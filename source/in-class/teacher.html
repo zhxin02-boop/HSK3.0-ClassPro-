@@ -999,18 +999,19 @@ ap._ec=function(){
 window.addEventListener('beforeunload',function(){try{ap._saveClassData();ap._sendSessionSummary('beforeunload')}catch(e){}});
 if (window.LESSON_DATA && LESSON_DATA.meta && LESSON_DATA.meta.lessonKey === 'HSK1-L01') {
   ap._pyz2 = window.L01PinyinLab.render;
-  ap._tts = function (text) {
-    if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) return;
-    window.speechSynthesis.cancel();
-    var utterance = new SpeechSynthesisUtterance(String(text || ''));
-    utterance.lang = 'zh-CN';
-    utterance.rate = 0.78;
-    utterance.pitch = 1;
-    var voices = window.speechSynthesis.getVoices ? window.speechSynthesis.getVoices() : [];
-    for (var vi = 0; vi < voices.length; vi++) {
-      if (/zh[-_]CN/i.test(voices[vi].lang)) { utterance.voice = voices[vi]; break; }
-    }
-    window.speechSynthesis.speak(utterance);
+  ap._tts = function (text, src) {
+    var fallback = function () {
+      if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) return;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.resume();
+      var utterance = new SpeechSynthesisUtterance(String(text || ''));
+      utterance.lang = 'zh-CN'; utterance.rate = 0.78; utterance.pitch = 1;
+      var voices = window.speechSynthesis.getVoices ? window.speechSynthesis.getVoices() : [];
+      for (var vi = 0; vi < voices.length; vi++) if (/zh[-_]CN/i.test(voices[vi].lang)) { utterance.voice = voices[vi]; break; }
+      window.speechSynthesis.speak(utterance);
+    };
+    if (src) { try { var audio = new Audio(src); audio.onerror = fallback; audio.play().catch(fallback); return; } catch (e) {} }
+    fallback();
   };
   var l01Style = document.createElement('style');
   l01Style.textContent = '[onclick*="ap.st=\\\'v4\\\'"]{display:none!important}[onclick*="ap.st=\\\'g1\\\'"]{display:none!important}';
