@@ -106,7 +106,10 @@ client.on("close",function(){setStatus("disconnected")});
   function speak(text,src){var fallback=function(){var say=function(){if(!window.speechSynthesis||!window.SpeechSynthesisUtterance)return;window.speechSynthesis.cancel();window.speechSynthesis.resume();var u=new SpeechSynthesisUtterance(String(text||''));u.lang='zh-CN';u.rate=.8;var vs=window.speechSynthesis.getVoices?window.speechSynthesis.getVoices():[];for(var i=0;i<vs.length;i++){if(/^zh[-_]CN/i.test(vs[i].lang)){u.voice=vs[i];break}}window.speechSynthesis.speak(u)};try{var cloud=new Audio('https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=zh-CN&q='+encodeURIComponent(String(text||'')));cloud.onerror=say;cloud.play().catch(say)}catch(e){say()}};if(src){try{var a=new Audio(src);a.onerror=fallback;a.play().catch(fallback);return}catch(e){}}fallback()}
   window.speak=speak;
   var previousPublish=publish;
-  publish=function(ans,idx){previousPublish(ans,idx);var box=document.querySelector('#app .ok,#app .bad');if(box){box.innerHTML+=(box.classList.contains('ok')?' / Submitted: Correct!':' / Submitted: Please wait for teacher feedback.')}};
+  function addEnglishFeedback(){var box=document.querySelector('#app .ok,#app .bad');if(box&&!box.dataset.enFeedback){box.dataset.enFeedback='1';box.innerHTML+=(box.classList.contains('ok')?' / Submitted: Correct!':' / Submitted: Incorrect. Please review.')}}
+  publish=function(ans,idx){previousPublish(ans,idx);addEnglishFeedback()};
+  var previousMatching=submitMatching;
+  submitMatching=function(){previousMatching();addEnglishFeedback()};
   var previousRender=render;
   render=function(){
     if(current&&current.mode==="pinyin"){
