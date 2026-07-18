@@ -96,7 +96,7 @@ body{font-family:KaiTi,STKaiti,"楷体",serif}
 <div v-if="p===0 && !showReview" class="card">
   <h2>{{D.lessonTitle}}</h2>
   <p class="sub">{{D.lessonEnglishTitle}}</p>
-  <p class="meta">开始预习前，请先选择你的姓名。系统将用姓名保存学习记录。</p>
+  <p class="meta">Before you start, select your name. Your learning records will be saved under this name.</p>
   <div class="flex mb12">
     <select class="inp" v-model="studentName"><option value="">Select your name / 选择姓名</option><option v-for="n in classStudents" :value="n">{{n}}</option></select>
   </div>
