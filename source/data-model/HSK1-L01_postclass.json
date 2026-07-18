@@ -1,0 +1,36 @@
+{
+  "lessonKey": "HSK1-L01",
+  "postClassHomework": {
+    "version": "L01-v3",
+    "tiers": {
+      "A": {"label":"A档：基础巩固","goal":"掌握本课核心词语和基本表达","suggested_minutes":"10分钟","suggested_mix":"词汇理解、交际表达、汉字书写"},
+      "B": {"label":"B档：标准巩固","goal":"在简单情景中运用本课表达","suggested_minutes":"15分钟","suggested_mix":"词汇运用、开放表达、汉字书写"},
+      "C": {"label":"C档：挑战拓展","goal":"综合完成问候、感谢和告别任务","suggested_minutes":"20分钟","suggested_mix":"综合表达、开放表达、汉字书写"}
+    },
+    "shared_pool": [
+      {"id":"hw_l01_common_001","type":"choice","module":"choice","prompt_cn":"“你好”是什么意思？","prompt_en":"What does 你好 mean?","options":["hello","thank you","goodbye","teacher"],"correct_answer":"hello","acceptable_answers":["hello"],"tags":["你好"],"needs_teacher_review":false},
+      {"id":"hw_l01_common_002","type":"choice","module":"choice","prompt_cn":"“谢谢”通常回答什么？","prompt_en":"What does 谢谢 mean?","options":["thank you","goodbye","hello","you’re welcome"],"correct_answer":"thank you","acceptable_answers":["thank you"],"tags":["谢谢"],"needs_teacher_review":false},
+      {"id":"hw_l01_common_003","type":"fill_blank","module":"fill_blank","prompt_cn":"老师，___好！","prompt_en":"Teacher, hello!","options":["您","你们","们","大家"],"correct_answer":"您","acceptable_answers":["您"],"tags":["您"],"needs_teacher_review":false},
+      {"id":"hw_l01_common_004","type":"fill_blank","module":"fill_blank","prompt_cn":"同学___，再见！","prompt_en":"Goodbye, classmates!","options":["们","您","好","你"],"correct_answer":"们","acceptable_answers":["们"],"tags":["们","再见"],"needs_teacher_review":false},
+      {"id":"hw_l01_common_005","type":"choice","module":"choice","prompt_cn":"谢谢！——___！","prompt_en":"Thank you! — You’re welcome!","options":["不客气","再见","你好","大家好"],"correct_answer":"不客气","acceptable_answers":["不客气"],"tags":["谢谢","不客气"],"needs_teacher_review":false},
+      {"id":"hw_l01_common_006","type":"choice","module":"choice","prompt_cn":"放学了，我们说：___！","prompt_en":"Class is over. We say: ___.","options":["再见","谢谢","你好","不客气"],"correct_answer":"再见","acceptable_answers":["再见"],"tags":["再见"],"needs_teacher_review":false}
+    ],
+    "tier_pools": {
+      "A": [
+        {"id":"hw_l01_a_001","tier":"A","type":"choice","module":"choice","prompt_cn":"请选择“good”的中文。","prompt_en":"Choose the Chinese for good.","options":["好","谢谢","再见","老师"],"correct_answer":"好","acceptable_answers":["好"],"tags":["好"],"needs_teacher_review":false},
+        {"id":"hw_l01_a_002","tier":"A","type":"output","module":"output","prompt_cn":"请写一句问候老师的话。","prompt_en":"Write one sentence to greet your teacher.","tags":["老师","您好"],"needs_teacher_review":true},
+        {"id":"hw_l01_a_003","tier":"A","type":"handwriting","module":"handwriting","prompt_cn":"请练习书写本课汉字。","prompt_en":"Practice writing five characters from this lesson.","characters":["你","好","老","师","谢"],"repeat_count":2,"tags":["汉字书写"],"needs_teacher_review":true}
+      ],
+      "B": [
+        {"id":"hw_l01_b_001","tier":"B","type":"choice","module":"choice","prompt_cn":"“大家好！”是对谁说的？","prompt_en":"Who do we say 大家好 to?","options":["everyone","one teacher","one student","a classmate"],"correct_answer":"everyone","acceptable_answers":["everyone"],"tags":["大家"],"needs_teacher_review":false},
+        {"id":"hw_l01_b_002","tier":"B","type":"output","module":"output","prompt_cn":"请写一个向老师问好并说再见的两句对话。","prompt_en":"Write a two-line dialogue greeting and saying goodbye to a teacher.","tags":["您好","再见"],"needs_teacher_review":true},
+        {"id":"hw_l01_b_003","tier":"B","type":"handwriting","module":"handwriting","prompt_cn":"请练习书写本课汉字。","prompt_en":"Practice writing five characters from this lesson.","characters":["你","好","老","师","谢"],"repeat_count":2,"tags":["汉字书写"],"needs_teacher_review":true}
+      ],
+      "C": [
+        {"id":"hw_l01_c_001","tier":"C","type":"choice","module":"choice","prompt_cn":"“谢谢！”的合适回应是什么？","prompt_en":"What is an appropriate reply to 谢谢?","options":["不客气","再见","大家好","老师"],"correct_answer":"不客气","acceptable_answers":["不客气"],"tags":["谢谢","不客气"],"needs_teacher_review":false},
+        {"id":"hw_l01_c_002","tier":"C","type":"output","module":"output","prompt_cn":"请写一个包含问候、感谢和告别的四句对话。","prompt_en":"Write a four-line dialogue with a greeting, thanks and farewell.","tags":["你好","谢谢","再见"],"needs_teacher_review":true},
+        {"id":"hw_l01_c_003","tier":"C","type":"handwriting","module":"handwriting","prompt_cn":"请练习书写本课汉字。","prompt_en":"Practice writing five characters from this lesson.","characters":["同","学","再","见","您"],"repeat_count":2,"tags":["汉字书写"],"needs_teacher_review":true}
+      ]
+    }
+  }
+}

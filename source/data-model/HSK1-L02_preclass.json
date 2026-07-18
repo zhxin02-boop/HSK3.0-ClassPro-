@@ -1,0 +1,15 @@
+{
+  "meta": {"lessonKey":"HSK1-L02","lessonTitle":"第2课：我叫李文","lessonEnglishTitle":"My name is Li Wen"},
+  "preClass": {"questions":[
+    {"id":"pre_l02_001","type":"choice","module":"词汇理解","question":"Choose the Chinese word for “not”.","options":[{"text":"不","pinyin":"bù"},{"text":"是","pinyin":"shì"},{"text":"很","pinyin":"hěn"},{"text":"也","pinyin":"yě"}],"answer":"不","weakPoints":"词汇：不"},
+    {"id":"pre_l02_002","type":"choice","module":"词汇理解","question":"Choose the Chinese word for “sorry”.","options":[{"text":"对不起","pinyin":"duìbuqǐ"},{"text":"没关系","pinyin":"méi guānxi"},{"text":"高兴","pinyin":"gāoxìng"},{"text":"认识","pinyin":"rènshi"}],"answer":"对不起","weakPoints":"词汇：对不起"},
+    {"id":"pre_l02_003","type":"choice","module":"交际表达","question":"Choose the appropriate reply to “对不起”.","options":[{"text":"没关系","pinyin":"méi guānxi"},{"text":"很高兴","pinyin":"hěn gāoxìng"},{"text":"你好","pinyin":"nǐ hǎo"},{"text":"再见","pinyin":"zàijiàn"}],"answer":"没关系","weakPoints":"交际功能：回应道歉"},
+    {"id":"pre_l02_004","type":"choice","module":"词汇理解","question":"Choose the Chinese word for “glad; happy”.","options":[{"text":"高兴","pinyin":"gāoxìng"},{"text":"认识","pinyin":"rènshi"},{"text":"没事","pinyin":"méishì"},{"text":"学生","pinyin":"xuéshēng"}],"answer":"高兴","weakPoints":"词汇：高兴"},
+    {"id":"pre_l02_005","type":"choice","module":"句子理解","question":"Complete: 我___学生。","options":[{"text":"是","pinyin":"shì"},{"text":"不","pinyin":"bù"},{"text":"很","pinyin":"hěn"},{"text":"也","pinyin":"yě"}],"answer":"是","weakPoints":"语法：基本语序"},
+    {"id":"pre_l02_006","type":"choice","module":"词汇理解","question":"Choose the Chinese word for “know; become acquainted with”.","options":[{"text":"认识","pinyin":"rènshi"},{"text":"高兴","pinyin":"gāoxìng"},{"text":"没事","pinyin":"méishì"},{"text":"不是","pinyin":"bú shì"}],"answer":"认识","weakPoints":"词汇：认识"},
+    {"id":"pre_l02_007","type":"choice","module":"词汇理解","question":"Choose the Chinese word for “also; too”.","options":[{"text":"也","pinyin":"yě"},{"text":"很","pinyin":"hěn"},{"text":"不","pinyin":"bù"},{"text":"是","pinyin":"shì"}],"answer":"也","weakPoints":"词汇：也"},
+    {"id":"pre_l02_008","type":"choice","module":"交际表达","question":"Choose the Chinese expression for “It doesn’t matter”.","options":[{"text":"没事","pinyin":"méishì"},{"text":"对不起","pinyin":"duìbuqǐ"},{"text":"高兴","pinyin":"gāoxìng"},{"text":"认识","pinyin":"rènshi"}],"answer":"没事","weakPoints":"词汇：没事"},
+    {"id":"pre_l02_009","type":"subjective","module":"开放式自我介绍","question":"What is your name? Write one complete sentence.","answerPlaceholder":"For example: 我叫李文。","needsTeacherReview":true,"weakPoints":"综合：自我介绍"},
+    {"id":"pre_l02_010","type":"subjective","module":"开放式对话","question":"Write a short dialogue with 对不起 and 没关系.","answerPlaceholder":"Write at least two sentences.","needsTeacherReview":true,"weakPoints":"词汇：对不起、没关系"}
+  ]}
+}

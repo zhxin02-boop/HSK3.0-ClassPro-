@@ -1,0 +1,1060 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chinese ClassPro+</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.3.0/mqtt.min.js"></script>
+<script src="../shared/students.js"></script>
+<script src="../shared/context.js"></script>
+<script src="./lesson-data-loader.js"></script>
+<script src="./pinyin-lab.js"></script>
+<style>
+:root{--teach:#4A8FE7;--practice:#E8563A;--battle:#E8563A;--blue:#4A8FE7;--green:#5CC98C;--bg:#FAFAF7;--text:#1A1A2E;--sidebar-bg:#F5F4F0;--line:#E8E6E1;--primary:#E8563A}
+*{box-sizing:border-box}
+body{font-family:Nunito,Helvetica Neue,sans-serif;background:var(--bg);margin:0;color:var(--text)}
+:root{--hanzi-font:KaiTi,STKaiti,"Kaiti SC","楷体","Microsoft YaHei",serif}
+.wc-word,.vocab-hanzi,.text-hanzi,.option-hanzi,.chunk-btn,.chunk,.hanzi-font{font-family:var(--hanzi-font)}
+#app{min-height:100vh}
+.cp-sidebar{position:fixed;left:0;top:0;bottom:0;width:56px;background:var(--sidebar-bg);border-right:0.5px solid var(--line);display:flex;flex-direction:column;align-items:center;padding:10px 0;z-index:80}
+.cp-sidebar .cp-logo{width:32px;height:32px;border-radius:8px;background:var(--primary);color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;cursor:pointer}
+.cp-sidebar .sb-btn{width:38px;height:38px;border-radius:10px;border:none;background:transparent;font-size:15px;color:#bbb;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.cp-sidebar .sb-btn.active{background:#fff;border:1.5px solid var(--primary);color:var(--primary);font-weight:700}
+.cp-sidebar .sb-spacer{flex:1}
+.cp-sidebar .sb-bottom{font-size:13px;color:#ccc;cursor:pointer;width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;position:relative}
+.cp-sidebar .sb-dot{position:absolute;top:-1px;right:-1px;width:6px;height:6px;border-radius:50%;background:var(--green);border:1.5px solid var(--sidebar-bg)}
+.cp-body{margin-left:56px;min-height:100vh;display:flex;flex-direction:column}
+.home-screen{min-height:calc(100vh - 80px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;text-align:center}
+.home-title{font-size:36px;font-weight:900;color:var(--primary);margin-bottom:8px}
+.home-lesson{font-size:20px;color:#888;margin-bottom:40px}
+.home-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:600px;width:100%}
+.home-card{padding:35px 20px;border-radius:20px;cursor:pointer;text-align:center;transition:.3s;box-shadow:0 4px 18px rgba(0,0,0,.04);border:1px solid var(--line)}
+.home-card:hover{transform:translateY(-4px)}
+.home-card .emoji{font-size:48px;margin-bottom:10px}
+.home-card .label{font-size:18px;font-weight:800}
+.home-card .desc{font-size:13px;margin-top:6px;opacity:.7}
+.home-card.teach{background:#EDF3FF;color:#2D5DB8}
+.home-card.practice{background:#FFF0EE;color:#C74B3F}
+.home-card.battle{background:#E8F8EE;color:#1E6B3A}
+.header{background:#fff;padding:8px 20px;border-bottom:0.5px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.header h1{margin:0;font-size:16px;color:var(--text);cursor:pointer;font-weight:700}
+.header-right{display:flex;gap:6px;align-items:center}
+.sub-nav{background:#fff;padding:8px 12px;border-bottom:0.5px solid var(--line);display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.sub-group{display:inline-flex;align-items:center;padding:5px 8px;border-radius:10px;background:#E6F1FB}
+.sub-group-label{font-size:10px;font-weight:800;color:#0C447C;margin-right:4px}
+.sub-btn{padding:4px 10px;font-size:12px;border:none;background:transparent;border-radius:16px;cursor:pointer;font-weight:600;color:#888}
+.sub-btn.active{background:#fff;color:var(--text);box-shadow:0 0 0 0.5px rgba(0,0,0,.15)}
+.grammar-tab{padding:5px 12px;font-size:12px;font-weight:600;border-radius:20px;cursor:pointer;border:1.5px solid var(--blue);background:#fff;color:var(--blue)}
+.grammar-tab.active{background:var(--blue);color:#fff}
+.timer-circle{width:80px;height:80px;border-radius:50%;background:linear-gradient(145deg,#fff,#f0f0f0);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;border:3px solid #e5e7eb}
+.timer-ring{position:absolute;top:0;left:0;width:80px;height:80px}
+.timer-ring circle{fill:none;stroke-width:4;stroke-linecap:round;transform:rotate(-90deg);transform-origin:center}
+.timer-ring .bg{stroke:#e5e7eb}
+.timer-ring .fg{stroke:var(--green);transition:stroke-dashoffset .3s}
+.timer-ring .fg.warn{stroke:#fbbf24}
+.timer-ring .fg.danger{stroke:var(--red);animation:pulse .5s infinite}
+@keyframes pulse{50%{opacity:.4}}
+.timer-num{font-size:26px;font-weight:900;color:var(--text);font-family:Courier New,monospace}
+.timer-num.danger{color:var(--red);animation:pulse .5s infinite}
+.timer-label{font-size:9px;color:#9ca3af}
+.timer-preset{padding:4px 10px;border-radius:15px;border:2px solid #d1d5db;background:#fff;font-size:12px;font-weight:bold;cursor:pointer;color:#555}
+.timer-preset.active{border-color:var(--green);background:#E8F6EE;color:var(--green)}
+.timer-ctrl{padding:8px;border-radius:8px;border:none;font-weight:bold;cursor:pointer;font-size:13px;color:#fff}
+.timer-ctrl.start{background:var(--green)}
+.timer-ctrl.reset{background:#9ca3af}
+.qw-bar{background:linear-gradient(135deg,#eff6ff,#dbeafe);border:2px solid #93c5fd;border-radius:14px;padding:14px 18px;margin-bottom:15px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.qw-btn{padding:8px 18px;border-radius:10px;font-weight:700;font-size:13px;cursor:pointer;border:none;color:#fff}
+.qw-btn.start{background:linear-gradient(135deg,#3b82f6,#2563eb)}
+.qw-btn.reset{background:#94a3b8}
+.qw-btn.lock{background:linear-gradient(135deg,#f59e0b,#d97706)}
+.main-content{flex:1;padding:16px 24px;display:flex;gap:15px;justify-content:center;max-width:1200px;margin:0 auto;width:100%}
+.panel-area{flex:1;display:flex;flex-direction:column;align-items:center}
+.panel{background:#fff;width:100%;padding:28px;border-radius:16px;border:0.5px solid var(--line)}
+.word-card{background:#fff;border:2px solid #e5e7eb;border-radius:14px;padding:15px;text-align:center;cursor:pointer}
+.word-card:hover{border-color:var(--blue)}
+.word-card .wc-word{font-size:28px;font-weight:900;color:var(--text)}
+.word-card .wc-pinyin{font-size:13px;color:#888}
+.chunk-btn{padding:10px 18px;font-size:20px;font-weight:bold;background:#fff;border:2px solid #e0e0e0;border-radius:10px;cursor:pointer}
+.chunk-btn.in-answer{background:#EDF3FF;border-color:var(--blue);color:#2D5DB8}
+.next-btn{display:inline-block;padding:10px 22px;background:var(--blue);color:#fff;border:none;border-radius:10px;font-weight:bold;font-size:14px;cursor:pointer;margin:5px}
+.score-sidebar{position:fixed;right:0;top:0;bottom:0;width:230px;background:linear-gradient(180deg,#fff,#f8fafc);z-index:90;display:flex;flex-direction:column;transition:transform .3s}
+.score-sidebar.closed{transform:translateX(100%)}
+.score-sidebar-header{background:linear-gradient(135deg,#10b981,#059669);padding:14px 16px;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.score-sidebar-body{flex:1;overflow-y:auto;padding:10px 12px}
+.score-row{display:flex;align-items:center;gap:5px;padding:6px 8px;border-radius:10px;font-size:12px}
+.score-row:nth-child(1){background:linear-gradient(135deg,#fef3c7,#fde68a);font-weight:bold}
+.score-row:nth-child(2){background:#f0f0f0;font-weight:bold}
+.score-name{flex:1;overflow:hidden}
+.score-pts{font-weight:900;color:var(--practice);min-width:22px;text-align:center}
+.star-btn{width:100%;padding:12px;background:linear-gradient(135deg,#f59e0b,#eab308);color:#fff;font-weight:900;font-size:14px;cursor:pointer;border:none;margin-top:10px;border-radius:12px}
+.star-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center}
+.teach-nav{display:flex;gap:10px;justify-content:center;margin-top:20px;padding-top:15px;border-top:1px solid #eee}
+.teach-nav button{padding:8px 16px;font-size:14px;font-weight:bold;border:none;border-radius:8px;cursor:pointer;color:#fff}
+.teach-nav .prev{background:#9ca3af}
+.teach-nav .next{background:var(--blue)}
+.live-panel{width:350px;min-width:350px;background:#fff;display:flex;flex-direction:column;border-radius:16px;overflow:hidden}
+.live-header{background:linear-gradient(135deg,#1A2980,#26D0CE);color:#fff;padding:12px 15px;display:flex;justify-content:space-between;align-items:center}
+.answers-area{flex:1;padding:10px;overflow-y:auto}
+.formula-box{background:#EDF3FF;border-radius:12px;padding:15px 20px;font-size:20px;font-weight:bold;color:#2D5DB8;text-align:center;margin:10px 0}
+.example-row{padding:10px;margin:6px 0;background:#f9fafb;border-radius:8px;border-left:3px solid var(--teach)}
+.example-row .cn{font-size:18px;font-weight:600;color:var(--text)}
+.example-row .en{font-size:14px;color:#888;font-style:italic}
+.pk-question-card{background:#fff;border:4px solid #ffd54f;border-radius:16px;padding:25px;width:100%;text-align:center;margin:15px 0}
+.score-block{font-size:48px;font-weight:900;width:80px;text-align:center}
+.chunk-bank{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;min-height:70px;margin-top:15px}
+
+/* ClassPro+ lite classroom skin: visual-only first pass. */
+:root{
+--cp-primary:#E8563A;
+--cp-primary-soft:#FFF0EC;
+--cp-blue:#2F6FD6;
+--cp-blue-soft:#EEF5FF;
+--cp-green:#26A269;
+--cp-green-soft:#EAF8EF;
+--cp-ink:#151725;
+--cp-muted:#6B7280;
+--cp-soft:#F7F7F3;
+--cp-card:#FFFFFF;
+--cp-line:#E7E3DA;
+--cp-shadow:0 18px 50px rgba(26,26,46,.08);
+--bg:#F7F7F3;
+--text:var(--cp-ink);
+--primary:var(--cp-primary);
+--blue:var(--cp-blue);
+--green:var(--cp-green);
+--line:var(--cp-line);
+--sidebar-bg:#FFFFFF;
+}
+body{background:radial-gradient(circle at 18% 0,#fff7f2 0,#f7f7f3 32%,#f4f7fb 100%);font-family:"Segoe UI","Microsoft YaHei",Arial,sans-serif}
+.cp-sidebar{width:72px;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-right:1px solid rgba(231,227,218,.9);padding:16px 0;box-shadow:8px 0 28px rgba(21,23,37,.04)}
+.cp-sidebar .cp-logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#e8563a,#ff8a66);font-size:15px;font-weight:900;box-shadow:0 12px 26px rgba(232,86,58,.22)}
+.cp-sidebar .sb-btn{width:46px;height:46px;border-radius:14px;margin:3px 0;color:#8b8f9b;font-weight:800;background:#fff;border:1px solid transparent}
+.cp-sidebar .sb-btn:hover,.cp-sidebar .sb-bottom:hover{background:#FFF7F4;color:var(--cp-primary)}
+.cp-sidebar .sb-btn.active{background:var(--cp-primary-soft);border:1px solid rgba(232,86,58,.35);color:var(--cp-primary);box-shadow:0 8px 20px rgba(232,86,58,.10)}
+.cp-sidebar .sb-bottom{width:44px;height:38px;border-radius:13px;color:#9CA3AF;font-weight:800}
+.cp-body{margin-left:72px}
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(18px);padding:14px 28px;border-bottom:1px solid rgba(231,227,218,.85)}
+.header h1{font-size:18px;font-weight:900;color:var(--cp-ink)}
+.header h1 span{display:inline-flex;margin-left:10px;padding:4px 10px;border-radius:999px;background:var(--cp-blue-soft);color:var(--cp-blue);font-size:12px;font-weight:800;vertical-align:middle}
+.header-right>button{border-radius:12px!important;border:1px solid var(--cp-line)!important;background:#fff!important;box-shadow:0 6px 14px rgba(21,23,37,.05)}
+.sub-nav{position:sticky;top:61px;z-index:45;justify-content:center;background:rgba(247,247,243,.88);backdrop-filter:blur(18px);padding:12px 20px;border-bottom:0}
+.sub-btn{padding:9px 17px;border-radius:999px;background:#fff;border:1px solid var(--cp-line);color:#6b7280;font-size:14px}
+.sub-btn.active{background:var(--cp-ink);color:#fff;box-shadow:0 10px 24px rgba(21,23,37,.16)}
+.sub-group{background:#fff;border:1px solid var(--cp-line);border-radius:999px;padding:4px}
+.sub-group-label{padding:0 8px;color:#748095}
+.main-content{max-width:1280px;padding:28px 32px 36px;gap:20px;align-items:flex-start}
+.panel-area{min-width:0}
+.panel{background:rgba(255,255,255,.94);border:1px solid rgba(231,227,218,.95);border-radius:8px;box-shadow:var(--cp-shadow);padding:32px}
+.home-screen{min-height:100vh;padding:52px 28px;background:linear-gradient(135deg,#fff7f2 0,#f7f7f3 48%,#eef5ff 100%)}
+.home-title{font-size:42px;color:var(--cp-ink);letter-spacing:0}
+.home-title::after{content:"+";color:var(--cp-primary);margin-left:2px}
+.home-lesson{color:#616978}
+.home-card{border-radius:8px;background:#fff!important;border:1px solid rgba(231,227,218,.95);box-shadow:var(--cp-shadow);color:var(--cp-ink)!important}
+.home-card:hover{transform:translateY(-3px);box-shadow:0 22px 58px rgba(26,26,46,.12)}
+.grammar-tab{border:1px solid var(--cp-line);background:#fff;color:#667085;border-radius:999px;padding:8px 14px;font-size:13px}
+.grammar-tab.active{background:var(--cp-blue);border-color:var(--cp-blue);color:#fff}
+.teach-nav{border-top:1px solid var(--cp-line);padding-top:18px}
+.teach-nav button,.next-btn{border-radius:999px;padding:10px 20px;box-shadow:none}
+.teach-nav .next,.next-btn{background:var(--cp-blue)}
+.teach-nav .prev{background:#8B95A5}
+.qw-bar{margin:16px 32px 0;border:1px solid #bfd4f8;background:linear-gradient(135deg,#f5f9ff,#eaf2ff);border-radius:8px;box-shadow:0 10px 28px rgba(47,111,214,.08)}
+.live-panel{border-radius:8px;border:1px solid var(--cp-line);box-shadow:var(--cp-shadow)}
+.live-header{background:linear-gradient(135deg,#2f6fd6,#66b8d9)}
+.score-sidebar{box-shadow:-12px 0 34px rgba(21,23,37,.12);border-left:1px solid var(--cp-line)}
+.chunk-btn{border-radius:8px;border:1px solid var(--cp-line);box-shadow:0 6px 14px rgba(21,23,37,.05)}
+.chunk-btn.in-answer{background:var(--cp-blue-soft);border-color:#a9c5f5;color:var(--cp-blue)}
+.pk-question-card{border-radius:8px}
+@media(max-width:820px){
+.cp-sidebar{width:56px}
+.cp-body{margin-left:56px}
+.main-content{padding:18px 12px;flex-direction:column}
+.home-cards{grid-template-columns:1fr}
+.panel{padding:20px}
+.live-panel{width:100%;min-width:0}
+.sub-nav{top:57px;justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}
+}
+
+/* ClassPro+ stage skin: bolder projection-first pass. */
+:root{
+--stage-red:#F05A3F;
+--stage-red-2:#FF8B66;
+--stage-blue:#2563D8;
+--stage-cyan:#46B9D8;
+--stage-yellow:#FFD166;
+--stage-ink:#101321;
+--stage-paper:#FFFDF8;
+--stage-shadow:0 28px 80px rgba(16,19,33,.16);
+}
+body{
+background:
+radial-gradient(circle at 8% 10%,rgba(255,139,102,.28) 0,rgba(255,139,102,0) 30%),
+radial-gradient(circle at 88% 16%,rgba(70,185,216,.25) 0,rgba(70,185,216,0) 32%),
+linear-gradient(135deg,#fffaf4 0,#f4f7ff 54%,#fff7f1 100%);
+}
+.cp-sidebar{
+background:linear-gradient(180deg,#161927,#22263a);
+border-right:0;
+box-shadow:14px 0 34px rgba(16,19,33,.18);
+}
+.cp-sidebar .cp-logo{
+background:linear-gradient(135deg,var(--stage-red),var(--stage-yellow));
+color:#171827;
+font-weight:1000;
+}
+.cp-sidebar .sb-btn,.cp-sidebar .sb-bottom{background:rgba(255,255,255,.06);color:rgba(255,255,255,.62)}
+.cp-sidebar .sb-btn.active{
+background:#fff;
+color:var(--stage-red);
+border-color:#fff;
+box-shadow:0 12px 30px rgba(255,255,255,.18);
+}
+.cp-sidebar .sb-btn:hover,.cp-sidebar .sb-bottom:hover{background:rgba(255,255,255,.14);color:#fff}
+.header{
+background:linear-gradient(135deg,rgba(16,19,33,.96),rgba(35,39,60,.94));
+border-bottom:0;
+box-shadow:0 18px 42px rgba(16,19,33,.18);
+}
+.header h1{color:#fff;font-size:20px;letter-spacing:.2px}
+.header h1 span{
+background:rgba(255,255,255,.12);
+color:#fff;
+border:1px solid rgba(255,255,255,.18);
+}
+.header-right{color:rgba(255,255,255,.72)}
+.header-right>button{
+background:rgba(255,255,255,.12)!important;
+border:1px solid rgba(255,255,255,.18)!important;
+color:#fff!important;
+}
+.sub-nav{
+top:69px;
+background:rgba(255,253,248,.78);
+border-bottom:1px solid rgba(255,255,255,.6);
+box-shadow:0 12px 32px rgba(16,19,33,.06);
+}
+.sub-btn{font-size:15px;padding:10px 20px;border:0;background:#fff;box-shadow:0 8px 18px rgba(16,19,33,.07)}
+.sub-btn.active{background:linear-gradient(135deg,var(--stage-red),var(--stage-red-2));box-shadow:0 14px 28px rgba(240,90,63,.26)}
+.main-content{max-width:1380px;padding:34px 42px 42px}
+.panel{
+position:relative;
+overflow:hidden;
+border:0;
+border-radius:22px;
+box-shadow:var(--stage-shadow);
+background:rgba(255,253,248,.94);
+}
+.panel::before{
+content:"";
+position:absolute;
+inset:0 0 auto 0;
+height:7px;
+background:linear-gradient(90deg,var(--stage-red),var(--stage-yellow),var(--stage-cyan),var(--stage-blue));
+}
+.panel h2,.panel h3{font-size:28px!important;color:var(--stage-ink)!important;letter-spacing:.2px}
+.home-screen{
+position:relative;
+overflow:hidden;
+background:
+radial-gradient(circle at 20% 20%,rgba(255,209,102,.42) 0,rgba(255,209,102,0) 28%),
+radial-gradient(circle at 82% 18%,rgba(37,99,216,.22) 0,rgba(37,99,216,0) 34%),
+linear-gradient(135deg,#151827 0,#20243a 52%,#f05a3f 160%);
+color:#fff;
+}
+.home-screen::before{
+content:"Chinese ClassPro+";
+position:absolute;
+right:-40px;
+bottom:18px;
+font-size:110px;
+font-weight:1000;
+letter-spacing:-1px;
+color:rgba(255,255,255,.055);
+white-space:nowrap;
+}
+.home-title{
+position:relative;
+font-size:68px;
+line-height:1;
+color:#fff;
+text-shadow:0 16px 42px rgba(0,0,0,.25);
+}
+.home-title::after{color:var(--stage-yellow)}
+.home-lesson{position:relative;color:rgba(255,255,255,.78);font-size:24px;margin-bottom:48px}
+.home-cards{position:relative;max-width:920px;gap:24px}
+.home-card{
+padding:34px 26px 30px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,.28);
+background:rgba(255,255,255,.95)!important;
+box-shadow:0 26px 70px rgba(0,0,0,.24);
+}
+.home-card .emoji{font-size:62px;margin-bottom:16px}
+.home-card .label{font-size:24px}
+.home-card .desc{font-size:15px}
+.home-card.teach{box-shadow:0 26px 70px rgba(37,99,216,.30)}
+.home-card.practice{box-shadow:0 26px 70px rgba(240,90,63,.30)}
+.home-card.battle{box-shadow:0 26px 70px rgba(38,162,105,.26)}
+.home-card:hover{transform:translateY(-8px) scale(1.015)}
+.grammar-tab{font-size:14px;padding:9px 16px}
+.grammar-tab.active{background:linear-gradient(135deg,var(--stage-blue),var(--stage-cyan));border-color:transparent}
+.teach-nav{margin-top:26px;padding-top:22px}
+.teach-nav button,.next-btn{font-size:16px;padding:12px 24px}
+.live-panel{border:0;border-radius:22px;box-shadow:var(--stage-shadow)}
+.live-header{background:linear-gradient(135deg,#151827,#2563d8)}
+.qw-bar{border:0;border-radius:20px;background:linear-gradient(135deg,#fff,#eaf4ff);box-shadow:0 18px 42px rgba(37,99,216,.14)}
+.chunk-btn{font-size:22px;border-radius:16px;padding:14px 22px}
+.score-sidebar{background:#fffdf8}
+
+/* Turn vocabulary into a real classroom stage without touching JS. */
+.panel[style*="max-width:960px"]{
+max-width:1120px!important;
+padding:42px!important;
+background:
+linear-gradient(135deg,rgba(255,255,255,.96),rgba(255,250,244,.96));
+}
+.panel[style*="max-width:960px"]>div:first-child{
+display:grid!important;
+grid-template-columns:minmax(300px,380px) 1fr!important;
+gap:44px!important;
+align-items:center!important;
+}
+.panel[style*="max-width:960px"]>div:first-child>div:first-child{
+width:360px!important;
+height:360px!important;
+border-radius:34px!important;
+border:8px solid #fff!important;
+box-shadow:0 28px 70px rgba(16,19,33,.18)!important;
+background:linear-gradient(135deg,#fff3e8,#eaf4ff)!important;
+}
+.panel[style*="max-width:960px"]>div:first-child>div:nth-child(2)>div:nth-child(1){
+display:inline-flex!important;
+font-size:28px!important;
+color:var(--stage-blue)!important;
+background:#eef5ff!important;
+padding:8px 16px!important;
+border-radius:999px!important;
+}
+.panel[style*="max-width:960px"]>div:first-child>div:nth-child(2)>div:nth-child(2){
+font-size:92px!important;
+letter-spacing:2px!important;
+line-height:1.02!important;
+color:var(--stage-ink)!important;
+}
+.panel[style*="max-width:960px"]>div:first-child>div:nth-child(2)>div:nth-child(3){
+font-size:24px!important;
+color:#5f6675!important;
+}
+.panel[style*="max-width:960px"] button{
+font-size:16px!important;
+padding:11px 22px!important;
+box-shadow:0 14px 30px rgba(240,90,63,.18)!important;
+}
+.panel[style*="max-width:960px"] img{transform:scale(1.01)}
+
+/* Make text and exercise cards feel more like projected activities. */
+.panel[style*="max-width:800px"],.panel[style*="max-width:860px"]{max-width:980px!important}
+.panel[style*="max-width:800px"] [style*="border-left"],.panel[style*="max-width:860px"] [style*="border-left"]{
+border-left-width:7px!important;
+box-shadow:0 8px 24px rgba(16,19,33,.06)!important;
+}
+.panel[style*="max-width:800px"] [style*="font-size:24px"],.panel[style*="max-width:860px"] [style*="font-size:24px"]{
+font-size:30px!important;
+}
+@media(max-width:980px){
+.panel[style*="max-width:960px"]>div:first-child{grid-template-columns:1fr!important}
+.panel[style*="max-width:960px"]>div:first-child>div:first-child{width:100%!important;max-width:360px!important;margin:auto}
+.home-title{font-size:48px}
+.sub-nav{top:65px}
+}
+
+/* ClassPro+ Sunny companion skin: Xiaotaiyang-led calm learning app style. */
+:root{
+--sun-bg:#EEF6DA;
+--sun-bg-2:#FFF7DE;
+--sun-card:#FFFDF8;
+--sun-green:#3F7F32;
+--sun-green-2:#8BCB2F;
+--sun-orange:#F98C53;
+--sun-yellow:#FFD166;
+--sun-blue:#ABD7FB;
+--sun-ink:#263B2A;
+--sun-muted:#697260;
+--sun-line:#DCE8C0;
+--sun-shadow:0 18px 45px rgba(86,115,55,.13);
+--sunny-url:url("../../references/UI/parrot.png");
+--primary:var(--sun-orange);
+--blue:var(--sun-green);
+--green:var(--sun-green-2);
+--text:var(--sun-ink);
+--line:var(--sun-line);
+--bg:var(--sun-bg);
+}
+body{
+background:
+radial-gradient(circle at 12% 8%,rgba(255,209,102,.30) 0,rgba(255,209,102,0) 26%),
+radial-gradient(circle at 92% 12%,rgba(171,215,251,.34) 0,rgba(171,215,251,0) 30%),
+linear-gradient(135deg,var(--sun-bg) 0,#F7F9EA 48%,#FFF8E6 100%)!important;
+color:var(--sun-ink);
+}
+.cp-sidebar{
+background:rgba(255,253,248,.92)!important;
+border-right:1px solid rgba(220,232,192,.9)!important;
+box-shadow:8px 0 28px rgba(86,115,55,.08)!important;
+}
+.cp-sidebar .cp-logo{
+background:linear-gradient(135deg,var(--sun-green-2),var(--sun-yellow))!important;
+color:var(--sun-green)!important;
+box-shadow:0 10px 22px rgba(63,127,50,.18)!important;
+}
+.cp-sidebar .sb-btn,.cp-sidebar .sb-bottom{
+background:#fff!important;
+color:#7B876B!important;
+border:1px solid transparent!important;
+}
+.cp-sidebar .sb-btn.active{
+background:#E9F5C8!important;
+color:var(--sun-green)!important;
+border-color:#CFE79D!important;
+box-shadow:0 8px 18px rgba(63,127,50,.13)!important;
+}
+.cp-sidebar .sb-btn:hover,.cp-sidebar .sb-bottom:hover{background:#F4F9E5!important;color:var(--sun-green)!important}
+.header{
+background:rgba(255,253,248,.90)!important;
+border-bottom:1px solid rgba(220,232,192,.9)!important;
+box-shadow:0 10px 26px rgba(86,115,55,.06)!important;
+}
+.header h1{color:var(--sun-ink)!important}
+.header h1 span{
+background:#EEF6DA!important;
+color:var(--sun-green)!important;
+border:1px solid #D7EAAE!important;
+}
+.header-right{color:var(--sun-muted)!important}
+.header-right>button{
+background:#fff!important;
+border:1px solid var(--sun-line)!important;
+color:var(--sun-green)!important;
+}
+.sub-nav{
+top:69px!important;
+background:rgba(238,246,218,.82)!important;
+box-shadow:0 8px 24px rgba(86,115,55,.06)!important;
+}
+.sub-btn{
+background:#fff!important;
+color:var(--sun-muted)!important;
+border:1px solid rgba(220,232,192,.9)!important;
+box-shadow:0 6px 14px rgba(86,115,55,.06)!important;
+}
+.sub-btn.active{
+background:linear-gradient(135deg,var(--sun-green),#6EA229)!important;
+color:#fff!important;
+box-shadow:0 10px 22px rgba(63,127,50,.20)!important;
+}
+.main-content{max-width:1280px!important;padding:28px 34px 38px!important}
+.panel{
+background:rgba(255,253,248,.96)!important;
+border:1px solid rgba(220,232,192,.9)!important;
+border-radius:24px!important;
+box-shadow:var(--sun-shadow)!important;
+overflow:hidden;
+}
+.panel::before{
+height:6px!important;
+background:linear-gradient(90deg,var(--sun-green-2),var(--sun-yellow),var(--sun-orange))!important;
+}
+.panel::after{
+content:"";
+position:absolute;
+right:16px;
+bottom:12px;
+width:86px;
+height:124px;
+background:var(--sunny-url) center/contain no-repeat;
+opacity:.12;
+pointer-events:none;
+}
+.panel h2,.panel h3{color:var(--sun-ink)!important}
+.grammar-tab{
+background:#fff!important;
+border:1px solid var(--sun-line)!important;
+color:var(--sun-green)!important;
+box-shadow:none!important;
+}
+.grammar-tab.active{
+background:var(--sun-green)!important;
+border-color:var(--sun-green)!important;
+color:#fff!important;
+}
+.teach-nav .next,.next-btn{background:var(--sun-green)!important}
+.teach-nav .prev{background:#A7B192!important}
+.chunk-btn.in-answer{background:#F0F8D9!important;border-color:#C8E889!important;color:var(--sun-green)!important}
+.live-header{background:linear-gradient(135deg,var(--sun-green),#74AA37)!important}
+.score-sidebar{background:var(--sun-card)!important}
+.qw-bar{
+background:linear-gradient(135deg,#fff,#F3F9E5)!important;
+border:1px solid var(--sun-line)!important;
+box-shadow:var(--sun-shadow)!important;
+}
+
+.home-screen{
+background:
+radial-gradient(circle at 18% 22%,rgba(255,209,102,.18) 0,rgba(255,209,102,0) 24%),
+radial-gradient(circle at 86% 18%,rgba(171,215,251,.24) 0,rgba(171,215,251,0) 28%),
+linear-gradient(135deg,#F3F8E6 0,#FBF9EC 58%,#FFF9E8 100%)!important;
+color:var(--sun-ink)!important;
+justify-content:flex-start!important;
+padding-top:68px!important;
+}
+.home-screen::before{
+content:"中文课堂";
+right:40px;
+bottom:26px;
+font-size:92px;
+color:rgba(63,127,50,.055);
+}
+.home-title{
+color:var(--sun-green)!important;
+font-size:60px!important;
+text-shadow:none!important;
+}
+.home-title::after{color:var(--sun-orange)!important}
+.brand-lockup{
+position:relative;
+display:inline-flex;
+align-items:flex-start;
+justify-content:center;
+margin-bottom:8px;
+}
+.brand-lockup .home-title{margin-bottom:0!important}
+.home-lesson{color:var(--sun-muted)!important;font-size:22px!important;margin-bottom:36px!important}
+.home-cards{max-width:860px!important}
+.home-card{
+background:rgba(255,253,248,.96)!important;
+border:1px solid rgba(220,232,192,.9)!important;
+box-shadow:var(--sun-shadow)!important;
+}
+.home-card:hover{transform:translateY(-5px)!important;box-shadow:0 24px 54px rgba(86,115,55,.18)!important}
+.home-card .emoji{font-size:48px!important}
+.home-card .label{color:var(--sun-ink)!important}
+.sunny-home{
+position:absolute;
+width:92px;
+height:160px;
+object-fit:contain;
+margin:0;
+right:calc(100% + 8px);
+top:-34px;
+transform:none;
+filter:drop-shadow(0 14px 18px rgba(86,115,55,.16));
+z-index:1;
+pointer-events:none;
+}
+
+.panel[style*="max-width:960px"]{
+max-width:1040px!important;
+padding:38px 42px!important;
+background:rgba(255,253,248,.97)!important;
+}
+.panel[style*="max-width:960px"]>div:first-child{
+display:grid!important;
+grid-template-columns:210px 1fr!important;
+gap:34px!important;
+align-items:center!important;
+}
+.panel[style*="max-width:960px"]>div:first-child>div:first-child{
+width:190px!important;
+height:190px!important;
+border-radius:28px!important;
+border:6px solid #fff!important;
+box-shadow:0 16px 34px rgba(86,115,55,.14)!important;
+background:linear-gradient(135deg,#F5FAE5,#FFF5D9)!important;
+}
+.panel[style*="max-width:960px"]>div:first-child>div:nth-child(2)>div:nth-child(1){
+font-size:34px!important;
+background:#F0F8D9!important;
+color:var(--sun-green)!important;
+padding:8px 18px!important;
+}
+.panel[style*="max-width:960px"]>div:first-child>div:nth-child(2)>div:nth-child(2){
+font-size:112px!important;
+letter-spacing:1px!important;
+line-height:.96!important;
+color:var(--sun-ink)!important;
+}
+.panel[style*="max-width:960px"]>div:first-child>div:nth-child(2)>div:nth-child(3){
+font-size:24px!important;
+color:var(--sun-muted)!important;
+}
+.panel[style*="max-width:960px"] button{
+background:var(--sun-green)!important;
+color:#fff!important;
+box-shadow:0 12px 24px rgba(63,127,50,.18)!important;
+}
+.panel[style*="max-width:960px"]::after{
+opacity:.88;
+width:76px;
+height:112px;
+right:24px;
+top:24px;
+bottom:auto;
+}
+.panel[style*="max-width:960px"] [style*="常用短语"]+div>div{
+background:#F7FBEF!important;
+border-color:#DDEDBA!important;
+}
+
+.panel[style*="max-width:800px"],.panel[style*="max-width:860px"]{
+max-width:940px!important;
+}
+.panel[style*="max-width:800px"] [style*="border-left"],.panel[style*="max-width:860px"] [style*="border-left"]{
+border-left-color:var(--sun-green)!important;
+box-shadow:0 8px 18px rgba(86,115,55,.07)!important;
+}
+.panel[style*="max-width:800px"] [style*="font-size:24px"],.panel[style*="max-width:860px"] [style*="font-size:24px"]{
+font-size:30px!important;
+}
+@media(max-width:980px){
+.panel[style*="max-width:960px"]>div:first-child{grid-template-columns:1fr!important;text-align:center}
+.panel[style*="max-width:960px"]>div:first-child>div:first-child{margin:auto}
+.home-title{font-size:42px!important}
+.brand-lockup{padding-top:86px}
+.sunny-home{right:auto;left:50%;top:0;transform:translateX(-50%);width:88px;height:126px;margin:0}
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+var V=window.LESSON_DATA.vocabulary||[];
+var G=window.LESSON_DATA.grammar||[];
+var T=window.LESSON_DATA.texts||[];
+var Q=window.LESSON_DATA.classProQuestions||{};
+var MT=window.LESSON_DATA.meta||{};
+var URL_LESSON=new URLSearchParams(location.search).get("lesson");
+if(URL_LESSON&&MT.lessonKey!==URL_LESSON){document.getElementById("app").innerHTML='<div style="max-width:720px;margin:80px auto;padding:28px;border:2px solid #f59e0b;border-radius:16px;background:#fff7ed;font:16px sans-serif;line-height:1.8"><h2>课程上下文错误</h2><p>请求课程：'+URL_LESSON+'</p><p>实际加载：'+(MT.lessonKey||"未知")+'</p><p>页面已停止，未进入课堂。请返回教师主页重新选择课程。</p></div>';throw new Error("Lesson context mismatch: "+URL_LESSON+" != "+MT.lessonKey)}
+var RM=(window.ClassProContext&&ClassProContext.read().room)||"8888";
+function sh(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function es(s){return String(s==null?"":s).replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function py(s){var m={"我":"wǒ","你":"nǐ","他":"tā","她":"tā","是":"shì","不是":"bú shì","不":"bù","也":"yě","很":"hěn","学生":"xuéshēng","老师":"lǎoshī","同学":"tóngxué","叫":"jiào","认识":"rènshi","认识你":"rènshi nǐ","高兴":"gāoxìng","很高兴":"hěn gāoxìng","对不起":"duìbuqǐ","没关系":"méi guānxi","你好":"nǐ hǎo","再见":"zàijiàn","谢谢":"xièxie","安妮":"Ānnī","李文":"Lǐ Wén","白家月":"Bái Jiāyuè"};return m[String(s||"")]||""}
+function pys(s){var t=String(s||"");var map={"\u4e0d\u662f":"b\u00fa sh\u00ec","\u5f88":"h\u011bn","\u9ad8\u5174":"g\u0101ox\u00ecng","\u8ba4\u8bc6":"r\u00e8nshi","\u89c1\u5230":"ji\u00e0n d\u00e0o","\u4f60":"n\u01d0","\u6211":"w\u01d2","\u4ed6":"t\u0101","\u5979":"t\u0101","\u5b66\u751f":"xu\u00e9sh\u0113ng","\u8001\u5e08":"l\u01ceosh\u012b","\u662f":"sh\u00ec","\u4e5f":"y\u011b","\u4e0d":"b\u00f9","\u5bf9\u4e0d\u8d77":"du\u00ecbuq\u01d0","\u6ca1\u5173\u7cfb":"m\u00e9i gu\u0101nxi","\u8c22\u8c22":"xi\u00e8xie","\u53eb":"ji\u00e0o","\u5b89\u59ae":"\u0100nn\u012b","\u767d\u5bb6\u6708":"B\u00e1i Ji\u0101yu\u00e8","\u674e\u6587":"L\u01d0 W\u00e9n"};for(var k in map)t=t.split(k).join(map[k]);return t.replace(/[___??,.!???:?;]/g," ").replace(/\s+/g," ").trim()}
+function rawStudentUrl(){return new URL("student.html?lesson="+encodeURIComponent(MT.lessonKey||URL_LESSON||"HSK1-L01")+"&room="+encodeURIComponent(RM),location.href).href}
+function studentUrl(){return encodeURIComponent(rawStudentUrl())}
+var ap={
+mt:"home",st:"",tmode:0,pyzStep:0,tvOpen:false,timerOn:false,lw:false,sl:0,sg:0,gr:false,ti:0,tl:0,
+v1i:0,v1a:false,v1p:-1,v4i:0,v4a:false,v4p:-1,v5i:0,v5a:false,v5p:-1,ttqi:0,ttqa:false,ttqp:-1,g1i:0,g1a:[],g1s:[],g1sa:false,v7i:0,v7si:0,v7a:false,v7p:-1,v8i:0,v8qi:0,v8L:-1,v8R:-1,v8m:{},w1i:0,w1a:false,w1p:-1,w2i:0,w2a:false,w2p:-1,
+pkp:"setup",pks:[],pkt:[],pkqi:0,pksa:false,pka:{},pkat:[],pktc:4,pkw:null,pkws:false,
+sc:{},la:[],qr:false,qrp:false,qrx:20,qry:200,
+cs:"disconnected",oc:0,td:30,tr:30,trun:false,tint:null,
+qp:"idle",qt:30,qtm:60,qsub:{},qtint:null,mq:null,as:[],ps:"",pint:null,_soShow:false,
+init(){this.as=(MT.characters||[]).filter(function(c){return c.role==="student"}).map(function(c){return c.name});this.pkat=[].concat(this.as);this._mq();this._r()},
+_r(){document.getElementById("app").innerHTML=this._rm()},
+stb(t,s){this.mt=t;this.st=s||"";this._r()},
+_rm(){var h='<div class="cp-sidebar"><div class="cp-logo" onclick="ap.stb(\'home\')">C</div><button class="sb-btn'+(this.mt==="teach"?" active":"")+'" onclick="ap.stb(\'teach\',\'tv\')">讲</button><button class="sb-btn'+(this.mt==="practice"?" active":"")+'" onclick="ap.stb(\'practice\',\'v4\')">练</button><button class="sb-btn'+(this.mt==="battle"?" active":"")+'" onclick="ap.stb(\'battle\',\'pk\')">赛</button><div class="sb-spacer"></div><div class="sb-bottom" onclick="ap.scs=!ap.scs;ap._r()">榜</div><div class="sb-bottom" onclick="ap.lw=!ap.lw;ap._r()">墙</div><div class="sb-bottom" style="position:relative" onclick="ap.qr=!ap.qr;ap._r()">'+(this.cs==="connected"?'<div class="sb-dot"></div>':'')+'QR</div></div>';if(this.mt==="home")h+=this._hm();else h+=this._in();h+=this._qr()+this._tr()+this._ss()+(this._soShow?this._so():"")+this._pm();return h},
+_hm(){return '<div class="cp-body"><div class="home-screen"><div class="brand-lockup"><img class="sunny-home" src="../../references/UI/parrot.png" alt="小太阳"><div class="home-title">Chinese ClassPro</div></div><div class="home-lesson">'+es(MT.level||"")+" &middot; "+es(MT.title||"")+'</div><div class="home-cards"><div class="home-card teach" onclick="ap.stb(\'teach\',\'tv\')"><div class="emoji">📖</div><div class="label">讲授</div><div class="desc">生词 · 语法 · 课文</div></div><div class="home-card practice" onclick="ap.stb(\'practice\',\'v4\')"><div class="emoji">✍️</div><div class="label">练习</div><div class="desc">完成句子 · 判断 · 排序</div></div><div class="home-card battle" onclick="ap.stb(\'battle\',\'pk\')"><div class="emoji">🏆</div><div class="label">竞赛</div><div class="desc">PK对战 · 实时积分</div></div></div></div></div>'},
+_in(){var h='<div class="cp-body"><div class="header"><h1 onclick="ap.stb(\'home\')">Chinese ClassPro+ <span>'+es(MT.level||"")+" "+es(MT.lessonId||"")+" &middot; "+es(MT.title||"")+'</span></h1><div class="header-right"><div style="display:flex;align-items:center;gap:4px;font-size:12px;color:#aaa"><div style="width:6px;height:6px;border-radius:50%;background:'+(this.cs==="connected"?"var(--green)":"#ccc")+'"></div>'+(this.cs==="connected"?(this.oc||0)+" online":"&#31163;&#32447;&#28436;&#31034;")+'</div><button title="学生扫码进入" onclick="ap.qr=true;ap._r()" style="height:34px;border-radius:8px;border:0.5px solid var(--line);font-size:13px;font-weight:800;cursor:pointer;background:#edf6d9;color:#3f7f32;padding:0 12px">扫码入课</button><button title="打开三阶段数据面板" onclick="window.open(\'../teacher-dashboard/unified.html\',\'_blank\')" style="height:34px;border-radius:8px;border:0.5px solid var(--line);font-size:13px;font-weight:800;cursor:pointer;background:#edf3ff;color:#2563eb;padding:0 12px">数据面板</button><button title="&#38543;&#26426;&#28857;&#21517;" onclick="ap.psm=!ap.psm;ap._r()" style="width:34px;height:34px;border-radius:8px;border:0.5px solid var(--line);font-size:15px;cursor:pointer;background:#fff;color:#666">&#127922;</button><button title="&#35745;&#26102;&#22120;" onclick="ap.timerOn=!ap.timerOn;ap._r()" style="width:34px;height:34px;border-radius:8px;border:0.5px solid var(--line);font-size:15px;cursor:pointer;background:#fff;color:#666">&#9201;</button></div></div>'+this._snav()+this._qw()+'<div class="main-content"><div class="panel-area">'+this._cnt()+'</div>'+this._lw()+'</div></div>';return h},
+_snav(){var m=this.mt,s=this.st;if(m==="teach")return'<div class="sub-nav"><button class="sub-btn'+(s==="tv"?" active":"")+'" onclick="ap.st=\'tv\';ap.tvOpen=false;ap._r()">&#35789;&#27719;<br><small>Vocabulary</small></button><button class="sub-btn'+(s==="pyz"?" active":"")+'" onclick="ap.st=\'pyz\';ap.pyzStep=0;ap._r()">&#25340;&#38899;<br><small>Pinyin</small></button><button class="sub-btn'+(s==="tg"?" active":"")+'" onclick="ap.st=\'tg\';ap.sg=0;ap.sl=0;ap.gr=false;ap._r()">&#35821;&#27861;<br><small>Grammar</small></button><button class="sub-btn'+(s==="tt"||s==="ttq"?" active":"")+'" onclick="ap.st=\'tt\';ap.ti=0;ap.tl=0;ap.tmode=0;ap._r()">&#35838;&#25991;<br><small>Text</small></button></div>';if(m==="practice")return'<div class="sub-nav"><span class="sub-group"><span class="sub-group-label">Practice</span><button class="sub-btn'+(s==="v1"?" active":"")+'" onclick="ap.st=\'v1\';ap.v1i=0;ap.v1a=false;ap.v1p=-1;ap._r()">&#22270;&#29255;&#29468;&#35789;<br><small>Picture</small></button><button class="sub-btn'+(s==="v5"?" active":"")+'" onclick="ap.st=\'v5\';ap.v5i=0;ap.v5a=false;ap.v5p=-1;ap._r()">&#36873;&#35789;&#22635;&#31354;<br><small>Fill</small></button><button class="sub-btn'+(s==="v7"?" active":"")+'" onclick="ap.st=\'v7\';ap.v7i=0;ap.v7si=0;ap.v7a=false;ap.v7p=-1;ap._r()">&#35789;&#21477;&#21305;&#37197;<br><small>Word Match</small></button><button class="sub-btn'+(s==="v8"?" active":"")+'" onclick="ap.st=\'v8\';ap.v8L=-1;ap.v8R=-1;ap.v8m={};ap._r()">&#35789;&#20102;&#20010;&#35789;<br><small>Matching Game</small></button><button class="sub-btn'+(s==="w1"?" active":"")+'" onclick="ap.st=\'w1\';ap.w1i=0;ap.w1a=false;ap.w1p=-1;ap._r()">&#27721;&#23383;&#21306;&#36776;<br><small>Characters</small></button><button class="sub-btn'+(s==="v4"?" active":"")+'" onclick="ap.st=\'v4\';ap.v4i=0;ap.v4a=false;ap.v4p=-1;ap._r()">&#21477;&#23376;&#36716;&#25442;<br><small>Sentence</small></button><button class="sub-btn'+(s==="g1"?" active":"")+'" onclick="ap.st=\'g1\';ap.g1i=0;ap.g1s=[];ap.g1a=[];ap.g1sa=false;ap._r()">&#36830;&#35789;&#25104;&#21477;<br><small>Ordering</small></button></span></div>';if(m==="battle")return'<div class="sub-nav"><button class="sub-btn'+(s==="pk"?" active":"")+'" onclick="ap.st=\'pk\';ap._r()">&#127942; PK<br><small>Competition</small></button></div>';return""},
+_qw(){if(!["v1","v4","v5","v7","v8","ttq","g1","w1","pk"].includes(this.st))return"";var p=this.qp;var h='<div class="qw-bar"><div class="qw-phase">';if(p==="idle")h+="&#128229; &#28857;&#20987;&#24320;&#22987;&#31572;&#39064;&#25512;&#36865;&#39064;&#30446;&#21040;&#23398;&#29983;&#25163;&#26426;";if(p==="answering")h+='&#128215; &#31572;&#39064;&#20013;... <span style="font-size:22px;font-weight:900;color:#dc2626;font-family:Courier New,monospace">'+this.qt+"s</span>";if(p==="published")h+="&#9989; &#24050;&#20844;&#24067;&#31572;&#26696;";h+='</div>';if(p==="answering"||p==="locked")h+='<div class="qw-progress">'+this._qsc()+'/'+this.as.length+' &#24050;&#20132;</div>';h+='<div style="display:flex;gap:6px;align-items:center">';if(p==="idle")h+='<select onchange="ap.qtm=parseInt(this.value);ap.qt=ap.qtm" style="padding:6px 10px;border-radius:8px;border:2px solid #93c5fd;background:#fff;font-weight:600;font-size:13px;color:#1e40af"><option value="30">30s</option><option value="45">45s</option><option value="60" selected>60s</option><option value="90">90s</option><option value="120">120s</option></select><button class="qw-btn start" onclick="ap.qws()">&#128215; &#24320;&#22987;&#31572;&#39064;</button>';if(p==="answering")h+='<button class="qw-btn lock" onclick="ap.qwl()">&#128274; &#38145;&#23450;</button>';if(p==="answering"||p==="locked")h+='<button class="qw-btn publish" onclick="ap.qwe()" style="background:linear-gradient(135deg,#ef4444,#dc2626)">&#9209; &#32467;&#26463;</button>';if(p==="published")h+='<button class="qw-btn reset" onclick="ap.qwr()">&#8594; &#19979;&#19968;&#39064;</button>';h+="</div></div>";return h},
+_cnt(){var m=this.mt,s=this.st;if(m==="teach"){if(s==="tv")return this._tv();if(s==="pyz")return this._pyz2();if(s==="tg")return this._tg();if(s==="tt")return this._tt();if(s==="ttq")return this._ttq()}if(m==="practice"){if(s==="v1")return this._v1();if(s==="v4")return this._v4();if(s==="v5")return this._v5();if(s==="v7")return this._v7();if(s==="v8")return this._v8();if(s==="g1")return this._g1();if(s==="w1")return this._w1()}if(m==="battle"){if(s==="pk")return this._pk()}return'<div class="panel" style="text-align:center;padding:50px"><p>&#35831;&#36873;&#25321;&#19968;&#20010;&#27169;&#22359;</p></div>'},
+_pyz2(){var st=this.pyzStep||0;var tabs=[['&#23548;&#20837;','Pinyin Intro'],['&#22768;&#27597;','Initials'],['&#38901;&#27597;','Finals'],['&#22768;&#35843;','Tones'],['&#25340;&#21512;','Blend'],['&#32451;&#20064;','Practice']];var h='<div class="panel" style="text-align:left;max-width:1080px;width:100%;overflow:hidden"><h3 style="color:var(--blue);margin:0 0 12px;text-align:center">&#25340;&#38899;&#23398;&#32451; <span style="font-size:15px;color:#888">Pinyin Lab</span></h3><div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:18px">';for(var i=0;i<tabs.length;i++)h+='<button class="grammar-tab'+(st===i?' active':'')+'" onclick="ap.pyzStep='+i+';ap._r()"><b>'+tabs[i][0]+'</b><br><small>'+tabs[i][1]+'</small></button>';h+='</div>';var card='background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 10px 28px rgba(80,105,55,.06)';var chip='display:inline-flex;align-items:center;justify-content:center;min-width:52px;padding:9px 12px;border:1px solid #dfeac8;border-radius:14px;background:#fff;color:#14312b;font-weight:900;margin:4px;font-size:22px';if(st===0){h+="<div style='background:#edf3ff;border-radius:14px;padding:14px;margin-bottom:14px;line-height:1.7'><b>Pinyin / 拼音</b><br>Pinyin is a sound guide made from initials, finals and tones. First learn where the sound is made, then blend the parts and read the tone.</div>";var warm=[['K&#466;ng z&#464;','&#23380;&#23376;','Confucius'],['g&#333;ngfu','&#21151;&#22827;','Kung Fu'],['l&#236;zh&#299;','&#33620;&#26525;','Litchi'],['d&#242;ufu','&#35910;&#33104;','Tofu'],['k&#257;f&#275;i','&#21654;&#21857;','Coffee'],['k&#283;l&#232;','&#21487;&#20048;','Coke'],['p&#299;s&#224;','&#25259;&#33832;','Pizza'],['di&#462;nx&#299;n','&#28857;&#24515;','Dim sum']];h+='<div style="'+card+'"><div style="font-size:13px;color:#74806d;font-weight:800">Icebreaker</div><h2 style="margin:8px 0 14px;color:var(--text)">You already know some Chinese.</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px">';for(var i=0;i<warm.length;i++)h+='<div style="background:#f8faf3;border:1px solid #dfeac8;border-radius:14px;padding:12px;text-align:center"><div style="font-size:14px;color:#6f7e68">'+warm[i][0]+'</div><div class="hanzi-font" style="font-size:30px;font-weight:900">'+warm[i][1]+'</div><div style="font-size:12px;color:#8d96a3">'+warm[i][2]+'</div></div>';h+='</div><div style="margin-top:16px;background:#edf3ff;border-radius:14px;padding:14px;text-align:center"><b>Goal:</b> connect sound, tone, and character before reading HSK1 words.</div></div>'}else if(st===1){var ini=['b','p','m','f','d','t','n','l','g','k','h','j','q','x','zh','ch','sh','r','z','c','s'];h+='<div style="'+card+'"><h2 style="margin-top:0">1. &#22768;&#27597; Initials</h2><div style="text-align:center;margin:10px 0 16px">';for(var i=0;i<ini.length;i++)h+='<span style="'+chip+'">'+ini[i]+'</span>';h+='</div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><div class="formula-box">j q x<br><small>flat tongue, mouth stretched</small></div><div class="formula-box">z c s<br><small>tip near lower teeth</small></div><div class="formula-box">zh ch sh r<br><small>tongue curls back</small></div></div><div style="margin-top:14px;text-align:center"><img src="images/pinyin_tongue_positions.svg" alt="Tongue positions for initials" style="width:100%;max-width:760px;border-radius:16px;border:1px solid var(--line)"></div></div>'}else if(st===2){var groups=[['Simple finals','a o e i u &#252;'],['Compound finals','ai ei ao ou'],['i finals','ia iao ie iu ian in iang ing iong'],['u finals','ua uo uai ui uan un uang ueng'],['&#252; finals','&#252;e &#252;an &#252;n'],['Nasal finals','an en ang eng ong'],['Special final','er']];h+='<div style="'+card+'"><h2 style="margin-top:0">2. &#38901;&#27597; Finals <span style="font-size:14px;color:#74806d">36 finals</span></h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px">';for(var i=0;i<groups.length;i++)h+='<div style="background:#edf3ff;border-radius:16px;padding:14px;text-align:center;min-height:92px"><div style="font-size:25px;font-weight:900;color:#2b62bd;line-height:1.55">'+groups[i][1]+'</div><div style="font-size:13px;color:#5b6f9a;font-weight:800">'+groups[i][0]+'</div></div>';h+='</div><div style="margin-top:16px;background:#f8faf3;border-radius:14px;padding:14px;line-height:1.7"><b>Attention:</b> uei is written as <b>ui</b> after an initial, for example <b>du&#236;</b>; iou is written as <b>iu</b>, for example <b>li&#249;</b>; uen is written as <b>un</b>, for example <b>l&#249;n</b>. The full list is shown above; choose only a few to drill in HSK1-L02.</div></div>'}else if(st===3){h+='<div style="'+card+'"><h2 style="margin-top:0">3. &#22768;&#35843; Tones</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;text-align:center"><div class="formula-box">m&#257;<br><span class="hanzi-font">&#22920;</span><br><small>1st tone</small></div><div class="formula-box">m&#225;<br><span class="hanzi-font">&#40635;</span><br><small>2nd tone</small></div><div class="formula-box">m&#462;<br><span class="hanzi-font">&#39532;</span><br><small>3rd tone</small></div><div class="formula-box">m&#224;<br><span class="hanzi-font">&#39554;</span><br><small>4th tone</small></div><div class="formula-box">ma<br><span class="hanzi-font">&#21527;</span><br><small>neutral</small></div></div><div style="margin-top:16px;background:#f8faf3;border-radius:14px;padding:14px"><b>Contrast:</b> shu&#236; ji&#224;o = sleep; shu&#464; ji&#462;o = dumplings. Neutral tone: m&#257;ma, y&#233;ye, n&#462;inai, b&#224;ba.</div></div>'}else if(st===4){h+='<div style="'+card+'"><h2 style="margin-top:0">4. &#25340;&#21512; Blend</h2><div style="background:#f8faf3;border-radius:18px;padding:22px;text-align:center;margin-bottom:14px"><div style="font-size:44px;font-weight:900">h + ao + &#711; = h&#462;o</div><div class="hanzi-font" style="font-size:74px;font-weight:900;color:var(--blue)">&#22909;</div></div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;text-align:center"><div class="formula-box">b + u + &#96;<br><b>b&#249;</b></div><div class="formula-box">sh + i + &#96;<br><b>sh&#236;</b></div><div class="formula-box">h + en + &#711;<br><b>h&#283;n</b></div><div class="formula-box">r&#232;n + shi<br><b>r&#232;nshi</b></div><div class="formula-box">du&#236; + bu + q&#464;<br><b>du&#236;buq&#464;</b></div></div></div>'}else{h+='<div style="'+card+'"><h2 style="margin-top:0">5. &#32451;&#20064; Practice</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px"><div style="background:#f8faf3;border-radius:16px;padding:16px;min-height:130px"><b>A. Listen and choose: initial</b><div style="margin-top:10px"><span style="'+chip+'">b</span><span style="'+chip+'">p</span><span style="'+chip+'">m</span><span style="'+chip+'">f</span></div></div><div style="background:#f8faf3;border-radius:16px;padding:16px;min-height:130px"><b>B. Listen and choose: final</b><div style="margin-top:10px"><span style="'+chip+'">i</span><span style="'+chip+'">u</span><span style="'+chip+'">&#252;</span><span style="'+chip+'">ai</span></div></div><div style="background:#f8faf3;border-radius:16px;padding:16px;min-height:130px"><b>C. Tone check</b><div style="margin-top:10px"><span style="'+chip+'">h&#275;n</span><span style="'+chip+'">h&#283;n</span><span style="'+chip+'">y&#283;</span><span style="'+chip+'">y&#232;</span></div></div><div style="background:#f8faf3;border-radius:16px;padding:16px;min-height:130px"><b>D. Read lesson words</b><div style="margin-top:10px"><span style="'+chip+'">b&#249;</span><span style="'+chip+'">sh&#236;</span><span style="'+chip+'">r&#232;nshi</span></div></div></div><div style="margin-top:16px;background:#edf3ff;border-radius:14px;padding:14px"><b>Class use:</b> teacher reads once, students point or answer aloud. Keep it quick and low-pressure.</div></div>'}h+='<div class="teach-nav"><button class="prev" onclick="ap.pyzStep=Math.max(0,ap.pyzStep-1);ap._r()"'+(st===0?' disabled':'')+'>&larr; Previous</button><span class="step-counter">'+(st+1)+' / 6</span><button class="next" onclick="ap.pyzStep=Math.min(5,ap.pyzStep+1);ap._r()"'+(st>=5?' disabled':'')+'>Next &rarr;</button></div></div>';return h},
+_pyz(){var st=this.pyzStep||0;var tabs=[['&#23548;&#20837;','Warm-up'],['&#22768;&#27597;','Initials'],['&#38893;&#27597;','Finals'],['&#22768;&#35843;','Tones'],['&#25340;&#21512;','Blend'],['&#32451;&#20064;','Practice']];var h='<div class="panel" style="text-align:left;max-width:1020px;width:100%"><h3 style="color:var(--blue);margin-top:0;text-align:center">&#25340;&#38899;&#23398;&#32451; <span style="font-size:15px;color:#888">Pinyin Lab</span></h3><div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:18px">';for(var i=0;i<tabs.length;i++){h+='<button class="grammar-tab'+(st===i?' active':'')+'" onclick="ap.pyzStep='+i+';ap._r()"><b>'+tabs[i][0]+'</b><br><small>'+tabs[i][1]+'</small></button>'}h+='</div>';if(st===0){h+='<div style="display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:stretch"><div style="background:#f8faf3;border:1px solid #dfeac8;border-radius:18px;padding:24px"><div style="font-size:13px;color:#74806d;font-weight:800">Icebreaker</div><h2 style="margin:8px 0 12px;color:var(--text)">You already know some Chinese.</h2><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px">';var words=[['K&#466;ng z&#464;','&#23380;&#23376;','Confucius'],['g&#333;ngfu','&#21151;&#22827;','Kung Fu'],['d&#242;ufu','&#35910;&#33104;','Tofu'],['k&#257;f&#275;i','&#21654;&#21857;','Coffee'],['k&#283; l&#232;','&#21487;&#20048;','Coke'],['di&#462;nx&#299;n','&#28857;&#24515;','Dim sum']];for(var i=0;i<words.length;i++){h+='<div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center"><div style="font-size:14px;color:#6f7e68">'+words[i][0]+'</div><div class="hanzi-font" style="font-size:30px;font-weight:900">'+words[i][1]+'</div><div style="font-size:12px;color:#8d96a3">'+words[i][2]+'</div></div>'}h+='</div></div><div style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;text-align:center;display:flex;flex-direction:column;justify-content:center"><div style="font-size:72px;font-weight:900;color:var(--blue)">p&#299;n y&#299;n</div><div style="font-size:28px;color:#74806d">character + pronunciation</div><div class="hanzi-font" style="font-size:70px;font-weight:900;margin-top:14px">&#27721;&#35821;</div></div></div>'}else if(st===1){h+='<div style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px"><h2 style="margin-top:0">1. &#22768;&#27597; Initials</h2><div style="font-size:36px;font-weight:900;line-height:1.8;text-align:center">b p m f &nbsp; d t n l &nbsp; g k h<br>j q x &nbsp; zh ch sh r &nbsp; z c s</div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:16px"><div class="formula-box">j q x<br><small>Tongue flat, mouth stretched</small></div><div class="formula-box">z c s<br><small>Tip touches lower teeth</small></div><div class="formula-box">zh ch sh r<br><small>Roll tongue close to hard palate</small></div></div><div style="margin-top:16px"><b>Practice:</b> choose the initial according to what you hear: <span class="chunk-btn">b / p</span> <span class="chunk-btn">m / f</span> <span class="chunk-btn">g / k / h</span> <span class="chunk-btn">j / q / x</span></div></div>'}else if(st===2){h+='<div style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px"><h2 style="margin-top:0">2. &#38893;&#27597; Finals</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px"><div class="formula-box">a o e i u &#252; er<br><small>Simple finals</small></div><div class="formula-box">ai ei ao ou<br><small>1st sound longer</small></div><div class="formula-box">ia ua uo ie &#252;e<br><small>2nd sound longer</small></div><div class="formula-box">uai uei iao iou<br><small>middle sound strongest</small></div></div><div style="margin-top:16px;background:#f8faf3;border-radius:14px;padding:14px"><b>Attention:</b> uei is written as ui after an initial, for example <b>du&#236;</b>. Practice: <span class="chunk-btn">i / u / &#252;</span> <span class="chunk-btn">ia / ua</span> <span class="chunk-btn">ie / &#252;e</span></div></div>'}else if(st===3){h+='<div style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px"><h2 style="margin-top:0">3. &#22768;&#35843; Tones</h2><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:center"><div class="formula-box">m&#257;<br><span class="hanzi-font">&#22920;</span><br><small>high level</small></div><div class="formula-box">m&#225;<br><span class="hanzi-font">&#40635;</span><br><small>rising</small></div><div class="formula-box">m&#462;<br><span class="hanzi-font">&#39532;</span><br><small>dipping</small></div><div class="formula-box">m&#224;<br><span class="hanzi-font">&#39554;</span><br><small>falling</small></div></div><div style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><div style="background:#f8faf3;border-radius:14px;padding:14px"><b>Contrast:</b><br>shu&#236; ji&#224;o = sleep<br>shu&#464; ji&#462;o = dumplings</div><div style="background:#f8faf3;border-radius:14px;padding:14px"><b>Neutral tone:</b><br>m&#257;ma, y&#233;ye, n&#462;inai, b&#224;ba</div></div></div>'}else if(st===4){h+='<div style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px"><h2 style="margin-top:0">4. &#25340;&#21512; Blend</h2><div style="text-align:center;background:#f8faf3;border-radius:18px;padding:24px;margin-bottom:16px"><div style="font-size:44px;font-weight:900">h + ao + &#711; = h&#462;o</div><div class="hanzi-font" style="font-size:72px;font-weight:900;color:var(--blue)">&#22909;</div></div><div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center"><span class="chunk-btn">b + u + &#96; = b&#249;</span><span class="chunk-btn">sh + i + &#96; = sh&#236;</span><span class="chunk-btn">h + en + &#711; = h&#283;n</span><span class="chunk-btn">y + e + &#711; = y&#283;</span><span class="chunk-btn">r&#232;n + shi = r&#232;nshi</span><span class="chunk-btn">du&#236; + bu + q&#464; = du&#236;buq&#464;</span></div></div>'}else{h+='<div style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px"><h2 style="margin-top:0">5. &#32451;&#20064; Practice</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px"><div style="background:#f8faf3;border-radius:14px;padding:16px"><b>A. Listen: initial</b><br><span class="chunk-btn">b / p</span> <span class="chunk-btn">m / f</span> <span class="chunk-btn">d / t</span></div><div style="background:#f8faf3;border-radius:14px;padding:16px"><b>B. Listen: final</b><br><span class="chunk-btn">i / u / &#252;</span> <span class="chunk-btn">ai / uai</span></div><div style="background:#f8faf3;border-radius:14px;padding:16px"><b>C. Tone check</b><br><span class="chunk-btn">h&#275;n / h&#283;n</span> <span class="chunk-btn">y&#283; / y&#232;</span></div><div style="background:#f8faf3;border-radius:14px;padding:16px"><b>D. Lesson words</b><br><span class="chunk-btn">b&#249;</span> <span class="chunk-btn">sh&#236;</span> <span class="chunk-btn">du&#236;buq&#464;</span> <span class="chunk-btn">r&#232;nshi</span></div></div></div>'}h+='<div class="teach-nav"><button class="prev" onclick="ap.pyzStep=Math.max(0,ap.pyzStep-1);ap._r()"'+(st===0?' disabled':'')+'>&larr; Previous</button><span class="step-counter">'+(st+1)+' / 6</span><button class="next" onclick="ap.pyzStep=Math.min(5,ap.pyzStep+1);ap._r()"'+(st>=5?' disabled':'')+'>Next &rarr;</button></div></div>';return h},
+
+_tv(){var v=V,w=v[this.sl]||v[0];var im={v01:'images/v01_bu.jpg',v02:'images/v02_shi.jpg',v03:'images/v03_duibuqi.jpg',v04:'images/v04_meiguanxi.jpg',v05:'images/v05_meishi.jpg',v06:'images/v06_hen.jpg',v07:'images/v07_gaoxing.jpg',v08:'images/v08_renshi.jpg'};var h='<div class="panel" style="text-align:left;padding:28px;max-width:1040px;width:100%"><div style="display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:16px;flex-wrap:wrap"><div><h2 style="margin:0;color:var(--blue);font-size:22px">&#35789;&#27719;&#35762;&#25480; <span style="font-size:14px;color:#888">Vocabulary Cards</span></h2><div style="font-size:13px;color:#74806d;margin-top:4px">&#20808;&#23637;&#31034;&#20840;&#37096;&#29983;&#35789;&#21345;&#65292;&#28857;&#20987;&#26576;&#20010;&#29983;&#35789;&#21518;&#20877;&#36827;&#20837;&#35762;&#35299;&#12290;</div></div>'+(this.tvOpen?'<button class="grammar-tab" onclick="ap.tvOpen=false;ap._r()">&#22238;&#21040;&#29983;&#35789;&#24635;&#35272;</button>':'')+'</div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:12px;margin-bottom:'+(this.tvOpen?'20px':'0')+'">';for(var i=0;i<v.length;i++){var x=v[i],act=this.tvOpen&&i===this.sl;h+='<button onclick="ap.sl='+i+';ap.tvOpen=true;ap._r()" style="border:'+(act?'2px solid var(--primary)':'1px solid var(--line)')+';background:'+(act?'#fff6f1':'#fff')+';border-radius:16px;padding:14px 8px;cursor:pointer;box-shadow:'+(act?'0 12px 24px rgba(232,86,58,.12)':'0 6px 14px rgba(21,23,37,.04)')+'"><div class="wc-word" style="font-size:29px;font-weight:900;color:var(--text);line-height:1.15">'+es(x.hanzi)+'</div><div style="font-size:13px;color:#6f7e68;margin-top:5px;font-weight:800">'+es(x.pinyin)+'</div><div style="font-size:11px;color:#8d96a3;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+es(x.english)+'</div></button>'}h+='</div>';if(!this.tvOpen){h+='<div style="margin-top:18px;text-align:center;color:#9aa394;font-size:13px">Tip: &#28857;&#19968;&#24352;&#21345;&#29255;&#24320;&#22987;&#35762;&#35299;&#65292;&#35838;&#22530;&#19978;&#21487;&#25353;&#20320;&#30340;&#33410;&#22863;&#33258;&#30001;&#25442;&#39034;&#24207;&#12290;</div></div>';return h}if(!w)return h+'</div>';var img=w.image||im[w.id];var media=img?'<img src="'+es(img)+'" alt="'+es(w.hanzi)+'" style="width:100%;height:100%;object-fit:cover">':'<span class="vocab-hanzi">'+es(w.hanzi)+'</span>';h+='<div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px"><div style="width:168px;height:168px;border-radius:14px;overflow:hidden;flex-shrink:0;background:linear-gradient(135deg,#f0efeb,#e8e4df);border:0.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:64px;color:#aaa">'+media+'</div><div style="flex:1;min-width:240px"><div style="font-size:20px;color:#6f7e68;margin-bottom:4px;font-weight:800">'+es(w.pinyin)+'</div><div class="vocab-hanzi" style="font-size:58px;font-weight:900;color:var(--text);line-height:1.1;margin-bottom:6px">'+es(w.hanzi)+'</div><div style="font-size:17px;color:#6b7280;margin-bottom:4px">'+es(w.english)+'</div><div style="font-size:14px;color:#a8a8a8;margin-bottom:10px">'+es(w.pos||'')+'</div><button onclick="ap._tts(\''+es(w.hanzi).replace(/'/g,"\\'")+'\')" style="padding:7px 18px;border-radius:20px;border:none;background:#FFF0EE;color:var(--primary);font-size:14px;cursor:pointer;font-weight:700">&#128266; &#26391;&#35835;</button></div></div>';if(w.phrases&&w.phrases.length>0){h+='<div style="margin-top:20px"><div style="font-size:14px;font-weight:800;color:var(--blue);margin-bottom:10px">&#128221; &#26412;&#35838;&#30701;&#35821;</div><div style="display:flex;gap:8px;flex-wrap:wrap">';for(var j=0;j<w.phrases.length;j++){var p=w.phrases[j];h+='<div style="background:#EDF3FF;border-radius:10px;padding:10px 14px;min-width:160px;flex:1;border:1px solid #d0e1f9"><div class="vocab-hanzi" style="font-size:22px;font-weight:900;color:var(--text)">'+es(p.hanzi)+'</div><div style="font-size:15px;color:#6f7e68;margin-top:2px">'+es(p.pinyin)+'</div><div style="font-size:12px;color:#8d96a3;margin-top:2px">'+es(p.english)+'</div></div>'}h+='</div></div>'}h+='</div>';return h},
+_tg(){var gp=G,idx=this.sg,cur=gp[idx];if(!cur)return'<div class="panel"><p>&#26242;&#26080;&#35821;&#27861;</p></div>';var h='<div class="panel" style="text-align:left;max-width:860px;width:100%"><h2 style="color:var(--blue);margin-top:0;font-size:22px">&#35821;&#27861; &mdash; '+es(cur.title)+'</h2><div style="display:flex;gap:6px;justify-content:center;margin-bottom:15px;flex-wrap:wrap">';for(var i=0;i<gp.length;i++){h+='<button class="grammar-tab'+(this.sg===i?' active':'')+'" onclick="ap.sg='+i+';ap.sl=0;ap.gr=false;ap._r()">'+es(gp[i].title)+'</button>'}h+='</div>';if(cur.formula){h+='<div style="background:#EDF3FF;border-radius:14px;padding:18px 22px;margin:12px 0;text-align:center"><div class="text-hanzi" style="font-size:22px;font-weight:bold;color:#2D5DB8">'+es(cur.formula.pattern||'')+'</div><div style="font-size:15px;color:#888;margin-top:4px;font-style:italic">'+es(cur.formula.patternEn||'')+'</div></div>'}if(this.sl===0){h+='<div style="background:#f8faff;border:2px solid var(--blue);border-radius:16px;padding:25px;margin-bottom:15px"><div style="font-size:15px;color:#555;line-height:1.8;margin-bottom:10px">'+es(cur.formula&&cur.formula.note?cur.formula.note:'')+'</div><div style="font-size:14px;color:#666;line-height:1.65;margin-top:8px"><b>English:</b> '+es(cur.formula&&cur.formula.noteEn?cur.formula.noteEn:cur.titleEn||'')+'</div><div style="font-size:14px;color:#666;line-height:1.65;margin-top:8px"><b>???????:</b> '+es(cur.formula&&cur.formula.noteRu?cur.formula.noteRu:'')+'</div><div class="teach-nav"><button class="next" onclick="ap.sl=1;ap._r()">&#26597;&#30475;&#20363;&#21477; &rarr;</button></div></div>'}if(this.sl>=1&&cur.examples){h+='<div style="margin-top:15px"><div style="font-size:15px;font-weight:800;color:var(--practice);margin-bottom:12px">&#20363;&#21477;</div>';for(var j=0;j<cur.examples.length;j++){var e=cur.examples[j];h+='<div style="background:#f9fafb;border-radius:12px;padding:14px 18px;margin-bottom:10px;border-left:4px solid var(--teach)"><div class="text-hanzi" style="font-size:24px;font-weight:700;color:var(--text);line-height:1.5">'+es(e.hanzi)+'</div><div style="font-size:17px;color:#888;margin-top:4px">'+es(e.pinyin||'')+'</div><div style="font-size:14px;color:#aaa;margin-top:2px;font-style:italic">'+es(e.english||'')+'</div><button onclick="ap._tts(\''+es(e.hanzi).replace(/'/g,"\\'")+'\')" style="margin-top:6px;padding:4px 14px;border-radius:14px;border:none;background:#FFF0EE;color:var(--primary);font-size:13px;cursor:pointer;font-weight:600">&#128266;</button></div>'}h+='<div class="teach-nav"><button class="prev" onclick="ap.sl=0;ap._r()">&larr; &#36820;&#22238;&#32467;&#26500;</button></div></div>'}h+='</div>';return h},
+_tt(){var tx=T,idx=this.ti,cur=tx[idx];if(!cur)return'<div class="panel"><p>&#26242;&#26080;&#35838;&#25991;</p></div>';var cm={};for(var i=0;i<(MT.characters||[]).length;i++){var c=MT.characters[i];cm[c.id]=c}var ml=['&#128266; &#25340;&#38899;','&#128214; &#27721;&#23383;+&#25340;&#38899;','&#128218; &#20013;&#33521;&#25340;&#38899;','&#127760; English'];var h='<div class="panel" style="text-align:left;max-width:800px;width:100%"><h2 style="color:var(--blue);margin-top:0;font-size:22px">&#128235; &#35838;&#25991; &mdash; '+es(cur.title)+'</h2><div style="display:flex;gap:6px;justify-content:center;margin-bottom:12px;flex-wrap:wrap">';for(var i=0;i<4;i++){h+='<button class="grammar-tab'+(this.st==="tt"&&this.tmode===i?" active":"")+'" onclick="ap.st=\'tt\';ap.tmode='+i+';ap._r()">'+ml[i]+'</button>'}h+='<button class="grammar-tab'+(this.st==="ttq"?" active":"")+'" onclick="ap.st=\'ttq\';ap.ttqi=0;ap.ttqa=false;ap.ttqp=-1;ap._r()">&#38382;&#31572;<br><small>Q&amp;A</small></button>';h+='</div><div style="display:flex;gap:6px;justify-content:center;margin-bottom:12px;flex-wrap:wrap">';for(var i=0;i<tx.length;i++){h+='<button class="grammar-tab'+(idx===i?" active":"")+'" onclick="ap.st=\'tt\';ap.ti='+i+';ap.tl=0;ap._r()" style="font-size:12px;padding:4px 10px">'+es(tx[i].title)+'</button>'}h+='</div><div style="background:#f0f7ff;border-radius:10px;padding:12px;margin-bottom:12px"><div style="font-size:13px;color:#888">&#128204; '+es(cur.scene||"")+'</div></div><div>';if(cur.lines){for(var i=0;i<cur.lines.length;i++){var l=cur.lines[i];var sp=cm[l.speaker];var sn=sp?sp.name:l.speaker;var act=(i===this.tl);h+='<div onclick="ap.tl='+i+';ap._r()" style="padding:14px;margin:8px 0;border-radius:12px;cursor:pointer;background:'+(act?'#EDF3FF':'#f9fafb')+';border-left:'+(act?'4px solid var(--blue)':'2px solid #e5e7eb')+'"><div style="font-size:13px;color:#888;margin-bottom:6px;font-weight:600">'+es(sn)+'</div>';if(this.tmode===0)h+='<div style="font-size:22px;font-weight:700;color:var(--blue);line-height:1.6">'+es(l.pinyin||"")+'</div>';else if(this.tmode===1)h+='<div class="text-hanzi" style="font-size:24px;font-weight:700;color:var(--text);line-height:1.5">'+es(l.hanzi)+'</div><div style="font-size:18px;color:#888;margin-top:4px">'+es(l.pinyin||"")+'</div>';else if(this.tmode===3)h+='<div style="font-size:22px;font-weight:700;color:var(--text);line-height:1.5">'+es(l.english||"")+'</div>';else h+='<div class="text-hanzi" style="font-size:24px;font-weight:700;color:var(--text);line-height:1.5">'+es(l.hanzi)+'</div><div style="font-size:18px;color:#888;margin-top:4px">'+es(l.pinyin||"")+'</div><div style="font-size:15px;color:#aaa;margin-top:4px;font-style:italic">'+es(l.english||"")+'</div>';h+='<button onclick="event.stopPropagation();ap._tts(\''+es(l.hanzi).replace(/'/g,"\\'")+'\')" style="margin-top:8px;padding:4px 14px;border-radius:14px;border:none;background:#FFF0EE;color:var(--primary);font-size:13px;cursor:pointer;font-weight:600">&#128266;</button></div>'}}else{h+='<div style="color:#aaa;text-align:center;padding:20px">Loading...</div>'}h+='</div><div class="teach-nav"><button class="prev" onclick="ap.ti=Math.max(0,ap.ti-1);ap.tl=0;ap._r()"'+(idx===0?' disabled':'')+'>&larr; &#19978;&#19968;&#31687;</button><span class="step-counter">'+(idx+1)+' / '+tx.length+'</span><button class="next" onclick="ap.ti=Math.min('+(tx.length-1)+',ap.ti+1);ap.tl=0;ap._r()"'+(idx>=tx.length-1?' disabled':'')+'>&#19979;&#19968;&#31687; &rarr;</button></div></div>';return h},
+
+_v4(){var qs=Q.v4_complete_sentence||[];var i=this.v4i;var c=qs[i];if(!c||!c.data)return'<div class="panel"><p>暂无题目</p></div>';var a=this.v4a,p=this.v4p,ci=c.data.correct_index;var h='<div class="panel" style="text-align:left"><h3 style="color:var(--practice);margin-top:0;text-align:center">完成句子</h3><div style="font-size:13px;color:#888;text-align:center;margin-bottom:10px">'+es(c.prompt_cn||"")+'</div><div style="text-align:center;margin:18px 0;padding:18px;background:#fffaf0;border:1px solid #fde68a;border-radius:14px"><div style="font-size:16px;color:#777;margin-bottom:6px">'+es(c.data.template_pinyin||"")+'</div><div style="font-size:24px;font-weight:700;color:var(--text)">'+es(c.data.template||"")+'</div></div><div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:15px 0">';for(var j=0;j<(c.data.options||[]).length;j++){var o=c.data.options[j];var opy=(c.data.options_pinyin||[])[j]||py(o);var iP=p===j;var st=a?(j===ci?"border-color:var(--green);background:#E8F6EE;color:var(--green)":iP?"border-color:var(--red);background:#fef2f2;color:var(--red)":"opacity:0.55"):"border-color:var(--practice);background:#fff;color:var(--text)";h+='<div onclick="'+(a?"":"ap.v4p="+j+";ap.v4a=true;ap._r()")+'" style="padding:10px 22px;border:2px solid #e5e7eb;border-radius:12px;font-size:18px;font-weight:bold;cursor:'+(a?"default":"pointer")+";"+st+'"><div style="font-size:12px;font-weight:600;color:#888;margin-bottom:3px">'+es(opy)+'</div><div>'+es(o)+"</div></div>"}h+="</div>";if(a){var ok=p===ci;h+='<div style="padding:12px;border-radius:10px;text-align:center;font-weight:bold;font-size:16px;background:'+(ok?"#E8F6EE":"#fef2f2")+";color:"+(ok?"var(--green)":"var(--red)")+'">'+(ok?"✅ 很好！":"❌ 正确答案："+es(c.correct_answer||c.data.options[ci]||""))+"</div>"}h+='<div class="teach-nav"><button class="prev" onclick="ap.v4i=Math.max(0,ap.v4i-1);ap.v4a=false;ap.v4p=-1;ap._r()"'+(i===0?" disabled":"")+'>&larr; 上一题</button><span class="step-counter">'+(i+1)+" / "+qs.length+'</span><button class="next" onclick="ap.v4i=Math.min('+(qs.length-1)+',ap.v4i+1);ap.v4a=false;ap.v4p=-1;ap._r()"'+(i>=qs.length-1?" disabled":"")+'>下一题 &rarr;</button></div></div>';return h},
+_ttq(){var qs=Q.tt_text_true_false||[];var i=this.ttqi;var c=qs[i];if(!c||!c.data)return'<div class="panel"><p>暂无题目</p></div>';var a=this.ttqa,p=this.ttqp,ans=!!c.data.answer;var h='<div class="panel" style="text-align:left"><h3 style="color:var(--blue);margin-top:0;text-align:center">课文判断</h3><div style="font-size:13px;color:#888;text-align:center;margin-bottom:4px">'+es(c.prompt_cn||"")+'</div><div style="font-size:12px;color:#999;text-align:center;margin-bottom:10px">'+es(c.prompt_en||"")+'</div><div style="text-align:center;line-height:1.6;margin:18px 0;padding:20px;background:#f0f7ff;border:1px solid #bfdbfe;border-radius:14px"><div style="font-size:15px;color:#777;margin-bottom:6px">'+es(c.data.statement_pinyin||"")+'</div><div style="font-size:24px;font-weight:700;color:var(--text)">'+es(c.data.statement||"")+'</div><div style="font-size:13px;color:#666;margin-top:4px">'+es(c.data.statement_en||"")+'</div></div><div style="display:flex;gap:14px;justify-content:center;margin:16px 0;flex-wrap:wrap">';var labs=[["对 / True",true],["不对 / False",false]];for(var j=0;j<labs.length;j++){var val=labs[j][1],iP=p===j;var st=a?(val===ans?"border-color:var(--green);background:#E8F6EE;color:var(--green)":iP?"border-color:var(--red);background:#fef2f2;color:var(--red)":"opacity:0.55"):"border-color:var(--blue);background:#fff;color:var(--blue)";h+='<div onclick="'+(a?"":"ap.ttqp="+j+";ap.ttqa=true;ap._r()")+'" style="min-width:150px;text-align:center;padding:14px 24px;border:2px solid #e5e7eb;border-radius:14px;font-size:18px;font-weight:bold;cursor:'+(a?"default":"pointer")+";"+st+'">'+labs[j][0]+"</div>"}h+="</div>";if(a){var ok=labs[p]&&labs[p][1]===ans;h+='<div style="padding:12px;border-radius:10px;text-align:center;font-weight:bold;font-size:16px;background:'+(ok?"#E8F6EE":"#fef2f2")+";color:"+(ok?"var(--green)":"var(--red)")+'">'+(ok?"✅ 判断正确！":"❌ 正确答案："+(ans?"对 / True":"不对 / False"))+"</div>"}h+='<div class="teach-nav"><button class="prev" onclick="ap.ttqi=Math.max(0,ap.ttqi-1);ap.ttqa=false;ap.ttqp=-1;ap._r()"'+(i===0?" disabled":"")+'>&larr; 上一题</button><span class="step-counter">'+(i+1)+" / "+qs.length+'</span><button class="next" onclick="ap.ttqi=Math.min('+(qs.length-1)+',ap.ttqi+1);ap.ttqa=false;ap.ttqp=-1;ap._r()"'+(i>=qs.length-1?" disabled":"")+'>下一题 &rarr;</button></div></div>';return h},
+_v5(){var qs=Q.v5_vocab_fill||[];var i=this.v5i;var c=qs[i];if(!c||!c.data)return'<div class="panel"><p>暂无题目</p></div>';var a=this.v5a,p=this.v5p;var cA=c.correct_answer;var iC=a&&p>=0&&c.data.options[p]===cA;var h='<div class="panel" style="text-align:left"><h3 style="color:var(--blue);margin-top:0;text-align:center">选词填空</h3><div style="font-size:13px;color:#888;text-align:center;margin-bottom:10px">'+es(c.prompt_cn||"")+'</div><div style="text-align:center;margin:20px 0;padding:15px;background:#f9fafb;border-radius:10px"><div style="font-size:15px;color:#777;margin-bottom:6px">'+es(c.data.sentence_pinyin||"")+'</div><div style="font-size:22px;font-weight:600;color:var(--text)">'+es(c.data.sentence)+'</div></div><div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:15px 0">';for(var j=0;j<c.data.options.length;j++){var o=c.data.options[j];var opy=(c.data.options_pinyin||[])[j]||py(o);var iP=p===j;var st=a?(o===cA?"border-color:var(--green);background:#E8F6EE;color:var(--green)":iP?"border-color:var(--red);background:#fef2f2;color:var(--red)":"opacity:0.6"):"border-color:var(--blue);background:#fff;color:var(--blue)";h+='<div onclick="'+(a?"":"ap.v5p="+j+";ap.v5a=true;ap._r()")+'" style="padding:10px 22px;border:2px solid #e5e7eb;border-radius:10px;font-size:18px;font-weight:bold;cursor:'+(a?"default":"pointer")+";"+st+'"><div style="font-size:12px;font-weight:600;color:#888;margin-bottom:3px">'+es(opy)+'</div><div>'+es(o)+"</div></div>"}h+="</div>";if(a){h+='<div style="padding:12px;border-radius:10px;text-align:center;font-weight:bold;font-size:16px;background:'+(iC?"#E8F6EE":"#fef2f2")+";color:"+(iC?"var(--green)":"var(--red)")+'">'+(iC?"✅ 正确！":"❌ 正确答案："+es(cA))+"</div>"}h+='<div class="teach-nav"><button class="prev" onclick="ap.v5i=Math.max(0,ap.v5i-1);ap.v5a=false;ap.v5p=-1;ap._r()"'+(i===0?" disabled":"")+'>&larr; 上一题</button><span class="step-counter">'+(i+1)+" / "+qs.length+'</span><button class="next" onclick="ap.v5i=Math.min('+(qs.length-1)+',ap.v5i+1);ap.v5a=false;ap.v5p=-1;ap._r()"'+(i>=qs.length-1?" disabled":"")+'>下一题 &rarr;</button></div></div>';return h},
+_g1(){var qs=Q.g1_ordering||[];var i=this.g1i;var c=qs[i];if(!c||!c.data)return'<div class="panel"><p>暂无题目</p></div>';if(this.g1a.length===0&&this.g1s.length===0){this._g1i()}var np=function(x){return String(x||"").replace(/[\s\u3000]/g,"").replace(/[\u3002\uff0c\uff01\uff1f\u3001\uff1b\uff1a\u201c\u201d\u2018\u2019\uff08\uff09\u300a\u300b\u3010\u3011.,!?;:()]/g,"")};var sT="";for(var j=0;j<this.g1s.length;j++)sT+=this.g1s[j].t;var acc=(c.acceptable_answers&&c.acceptable_answers.length?c.acceptable_answers:[c.correct_answer||""]);var iC=false;for(var k=0;k<acc.length;k++){if(np(sT)===np(acc[k])){iC=true;break}}var h='<div class="panel" style="text-align:left"><h3 style="color:var(--blue);margin-top:0;text-align:center">连词成句</h3><div style="font-size:13px;color:#888;text-align:center;margin-bottom:10px">'+es(c.prompt_cn||"")+'</div><div style="min-height:60px;padding:10px;background:#f9fafb;border-radius:10px;margin:10px 0;display:flex;flex-wrap:wrap;gap:8px">';for(var j=0;j<this.g1a.length;j++){if(!this.g1a[j].u){h+='<span class="chunk-btn" onclick="ap._g1m('+j+')" style="text-align:center"><span style="display:block;font-size:12px;color:#78836f;margin-bottom:3px">'+es(py(this.g1a[j].t))+'</span>'+es(this.g1a[j].t)+"</span>"}}h+='</div><div style="min-height:60px;padding:15px;background:#EDF3FF;border:2px dashed var(--blue);border-radius:10px;margin:10px 0;display:flex;flex-wrap:wrap;gap:8px;align-items:center">';if(this.g1s.length===0)h+='<span style="color:#aaa;font-size:14px">点击上方词块 / Click the chunks above</span>';else for(var j=0;j<this.g1s.length;j++)h+='<span class="chunk-btn in-answer" onclick="ap._g1b('+j+')" style="text-align:center"><span style="display:block;font-size:12px;color:#78836f;margin-bottom:3px">'+es(py(this.g1s[j].t))+'</span>'+es(this.g1s[j].t)+"</span>";h+='</div><div style="text-align:center;margin:10px 0"><button class="next-btn" style="background:var(--green);margin:5px" onclick="ap.g1ch()">✅ 检查</button><button class="next-btn" style="background:#9ca3af;margin:5px" onclick="ap.g1re()">🔄 重置</button></div>';if(this.g1sa){h+='<div style="padding:12px;border-radius:10px;text-align:center;font-weight:bold;font-size:16px;background:'+(iC?"#E8F6EE":"#FFF5E8")+";color:"+(iC?"var(--green)":"#C74B3F")+'">'+(iC?"✅ 正确！":"⚠️ 参考答案："+es(c.correct_answer||"")+"；可接受答案请在 data_L02.js 的 acceptable_answers 中维护。")+"</div>"}h+='<div class="teach-nav"><button class="prev" onclick="ap.g1i=Math.max(0,ap.g1i-1);ap.g1s=[];ap.g1a=[];ap.g1sa=false;ap._r()"'+(i===0?" disabled":"")+'>&larr; 上一题</button><span class="step-counter">'+(i+1)+" / "+qs.length+'</span><button class="next" onclick="ap.g1i=Math.min('+(qs.length-1)+',ap.g1i+1);ap.g1s=[];ap.g1a=[];ap.g1sa=false;ap._r()"'+(i>=qs.length-1?" disabled":"")+'>下一题 &rarr;</button></div></div>';return h},
+_g1i(){var qs=Q.g1_ordering||[];var c=qs[this.g1i]||{};if(c.data&&c.data.chunks){var a=[];for(var i=0;i<c.data.chunks.length;i++){a.push({id:i,t:c.data.chunks[i],u:false})}this.g1a=sh(a);this.g1s=[]}this.g1sa=false},
+_g1m(i){var c=this.g1a[i];if(!c||c.u)return;this.g1a[i].u=true;this.g1s.push({id:c.id,t:c.t});this._r()},
+_g1b(i){var c=this.g1s.splice(i,1)[0];if(c){for(var j=0;j<this.g1a.length;j++){if(this.g1a[j].id===c.id){this.g1a[j].u=false;break}}}this._r()},
+g1ch(){this.g1sa=true;this._r()},
+g1re(){for(var i=0;i<this.g1a.length;i++)this.g1a[i].u=false;this.g1s=[];this.g1sa=false;this._r()},
+_opts(ans,pool){var a=[ans];for(var i=0;i<pool.length;i++){if(pool[i]&&pool[i]!==ans&&a.indexOf(pool[i])<0)a.push(pool[i]);if(a.length>=4)break}return a},
+_navBtn(prev,next,i,len,prevText,nextText){return'<div class="teach-nav"><button class="prev" onclick="'+prev+'"'+(i===0?' disabled':'')+'>'+prevText+'</button><span class="step-counter">'+(i+1)+' / '+len+'</span><button class="next" onclick="'+next+'"'+(i>=len-1?' disabled':'')+'>'+nextText+'</button></div>'},
+_mc(title,c,opts,ci,p,a,setp,body,nav){var h='<div class="panel" style="text-align:left;max-width:900px;width:100%"><h3 style="color:var(--blue);margin-top:0;text-align:center">'+title+'</h3><div style="font-size:13px;color:#888;text-align:center;margin-bottom:10px">'+es(c.prompt_cn||'')+' <span style="color:#aaa">'+es(c.prompt_en||'')+'</span></div>'+body+'<div style="display:flex;flex-wrap:wrap;gap:12px 14px;align-items:center;justify-content:center;min-height:142px;margin:15px auto;max-width:760px;padding:8px">';for(var j=0;j<opts.length;j++){var o=opts[j];var iP=p===j;var st=a?(j===ci?'border-color:var(--green);background:#E8F6EE;color:var(--green)':iP?'border-color:var(--red);background:#fef2f2;color:var(--red)':'opacity:0.56'):'border-color:var(--blue);background:#fff;color:var(--blue)';var extra='';if(setp.indexOf('v1p')>=0)extra=';ap.v1a=true';if(setp.indexOf('v7p')>=0)extra=';ap.v7a=true';if(setp.indexOf('w1p')>=0)extra=';ap.w1a=true';var rot=[-2,1.5,-1,2,0.5,-1.5][j%6],dy=[0,10,-6,6,-10,4][j%6];h+='<button onclick="'+(a?'':setp+j+extra+';ap._r()')+'" style="min-width:88px;padding:12px 18px;border:2px solid #e5e7eb;border-radius:18px;font-size:20px;font-weight:900;cursor:'+(a?'default':'pointer')+';box-shadow:0 10px 22px rgba(75,101,50,.08);transform:translateY('+dy+'px) rotate('+rot+'deg);'+st+'"><div style="font-size:12px;color:#78836f;margin-bottom:3px;font-weight:600">'+es(py(o))+'</div>'+es(o)+'</button>'}h+='</div>';if(a){var ok=p===ci;h+='<div style="padding:12px;border-radius:10px;text-align:center;font-weight:bold;font-size:16px;background:'+(ok?'#E8F6EE':'#fef2f2')+';color:'+(ok?'var(--green)':'var(--red)')+'">'+(ok?'&#9989; &#27491;&#30830;&#65281; Correct':'&#10060; &#27491;&#30830;&#31572;&#26696;&#65306; '+es(opts[ci]||''))+'</div>'}return h+nav+'</div>'},
+_v1(){var qs=Q.v1_image_guess||[],i=this.v1i,c=qs[i];if(!c)return'<div class="panel"><p>&#26242;&#26080;&#39064;&#30446;</p></div>';var opts=this._opts(c.correct_answer||'', ['\u9ad8\u5174','\u8ba4\u8bc6','\u5bf9\u4e0d\u8d77','\u6ca1\u5173\u7cfb','\u4e0d','\u662f','\u4e5f','\u5f88']),ci=opts.indexOf(c.correct_answer);var im={'\u9ad8\u5174':'images/v07_gaoxing.jpg','\u8ba4\u8bc6':'images/v08_renshi.jpg','\u5bf9\u4e0d\u8d77':'images/v03_duibuqi.jpg','\u6ca1\u5173\u7cfb':'images/v04_meiguanxi.jpg'};var img=(c.media&&c.media.image)||im[c.correct_answer]||'';var pic=img?'<img src="'+es(img)+'" alt="'+es(c.correct_answer)+'" style="width:100%;max-height:240px;object-fit:contain;border-radius:14px;background:#fff">':'<div style="font-size:24px;font-weight:900">'+es(c.data&&c.data.image_hint||'')+'</div>';var body='<div style="text-align:center;background:#f8faf3;border:1px solid #dfeac8;border-radius:16px;padding:16px;margin:12px 0"><div style="font-size:15px;color:#74806d;margin-bottom:8px">Look at the picture. Choose the word.</div>'+pic+'</div>';var nav=this._navBtn('ap.v1i=Math.max(0,ap.v1i-1);ap.v1a=false;ap.v1p=-1;ap._r()','ap.v1i=Math.min('+(qs.length-1)+',ap.v1i+1);ap.v1a=false;ap.v1p=-1;ap._r()',i,qs.length,'&larr; &#19978;&#19968;&#39064;','&#19979;&#19968;&#39064; &rarr;');return this._mc('&#22270;&#29255;&#29468;&#35789; / Picture Guess',c,opts,ci,this.v1p,this.v1a,'ap.v1p=',body,nav)},
+_v7(){var qs=Q.v7_word_match||[],c=qs[this.v7i];if(!c||!c.data)return'<div class="panel"><p>&#26242;&#26080;&#39064;&#30446;</p></div>';var ss=c.data.sentences||[],si=this.v7si,cur=ss[si]||{},opts=c.data.words||[],ci=opts.indexOf(cur.answer);var body='<div style="text-align:center;background:#fffaf0;border:1px solid #fde68a;border-radius:16px;padding:22px;margin:12px 0"><div style="font-size:13px;color:#888;margin-bottom:6px">Choose the word that fits the sentence.</div><div style="font-size:15px;color:#74806d;margin-bottom:6px">'+es(pys(cur.sentence||''))+'</div><div class="text-hanzi" style="font-size:26px;font-weight:900;color:var(--text);line-height:1.5">'+es(cur.sentence||'')+'</div></div>';var nav=this._navBtn('ap.v7si=Math.max(0,ap.v7si-1);ap.v7a=false;ap.v7p=-1;ap._r()','ap.v7si=Math.min('+(ss.length-1)+',ap.v7si+1);ap.v7a=false;ap.v7p=-1;ap._r()',si,ss.length,'&larr; &#19978;&#19968;&#39064;','&#19979;&#19968;&#39064; &rarr;');return this._mc('&#35789;&#21477;&#21305;&#37197; / Word in Sentence',c,opts,ci,this.v7p,this.v7a,'ap.v7p=',body,nav)},
+_v8(){var qs=Q.v8_memory_match||[],c=qs[this.v8i];if(!c||!c.data)return'<div class="panel"><p>&#26242;&#26080;&#39064;&#30446;</p></div>';var ps=c.data.pairs||[];var done=0;for(var k in this.v8m){if(this.v8m[k])done++}var order=[2,0,3,1,5,4].filter(function(x){return x<ps.length});var h='<div class="panel" style="text-align:left;max-width:900px;width:100%"><h3 style="color:var(--battle);margin-top:0;text-align:center">&#35789;&#20102;&#20010;&#35789; <span style="font-size:15px;color:#888">Matching Game</span></h3><div style="text-align:center;color:#74806d;margin-bottom:12px">Match Chinese words with English meanings. '+done+' / '+ps.length+'<br><span style="font-size:12px;color:#9aa394">&#28857;&#19968;&#20010;&#24038;&#20391;&#27721;&#35821;&#35789;&#65292;&#20877;&#28857;&#8220;&#24320;&#22987;&#31572;&#39064;&#8221;&#21487;&#25512;&#36865;&#21040;&#23398;&#29983;&#31471;&#12290;</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start">';h+='<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;min-height:210px">';for(var i=0;i<ps.length;i++){var m=this.v8m[i],sel=this.v8L===i||this.v8qi===i;h+='<button onclick="ap.v8L='+i+';ap.v8qi='+i+';ap._v8check()" style="min-width:130px;padding:14px;border-radius:18px;border:2px solid '+(m?'#86efac':sel?'var(--blue)':'#dfeac8')+';background:'+(m?'#f0fdf4':sel?'#edf3ff':'#fff')+';font-size:24px;font-weight:900;color:var(--text);cursor:pointer;transform:translateY('+([0,12,-8,8][i%4])+'px) rotate('+([-2,1,2,-1][i%4])+'deg)"><div style="font-size:13px;color:#78836f">'+es(py(ps[i].left))+'</div><span class="option-hanzi">'+es(ps[i].left)+'</span></button>'}h+='</div><div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;min-height:210px">';for(var j=0;j<order.length;j++){var idx=order[j],r=ps[idx],m=this.v8m[idx],sel=this.v8R===idx;h+='<button onclick="ap.v8R='+idx+';ap._v8check()" style="min-width:130px;padding:14px;border-radius:18px;border:2px solid '+(m?'#86efac':sel?'var(--blue)':'#dfeac8')+';background:'+(m?'#f0fdf4':sel?'#edf3ff':'#fff')+';font-size:20px;font-weight:900;color:var(--text);cursor:pointer;transform:translateY('+([-6,10,0,-10][j%4])+'px) rotate('+([1,-2,2,-1][j%4])+'deg)">'+es(r.right)+'</button>'}h+='</div></div><div style="text-align:center;margin-top:16px"><button class="next-btn" onclick="ap.v8L=-1;ap.v8R=-1;ap.v8m={};ap.v8qi=0;ap._r()">&#37325;&#32622; Reset</button></div></div>';return h},
+_v8check(){if(this.v8L<0||this.v8R<0){this._r();return}if(this.v8L===this.v8R){this.v8m[this.v8L]=true}this.v8L=-1;this.v8R=-1;this._r()},
+_w1(){var qs=[{s:'\u5f88\u9ad8\u5174___\u8bc6\u4f60\u3002',p:'H\u011bn g\u0101ox\u00ecng ___ sh\u00ed n\u01d0.',a:'\u8ba4',opts:['\u8ba9','\u8ba1','\u8ba8','\u8bc6','\u8ba4','\u8bdd','\u8bd5','\u8bd7','\u8bf7','\u8bf4','\u8c01','\u8bfe']},{s:'\u5f88\u9ad8\u5174\u8ba4___\u4f60\u3002',p:'H\u011bn g\u0101ox\u00ecng r\u00e8n ___ n\u01d0.',a:'\u8bc6',opts:['\u53ea','\u7ec7','\u804c','\u8bc6','\u8ba4','\u8bdd','\u8bd5','\u8bd7','\u8bf7','\u8bf4','\u8c01','\u8bfe']}],i=this.w1i,c=qs[i];if(!c)return'<div class="panel"><p>&#26242;&#26080;&#39064;&#30446;</p></div>';var ci=c.opts.indexOf(c.a);var body='<div style="text-align:center;background:#f8faf3;border:1px solid #dfeac8;border-radius:16px;padding:24px;margin:12px 0"><div style="font-size:16px;color:#74806d;margin-bottom:6px">'+es(c.p)+'</div><div class="hanzi-font" style="font-size:34px;font-weight:900;color:var(--text);line-height:1.5">'+es(c.s)+'</div><div style="font-size:13px;color:#888;margin-top:8px">Choose the right character from similar-looking characters.</div></div>';var fake={prompt_cn:'&#36873;&#25321;&#27491;&#30830;&#30340;&#27721;&#23383;',prompt_en:'Character discrimination'};var nav=this._navBtn('ap.w1i=Math.max(0,ap.w1i-1);ap.w1a=false;ap.w1p=-1;ap._r()','ap.w1i=Math.min('+(qs.length-1)+',ap.w1i+1);ap.w1a=false;ap.w1p=-1;ap._r()',i,qs.length,'&larr; &#19978;&#19968;&#39064;','&#19979;&#19968;&#39064; &rarr;');return this._mc('&#27721;&#23383;&#21306;&#36776; / Character Check',fake,c.opts,ci,this.w1p,this.w1a,'ap.w1p=',body,nav)},
+
+_w2(){var qs=Q.w2_pinyin_to_hanzi||[],i=this.w2i,c=qs[i];if(!c||!c.data)return'<div class="panel"><p>&#26242;&#26080;&#39064;&#30446;</p></div>';var ans=c.correct_answer||c.data.correct_hanzi,opts=this._opts(ans,["\u4e0d","\u662f","\u5f88","\u4e5f"]),ci=opts.indexOf(ans);var body='<div style="text-align:center;background:#f0f7ff;border:1px solid #bfdbfe;border-radius:16px;padding:24px;margin:12px 0"><div style="font-size:15px;color:#74806d">&#30475;&#25340;&#38899;&#65292;&#36873;&#27721;&#23383;</div><div style="font-size:44px;font-weight:900;color:var(--blue);line-height:1.4">'+es(c.data.pinyin||"")+'</div></div>';var nav=this._navBtn('ap.w2i=Math.max(0,ap.w2i-1);ap.w2a=false;ap.w2p=-1;ap._r()','ap.w2i=Math.min('+(qs.length-1)+',ap.w2i+1);ap.w2a=false;ap.w2p=-1;ap._r()',i,qs.length,'&larr; &#19978;&#19968;&#39064;','&#19979;&#19968;&#39064; &rarr;');return this._mc('&#25340;&#38899;&#19987;&#39033;',c,opts,ci,this.w2p,this.w2a,'ap.w2p=',body,nav)},
+_pk(){var ph=this.pkp;if(ph==="setup"){var h='<div class="panel"><h3 style="color:var(--battle);margin-top:0">⚔️ PK设置</h3><div style="margin:15px 0;font-size:14px;color:#888">选择参赛学生</div><div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:15px">';for(var i=0;i<this.as.length;i++){var s=this.as[i];var ck=this.pkat.indexOf(s)>=0;h+='<label style="display:flex;align-items:center;gap:4px;padding:4px 10px;border-radius:8px;background:'+(ck?"#E8F6EE":"#f1f5f9")+';cursor:pointer;font-size:13px"><input type="checkbox"'+(ck?" checked":"")+' onchange="if(this.checked){if(ap.pkat.indexOf(\''+es(s).replace(/'/g,"\\'")+'\')<0)ap.pkat.push(\''+es(s).replace(/'/g,"\\'")+'\')}else{var x=ap.pkat.indexOf(\''+es(s).replace(/'/g,"\\'")+'\');if(x>=0)ap.pkat.splice(x,1)}}">'+es(s)+"</label>"}h+='</div><div style="margin:15px 0"><label style="font-size:14px;color:#888">队伍：<select onchange="ap.pktc=parseInt(this.value)" style="margin-left:8px;padding:4px 8px;border-radius:8px;border:1px solid #ccc"><option value="2">2队</option><option value="3" selected>3队</option><option value="4">4队</option></select></label></div><button class="next-btn" onclick="ap._st()">🎲 分组</button>';if(this.pkt.length>0){h+='<div style="margin:15px 0">';for(var i=0;i<this.pkt.length;i++){var tc=["#F44336","#2196F3","#4CAF50"];h+='<span style="display:inline-block;margin:4px;padding:6px 12px;border-radius:8px;font-weight:bold;font-size:13px;background:'+tc[i]+';color:#fff">'+(i===0?"🔴":i===1?"🔵":"🟢")+" 队"+(i+1)+": "+this.pkt[i].join(", ")+"</span>"}h+='</div><button class="next-btn" onclick="ap._stpk()" style="background:var(--battle)">🚀 开始</button>'}h+="</div>";return h}if(ph==="play"){var pkq=Q.pk_question||[];var c=pkq[this.pkqi]||{};var tc=["#F44336","#2196F3","#4CAF50"];var h='<div class="panel"><h3 style="color:var(--battle);margin-top:0">⚔️ PK</h3><div style="display:flex;justify-content:space-around;margin:10px 0;flex-wrap:wrap;gap:10px">';for(var i=0;i<this.pkt.length;i++){h+='<div style="text-align:center"><div style="font-size:14px;font-weight:bold;color:'+tc[i]+'">'+(i===0?"🔴":i===1?"🔵":"🟢")+" 队"+(i+1)+'</div><div style="font-size:48px;font-weight:900;color:'+tc[i]+'">'+(this.pks[i]||0)+"</div></div>"}h+='</div>';if(c.data){h+='<div style="background:#fff;border:4px solid #ffd54f;border-radius:16px;padding:25px;text-align:center;margin:15px 0"><div style="font-size:14px;font-weight:bold;color:#C74B3F;background:#FFF5E8;display:inline-block;padding:3px 10px;border-radius:15px;margin-bottom:12px">第'+(this.pkqi+1)+"题 / Round "+(this.pkqi+1)+'</div><div style="font-size:22px;font-weight:bold;color:var(--text);margin:10px 0 4px">'+es(c.data.question_cn||"")+'</div><div style="font-size:15px;color:#666;line-height:1.5;margin-bottom:14px">'+es(c.data.question_en||"")+'</div><div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:15px 0">';for(var j=0;j<(c.data.options||[]).length;j++){var o=c.data.options[j];var iC=this.pksa&&j===c.data.correct_index;h+='<div style="padding:10px 20px;border:2px solid '+(iC?"var(--green)":"#e5e7eb")+";border-radius:10px;font-size:16px;font-weight:bold;background:"+(iC?"#E8F6EE":"#fff")+";color:"+(iC?"var(--green)":"var(--text)")+'">'+es(o)+"</div>"}h+='</div>';if(this.pkws)h+='<div style="font-size:18px;color:var(--battle);margin:15px 0">🎰 转盘转动中...</div>';if(this.pkw&&!this.pkws)h+='<div style="background:#FFF5E8;border:2px solid var(--battle);border-radius:12px;padding:15px;font-size:20px;font-weight:bold;color:#C74B3F;margin:10px 0">🎰 '+(this.pkw.ti===0?"🔴":this.pkw.ti===1?"🔵":"🟢")+" 队"+(this.pkw.ti+1)+" &mdash; "+this.pkw.st+" 请作答！</div>";if(this.pksa&&c.correct_answer)h+='<div style="font-size:18px;color:var(--practice);font-weight:bold;background:#E8F6EE;padding:10px;border-radius:8px;margin-top:10px">答案：'+es(c.correct_answer)+"</div>";h+='<div style="margin-top:15px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap"><button class="next-btn" style="background:transparent;color:var(--text);border:2px solid #ccc" onclick="ap.pksa=true;ap._r()">👑 答案</button>';if(this.pkw&&!this.pkws)h+='<button class="next-btn" style="background:var(--practice)" onclick="ap._pkc('+this.pkw.ti+')">✅ +2</button>';h+='<button class="next-btn" onclick="ap._nq()">🎲 下一题</button></div></div>'}h+='<button class="next-btn" style="background:#9ca3af;margin-top:5px" onclick="ap._epk()">🏁 结束PK</button></div>';return h}return""},
+_st(){var n=this.pkat.length;var tc=this.pktc;if(tc>n)tc=Math.max(2,n);var s=sh([].concat(this.pkat));var r=[];for(var i=0;i<tc;i++)r.push([]);for(var i=0;i<s.length;i++)r[i%tc].push(s[i]);this.pkt=r;this.pks=new Array(tc).fill(0);this._r()},
+_stpk(){this.pks=new Array(this.pkt.length).fill(0);this.pkqi=0;this.pksa=false;this.pkp="play";this.pka={};this._sw()},
+_sw(){var t=this;this.pkws=true;this.pkw=null;this.pksa=false;setTimeout(function(){var av=[];for(var i=0;i<t.pkt.length;i++){var st=[];for(var j=0;j<t.pkt[i].length;j++){if(!t.pka[t.pkt[i][j]])st.push(t.pkt[i][j])}if(st.length>0)av.push({ti:i,st:st})}if(av.length===0){t.pkw={ti:0,st:"都答过了"};t.pkws=false;t._r();return}var tm=av[Math.floor(Math.random()*av.length)];var st=tm.st[Math.floor(Math.random()*tm.st.length)];t.pkw={ti:tm.ti,st:st};t.pkws=false;t._r()},1500);this._r()},
+_pkc(ti){this.pks[ti]=(this.pks[ti]||0)+2;if(this.pkw&&this.pkw.st){this.pka[this.pkw.st]=true;this._as(this.pkw.st,2)}this._r()},
+_nq(){if(this.pkw&&this.pkw.st)this.pka[this.pkw.st]=true;this.pkqi=(this.pkqi+1)%((Q.pk_question||[]).length||1);this._sw()},
+_epk(){var r=[];for(var i=0;i<this.pks.length;i++)r.push({s:this.pks[i],i:i});r.sort(function(a,b){return b.s-a.s});var b=[10,8,6,4,3,2];for(var i=0;i<r.length;i++){var x=r[i];if(this.pkt[x.i]){for(var j=0;j<this.pkt[x.i].length;j++){this._as(this.pkt[x.i][j],b[i]||1)}}}this.pkp="setup";this._r()},
+_lw(){if(!this.lw)return"";var rows={},order=[];(this.records||[]).forEach(function(r){if(!r||!r.questionId||r.sessionId&&r.sessionId!==this.sessionId)return;var id=String(r.questionId);if(!rows[id]){rows[id]={id:id,total:0,correct:0,review:0};order.push(id)}rows[id].total++;if(r.result==="correct")rows[id].correct++;if(r.result==="review"||r.needsReview)rows[id].review++},this);var h='<div class="live-panel"><div class="live-header"><div>📗 互动墙</div><div style="font-size:12px;color:#64748b">逐题正确率</div></div><div class="answers-area">';if(!order.length)h+='<div style="text-align:center;color:#94a3b8;margin-top:50px">等待学生提交答案...</div>';else{for(var i=0;i<order.length;i++){var x=rows[order[i]],rate=Math.round(x.correct/x.total*100),color=rate>=80?"#15803d":rate>=60?"#b45309":"#b91c1c";h+='<div style="padding:12px 10px;margin-bottom:8px;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0"><div style="display:flex;justify-content:space-between;align-items:center"><b>第'+(i+1)+'题</b><b style="font-size:22px;color:'+color+'">'+rate+'%</b></div><div style="font-size:12px;color:#64748b;margin-top:5px">已答 '+x.total+' 人次 · 答对 '+x.correct+' 人'+(x.review?' · 待批改 '+x.review+' 人':'')+'</div><div style="font-size:10px;color:#94a3b8;margin-top:3px">'+es(x.id)+'</div></div>'}}h+='</div><div style="padding:8px;border-top:1px solid #e5e7eb"><button onclick="ap.la=[];ap.records=[];ap._saveClassData();ap._r()" style="width:100%;background:#f3f4f6;color:#666;border:none;padding:8px;border-radius:8px;cursor:pointer;font-size:12px">清空本轮统计</button></div></div>';return h},
+_qr(){if(!this.qr&&!this.qrp)return"";var h='<div style="position:fixed;left:'+this.qrx+"px;top:"+this.qry+'px;z-index:90"><div style="background:#fff;border-radius:16px;padding:16px;border:0.5px solid var(--line);width:200px;box-shadow:0 6px 24px rgba(0,0,0,.1)"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><span style="font-size:12px;font-weight:700;color:var(--text)">🖐 QR</span><div><button onclick="ap.qrp=!ap.qrp;ap._r()" style="width:24px;height:24px;border-radius:6px;border:0.5px solid var(--line);background:'+(this.qrp?"var(--primary)":"#fff")+';font-size:11px;cursor:pointer;color:'+(this.qrp?"#fff":"#888")+'">📌</button> <button onclick="ap.qr=false;ap.qrp=false;ap._r()" style="width:24px;height:24px;border-radius:6px;border:0.5px solid var(--line);background:#fff;font-size:11px;cursor:pointer;color:#888">✕</button></div></div><div style="text-align:center"><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://zhxin02-boop.github.io/ClassPro-student/" style="width:140px;height:140px;border-radius:8px"><div style="font-size:16px;font-weight:800;margin-top:8px">Room '+RM+'</div><div style="font-size:12px;color:var(--green);font-weight:600;margin-top:2px">● '+(this.oc||0)+" online</div></div></div></div>";return h},
+_tr(){if(!this.timerOn)return"";var h='<div style="position:fixed;left:20px;top:80px;z-index:100"><div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(145deg,#fff,#f0f0f0);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;border:3px solid #e5e7eb"><svg style="position:absolute;top:0;left:0;width:80px;height:80px" viewBox="0 0 80 80"><circle fill="none" stroke="#e5e7eb" stroke-width="4" cx="40" cy="40" r="36"/><circle fill="none" stroke="'+(this.tr<=5&&this.trun?"var(--red)":this.tr<=10&&this.trun?"#fbbf24":"var(--green)")+'" stroke-width="4" stroke-linecap="round" transform="rotate(-90 40 40)" stroke-dasharray="226" stroke-dashoffset="'+Math.round(226*(1-this.tr/this.td))+'"/></svg><div style="font-size:26px;font-weight:900;color:var(--text);font-family:Courier New,monospace;z-index:1;'+(this.tr<=5&&this.trun?"color:var(--red)":"")+'">'+(this.trun?this.tr:(this.tr===0?"⏰":"⏱"))+'</div><div style="font-size:9px;color:#9ca3af;z-index:1">sec</div></div><div style="background:#fff;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.12);padding:12px;margin-top:8px;width:190px"><div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">';[10,20,30,45,60].forEach(function(s){h+='<button class="timer-preset'+(ap.td===s?" active":"")+'" onclick="ap._stt('+s+')">'+s+"s</button>"});h+='</div><div style="display:flex;gap:6px">';if(!this.trun&&this.tr>0)h+='<button class="timer-ctrl start" onclick="ap._stt2()">▶</button>';if(this.trun)h+='<button class="timer-ctrl pause" onclick="ap._ptt()">⏸</button>';h+='<button class="timer-ctrl reset" onclick="ap._rtt()">↺</button><button style="flex:1;background:#f3f4f6;border:none;border-radius:8px;cursor:pointer;font-size:12px;color:#888" onclick="ap.timerOn=false;ap._r()">✕</button></div></div></div>';return h},
+_ss(){if(!this.scs)return'<div class="score-sidebar closed"></div>';var ss=this._sss();var h='<div class="score-sidebar"><div class="score-sidebar-header"><h3>📊 Score</h3><button onclick="ap.scs=false;ap._r()" style="background:none;border:none;font-size:18px;cursor:pointer;color:rgba(255,255,255,.8)">✕</button></div><div class="score-sidebar-body">';for(var i=0;i<ss.length;i++){h+='<div class="score-row"><span style="font-size:12px;min-width:18px">'+(i<3?["🥇","🥈","🥉"][i]:(i+1))+'</span><span class="score-name">'+es(ss[i].n)+'</span><span class="score-pts">'+ss[i].t+'</span><button class="score-add" onclick="ap._as(\''+es(ss[i].n).replace(/'/g,"\\'")+"',1)\">+1</button><button class=\"score-add\" onclick=\"ap._as('"+es(ss[i].n).replace(/'/g,"\\'")+"',2)\">+2</button></div>"}h+='</div><button class="star-btn" onclick="ap._soShow=true;ap._r()">🏳️ 本课之星</button></div>';return h},
+_so(){if(!this._soShow)return"";var t3=this._t3();var h='<div class="star-overlay" onclick="if(event.target===event.currentTarget){ap._soShow=false;ap._r()}">';for(var i=0;i<30;i++){var cl=["#FF6B6B","#4ECDC4","#FFE66D","#A78BFA","#F472B6","#34D399"];h+='<div style="position:absolute;width:'+(6+Math.random()*8)+"px;height:"+(6+Math.random()*8)+"px;border-radius:2px;background:"+cl[i%6]+";left:"+(Math.random()*100)+"%;animation:confettiFall "+(2+Math.random()*3)+"s linear "+(Math.random()*2)+"s forwards\"></div>"}h+='<div style="background:linear-gradient(135deg,#fef3c7,#fde68a,#fbbf24);border-radius:20px;padding:35px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3)"><div style="font-size:60px;margin-bottom:10px">🏳️</div><h2 style="font-size:24px;margin:0 0 15px;color:#92400e">本课之星</h2>';for(var i=0;i<t3.length;i++){h+='<div style="font-size:20px;margin:10px 0;font-weight:900;'+(i===0?"color:#b45309;font-size:28px":"")+'"><span style="font-size:28px">'+["🥇","🥈","🥉"][i]+"</span> "+es(t3[i].n)+' <span style="font-size:16px;opacity:.7">'+t3[i].t+" pts</span></div>"}h+='<div style="display:flex;justify-content:center;gap:30px;margin-top:20px;padding-top:15px;border-top:2px solid rgba(146,64,14,.2)"><div style="text-align:center"><div style="font-size:28px;font-weight:900;color:#92400e">'+this._avg()+'</div><div style="font-size:12px;color:#a16207">平均</div></div><div style="text-align:center"><div style="font-size:28px;font-weight:900;color:#92400e">'+this._pcnt()+'/'+this.as.length+'</div><div style="font-size:12px;color:#a16207">参与</div></div></div><button class="star-close" onclick="ap._so=false;ap._ec();ap._r()">🎀 关闭</button></div></div>';return h},
+_pm(){if(!this.psm)return"";return'<div class="star-overlay" onclick="if(event.target===event.currentTarget){ap.psm=false;ap._r()}"><div style="background:#fff;border-radius:20px;padding:30px;max-width:400px;width:90%;text-align:center"><h2 style="margin-top:0;color:var(--blue)">🎲 点名</h2><div style="font-size:48px;font-weight:900;color:var(--battle);margin:20px 0">'+(this.ps||"点击开始")+'</div><div style="display:flex;gap:10px;justify-content:center"><button class="next-btn" onclick="ap._sp()">🎲 开始</button><button class="next-btn" style="background:#9ca3af" onclick="ap.psm=false;ap._r()">关闭</button></div></div></div>'},
+_qr(){if(!this.qr&&!this.qrp)return"";var u=studentUrl(),raw=rawStudentUrl(),local=/^(file:|http:\/\/(localhost|127\.0\.0\.1))/i.test(raw);return'<div style="position:fixed;left:'+this.qrx+"px;top:"+this.qry+'px;z-index:90"><div style="background:#fff;border-radius:16px;padding:16px;border:0.5px solid var(--line);width:260px;box-shadow:0 6px 24px rgba(0,0,0,.1)"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><span style="font-size:12px;font-weight:700;color:var(--text)">学生扫码入课</span><div><button onclick="ap.qrp=!ap.qrp;ap._r()" style="width:24px;height:24px;border-radius:6px;border:0.5px solid var(--line);background:'+(this.qrp?"var(--primary)":"#fff")+';font-size:11px;cursor:pointer;color:'+(this.qrp?"#fff":"#888")+'">📌</button> <button onclick="ap.qr=false;ap.qrp=false;ap._r()" style="width:24px;height:24px;border-radius:6px;border:0.5px solid var(--line);background:#fff;font-size:11px;cursor:pointer;color:#888">✕</button></div></div><div style="text-align:center"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data='+u+'" style="width:170px;height:170px;border-radius:8px"><div style="font-size:16px;font-weight:800;margin-top:8px">Room '+RM+'</div><div style="font-size:11px;color:#64748b;margin-top:6px;word-break:break-all;line-height:1.35">'+es(raw)+'</div>'+(local?'<div style="font-size:12px;color:#b45309;background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:7px;margin-top:8px;text-align:left">当前是本地地址，学生手机通常扫不开。请部署到公开地址，或用同一局域网的服务器地址打开教师端。</div>':'')+'<div style="font-size:12px;color:var(--green);font-weight:600;margin-top:6px">● '+(this.oc||0)+" online</div></div></div></div>"},
+_sp(){if(this.pint)return;var t=this;var c=0;this.pint=setInterval(function(){if(t.as.length)t.ps=t.as[Math.floor(Math.random()*t.as.length)];c++;if(c>20){clearInterval(t.pint);t.pint=null}t._r()},100)},
+_mq(){var t=this;try{if(!window.mqtt){t.cs="offline";return}var cl=mqtt.connect("wss://05d1d5baec9d4cb3a21f5517b430cff1.s1.eu.hivemq.cloud:8884/mqtt",{username:"classpro",password:"Classpro2026",clientId:"tc_"+Math.random().toString(36).substr(2,8),reconnectPeriod:3000,connectTimeout:8000});cl.on("connect",function(){t.cs="connected";cl.subscribe("classpro/room/"+RM+"/answers");cl.subscribe("classpro/room/"+RM+"/presence");t._r()});cl.on("message",function(tp,p){var m=JSON.parse(p.toString());if(tp.indexOf("/answers")>=0)t._ha(m);else if(tp.indexOf("/presence")>=0)t._hp(m)});cl.on("error",function(e){t.cs="error";console.log("MQTT",e);t._r()});cl.on("close",function(){if(t.cs!=="error")t.cs="disconnected";t._r()});t.mq=cl}catch(e){t.cs="offline";console.log("MQTT",e)}},
+_ha(m){var n=m.name||m.studentName||"unknown";var tx=m.text||m.answer||"";this.la.unshift({n:n,x:tx,t:new Date().toLocaleTimeString(),ar:m.autoResult||null});if(m.autoResult==="correct"){var r=this._rn(n);this._as(r,1)}if(this.qp==="answering"||this.qp==="locked")this.qsub[n]=true;this._r()},
+_hp(m){this.oc=m.count||0;this._r()},
+_rn(n){var f=this.as.find(function(s){return s.indexOf(n)>=0||n.indexOf(s)>=0});return f||n},
+_as(n,p){if(!this.sc[n])this.sc[n]={t:0,f:false};this.sc[n].t+=p;this.sc[n].f=true;var t=this;setTimeout(function(){if(t.sc[n])t.sc[n].f=false;t._r()},600);this._r()},
+_sss(){var a=[];for(var k in this.sc){if(this.sc.hasOwnProperty(k))a.push({n:k,t:this.sc[k].t})}return a.sort(function(a,b){return b.t-a.t})},
+_t3(){return this._sss().slice(0,3)},
+_pcnt(){var c=0;for(var k in this.sc){if(this.sc.hasOwnProperty(k))c++}return c},
+_avg(){var e=[];for(var k in this.sc){if(this.sc.hasOwnProperty(k))e.push(this.sc[k].t)}if(!e.length)return 0;var s=0;for(var i=0;i<e.length;i++)s+=e[i];return Math.round(s/e.length)},
+_ec(){var r=this._sss();var l="";for(var i=0;i<r.length;i++)l+=r[i].n+","+r[i].t+"\n";var a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeffName,Points\n"+l],{type:"text/csv;charset=utf-8"}));a.download="ClassPro_"+RM+".csv";a.click()},
+_stt(s){this.td=s;this.tr=s;this.trun=false;this._r()},
+_stt2(){if(this.trun)return;this.trun=true;if(this.tr<=0)this.tr=this.td;var t=this;this.tint=setInterval(function(){t.tr--;if(t.tr<=0){clearInterval(t.tint);t.trun=false}t._r()},1000);this._r()},
+_ptt(){clearInterval(this.tint);this.trun=false;this._r()},
+_rtt(){clearInterval(this.tint);this.tr=this.td;this.trun=false;this._r()},
+_tts(t){if(window.speechSynthesis){var u=new SpeechSynthesisUtterance(t);u.lang="zh-CN";speechSynthesis.speak(u)}},
+_cq(){var s=this.st;if(s==="v1"){var q=(Q.v1_image_guess||[])[this.v1i];if(!q)return null;var opts=this._opts(q.correct_answer||'', ['\u9ad8\u5174','\u8ba4\u8bc6','\u5bf9\u4e0d\u8d77','\u6ca1\u5173\u7cfb','\u4e0d','\u662f','\u4e5f','\u5f88']);var im={'\u9ad8\u5174':'images/v07_gaoxing.jpg','\u8ba4\u8bc6':'images/v08_renshi.jpg','\u5bf9\u4e0d\u8d77':'images/v03_duibuqi.jpg','\u6ca1\u5173\u7cfb':'images/v04_meiguanxi.jpg'};return Object.assign({},q,{data:Object.assign({},q.data||{},{image:(q.media&&q.media.image)||im[q.correct_answer]||'',options:opts,correct_index:opts.indexOf(q.correct_answer)})})}if(s==="v4")return(Q.v4_complete_sentence||[])[this.v4i]||null;if(s==="v5")return(Q.v5_vocab_fill||[])[this.v5i]||null;if(s==="v7"){var q=(Q.v7_word_match||[])[this.v7i];if(!q||!q.data)return null;var ss=q.data.sentences||[],cur=ss[this.v7si]||{},opts=q.data.words||[];return Object.assign({},q,{id:q.id+'_'+this.v7si,data:{sentence:cur.sentence,sentence_pinyin:pys(cur.sentence),options:opts,correct_index:opts.indexOf(cur.answer)}})}if(s==="v8"){var q=(Q.v8_memory_match||[])[this.v8i];if(!q||!q.data)return null;var ps=q.data.pairs||[];if(!ps.length)return null;var idx=this.v8qi||0;if(idx>=ps.length)idx=0;var order=[2,0,3,1,5,4].filter(function(x){return x<ps.length});var opts=order.map(function(k){return ps[k].right});return Object.assign({},q,{id:q.id+'_pair_'+idx,prompt_cn:'\u770b\u6c49\u5b57\uff0c\u9009\u82f1\u6587\u610f\u601d',prompt_en:'Choose the English meaning.',data:{left:ps[idx].left,left_pinyin:py(ps[idx].left),options:opts,correct_index:opts.indexOf(ps[idx].right)}})}if(s==="ttq")return(Q.tt_text_true_false||[])[this.ttqi]||null;if(s==="g1")return(Q.g1_ordering||[])[this.g1i]||null;if(s==="w1"){var qs=[{id:'w1_discriminate_01',prompt_cn:'\u9009\u62e9\u6b63\u786e\u7684\u6c49\u5b57',prompt_en:'Choose the right character',data:{sentence:'\u5f88\u9ad8\u5174___\u8bc6\u4f60\u3002',sentence_pinyin:'H\u011bn g\u0101ox\u00ecng ___ sh\u00ed n\u01d0.',options:['\u8ba9','\u8ba1','\u8ba8','\u8bc6','\u8ba4','\u8bdd','\u8bd5','\u8bd7','\u8bf7','\u8bf4','\u8c01','\u8bfe'],correct_index:4}},{id:'w1_discriminate_02',prompt_cn:'\u9009\u62e9\u6b63\u786e\u7684\u6c49\u5b57',prompt_en:'Choose the right character',data:{sentence:'\u5f88\u9ad8\u5174\u8ba4___\u4f60\u3002',sentence_pinyin:'H\u011bn g\u0101ox\u00ecng r\u00e8n ___ n\u01d0.',options:['\u53ea','\u7ec7','\u804c','\u8bc6','\u8ba4','\u8bdd','\u8bd5','\u8bd7','\u8bf7','\u8bf4','\u8c01','\u8bfe'],correct_index:3}}];return qs[this.w1i]||null}if(s==="pk")return(Q.pk_question||[])[this.pkqi]||null;return null},
+
+_cq2(){if(this.st==="v8"){var q=(Q.v8_memory_match||[])[this.v8i];if(!q||!q.data)return null;var ps=q.data.pairs||[];if(!ps.length)return null;var order=[2,0,3,1,5,4].filter(function(x){return x<ps.length});return Object.assign({},q,{id:q.id+"_board",prompt_cn:"\u8fde\u8fde\u770b\uff1a\u6c49\u5b57\u548c\u82f1\u6587\u610f\u601d",prompt_en:"Matching game: match Chinese words with English meanings.",data:{pairs:ps.map(function(p){return{left:p.left,left_pinyin:py(p.left),right:p.right}}),order:order}})}return this._cq()},
+_pubq(){if(!this.mq||this.cs!=="connected")return;var q=this._cq2();if(!q)return;this.mq.publish("classpro/room/"+RM+"/question",JSON.stringify({room:RM,lesson:MT.lessonKey||"HSK1-L02",mode:this.st,duration:this.qtm,sentAt:new Date().toISOString(),question:q}))},
+qws(){this.qp="answering";this.qt=this.qtm;this.qsub={};this._pubq();var t=this;this.qtint=setInterval(function(){t.qt--;if(t.qt<=0){clearInterval(t.qtint);t.qwe()}t._r()},1000);this._r()},
+qwl(){clearInterval(this.qtint);this.qp="locked";this._r()},
+qwe(){clearInterval(this.qtint);this.qp="published";this._r()},
+qwr(){this.qp="idle";this.qsub={};this.qt=this.qtm;this._r()},
+_qsc(){var c=0;for(var k in this.qsub){if(this.qsub.hasOwnProperty(k))c++}return c},
+};
+(function(){
+var oldCq=ap._cq.bind(ap);
+ap._v7=function(){
+  var qs=Q.v7_word_match||[],i=this.v7i,c=qs[i];
+  if(!c||!c.data)return'<div class="panel"><p>&#26242;&#26080;&#39064;&#30446;</p></div>';
+  var cur=(c.data.sentences||[])[0]||{},opts=c.data.words||[],ci=opts.indexOf(cur.answer);
+  var body='<div style="text-align:center;background:#fffaf0;border:1px solid #fde68a;border-radius:16px;padding:22px;margin:12px 0"><div style="font-size:13px;color:#888;margin-bottom:6px">Choose the word that fits the sentence.</div><div style="font-size:15px;color:#74806d;margin-bottom:6px">'+es(pys(cur.sentence||''))+'</div><div class="text-hanzi" style="font-size:26px;font-weight:900;color:var(--text);line-height:1.5">'+es(cur.sentence||'')+'</div></div>';
+  var nav=this._navBtn('ap.v7i=Math.max(0,ap.v7i-1);ap.v7a=false;ap.v7p=-1;ap._r()','ap.v7i=Math.min('+(qs.length-1)+',ap.v7i+1);ap.v7a=false;ap.v7p=-1;ap._r()',i,qs.length,'&larr; &#19978;&#19968;&#32452;','&#19979;&#19968;&#32452; &rarr;');
+  var qc=Object.assign({},c,{
+    acceptable_answers:cur.acceptable_answers||[cur.answer],
+    data:Object.assign({},c.data,{options:opts,options_pinyin:c.data.words_pinyin||opts.map(py),correct_index:ci})
+  });
+  return this._mc('&#35789;&#21477;&#21305;&#37197; / Word in Sentence',qc,opts,ci,this.v7p,this.v7a,'ap.v7p=',body,nav);
+};
+ap._w1=function(){
+  var qs=Q.w1_component_char||[],i=this.w1i,c=qs[i];
+  if(!c||!c.data)return'<div class="panel"><p>&#26242;&#26080;&#39064;&#30446;</p></div>';
+  var opts=c.data.options||[],ci=typeof c.data.correct_index==='number'?c.data.correct_index:opts.indexOf(c.correct_answer);
+  var body='<div style="text-align:center;background:#f8faf3;border:1px solid #dfeac8;border-radius:16px;padding:24px;margin:12px 0"><div style="font-size:16px;color:#74806d;margin-bottom:6px">'+es(c.data.sentence_pinyin||'')+'</div><div class="hanzi-font" style="font-size:34px;font-weight:900;color:var(--text);line-height:1.5">'+es(c.data.sentence||'')+'</div><div style="font-size:13px;color:#888;margin-top:8px">Choose the right character from similar-looking characters.</div></div>';
+  var nav=this._navBtn('ap.w1i=Math.max(0,ap.w1i-1);ap.w1a=false;ap.w1p=-1;ap._r()','ap.w1i=Math.min('+(qs.length-1)+',ap.w1i+1);ap.w1a=false;ap.w1p=-1;ap._r()',i,qs.length,'&larr; &#19978;&#19968;&#39064;','&#19979;&#19968;&#39064; &rarr;');
+  return this._mc('&#27721;&#23383;&#21306;&#36776; / Character Check',c,opts,ci,this.w1p,this.w1a,'ap.w1p=',body,nav);
+};
+ap._ttq=function(){
+  var qs=Q.r2_passage_choice||[],i=this.ttqi,c=qs[i];
+  if(!c||!c.data)return'<div class="panel"><p>暂无题目</p></div>';
+  var opts=c.data.options||[],ci=typeof c.data.correct_index==='number'?c.data.correct_index:opts.indexOf(c.correct_answer);
+  var body='<div style="text-align:left;background:#f0f7ff;border:1px solid #bfdbfe;border-radius:14px;padding:18px;margin:14px 0"><div style="font-size:15px;color:#475569;line-height:1.7;margin-bottom:12px">'+es(c.data.passage||'')+'</div><div style="font-size:13px;color:#888">'+es(c.data.question_en||'')+'</div><div style="font-size:24px;font-weight:800;color:var(--text);line-height:1.5">'+es(c.data.question_cn||'')+'</div></div>';
+  var nav=this._navBtn('ap.ttqi=Math.max(0,ap.ttqi-1);ap.ttqa=false;ap.ttqp=-1;ap._r()','ap.ttqi=Math.min('+(qs.length-1)+',ap.ttqi+1);ap.ttqa=false;ap.ttqp=-1;ap._r()',i,qs.length,'&larr; 上一题','下一题 &rarr;');
+  return this._mc('课文问答 / Text Q&A',c,opts,ci,this.ttqp,this.ttqa,'ap.ttqp=',body,nav);
+};
+ap._cq=function(){
+  if(this.st==='ttq'){
+    var tq=(Q.r2_passage_choice||[])[this.ttqi];
+    return tq||null;
+  }
+  if(this.st==='w1'){
+    var q=(Q.w1_component_char||[])[this.w1i];
+    return q||null;
+  }
+  return oldCq();
+};
+})();
+(function(){
+var baseCq=ap._cq.bind(ap);
+function ok(c,j){
+  var opts=(c&&c.data&&c.data.options)||[], ans=opts[j];
+  if(j===((c&&c.data&&c.data.correct_index)||0))return true;
+  var acc=(c&&c.acceptable_answers)||[];
+  for(var i=0;i<acc.length;i++){if(acc[i]===ans)return true}
+  return false;
+}
+function optPy(c,o,j){
+  if(c&&c.data&&c.data.hide_option_pinyin)return "";
+  return ((c&&c.data&&c.data.options_pinyin)||[])[j]||py(o);
+}
+ap._mc=function(title,c,opts,ci,p,a,setp,body,nav){
+  var h='<div class="panel" style="text-align:left;max-width:900px;width:100%"><h3 style="color:var(--blue);margin-top:0;text-align:center">'+title+'</h3><div style="font-size:13px;color:#888;text-align:center;margin-bottom:10px">'+es(c.prompt_cn||'')+' <span style="color:#aaa">'+es(c.prompt_en||'')+'</span></div>'+body+'<div style="display:flex;flex-wrap:wrap;gap:12px 14px;align-items:center;justify-content:center;min-height:142px;margin:15px auto;max-width:760px;padding:8px">';
+  for(var j=0;j<opts.length;j++){
+    var o=opts[j], iP=p===j, right=ok(c,j);
+    var st=a?(right?'border-color:var(--green);background:#E8F6EE;color:var(--green)':iP?'border-color:var(--red);background:#fef2f2;color:var(--red)':'opacity:0.56'):'border-color:var(--blue);background:#fff;color:var(--blue)';
+    var extra='';if(setp.indexOf('v1p')>=0)extra=';ap.v1a=true';if(setp.indexOf('v4p')>=0)extra=';ap.v4a=true';if(setp.indexOf('v5p')>=0)extra=';ap.v5a=true';if(setp.indexOf('v7p')>=0)extra=';ap.v7a=true';if(setp.indexOf('w1p')>=0)extra=';ap.w1a=true';if(setp.indexOf('ttqp')>=0)extra=';ap.ttqa=true';
+    var rot=[-2,1.5,-1,2,0.5,-1.5][j%6],dy=[0,10,-6,6,-10,4][j%6], op=optPy(c,o,j);
+    h+='<button onclick="'+(a?'':setp+j+extra+';ap._r()')+'" style="min-width:88px;padding:12px 18px;border:2px solid #e5e7eb;border-radius:18px;font-size:20px;font-weight:900;cursor:'+(a?'default':'pointer')+';box-shadow:0 10px 22px rgba(75,101,50,.08);transform:translateY('+dy+'px) rotate('+rot+'deg);'+st+'">'+(op?'<div style="font-size:12px;color:#78836f;margin-bottom:3px;font-weight:600">'+es(op)+'</div>':'')+es(o)+'</button>'
+  }
+  h+='</div>';
+  if(a){
+    var rightLabels=[];for(var r=0;r<opts.length;r++){if(ok(c,r))rightLabels.push(opts[r])}
+    var yes=ok(c,p);
+    h+='<div style="padding:12px;border-radius:10px;text-align:center;font-weight:bold;font-size:16px;background:'+(yes?'#E8F6EE':'#fef2f2')+';color:'+(yes?'var(--green)':'var(--red)')+'">'+(yes?'&#9989; &#27491;&#30830;&#65281; Correct':'&#10060; &#27491;&#30830;&#31572;&#26696;&#65306; '+es(rightLabels.join(' / ')))+'</div>'
+  }
+  return h+nav+'</div>';
+};
+ap._v5=function(){
+  var qs=Q.v5_vocab_fill||[],i=this.v5i,c=qs[i];if(!c||!c.data)return'<div class="panel"><p>暂无题目</p></div>';
+  var body='<div style="text-align:center;margin:20px 0;padding:15px;background:#f9fafb;border-radius:10px"><div style="font-size:15px;color:#777;margin-bottom:6px">'+es(c.data.sentence_pinyin||"")+'</div><div style="font-size:22px;font-weight:600;color:var(--text)">'+es(c.data.sentence||"")+'</div><div style="font-size:13px;color:#888;margin-top:5px">'+es(c.data.sentence_en||"")+'</div></div>';
+  var nav=this._navBtn('ap.v5i=Math.max(0,ap.v5i-1);ap.v5a=false;ap.v5p=-1;ap._r()','ap.v5i=Math.min('+(qs.length-1)+',ap.v5i+1);ap.v5a=false;ap.v5p=-1;ap._r()',i,qs.length,'&larr; 上一题','下一题 &rarr;');
+  return this._mc('选词填空 / Fill',c,c.data.options||[],c.data.correct_index,this.v5p,this.v5a,'ap.v5p=',body,nav);
+};
+ap._v4=function(){
+  var qs=Q.v4_complete_sentence||[],i=this.v4i,c=qs[i];if(!c||!c.data)return'<div class="panel"><p>暂无题目</p></div>';
+  var body='<div style="text-align:center;margin:18px 0;padding:18px;background:#fffaf0;border:1px solid #fde68a;border-radius:14px"><div style="font-size:16px;color:#777;margin-bottom:6px">'+es(c.data.template_pinyin||"")+'</div><div style="font-size:24px;font-weight:700;color:var(--text)">'+es(c.data.template||"")+'</div><div style="font-size:13px;color:#888;margin-top:5px">'+es(c.data.template_en||"")+'</div></div>';
+  var nav=this._navBtn('ap.v4i=Math.max(0,ap.v4i-1);ap.v4a=false;ap.v4p=-1;ap._r()','ap.v4i=Math.min('+(qs.length-1)+',ap.v4i+1);ap.v4a=false;ap.v4p=-1;ap._r()',i,qs.length,'&larr; 上一题','下一题 &rarr;');
+  return this._mc('完成句子 / Sentence',c,c.data.options||[],c.data.correct_index,this.v4p,this.v4a,'ap.v4p=',body,nav);
+};
+ap._v8=function(){
+  var qs=Q.v8_memory_match||[],i=this.v8i,c=qs[i];if(!c||!c.data)return'<div class="panel"><p>&#26242;&#26080;&#39064;&#30446;</p></div>';
+  var ps=c.data.pairs||[],done=0;for(var k in this.v8m){if(this.v8m[k])done++}
+  var order=(c.data.order||[2,0,3,1]).filter(function(x){return x<ps.length});
+  var h='<div class="panel" style="text-align:left;max-width:900px;width:100%"><h3 style="color:var(--battle);margin-top:0;text-align:center">&#35789;&#20102;&#20010;&#35789; <span style="font-size:15px;color:#888">Matching Game</span></h3><div style="text-align:center;color:#74806d;margin-bottom:12px">Match Chinese words with English meanings. '+done+' / '+ps.length+'<br><span style="font-size:12px;color:#9aa394">第 '+(i+1)+' / '+qs.length+' 组</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start">';
+  h+='<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;min-height:210px">';
+  for(var a=0;a<ps.length;a++){var m=this.v8m[a],sel=this.v8L===a||this.v8qi===a;h+='<button onclick="ap.v8L='+a+';ap.v8qi='+a+';ap._v8check()" style="min-width:130px;padding:14px;border-radius:18px;border:3px solid '+(m?'#22c55e':sel?'#2563eb':'#dfeac8')+';background:'+(m?'#dcfce7':sel?'#dbeafe':'#fff')+';font-size:24px;font-weight:900;color:var(--text);cursor:pointer;box-shadow:'+(sel?'0 0 0 4px rgba(37,99,235,.16)':'0 10px 22px rgba(75,101,50,.08)')+';transform:translateY('+([0,12,-8,8][a%4])+'px) rotate('+([-2,1,2,-1][a%4])+'deg)"><div style="font-size:13px;color:#78836f">'+es(py(ps[a].left))+'</div><span class="option-hanzi">'+es(ps[a].left)+'</span></button>'}
+  h+='</div><div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;min-height:210px">';
+  for(var b=0;b<order.length;b++){var idx=order[b],r=ps[idx],m2=this.v8m[idx],sel2=this.v8R===idx;h+='<button onclick="ap.v8R='+idx+';ap._v8check()" style="min-width:130px;padding:14px;border-radius:18px;border:3px solid '+(m2?'#22c55e':sel2?'#2563eb':'#dfeac8')+';background:'+(m2?'#dcfce7':sel2?'#dbeafe':'#fff')+';font-size:20px;font-weight:900;color:var(--text);cursor:pointer;box-shadow:'+(sel2?'0 0 0 4px rgba(37,99,235,.16)':'0 10px 22px rgba(75,101,50,.08)')+';transform:translateY('+([-6,10,0,-10][b%4])+'px) rotate('+([1,-2,2,-1][b%4])+'deg)">'+es(r.right)+'</button>'}
+  h+='</div></div><div style="text-align:center;margin-top:16px"><button class="next-btn" onclick="ap.v8L=-1;ap.v8R=-1;ap.v8m={};ap.v8qi=0;ap.v8i=(ap.v8i+1)%'+qs.length+';ap._r()">下一组 / Reset</button></div></div>';
+  return h;
+};
+ap._cq=function(){
+  if(this.st==='v1'){
+    var iq=(Q.v1_image_guess||[])[this.v1i];if(!iq)return null;var pool=['你好','对不起','认识','没关系','高兴','是','不','也','很','叫'];var opts=sh(this._opts(iq.correct_answer||'',pool).slice());return Object.assign({},iq,{data:Object.assign({},iq.data||{},{image:(iq.media&&iq.media.image)||'',options:opts,options_pinyin:opts.map(py),correct_index:opts.indexOf(iq.correct_answer)})});
+  }
+  if(this.st==='v7'){
+    var vq=(Q.v7_word_match||[])[this.v7i];if(!vq||!vq.data)return null;var cur=(vq.data.sentences||[])[0]||{},opts2=vq.data.words||[];return Object.assign({},vq,{id:vq.id+'_0',acceptable_answers:cur.acceptable_answers||[cur.answer],data:{sentence:cur.sentence,sentence_pinyin:pys(cur.sentence),options:opts2,options_pinyin:vq.data.words_pinyin||opts2.map(py),correct_index:opts2.indexOf(cur.answer)}});
+  }
+  if(this.st==='ttq')return(Q.r2_passage_choice||[])[this.ttqi]||null;
+  if(this.st==='w1')return(Q.w1_component_char||[])[this.w1i]||null;
+  return baseCq();
+};
+ap._cq2=function(){
+  if(this.st==="v8"){var q=(Q.v8_memory_match||[])[this.v8i];if(!q||!q.data)return null;var ps=q.data.pairs||[];if(!ps.length)return null;var order=(q.data.order||[2,0,3,1]).filter(function(x){return x<ps.length});return Object.assign({},q,{id:q.id+"_board",prompt_cn:"连连看：汉字和英文意思",prompt_en:"Matching game: match Chinese words with English meanings.",data:{pairs:ps.map(function(p){return{left:p.left,left_pinyin:py(p.left),right:p.right}}),order:order}})}
+  return this._cq();
+};
+ap._tg=function(){
+  var gp=G,idx=this.sg,cur=gp[idx];if(!cur)return'<div class="panel"><p>&#26242;&#26080;&#35821;&#27861;</p></div>';
+  var h='<div class="panel" style="text-align:left;max-width:860px;width:100%"><h2 style="color:var(--blue);margin-top:0;font-size:22px">语法 Grammar &mdash; '+es(cur.title)+'</h2><div style="display:flex;gap:6px;justify-content:center;margin-bottom:15px;flex-wrap:wrap">';
+  for(var i=0;i<gp.length;i++){h+='<button class="grammar-tab'+(this.sg===i?' active':'')+'" onclick="ap.sg='+i+';ap.sl=0;ap.gr=false;ap._r()">'+es(gp[i].title)+'</button>'}
+  h+='</div>';
+  if(cur.formula){h+='<div style="background:#EDF3FF;border-radius:14px;padding:18px 22px;margin:12px 0;text-align:center"><div class="text-hanzi" style="font-size:22px;font-weight:bold;color:#2D5DB8">'+es(cur.formula.pattern||'')+'</div><div style="font-size:15px;color:#888;margin-top:4px;font-style:italic">'+es(cur.formula.patternEn||'')+'</div></div>'}
+  if(this.sl===0){h+='<div style="background:#f8faff;border:2px solid var(--blue);border-radius:16px;padding:25px;margin-bottom:15px"><div style="font-size:15px;color:#555;line-height:1.8;margin-bottom:10px">'+es(cur.formula&&cur.formula.note?cur.formula.note:'')+'</div><div style="font-size:14px;color:#666;line-height:1.65;margin-top:8px"><b>English:</b> '+es(cur.formula&&cur.formula.noteEn?cur.formula.noteEn:cur.titleEn||'')+'</div><div style="font-size:14px;color:#666;line-height:1.65;margin-top:8px"><b>Русский:</b> '+es(cur.formula&&cur.formula.noteRu?cur.formula.noteRu:'')+'</div><div class="teach-nav"><button class="next" onclick="ap.sl=1;ap._r()">查看例句 &rarr;</button></div></div>'}
+  if(this.sl>=1&&cur.examples){h+='<div style="margin-top:15px"><div style="font-size:15px;font-weight:800;color:var(--practice);margin-bottom:12px">例句</div>';for(var j=0;j<cur.examples.length;j++){var e=cur.examples[j];h+='<div style="background:#f9fafb;border-radius:12px;padding:14px 18px;margin-bottom:10px;border-left:4px solid var(--teach)"><div class="text-hanzi" style="font-size:24px;font-weight:700;color:var(--text);line-height:1.5">'+es(e.hanzi)+'</div><div style="font-size:17px;color:#888;margin-top:4px">'+es(e.pinyin||'')+'</div><div style="font-size:14px;color:#aaa;margin-top:2px;font-style:italic">'+es(e.english||'')+'</div><button onclick="ap._tts(\''+es(e.hanzi).replace(/'/g,"\\'")+'\')" style="margin-top:6px;padding:4px 14px;border-radius:14px;border:none;background:#FFF0EE;color:var(--primary);font-size:13px;cursor:pointer;font-weight:600">&#128266;</button></div>'}h+='<div class="teach-nav"><button class="prev" onclick="ap.sl=0;ap._r()">&larr; 返回结构</button></div></div>'}
+  h+='</div>';return h;
+};
+ap._tv=function(){
+  var v=V,w=v[this.sl]||v[0],im={v01:'images/l02_pic_07_bu.svg',v02:'images/l02_pic_06_shi.svg',v03:'images/l02_pic_02_duibuqi.svg',v04:'images/l02_pic_04_meiguanxi.svg',v05:'images/l02_pic_04_meiguanxi.svg',v06:'images/l02_pic_09_hen.svg',v07:'images/l02_pic_05_gaoxing.svg',v08:'images/l02_pic_03_renshi.svg',v09:'images/l02_pic_08_ye.svg'};
+  var h='<div class="panel" style="text-align:left;padding:28px;max-width:1040px;width:100%"><div style="display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:16px;flex-wrap:wrap"><div><h2 style="margin:0;color:var(--blue);font-size:22px">&#35789;&#27719;&#35762;&#25480; <span style="font-size:14px;color:#888">Vocabulary Cards</span></h2><div style="font-size:13px;color:#74806d;margin-top:4px">点击生词卡进入讲解。</div></div>'+(this.tvOpen?'<button class="grammar-tab" onclick="ap.tvOpen=false;ap._r()">回到生词总览</button>':'')+'</div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:12px;margin-bottom:'+(this.tvOpen?'20px':'0')+'">';
+  for(var i=0;i<v.length;i++){var x=v[i],act=this.tvOpen&&i===this.sl;h+='<button onclick="ap.sl='+i+';ap.tvOpen=true;ap._r()" style="border:'+(act?'2px solid var(--primary)':'1px solid var(--line)')+';background:'+(act?'#fff6f1':'#fff')+';border-radius:16px;padding:14px 8px;cursor:pointer;box-shadow:'+(act?'0 12px 24px rgba(232,86,58,.12)':'0 6px 14px rgba(21,23,37,.04)')+'"><div class="wc-word" style="font-size:29px;font-weight:900;color:var(--text);line-height:1.15">'+es(x.hanzi)+'</div><div style="font-size:13px;color:#6f7e68;margin-top:5px;font-weight:800">'+es(x.pinyin)+'</div><div style="font-size:11px;color:#8d96a3;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+es(x.english)+'</div></button>'}
+  h+='</div>';if(!this.tvOpen){h+='<div style="margin-top:18px;text-align:center;color:#9aa394;font-size:13px">Tip: 点一张卡片开始讲解。</div></div>';return h}
+  if(!w)return h+'</div>';var img=w.image||im[w.id];var media=img?'<img src="'+es(img)+'" alt="'+es(w.hanzi)+'" style="width:100%;height:100%;object-fit:contain;background:#fff">':'<span class="vocab-hanzi">'+es(w.hanzi)+'</span>';
+  h+='<div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px"><div style="width:168px;height:168px;border-radius:14px;overflow:hidden;flex-shrink:0;background:#fff;border:0.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:64px;color:#aaa">'+media+'</div><div style="flex:1;min-width:240px"><div style="font-size:20px;color:#6f7e68;margin-bottom:4px;font-weight:800">'+es(w.pinyin)+'</div><div class="vocab-hanzi" style="font-size:58px;font-weight:900;color:var(--text);line-height:1.1;margin-bottom:6px">'+es(w.hanzi)+'</div><div style="font-size:17px;color:#6b7280;margin-bottom:4px">'+es(w.english)+'</div><div style="font-size:14px;color:#a8a8a8;margin-bottom:10px">'+es(w.pos||'')+'</div><button onclick="ap._tts(\''+es(w.hanzi).replace(/'/g,"\\'")+'\')" style="padding:7px 18px;border-radius:20px;border:none;background:#FFF0EE;color:var(--primary);font-size:14px;cursor:pointer;font-weight:700">&#128266; 朗读</button></div></div>';
+  if(w.phrases&&w.phrases.length>0){h+='<div style="margin-top:20px"><div style="font-size:14px;font-weight:800;color:var(--blue);margin-bottom:10px">本课短语</div><div style="display:flex;gap:8px;flex-wrap:wrap">';for(var j=0;j<w.phrases.length;j++){var p=w.phrases[j];h+='<div style="background:#EDF3FF;border-radius:10px;padding:10px 14px;min-width:160px;flex:1;border:1px solid #d0e1f9"><div class="vocab-hanzi" style="font-size:22px;font-weight:900;color:var(--text)">'+es(p.hanzi)+'</div><div style="font-size:15px;color:#6f7e68;margin-top:2px">'+es(p.pinyin)+'</div><div style="font-size:12px;color:#8d96a3;margin-top:2px">'+es(p.english)+'</div></div>'}h+='</div></div>'}
+  return h+'</div>';
+};
+var basePy=py;
+py=function(s){var m={"名字":"míngzi","什么":"shénme","很高兴":"hěn gāoxìng","认识你":"rènshi nǐ","王一飞":"Wáng Yīfēi","陈天中":"Chén Tiānzhōng","妈妈":"māma","请问":"qǐngwèn"};return m[String(s||"")]||basePy(s)};
+function spreadOpts(ans,pool,seed){var a=ap._opts(ans,pool).slice(),first=a.shift(),pos=seed%4;if(pos>a.length)pos=a.length;a.splice(pos,0,first);return a}
+ap._v1=function(){var qs=Q.v1_image_guess||[],i=this.v1i,c=qs[i];if(!c)return'<div class="panel"><p>&#26242;&#26080;&#39064;&#30446;</p></div>';var pool=['你好','对不起','认识','没关系','高兴','是','不','也','很','叫'];var opts=spreadOpts(c.correct_answer||'',pool,i),ci=opts.indexOf(c.correct_answer);var img=(c.media&&c.media.image)||'';var pic=img?'<img src="'+es(img)+'" alt="'+es(c.correct_answer)+'" style="width:100%;max-height:240px;object-fit:contain;border-radius:14px;background:#fff">':'<div style="font-size:24px;font-weight:900">'+es(c.data&&c.data.image_hint||'')+'</div>';var body='<div style="text-align:center;background:#f8faf3;border:1px solid #dfeac8;border-radius:16px;padding:16px;margin:12px 0"><div style="font-size:15px;color:#74806d;margin-bottom:8px">Look at the picture. Choose the word.</div>'+pic+'</div>';var nav=this._navBtn('ap.v1i=Math.max(0,ap.v1i-1);ap.v1a=false;ap.v1p=-1;ap._r()','ap.v1i=Math.min('+(qs.length-1)+',ap.v1i+1);ap.v1a=false;ap.v1p=-1;ap._r()',i,qs.length,'&larr; 上一题','下一题 &rarr;');var qc=Object.assign({},c,{data:Object.assign({},c.data,{options:opts,options_pinyin:opts.map(py),correct_index:ci})});return this._mc('图片猜词 / Picture Guess',qc,opts,ci,this.v1p,this.v1a,'ap.v1p=',body,nav)};
+var prevCq=ap._cq.bind(ap);
+ap._cq=function(){
+  if(this.st==='v1'){var iq=(Q.v1_image_guess||[])[this.v1i];if(!iq)return null;var pool=['你好','对不起','认识','没关系','高兴','是','不','也','很','叫'];var opts=spreadOpts(iq.correct_answer||'',pool,this.v1i);return Object.assign({},iq,{data:Object.assign({},iq.data||{},{image:(iq.media&&iq.media.image)||'',options:opts,options_pinyin:opts.map(py),correct_index:opts.indexOf(iq.correct_answer)})})}
+  return prevCq();
+};
+})();
+(function(){
+var CLASS_STUDENTS=window.CLASS_STUDENTS||[];
+// Keep the legacy L02 interaction handler compatible with later overrides.
+if(typeof window.rn!=='function') window.rn=function(s){return String(s||'').trim()||'unknown'};
+function nn(s){return String(s||"").trim().replace(/\s+/g," ").toUpperCase()}
+function rn(s){var n=nn(s);for(var i=0;i<CLASS_STUDENTS.length;i++){var x=CLASS_STUDENTS[i],nx=nn(x);if(nx===n||nx.indexOf(n)>=0||n.indexOf(nx)>=0)return x}return String(s||"").trim()||"unknown"}
+function csv(s){return '"'+String(s==null?"":s).replace(/"/g,'""')+'"'}
+var oldInit=ap.init.bind(ap), oldMq=ap._mq.bind(ap), oldR=ap._r.bind(ap);
+ap.roster=CLASS_STUDENTS.slice();
+ap.records=[];
+ap.sessionId=(MT.lessonKey||"HSK1-L02")+"_"+new Date().toISOString().replace(/[:.]/g,"-");
+ap._loadClassData=function(){
+  try{var raw=localStorage.getItem("ClassProData_"+RM);if(!raw)return;var d=JSON.parse(raw);this.records=d.records||[];if(d.scores){this.sc={};for(var k in d.scores){if(d.scores.hasOwnProperty(k))this.sc[k]={t:+d.scores[k]||0,f:false}}}}catch(e){console.log("load class data",e)}
+};
+ap._saveClassData=function(){
+  try{var sc={};for(var k in this.sc){if(this.sc.hasOwnProperty(k))sc[k]=this.sc[k].t||0}localStorage.setItem("ClassProData_"+RM,JSON.stringify({room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,updatedAt:new Date().toISOString(),roster:this.roster,scoreboard:this._sss(),scores:sc,records:this.records}))}catch(e){console.log("save class data",e)}
+};
+ap._scorePayload=function(){return{room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,updatedAt:new Date().toISOString(),rows:this._sss().map(function(x,i){return{rank:i+1,name:x.n,points:x.t}})}};
+ap._pubBoard=function(){if(this.mq&&this.cs==="connected"){try{this.mq.publish("classpro/room/"+RM+"/scoreboard",JSON.stringify(this._scorePayload()))}catch(e){console.log("publish scoreboard",e)}}};
+ap.init=function(){this.as=this.roster.slice();this.pkat=this.roster.slice();this._loadClassData();this._mq();this._r()};
+ap._mq=function(){
+  var t=this;
+  try{if(!window.mqtt){t.cs="offline";return}var cl=mqtt.connect("wss://05d1d5baec9d4cb3a21f5517b430cff1.s1.eu.hivemq.cloud:8884/mqtt",{username:"classpro",password:"Classpro2026",clientId:"tc_"+Math.random().toString(36).substr(2,8),reconnectPeriod:3000,connectTimeout:8000});
+  cl.on("connect",function(){t.cs="connected";cl.subscribe("classpro/room/"+RM+"/answers");cl.subscribe("classpro/room/"+RM+"/presence");t._pubBoard();t._r()});
+  cl.on("message",function(tp,p){try{var m=JSON.parse(p.toString());if(tp.indexOf("/answers")>=0)t._ha(m);else if(tp.indexOf("/presence")>=0)t._hp(m)}catch(e){console.log("MQTT message",e)}});
+  cl.on("error",function(e){t.cs="error";console.log("MQTT",e);t._r()});
+  cl.on("close",function(){if(t.cs!=="error")t.cs="disconnected";t._r()});
+  t.mq=cl}catch(e){t.cs="offline";console.log("MQTT",e)}
+};
+ap._ha=function(m){
+  var n=this._rn(m.name||m.studentName||"unknown"),tx=m.text||m.answer||"",res=m.autoResult||null,now=new Date();
+  var q=this._cq2?this._cq2():null;
+  var rec={room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,studentName:n,mode:m.mode||this.st,questionId:m.questionId||(q&&q.id)||"",answer:tx,result:res,submittedAt:m.submittedAt||now.toISOString(),receivedAt:now.toISOString()};
+  this.records.unshift(rec);
+  this.la.unshift({n:n,x:tx,t:now.toLocaleTimeString(),ar:res});
+  if(res==="correct")this._as(n,1);else{this._saveClassData();this._pubBoard()}
+  if(this.qp==="answering"||this.qp==="locked")this.qsub[n]=true;
+  this._r();
+};
+ap._hp=function(m){this.oc=m.count||this.oc||0;this._pubBoard();this._r()};
+ap._as=function(n,p){n=rn(n);if(!this.sc[n])this.sc[n]={t:0,f:false};this.sc[n].t+=p;this.sc[n].f=true;this._saveClassData();this._pubBoard();var t=this;setTimeout(function(){if(t.sc[n])t.sc[n].f=false;t._r()},600);this._r()};
+ap._sss=function(){var a=this.roster.map(function(n){return{n:n,t:(ap.sc[n]&&ap.sc[n].t)||0}});for(var k in this.sc){if(this.sc.hasOwnProperty(k)&&this.roster.indexOf(k)<0)a.push({n:k,t:this.sc[k].t||0})}return a.sort(function(a,b){return b.t-a.t||ap.roster.indexOf(a.n)-ap.roster.indexOf(b.n)})};
+ap._pcnt=function(){var c=0;for(var i=0;i<this.roster.length;i++){var n=this.roster[i];if(this.sc[n]&&this.sc[n].t>0)c++}return c};
+ap._avg=function(){var s=0;for(var i=0;i<this.roster.length;i++){var n=this.roster[i];s+=(this.sc[n]&&this.sc[n].t)||0}return this.roster.length?Math.round(s/this.roster.length):0};
+ap._ec=function(){
+  var sum=this._sss(), lines=["Type,Name,Points,Mode,QuestionId,Answer,Result,SubmittedAt,ReceivedAt"];
+  for(var i=0;i<sum.length;i++)lines.push(["score",csv(sum[i].n),sum[i].t,"","","","","",""].join(","));
+  for(var j=this.records.length-1;j>=0;j--){var r=this.records[j];lines.push(["answer",csv(r.studentName),"",csv(r.mode),csv(r.questionId),csv(r.answer),csv(r.result),csv(r.submittedAt),csv(r.receivedAt)].join(","))}
+  var a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+lines.join("\n")],{type:"text/csv;charset=utf-8"}));a.download="ClassPro_"+RM+"_"+this.sessionId+".csv";a.click();
+};
+ap._exportJson=function(){this._saveClassData();var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([localStorage.getItem("ClassProData_"+RM)||"{}"],{type:"application/json;charset=utf-8"}));a.download="ClassPro_"+RM+"_"+this.sessionId+".json";a.click()};
+ap._r=function(){oldR();this._saveClassData()};
+})();
+(function(){
+var GAS_URL='https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec';
+var bonus=[3,2,2,1,1];
+var baseQws=ap.qws.bind(ap),baseQwr=ap.qwr.bind(ap),baseQwl=ap.qwl.bind(ap),baseQwe=ap.qwe.bind(ap);
+ap.cloudSync=true;
+ap.qcorrect={};
+ap._speedBonus=function(rank){return bonus[rank-1]||0};
+  ap._sendCloud=function(rec){
+    if(!this.cloudSync||!GAS_URL)return;
+    try{
+    var payload=Object.assign({
+      action:'append_record',
+      lesson:rec.lesson||'HSK1-L02',
+      stage:'课中',
+      module:rec.mode||'',
+      total:1,
+      openEnded:rec.needsReview?'yes':'no',
+      weakPoints:rec.result==='wrong'?(rec.mode||''):'',
+      correction:''
+    },rec);
+    payload.score=rec.result==='correct'?1:0;
+      payload.points=rec.pointsAwarded||0;
+      if(location.hostname==='localhost'||location.hostname==='127.0.0.1'){
+        fetch('/api/pre-class-record',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(e){console.log('local cloud sync',e)});
+        return;
+      }
+      var blob=new Blob([JSON.stringify(payload)],{type:'text/plain;charset=utf-8'});
+    if(navigator.sendBeacon){navigator.sendBeacon(GAS_URL,blob)}
+    else fetch(GAS_URL,{method:'POST',body:blob,mode:'no-cors'});
+  }catch(e){console.log('cloud sync',e)}
+};
+ap._sendSessionSummary=function(reason){
+  if(!this.cloudSync||!GAS_URL)return;
+  try{
+    var payload={
+      action:'session_summary',
+      lesson:MT.lessonKey||'HSK1-L02',
+      stage:'课中',
+      module:'session_summary',
+      room:RM,
+      sessionId:this.sessionId,
+      reason:reason||'manual',
+      studentName:'__CLASS__',
+      answer:JSON.stringify({scoreboard:this._sss(),recordsCount:this.records.length,updatedAt:new Date().toISOString()}),
+      score:0,total:0,points:0,openEnded:'no'
+    };
+    var blob=new Blob([JSON.stringify(payload)],{type:'text/plain;charset=utf-8'});
+    if(navigator.sendBeacon){navigator.sendBeacon(GAS_URL,blob)}
+    else fetch(GAS_URL,{method:'POST',body:blob,mode:'no-cors'});
+  }catch(e){console.log('session summary sync',e)}
+};
+ap.qws=function(){this.qcorrect={};baseQws()};
+ap.qwr=function(){this.qcorrect={};baseQwr()};
+ap.qwl=function(){baseQwl()};
+ap.qwe=function(){baseQwe();this._saveClassData();this._pubBoard();this._sendSessionSummary('question_end')};
+ap._ha=function(m){
+  var n=this._rn(m.name||m.studentName||"unknown"),tx=m.text||m.answer||"",res=m.autoResult||null,now=new Date();
+  var q=this._cq2?this._cq2():null,rank=0,sb=0,base=0,totalPts=0;
+  if(res==="correct"&&!this.qcorrect[n]){
+    rank=Object.keys(this.qcorrect).length+1;
+    this.qcorrect[n]=rank;
+    base=1;sb=this._speedBonus(rank);totalPts=base+sb;
+  }
+  var rec={room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,studentName:n,mode:m.mode||this.st,questionId:m.questionId||(q&&q.id)||"",answer:tx,result:res,submittedAt:m.submittedAt||now.toISOString(),receivedAt:now.toISOString(),speedRank:rank||"",speedBonus:sb,basePoint:base,pointsAwarded:totalPts,needsReview:false};
+  this.records.unshift(rec);
+  this.la.unshift({n:n,x:tx+(sb?("  +速度奖励"+sb):""),t:now.toLocaleTimeString(),ar:res});
+  if(totalPts>0)this._as(n,totalPts);else{this._saveClassData();this._pubBoard()}
+  if(this.qp==="answering"||this.qp==="locked")this.qsub[n]=true;
+  this.lw=true;
+  this._sendCloud(rec);
+  this._r();
+};
+var oldEc=ap._ec.bind(ap);
+ap._ec=function(){
+  var sum=this._sss(), lines=["Type,Name,Points,Mode,QuestionId,Answer,Result,BasePoint,SpeedRank,SpeedBonus,PointsAwarded,SubmittedAt,ReceivedAt"];
+  for(var i=0;i<sum.length;i++)lines.push(["score",csv(sum[i].n),sum[i].t,"","","","","","","","","",""].join(","));
+  for(var j=this.records.length-1;j>=0;j--){var r=this.records[j];lines.push(["answer",csv(r.studentName),"",csv(r.mode),csv(r.questionId),csv(r.answer),csv(r.result),r.basePoint||0,r.speedRank||"",r.speedBonus||0,r.pointsAwarded||0,csv(r.submittedAt),csv(r.receivedAt)].join(","))}
+  var a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+lines.join("\n")],{type:"text/csv;charset=utf-8"}));a.download="ClassPro_"+RM+"_"+this.sessionId+".csv";a.click();
+};
+window.addEventListener('beforeunload',function(){try{ap._saveClassData();ap._sendSessionSummary('beforeunload')}catch(e){}});
+if (window.LESSON_DATA && LESSON_DATA.meta && LESSON_DATA.meta.lessonKey === 'HSK1-L01') {
+  ap._pyz2 = window.L01PinyinLab.render;
+  ap._tts = function (text) {
+    if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) return;
+    window.speechSynthesis.cancel();
+    var utterance = new SpeechSynthesisUtterance(String(text || ''));
+    utterance.lang = 'zh-CN';
+    utterance.rate = 0.78;
+    utterance.pitch = 1;
+    var voices = window.speechSynthesis.getVoices ? window.speechSynthesis.getVoices() : [];
+    for (var vi = 0; vi < voices.length; vi++) {
+      if (/zh[-_]CN/i.test(voices[vi].lang)) { utterance.voice = voices[vi]; break; }
+    }
+    window.speechSynthesis.speak(utterance);
+  };
+  var l01Style = document.createElement('style');
+  l01Style.textContent = '[onclick*="ap.st=\\\'v4\\\'"]{display:none!important}[onclick*="ap.st=\\\'g1\\\'"]{display:none!important}';
+  document.head.appendChild(l01Style);
+  ap._v1 = function () {
+    var qs = Q.v1_image_guess || [], i = this.v1i, c = qs[i];
+    if (!c || !c.data) return '<div class="panel"><p>暂无题目</p></div>';
+    var opts = c.data.options || [], ci = opts.indexOf(c.correct_answer);
+    var img = c.media && c.media.image || '';
+    var body = '<div style="text-align:center;background:#f8faf3;border:1px solid #dfeac8;border-radius:16px;padding:16px;margin:12px 0"><div style="font-size:15px;color:#74806d;margin-bottom:8px">Look at the picture. Choose the word.</div><img src="' + es(img) + '" alt="' + es(c.correct_answer) + '" style="width:100%;max-height:240px;object-fit:contain;border-radius:14px;background:#fff"></div>';
+    var nav = this._navBtn('ap.v1i=Math.max(0,ap.v1i-1);ap.v1a=false;ap.v1p=-1;ap._r()', 'ap.v1i=Math.min(' + (qs.length - 1) + ',ap.v1i+1);ap.v1a=false;ap.v1p=-1;ap._r()', i, qs.length, '&larr; 上一题', '下一题 &rarr;');
+    return this._mc('图片猜词 / Picture Guess', c, opts, ci, this.v1p, this.v1a, 'ap.v1p=', body, nav);
+  };
+  var l01Cq = ap._cq;
+  ap._cq = function () {
+    var result = l01Cq.call(this);
+    if (this.st === 'ttq') {
+      var textItem = (Q.tt_text_true_false || [])[this.ttqi];
+      if (!textItem) return null;
+      result = Object.assign({}, textItem, { data: Object.assign({}, textItem.data || {}, {
+        options: ['对', '不对'],
+        options_pinyin: ['', ''],
+        correct_index: textItem.data && textItem.data.answer ? 0 : 1
+      }), correct_answer: textItem.data && textItem.data.answer ? '对' : '不对' });
+    }
+    if (this.st === 'v1') {
+      var item = (Q.v1_image_guess || [])[this.v1i];
+      var opts = item && item.data && item.data.options || [];
+      if (result && opts.length) result.data = Object.assign({}, result.data, { options: opts, options_pinyin: opts.map(py), correct_index: opts.indexOf(result.correct_answer) });
+    }
+    return result;
+  };
+  ap._ttq = function () {
+    var qs = Q.tt_text_true_false || [], i = this.ttqi, c = qs[i];
+    if (!c || !c.data) return '<div class="panel"><p>暂无题目</p></div>';
+    var opts = ['对', '不对'], ci = c.data.answer ? 0 : 1;
+    var body = '<div style="text-align:left;background:#f0f7ff;border:1px solid #bfdbfe;border-radius:14px;padding:18px;margin:14px 0"><div style="font-size:15px;color:#777;margin-bottom:6px">' + es(c.data.statement_pinyin || '') + '</div><div style="font-size:24px;font-weight:800;color:var(--text);line-height:1.5">' + es(c.data.statement || '') + '</div><div style="font-size:13px;color:#666;margin-top:6px">' + es(c.data.statement_en || '') + '</div></div>';
+    var nav = this._navBtn('ap.ttqi=Math.max(0,ap.ttqi-1);ap.ttqa=false;ap.ttqp=-1;ap._r()', 'ap.ttqi=Math.min(' + (qs.length - 1) + ',ap.ttqi+1);ap.ttqa=false;ap.ttqp=-1;ap._r()', i, qs.length, '← 上一题', '下一题 →');
+    var qc = Object.assign({}, c, { data: Object.assign({}, c.data, { options: opts, options_pinyin: ['', ''], correct_index: ci }), correct_answer: opts[ci] });
+    return this._mc('课文问答 / Text Q&A', qc, opts, ci, this.ttqp, this.ttqa, 'ap.ttqp=', body, nav);
+  };
+}
+})();
+ap.init();
+</script>
+</body>
+</html>
+

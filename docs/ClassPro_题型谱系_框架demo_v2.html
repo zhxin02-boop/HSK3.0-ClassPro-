@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClassPro 题型谱系 · 框架 demo v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FAF8F3;
+  --bg-soft: #F3EFE6;
+  --bg-card: #FFFFFF;
+  --bg-example: #F7F3E8;
+  --ink: #1F2A37;
+  --ink-soft: #5A6573;
+  --ink-mute: #8A8E93;
+  --line: #E5DFD2;
+  --line-soft: #EFEAE0;
+  --seal: #B83A2A;
+  --seal-soft: #E8C9C2;
+
+  --mod-vocab: #3B5F8A;
+  --mod-grammar: #4F6B4A;
+  --mod-text: #8B5A3C;
+  --mod-comp: #876B33;
+
+  --status-live: #4A8B5F;
+  --status-dev: #C68A2E;
+  --status-hold: #8A8E93;
+  --status-dep: #B7B2A6;
+
+  --serif: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+  --sans: 'Inter', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', 'SF Mono', 'Menlo', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+/* ============ HEADER ============ */
+header.masthead {
+  border-bottom: 1px solid var(--line);
+  padding: 44px 0 32px;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--seal);
+  margin-bottom: 14px;
+}
+
+h1.title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
+}
+
+h1.title .accent { color: var(--seal); }
+
+.subtitle {
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+  max-width: 720px;
+}
+
+.lede {
+  margin-top: 18px;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  max-width: 760px;
+  border-left: 3px solid var(--seal);
+  padding-left: 14px;
+  font-weight: 500;
+}
+
+/* ============ FILTER BAR ============ */
+.filterbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(250, 248, 243, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+  margin-top: 24px;
+}
+
+.filterbar .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+.chip {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border-radius: 0;
+  letter-spacing: 0.04em;
+}
+
+.chip:hover { border-color: var(--ink-soft); color: var(--ink); }
+.chip.active { background: var(--seal); color: #fff; border-color: var(--seal); }
+
+.clear-btn {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--ink-mute);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-left: auto;
+}
+
+.clear-btn:hover { color: var(--seal); }
+
+/* ============ SECTION ============ */
+section {
+  padding: 52px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.section-num {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--seal);
+}
+
+h2.section-title {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.section-desc {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  max-width: 640px;
+  flex-basis: 100%;
+  margin-top: -8px;
+}
+
+/* ============ MATRIX ============ */
+.matrix-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+}
+
+.matrix {
+  display: grid;
+  grid-template-columns: 130px repeat(6, minmax(120px, 1fr));
+  min-width: 800px;
+  font-size: 0.85rem;
+}
+
+.matrix-cell {
+  padding: 14px 12px;
+  border-right: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+  min-height: 84px;
+}
+
+.matrix-cell:last-child { border-right: none; }
+
+.matrix-cell.corner {
+  background: var(--bg-soft);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-mute);
+  display: flex;
+  align-items: flex-end;
+  text-transform: uppercase;
+}
+
+.matrix-cell.col-head {
+  background: var(--bg-soft);
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.matrix-cell.row-head {
+  background: var(--bg-soft);
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 0.96rem;
+  display: flex;
+  align-items: center;
+  border-right: 2px solid var(--line);
+  position: relative;
+  cursor: pointer;
+}
+
+.matrix-cell.row-head::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 3px;
+  background: var(--module-color, transparent);
+}
+
+.matrix-cell.row-head:hover { background: #ECE7DA; }
+
+.matrix-cell.data {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 4px;
+}
+
+.code-chip {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  padding: 3px 7px;
+  background: #fff;
+  border: 1px solid var(--code-color, var(--line));
+  color: var(--code-color, var(--ink));
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.code-chip:hover { background: var(--code-color, var(--ink)); color: #fff; }
+.code-chip.dimmed { opacity: 0.28; }
+.code-chip.highlight {
+  background: var(--code-color);
+  color: #fff;
+  box-shadow: 0 0 0 2px var(--bg-card), 0 0 0 3px var(--code-color);
+}
+.code-chip.status-hold { border-style: dashed; opacity: 0.65; }
+.code-chip.status-dep { text-decoration: line-through; opacity: 0.4; }
+
+/* ============ LEGEND ============ */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+  margin-top: 22px;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.legend-item { display: flex; align-items: center; gap: 7px; }
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c, var(--ink-mute));
+}
+
+/* ============ CARDS ============ */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  padding: 18px 18px 16px;
+  border-left: 3px solid var(--module-color);
+  position: relative;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(31, 42, 55, 0.06);
+}
+
+.card.dim { opacity: 0.25; pointer-events: none; }
+
+.card-module {
+  font-size: 0.72rem;
+  color: var(--module-color);
+  font-family: var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: -2px;
+}
+
+.card-row1 {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.card-code {
+  font-family: var(--mono);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--module-color);
+}
+
+.card-name {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+.card-status {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-transform: uppercase;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--ink-mute);
+}
+
+.meta-tag {
+  padding: 2px 7px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line-soft);
+}
+
+.ability-tag {
+  background: #fff;
+  border-color: var(--module-color);
+  color: var(--module-color);
+}
+
+.card-oneline {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.card-example {
+  background: var(--bg-example);
+  border-left: 2px solid var(--module-color);
+  padding: 8px 10px 8px 12px;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--ink);
+  position: relative;
+}
+
+.card-example::before {
+  content: '示例';
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  color: var(--module-color);
+  display: block;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+.card-levels {
+  display: flex;
+  gap: 4px;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px dashed var(--line-soft);
+}
+
+.level-chip {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 2px 5px;
+  background: var(--seal-soft);
+  color: var(--seal);
+}
+
+.level-chip.partial {
+  background: transparent;
+  border: 1px dashed var(--seal);
+  color: var(--seal);
+}
+
+.level-chip.empty {
+  background: transparent;
+  color: var(--line);
+  border: 1px solid var(--line-soft);
+}
+
+/* ============ PHILOSOPHY ============ */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.principle { border-top: 2px solid var(--seal); padding-top: 14px; }
+
+.principle-num {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--seal);
+  margin-bottom: 8px;
+}
+
+.principle-title {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.principle-body {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+/* ============ FOOTER ============ */
+footer { padding: 40px 0 50px; border-bottom: none; }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.feedback-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  padding: 20px;
+}
+
+.feedback-card h3 {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+}
+
+.feedback-fields { display: flex; flex-direction: column; gap: 10px; }
+
+.feedback-field { display: flex; gap: 10px; font-size: 0.86rem; }
+
+.feedback-field strong {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--seal);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  min-width: 64px;
+  padding-top: 3px;
+}
+
+.feedback-field span { color: var(--ink-soft); }
+
+.meta-info { font-size: 0.82rem; color: var(--ink-mute); line-height: 1.8; }
+.meta-info .sig { font-family: var(--serif); font-size: 1.04rem; color: var(--ink); margin-bottom: 12px; }
+
+/* ============ MOBILE ============ */
+@media (max-width: 720px) {
+  .container { padding: 0 16px; }
+  header.masthead { padding: 32px 0 22px; }
+  section { padding: 38px 0; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .filterbar .container { gap: 10px; }
+  .clear-btn { margin-left: 0; }
+  .matrix { font-size: 0.78rem; grid-template-columns: 100px repeat(6, minmax(92px, 1fr)); }
+  .matrix-cell { padding: 10px 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container">
+    <div class="eyebrow">CLASSPRO · 框架 demo v2 · 2026.06</div>
+    <h1 class="title">题型 <span class="accent">谱系</span><br>教学环节 × 能力 × HSK 级别</h1>
+    <p class="subtitle">国际中文综合课的可互动题型组织框架。基于综合课模式与 HSK 3.0 能力导向，以四个教学环节为主轴、语言能力为副轴，串联起 ClassPro 全部题型与级别覆盖。</p>
+    <p class="lede">本视图是给同行评议的框架草案，不是产品发布——请在使用中给我"情境—判断—理由"的反馈。</p>
+  </div>
+</header>
+
+<nav class="filterbar">
+  <div class="container">
+    <div class="filter-group">
+      <span class="filter-label">HSK 级别</span>
+      <button class="chip active" data-filter-level="all">全部</button>
+      <button class="chip" data-filter-level="1">HSK1</button>
+      <button class="chip" data-filter-level="2">HSK2</button>
+      <button class="chip" data-filter-level="3">HSK3</button>
+      <button class="chip" data-filter-level="4">HSK4</button>
+      <button class="chip" data-filter-level="5">HSK5</button>
+    </div>
+    <button class="clear-btn" id="clearAll">清除筛选</button>
+  </div>
+</nav>
+
+<section id="matrix-section">
+  <div class="container">
+    <div class="section-meta">
+      <span class="section-num">§ 01</span>
+      <h2 class="section-title">环节 × 能力矩阵</h2>
+      <p class="section-desc">行为四个教学环节，列为主练语言能力。题型代码落在每个交叉单元格。点击代码查看对应卡片；点击行首高亮整模块。</p>
+    </div>
+
+    <div class="matrix-wrap">
+      <div class="matrix" id="matrix"></div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><span class="legend-dot" style="--c:var(--status-live)"></span>已上线</div>
+      <div class="legend-item"><span class="legend-dot" style="--c:var(--status-dev)"></span>开发中</div>
+      <div class="legend-item"><span class="legend-dot" style="--c:var(--status-hold)"></span>暂缓</div>
+      <div class="legend-item"><span class="legend-dot" style="--c:var(--status-dep)"></span>已废弃</div>
+      <div class="legend-item" style="margin-left:auto"><span style="font-family:var(--mono);font-size:0.72rem;color:var(--ink-mute)">代码可点击 · 划线为废弃 · 虚线框为暂缓</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="cards-section">
+  <div class="container">
+    <div class="section-meta">
+      <span class="section-num">§ 02</span>
+      <h2 class="section-title">题型卡片</h2>
+      <p class="section-desc">每张卡含代码、名称、模块、主练能力、适用 HSK 级别、课上/课后、状态、一句话定位与示例。实心级别徽章为完全适用，虚线为需简化后适用。</p>
+    </div>
+
+    <div class="cards-grid" id="cards"></div>
+  </div>
+</section>
+
+<section id="philosophy">
+  <div class="container">
+    <div class="section-meta">
+      <span class="section-num">§ 03</span>
+      <h2 class="section-title">设计哲学</h2>
+    </div>
+
+    <div class="philosophy-grid">
+      <div class="principle">
+        <div class="principle-num">原则 01</div>
+        <div class="principle-title">综合课模式为骨架</div>
+        <div class="principle-body">题型组织以"教学环节"而非"四技分立"为主轴。综合课在生词、语法、课文、综合运用之间流转，每个环节内嵌多种能力训练。这一组织方式与综合课的真实工作流同构，老师备课与上课节奏直接对应。</div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">原则 02</div>
+        <div class="principle-title">能力作为横切维度</div>
+        <div class="principle-body">每个题型显式标注主练能力（听 / 说 / 读 / 写 / 字 / 综合），允许多值。这样可以在不破坏环节归属的前提下，回答"哪类能力训练在哪个环节发生"，为后续实证分析提供切面。</div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">原则 03</div>
+        <div class="principle-title">HSK 3.0 能力对位</div>
+        <div class="principle-body">HSK 3.0 的"能力导向"意味着考试题型本身是能力训练的载体，无需为应试单设模块。新增的汉字、阅读、写作题型直接融入日常课堂练习，对位考试但不止于考试。模拟测评（限时闭卷）作为独立产品另行规划。</div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">原则 04</div>
+        <div class="principle-title">级别梯度而非级别孤岛</div>
+        <div class="principle-body">同一题型在不同 HSK 级别表现为简化或扩展，而非另起炉灶。一个题型代码承载一条难度曲线，便于跨级别复用与数据可比。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="section-meta">
+      <span class="section-num">§ 04</span>
+      <h2 class="section-title">反馈</h2>
+    </div>
+
+    <div class="footer-grid">
+      <div class="feedback-card">
+        <h3>反馈格式（沿用教学决策日志）</h3>
+        <div class="feedback-fields">
+          <div class="feedback-field"><strong>情境</strong><span>您在哪个教学场景下看这个框架？教 HSK 几级？带的什么类型学生？</span></div>
+          <div class="feedback-field"><strong>判断</strong><span>哪个分类、命名、能力标签让您觉得合理或别扭？</span></div>
+          <div class="feedback-field"><strong>理由</strong><span>为什么这样判断——可以基于教学经验、SLA 理论、或对学生反应的预测。</span></div>
+        </div>
+      </div>
+
+      <div class="meta-info">
+        <div class="sig">馨言时光 · ClassPro 题型谱系框架 demo</div>
+        版本：v2 · 2026.06<br>
+        作者：张馨（大连东软信息学院 国际中文语言文化教学中心）<br>
+        范围：HSK 1-5 · 共 28 个题型（含暂缓与已废弃）<br>
+        说明：本框架为教研讨论草案，最终形态以同行评议后修订版为准。
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============ DATA ============
+const MODULES = [
+  { id: 'vocab',   name: '练习·生词',  short: '生词',     color: 'var(--mod-vocab)' },
+  { id: 'grammar', name: '练习·语法',  short: '语法',     color: 'var(--mod-grammar)' },
+  { id: 'text',    name: '练习·课文',  short: '课文',     color: 'var(--mod-text)' },
+  { id: 'comp',    name: '综合运用',   short: '综合运用', color: 'var(--mod-comp)' },
+];
+
+const ABILITIES = ['听', '说', '读', '写', '字', '综合'];
+
+const TYPES = [
+  // ====== 练习·生词 ======
+  { code:'v1', name:'看图猜词', module:'vocab', abilities:['字','读'], status:'live', when:'课上',
+    levels:{1:'full',2:'full',3:'full',4:'full',5:'full'},
+    oneline:'看图识词，建立形—音—义关联，词汇导入主力题型。',
+    example:'[图：苹果] → A 香蕉  B 苹果  C 葡萄'
+  },
+  { code:'v2', name:'你说我猜', module:'vocab', abilities:['说','听'], status:'live', when:'课上',
+    levels:{3:'full',4:'full',5:'full'},
+    oneline:'同伴互动描述与推理词义，激活口语化输出。',
+    example:'卡片词「地铁」→ A 同学描述「在地下跑的车」→ B 同学猜出'
+  },
+  { code:'v3', name:'盲盒造句', module:'vocab', abilities:['写'], status:'live', when:'课上',
+    levels:{1:'full',2:'full',3:'full',4:'full',5:'full'},
+    oneline:'随机词组造句，制造意外语境，激发输出。',
+    example:'抽到「如果…就…」→ 如果明天下雨，我就在家看书。'
+  },
+  { code:'v4', name:'完成句子', module:'vocab', abilities:['写'], status:'live', when:'课后',
+    levels:{1:'full',2:'full',3:'full',4:'full',5:'full'},
+    oneline:'半命题补全，控制性产出，巩固词汇用法。',
+    example:'虽然今天很累，但是______。 → 但是我还要做作业。'
+  },
+  { code:'v5', name:'选词填空', module:'vocab', abilities:['读'], status:'live', when:'课上',
+    levels:{1:'full',2:'full',3:'full',4:'full',5:'full'},
+    oneline:'在语境中识别词义并选词补全，对位 HSK 完形选词。',
+    example:'我每天______去学校。  词池：骑自行车 / 跑步 / 坐公交车'
+  },
+  { code:'v6', name:'描述猜词', module:'vocab', abilities:['听','说'], status:'live', when:'课上',
+    levels:{3:'full',4:'full',5:'full'},
+    oneline:'多角度线索听辨词义，强化词的语义网络。',
+    example:'老师描述「一种很甜的红色水果，圆圆的」→ 学生猜「苹果」'
+  },
+  { code:'v7', name:'词了个词', module:'vocab', abilities:['读'], status:'live', when:'课上',
+    levels:{1:'full',2:'full',3:'full',4:'full',5:'full'},
+    oneline:'限时选词填空竞速，词义巩固+正确率排名。',
+    example:'20 秒内：他______喜欢踢足球。 [很/非常/也/都]'
+  },
+  { code:'v8', name:'消消乐', module:'vocab', abilities:['读','字'], status:'live', when:'课上',
+    levels:{1:'full',2:'full',3:'full',4:'full',5:'full'},
+    oneline:'词义/部件配对消除，竞速形式（4 组 × 9 项）。',
+    example:'左侧词 ↔ 右侧释义/部件，拖拽配对则消除'
+  },
+  { code:'w1', name:'部件组字', module:'vocab', abilities:['字'], status:'dev', when:'课上',
+    levels:{1:'partial',2:'full',3:'full',4:'partial'},
+    oneline:'部件拖拽组字，建立字形结构感，对位 HSK 书写部件题。',
+    example:'散落部件 [女][子][人][口] → 拖拽组合目标字「好」'
+  },
+  { code:'w2', name:'看拼音写汉字', module:'vocab', abilities:['字','写'], status:'dev', when:'课上',
+    levels:{1:'partial',2:'full',3:'full',4:'full'},
+    oneline:'拼音到字形的转化训练，输入交互+实时正确率。',
+    example:'péngyou → 学生输入 → 朋友'
+  },
+
+  // ====== 练习·语法 ======
+  { code:'g1', name:'连词成句', module:'grammar', abilities:['写'], status:'dep', when:'—',
+    levels:{},
+    oneline:'（已废弃）教学价值有限，与 HSK 3.0 题型无对位。',
+    example:'（无）'
+  },
+  { code:'g2', name:'看图造句', module:'grammar', abilities:['写'], status:'live', when:'课后',
+    levels:{2:'full',3:'full',4:'full',5:'full'},
+    oneline:'图景驱动的语法点输出，对位 HSK 写作题。',
+    example:'[图：女生跑步] + 语法点「正在…」→ 她正在跑步。'
+  },
+  { code:'g3', name:'情境挑战', module:'grammar', abilities:['写'], status:'live', when:'课后',
+    levels:{3:'full',4:'full',5:'full'},
+    oneline:'情境任务中运用语法点，推动有意义输出。',
+    example:'情境：你想去食堂 + 「先…再…」→ 我先去食堂，再去图书馆。'
+  },
+  { code:'r1', name:'上下句配对', module:'grammar', abilities:['读'], status:'dev', when:'课上',
+    levels:{1:'partial',2:'full',3:'full',4:'full'},
+    oneline:'语境衔接判断，6×6 拖拽配对，训练衔接与逻辑。',
+    example:'今天天气怎么样？ ↔ 今天很热。 （6 上 × 6 下拖拽配对）'
+  },
+  { code:'r2', name:'短文选择', module:'grammar', abilities:['读'], status:'dev', when:'课后',
+    levels:{2:'full',3:'full',4:'full',5:'full'},
+    oneline:'独立短文理解，学生端独立完成，老师端汇总正确率。',
+    example:'短文 80-200 字 + 问：文章主要讲什么？ → 3 选 1'
+  },
+  { code:'r3', name:'段落填空', module:'grammar', abilities:['读'], status:'dev', when:'课后',
+    levels:{3:'partial',4:'full',5:'full'},
+    oneline:'六句还原三句到篇章空位，对位 HSK4 新题型。',
+    example:'短文留 3 个空 → 从 6 个备选句中选 3 句填入对应位置'
+  },
+  { code:'r4', name:'段落排序', module:'grammar', abilities:['读'], status:'dev', when:'课后',
+    levels:{4:'full',5:'full'},
+    oneline:'5 段落逻辑重组，对位 HSK5 特色题。',
+    example:'打乱的 5 段 → 按逻辑顺序排成 B → A → D → C → E'
+  },
+
+  // ====== 练习·课文 ======
+  { code:'t1', name:'挖空复述', module:'text', abilities:['读','写'], status:'live', when:'课上',
+    levels:{1:'full',2:'full',3:'full',4:'full',5:'full'},
+    oneline:'关键词缺失下的篇章复述，整合理解与输出。',
+    example:'今天是星期六，我和朋友去____。我们一起____。 → 填入并复述全段'
+  },
+  { code:'tt', name:'课文判断', module:'text', abilities:['读'], status:'live', when:'课上',
+    levels:{1:'full',2:'full',3:'full',4:'full',5:'full'},
+    oneline:'课文细节判断，紧扣文本内容的检索题。',
+    example:'原文「小王是大学生」→ 判断：小王是中学生 ✗'
+  },
+  { code:'t2', name:'任务卡', module:'text', abilities:['综合'], status:'live', when:'课上',
+    levels:{3:'full',4:'full',5:'full'},
+    oneline:'真实任务情境，多技能整合，对位 TBLT 模式。',
+    example:'任务卡：假设你是导游，向游客介绍北京三个景点 → 小组协作完成'
+  },
+  { code:'t3', name:'接龙造句', module:'text', abilities:['写','说'], status:'live', when:'课上',
+    levels:{3:'full',4:'full',5:'full'},
+    oneline:'接续输出构建语篇，强协作语用。',
+    example:'起点「今天」→ S1：今天天气好 → S2：今天天气好我们去公园 → …'
+  },
+
+  // ====== 综合运用 ======
+  { code:'pk', name:'PK竞赛', module:'comp', abilities:['综合'], status:'live', when:'课上',
+    levels:{1:'full',2:'full',3:'full',4:'full',5:'full'},
+    oneline:'综合性赛制，可覆盖词汇/语法/翻译/造句，课堂高激活度。',
+    example:'老师出「英译中：apple」→ 各组抢答「苹果」→ 计分'
+  },
+  { code:'wc', name:'近义词辨析', module:'comp', abilities:['读','综合'], status:'live', when:'课上',
+    levels:{3:'full',4:'full',5:'full'},
+    oneline:'同义/近义词语义辨析，提升精准用词能力。',
+    example:'「高兴」vs「开心」：「高兴」可作动词/形容词，「开心」更口语化'
+  },
+  { code:'w3', name:'短文写作', module:'comp', abilities:['写'], status:'dev', when:'课后',
+    levels:{3:'partial',4:'full',5:'full'},
+    oneline:'命题/看图短文输出，AI 批改+教师终审。写作数据可入科研。',
+    example:'题目「我最难忘的一次旅行」，不少于 80 / 100 / 200 字（按级别）'
+  },
+  { code:'l1', name:'听音选图', module:'comp', abilities:['听'], status:'hold', when:'课上',
+    levels:{1:'partial',2:'partial'},
+    oneline:'听短语句选图，对位 HSK1/2 听 1。AI 音频质量待方案。',
+    example:'听「三个苹果」→ A 书本  B 电话  C 苹果'
+  },
+  { code:'l2', name:'听句配图(6选1)', module:'comp', abilities:['听'], status:'hold', when:'课上',
+    levels:{1:'partial',2:'partial',3:'partial'},
+    oneline:'听对话匹配图片。AI 音频质量待方案。',
+    example:'听「你好！」「你好，很高兴认识你！」→ 6 图选 1（握手）'
+  },
+  { code:'l3', name:'听对话答题', module:'comp', abilities:['听'], status:'hold', when:'课上',
+    levels:{2:'partial',3:'partial',4:'partial',5:'partial'},
+    oneline:'短/长对话理解。AI 音频质量待方案。',
+    example:'听对话 → 问：女的要写什么？ → A 姓名  B 时间  C 问题'
+  },
+  { code:'l4', name:'听短文答题', module:'comp', abilities:['听'], status:'hold', when:'课上',
+    levels:{3:'partial',4:'partial',5:'partial'},
+    oneline:'段落听力理解。AI 音频质量待方案。',
+    example:'听短段 → 问：说话人下午去哪里？ → A 超市  B 医院  C 学校'
+  },
+];
+
+const STATUS_META = {
+  live:  { label:'已上线', color:'var(--status-live)' },
+  dev:   { label:'开发中', color:'var(--status-dev)' },
+  hold:  { label:'暂缓',   color:'var(--status-hold)' },
+  dep:   { label:'已废弃', color:'var(--status-dep)' },
+};
+
+// ============ STATE ============
+let activeLevel = 'all';
+let highlightedCodes = null;
+
+// ============ HELPERS ============
+function typeAppliesAtLevel(type, level) {
+  if (level === 'all') return true;
+  return !!type.levels[level];
+}
+
+// ============ RENDER MATRIX ============
+function renderMatrix() {
+  const grid = document.getElementById('matrix');
+  grid.innerHTML = '';
+
+  const corner = document.createElement('div');
+  corner.className = 'matrix-cell corner';
+  corner.textContent = '环节 \\ 能力';
+  grid.appendChild(corner);
+
+  ABILITIES.forEach(ab => {
+    const cell = document.createElement('div');
+    cell.className = 'matrix-cell col-head';
+    cell.textContent = ab;
+    grid.appendChild(cell);
+  });
+
+  MODULES.forEach(mod => {
+    const rowHead = document.createElement('div');
+    rowHead.className = 'matrix-cell row-head';
+    rowHead.style.setProperty('--module-color', mod.color);
+    rowHead.textContent = mod.short;
+    rowHead.onclick = () => {
+      const codes = TYPES.filter(t => t.module === mod.id && typeAppliesAtLevel(t, activeLevel)).map(t => t.code);
+      setHighlight(new Set(codes));
+    };
+    grid.appendChild(rowHead);
+
+    ABILITIES.forEach(ab => {
+      const cell = document.createElement('div');
+      cell.className = 'matrix-cell data';
+      const types = TYPES.filter(t => t.module === mod.id && t.abilities.includes(ab));
+      types.forEach(t => {
+        const chip = document.createElement('button');
+        chip.className = 'code-chip';
+        chip.textContent = t.code;
+        chip.style.setProperty('--code-color', mod.color);
+
+        if (!typeAppliesAtLevel(t, activeLevel)) chip.classList.add('dimmed');
+        if (t.status === 'hold') chip.classList.add('status-hold');
+        if (t.status === 'dep')  chip.classList.add('status-dep');
+        if (highlightedCodes && highlightedCodes.has(t.code)) chip.classList.add('highlight');
+
+        chip.onclick = (e) => {
+          e.stopPropagation();
+          setHighlight(new Set([t.code]));
+          scrollToCard(t.code);
+        };
+
+        cell.appendChild(chip);
+      });
+      grid.appendChild(cell);
+    });
+  });
+}
+
+// ============ RENDER CARDS ============
+function renderCards() {
+  const grid = document.getElementById('cards');
+  grid.innerHTML = '';
+
+  TYPES.forEach(t => {
+    const mod = MODULES.find(m => m.id === t.module);
+    const card = document.createElement('article');
+    card.className = 'card';
+    card.id = `card-${t.code}`;
+    card.style.setProperty('--module-color', mod.color);
+
+    if (!typeAppliesAtLevel(t, activeLevel)) card.classList.add('dim');
+    if (highlightedCodes && !highlightedCodes.has(t.code)) card.classList.add('dim');
+
+    const status = STATUS_META[t.status];
+
+    card.innerHTML = `
+      <div class="card-module">${mod.name}</div>
+      <div class="card-row1">
+        <span class="card-code">${t.code}</span>
+        <span class="card-name">${t.name}</span>
+      </div>
+      <div class="card-status" style="color:${status.color}">
+        <span class="status-dot" style="background:${status.color}"></span>${status.label} · ${t.when}
+      </div>
+      <div class="card-meta">
+        ${t.abilities.map(a => `<span class="meta-tag ability-tag">${a}</span>`).join('')}
+      </div>
+      <div class="card-oneline">${t.oneline}</div>
+      <div class="card-example">${t.example}</div>
+      <div class="card-levels">
+        ${[1,2,3,4,5].map(lv => {
+          const l = t.levels[lv];
+          if (l === 'full')    return `<span class="level-chip">HSK${lv}</span>`;
+          if (l === 'partial') return `<span class="level-chip partial">HSK${lv}△</span>`;
+          return `<span class="level-chip empty">HSK${lv}</span>`;
+        }).join('')}
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+// ============ INTERACTION ============
+function setHighlight(set) {
+  highlightedCodes = (set && set.size > 0) ? set : null;
+  renderMatrix();
+  renderCards();
+}
+
+function scrollToCard(code) {
+  const el = document.getElementById(`card-${code}`);
+  if (el) {
+    const rect = el.getBoundingClientRect();
+    window.scrollTo({ top: window.scrollY + rect.top - 100, behavior: 'smooth' });
+  }
+}
+
+function setLevel(lv) {
+  activeLevel = lv;
+  document.querySelectorAll('[data-filter-level]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.filterLevel === lv);
+  });
+  renderMatrix();
+  renderCards();
+}
+
+document.querySelectorAll('[data-filter-level]').forEach(btn => {
+  btn.onclick = () => setLevel(btn.dataset.filterLevel);
+});
+
+document.getElementById('clearAll').onclick = () => {
+  activeLevel = 'all';
+  highlightedCodes = null;
+  document.querySelectorAll('[data-filter-level]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.filterLevel === 'all');
+  });
+  renderMatrix();
+  renderCards();
+};
+
+// ============ INIT ============
+renderMatrix();
+renderCards();
+</script>
+</body>
+</html>

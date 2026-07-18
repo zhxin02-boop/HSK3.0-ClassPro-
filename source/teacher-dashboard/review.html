@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>教师批改</title>
+<script>location.replace('post-review.html');</script>
+<style>
+body{font-family:sans-serif;background:#f5f0ee;padding:20px;color:#333}
+h1{font-size:22px;margin:0 0 10px 0}
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:12px 0 16px}
+.summary-card{background:#fff;border-radius:10px;padding:12px;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.summary-card .num{font-size:24px;font-weight:900;color:#c0392b;line-height:1.2}
+.summary-card .label{font-size:12px;color:#888;margin-top:4px}
+.weak-list{background:#fff;border-radius:10px;padding:12px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.weak-list h3{font-size:15px;margin:0 0 8px;color:#333}
+.weak-tag{display:inline-block;background:#fff3e0;color:#b45309;border-radius:14px;padding:4px 10px;font-size:12px;margin:3px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;font-size:13px}
+td,th{padding:8px;border:1px solid #ddd;text-align:left}
+th{background:#c0392b;color:#fff}
+.pending{background:#fff3e0}
+.pl{color:#e67e22;font-weight:600}
+.inp{width:56px;padding:5px 6px;border:1px solid #ddd;border-radius:4px;font-size:12px}
+.fix{width:180px;padding:5px 6px;border:1px solid #ddd;border-radius:4px;font-size:12px}
+.mk{padding:4px 10px;border:none;border-radius:6px;cursor:pointer;font-size:12px;background:#27ae60;color:#fff}
+.hint{font-size:11px;color:#999;margin-top:3px}
+</style>
+</head>
+<body>
+<h1>教师批改与课前看板</h1>
+<div id=status></div>
+<div id=summary></div>
+<table id=tbl>
+<tr><th>时间</th><th>姓名</th><th>课</th><th>环节</th><th>模块</th><th>得分</th><th>总分</th><th>学生作答</th><th>教师批改</th><th>状态</th><th></th></tr>
+</table>
+<script>
+var U = 'https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec';
+var LESSON = 'HSK1-L02';
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function renderSummary(rows){
+  var students={}, pending=0, objScore=0, objTotal=0, weak={};
+  for(var i=0;i<rows.length;i++){
+    var x=rows[i]; if(x.姓名) students[x.姓名]=true;
+    if(x.批改状态==='待批改') pending++;
+    var total=Number(x.总分), score=Number(x.得分);
+    if(!isNaN(total)&&!isNaN(score)&&total===1){ objScore+=score; objTotal+=total; }
+    if(x.薄弱点){ weak[x.薄弱点]=(weak[x.薄弱点]||0)+1; }
+  }
+  var names=Object.keys(students);
+  var acc=objTotal?Math.round(objScore/objTotal*100):0;
+  var weakArr=[]; for(var k in weak){weakArr.push({k:k,n:weak[k]})}
+  weakArr.sort(function(a,b){return b.n-a.n});
+  var h='<div class=summary-grid>'+
+    '<div class=summary-card><div class=num>'+names.length+'</div><div class=label>完成人数</div></div>'+
+    '<div class=summary-card><div class=num>'+rows.length+'</div><div class=label>提交记录</div></div>'+
+    '<div class=summary-card><div class=num>'+acc+'%</div><div class=label>客观题正确率</div></div>'+
+    '<div class=summary-card><div class=num>'+pending+'</div><div class=label>待批改</div></div>'+
+    '</div>';
+  h+='<div class=weak-list><h3>高频薄弱点</h3>';
+  if(weakArr.length===0) h+='<span style="font-size:13px;color:#999">暂无薄弱点记录</span>';
+  for(var i=0;i<Math.min(5,weakArr.length);i++) h+='<span class=weak-tag>'+esc(weakArr[i].k)+' × '+weakArr[i].n+'</span>';
+  h+='</div>';
+  document.getElementById('summary').innerHTML=h;
+  document.getElementById('status').innerHTML='<div style="font-size:13px;color:#666;margin-bottom:8px">当前筛选课程：<b>'+LESSON+'</b></div>';
+}
+function renderRows(rows){
+  var tbl = document.getElementById('tbl');
+  while(tbl.rows.length>1) tbl.deleteRow(1);
+  for(var i=0;i<rows.length;i++){
+    var x = rows[i];
+    var tr = tbl.insertRow();
+    if(x.批改状态==='待批改') tr.className='pending';
+    tr.innerHTML =
+      '<td>'+(esc(x.提交时间)||'')+'</td>'+
+      '<td>'+(esc(x.姓名)||'')+'</td>'+
+      '<td>'+(esc(x.课程)||'')+'</td>'+
+      '<td>'+(esc(x.环节)||'')+'</td>'+
+      '<td>'+(esc(x.模块)||'')+'</td>'+
+      '<td>'+(esc(x.得分)||'')+'</td>'+
+      '<td>'+(esc(x.总分)||'')+'</td>'+
+      '<td>'+(esc(x.学生作答)||'')+'</td>'+
+      '<td><input class=fix id=f'+i+' placeholder="写给学生的反馈" value="'+esc(x.教师批改||'')+'"><div class=hint>例：很好，句子完整。</div></td>'+
+      '<td>'+(x.批改状态==='待批改'?'<span class=pl>待批改</span>':esc(x.批改状态||''))+'</td>'+
+      '<td>'+(x.批改状态==='待批改'?'<input class=inp id=s'+i+' type=number min=0 max=10 placeholder="分"><button class=mk onclick="save('+i+')">批改</button><div class=hint>0-10分</div>':'')+'</td>';
+  }
+}
+function loadData() {
+  fetch(U+'?action=get_all').then(function(r){return r.json()}).then(function(d){
+    if(d.status!='ok')return;
+    var allRows = []; for(var k in d.data){ d.data[k].forEach(function(x){ allRows.push(x) }) }
+    allRows=allRows.filter(function(x){return x.课程===LESSON});
+    renderSummary(allRows);
+    renderRows(allRows);
+  });
+}
+
+function save(i){
+  var sc = document.getElementById('s'+i).value||0;
+  var fix = document.getElementById('f'+i).value||'';
+  if(sc==='' || isNaN(Number(sc))){ alert('请在得分处输入数字，例如 10'); return; }
+  var td = document.querySelectorAll('#tbl tr')[i+1].cells;
+  fetch(U,{method:'POST',body:JSON.stringify({
+    action:'save_score',lesson:td[2].textContent,
+    timestamp:td[0].textContent,studentName:td[1].textContent,
+    score:sc,correction:fix
+  })}).then(function(r){return r.json()}).then(function(d){
+    if(d.status==='ok'){
+      var row=document.getElementById('tbl').rows[i+1];
+      row.className='';
+      row.cells[5].textContent = sc;
+      row.cells[8].innerHTML = '<input class=fix id=f'+i+' value="'+esc(fix)+'">';
+      row.cells[9].textContent = '已批改';
+      row.cells[10].innerHTML = '';
+    }else{alert('保存失败，请重试！')}
+  }).catch(function(){alert('网络错误，保存失败！')});
+}
+
+loadData();
+</script>
+</body>
+</html>

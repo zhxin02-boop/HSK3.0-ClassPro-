@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script src="../shared/students.js"></script>
+<title>ClassReady 课前测试 - HSK1 L2</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,Microsoft YaHei,sans-serif;background:#f5f0ee;padding:20px;color:#333}
+.app{max-width:480px;margin:0 auto}
+h1{font-size:22px;margin-bottom:4px;color:#c0392b}
+.sub{color:#888;font-size:14px;margin-bottom:20px}
+.q{background:#fff;border-radius:16px;padding:20px;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.type{font-size:12px;color:#c0392b;font-weight:600;margin-bottom:8px}
+.prompt{font-size:16px;font-weight:600;margin-bottom:12px}
+.opt{display:block;width:100%;padding:14px 16px;margin-bottom:8px;border:2px solid #e0d5d0;border-radius:12px;background:#fff;font-size:16px;text-align:left;cursor:pointer;transition:all .15s}
+.opt:active{transform:scale(0.97)}
+.opt.correct{border-color:#27ae60;background:#e8f5e9}
+.opt.wrong{border-color:#e74c3c;background:#fcecea}
+.exam{display:block;width:100%;padding:14px;margin-bottom:12px;border:2px solid #e0d5d0;border-radius:12px;font-size:16px;outline:none;resize:vertical;min-height:80px;font-family:inherit}
+.exam:focus{border-color:#c0392b}
+.name-input{padding:12px;border:2px solid #e0d5d0;border-radius:12px;font-size:16px;width:100%;margin-bottom:16px;outline:none;background:#fff}
+.name-input:focus{border-color:#c0392b}
+.btn{width:100%;padding:16px;border:none;border-radius:12px;background:#c0392b;color:#fff;font-size:17px;font-weight:600;cursor:pointer;margin-bottom:10px}
+.btn:active{transform:scale(0.97)}
+.btn:disabled{background:#ccc}
+.result{text-align:center;padding:40px 20px}
+.result .score{font-size:48px;font-weight:900;color:#c0392b}
+.result p{color:#888;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="app">
+  <h1>HSK1 第2课</h1>
+  <p class="sub">我叫李文 - ClassReady 课前测试</p>
+  <select class="name-input" id="nameInput"><option value="">Select your name / 选择姓名</option></select>
+  <div id="questions"></div>
+  <div id="result" style="display:none"></div>
+</div>
+<script>
+var GAS_URL = 'https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec';
+var questions = [
+  {
+    type: "选词填空",
+    prompt: "选择合适的词填空",
+    question: "我___学生，你是老师。",
+    options: ["是", "不", "也", "很"],
+    correct: 0,
+    kp: "词汇：是"
+  },
+  {
+    type: "选词填空",
+    prompt: "选择合适的词填空",
+    question: "A: 对不起！ B: ___。",
+    options: ["你好", "没关系", "再见", "谢谢"],
+    correct: 1,
+    kp: "词汇：没关系"
+  },
+  {
+    type: "选词填空",
+    prompt: "选择合适的词填空",
+    question: "认识你我很___。",
+    options: ["认识", "对不起", "高兴", "没关系"],
+    correct: 2,
+    kp: "词汇：高兴"
+  },
+  {
+    type: "开放式造句",
+    prompt: "请用中文介绍一下自己",
+    question: "你叫什么名字？请写一个完整的句子。",
+    openEnded: true,
+    kp: "综合：自我介绍"
+  },
+  {
+    type: "造句练习",
+    prompt: '用【对不起】和【没关系】造句',
+    question: "请用这两个词写一个简短的对话。",
+    openEnded: true,
+    kp: "词汇：对不起、没关系"
+  }
+];
+
+var studentName = "";
+var current = 0;
+var autoScore = 0;
+var total = questions.length;
+var qDiv = document.getElementById("questions");
+var rDiv = document.getElementById("result");
+
+function start() {
+  studentName = document.getElementById("nameInput").value.trim();
+  if (!studentName) { alert("请先输入名字"); return; }
+  autoScore = 0; current = 0;
+  document.getElementById("nameInput").style.display = "none";
+  document.getElementById("startWrap").style.display = "none";
+  renderQ();
+}
+
+function renderQ() {
+  if (current >= total) { showResult(); return; }
+  var q = questions[current];
+  var h = '<div class="q"><div class="type">' + (current+1) + "/" + total + " " + q.type + '</div>';
+  h += '<div class="prompt">' + q.prompt + '</div>';
+  if (q.openEnded) {
+    h += '<p style="margin-bottom:8px;font-size:18px">' + q.question + '</p>';
+    h += '<textarea class="exam" id="answer" placeholder="在这儿写你的句子..."></textarea>';
+    h += '<button class="btn" onclick="submitOpen()">提交 / Submit</button>';
+  } else {
+    h += '<p style="margin-bottom:12px;font-size:18px">' + q.question + '</p>';
+    q.options.forEach(function(o,i) {
+      h += '<button class="opt" onclick="select(' + i + ')">' + o + '</button>';
+    });
+  }
+  h += '</div>';
+  qDiv.innerHTML = h;
+}
+
+function select(i) {
+  var q = questions[current];
+  var opts = document.querySelectorAll(".opt");
+  var isCorrect = (i === q.correct);
+  opts[i].classList.add(isCorrect ? "correct" : "wrong");
+  if (!isCorrect) opts[q.correct].classList.add("correct");
+  if (isCorrect) autoScore++;
+  // Post to GAS
+  var blob = new Blob([JSON.stringify({studentName:studentName,lesson:"HSK1-L02",stage:"预习",module:q.type,score:isCorrect?1:0,total:1,weakPoints:isCorrect?"":q.kp,answer:q.options[i],questionText:q.question||q.prompt||q.type,openEnded:"no"})], {type:"text/plain"});
+  navigator.sendBeacon(GAS_URL, blob);
+  setTimeout(function() { current++; renderQ(); }, 800);
+}
+
+function submitOpen() {
+  var ans = document.getElementById("answer").value.trim();
+  if (!ans) { alert("请先写句子"); return; }
+  var q = questions[current];
+  // Post to GAS as open-ended
+  var blob = new Blob([JSON.stringify({studentName:studentName,lesson:"HSK1-L02",stage:"预习",module:q.type,score:0,total:10,weakPoints:q.kp,answer:ans,questionText:q.question||q.prompt||q.type,openEnded:"yes"})], {type:"text/plain"});
+  navigator.sendBeacon(GAS_URL, blob);
+  current++;
+  renderQ();
+}
+
+function showResult() {
+  qDiv.style.display = "none";
+  rDiv.style.display = "block";
+  rDiv.innerHTML = "<div class=result><div class=score>" + autoScore + "/3</div>" + "<p>" + "客观题完成！开放题已提交，等待老师批改。" + "</p>";
+}
+</script>
+<script>document.getElementById("nameInput").innerHTML='<option value="">Select your name / 选择姓名</option>'+(window.CLASS_STUDENTS||[]).map(function(n){return'<option value="'+n+'">'+n+'</option>'}).join("");</script>
+<script>document.querySelector(".btn") && document.querySelector(".btn").addEventListener("click", start);</script>
+<p id="startWrap" style="text-align:center;margin-top:10px"><button class="btn" onclick="start()">开始答题 / Start</button></p>
+</body>
+</html>

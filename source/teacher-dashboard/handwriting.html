@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ClassPro+ 汉字书写提交</title>
+<script>location.replace('post-review.html');</script>
+<style>
+*{box-sizing:border-box}
+:root{--green:#4f8f2f;--line:#dfe9c8;--dark:#24351f;--red:#c0392b}
+body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:linear-gradient(180deg,#f7f9ef,#fffaf3);color:var(--dark);padding:20px}
+.wrap{max-width:1180px;margin:0 auto}
+.hero,.panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 12px 28px rgba(86,115,55,.1);margin-bottom:14px}
+h1{margin:0 0 8px;color:#3f7f32;font-size:26px}.muted{color:#74806d;font-size:13px;line-height:1.5}
+button{border:0;border-radius:999px;padding:10px 16px;font-size:14px;font-weight:900;background:var(--green);color:#fff;cursor:pointer}
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.record{border-top:1px dashed var(--line);padding:16px 0}.record:first-child{border-top:0}
+.meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.tag{display:inline-block;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:900;background:#edf6d9;color:#3f7f32}
+.sheet{display:grid;gap:10px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:9px;border:1px solid #eef3df;border-radius:16px;background:#fbfdf6}
+.label{width:42px;font-size:13px;color:#73806b;font-weight:900}
+.model,.cell{width:58px;height:58px;border:1px solid #dce7c8;border-radius:10px;background:linear-gradient(90deg,transparent 49%,#edf2df 50%,transparent 51%),linear-gradient(0deg,transparent 49%,#edf2df 50%,transparent 51%),linear-gradient(45deg,transparent 49.4%,#f3eadb 50%,transparent 50.6%),linear-gradient(-45deg,transparent 49.4%,#f3eadb 50%,transparent 50.6%),#fff}
+.model{display:flex;align-items:center;justify-content:center;font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:34px;color:rgba(45,59,41,.32);font-weight:900}
+.empty{padding:24px;border:1px dashed var(--line);border-radius:16px;text-align:center;color:#74806d;background:#fbfdf6}
+.bad{color:var(--red)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <h1>ClassPro+ 汉字书写提交</h1>
+    <div class="muted">这里读取 Google Sheets 中的课后 handwriting 记录，并把学生在手机上写的笔迹重新画出来。</div>
+    <div class="tools">
+      <button onclick="loadData()">刷新云端书写记录</button>
+      <span class="muted" id="status">尚未读取</span>
+    </div>
+  </div>
+  <div class="panel" id="app"><div class="empty">点击“刷新云端书写记录”。</div></div>
+</div>
+<script>
+var GAS="https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec";
+var LESSON="HSK1-L02";
+function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+function val(o,keys){for(var i=0;i<keys.length;i++){if(o&&o[keys[i]]!=null&&o[keys[i]]!=="")return o[keys[i]]}return""}
+function parseAnswer(s){try{var x=JSON.parse(s);return x&&x.type==="handwriting"?x:null}catch(e){return null}}
+function loadData(){
+  document.getElementById("status").textContent="正在读取...";
+  fetch(GAS+"?action=get_all").then(function(r){return r.json()}).then(function(d){
+    var rows=[];
+    if(d&&d.data){for(var k in d.data){(d.data[k]||[]).forEach(function(x){rows.push(x)})}}
+    var rec=rows.map(function(x){
+      var answer=val(x,["学生作答","answer","瀛︾敓浣滅瓟"]);
+      var parsed=parseAnswer(answer);
+      if(!parsed)return null;
+      return {
+        row:x,
+        data:parsed,
+        student:val(x,["姓名","studentName","name","濮撳悕"]),
+        time:val(x,["提交时间","timestamp","鎻愪氦鏃堕棿"]),
+        questionId:val(x,["题号","questionId","棰樺彿"])
+      };
+    }).filter(Boolean).reverse();
+    document.getElementById("status").textContent="已读取 "+rec.length+" 条书写记录";
+    render(rec);
+  }).catch(function(err){
+    document.getElementById("status").innerHTML='<span class="bad">读取失败：'+esc(err.message||err)+'</span>';
+  });
+}
+function groupCells(cells){
+  var out={};
+  (cells||[]).forEach(function(c){(out[c.char]=out[c.char]||[]).push(c)});
+  Object.keys(out).forEach(function(k){out[k].sort(function(a,b){return Number(a.cell)-Number(b.cell)})});
+  return out;
+}
+function render(records){
+  if(!records.length){document.getElementById("app").innerHTML='<div class="empty">暂无书写提交。</div>';return}
+  document.getElementById("app").innerHTML=records.map(function(r,idx){
+    var grouped=groupCells(r.data.cells);
+    var rows=Object.keys(grouped).map(function(ch){
+      return '<div class="row"><span class="label">'+esc(ch)+'</span><span class="model">'+esc(ch)+'</span>'+grouped[ch].map(function(c,j){return '<canvas class="cell" width="116" height="116" data-rec="'+idx+'" data-char="'+esc(ch)+'" data-cell="'+j+'"></canvas>'}).join("")+'</div>';
+    }).join("");
+    return '<div class="record"><div class="meta"><span class="tag">'+esc(r.student||"未命名")+'</span><span class="tag">'+esc(r.questionId||r.data.questionId||"handwriting")+'</span><span class="muted">'+esc(r.time||r.data.submittedAt||"")+'</span></div><div class="sheet">'+rows+'</div></div>';
+  }).join("");
+  setTimeout(function(){drawAll(records)},0);
+}
+function drawGrid(ctx,w,h){
+  ctx.clearRect(0,0,w,h);ctx.fillStyle="#fff";ctx.fillRect(0,0,w,h);
+  ctx.strokeStyle="#edf2df";ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(w/2,0);ctx.lineTo(w/2,h);ctx.moveTo(0,h/2);ctx.lineTo(w,h/2);ctx.stroke();
+  ctx.strokeStyle="#f3eadb";ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(w,h);ctx.moveTo(w,0);ctx.lineTo(0,h);ctx.stroke();
+}
+function drawAll(records){
+  document.querySelectorAll("canvas.cell").forEach(function(c){
+    var rec=records[Number(c.dataset.rec)],ch=c.dataset.char,cell=Number(c.dataset.cell);
+    var matches=(rec.data.cells||[]).filter(function(x){return x.char===ch}).sort(function(a,b){return Number(a.cell)-Number(b.cell)});
+    var item=matches[cell],ctx=c.getContext("2d"),w=c.width,h=c.height;
+    drawGrid(ctx,w,h);
+    if(!item||!item.strokes)return;
+    ctx.strokeStyle="#c0392b";ctx.lineWidth=7;ctx.lineCap="round";ctx.lineJoin="round";
+    item.strokes.forEach(function(stroke){
+      if(!stroke||!stroke.length)return;
+      ctx.beginPath();ctx.moveTo(stroke[0].x*w,stroke[0].y*h);
+      for(var i=1;i<stroke.length;i++)ctx.lineTo(stroke[i].x*w,stroke[i].y*h);
+      ctx.stroke();
+    });
+  });
+}
+</script>
+</body>
+</html>

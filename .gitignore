@@ -1,0 +1,10 @@
+backups/
+server-local*.log
+data/learning-records.json
+data/students/*.json
+*.tmp
+*.bak
+*.bak-*
+~$*
+source/in-class/_*
+docs/temp_content.txt

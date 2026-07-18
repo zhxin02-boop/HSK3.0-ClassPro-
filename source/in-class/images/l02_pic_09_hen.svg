@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#fff7ed"/>
+  <rect x="150" y="130" width="340" height="80" rx="40" fill="#f28b66"/>
+  <circle cx="250" cy="170" r="38" fill="#ffd15c"/>
+  <circle cx="390" cy="170" r="58" fill="#ffd15c"/>
+  <text x="320" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#c74b3f">very</text>
+  <text x="320" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#203421">small → big</text>
+</svg>

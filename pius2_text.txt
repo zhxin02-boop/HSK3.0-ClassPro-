@@ -1,0 +1,101 @@
+发言总结
+说话人1
+Initiating the interview with a clear research objective, she framed the discussion around participants’ authentic experiences with Class PRO and Class Ready in the SE master program, emphasizing confidentiality, openness to honest reflections on confidence gains, preparedness for learning, and specific challenges such as sentence construction difficulty—highlighting these as focal points for qualitative insight.
+说话人2
+Reporting substantial personal improvement across speaking, character recognition, and listening comprehension through Class PRO and Class Ready, he described a structured pre-class routine involving vocabulary repetition, self-testing, and question-driven sentence formation—leading to heightened classroom participation confidence, real-life language applicability, and refined listening strategies using earphones, targeted repetition, and post-listening verification.
+通用摘要
+Class PRO significantly improved speaking skills, character recognition, and listening comprehension through pre-class web-based preparation and in-class reinforcement.
+Class READY increased confidence in class participation by ensuring students were fully prepared before lessons began.
+Students spent 30–45 minutes daily on Class READY, using spaced repetition for vocabulary, sentence construction without aids, and active listening with self-checking translation.
+Listening practice with headphones and careful pre-translation improved real-world comprehension, enabling students to understand and respond to native speakers—even at faster speeds.
+Real-life applicability of learned phrases—such as mountain-related vocabulary—motivated deeper engagement and extended study time beyond class requirements.
+核心话题
+00:09-00:45 Introduction and Purpose of the Interview on Class PRO and Class Ready Experiences
+The interviewer begins by welcoming participants and clarifying the purpose of the session: to gather honest, anonymized reflections on students’ lived experiences with two instructional tools—Class PRO and Class Ready—within the SE Master’s Chinese language curriculum. Emphasizing that there are no right or wrong answers, the interviewer establishes psychological safety and encourages candid self-reporting about emotional responses, perceived learning gains, and behavioral changes. This foundational segment sets the qualitative, learner-centered tone for the entire discussion, framing all subsequent questions as exploratory probes into subjective educational impact rather than evaluative assessments.
+00:45-02:28 Overall Reflective Evaluation of the Semester-Long Experience with Class PRO and Class Ready
+Building directly on the introductory framing, the interviewer invites a holistic, retrospective reflection on the full semester, explicitly anchoring it first in the Chinese language course context and prompting associative recall (“what comes to mind?”). The participant responds with an extended, albeit fragmented, narrative describing transformative shifts: moving from passive textbook reliance to active, scaffolded engagement; marked improvements in speaking fluency, character recognition, and listening comprehension; and the development of disciplined pre-class preparation habits (e.g., web-based preview, vocabulary rehearsal, sentence construction). Crucially, the response links pedagogical design—particularly the cyclical “preview → in-class reinforcement → application” structure of Class PRO—to tangible neurocognitive outcomes (“it builds something in the brain”) and heightened metacognitive awareness, illustrating how structured autonomy fostered seriousness and intentionality in learning.
+02:28-04:56 Impact on Self-Confidence and Classroom Participation Behavior
+Shifting focus from general learning outcomes to affective and behavioral dimensions, the interviewer explicitly probes changes in self-confidence, particularly regarding willingness and readiness to participate orally in class. The participant affirms a dramatic shift—from initial hesitation and uncertainty (“will I participate or not?”) to unwavering assurance (“0% sure going to participate”)—attributing this transformation directly to the preparatory rigor of Class Ready. This confidence is portrayed not as mere bravado but as competence-based assurance rooted in thorough pre-class work: mastering vocabulary independently, constructing grammatically sound sentences without scaffolding, and developing real-time comprehension skills that extend beyond the classroom into spontaneous interactions with native speakers, thereby validating the authenticity and transferability of the learning experience.
+04:56-06:25 Detailed Workflow and Cognitive Strategies Employed in Class Ready Preparation
+The interviewer elicits granular insight into how participants engage with Class Ready, prompting a step-by-step description of their pre-class routine. The participant details a deliberate, multi-stage cognitive workflow: initial intensive vocabulary exposure (repetition “three or four times”), followed by active recall testing (self-quizzing without materials), then progression to sentence construction tasks requiring deep semantic parsing of contextual prompts (e.g., location-based questions involving Beijing, Shanghai, Xi’an). This process is described as cultivating not just rote knowledge but interpretive agility—the ability to grasp question intent instantly and generate appropriate, unrehearsed responses. Furthermore, the participant explicitly connects this structured practice to enhanced real-world listening resilience, including strategies for managing speech rate (requesting slower delivery) and layered comprehension (listening for meaning first, translating only for verification), demonstrating sophisticated, adaptive learning regulation.
+06:25-07:54 Evolution and Effectiveness of Listening Skill Development Through Class Ready’s Structured Practice
+Concluding the substantive discussion, the interviewer and participant jointly examine the most challenging domain—listening comprehension—and trace its trajectory of improvement across the semester. The participant contrasts past struggles (characterized by excessive repetition and lack of strategy) with current, systematic engagement: using headphones for focused auditory input, prioritizing meaning extraction over immediate translation, employing targeted verification (translation only for uncertain segments), and progressing through scaffolded task types (fill-in-the-blank, multiple-choice, opinion inference). This evolution is framed as cumulative and qualitatively transformative—the “third part” (likely referring to advanced listening tasks) didn’t merely reinforce prior knowledge but conferred new “qualification” (i.e., deeper competence and confidence), enabling functional communication in authentic, unscripted settings and confirming the tool’s efficacy in bridging the gap between controlled practice and real-life language use.
+会议纪要
+Meeting Topic: User Experience Interview on Class PRO and Class Ready in SE Master Chinese Curriculum：### Main Content:
+Meeting StartTime：2026-07-06 09:29:29
+Speaker List：说话人1，说话人2
+Impact on Self-Confidence and Real-World Application
+02:58 Class Ready substantially increased classroom participation confidence: users reported transitioning from uncertainty about contributing to “0% sure” willingness to engage actively
+03:47 A concrete example of real-life transfer involved recalling and applying a mountain-related idiom (e.g., “一鼓作气” or similar contextually appropriate phrase referencing perseverance in climbing) outside class, reinforcing perceived authenticity and utility of learned content
+04:08 Users applied Class Ready strategies beyond class—e.g., adjusting personal study time to 30–45 minutes per session—to sustain skill development
+Usage Patterns and Cognitive Strategy
+04:56 Vocabulary acquisition followed an active recall protocol: reviewing target terms 3–4 times, then attempting recognition without prompts before progressing
+05:36 Sentence construction required first comprehending contextual question semantics (e.g., location-based prompts involving Beijing, Shanghai, Xi’an) prior to formulating responses without aids
+07:21 Listening practice emphasized bottom-up processing: listening attentively via headphones, inferring meaning before translation, verifying accuracy through self-checking, and using targeted exercises (fill-in-the-blank, multiple-choice, opinion identification) to refine comprehension
+Key Parameter Information
+Core Conclusions
+02:33 Class PRO and Class Ready operate synergistically: Class Ready builds foundational competence and confidence, enabling effective in-class application within Class PRO
+05:36 Learners attribute tangible real-world language use and sustained self-directed study behavior to the scaffolding provided by Class Ready’s structured, multi-stage workflow
+06:43 The pedagogical design of Class Ready—particularly its emphasis on pre-class active processing—directly supports measurable improvements in listening accuracy, speaking fluency, and character recognition
+Action Items
+03:19 Document and analyze the specific mountain-related idiom referenced (e.g., phonetic approximation, character form, usage context) for curriculum alignment verification
+访谈对话
+Question：Looking back at the whole semester, what comes to mind regarding your experience with Class PRO and Class Ready in this SE master program?
+Answer：For me, these tools helped a lot compared to last semester, when we relied only on textbooks and teacher-provided materials. Class PRO significantly improved my speaking skills, character recognition, and listening ability. Before class, I had to go through online preparation—answering questions first, then reviewing in class—which trained me to listen carefully and think actively. This process built mental discipline and made me much more serious and focused during learning.
+Question：How has your confidence in participating in class changed after using Class Ready?
+Answer：I feel far more confident now. Earlier, I often hesitated before speaking up—I wasn’t sure whether I’d participate or not. But after completing Class Ready tasks, I enter class fully prepared and 100% certain I’ll take part. That shift came from knowing the vocabulary, structures, and content in advance.
+Question：Can you describe a specific moment when you realized Class Ready content connected meaningfully to real-life Chinese usage?
+Answer：Yes—I remember one phrase taught in Class Ready that was actually used in daily life: a saying involving mountains, something like “we can climb a mountain.” At first, it felt abstract, but later I realized it appeared naturally in conversations and even in media. That moment made me take Chinese more seriously, because it showed me the material wasn’t just academic—it worked in reality. I started spending more time on Class Ready, usually 30 to 45 minutes per session.
+Question：How do you typically use Class Ready before class, and what steps do you follow?
+Answer：I start by reviewing vocabulary three or four times, then test myself without any support—I click to reveal characters and try to recall their meanings and pronunciations. If I remember them well, I move to the sentence-building section. There, I read each question carefully to understand its meaning—for example, if it mentions cities like Beijing, Shanghai, or Xi’an, I figure out what kind of response it expects. Once I grasp the intent, I construct sentences from memory, without referring to notes or translations.
+Question：How has Class Ready affected your ability to understand and respond to spoken Chinese outside class?
+Answer：It’s improved my real-time listening and speaking reactions. Now, when I meet Chinese speakers outside class, I can recognize what they’re saying and attempt to reply—even if they speak quickly, I can ask them to slow down. Before, listening was extremely difficult; last semester, I spent excessive time replaying audio clips with no transcript. With Class Ready, I use headphones, listen carefully, try to understand the meaning first, and only translate if I’m unsure. Then I check my comprehension against the correct answers—whether filling blanks or selecting options—and reflect on where I succeeded or missed. The third section, especially, strengthened my accuracy and confidence in interpreting spoken language.
+原文
+00:01 说话人1
+Okay, so.
+00:09 说话人1
+So now I’m going to start.So first of all thank you for coming participating the the interview and um, so for this interview I would like to understand your real experience with the class PRO and class ready in this SE master, and for the answers there are no right or wrong okay answers and please share honestly about how you feel, how you felt about them and everything you say will be anonym and only be used for the research.
+00:45 说话人1
+OK?So question numberone, so it’s about the overall reflection.So looking back at the whole semester, what comes to mind?First we’ think about the Chinese class.
+01:00 说话人2
+嗯。About the last semester, including the class PRO and cross.For me on my side, it, it, it helped us a lot because in the past semester we were just using the textbooks and what, what the teacher gave us only that, but in the, the class PRO it helped us very, very.
+01:30 说话人2
+And it helps us to increase our speaking skills and how to recognize the characters when we see it and in the issue of listening part it improved a lott, it helps us to improve a lot because we, we, we, we.
+01:50 说话人2
+Before entering in the class we have to go through the the web first, we send it first, we answer the questions and then we come back to the class, we do the same.So it it, it, it actually builds something in the brain like you have to listen it very carefully in order to do something so it’s.
+02:13 说话人2
+Well, it builds, it build a like something that made us to be, to be very, very, very, very, I mean serious with, 嗯。
+02:28 说话人1
+Like let me.So talking about the self confidence change, so do you feel that.Like you feel more confident after using the class ready.
+02:48 说话人2
+Than earlier, earlier, you know, went in the class, but youre like will I participate or not?But after doing the class reading, you 0% sure going to participate in the class.
+03:01 说话人1
+okay?So you well prepared for what you’re going to learn, okay?And question can describe one specific semester that stood.
+03:19 说话人2
+I like to speak positive.There is this issue one day.Like a phrase you told us it was it was used in the past, past life, I mean past years theres this character, I don’t remember it, but there is character when it had a saying it, it, it actually.
+03:47 说话人2
+It was actually used in mountains. If I in mans we can can can climb a mountain something like that.You know nothing thing made me to to I mean to to be very serious Chinese some reduce that they actually work in real life.
+04:08 说话人2
+I used it to do my somes you know like increasing the time to study doing the class ready part.3045 minutes, 45 minutes okay?
+04:33 说话人1
+Do you think that’s a quite long time for you or like its just time or need more just okay because when I timeok question.
+04:56 说话人2
+Could you please tell me about how you use class ready before class I firstly go through the vocabulary like three or four times?Then I tried to recognize them without using any material.I just click it and I try to to to remember it.
+05:18 说话人2
+If I remember it then I continue and I I enter the second part the to enforce questions. Yes, is it questions.No, no.
+05:31 说话人1
+it’s the making sentencens by using yeah, yeah, sentences.
+05:36 说话人2
+When when I start making sentences, firstly I have to read the question and understand what does it mean because they like this this.This question which was which had Beijing, Shanghai, maybe Xi’an, and then the question wanted me to say if something, something so.
+06:03 说话人2
+When I read the question and understand what at once, I’ will be able to make a sentence without using any material, okay? You know, and actually it helped me, even if I go outside, maybe I meet some Chinese people, they start talking to me, I can recognize what they are saying and I can try to reply if they.
+06:25 说话人2
+Speak a little bit fast, I can tell them to slow down and last part, which was the listening part.To me.The listening part, the last in last semester was very hard.
+06:42 说话人1
+very, very hard.
+06:43 说话人2
+I was using much time to repeat the voice, what I had, I just had the voice.But when I use, I use it, I usually use the earphones and I listen it to III, tried to listen it very carefully and understand before translating it and understand what does the sentence means then I if I’m not sure, then I translate it and I see okay, yeah, here I was correct, but here I was not and tried to ask the questions then I go to the.
+07:21 说话人2
+But where I I have to to fill in the blanks maybe or choose which the which sentence is the correct one and and feeling the the opinions, yeah, it it helped me so much well.Even, even if, uh, I was maybe I wasn’t very clear with that and I understood earlier in the everything, but the third part was helping me to get more qualification on it.
+07:52 说话人1
+okay?Okay?And for.

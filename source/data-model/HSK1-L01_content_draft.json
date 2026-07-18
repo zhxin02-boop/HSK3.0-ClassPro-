@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "level": "HSK1",
+    "lessonId": "L01",
+    "lessonKey": "HSK1-L01",
+    "title": "AI小语，你好！",
+    "titleEn": "Hello, AI Xiaoyu!",
+    "topic": "问候与介绍（打招呼、致谢、告别）",
+    "topicEn": "Greetings, thanks and farewells",
+    "status": "draft"
+  },
+  "vocabulary": [
+    {"id":"v01","hanzi":"你好","pinyin":"nǐ hǎo","pos":"问候语","english":"hello","isCore":true,"tags":["greeting"]},
+    {"id":"v02","hanzi":"大家","pinyin":"dàjiā","pos":"代词","english":"everybody; everyone","isCore":true,"tags":["group"]},
+    {"id":"v03","hanzi":"好","pinyin":"hǎo","pos":"形容词","english":"good; fine","isCore":true,"tags":["greeting"]},
+    {"id":"v04","hanzi":"学生","pinyin":"xuéshēng","pos":"名词","english":"student","isCore":true,"tags":["school"]},
+    {"id":"v05","hanzi":"们","pinyin":"men","pos":"后缀","english":"plural suffix for people","isCore":true,"tags":["plural"]},
+    {"id":"v06","hanzi":"老师","pinyin":"lǎoshī","pos":"名词","english":"teacher","isCore":true,"tags":["school"]},
+    {"id":"v07","hanzi":"您","pinyin":"nín","pos":"代词","english":"you (honorific)","isCore":true,"tags":["politeness"]},
+    {"id":"v08","hanzi":"你们","pinyin":"nǐmen","pos":"代词","english":"you (plural)","isCore":true,"tags":["plural"]},
+    {"id":"v09","hanzi":"谢谢","pinyin":"xièxie","pos":"动词","english":"thank you; thanks","isCore":true,"tags":["thanks"]},
+    {"id":"v10","hanzi":"不客气","pinyin":"bú kèqi","pos":"套语","english":"you're welcome","isCore":true,"tags":["thanks"]},
+    {"id":"v11","hanzi":"同学","pinyin":"tóngxué","pos":"名词","english":"classmate; student","isCore":true,"tags":["school"]},
+    {"id":"v12","hanzi":"再见","pinyin":"zàijiàn","pos":"动词","english":"goodbye; see you again","isCore":true,"tags":["farewell"]}
+  ],
+  "properNouns": [
+    {"id":"p01","hanzi":"王老师","pinyin":"Wáng lǎoshī","english":"Ms. Wang"},
+    {"id":"p02","hanzi":"小语","pinyin":"Xiǎoyǔ","english":"Xiaoyu"}
+  ],
+  "texts": [
+    {"id":"text01","title":"对话一（课文1）","scene":"课堂问候","lines":[
+      {"speaker":"王一飞","hanzi":"AI小语，你好！","pinyin":"AI Xiǎoyǔ, nǐ hǎo!","english":"Hello, AI Xiaoyu!","highlightVocab":["v01"]},
+      {"speaker":"小语","hanzi":"王老师，你好！","pinyin":"Wáng lǎoshī, nǐ hǎo!","english":"Hello, Teacher Wang!","highlightVocab":["v01","v06"]}
+    ]},
+    {"id":"text02","title":"对话二（课文2）","scene":"课堂集体问候","lines":[
+      {"speaker":"王一飞","hanzi":"大家好！","pinyin":"Dàjiā hǎo!","english":"Hello, everyone!","highlightVocab":["v02","v03"]},
+      {"speaker":"学生们","hanzi":"老师，您好！","pinyin":"Lǎoshī, nín hǎo!","english":"Hello, teacher!","highlightVocab":["v06","v07"]},
+      {"speaker":"小语","hanzi":"你们好！","pinyin":"Nǐmen hǎo!","english":"Hello, everyone!","highlightVocab":["v08","v03"]},
+      {"speaker":"学生们","hanzi":"你好，小语！","pinyin":"Nǐ hǎo, Xiǎoyǔ!","english":"Hello, Xiaoyu!","highlightVocab":["v01"]}
+    ]},
+    {"id":"text03","title":"对话三（课文3）","scene":"感谢与告别","lines":[
+      {"speaker":"学生们","hanzi":"谢谢！","pinyin":"Xièxie!","english":"Thank you!","highlightVocab":["v09"]},
+      {"speaker":"小语","hanzi":"不客气！","pinyin":"Bú kèqi!","english":"You're welcome!","highlightVocab":["v10"]},
+      {"speaker":"王一飞","hanzi":"同学们，再见！","pinyin":"Tóngxuémen, zàijiàn!","english":"Goodbye, class!","highlightVocab":["v05","v11","v12"]},
+      {"speaker":"学生们","hanzi":"老师，再见！","pinyin":"Lǎoshī, zàijiàn!","english":"Goodbye, teacher!","highlightVocab":["v06","v12"]}
+    ]}
+  ],
+  "grammar": [
+    {"id":"g01","title":"“您”的基本用法","titleEn":"The basic use of nín","explanation":"“您”是“你”的敬称，常用于对长辈、老师或需要表示尊敬的人。","examples":[{"hanzi":"老师，您好！","pinyin":"Lǎoshī, nín hǎo!","english":"Hello, teacher!","highlight":["您"]}],"formula":{"pattern":"你好 → 您好","patternEn":"Replace 你 with 您 to make the greeting polite","note":"先学习“你好”，把“你”换成“您”，就是对老师或需要尊敬的人的礼貌说法。","noteEn":"Start with 你好. Replace 你 with 您 to greet a teacher or a respected person politely."}},
+    {"id":"g02","title":"后缀“们”的基本用法","titleEn":"The plural suffix men","explanation":"“们”用在代词或指人的名词后面表示复数。","examples":[{"hanzi":"同学们、你们、学生们。","pinyin":"Tóngxuémen, nǐmen, xuéshengmen.","english":"Classmates, you, students.","highlight":["们"]}],"formula":{"pattern":"人称代词或人的名词 + 们","patternEn":"Personal pronoun or person noun + men","note":"用于指一组人。","noteEn":"Use it to refer to a group of people."}}
+  ],
+  "preClass": {"questions":[
+    {"id":"pre_l01_001","type":"choice","prompt_cn":"请选择正确答案","prompt_en":"Choose the correct answer.","question":"“谢谢”是什么意思？","options":["Thank you","Goodbye","Hello","You're welcome"],"correct_answer":"Thank you","acceptable_answers":["Thank you"],"score":1,"total":1,"weakPoints":"词汇：谢谢","needs_teacher_review":false},
+    {"id":"pre_l01_002","type":"choice","prompt_cn":"请选择合适的词","prompt_en":"Choose the appropriate word.","question":"老师，___好！","options":["你","您","你们","大家"],"correct_answer":"您","acceptable_answers":["您"],"score":1,"total":1,"weakPoints":"语法：您","needs_teacher_review":false},
+    {"id":"pre_l01_003","type":"output","prompt_cn":"请写一句问候老师的话。","prompt_en":"Write one greeting to a teacher.","question":"请使用“老师”和“您好”。","correct_answer":"老师，您好！","acceptable_answers":["老师您好","老师，您好！"],"score":0,"total":0,"weakPoints":"综合：礼貌问候","needs_teacher_review":true}
+  ]},
+  "classProQuestions": {
+    "v1_image_guess": [
+      {"id":"v1_hsk1_01_001","type":"image_guess","stage":"in_class","difficulty":0.2,"time_estimate_sec":8,"prompt_cn":"两个人见面时可以说什么？","prompt_en":"What can two people say when they meet?","data":{"image_hint":"两个人见面打招呼"},"correct_answer":"你好","acceptable_answers":["你好"],"kp":"词汇：你好","feedback_correct":"正确！你好。","feedback_wrong":"可以用“你好”打招呼。","media":{"audio":"","image":""},"source":"vocabulary","vocab_pool":"L01"}
+    ],
+    "v3_blind_box_sentence": [
+      {"id":"v3_hsk1_01_001","type":"blind_box_sentence","stage":"in_class","difficulty":0.4,"time_estimate_sec":15,"prompt_cn":"请用“谢谢”说一句话。","prompt_en":"Make a sentence with 谢谢.","data":{"word":"谢谢","hints":["老师","同学"]},"reference_answer":"谢谢老师！","kp":"词汇：谢谢","needs_teacher_review":true,"source":"vocabulary"}
+    ],
+    "v4_complete_sentence": [
+      {"id":"v4_hsk1_01_001","type":"complete_sentence","stage":"in_class","difficulty":0.3,"time_estimate_sec":10,"prompt_cn":"请选择合适的词完成句子。","prompt_en":"Complete the sentence.","data":{"template":"老师，___好！","options":["您","你们","大家","们"],"correct_index":0},"correct_answer":"您","kp":"语法：您"},
+      {"id":"v4_hsk1_01_002","type":"complete_sentence","stage":"in_class","difficulty":0.3,"time_estimate_sec":10,"prompt_cn":"请选择合适的词完成句子。","prompt_en":"Complete the sentence.","data":{"template":"同学___，再见！","options":["们","您","好","你"],"correct_index":0},"correct_answer":"们","kp":"语法：们"}
+    ],
+    "v5_vocab_fill": [],
+    "g1_ordering": [
+      {"id":"g1_hsk1_01_001","type":"ordering","stage":"in_class","difficulty":0.4,"time_estimate_sec":15,"prompt_cn":"把词语排列成正确的句子。","prompt_en":"Arrange the words into a correct sentence.","data":{"chunks":["您好","老师"],"num_chunks":2,"distractors":[]},"correct_answer":"老师您好","acceptable_answers":["老师您好","老师，您好！"],"needs_teacher_review":false,"kp":"语法：您"}
+    ]
+  },
+  "postClassHomework": {
+    "version":"L01-v1",
+    "tiers":{"A":{"label":"A档：基础巩固","goal":"掌握基本问候和告别","suggested_minutes":"10分钟"},"B":{"label":"B档：标准巩固","goal":"完成问候、感谢和告别对话","suggested_minutes":"15分钟"},"C":{"label":"C档：挑战拓展","goal":"综合使用礼貌表达进行角色扮演","suggested_minutes":"20分钟"}},
+    "shared_pool":[
+      {"id":"hw_l01_s_001","tier":"shared","type":"choice","module":"choice","prompt_cn":"“不客气”通常回答什么？","prompt_en":"What does 不客气 usually respond to?","options":["谢谢","再见","你好","老师"],"correct_answer":"谢谢","acceptable_answers":["谢谢"],"tags":["谢谢","不客气"],"needs_teacher_review":false},
+      {"id":"hw_l01_s_002","tier":"shared","type":"fill_blank","module":"fill_blank","prompt_cn":"老师，___好！","prompt_en":"Teacher, hello!","options":["您","你们","们","大家"],"correct_answer":"您","acceptable_answers":["您"],"tags":["您"],"needs_teacher_review":false},
+      {"id":"hw_l01_s_003","tier":"shared","type":"ordering","module":"ordering","prompt_cn":"请排列：同学们 / 再见","prompt_en":"Put the words in order.","tokens":["同学们","再见"],"correct_answer":"同学们，再见！","acceptable_answers":["同学们，再见！","同学们再见"],"tags":["们","再见"],"needs_teacher_review":false}
+    ],
+    "tier_pools": {
+      "A":[{"id":"hw_l01_a_001","tier":"A","type":"choice","module":"choice","prompt_cn":"请选择“good”的中文。","prompt_en":"Choose the Chinese for good.","options":["好","谢谢","再见","老师"],"correct_answer":"好","acceptable_answers":["好"],"tags":["好"],"needs_teacher_review":false}],
+      "B":[{"id":"hw_l01_b_001","tier":"B","type":"output","module":"output","prompt_cn":"请写一个向老师问好并说再见的两句对话。","prompt_en":"Write a two-line dialogue greeting and saying goodbye to a teacher.","correct_answer":"老师，您好！老师，再见！","acceptable_answers":[],"tags":["您好","再见"],"needs_teacher_review":true}],
+      "C":[{"id":"hw_l01_c_001","tier":"C","type":"output","module":"output","prompt_cn":"请写一个包含问候、感谢和告别的四句对话。","prompt_en":"Write a four-line dialogue with a greeting, thanks and farewell.","correct_answer":"","acceptable_answers":[],"tags":["你好","谢谢","再见"],"needs_teacher_review":true}]
+    }
+  },
+  "reviewNotes": [
+      "王一飞为女性，英文称谓统一使用 Ms. Wang；中文课堂称呼保留“王老师”。",
+    "课中和课后题目为根据本课生词、语法和课文目标生成，需教师审核后再接入运行页面。",
+    "图片和音频路径暂为空，避免生成不存在的资源。"
+  ]
+}

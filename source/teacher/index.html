@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>教师界面 / Teacher Home</title>
+<script src="../data-model/hsk1-curriculum.js"></script>
+<script src="../shared/context.js"></script>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f7f8fb;color:#1f2937;padding:22px}.wrap{max-width:1050px;margin:auto}.hero,.context,.card{background:#fff;border:1px solid #e5e7eb;border-radius:22px;box-shadow:0 12px 30px rgba(35,55,85,.08)}.hero{padding:30px;background:linear-gradient(135deg,#fff,#eef5ff)}.brand{font-size:13px;font-weight:900;color:#2563eb;letter-spacing:.4px}.hero h1{margin:10px 0 6px;font-size:32px;color:#193b70}.muted{color:#64748b;font-size:14px;line-height:1.6}.context{margin:16px 0;padding:18px;display:flex;gap:14px;align-items:end;flex-wrap:wrap}.field{display:flex;flex-direction:column;gap:6px;font-weight:900;color:#334155;font-size:13px}.field select,.field input{min-width:240px;padding:11px 13px;border:1px solid #cbd5e1;border-radius:12px;background:#fff;color:#1f2937;font-size:15px}.field input{min-width:150px}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:11px 16px;text-decoration:none;font-weight:900;cursor:pointer;font-size:14px}.btn.primary{background:#2563eb;color:#fff}.btn.secondary{background:#eaf2ff;color:#2456a6}.btn.green{background:#e9f7ed;color:#23733d}.btn.orange{background:#fff2e8;color:#a44d12}.section-title{margin:24px 0 12px;color:#334155}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{padding:20px;text-decoration:none;color:inherit;transition:.18s;display:flex;flex-direction:column;min-height:190px}.card:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(35,55,85,.14)}.card.classroom{border-top:5px solid #4a8fe7}.card.dashboard{border-top:5px solid #6ea72d}.card.review{border-top:5px solid #c97922}.icon{font-size:32px}.card h3{margin:12px 0 4px;color:#1e3a63}.card p{margin:0;color:#64748b;font-size:13px;line-height:1.55}.card .go{margin-top:auto;padding-top:16px;color:#2563eb;font-weight:900;font-size:13px}.quick{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}.foot{margin-top:18px;padding:14px 16px;border-radius:16px;background:#fff;border:1px solid #e5e7eb;color:#64748b;font-size:13px;line-height:1.6}@media(max-width:700px){body{padding:12px}.hero{padding:22px}.grid{grid-template-columns:1fr}.field,.field select{width:100%;min-width:0}.context{align-items:stretch}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <section class="hero">
+    <div class="brand">Chinese ClassPro+ / Teacher Workspace</div>
+    <h1>教师界面 / Teacher Home</h1>
+    <div class="muted">从这里选择当前课程，再进入课堂、数据面板或批改工作台。Choose a lesson and open the workspace you need.</div>
+  </section>
+  <section class="context">
+    <label class="field">当前课程 / Current Lesson<select id="lessonSelect"></select></label>
+    <label class="field">课堂房间 / Room<input id="roomInput" value="8888" inputmode="numeric"></label>
+    <div class="actions"><button class="btn primary" onclick="saveContext()">确认课程 / Apply</button><a class="btn secondary" id="studentLink" href="../student/index.html">打开学生入口 / Student Home</a></div>
+  </section>
+  <h2 class="section-title">教师工作区 / Teacher Workspaces</h2>
+  <section class="grid">
+    <a class="card classroom" id="classroomLink" href="../in-class/teacher.html?room=8888&lesson=HSK1-L01">
+      <div class="icon">🎯</div><h3>ClassPro+ 课堂</h3><p>讲授、练习、竞赛、实时答题和排行榜。</p><div class="go">进入课堂 / Open ClassPro+</div>
+    </a>
+    <a class="card dashboard" id="dashboardLink" href="../teacher-dashboard/unified.html?room=8888&lesson=HSK1-L01">
+      <div class="icon">📊</div><h3>统一数据面板</h3><p>按课查看课前、课中、课后数据，以及按学生查看学习情况。</p><div class="go">查看数据 / Open Dashboard</div>
+    </a>
+    <a class="card review" id="reviewLink" href="../teacher-dashboard/post-review.html?room=8888&lesson=HSK1-L01">
+      <div class="icon">✍️</div><h3>批改工作台</h3><p>集中处理课前主观题、课后输出题和汉字书写。</p><div class="go">进入批改 / Open Review Desk</div>
+    </a>
+  </section>
+  <div class="quick"><a class="btn secondary" href="../teacher-dashboard/unified.html?lesson=HSK1-L01&room=8888">数据面板 / Dashboard</a><a class="btn green" href="../in-class/teacher.html?lesson=HSK1-L01&room=8888">直接进入课堂 / Quick Class</a></div>
+  <div class="foot">当前选择会保存到本机浏览器，并通过 URL 传递给各工作区。课程目录可提前显示全部 HSK1 课程；具体课程内容按开发进度逐课接入。</div>
+</main>
+<script>
+var lessonKey='ClassProTeacherLesson',roomKey='ClassProTeacherRoom';
+function qs(id){return document.getElementById(id)}
+function context(){return{lesson:qs('lessonSelect').value||'HSK1-L01',room:(qs('roomInput').value||'8888').trim()||'8888',student:''}}
+function saveContext(){var c=window.ClassProContext.save(context());try{localStorage.setItem(lessonKey,c.lesson);localStorage.setItem(roomKey,c.room)}catch(e){}var query='?'+window.ClassProContext.query(c);qs('classroomLink').href='../in-class/teacher.html'+query;qs('dashboardLink').href='../teacher-dashboard/unified.html'+query;qs('reviewLink').href='../teacher-dashboard/post-review.html'+query;qs('studentLink').href='../student/index.html'+query;window.history.replaceState({},'', query)}
+function init(){var list=window.HSK1_CURRICULUM||[],url=new URLSearchParams(location.search),savedLesson=url.get('lesson')||'',savedRoom=url.get('room')||'';try{savedLesson=savedLesson||localStorage.getItem(lessonKey)||'';savedRoom=savedRoom||localStorage.getItem(roomKey)||''}catch(e){}qs('lessonSelect').innerHTML=list.map(function(x){return'<option value="'+x.id+'">'+x.id+' · '+x.title+'</option>'}).join('');qs('lessonSelect').value=list.some(function(x){return x.id===savedLesson})?savedLesson:'HSK1-L01';qs('roomInput').value=savedRoom||'8888';saveContext()}
+init();
+</script>
+</body>
+</html>

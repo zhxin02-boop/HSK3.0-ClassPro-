@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Chinese ClassPro - 汉语学习平台</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,San Francisco,Segoe UI,"Microsoft YaHei",sans-serif;background:#f5f0ee;color:#3d2b1f;overscroll-behavior:none;}
+.app{max-width:480px;margin:0 auto;min-height:100vh;position:relative;}
+.hd{background:linear-gradient(165deg,#5a0a0a 0%,#8b1a1a 40%,#c0392b 100%);padding:28px 20px 60px;text-align:center;position:relative;overflow:hidden;}.hd::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.04);}.hd::after{content:"";position:absolute;bottom:0;left:0;right:0;height:30px;background:#f5f0ee;border-radius:20px 20px 0 0;}.hd h1{font-size:26px;font-weight:700;color:#fff;margin-bottom:2px;letter-spacing:-0.5px;}.hd p{font-size:13px;color:rgba(255,255,255,.75);line-height:1.4;}.hd .stud{font-size:12px;color:rgba(255,255,255,.5);margin-top:6px;}.tabs{display:flex;gap:6px;padding:16px 20px 8px;overflow-x:auto;-webkit-overflow-scrolling:touch;}.tabs::-webkit-scrollbar{display:none;}.tab{padding:6px 18px;border-radius:20px;border:1.5px solid #e0d5d0;background:#fff;font-size:13px;font-weight:600;color:#a08070;cursor:pointer;white-space:nowrap;transition:all .2s;-webkit-tap-highlight-color:transparent;}.tab:active{transform:scale(0.95);}.tab.a{border-color:#c0392b;background:#c0392b;color:#fff;}.ct{padding:4px 20px 100px;}.card{background:#fff;border-radius:20px;margin-bottom:14px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.05);transition:transform .15s,box-shadow .15s;}.card:active{transform:scale(0.98);}.card-h{padding:16px 18px;display:flex;align-items:center;gap:12px;cursor:pointer;-webkit-tap-highlight-color:transparent;}.card-icon{width:42px;height:42px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}.card-info{flex:1;min-width:0;}.card-info .nm{font-size:16px;font-weight:700;color:#3d2b1f;}.card-info .sub{font-size:12px;color:#a08070;margin-top:1px;}.card-badge{font-size:10px;padding:3px 10px;border-radius:10px;font-weight:600;flex-shrink:0;}.card-badge.rd{background:#fcecea;color:#c0392b;}.card-badge.cm{background:#f0edff;color:#8e44ad;}.card-arrow{font-size:10px;color:#c0b0a0;margin-left:4px;transition:transform .2s;}.card-arrow.open{transform:rotate(180deg);}.card-b{padding:0 18px 14px;display:none;}.card-b.open{display:block;}.lsn{display:flex;align-items:center;padding:10px 12px;border-radius:12px;margin-bottom:6px;background:#fcf8f6;border:1px solid #f0e8e4;text-decoration:none;color:#3d2b1f;transition:all .15s;cursor:pointer;}.lsn:active{background:#fcecea;border-color:#c0392b;}.lsn .id{font-size:11px;color:#c0392b;font-weight:600;min-width:44px;}.lsn .nm{font-size:14px;font-weight:600;}.lsn .en{font-size:11px;color:#a08070;margin-left:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.lsn .st{font-size:11px;color:#28a745;margin-left:auto;font-weight:600;}.pro{background:linear-gradient(135deg,#6c3483,#8e44ad);border-radius:20px;padding:20px;text-align:center;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,.05);}.pro .ic{font-size:36px;margin-bottom:6px;}.pro h3{font-size:17px;font-weight:700;color:#fff;margin-bottom:3px;}.pro p{font-size:13px;color:rgba(255,255,255,.7);line-height:1.5;}.pro .soon{display:inline-block;margin-top:10px;padding:6px 22px;border-radius:20px;background:rgba(255,255,255,.15);color:#fff;font-size:12px;font-weight:600;}.coming-soon{text-align:center;padding:20px;color:#a08070;font-size:13px;background:#fcf8f6;border-radius:14px;border:1.5px dashed #e0d5d0;}.coming-soon .big{font-size:32px;margin-bottom:6px;}.ft{text-align:center;padding:20px;font-size:11px;color:#c0b0a0;}</style>
+</head>
+<body>
+<div class="app">
+<div class="hd"><h1>Chinese ClassPro</h1><p>课前预习 · 课中互动 · 课后巩固</p><div class="stud">Choose your level to start / 选择级别开始学习</div></div>
+<div class="tabs" id="tabs"></div>
+<div class="ct" id="content"></div>
+<div class="ft">© 2026 Chinese ClassPro · 以数据驱动的汉语教学</div>
+</div>
+<script>
+var levels = [
+  {id:"1", label:"HSK 1", badge:"Beginner", color:"#c0392b", icon:"🌱", lessons:[
+    {id:"HSK1-L01", title:"第1课：AI小语，你好！", en:"Hello, AI Xiaoyu!", url:"source/student/index.html?lesson=HSK1-L01", status:"Ready"},
+    {id:"HSK1-L02", title:"第2课：我叫李文", en:"My name is Li Wen", url:"source/student/index.html?lesson=HSK1-L02", status:"Ready"}
+  ]},
+  {id:"2", label:"HSK 2", badge:"Elementary", color:"#d35400", icon:"🌿", lessons:[]},
+  {id:"3", label:"HSK 3", badge:"Intermediate", color:"#2980b9", icon:"🌳", lessons:[]},
+  {id:"4", label:"HSK 4", badge:"Upper-Intermediate", color:"#27ae60", icon:"🌲", lessons:[]},
+  {id:"5", label:"HSK 5", badge:"Advanced", color:"#8e44ad", icon:"🏔️", lessons:[]}
+];
+var curLevel = "1";
+function render() {
+  // Tabs
+  var tabsHtml = "";
+  levels.forEach(function(lv) {
+    tabsHtml += '<div class="tab' + (lv.id === curLevel ? " a" : "") + '" onclick="switchLevel(\'' + lv.id + '\')">' + lv.label + '</div>';
+  });
+  document.getElementById("tabs").innerHTML = tabsHtml;
+
+  // Content
+  var lv = levels.find(function(l) { return l.id === curLevel; });
+  if (!lv) return;
+  var h = '';
+  // ClassReady card
+  h += '<div class="card"><div class="card-h" onclick="toggleBody(\'readyBody\')"><div class="card-icon" style="background:' + lv.color + '20;color:' + lv.color + '">' + lv.icon + '</div><div class="card-info"><div class="nm">' + lv.label + ' ClassReady</div><div class="sub">课前预习 · ' + lv.lessons.length + ' lesson(s)</div></div><span class="card-badge rd">Ready</span><span class="card-arrow open" id="readyArrow">▼</span></div><div class="card-b open" id="readyBody">';  if (lv.lessons.length === 0) {
+    h += '<div class="coming-soon"><div class="big">📚</div>Lessons coming soon<br>课程即将上线</div>';
+  } else {
+    lv.lessons.forEach(function(ls) {
+      h += '<a class="lsn" href="' + ls.url + '"><span class="id">' + ls.id + '</span><span class="nm">' + ls.title + '</span><span class="en">' + ls.en + '</span><span class="st">▶</span></a>';
+    });
+  }
+  h += '</div></div>';
+  // ClassPro card
+  h += '<div class="pro"><div class="ic"></div><h3>ClassPro 课中互动</h3><p>实时答题 · 排行榜 · PK 对战 · 教师反馈<br>即将上线</p><div class="soon">Coming Soon</div></div>';
+  document.getElementById("content").innerHTML = h;
+}
+function switchLevel(id) { curLevel = id; render(); }
+function toggleBody(id) {
+  var el = document.getElementById(id);
+  var arr = document.getElementById(id.replace("Body","Arrow"));
+  if (el) el.classList.toggle("open");
+  if (arr) arr.classList.toggle("open");
+}
+render();
+</script>
+</body>
+</html>

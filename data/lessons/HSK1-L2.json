@@ -1,0 +1,208 @@
+{
+  "lesson": "Lesson 2",
+  "lessonTitle": "第2课：我叫李文",
+  "lessonEnglishTitle": "My name is Li Wen",
+  "grammarPoints": [
+    "汉语的基本语序：主语 + 谓语 + 宾语 (Basic Word Order in Chinese: Subject + Predicate + Object)",
+    "用“对不起”和“没关系”表达歉意和回应 (Expressions of apology and responding: '对不起' and '没关系')"
+  ],
+  "vocabData": [
+    {
+      "word": "不",
+      "pinyin": "bù",
+      "english": "not; no"
+    },
+    {
+      "word": "是",
+      "pinyin": "shì",
+      "english": "be"
+    },
+    {
+      "word": "对不起",
+      "pinyin": "duìbuqǐ",
+      "english": "sorry"
+    },
+    {
+      "word": "没关系",
+      "pinyin": "méi guānxi",
+      "english": "that's all right; never mind"
+    },
+    {
+      "word": "没事",
+      "pinyin": "méishì",
+      "english": "it doesn't matter"
+    },
+    {
+      "word": "很",
+      "pinyin": "hěn",
+      "english": "very"
+    },
+    {
+      "word": "高兴",
+      "pinyin": "gāoxìng",
+      "english": "glad; happy"
+    },
+    {
+      "word": "认识",
+      "pinyin": "rènshi",
+      "english": "know; become acquainted with"
+    },
+    {
+      "word": "也",
+      "pinyin": "yě",
+      "english": "also; too"
+    }
+  ],
+  "readingData": [
+    {
+      "textId": 1,
+      "context": "在教室里，王一飞在认识学生。 (In the classroom, Wang Yifei was getting to know the students.)",
+      "dialogue": [
+        {
+          "speaker": "王一飞",
+          "chinese": "请问，你叫什么名字？",
+          "pinyin": "Qǐngwèn, nǐ jiào shénme míngzì?",
+          "english": "Excuse me, what is your name?"
+        },
+        {
+          "speaker": "陈天中",
+          "chinese": "我叫陈天中。",
+          "pinyin": "Wǒ jiào Chén Tiānzhōng.",
+          "english": "My name is Chen Tianzhong."
+        }
+      ]
+    },
+    {
+      "textId": 2,
+      "context": "在校园里，陈天中和白家月打招呼认识错了人。 (On campus, Chen Tianzhong greeted Bai Jiayue but mistook her for someone else.)",
+      "dialogue": [
+        {
+          "speaker": "陈天中",
+          "chinese": "你好，安妮！",
+          "pinyin": "Nǐ hǎo, Ānnī!",
+          "english": "Hello, Annie!"
+        },
+        {
+          "speaker": "白家月",
+          "chinese": "你好，陈天中！我不是安妮，我是白家月。",
+          "pinyin": "Nǐ hǎo, Chén Tiānzhōng! Wǒ bù shì Ānnī, wǒ shì Bái Jiāyuè.",
+          "english": "Hello, Chen Tianzhong! I'm not Annie—I'm Bai Jiayue."
+        },
+        {
+          "speaker": "陈天中",
+          "chinese": "对不起！",
+          "pinyin": "Duìbuqǐ!",
+          "english": "Sorry!"
+        },
+        {
+          "speaker": "白家月",
+          "chinese": "没关系！ (口语：没事！)",
+          "pinyin": "Méi guānxi! (méishì!)",
+          "english": "That's all right! (It doesn't matter!)"
+        }
+      ]
+    },
+    {
+      "textId": 3,
+      "context": "在校园里，李文和白家月第一次相遇。 (On campus, Li Wen and Bai Jiayue met for the first time.)",
+      "dialogue": [
+        {
+          "speaker": "李文",
+          "chinese": "你好！我叫李文。",
+          "pinyin": "Nǐ hǎo! Wǒ jiào Lǐ Wén.",
+          "english": "Hello! My name is Li Wen."
+        },
+        {
+          "speaker": "白家月",
+          "chinese": "你好！我叫白家月。",
+          "pinyin": "Nǐ hǎo! Wǒ jiào Bái Jiāyuè.",
+          "english": "Hello! My name is Bai Jiayue."
+        },
+        {
+          "speaker": "李文",
+          "chinese": "很高兴认识你。",
+          "pinyin": "Hěn gāoxìng rènshi nǐ.",
+          "english": "Nice to meet you."
+        },
+        {
+          "speaker": "白家月",
+          "chinese": "认识你我也很高兴。",
+          "pinyin": "Rènshi nǐ wǒ yě hěn gāoxìng.",
+          "english": "Nice to meet you too."
+        }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "q": "What does bu mean?",
+      "o": [
+        "yes",
+        "no",
+        "maybe",
+        "good"
+      ],
+      "a": 1
+    },
+    {
+      "q": "How to say sorry?",
+      "o": [
+        "xiexie",
+        "duibuqi",
+        "meiguanxi",
+        "meishi"
+      ],
+      "a": 1
+    },
+    {
+      "q": "What does renshi mean?",
+      "o": [
+        "know",
+        "love",
+        "eat",
+        "run"
+      ],
+      "a": 0
+    },
+    {
+      "q": "Respond to duibuqi?",
+      "o": [
+        "nihao",
+        "zaijian",
+        "meiguanxi",
+        "xiexie"
+      ],
+      "a": 2
+    },
+    {
+      "q": "What does ye mean?",
+      "o": [
+        "not",
+        "also",
+        "very",
+        "good"
+      ],
+      "a": 1
+    },
+    {
+      "q": "Hen gaoxing renshi ni means?",
+      "o": [
+        "Nice to meet you",
+        "Goodbye",
+        "Sorry",
+        "Hello"
+      ],
+      "a": 0
+    },
+    {
+      "q": "Wo jiao Li Wen means?",
+      "o": [
+        "My name is Li Wen",
+        "I am Li Wen",
+        "Call me Li Wen",
+        "Li Wen is me"
+      ],
+      "a": 0
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#eefaf0"/>
+  <rect x="150" y="92" width="340" height="190" rx="26" fill="#fff" stroke="#78a83b" stroke-width="8"/>
+  <circle cx="240" cy="170" r="42" fill="#ffd7a8"/>
+  <path d="M194 262c14-78 78-78 92 0" fill="#5b8fd6"/>
+  <text x="335" y="150" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#203421">Name card</text>
+  <text x="335" y="205" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#2e7d32">Li Wen</text>
+</svg>

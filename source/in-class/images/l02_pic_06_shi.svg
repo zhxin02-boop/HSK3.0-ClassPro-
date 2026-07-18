@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#f0f7ff"/>
+  <rect x="155" y="92" width="330" height="170" rx="22" fill="#fff" stroke="#5b8fd6" stroke-width="8"/>
+  <circle cx="245" cy="177" r="36" fill="#ffd7a8"/>
+  <path d="M210 250c12-64 58-64 70 0" fill="#78a83b"/>
+  <text x="330" y="162" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#203421">student</text>
+  <text x="330" y="212" font-family="Arial, sans-serif" font-size="32" fill="#5b8fd6">is</text>
+</svg>

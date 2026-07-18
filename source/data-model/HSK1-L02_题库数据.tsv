@@ -1,0 +1,28 @@
+============================================================
+HSK1-L2 题库数据 - 复制以下内容到 Google Sheets
+============================================================
+
+操作步骤：
+1. 打开你的旧 Sheet (ID: 1ILjSScbsUKwh7za0iEzRcHWOJf3QnonrTaIafEkbhiw)
+2. 新建一个 Tab，命名为 "题库_HSK1"
+3. 点击 A1 单元格，粘贴以下内容
+（建议：先粘贴到记事本，再从记事本全选复制→粘贴到 Sheet，避免编码问题）
+
+id	lesson	type	type_name	stage	difficulty	time_sec	prompt_cn	prompt_en	data	correct	kp	source
+v5_hsk1_02_01	HSK1-L02	vocab_fill	选词填空	in_class	0.3	10	选择合适的词填空	Choose the correct word.	{"sentence": "我___学生，你是老师。", "options": ["是", "不", "也", "很"], "correct_index": 0}	是	词汇：是	new_sentence
+v5_hsk1_02_02	HSK1-L02	vocab_fill	选词填空	in_class	0.4	10	选择合适的词填空	Choose the correct word.	{"sentence": "认识你我很___。", "options": ["高兴", "对不起", "没关系", "认识"], "correct_index": 0}	高兴	词汇：高兴	text_sentence
+v5_hsk1_02_03	HSK1-L02	vocab_fill	选词填空	in_class	0.4	10	选择合适的词填空	Choose the correct word.	{"sentence": "我叫李文，她___叫李文。", "options": ["很", "也", "不", "是"], "correct_index": 1}	也	词汇：也	new_sentence
+v5_hsk1_02_04	HSK1-L02	vocab_fill	选词填空	in_class	0.5	10	选择合适的词填空	Choose the correct word.	{"sentence": "A: 对不起！ B: ___。", "options": ["你好", "没关系", "再见", "谢谢"], "correct_index": 1}	没关系	词汇：没关系	text_sentence
+v5_hsk1_02_05	HSK1-L02	vocab_fill	选词填空	in_class	0.5	10	选择合适的词填空	Choose the correct word.	{"sentence": "我___安妮，我是白家月。", "options": ["很", "是", "认识", "不早安"], "correct_index": 3}	不早安	词汇：不	text_sentence
+g1_hsk1_02_01	HSK1-L02	ordering	连词成句	in_class	0.4	15	把下面的词排成正确的句子	Arrange into a correct sentence.	{"chunks": ["我", "学生", "是"], "num_chunks": 3, "distractors": []}	我是学生。	语法：基本语序	new_sentence
+g1_hsk1_02_02	HSK1-L02	ordering	连词成句	in_class	0.5	20	把下面的词排成正确的句子	Arrange into a correct sentence.	{"chunks": ["认识你", "我", "也", "很高兴"], "num_chunks": 4, "distractors": ["很对不起"]}	认识你我也很高兴。	语法：基本语序	text_sentence
+g1_hsk1_02_03	HSK1-L02	ordering	连词成句	in_class	0.5	20	把下面的词排成正确的句子	Arrange into a correct sentence.	{"chunks": ["我", "不早安", "安妮", "是"], "num_chunks": 4, "distractors": ["你好"]}	我不早安妮。	语法：基本语序 + 不	text_sentence
+g1_hsk1_02_04	HSK1-L02	ordering	连词成句	in_class	0.6	20	把下面的词排成正确的句子	Arrange into a correct sentence.	{"chunks": ["你好", "陈天中", "我", "早安", "不"], "num_chunks": 5, "distractors": ["对不起"]}	你好陈天中，我不早安妮。	语法：基本语序	text_sentence
+pk_hsk1_02_01	HSK1-L02	pk_question	PK赛	in_class	0.3	10	快速选择题！	Quick quiz!	{"question": "看见同学应该说____？", "options": ["对不起", "再见", "你好", "谢谢"], "correct_index": 2}	你好	综合：打招呼	new_sentence
+pk_hsk1_02_02	HSK1-L02	pk_question	PK赛	in_class	0.4	8	快速选择题！	Quick quiz!	{"question": "踩到别人的脚，应该说____？", "options": ["没关系", "对不起", "谢谢", "你好"], "correct_index": 1}	对不起	综合：道歉	new_sentence
+pk_hsk1_02_03	HSK1-L02	pk_question	PK赛	in_class	0.4	8	快速选择题！	Quick quiz!	{"question": "听到对不起，应该回答____？", "options": ["再见", "对不起", "没关系", "你好"], "correct_index": 2}	没关系	综合：回应道歉	new_sentence
+pk_hsk1_02_04	HSK1-L02	pk_question	PK赛	in_class	0.5	8	快速选择题！	Quick quiz!	{"question": "Wo jiao Li Wen 的意思是____？", "options": ["我是李文", "我叫李文", "你好李文", "李文明白"], "correct_index": 1}	我叫李文	综合：自我介绍	text_sentence
+
+============================================================
+共 13 道题（V5选词填空 x5, g1连词成句 x4, PK赛 x4）
+============================================================

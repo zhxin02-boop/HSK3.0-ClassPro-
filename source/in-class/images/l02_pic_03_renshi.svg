@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#edf7ff"/>
+  <circle cx="220" cy="120" r="44" fill="#ffd7a8"/>
+  <circle cx="420" cy="120" r="44" fill="#ffd7a8"/>
+  <path d="M174 318c16-102 80-102 96 0" fill="#7aa64a"/>
+  <path d="M374 318c16-102 80-102 96 0" fill="#5b8fd6"/>
+  <path d="M260 210c40-26 80-26 120 0" fill="none" stroke="#203421" stroke-width="16" stroke-linecap="round"/>
+  <path d="M282 210h76" stroke="#203421" stroke-width="16" stroke-linecap="round"/>
+  <text x="320" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#2e7d32">meet</text>
+</svg>

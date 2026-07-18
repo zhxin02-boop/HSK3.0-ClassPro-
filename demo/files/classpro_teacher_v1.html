@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClassPro 教师端 · HSK1</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Quicksand:wght@400;500;600;700&display=swap');
+
+  :root {
+    --bg: #FFF8F2;
+    --bg-warm: #FFF0E6;
+    --bg-card: #FFFFFF;
+    --primary: #E85D3A;
+    --primary-light: #FF8A65;
+    --primary-pale: #FFEEE8;
+    --secondary: #5B8DEF;
+    --secondary-light: #8BB4FF;
+    --secondary-pale: #E8F0FF;
+    --accent-green: #4CAF50;
+    --accent-green-pale: #E8F5E9;
+    --accent-purple: #9C67DB;
+    --accent-purple-pale: #F3E8FF;
+    --accent-amber: #FFB74D;
+    --accent-amber-pale: #FFF3E0;
+    --text-dark: #2D2D2D;
+    --text-mid: #666;
+    --text-light: #999;
+    --border: #F0E0D6;
+    --shadow-soft: 0 2px 12px rgba(232,93,58,0.08);
+    --shadow-card: 0 4px 20px rgba(0,0,0,0.06);
+    --shadow-float: 0 8px 32px rgba(0,0,0,0.12);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --radius-xs: 6px;
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', 'Quicksand', sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ====== Top Navigation Bar ====== */
+  .topbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,248,242,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .topbar-left {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .topbar-logo {
+    font-size: 20px; font-weight: 700; color: var(--primary);
+    letter-spacing: -0.5px;
+  }
+  .topbar-logo span { font-weight: 400; color: var(--text-light); font-size: 14px; margin-left: 8px; }
+  .topbar-lesson {
+    background: var(--primary-pale);
+    color: var(--primary);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .topbar-right {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .pinyin-toggle {
+    display: flex; align-items: center; gap: 6px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--text-mid);
+    transition: var(--transition);
+  }
+  .pinyin-toggle:hover { border-color: var(--primary-light); color: var(--primary); }
+  .pinyin-toggle .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent-green);
+    transition: var(--transition);
+  }
+  .pinyin-toggle.off .dot { background: var(--text-light); }
+
+  /* ====== Module Selector (Home) ====== */
+  .module-home {
+    padding: 80px 24px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .home-header {
+    text-align: center;
+    margin-bottom: 48px;
+    animation: fadeUp 0.6s ease;
+  }
+  .home-header h1 {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+  }
+  .home-header h1 .pinyin-sub {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 4px;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .home-header p {
+    color: var(--text-mid);
+    font-size: 15px;
+    margin-top: 8px;
+  }
+  .module-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .module-card {
+    background: var(--bg-card);
+    border: 2px solid transparent;
+    border-radius: var(--radius);
+    padding: 28px 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow-soft);
+    animation: fadeUp 0.5s ease both;
+  }
+  .module-card:nth-child(1) { animation-delay: 0.1s; }
+  .module-card:nth-child(2) { animation-delay: 0.2s; }
+  .module-card:nth-child(3) { animation-delay: 0.3s; }
+  .module-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+    border-color: var(--primary-light);
+  }
+  .module-card .icon {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 16px;
+  }
+  .module-card:nth-child(1) .icon { background: var(--primary-pale); }
+  .module-card:nth-child(2) .icon { background: var(--secondary-pale); }
+  .module-card:nth-child(3) .icon { background: var(--accent-purple-pale); }
+  .module-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+  .module-card p { font-size: 13px; color: var(--text-light); line-height: 1.5; }
+
+  /* ====== Shared Module Layout ====== */
+  .module-view {
+    display: none;
+    padding: 80px 24px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .module-view.active { display: block; }
+  .module-topbar {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 28px;
+    animation: fadeUp 0.4s ease;
+  }
+  .btn-back {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: var(--transition);
+    flex-shrink: 0;
+  }
+  .btn-back:hover { background: var(--primary-pale); border-color: var(--primary-light); }
+  .module-title {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .module-subtitle {
+    font-size: 13px;
+    color: var(--text-light);
+  }
+
+  /* ====== Vocab Flashcard Module ====== */
+  .flashcard-container {
+    perspective: 1200px;
+    margin: 0 auto;
+    max-width: 480px;
+  }
+  .flashcard-progress {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 20px;
+    animation: fadeUp 0.5s ease 0.1s both;
+  }
+  .progress-bar {
+    flex: 1; height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%; background: var(--primary);
+    border-radius: 3px;
+    transition: width 0.4s ease;
+  }
+  .progress-text { font-size: 13px; color: var(--text-light); white-space: nowrap; }
+
+  .flashcard-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    cursor: pointer;
+    animation: fadeUp 0.5s ease 0.2s both;
+  }
+  .flashcard-inner {
+    position: relative;
+    width: 100%; height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+  }
+  .flashcard-wrapper.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+  }
+  .flashcard-front, .flashcard-back {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 32px;
+    overflow: hidden;
+  }
+  .flashcard-front {
+    background: linear-gradient(145deg, #fff 0%, var(--bg-warm) 100%);
+    border: 2px solid var(--border);
+  }
+  .flashcard-front .emoji-bg {
+    position: absolute; top: -20px; right: -20px;
+    font-size: 120px; opacity: 0.08;
+    transform: rotate(15deg);
+  }
+  .flashcard-front .pinyin-main {
+    font-size: 28px;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 16px;
+    font-family: 'Quicksand', 'Noto Sans SC', sans-serif;
+    letter-spacing: 1px;
+  }
+  .flashcard-front .emoji-main {
+    font-size: 72px;
+    margin-bottom: 20px;
+    animation: gentleBounce 3s ease-in-out infinite;
+  }
+  .flashcard-front .tap-hint {
+    position: absolute;
+    bottom: 24px;
+    font-size: 12px;
+    color: var(--text-light);
+    display: flex; align-items: center; gap: 4px;
+  }
+
+  .flashcard-back {
+    background: var(--bg-card);
+    border: 2px solid var(--primary-light);
+    transform: rotateY(180deg);
+    gap: 12px;
+    justify-content: flex-start;
+    padding-top: 36px;
+  }
+  .flashcard-back .hanzi-large {
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--text-dark);
+    line-height: 1.2;
+  }
+  .flashcard-back .pinyin-back {
+    font-size: 20px;
+    color: var(--primary);
+    font-family: 'Quicksand', 'Noto Sans SC', sans-serif;
+  }
+  .flashcard-back .pos-tag {
+    display: inline-block;
+    background: var(--secondary-pale);
+    color: var(--secondary);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .flashcard-back .english {
+    font-size: 20px;
+    color: var(--text-mid);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+  }
+  .flashcard-back .usage-section {
+    width: 100%;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px dashed var(--border);
+  }
+  .flashcard-back .usage-label {
+    font-size: 11px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .usage-item {
+    background: var(--bg-warm);
+    border-radius: var(--radius-xs);
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  .usage-item .u-hanzi { font-weight: 600; }
+  .usage-item .u-pinyin { color: var(--primary); font-size: 12px; margin-left: 4px; }
+  .usage-item .u-en { color: var(--text-light); font-size: 12px; display: block; margin-top: 2px; }
+
+  .flashcard-nav {
+    display: flex; justify-content: center; gap: 16px;
+    margin-top: 24px;
+    animation: fadeUp 0.5s ease 0.3s both;
+  }
+  .flashcard-nav button {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    background: var(--bg-card);
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .flashcard-nav button:hover {
+    background: var(--primary-pale);
+    border-color: var(--primary-light);
+    transform: scale(1.08);
+  }
+  .flashcard-nav button:disabled {
+    opacity: 0.3; cursor: not-allowed;
+    transform: none;
+  }
+
+  /* ====== Grammar Module ====== */
+  .grammar-section {
+    margin-bottom: 40px;
+    animation: fadeUp 0.5s ease both;
+  }
+  .grammar-section:nth-child(2) { animation-delay: 0.1s; }
+  .grammar-section:nth-child(3) { animation-delay: 0.2s; }
+  .grammar-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+  }
+  .grammar-card-header {
+    padding: 20px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .grammar-card-header:hover { background: var(--bg-warm); }
+  .grammar-card-header h3 {
+    font-size: 18px; font-weight: 700;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .grammar-card-header h3 .g-num {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--secondary);
+    color: #fff;
+    font-size: 13px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+  }
+  .grammar-card-header .en-title {
+    font-size: 13px; color: var(--text-light);
+    font-family: 'Quicksand', sans-serif;
+  }
+  .grammar-card-header .expand-icon {
+    font-size: 14px; color: var(--text-light);
+    transition: transform 0.3s ease;
+  }
+  .grammar-card.expanded .expand-icon { transform: rotate(180deg); }
+
+  .grammar-card-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .grammar-card.expanded .grammar-card-body {
+    max-height: 800px;
+  }
+  .grammar-examples {
+    padding: 0 24px 16px;
+  }
+  .grammar-example {
+    display: flex; align-items: center; gap: 16px;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 8px;
+    background: var(--bg);
+    opacity: 0;
+    transform: translateX(-12px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  .grammar-card.expanded .grammar-example.revealed {
+    opacity: 1; transform: translateX(0);
+  }
+  .grammar-example .ex-hanzi {
+    font-size: 22px; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .grammar-example .ex-hanzi .hl {
+    color: var(--primary);
+    position: relative;
+  }
+  .grammar-example .ex-hanzi .hl::after {
+    content: '';
+    position: absolute; left: 0; right: 0; bottom: -2px;
+    height: 3px; background: var(--primary-light);
+    border-radius: 2px;
+    opacity: 0.5;
+  }
+  .grammar-example .ex-right {
+    display: flex; flex-direction: column;
+  }
+  .grammar-example .ex-pinyin {
+    font-size: 14px; color: var(--primary);
+    font-family: 'Quicksand', 'Noto Sans SC', sans-serif;
+  }
+  .grammar-example .ex-en {
+    font-size: 13px; color: var(--text-light);
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .grammar-step-btn {
+    display: flex; align-items: center; justify-content: center;
+    gap: 6px;
+    margin: 0 24px 12px;
+    padding: 10px;
+    border-radius: var(--radius-sm);
+    background: var(--secondary-pale);
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    width: calc(100% - 48px);
+    transition: var(--transition);
+  }
+  .grammar-step-btn:hover { background: var(--secondary); color: #fff; }
+  .grammar-step-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .grammar-formula {
+    margin: 8px 24px 20px;
+    padding: 16px 20px;
+    background: var(--accent-amber-pale);
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--accent-amber);
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .grammar-card.formula-shown .grammar-formula {
+    opacity: 1; transform: scale(1);
+  }
+  .grammar-formula .formula-pattern {
+    font-size: 20px; font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+  }
+  .grammar-formula .formula-note {
+    font-size: 13px; color: var(--text-mid);
+  }
+  .grammar-formula .formula-en {
+    font-size: 12px; color: var(--text-light);
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 4px;
+  }
+
+  /* ====== Comic Text Module ====== */
+  .comic-tabs {
+    display: flex; gap: 8px;
+    margin-bottom: 24px;
+    animation: fadeUp 0.4s ease 0.1s both;
+  }
+  .comic-tab {
+    flex: 1;
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    border: 2px solid var(--border);
+    background: var(--bg-card);
+    cursor: pointer;
+    text-align: center;
+    transition: var(--transition);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .comic-tab:hover { border-color: var(--primary-light); }
+  .comic-tab.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+  .comic-tab .tab-sub {
+    font-size: 11px; font-weight: 400;
+    opacity: 0.7;
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .comic-scene {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    padding: 24px;
+    min-height: 400px;
+    animation: fadeUp 0.4s ease 0.2s both;
+  }
+  .comic-scene-label {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 6px;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .comic-scene-label .scene-icon {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--accent-green-pale);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px;
+  }
+
+  .chat-line {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    max-width: 85%;
+  }
+  .chat-line.revealed { opacity: 1; transform: translateY(0); }
+  .chat-line.right { flex-direction: row-reverse; margin-left: auto; }
+
+  .chat-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+  }
+  .chat-avatar.teacher { background: var(--primary); }
+  .chat-avatar.student { background: var(--secondary); }
+  .chat-avatar.ai { background: var(--accent-purple); }
+  .chat-avatar .avatar-name {
+    position: absolute;
+    bottom: -16px;
+    font-size: 10px;
+    color: var(--text-light);
+    white-space: nowrap;
+  }
+
+  .chat-bubble {
+    background: var(--bg);
+    border-radius: 18px 18px 18px 4px;
+    padding: 14px 18px;
+    position: relative;
+    max-width: 100%;
+  }
+  .chat-line.right .chat-bubble {
+    border-radius: 18px 18px 4px 18px;
+    background: var(--primary-pale);
+  }
+  .chat-bubble .bubble-pinyin {
+    font-size: 13px;
+    color: var(--primary);
+    font-family: 'Quicksand', 'Noto Sans SC', sans-serif;
+    margin-bottom: 4px;
+  }
+  .chat-bubble .bubble-hanzi {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .chat-bubble .bubble-hanzi .vocab-hl {
+    color: var(--primary);
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition);
+  }
+  .chat-bubble .bubble-hanzi .vocab-hl:hover {
+    background: var(--primary-pale);
+    border-radius: 4px;
+  }
+  .chat-bubble .bubble-en {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 4px;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .comic-controls {
+    display: flex; justify-content: center; gap: 12px;
+    margin-top: 24px;
+    animation: fadeUp 0.4s ease 0.3s both;
+  }
+  .comic-btn {
+    padding: 10px 24px;
+    border-radius: 24px;
+    border: 2px solid var(--border);
+    background: var(--bg-card);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .comic-btn:hover {
+    border-color: var(--primary-light);
+    background: var(--primary-pale);
+  }
+  .comic-btn.primary-btn {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+  .comic-btn.primary-btn:hover {
+    background: var(--primary-light);
+    border-color: var(--primary-light);
+  }
+
+  /* ====== Animations ====== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes gentleBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    70% { transform: scale(1.05); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  /* ====== Responsive ====== */
+  @media (max-width: 640px) {
+    .module-grid { grid-template-columns: 1fr; }
+    .flashcard-front .pinyin-main { font-size: 22px; }
+    .flashcard-front .emoji-main { font-size: 56px; }
+    .flashcard-back .hanzi-large { font-size: 48px; }
+    .chat-bubble .bubble-hanzi { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== Top Bar ====== -->
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-logo">ClassPro <span>教师端</span></div>
+    <div class="topbar-lesson" id="topbarLesson"></div>
+  </div>
+  <div class="topbar-right">
+    <div class="pinyin-toggle" id="pinyinToggle" onclick="togglePinyin()">
+      <span class="dot"></span>
+      <span>拼音</span>
+    </div>
+  </div>
+</div>
+
+<!-- ====== Module Selector Home ====== -->
+<div class="module-home" id="moduleHome">
+  <div class="home-header">
+    <h1>
+      <span class="pinyin-sub" id="homePinyin"></span>
+      <span id="homeTitle"></span>
+    </h1>
+    <p id="homeTopic"></p>
+  </div>
+  <div class="module-grid">
+    <div class="module-card" onclick="openModule('vocab')">
+      <div class="icon">📇</div>
+      <h3>生词卡片</h3>
+      <p>Vocab Flashcards<br>拼音引导 · 翻卡学习</p>
+    </div>
+    <div class="module-card" onclick="openModule('grammar')">
+      <div class="icon">🔍</div>
+      <h3>归纳语法</h3>
+      <p>Inductive Grammar<br>步进引导 · 公式推导</p>
+    </div>
+    <div class="module-card" onclick="openModule('comic')">
+      <div class="icon">💬</div>
+      <h3>漫画课文</h3>
+      <p>Comic Dialogue<br>角色对话 · 呼吸节奏</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====== Vocab Flashcard Module ====== -->
+<div class="module-view" id="vocabModule">
+  <div class="module-topbar">
+    <button class="btn-back" onclick="goHome()">←</button>
+    <div>
+      <div class="module-title">📇 生词卡片</div>
+      <div class="module-subtitle">点击卡片翻转 · 左右切换</div>
+    </div>
+  </div>
+  <div class="flashcard-container">
+    <div class="flashcard-progress">
+      <div class="progress-bar"><div class="progress-fill" id="vocabProgress"></div></div>
+      <div class="progress-text" id="vocabCount"></div>
+    </div>
+    <div class="flashcard-wrapper" id="flashcard" onclick="flipCard()">
+      <div class="flashcard-inner">
+        <div class="flashcard-front" id="cardFront"></div>
+        <div class="flashcard-back" id="cardBack"></div>
+      </div>
+    </div>
+    <div class="flashcard-nav">
+      <button id="btnPrev" onclick="prevCard()">◀</button>
+      <button onclick="flipCard()">🔄</button>
+      <button id="btnNext" onclick="nextCard()">▶</button>
+    </div>
+  </div>
+</div>
+
+<!-- ====== Grammar Module ====== -->
+<div class="module-view" id="grammarModule">
+  <div class="module-topbar">
+    <button class="btn-back" onclick="goHome()">←</button>
+    <div>
+      <div class="module-title">🔍 归纳语法</div>
+      <div class="module-subtitle">逐句展示 · 发现规律 · 总结公式</div>
+    </div>
+  </div>
+  <div id="grammarContent"></div>
+</div>
+
+<!-- ====== Comic Text Module ====== -->
+<div class="module-view" id="comicModule">
+  <div class="module-topbar">
+    <button class="btn-back" onclick="goHome()">←</button>
+    <div>
+      <div class="module-title">💬 漫画课文</div>
+      <div class="module-subtitle">角色对话 · 逐句展示</div>
+    </div>
+  </div>
+  <div class="comic-tabs" id="comicTabs"></div>
+  <div class="comic-scene" id="comicScene"></div>
+  <div class="comic-controls" id="comicControls"></div>
+</div>
+
+<script src="data_L01.js"></script>
+<script>
+// ====== Global State ======
+let D = null; // LESSON_DATA
+let showPinyin = true;
+let currentVocabIndex = 0;
+let comicCurrentText = 0;
+let comicRevealedLines = 0;
+
+// ====== Initialization ======
+function init() {
+  D = window.LESSON_DATA;
+  if (!D) { document.body.innerHTML = '<p style="padding:80px 24px;text-align:center;color:#999;">请先加载数据文件 data_L01.js</p>'; return; }
+
+  // Top bar
+  document.getElementById('topbarLesson').textContent = `${D.meta.level} · ${D.meta.lessonId}`;
+
+  // Home header
+  document.getElementById('homePinyin').textContent = D.vocabulary[0]?.pinyin || '';
+  document.getElementById('homeTitle').textContent = `第一课　${D.meta.title}`;
+  document.getElementById('homeTopic').textContent = `${D.meta.topic} · ${D.meta.topicEn}`;
+
+  goHome();
+}
+
+// ====== Navigation ======
+function goHome() {
+  document.querySelectorAll('.module-view').forEach(el => el.classList.remove('active'));
+  document.getElementById('moduleHome').style.display = '';
+}
+
+function openModule(name) {
+  document.getElementById('moduleHome').style.display = 'none';
+  document.querySelectorAll('.module-view').forEach(el => el.classList.remove('active'));
+
+  if (name === 'vocab') {
+    document.getElementById('vocabModule').classList.add('active');
+    currentVocabIndex = 0;
+    renderVocabCard();
+  } else if (name === 'grammar') {
+    document.getElementById('grammarModule').classList.add('active');
+    renderGrammar();
+  } else if (name === 'comic') {
+    document.getElementById('comicModule').classList.add('active');
+    comicCurrentText = 0;
+    renderComicTabs();
+    renderComicScene();
+  }
+}
+
+// ====== Pinyin Toggle ======
+function togglePinyin() {
+  showPinyin = !showPinyin;
+  const toggle = document.getElementById('pinyinToggle');
+  toggle.classList.toggle('off', !showPinyin);
+  document.querySelectorAll('.pinyin-el').forEach(el => {
+    el.style.display = showPinyin ? '' : 'none';
+  });
+}
+
+// ====== Vocab Flashcard ======
+function renderVocabCard() {
+  const vocab = D.vocabulary;
+  const v = vocab[currentVocabIndex];
+  const total = vocab.length;
+
+  // Progress
+  document.getElementById('vocabProgress').style.width = `${((currentVocabIndex + 1) / total) * 100}%`;
+  document.getElementById('vocabCount').textContent = `${currentVocabIndex + 1} / ${total}`;
+
+  // Unflip
+  document.getElementById('flashcard').classList.remove('flipped');
+
+  // Front
+  const front = document.getElementById('cardFront');
+  front.innerHTML = `
+    <div class="emoji-bg">${v.emoji || '📝'}</div>
+    <div class="pinyin-main pinyin-el">${v.pinyin}</div>
+    <div class="emoji-main">${v.emoji || '📝'}</div>
+    <div class="tap-hint">👆 点击翻转</div>
+  `;
+
+  // Back
+  const back = document.getElementById('cardBack');
+  let usagesHtml = '';
+  if (v.usages && v.usages.length > 0) {
+    usagesHtml = `
+      <div class="usage-section">
+        <div class="usage-label">常用搭配 Usages</div>
+        ${v.usages.map(u => `
+          <div class="usage-item">
+            <span class="u-hanzi">${u.hanzi}</span>
+            <span class="u-pinyin pinyin-el">${u.pinyin}</span>
+            <span class="u-en">${u.english}</span>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+  back.innerHTML = `
+    <div class="hanzi-large">${v.hanzi}</div>
+    <div class="pinyin-back pinyin-el">${v.pinyin}</div>
+    ${v.pos ? `<div class="pos-tag">${v.pos}</div>` : ''}
+    <div class="english">${v.english}</div>
+    ${usagesHtml}
+  `;
+
+  // Nav buttons
+  document.getElementById('btnPrev').disabled = currentVocabIndex === 0;
+  document.getElementById('btnNext').disabled = currentVocabIndex === total - 1;
+
+  // Apply pinyin visibility
+  if (!showPinyin) {
+    document.querySelectorAll('#vocabModule .pinyin-el').forEach(el => el.style.display = 'none');
+  }
+}
+
+function flipCard() {
+  document.getElementById('flashcard').classList.toggle('flipped');
+}
+
+function nextCard() {
+  if (currentVocabIndex < D.vocabulary.length - 1) {
+    currentVocabIndex++;
+    renderVocabCard();
+  }
+}
+
+function prevCard() {
+  if (currentVocabIndex > 0) {
+    currentVocabIndex--;
+    renderVocabCard();
+  }
+}
+
+// ====== Grammar Module ======
+function renderGrammar() {
+  const container = document.getElementById('grammarContent');
+  container.innerHTML = '';
+
+  D.grammar.forEach((g, gi) => {
+    const card = document.createElement('div');
+    card.className = 'grammar-section';
+    card.style.animationDelay = `${gi * 0.1}s`;
+
+    let examplesHtml = g.examples.map((ex, ei) => {
+      // Build highlighted hanzi
+      let hanziHtml = ex.hanzi;
+      if (ex.highlight) {
+        ex.highlight.forEach(h => {
+          hanziHtml = hanziHtml.replace(h, `<span class="hl">${h}</span>`);
+        });
+      }
+      return `
+        <div class="grammar-example" data-index="${ei}">
+          <div class="ex-hanzi">${hanziHtml}</div>
+          <div class="ex-right">
+            <div class="ex-pinyin pinyin-el">${ex.pinyin}</div>
+            <div class="ex-en">${ex.english}</div>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    card.innerHTML = `
+      <div class="grammar-card" id="gcard-${gi}" data-revealed="0" data-total="${g.examples.length}">
+        <div class="grammar-card-header" onclick="toggleGrammarCard(${gi})">
+          <h3><span class="g-num">${gi + 1}</span>${g.title}</h3>
+          <div>
+            <span class="en-title">${g.titleEn}</span>
+            <span class="expand-icon">▼</span>
+          </div>
+        </div>
+        <div class="grammar-card-body">
+          <div class="grammar-examples">${examplesHtml}</div>
+          <button class="grammar-step-btn" onclick="stepGrammar(${gi})">
+            👆 点击逐句展示
+          </button>
+          <div class="grammar-formula">
+            <div class="formula-pattern">${g.formula.pattern}</div>
+            <div class="formula-note">${g.formula.note}</div>
+            <div class="formula-en">${g.formula.patternEn}</div>
+          </div>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+
+  if (!showPinyin) {
+    document.querySelectorAll('#grammarModule .pinyin-el').forEach(el => el.style.display = 'none');
+  }
+}
+
+function toggleGrammarCard(gi) {
+  const card = document.getElementById(`gcard-${gi}`);
+  card.classList.toggle('expanded');
+}
+
+function stepGrammar(gi) {
+  const card = document.getElementById(`gcard-${gi}`);
+  let revealed = parseInt(card.dataset.revealed);
+  const total = parseInt(card.dataset.total);
+  const examples = card.querySelectorAll('.grammar-example');
+  const btn = card.querySelector('.grammar-step-btn');
+
+  if (revealed < total) {
+    examples[revealed].classList.add('revealed');
+    examples[revealed].style.transitionDelay = '0s';
+    revealed++;
+    card.dataset.revealed = revealed;
+
+    if (revealed >= total) {
+      btn.textContent = '✨ 看看规律是什么？';
+      btn.onclick = () => {
+        card.classList.add('formula-shown');
+        btn.disabled = true;
+        btn.textContent = '✅ 归纳完成';
+      };
+    } else {
+      btn.textContent = `👆 继续展示 (${revealed}/${total})`;
+    }
+  }
+}
+
+// ====== Comic Text Module ======
+function renderComicTabs() {
+  const tabs = document.getElementById('comicTabs');
+  tabs.innerHTML = D.texts.map((t, i) => `
+    <div class="comic-tab ${i === comicCurrentText ? 'active' : ''}" onclick="switchComicText(${i})">
+      ${t.title}
+      <span class="tab-sub">${t.titleEn}</span>
+    </div>
+  `).join('');
+}
+
+function switchComicText(index) {
+  comicCurrentText = index;
+  comicRevealedLines = 0;
+  renderComicTabs();
+  renderComicScene();
+}
+
+function renderComicScene() {
+  const text = D.texts[comicCurrentText];
+  const scene = document.getElementById('comicScene');
+
+  const charMap = {};
+  D.meta.characters.forEach(c => charMap[c.id] = c);
+
+  let linesHtml = text.lines.map((line, i) => {
+    const char = charMap[line.speaker] || {};
+    const isTeacher = char.role === 'teacher';
+    const isAI = char.role === 'student'; // xiaoyu
+    const isRight = char.role === 'group'; // students on right
+    const avatarClass = isTeacher ? 'teacher' : (isAI ? 'ai' : 'student');
+    const avatarLabel = char.name ? char.name.slice(0, 1) : '?';
+
+    return `
+      <div class="chat-line ${isRight ? 'right' : ''}" data-line="${i}">
+        <div class="chat-avatar ${avatarClass}">
+          ${avatarLabel}
+          <span class="avatar-name">${char.name || ''}</span>
+        </div>
+        <div class="chat-bubble">
+          <div class="bubble-pinyin pinyin-el">${line.pinyin}</div>
+          <div class="bubble-hanzi">${line.hanzi}</div>
+          <div class="bubble-en">${line.english}</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  scene.innerHTML = `
+    <div class="comic-scene-label">
+      <span class="scene-icon">🎬</span>
+      ${text.scene}（${text.sceneEn}）
+    </div>
+    <div id="comicLines">${linesHtml}</div>
+  `;
+
+  renderComicControls();
+
+  if (!showPinyin) {
+    document.querySelectorAll('#comicModule .pinyin-el').forEach(el => el.style.display = 'none');
+  }
+}
+
+function renderComicControls() {
+  const text = D.texts[comicCurrentText];
+  const total = text.lines.length;
+  const controls = document.getElementById('comicControls');
+
+  if (comicRevealedLines >= total) {
+    controls.innerHTML = `
+      <button class="comic-btn" onclick="resetComic()">🔄 重新播放</button>
+      ${comicCurrentText < D.texts.length - 1
+        ? `<button class="comic-btn primary-btn" onclick="switchComicText(${comicCurrentText + 1})">下一段 ▶</button>`
+        : `<button class="comic-btn primary-btn" onclick="goHome()">✅ 完成</button>`
+      }
+    `;
+  } else {
+    controls.innerHTML = `
+      <button class="comic-btn primary-btn" onclick="revealNextLine()">
+        ${comicRevealedLines === 0 ? '▶ 开始对话' : `▶ 下一句 (${comicRevealedLines}/${total})`}
+      </button>
+    `;
+  }
+}
+
+function revealNextLine() {
+  const text = D.texts[comicCurrentText];
+  const lines = document.querySelectorAll('#comicLines .chat-line');
+
+  if (comicRevealedLines < text.lines.length) {
+    lines[comicRevealedLines].classList.add('revealed');
+    comicRevealedLines++;
+    renderComicControls();
+  }
+}
+
+function resetComic() {
+  comicRevealedLines = 0;
+  document.querySelectorAll('#comicLines .chat-line').forEach(el => el.classList.remove('revealed'));
+  renderComicControls();
+}
+
+// ====== Keyboard shortcuts ======
+document.addEventListener('keydown', (e) => {
+  const vocabActive = document.getElementById('vocabModule').classList.contains('active');
+  const comicActive = document.getElementById('comicModule').classList.contains('active');
+
+  if (vocabActive) {
+    if (e.key === 'ArrowLeft') prevCard();
+    else if (e.key === 'ArrowRight') nextCard();
+    else if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); flipCard(); }
+  }
+  if (comicActive) {
+    if (e.key === ' ' || e.key === 'Enter' || e.key === 'ArrowRight') { e.preventDefault(); revealNextLine(); }
+  }
+  if (e.key === 'Escape') goHome();
+});
+
+// Wait for data then init
+if (window.LESSON_DATA) {
+  init();
+} else {
+  window.addEventListener('load', init);
+}
+</script>
+</body>
+</html>

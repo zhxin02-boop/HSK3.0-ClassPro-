@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>课后作业 / Homework</title>
+<script src="../shared/context.js"></script>
+<script src="./lesson-data-loader.js"></script>
+<script src="../shared/storage.js"></script>
+<script src="../shared/students.js"></script>
+<style>
+*{box-sizing:border-box}
+:root{--green:#4f8f2f;--line:#dfe9c8;--dark:#24351f;--blue:#2563eb;--red:#c0392b;--orange:#b45309}
+body{margin:0;min-height:100vh;font-family:Arial,"Microsoft YaHei",sans-serif;background:radial-gradient(circle at top,#eef7da,#fffaf2 55%,#fff);color:var(--dark);padding:16px}
+.product-nav{display:flex;gap:4px;align-items:center;flex-wrap:nowrap;overflow-x:auto;padding:8px 10px;margin:-16px auto 12px;max-width:940px;white-space:nowrap}.product-nav a{padding:6px 8px;border-radius:999px;text-decoration:none;color:#74806d;background:rgba(255,255,255,.75);font-size:11px;font-weight:900;white-space:nowrap;flex:0 0 auto}.product-nav a.active,.product-nav a:hover{background:#edf6d9;color:#3f7f32}.product-nav .brand{font-weight:900;color:#3f7f32;margin-right:0}
+.wrap{max-width:940px;margin:0 auto}
+.hero,.card{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:24px;box-shadow:0 14px 32px rgba(80,110,50,.1);padding:20px;margin-bottom:14px}
+.hero{background:linear-gradient(135deg,#fff,#f2f8e4)}
+.badge{display:inline-flex;background:#edf6d9;color:#44782b;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:900}
+h1{margin:12px 0 6px;font-size:28px;color:#3f7f32}.muted{color:#6f7d68;font-size:14px;line-height:1.55}
+.toolbar,.namebar,.submitbar,.opts,.tokenbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.toolbar,.namebar{margin-top:14px}.namebar{background:#fbfdf6;border:1px solid var(--line);border-radius:18px;padding:12px}
+button{border:1px solid #bfd99b;border-radius:999px;padding:10px 15px;font-size:15px;font-weight:900;background:#fff;color:var(--green);cursor:pointer}
+button.active,.submit-main,.confirm-btn{background:var(--green);color:#fff;border-color:var(--green)}button:disabled{opacity:.55;cursor:not-allowed}
+input,textarea{border:1px solid #d8e4bf;border-radius:14px;padding:11px 12px;font-size:15px;background:#fff;font-family:inherit}
+input.name{min-width:240px;flex:1}textarea{width:100%;min-height:92px;resize:vertical;margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:14px 0}.num{font-size:30px;font-weight:900;color:var(--green)}.label{font-size:12px;color:#74806d}
+.tierline{display:grid;grid-template-columns:86px 1fr;gap:14px;align-items:center}.tier{width:76px;height:76px;border-radius:24px;background:var(--green);color:#fff;font-size:38px;font-weight:900;display:flex;align-items:center;justify-content:center}.tier.a{background:#e58a1f}.tier.c{background:#2563eb}
+.task{display:grid;grid-template-columns:78px 1fr;gap:12px;padding:16px 0;border-top:1px dashed #dce7c8}.task:first-child{border-top:0}
+.tag{display:inline-flex;justify-content:center;border-radius:999px;background:#f2f8e4;color:#4f7d2e;font-size:12px;font-weight:900;padding:5px 9px;white-space:nowrap}.qtitle{font-size:16px;font-weight:900;line-height:1.45}.en{font-size:13px;color:#7d8577;margin-top:3px}
+.opt,.token{border:1px solid #dce7c8;border-radius:13px;background:#fff;padding:8px 11px;font-size:14px;color:#41513d}.opt.sel{border-color:var(--blue);background:#dbeafe;color:#1d4ed8}
+.answer-input{width:100%;margin-top:8px}.hint{font-size:12px;color:#8a735a;margin-top:7px}.result{font-size:13px;font-weight:900;margin-top:8px}.ok{color:#2f7d32}.bad{color:#b42318}.wait{color:#b45309}
+.writing-sheet{margin-top:10px;display:grid;gap:10px}.writing-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:9px;border:1px solid #eef3df;border-radius:16px;background:#fbfdf6}.writing-label{width:42px;font-size:13px;color:#73806b;font-weight:900}
+.charbox,.write-canvas{width:58px;height:58px;border:1px solid #dce7c8;border-radius:10px;background:linear-gradient(90deg,transparent 49%,#edf2df 50%,transparent 51%),linear-gradient(0deg,transparent 49%,#edf2df 50%,transparent 51%),linear-gradient(45deg,transparent 49.4%,#f3eadb 50%,transparent 50.6%),linear-gradient(-45deg,transparent 49.4%,#f3eadb 50%,transparent 50.6%),#fff}
+.charbox{display:flex;align-items:center;justify-content:center;font-family:KaiTi,STKaiti,"Kaiti SC",serif}.charbox.model{font-size:34px;color:rgba(45,59,41,.28);font-weight:900}.write-canvas{display:block;touch-action:none}
+.submitbar{justify-content:space-between}.submit-main{font-size:18px;padding:13px 24px}.summary{font-size:14px;color:#526248}
+.locked{opacity:.55;pointer-events:none}
+.report-card{background:linear-gradient(135deg,#f3f0ff,#fff);border-color:#d9d1ff}.report-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.report-title{font-size:18px;font-weight:900;color:#5847bc}.report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.report-kpi{padding:11px;border-radius:14px;background:rgba(255,255,255,.8);text-align:center}.report-kpi b{display:block;font-size:22px;color:#5847bc}.report-kpi span{font-size:11px;color:#887da8}@media(max-width:620px){.report-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<nav class="product-nav"><a class="brand" href="../student/index.html">学生界面 / Student Home</a><a href="../pre-class/index.html">课前预习 / Preview</a><a href="../in-class/student.html">课中互动 / Class</a><a class="active" href="student-report.html">课后作业 / Homework</a></nav>
+<div class="wrap">
+  <div class="hero">
+    <div class="badge" id="lessonBadge">课程作业 / Homework</div>
+    <h1>课后作业</h1>
+    <div class="muted">请先确认姓名。系统会自动保存进度；如果中途关闭，下次用同一姓名和同一档位打开，可以继续上次的作业。</div>
+    <div class="toolbar">
+      <span class="badge" id="tierRecommendation">推荐档位 / Recommended: B</span>
+      <details class="tier-switch"><summary>切换作业档位 / Change level</summary><div class="toolbar"><button id="btnA" onclick="setTier('A',true)">A档 基础巩固</button><button id="btnB" onclick="setTier('B',true)" class="active">B档 标准巩固</button><button id="btnC" onclick="setTier('C',true)">C档 挑战拓展</button></div></details>
+    </div>
+    <div class="namebar">
+      <span class="muted">学生姓名 / Name</span>
+      <select class="name" id="studentName"><option value="">Select your name / 选择姓名</option></select>
+      <button class="confirm-btn" onclick="confirmName()">确认姓名 / Confirm & Start</button>
+      <span class="muted" id="nameStatus">未确认</span>
+    </div>
+  </div>
+  <div class="card report-card" id="classReport">
+    <div class="report-head"><div><div class="report-title">课堂报告 / Class Report</div><div class="muted" id="reportHint">提交作业后生成你的课前、课中、课后学习摘要。</div></div><button onclick="loadClassReport()">刷新报告 / Refresh</button></div>
+    <div id="reportBody" class="muted" style="margin-top:10px">暂无报告数据。</div>
+  </div>
+
+  <div class="grid">
+    <div class="card"><div class="num" id="taskCount">--</div><div class="label">作业题数</div></div>
+    <div class="card"><div class="num" id="autoCount">--</div><div class="label">自动判分题</div></div>
+    <div class="card"><div class="num" id="reviewCount">--</div><div class="label">需老师查看/批改</div></div>
+    <div class="card"><div class="num" id="minutes">--</div><div class="label">预计分钟</div></div>
+  </div>
+
+  <div class="card tierline">
+    <div class="tier b" id="tierBadge">B</div>
+    <div>
+      <div id="tierTitle" style="font-size:20px;font-weight:900;color:#3f7f32">B档：标准巩固</div>
+      <div class="muted" id="tierGoal">能完成本课交际任务</div>
+      <div class="hint" id="tierMix"></div>
+    </div>
+  </div>
+
+  <div class="card locked" id="tasks"></div>
+  <div class="card submitbar">
+    <div>
+      <div class="summary" id="submitSummary">完成后统一提交。提交后会显示客观题结果和错题答案。</div>
+      <div class="result wait" id="submitStatus"></div>
+    </div>
+    <button class="submit-main" onclick="submitAllHomework()">一次性提交作业</button>
+  </div>
+</div>
+
+<script>
+var GAS_URL="https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec";var lessonKey=(new URLSearchParams(location.search).get("lesson")||(window.ClassProContext&&ClassProContext.read().lesson)||"HSK1-L01");document.title=lessonKey+" 课后作业";document.getElementById("lessonBadge").textContent=lessonKey+" · Homework";
+var currentTier=new URLSearchParams(location.search).get("tier")||"B";
+var writingStrokes={},selectedAnswers={},currentItems=[],studentConfirmed=false,saveTimer=null,restoring=false,submitted=false,tierLocked=false,recommendedTier="B";
+function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+function norm(s){return String(s||"").replace(/[\s\u3000]/g,"").replace(/[。！？!?，,、；;：:（）()]/g,"").toLowerCase()}
+function getStudentName(){return (document.getElementById("studentName").value||"").trim()}
+function parseMaybeJson(s){try{return JSON.parse(s||"")}catch(e){return null}}
+function renderStudentOptions(){var el=document.getElementById("studentName"),saved="";try{saved=localStorage.getItem("ClassProStudentName")||""}catch(e){}el.innerHTML='<option value="">Select your name / 选择姓名</option>'+(window.CLASS_STUDENTS||[]).map(function(n){return'<option value="'+esc(n)+'">'+esc(n)+'</option>'}).join("");if(saved&&(window.CLASS_STUDENTS||[]).indexOf(saved)>=0)el.value=saved}
+function saveStudentName(){try{localStorage.setItem("ClassProStudentName",getStudentName())}catch(e){}}
+function progressParts(){return[window.ClassProContext.read().lesson,"post_class",currentTier,getStudentName()||"anonymous"]}
+function shuffleArray(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),x=a[i];a[i]=a[j];a[j]=x}return a}function taskPool(tier){var hw=window.LESSON_DATA&&window.LESSON_DATA.postClassHomework;if(!hw)return[];var s=(hw.shared_pool||[]).slice(),t=(hw.tier_pools&&hw.tier_pools[tier]||[]).slice();var items=s.concat(t);if(tier==="C")items=items.filter(function(q){return q.type!=="ordering"});return items.map(function(q){var x=Object.assign({},q);if(x.options)x.options=shuffleArray(x.options.slice());return x})}
+function typeName(t){return{choice:"选择",fill_blank:"填空",ordering:"排序",output:"输出",handwriting:"书写"}[t]||t}
+function renderTask(q,i){
+  var h='<div class="task" id="task_'+esc(q.id)+'"><div><span class="tag">'+typeName(q.type)+'</span></div><div>';
+  h+='<div class="qtitle">'+(i+1)+'. '+esc(q.prompt_cn)+'</div>'; if(q.prompt_en)h+='<div class="en">'+esc(q.prompt_en)+'</div>';
+  if(q.type==="choice"){
+    h+='<div class="opts">'+(q.options||[]).map(function(o){return'<button type="button" class="opt" data-qid="'+esc(q.id)+'" onclick="chooseAnswer(\''+esc(q.id)+'\',this,\''+esc(o)+'\')">'+esc(o)+'</button>'}).join("")+'</div>';
+  }else if(q.type==="fill_blank"){
+    h+='<input class="answer-input" id="ans_'+esc(q.id)+'" placeholder="请输入答案">';
+    if(q.options)h+='<div class="tokenbar">'+q.options.map(function(o){return'<span class="token">'+esc(o)+'</span>'}).join("")+'</div>';
+  }else if(q.type==="ordering"){
+    if(q.tokens)h+='<div class="tokenbar">'+q.tokens.map(function(o){return'<span class="token">'+esc(o)+'</span>'}).join("")+'</div>';
+    h+='<input class="answer-input" id="ans_'+esc(q.id)+'" placeholder="请写出完整句子">';
+  }else if(q.type==="output"){
+    h+='<textarea id="ans_'+esc(q.id)+'" placeholder="请在这里写你的答案"></textarea>';
+  }else if(q.type==="handwriting"){
+    var repeat=Number(q.repeat_count||3);
+    h+='<div class="writing-sheet">'+(q.characters||[]).map(function(c){var cells='<span class="writing-label">'+esc(c)+'</span><span class="charbox model">'+esc(c)+'</span>';for(var k=0;k<repeat;k++)cells+='<canvas class="write-canvas" width="116" height="116" data-qid="'+esc(q.id)+'" data-char="'+esc(c)+'" data-cell="'+k+'"></canvas>';return'<div class="writing-row">'+cells+'</div>'}).join("")+'</div>';
+    h+='<div class="hint">手机上可直接用手指写。提交作业时会一起保存。</div><button type="button" onclick="clearHandwriting(\''+esc(q.id)+'\')">清除本题书写</button>';
+  }
+  h+='<div class="result" id="res_'+esc(q.id)+'"></div></div></div>';return h;
+}
+function setTier(tier,manual){
+  currentTier=tier;if(manual){tierLocked=true;document.getElementById("tierRecommendation").textContent="当前档位 / Current: "+tier+"（已手动调整 / Manual）"}selectedAnswers={};writingStrokes={};submitted=false;
+  var hw=window.LESSON_DATA&&window.LESSON_DATA.postClassHomework;if(!hw){document.getElementById("tasks").innerHTML='<div class="hint">没有读取到作业池。</div>';return}
+  ["A","B","C"].forEach(function(t){document.getElementById("btn"+t).classList.toggle("active",t===tier)});
+  currentItems=taskPool(tier);var meta=hw.tiers[tier],review=currentItems.filter(function(q){return q.needs_teacher_review||q.type==="handwriting"}).length,auto=currentItems.length-review;
+  document.getElementById("taskCount").textContent=currentItems.length;document.getElementById("autoCount").textContent=auto;document.getElementById("reviewCount").textContent=review;document.getElementById("minutes").textContent=(meta.suggested_minutes||"").replace("分钟左右","").replace("分钟","");
+  var b=document.getElementById("tierBadge");b.textContent=tier;b.className="tier "+tier.toLowerCase();document.getElementById("tierTitle").textContent=meta.label;document.getElementById("tierGoal").textContent=meta.goal;document.getElementById("tierMix").textContent=meta.suggested_mix;
+  document.getElementById("tasks").innerHTML=currentItems.map(renderTask).join("");setTimeout(function(){initWritingCanvases();bindProgressEvents();if(studentConfirmed)restoreProgress()},0);
+  document.getElementById("tasks").classList.toggle("locked",!studentConfirmed);
+}
+function confirmName(){
+  if(!getStudentName()){alert("请先填写姓名");return}
+  studentConfirmed=true;saveStudentName();document.getElementById("nameStatus").textContent="已确认："+getStudentName();document.getElementById("tasks").classList.remove("locked");restoreProgress();saveProgressSoon();loadClassReport();
+}
+function reportVal(x,keys){for(var i=0;i<keys.length;i++){if(x&&x[keys[i]]!=null&&x[keys[i]]!=="")return x[keys[i]]}if(x&&x.__values){var map={studentName:1,姓名:1,学生姓名:1,lesson:2,课程:2,课程编号:2,lessonKey:2,stage:3,环节:3,阶段:3,module:4,模块:4,answer:13,学生作答:13,result:14,结果:14};for(var j=0;j<keys.length;j++){if(map[keys[j]]!=null&&x.__values[map[keys[j]]]!=="")return x.__values[map[keys[j]]]}}return""}
+function tierFromReport(pre,mid){var accuracy=mid.length?mid.filter(function(x){return String(reportVal(x,["result","autoResult","结果"])).toLowerCase()==="correct"}).length/mid.length:0;if(!mid.length&&pre.length){var scored=pre.filter(function(x){return Number(reportVal(x,["total","总分"]))>0}),got=scored.reduce(function(s,x){return s+Number(reportVal(x,["score","得分"]));},0),tot=scored.reduce(function(s,x){return s+Number(reportVal(x,["total","总分"]));},0);accuracy=tot?got/tot:0}return accuracy>=.85?"C":accuracy>=.6?"B":"A"}
+function sameLesson(value){var v=String(value||"").toUpperCase().replace(/第|课/g,"").replace(/HSK1-L0?/,'');var t=String(lessonKey||"").toUpperCase().replace(/HSK1-L0?/,'');return String(value||"")===String(lessonKey)||v===t}
+function loadClassReport(){var name=getStudentName();if(!name){document.getElementById("reportBody").textContent="请先选择姓名 / Select your name first.";return}document.getElementById("reportBody").textContent="正在读取报告 / Loading...";fetch((location.hostname==="localhost"||location.hostname==="127.0.0.1")?"/api/reviews?name="+encodeURIComponent(name):GAS_URL+"?action=get_all").then(function(r){if(!r.ok)throw new Error("Report API "+r.status);return r.json()}).then(function(d){var all=[];if(d&&d.data){if(Array.isArray(d.data))all=d.data.slice();else for(var k in d.data)(d.data[k]||[]).forEach(function(x){all.push(x)})}var rows=all.filter(function(x){return String(reportVal(x,["studentName","姓名","学生姓名","name"]))===name&&sameLesson(reportVal(x,["lesson","课程","课程编号","lessonKey"]))}),pre=rows.filter(function(x){return ["pre_class","课前","预习"].indexOf(String(reportVal(x,["stage","环节","阶段"])))>=0}),mid=rows.filter(function(x){return ["in_class","课中"].indexOf(String(reportVal(x,["stage","环节","阶段"])))>=0}),post=rows.filter(function(x){return ["post_class","课后"].indexOf(String(reportVal(x,["stage","环节","阶段"])))>=0}),correct=mid.filter(function(x){return String(reportVal(x,["result","autoResult","结果"])).toLowerCase()==="correct"}).length,summary=post.filter(function(x){return reportVal(x,["module","模块"])==="homework_summary"})[0],report=summary?parseMaybeJson(reportVal(summary,["answer","学生作答"])):null;recommendedTier=tierFromReport(pre,mid);if(!tierLocked){document.getElementById("tierRecommendation").textContent="推荐档位 / Recommended: "+recommendedTier;if(recommendedTier!==currentTier){setTier(recommendedTier,false);if(studentConfirmed)restoreProgress()}}if(!rows.length){document.getElementById("reportBody").textContent="暂无报告数据。完成课前或课中活动后，这里会生成推荐档位。";return}document.getElementById("reportHint").textContent="已生成："+name+" 的学习摘要；系统推荐 "+recommendedTier+" 档";document.getElementById("reportBody").innerHTML='<div class="report-grid"><div class="report-kpi"><b>'+pre.length+'</b><span>课前记录 / Pre</span></div><div class="report-kpi"><b>'+mid.length+'</b><span>课中答题 / Class</span></div><div class="report-kpi"><b>'+ (mid.length?Math.round(correct/mid.length*100):0)+'%</b><span>课中正确率 / Accuracy</span></div><div class="report-kpi"><b>'+ (report?report.objectiveCorrect+'/'+report.objectiveTotal:'--')+'</b><span>课后客观题 / Homework</span></div></div>'}).catch(function(){document.getElementById("reportBody").textContent="报告暂时无法读取，请稍后刷新 / Try again later."})}
+function chooseAnswer(qid,btn,value){selectedAnswers[qid]=value;document.querySelectorAll('.opt[data-qid="'+qid+'"]').forEach(function(b){b.classList.remove("sel")});btn.classList.add("sel");saveProgressSoon()}
+function gridCanvas(c){var x=c.getContext("2d"),w=c.width,h=c.height;x.clearRect(0,0,w,h);x.fillStyle="#fff";x.fillRect(0,0,w,h);x.strokeStyle="#edf2df";x.lineWidth=2;x.beginPath();x.moveTo(w/2,0);x.lineTo(w/2,h);x.moveTo(0,h/2);x.lineTo(w,h/2);x.stroke();x.strokeStyle="#f3eadb";x.lineWidth=1;x.beginPath();x.moveTo(0,0);x.lineTo(w,h);x.moveTo(w,0);x.lineTo(0,h);x.stroke()}
+function drawSavedCanvas(c,strokes){gridCanvas(c);var ctx=c.getContext("2d"),w=c.width,h=c.height;ctx.strokeStyle="#c0392b";ctx.lineWidth=7;ctx.lineCap="round";ctx.lineJoin="round";(strokes||[]).forEach(function(stroke){if(!stroke||!stroke.length)return;ctx.beginPath();ctx.moveTo(stroke[0].x*w,stroke[0].y*h);for(var i=1;i<stroke.length;i++)ctx.lineTo(stroke[i].x*w,stroke[i].y*h);ctx.stroke()})}
+function pos(e,c){var r=c.getBoundingClientRect(),p=e.touches?e.touches[0]:e;return{x:(p.clientX-r.left)/r.width,y:(p.clientY-r.top)/r.height}}
+function initWritingCanvases(){document.querySelectorAll(".write-canvas").forEach(function(c){if(c.dataset.ready)return;c.dataset.ready="1";gridCanvas(c);var key=c.dataset.qid+"|"+c.dataset.char+"|"+c.dataset.cell;writingStrokes[key]=writingStrokes[key]||[];var ctx=c.getContext("2d"),drawing=false,stroke=null;function st(e){if(!studentConfirmed)return;e.preventDefault();drawing=true;stroke=[];var p=pos(e,c);stroke.push(p);ctx.beginPath();ctx.moveTo(p.x*c.width,p.y*c.height)}function mv(e){if(!drawing)return;e.preventDefault();var p=pos(e,c);stroke.push(p);ctx.lineTo(p.x*c.width,p.y*c.height);ctx.strokeStyle="#c0392b";ctx.lineWidth=7;ctx.lineCap="round";ctx.lineJoin="round";ctx.stroke()}function ed(){if(!drawing)return;drawing=false;if(stroke&&stroke.length)writingStrokes[key].push(stroke);stroke=null;saveProgressSoon()}c.addEventListener("mousedown",st);c.addEventListener("mousemove",mv);c.addEventListener("mouseup",ed);c.addEventListener("mouseleave",ed);c.addEventListener("touchstart",st,{passive:false});c.addEventListener("touchmove",mv,{passive:false});c.addEventListener("touchend",ed)})}
+function clearHandwriting(qid){document.querySelectorAll('.write-canvas[data-qid="'+qid+'"]').forEach(function(c){writingStrokes[c.dataset.qid+"|"+c.dataset.char+"|"+c.dataset.cell]=[];gridCanvas(c)});saveProgressSoon()}
+function answerOf(q){if(q.type==="choice")return selectedAnswers[q.id]||"";var el=document.getElementById("ans_"+q.id);return el?el.value.trim():""}
+function handwritingAnswer(q){var cells=[].slice.call(document.querySelectorAll('.write-canvas[data-qid="'+q.id+'"]')).map(function(c){var key=c.dataset.qid+"|"+c.dataset.char+"|"+c.dataset.cell;return{char:c.dataset.char,cell:Number(c.dataset.cell),strokes:writingStrokes[key]||[]}});return JSON.stringify({type:"handwriting",questionId:q.id,tier:currentTier,submittedAt:new Date().toISOString(),cells:cells})}
+function grade(q,ans){if(q.type==="output"||q.type==="handwriting")return{score:0,total:0,result:"submitted"};var ok=(q.acceptable_answers||[q.correct_answer]).some(function(a){return norm(a)===norm(ans)});return{score:ok?1:0,total:1,result:ok?"correct":"wrong"}}
+function correctText(q){return (q.acceptable_answers||[q.correct_answer]).filter(Boolean).join(" / ")}
+function collectProgress(extra){var textAnswers={};currentItems.forEach(function(q){if(q.type!=="choice"&&q.type!=="handwriting")textAnswers[q.id]=answerOf(q)});return Object.assign({tier:currentTier,studentName:getStudentName(),selectedAnswers:selectedAnswers,textAnswers:textAnswers,writingStrokes:writingStrokes,submitted:submitted},extra||{})}
+function saveProgressSoon(){if(restoring||!studentConfirmed)return;clearTimeout(saveTimer);saveTimer=setTimeout(function(){if(window.ClassProShared&&ClassProShared.saveProgress)ClassProShared.saveProgress(progressParts(),collectProgress())},250)}
+function bindProgressEvents(){document.querySelectorAll("input.answer-input, textarea").forEach(function(el){el.addEventListener("input",saveProgressSoon)})}
+function restoreProgress(){
+  if(!studentConfirmed||!window.ClassProShared||!ClassProShared.loadProgress)return;
+  var saved=ClassProShared.loadProgress(progressParts());if(!saved){document.getElementById("submitStatus").textContent="未找到本机保存进度，可以开始作业。";return}
+  restoring=true;selectedAnswers=saved.selectedAnswers||{};submitted=!!saved.submitted;
+  Object.keys(selectedAnswers).forEach(function(qid){document.querySelectorAll('.opt[data-qid="'+qid+'"]').forEach(function(btn){btn.classList.toggle("sel",btn.textContent===selectedAnswers[qid])})});
+  var ta=saved.textAnswers||{};Object.keys(ta).forEach(function(qid){var el=document.getElementById("ans_"+qid);if(el)el.value=ta[qid]});
+  writingStrokes=saved.writingStrokes||writingStrokes||{};document.querySelectorAll(".write-canvas").forEach(function(c){var key=c.dataset.qid+"|"+c.dataset.char+"|"+c.dataset.cell;drawSavedCanvas(c,writingStrokes[key]||[])});
+  document.getElementById("submitStatus").textContent=submitted?"已恢复本机提交记录，可以修改后重新提交。":"已恢复上次未完成的作业。";restoring=false;
+}
+function postRecord(payload){var local=location.hostname==="localhost"||location.hostname==="127.0.0.1";return fetch(local?"/api/pre-class-record":GAS_URL,{method:"POST",mode:local?"cors":"no-cors",headers:{"Content-Type":local?"application/json":"text/plain;charset=utf-8"},body:JSON.stringify(payload)})}
+function submitAllHomework(){
+  if(!studentConfirmed){alert("请先确认姓名");return}
+  var name=getStudentName();if(!name){alert("请先填写姓名");return}
+  var now=new Date().toISOString(),correct=0,total=0,pending=0,records=[];
+  currentItems.forEach(function(q){
+    var ans=q.type==="handwriting"?handwritingAnswer(q):answerOf(q),g=grade(q,ans),needs=q.type==="output"||q.type==="handwriting";
+    if(g.total){total+=g.total;correct+=g.score} if(needs)pending++;
+    var res=document.getElementById("res_"+q.id);if(res){res.className="result "+(g.result==="correct"?"ok":g.result==="wrong"?"bad":"wait");res.textContent=g.result==="correct"?"正确":g.result==="wrong"?"错误。正确答案："+correctText(q):"已提交，等待老师查看/批改"}
+    records.push({lesson:window.ClassProContext.read().lesson,room:window.ClassProContext.read().room,stage:"post_class",module:q.type,mode:q.type,questionId:q.id,studentName:name,score:g.score,total:g.total,points:g.score,result:g.result,needsReview:needs,openEnded:needs?"yes":"no",weakPoints:q.tags?(q.tags.join(",")):"",answer:ans,questionText:q.question||q.prompt||q.task||q.instruction||q.type,submittedAt:now});
+  });
+  records.push({lesson:window.ClassProContext.read().lesson,room:window.ClassProContext.read().room,stage:"post_class",module:"homework_summary",mode:"homework_summary",questionId:"homework_"+currentTier,studentName:name,score:correct,total:total,points:correct,result:"submitted",needsReview:pending>0,weakPoints:"",answer:JSON.stringify({tier:currentTier,taskCount:currentItems.length,objectiveCorrect:correct,objectiveTotal:total,pendingReview:pending}),submittedAt:now});
+  document.getElementById("submitStatus").textContent="正在提交 "+records.length+" 条记录...";
+  var important=records.filter(function(r){return r.module==="output"||r.module==="handwriting"||r.module==="homework_summary"});
+  var normal=records.filter(function(r){return !(r.module==="output"||r.module==="handwriting"||r.module==="homework_summary")});
+  important.reduce(function(p,r){return p.then(function(){return postRecord(r)})},Promise.resolve())
+    .then(function(){return Promise.all(normal.map(postRecord))})
+    .then(function(){submitted=true;if(window.ClassProShared&&ClassProShared.saveProgress)ClassProShared.saveProgress(progressParts(),collectProgress({submitted:true,submittedAt:now,objectiveCorrect:correct,objectiveTotal:total,pendingReview:pending}));document.getElementById("submitStatus").textContent="已提交。客观题正确率："+(total?Math.round(correct/total*100):0)+"%，待老师查看/批改："+pending+"题。";loadClassReport()})
+    .catch(function(){document.getElementById("submitStatus").textContent="已尝试提交；如果网络不稳定，请稍后刷新教师端确认。"});
+}
+renderStudentOptions();
+setTier(currentTier);
+</script>
+</body>
+</html>

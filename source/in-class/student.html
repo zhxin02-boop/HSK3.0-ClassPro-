@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ClassPro+ Student</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.3.0/mqtt.min.js"></script>
+<script src="../shared/students.js"></script>
+<style>
+*{box-sizing:border-box}
+:root{--green:#6ea72d;--dark:#203421;--soft:#f7f9ef;--line:#dfeac8;--blue:#2563eb;--red:#c0392b}
+body{margin:0;min-height:100vh;font-family:Arial,"Microsoft YaHei",sans-serif;background:radial-gradient(circle at top,#eef7d9 0,#f7f9ef 42%,#fffaf3 100%);color:var(--dark);padding:16px}
+.product-nav{display:flex;gap:4px;align-items:center;flex-wrap:nowrap;overflow-x:auto;padding:8px 10px;margin:-16px auto 12px;max-width:620px;white-space:nowrap}.product-nav a{padding:6px 8px;border-radius:999px;text-decoration:none;color:#74806d;background:rgba(255,255,255,.7);font-size:11px;font-weight:900;white-space:nowrap;flex:0 0 auto}.product-nav a.active,.product-nav a:hover{background:#edf6d9;color:#3f7f32}.product-nav .brand{font-weight:900;color:#3f7f32;margin-right:0}
+.wrap{max-width:620px;margin:0 auto}
+.card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:22px;box-shadow:0 16px 38px rgba(86,115,55,.13);padding:20px;margin:14px 0}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#ffffff,#f2f8e4)}
+.hero:after{content:"";position:absolute;right:-38px;top:-44px;width:130px;height:130px;border-radius:50%;background:#dcedb4;opacity:.8}
+h1{font-size:25px;margin:8px 0 4px;color:#3f7f32}
+.muted{color:#74806d;font-size:13px;line-height:1.45}
+.status{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;background:#edf6d9;color:#4c782c;font-size:12px;font-weight:900}
+input{width:100%;padding:14px;border:1px solid #d8e4bf;border-radius:14px;font-size:16px;background:#fff}
+button{border:0;border-radius:16px;padding:13px 16px;font-size:17px;font-weight:900;background:var(--green);color:#fff;cursor:pointer}
+button:disabled{opacity:.45;cursor:not-allowed}
+.name-row{display:flex;gap:8px;align-items:center}.name-row input{flex:1}.name-row button{white-space:nowrap}
+.prompt{font-size:13px;color:#71806b;text-align:center;margin-bottom:8px;font-weight:800}
+.pinyin{font-size:16px;color:#6f7e68;text-align:center;margin-bottom:6px;line-height:1.5}
+.hanzi{font-size:27px;font-weight:900;text-align:center;line-height:1.5;color:var(--dark);font-family:KaiTi,STKaiti,"Kaiti SC","Microsoft YaHei",serif}
+.english{font-size:14px;color:#6d7380;text-align:center;line-height:1.5;margin-top:6px}
+.hint{background:#f8faf3;border:1px solid var(--line);border-radius:18px;padding:18px;text-align:center;margin:12px 0}
+.options{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 14px;min-height:130px;margin-top:18px;padding:8px}
+.option{min-width:96px;padding:13px 17px;border:2px solid var(--line);border-radius:20px;background:#fff;color:var(--dark);text-align:center;font-weight:900;font-size:21px;box-shadow:0 10px 22px rgba(75,101,50,.08)}
+.option .py{display:block;font-size:12px;color:#78836f;margin-bottom:4px}
+.option.sel{border-color:var(--blue);background:#dbeafe;box-shadow:0 0 0 4px rgba(37,99,235,.15)}
+.match-board{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;margin-top:12px}
+.match-col{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;min-height:180px}
+.match-card{min-width:118px;padding:14px 16px;border:2px solid var(--line);border-radius:18px;background:#fff;color:var(--dark);text-align:center;font-weight:900;font-size:20px;box-shadow:0 10px 22px rgba(75,101,50,.08)}
+.match-card .py{display:block;font-size:12px;color:#78836f;margin-bottom:4px}.match-card.sel{border-color:var(--blue);background:#dbeafe}.match-card.done{border-color:#86c76b;background:#edf9e8;opacity:.72}
+.chunks{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;min-height:58px;padding:10px;border-radius:14px;background:#f8faf3}
+.chunk{padding:10px 14px;border:1px solid #cfe2a5;border-radius:12px;background:#fff;color:var(--dark);font-weight:900;text-align:center}.chunk .py{display:block;font-size:11px;color:#78836f;text-align:center;margin-bottom:3px}.answer{border:2px dashed #9ac45b;background:#f4fae8}
+.ok{color:#2f7d32;font-weight:900;text-align:center;padding:20px}.bad{color:var(--red);font-weight:900;text-align:center;padding:20px}
+.leader-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}.leader-title{font-size:18px;font-weight:900;color:#3f7f32}.leader-sub{font-size:12px;color:#74806d}
+.leader-row{display:grid;grid-template-columns:34px 1fr 56px;align-items:center;gap:8px;padding:9px 10px;border-radius:13px;background:#f8faf3;margin:6px 0;border:1px solid #edf3dc}
+.leader-row.me{background:#edf6d9;border-color:#9ac45b;box-shadow:0 8px 18px rgba(127,170,50,.14)}.leader-rank{font-weight:900;color:var(--green);text-align:center}.leader-name{font-size:13px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.leader-pts{text-align:right;font-size:15px;font-weight:900}.leader-empty{padding:14px;border-radius:13px;background:#f8faf3;color:#74806d;text-align:center;font-size:13px}
+</style>
+</head>
+<body>
+<nav class="product-nav"><a class="brand" href="../student/index.html">学生界面 / Student Home</a><a href="../pre-class/index.html">课前预习 / Preview</a><a class="active" href="student.html">课中互动 / Class</a><a href="../post-class/student-report.html">课后作业 / Homework</a></nav>
+<div class="wrap">
+  <div class="card hero">
+    <div class="status" id="status">connecting</div>
+    <h1>Chinese ClassPro+</h1>
+    <div class="muted">扫码进入课堂，接收老师推送的题目，提交后实时计入排行榜。</div>
+  </div>
+  <div class="card" id="nameBox">
+    <div class="muted" style="margin-bottom:8px">Your name / 姓名</div>
+    <div class="name-row">
+      <select id="studentName" style="flex:1;width:100%;padding:14px;border:1px solid #d8e4bf;border-radius:14px;font-size:16px;background:#fff"><option value="">Select your name / 选择姓名</option></select>
+      <button onclick="confirmName()">确认 / Confirm</button>
+    </div>
+    <div class="muted" id="nameHint" style="margin-top:8px">输入姓名后点击确认，或按 Enter。</div>
+  </div>
+  <div class="card" id="app"><div class="muted">等待老师发送题目...</div></div>
+  <div class="card" id="leaderboard">
+    <div class="leader-head"><div><div class="leader-title">实时排行榜</div><div class="leader-sub">Live ranking · 等老师开始答题后自动更新</div></div><div class="status" id="myRank">--</div></div>
+    <div id="leaderRows" class="leader-empty">等待课堂积分...</div>
+  </div>
+</div>
+<script>
+var query=new URLSearchParams(location.search),RM=query.get("room")||"8888",LESSON=query.get("lesson")||((window.ClassProContext&&ClassProContext.read().lesson)||"HSK1-L01");
+var current=null, selected=null, chunks=[], answerChunks=[], nameReady=false, matchLeft=null, matchRight=null, matchPairs={};
+var CLASS_STUDENTS=window.CLASS_STUDENTS||[];
+var scoreboard={rows:CLASS_STUDENTS.map(function(n){return{name:n,points:0}}),updatedAt:null};
+function es(s){return String(s==null?"":s).replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function norm(s){return String(s||"").replace(/[\s\u3000]/g,"").replace(/[\u3002\uff0c\uff01\uff1f\u3001\uff1b\uff1a.,!?;:()]/g,"")}
+function normName(s){return String(s||"").trim().replace(/\s+/g," ").toUpperCase()}
+function rosterName(s){var n=normName(s);for(var i=0;i<CLASS_STUDENTS.length;i++){if(normName(CLASS_STUDENTS[i])===n)return CLASS_STUDENTS[i]}return String(s||"").trim()}
+function py(s){var m={"我":"wǒ","你":"nǐ","他":"tā","她":"tā","是":"shì","不是":"bú shì","不":"bù","也":"yě","很":"hěn","学生":"xuéshēng","老师":"lǎoshī","同学":"tóngxué","叫":"jiào","认识":"rènshi","认识你":"rènshi nǐ","高兴":"gāoxìng","很高兴":"hěn gāoxìng","对不起":"duìbuqǐ","没关系":"méi guānxi","你好":"nǐ hǎo","再见":"zàijiàn","谢谢":"xièxie","安妮":"Ānnī","李文":"Lǐ Wén","白家月":"Bái Jiāyuè","名字":"míngzi","什么":"shénme","王一飞":"Wáng Yīfēi","陈天中":"Chén Tiānzhōng","妈妈":"māma","请问":"qǐngwèn","认":"rèn","识":"shí"};return m[String(s||"")]||""}
+function name(){return rosterName(document.getElementById("studentName").value)||"Student"}
+function confirmName(){var el=document.getElementById("studentName");el.value=name();nameReady=true;document.getElementById("nameHint").innerHTML='已确认：<b>'+es(name())+'</b>';el.disabled=true;publishPresence();renderBoard()}
+function setStatus(t){document.getElementById("status").textContent=t}
+function publishPresence(){if(window.client&&client.connected)client.publish("classpro/room/"+RM+"/presence",JSON.stringify({count:1,studentName:name(),name:name(),seenAt:new Date().toISOString()}))}
+function renderRosterOptions(){document.getElementById("studentName").innerHTML='<option value="">Select your name / 选择姓名</option>'+CLASS_STUDENTS.map(function(n){return'<option value="'+es(n)+'">'+es(n)+'</option>'}).join("")}
+function renderBoard(){var rows=(scoreboard.rows&&scoreboard.rows.length?scoreboard.rows:CLASS_STUDENTS.map(function(n){return{name:n,points:0}})).slice();rows.sort(function(a,b){return (b.points||0)-(a.points||0)||CLASS_STUDENTS.indexOf(a.name)-CLASS_STUDENTS.indexOf(b.name)});var me=normName(name()),myIdx=-1,h="";for(var i=0;i<Math.min(rows.length,10);i++){var r=rows[i],mine=normName(r.name)===me;if(mine)myIdx=i;h+='<div class="leader-row '+(mine?'me':'')+'"><div class="leader-rank">'+(i+1)+'</div><div class="leader-name">'+es(r.name)+'</div><div class="leader-pts">'+(r.points||0)+' pts</div></div>'}if(myIdx<0){for(var j=0;j<rows.length;j++){if(normName(rows[j].name)===me){myIdx=j;break}}}document.getElementById("leaderRows").innerHTML=h||'<div class="leader-empty">等待课堂积分...</div>';document.getElementById("myRank").textContent=myIdx>=0?"#"+(myIdx+1):"--"}
+function qdata(){return current&&current.question?current.question.data||{}:{}}
+function optionGrid(opts,showPy){var d=qdata(),pys=d.options_pinyin||[],h='<div class="options">';(opts||[]).forEach(function(o,i){var rot=[-2,1.5,-1,2,0.5,-1.5][i%6],dy=[0,10,-6,6,-10,4][i%6],opy=pys[i]||py(o);h+='<button class="option '+(selected===i?'sel':'')+'" onclick="pick('+i+')" style="transform:translateY('+dy+'px) rotate('+rot+'deg)">'+(showPy&&opy?'<span class="py">'+es(opy)+'</span>':'')+es(o)+'</button>'});return h+'</div><button style="width:100%;margin-top:16px" onclick="submitChoice()" '+(selected==null?'disabled':'')+'>提交 Submit</button>'}
+function render(){if(!current){document.getElementById("app").innerHTML='<div class="muted">等待老师发送题目...</div>';return}var q=current.question,d=qdata(),mode=current.mode,h='<div class="prompt">'+es(q.prompt_cn||"")+'</div>';if(mode==="v1"){var pic=d.image?'<img src="'+es(d.image)+'" alt="" style="width:100%;max-height:220px;object-fit:contain;border-radius:14px;background:#fff">':'<div class="hanzi">'+es(d.image_hint||"")+'</div>';h+='<div class="hint"><div class="muted">Look at the picture. Choose the word.</div>'+pic+'</div>'+optionGrid(d.options||[],true)}else if(mode==="v4"){h+='<div class="pinyin">'+es(d.template_pinyin||"")+'</div><div class="hanzi">'+es(d.template||"")+'</div>'+optionGrid(d.options||[],true)}else if(mode==="v5"){h+='<div class="pinyin">'+es(d.sentence_pinyin||"")+'</div><div class="hanzi">'+es(d.sentence||"")+'</div>'+optionGrid(d.options||[],true)}else if(mode==="v7"){h+='<div class="hint"><div class="muted">Choose the word that fits the sentence.</div><div class="pinyin">'+es(d.sentence_pinyin||"")+'</div><div class="hanzi">'+es(d.sentence||"")+'</div></div>'+optionGrid(d.options||[],true)}else if(mode==="v8"){var pairs=d.pairs||[],order=d.order||pairs.map(function(_,i){return i}),done=Object.keys(matchPairs).length;h+='<div style="text-align:center;font-weight:900;color:#d16b35;margin-bottom:8px">词了个词 / Matching Game</div><div class="muted" style="text-align:center">先点中文，再点英文。'+done+' / '+pairs.length+'</div><div class="match-board"><div class="match-col">';pairs.forEach(function(p,i){var cls=matchPairs[i]?' done':matchLeft===i?' sel':'';h+='<button class="match-card'+cls+'" onclick="pickMatch(\'L\','+i+')"><span class="py">'+es(p.left_pinyin||py(p.left))+'</span>'+es(p.left)+'</button>'});h+='</div><div class="match-col">';order.forEach(function(idx){var p=pairs[idx]||{},used=false;for(var k in matchPairs){if(matchPairs[k]===idx)used=true}var cls=used?' done':matchRight===idx?' sel':'';h+='<button class="match-card'+cls+'" onclick="pickMatch(\'R\','+idx+')">'+es(p.right||"")+'</button>'});h+='</div></div><button style="width:100%;margin-top:18px" onclick="submitMatching()" '+(done<pairs.length?'disabled':'')+'>提交 Submit</button>'}else if(mode==="w1"){h+='<div class="hint"><div class="muted">Choose the right character.</div><div class="pinyin">'+es(d.sentence_pinyin||"")+'</div><div class="hanzi">'+es(d.sentence||"")+'</div></div>'+optionGrid(d.options||[],false)}else if(mode==="ttq"&&d.options&&d.options.length){h+='<div class="hint"><div class="muted">Read and choose.</div><div class="hanzi" style="font-size:20px;line-height:1.6">'+es(d.passage||d.statement||"")+'</div><div class="pinyin">'+es(d.statement_pinyin||"")+'</div><div class="english">'+es(d.question_en||d.statement_en||"")+'</div><div class="hanzi">'+es(d.question_cn||"")+'</div></div>'+optionGrid(d.options||[],false)}else if(mode==="g1"){if(!chunks.length){chunks=(d.chunks||[]).map(function(t,i){return{id:i,t:t,u:false}}).sort(function(){return Math.random()-.5});answerChunks=[]}h+='<div class="chunks">';chunks.forEach(function(c,i){if(!c.u)h+='<div class="chunk" onclick="moveChunk('+i+')"><span class="py">'+es(py(c.t))+'</span>'+es(c.t)+'</div>'});h+='</div><div class="chunks answer">';if(!answerChunks.length)h+='<span class="muted">点击上面的词块</span>';answerChunks.forEach(function(c,i){h+='<div class="chunk" onclick="backChunk('+i+')"><span class="py">'+es(py(c.t))+'</span>'+es(c.t)+'</div>'});h+='</div><button style="width:100%;margin-top:16px" onclick="submitOrdering()" '+(!answerChunks.length?'disabled':'')+'>提交 Submit</button>'}else{h+='<div class="muted">当前题型暂未接入学生端。</div>'}document.getElementById("app").innerHTML=h}
+function pick(i){selected=i;render()}
+function pickMatch(side,idx){if(side==="L"){if(matchPairs[idx]!=null)return;matchLeft=idx}else{var used=false;for(var k in matchPairs){if(matchPairs[k]===idx)used=true}if(used)return;matchRight=idx}if(matchLeft!=null&&matchRight!=null){if(matchLeft===matchRight)matchPairs[matchLeft]=matchRight;matchLeft=null;matchRight=null}render()}
+function moveChunk(i){chunks[i].u=true;answerChunks.push(chunks[i]);render()}
+function backChunk(i){var c=answerChunks.splice(i,1)[0];chunks.forEach(function(x){if(x.id===c.id)x.u=false});render()}
+function resultFor(ans,idx){var q=current.question,d=qdata(),mode=current.mode,acc=q.acceptable_answers&&q.acceptable_answers.length?q.acceptable_answers:[q.correct_answer||""];if(d.options&&d.options.length&&acc.some(function(x){return norm(x)===norm((d.options||[])[idx])}))return"correct";if(mode==="ttq"&&d.options&&d.options.length)return idx===d.correct_index?"correct":"wrong";if(typeof d.correct_index==="number")return idx===d.correct_index?"correct":"wrong";return acc.some(function(x){return norm(x)===norm(ans)})?"correct":"wrong"}
+function publish(ans,idx){if(!nameReady)confirmName();var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:ans,text:ans,questionId:current.question.id,mode:current.mode,autoResult:resultFor(ans,idx),submittedAt:new Date().toISOString()};client.publish("classpro/room/"+RM+"/answers",JSON.stringify(payload));document.getElementById("app").innerHTML='<div class="'+(payload.autoResult==="correct"?'ok':'bad')+'">'+(payload.autoResult==="correct"?'提交成功：正确！':'提交成功：请看老师反馈')+'</div>'}
+function submitChoice(){var d=qdata();publish((d.options||[])[selected]||"",selected)}
+function submitOrdering(){publish(answerChunks.map(function(c){return c.t}).join(""),-1)}
+function submitMatching(){if(!nameReady)confirmName();var pairs=qdata().pairs||[],ok=Object.keys(matchPairs).length===pairs.length,ans=pairs.map(function(p,i){return(p.left||"")+"="+((pairs[matchPairs[i]]||{}).right||"")}).join("; ");var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:ans,text:ans,questionId:current.question.id,mode:current.mode,autoResult:ok?"correct":"wrong",submittedAt:new Date().toISOString()};client.publish("classpro/room/"+RM+"/answers",JSON.stringify(payload));document.getElementById("app").innerHTML='<div class="'+(ok?'ok':'bad')+'">'+(ok?'提交成功：正确！':'提交成功：请看老师反馈')+'</div>'}
+document.getElementById("studentName").addEventListener("keydown",function(e){if(e.key==="Enter")confirmName()});
+renderRosterOptions();renderBoard();
+var client=mqtt.connect("wss://05d1d5baec9d4cb3a21f5517b430cff1.s1.eu.hivemq.cloud:8884/mqtt",{username:"classpro",password:"Classpro2026",clientId:"st_"+Math.random().toString(36).slice(2,10),reconnectPeriod:3000,connectTimeout:8000});
+client.on("connect",function(){setStatus("connected room "+RM);client.subscribe("classpro/room/"+RM+"/question");client.subscribe("classpro/room/"+RM+"/scoreboard");publishPresence()});
+client.on("message",function(topic,payload){try{var msg=JSON.parse(payload.toString());if(topic.indexOf("/scoreboard")>=0){scoreboard=msg;renderBoard();return}if(msg.lesson&&msg.lesson!==LESSON)return;current=msg;selected=null;chunks=[];answerChunks=[];matchLeft=null;matchRight=null;matchPairs={};render()}catch(e){console.log(e)}});
+client.on("error",function(e){setStatus("connection error");console.log(e)});
+client.on("close",function(){setStatus("disconnected")});
+</script>
+</body>
+</html>

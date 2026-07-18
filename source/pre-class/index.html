@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ClassReady+ 学生界面 / Student Interface</title>
+<script>var D={"lesson":"Lesson 2","lessonTitle":"第2课：我叫李文","lessonEnglishTitle":"My name is Li Wen","grammarPoints":["汉语的基本语序：主语 + 谓语 + 宾语 (Basic Word Order in Chinese: Subject + Predicate + Object)","用“对不起”和“没关系”表达歉意和回应 (Expressions of apology and responding: '对不起' and '没关系')"],"vocabData":[{"word":"不","pinyin":"bù","english":"not; no"},{"word":"是","pinyin":"shì","english":"be"},{"word":"对不起","pinyin":"duìbuqǐ","english":"sorry"},{"word":"没关系","pinyin":"méi guānxi","english":"that's all right; never mind"},{"word":"没事","pinyin":"méishì","english":"it doesn't matter"},{"word":"很","pinyin":"hěn","english":"very"},{"word":"高兴","pinyin":"gāoxìng","english":"glad; happy"},{"word":"认识","pinyin":"rènshi","english":"know; become acquainted with"},{"word":"也","pinyin":"yě","english":"also; too"}],"readingData":[{"textId":1,"context":"在教室里，王一飞在认识学生。 (In the classroom, Wang Yifei was getting to know the students.)","dialogue":[{"speaker":"陈天中","chinese":"你好，安妮！","pinyin":"Nǐ hǎo, Ānnī!","english":"Hello, Annie!"},{"speaker":"白家月","chinese":"你好，安妮！","pinyin":"Nǐ hǎo, Ānnī!","english":"Hello, Annie!"}]},{"textId":2,"context":"在校园里，陈天中和白家月打招呼认识错了人。 (On campus, Chen Tianzhong greeted Bai Jiayue but mistook her for someone else.)","dialogue":[{"speaker":"陈天中","chinese":"你好，安妮！","pinyin":"Nǐ hǎo, Ānnī!","english":"Hello, Annie!"},{"speaker":"白家月","chinese":"你好，陈天中！我不早安妮，我是白家月。","pinyin":"Nǐ hǎo, Chén Tiānzhōng! Wǒ bù shì Ānnī, wǒ shì Bái Jiāyuè.","english":"Hello, Chen Tianzhong! I'm not Annie—I'm Bai Jiayue."},{"speaker":"陈天中","chinese":"对不起！","pinyin":"Duìbuqǐ!","english":"Sorry!"},{"speaker":"白家月","chinese":"没关系！ (口语：没事！)","pinyin":"Méi guānxi! (méishì!)","english":"That's all right! (It doesn't matter!)"}]},{"textId":3,"context":"在校园里，李文和白家月第一次相遇。 (On campus, Li Wen and Bai Jiayue met for the first time.)","dialogue":[{"speaker":"李文","chinese":"你好！我叫李文。","pinyin":"Nǐ hǎo! Wǒ jiào Lǐ Wén.","english":"Hello! My name is Li Wen."},{"speaker":"白家月","chinese":"你好！我叫白家月。","pinyin":"Nǐ hǎo! Wǒ jiaò Bái Jiāyuè.","english":"Hello! My name is Bai Jiayue."},{"speaker":"李文","chinese":"很高兴认识你。","pinyin":"Hěn gāoxìng rènshi nǐ.","english":"Nice to meet you."},{"speaker":"白家月","chinese":"认识你我也很高兴。","pinyin":"Rènshi nǐ wǒ yě hěn gāoxìng.","english":"Nice to meet you too."}]},{"textId":4,"context":"跟读绕口令 (Shadow the Tongue Twister)","dialogue":[{"speaker":"","chinese":"七加一，再减一，加完减完等于几？加完减完还是七。","pinyin":"Qī jiā yī, zài jiǎn yī, jiāwán jiǎnwán děngyú jǐ? Jiāwán jiǎnwán háishì qī.","english":"Seven plus one, minus one. What's the gain? Add it up. Take it down. Still just seven!"}]}]};</script>
+<script>
+D.readingData=[
+  {textId:1,context:"在教室里，王一飞在认识学生。 (In the classroom, Wang Yifei was getting to know the students.)",dialogue:[
+    {speaker:"王一飞",chinese:"请问，你叫什么名字？",pinyin:"Qǐngwèn, nǐ jiào shénme míngzì?",english:"Excuse me, what is your name?"},
+    {speaker:"陈天中",chinese:"我叫陈天中。",pinyin:"Wǒ jiào Chén Tiānzhōng.",english:"My name is Chen Tianzhong."}
+  ]},
+  {textId:2,context:"在校园里，陈天中和白家月打招呼认识错了人。 (On campus, Chen Tianzhong greeted Bai Jiayue but mistook her for someone else.)",dialogue:[
+    {speaker:"陈天中",chinese:"你好，安妮！",pinyin:"Nǐ hǎo, Ānnī!",english:"Hello, Annie!"},
+    {speaker:"白家月",chinese:"你好，陈天中！我不是安妮，我是白家月。",pinyin:"Nǐ hǎo, Chén Tiānzhōng! Wǒ bù shì Ānnī, wǒ shì Bái Jiāyuè.",english:"Hello, Chen Tianzhong! I'm not Annie—I'm Bai Jiayue."},
+    {speaker:"陈天中",chinese:"对不起！",pinyin:"Duìbuqǐ!",english:"Sorry!"},
+    {speaker:"白家月",chinese:"没关系！ (口语：没事！)",pinyin:"Méi guānxi! (méishì!)",english:"That's all right! (It doesn't matter!)"}
+  ]},
+  {textId:3,context:"在校园里，李文和白家月第一次相遇。 (On campus, Li Wen and Bai Jiayue met for the first time.)",dialogue:[
+    {speaker:"李文",chinese:"你好！我叫李文。",pinyin:"Nǐ hǎo! Wǒ jiào Lǐ Wén.",english:"Hello! My name is Li Wen."},
+    {speaker:"白家月",chinese:"你好！我叫白家月。",pinyin:"Nǐ hǎo! Wǒ jiào Bái Jiāyuè.",english:"Hello! My name is Bai Jiayue."},
+    {speaker:"李文",chinese:"很高兴认识你。",pinyin:"Hěn gāoxìng rènshi nǐ.",english:"Nice to meet you."},
+    {speaker:"白家月",chinese:"认识你我也很高兴。",pinyin:"Rènshi nǐ wǒ yě hěn gāoxìng.",english:"Nice to meet you too."}
+  ]}
+];
+</script>
+<script src="../../vue.global.prod.js"></script>
+<script src="../shared/students.js"></script>
+<script src="../shared/context.js"></script>
+<script src="./lesson-data-loader.js"></script>
+<style>
+.product-nav{position:sticky;top:0;z-index:10;display:flex;gap:4px;align-items:center;flex-wrap:nowrap;overflow-x:auto;padding:8px 10px;margin:-20px -20px 16px;background:rgba(255,255,255,.94);border-bottom:1px solid #e8e1dc;white-space:nowrap}.product-nav a{padding:6px 8px;border-radius:999px;text-decoration:none;color:#777;font-size:11px;font-weight:800;white-space:nowrap;flex:0 0 auto}.product-nav a.active,.product-nav a:hover{background:#fff0ee;color:#c0392b}.product-nav .brand{font-weight:900;color:#c0392b;margin-right:0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,Microsoft YaHei,sans-serif;background:#f5f0ee;padding:20px;color:#333}
+#a{max-width:480px;margin:0 auto}
+.card{background:#fff;border-radius:12px;padding:20px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+h2{font-size:22px;margin-bottom:6px;color:#c0392b}
+.sub{color:#888;font-size:14px;margin-bottom:6px}
+.meta{color:#999;font-size:13px;margin-bottom:16px}
+.btn{padding:12px 24px;border:none;border-radius:10px;background:#c0392b;color:#fff;font-size:15px;font-weight:600;cursor:pointer;display:inline-block;transition:background .15s}
+.btn:hover{background:#a93226}
+.btn:active{transform:scale(0.97)}
+.btn-sm{padding:8px 14px;font-size:13px}
+.btn-outline{background:transparent;border:2px solid #c0392b;color:#c0392b}
+.btn-back{background:transparent;border:none;color:#888;cursor:pointer;font-size:14px;padding:4px 0;margin-bottom:12px;display:inline-block}
+.btn-back:hover{color:#333}
+.flex{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.inp{padding:10px 14px;border:2px solid #e0d5d0;border-radius:10px;font-size:15px;outline:none;flex:1;min-width:160px;font-family:inherit}
+.inp:focus{border-color:#c0392b}
+.mb12{margin-bottom:12px}
+.w-full{width:100%}
+.tag{display:inline-block;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600}
+.tag-pending{background:#fff3e0;color:#e67e22}
+.tag-done{background:#e8f5e9;color:#27ae60}
+.tag-auto{background:#e3f2fd;color:#1565c0}
+.rv-card{background:#fff;border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.rv-card.pending{border-left:4px solid #e67e22}
+.rv-card.done{border-left:4px solid #27ae60}
+.rv-card.auto{border-left:4px solid #1565c0}
+.rv-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;flex-wrap:wrap;gap:4px}
+.rv-date{font-size:12px;color:#999}
+.rv-module{font-size:13px;color:#555;font-weight:600}
+.rv-score{font-size:15px;font-weight:700;color:#333}
+.rv-answer{background:#faf8f6;border-radius:8px;padding:10px;margin-top:8px;font-size:14px;line-height:1.6}
+.rv-answer label{font-size:12px;color:#999;display:block;margin-bottom:2px}
+.rv-correction{background:#f0faf0;border-radius:8px;padding:10px;margin-top:8px;font-size:14px;line-height:1.6}
+.rv-correction label{font-size:12px;color:#27ae60;display:block;margin-bottom:2px}
+.summary{text-align:center;padding:20px;color:#666;font-size:14px}
+.summary strong{font-size:20px;color:#c0392b}
+.empty{text-align:center;padding:40px 20px;color:#aaa;font-size:15px}
+.step-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}.step-head .meta{margin:4px 0 0}.lesson-panel{background:#fffaf7;border:1px solid #f0dfd7;border-radius:16px;padding:18px;margin-bottom:16px}.lesson-panel h3{color:#a93226;margin-bottom:6px}.vocab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}.vocab-card{display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:12px;background:#fff;border:1px solid #eadfd8}.vocab-card b{font-size:25px}.vocab-card span{color:#b66b59}.vocab-card small,.sound-row small,.text-card small{color:#999}.sound-list{display:grid;gap:8px}.sound-row{display:grid;grid-template-columns:70px 1fr 1.5fr 32px;align-items:center;gap:8px;padding:12px;border:1px solid #eadfd8;border-radius:12px;background:#fff;text-align:left;cursor:pointer}.sound-row span:first-child{font-size:22px;font-weight:900}.choice-grid{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.choice{padding:11px 16px;border:2px solid #eadfd8;border-radius:12px;background:#fff;cursor:pointer}.choice.selected{border-color:#c0392b;background:#fff0ed;color:#a93226}.feedback{margin-top:12px;padding:10px;border-radius:10px;background:#f7f3ef}.text-card{padding:14px;margin:10px 0;border-radius:12px;background:#fff;border-left:4px solid #c0392b}.text-card>b,.text-card>small{display:block;margin-bottom:8px}.dialogue{display:grid;grid-template-columns:70px 1fr;gap:4px;padding:8px 0;border-top:1px solid #f0e8e3}.dialogue span{font-size:19px;font-weight:800}.dialogue small{grid-column:2}.pre-question{padding:12px 0;border-top:1px solid #f0e8e3}.done{text-align:center}.done-icon{font-size:64px;color:#27ae60}.w-full{width:100%}
+<style>
+*{font-family:KaiTi,STKaiti,"楷体",serif}
+body{font-family:KaiTi,STKaiti,"楷体",serif}
+.english-font,.word-card-english,.read-main em{font-family:"Times New Roman",Times,serif}
+.pinyin-font,.word-card-pinyin,.read-main small,.writing-char small,.quiz-option small{font-family:SimSun,"宋体",serif}
+.choice{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.choice small,.writing-char small{display:block;line-height:1.2}
+.nav-actions{display:flex;gap:10px;margin-top:12px}.nav-actions .btn{flex:1;margin:0}
+.completion-overlay{position:fixed;inset:0;background:rgba(64,39,29,.46);z-index:30;display:flex;align-items:center;justify-content:center;padding:20px}
+.completion-dialog{width:min(440px,100%);max-height:90vh;overflow:auto;background:#fffaf7;border-radius:24px;padding:22px;box-shadow:0 18px 60px rgba(40,20,10,.22)}
+.completion-dialog .btn-outline{display:none}
+.module-step>h3{display:none}
+.subjective-mode .quiz-panel{display:none}.subjective-panel{margin-top:14px;padding:16px;border:1px solid #eadbd4;border-radius:18px;background:#fffaf7}.subjective-label{color:#8a6558;font-weight:700}.subjective-input{display:block;width:100%;min-height:130px;margin:12px 0;padding:12px;border:1px solid #ddc9c0;border-radius:12px;background:#fff;resize:vertical;font-size:16px;line-height:1.7}
+.subjective-prompt{margin-top:10px;padding:12px;border-left:4px solid #c75543;border-radius:8px;background:#fff4ef;color:#6c4d42;line-height:1.6}
+</style>
+<style>
+.word-card-shell{margin:14px 0}.swipe-card{position:relative;min-height:270px;border-radius:22px;border:1px solid #eadbd4;background:linear-gradient(145deg,#fff,#fff7f2);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 8px 24px rgba(95,55,35,.10);touch-action:pan-y;user-select:none;cursor:grab}.swipe-card:active{cursor:grabbing}.word-card-hanzi{font-size:64px;font-weight:900;color:#7b3028}.word-card-pinyin{font-size:25px;color:#b34b3e;margin:10px 0}.word-card-english{font-size:16px;color:#715b52;max-width:85%}.word-card-hint{font-size:12px;color:#a8958d;margin-top:14px}.mastered-badge{position:absolute;right:14px;top:14px;color:#27824b;background:#eaf7ee;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:700}.word-card-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.word-card-actions .btn{padding:9px 4px;font-size:12px}.card-progress{text-align:center;margin-top:10px}.match-toolbar{display:flex;justify-content:space-between;align-items:center;margin:12px 0;color:#856f65;font-size:13px}.match-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.match-card{min-height:76px;padding:8px;border-radius:14px;border:2px solid #eadbd4;background:#fff;color:#5e453b;font-size:14px;cursor:pointer;transition:transform .15s,background .15s,border-color .15s;word-break:break-word}.match-card:hover{transform:translateY(-2px);border-color:#c96b59}.match-card.english{font-size:12px;color:#816c62}.match-card.selected{border-color:#c75543;background:#fff0ec;transform:scale(1.03)}.match-card.matched{border-color:#55a96b;background:#eaf7ee;color:#287844;opacity:.75}.feedback.success{color:#287844;background:#eaf7ee}.feedback.error{color:#b13c35;background:#fff0ed}.writing-chars{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0}.writing-char{padding:10px 4px;border:1px solid #eadbd4;border-radius:13px;background:#fff;cursor:pointer;color:#62483d}.writing-char b{display:block;font-size:30px}.writing-char small{display:block;color:#aa9287;font-size:10px;margin-top:4px}.writing-char.selected{border:2px solid #c75543;background:#fff3ef;color:#a53d31}.writing-panel{background:linear-gradient(145deg,#fffaf7,#fff);border:1px solid #eadbd4;border-radius:18px;padding:14px;text-align:center}.writing-title{display:flex;justify-content:space-between;align-items:center;color:#765f55;font-size:14px}.writing-title b{font-size:24px;color:#a64236}.writing-hint{font-size:11px;color:#ab9890}.writing-canvas{display:block;width:min(320px,100%);height:auto;aspect-ratio:1;margin:12px auto;border-radius:15px;border:1px solid #d9c4ba;background-color:#fff;background-image:linear-gradient(90deg,transparent 49.5%,#e9d9d2 49.5%,#e9d9d2 50.5%,transparent 50.5%),linear-gradient(0deg,transparent 49.5%,#e9d9d2 49.5%,#e9d9d2 50.5%,transparent 50.5%),linear-gradient(45deg,transparent 49.7%,#f0e3de 49.7%,#f0e3de 50.3%,transparent 50.3%),linear-gradient(-45deg,transparent 49.7%,#f0e3de 49.7%,#f0e3de 50.3%,transparent 50.3%);touch-action:none}.writing-actions{display:flex;gap:8px}.writing-actions .btn{flex:1}.writing-empty{text-align:center;color:#aa9790;padding:35px 10px;border:1px dashed #dcc9c0;border-radius:15px}.quiz-panel,.quiz-report{background:linear-gradient(145deg,#fffaf7,#fff);border:1px solid #eadbd4;border-radius:18px;padding:16px}.quiz-progress{display:flex;align-items:center;gap:10px;color:#8c7469;font-size:12px}.quiz-progress i{height:7px;background:#f0e4df;border-radius:99px;flex:1;overflow:hidden}.quiz-progress i b{display:block;height:100%;background:#c75543;border-radius:99px}.quiz-question{font-size:17px;font-weight:700;line-height:1.6;margin:22px 0 14px;color:#4a3831}.quiz-options{display:grid;gap:9px}.quiz-option{display:flex;align-items:center;justify-content:space-between;padding:13px 14px;border:2px solid #eadbd4;border-radius:13px;background:#fff;cursor:pointer;text-align:left}.quiz-option span{font-size:18px;font-weight:700}.quiz-option small{color:#a28d84}.quiz-option.selected{border-color:#c75543;background:#fff0ec}.quiz-selected{text-align:center;color:#8c7469;font-size:12px}.quiz-panel .btn:disabled{opacity:.45;cursor:not-allowed}.report-score{font-size:66px;font-weight:900;color:#b4483b;text-align:center}.report-score small{font-size:24px;color:#a48c82}.report-rate{text-align:center;color:#806b62;font-weight:700}.report-message{text-align:center;color:#806b62;line-height:1.6;margin:14px 0}.report-details{border-top:1px solid #eee0db;margin-top:12px}.report-row{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #f2e7e3}.report-row>span{font-size:20px;font-weight:800}.report-row .ok{color:#318750}.report-row .bad{color:#bc443b}.report-row div{display:flex;flex-direction:column;gap:3px}.report-row small,.report-row em{font-size:12px;color:#8c766c;font-style:normal}.quiz-report>.btn{margin-top:14px}
+</style>
+<style>
+.swipe-card{transition:transform .28s cubic-bezier(.2,.8,.2,1);will-change:transform}.read-row{display:flex;align-items:center;gap:8px;padding:8px 10px;margin:6px 0;border:1px solid #eadbd4;border-radius:12px;background:#fff}.read-main{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}.read-main small{color:#b34b3e;font-size:14px}.read-main b{font-size:20px;color:#5b4035}.read-main em{font-size:11px;color:#9b887f;font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.audio-btn,.read-check{border:0;border-radius:9px;padding:8px 9px;cursor:pointer;white-space:nowrap}.audio-btn{background:#fff0ec;color:#b4483b;font-size:17px}.read-check{background:#f4ebe7;color:#80675c;font-size:12px}.read-check.done{background:#eaf7ee;color:#287844}
+</style>
+</head><body>
+<nav class="product-nav"><a class="brand" href="../student/index.html">学生界面 / Student Home</a><a class="active" href="index.html">课前预习 / Preview</a><a href="../in-class/student.html">课中互动 / Class</a><a href="../post-class/student-report.html">课后作业 / Homework</a></nav>
+<div id="a">
+<div v-if="p===0 && !showReview" class="card">
+  <h2>{{D.lessonTitle}}</h2>
+  <p class="sub">{{D.lessonEnglishTitle}}</p>
+  <p class="meta">6 modules ~12 min</p>
+  <div class="flex">
+    <button class="btn" @click="p=1">Start Learning</button>
+    <button class="btn btn-outline" @click="openReview">View Feedback</button>
+  </div>
+</div>
+<div v-if="showReview">
+  <button class="btn-back" @click="showReview=false">&larr; 返回</button>
+  <h2>我的批改结果</h2>
+  <p class="meta">输入名字查看老师的批改反馈</p>
+  <div class="flex mb12">
+    <select class="inp" v-model="reviewName"><option value="">Select your name / 选择姓名</option><option v-for="n in classStudents" :value="n">{{n}}</option></select>
+    <button class="btn btn-sm" @click="fetchReviews" :disabled="loading">{{loading ? '查询中... / Loading' : '查询反馈 / Check feedback'}}</button>
+  </div>
+  <div v-if="!loading && reviewFetched && reviews.length===0" class="empty">
+    暂无提交记录，请先完成测试。
+  </div>
+  <div v-if="!loading && reviews.length>0">
+    <div class="card summary">
+      共 <strong>{{reviews.length}}</strong> 次提交，
+      <span v-if="reviewedCount>0"><strong>{{reviewedCount}}</strong> 次已批改</span>
+      <span v-else>暂无已批改</span>
+    </div>
+    <div v-for="(r,i) in reviews" :key="i" :class="['rv-card', r.批改状态==='待批改' ? 'pending' : r.批改状态==='无需批改' ? 'auto' : 'done']">
+      <div class="rv-header">
+        <span class="rv-module">{{r.模块 || r.课程 || '测试'}}</span>
+        <span :class="['tag', r.批改状态==='待批改' ? 'tag-pending' : r.批改状态==='无需批改' ? 'tag-auto' : 'tag-done']">
+          {{r.批改状态==='待批改' ? '待批改' : r.批改状态==='无需批改' ? '自动评分' : '已批改'}}
+        </span>
+      </div>
+      <div class="rv-header">
+        <span class="rv-date">{{formatDate(r.提交时间)}}</span>
+        <span class="rv-score">{{r.得分}} / {{r.总分}}</span>
+      </div>
+      <div class="rv-answer"><label>你的作答</label>{{r.学生作答 || '(无)'}}</div>
+      <div v-if="r.教师批改" class="rv-correction"><label>教师批改</label>{{r.教师批改}}</div>
+      <div v-if="r.薄弱点 && r.薄弱点!=='undefined' && r.薄弱点!=='null'" style="margin-top:6px;font-size:12px;color:#999">知识点: {{r.薄弱点}}</div>
+    </div>
+  </div>
+</div>
+<div v-if="p>0 && !showReview" class="card">
+  <p class="step-title"><b>Step {{mi+1}}/6</b> <span>{{(stepTitles[mi]||stepTitles[0]).cn}}</span> / <span class="english-font">{{(stepTitles[mi]||stepTitles[0]).en}}</span></p>
+  <div v-if="mi===0" class="module-step" data-step="0">
+    <p class="sub">这一课学完，你可以用中文问候别人、介绍自己。</p>
+    <p class="pre-question">你第一次见到老师时，最合适的表达是什么？<br><small class="english-font">What would you say when you meet your teacher for the first time?</small></p>
+    <div class="choice-grid"><button v-for="x in r0Options" class="choice" :class="{selected:r0Choice===x.word}" @click="r0Choice=x.word"><small class="pinyin-font">{{x.pinyin}}</small><b>{{x.word}}</b></button></div>
+    <p class="pre-question">下面哪些表达你已经听过？<br><small class="english-font">Which expressions have you heard before?</small></p>
+    <div class="choice-grid"><button v-for="x in r0KnownOptions" class="choice" :class="{selected:r0Known.indexOf(x.word)>=0}" @click="toggleKnown(x.word)"><small class="pinyin-font">{{x.pinyin}}</small><b>{{x.word}}</b></button></div>
+  </div>
+  <div v-if="mi===1" class="module-step" data-step="1">
+    <p class="sub english-font">Swipe the card left to view pinyin and English; swipe right to mark it as mastered.</p>
+    <div class="word-card-shell"><div class="swipe-card" :style="{transform:'translateX('+cardOffset+'px) rotate('+(cardOffset*.05)+'deg)'}" @pointerdown="cardTouchStart" @pointermove="cardTouchMove" @pointerup="cardTouchEnd" @pointercancel="cardTouchEnd" @click="cardClick"><div v-if="!cardRevealed"><div class="word-card-hanzi">{{cardWord.word}}</div><div class="word-card-hint">向左滑查看释义 · 向右滑表示掌握</div></div><div v-else><div class="word-card-pinyin pinyin-font">{{cardWord.pinyin}}</div><div class="word-card-hanzi">{{cardWord.word}}</div><div class="word-card-english english-font">{{cardWord.english}}</div></div><div v-if="cardMastered" class="mastered-badge">✓ 已掌握</div></div></div>
+    <div class="word-card-actions"><button class="btn btn-outline btn-sm" @click="cardPrev">← 上一个</button><button class="btn btn-sm" @click="revealCard">查看释义</button><button class="btn btn-sm" @click="masterCard">已掌握 →</button><button class="btn btn-outline btn-sm" @click="cardNext">下一个 →</button></div><p class="meta card-progress">第 {{cardIndex+1}} / {{D.vocabData.length}} 张 · 已掌握 {{masteredCount}} 张</p>
+  </div>
+  <div v-if="mi===2" class="module-step" data-step="2">
+    <p class="sub english-font">Shadow the words first, then shadow the short sentences.</p>
+    <h4 class="english-font">Shadow Words</h4><div v-for="v in D.vocabData" class="read-row"><div class="read-main"><small class="pinyin-font">{{v.pinyin}}</small><b>{{v.word}}</b><em class="english-font">{{v.english}}</em></div><button class="audio-btn" @click="speak(v.word)">🔊</button><button class="read-check" :class="{done:readDone.indexOf(v.word)>=0}" @click="markRead(v.word)">{{readDone.indexOf(v.word)>=0?'Done':'Practice'}}</button></div>
+    <h4 class="english-font">Shadow Short Sentences</h4><div v-for="s in readSentences" class="read-row"><div class="read-main"><small class="pinyin-font">{{s.pinyin}}</small><b>{{s.chinese}}</b><em class="english-font">{{s.english}}</em></div><button class="audio-btn" @click="speak(s.chinese)">🔊</button><button class="read-check" :class="{done:readDone.indexOf(s.chinese)>=0}" @click="markRead(s.chinese)">{{readDone.indexOf(s.chinese)>=0?'Done':'Practice'}}</button></div>
+  </div>
+  <div v-if="mi===3" class="module-step" data-step="3">
+    <p class="sub">4×4 连连看：点击两张相同含义的卡片。</p>
+    <div class="match-toolbar"><span>已配对 {{matchedPairs}} / 8 组</span><button class="btn btn-outline btn-sm" @click="resetMatch">重新开始</button></div><div class="match-grid"><button v-for="c in matchCards" :key="c.uid" class="match-card" :class="{selected:c.selected,matched:c.matched,english:c.kind==='english'}" @click="pickMatch(c)">{{c.value}}</button></div><p class="feedback" :class="{success:matchMessageType==='success',error:matchMessageType==='error'}">{{matchMessage}}</p>
+  </div>
+  <div v-if="mi===4" class="module-step" data-step="4">
+    <h3>汉字书写 / <span class="english-font">Character Writing</span></h3><p class="sub">先选择一个汉字，再在田字格中用手指或鼠标练习。</p><div class="writing-chars"><button v-for="ch in chars" class="writing-char" :class="{selected:writingChar===ch.h}" @click="selectWriting(ch.h)"><small class="pinyin-font">{{ch.pinyin}}</small><b>{{ch.h}}</b></button></div><div v-if="writingChar" class="writing-panel"><div class="writing-title"><span>练习：<b>{{writingChar}}</b></span><span class="writing-hint">参考灰色范字书写</span></div><canvas ref="writingCanvas" width="320" height="320" class="writing-canvas" @pointerdown="startStroke" @pointermove="moveStroke" @pointerup="endStroke" @pointerleave="endStroke"></canvas><div class="writing-actions"><button class="btn btn-outline btn-sm" @click="clearCanvas">清除重写</button><button class="btn btn-sm" @click="saveWriting">保存本字</button></div><p v-if="writingSaved" class="feedback success">✓ 本字练习已保存</p></div><div v-else class="writing-empty">请选择上方一个汉字开始练习</div>
+  </div>
+  <div v-if="mi===5" class="module-step" data-step="5" :class="{ 'subjective-mode': quizQuestion.type==='subjective' }">
+    <h3>预习小测 / Quick Check</h3><p class="sub">共 10 题。选择后会自动进入下一题，完成后统一查看报告。</p><div v-if="!quizFinished" class="quiz-panel"><div class="quiz-progress"><span>第 {{quizIndex+1}} / 10 题</span><i><b :style="{width:((quizIndex)/10*100)+'%'}"></b></i></div><p class="quiz-question">{{quizQuestion.question}}</p><div class="quiz-options"><button v-for="x in quizQuestion.options" class="quiz-option" :class="{selected:quizAnswer===x}" @click="selectQuizOption(x)"><span>{{x.word}}</span><small>{{x.pinyin}}</small></button></div><p v-if="quizAnswer" class="quiz-selected">已选择，正在进入下一题…</p></div><div v-else class="completion-overlay"><div class="quiz-report completion-dialog"><div class="done-icon">✓</div><h3 style="text-align:center">预习完成 / Pre-class Complete</h3><div class="report-score">{{quizScore}}<small>/ 10</small></div><div class="report-rate">正确率 {{Math.round(quizScore/10*100)}}%</div><p class="report-message">{{quizScore>=8?'做得很好，已经具备进入课堂的基础。':quizScore>=6?'基础已经建立，再复习一下错题会更稳。':'建议重新复习词卡和跟读，再完成一次小测。'}}</p><div class="report-details"><div v-for="(r,i) in quizResults" class="report-row"><span :class="r.correct?'ok':'bad'">{{r.correct?'✓':'×'}}</span><div><b>第 {{i+1}} 题</b><small>{{r.question}}</small><em v-if="!r.correct">你的答案：{{r.answer}}</em></div></div></div><button class="btn btn-outline btn-sm" @click="restartQuiz">重新测试</button><button class="btn btn-sm" @click="mi=6">查看报告</button></div></div>
+  </div>
+  <div v-if="mi===5 && quizQuestion.type==='subjective' && !quizFinished" class="subjective-panel"><p class="subjective-label">主观题 / <span class="english-font">Open Response</span></p><div class="subjective-prompt"><b>题目要求：</b>{{quizQuestion.question}}<br><span v-if="quizQuestion.prompt">{{quizQuestion.prompt}}</span></div><textarea v-model="quizTextAnswer" class="subjective-input" placeholder="请用中文写下你的回答"></textarea><button class="btn" :disabled="!quizTextAnswer.trim() || subjectiveSubmitting" @click="submitSubjective">{{subjectiveSubmitting?'提交中…':'提交回答，进入下一题'}}</button></div>
+  <div v-if="showReport" class="completion-overlay"><div class="quiz-report completion-dialog"><div class="done-icon">✓</div><h3 style="text-align:center">预习报告 / <span class="english-font">Pre-class Report</span></h3><div class="report-score">{{quizScore}}<small>/ 10</small></div><div class="report-rate">正确率 {{Math.round(quizScore/10*100)}}%</div><p class="report-message">本次预习已完成，主观题已提交教师批改。</p><div class="report-details"><div v-for="(r,i) in quizResults" class="report-row"><span :class="r.correct?'ok':'bad'">{{r.correct?'✓':'·'}}</span><div><b>第 {{i+1}} 题</b><small>{{r.question}}</small><em v-if="r.answer">作答：{{r.answer}}</em></div></div></div><button class="btn" @click="showReport=false">关闭报告</button></div></div>
+  <div v-if="mi===6" class="module-step" data-step="6"><h2>预习完成 / <span class="english-font">Pre-class Complete</span></h2><p class="sub">本课预习已经完成。</p><button v-if="quizFinished" class="btn" @click="showReport=true">查看预习报告</button></div>
+  <div v-if="mi<6" class="nav-actions"><button v-if="mi>0" class="btn btn-outline" @click="mi--">← 返回 / Back</button><button class="btn" @click="next()">继续 / Continue →</button></div>
+  <div v-else class="nav-actions"><button class="btn btn-outline" @click="mi=0">重新预习 / Review Again</button></div>
+</div>
+<script>
+var GAS_URL = 'https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec';
+var {createApp,ref,computed} = Vue; createApp({setup(){
+var p=ref(0);var mi=ref(0);var w=ref("");var wd=ref(false);var r0Choice=ref("");var r0Known=ref([]);var cardIndex=ref(0);var cardRevealed=ref(false);var cardMastered=ref(false);var cardTouchX=0;var cardOffset=ref(0);var cardDragging=ref(false);var cardWasSwipe=false;var writingChar=ref("");var writingCanvas=ref(null);var writingSaved=ref(false);var drawing=ref(false);var quizIndex=ref(0);var quizAnswer=ref("");var quizFinished=ref(false);var readDone=ref([]);
+ var ctx=window.ClassProContext?ClassProContext.read():{};var params=new URLSearchParams(location.search);var lessonKey=params.get("lesson")||ctx.lesson||"HSK1-L01";var roomKey=params.get("room")||ctx.room||"8888";var studentName=params.get("student")||ctx.student||localStorage.getItem("classpro_student")||"未命名学生";
+var showReview=ref(false);var showReport=ref(false);var reviewName=ref("");var reviews=ref([]);var loading=ref(false);var reviewFetched=ref(false);var classStudents=window.CLASS_STUDENTS||[];
+var mods=["R0 话题预热","R1 词卡学习","R2 跟读练习","R1 生词闯关","R5 汉字书写","R6 预习小测"];var stepTitles=[{cn:"话题预热",en:"Topic Warm-up"},{cn:"词卡学习",en:"Word Cards"},{cn:"跟读练习",en:"Read Aloud"},{cn:"生词闯关",en:"Vocabulary Match"},{cn:"汉字书写",en:"Character Writing"},{cn:"预习小测",en:"Quick Check"}];
+var chars=computed(function(){var r=[];var u={};(D.vocabData||[]).forEach(function(v){v.word.split("").forEach(function(ch){if(!u[ch]){u[ch]=1;r.push({h:ch,p:v.pinyin})}})});return r.slice(0,10)});
+var r0Options=[{word:"你好！",pinyin:"nǐ hǎo"},{word:"老师，您好！",pinyin:"lǎoshī, nín hǎo"},{word:"再见！",pinyin:"zàijiàn"}];var r0KnownOptions=(D.vocabData||[]).slice(0,6);
+var masteredCards=ref({});var masteredCount=computed(function(){return Object.keys(masteredCards.value).length});var cardWord=computed(function(){return D.vocabData[cardIndex.value%D.vocabData.length]||{word:"",pinyin:"",english:""}});function revealCard(){cardRevealed.value=true}function masterCard(){masteredCards.value[cardWord.value.word]=true;cardMastered.value=true;cardRevealed.value=true;cardOffset.value=0;if(cardIndex.value<D.vocabData.length-1){setTimeout(function(){cardIndex.value++;cardRevealed.value=false;cardMastered.value=false},300)}}function cardPrev(){cardIndex.value=(cardIndex.value-1+D.vocabData.length)%D.vocabData.length;cardRevealed.value=false;cardMastered.value=!!masteredCards.value[cardWord.value.word];cardOffset.value=0}function cardNext(){cardIndex.value=(cardIndex.value+1)%D.vocabData.length;cardRevealed.value=false;cardMastered.value=!!masteredCards.value[cardWord.value.word];cardOffset.value=0}function cardClick(e){if(!cardWasSwipe&&e.pointerType==='mouse')revealCard();cardWasSwipe=false}
+function cardTouchStart(e){cardTouchX=e.clientX||0;cardDragging.value=true;cardWasSwipe=false;cardOffset.value=0}function cardTouchMove(e){if(!cardDragging.value)return;var dx=(e.clientX||0)-cardTouchX;if(Math.abs(dx)>5)cardWasSwipe=true;cardOffset.value=Math.max(-170,Math.min(170,dx))}function cardTouchEnd(e){if(!cardDragging.value)return;cardDragging.value=false;var dx=cardOffset.value;if(Math.abs(dx)>55){cardOffset.value=dx<0?-360:360;setTimeout(function(){cardOffset.value=0;if(dx<0)revealCard();else masterCard()},260)}else{cardOffset.value=0}}
+var readSentences=computed(function(){var a=[];(D.readingData||[]).forEach(function(t){(t.dialogue||[]).forEach(function(x){if(x.chinese&&a.length<6)a.push(x)})});return a});
+function markRead(x){if(readDone.value.indexOf(x)<0)readDone.value.push(x)}
+var matchCards=ref([]);var matchPicked=ref([]);var matchMessage=ref("请点击一张中文词卡和一张英文释义卡。");var matchMessageType=ref("");var matchedPairs=computed(function(){return matchCards.value.filter(function(x){return x.matched&&x.kind==='word'}).length});function initMatch(){var a=(D.vocabData||[]).slice(0,8).map(function(x,i){return[{uid:"w"+i,kind:"word",value:x.word,pair:i,selected:false,matched:false},{uid:"e"+i,kind:"english",value:x.english,pair:i,selected:false,matched:false}]}).reduce(function(x,y){return x.concat(y)},[]);for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),z=a[i];a[i]=a[j];a[j]=z}matchCards.value=a}initMatch();function resetMatch(){matchPicked.value=[];matchMessage.value="请点击一张中文词卡和一张英文释义卡。";matchMessageType.value="";initMatch()}function pickMatch(c){if(c.matched||c.selected||matchPicked.value.length>=2)return;c.selected=true;matchPicked.value.push(c);if(matchPicked.value.length===2){var a=matchPicked.value;if(a[0].pair===a[1].pair){a[0].matched=true;a[1].matched=true;matchPicked.value=[];matchMessage.value="配对正确！";matchMessageType.value="success"}else{matchMessage.value="不是同一组，再试一次。";matchMessageType.value="error";setTimeout(function(){a[0].selected=false;a[1].selected=false;matchPicked.value=[];matchMessage.value="继续寻找下一组。";matchMessageType.value=""},700)}}}
+var rawQuizQuestions=(D.preQuestions||[]);var quizQuestions=rawQuizQuestions.map(function(q){var options=(q.options||[]).map(function(x){return typeof x==="string"?{word:x,pinyin:""}:{word:x.word||x.text||x.value||"",pinyin:x.pinyin||""}});return{type:q.type==="output"||q.type==="subjective"?"subjective":"choice",id:q.id,module:q.module||q.moduleName||"",question:q.question||q.prompt_en||q.prompt_cn||"",prompt:q.prompt||q.answerPlaceholder||"",options:options,answer:q.answer||q.correct_answer||q.correctAnswer,weakPoints:q.weakPoints||q.kp||""}});if(!quizQuestions.length){quizQuestions=(D.vocabData||[]).slice(0,8).map(function(v){var opts=[v];(D.vocabData||[]).filter(function(x){return x.word!==v.word}).slice(0,3).forEach(function(x){opts.push(x)});return{type:"choice",question:"Choose the Chinese word for \""+v.english+"\".",options:opts.sort(function(){return Math.random()-.5}),answer:v.word}})}var quizQuestion=computed(function(){return quizQuestions[quizIndex.value]||quizQuestions[0]});var quizTextAnswer=ref("");var subjectiveSubmitting=ref(false);var quizResults=ref([]);var quizScore=computed(function(){return quizResults.value.filter(function(x){return x.correct}).length});function sendSubjective(q,ans){var local=location.protocol==="file:"||location.hostname==="localhost"||location.hostname==="127.0.0.1";var recordUrl=local?"http://localhost:18765/api/pre-class-record":GAS_URL;return fetch(recordUrl,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({studentName:studentName,lesson:lessonKey,stage:"预习",module:q.module,score:0,total:0,weakPoints:q.weakPoints,answer:ans,questionText:q.question,openEnded:"yes"})})}function selectQuizOption(x){if(quizAnswer.value)return;quizAnswer.value=x;setTimeout(function(){quizResults.value.push({question:quizQuestion.value.question,answer:x.word,correct:x.word===quizQuestion.value.answer});if(quizIndex.value<quizQuestions.length-1){quizIndex.value++;quizAnswer.value=""}else{quizFinished.value=true}},550)}function submitSubjective(){if(!quizTextAnswer.value.trim()||subjectiveSubmitting.value)return;subjectiveSubmitting.value=true;var q=quizQuestion.value,ans=quizTextAnswer.value.trim();sendSubjective(q,ans).catch(function(){}).then(function(){quizResults.value.push({question:q.question,answer:ans,correct:false});subjectiveSubmitting.value=false;quizTextAnswer.value="";if(quizIndex.value<quizQuestions.length-1){quizIndex.value++;}else{quizFinished.value=true}})}function restartQuiz(){quizIndex.value=0;quizAnswer.value="";quizTextAnswer.value="";quizResults.value=[];quizFinished.value=false}
+function selectWriting(ch){writingChar.value=ch;writingSaved.value=false;setTimeout(function(){clearCanvas()},30)}function startStroke(e){drawing.value=true;drawPoint(e)}function moveStroke(e){if(drawing.value)drawPoint(e)}function endStroke(){drawing.value=false;if(writingCanvas.value)writingCanvas.value._last=null}function drawPoint(e){var c=writingCanvas.value;if(!c)return;var r=c.getBoundingClientRect(),x=(e.clientX-r.left)*c.width/r.width,y=(e.clientY-r.top)*c.height/r.height,ctx=c.getContext("2d");ctx.strokeStyle="#a94438";ctx.lineWidth=5;ctx.lineCap="round";ctx.lineJoin="round";if(!c._last){ctx.beginPath();ctx.moveTo(x,y)}else{ctx.lineTo(x,y);ctx.stroke()}c._last={x:x,y:y}}function clearCanvas(){var c=writingCanvas.value;if(c){c.getContext("2d").clearRect(0,0,c.width,c.height);c._last=null;var ctx=c.getContext("2d");ctx.fillStyle="rgba(150,120,110,.12)";ctx.font="220px Microsoft YaHei";ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText(writingChar.value,c.width/2,c.height/2)}}function saveWriting(){writingSaved.value=true}
+function next(){if(mi.value<5)mi.value++}
+function speak(t){try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);u.lang='zh-CN';speechSynthesis.speak(u)}catch(e){}}
+function toggleKnown(x){var a=r0Known.value.slice(),i=a.indexOf(x);if(i>=0)a.splice(i,1);else a.push(x);r0Known.value=a}
+var pinyinWord=computed(function(){return D.vocabData[pinyinIndex.value%D.vocabData.length]||{word:'',pinyin:''}});var pinyinOptions=computed(function(){var a=(D.vocabData||[]).map(function(x){return x.pinyin});return a.slice(0,4)});function nextPinyin(){pinyinIndex.value=(pinyinIndex.value+1)%(D.vocabData.length||1);pinyinAnswer.value=''}
+var matchWord=computed(function(){return D.vocabData[matchIndex.value%D.vocabData.length]||{word:'',english:''}});var matchOptions=computed(function(){var a=(D.vocabData||[]).map(function(x){return x.word});return a.slice(0,4)});function nextMatch(){matchIndex.value=(matchIndex.value+1)%(D.vocabData.length||1);matchAnswer.value=''}
+var reviewedCount=computed(function(){return reviews.value.filter(function(r){return r.批改状态==='已批改'}).length});
+function formatDate(d){if(!d)return '';try{var dt=new Date(d);if(isNaN(dt.getTime()))return d;var mo=''+(dt.getMonth()+1);var dd=''+dt.getDate();var h=''+dt.getHours();var mi=''+(dt.getMinutes()<10?'0':'')+dt.getMinutes();return mo+'月'+dd+'日 '+h+':'+mi}catch(e){return d}}
+function openReview(){showReview.value=true;if(!reviewName.value.trim())return;fetchReviews()}
+function fetchReviews(){
+if(!reviewName.value.trim()){alert('请输入你的名字');return}
+loading.value=true;reviewFetched.value=false;var n=reviewName.value.trim()
+var local=location.protocol==='file:'||location.hostname==='localhost'||location.hostname==='127.0.0.1';var reviewUrl=local?'http://localhost:18765/api/reviews?name='+encodeURIComponent(n):GAS_URL+'?action=get_all';fetch(reviewUrl).then(function(r){return r.json()}).then(function(d){
+var all=[]
+if(d.status==='ok'){
+var dd=d.data
+if(Array.isArray(dd)){all=dd}else{for(var k in dd){dd[k].forEach(function(x){all.push(x)})}}
+}
+reviews.value=all.filter(function(x){return x.姓名===n})
+loading.value=false;reviewFetched.value=true
+}).catch(function(){reviews.value=[];loading.value=false;reviewFetched.value=true})
+}
+return{D,p,mi,mods,stepTitles,w,wd,chars,next,speak,r0Options,r0Choice,r0Known,r0KnownOptions,toggleKnown,cardIndex,cardWord,cardRevealed,cardMastered,masteredCount,cardOffset,cardTouchStart,cardTouchMove,cardTouchEnd,cardClick,cardPrev,cardNext,revealCard,masterCard,readSentences,markRead,readDone,matchCards,matchedPairs,matchMessage,matchMessageType,pickMatch,resetMatch,writingChar,writingCanvas,writingSaved,selectWriting,startStroke,moveStroke,endStroke,clearCanvas,saveWriting,quizIndex,quizQuestion,quizAnswer,quizTextAnswer,subjectiveSubmitting,quizFinished,quizResults,quizScore,selectQuizOption,submitSubjective,restartQuiz,showReview,showReport,reviewName,reviews,loading,reviewFetched,reviewedCount,formatDate,openReview,fetchReviews,classStudents}
+}}).mount("#a")
+</script></body></html>

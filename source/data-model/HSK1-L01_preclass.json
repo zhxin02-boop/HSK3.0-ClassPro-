@@ -1,0 +1,15 @@
+{
+  "meta": {"lessonKey":"HSK1-L01","lessonTitle":"第1课：AI小语，你好！","lessonEnglishTitle":"Hello, AI Xiaoyu!"},
+  "preClass": {"questions":[
+    {"id":"pre_l01_001","type":"choice","module":"词汇理解","question":"Choose the Chinese word for “hello”.","options":[{"text":"你好","pinyin":"nǐ hǎo"},{"text":"谢谢","pinyin":"xièxie"},{"text":"再见","pinyin":"zàijiàn"},{"text":"老师","pinyin":"lǎoshī"}],"answer":"你好","weakPoints":"词汇：你好"},
+    {"id":"pre_l01_002","type":"choice","module":"语法理解","question":"Choose the polite form: Teacher, ___ hello!","options":[{"text":"您","pinyin":"nín"},{"text":"你","pinyin":"nǐ"},{"text":"你们","pinyin":"nǐmen"},{"text":"大家","pinyin":"dàjiā"}],"answer":"您","weakPoints":"语法：您"},
+    {"id":"pre_l01_003","type":"choice","module":"词汇理解","question":"Choose the Chinese word for “everyone”.","options":[{"text":"大家","pinyin":"dàjiā"},{"text":"学生","pinyin":"xuéshēng"},{"text":"同学","pinyin":"tóngxué"},{"text":"好","pinyin":"hǎo"}],"answer":"大家","weakPoints":"词汇：大家"},
+    {"id":"pre_l01_004","type":"choice","module":"词汇理解","question":"Choose the Chinese word for “student”.","options":[{"text":"学生","pinyin":"xuéshēng"},{"text":"老师","pinyin":"lǎoshī"},{"text":"你们","pinyin":"nǐmen"},{"text":"再见","pinyin":"zàijiàn"}],"answer":"学生","weakPoints":"词汇：学生"},
+    {"id":"pre_l01_005","type":"choice","module":"语法理解","question":"Which word shows a plural group of people?","options":[{"text":"们","pinyin":"men"},{"text":"好","pinyin":"hǎo"},{"text":"您","pinyin":"nín"},{"text":"你好","pinyin":"nǐ hǎo"}],"answer":"们","weakPoints":"语法：们"},
+    {"id":"pre_l01_006","type":"choice","module":"交际表达","question":"Choose the Chinese expression for “thank you”.","options":[{"text":"谢谢","pinyin":"xièxie"},{"text":"不客气","pinyin":"bú kèqi"},{"text":"你好","pinyin":"nǐ hǎo"},{"text":"再见","pinyin":"zàijiàn"}],"answer":"谢谢","weakPoints":"交际功能：致谢"},
+    {"id":"pre_l01_007","type":"choice","module":"交际表达","question":"Choose the appropriate reply to “谢谢”.","options":[{"text":"不客气","pinyin":"bú kèqi"},{"text":"大家好","pinyin":"dàjiā hǎo"},{"text":"老师好","pinyin":"lǎoshī hǎo"},{"text":"再见","pinyin":"zàijiàn"}],"answer":"不客气","weakPoints":"交际功能：回应感谢"},
+    {"id":"pre_l01_008","type":"choice","module":"交际表达","question":"Choose the Chinese expression for “goodbye”.","options":[{"text":"再见","pinyin":"zàijiàn"},{"text":"同学","pinyin":"tóngxué"},{"text":"谢谢","pinyin":"xièxie"},{"text":"你们好","pinyin":"nǐmen hǎo"}],"answer":"再见","weakPoints":"交际功能：告别"},
+    {"id":"pre_l01_009","type":"subjective","module":"开放式问候","question":"9. How do you greet your teacher?","answerPlaceholder":"Write your answer in Chinese.","needsTeacherReview":true,"weakPoints":"综合：礼貌问候"},
+    {"id":"pre_l01_010","type":"subjective","module":"开放式告别","question":"10. How do you say goodbye to your classmates?","answerPlaceholder":"Write your answer in Chinese.","needsTeacherReview":true,"weakPoints":"综合：告别表达"}
+  ]}
+}

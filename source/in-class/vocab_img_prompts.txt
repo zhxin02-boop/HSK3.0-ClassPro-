@@ -1,0 +1,9 @@
+v01_bu.jpg | 不 | A red cross mark X symbol on white background, simple clear sign meaning negation or no, minimalist design, clean flat vector style
+v02_shi.jpg | 是 | A person standing confidently nodding yes, thumbs up gesture, clear affirmative body language, bright positive atmosphere, simple illustration
+v03_duibuqi.jpg | 对不起 | A person bowing deeply with apologetic expression, hands together in apology gesture, sincere sorry posture, warm lighting, respectful atmosphere
+v04_meiguanxi.jpg | 没关系 | Two friends smiling at each other, one waving hand casually saying it's okay, forgiving friendly gesture, warm cozy atmosphere, soft daylight
+v05_meishi.jpg | 没事 | A relaxed person shrugging with palms up, casual no-problem gesture, calm expression, minimal line art style, gentle colors
+v06_hen.jpg | 很 | A speedometer or intensity gauge showing high level, arrow pointing to very high zone, comparison concept, clean infographic style
+v07_gaoxing.jpg | 高兴 | A joyful person laughing with eyes closed, big happy smile, arms raised in celebration, warm golden sunlight, pure happiness captured
+v08_renshi.jpg | 认识 | Two people meeting for the first time shaking hands, smiling at each other, friendly introduction scene, professional yet warm atmosphere
+v09_ye.jpg | 也 | Two identical objects placed side by side, symmetry concept showing also or too, two apples or books, clean minimal composition
