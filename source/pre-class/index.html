@@ -208,7 +208,7 @@ if(d.status==='ok'){
 var dd=d.data
 if(Array.isArray(dd)){all=dd}else{for(var k in dd){dd[k].forEach(function(x){all.push(x)})}}
 }
- reviews.value=all.filter(function(x){var rowName=x.姓名||x.studentName||x.name||'';var rowLesson=x.课程||x.lesson||x.lessonKey||'';return String(rowName)===n&&(!rowLesson||String(rowLesson)===lessonKey)})
+ reviews.value=all.filter(function(x){var rowName=x.姓名||x.studentName||x.name||'';var rowLesson=x.课程||x.lesson||x.lessonKey||'';return String(rowName)===n&&(!rowLesson||String(rowLesson)===lessonKey)}).map(function(x){return{'姓名':x.姓名||x.studentName||x.name||n,'课程':x.课程||x.lesson||lessonKey,'模块':x.模块||x.module||'预习','提交时间':x.提交时间||x.submittedAt||x.timestamp||'', '学生作答':x.学生作答||x.answer||'', '题目说明':x.题目说明||x.questionText||'', '教师批改':x.教师批改||x.teacherFeedback||x.correction||'', '批改状态':x.批改状态||x.reviewStatus||x.status||((x.openEnded==='yes'||x.openEnded===true)?'待批改':'无需批改')}})
 loading.value=false;reviewFetched.value=true
 }).catch(function(){reviews.value=[];loading.value=false;reviewFetched.value=true})
 }
