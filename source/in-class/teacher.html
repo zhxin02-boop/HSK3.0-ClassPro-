@@ -1137,6 +1137,10 @@ ap.init();
 <script>
 (function(){ap._so=function(){if(!this._soShow)return'';var t3=this._t3(),medals=['🥇','🥈','🥉'],h='<div class="star-overlay" onclick="if(event.target===event.currentTarget){ap._soShow=false;ap._r()}"><div class="firework one"></div><div class="firework two"></div><div class="firework three"></div><div class="firework four"></div><div class="star-modal"><div class="star-modal-icon">⭐</div><div class="star-modal-title">本课之星<br><span style="font-size:14px;font-weight:800;color:#a87325">Class Stars</span></div>';for(var i=0;i<t3.length;i++){h+='<div class="star-winner '+(i===0?'first':'')+'"><span class="star-medal">'+(medals[i]||'🏅')+'</span><span class="star-name">'+es(t3[i].n)+'</span><span class="star-points">'+t3[i].t+' pts</span></div>'}h+='<div class="star-stats"><div><div class="star-stat-value">'+this._avg()+'</div><div class="star-stat-label">平均分 / Average</div></div><div><div class="star-stat-value">'+this._pcnt()+'/'+this.as.length+'</div><div class="star-stat-label">参与人数 / Participants</div></div></div><button class="star-close" onclick="ap._soShow=false;ap._r()">关闭 / Close</button></div></div>';return h}})();
 </script>
+<style>.teacher-home-btn{display:inline-flex;align-items:center;gap:5px;height:34px;padding:0 12px;border-radius:999px;border:1px solid #d8e6c5;background:#f7fbef;color:#4f8f2d;font-size:12px;font-weight:900;text-decoration:none;white-space:nowrap;box-shadow:0 4px 10px rgba(76,107,43,.08)}.teacher-home-btn:hover{background:#edf6d9;transform:translateY(-1px)}</style>
+<script>
+(function(){var baseR=ap._r;ap._r=function(){baseR.call(this);if(this.mt==='home')return;var host=document.querySelector('.header-right');if(!host||document.getElementById('teacherHomeLink'))return;var a=document.createElement('a');a.id='teacherHomeLink';a.className='teacher-home-btn';a.textContent='⌂ 教师主页 / Home';a.href='../teacher/index.html?lesson='+encodeURIComponent(MT.lessonKey||'')+'&room='+encodeURIComponent(RM||'');host.insertBefore(a,host.firstChild)}})();
+</script>
 </body>
 </html>
 
