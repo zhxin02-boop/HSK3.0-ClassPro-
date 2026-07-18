@@ -1077,6 +1077,9 @@ ap.init();
   ap._lw=function(){if(this.lw&&this.currentQuestionId){var all=this.records;this.records=(all||[]).filter(function(r){return String(r.questionId||'')===String(ap.currentQuestionId)});var h=oldWall.call(this);this.records=all;return h}return oldWall.call(this)};
 })();
 </script>
+<script>
+(function(){var oldR2=ap._r;ap._r=function(){oldR2.call(this);if(this.mt==='teach'&&this.st==='pyz'&&this.pyzStep===5){var state=document.getElementById('pinyinSubmitState');if(state){var self=this,html='<div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:8px">';this.as.forEach(function(n){var done=!!self.qsub[n];html+='<span style="padding:5px 9px;border-radius:999px;font-size:12px;font-weight:800;background:'+(done?'#dcfce7':'#f1f5f9')+';color:'+(done?'#166534':'#94a3b8')+';border:1px solid '+(done?'#86efac':'#e2e8f0')+'">'+es(n)+(done?' ✓':'')+'</span>'});html+='</div>';state.innerHTML=(this.qp==='answering'?'答题记录 / Response record':'可以发送一道拼音题给学生。 / Ready to send.')+html}}}})();
+</script>
 </body>
 </html>
 

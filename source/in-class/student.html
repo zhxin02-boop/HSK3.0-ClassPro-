@@ -113,7 +113,7 @@ client.on("close",function(){setStatus("disconnected")});
       var d=qdata(), opts=d.options||[], prompt=d.prompt||d.prompt_pinyin||"";
       var h='<div class="prompt">'+es(current.question.prompt_cn||"Listen and choose the correct pinyin.")+'<br><span class="english">'+es(current.question.prompt_en||"Listen and choose the correct pronunciation.")+'</span></div>';
       h+='<div class="hint"><div class="pinyin" style="font-size:28px;color:#203421">'+es(prompt)+'</div><button type="button" style="padding:9px 14px;font-size:14px" onclick="speak('+JSON.stringify(prompt)+')">🔊 Listen</button></div>';
-      h+=optionGrid(opts,true);
+      var pys=d.options_pinyin||[], oh='<div class="options">';opts.forEach(function(o,i){var rot=[-2,1.5,-1,2,0.5,-1.5][i%6],dy=[0,10,-6,6,-10,4][i%6];oh+='<button class="option '+(selected===i?'sel':'')+'" onclick="pick('+i+')" style="transform:translateY('+dy+'px) rotate('+rot+'deg)">'+es(pys[i]||o)+'</button>'});oh+='</div><button style="width:100%;margin-top:16px" onclick="submitChoice()" '+(selected==null?'disabled':'')+'>提交 Submit</button>';h+=oh;
       document.getElementById("app").innerHTML=h;
       return;
     }
