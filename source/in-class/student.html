@@ -78,7 +78,7 @@ function py(s){var m={"我":"wǒ","你":"nǐ","他":"tā","她":"tā","是":"sh�
 function name(){return rosterName(document.getElementById("studentName").value)||"Student"}
 function confirmName(){var el=document.getElementById("studentName");el.value=name();nameReady=true;document.getElementById("nameHint").innerHTML='已确认：<b>'+es(name())+'</b>';el.disabled=true;publishPresence();renderBoard()}
 function setStatus(t){document.getElementById("status").textContent=t}
-function publishPresence(){if(window.client&&client.connected)client.publish("classpro/room/"+RM+"/presence",JSON.stringify({count:1,studentName:name(),name:name(),seenAt:new Date().toISOString()}))}
+function publishPresence(){if(window.client&&client.connected)client.publish("classpro/room/"+RM+"/presence",JSON.stringify({count:1,studentName:name(),name:name(),seenAt:new Date().toISOString(),requestCurrent:true}))}
 function renderRosterOptions(){document.getElementById("studentName").innerHTML='<option value="">Select your name / 选择姓名</option>'+CLASS_STUDENTS.map(function(n){return'<option value="'+es(n)+'">'+es(n)+'</option>'}).join("")}
 function renderBoard(){var rows=(scoreboard.rows&&scoreboard.rows.length?scoreboard.rows:CLASS_STUDENTS.map(function(n){return{name:n,points:0}})).slice();rows.sort(function(a,b){return (b.points||0)-(a.points||0)||CLASS_STUDENTS.indexOf(a.name)-CLASS_STUDENTS.indexOf(b.name)});var me=normName(name()),myIdx=-1,h="";for(var i=0;i<Math.min(rows.length,10);i++){var r=rows[i],mine=normName(r.name)===me;if(mine)myIdx=i;h+='<div class="leader-row '+(mine?'me':'')+'"><div class="leader-rank">'+(i+1)+'</div><div class="leader-name">'+es(r.name)+'</div><div class="leader-pts">'+(r.points||0)+' pts</div></div>'}if(myIdx<0){for(var j=0;j<rows.length;j++){if(normName(rows[j].name)===me){myIdx=j;break}}}document.getElementById("leaderRows").innerHTML=h||'<div class="leader-empty">等待课堂积分...</div>';document.getElementById("myRank").textContent=myIdx>=0?"#"+(myIdx+1):"--"}
 function qdata(){return current&&current.question?current.question.data||{}:{}}
@@ -100,6 +100,26 @@ client.on("connect",function(){setStatus("connected room "+RM);client.subscribe(
 client.on("message",function(topic,payload){try{var msg=JSON.parse(payload.toString());if(topic.indexOf("/scoreboard")>=0){scoreboard=msg;renderBoard();return}if(msg.lesson&&msg.lesson!==LESSON)return;current=msg;selected=null;chunks=[];answerChunks=[];matchLeft=null;matchRight=null;matchPairs={};render()}catch(e){console.log(e)}});
 client.on("error",function(e){setStatus("connection error");console.log(e)});
 client.on("close",function(){setStatus("disconnected")});
+</script>
+<script>
+(function(){
+  function speak(text){if(!window.speechSynthesis||!window.SpeechSynthesisUtterance)return;window.speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(String(text||''));u.lang='zh-CN';u.rate=.8;window.speechSynthesis.speak(u)}
+  window.speak=speak;
+  var previousPublish=publish;
+  publish=function(ans,idx){previousPublish(ans,idx);var box=document.querySelector('#app .ok,#app .bad');if(box){box.innerHTML+=(box.classList.contains('ok')?' / Submitted: Correct!':' / Submitted: Please wait for teacher feedback.')}};
+  var previousRender=render;
+  render=function(){
+    if(current&&current.mode==="pinyin"){
+      var d=qdata(), opts=d.options||[], prompt=d.prompt||d.prompt_pinyin||"";
+      var h='<div class="prompt">'+es(current.question.prompt_cn||"Listen and choose the correct pinyin.")+'<br><span class="english">'+es(current.question.prompt_en||"Listen and choose the correct pronunciation.")+'</span></div>';
+      h+='<div class="hint"><div class="pinyin" style="font-size:28px;color:#203421">'+es(prompt)+'</div><button type="button" style="padding:9px 14px;font-size:14px" onclick="speak('+JSON.stringify(prompt)+')">🔊 Listen</button></div>';
+      h+=optionGrid(opts,true);
+      document.getElementById("app").innerHTML=h;
+      return;
+    }
+    previousRender();
+  };
+})();
 </script>
 </body>
 </html>

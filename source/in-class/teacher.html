@@ -646,7 +646,7 @@ v1i:0,v1a:false,v1p:-1,v4i:0,v4a:false,v4p:-1,v5i:0,v5a:false,v5p:-1,ttqi:0,ttqa
 pkp:"setup",pks:[],pkt:[],pkqi:0,pksa:false,pka:{},pkat:[],pktc:4,pkw:null,pkws:false,
 sc:{},la:[],qr:false,qrp:false,qrx:20,qry:200,
 cs:"disconnected",oc:0,td:30,tr:30,trun:false,tint:null,
-qp:"idle",qt:30,qtm:60,qsub:{},qtint:null,mq:null,as:[],ps:"",pint:null,_soShow:false,
+qp:"idle",qt:30,qtm:60,qsub:{},qtint:null,mq:null,as:[],ps:"",pint:null,lastQuestionPayload:null,currentQuestionId:null,pyzQuestionIndex:0,_soShow:false,
 init(){this.as=(MT.characters||[]).filter(function(c){return c.role==="student"}).map(function(c){return c.name});this.pkat=[].concat(this.as);this._mq();this._r()},
 _r(){document.getElementById("app").innerHTML=this._rm()},
 stb(t,s){this.mt=t;this.st=s||"";this._r()},
@@ -699,7 +699,7 @@ _qr(){if(!this.qr&&!this.qrp)return"";var u=studentUrl(),raw=rawStudentUrl(),loc
 _sp(){if(this.pint)return;var t=this;var c=0;this.pint=setInterval(function(){if(t.as.length)t.ps=t.as[Math.floor(Math.random()*t.as.length)];c++;if(c>20){clearInterval(t.pint);t.pint=null}t._r()},100)},
 _mq(){var t=this;try{if(!window.mqtt){t.cs="offline";return}var cl=mqtt.connect("wss://05d1d5baec9d4cb3a21f5517b430cff1.s1.eu.hivemq.cloud:8884/mqtt",{username:"classpro",password:"Classpro2026",clientId:"tc_"+Math.random().toString(36).substr(2,8),reconnectPeriod:3000,connectTimeout:8000});cl.on("connect",function(){t.cs="connected";cl.subscribe("classpro/room/"+RM+"/answers");cl.subscribe("classpro/room/"+RM+"/presence");t._r()});cl.on("message",function(tp,p){var m=JSON.parse(p.toString());if(tp.indexOf("/answers")>=0)t._ha(m);else if(tp.indexOf("/presence")>=0)t._hp(m)});cl.on("error",function(e){t.cs="error";console.log("MQTT",e);t._r()});cl.on("close",function(){if(t.cs!=="error")t.cs="disconnected";t._r()});t.mq=cl}catch(e){t.cs="offline";console.log("MQTT",e)}},
 _ha(m){var n=m.name||m.studentName||"unknown";var tx=m.text||m.answer||"";this.la.unshift({n:n,x:tx,t:new Date().toLocaleTimeString(),ar:m.autoResult||null});if(m.autoResult==="correct"){var r=this._rn(n);this._as(r,1)}if(this.qp==="answering"||this.qp==="locked")this.qsub[n]=true;this._r()},
-_hp(m){this.oc=m.count||0;this._r()},
+_hp(m){if(m&&m.requestCurrent&&this.lastQuestionPayload&&this.mq&&this.cs==="connected"){this.mq.publish("classpro/room/"+RM+"/question",JSON.stringify(this.lastQuestionPayload))}this.oc=m.count||0;this._r()},
 _rn(n){var f=this.as.find(function(s){return s.indexOf(n)>=0||n.indexOf(s)>=0});return f||n},
 _as(n,p){if(!this.sc[n])this.sc[n]={t:0,f:false};this.sc[n].t+=p;this.sc[n].f=true;var t=this;setTimeout(function(){if(t.sc[n])t.sc[n].f=false;t._r()},600);this._r()},
 _sss(){var a=[];for(var k in this.sc){if(this.sc.hasOwnProperty(k))a.push({n:k,t:this.sc[k].t})}return a.sort(function(a,b){return b.t-a.t})},
@@ -715,12 +715,13 @@ _tts(t){if(window.speechSynthesis){var u=new SpeechSynthesisUtterance(t);u.lang=
 _cq(){var s=this.st;if(s==="v1"){var q=(Q.v1_image_guess||[])[this.v1i];if(!q)return null;var opts=this._opts(q.correct_answer||'', ['\u9ad8\u5174','\u8ba4\u8bc6','\u5bf9\u4e0d\u8d77','\u6ca1\u5173\u7cfb','\u4e0d','\u662f','\u4e5f','\u5f88']);var im={'\u9ad8\u5174':'images/v07_gaoxing.jpg','\u8ba4\u8bc6':'images/v08_renshi.jpg','\u5bf9\u4e0d\u8d77':'images/v03_duibuqi.jpg','\u6ca1\u5173\u7cfb':'images/v04_meiguanxi.jpg'};return Object.assign({},q,{data:Object.assign({},q.data||{},{image:(q.media&&q.media.image)||im[q.correct_answer]||'',options:opts,correct_index:opts.indexOf(q.correct_answer)})})}if(s==="v4")return(Q.v4_complete_sentence||[])[this.v4i]||null;if(s==="v5")return(Q.v5_vocab_fill||[])[this.v5i]||null;if(s==="v7"){var q=(Q.v7_word_match||[])[this.v7i];if(!q||!q.data)return null;var ss=q.data.sentences||[],cur=ss[this.v7si]||{},opts=q.data.words||[];return Object.assign({},q,{id:q.id+'_'+this.v7si,data:{sentence:cur.sentence,sentence_pinyin:pys(cur.sentence),options:opts,correct_index:opts.indexOf(cur.answer)}})}if(s==="v8"){var q=(Q.v8_memory_match||[])[this.v8i];if(!q||!q.data)return null;var ps=q.data.pairs||[];if(!ps.length)return null;var idx=this.v8qi||0;if(idx>=ps.length)idx=0;var order=[2,0,3,1,5,4].filter(function(x){return x<ps.length});var opts=order.map(function(k){return ps[k].right});return Object.assign({},q,{id:q.id+'_pair_'+idx,prompt_cn:'\u770b\u6c49\u5b57\uff0c\u9009\u82f1\u6587\u610f\u601d',prompt_en:'Choose the English meaning.',data:{left:ps[idx].left,left_pinyin:py(ps[idx].left),options:opts,correct_index:opts.indexOf(ps[idx].right)}})}if(s==="ttq")return(Q.tt_text_true_false||[])[this.ttqi]||null;if(s==="g1")return(Q.g1_ordering||[])[this.g1i]||null;if(s==="w1"){var qs=[{id:'w1_discriminate_01',prompt_cn:'\u9009\u62e9\u6b63\u786e\u7684\u6c49\u5b57',prompt_en:'Choose the right character',data:{sentence:'\u5f88\u9ad8\u5174___\u8bc6\u4f60\u3002',sentence_pinyin:'H\u011bn g\u0101ox\u00ecng ___ sh\u00ed n\u01d0.',options:['\u8ba9','\u8ba1','\u8ba8','\u8bc6','\u8ba4','\u8bdd','\u8bd5','\u8bd7','\u8bf7','\u8bf4','\u8c01','\u8bfe'],correct_index:4}},{id:'w1_discriminate_02',prompt_cn:'\u9009\u62e9\u6b63\u786e\u7684\u6c49\u5b57',prompt_en:'Choose the right character',data:{sentence:'\u5f88\u9ad8\u5174\u8ba4___\u4f60\u3002',sentence_pinyin:'H\u011bn g\u0101ox\u00ecng r\u00e8n ___ n\u01d0.',options:['\u53ea','\u7ec7','\u804c','\u8bc6','\u8ba4','\u8bdd','\u8bd5','\u8bd7','\u8bf7','\u8bf4','\u8c01','\u8bfe'],correct_index:3}}];return qs[this.w1i]||null}if(s==="pk")return(Q.pk_question||[])[this.pkqi]||null;return null},
 
 _cq2(){if(this.st==="v8"){var q=(Q.v8_memory_match||[])[this.v8i];if(!q||!q.data)return null;var ps=q.data.pairs||[];if(!ps.length)return null;var order=[2,0,3,1,5,4].filter(function(x){return x<ps.length});return Object.assign({},q,{id:q.id+"_board",prompt_cn:"\u8fde\u8fde\u770b\uff1a\u6c49\u5b57\u548c\u82f1\u6587\u610f\u601d",prompt_en:"Matching game: match Chinese words with English meanings.",data:{pairs:ps.map(function(p){return{left:p.left,left_pinyin:py(p.left),right:p.right}}),order:order}})}return this._cq()},
-_pubq(){if(!this.mq||this.cs!=="connected")return;var q=this._cq2();if(!q)return;this.mq.publish("classpro/room/"+RM+"/question",JSON.stringify({room:RM,lesson:MT.lessonKey||"HSK1-L02",mode:this.st,duration:this.qtm,sentAt:new Date().toISOString(),question:q}))},
+_pubq(){if(!this.mq||this.cs!=="connected")return;var q=this._cq2();if(!q)return;var payload={room:RM,lesson:MT.lessonKey||"HSK1-L02",mode:this.st,duration:this.qtm,sentAt:new Date().toISOString(),question:q};this.lastQuestionPayload=payload;this.currentQuestionId=q.id;this.mq.publish("classpro/room/"+RM+"/question",JSON.stringify(payload))},
 qws(){this.qp="answering";this.qt=this.qtm;this.qsub={};this._pubq();var t=this;this.qtint=setInterval(function(){t.qt--;if(t.qt<=0){clearInterval(t.qtint);t.qwe()}t._r()},1000);this._r()},
 qwl(){clearInterval(this.qtint);this.qp="locked";this._r()},
 qwe(){clearInterval(this.qtint);this.qp="published";this._r()},
-qwr(){this.qp="idle";this.qsub={};this.qt=this.qtm;this._r()},
+qwr(){this.qp="idle";this.qsub={};this.qt=this.qtm;this.lastQuestionPayload=null;this.currentQuestionId=null;this._r()},
 _qsc(){var c=0;for(var k in this.qsub){if(this.qsub.hasOwnProperty(k))c++}return c},
+_qpending(){var t=this;return this.as.filter(function(n){return !t.qsub[n]})},
 };
 (function(){
 var oldCq=ap._cq.bind(ap);
@@ -902,8 +903,8 @@ ap._ha=function(m){
   if(this.qp==="answering"||this.qp==="locked")this.qsub[n]=true;
   this._r();
 };
-ap._hp=function(m){this.oc=m.count||this.oc||0;this._pubBoard();this._r()};
-ap._as=function(n,p){n=rn(n);if(!this.sc[n])this.sc[n]={t:0,f:false};this.sc[n].t+=p;this.sc[n].f=true;this._saveClassData();this._pubBoard();var t=this;setTimeout(function(){if(t.sc[n])t.sc[n].f=false;t._r()},600);this._r()};
+ap._hp=function(m){if(m&&m.requestCurrent&&this.lastQuestionPayload&&this.mq&&this.cs==="connected"){this.mq.publish("classpro/room/"+RM+"/question",JSON.stringify(this.lastQuestionPayload))}this.oc=m.count||this.oc||0;this._pubBoard();this._r()};
+ap._as=function(n,p){n=this._rn(n);if(!this.sc[n])this.sc[n]={t:0,f:false};this.sc[n].t+=p;this.sc[n].f=true;this._saveClassData();this._pubBoard();var t=this;setTimeout(function(){if(t.sc[n])t.sc[n].f=false;t._r()},600);this._r()};
 ap._sss=function(){var a=this.roster.map(function(n){return{n:n,t:(ap.sc[n]&&ap.sc[n].t)||0}});for(var k in this.sc){if(this.sc.hasOwnProperty(k)&&this.roster.indexOf(k)<0)a.push({n:k,t:this.sc[k].t||0})}return a.sort(function(a,b){return b.t-a.t||ap.roster.indexOf(a.n)-ap.roster.indexOf(b.n)})};
 ap._pcnt=function(){var c=0;for(var i=0;i<this.roster.length;i++){var n=this.roster[i];if(this.sc[n]&&this.sc[n].t>0)c++}return c};
 ap._avg=function(){var s=0;for(var i=0;i<this.roster.length;i++){var n=this.roster[i];s+=(this.sc[n]&&this.sc[n].t)||0}return this.roster.length?Math.round(s/this.roster.length):0};
@@ -1054,6 +1055,27 @@ if (window.LESSON_DATA && LESSON_DATA.meta && LESSON_DATA.meta.lessonKey === 'HS
 }
 })();
 ap.init();
+</script>
+<script>
+(function(){
+  var blend=[['好','hǎo'],['茶','chá'],['狗','gǒu'],['猫','māo'],['菜','cài'],['吃','chī'],['喝','hē'],['七','qī'],['写','xiě'],['请','qǐng'],['五','wǔ'],['书','shū'],['坐','zuò'],['人','rén'],['睡','shuì']];
+  ap._pubPinyinQuestion=function(){
+    if(!this.mq||this.cs!=="connected"){alert("MQTT 尚未连接，请稍候再试。 / MQTT is not connected yet.");return}
+    var x=blend[this.pyzQuestionIndex%blend.length], pool=blend.filter(function(v){return v[0]!==x[0]}).slice(0,4), opts=[x].concat(pool).sort(function(){return Math.random()-.5}), ci=opts.indexOf(x), q={id:"pinyin_blend_"+(this.pyzQuestionIndex%blend.length+1),prompt_cn:"听音，选择正确的拼音",prompt_en:"Listen and choose the correct pinyin.",data:{prompt:x[0],options:opts.map(function(v){return v[0]}),options_pinyin:opts.map(function(v){return v[1]}),correct_index:ci}};
+    var payload={room:RM,lesson:MT.lessonKey||"HSK1-L01",mode:"pinyin",duration:this.qtm,sentAt:new Date().toISOString(),question:q};
+    this.lastQuestionPayload=payload;this.currentQuestionId=q.id;this.qp="answering";this.qsub={};this.mq.publish("classpro/room/"+RM+"/question",JSON.stringify(payload));this._r();
+  };
+  var oldRender=ap._r;
+  ap._r=function(){oldRender.call(this);if(this.mt==="teach"&&this.st==="pyz"&&this.pyzStep===5){var host=document.querySelector('.panel-area');if(host&&!document.getElementById('pinyinSendBox')){var box=document.createElement('div');box.id='pinyinSendBox';box.style.cssText='margin:14px 0;padding:14px;border:1px solid #dfeac8;border-radius:16px;background:#edf6d9;text-align:center';box.innerHTML='<button type="button" onclick="ap._pubPinyinQuestion()" style="background:#3f7f32">📨 发送当前拼音题 / Send Pinyin Question</button><div id="pinyinSubmitState" style="margin-top:8px;color:#4c782c;font-size:13px;font-weight:800"></div>';host.appendChild(box)}var state=document.getElementById('pinyinSubmitState');if(state){var done=this._qsc(),pending=this._qpending();state.textContent=this.qp==="answering"?'已提交 '+done+'/'+this.as.length+'；未提交：'+(pending.slice(0,5).join('、')+(pending.length>5?' 等':'')):'可以发送一道拼音题给学生。 / Ready to send.'}}};
+})();
+</script>
+<script>
+(function(){
+  var oldR=ap._r;
+  ap._r=function(){oldR.call(this);var progress=document.querySelector('.qw-progress');if(progress&&(this.qp==='answering'||this.qp==='locked')){var pending=this._qpending();progress.innerHTML+=' &nbsp; 未提交：'+(pending.slice(0,5).map(function(n){return es(n)}).join('、')+(pending.length>5?' 等':''));}};
+  var oldWall=ap._lw;
+  ap._lw=function(){if(this.lw&&this.currentQuestionId){var all=this.records;this.records=(all||[]).filter(function(r){return String(r.questionId||'')===String(ap.currentQuestionId)});var h=oldWall.call(this);this.records=all;return h}return oldWall.call(this)};
+})();
 </script>
 </body>
 </html>
