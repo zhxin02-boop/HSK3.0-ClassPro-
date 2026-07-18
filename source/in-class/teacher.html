@@ -719,7 +719,7 @@ _pubq(){if(!this.mq||this.cs!=="connected")return;var q=this._cq2();if(!q)return
 qws(){this.qp="answering";this.qt=this.qtm;this.qsub={};this._pubq();var t=this;this.qtint=setInterval(function(){t.qt--;if(t.qt<=0){clearInterval(t.qtint);t.qwe()}t._r()},1000);this._r()},
 qwl(){clearInterval(this.qtint);this.qp="locked";this._r()},
 qwe(){clearInterval(this.qtint);this.qp="published";this._r()},
-qwr(){this.qp="idle";this.qsub={};this.qt=this.qtm;this.lastQuestionPayload=null;this.currentQuestionId=null;this._r()},
+qwr(){this.qp="idle";this.qsub={};this.qt=this.qtm;this.lastQuestionPayload=null;this.currentQuestionId=null;this.pyzSentQuestion=null;this._r()},
 _qsc(){var c=0;for(var k in this.qsub){if(this.qsub.hasOwnProperty(k))c++}return c},
 _qpending(){var t=this;return this.as.filter(function(n){return !t.qsub[n]})},
 };
@@ -1063,7 +1063,7 @@ ap.init();
     if(!this.mq||this.cs!=="connected"){alert("MQTT 尚未连接，请稍候再试。 / MQTT is not connected yet.");return}
     var x=blend[this.pyzQuestionIndex%blend.length], pool=blend.filter(function(v){return v[0]!==x[0]}).slice(0,4), opts=[x].concat(pool).sort(function(){return Math.random()-.5}), ci=opts.indexOf(x), q={id:"pinyin_blend_"+(this.pyzQuestionIndex%blend.length+1),prompt_cn:"听音，选择正确的拼音",prompt_en:"Listen and choose the correct pinyin.",data:{prompt:x[0],options:opts.map(function(v){return v[0]}),options_pinyin:opts.map(function(v){return v[1]}),correct_index:ci}};
     var payload={room:RM,lesson:MT.lessonKey||"HSK1-L01",mode:"pinyin",duration:this.qtm,sentAt:new Date().toISOString(),question:q};
-    this.lastQuestionPayload=payload;this.currentQuestionId=q.id;this.qp="answering";this.qsub={};this.mq.publish("classpro/room/"+RM+"/question",JSON.stringify(payload));this._r();
+    this.lastQuestionPayload=payload;this.currentQuestionId=q.id;this.pyzSentQuestion=q;this.qp="answering";this.qsub={};this.mq.publish("classpro/room/"+RM+"/question",JSON.stringify(payload));this._r();
   };
   var oldRender=ap._r;
   ap._r=function(){oldRender.call(this);if(this.mt==="teach"&&this.st==="pyz"&&this.pyzStep===5){var host=document.querySelector('.panel-area');if(host&&!document.getElementById('pinyinSendBox')){var box=document.createElement('div');box.id='pinyinSendBox';box.style.cssText='margin:14px 0;padding:14px;border:1px solid #dfeac8;border-radius:16px;background:#edf6d9;text-align:center';box.innerHTML='<button type="button" onclick="ap._pubPinyinQuestion()" style="background:#3f7f32">📨 发送当前拼音题 / Send Pinyin Question</button><div id="pinyinSubmitState" style="margin-top:8px;color:#4c782c;font-size:13px;font-weight:800"></div>';host.appendChild(box)}var state=document.getElementById('pinyinSubmitState');if(state){var done=this._qsc(),pending=this._qpending();state.textContent=this.qp==="answering"?'已提交 '+done+'/'+this.as.length+'；未提交：'+(pending.slice(0,5).join('、')+(pending.length>5?' 等':'')):'可以发送一道拼音题给学生。 / Ready to send.'}}};
@@ -1079,6 +1079,9 @@ ap.init();
 </script>
 <script>
 (function(){var oldR2=ap._r;ap._r=function(){oldR2.call(this);if(this.mt==='teach'&&this.st==='pyz'&&this.pyzStep===5){var state=document.getElementById('pinyinSubmitState');if(state){var self=this,html='<div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:8px">';this.as.forEach(function(n){var done=!!self.qsub[n];html+='<span style="padding:5px 9px;border-radius:999px;font-size:12px;font-weight:800;background:'+(done?'#dcfce7':'#f1f5f9')+';color:'+(done?'#166534':'#94a3b8')+';border:1px solid '+(done?'#86efac':'#e2e8f0')+'">'+es(n)+(done?' ✓':'')+'</span>'});html+='</div>';state.innerHTML=(this.qp==='answering'?'答题记录 / Response record':'可以发送一道拼音题给学生。 / Ready to send.')+html}}}})();
+</script>
+<script>
+(function(){var oldR3=ap._r;ap._r=function(){oldR3.call(this);if(this.mt==='teach'&&this.st==='pyz'&&this.pyzStep===5){var host=document.querySelector('.panel-area');if(!host)return;var old=document.getElementById('pinyinUnifiedRecord');if(old)old.remove();var box=document.createElement('div');box.id='pinyinUnifiedRecord';box.style.cssText='margin:14px 0;padding:14px;border:1px solid #dbe3ef;border-radius:16px;background:#fff';var q=this.pyzSentQuestion,html='<div style="font-weight:900;color:#2563eb;margin-bottom:8px">本次发送题目 / Current sent question</div>';if(q&&q.data){html+='<div style="text-align:center;font-size:24px;font-weight:900;margin:8px">'+es(q.data.prompt||'')+'</div><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">';(q.data.options_pinyin||[]).forEach(function(p){html+='<span style="padding:8px 12px;border:1px solid #dbe3ef;border-radius:10px;background:#f8fafc;font-weight:800">'+es(p)+'</span>'});html+='</div>'}html+='<div style="margin-top:12px;font-weight:900">答题记录 / Response record</div><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">';var self=this;this.as.forEach(function(n){var done=!!self.qsub[n];html+='<span style="padding:5px 9px;border-radius:999px;font-size:12px;font-weight:800;background:'+(done?'#dcfce7':'#f1f5f9')+';color:'+(done?'#166534':'#94a3b8')+';border:1px solid '+(done?'#86efac':'#e2e8f0')+'">'+es(n)+(done?' ✓':'')+'</span>'});box.innerHTML=html;host.appendChild(box)}}})();
 </script>
 </body>
 </html>
