@@ -62,7 +62,7 @@ function normResult(r){r=String(r||"").toLowerCase();if(r==="correct"||r==="true
 // 字段位置兜底：GAS 固定写入顺序为
 // 0提交时间 1姓名 2课程 3环节 4模块 5题号 6得分 7总分 8积分 13学生作答 14结果 15教师批改 16批改状态
 // 由于历史表头有中文/乱码混用，教师端优先按列位置读取，避免误把 0 当作学生作答。
-function col(x,i){if(x&&x.__values&&x.__values[i]!=null)return x.__values[i];var ks=Object.keys(x||{}).filter(function(k){return k!=="__rowIndex"&&k!=="__values"});return ks[i]!=null?x[ks[i]]:""}
+function col(x,i){if(x&&Array.isArray(x.__values)&&x.__values[i]!=null)return x.__values[i];return ""}
 function pick(a,b){return a!=null&&a!==""?a:b}
 function lessonOf(x){return pick(col(x,2),fuzzy(x,["课程","lesson","璇剧▼"],["课程","lesson"]))}
 function stageOf(x){return pick(col(x,3),fuzzy(x,["环节","stage","鐜妭"],["环节","stage"]))}
