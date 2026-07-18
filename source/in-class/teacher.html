@@ -1001,6 +1001,7 @@ if (window.LESSON_DATA && LESSON_DATA.meta && LESSON_DATA.meta.lessonKey === 'HS
   ap._pyz2 = window.L01PinyinLab.render;
   ap._tts = function (text, src) {
     var fallback = function () {
+      var say = function () {
       if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) return;
       window.speechSynthesis.cancel();
       window.speechSynthesis.resume();
@@ -1009,6 +1010,8 @@ if (window.LESSON_DATA && LESSON_DATA.meta && LESSON_DATA.meta.lessonKey === 'HS
       var voices = window.speechSynthesis.getVoices ? window.speechSynthesis.getVoices() : [];
       for (var vi = 0; vi < voices.length; vi++) if (/zh[-_]CN/i.test(voices[vi].lang)) { utterance.voice = voices[vi]; break; }
       window.speechSynthesis.speak(utterance);
+      };
+      try { var cloud = new Audio('https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=zh-CN&q=' + encodeURIComponent(String(text || ''))); cloud.onerror = say; cloud.play().catch(say); } catch (e) { say(); }
     };
     if (src) { try { var audio = new Audio(src); audio.onerror = fallback; audio.play().catch(fallback); return; } catch (e) {} }
     fallback();
