@@ -1106,6 +1106,15 @@ ap.init();
   ap._r=function(){baseR5.call(this);if(this.st==='pyz'){var send=document.getElementById('pinyinSendBox');if(send)send.remove()}};
 })();
 </script>
+<style>
+.teach-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:24px;padding:14px 0 0;border-top:1px solid #e8eee1}
+.teach-nav button,.next-btn{min-width:112px;padding:11px 18px!important;border:1px solid transparent!important;border-radius:999px!important;font-size:14px!important;font-weight:900!important;line-height:1.2;box-shadow:0 6px 14px rgba(57,78,42,.10);transition:transform .15s ease,box-shadow .15s ease,filter .15s ease}
+.teach-nav button:hover,.next-btn:hover{transform:translateY(-2px);filter:brightness(1.03);box-shadow:0 9px 18px rgba(57,78,42,.16)}
+.teach-nav button:disabled{opacity:.38;box-shadow:none;transform:none;cursor:not-allowed}
+.teach-nav .prev{background:#eef2eb!important;color:#586653!important;border-color:#d6dfd0!important}
+.teach-nav .next,.next-btn{background:linear-gradient(135deg,#78b832,#4f8f2d)!important;color:#fff!important}
+.step-counter{min-width:72px;text-align:center;color:#6c7b67;font-size:13px;font-weight:900}
+</style>
 </body>
 </html>
 
