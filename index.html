@@ -6,29 +6,25 @@
 <title>HSK 中文课程</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{min-height:100vh;background:#f6f7f8;color:#263238;font-family:"Microsoft YaHei",Arial,sans-serif}
-.app{width:min(720px,100%);margin:0 auto;padding:28px 18px 44px}
-.top{padding:8px 2px 24px;border-bottom:1px solid #e1e5e8;margin-bottom:18px}
-.top h1{font-size:26px;font-weight:700;letter-spacing:.02em}
-.top p{margin-top:7px;color:#718096;font-size:14px}
-.level{background:#fff;border:1px solid #e1e5e8;border-radius:14px;margin:12px 0;overflow:hidden;box-shadow:0 3px 12px rgba(38,50,56,.05)}
-.level-head{width:100%;border:0;background:#fff;color:#263238;display:flex;align-items:center;gap:14px;padding:18px 20px;text-align:left;cursor:pointer;font:inherit}
-.level-head:hover{background:#fafbfc}
-.level-no{width:38px;height:38px;border-radius:10px;background:#eef1f3;display:grid;place-items:center;font-size:16px;font-weight:700;color:#455a64;flex:none}
-.level-main{flex:1}.level-title{font-size:17px;font-weight:700}.level-sub{font-size:12px;color:#87939b;margin-top:3px}
-.chevron{font-size:18px;color:#90a0a8;transition:transform .2s}.level.open .chevron{transform:rotate(90deg)}
-.lesson-list{display:none;padding:0 18px 16px 72px}.level.open .lesson-list{display:block}
-.lesson{display:flex;align-items:center;gap:10px;padding:12px 14px;margin-top:8px;border:1px solid #e7eaec;border-radius:10px;text-decoration:none;color:#263238;background:#fbfcfc}
-.lesson:hover{background:#f4f7f8;border-color:#cbd5da}.lesson-code{font-size:12px;color:#607d8b;font-weight:700;min-width:76px}.lesson-name{font-size:14px;flex:1}.lesson-en{font-size:12px;color:#87939b}.lesson-go{color:#90a0a8;font-size:18px}
-.empty{padding:4px 0 2px;color:#9aa5ab;font-size:13px}
-@media(max-width:520px){.app{padding:20px 12px 32px}.top h1{font-size:23px}.lesson-list{padding-left:58px}.lesson{display:grid;grid-template-columns:1fr auto;gap:4px 8px}.lesson-code{grid-column:1}.lesson-name{grid-column:1}.lesson-en{grid-column:1}.lesson-go{grid-column:2;grid-row:1 / span 3;align-self:center}}
+body{min-height:100vh;background:#f5f0ee;color:#3d2b1f;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}
+.app{width:min(720px,100%);margin:0 auto;padding:24px 18px 44px}
+.top{background:#fff;border:1px solid #eadfd8;border-radius:22px;padding:24px 24px 22px;margin-bottom:18px;box-shadow:0 8px 22px rgba(100,70,50,.06)}
+.brand{font-size:12px;font-weight:700;letter-spacing:.08em;color:#c0392b;text-transform:uppercase}.top h1{font-size:28px;font-weight:800;letter-spacing:.01em;margin-top:8px}.top p{margin-top:8px;color:#8d7b70;font-size:14px;line-height:1.6}
+.hint{display:flex;align-items:center;gap:8px;margin-top:16px;padding-top:14px;border-top:1px solid #f0e8e4;color:#a08070;font-size:12px}.hint-dot{width:8px;height:8px;border-radius:50%;background:#c0392b;flex:none}
+.level{background:#fff;border:1px solid #eadfd8;border-radius:18px;margin:12px 0;overflow:hidden;box-shadow:0 5px 16px rgba(100,70,50,.06)}
+.level-head{width:100%;border:0;background:#fff;color:#3d2b1f;display:flex;align-items:center;gap:14px;padding:18px 20px;text-align:left;cursor:pointer;font:inherit}
+.level-head:hover{background:#fffaf7}.level-no{width:42px;height:42px;border-radius:14px;background:#fcecea;display:grid;place-items:center;font-size:16px;font-weight:800;color:#c0392b;flex:none}.level-main{flex:1}.level-title{font-size:17px;font-weight:800}.level-sub{display:block;font-size:12px;color:#a08070;margin-top:4px}.level-count{font-size:11px;color:#c0392b;background:#fcecea;border-radius:999px;padding:4px 9px;font-weight:700}.chevron{font-size:18px;color:#c0b0a0;transition:transform .2s}.level.open .chevron{transform:rotate(90deg)}
+.lesson-list{display:none;padding:0 18px 16px 76px}.level.open .lesson-list{display:block}.lesson{display:flex;align-items:center;gap:10px;padding:13px 14px;margin-top:8px;border:1px solid #f0e8e4;border-radius:12px;text-decoration:none;color:#3d2b1f;background:#fcf8f6;transition:all .15s}.lesson:hover{background:#fff;border-color:#e2b8ae;transform:translateX(2px)}.lesson-code{font-size:11px;color:#c0392b;font-weight:700;min-width:76px}.lesson-name{font-size:14px;font-weight:700;flex:1}.lesson-en{font-size:12px;color:#a08070}.lesson-go{color:#c0392b;font-size:20px;line-height:1}.empty{padding:4px 0 2px;color:#a08070;font-size:13px}
+@media(max-width:520px){.app{padding:16px 12px 32px}.top{padding:21px 18px}.top h1{font-size:24px}.level-head{padding:16px}.level-count{display:none}.lesson-list{padding-left:58px}.lesson{display:grid;grid-template-columns:1fr auto;gap:4px 8px}.lesson-code{grid-column:1}.lesson-name{grid-column:1}.lesson-en{grid-column:1}.lesson-go{grid-column:2;grid-row:1 / span 3;align-self:center}}
 </style>
 </head>
 <body>
 <main class="app">
   <header class="top">
+    <div class="brand">Chinese ClassPro</div>
     <h1>HSK 中文课程</h1>
-    <p>请选择 HSK 级别，再选择课程开始学习</p>
+    <p>从课程目录开始，选择你的 HSK 级别和课程。</p>
+    <div class="hint"><span class="hint-dot"></span><span>点击级别可以展开或收起课程列表</span></div>
   </header>
   <section id="levels" aria-label="HSK课程级别"></section>
 </main>
@@ -49,7 +45,7 @@ function render(){
     var items=level.lessons.length?level.lessons.map(function(lesson){
       return '<a class="lesson" href="'+lessonUrl(lesson.id)+'"><span class="lesson-code">'+lesson.id+'</span><span class="lesson-name">'+lesson.name+'</span><span class="lesson-en">'+lesson.en+'</span><span class="lesson-go">›</span></a>';
     }).join(""):'<div class="empty">课程内容准备中</div>';
-    return '<article class="level '+(index===0?'open':'')+'"><button class="level-head" type="button" aria-expanded="'+(index===0?'true':'false')+'" onclick="toggleLevel(this)"><span class="level-no">'+level.id+'</span><span class="level-main"><span class="level-title">'+level.name+'</span><span class="level-sub">'+level.desc+' · '+level.lessons.length+'课</span></span><span class="chevron">›</span></button><div class="lesson-list">'+items+'</div></article>';
+    return '<article class="level '+(index===0?'open':'')+'"><button class="level-head" type="button" aria-expanded="'+(index===0?'true':'false')+'" onclick="toggleLevel(this)"><span class="level-no">'+level.id+'</span><span class="level-main"><span class="level-title">'+level.name+'</span><span class="level-sub">'+level.desc+'</span></span><span class="level-count">'+level.lessons.length+' 课</span><span class="chevron">›</span></button><div class="lesson-list">'+items+'</div></article>';
   }).join("");
 }
 function toggleLevel(button){var level=button.parentElement;var open=level.classList.toggle("open");button.setAttribute("aria-expanded",String(open));}
