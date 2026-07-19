@@ -34,6 +34,12 @@ input.name{min-width:240px;flex:1}textarea{width:100%;min-height:92px;resize:ver
 .charbox,.write-canvas{width:58px;height:58px;border:1px solid #dce7c8;border-radius:10px;background:linear-gradient(90deg,transparent 49%,#edf2df 50%,transparent 51%),linear-gradient(0deg,transparent 49%,#edf2df 50%,transparent 51%),linear-gradient(45deg,transparent 49.4%,#f3eadb 50%,transparent 50.6%),linear-gradient(-45deg,transparent 49.4%,#f3eadb 50%,transparent 50.6%),#fff}
 .charbox{display:flex;align-items:center;justify-content:center;font-family:KaiTi,STKaiti,"Kaiti SC",serif}.charbox.model{font-size:34px;color:rgba(45,59,41,.28);font-weight:900}.write-canvas{display:block;touch-action:none}
 .submitbar{justify-content:space-between}.submit-main{font-size:18px;padding:13px 24px}.summary{font-size:14px;color:#526248}
+.writing-modal{display:none;position:fixed;inset:0;z-index:2000;background:rgba(27,39,23,.78);align-items:center;justify-content:center;padding:16px}
+.writing-modal.open{display:flex}.writing-modal-card{width:min(96vw,620px);height:min(92vh,760px);background:#fffdf7;border-radius:26px;padding:18px;display:flex;flex-direction:column;box-shadow:0 24px 80px rgba(0,0,0,.35)}
+.writing-modal-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.writing-modal-title{font-size:22px;font-family:KaiTi,STKaiti,"Kaiti SC",serif;color:var(--green);font-weight:900}.writing-modal-sub{font-size:12px;color:#75806e;margin:5px 0 10px}
+.writing-modal-canvas-wrap{position:relative;flex:1;min-height:0;border:2px solid #cfe0ad;border-radius:20px;overflow:hidden;background:linear-gradient(90deg,transparent 49.7%,#dfe9c8 50%,transparent 50.3%),linear-gradient(0deg,transparent 49.7%,#dfe9c8 50%,transparent 50.3%),linear-gradient(45deg,transparent 49.6%,#f1dfd2 50%,transparent 50.4%),linear-gradient(-45deg,transparent 49.6%,#f1dfd2 50%,transparent 50.4%),#fff}
+.writing-modal-canvas{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair}.writing-modal-guide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:min(48vw,260px);color:rgba(79,143,47,.12);pointer-events:none}
+.writing-modal-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px}.writing-modal-actions button{min-width:120px}.writing-modal-count{font-size:13px;color:#68765e;font-weight:900}
 .locked{opacity:.55;pointer-events:none}
 .report-card{background:linear-gradient(135deg,#f3f0ff,#fff);border-color:#d9d1ff}.report-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.report-title{font-size:18px;font-weight:900;color:#5847bc}.report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.report-kpi{padding:11px;border-radius:14px;background:rgba(255,255,255,.8);text-align:center}.report-kpi b{display:block;font-size:22px;color:#5847bc}.report-kpi span{font-size:11px;color:#887da8}@media(max-width:620px){.report-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
@@ -84,6 +90,14 @@ input.name{min-width:240px;flex:1}textarea{width:100%;min-height:92px;resize:ver
       <div class="result wait" id="submitStatus"></div>
     </div>
     <button class="submit-main" onclick="submitAllHomework()">一次性提交作业</button>
+  </div>
+</div>
+
+<div class="writing-modal" id="writingModal" aria-hidden="true">
+  <div class="writing-modal-card" role="dialog" aria-modal="true" aria-labelledby="writingModalTitle">
+    <div class="writing-modal-head"><div><div class="writing-modal-title" id="writingModalTitle">汉字书写</div><div class="writing-modal-sub">请在大框中书写，完成一次后点击“完成本次”；每个字练习 3 次。</div></div><button type="button" onclick="closeWritingModal()">关闭</button></div>
+    <div class="writing-modal-canvas-wrap"><div class="writing-modal-guide" id="writingGuide"></div><canvas id="writingModalCanvas" class="writing-modal-canvas" width="900" height="900"></canvas></div>
+    <div class="writing-modal-actions"><span class="writing-modal-count" id="writingModalCount">第 1 / 3 次</span><button type="button" onclick="clearWritingModal()">重写本次</button><button type="button" class="confirm-btn" onclick="finishWritingAttempt()">完成本次</button></div>
   </div>
 </div>
 
@@ -180,6 +194,16 @@ function submitAllHomework(){
     .then(function(){submitted=true;if(window.ClassProShared&&ClassProShared.saveProgress)ClassProShared.saveProgress(progressParts(),collectProgress({submitted:true,submittedAt:now,objectiveCorrect:correct,objectiveTotal:total,pendingReview:pending}));document.getElementById("submitStatus").textContent="已提交。客观题正确率："+(total?Math.round(correct/total*100):0)+"%，待老师查看/批改："+pending+"题。";loadClassReport()})
     .catch(function(){document.getElementById("submitStatus").textContent="已尝试提交；如果网络不稳定，请稍后刷新教师端确认。"});
 }
+var writingModalTarget=null,writingModalKey="",writingModalAttempts=0,writingModalStrokes=[],writingModalDrawing=false,writingModalStroke=null;
+function modalCanvas(){return document.getElementById("writingModalCanvas")}
+function clearWritingModal(){var c=modalCanvas();if(c){c.getContext("2d").clearRect(0,0,c.width,c.height)}writingModalStrokes=[];writingModalDrawing=false;writingModalStroke=null}
+function updateWritingModalCount(){var el=document.getElementById("writingModalCount");if(el)el.textContent="第 "+Math.min(writingModalAttempts+1,3)+" / 3 次"}
+function openWritingModal(c){if(!studentConfirmed)return;writingModalTarget=c;writingModalKey=c.dataset.qid+"|"+c.dataset.char+"|"+c.dataset.cell;writingModalAttempts=(writingStrokes[writingModalKey]||[]).length;if(writingModalAttempts>=3){writingModalAttempts=0;writingStrokes[writingModalKey]=[]}document.getElementById("writingModalTitle").textContent="书写："+c.dataset.char;document.getElementById("writingGuide").textContent=c.dataset.char;document.getElementById("writingModal").classList.add("open");document.getElementById("writingModal").setAttribute("aria-hidden","false");clearWritingModal();updateWritingModalCount()}
+function closeWritingModal(){document.getElementById("writingModal").classList.remove("open");document.getElementById("writingModal").setAttribute("aria-hidden","true");writingModalTarget=null;writingModalKey="";writingModalStrokes=[];writingModalDrawing=false;writingModalStroke=null}
+function modalPos(e,c){var r=c.getBoundingClientRect();return{x:(e.clientX-r.left)/r.width,y:(e.clientY-r.top)/r.height}}
+function finishWritingAttempt(){if(!writingModalTarget)return;if(!writingModalStrokes.length){alert("请先写完一个汉字，再点击完成本次。 / Please write the character first.");return}writingStrokes[writingModalKey]=writingStrokes[writingModalKey]||[];Array.prototype.push.apply(writingStrokes[writingModalKey],writingModalStrokes);writingModalAttempts++;if(writingModalTarget)drawSavedCanvas(writingModalTarget,writingStrokes[writingModalKey]);saveProgressSoon();clearWritingModal();if(writingModalAttempts>=3){closeWritingModal()}else updateWritingModalCount()}
+function initWritingCanvases(){document.querySelectorAll(".write-canvas").forEach(function(c){if(c.dataset.ready)return;c.dataset.ready="1";gridCanvas(c);var key=c.dataset.qid+"|"+c.dataset.char+"|"+c.dataset.cell;writingStrokes[key]=writingStrokes[key]||[];drawSavedCanvas(c,writingStrokes[key]);c.style.cursor="pointer";c.addEventListener("click",function(){openWritingModal(c)})})}
+var writingModalCanvas=modalCanvas();if(writingModalCanvas){writingModalCanvas.addEventListener("pointerdown",function(e){e.preventDefault();writingModalDrawing=true;writingModalStroke=[];var p=modalPos(e,writingModalCanvas);writingModalStroke.push(p);writingModalCanvas.setPointerCapture&&writingModalCanvas.setPointerCapture(e.pointerId)});writingModalCanvas.addEventListener("pointermove",function(e){if(!writingModalDrawing)return;e.preventDefault();var p=modalPos(e,writingModalCanvas);writingModalStroke.push(p);var ctx=writingModalCanvas.getContext("2d"),w=writingModalCanvas.width,h=writingModalCanvas.height;ctx.strokeStyle="#c0392b";ctx.lineWidth=9;ctx.lineCap="round";ctx.lineJoin="round";if(writingModalStroke.length===1)ctx.beginPath(),ctx.moveTo(p.x*w,p.y*h);else{var q=writingModalStroke[writingModalStroke.length-2];ctx.beginPath();ctx.moveTo(q.x*w,q.y*h);ctx.lineTo(p.x*w,p.y*h);ctx.stroke()}});writingModalCanvas.addEventListener("pointerup",function(){if(!writingModalDrawing)return;writingModalDrawing=false;if(writingModalStroke&&writingModalStroke.length)writingModalStrokes.push(writingModalStroke);writingModalStroke=null})}
 renderStudentOptions();
 setTier(currentTier);
 </script>

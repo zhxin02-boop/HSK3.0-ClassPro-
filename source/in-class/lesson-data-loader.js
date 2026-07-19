@@ -39,19 +39,48 @@
       principle: q.principle, difficultyReason: q.difficultyReason, contentStatus: q.contentStatus };
   }
   var realScenes = [
-    'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80',
-    'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=900&q=80'
+    'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=85&v=3',
+    'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=900&q=85&v=3',
+    'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=85&v=3',
+    'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=85&v=3',
+    'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=85&v=3',
+    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=85&v=3',
+    'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=85&v=3',
+    'https://images.unsplash.com/photo-1509909756405-be0199881695?auto=format&fit=crop&w=900&q=85&v=3',
+    'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=85&v=3',
+    'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=900&q=85&v=3',
+    'https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=85&v=3',
+    'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=85&v=3',
+    'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85&v=3'
   ];
+  // Teacher and student pages use the same semantic scene mapping.
+  // Keep the image itself free of Chinese overlays; the hint is English text.
+  var sceneImages = {
+    greeting: './images/l01-vocab-greeting.png',
+    thumbsUp: './images/l01-vocab-thumbs-up.png',
+    studentGroup: './images/l01-vocab-student-group.png',
+    manyPeople: realScenes[3], teacher: realScenes[4], elder: realScenes[5],
+    twoPlus: './images/l01-vocab-you-all.png',
+    thanks: './images/l01-vocab-thanks.png',
+    welcome: './images/l01-vocab-welcome.png',
+    classmates: realScenes[9],
+    farewell: './images/l01-vocab-farewell.png'
+  };
   var sceneByWord = {
-    '你好': realScenes[6], '老师': realScenes[7], '大家': realScenes[1], '学生们': realScenes[0],
-    '您': realScenes[3], '谢谢': realScenes[4], '不客气': realScenes[2], '再见': realScenes[5],
-    '同学': realScenes[0]
+    '你好': sceneImages.greeting, '好': sceneImages.thumbsUp, '大家': sceneImages.manyPeople,
+    '学生': sceneImages.studentGroup, '们': sceneImages.manyPeople, '学生们': sceneImages.studentGroup,
+    '老师': sceneImages.teacher, '您': sceneImages.elder, '你们': sceneImages.twoPlus,
+    '谢谢': sceneImages.thanks, '不客气': sceneImages.welcome, '同学': sceneImages.classmates,
+    '再见': sceneImages.farewell
+  };
+  var imageHintByWord = {
+    '你好': 'People greeting each other', '好': 'A happy and positive expression',
+    '大家': 'A group of people together', '学生': 'Students in a learning setting',
+    '们': 'A group of people', '学生们': 'A group of students',
+    '老师': 'A teacher in a classroom', '您': 'Speaking politely to a teacher',
+    '你们': 'Several people being addressed', '谢谢': 'People expressing thanks',
+    '不客气': 'A friendly response', '同学': 'Classmates learning together',
+    '再见': 'People saying goodbye'
   };
 
   try {
@@ -63,7 +92,7 @@
     q.v1_image_guess = pool.image_guess.slice(0, 8).map(function (x, i) {
       var o = clone(x); o.prompt_cn = 'Look at the picture and choose the word.'; o.prompt_en = '';
       var imageOptions = reorder(options(x.correct_answer, vocabWords, 4), x.correct_answer, i + 1);
-      o.data = Object.assign(meta(x), { image_hint: '', options: imageOptions,
+      o.data = Object.assign(meta(x), { image_hint: imageHintByWord[x.correct_answer] || 'Look at the real-life scene', options: imageOptions,
         options_pinyin: imageOptions.map(function (w) { return pinyin[w] || ''; }), correct_index: imageOptions.indexOf(x.correct_answer) });
       o.correct_answer = x.correct_answer; o.acceptable_answers = [o.correct_answer];
       o.media = { image: sceneByWord[x.correct_answer] || realScenes[i] };
@@ -133,7 +162,7 @@
         { id: 'students', name: '学生们', role: '学生', gender: 'mixed' }
       ] }),
       vocabulary: content.vocabulary.map(function (v, i) {
-        var wordImages = {'你好':realScenes[6],'大家':realScenes[1],'好':realScenes[2],'学生':realScenes[0],'们':realScenes[1],'老师':realScenes[7],'您':realScenes[3],'你们':realScenes[1],'谢谢':realScenes[4],'不客气':realScenes[2],'同学':realScenes[0],'再见':realScenes[5]};
+        var wordImages = sceneByWord;
         return Object.assign({}, v, { image: wordImages[v.hanzi] || realScenes[i] });
       }),
       grammar: content.grammar.map(function (g) {

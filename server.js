@@ -110,7 +110,8 @@ var srv = http.createServer(function(req, res) {
   if (method === "GET" && url === "/api/reviews") {
     var gasUrl = 'https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec';
     var name = decodeURIComponent((req.url.split("?")[1]||"").replace(/name=/,""));
-    var localRows = readLearningRecords().filter(function(x){return String(x.姓名||x.studentName||x.name||"")===String(name)});
+    var allLocalRows = readLearningRecords();
+    var localRows = allLocalRows.filter(function(x){return !name || String(x.姓名||x.studentName||x.name||"")===String(name)});
     if (localRows.length) { json(res, 200, {status:"ok", data:localRows}); return; }
     var https = require("https");
     https.get(gasUrl + "?action=get_all", function(gres) {
@@ -121,15 +122,37 @@ var srv = http.createServer(function(req, res) {
           var data = JSON.parse(d);
           if (data.status === "ok" && name) {
             var all = [];
-            for (var k in data.data) {
-              data.data[k].forEach(function(x) { all.push(x); });
-            }
+            if (Array.isArray(data.data)) all = data.data.slice();
+            else for (var k in data.data) (data.data[k]||[]).forEach(function(x) { all.push(x); });
             data = {status:"ok", data:all.filter(function(x){return String(x.姓名||x.studentName||x.name||"")===String(name)})};
           }
           json(res, 200, data);
         } catch(e) { json(res, 500, {error:"Parse failed"}); }
       });
     }).on("error", function(e) { json(res, 502, {error:e.message}); }).setTimeout(8000, function(){ this.destroy(new Error("GAS request timeout")); });
+    return;
+  }
+
+  // Local test proxy for teacher feedback. Production uses the GAS mark_reviewed action.
+  if (method === "POST" && url === "/api/mark-reviewed") {
+    parseBody(req, function(body) {
+      var rows = readLearningRecords();
+      var target = new Date(body && body.timestamp || "").getTime();
+      var found = false;
+      rows.forEach(function(x) {
+        var student = String(x.studentName || x.姓名 || x.name || "");
+        var stamp = new Date(x.submittedAt || x.receivedAt || x.timestamp || "").getTime();
+        if (!found && student === String(body.studentName || "") && (!isNaN(target) && !isNaN(stamp) ? Math.abs(target - stamp) < 5000 : false)) {
+          x.correction = body.correction || "已查看。";
+          x.teacherFeedback = x.correction;
+          x.status = "已批改";
+          x.reviewStatus = "已批改";
+          found = true;
+        }
+      });
+      if (found) { try { fs.writeFileSync(learningRecordsFile, JSON.stringify(rows, null, 2), "utf8"); } catch(e) { json(res, 500, {status:"error", message:e.message}); return; } }
+      json(res, found ? 200 : 404, {status:found ? "ok" : "error", message:found ? "review saved" : "record not found"});
+    });
     return;
   }
 
