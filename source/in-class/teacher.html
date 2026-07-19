@@ -1141,6 +1141,22 @@ ap.init();
 <script>
 (function(){var baseR=ap._r;ap._r=function(){baseR.call(this);if(this.mt==='home')return;var host=document.querySelector('.header-right');if(!host||document.getElementById('teacherHomeLink'))return;var a=document.createElement('a');a.id='teacherHomeLink';a.className='teacher-home-btn';a.textContent='⌂ 教师主页 / Home';a.href='../teacher/index.html?lesson='+encodeURIComponent(MT.lessonKey||'')+'&room='+encodeURIComponent(RM||'');host.insertBefore(a,host.firstChild)}})();
 </script>
+<script>
+// Clearing the interaction wall must also reset the score state and broadcast
+// the zeroed leaderboard, otherwise students can receive the previous score.
+(function(){
+  document.addEventListener('click',function(e){
+    var b=e.target&&e.target.closest?e.target.closest('button'):null;
+    if(!b||String(b.textContent||'').indexOf('清空本轮统计')<0||!window.ap)return;
+    setTimeout(function(){
+      ap.la=[];ap.records=[];ap.sc={};ap.qsub={};
+      if(ap._saveClassData)ap._saveClassData();
+      if(ap._pubBoard)ap._pubBoard();
+      if(ap._r)ap._r();
+    },0);
+  });
+})();
+</script>
 </body>
 </html>
 
