@@ -7,7 +7,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.3.0/mqtt.min.js"></script>
 <script src="../shared/students.js"></script>
 <script src="../shared/context.js"></script>
-<script src="./lesson-data-loader.js"></script>
+<script src="./lesson-data-loader.js?v=20260719-images-4"></script>
 <script src="./pinyin-lab.js"></script>
 <style>
 :root{--teach:#4A8FE7;--practice:#E8563A;--battle:#E8563A;--blue:#4A8FE7;--green:#5CC98C;--bg:#FAFAF7;--text:#1A1A2E;--sidebar-bg:#F5F4F0;--line:#E8E6E1;--primary:#E8563A}
@@ -1024,7 +1024,7 @@ if (window.LESSON_DATA && LESSON_DATA.meta && LESSON_DATA.meta.lessonKey === 'HS
     if (!c || !c.data) return '<div class="panel"><p>暂无题目</p></div>';
     var opts = c.data.options || [], ci = opts.indexOf(c.correct_answer);
     var img = c.media && c.media.image || '';
-    var body = '<div style="text-align:center;background:#f8faf3;border:1px solid #dfeac8;border-radius:16px;padding:16px;margin:12px 0"><div style="font-size:15px;color:#74806d;margin-bottom:8px">Look at the picture. Choose the word.</div><img src="' + es(img) + '" alt="' + es(c.correct_answer) + '" style="width:100%;max-height:240px;object-fit:contain;border-radius:14px;background:#fff"></div>';
+    var body = '<div style="text-align:center;background:#f8faf3;border:1px solid #dfeac8;border-radius:16px;padding:16px;margin:12px 0"><div style="font-size:15px;color:#74806d;margin-bottom:8px">' + es(c.data.image_hint || 'Look at the picture and choose the word.') + '</div><img src="' + es(img) + '" alt="' + es(c.correct_answer) + '" style="width:100%;max-height:240px;object-fit:contain;border-radius:14px;background:#fff"></div>';
     var nav = this._navBtn('ap.v1i=Math.max(0,ap.v1i-1);ap.v1a=false;ap.v1p=-1;ap._r()', 'ap.v1i=Math.min(' + (qs.length - 1) + ',ap.v1i+1);ap.v1a=false;ap.v1p=-1;ap._r()', i, qs.length, '&larr; 上一题', '下一题 &rarr;');
     return this._mc('图片猜词 / Picture Guess', c, opts, ci, this.v1p, this.v1a, 'ap.v1p=', body, nav);
   };
