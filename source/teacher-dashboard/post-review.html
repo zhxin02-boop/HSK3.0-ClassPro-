@@ -118,6 +118,8 @@ function inferredModule(x){
 }
 function needsReview(x){
   var m=inferredModule(x),st=String(statusOf(x)||""),nr=String(fuzzy(x,["needsReview","openEnded"],["needsReview","openEnded"]));
+  var feedback=String(fuzzy(x,["教师批改","teacherFeedback","correction"],["批改","feedback","correction"])||"");
+  if(st.indexOf("已批改")>=0||st.indexOf("宸叉壒")>=0||st.toLowerCase()==="reviewed"||feedback.trim())return false;
   var sk=stageKey(x),ml=String(m||"");
   if(m==="homework_summary")return false;
   if(sk==="pre"&&(ml.indexOf("造句")>=0||ml.indexOf("开放")>=0||ml==="output"||ml==="handwriting"))return true;
@@ -167,6 +169,30 @@ function findQuestionText(r){var qid=String(qidOf(r)||""),pool=[];if(window.LESS
   var m=String(moduleRaw(r)||"");if(stageKey(r)==="pre"&&m.indexOf("开放")>=0)return"你叫什么名字？请写一个完整的句子。";if(stageKey(r)==="pre"&&m.indexOf("造句")>=0)return"请用“对不起”和“没关系”写一个简短的对话。";return""}
 function questionPreview(r,m){var q=val(r,["题目说明","questionText","prompt","question","task","instruction"])||findQuestionText(r);if(!q&&m==="handwriting")q="请完成汉字书写，并检查笔顺和字形。 / Complete the handwriting task.";if(!q&&m)q="请完成“"+m+"”任务。 / Complete the "+m+" task.";return'<div class="answer-box" style="background:#fffaf0"><b>题目说明 / Task</b><br>'+esc(q||"题目说明暂缺，请补充题库题干")+'</div>'}
 function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document.getElementById("batch_"+safeId(name));if(!rows.length)return;status.textContent="正在保存 0 / "+rows.length+"...";var local=location.hostname==='localhost'||location.hostname==='127.0.0.1',url=local?"/api/mark-reviewed":GAS;rows.reduce(function(p,r,i){return p.then(function(){var id=reviewId(r,name),correction=document.getElementById("fb_"+id).value||"已查看。";return fetch(url,{method:"POST",mode:local?"same-origin":"no-cors",headers:{"Content-Type":local?"application/json":"text/plain;charset=utf-8"},body:JSON.stringify({action:"mark_reviewed",lesson:LESSON,studentName:name,timestamp:timeOf(r),correction:correction})}).then(function(){var st=document.getElementById("st_"+id);if(st)st.textContent="已保存 / Saved";status.textContent="正在保存 "+(i+1)+" / "+rows.length+"..."})})},Promise.resolve()).then(function(){status.textContent="本学生全部批改已保存 / All saved"}).catch(function(){status.textContent="部分保存失败，请刷新后重试 / Retry"})}
+</script>
+<script>
+(function(){
+  var oldSaveReview=window.saveReview,oldSaveStudentReviews=window.saveStudentReviews;
+  window.saveReview=function(){oldSaveReview.apply(this,arguments);setTimeout(loadData,1200)};
+  window.saveStudentReviews=function(){oldSaveStudentReviews.apply(this,arguments);setTimeout(loadData,1500)};
+})();
+</script>
+<script>
+(function(){
+  function latestReviewRows(rows){
+    var latest={},others=[];
+    rows.forEach(function(r){
+      var stage=stageKey(r),m=inferredModule(r),qid=String(qidOf(r)||"");
+      if(stage!=="post"||!(m==="output"||m==="handwriting")||!qid){others.push(r);return}
+      var key=String(studentOf(r)||"")+"|"+qid,old=latest[key];
+      if(!old||new Date(timeOf(r)).getTime()>=new Date(timeOf(old)).getTime())latest[key]=r;
+    });
+    Object.keys(latest).forEach(function(k){others.push(latest[k])});
+    return others;
+  }
+  var oldRender=render;
+  render=function(){records=latestReviewRows(records);oldRender()};
+})();
 </script>
 </body>
 </html>

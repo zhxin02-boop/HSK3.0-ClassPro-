@@ -4,6 +4,7 @@ window.LESSON_DATA = {
     titleEn: "My Name Is Li Wen",
     topic: "自我介绍与道歉", topicEn: "Self-introduction and Apologies",
     showVocabExamples: false,
+    showHanziWritingDemo: true,
     characters: [
       { id: "wang", name: "王一飞", namePinyin: "Wang Yifei", role: "teacher", roleLabel: "老师", avatar: "assets/avatars/wang_yifei.png" },
       { id: "chentianzhong", name: "陈天中", namePinyin: "Chen Tianzhong", role: "student", roleLabel: "学生", avatar: "assets/avatars/chen_tianzhong.png" },
@@ -338,6 +339,18 @@ if (window.LESSON_DATA) {
       kp: kp
     };
   };
+  var imageNames = {
+    1: "images/l02_pic_01_nihao.png",
+    2: "images/l02_pic_02_duibuqi.png",
+    3: "images/l02_pic_03_renshi.png",
+    4: "images/l02_pic_04_meiguanxi.png",
+    5: "images/l02_pic_05_gaoxing.png",
+    6: "images/l02_pic_06_shi.png",
+    7: "images/l02_pic_07_bu.png",
+    8: "images/l02_pic_08_ye.png",
+    9: "images/l02_pic_09_hen.png",
+    10: "images/l02_pic_10_jiao.png"
+  };
   var img = function (n, hint, answer, kp) {
     return {
       id: "v1_hsk1_02_" + String(n).padStart(2, "0"),
@@ -353,7 +366,7 @@ if (window.LESSON_DATA) {
       kp: kp,
       feedback_correct: "对！" + answer,
       feedback_wrong: "再想想。",
-      media: { audio: null, image: null },
+      media: { audio: null, image: imageNames[n] || null },
       source: "vocabulary",
       vocab_pool: "L02"
     };
@@ -1098,16 +1111,16 @@ if (window.LESSON_DATA) {
   };
 
   Q.v1_image_guess = [
-    image(1, "你好", "两个人见面打招呼。", "images/l02_pic_01_nihao.svg", "词汇：你好"),
-    image(2, "对不起", "一个人低头道歉。", "images/l02_pic_02_duibuqi.svg", "词汇：对不起"),
-    image(3, "认识", "两个人第一次见面、握手。", "images/l02_pic_03_renshi.svg", "词汇：认识"),
-    image(4, "没关系", "听到道歉后摆手微笑。", "images/l02_pic_04_meiguanxi.svg", "词汇：没关系"),
-    image(5, "高兴", "开心的表情。", "images/l02_pic_05_gaoxing.svg", "词汇：高兴"),
-    image(6, "是", "表示身份：is。", "images/l02_pic_06_shi.svg", "词汇：是"),
-    image(7, "不", "摇头否定：not。", "images/l02_pic_07_bu.svg", "词汇：不"),
-    image(8, "也", "两个人都一样：also。", "images/l02_pic_08_ye.svg", "词汇：也"),
-    image(9, "很", "程度很高：very。", "images/l02_pic_09_hen.svg", "词汇：很"),
-    image(10, "叫", "姓名牌：我叫……", "images/l02_pic_10_jiao.svg", "词汇：叫")
+    image(1, "你好", "两个人见面打招呼。", "images/l02_pic_01_nihao.png", "词汇：你好"),
+    image(2, "对不起", "一个人低头道歉。", "images/l02_pic_02_duibuqi.png", "词汇：对不起"),
+    image(3, "认识", "两个人第一次见面、握手。", "images/l02_pic_03_renshi.png", "词汇：认识"),
+    image(4, "没关系", "听到道歉后摆手微笑。", "images/l02_pic_04_meiguanxi.png", "词汇：没关系"),
+    image(5, "高兴", "开心的表情。", "images/l02_pic_05_gaoxing.png", "词汇：高兴"),
+    image(6, "是", "表示身份：is。", "images/l02_pic_06_shi.png", "词汇：是"),
+    image(7, "不", "摇头否定：not。", "images/l02_pic_07_bu.png", "词汇：不"),
+    image(8, "也", "两个人都一样：also。", "images/l02_pic_08_ye.png", "词汇：也"),
+    image(9, "很", "程度很高：very。", "images/l02_pic_09_hen.png", "词汇：很"),
+    image(10, "叫", "姓名牌：我叫……", "images/l02_pic_10_jiao.png", "词汇：叫")
   ];
 
   Q.v5_vocab_fill[2] = mc("v5_hsk1_02_03", "vocab_fill", "选择合适的词填空", {
@@ -1177,15 +1190,15 @@ if (window.LESSON_DATA) {
     q.data.options_pinyin = [];
   });
   var vocabImages = {
-    v01: "images/l02_pic_07_bu.svg",
-    v02: "images/l02_pic_06_shi.svg",
-    v03: "images/l02_pic_02_duibuqi.svg",
-    v04: "images/l02_pic_04_meiguanxi.svg",
-    v05: "images/l02_pic_04_meiguanxi.svg",
-    v06: "images/l02_pic_09_hen.svg",
-    v07: "images/l02_pic_05_gaoxing.svg",
-    v08: "images/l02_pic_03_renshi.svg",
-    v09: "images/l02_pic_08_ye.svg"
+    v01: "images/l02_pic_07_bu.png",
+    v02: "images/l02_pic_06_shi.png",
+    v03: "images/l02_pic_02_duibuqi.png",
+    v04: "images/l02_pic_04_meiguanxi.png",
+    v05: "images/l02_pic_04_meiguanxi.png",
+    v06: "images/l02_pic_09_hen.png",
+    v07: "images/l02_pic_05_gaoxing.png",
+    v08: "images/l02_pic_03_renshi.png",
+    v09: "images/l02_pic_08_ye.png"
   };
   (window.LESSON_DATA.vocabulary || []).forEach(function (v) {
     if (vocabImages[v.id]) v.image = vocabImages[v.id];
@@ -1324,4 +1337,25 @@ if (window.LESSON_DATA) {
   var s012 = byId("hw_l02_s_012");
   if (s012) s012.prompt_en = "";
   HW.version = "2026-07-16-D4A-content-polish-v3";
+})();
+
+// L02 beginner-scope vocabulary extensions. Keep these phrases within L01-L02.
+(function () {
+  var phraseMap = {
+    "v01": [["不好", "bù hǎo", "not good"], ["不客气", "bú kèqi", "you're welcome"], ["不是", "bú shì", "is not"]],
+    "v02": [["是学生", "shì xuéshēng", "is a student"], ["是老师", "shì lǎoshī", "is a teacher"], ["是同学", "shì tóngxué", "is a classmate"]],
+    "v03": [],
+    "v04": [],
+    "v05": [],
+    "v06": [["很好", "hěn hǎo", "very good"], ["很大", "hěn dà", "very big"], ["很高兴", "hěn gāoxìng", "very happy"]],
+    "v07": [["不高兴", "bù gāoxìng", "unhappy"], ["很高兴", "hěn gāoxìng", "very happy"]],
+    "v08": [["认识你", "rènshi nǐ", "know you"], ["认识你们", "rènshi nǐmen", "know you all"], ["认识您", "rènshi nín", "know you (polite)"], ["认识大家", "rènshi dàjiā", "know everyone"], ["认识老师", "rènshi lǎoshī", "know the teacher"]],
+    "v09": [["我也是", "wǒ yě shì", "I am too"], ["你也是", "nǐ yě shì", "you are too"], ["您也是", "nín yě shì", "you are too (polite)"], ["大家也很高兴", "dàjiā yě hěn gāoxìng", "everyone is also very happy"]]
+  };
+  (window.LESSON_DATA.vocabulary || []).forEach(function (v) {
+    if (!Object.prototype.hasOwnProperty.call(phraseMap, v.id)) return;
+    v.phrases = phraseMap[v.id].map(function (row) {
+      return { hanzi: row[0], pinyin: row[1], english: row[2] };
+    });
+  });
 })();

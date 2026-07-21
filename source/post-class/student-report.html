@@ -207,5 +207,37 @@ var writingModalCanvas=modalCanvas();if(writingModalCanvas){writingModalCanvas.a
 renderStudentOptions();
 setTier(currentTier);
 </script>
+<script>
+/* Homework submission limit: at most two submissions per student and lesson. */
+(function(){
+  var maxAttempts=2,attemptCount=0,attemptCheckPending=false;
+  function setSubmitGate(){
+    var btn=document.querySelector('.submit-main');if(!btn)return;
+    btn.disabled=attemptCheckPending||attemptCount>=maxAttempts;
+    if(attemptCheckPending)btn.textContent='正在检查提交次数…';
+    else if(attemptCount>=maxAttempts)btn.textContent='已达到最多提交次数';
+    else btn.textContent='一次性提交作业（第 '+(attemptCount+1)+' / '+maxAttempts+' 次）';
+  }
+  function readAttemptCount(){
+    var name=getStudentName();if(!name)return;
+    attemptCheckPending=true;setSubmitGate();
+    var url=(location.hostname==='localhost'||location.hostname==='127.0.0.1')?'/api/reviews?name='+encodeURIComponent(name):GAS_URL+'?action=get_all';
+    fetch(url).then(function(r){return r.json()}).then(function(d){
+      var all=[];if(d&&d.data){if(Array.isArray(d.data))all=d.data.slice();else for(var k in d.data)(d.data[k]||[]).forEach(function(x){all.push(x)})}
+      attemptCount=all.filter(function(x){return String(reportVal(x,['studentName','姓名','学生姓名','name']))===name&&sameLesson(reportVal(x,['lesson','课程','课程编号','lessonKey']))&&String(reportVal(x,['module','模块','mode'])).toLowerCase()==='homework_summary'}).length;
+    }).catch(function(){attemptCount=0}).then(function(){attemptCheckPending=false;setSubmitGate()});
+  }
+  var oldConfirmName=confirmName;
+  confirmName=function(){oldConfirmName();if(studentConfirmed)readAttemptCount()};
+  var oldSubmit=submitAllHomework;
+  submitAllHomework=function(){
+    if(attemptCheckPending){alert('正在检查提交次数，请稍候。');return}
+    if(attemptCount>=maxAttempts){alert('本课作业最多提交两次，已达到上限。');setSubmitGate();return}
+    submitted=false;oldSubmit.apply(this,arguments);
+    var n=0;(function watch(){if(submitted){attemptCount++;setSubmitGate();return}if(n++<100)setTimeout(watch,200)})();
+  };
+  window.refreshHomeworkAttemptCount=readAttemptCount;
+})();
+</script>
 </body>
 </html>
