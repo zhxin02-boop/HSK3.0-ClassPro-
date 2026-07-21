@@ -122,6 +122,38 @@ client.on("close",function(){setStatus("disconnected")});
     }
     previousRender();
   };
+  var previousPracticeRender=render;
+  render=function(){
+    previousPracticeRender();
+    if(!current||current.phase!=='published'||current.mode!=='v1')return;
+    var app=document.getElementById('app'),d=qdata(),ans='';
+    ans=current.answerKey||'';
+    if(!ans&&typeof d.correct_index==='number'&&d.options&&d.options[d.correct_index]!=null)ans=d.options[d.correct_index];
+    if(!ans)ans=current.question.correct_answer||'';
+    var note=document.createElement('div');
+    note.className='ok';
+    note.style.marginBottom='14px';
+    note.innerHTML='答题结束，答案：<b>'+es(ans)+'</b>';
+    app.insertBefore(note,app.firstChild);
+    app.querySelectorAll('button').forEach(function(btn){btn.disabled=true;btn.style.pointerEvents='none';btn.style.opacity='.72'});
+  };
+})();
+</script>
+<script>
+(function(){
+  var oldRender=render;
+  render=function(){
+    oldRender();
+    if(!current||current.phase!=='published'||current.mode==='v1'||current.mode==='pinyin')return;
+    var d=qdata(),ans=current.answerKey||'';
+    if(!ans&&typeof d.correct_index==='number'&&d.options)ans=d.options[d.correct_index]||'';
+    if(!ans&&current.mode==='v8')ans=(d.pairs||[]).map(function(p){return p.left+'：'+p.right}).join('；');
+    if(!ans)ans=current.question.correct_answer||'';
+    var app=document.getElementById('app'),note=document.createElement('div');
+    note.className='ok';note.style.marginBottom='14px';note.innerHTML='答题结束，答案：<b>'+es(ans)+'</b>';
+    app.insertBefore(note,app.firstChild);
+    app.querySelectorAll('button').forEach(function(btn){btn.disabled=true;btn.style.pointerEvents='none';btn.style.opacity='.72'});
+  };
 })();
 </script>
 </body>

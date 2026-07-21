@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chinese ClassPro+</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.3.0/mqtt.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.2.0/dist/hanzi-writer-lib.min.js"></script>
 <script src="../shared/students.js"></script>
 <script src="../shared/context.js"></script>
 <script src="./lesson-data-loader.js?v=20260719-images-4"></script>
@@ -622,6 +623,10 @@ font-size:30px!important;
 .sunny-home{right:auto;left:50%;top:0;transform:translateX(-50%);width:88px;height:126px;margin:0}
 }
 </style>
+<style>
+.hw-panel{max-width:1120px!important;width:100%;padding:24px!important}.hw-head h2{margin:0;color:var(--blue)}.hw-head h2 span,.hw-order-title span{font-size:13px;color:#8b96a3;font-weight:600;margin-left:6px}.hw-head>div>div{margin-top:6px;color:#74806d;font-size:13px}.hw-word-list{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0;padding:12px;background:#f8faf3;border-radius:16px}.hw-word{padding:9px 14px!important;border-radius:12px!important;background:#fff!important;color:var(--text)!important;border:1px solid var(--line)!important;font-size:20px!important}.hw-word.active{background:#edf6d9!important;color:#3f7f32!important;border-color:#83b936!important}.hw-current{border-top:1px solid var(--line);padding-top:18px}.hw-current-title{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}.hw-current-title b{font-size:32px;color:var(--text)}.hw-current-title span{color:#74806d}.hw-grids{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}.hw-char-box{width:190px;text-align:center}.hw-grid-char{height:170px;border:2px solid #c9dca3;border-radius:14px;background-color:#fffaf1;background-image:linear-gradient(90deg,transparent 49.5%,#e7cfae 49.5%,#e7cfae 50.5%,transparent 50.5%),linear-gradient(0deg,transparent 49.5%,#e7cfae 49.5%,#e7cfae 50.5%,transparent 50.5%),linear-gradient(45deg,transparent 49.6%,#f0dfc8 49.6%,#f0dfc8 50.4%,transparent 50.4%),linear-gradient(-45deg,transparent 49.6%,#f0dfc8 49.6%,#f0dfc8 50.4%,transparent 50.4%);display:flex;align-items:center;justify-content:center;font-family:KaiTi,STKaiti,serif;font-size:128px;color:#203421}.hw-char-label{margin-top:6px;color:#74806d;font-weight:800}.hw-order-title{margin:24px 0 10px;font-weight:900;color:var(--blue)}.hw-strokes{background:#f8faf3;border:1px solid var(--line);border-radius:16px;padding:14px;overflow:auto}.hw-stroke-char{margin-bottom:14px}.hw-stroke-char:last-child{margin-bottom:0}.hw-stroke-char-title{font-weight:900;color:#3f7f32;margin-bottom:8px}.hw-step-row{display:flex;gap:8px;align-items:flex-start;min-width:max-content}.hw-step-svg{width:76px;height:76px;background:#fffaf1;border:1px solid #dfeac8;border-radius:9px}.hw-grid-line{fill:none;stroke:#ead9bf;stroke-width:8;stroke-dasharray:22 16}.hw-next{fill:#cbd5c0}.hw-done{fill:#315b29}.hw-current-stroke{fill:#e85a47}.hw-loading{padding:18px;text-align:center;color:#74806d}@media(max-width:700px){.hw-panel{padding:16px!important}.hw-char-box{width:150px}.hw-grid-char{height:140px;font-size:105px}}
+</style>
+<style>.hw-grid-char{color:#9aa3a0}</style>
 </head>
 <body>
 <div id="app"></div>
@@ -969,9 +974,19 @@ ap._sendSessionSummary=function(reason){
   }catch(e){console.log('session summary sync',e)}
 };
 ap.qws=function(){this.qcorrect={};baseQws()};
-ap.qwr=function(){this.qcorrect={};baseQwr()};
+ ap.qwr=function(){
+   this.qcorrect={};
+   if(this.mt==='practice'&&this.st==='v1'&&this.qp==='published'){
+     var total=(Q.v1_image_guess||[]).length;
+     if(this.v1i<total-1){
+       this.v1i+=1;this.v1a=false;this.v1p=-1;this.qp='idle';this.qt=this.qtm;this.qsub={};
+       this.lastQuestionPayload=null;this.currentQuestionId=null;this.qws();return;
+     }
+   }
+   baseQwr();
+ };
 ap.qwl=function(){baseQwl()};
-ap.qwe=function(){baseQwe();this._saveClassData();this._pubBoard();this._sendSessionSummary('question_end')};
+ap.qwe=function(){if(this.mt==='practice'&&this.st==='v1'){var cq=this._cq2&&this._cq2(),cd=cq&&cq.data||{};this.v1p=typeof cd.correct_index==='number'?cd.correct_index:0;this.v1a=true}baseQwe();if(this.mt==='practice'&&this.st==='v1'&&this.lastQuestionPayload){var q=this.lastQuestionPayload.question||{},d=q.data||{};this.lastQuestionPayload.phase='published';this.lastQuestionPayload.answerKey=q.correct_answer||(typeof d.correct_index==='number'&&d.options?d.options[d.correct_index]:'');this.lastQuestionPayload.publishedAt=new Date().toISOString();if(this.mq&&this.cs==='connected')this.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(this.lastQuestionPayload))}this._saveClassData();this._pubBoard();this._sendSessionSummary('question_end')};
 ap._ha=function(m){
   var n=this._rn(m.name||m.studentName||"unknown"),tx=m.text||m.answer||"",res=m.autoResult||null,now=new Date();
   var q=this._cq2?this._cq2():null,rank=0,sb=0,base=0,totalPts=0;
@@ -1098,12 +1113,16 @@ ap.init();
   ap._cq2=function(){return this.st==='pyz'?this._pinyinCurrentQuestion():baseCq2.call(this)};
   var basePubq=ap._pubq;
   ap._pubq=function(){if(this.st==='pyz')this.pyzSentQuestion=this._pinyinCurrentQuestion();basePubq.call(this)};
+  var baseQws=ap.qws;
+  ap.qws=function(){if(this.st==='pyz'){this._pubPinyinQuestion();return}baseQws.call(this)};
   var baseQw=ap._qw;
   ap._qw=function(){if(this.st!=='pyz')return baseQw.call(this);var old=this.st;this.st='v1';var h=baseQw.call(this);this.st=old;return h};
   var baseQwr=ap.qwr;
   ap.qwr=function(){if(this.st==='pyz'){this.pyzQuestionIndex=(this.pyzQuestionIndex||0)+1;this.pyzSentQuestion=null;this.pyzCurrentQuestion=null}baseQwr.call(this)};
-  var baseR5=ap._r;
-  ap._r=function(){baseR5.call(this);if(this.st==='pyz'){var send=document.getElementById('pinyinSendBox');if(send)send.remove()}};
+   // Keep the pinyin send box mounted while the practice panel re-renders.
+   // Removing it here made the teacher unable to publish the current pinyin question.
+   var baseR5=ap._r;
+   ap._r=function(){baseR5.call(this)};
 })();
 </script>
 <style>
@@ -1155,6 +1174,206 @@ ap.init();
       if(ap._r)ap._r();
     },0);
   });
+})();
+</script>
+<style>
+.vocab-stage-panel{display:grid!important;grid-template-columns:minmax(190px,240px) minmax(0,1fr);gap:20px;max-width:1280px!important;align-items:start}
+.vocab-stage-panel>.vocab-stage-head{grid-column:1/-1}
+.vocab-stage-panel>.vocab-stage-list{grid-column:1;grid-row:2 / span 2;display:grid!important;grid-template-columns:1fr!important;gap:10px!important;position:sticky;top:140px;max-height:calc(100vh - 170px);overflow:auto;margin:0!important;padding-right:4px}
+.vocab-stage-panel>.vocab-stage-detail{grid-column:2;grid-row:2;min-width:0}
+.vocab-stage-panel>.vocab-stage-phrases{grid-column:2;grid-row:3}
+@media(max-width:820px){.vocab-stage-panel{display:block!important;max-width:none!important}.vocab-stage-panel>.vocab-stage-list{position:static;max-height:none;display:grid!important;grid-template-columns:repeat(auto-fit,minmax(112px,1fr))!important;margin-bottom:20px!important}.vocab-stage-panel>.vocab-stage-detail,.vocab-stage-panel>.vocab-stage-phrases{margin-top:20px}}
+</style>
+<script>
+(function(){
+  var baseVocabRender=ap._r;
+  var vocabListScrollTop=0;
+  function markVocabLayout(){
+    if(ap.mt!=='teach'||ap.st!=='tv'||!ap.tvOpen)return;
+    var panel=document.querySelector('.panel-area>.panel');
+    if(!panel)return;
+    panel.classList.add('vocab-stage-panel');
+    var kids=panel.children;
+    if(kids[0])kids[0].classList.add('vocab-stage-head');
+    if(kids[1])kids[1].classList.add('vocab-stage-list');
+    if(kids[2])kids[2].classList.add('vocab-stage-detail');
+    if(kids[3])kids[3].classList.add('vocab-stage-phrases');
+  }
+  ap._r=function(){
+    var oldList=document.querySelector('.vocab-stage-list');
+    if(oldList)vocabListScrollTop=oldList.scrollTop;
+    baseVocabRender.call(this);
+    markVocabLayout();
+    var newList=document.querySelector('.vocab-stage-list');
+    if(newList)newList.scrollTop=vocabListScrollTop;
+  };
+})();
+</script>
+<style>
+.practice-fixed-controls .qw-bar{display:none!important}
+.practice-fixed-controls .qw-bar>div:last-child{display:flex!important;flex-direction:column;align-items:stretch;gap:8px}
+.practice-fixed-controls .qw-bar select,.practice-fixed-controls .qw-bar .qw-btn{width:100%}
+.practice-fixed-controls .main-content{padding-left:330px!important;padding-right:330px!important;justify-content:center}
+.practice-fixed-controls .panel-area{max-width:760px!important;margin:0 auto}
+.practice-fixed-controls .live-panel{position:fixed;right:20px;top:145px;width:280px;min-width:280px;height:calc(100vh - 175px);z-index:60}
+.practice-fixed-controls .cp-sidebar{width:72px;align-items:center}
+.practice-rail{position:absolute;top:245px;left:8px;right:8px;display:flex;flex-direction:column;gap:7px;padding:8px 0;color:#334155}
+.practice-rail-title{display:none}
+.practice-rail-action{width:56px;padding:8px 2px;border:0;border-radius:10px;background:linear-gradient(135deg,#46b9d8,#2563d8);color:#fff;font-size:12px;font-weight:900;cursor:pointer}
+.practice-rail-action.announce{background:linear-gradient(135deg,#ff8b66,#f05a3f)}
+.practice-rail-action.next{background:linear-gradient(135deg,#78b832,#4f8f2d)}
+.practice-rail-done{padding:8px 2px;border-radius:10px;background:rgba(255,255,255,.12);font-size:11px;text-align:center;color:#d7f5df}
+.practice-rail-label{font-size:11px;color:#64748b;font-weight:800;margin-top:4px;text-align:center}
+.practice-rail-status{max-height:calc(100vh - 455px);overflow:auto;padding-right:2px}
+.practice-status-panel{position:fixed;left:88px;top:145px;width:280px;height:calc(100vh - 175px);z-index:60;background:rgba(255,255,255,.95);border:1px solid #dfeac8;border-radius:20px;box-shadow:0 12px 30px rgba(70,100,40,.10);overflow:hidden}
+.practice-status-head{padding:14px 16px;border-bottom:1px solid #e5eadb;color:#4c7f31;font-weight:900;font-size:16px}
+.practice-status-body{height:calc(100% - 51px);overflow:auto;padding:10px 12px}
+.practice-student{display:flex;align-items:flex-start;gap:5px;padding:7px 6px;color:#64748b;background:#f3f4f6;font-size:12px;line-height:1.2;word-break:break-word;border-bottom:1px solid #e5e7eb;border-radius:8px;margin-bottom:5px}
+.practice-student.done{color:#166534;background:#dcfce7;border:1px solid #86efac}
+.practice-student span{flex:0 0 14px;text-align:center}.practice-student b{font-weight:700;min-width:0;flex:1}.practice-student small{flex:0 0 30px;font-size:10px;text-align:right;color:inherit}
+@media(max-width:1100px){.practice-fixed-controls .main-content{padding-left:18px!important;padding-right:12px!important}.practice-fixed-controls .live-panel{position:static;width:100%;min-width:0;height:auto}.practice-rail{position:static;margin:8px 4px 10px}.practice-status-panel{position:static;width:auto;height:280px;margin:10px 12px;order:3}}
+</style>
+<script>
+(function(){
+  var basePracticeRender=ap._r;
+  var basePracticeQws=ap.qws;
+  function practiceRailMarkup(state){
+    var total=(Q.v1_image_guess||[]).length,h='<div class="practice-rail">';
+    if(state.qp==='idle')h+='<button class="practice-rail-action" onclick="ap.qws()">答</button>';
+    else if(state.qp==='answering')h+='<button class="practice-rail-action announce" onclick="ap.qwe()">Key</button>';
+    else if(state.v1i<total-1)h+='<button class="practice-rail-action next" onclick="ap.qwr()">下一题</button>';
+    else h+='<div class="practice-rail-done">本组完成</div>';
+    return h+'</div>';
+  }
+  function practiceStatusMarkup(state){
+    var h='<div class="practice-status-panel"><div class="practice-status-head">答题完成情况</div><div class="practice-status-body">';
+    for(var i=0;i<state.as.length;i++){var n=state.as[i],done=Object.keys(state.qsub||{}).some(function(k){return state._rn(k)===n});h+='<div class="practice-student '+(done?'done':'')+'"><span>'+(done?'✓':'·')+'</span><b>'+es(n)+'</b><small>'+(done?'已答':'未答')+'</small></div>'}
+    return h+'</div></div>';
+  }
+  function syncPracticeRail(state){
+    var sidebar=document.querySelector('.cp-sidebar');
+    if(!sidebar)return;
+    var old=document.querySelector('.practice-rail');
+    if(old)old.remove();
+    var oldStatus=document.querySelector('.practice-status-panel');
+    if(oldStatus)oldStatus.remove();
+    if(state.mt!=='practice'||state.st!=='v1')return;
+    var holder=document.createElement('div');holder.innerHTML=practiceRailMarkup(state);
+    var rail=holder.firstChild,spacer=sidebar.querySelector('.sb-spacer');
+    if(rail)sidebar.insertBefore(rail,spacer||null);
+    var statusHolder=document.createElement('div');statusHolder.innerHTML=practiceStatusMarkup(state);
+    if(statusHolder.firstChild)document.body.appendChild(statusHolder.firstChild);
+  }
+  ap.qws=function(){
+    if(this.mt==='practice'&&this.st==='v1'){
+      clearInterval(this.qtint);this.qp='answering';this.qt=0;this.qsub={};this._pubq();this._r();return;
+    }
+    basePracticeQws.call(this);
+  };
+  ap._r=function(){
+    basePracticeRender.call(this);
+    document.body.classList.toggle('practice-fixed-controls',this.mt==='practice');
+    syncPracticeRail(this);
+  };
+})();
+</script>
+<script>
+(function(){
+  var basePk=ap._pk;
+  ap._st=function(){
+    var count=Math.max(2,Math.min(4,parseInt(this.pktc,10)||3));
+    var names=sh([].concat(this.pkat||[])),groups=[];
+    for(var i=0;i<count;i++)groups.push([]);
+    for(var j=0;j<names.length;j++)groups[j%count].push(names[j]);
+    this.pkt=groups;this.pks=new Array(count).fill(0);this._r();
+  };
+  ap._pk=function(){
+    var h=basePk.call(this);
+    if(this.pkp!=='setup'&&this.pkp!=='play')return h;
+    h=h.replace(/background:undefined/g,'background:#8B5CF6').replace(/color:undefined/g,'color:#8B5CF6');
+    if(this.pkp==='setup'){
+      h=h.replace('<option value="2">2队</option>','<option value="2"'+(this.pktc===2?' selected':'')+'>2队</option>');
+      h=h.replace('<option value="3" selected>3队</option>','<option value="3"'+(this.pktc===3?' selected':'')+'>3队</option>');
+      h=h.replace('<option value="4">4队</option>','<option value="4"'+(this.pktc===4?' selected':'')+'>4队</option>');
+    }
+    return h;
+  };
+})();
+</script>
+<style>
+.unified-answer-controls .qw-bar{display:none!important}
+.unified-answer-controls .main-content{padding-left:330px!important;padding-right:330px!important;justify-content:center}
+.unified-answer-controls .live-panel{position:fixed;right:20px;top:145px;width:280px;min-width:280px;height:calc(100vh - 175px);z-index:60}
+.practice-key-answer{margin:14px auto 0;max-width:760px;padding:12px 16px;border:2px solid #86efac;border-radius:12px;background:#dcfce7;color:#166534;text-align:center;font-size:17px;font-weight:900}
+</style>
+<script>
+(function(){
+  var modes=['v1','v4','v5','v7','v8','g1','w1','ttq'];
+  function active(s){return modes.indexOf(s)>=0}
+  function countFor(s){if(s==='v1')return(Q.v1_image_guess||[]).length;if(s==='v4')return(Q.v4_complete_sentence||[]).length;if(s==='v5')return(Q.v5_vocab_fill||[]).length;if(s==='v7')return(Q.v7_word_match||[]).length;if(s==='v8')return(Q.v8_memory_match||[]).length;if(s==='g1')return(Q.g1_ordering||[]).length;if(s==='w1')return 2;if(s==='ttq')return(Q.r2_passage_choice||Q.tt_text_true_false||[]).length;return 0}
+  function indexFor(t){if(t.st==='v1')return t.v1i;if(t.st==='v4')return t.v4i;if(t.st==='v5')return t.v5i;if(t.st==='v7')return t.v7i;if(t.st==='v8')return t.v8i;if(t.st==='g1')return t.g1i;if(t.st==='w1')return t.w1i;return t.ttqi}
+  function advance(t){if(t.st==='v7'){var item=(Q.v7_word_match||[])[t.v7i],ss=item&&item.data&&item.data.sentences||[];if(t.v7si<ss.length-1){t.v7si++;return}t.v7i++;t.v7si=0;return}if(t.st==='v1')t.v1i++;if(t.st==='v4')t.v4i++;if(t.st==='v5')t.v5i++;if(t.st==='v8')t.v8i++;if(t.st==='g1')t.g1i++;if(t.st==='w1')t.w1i++;if(t.st==='ttq')t.ttqi++}
+  function resetAnswer(t){t.v1a=false;t.v1p=-1;t.v4a=false;t.v4p=-1;t.v5a=false;t.v5p=-1;t.v7a=false;t.v7p=-1;t.v8L=-1;t.v8R=-1;t.v8m={};t.g1a=[];t.g1s=[];t.g1sa=false;t.w1a=false;t.w1p=-1;t.ttqa=false;t.ttqp=-1}
+  function keyFor(t){var q=t._cq2&&t._cq2(),d=q&&q.data||{};if(t.st==='v8')return(d.pairs||[]).map(function(p){return p.left+'：'+p.right}).join('；');if(t.st==='ttq')return q&&((q.correct_answer!=null?q.correct_answer:'')||((d.answer===true||d.answer===false)?(d.answer?'对':'不对'):''))||'';if(typeof d.correct_index==='number'&&d.options)return d.options[d.correct_index]||'';return q&&q.correct_answer||''}
+  function rail(state){var total=countFor(state.st),idx=indexFor(state),h='<div class="practice-rail">';if(state.qp==='idle')h+='<button class="practice-rail-action" onclick="ap.qws()">答</button>';else if(state.qp==='answering')h+='<button class="practice-rail-action announce" onclick="ap.qwe()">Key</button>';else if(idx<total-1)h+='<button class="practice-rail-action next" onclick="ap.qwr()">下一题</button>';else h+='<div class="practice-rail-done">本组完成</div>';return h+'</div>'}
+  function status(state){var h='<div class="practice-status-panel"><div class="practice-status-head">答题完成情况</div><div class="practice-status-body">';(state.as||[]).forEach(function(n){var done=Object.keys(state.qsub||{}).some(function(k){return state._rn(k)===n});h+='<div class="practice-student '+(done?'done':'')+'"><span>'+(done?'✓':'·')+'</span><b>'+es(n)+'</b><small>'+(done?'已答':'未答')+'</small></div>'});return h+'</div></div>'}
+  var oldStart=ap.qws,oldEnd=ap.qwe,oldNext=ap.qwr,oldRender=ap._r;
+  ap.qws=function(){if(this.mt==='practice'&&active(this.st)||this.st==='ttq'){clearInterval(this.qtint);this.qcorrect={};this.qp='answering';this.qt=0;this.qsub={};this._pubq();this._r();return}oldStart.call(this)};
+  ap.qwe=function(){if((this.mt==='practice'&&active(this.st))||this.st==='ttq'){var d=this._cq2&&this._cq2(),data=d&&d.data||{},map={v1:'v1',v4:'v4',v5:'v5',v7:'v7',w1:'w1',ttq:'ttq'},key=map[this.st];if(key&&typeof data.correct_index==='number'){this[key+'p']=data.correct_index;this[key+'a']=true}oldEnd.call(this);if(this.lastQuestionPayload){this.lastQuestionPayload.phase='published';this.lastQuestionPayload.answerKey=keyFor(this);if(this.mq&&this.cs==='connected')this.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(this.lastQuestionPayload))}this._r();return}oldEnd.call(this)};
+  ap.qwr=function(){if((this.mt==='practice'&&active(this.st))||this.st==='ttq'){if(this.qp==='published'&&indexFor(this)<countFor(this)-1){advance(this);resetAnswer(this);this.qp='idle';this.qsub={};this.lastQuestionPayload=null;this.currentQuestionId=null;this.qws();return}oldNext.call(this);return}oldNext.call(this)};
+  ap._r=function(){oldRender.call(this);var on=(this.mt==='practice'&&active(this.st))||this.st==='ttq';document.body.classList.toggle('unified-answer-controls',on);if(!on)return;var side=document.querySelector('.cp-sidebar'),oldRail=document.querySelector('.practice-rail'),oldStatus=document.querySelector('.practice-status-panel');if(oldRail)oldRail.remove();if(oldStatus)oldStatus.remove();if(side){var x=document.createElement('div');x.innerHTML=rail(this);side.insertBefore(x.firstChild,side.querySelector('.sb-spacer')||null)}var y=document.createElement('div');y.innerHTML=status(this);if(y.firstChild)document.body.appendChild(y.firstChild);var panel=document.querySelector('.panel-area>.panel'),oldKey=document.querySelector('.practice-key-answer');if(oldKey)oldKey.remove();if(this.qp==='published'&&panel){var b=document.createElement('div');b.className='practice-key-answer';b.textContent='答案：'+keyFor(this);panel.appendChild(b)}};
+})();
+</script>
+<script>
+(function(){
+  var oldVocabRender=ap._r;
+  ap._r=function(){
+    oldVocabRender.call(this);
+    if(this.mt==='teach'&&this.st==='tv'){
+      document.querySelectorAll('.panel-area img').forEach(function(img){
+        var src=img.getAttribute('src')||'';
+        if(/l02_pic_.*\.svg$/i.test(src))img.src=src.replace(/\.svg$/i,'.png');
+      });
+    }
+  };
+})();
+</script>
+<script>
+/* L02 static hanzi writing demonstration: data-driven, teacher-side only. */
+(function(){
+  if(!window.LESSON_DATA||window.LESSON_DATA.meta.lessonKey!=="HSK1-L02"||!window.LESSON_DATA.meta.showHanziWritingDemo)return;
+  ap.hwIndex=0;
+  var oldSnav=ap._snav,oldCnt=ap._cnt;
+  ap._snav=function(){
+    var h=oldSnav.call(this);
+    if(this.mt!=="teach")return h;
+    return h.replace("</div>",'<button class="sub-btn'+(this.st==="hw"?" active":"")+'" onclick="ap.st=\'hw\';ap.hwIndex=0;ap._r()">汉字<br><small>Writing</small></button></div>');
+  };
+  ap._cnt=function(){if(this.mt==="teach"&&this.st==="hw")return this._hw();return oldCnt.call(this)};
+  ap._hw=function(){
+    var v=V||[],idx=Math.max(0,Math.min(this.hwIndex||0,v.length-1)),w=v[idx]||{};
+    var h='<div class="panel hw-panel"><div class="hw-head"><div><h2>汉字书写示范 <span>Character Writing</span></h2><div>选择本课生词，先看田字格，再看下方静态笔顺示范。</div></div></div>';
+    h+='<div class="hw-word-list">';for(var i=0;i<v.length;i++)h+='<button class="hw-word '+(i===idx?'active':'')+'" onclick="ap.hwIndex='+i+';ap._r()">'+es(v[i].hanzi)+'</button>';h+='</div>';
+    h+='<div class="hw-current"><div class="hw-current-title"><b>'+es(w.hanzi||"")+'</b><span>'+es(w.pinyin||"")+'</span><span>'+es(w.english||"")+'</span></div><div class="hw-grids" id="hwGrids" data-word="'+es(w.hanzi||"")+'">';
+    var chars=Array.from(w.hanzi||"");for(var j=0;j<chars.length;j++)h+='<div class="hw-char-box"><div class="hw-grid-char">'+es(chars[j])+'</div><div class="hw-char-label">'+es(chars[j])+'</div></div>';
+    h+='</div><div class="hw-order-title">笔顺示范 <span>Static stroke order</span></div><div class="hw-strokes" id="hwStrokes" data-word="'+es(w.hanzi||"")+'"><div class="hw-loading">正在加载笔顺示范…</div></div></div></div>';
+    var word=w.hanzi||"";setTimeout(function(){ap._loadHw(word)},0);return h;
+  };
+  function gridSvg(paths,step){
+    var s='<svg class="hw-step-svg" viewBox="0 0 1024 1024" aria-label="stroke '+(step+1)+'"><path class="hw-grid-line" d="M512 0V1024M0 512H1024M0 0L1024 1024M1024 0L0 1024"/>';
+    for(var i=0;i<paths.length;i++)s+='<path d="'+paths[i]+'" class="'+(i<step?'hw-done':i===step?'hw-current-stroke':'hw-next')+'"/>';
+    return s+'</svg>';
+  }
+  ap._loadHw=function(word){
+    var host=document.getElementById("hwStrokes"),grid=document.getElementById("hwGrids");if(!host||!grid||host.dataset.word!==word)return;
+    if(!window.HanziWriter||!HanziWriter.loadCharacterData){host.innerHTML='<div class="hw-loading">笔顺数据暂不可用，请检查网络后刷新。</div>';return}
+    var chars=Array.from(word),jobs=chars.map(function(ch){return HanziWriter.loadCharacterData(ch)});
+    Promise.all(jobs).then(function(datas){
+      if(!document.getElementById("hwStrokes")||document.getElementById("hwStrokes").dataset.word!==word)return;
+      host.innerHTML='';
+      datas.forEach(function(data,ci){var paths=data&&data.strokes||[],box=document.createElement('div');box.className='hw-stroke-char';box.innerHTML='<div class="hw-stroke-char-title">'+es(chars[ci])+' · '+paths.length+'笔</div><div class="hw-step-row">'+paths.map(function(_,i){return gridSvg(paths,i)}).join('')+'</div>';host.appendChild(box)})
+    }).catch(function(){host.innerHTML='<div class="hw-loading">笔顺数据加载失败，请刷新页面重试。</div>'})
+  };
 })();
 </script>
 </body>
