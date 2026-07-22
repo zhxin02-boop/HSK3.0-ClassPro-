@@ -27,6 +27,7 @@ D.readingData=[
 <script src="../../vue.global.prod.js"></script>
 <script src="../shared/students.js"></script>
 <script src="../shared/context.js"></script>
+<script src="../data-model/course-data-adapter.js"></script>
 <script src="./lesson-data-loader.js"></script>
 <style>
 .product-nav{position:sticky;top:0;z-index:10;display:flex;gap:4px;align-items:center;flex-wrap:nowrap;overflow-x:auto;padding:8px 10px;margin:-20px -20px 16px;background:rgba(255,255,255,.94);border-bottom:1px solid #e8e1dc;white-space:nowrap}.product-nav a{padding:6px 8px;border-radius:999px;text-decoration:none;color:#777;font-size:11px;font-weight:800;white-space:nowrap;flex:0 0 auto}.product-nav a.active,.product-nav a:hover{background:#fff0ee;color:#c0392b}.product-nav .brand{font-weight:900;color:#c0392b;margin-right:0}
@@ -141,12 +142,12 @@ body{font-family:KaiTi,STKaiti,"楷体",serif}
   </div>
 </div>
 <div v-if="p>0 && !showReview" class="card">
-  <p class="step-title"><b>Step {{mi+1}}/6</b> <span>{{(stepTitles[mi]||stepTitles[0]).cn}}</span> / <span class="english-font">{{(stepTitles[mi]||stepTitles[0]).en}}</span></p>
+  <p v-if="mi<6" class="step-title"><b>Step {{mi+1}}/6</b> <span>{{(stepTitles[mi]||stepTitles[0]).cn}}</span> / <span class="english-font">{{(stepTitles[mi]||stepTitles[0]).en}}</span></p>
   <div v-if="mi===0" class="module-step" data-step="0">
-    <p class="sub">这一课学完，你可以用中文问候别人、介绍自己。</p>
-    <p class="pre-question">你第一次见到老师时，最合适的表达是什么？<br><small class="english-font">What would you say when you meet your teacher for the first time?</small></p>
+    <p class="sub">{{r0Warmup.intro}}</p>
+    <p class="pre-question">{{r0Warmup.question}}<br><small class="english-font">{{r0Warmup.questionEn}}</small></p>
     <div class="choice-grid"><button v-for="x in r0Options" class="choice" :class="{selected:r0Choice===x.word}" @click="r0Choice=x.word"><small class="pinyin-font">{{x.pinyin}}</small><b>{{x.word}}</b></button></div>
-    <p class="pre-question">下面哪些表达你已经听过？<br><small class="english-font">Which expressions have you heard before?</small></p>
+    <p class="pre-question">{{r0Warmup.knownQuestion}}<br><small class="english-font">{{r0Warmup.knownQuestionEn}}</small></p>
     <div class="choice-grid"><button v-for="x in r0KnownOptions" class="choice" :class="{selected:r0Known.indexOf(x.word)>=0}" @click="toggleKnown(x.word)"><small class="pinyin-font">{{x.pinyin}}</small><b>{{x.word}}</b></button></div>
   </div>
   <div v-if="mi===1" class="module-step" data-step="1">
@@ -183,7 +184,7 @@ var p=ref(0);var mi=ref(0);var w=ref("");var wd=ref(false);var r0Choice=ref("");
 var showReview=ref(false);var showReport=ref(false);var reviewName=ref("");var reviews=ref([]);var loading=ref(false);var reviewFetched=ref(false);var classStudents=window.CLASS_STUDENTS||[];
 var mods=["R0 话题预热","R1 词卡学习","R2 跟读练习","R1 生词闯关","R5 汉字书写","R6 预习小测"];var stepTitles=[{cn:"话题预热",en:"Topic Warm-up"},{cn:"词卡学习",en:"Word Cards"},{cn:"跟读练习",en:"Read Aloud"},{cn:"生词闯关",en:"Vocabulary Match"},{cn:"汉字书写",en:"Character Writing"},{cn:"预习小测",en:"Quick Check"}];
 var chars=computed(function(){var r=[];var u={};(D.vocabData||[]).forEach(function(v){v.word.split("").forEach(function(ch){if(!u[ch]){u[ch]=1;r.push({h:ch,p:v.pinyin})}})});return r.slice(0,10)});
-var r0Options=[{word:"你好！",pinyin:"nǐ hǎo"},{word:"老师，您好！",pinyin:"lǎoshī, nín hǎo"},{word:"再见！",pinyin:"zàijiàn"}];var r0KnownOptions=(D.vocabData||[]).slice(0,6);
+var r0Default={intro:"这一课学完，你可以用中文问候别人、介绍自己。",question:"你第一次见到老师时，最合适的表达是什么？",questionEn:"What would you say when you meet your teacher for the first time?",knownQuestion:"下面哪些表达你已经听过？",knownQuestionEn:"Which expressions have you heard before?",options:[{word:"你好！",pinyin:"nǐ hǎo"},{word:"老师，您好！",pinyin:"lǎoshī, nín hǎo"},{word:"再见！",pinyin:"zàijiàn"}]};var r0Warmup=Object.assign({},r0Default,((D.preClass||{}).warmup||{}));var r0Options=(Array.isArray(r0Warmup.options)&&r0Warmup.options.length)?r0Warmup.options:r0Default.options;var r0KnownOptions=(D.vocabData||[]).slice(0,6);
 var masteredCards=ref({});var masteredCount=computed(function(){return Object.keys(masteredCards.value).length});var cardWord=computed(function(){return D.vocabData[cardIndex.value%D.vocabData.length]||{word:"",pinyin:"",english:""}});function revealCard(){cardRevealed.value=true}function masterCard(){masteredCards.value[cardWord.value.word]=true;cardMastered.value=true;cardRevealed.value=true;cardOffset.value=0;if(cardIndex.value<D.vocabData.length-1){setTimeout(function(){cardIndex.value++;cardRevealed.value=false;cardMastered.value=false},300)}}function cardPrev(){cardIndex.value=(cardIndex.value-1+D.vocabData.length)%D.vocabData.length;cardRevealed.value=false;cardMastered.value=!!masteredCards.value[cardWord.value.word];cardOffset.value=0}function cardNext(){cardIndex.value=(cardIndex.value+1)%D.vocabData.length;cardRevealed.value=false;cardMastered.value=!!masteredCards.value[cardWord.value.word];cardOffset.value=0}function cardClick(e){if(!cardWasSwipe&&e.pointerType==='mouse')revealCard();cardWasSwipe=false}
 function cardTouchStart(e){cardTouchX=e.clientX||0;cardDragging.value=true;cardWasSwipe=false;cardOffset.value=0}function cardTouchMove(e){if(!cardDragging.value)return;var dx=(e.clientX||0)-cardTouchX;if(Math.abs(dx)>5)cardWasSwipe=true;cardOffset.value=Math.max(-170,Math.min(170,dx))}function cardTouchEnd(e){if(!cardDragging.value)return;cardDragging.value=false;var dx=cardOffset.value;if(Math.abs(dx)>55){cardOffset.value=dx<0?-360:360;setTimeout(function(){cardOffset.value=0;if(dx<0)revealCard();else masterCard()},260)}else{cardOffset.value=0}}
 var readSentences=computed(function(){var a=[];(D.readingData||[]).forEach(function(t){(t.dialogue||[]).forEach(function(x){if(x.chinese&&a.length<6)a.push(x)})});return a});
@@ -208,10 +209,23 @@ if(d.status==='ok'){
 var dd=d.data
 if(Array.isArray(dd)){all=dd}else{for(var k in dd){dd[k].forEach(function(x){all.push(x)})}}
 }
- reviews.value=all.filter(function(x){var rowName=x.姓名||x.studentName||x.name||'';var rowLesson=x.课程||x.lesson||x.lessonKey||'';return String(rowName)===n&&(!rowLesson||String(rowLesson)===lessonKey)}).map(function(x){return{'姓名':x.姓名||x.studentName||x.name||n,'课程':x.课程||x.lesson||lessonKey,'模块':x.模块||x.module||'预习','提交时间':x.提交时间||x.submittedAt||x.timestamp||'', '学生作答':x.学生作答||x.answer||'', '题目说明':x.题目说明||x.questionText||'', '教师批改':x.教师批改||x.teacherFeedback||x.correction||'', '批改状态':x.批改状态||x.reviewStatus||x.status||((x.openEnded==='yes'||x.openEnded===true)?'待批改':'无需批改')}})
+all=all.map(function(x){
+  if(!x||!Array.isArray(x.__values))return x;
+  var v=x.__values,y=Object.assign({},x);
+  y['\u63d0\u4ea4\u65f6\u95f4']=y['\u63d0\u4ea4\u65f6\u95f4']||v[0]||'';
+  y['\u59d3\u540d']=y['\u59d3\u540d']||v[1]||'';
+  y['\u8bfe\u7a0b']=y['\u8bfe\u7a0b']||v[2]||'';
+  y['\u73af\u8282']=y['\u73af\u8282']||v[3]||'';
+  y['\u6a21\u5757']=y['\u6a21\u5757']||v[4]||'';
+  y['\u5b66\u751f\u4f5c\u7b54']=y['\u5b66\u751f\u4f5c\u7b54']||v[13]||'';
+  y['\u6559\u5e08\u6279\u6539']=y['\u6559\u5e08\u6279\u6539']||v[15]||'';
+  y['\u6279\u6539\u72b6\u6001']=y['\u6279\u6539\u72b6\u6001']||v[16]||'';
+  return y;
+});
+reviews.value=all.filter(function(x){var rowName=x.姓名||x.studentName||x.name||'';var rowLesson=x.课程||x.lesson||x.lessonKey||'';return String(rowName)===n&&(!rowLesson||String(rowLesson)===lessonKey)}).map(function(x){return{'姓名':x.姓名||x.studentName||x.name||n,'课程':x.课程||x.lesson||lessonKey,'模块':x.模块||x.module||'预习','提交时间':x.提交时间||x.submittedAt||x.timestamp||'', '学生作答':x.学生作答||x.answer||'', '题目说明':x.题目说明||x.questionText||'', '教师批改':x.教师批改||x.teacherFeedback||x.correction||'', '批改状态':x.批改状态||x.reviewStatus||x.status||((x.openEnded==='yes'||x.openEnded===true)?'待批改':'无需批改')}})
 loading.value=false;reviewFetched.value=true
 }).catch(function(){reviews.value=[];loading.value=false;reviewFetched.value=true})
 }
- return{D,p,mi,mods,stepTitles,w,wd,chars,next,speak,r0Options,r0Choice,r0Known,r0KnownOptions,toggleKnown,cardIndex,cardWord,cardRevealed,cardMastered,masteredCount,cardOffset,cardTouchStart,cardTouchMove,cardTouchEnd,cardClick,cardPrev,cardNext,revealCard,masterCard,readSentences,markRead,readDone,matchCards,matchedPairs,matchMessage,matchMessageType,pickMatch,resetMatch,writingChar,writingCanvas,writingSaved,selectWriting,startStroke,moveStroke,endStroke,clearCanvas,saveWriting,studentName,classStudents,startLearning,quizIndex,quizQuestion,quizAnswer,quizTextAnswer,subjectiveSubmitting,quizFinished,quizResults,quizScore,objectiveQuizCount,subjectiveQuizCount,completedSteps,selectQuizOption,submitSubjective,restartQuiz,showReview,showReport,reviewName,reviews,loading,reviewFetched,reviewedCount,formatDate,openReview,fetchReviews}
+ return{D,p,mi,mods,stepTitles,w,wd,chars,next,speak,r0Warmup,r0Options,r0Choice,r0Known,r0KnownOptions,toggleKnown,cardIndex,cardWord,cardRevealed,cardMastered,masteredCount,cardOffset,cardTouchStart,cardTouchMove,cardTouchEnd,cardClick,cardPrev,cardNext,revealCard,masterCard,readSentences,markRead,readDone,matchCards,matchedPairs,matchMessage,matchMessageType,pickMatch,resetMatch,writingChar,writingCanvas,writingSaved,selectWriting,startStroke,moveStroke,endStroke,clearCanvas,saveWriting,studentName,classStudents,startLearning,quizIndex,quizQuestion,quizAnswer,quizTextAnswer,subjectiveSubmitting,quizFinished,quizResults,quizScore,objectiveQuizCount,subjectiveQuizCount,completedSteps,selectQuizOption,submitSubjective,restartQuiz,showReview,showReport,reviewName,reviews,loading,reviewFetched,reviewedCount,formatDate,openReview,fetchReviews}
 }}).mount("#a")
 </script></body></html>

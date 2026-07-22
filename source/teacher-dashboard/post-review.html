@@ -22,8 +22,10 @@ textarea{width:100%;min-height:78px;border:1px solid #d8e4bf;border-radius:12px;
 .review-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}.review-summary>div{background:#edf6d9;border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center}.review-summary b{display:block;font-size:26px;color:#3f7f32}.review-summary span{font-size:12px;color:#526248}
 .batch-tools{display:flex;justify-content:flex-end;align-items:center;gap:10px;margin-top:14px;padding-top:12px;border-top:1px solid #f1d399}.batch-tools button{background:#2563eb}.batch-status{font-size:12px;color:#74806d}
 </style>
-<script src="../in-class/data_L02.js"></script>
 <script src="../shared/context.js"></script>
+<script>window.ClassProDefaultLesson='HSK1-L02';window.ClassProLegacyDataPath='../in-class/data_L02.js';</script>
+<script src="../data-model/course-data-adapter.js"></script>
+<script src="../in-class/lesson-data-loader.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -125,6 +127,20 @@ function needsReview(x){
   if(sk==="pre"&&(ml.indexOf("造句")>=0||ml.indexOf("开放")>=0||ml==="output"||ml==="handwriting"))return true;
   return m==="output"||m==="handwriting"||nr==="true"||nr==="yes"||st.indexOf("待")>=0;
 }
+// 课前主观题统一按 openEnded 标记进入批改队列，避免依赖课程模块名称。
+(function(){
+  var originalNeedsReview=needsReview;
+  needsReview=function(x){
+    var stage=stageKey(x);
+    var openEnded=String(val(x,["openEnded","open_ended","isOpenEnded"])||"").toLowerCase();
+    if(stage==="pre"&&(openEnded==="yes"||openEnded==="true")){
+      var status=String(val(x,["reviewStatus","status"])||"").toLowerCase();
+      var feedback=String(val(x,["teacherFeedback","correction"])||"").trim();
+      if(!feedback&&status!=="reviewed"&&status!=="已批改")return true;
+    }
+    return originalNeedsReview(x);
+  };
+})();
 function loadData(){
   document.getElementById("status").textContent="正在读取...";
   var local=location.hostname==='localhost'||location.hostname==='127.0.0.1';var dataUrl=local?"/api/reviews":GAS+"?action=get_all";
@@ -192,6 +208,17 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
   }
   var oldRender=render;
   render=function(){records=latestReviewRows(records);oldRender()};
+})();
+</script>
+<script>
+// 批改台字段兼容：反馈/状态等字段在部分 GAS 返回中只存在于 __values。
+(function(){
+  var oldFuzzy=fuzzy,idx={timestamp:0,提交时间:0,studentName:1,姓名:1,lesson:2,课程:2,stage:3,环节:3,module:4,模块:4,questionId:5,题号:5,score:6,得分:6,total:7,总分:7,answer:13,学生作答:13,result:14,结果:14,teacherFeedback:15,教师批改:15,status:16,批改状态:16};
+  fuzzy=function(o,keys,contains){
+    var v=oldFuzzy(o,keys,contains);if(v!==''&&v!=null)return v;
+    if(o&&Array.isArray(o.__values))for(var i=0;i<keys.length;i++){var n=idx[keys[i]];if(n!=null&&o.__values[n]!==''&&o.__values[n]!=null)return o.__values[n]}
+    return '';
+  };
 })();
 </script>
 </body>

@@ -146,5 +146,72 @@ function historyReports(){var blocks=window.HSK1_REPORT_BLOCKS||[{from:1,to:5,la
 function renderOverview(){var p=preStats(),i=inStats(),po=postStats();return cards([{n:p.students,l:'课前完成人数'},{n:p.acc+'%',l:'课前客观正确率'},{n:i.participants+'/'+i.students,l:'课中参与'},{n:i.acc+'%',l:'课中正确率'},{n:po.submitted,l:'课后提交人数'},{n:po.pending+p.pending,l:'待批改/查看'}])+currentPerformance()+studentAnalysisTable()+historyReports()+renderSuggestions()}
 loadLocal();render();
 </script>
+<script>
+// 统一 GAS 行读取：兼容字段名缺失但 __values 完整的历史/新记录。
+(function(){
+  var oldVal=val,idx={
+    timestamp:0,提交时间:0,receivedAt:0,submittedAt:0,
+    studentName:1,姓名:1,student:1,
+    lesson:2,课程:2,lessonKey:2,
+    stage:3,环节:3,模块:4,module:4,
+    questionId:5,题号:5,score:6,得分:6,total:7,总分:7,
+    points:8,积分:8,answer:13,学生作答:13,result:14,结果:14,
+    teacherFeedback:15,教师批改:15,status:16,批改状态:16
+  };
+  val=function(o,keys){
+    var v=oldVal(o,keys);if(v!==''&&v!=null)return v;
+    if(o&&Array.isArray(o.__values))for(var i=0;i<keys.length;i++){var n=idx[keys[i]];if(n!=null&&o.__values[n]!==''&&o.__values[n]!=null)return o.__values[n]}
+    return '';
+  };
+  function reviewUrl(){
+    var q=window.ClassProContext&&ClassProContext.query?ClassProContext.query({lesson:LESSON,room:ROOM,student:state.student||''}):('lesson='+encodeURIComponent(LESSON)+'&room='+encodeURIComponent(ROOM));
+    return 'post-review.html?'+q;
+  }
+  window.openReview=function(){location.href=reviewUrl()};
+  var oldLoadCloud=loadCloud;
+  loadCloud=function(){
+    var localHost=location.hostname==='localhost'||location.hostname==='127.0.0.1';
+    if(!localHost){oldLoadCloud();return}
+    document.getElementById('app').innerHTML='<div class="empty">正在读取本地测试记录...</div>';
+    fetch('/api/reviews').then(function(r){return r.json()}).then(function(d){
+      var rows=[];
+      if(d&&Array.isArray(d.data))rows=d.data.slice();
+      else if(d&&d.data)for(var k in d.data)(d.data[k]||[]).forEach(function(x){rows.push(x)});
+      state.cloudRows=rows;state.lastCloud=new Date().toLocaleString();
+      document.getElementById('status').textContent='本地测试记录已刷新：'+rows.length+' 条';render();
+    }).catch(function(){document.getElementById('status').textContent='本地记录读取失败';render()});
+  };
+  function postStudent(x){return String(dataVal(x,['studentName','name'],1)||'').trim()}
+  function postLesson(x){return String(dataVal(x,['lesson','lessonKey'],2)||'').trim()}
+  function postRoom(x){return String(dataVal(x,['room'],9)||'').trim()}
+  function postModule(x){return String(dataVal(x,['module','mode'],4)||'').trim()}
+  function postTime(x){return String(dataVal(x,['submittedAt','timestamp','receivedAt'],0)||'').trim()}
+  function latestPostAttempts(rows){
+    var latest={};
+    rows.forEach(function(x){
+      if(postModule(x)!=='homework_summary')return;
+      var key=[postStudent(x),postLesson(x),postRoom(x)].join('|'),old=latest[key];
+      if(!old||Date.parse(postTime(x))>=Date.parse(postTime(old)))latest[key]=x;
+    });
+    return rows.filter(function(x){
+      var latestRow=latest[[postStudent(x),postLesson(x),postRoom(x)].join('|')];
+      return !latestRow||postTime(x)===postTime(latestRow);
+    });
+  }
+  postRows=function(){return latestPostAttempts(scoped(cloud().post))};
+  allRows=function(){var c=splitRows(state.cloudRows);return c.pre.concat(c.mid).concat(latestPostAttempts(c.post))};
+  tablePostRows2=function(rows,title){
+    if(!rows.length)return'<div class="empty">\u6682\u65e0'+title+'\u3002</div>';
+    return'<div class="panel"><h2>'+title+'</h2><table><tr><th>\u65f6\u95f4</th><th>\u59d3\u540d</th><th>\u6a21\u5757</th><th>\u9898\u53f7</th><th>\u5f97\u5206</th><th>\u7ed3\u679c</th><th>\u4f5c\u7b54</th><th>\u64cd\u4f5c</th></tr>'+rows.slice(-160).reverse().map(function(x){var m=postModule(x),res=normResult(dataVal(x,['result','autoResult'],14)),op=(m==='output'||m==='handwriting')?'<button class="btn secondary" onclick="openReview()">\u6253\u5f00\u8bfe\u540e\u6279\u6539</button>':'';return'<tr><td>'+esc(postTime(x))+'</td><td>'+esc(postStudent(x))+'</td><td>'+esc(m)+'</td><td>'+esc(dataVal(x,['questionId'],5))+'</td><td>'+esc(dataVal(x,['score'],6))+'/'+esc(dataVal(x,['total'],7))+'</td><td><span class="pill '+(res==='correct'?'ok':res==='wrong'?'bad':'wait')+'">'+esc(res||'submitted')+'</span></td><td>'+esc(previewAnswer(dataVal(x,['answer'],13),m))+'</td><td>'+op+'</td></tr>'}).join('')+'</table></div>';
+  };
+  function patchReviewLinks(){
+    document.querySelectorAll('a[href="post-review.html"]').forEach(function(a){a.href=reviewUrl()});
+    document.querySelectorAll('button[onclick*="post-review.html"]').forEach(function(b){b.onclick=function(){openReview()}});
+  }
+  patchReviewLinks();
+  if(window.MutationObserver)new MutationObserver(patchReviewLinks).observe(document.body,{childList:true,subtree:true});
+  render();
+})();
+</script>
 </body>
 </html>

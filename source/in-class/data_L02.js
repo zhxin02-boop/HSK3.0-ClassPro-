@@ -1036,6 +1036,21 @@ if (window.LESSON_DATA) {
   };
 })();
 
+// L02 post-class supplementary homework: 12 balanced tasks per tier, about 15 minutes.
+(function () {
+  var hw = window.LESSON_DATA && window.LESSON_DATA.postClassHomework;
+  if (!hw) return;
+  hw.assignment_selection = {
+    A: ["hw_l02_s_001", "hw_l02_s_002", "hw_l02_s_003", "hw_l02_s_007", "hw_l02_s_009", "hw_l02_a_004", "hw_l02_a_005", "hw_l02_a_006", "hw_l02_a_007", "hw_l02_a_009", "hw_l02_a_011", "hw_l02_a_012"],
+    B: ["hw_l02_s_001", "hw_l02_s_002", "hw_l02_s_004", "hw_l02_s_007", "hw_l02_s_008", "hw_l02_b_001", "hw_l02_b_002", "hw_l02_b_003", "hw_l02_b_004", "hw_l02_b_007", "hw_l02_b_010", "hw_l02_b_011"],
+    C: ["hw_l02_s_001", "hw_l02_s_002", "hw_l02_s_003", "hw_l02_s_007", "hw_l02_s_008", "hw_l02_c_001", "hw_l02_c_002", "hw_l02_c_003", "hw_l02_c_004", "hw_l02_c_005", "hw_l02_c_007", "hw_l02_c_009"]
+  };
+  Object.keys(hw.tiers || {}).forEach(function (tier) {
+    hw.tiers[tier].suggested_minutes = "15\u5206\u949f\u5de6\u53f3";
+    hw.tiers[tier].suggested_mix = "12\u9898\u8865\u5145\u5de9\u56fa\uff1a\u5ba2\u89c2\u7ec3\u4e60 + 1\u9898\u8f93\u51fa + 1\u9898\u6c49\u5b57\u4e66\u5199";
+  });
+})();
+
 // D-3 refinement pass: fixes reviewed question wording, image assets, pinyin,
 // and multi-answer checks raised during teacher-side inspection.
 (function () {

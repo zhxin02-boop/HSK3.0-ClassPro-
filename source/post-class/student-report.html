@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>课后作业 / Homework</title>
 <script src="../shared/context.js"></script>
+<script src="../data-model/course-data-adapter.js"></script>
 <script src="./lesson-data-loader.js"></script>
 <script src="../shared/storage.js"></script>
 <script src="../shared/students.js"></script>
@@ -112,7 +113,7 @@ function parseMaybeJson(s){try{return JSON.parse(s||"")}catch(e){return null}}
 function renderStudentOptions(){var el=document.getElementById("studentName"),saved="";try{saved=localStorage.getItem("ClassProStudentName")||""}catch(e){}el.innerHTML='<option value="">Select your name / 选择姓名</option>'+(window.CLASS_STUDENTS||[]).map(function(n){return'<option value="'+esc(n)+'">'+esc(n)+'</option>'}).join("");if(saved&&(window.CLASS_STUDENTS||[]).indexOf(saved)>=0)el.value=saved}
 function saveStudentName(){try{localStorage.setItem("ClassProStudentName",getStudentName())}catch(e){}}
 function progressParts(){return[window.ClassProContext.read().lesson,"post_class",currentTier,getStudentName()||"anonymous"]}
-function shuffleArray(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),x=a[i];a[i]=a[j];a[j]=x}return a}function taskPool(tier){var hw=window.LESSON_DATA&&window.LESSON_DATA.postClassHomework;if(!hw)return[];var s=(hw.shared_pool||[]).slice(),t=(hw.tier_pools&&hw.tier_pools[tier]||[]).slice();var items=s.concat(t);if(tier==="C")items=items.filter(function(q){return q.type!=="ordering"});return items.map(function(q){var x=Object.assign({},q);if(x.options)x.options=shuffleArray(x.options.slice());return x})}
+function shuffleArray(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),x=a[i];a[i]=a[j];a[j]=x}return a}function taskPool(tier){var hw=window.LESSON_DATA&&window.LESSON_DATA.postClassHomework;if(!hw)return[];var s=(hw.shared_pool||[]).slice(),t=(hw.tier_pools&&hw.tier_pools[tier]||[]).slice(),all=s.concat(t),selected=hw.assignment_selection&&hw.assignment_selection[tier],items=all;if(Array.isArray(selected)&&selected.length){var byId={};all.forEach(function(q){byId[q.id]=q});items=selected.map(function(id){return byId[id]}).filter(Boolean)}else if(tier==="C")items=items.filter(function(q){return q.type!=="ordering"});return items.map(function(q){var x=Object.assign({},q);if(x.options)x.options=shuffleArray(x.options.slice());return x})}
 function typeName(t){return{choice:"选择",fill_blank:"填空",ordering:"排序",output:"输出",handwriting:"书写"}[t]||t}
 function renderTask(q,i){
   var h='<div class="task" id="task_'+esc(q.id)+'"><div><span class="tag">'+typeName(q.type)+'</span></div><div>';

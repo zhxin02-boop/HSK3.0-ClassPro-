@@ -156,5 +156,55 @@ client.on("close",function(){setStatus("disconnected")});
   };
 })();
 </script>
+<script>
+(function(){
+  var previousRender=render;
+  function publishedNote(){
+    if(!current||current.phase!=='published')return;
+    var d=qdata(),ans=current.answerKey||'';
+    if(!ans&&((current.mode==='v7'||current.mode==='v8')&&d.pairs))ans=d.pairs.map(function(p){return p.left+'：'+p.right}).join('；');
+    if(!ans&&typeof d.correct_index==='number'&&d.options)ans=d.options[d.correct_index]||'';
+    if(!ans)ans=current.question.correct_answer||'';
+    var app=document.getElementById('app'),note=document.createElement('div');
+    note.className='ok';note.style.marginBottom='14px';note.innerHTML='答题结束，答案：<b>'+es(ans)+'</b>';
+    app.insertBefore(note,app.firstChild);
+    app.querySelectorAll('button').forEach(function(btn){btn.disabled=true;btn.style.pointerEvents='none';btn.style.opacity='.72'});
+  }
+  render=function(){
+    if(!current||['v4','v7','g1'].indexOf(current.mode)<0){previousRender();return}
+    var q=current.question||{},d=qdata(),mode=current.mode,h='<div class="prompt">'+es(q.prompt_cn||'')+'<br><span class="english">'+es(q.prompt_en||'')+'</span></div>';
+    if(mode==='v4'){
+      h+='<div class="hint"><div class="muted">Transform the sentence.</div><div class="pinyin">'+es(d.source_pinyin||d.template_pinyin||'')+'</div><div class="hanzi">'+es(d.source_sentence||d.template||'')+'</div></div>'+optionGrid(d.options||[],true);
+    }else if(mode==='v7'&&d.pairs){
+      var pairs=d.pairs||[],order=d.order||pairs.map(function(_,i){return i}),done=Object.keys(matchPairs).length;
+      h+='<div style="text-align:center;font-weight:900;color:#3f7f32;margin-bottom:8px">词句匹配 / Word–Sentence Match</div><div class="muted" style="text-align:center">先点左侧回答，再点右侧问题。 '+done+' / '+pairs.length+'</div><div class="match-board"><div class="match-col">';
+      pairs.forEach(function(p,i){var cls=matchPairs[i]!=null?' done':matchLeft===i?' sel':'';h+='<button class="match-card'+cls+'" onclick="pickMatch(\'L\','+i+')"><span class="py">'+es(p.left_pinyin||py(p.left))+'</span>'+es(p.left)+'</button>'});
+      h+='</div><div class="match-col">';
+      order.forEach(function(idx){var p=pairs[idx]||{},used=false;for(var k in matchPairs){if(matchPairs[k]===idx)used=true}var cls=used?' done':matchRight===idx?' sel':'';h+='<button class="match-card'+cls+'" onclick="pickMatch(\'R\','+idx+')" style="font-size:17px;line-height:1.45">'+es(p.right||'')+'</button>'});
+      h+='</div></div><button style="width:100%;margin-top:18px" onclick="submitMatching()" '+(done<pairs.length?'disabled':'')+'>提交 Submit</button>';
+    }else if(mode==='v7'){
+      previousRender();return;
+    }else if(mode==='g1'){
+      if(!chunks.length){var cps=d.chunks_pinyin||[];chunks=(d.chunks||[]).map(function(t,i){return{id:i,t:t,p:cps[i]||py(t),u:false}}).sort(function(){return Math.random()-.5});answerChunks=[]}
+      h+='<div class="chunks">';chunks.forEach(function(c,i){if(!c.u)h+='<div class="chunk" onclick="moveChunk('+i+')"><span class="py">'+es(c.p||py(c.t))+'</span>'+es(c.t)+'</div>'});h+='</div><div class="chunks answer">';
+      if(!answerChunks.length)h+='<span class="muted">点击上面的词块</span>';answerChunks.forEach(function(c,i){h+='<div class="chunk" onclick="backChunk('+i+')"><span class="py">'+es(c.p||py(c.t))+'</span>'+es(c.t)+'</div>'});
+      h+='</div><button style="width:100%;margin-top:16px" onclick="submitOrdering()" '+(!answerChunks.length?'disabled':'')+'>提交 Submit</button>';
+    }
+    document.getElementById('app').innerHTML=h;
+    publishedNote();
+  };
+})();
+</script>
+<script>
+(function(){
+  var oldStudentRender=render;
+  render=function(){
+    oldStudentRender();
+    if(!current||current.mode!=='v7'||!qdata().pairs)return;
+    var cols=document.querySelectorAll('#app .match-col');if(cols.length<2)return;var board=document.querySelector('#app .match-board');if(board){board.style.gridTemplateColumns='repeat(2,minmax(0,1fr))';board.style.gap='24px';board.style.width='100%';board.style.overflow='hidden'}var d=qdata(),order=d.order||d.pairs.map(function(_,i){return i}),btns=cols[1].querySelectorAll('button');
+    for(var i=0;i<btns.length;i++){var p=d.pairs[order[i]]||{},pyEl=btns[i].querySelector('.l03-match-py');if(!pyEl){pyEl=document.createElement('span');pyEl.className='l03-match-py';pyEl.style.cssText='display:block;font-size:12px;color:#78836f;margin-bottom:4px';pyEl.textContent=p.right_pinyin||'';btns[i].insertBefore(pyEl,btns[i].firstChild)}btns[i].style.width='100%';btns[i].style.height='96px';btns[i].style.boxSizing='border-box';btns[i].style.textAlign='left';btns[i].style.whiteSpace='normal';btns[i].style.overflowWrap='anywhere'}
+  };
+})();
+</script>
 </body>
 </html>

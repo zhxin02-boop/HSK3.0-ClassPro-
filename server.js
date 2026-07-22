@@ -112,7 +112,9 @@ var srv = http.createServer(function(req, res) {
     var name = decodeURIComponent((req.url.split("?")[1]||"").replace(/name=/,""));
     var allLocalRows = readLearningRecords();
     var localRows = allLocalRows.filter(function(x){return !name || String(x.姓名||x.studentName||x.name||"")===String(name)});
-    if (localRows.length) { json(res, 200, {status:"ok", data:localRows}); return; }
+    var replied = false;
+    function reply(status, payload) { if (replied) return; replied = true; json(res, status, payload); }
+    function localFallback() { reply(200, {status:"ok", source:"local", data:localRows}); }
     var https = require("https");
     https.get(gasUrl + "?action=get_all", function(gres) {
       var d = "";
@@ -120,16 +122,33 @@ var srv = http.createServer(function(req, res) {
       gres.on("end", function() {
         try {
           var data = JSON.parse(d);
+          var remoteRows = [];
+          if (data && data.status === "ok") {
+            if (Array.isArray(data.data)) remoteRows = data.data.slice();
+            else for (var group in data.data) (data.data[group]||[]).forEach(function(x) { remoteRows.push(x); });
+          }
+          function reviewName(x) { return String(x.studentName || x.name || x['\u59d3\u540d'] || ""); }
+          function reviewKey(x) {
+            return [reviewName(x), x.lesson || x.lessonKey || x['\u8bfe\u7a0b'] || "", x.module || x.mode || x['\u6a21\u5757'] || "", x.questionId || x['\u9898\u76eeID'] || "", x.submittedAt || x.timestamp || x['\u63d0\u4ea4\u65f6\u95f4'] || ""].join("|");
+          }
+          var seen = Object.create(null), merged = [];
+          remoteRows.concat(localRows).forEach(function(x) {
+            if (name && reviewName(x) !== String(name)) return;
+            var key = reviewKey(x);
+            if (!seen[key]) { seen[key] = true; merged.push(x); }
+          });
+          reply(200, {status:"ok", data:merged});
+          return;
           if (data.status === "ok" && name) {
             var all = [];
             if (Array.isArray(data.data)) all = data.data.slice();
             else for (var k in data.data) (data.data[k]||[]).forEach(function(x) { all.push(x); });
             data = {status:"ok", data:all.filter(function(x){return String(x.姓名||x.studentName||x.name||"")===String(name)})};
           }
-          json(res, 200, data);
-        } catch(e) { json(res, 500, {error:"Parse failed"}); }
+          reply(200, data);
+        } catch(e) { localFallback(); }
       });
-    }).on("error", function(e) { json(res, 502, {error:e.message}); }).setTimeout(8000, function(){ this.destroy(new Error("GAS request timeout")); });
+    }).on("error", function() { localFallback(); }).setTimeout(8000, function(){ this.destroy(new Error("GAS request timeout")); });
     return;
   }
 
@@ -160,16 +179,23 @@ var srv = http.createServer(function(req, res) {
   if (method === "POST" && url === "/api/pre-class-record") {
     parseBody(req, function(body) {
       if (!body) { json(res, 400, {error:"Invalid JSON"}); return; }
-      try { appendLearningRecord(body); } catch(e) { console.log("local record", e.message); }
+      try {
+        appendLearningRecord(body);
+        json(res, 200, {status:"ok", source:"local"});
+      } catch(e) {
+        json(res, 500, {status:"error", error:"local record failed"});
+        console.log("local record", e.message);
+        return;
+      }
       var gasUrl = 'https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec';
       var https = require("https");
       var payload = JSON.stringify(body);
       var proxyReq = https.request(gasUrl, {method:"POST", headers:{"Content-Type":"application/json", "Content-Length":Buffer.byteLength(payload)}}, function(gres) {
         var d = "";
         gres.on("data", function(c) { d += c; });
-        gres.on("end", function() { try { json(res, gres.statusCode || 200, JSON.parse(d)); } catch(e) { json(res, 200, {status:"ok", raw:d}); } });
+        gres.on("end", function() { console.log("GAS pre-class forward", gres.statusCode || 200); });
       });
-      proxyReq.on("error", function(e) { json(res, 502, {error:e.message}); });
+      proxyReq.on("error", function(e) { console.log("GAS pre-class forward failed", e.message); });
       proxyReq.write(payload);
       proxyReq.end();
     });
