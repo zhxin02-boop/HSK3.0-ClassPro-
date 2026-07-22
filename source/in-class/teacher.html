@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chinese ClassPro+</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.3.0/mqtt.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.2.0/dist/hanzi-writer-lib.min.js"></script>
 <script src="../shared/students.js"></script>
 <script src="../shared/context.js"></script>
 <script src="./lesson-data-loader.js?v=20260719-images-4"></script>
@@ -1366,8 +1365,8 @@ ap.init();
   }
   ap._loadHw=function(word){
     var host=document.getElementById("hwStrokes"),grid=document.getElementById("hwGrids");if(!host||!grid||host.dataset.word!==word)return;
-    if(!window.HanziWriter||!HanziWriter.loadCharacterData){host.innerHTML='<div class="hw-loading">笔顺数据暂不可用，请检查网络后刷新。</div>';return}
-    var chars=Array.from(word),jobs=chars.map(function(ch){return HanziWriter.loadCharacterData(ch)});
+    var chars=Array.from(word),base='https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0.1/';
+    var jobs=chars.map(function(ch){return fetch(base+encodeURIComponent(ch)+'.json').then(function(res){if(!res.ok)throw new Error('stroke data '+res.status);return res.json()})});
     Promise.all(jobs).then(function(datas){
       if(!document.getElementById("hwStrokes")||document.getElementById("hwStrokes").dataset.word!==word)return;
       host.innerHTML='';
