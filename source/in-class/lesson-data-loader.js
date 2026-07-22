@@ -1,18 +1,81 @@
 (function () {
   var params = new URLSearchParams(location.search);
   var shared = window.ClassProContext ? ClassProContext.read() : {};
-  var lesson = params.get('lesson') || params.get('course') || shared.lesson || 'HSK1-L01';
-  if (lesson !== 'HSK1-L01') {
-    document.write('<script src="./data_L02.js"><\\/script>');
-    return;
-  }
-
+  var lesson = params.get('lesson') || params.get('course') || window.ClassProDefaultLesson || shared.lesson || 'HSK1-L01';
+  var legacyDataPath = window.ClassProLegacyDataPath || './data_L02.js';
+  function loadLegacyL02() { document.write('<script src="' + legacyDataPath + '"><\\/script>'); }
   function loadJson(path) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', path, false);
     xhr.send(null);
     if (xhr.status < 200 || xhr.status >= 300) throw new Error('Cannot load ' + path);
     return JSON.parse(xhr.responseText);
+  }
+  function legacyHomework(homework) {
+    homework = homework || {};
+    var tiers = {};
+    Object.keys(homework.tiers || {}).forEach(function (tier) {
+      var item = homework.tiers[tier] || {};
+      tiers[tier] = {
+        label: item.label || tier,
+        goal: item.goal || '',
+        suggested_minutes: (item.suggestedMinutes || 15) + '分钟左右',
+        suggested_mix: item.suggestedMix || ''
+      };
+    });
+    return {
+      tiers: tiers,
+      shared_pool: homework.sharedPool || [],
+      tier_pools: homework.tierPools || {},
+      assignment_selection: homework.assignmentSelection || {},
+      review_policy: homework.reviewPolicy || {}
+    };
+  }
+  if (/^HSK1-L\d{2}$/.test(lesson) && lesson !== 'HSK1-L01') {
+    try {
+      var standard = loadJson('../data-model/lessons/' + lesson + '.json');
+      if (!standard || !standard.schemaVersion || !standard.meta || standard.meta.lessonKey !== lesson) throw new Error('Invalid standard course data');
+      var normalized = window.ClassProCourseAdapter ? window.ClassProCourseAdapter.normalizeStandard(standard) : null;
+      if (!normalized) throw new Error('Course data adapter unavailable');
+      var groups = (standard.inClass && standard.inClass.questionGroups) || {};
+      if (lesson === 'HSK1-L03') {
+        Object.keys(groups).forEach(function (groupKey) {
+          (groups[groupKey] || []).forEach(function (question) {
+            var data = question && question.data;
+            if (!data || !Array.isArray(data.options) || data.options.length < 2 || question.correct_answer == null) return;
+            var paired = data.options.map(function (option, index) {
+              return { option: option, pinyin: (data.options_pinyin || [])[index] || '' };
+            });
+            for (var i = paired.length - 1; i > 0; i--) {
+              var j = Math.floor(Math.random() * (i + 1));
+              var temp = paired[i]; paired[i] = paired[j]; paired[j] = temp;
+            }
+            data.options = paired.map(function (item) { return item.option; });
+            if (Array.isArray(data.options_pinyin)) data.options_pinyin = paired.map(function (item) { return item.pinyin; });
+            data.correct_index = data.options.indexOf(question.correct_answer);
+          });
+        });
+      }
+      normalized.classProQuestions = groups;
+      window.LESSON_DATA = normalized;
+      window.LESSON_DATA.v5_vocab_fill = groups.v5_vocab_fill || [];
+      window.LESSON_DATA.g1_ordering = groups.g1_ordering || [];
+      window.LESSON_DATA.pk_question = groups.pk_question || [];
+      return;
+    } catch (e) {
+      if (lesson === 'HSK1-L02') {
+        console.warn('L02 standard data load failed; using legacy data.', e);
+        loadLegacyL02();
+      } else {
+        window.LESSON_DATA = { meta: { lessonKey: lesson, lessonId: lesson.split('-').pop(), title: 'Course data unavailable' }, vocabulary: [], grammar: [], texts: [], classProQuestions: {}, postClassHomework: {} };
+        console.error('Standard course data load failed.', e);
+      }
+      return;
+    }
+  }
+  if (lesson !== 'HSK1-L01') {
+    loadLegacyL02();
+    return;
   }
   function clone(o) { return JSON.parse(JSON.stringify(o)); }
   function options(correct, pool, count) {

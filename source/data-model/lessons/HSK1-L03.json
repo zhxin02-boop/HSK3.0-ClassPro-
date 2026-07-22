@@ -1,0 +1,306 @@
+{
+  "schemaVersion": "hsk1-course-v1",
+  "meta": {
+    "level": "HSK1",
+    "lessonId": "L03",
+    "lessonKey": "HSK1-L03",
+    "title": "我是中国人",
+    "titleEn": "I'm Chinese",
+    "topic": "国籍、身份与日常问候",
+    "topicEn": "Nationality, identity and everyday greetings",
+    "sourceTextPolicy": "教材原句保留；新增内容必须标记为教学扩展"
+  },
+  "features": {
+    "pinyin": false,
+    "hanziWritingDemo": true,
+    "vocabExamples": false,
+    "competition": true,
+    "postClassHomework": true
+  },
+  "vocabulary": [
+    {"id":"v_l03_01","hanzi":"人","word":"人","pinyin":"rén","english":"human; person","partOfSpeech":"名词","sourceType":"textbook","image":"images/l03_pic_01_ren.png","writing":{"enabled":true,"characters":["人"]}},
+    {"id":"v_l03_02","hanzi":"的","word":"的","pinyin":"de","english":"used after an attributive","partOfSpeech":"助词","sourceType":"textbook","writing":{"enabled":true,"characters":["的"]}},
+    {"id":"v_l03_03","hanzi":"这","word":"这","pinyin":"zhè","english":"this","partOfSpeech":"代词","sourceType":"textbook","image":"images/l03_pic_02_zhe.png","writing":{"enabled":true,"characters":["这"]}},
+    {"id":"v_l03_04","hanzi":"谁","word":"谁","pinyin":"shéi/shuí","english":"who","partOfSpeech":"代词","sourceType":"textbook","image":"images/l03_pic_03_shei.png","writing":{"enabled":true,"characters":["谁"]}},
+    {"id":"v_l03_05","hanzi":"女朋友","word":"女朋友","pinyin":"nǚpéngyou","english":"girlfriend","partOfSpeech":"名词","sourceType":"textbook","image":"images/l03_pic_04_nvpengyou.png","writing":{"enabled":true,"characters":["女","朋","友"]}},
+    {"id":"v_l03_06","hanzi":"哪","word":"哪","pinyin":"nǎ","english":"which","partOfSpeech":"代词","sourceType":"textbook","writing":{"enabled":true,"characters":["哪"]}},
+    {"id":"v_l03_07","hanzi":"国","word":"国","pinyin":"guó","english":"country","partOfSpeech":"名词","sourceType":"textbook","image":"images/l03_pic_05_guo.png","writing":{"enabled":true,"characters":["国"]}},
+    {"id":"v_l03_08","hanzi":"她","word":"她","pinyin":"tā","english":"she; her","partOfSpeech":"代词","sourceType":"textbook","image":"images/l03_pic_06_ta.png","writing":{"enabled":true,"characters":["她"]}},
+    {"id":"v_l03_09","hanzi":"喂","word":"喂","pinyin":"wèi","english":"hello; hey","partOfSpeech":"叹词","sourceType":"textbook","image":"images/l03_pic_07_wei.png","writing":{"enabled":true,"characters":["喂"]}},
+    {"id":"v_l03_10","hanzi":"姐姐","word":"姐姐","pinyin":"jiějie","english":"elder sister","partOfSpeech":"名词","sourceType":"textbook","image":"images/l03_pic_08_jiejie.png","writing":{"enabled":true,"characters":["姐"]}},
+    {"id":"v_l03_11","hanzi":"工作","word":"工作","pinyin":"gōngzuò","english":"job; work","partOfSpeech":"名词","sourceType":"textbook","image":"images/l03_pic_09_gongzuo.png","writing":{"enabled":true,"characters":["工","作"]}},
+    {"id":"v_l03_12","hanzi":"还","word":"还","pinyin":"hái","english":"still","partOfSpeech":"副词","sourceType":"textbook","writing":{"enabled":true,"characters":["还"]}},
+    {"id":"v_l03_13","hanzi":"忙","word":"忙","pinyin":"máng","english":"busy","partOfSpeech":"形容词","sourceType":"textbook","image":"images/l03_pic_10_mang.png","writing":{"enabled":true,"characters":["忙"]}},
+    {"id":"v_l03_14","hanzi":"吗","word":"吗","pinyin":"ma","english":"used at the end of a question","partOfSpeech":"助词","sourceType":"textbook","writing":{"enabled":true,"characters":["吗"]}},
+    {"id":"v_l03_15","hanzi":"对","word":"对","pinyin":"duì","english":"right; correct","partOfSpeech":"形容词","sourceType":"textbook","writing":{"enabled":true,"characters":["对"]}},
+    {"id":"v_l03_16","hanzi":"太","word":"太","pinyin":"tài","english":"too; excessively","partOfSpeech":"副词","sourceType":"textbook","writing":{"enabled":true,"characters":["太"]}},
+    {"id":"v_l03_17","hanzi":"我们","word":"我们","pinyin":"wǒmen","english":"we; us","partOfSpeech":"代词","sourceType":"textbook","writing":{"enabled":true,"characters":["我","们"]}},
+    {"id":"v_l03_18","hanzi":"想","word":"想","pinyin":"xiǎng","english":"miss; think of","partOfSpeech":"动词","sourceType":"textbook","writing":{"enabled":true,"characters":["想"]}}
+  ],
+  "vocabExtensions": {
+    "人": [{"hanzi":"中国人","pinyin":"Zhōngguó rén","english":"Chinese person","sourceType":"teaching_extension"},{"hanzi":"法国人","pinyin":"Fǎguó rén","english":"French person","sourceType":"teaching_extension"},{"hanzi":"我是中国人。","pinyin":"Wǒ shì Zhōngguó rén.","english":"I am Chinese.","sourceType":"teaching_extension"}],
+    "的": [{"hanzi":"我的老师","pinyin":"wǒ de lǎoshī","english":"my teacher","sourceType":"teaching_extension"},{"hanzi":"你的姐姐","pinyin":"nǐ de jiějie","english":"your elder sister","sourceType":"teaching_extension"},{"hanzi":"中文老师","pinyin":"Zhōngwén lǎoshī","english":"Chinese language teacher","sourceType":"teaching_extension"}],
+    "这": [{"hanzi":"这是老师。","pinyin":"Zhè shì lǎoshī.","english":"This is a teacher.","sourceType":"teaching_extension"},{"hanzi":"这是我姐姐。","pinyin":"Zhè shì wǒ jiějie.","english":"This is my elder sister.","sourceType":"teaching_extension"},{"hanzi":"这是谁？","pinyin":"Zhè shì shéi?","english":"Who is this?","sourceType":"teaching_extension"}],
+    "谁": [{"hanzi":"这是谁？","pinyin":"Zhè shì shéi?","english":"Who is this?","sourceType":"teaching_extension"},{"hanzi":"你是谁？","pinyin":"Nǐ shì shéi?","english":"Who are you?","sourceType":"teaching_extension"},{"hanzi":"她是谁？","pinyin":"Tā shì shéi?","english":"Who is she?","sourceType":"teaching_extension"}],
+    "女朋友": [{"hanzi":"我的女朋友","pinyin":"wǒ de nǚpéngyou","english":"my girlfriend","sourceType":"teaching_extension"},{"hanzi":"她是我女朋友。","pinyin":"Tā shì wǒ nǚpéngyou.","english":"She is my girlfriend.","sourceType":"teaching_extension"},{"hanzi":"女朋友是泰国人。","pinyin":"Nǚpéngyou shì Tàiguó rén.","english":"The girlfriend is Thai.","sourceType":"teaching_extension"}],
+    "哪": [{"hanzi":"哪国人？","pinyin":"nǎ guó rén?","english":"which nationality?","sourceType":"teaching_extension"},{"hanzi":"你是哪国人？","pinyin":"Nǐ shì nǎ guó rén?","english":"What nationality are you?","sourceType":"teaching_extension"},{"hanzi":"她是哪国人？","pinyin":"Tā shì nǎ guó rén?","english":"What nationality is she?","sourceType":"teaching_extension"}],
+    "国": [{"hanzi":"中国人","pinyin":"Zhōngguó rén","english":"Chinese person","sourceType":"teaching_extension"},{"hanzi":"法国人","pinyin":"Fǎguó rén","english":"French person","sourceType":"teaching_extension"},{"hanzi":"泰国人","pinyin":"Tàiguó rén","english":"Thai person","sourceType":"teaching_extension"}],
+    "她": [{"hanzi":"她是学生。","pinyin":"Tā shì xuésheng.","english":"She is a student.","sourceType":"teaching_extension"},{"hanzi":"她也是老师。","pinyin":"Tā yě shì lǎoshī.","english":"She is also a teacher.","sourceType":"teaching_extension"},{"hanzi":"她很忙。","pinyin":"Tā hěn máng.","english":"She is very busy.","sourceType":"teaching_extension"}],
+    "喂": [{"hanzi":"喂，一飞！","pinyin":"Wèi, Yīfēi!","english":"Hi, Yifei!","sourceType":"teaching_extension"},{"hanzi":"喂，你好！","pinyin":"Wèi, nǐ hǎo!","english":"Hello!","sourceType":"teaching_extension"}],
+    "姐姐": [{"hanzi":"我的姐姐","pinyin":"wǒ de jiějie","english":"my elder sister","sourceType":"teaching_extension"},{"hanzi":"姐姐很忙。","pinyin":"Jiějie hěn máng.","english":"Older sister is very busy.","sourceType":"teaching_extension"},{"hanzi":"姐姐是老师。","pinyin":"Jiějie shì lǎoshī.","english":"Older sister is a teacher.","sourceType":"teaching_extension"}],
+    "工作": [{"hanzi":"工作很忙。","pinyin":"Gōngzuò hěn máng.","english":"Work is very busy.","sourceType":"teaching_extension"},{"hanzi":"你工作吗？","pinyin":"Nǐ gōngzuò ma?","english":"Do you work?","sourceType":"teaching_extension"},{"hanzi":"我的工作","pinyin":"wǒ de gōngzuò","english":"my work","sourceType":"teaching_extension"}],
+    "还": [{"hanzi":"还很忙","pinyin":"hái hěn máng","english":"still very busy","sourceType":"teaching_extension"},{"hanzi":"还好吗？","pinyin":"Hái hǎo ma?","english":"Are you still well?","sourceType":"teaching_extension"},{"hanzi":"我还想你。","pinyin":"Wǒ hái xiǎng nǐ.","english":"I still miss you.","sourceType":"teaching_extension"}],
+    "忙": [{"hanzi":"很忙","pinyin":"hěn máng","english":"very busy","sourceType":"teaching_extension"},{"hanzi":"还忙","pinyin":"hái máng","english":"still busy","sourceType":"teaching_extension"},{"hanzi":"你忙吗？","pinyin":"Nǐ máng ma?","english":"Are you busy?","sourceType":"teaching_extension"}],
+    "吗": [{"hanzi":"你是学生吗？","pinyin":"Nǐ shì xuésheng ma?","english":"Are you a student?","sourceType":"teaching_extension"},{"hanzi":"你忙吗？","pinyin":"Nǐ máng ma?","english":"Are you busy?","sourceType":"teaching_extension"},{"hanzi":"她是老师吗？","pinyin":"Tā shì lǎoshī ma?","english":"Is she a teacher?","sourceType":"teaching_extension"}],
+    "对": [{"hanzi":"对，还很忙。","pinyin":"Duì, hái hěn máng.","english":"Yes, still very busy.","sourceType":"teaching_extension"},{"hanzi":"对不起","pinyin":"duìbuqǐ","english":"sorry","sourceType":"teaching_extension"},{"hanzi":"你说得对。","pinyin":"Nǐ shuō de duì.","english":"You are right.","sourceType":"teaching_extension"}],
+    "太": [{"hanzi":"太忙","pinyin":"tài máng","english":"too busy","sourceType":"teaching_extension"},{"hanzi":"太好了！","pinyin":"Tài hǎo le!","english":"Great!","sourceType":"teaching_extension"}],
+    "我们": [{"hanzi":"我们是学生。","pinyin":"Wǒmen shì xuésheng.","english":"We are students.","sourceType":"teaching_extension"},{"hanzi":"我们很高兴。","pinyin":"Wǒmen hěn gāoxìng.","english":"We are very happy.","sourceType":"teaching_extension"},{"hanzi":"我们想你。","pinyin":"Wǒmen xiǎng nǐ.","english":"We miss you.","sourceType":"teaching_extension"}],
+    "想": [{"hanzi":"想你","pinyin":"xiǎng nǐ","english":"miss you","sourceType":"teaching_extension"},{"hanzi":"很想你","pinyin":"hěn xiǎng nǐ","english":"miss you a lot","sourceType":"teaching_extension"},{"hanzi":"我们想你。","pinyin":"Wǒmen xiǎng nǐ.","english":"We miss you.","sourceType":"teaching_extension"}]
+  },
+  "v7QuestionAnswerPairs": [
+    [{"left":"我是中国人。","right":"你是哪国人？"},{"left":"这是我女朋友。","right":"这是谁？"},{"left":"她是泰国人。","right":"她是哪国人？"},{"left":"她也是学生。","right":"她是学生吗？"}],
+    [{"left":"喂，一飞！","right":"你给谁打电话？"},{"left":"对，还很忙。","right":"你工作还忙吗？"},{"left":"我不太忙。","right":"你也很忙吗？"},{"left":"我们很想你。","right":"你们想我吗？"}],
+    [{"left":"我叫李文。","right":"你叫什么？"},{"left":"很高兴认识你。","right":"认识你我也很高兴。","right_pinyin":"Rènshi nǐ wǒ yě hěn gāoxìng."},{"left":"我不是老师。","right":"你是老师吗？"},{"left":"她也是学生。","right":"她是学生吗？"}]
+  ],
+  "grammarTeachingNotes": {
+    "g_l03_01": {"structure":"主语 + 是 + 身份/国籍。\n主语 + 不是 + 身份/国籍。","structureEn":"Subject + 是 + identity or nationality.\nSubject + 不是 + identity or nationality.","structureRu":"Подлежащее + 是 +身份/национальность.\nПодлежащее + 不是 +身份/национальность.","english":"Use 是 to identify a person or nationality; use 不是 for the negative.","russian":"是 используется, чтобы назвать личность или национальность; для отрицания используется 不是."},
+    "g_l03_02": {"structure":"定语 + 的 + 名词。","structureEn":"Modifier + 的 + noun.","structureRu":"Определение + 的 + существительное.","english":"的 connects a person or description with the noun that belongs to or follows it.","russian":"的 соединяет признак или лицо с последующим существительным и показывает принадлежность или определение."},
+    "g_l03_03": {"structure":"陈述句 + 吗？","structureEn":"Statement + 吗?","structureRu":"Утвердительное предложение + 吗?","english":"Put 吗 at the end to turn a statement into a yes-no question.","russian":"Поставьте 吗 в конце, чтобы превратить утверждение в общий вопрос."}
+  },
+  "properNouns": [
+    {"hanzi":"中国","pinyin":"Zhōngguó","english":"China","sourceType":"textbook"},
+    {"hanzi":"法国","pinyin":"Fǎguó","english":"France","sourceType":"textbook"},
+    {"hanzi":"中文","pinyin":"Zhōngwén","english":"Chinese language","sourceType":"textbook"},
+    {"hanzi":"泰国","pinyin":"Tàiguó","english":"Thailand","sourceType":"textbook"}
+  ],
+  "grammar": [
+    {
+      "id":"g_l03_01",
+      "title":"“是”字句",
+      "titleEn":"“是” Sentence",
+      "explanation":"表示人或事物等同于什么或类属什么，否定形式是“不是”。",
+      "sourceType":"textbook",
+      "examples":[
+        {"hanzi":"我是法国人。","sourceType":"textbook"},
+        {"hanzi":"她是中文老师。","sourceType":"textbook"},
+        {"hanzi":"我老师不是法国人。","sourceType":"textbook"}
+      ]
+    },
+    {
+      "id":"g_l03_02",
+      "title":"结构助词“的”",
+      "titleEn":"Structural Particle “的”",
+      "explanation":"结构助词“的”在定语和中心语之间，表达领属关系。",
+      "examples":[
+        {"hanzi":"白家月的中文老师。","sourceType":"textbook"},
+        {"hanzi":"你的名字。","sourceType":"textbook"}
+      ],
+      "note":"如果“的”前边是人称代词，后边是亲属称谓或指人的名词，“的”可省略。例如：我老师、我学生、你同学、我妈妈。",
+      "sourceType":"textbook"
+    },
+    {
+      "id":"g_l03_03",
+      "title":"用“吗”的是非问句",
+      "titleEn":"Yes-No Question with “吗”",
+      "explanation":"“吗”是语气助词，通常在句子末尾，表示疑问。基本结构：……吗？",
+      "sourceType":"textbook",
+      "examples":[
+        {"hanzi":"你也很忙吗？","sourceType":"textbook"},
+        {"hanzi":"你是他的中文老师吗？","sourceType":"textbook"},
+        {"hanzi":"你有姐姐吗？","sourceType":"textbook"}
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id":"text_l03_01",
+      "title":"课文一",
+      "scene":"在校园里，李文和白家月第一次相遇，两人继续聊天儿。",
+      "sourceType":"textbook",
+      "lines":[
+        {"speaker":"李文","hanzi":"我是中国人。","pinyin":"Wǒ shì Zhōngguó rén.","english":"I'm Chinese.","sourceType":"textbook"},
+        {"speaker":"白家月","hanzi":"我是法国人。我的中文老师也是中国人。","pinyin":"Wǒ shì Fǎguó rén. Wǒ de Zhōngwén lǎoshī yě shì Zhōngguó rén.","english":"I'm French. My Chinese language teacher is also Chinese.","sourceType":"textbook"}
+      ]
+    },
+    {
+      "id":"text_l03_02",
+      "title":"课文二",
+      "scene":"在教室里，下课后，安妮在看陈天中手机里的照片。",
+      "sourceType":"textbook",
+      "lines":[
+        {"speaker":"安妮","hanzi":"这是谁？","pinyin":"Zhè shì shéi?","english":"Who is this?","sourceType":"textbook","note":"“谁”也可以读成 shúi。"},
+        {"speaker":"陈天中","hanzi":"这是我女朋友。","pinyin":"Zhè shì wǒ nǚpéngyou.","english":"This is my girlfriend.","sourceType":"textbook"},
+        {"speaker":"安妮","hanzi":"你女朋友是哪国人？","pinyin":"Nǐ nǚpéngyou shì nǎ guó rén?","english":"What nationality is your girlfriend?","sourceType":"textbook"},
+        {"speaker":"陈天中","hanzi":"她也是泰国人。","pinyin":"Tā yě shì Tàiguó rén.","english":"She is also Thai.","sourceType":"textbook"}
+      ]
+    },
+    {
+      "id":"text_l03_03",
+      "title":"课文三",
+      "scene":"在家里，王一雪给王一飞打视频电话。",
+      "sourceType":"textbook",
+      "lines":[
+        {"speaker":"王一雪","hanzi":"喂，一飞！","pinyin":"Wèi, Yīfēi!","english":"Hi, Yifei!","sourceType":"textbook"},
+        {"speaker":"王一飞","hanzi":"姐姐！","pinyin":"Jiějie!","english":"Sister!","sourceType":"textbook"},
+        {"speaker":"王一雪","hanzi":"你工作还忙吗？","pinyin":"Nǐ gōngzuò hái máng ma?","english":"Are you still busy with work?","sourceType":"textbook"},
+        {"speaker":"王一飞","hanzi":"对，还很忙。你也很忙吗？","pinyin":"Duì, hái hěn máng. Nǐ yě hěn máng ma?","english":"Yes, I'm still very busy. Are you busy too?","sourceType":"textbook"},
+        {"speaker":"王一雪","hanzi":"我不太忙。我们很想你。","pinyin":"Wǒ bú tài máng. Wǒmen hěn xiǎng nǐ.","english":"I'm not too busy. We miss you a lot.","sourceType":"textbook"},
+        {"speaker":"王一飞","hanzi":"我也想你们。","pinyin":"Wǒ yě xiǎng nǐmen.","english":"I miss you all too.","sourceType":"textbook"}
+      ]
+    }
+  ],
+  "preClass": {
+    "warmup": {
+      "intro": "这一课学完，你可以用中文介绍国籍和身份。",
+      "question": "请选择一种你会说的身份表达。",
+      "questionEn": "Choose an identity expression you can already say.",
+      "knownQuestion": "下面哪些第三课词语你已经认识？",
+      "knownQuestionEn": "Which Lesson 3 words do you already know?",
+      "options": [
+        {"word":"我是中国人。","pinyin":"Wǒ shì Zhōngguó rén.","sourceType":"textbook"},
+        {"word":"我是俄罗斯人。","pinyin":"Wǒ shì Èluósī rén.","sourceType":"teaching_extension"},
+        {"word":"这是我女朋友。","pinyin":"Zhè shì wǒ nǚpéngyou.","sourceType":"textbook"}
+      ]
+    },
+    "questions": [
+      {"id":"pre_l03_01","type":"choice","module":"词汇理解","question":"Choose the Chinese word for “person”.","options":[{"text":"人","pinyin":"rén"},{"text":"国","pinyin":"guó"},{"text":"谁","pinyin":"shéi"},{"text":"这","pinyin":"zhè"}],"answer":"人","weakPoints":"词汇：人","sourceType":"teaching_extension"},
+      {"id":"pre_l03_02","type":"choice","module":"词汇理解","question":"Choose the Chinese word for “country”.","options":[{"text":"国","pinyin":"guó"},{"text":"的","pinyin":"de"},{"text":"吗","pinyin":"ma"},{"text":"忙","pinyin":"máng"}],"answer":"国","weakPoints":"词汇：国","sourceType":"teaching_extension"},
+      {"id":"pre_l03_03","type":"choice","module":"国家与身份","question":"Choose the Chinese word for “China”.","options":[{"text":"中国","pinyin":"Zhōngguó"},{"text":"法国","pinyin":"Fǎguó"},{"text":"泰国","pinyin":"Tàiguó"},{"text":"中文","pinyin":"Zhōngwén"}],"answer":"中国","weakPoints":"专有名词：中国","sourceType":"teaching_extension"},
+      {"id":"pre_l03_04","type":"choice","module":"“是”字句","question":"Complete: 我___中国人。","options":[{"text":"是","pinyin":"shì"},{"text":"不","pinyin":"bù"},{"text":"很","pinyin":"hěn"},{"text":"也","pinyin":"yě"}],"answer":"是","weakPoints":"语法：是字句","sourceType":"teaching_extension","textbookSource":"我是中国人。"},
+      {"id":"pre_l03_05","type":"choice","module":"指示与疑问","question":"Complete: 这___谁？","options":[{"text":"是","pinyin":"shì"},{"text":"叫","pinyin":"jiào"},{"text":"很","pinyin":"hěn"},{"text":"也","pinyin":"yě"}],"answer":"是","weakPoints":"句型：这是谁？","sourceType":"teaching_extension","textbookSource":"这是谁？"},
+      {"id":"pre_l03_06","type":"choice","module":"国家与身份","question":"Complete: 你女朋友是哪___人？","options":[{"text":"国","pinyin":"guó"},{"text":"人","pinyin":"rén"},{"text":"谁","pinyin":"shéi"},{"text":"的","pinyin":"de"}],"answer":"国","weakPoints":"句型：哪国人","sourceType":"teaching_extension","textbookSource":"你女朋友是哪国人？"},
+      {"id":"pre_l03_07","type":"choice","module":"词汇理解","question":"Complete: 这是我___，她是泰国人。","options":[{"text":"女朋友","pinyin":"nǚpéngyou"},{"text":"还","pinyin":"hái"},{"text":"哪","pinyin":"nǎ"},{"text":"吗","pinyin":"ma"}],"answer":"女朋友","weakPoints":"词汇：女朋友","sourceType":"teaching_extension"},
+      {"id":"pre_l03_08","type":"choice","module":"已学词复习","question":"Complete: 她___是中国人。","options":[{"text":"也","pinyin":"yě"},{"text":"叫","pinyin":"jiào"},{"text":"的","pinyin":"de"},{"text":"很","pinyin":"hěn"}],"answer":"也","weakPoints":"已学词：也","sourceType":"teaching_extension"},
+      {"id":"pre_l03_09","type":"subjective","module":"翻译练习","question":"教学扩展：请把下面的英文翻译成中文：My name is Li Wen. I am a student.","prompt":"English hint: Translate into Chinese. Use: 我、叫、是、学生。","answerPlaceholder":"例如：我叫李文。我是学生。","needsTeacherReview":true,"weakPoints":"已学词综合：我、叫、是、学生","sourceType":"teaching_extension"},
+      {"id":"pre_l03_10","type":"subjective","module":"翻译练习","question":"教学扩展：请把下面的英文翻译成中文：I am not Annie. I am also a student.","prompt":"English hint: Translate into Chinese. Use: 我、不、是、也、学生。","answerPlaceholder":"例如：我不是安妮。我也是学生。","needsTeacherReview":true,"weakPoints":"已学词综合：不、是、也、学生","sourceType":"teaching_extension"}
+    ]
+  },
+  "inClass": {"questionGroups": {"v1_image_guess": [
+    {"id":"v1_hsk1_03_01","type":"image_guess","stage":"in_class","difficulty":0.3,"time_estimate_sec":8,"prompt_cn":"请看图片，选择对应的词。","prompt_en":"Look at the picture. Choose the word.","data":{"image_hint":"People standing together.","options":["人","国","谁","她"],"options_pinyin":["rén","guó","shéi","tā"],"correct_index":0},"correct_answer":"人","acceptable_answers":["人"],"kp":"词汇：人","feedback_correct":"对！人","feedback_wrong":"再想想。","media":{"audio":null,"image":"images/l03_pic_01_ren.png"},"source":"teaching_extension","sourceType":"teaching_extension","vocab_pool":"L03"},
+    {"id":"v1_hsk1_03_02","type":"image_guess","stage":"in_class","difficulty":0.3,"time_estimate_sec":8,"prompt_cn":"请看图片，选择对应的词。","prompt_en":"Look at the picture. Choose the word.","data":{"image_hint":"Pointing to this object.","options":["这","的","哪","还"],"options_pinyin":["zhè","de","nǎ","hái"],"correct_index":0},"correct_answer":"这","acceptable_answers":["这"],"kp":"词汇：这","feedback_correct":"对！这","feedback_wrong":"再想想。","media":{"audio":null,"image":"images/l03_pic_02_zhe.png"},"source":"teaching_extension","sourceType":"teaching_extension","vocab_pool":"L03"},
+    {"id":"v1_hsk1_03_03","type":"image_guess","stage":"in_class","difficulty":0.3,"time_estimate_sec":8,"prompt_cn":"请看图片，选择对应的词。","prompt_en":"Look at the picture. Choose the word.","data":{"image_hint":"Asking about a person in a photo.","options":["谁","哪","这","人"],"options_pinyin":["shéi","nǎ","zhè","rén"],"correct_index":0},"correct_answer":"谁","acceptable_answers":["谁"],"kp":"词汇：谁","feedback_correct":"对！谁","feedback_wrong":"再想想。","media":{"audio":null,"image":"images/l03_pic_03_shei.png"},"source":"teaching_extension","sourceType":"teaching_extension","vocab_pool":"L03"},
+    {"id":"v1_hsk1_03_04","type":"image_guess","stage":"in_class","difficulty":0.4,"time_estimate_sec":8,"prompt_cn":"请看图片，选择对应的词。","prompt_en":"Look at the picture. Choose the word.","data":{"image_hint":"A couple standing together.","options":["女朋友","姐姐","朋友","工作"],"options_pinyin":["nǚpéngyou","jiějie","péngyou","gōngzuò"],"correct_index":0},"correct_answer":"女朋友","acceptable_answers":["女朋友"],"kp":"词汇：女朋友","feedback_correct":"对！女朋友","feedback_wrong":"再想想。","media":{"audio":null,"image":"images/l03_pic_04_nvpengyou.png"},"source":"teaching_extension","sourceType":"teaching_extension","vocab_pool":"L03"},
+    {"id":"v1_hsk1_03_05","type":"image_guess","stage":"in_class","difficulty":0.4,"time_estimate_sec":8,"prompt_cn":"请看图片，选择对应的词。","prompt_en":"Look at the picture. Choose the word.","data":{"image_hint":"A country shown on a globe.","options":["国","人","这","哪"],"options_pinyin":["guó","rén","zhè","nǎ"],"correct_index":0},"correct_answer":"国","acceptable_answers":["国"],"kp":"词汇：国","feedback_correct":"对！国","feedback_wrong":"再想想。","media":{"audio":null,"image":"images/l03_pic_05_guo.png"},"source":"teaching_extension","sourceType":"teaching_extension","vocab_pool":"L03"},
+    {"id":"v1_hsk1_03_06","type":"image_guess","stage":"in_class","difficulty":0.4,"time_estimate_sec":8,"prompt_cn":"请看图片，选择对应的词。","prompt_en":"Look at the picture. Choose the word.","data":{"image_hint":"A young woman.","options":["她","人","谁","我们"],"options_pinyin":["tā","rén","shéi","wǒmen"],"correct_index":0},"correct_answer":"她","acceptable_answers":["她"],"kp":"词汇：她","feedback_correct":"对！她","feedback_wrong":"再想想。","media":{"audio":null,"image":"images/l03_pic_06_ta.png"},"source":"teaching_extension","sourceType":"teaching_extension","vocab_pool":"L03"},
+    {"id":"v1_hsk1_03_07","type":"image_guess","stage":"in_class","difficulty":0.4,"time_estimate_sec":8,"prompt_cn":"请看图片，选择对应的词。","prompt_en":"Look at the picture. Choose the word.","data":{"image_hint":"Greeting on the phone.","options":["喂","姐姐","忙","想"],"options_pinyin":["wèi","jiějie","máng","xiǎng"],"correct_index":0},"correct_answer":"喂","acceptable_answers":["喂"],"kp":"词汇：喂","feedback_correct":"对！喂","feedback_wrong":"再想想。","media":{"audio":null,"image":"images/l03_pic_07_wei.png"},"source":"teaching_extension","sourceType":"teaching_extension","vocab_pool":"L03"},
+    {"id":"v1_hsk1_03_08","type":"image_guess","stage":"in_class","difficulty":0.4,"time_estimate_sec":8,"prompt_cn":"请看图片，选择对应的词。","prompt_en":"Look at the picture. Choose the word.","data":{"image_hint":"Two sisters together.","options":["姐姐","女朋友","工作","还"],"options_pinyin":["jiějie","nǚpéngyou","gōngzuò","hái"],"correct_index":0},"correct_answer":"姐姐","acceptable_answers":["姐姐"],"kp":"词汇：姐姐","feedback_correct":"对！姐姐","feedback_wrong":"再想想。","media":{"audio":null,"image":"images/l03_pic_08_jiejie.png"},"source":"teaching_extension","sourceType":"teaching_extension","vocab_pool":"L03"},
+    {"id":"v1_hsk1_03_09","type":"image_guess","stage":"in_class","difficulty":0.4,"time_estimate_sec":8,"prompt_cn":"请看图片，选择对应的词。","prompt_en":"Look at the picture. Choose the word.","data":{"image_hint":"Working at a desk.","options":["工作","忙","还","太"],"options_pinyin":["gōngzuò","máng","hái","tài"],"correct_index":0},"correct_answer":"工作","acceptable_answers":["工作"],"kp":"词汇：工作","feedback_correct":"对！工作","feedback_wrong":"再想想。","media":{"audio":null,"image":"images/l03_pic_09_gongzuo.png"},"source":"teaching_extension","sourceType":"teaching_extension","vocab_pool":"L03"},
+    {"id":"v1_hsk1_03_10","type":"image_guess","stage":"in_class","difficulty":0.4,"time_estimate_sec":8,"prompt_cn":"请看图片，选择对应的词。","prompt_en":"Look at the picture. Choose the word.","data":{"image_hint":"Busy with several tasks.","options":["忙","工作","还","太"],"options_pinyin":["máng","gōngzuò","hái","tài"],"correct_index":0},"correct_answer":"忙","acceptable_answers":["忙"],"kp":"词汇：忙","feedback_correct":"对！忙","feedback_wrong":"再想想。","media":{"audio":null,"image":"images/l03_pic_10_mang.png"},"source":"teaching_extension","sourceType":"teaching_extension","vocab_pool":"L03"}
+  ],
+  "v4_complete_sentence":[
+    {"id":"v4_hsk1_03_01","type":"sentence_transform","stage":"in_class","prompt_cn":"改为否定句。","prompt_en":"Change it into a negative sentence.","data":{"source_sentence":"我是中国人。","source_pinyin":"Wǒ shì Zhōngguó rén.","options":["我不是中国人。","我也中国人。","我是中国人吗？","我很中国人。"],"options_pinyin":["Wǒ bú shì Zhōngguó rén.","Wǒ yě Zhōngguó rén.","Wǒ shì Zhōngguó rén ma?","Wǒ hěn Zhōngguó rén."],"correct_index":0},"correct_answer":"我不是中国人。","kp":"句型转换：是→不是","sourceType":"teaching_extension"},
+    {"id":"v4_hsk1_03_02","type":"sentence_transform","stage":"in_class","prompt_cn":"改为肯定句。","prompt_en":"Change it into an affirmative sentence.","data":{"source_sentence":"我不是老师。","source_pinyin":"Wǒ bú shì lǎoshī.","options":["我是老师。","我老师是。","我也老师。","我是老师吗？"],"options_pinyin":["Wǒ shì lǎoshī.","Wǒ lǎoshī shì.","Wǒ yě lǎoshī.","Wǒ shì lǎoshī ma?"],"correct_index":0},"correct_answer":"我是老师。","kp":"句型转换：不是→是","sourceType":"teaching_extension"},
+    {"id":"v4_hsk1_03_03","type":"sentence_transform","stage":"in_class","prompt_cn":"加入“也”，意思不变。","prompt_en":"Add 也 without changing the meaning.","data":{"source_sentence":"我是中国人。她是中国人。","source_pinyin":"Wǒ shì Zhōngguó rén. Tā shì Zhōngguó rén.","options":["她也是中国人。","她也中国人。","也是她中国人。","她是也中国人。"],"options_pinyin":["Tā yě shì Zhōngguó rén.","Tā yě Zhōngguó rén.","Yě shì tā Zhōngguó rén.","Tā shì yě Zhōngguó rén."],"correct_index":0},"correct_answer":"她也是中国人。","kp":"句型转换：也的位置","sourceType":"teaching_extension"},
+    {"id":"v4_hsk1_03_04","type":"sentence_transform","stage":"in_class","prompt_cn":"改为“吗”问句。","prompt_en":"Change it into a yes-no question with 吗.","data":{"source_sentence":"你是学生。","source_pinyin":"Nǐ shì xuéshēng.","options":["你是学生吗？","你吗是学生？","吗你是学生？","你是吗学生？"],"options_pinyin":["Nǐ shì xuéshēng ma?","Nǐ ma shì xuéshēng?","Ma nǐ shì xuéshēng?","Nǐ shì ma xuéshēng?"],"correct_index":0},"correct_answer":"你是学生吗？","kp":"句型转换：吗问句","sourceType":"teaching_extension"},
+    {"id":"v4_hsk1_03_05","type":"sentence_transform","stage":"in_class","prompt_cn":"选择肯定回答。","prompt_en":"Choose the positive answer.","data":{"source_sentence":"你工作还忙吗？","source_pinyin":"Nǐ gōngzuò hái máng ma?","options":["对，还很忙。","我不是学生。","这是我女朋友。","我叫李文。"],"options_pinyin":["Duì, hái hěn máng.","Wǒ bú shì xuéshēng.","Zhè shì wǒ nǚpéngyou.","Wǒ jiào Lǐ Wén."],"correct_index":0},"correct_answer":"对，还很忙。","kp":"句型转换：吗问句回答","sourceType":"textbook","isTextbookOriginal":true,"textSource":"你工作还忙吗？／对，还很忙。"},
+    {"id":"v4_hsk1_03_06","type":"sentence_transform","stage":"in_class","prompt_cn":"选择否定回答。","prompt_en":"Choose the negative answer.","data":{"source_sentence":"你也很忙吗？","source_pinyin":"Nǐ yě hěn máng ma?","options":["我不太忙。","对，还很忙。","她也是泰国人。","我们很想你。"],"options_pinyin":["Wǒ bú tài máng.","Duì, hái hěn máng.","Tā yě shì Tàiguó rén.","Wǒmen hěn xiǎng nǐ."],"correct_index":0},"correct_answer":"我不太忙。","kp":"句型转换：否定回答","sourceType":"textbook","isTextbookOriginal":true,"textSource":"你也很忙吗？／我不太忙。"},
+    {"id":"v4_hsk1_03_07","type":"sentence_transform","stage":"in_class","prompt_cn":"用“她”替换人物名字。","prompt_en":"Replace the person's name with 她.","data":{"source_sentence":"白家月是法国人。","source_pinyin":"Bái Jiāyuè shì Fǎguó rén.","options":["她是法国人。","她法国人是。","是她法国人。","她也法国人。"],"options_pinyin":["Tā shì Fǎguó rén.","Tā Fǎguó rén shì.","Shì tā Fǎguó rén.","Tā yě Fǎguó rén."],"correct_index":0},"correct_answer":"她是法国人。","kp":"句型转换：人称代词她","sourceType":"teaching_extension"},
+    {"id":"v4_hsk1_03_08","type":"sentence_transform","stage":"in_class","prompt_cn":"加入所属关系“我的”。","prompt_en":"Add the possessive phrase 我的.","data":{"source_sentence":"这是中文老师。","source_pinyin":"Zhè shì Zhōngwén lǎoshī.","options":["这是我的中文老师。","这我的中文老师是。","这是我中文的老师。","我的这是中文老师。"],"options_pinyin":["Zhè shì wǒ de Zhōngwén lǎoshī.","Zhè wǒ de Zhōngwén lǎoshī shì.","Zhè shì wǒ Zhōngwén de lǎoshī.","Wǒ de zhè shì Zhōngwén lǎoshī."],"correct_index":0},"correct_answer":"这是我的中文老师。","kp":"句型转换：结构助词的","sourceType":"teaching_extension"},
+    {"id":"v4_hsk1_03_09","type":"sentence_transform","stage":"in_class","prompt_cn":"把回答改成询问国籍的问题。","prompt_en":"Change the answer into a nationality question.","data":{"source_sentence":"她是泰国人。","source_pinyin":"Tā shì Tàiguó rén.","options":["她是哪国人？","她是谁国人？","哪她是国人？","她是国哪人？"],"options_pinyin":["Tā shì nǎ guó rén?","Tā shì shéi guó rén?","Nǎ tā shì guó rén?","Tā shì guó nǎ rén?"],"correct_index":0},"correct_answer":"她是哪国人？","kp":"句型转换：哪国人","sourceType":"teaching_extension"},
+    {"id":"v4_hsk1_03_10","type":"sentence_transform","stage":"in_class","prompt_cn":"用“我们”改写两句话。","prompt_en":"Rewrite the two sentences with 我们.","data":{"source_sentence":"我很想老师。安妮也很想老师。","source_pinyin":"Wǒ hěn xiǎng lǎoshī. Ānnī yě hěn xiǎng lǎoshī.","options":["我们很想老师。","我们老师很想。","很想我们老师。","老师我们很想。"],"options_pinyin":["Wǒmen hěn xiǎng lǎoshī.","Wǒmen lǎoshī hěn xiǎng.","Hěn xiǎng wǒmen lǎoshī.","Lǎoshī wǒmen hěn xiǎng."],"correct_index":0},"correct_answer":"我们很想老师。","kp":"句型转换：我们","sourceType":"teaching_extension"}
+  ],
+  "v5_vocab_fill":[
+    {"id":"v5_hsk1_03_01","type":"vocab_fill","stage":"in_class","prompt_cn":"第一次见面，我介绍自己的名字。","prompt_en":"Choose the word for introducing your name.","data":{"sentence":"我___李文。","sentence_pinyin":"Wǒ ___ Lǐ Wén.","options":["是","叫","想","忙"],"options_pinyin":["shì","jiào","xiǎng","máng"],"correct_index":1},"correct_answer":"叫","kp":"跨课复习：叫","sourceType":"cross_lesson_review"},
+    {"id":"v5_hsk1_03_02","type":"vocab_fill","stage":"in_class","prompt_cn":"根据国籍选择合适的词。","prompt_en":"Choose the nationality word.","data":{"sentence":"白家月是___。","sentence_pinyin":"Bái Jiāyuè shì ___.","options":["中国人","泰国人","法国人","中文"],"options_pinyin":["Zhōngguó rén","Tàiguó rén","Fǎguó rén","Zhōngwén"],"correct_index":2},"correct_answer":"法国人","kp":"词汇：法国人","sourceType":"textbook"},
+    {"id":"v5_hsk1_03_03","type":"vocab_fill","stage":"in_class","prompt_cn":"电话里先说什么？","prompt_en":"What do you say first on the phone?","data":{"sentence":"王一雪：“___，一飞！”","sentence_pinyin":"Wáng Yīxuě: “___, Yīfēi!”","options":["再见","谢谢","你好","喂"],"options_pinyin":["zàijiàn","xièxie","nǐ hǎo","wèi"],"correct_index":3},"correct_answer":"喂","kp":"交际功能：电话问候","sourceType":"textbook"},
+    {"id":"v5_hsk1_03_04","type":"vocab_fill","stage":"in_class","prompt_cn":"根据工作状态选择词语。","prompt_en":"Choose the word for the work situation.","data":{"sentence":"你工作还___吗？","sentence_pinyin":"Nǐ gōngzuò hái ___ ma?","options":["忙","高兴","对","不客气"],"options_pinyin":["máng","gāoxìng","duì","bú kèqi"],"correct_index":0},"correct_answer":"忙","kp":"词汇：忙","sourceType":"textbook"},
+    {"id":"v5_hsk1_03_05","type":"vocab_fill","stage":"in_class","prompt_cn":"选择表示所属关系的词。","prompt_en":"Choose the word that shows possession.","data":{"sentence":"这是我___中文老师。","sentence_pinyin":"Zhè shì wǒ ___ Zhōngwén lǎoshī.","options":["也","还","的","吗"],"options_pinyin":["yě","hái","de","ma"],"correct_index":2},"correct_answer":"的","kp":"语法：结构助词的","sourceType":"teaching_extension"},
+    {"id":"v5_hsk1_03_06","type":"vocab_fill","stage":"in_class","prompt_cn":"根据人物信息选择肯定或否定。","prompt_en":"Choose the correct positive or negative form.","data":{"sentence":"李文是中国人，白家月___中国人。","sentence_pinyin":"Lǐ Wén shì Zhōngguó rén, Bái Jiāyuè ___ Zhōngguó rén.","options":["也是","很","不是","也"],"options_pinyin":["yě shì","hěn","bú shì","yě"],"correct_index":2},"correct_answer":"不是","kp":"语法：不是","sourceType":"teaching_extension"},
+    {"id":"v5_hsk1_03_07","type":"vocab_fill","stage":"in_class","prompt_cn":"根据人物关系选择词语。","prompt_en":"Choose the relationship word.","data":{"sentence":"这是陈天中的___。","sentence_pinyin":"Zhè shì Chén Tiānzhōng de ___.","options":["老师","学生","姐姐","女朋友"],"options_pinyin":["lǎoshī","xuéshēng","jiějie","nǚpéngyou"],"correct_index":3},"correct_answer":"女朋友","kp":"词汇：女朋友","sourceType":"teaching_extension"},
+    {"id":"v5_hsk1_03_08","type":"vocab_fill","stage":"in_class","prompt_cn":"选择句末疑问词。","prompt_en":"Choose the question particle.","data":{"sentence":"你是中国人___？","sentence_pinyin":"Nǐ shì Zhōngguó rén ___?","options":["的","吗","也","还"],"options_pinyin":["de","ma","yě","hái"],"correct_index":1},"correct_answer":"吗","kp":"语法：吗问句","sourceType":"teaching_extension"},
+    {"id":"v5_hsk1_03_09","type":"vocab_fill","stage":"in_class","prompt_cn":"根据家庭关系选择称呼。","prompt_en":"Choose the family word.","data":{"sentence":"王一雪是王一飞的___。","sentence_pinyin":"Wáng Yīxuě shì Wáng Yīfēi de ___.","options":["女朋友","老师","姐姐","同学"],"options_pinyin":["nǚpéngyou","lǎoshī","jiějie","tóngxué"],"correct_index":2},"correct_answer":"姐姐","kp":"词汇：姐姐","sourceType":"textbook"},
+    {"id":"v5_hsk1_03_10","type":"vocab_fill","stage":"in_class","prompt_cn":"选择表示思念的词。","prompt_en":"Choose the word meaning to miss someone.","data":{"sentence":"我们很___你。","sentence_pinyin":"Wǒmen hěn ___ nǐ.","options":["认识","叫","想","是"],"options_pinyin":["rènshi","jiào","xiǎng","shì"],"correct_index":2},"correct_answer":"想","kp":"词汇：想","sourceType":"textbook"}
+  ],
+  "v7_word_match":[
+    {"id":"v7_hsk1_03_01","type":"word_sentence_match","stage":"in_class","prompt_cn":"把词语和能说明它的完整句子配对。","prompt_en":"Match each word with the sentence that shows its meaning.","data":{"pairs":[{"left":"中国人","left_pinyin":"Zhōngguó rén","right":"我是中国人。"},{"left":"女朋友","left_pinyin":"nǚpéngyou","right":"这是我女朋友。"},{"left":"哪","left_pinyin":"nǎ","right":"你是哪国人？"},{"left":"谁","left_pinyin":"shéi","right":"这是谁？"}]},"kp":"词句匹配：国籍与人物","sourceType":"textbook"},
+    {"id":"v7_hsk1_03_02","type":"word_sentence_match","stage":"in_class","prompt_cn":"把词语和对应的使用情景配对。","prompt_en":"Match each word with its usage sentence.","data":{"pairs":[{"left":"喂","left_pinyin":"wèi","right":"喂，一飞！"},{"left":"忙","left_pinyin":"máng","right":"你工作还忙吗？"},{"left":"想","left_pinyin":"xiǎng","right":"我们很想你。"},{"left":"还","left_pinyin":"hái","right":"对，还很忙。"}]},"kp":"词句匹配：电话与状态","sourceType":"textbook"},
+    {"id":"v7_hsk1_03_03","type":"word_sentence_match","stage":"in_class","prompt_cn":"把已学词和新的完整句子配对。","prompt_en":"Match review words with complete sentences.","data":{"pairs":[{"left":"叫","left_pinyin":"jiào","right":"我叫李文。"},{"left":"认识","left_pinyin":"rènshi","right":"很高兴认识你。"},{"left":"也","left_pinyin":"yě","right":"她也是学生。"},{"left":"不是","left_pinyin":"bú shì","right":"我不是老师。"}]},"kp":"跨课复习：L01-L02","sourceType":"cross_lesson_review"}
+  ],
+  "v8_memory_match":[
+    {"id":"v8_hsk1_03_01","type":"vocab_collocations","stage":"in_class","prompt_cn":"词了个词：汉语和英文配对。","prompt_en":"Match Chinese words with English meanings.","data":{"pairs":[{"left":"人","left_pinyin":"rén","right":"person"},{"left":"国","left_pinyin":"guó","right":"country"},{"left":"谁","left_pinyin":"shéi","right":"who"},{"left":"女朋友","left_pinyin":"nǚpéngyou","right":"girlfriend"}]},"kp":"词汇配对：人物与国籍","sourceType":"textbook"},
+    {"id":"v8_hsk1_03_02","type":"vocab_collocations","stage":"in_class","prompt_cn":"词了个词：汉语和英文配对。","prompt_en":"Match Chinese words with English meanings.","data":{"pairs":[{"left":"喂","left_pinyin":"wèi","right":"hello (on the phone)"},{"left":"姐姐","left_pinyin":"jiějie","right":"older sister"},{"left":"工作","left_pinyin":"gōngzuò","right":"work"},{"left":"忙","left_pinyin":"máng","right":"busy"}]},"kp":"词汇配对：电话与生活","sourceType":"textbook"},
+    {"id":"v8_hsk1_03_03","type":"vocab_collocations","stage":"in_class","prompt_cn":"词了个词：汉语和英文配对。","prompt_en":"Match Chinese words with English meanings.","data":{"pairs":[{"left":"这","left_pinyin":"zhè","right":"this"},{"left":"哪","left_pinyin":"nǎ","right":"which"},{"left":"还","left_pinyin":"hái","right":"still"},{"left":"想","left_pinyin":"xiǎng","right":"miss / think of"}]},"kp":"词汇配对：指示与状态","sourceType":"textbook"}
+  ],
+  "g1_ordering":[
+    {"id":"g1_hsk1_03_01","type":"ordering","stage":"in_class","prompt_cn":"把词语排成正确的句子。","prompt_en":"Arrange the words into a correct sentence.","data":{"chunks":["我","是","中国人"],"chunks_pinyin":["wǒ","shì","Zhōngguó rén"],"num_chunks":3,"distractors":[]},"correct_answer":"我是中国人。","acceptable_answers":["我是中国人。","我是中国人"],"needs_teacher_review":true,"kp":"语法：是字句","sourceType":"textbook"},
+    {"id":"g1_hsk1_03_02","type":"ordering","stage":"in_class","prompt_cn":"把词语排成正确的句子。","prompt_en":"Arrange the words into a correct sentence.","data":{"chunks":["她","也","是","泰国人"],"chunks_pinyin":["tā","yě","shì","Tàiguó rén"],"num_chunks":4,"distractors":[]},"correct_answer":"她也是泰国人。","acceptable_answers":["她也是泰国人。","她也是泰国人"],"needs_teacher_review":true,"kp":"语法：也的位置","sourceType":"textbook"},
+    {"id":"g1_hsk1_03_03","type":"ordering","stage":"in_class","prompt_cn":"把词语排成正确的句子。","prompt_en":"Arrange the words into a correct sentence.","data":{"chunks":["这","是","我","女朋友"],"chunks_pinyin":["zhè","shì","wǒ","nǚpéngyou"],"num_chunks":4,"distractors":[]},"correct_answer":"这是我女朋友。","acceptable_answers":["这是我女朋友。","这是我女朋友"],"needs_teacher_review":true,"kp":"语法：基本语序","sourceType":"textbook"},
+    {"id":"g1_hsk1_03_04","type":"ordering","stage":"in_class","prompt_cn":"把词语排成正确的句子。","prompt_en":"Arrange the words into a correct sentence.","data":{"chunks":["你","工作","还","忙","吗"],"chunks_pinyin":["nǐ","gōngzuò","hái","máng","ma"],"num_chunks":5,"distractors":[]},"correct_answer":"你工作还忙吗？","acceptable_answers":["你工作还忙吗？","你工作还忙吗"],"needs_teacher_review":true,"kp":"语法：吗问句","sourceType":"textbook"},
+    {"id":"g1_hsk1_03_05","type":"ordering","stage":"in_class","prompt_cn":"把词语排成正确的句子。","prompt_en":"Arrange the words into a correct sentence.","data":{"chunks":["我们","很","想","你"],"chunks_pinyin":["wǒmen","hěn","xiǎng","nǐ"],"num_chunks":4,"distractors":[]},"correct_answer":"我们很想你。","acceptable_answers":["我们很想你。","我们很想你"],"needs_teacher_review":true,"kp":"语法：程度副词与动词","sourceType":"textbook"}
+  ],
+  "r2_passage_choice":[
+    {"id":"r2_hsk1_03_01","type":"passage_choice","stage":"in_class","prompt_cn":"读课文，选择正确答案。","prompt_en":"Read and choose.","data":{"passage":"李文：我是中国人。白家月：我是法国人。","question_cn":"李文是哪国人？","question_en":"What nationality is Li Wen?","options":["中国人","法国人","泰国人"],"options_pinyin":["Zhōngguó rén","Fǎguó rén","Tàiguó rén"],"correct_index":0},"correct_answer":"中国人","kp":"课文一：国籍","sourceType":"textbook"},
+    {"id":"r2_hsk1_03_02","type":"passage_choice","stage":"in_class","prompt_cn":"读课文，选择正确答案。","prompt_en":"Read and choose.","data":{"passage":"白家月：我是法国人。我的中文老师也是中国人。","question_cn":"谁也是中国人？","question_en":"Who is also Chinese?","options":["白家月的中文老师","白家月的姐姐","陈天中的女朋友"],"options_pinyin":["Bái Jiāyuè de Zhōngwén lǎoshī","Bái Jiāyuè de jiějie","Chén Tiānzhōng de nǚpéngyou"],"correct_index":0},"correct_answer":"白家月的中文老师","kp":"课文一：中文老师","sourceType":"textbook"},
+    {"id":"r2_hsk1_03_03","type":"passage_choice","stage":"in_class","prompt_cn":"读课文，选择正确答案。","prompt_en":"Read and choose.","data":{"passage":"安妮：这是谁？陈天中：这是我女朋友。","question_cn":"照片里是谁？","question_en":"Who is in the photo?","options":["陈天中的女朋友","白家月的老师","王一飞的姐姐"],"options_pinyin":["Chén Tiānzhōng de nǚpéngyou","Bái Jiāyuè de lǎoshī","Wáng Yīfēi de jiějie"],"correct_index":0},"correct_answer":"陈天中的女朋友","kp":"课文二：人物关系","sourceType":"textbook"},
+    {"id":"r2_hsk1_03_04","type":"passage_choice","stage":"in_class","prompt_cn":"读课文，选择正确答案。","prompt_en":"Read and choose.","data":{"passage":"陈天中：她也是泰国人。","question_cn":"她是哪国人？","question_en":"What nationality is she?","options":["泰国人","中国人","法国人"],"options_pinyin":["Tàiguó rén","Zhōngguó rén","Fǎguó rén"],"correct_index":0},"correct_answer":"泰国人","kp":"课文二：哪国人","sourceType":"textbook"},
+    {"id":"r2_hsk1_03_05","type":"passage_choice","stage":"in_class","prompt_cn":"读课文，选择正确答案。","prompt_en":"Read and choose.","data":{"passage":"王一飞：对，还很忙。王一雪：我不太忙。","question_cn":"谁还很忙？","question_en":"Who is still very busy?","options":["王一飞","王一雪","姐姐的朋友"],"options_pinyin":["Wáng Yīfēi","Wáng Yīxuě","Jiějie de péngyou"],"correct_index":0},"correct_answer":"王一飞","kp":"课文三：还、忙","sourceType":"textbook"}
+  ],
+  "w1_component_char":[
+    {"id":"w1_hsk1_03_01","type":"component_char","stage":"in_class","prompt_cn":"哪个汉字是“人”？","prompt_en":"Choose the character 人 (person).","data":{"sentence":"人 / person","sentence_pinyin":"rén","options":["入","人","八","大"],"options_pinyin":[],"correct_index":1,"hide_option_pinyin":true},"correct_answer":"人","kp":"汉字区辨：人和入","sourceType":"textbook"},
+    {"id":"w1_hsk1_03_02","type":"component_char","stage":"in_class","prompt_cn":"哪个汉字是“谁”？","prompt_en":"Choose the character 谁 (who).","data":{"sentence":"谁 / who","sentence_pinyin":"shéi","options":["说","词","谁","语"],"options_pinyin":[],"correct_index":2,"hide_option_pinyin":true},"correct_answer":"谁","kp":"汉字区辨：讠旁汉字","sourceType":"textbook"},
+    {"id":"w1_hsk1_03_03","type":"component_char","stage":"in_class","prompt_cn":"哪个汉字是“哪”？","prompt_en":"Choose the character 哪 (which).","data":{"sentence":"哪 / which","sentence_pinyin":"nǎ","options":["娜","呐","那","哪"],"options_pinyin":[],"correct_index":3,"hide_option_pinyin":true},"correct_answer":"哪","kp":"汉字区辨：口旁哪","sourceType":"textbook"},
+    {"id":"w1_hsk1_03_04","type":"component_char","stage":"in_class","prompt_cn":"哪个汉字是“国”？","prompt_en":"Choose the character 国 (country).","data":{"sentence":"国 / country","sentence_pinyin":"guó","options":["国","园","回","因"],"options_pinyin":[],"correct_index":0,"hide_option_pinyin":true},"correct_answer":"国","kp":"汉字区辨：全包围结构","sourceType":"textbook"},
+    {"id":"w1_hsk1_03_05","type":"component_char","stage":"in_class","prompt_cn":"哪个汉字表示“她”？","prompt_en":"Choose 她 (she).","data":{"sentence":"她 / she","sentence_pinyin":"tā","options":["他","地","她","池"],"options_pinyin":[],"correct_index":2,"hide_option_pinyin":true},"correct_answer":"她","kp":"汉字区辨：女旁她","sourceType":"textbook"},
+    {"id":"w1_hsk1_03_06","type":"component_char","stage":"in_class","prompt_cn":"哪个汉字是“姐”？","prompt_en":"Choose 姐 (older sister).","data":{"sentence":"姐 / older sister","sentence_pinyin":"jiě","options":["组","好","妈","姐"],"options_pinyin":[],"correct_index":3,"hide_option_pinyin":true},"correct_answer":"姐","kp":"汉字区辨：女旁姐","sourceType":"textbook"},
+    {"id":"w1_hsk1_03_07","type":"component_char","stage":"in_class","prompt_cn":"哪个汉字是“工”？","prompt_en":"Choose 工 (work).","data":{"sentence":"工 / work","sentence_pinyin":"gōng","options":["王","工","土","干"],"options_pinyin":[],"correct_index":1,"hide_option_pinyin":true},"correct_answer":"工","kp":"汉字区辨：工","sourceType":"textbook"},
+    {"id":"w1_hsk1_03_08","type":"component_char","stage":"in_class","prompt_cn":"哪个汉字是“作”？","prompt_en":"Choose 作 (work/do).","data":{"sentence":"作 / work","sentence_pinyin":"zuò","options":["昨","住","作","做"],"options_pinyin":[],"correct_index":2,"hide_option_pinyin":true},"correct_answer":"作","kp":"汉字区辨：亻旁作","sourceType":"textbook"},
+    {"id":"w1_hsk1_03_09","type":"component_char","stage":"in_class","prompt_cn":"哪个汉字是“忙”？","prompt_en":"Choose 忙 (busy).","data":{"sentence":"忙 / busy","sentence_pinyin":"máng","options":["忘","盲","芒","忙"],"options_pinyin":[],"correct_index":3,"hide_option_pinyin":true},"correct_answer":"忙","kp":"汉字区辨：忄旁忙","sourceType":"textbook"},
+    {"id":"w1_hsk1_03_10","type":"component_char","stage":"in_class","prompt_cn":"哪个汉字是“想”？","prompt_en":"Choose 想 (miss/think).","data":{"sentence":"想 / miss","sentence_pinyin":"xiǎng","options":["想","相","箱","香"],"options_pinyin":[],"correct_index":0,"hide_option_pinyin":true},"correct_answer":"想","kp":"汉字区辨：心底想","sourceType":"textbook"}
+  ],
+  "tt_text_true_false":[
+    {"id":"tt_hsk1_03_01","type":"text_true_false","stage":"in_class","prompt_cn":"判断正误。","prompt_en":"True or false?","data":{"statement":"李文是中国人。","statement_pinyin":"Lǐ Wén shì Zhōngguó rén.","statement_en":"Li Wen is Chinese.","answer":true},"correct_answer":true,"kp":"课文一：国籍","sourceType":"textbook"},
+    {"id":"tt_hsk1_03_02","type":"text_true_false","stage":"in_class","prompt_cn":"判断正误。","prompt_en":"True or false?","data":{"statement":"陈天中的女朋友是法国人。","statement_pinyin":"Chén Tiānzhōng de nǚpéngyou shì Fǎguó rén.","statement_en":"Chen Tianzhong's girlfriend is French.","answer":false},"correct_answer":false,"kp":"课文二：哪国人","sourceType":"textbook"},
+    {"id":"tt_hsk1_03_03","type":"text_true_false","stage":"in_class","prompt_cn":"判断正误。","prompt_en":"True or false?","data":{"statement":"王一飞还很忙。","statement_pinyin":"Wáng Yīfēi hái hěn máng.","statement_en":"Wang Yifei is still very busy.","answer":true},"correct_answer":true,"kp":"课文三：还、忙","sourceType":"textbook"}
+  ]},"hanziWriting":{"characters":["人","的","这","谁","女","朋","友","哪","国","她","喂","姐","工","作","还","忙","吗","对","太","我","们","想"]}},
+  "postClassHomework": {
+    "tiers": {"A":{"label":"A档：基础巩固","goal":"认得出、选得对、敢开口","suggestedMinutes":15,"suggestedMix":"12题补充巩固：客观练习 + 1题输出 + 1题汉字书写"},"B":{"label":"B档：标准巩固","goal":"能完成本课交际任务","suggestedMinutes":15,"suggestedMix":"12题补充巩固：客观练习 + 1题输出 + 1题汉字书写"},"C":{"label":"C档：挑战拓展","goal":"迁移使用，不是多刷题","suggestedMinutes":15,"suggestedMix":"12题补充巩固：客观练习 + 1题输出 + 1题汉字书写"}},
+    "sharedPool": [
+      {"id":"hw_l03_s_001","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"choice","section":"词汇识别","prompt_cn":"“谁”的意思是？","prompt_en":"What does 谁 mean?","options":["who","which","country","she"],"correct_answer":"who","acceptable_answers":["who"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["谁","vocab"]},
+      {"id":"hw_l03_s_002","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"choice","section":"词汇识别","prompt_cn":"“哪”的意思是？","prompt_en":"What does 哪 mean?","options":["which","still","busy","also"],"correct_answer":"which","acceptable_answers":["which"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["哪","vocab"]},
+      {"id":"hw_l03_s_003","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"choice","section":"词汇识别","prompt_cn":"“还”的意思是？","prompt_en":"What does 还 mean?","options":["still","too","who","work"],"correct_answer":"still","acceptable_answers":["still"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["还","vocab"]},
+      {"id":"hw_l03_s_004","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"choice","section":"词汇识别","prompt_cn":"“想”的意思是？","prompt_en":"What does 想 mean?","options":["to miss / think of","to work","to call","to be"],"correct_answer":"to miss / think of","acceptable_answers":["to miss / think of"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["想","vocab"]},
+      {"id":"hw_l03_s_005","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"choice","section":"词汇识别","prompt_cn":"“对”的意思是？","prompt_en":"What does 对 mean?","options":["right / yes","still","who","too"],"correct_answer":"right / yes","acceptable_answers":["right / yes"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["对","vocab"]},
+      {"id":"hw_l03_s_006","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"choice","section":"情景反应","prompt_cn":"别人问“你是哪国人？”，可以回答什么？","prompt_en":"How can you answer: What nationality are you?","options":["我是俄罗斯人。","我还很忙。","这是我姐姐。","我们很想你。"],"correct_answer":"我是俄罗斯人。","acceptable_answers":["我是俄罗斯人。","我是俄罗斯人"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["国籍","情景"]},
+      {"id":"hw_l03_s_007","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"fill_blank","section":"选词填空","prompt_cn":"她___是泰国人。","prompt_en":"Fill in the blank.","options":["也","吗","哪","还"],"correct_answer":"也","acceptable_answers":["也"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["也","句子"]},
+      {"id":"hw_l03_s_008","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"fill_blank","section":"选词填空","prompt_cn":"你工作还___吗？","prompt_en":"Fill in the blank.","options":["忙","谁","国","对"],"correct_answer":"忙","acceptable_answers":["忙"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["忙","句子"]},
+      {"id":"hw_l03_s_009","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"fill_blank","section":"选词填空","prompt_cn":"认识你我也很___。","prompt_en":"Fill in the blank.","options":["高兴","工作","国","她"],"correct_answer":"高兴","acceptable_answers":["高兴"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["高兴","复习"]},
+      {"id":"hw_l03_s_010","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"fill_blank","section":"选词填空","prompt_cn":"这是谁？这是我的___。","prompt_en":"Fill in the blank.","options":["女朋友","哪","还","吗"],"correct_answer":"女朋友","acceptable_answers":["女朋友"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["女朋友","句子"]},
+      {"id":"hw_l03_s_011","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"ordering","section":"连词成句","prompt_cn":"连词成句：你 / 哪 / 是 / 国 / 人","prompt_en":"Put the words in order.","tokens":["你","是","哪","国","人"],"correct_answer":"你是哪国人","acceptable_answers":["你是哪国人","你是哪国人？"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["哪","国","ordering"]},
+      {"id":"hw_l03_s_012","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"ordering","section":"连词成句","prompt_cn":"连词成句：我 / 们 / 很 / 想 / 你","prompt_en":"Put the words in order.","tokens":["我","们","很","想","你"],"correct_answer":"我们很想你","acceptable_answers":["我们很想你","我们很想你。"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["我们","想","ordering"]},
+      {"id":"hw_l03_s_013","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"handwriting","section":"汉字描红","prompt_cn":"汉字描红：每个汉字描 3 遍。","prompt_en":"Trace each Chinese character 3 times.","characters":["谁","哪","国","她","忙"],"repeat_count":3,"auto_grade":false,"needs_teacher_review":false,"optional_teacher_check":true,"repeat_ok":true,"tags":["handwriting","汉字"]},
+      {"id":"hw_l03_s_014","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"handwriting","section":"汉字描红","prompt_cn":"汉字描红：每个汉字描 3 遍。","prompt_en":"Trace each Chinese character 3 times.","characters":["姐","工","作","还","想"],"repeat_count":3,"auto_grade":false,"needs_teacher_review":false,"optional_teacher_check":true,"repeat_ok":true,"tags":["handwriting","汉字"]},
+      {"id":"hw_l03_s_015","lesson":"HSK1-L03","stage":"post_class","tier":"shared","type":"output","section":"轻量输出","prompt_cn":"请写两个问题：如何问一个人的国籍和姓名？","prompt_en":"Write two questions: how do you ask someone's nationality and name?","sample_answer":"你是哪国人？你叫什么名字？","auto_grade":false,"needs_teacher_review":true,"repeat_ok":true,"tags":["output","国籍","姓名"]},
+      {"id":"hw_l03_c_006","lesson":"HSK1-L03","stage":"post_class","tier":"C","type":"output","section":"基础自我介绍","prompt_cn":"写一个简单的自我介绍，至少三句。","prompt_en":"Write a simple self-introduction in at least three sentences.","sample_answer":"我叫安娜。我是俄罗斯人。我是学生。","auto_grade":false,"needs_teacher_review":true,"repeat_ok":true,"tags":["output","自我介绍"]}
+    ],
+    "tierPools": {
+      "A":[
+        {"id":"hw_l03_a_001","lesson":"HSK1-L03","stage":"post_class","tier":"A","type":"choice","section":"基础词汇","prompt_cn":"Choose the correct Chinese: still","prompt_en":"Choose the correct Chinese word.","options":["还","忙","想","对"],"correct_answer":"还","acceptable_answers":["还"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["还"]},
+        {"id":"hw_l03_a_002","lesson":"HSK1-L03","stage":"post_class","tier":"A","type":"fill_blank","section":"基础填空","prompt_cn":"她___是学生。","prompt_en":"Fill in the blank.","options":["也","吗","哪","对"],"correct_answer":"也","acceptable_answers":["也"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["也"]},
+        {"id":"hw_l03_a_003","lesson":"HSK1-L03","stage":"post_class","tier":"A","type":"fill_blank","section":"基础填空","prompt_cn":"我___想你。","prompt_en":"Fill in the blank.","options":["很","谁","国","吗"],"correct_answer":"很","acceptable_answers":["很"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["很","想"]},
+        {"id":"hw_l03_a_004","lesson":"HSK1-L03","stage":"post_class","tier":"A","type":"ordering","section":"基础排序","prompt_cn":"连词成句：学生 / 他 / 中国 / 是","prompt_en":"Put the words in order.","tokens":["学生","他","中国","是"],"correct_answer":"他是中国学生","acceptable_answers":["他是中国学生","他是中国学生。"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["是","中国","学生","ordering"]},
+        {"id":"hw_l03_a_005","lesson":"HSK1-L03","stage":"post_class","tier":"A","type":"output","section":"基础输出","prompt_cn":"回答问题：你是哪国人？","prompt_en":"Answer the question: What nationality are you?","sample_answer":"我是俄罗斯人。","auto_grade":false,"needs_teacher_review":true,"repeat_ok":true,"tags":["output","国籍"]}
+      ],
+      "B":[
+        {"id":"hw_l03_b_001","lesson":"HSK1-L03","stage":"post_class","tier":"B","type":"choice","section":"交际理解","prompt_cn":"别人问“这是你姐姐吗？”，你可以回答什么？","prompt_en":"Someone asks “Is this your elder sister?”. How can you answer?","options":["对，这是我姐姐。","我还很忙。","你是哪国人？","我们很想你。"],"correct_answer":"对，这是我姐姐。","acceptable_answers":["对，这是我姐姐。"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["对","姐姐","情景"]},
+        {"id":"hw_l03_b_002","lesson":"HSK1-L03","stage":"post_class","tier":"B","type":"fill_blank","section":"交际填空","prompt_cn":"A：你工作还忙吗？ B：对，___很忙。","prompt_en":"Complete the dialogue.","options":["还","也","哪","谁"],"correct_answer":"还","acceptable_answers":["还"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["还","忙"]},
+        {"id":"hw_l03_b_003","lesson":"HSK1-L03","stage":"post_class","tier":"B","type":"ordering","section":"交际排序","prompt_cn":"Put the words in order: 你 / 也 / 很 / 忙 / 吗","prompt_en":"Put the words in order.","tokens":["吗","很","你","忙","也"],"correct_answer":"你也很忙吗","acceptable_answers":["你也很忙吗","你也很忙吗？"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["吗","ordering"]},
+        {"id":"hw_l03_b_004","lesson":"HSK1-L03","stage":"post_class","tier":"B","type":"output","section":"标准输出","prompt_cn":"请写两句介绍朋友：她是谁、她是哪国人。","prompt_en":"Write two sentences about a friend: who she is and her nationality.","sample_answer":"她是我的朋友。她是泰国人。","auto_grade":false,"needs_teacher_review":true,"repeat_ok":true,"tags":["output","她","国籍"]},
+        {"id":"hw_l03_b_005","lesson":"HSK1-L03","stage":"post_class","tier":"B","type":"handwriting","section":"汉字描红","prompt_cn":"汉字描红：每个汉字描 4 遍。","prompt_en":"Trace each Chinese character 4 times.","characters":["这","谁","女","朋","友"],"repeat_count":4,"auto_grade":false,"needs_teacher_review":false,"optional_teacher_check":true,"repeat_ok":true,"tags":["handwriting"]}
+      ],
+      "C":[
+        {"id":"hw_l03_c_001","lesson":"HSK1-L03","stage":"post_class","tier":"C","type":"choice","section":"迁移表达","prompt_cn":"Choose the correct Chinese sentence: I still miss you.","prompt_en":"Choose the correct Chinese sentence.","options":["我还想你。","我很忙你。","你还是哪国人？","我想工作。"],"correct_answer":"我还想你。","acceptable_answers":["我还想你。"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["还","想"]},
+        {"id":"hw_l03_c_002","lesson":"HSK1-L03","stage":"post_class","tier":"C","type":"fill_blank","section":"句子转换","prompt_cn":"我很忙。→ 否定句：我___太忙。","prompt_en":"Change the sentence to a negative sentence.","options":["不","也","还","吗"],"correct_answer":"不","acceptable_answers":["不"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["不","忙"]},
+        {"id":"hw_l03_c_003","lesson":"HSK1-L03","stage":"post_class","tier":"C","type":"ordering","section":"迁移排序","prompt_cn":"Put the words in order: 认识 / 你 / 我 / 也 / 很 / 高兴","prompt_en":"Put the words in order.","tokens":["高兴","我","认识","很","你","也"],"correct_answer":"认识你我也很高兴","acceptable_answers":["认识你我也很高兴","我也很高兴认识你"],"auto_grade":true,"needs_teacher_review":false,"repeat_ok":true,"tags":["认识","高兴","ordering"]},
+        {"id":"hw_l03_c_004","lesson":"HSK1-L03","stage":"post_class","tier":"C","type":"output","section":"迁移输出","prompt_cn":"请写一个四句小对话：问候、询问国籍、回答国籍、表达高兴。","prompt_en":"Write a four-line dialogue: greeting, asking nationality, answering nationality, and expressing happiness.","sample_answer":"喂，你好！你是哪国人？我是俄罗斯人。认识你我也很高兴。","auto_grade":false,"needs_teacher_review":true,"repeat_ok":true,"tags":["dialogue","output"]},
+        {"id":"hw_l03_c_005","lesson":"HSK1-L03","stage":"post_class","tier":"C","type":"handwriting","section":"汉字描红","prompt_cn":"汉字描红：每个汉字描 3 遍。","prompt_en":"Trace each Chinese character 3 times.","characters":["还","忙","对","太","想"],"repeat_count":3,"auto_grade":false,"needs_teacher_review":false,"optional_teacher_check":true,"repeat_ok":true,"tags":["handwriting"]}
+      ]
+    },
+    "assignmentSelection": {
+      "A":["hw_l03_s_001","hw_l03_s_002","hw_l03_s_005","hw_l03_s_007","hw_l03_s_009","hw_l03_s_011","hw_l03_s_013","hw_l03_a_001","hw_l03_a_002","hw_l03_a_003","hw_l03_a_004","hw_l03_a_005"],
+      "B":["hw_l03_s_001","hw_l03_s_003","hw_l03_s_006","hw_l03_s_008","hw_l03_s_012","hw_l03_s_014","hw_l03_b_001","hw_l03_b_002","hw_l03_b_003","hw_l03_b_004","hw_l03_b_005","hw_l03_s_015"],
+      "C":["hw_l03_s_002","hw_l03_s_004","hw_l03_s_005","hw_l03_s_010","hw_l03_s_012","hw_l03_s_014","hw_l03_c_001","hw_l03_c_002","hw_l03_c_003","hw_l03_c_004","hw_l03_c_005","hw_l03_c_006"]
+    },
+    "reviewPolicy":{"auto_grade_types":["choice","fill_blank","ordering"],"practice_types":["handwriting"],"teacher_review_types":["output"],"feedback_timing":"下课立即给学生自动报告；作业输出题完成后，教师再给针对性反馈。"}
+  },
+  "report": {}
+}

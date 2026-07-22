@@ -1,0 +1,5001 @@
+{
+  "schemaVersion": "hsk1-course-v1",
+  "meta": {
+    "level": "HSK1",
+    "lessonId": "L02",
+    "lessonKey": "HSK1-L02",
+    "title": "我叫李文",
+    "titleEn": "My Name Is Li Wen",
+    "topic": "自我介绍与道歉",
+    "topicEn": "Self-introduction and Apologies",
+    "showVocabExamples": false,
+    "showHanziWritingDemo": true,
+    "characters": [
+      {
+        "id": "wang",
+        "name": "王一飞",
+        "namePinyin": "Wang Yifei",
+        "role": "teacher",
+        "roleLabel": "老师",
+        "avatar": "assets/avatars/wang_yifei.png"
+      },
+      {
+        "id": "chentianzhong",
+        "name": "陈天中",
+        "namePinyin": "Chen Tianzhong",
+        "role": "student",
+        "roleLabel": "学生",
+        "avatar": "assets/avatars/chen_tianzhong.png"
+      },
+      {
+        "id": "baijiayue",
+        "name": "白家月",
+        "namePinyin": "Bai Jiayue",
+        "role": "student",
+        "roleLabel": "学生",
+        "avatar": "assets/avatars/bai_jiayue.png"
+      },
+      {
+        "id": "liwen",
+        "name": "李文",
+        "namePinyin": "Li Wen",
+        "role": "student",
+        "roleLabel": "学生",
+        "avatar": "assets/avatars/li_wen.png"
+      }
+    ]
+  },
+  "features": {
+    "pinyin": false,
+    "hanziWritingDemo": true,
+    "vocabExamples": false,
+    "competition": true,
+    "postClassHomework": true
+  },
+  "vocabulary": [
+    {
+      "id": "v01",
+      "hanzi": "不",
+      "pinyin": "bù",
+      "pos": "adv.",
+      "english": "not; no",
+      "audio": "audio/L02/bu.mp3",
+      "emoji": "-",
+      "isCore": true,
+      "tags": [
+        "adverb",
+        "negation"
+      ],
+      "phrases": [
+        {
+          "hanzi": "不好",
+          "pinyin": "bù hǎo",
+          "english": "not good"
+        },
+        {
+          "hanzi": "不客气",
+          "pinyin": "bú kèqi",
+          "english": "you're welcome"
+        },
+        {
+          "hanzi": "不是",
+          "pinyin": "bú shì",
+          "english": "is not"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "我不是学生。",
+          "pinyin": "Wǒ bù shì xuéshēng.",
+          "english": "I am not a student."
+        },
+        {
+          "hanzi": "今天天气不好。",
+          "pinyin": "Jīntiān tiānqì bù hǎo.",
+          "english": "The weather is not good today."
+        },
+        {
+          "hanzi": "他不去学校。",
+          "pinyin": "Tā bù qù xuéxiào.",
+          "english": "He does not go to school."
+        }
+      ],
+      "image": "images/l02_pic_07_bu.png"
+    },
+    {
+      "id": "v02",
+      "hanzi": "是",
+      "pinyin": "shì",
+      "pos": "v.",
+      "english": "be (am/is/are)",
+      "audio": "audio/L02/shi.mp3",
+      "emoji": "-",
+      "isCore": true,
+      "tags": [
+        "verb",
+        "be"
+      ],
+      "phrases": [
+        {
+          "hanzi": "是学生",
+          "pinyin": "shì xuéshēng",
+          "english": "is a student"
+        },
+        {
+          "hanzi": "是老师",
+          "pinyin": "shì lǎoshī",
+          "english": "is a teacher"
+        },
+        {
+          "hanzi": "是同学",
+          "pinyin": "shì tóngxué",
+          "english": "is a classmate"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "我是中国人。",
+          "pinyin": "Wǒ shì Zhōngguó rén.",
+          "english": "I am Chinese."
+        },
+        {
+          "hanzi": "他是老师。",
+          "pinyin": "Tā shì lǎoshī.",
+          "english": "He is a teacher."
+        },
+        {
+          "hanzi": "这是书。",
+          "pinyin": "Zhè shì shū.",
+          "english": "This is a book."
+        }
+      ],
+      "image": "images/l02_pic_06_shi.png"
+    },
+    {
+      "id": "v03",
+      "hanzi": "对不起",
+      "pinyin": "duìbuqǐ",
+      "pos": "v.",
+      "english": "sorry",
+      "audio": "audio/L02/duibuqi.mp3",
+      "emoji": "-",
+      "isCore": true,
+      "tags": [
+        "verb",
+        "politeness",
+        "apology"
+      ],
+      "phrases": [],
+      "examples": [
+        {
+          "hanzi": "对不起，我来晚了。",
+          "pinyin": "Duìbuqǐ, wǒ lái wǎn le.",
+          "english": "Sorry, I am late."
+        },
+        {
+          "hanzi": "对不起，请问这是哪儿？",
+          "pinyin": "Duìbuqǐ, qǐngwèn zhè shì nǎr?",
+          "english": "Excuse me, where is this?"
+        },
+        {
+          "hanzi": "对不起，我不知道。",
+          "pinyin": "Duìbuqǐ, wǒ bù zhīdào.",
+          "english": "Sorry, I don't know."
+        }
+      ],
+      "image": "images/l02_pic_02_duibuqi.png"
+    },
+    {
+      "id": "v04",
+      "hanzi": "没关系",
+      "pinyin": "méi guānxi",
+      "pos": "",
+      "english": "never mind; it doesn't matter",
+      "audio": "audio/L02/meiguanxi.mp3",
+      "emoji": "-",
+      "isCore": true,
+      "tags": [
+        "politeness",
+        "response",
+        "apology"
+      ],
+      "phrases": [],
+      "examples": [
+        {
+          "hanzi": "A: 对不起！ B: 没关系！",
+          "pinyin": "A: Duìbuqǐ! B: Méi guānxi!",
+          "english": "A: Sorry! B: No problem!"
+        },
+        {
+          "hanzi": "没关系，慢慢来。",
+          "pinyin": "Méi guānxi, màn man lái.",
+          "english": "It's okay, take your time."
+        },
+        {
+          "hanzi": "没关系，我知道你不是故意的。",
+          "pinyin": "Méi guānxi, wǒ zhīdào nǐ bù shì gùyì de.",
+          "english": "Never mind, I know you didn't mean it."
+        }
+      ],
+      "image": "images/l02_pic_04_meiguanxi.png"
+    },
+    {
+      "id": "v05",
+      "hanzi": "没事",
+      "pinyin": "méi shì",
+      "pos": "",
+      "english": "it's nothing; no problem",
+      "audio": "audio/L02/meishi.mp3",
+      "emoji": "-",
+      "isCore": false,
+      "tags": [
+        "politeness",
+        "response"
+      ],
+      "phrases": [],
+      "examples": [
+        {
+          "hanzi": "A: 你没事吧？ B: 没事。",
+          "pinyin": "A: Nǐ méi shì ba? B: Méi shì.",
+          "english": "A: Are you okay? B: I'm fine."
+        },
+        {
+          "hanzi": "没事，别担心。",
+          "pinyin": "Méi shì, bié dānxīn.",
+          "english": "It's nothing, don't worry."
+        },
+        {
+          "hanzi": "没事，我可以做。",
+          "pinyin": "Méi shì, wǒ kěyǐ zuò.",
+          "english": "It's okay, I can do it."
+        }
+      ],
+      "image": "images/l02_pic_04_meiguanxi.png"
+    },
+    {
+      "id": "v06",
+      "hanzi": "很",
+      "pinyin": "hěn",
+      "pos": "adv.",
+      "english": "very",
+      "audio": "audio/L02/hen.mp3",
+      "emoji": "-",
+      "isCore": true,
+      "tags": [
+        "adverb",
+        "degree"
+      ],
+      "phrases": [
+        {
+          "hanzi": "很好",
+          "pinyin": "hěn hǎo",
+          "english": "very good"
+        },
+        {
+          "hanzi": "很大",
+          "pinyin": "hěn dà",
+          "english": "very big"
+        },
+        {
+          "hanzi": "很高兴",
+          "pinyin": "hěn gāoxìng",
+          "english": "very happy"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "今天很好。",
+          "pinyin": "Jīntiān hěn hǎo.",
+          "english": "Today is very good."
+        },
+        {
+          "hanzi": "他很高。",
+          "pinyin": "Tā hěn gāo.",
+          "english": "He is very tall."
+        },
+        {
+          "hanzi": "这本书很有意思。",
+          "pinyin": "Zhè běn shū hěn yǒuyìsi.",
+          "english": "This book is very interesting."
+        }
+      ],
+      "image": "images/l02_pic_09_hen.png"
+    },
+    {
+      "id": "v07",
+      "hanzi": "高兴",
+      "pinyin": "gāoxìng",
+      "pos": "adj.",
+      "english": "happy; glad",
+      "audio": "audio/L02/gaoxing.mp3",
+      "emoji": "-",
+      "isCore": true,
+      "tags": [
+        "adjective",
+        "emotion"
+      ],
+      "phrases": [
+        {
+          "hanzi": "不高兴",
+          "pinyin": "bù gāoxìng",
+          "english": "unhappy"
+        },
+        {
+          "hanzi": "很高兴",
+          "pinyin": "hěn gāoxìng",
+          "english": "very happy"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "认识你很高兴。",
+          "pinyin": "Rènshi nǐ hěn gāoxìng.",
+          "english": "Nice to meet you."
+        },
+        {
+          "hanzi": "她今天很高兴。",
+          "pinyin": "Tā jīntiān hěn gāoxìng.",
+          "english": "She is very happy today."
+        },
+        {
+          "hanzi": "我很高兴来中国。",
+          "pinyin": "Wǒ hěn gāoxìng lái Zhōngguó.",
+          "english": "I am very happy to come to China."
+        }
+      ],
+      "image": "images/l02_pic_05_gaoxing.png"
+    },
+    {
+      "id": "v08",
+      "hanzi": "认识",
+      "pinyin": "rènshi",
+      "pos": "v.",
+      "english": "know; recognize; meet",
+      "audio": "audio/L02/renshi.mp3",
+      "emoji": "-",
+      "isCore": true,
+      "tags": [
+        "verb",
+        "meet"
+      ],
+      "phrases": [
+        {
+          "hanzi": "认识你",
+          "pinyin": "rènshi nǐ",
+          "english": "know you"
+        },
+        {
+          "hanzi": "认识你们",
+          "pinyin": "rènshi nǐmen",
+          "english": "know you all"
+        },
+        {
+          "hanzi": "认识您",
+          "pinyin": "rènshi nín",
+          "english": "know you (polite)"
+        },
+        {
+          "hanzi": "认识大家",
+          "pinyin": "rènshi dàjiā",
+          "english": "know everyone"
+        },
+        {
+          "hanzi": "认识老师",
+          "pinyin": "rènshi lǎoshī",
+          "english": "know the teacher"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "我认识他。",
+          "pinyin": "Wǒ rènshi tā.",
+          "english": "I know him."
+        },
+        {
+          "hanzi": "你们认识吗？",
+          "pinyin": "Nǐmen rènshi ma?",
+          "english": "Do you know each other?"
+        },
+        {
+          "hanzi": "很高兴认识你。",
+          "pinyin": "Hěn gāoxìng rènshi nǐ.",
+          "english": "Nice to meet you."
+        }
+      ],
+      "image": "images/l02_pic_03_renshi.png"
+    },
+    {
+      "id": "v09",
+      "hanzi": "也",
+      "pinyin": "yě",
+      "pos": "adv.",
+      "english": "also; too",
+      "audio": "audio/L02/ye.mp3",
+      "emoji": "-",
+      "isCore": true,
+      "tags": [
+        "adverb",
+        "also"
+      ],
+      "phrases": [
+        {
+          "hanzi": "我也是",
+          "pinyin": "wǒ yě shì",
+          "english": "I am too"
+        },
+        {
+          "hanzi": "你也是",
+          "pinyin": "nǐ yě shì",
+          "english": "you are too"
+        },
+        {
+          "hanzi": "您也是",
+          "pinyin": "nín yě shì",
+          "english": "you are too (polite)"
+        },
+        {
+          "hanzi": "大家也很高兴",
+          "pinyin": "dàjiā yě hěn gāoxìng",
+          "english": "everyone is also very happy"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "我也是学生。",
+          "pinyin": "Wǒ yě shì xuéshēng.",
+          "english": "I am also a student."
+        },
+        {
+          "hanzi": "他也很高兴。",
+          "pinyin": "Tā yě hěn gāoxìng.",
+          "english": "He is also very happy."
+        },
+        {
+          "hanzi": "我认识你，他也认识你。",
+          "pinyin": "Wǒ rènshi nǐ, tā yě rènshi nǐ.",
+          "english": "I know you, and he knows you too."
+        }
+      ],
+      "image": "images/l02_pic_08_ye.png"
+    }
+  ],
+  "texts": [
+    {
+      "id": "text01",
+      "title": "认识学生",
+      "titleEn": "Getting to Know Students",
+      "scene": "在教室里，王一飞在认识学生。",
+      "sceneEn": "In the classroom, Wang Yifei was getting to know the students.",
+      "audio": "audio/L02/text01_full.mp3",
+      "lines": [
+        {
+          "speaker": "wang",
+          "hanzi": "请问，你叫什么名字？",
+          "pinyin": "Qǐngwèn, nǐ jiào shénme míngzi?",
+          "english": "Excuse me, what is your name?",
+          "audio": "audio/L02/text01_line01.mp3",
+          "highlightVocab": []
+        },
+        {
+          "speaker": "chentianzhong",
+          "hanzi": "我叫陈天中。",
+          "pinyin": "Wǒ jiào Chén Tiānzhōng.",
+          "english": "My name is Chen Tianzhong.",
+          "audio": "audio/L02/text01_line02.mp3",
+          "highlightVocab": []
+        }
+      ]
+    },
+    {
+      "id": "text02",
+      "title": "认错人",
+      "titleEn": "Mistaken Identity",
+      "scene": "在校园里，陈天中和白家月打招呼认识错了人。",
+      "sceneEn": "On campus, Chen Tianzhong greeted Bai Jiayue but mistook her for someone else.",
+      "audio": "audio/L02/text02_full.mp3",
+      "lines": [
+        {
+          "speaker": "chentianzhong",
+          "hanzi": "你好，安妮！",
+          "pinyin": "Nǐ hǎo, Ānnī!",
+          "english": "Hello, Annie!",
+          "audio": "audio/L02/text02_line01.mp3",
+          "highlightVocab": []
+        },
+        {
+          "speaker": "baijiayue",
+          "hanzi": "你好，陈天中！我不是安妮，我是白家月。",
+          "pinyin": "Nǐ hǎo, Chén Tiānzhōng! Wǒ bú shì Ānnī, wǒ shì Bái Jiāyuè.",
+          "english": "Hello, Chen Tianzhong! I'm not Annie, I'm Bai Jiayue.",
+          "audio": "audio/L02/text02_line02.mp3",
+          "highlightVocab": [
+            "v01",
+            "v02"
+          ]
+        },
+        {
+          "speaker": "chentianzhong",
+          "hanzi": "对不起！",
+          "pinyin": "Duìbuqǐ!",
+          "english": "Sorry!",
+          "audio": "audio/L02/text02_line03.mp3",
+          "highlightVocab": [
+            "v03"
+          ]
+        },
+        {
+          "speaker": "baijiayue",
+          "hanzi": "没关系！",
+          "pinyin": "Méi guānxi!",
+          "english": "That's all right!",
+          "audio": "audio/L02/text02_line04.mp3",
+          "highlightVocab": [
+            "v04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "text03",
+      "title": "初次相遇",
+      "titleEn": "First Meeting",
+      "scene": "在校园里，李文和白家月第一次相遇。",
+      "sceneEn": "On campus, Li Wen and Bai Jiayue met for the first time.",
+      "audio": "audio/L02/text03_full.mp3",
+      "lines": [
+        {
+          "speaker": "liwen",
+          "hanzi": "你好！我叫李文。",
+          "pinyin": "Nǐ hǎo! Wǒ jiào Lǐ Wén.",
+          "english": "Hello! My name is Li Wen.",
+          "audio": "audio/L02/text03_line01.mp3",
+          "highlightVocab": []
+        },
+        {
+          "speaker": "baijiayue",
+          "hanzi": "你好！我叫白家月。",
+          "pinyin": "Nǐ hǎo! Wǒ jiào Bái Jiāyuè.",
+          "english": "Hello! My name is Bai Jiayue.",
+          "audio": "audio/L02/text03_line02.mp3",
+          "highlightVocab": []
+        },
+        {
+          "speaker": "liwen",
+          "hanzi": "很高兴认识你。",
+          "pinyin": "Hěn gāoxìng rènshi nǐ.",
+          "english": "Nice to meet you.",
+          "audio": "audio/L02/text03_line03.mp3",
+          "highlightVocab": [
+            "v06",
+            "v07",
+            "v08"
+          ]
+        },
+        {
+          "speaker": "baijiayue",
+          "hanzi": "认识你我也很高兴。",
+          "pinyin": "Rènshi nǐ wǒ yě hěn gāoxìng.",
+          "english": "Nice to meet you too.",
+          "audio": "audio/L02/text03_line04.mp3",
+          "highlightVocab": [
+            "v06",
+            "v07",
+            "v08",
+            "v09"
+          ]
+        }
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g01",
+      "title": "基本语序 SVO",
+      "titleEn": "Basic Word Order SVO",
+      "examples": [
+        {
+          "hanzi": "我是学生。",
+          "pinyin": "Wo shi xuesheng.",
+          "english": "I am a student.",
+          "highlight": [
+            "是"
+          ]
+        },
+        {
+          "hanzi": "你是老师。",
+          "pinyin": "Ni shi laoshi.",
+          "english": "You are a teacher.",
+          "highlight": [
+            "是"
+          ]
+        },
+        {
+          "hanzi": "她叫李文。",
+          "pinyin": "Ta jiao Li Wen.",
+          "english": "Her name is Li Wen.",
+          "highlight": [
+            "叫"
+          ]
+        }
+      ],
+      "formula": {
+        "pattern": "主语 + 谓语 + 宾语",
+        "patternEn": "Subject + Predicate + Object",
+        "note": "汉语的基本语序是主语-谓语-宾语。先说“谁”，再说“做什么/是什么”，最后说对象或身份。",
+        "noteEn": "Chinese basic word order is SVO. Say the person first, then the action or identity, then the object or identity word.",
+        "noteRu": "Базовый порядок слов в китайском: подлежащее + сказуемое + дополнение. Сначала говорим «кто», потом «что делает / кем является», затем объект или身份."
+      }
+    },
+    {
+      "id": "g02",
+      "title": "不的否定",
+      "titleEn": "Negation with not",
+      "examples": [
+        {
+          "hanzi": "我是学生。 -> 我不是学生。",
+          "pinyin": "Wo shi xuesheng. -> Wo bu shi xuesheng.",
+          "english": "I am a student. -> I am not a student.",
+          "highlight": [
+            "不"
+          ]
+        },
+        {
+          "hanzi": "他叫李文。 -> 他不叫李文。",
+          "pinyin": "Ta jiao Li Wen. -> Ta bu jiao Li Wen.",
+          "english": "His name is Li Wen. -> His name is not Li Wen.",
+          "highlight": [
+            "不"
+          ]
+        }
+      ],
+      "formula": {
+        "pattern": "主语 + 不 + 动词 + 宾语",
+        "patternEn": "Subject + bu + Verb + Object",
+        "note": "“不”放在动词或形容词前面，表示否定。HSK1 阶段先记住：不是、不叫、不认识。",
+        "noteEn": "Put bu before a verb or adjective to make a negative sentence. At HSK1, start with: bu shi, bu jiao, bu renshi.",
+        "noteRu": "不 ставится перед глаголом или прилагательным и делает предложение отрицательным. На уровне HSK1 сначала запомните: bu shi, bu jiao, bu renshi."
+      }
+    },
+    {
+      "id": "g03",
+      "title": "“也”的用法",
+      "titleEn": "The use of ye (also / too)",
+      "examples": [
+        {
+          "hanzi": "我是学生，他也是学生。",
+          "pinyin": "Wo shi xuesheng, ta ye shi xuesheng.",
+          "english": "I am a student, he is also a student.",
+          "highlight": [
+            "也"
+          ]
+        },
+        {
+          "hanzi": "很高兴认识你。 -> 认识你我也很高兴。",
+          "pinyin": "Hen gaoxing renshi ni. -> Renshi ni wo ye hen gaoxing.",
+          "english": "Nice to meet you. -> Nice to meet you too.",
+          "highlight": [
+            "也"
+          ]
+        }
+      ],
+      "formula": {
+        "pattern": "主语 + 也 + 动词/形容词 + ...",
+        "patternEn": "Subject + ye + Verb/Adjective + ...",
+        "note": "“也”表示“同样、也”。它通常放在主语后、动词或形容词前。不要把“也”放在句子最后。",
+        "noteEn": "Ye means also or too. It usually comes after the subject and before the verb or adjective. Do not put ye at the end of the sentence.",
+        "noteRu": "也 означает «тоже». Обычно ставится после подлежащего и перед глаголом или прилагательным. Не ставьте 也 в конец предложения."
+      }
+    },
+    {
+      "id": "g04",
+      "title": "对不起和没关系",
+      "titleEn": "Sorry and Never Mind",
+      "examples": [
+        {
+          "hanzi": "A: 对不起！ B: 没关系。",
+          "pinyin": "A: Duibuqi! B: Mei guanxi.",
+          "english": "A: I'm sorry! B: Never mind.",
+          "highlight": [
+            "对不起",
+            "没关系"
+          ]
+        },
+        {
+          "hanzi": "A: 对不起！ B: 没事，没关系。",
+          "pinyin": "A: Duibuqi! B: Mei shi, mei guanxi.",
+          "english": "A: Sorry! B: It's fine, never mind.",
+          "highlight": [
+            "对不起",
+            "没事"
+          ]
+        }
+      ],
+      "formula": {
+        "pattern": "道歉：对不起 / 回应：没关系、没事",
+        "patternEn": "Apology: duibuqi / Response: mei guanxi, mei shi",
+        "note": "“对不起”用于道歉；“没关系”和“没事”用于回应道歉，表示不要紧。课堂上先掌握一问一答。",
+        "noteEn": "Use duibuqi to apologize. Use mei guanxi or mei shi to respond and show that it is okay. In class, first master this short exchange.",
+        "noteRu": "对不起 используется для извинения. 没关系 и 没事 используются в ответ и означают «ничего страшного». Сначала выучите короткий диалог."
+      }
+    }
+  ],
+  "preClass": {
+    "questions": [
+      {
+        "id": "pre_l02_001",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "Choose the Chinese word for “not”.",
+        "options": [
+          {
+            "text": "不",
+            "pinyin": "bù"
+          },
+          {
+            "text": "是",
+            "pinyin": "shì"
+          },
+          {
+            "text": "很",
+            "pinyin": "hěn"
+          },
+          {
+            "text": "也",
+            "pinyin": "yě"
+          }
+        ],
+        "answer": "不",
+        "weakPoints": "词汇：不"
+      },
+      {
+        "id": "pre_l02_002",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "Choose the Chinese word for “sorry”.",
+        "options": [
+          {
+            "text": "对不起",
+            "pinyin": "duìbuqǐ"
+          },
+          {
+            "text": "没关系",
+            "pinyin": "méi guānxi"
+          },
+          {
+            "text": "高兴",
+            "pinyin": "gāoxìng"
+          },
+          {
+            "text": "认识",
+            "pinyin": "rènshi"
+          }
+        ],
+        "answer": "对不起",
+        "weakPoints": "词汇：对不起"
+      },
+      {
+        "id": "pre_l02_003",
+        "type": "choice",
+        "module": "交际表达",
+        "question": "Choose the appropriate reply to “对不起”.",
+        "options": [
+          {
+            "text": "没关系",
+            "pinyin": "méi guānxi"
+          },
+          {
+            "text": "很高兴",
+            "pinyin": "hěn gāoxìng"
+          },
+          {
+            "text": "你好",
+            "pinyin": "nǐ hǎo"
+          },
+          {
+            "text": "再见",
+            "pinyin": "zàijiàn"
+          }
+        ],
+        "answer": "没关系",
+        "weakPoints": "交际功能：回应道歉"
+      },
+      {
+        "id": "pre_l02_004",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "Choose the Chinese word for “glad; happy”.",
+        "options": [
+          {
+            "text": "高兴",
+            "pinyin": "gāoxìng"
+          },
+          {
+            "text": "认识",
+            "pinyin": "rènshi"
+          },
+          {
+            "text": "没事",
+            "pinyin": "méishì"
+          },
+          {
+            "text": "学生",
+            "pinyin": "xuéshēng"
+          }
+        ],
+        "answer": "高兴",
+        "weakPoints": "词汇：高兴"
+      },
+      {
+        "id": "pre_l02_005",
+        "type": "choice",
+        "module": "句子理解",
+        "question": "Complete: 我___学生。",
+        "options": [
+          {
+            "text": "是",
+            "pinyin": "shì"
+          },
+          {
+            "text": "不",
+            "pinyin": "bù"
+          },
+          {
+            "text": "很",
+            "pinyin": "hěn"
+          },
+          {
+            "text": "也",
+            "pinyin": "yě"
+          }
+        ],
+        "answer": "是",
+        "weakPoints": "语法：基本语序"
+      },
+      {
+        "id": "pre_l02_006",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "Choose the Chinese word for “know; become acquainted with”.",
+        "options": [
+          {
+            "text": "认识",
+            "pinyin": "rènshi"
+          },
+          {
+            "text": "高兴",
+            "pinyin": "gāoxìng"
+          },
+          {
+            "text": "没事",
+            "pinyin": "méishì"
+          },
+          {
+            "text": "不是",
+            "pinyin": "bú shì"
+          }
+        ],
+        "answer": "认识",
+        "weakPoints": "词汇：认识"
+      },
+      {
+        "id": "pre_l02_007",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "Choose the Chinese word for “also; too”.",
+        "options": [
+          {
+            "text": "也",
+            "pinyin": "yě"
+          },
+          {
+            "text": "很",
+            "pinyin": "hěn"
+          },
+          {
+            "text": "不",
+            "pinyin": "bù"
+          },
+          {
+            "text": "是",
+            "pinyin": "shì"
+          }
+        ],
+        "answer": "也",
+        "weakPoints": "词汇：也"
+      },
+      {
+        "id": "pre_l02_008",
+        "type": "choice",
+        "module": "交际表达",
+        "question": "Choose the Chinese expression for “It doesn’t matter”.",
+        "options": [
+          {
+            "text": "没事",
+            "pinyin": "méishì"
+          },
+          {
+            "text": "对不起",
+            "pinyin": "duìbuqǐ"
+          },
+          {
+            "text": "高兴",
+            "pinyin": "gāoxìng"
+          },
+          {
+            "text": "认识",
+            "pinyin": "rènshi"
+          }
+        ],
+        "answer": "没事",
+        "weakPoints": "词汇：没事"
+      },
+      {
+        "id": "pre_l02_009",
+        "type": "subjective",
+        "module": "开放式自我介绍",
+        "question": "What is your name? Write one complete sentence.",
+        "answerPlaceholder": "For example: 我叫李文。",
+        "needsTeacherReview": true,
+        "weakPoints": "综合：自我介绍"
+      },
+      {
+        "id": "pre_l02_010",
+        "type": "subjective",
+        "module": "开放式对话",
+        "question": "Write a short dialogue with 对不起 and 没关系.",
+        "answerPlaceholder": "Write at least two sentences.",
+        "needsTeacherReview": true,
+        "weakPoints": "词汇：对不起、没关系"
+      }
+    ]
+  },
+  "inClass": {
+    "questionGroups": {
+      "v1_image_guess": [
+        {
+          "id": "v1_hsk1_02_01",
+          "type": "image_guess",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 8,
+          "prompt_cn": "请看图片，选择对应的词。",
+          "prompt_en": "Look at the picture. Choose the word.",
+          "data": {
+            "image_hint": "两个人见面打招呼。"
+          },
+          "correct_answer": "你好",
+          "acceptable_answers": [
+            "你好"
+          ],
+          "kp": "词汇：你好",
+          "feedback_correct": "对！你好",
+          "feedback_wrong": "再想想。",
+          "media": {
+            "audio": null,
+            "image": "images/l02_pic_01_nihao.png"
+          },
+          "source": "vocabulary",
+          "vocab_pool": "L02"
+        },
+        {
+          "id": "v1_hsk1_02_02",
+          "type": "image_guess",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 8,
+          "prompt_cn": "请看图片，选择对应的词。",
+          "prompt_en": "Look at the picture. Choose the word.",
+          "data": {
+            "image_hint": "一个人低头道歉。"
+          },
+          "correct_answer": "对不起",
+          "acceptable_answers": [
+            "对不起"
+          ],
+          "kp": "词汇：对不起",
+          "feedback_correct": "对！对不起",
+          "feedback_wrong": "再想想。",
+          "media": {
+            "audio": null,
+            "image": "images/l02_pic_02_duibuqi.png"
+          },
+          "source": "vocabulary",
+          "vocab_pool": "L02"
+        },
+        {
+          "id": "v1_hsk1_02_03",
+          "type": "image_guess",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 8,
+          "prompt_cn": "请看图片，选择对应的词。",
+          "prompt_en": "Look at the picture. Choose the word.",
+          "data": {
+            "image_hint": "两个人第一次见面、握手。"
+          },
+          "correct_answer": "认识",
+          "acceptable_answers": [
+            "认识"
+          ],
+          "kp": "词汇：认识",
+          "feedback_correct": "对！认识",
+          "feedback_wrong": "再想想。",
+          "media": {
+            "audio": null,
+            "image": "images/l02_pic_03_renshi.png"
+          },
+          "source": "vocabulary",
+          "vocab_pool": "L02"
+        },
+        {
+          "id": "v1_hsk1_02_04",
+          "type": "image_guess",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 8,
+          "prompt_cn": "请看图片，选择对应的词。",
+          "prompt_en": "Look at the picture. Choose the word.",
+          "data": {
+            "image_hint": "听到道歉后摆手微笑。"
+          },
+          "correct_answer": "没关系",
+          "acceptable_answers": [
+            "没关系"
+          ],
+          "kp": "词汇：没关系",
+          "feedback_correct": "对！没关系",
+          "feedback_wrong": "再想想。",
+          "media": {
+            "audio": null,
+            "image": "images/l02_pic_04_meiguanxi.png"
+          },
+          "source": "vocabulary",
+          "vocab_pool": "L02"
+        },
+        {
+          "id": "v1_hsk1_02_05",
+          "type": "image_guess",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 8,
+          "prompt_cn": "请看图片，选择对应的词。",
+          "prompt_en": "Look at the picture. Choose the word.",
+          "data": {
+            "image_hint": "开心的表情。"
+          },
+          "correct_answer": "高兴",
+          "acceptable_answers": [
+            "高兴"
+          ],
+          "kp": "词汇：高兴",
+          "feedback_correct": "对！高兴",
+          "feedback_wrong": "再想想。",
+          "media": {
+            "audio": null,
+            "image": "images/l02_pic_05_gaoxing.png"
+          },
+          "source": "vocabulary",
+          "vocab_pool": "L02"
+        },
+        {
+          "id": "v1_hsk1_02_06",
+          "type": "image_guess",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 8,
+          "prompt_cn": "请看图片，选择对应的词。",
+          "prompt_en": "Look at the picture. Choose the word.",
+          "data": {
+            "image_hint": "表示身份：is。"
+          },
+          "correct_answer": "是",
+          "acceptable_answers": [
+            "是"
+          ],
+          "kp": "词汇：是",
+          "feedback_correct": "对！是",
+          "feedback_wrong": "再想想。",
+          "media": {
+            "audio": null,
+            "image": "images/l02_pic_06_shi.png"
+          },
+          "source": "vocabulary",
+          "vocab_pool": "L02"
+        },
+        {
+          "id": "v1_hsk1_02_07",
+          "type": "image_guess",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 8,
+          "prompt_cn": "请看图片，选择对应的词。",
+          "prompt_en": "Look at the picture. Choose the word.",
+          "data": {
+            "image_hint": "摇头否定：not。"
+          },
+          "correct_answer": "不",
+          "acceptable_answers": [
+            "不"
+          ],
+          "kp": "词汇：不",
+          "feedback_correct": "对！不",
+          "feedback_wrong": "再想想。",
+          "media": {
+            "audio": null,
+            "image": "images/l02_pic_07_bu.png"
+          },
+          "source": "vocabulary",
+          "vocab_pool": "L02"
+        },
+        {
+          "id": "v1_hsk1_02_08",
+          "type": "image_guess",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 8,
+          "prompt_cn": "请看图片，选择对应的词。",
+          "prompt_en": "Look at the picture. Choose the word.",
+          "data": {
+            "image_hint": "两个人都一样：also。"
+          },
+          "correct_answer": "也",
+          "acceptable_answers": [
+            "也"
+          ],
+          "kp": "词汇：也",
+          "feedback_correct": "对！也",
+          "feedback_wrong": "再想想。",
+          "media": {
+            "audio": null,
+            "image": "images/l02_pic_08_ye.png"
+          },
+          "source": "vocabulary",
+          "vocab_pool": "L02"
+        },
+        {
+          "id": "v1_hsk1_02_09",
+          "type": "image_guess",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 8,
+          "prompt_cn": "请看图片，选择对应的词。",
+          "prompt_en": "Look at the picture. Choose the word.",
+          "data": {
+            "image_hint": "程度很高：very。"
+          },
+          "correct_answer": "很",
+          "acceptable_answers": [
+            "很"
+          ],
+          "kp": "词汇：很",
+          "feedback_correct": "对！很",
+          "feedback_wrong": "再想想。",
+          "media": {
+            "audio": null,
+            "image": "images/l02_pic_09_hen.png"
+          },
+          "source": "vocabulary",
+          "vocab_pool": "L02"
+        },
+        {
+          "id": "v1_hsk1_02_10",
+          "type": "image_guess",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 8,
+          "prompt_cn": "请看图片，选择对应的词。",
+          "prompt_en": "Look at the picture. Choose the word.",
+          "data": {
+            "image_hint": "姓名牌：我叫……"
+          },
+          "correct_answer": "叫",
+          "acceptable_answers": [
+            "叫"
+          ],
+          "kp": "词汇：叫",
+          "feedback_correct": "对！叫",
+          "feedback_wrong": "再想想。",
+          "media": {
+            "audio": null,
+            "image": "images/l02_pic_10_jiao.png"
+          },
+          "source": "vocabulary",
+          "vocab_pool": "L02"
+        }
+      ],
+      "v3_blind_box_sentence": [
+        {
+          "id": "v3_hsk1_02_01",
+          "type": "blind_box_sentence",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 15,
+          "prompt_cn": "请用下面的词说一个句子",
+          "prompt_en": "Make a sentence with the word",
+          "data": {
+            "word": "认识",
+            "hints": [
+              "你",
+              "很",
+              "高兴"
+            ],
+            "reference_answer": "很高兴认识你。"
+          },
+          "kp": "词汇：认识"
+        },
+        {
+          "id": "v3_hsk1_02_02",
+          "type": "blind_box_sentence",
+          "stage": "in_class",
+          "difficulty": 0.6,
+          "time_estimate_sec": 15,
+          "prompt_cn": "请用下面的词说一个句子",
+          "prompt_en": "Make a sentence with the word",
+          "data": {
+            "word": "也",
+            "hints": [
+              "我",
+              "是",
+              "学生"
+            ],
+            "reference_answer": "我也是学生。"
+          },
+          "kp": "词汇：也"
+        },
+        {
+          "id": "v3_hsk1_02_03",
+          "type": "blind_box_sentence",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 12,
+          "prompt_cn": "请用下面的词说一个句子",
+          "prompt_en": "Make a sentence with the word",
+          "data": {
+            "word": "对不起",
+            "hints": [
+              "我",
+              "叫"
+            ],
+            "reference_answer": "对不起，我不叫李文。"
+          },
+          "kp": "词汇：对不起"
+        }
+      ],
+      "v4_complete_sentence": [
+        {
+          "id": "v4_hsk1_02_01",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 10,
+          "prompt_cn": "完成下面的句子",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "template": "我___学生。",
+            "template_pinyin": "Wǒ ___ xuéshēng.",
+            "options": [
+              "很高兴",
+              "是",
+              "也"
+            ],
+            "options_pinyin": [
+              "hěn gāoxìng",
+              "shì",
+              "yě"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "是",
+          "kp": "语法：A 是 B"
+        },
+        {
+          "id": "v4_hsk1_02_02",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "完成下面的句子",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "template": "我___安妮，我是白家月。",
+            "template_pinyin": "Wǒ ___ Ānnī, wǒ shì Bái Jiāyuè.",
+            "options": [
+              "是",
+              "不是",
+              "也"
+            ],
+            "options_pinyin": [
+              "shì",
+              "bú shì",
+              "yě"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "不是",
+          "kp": "语法：不是"
+        },
+        {
+          "id": "v4_hsk1_02_03",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "完成下面的句子",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "template": "认识你我___高兴。",
+            "template_pinyin": "Rènshi nǐ wǒ ___ gāoxìng.",
+            "options": [
+              "叫",
+              "也",
+              "很"
+            ],
+            "options_pinyin": [
+              "jiào",
+              "yě",
+              "hěn"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "很",
+          "kp": "语法：很 + 形容词"
+        },
+        {
+          "id": "v4_hsk1_02_04",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "完成下面的句子",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "template": "A: 对不起！ B: ___。",
+            "template_pinyin": "A: Duìbuqǐ! B: ___.",
+            "options": [
+              "没关系",
+              "高兴",
+              "认识"
+            ],
+            "options_pinyin": [
+              "méi guānxi",
+              "gāoxìng",
+              "rènshi"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "没关系",
+          "kp": "功能：道歉回应"
+        },
+        {
+          "id": "v4_hsk1_02_05",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 10,
+          "prompt_cn": "完成下面的句子",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "template": "我叫李文，你叫什么___？",
+            "template_pinyin": "Wǒ jiào Lǐ Wén, nǐ jiào shénme ___?",
+            "options": [
+              "学生",
+              "名字",
+              "老师"
+            ],
+            "options_pinyin": [
+              "xuéshēng",
+              "míngzi",
+              "lǎoshī"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "名字",
+          "kp": "功能：询问姓名"
+        },
+        {
+          "id": "v4_hsk1_02_06",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "完成下面的句子",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "template": "很高兴___你。",
+            "template_pinyin": "Hěn gāoxìng ___ nǐ.",
+            "options": [
+              "认识",
+              "名字",
+              "学生"
+            ],
+            "options_pinyin": [
+              "rènshi",
+              "míngzi",
+              "xuéshēng"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "认识",
+          "kp": "固定表达：很高兴认识你"
+        },
+        {
+          "id": "v4_hsk1_02_07",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "完成下面的句子",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "template": "我是学生，她___是学生。",
+            "template_pinyin": "Wǒ shì xuéshēng, tā ___ shì xuéshēng.",
+            "template_en": "I am a student. She is also/not a student.",
+            "options": [
+              "很",
+              "也",
+              "不"
+            ],
+            "correct_index": 1,
+            "options_pinyin": [
+              "hěn",
+              "yě",
+              "bù"
+            ]
+          },
+          "correct_answer": "也",
+          "kp": "语法：也 / 不",
+          "acceptable_answers": [
+            "也",
+            "不"
+          ]
+        },
+        {
+          "id": "v4_hsk1_02_08",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 10,
+          "prompt_cn": "完成下面的句子",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "template": "A: 你好！ B: ___！",
+            "template_pinyin": "A: Nǐ hǎo! B: ___!",
+            "options": [
+              "对不起",
+              "你好",
+              "没关系"
+            ],
+            "options_pinyin": [
+              "duìbuqǐ",
+              "nǐ hǎo",
+              "méi guānxi"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "你好",
+          "kp": "功能：问候"
+        },
+        {
+          "id": "v4_hsk1_02_09",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "完成下面的句子",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "template": "我___陈天中。",
+            "template_pinyin": "Wǒ ___ Chén Tiānzhōng.",
+            "options": [
+              "也",
+              "不",
+              "叫"
+            ],
+            "options_pinyin": [
+              "yě",
+              "bù",
+              "jiào"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "叫",
+          "kp": "句型：我叫……"
+        },
+        {
+          "id": "v4_hsk1_02_10",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 10,
+          "prompt_cn": "完成下面的句子",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "template": "我不是老师，我___学生。",
+            "template_pinyin": "Wǒ bú shì lǎoshī, wǒ ___ xuéshēng.",
+            "options": [
+              "是",
+              "很",
+              "认识"
+            ],
+            "options_pinyin": [
+              "shì",
+              "hěn",
+              "rènshi"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "是",
+          "kp": "语法：不是 / 是"
+        }
+      ],
+      "v5_vocab_fill": [
+        {
+          "id": "v5_hsk1_02_01",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择合适的词填空",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "我___学生。",
+            "sentence_pinyin": "Wǒ ___ xuéshēng.",
+            "options": [
+              "很",
+              "是",
+              "也",
+              "不"
+            ],
+            "options_pinyin": [
+              "hěn",
+              "shì",
+              "yě",
+              "bù"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "是",
+          "kp": "词汇：是"
+        },
+        {
+          "id": "v5_hsk1_02_02",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择合适的词填空",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "我___是安妮。",
+            "sentence_pinyin": "Wǒ ___ shì Ānnī.",
+            "options": [
+              "不",
+              "是",
+              "很",
+              "也"
+            ],
+            "options_pinyin": [
+              "bù",
+              "shì",
+              "hěn",
+              "yě"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "不",
+          "kp": "词汇：不"
+        },
+        {
+          "id": "v5_hsk1_02_03",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择合适的词填空",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "她___是学生。",
+            "sentence_pinyin": "Tā ___ shì xuéshēng.",
+            "sentence_en": "She is also a student.",
+            "options": [
+              "是",
+              "不",
+              "也",
+              "很"
+            ],
+            "correct_index": 2,
+            "options_pinyin": [
+              "shì",
+              "bù",
+              "yě",
+              "hěn"
+            ]
+          },
+          "correct_answer": "也",
+          "kp": "词汇：也",
+          "acceptable_answers": [
+            "也"
+          ]
+        },
+        {
+          "id": "v5_hsk1_02_04",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择合适的词填空",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "认识你我___高兴。",
+            "sentence_pinyin": "Rènshi nǐ wǒ ___ gāoxìng.",
+            "options": [
+              "也",
+              "是",
+              "不",
+              "很"
+            ],
+            "options_pinyin": [
+              "yě",
+              "shì",
+              "bù",
+              "hěn"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "很",
+          "kp": "词汇：很"
+        },
+        {
+          "id": "v5_hsk1_02_05",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择合适的词填空",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "A: 对不起！ B: ___。",
+            "sentence_pinyin": "A: Duìbuqǐ! B: ___.",
+            "options": [
+              "你好",
+              "没关系",
+              "认识",
+              "高兴"
+            ],
+            "options_pinyin": [
+              "nǐ hǎo",
+              "méi guānxi",
+              "rènshi",
+              "gāoxìng"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "没关系",
+          "kp": "词汇：没关系"
+        },
+        {
+          "id": "v5_hsk1_02_06",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择合适的词填空",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "很高兴___你。",
+            "sentence_pinyin": "Hěn gāoxìng ___ nǐ.",
+            "options": [
+              "叫",
+              "是",
+              "认识",
+              "也"
+            ],
+            "options_pinyin": [
+              "jiào",
+              "shì",
+              "rènshi",
+              "yě"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "认识",
+          "kp": "词汇：认识"
+        },
+        {
+          "id": "v5_hsk1_02_07",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择合适的词填空",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "你叫什么___？",
+            "sentence_pinyin": "Nǐ jiào shénme ___?",
+            "options": [
+              "学生",
+              "名字",
+              "老师",
+              "高兴"
+            ],
+            "options_pinyin": [
+              "xuéshēng",
+              "míngzi",
+              "lǎoshī",
+              "gāoxìng"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "名字",
+          "kp": "词汇：名字"
+        },
+        {
+          "id": "v5_hsk1_02_08",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择合适的词填空",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "我___白家月。",
+            "sentence_pinyin": "Wǒ ___ Bái Jiāyuè.",
+            "options": [
+              "不是",
+              "也",
+              "很",
+              "叫"
+            ],
+            "options_pinyin": [
+              "bú shì",
+              "yě",
+              "hěn",
+              "jiào"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "叫",
+          "kp": "词汇：叫",
+          "acceptable_answers": [
+            "不是",
+            "叫"
+          ]
+        },
+        {
+          "id": "v5_hsk1_02_09",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择合适的词填空",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "A: 你好！ B: ___！",
+            "sentence_pinyin": "A: Nǐ hǎo! B: ___!",
+            "options": [
+              "对不起",
+              "你好",
+              "没关系",
+              "高兴"
+            ],
+            "options_pinyin": [
+              "duìbuqǐ",
+              "nǐ hǎo",
+              "méi guānxi",
+              "gāoxìng"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "你好",
+          "kp": "词汇：你好"
+        },
+        {
+          "id": "v5_hsk1_02_10",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择合适的词填空",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "我是学生，你___是学生吗？",
+            "sentence_pinyin": "Wǒ shì xuéshēng, nǐ ___ shì xuéshēng ma?",
+            "options": [
+              "很",
+              "不",
+              "也",
+              "是"
+            ],
+            "options_pinyin": [
+              "hěn",
+              "bù",
+              "yě",
+              "shì"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "也",
+          "kp": "词汇：也"
+        }
+      ],
+      "v7_word_match": [
+        {
+          "id": "v7_hsk1_02_01",
+          "type": "word_match",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 18,
+          "prompt_cn": "选择合适的词完成句子",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "words": [
+              "认识",
+              "是",
+              "叫",
+              "也"
+            ],
+            "words_pinyin": [
+              "rènshi",
+              "shì",
+              "jiào",
+              "yě"
+            ],
+            "sentences": [
+              {
+                "sentence": "我___李文。",
+                "answer": "叫",
+                "acceptable_answers": [
+                  "认识",
+                  "是",
+                  "叫"
+                ]
+              }
+            ],
+            "game_mode": "speed_race"
+          },
+          "kp": "词句匹配"
+        },
+        {
+          "id": "v7_hsk1_02_02",
+          "type": "word_match",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 18,
+          "prompt_cn": "选择合适的词完成句子",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "words": [
+              "也",
+              "不",
+              "很",
+              "是"
+            ],
+            "words_pinyin": [
+              "yě",
+              "bù",
+              "hěn",
+              "shì"
+            ],
+            "sentences": [
+              {
+                "sentence": "___高兴认识你。",
+                "answer": "很",
+                "acceptable_answers": [
+                  "很"
+                ]
+              }
+            ],
+            "game_mode": "speed_race"
+          },
+          "kp": "词句匹配"
+        },
+        {
+          "id": "v7_hsk1_02_03",
+          "type": "word_match",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 18,
+          "prompt_cn": "选择合适的词完成句子",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "words": [
+              "很",
+              "是",
+              "不",
+              "也"
+            ],
+            "words_pinyin": [
+              "hěn",
+              "shì",
+              "bù",
+              "yě"
+            ],
+            "sentences": [
+              {
+                "sentence": "我___学生。",
+                "answer": "是",
+                "acceptable_answers": [
+                  "是"
+                ]
+              }
+            ],
+            "game_mode": "speed_race"
+          },
+          "kp": "词句匹配"
+        },
+        {
+          "id": "v7_hsk1_02_04",
+          "type": "word_match",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 18,
+          "prompt_cn": "选择合适的词完成句子",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "words": [
+              "是",
+              "也",
+              "很",
+              "不"
+            ],
+            "words_pinyin": [
+              "shì",
+              "yě",
+              "hěn",
+              "bù"
+            ],
+            "sentences": [
+              {
+                "sentence": "我___是安妮。",
+                "answer": "不",
+                "acceptable_answers": [
+                  "不"
+                ]
+              }
+            ],
+            "game_mode": "speed_race"
+          },
+          "kp": "词句匹配"
+        },
+        {
+          "id": "v7_hsk1_02_05",
+          "type": "word_match",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 18,
+          "prompt_cn": "选择合适的词完成句子",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "words": [
+              "认识",
+              "高兴",
+              "学生",
+              "名字"
+            ],
+            "words_pinyin": [
+              "rènshi",
+              "gāoxìng",
+              "xuéshēng",
+              "míngzi"
+            ],
+            "sentences": [
+              {
+                "sentence": "认识你我也很___。",
+                "answer": "高兴",
+                "acceptable_answers": [
+                  "高兴"
+                ]
+              }
+            ],
+            "game_mode": "speed_race"
+          },
+          "kp": "词句匹配"
+        },
+        {
+          "id": "v7_hsk1_02_06",
+          "type": "word_match",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 18,
+          "prompt_cn": "选择合适的词完成句子",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "words": [
+              "你好",
+              "对不起",
+              "没关系",
+              "认识"
+            ],
+            "words_pinyin": [
+              "nǐ hǎo",
+              "duìbuqǐ",
+              "méi guānxi",
+              "rènshi"
+            ],
+            "sentences": [
+              {
+                "sentence": "A: 对不起！ B: ___。",
+                "answer": "没关系",
+                "acceptable_answers": [
+                  "没关系"
+                ]
+              }
+            ],
+            "game_mode": "speed_race"
+          },
+          "kp": "词句匹配"
+        },
+        {
+          "id": "v7_hsk1_02_07",
+          "type": "word_match",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 18,
+          "prompt_cn": "选择合适的词完成句子",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "words": [
+              "认识",
+              "名字",
+              "高兴",
+              "学生"
+            ],
+            "words_pinyin": [
+              "rènshi",
+              "míngzi",
+              "gāoxìng",
+              "xuéshēng"
+            ],
+            "sentences": [
+              {
+                "sentence": "很高兴___你。",
+                "answer": "认识",
+                "acceptable_answers": [
+                  "认识"
+                ]
+              }
+            ],
+            "game_mode": "speed_race"
+          },
+          "kp": "词句匹配"
+        },
+        {
+          "id": "v7_hsk1_02_08",
+          "type": "word_match",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 18,
+          "prompt_cn": "选择合适的词完成句子",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "words": [
+              "不",
+              "很",
+              "是",
+              "也"
+            ],
+            "words_pinyin": [
+              "bù",
+              "hěn",
+              "shì",
+              "yě"
+            ],
+            "sentences": [
+              {
+                "sentence": "她___是学生。",
+                "answer": "也",
+                "acceptable_answers": [
+                  "不",
+                  "也"
+                ]
+              }
+            ],
+            "game_mode": "speed_race"
+          },
+          "kp": "词句匹配"
+        },
+        {
+          "id": "v7_hsk1_02_09",
+          "type": "word_match",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 18,
+          "prompt_cn": "选择合适的词完成句子",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "words": [
+              "名字",
+              "学生",
+              "老师",
+              "李文"
+            ],
+            "words_pinyin": [
+              "míngzi",
+              "xuéshēng",
+              "lǎoshī",
+              "Lǐ Wén"
+            ],
+            "sentences": [
+              {
+                "sentence": "你叫什么___？",
+                "answer": "名字",
+                "acceptable_answers": [
+                  "名字"
+                ]
+              }
+            ],
+            "game_mode": "speed_race"
+          },
+          "kp": "词句匹配"
+        },
+        {
+          "id": "v7_hsk1_02_10",
+          "type": "word_match",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 18,
+          "prompt_cn": "选择合适的词完成句子",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "words": [
+              "不",
+              "叫",
+              "也",
+              "是"
+            ],
+            "words_pinyin": [
+              "bù",
+              "jiào",
+              "yě",
+              "shì"
+            ],
+            "sentences": [
+              {
+                "sentence": "我不是安妮，我___白家月。",
+                "answer": "是",
+                "acceptable_answers": [
+                  "是",
+                  "叫"
+                ]
+              }
+            ],
+            "game_mode": "speed_race"
+          },
+          "kp": "词句匹配"
+        }
+      ],
+      "v8_memory_match": [
+        {
+          "id": "v8_hsk1_02_01",
+          "type": "memory_match",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 30,
+          "prompt_cn": "词了个词：汉语和英文配对",
+          "prompt_en": "Match Chinese words with English meanings.",
+          "data": {
+            "mode": "hanzi_english",
+            "pairs": [
+              {
+                "left": "高兴",
+                "right": "happy"
+              },
+              {
+                "left": "认识",
+                "right": "know/meet"
+              },
+              {
+                "left": "对不起",
+                "right": "sorry"
+              },
+              {
+                "left": "没关系",
+                "right": "never mind"
+              }
+            ],
+            "game_mode": "speed_race"
+          },
+          "kp": "词汇配对"
+        },
+        {
+          "id": "v8_hsk1_02_02",
+          "type": "memory_match",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 30,
+          "prompt_cn": "词了个词：汉语和英文配对",
+          "prompt_en": "Match Chinese words with English meanings.",
+          "data": {
+            "mode": "hanzi_english",
+            "pairs": [
+              {
+                "left": "是",
+                "right": "be/is"
+              },
+              {
+                "left": "不",
+                "right": "not"
+              },
+              {
+                "left": "也",
+                "right": "also"
+              },
+              {
+                "left": "很",
+                "right": "very"
+              }
+            ],
+            "game_mode": "speed_race"
+          },
+          "kp": "词汇配对"
+        },
+        {
+          "id": "v8_hsk1_02_03",
+          "type": "memory_match",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 30,
+          "prompt_cn": "词了个词：汉语和英文配对",
+          "prompt_en": "Match Chinese words with English meanings.",
+          "data": {
+            "mode": "hanzi_english",
+            "pairs": [
+              {
+                "left": "你好",
+                "right": "hello"
+              },
+              {
+                "left": "名字",
+                "right": "name"
+              },
+              {
+                "left": "学生",
+                "right": "student"
+              },
+              {
+                "left": "叫",
+                "right": "be called"
+              }
+            ],
+            "game_mode": "speed_race"
+          },
+          "kp": "词汇配对"
+        }
+      ],
+      "g1_ordering": [
+        {
+          "id": "g1_hsk1_02_01",
+          "type": "ordering",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 18,
+          "prompt_cn": "把下面的词排成正确的句子",
+          "prompt_en": "Arrange the words into a correct sentence.",
+          "data": {
+            "chunks": [
+              "我",
+              "是",
+              "学生"
+            ],
+            "num_chunks": 3,
+            "distractors": []
+          },
+          "correct_answer": "我是学生。",
+          "acceptable_answers": [
+            "我是学生。",
+            "我是学生"
+          ],
+          "needs_teacher_review": true,
+          "kp": "语法：基本语序",
+          "source": "text_sentence"
+        },
+        {
+          "id": "g1_hsk1_02_02",
+          "type": "ordering",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 18,
+          "prompt_cn": "把下面的词排成正确的句子",
+          "prompt_en": "Arrange the words into a correct sentence.",
+          "data": {
+            "chunks": [
+              "我",
+              "叫",
+              "李文"
+            ],
+            "num_chunks": 3,
+            "distractors": []
+          },
+          "correct_answer": "我叫李文。",
+          "acceptable_answers": [
+            "我叫李文。",
+            "我叫李文"
+          ],
+          "needs_teacher_review": true,
+          "kp": "语法：基本语序",
+          "source": "text_sentence"
+        },
+        {
+          "id": "g1_hsk1_02_03",
+          "type": "ordering",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 18,
+          "prompt_cn": "把下面的词排成正确的句子",
+          "prompt_en": "Arrange the words into a correct sentence.",
+          "data": {
+            "chunks": [
+              "你",
+              "叫",
+              "什么",
+              "名字"
+            ],
+            "num_chunks": 4,
+            "distractors": []
+          },
+          "correct_answer": "你叫什么名字？",
+          "acceptable_answers": [
+            "你叫什么名字？",
+            "你叫什么名字"
+          ],
+          "needs_teacher_review": true,
+          "kp": "语法：基本语序",
+          "source": "text_sentence"
+        },
+        {
+          "id": "g1_hsk1_02_04",
+          "type": "ordering",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 18,
+          "prompt_cn": "把下面的词排成正确的句子",
+          "prompt_en": "Arrange the words into a correct sentence.",
+          "data": {
+            "chunks": [
+              "很高兴",
+              "认识",
+              "你"
+            ],
+            "num_chunks": 3,
+            "distractors": []
+          },
+          "correct_answer": "很高兴认识你。",
+          "acceptable_answers": [
+            "很高兴认识你。",
+            "很高兴认识你"
+          ],
+          "needs_teacher_review": true,
+          "kp": "语法：基本语序",
+          "source": "text_sentence"
+        },
+        {
+          "id": "g1_hsk1_02_05",
+          "type": "ordering",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 18,
+          "prompt_cn": "把下面的词排成正确的句子",
+          "prompt_en": "Arrange the words into a correct sentence.",
+          "data": {
+            "chunks": [
+              "认识你",
+              "我",
+              "也",
+              "很高兴"
+            ],
+            "num_chunks": 4,
+            "distractors": []
+          },
+          "correct_answer": "认识你我也很高兴。",
+          "acceptable_answers": [
+            "认识你我也很高兴。",
+            "认识你我也很高兴",
+            "我也很高兴认识你。",
+            "我也很高兴认识你"
+          ],
+          "needs_teacher_review": true,
+          "kp": "语法：也",
+          "source": "text_sentence"
+        }
+      ],
+      "g2_image_sentence": [
+        {
+          "id": "g2_hsk1_02_01",
+          "type": "image_sentence",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 15,
+          "prompt_cn": "请看图说一个句子",
+          "prompt_en": "Look and make a sentence",
+          "data": {
+            "image_hint": "两个人握手互相认识",
+            "reference_answer": "很高兴认识你。"
+          },
+          "kp": "词汇：认识"
+        },
+        {
+          "id": "g2_hsk1_02_02",
+          "type": "image_sentence",
+          "stage": "in_class",
+          "difficulty": 0.6,
+          "time_estimate_sec": 15,
+          "prompt_cn": "请看图说一个句子",
+          "prompt_en": "Look and make a sentence",
+          "data": {
+            "image_hint": "一个学生向老师鞠躬道歉",
+            "reference_answer": "对不起。"
+          },
+          "kp": "词汇：对不起"
+        }
+      ],
+      "r1_sentence_matching": [
+        {
+          "id": "r1_hsk1_02_01",
+          "type": "sentence_matching",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 20,
+          "prompt_cn": "把上下句连起来",
+          "prompt_en": "Match the sentence halves",
+          "data": {
+            "pairs": [
+              {
+                "left": "我叫",
+                "right": "陈天中。"
+              },
+              {
+                "left": "很高兴",
+                "right": "认识你。"
+              },
+              {
+                "left": "认识你我也",
+                "right": "很高兴。"
+              },
+              {
+                "left": "我不是安妮，",
+                "right": "我是白家月。"
+              }
+            ]
+          },
+          "kp": "语法：基本语序"
+        }
+      ],
+      "r2_passage_choice": [
+        {
+          "id": "r2_hsk1_02_01",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 15,
+          "prompt_cn": "读课文，选择正确答案",
+          "prompt_en": "Read and choose",
+          "data": {
+            "passage": "王一飞：请问，你叫什么名字？陈天中：我叫陈天中。",
+            "question_cn": "如何问别人的名字？",
+            "question_en": "How do you ask someone's name?",
+            "options": [
+              "你叫什么名字？",
+              "老师叫什么名字？",
+              "你妈妈叫什么名字？"
+            ],
+            "correct_index": 0,
+            "options_pinyin": [
+              "Nǐ jiào shénme míngzi?",
+              "Lǎoshī jiào shénme míngzi?",
+              "Nǐ māma jiào shénme míngzi?"
+            ]
+          },
+          "correct_answer": "你叫什么名字？",
+          "kp": "课文1：询问姓名"
+        },
+        {
+          "id": "r2_hsk1_02_02",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 15,
+          "prompt_cn": "读课文，选择正确答案",
+          "prompt_en": "Read and choose",
+          "data": {
+            "passage": "王一飞：请问，你叫什么名字？陈天中：我叫陈天中。",
+            "question_cn": "如果想问老师的名字，可以怎么说？",
+            "question_en": "How can you ask the teacher's name?",
+            "options": [
+              "你叫什么名字？",
+              "你妈妈叫什么名字？",
+              "老师叫什么名字？"
+            ],
+            "correct_index": 2,
+            "options_pinyin": [
+              "Nǐ jiào shénme míngzi?",
+              "Nǐ māma jiào shénme míngzi?",
+              "Lǎoshī jiào shénme míngzi?"
+            ]
+          },
+          "correct_answer": "老师叫什么名字？",
+          "kp": "课文1：询问姓名"
+        },
+        {
+          "id": "r2_hsk1_02_03",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 15,
+          "prompt_cn": "读课文，选择正确答案",
+          "prompt_en": "Read and choose",
+          "data": {
+            "passage": "陈天中：你好，安妮！白家月：你好，陈天中！我不是安妮，我是白家月。陈天中：对不起！",
+            "question_cn": "陈天中认识安妮吗？",
+            "question_en": "Does Chen Tianzhong know Annie?",
+            "options": [
+              "认识",
+              "不认识",
+              "很高兴"
+            ],
+            "correct_index": 1,
+            "options_pinyin": [
+              "rènshi",
+              "bù rènshi",
+              "hěn gāoxìng"
+            ]
+          },
+          "correct_answer": "不认识",
+          "kp": "课文2：认错人"
+        },
+        {
+          "id": "r2_hsk1_02_04",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 15,
+          "prompt_cn": "读课文，选择正确答案",
+          "prompt_en": "Read and choose",
+          "data": {
+            "passage": "陈天中认错人了。",
+            "question_cn": "他应该怎么说？",
+            "question_en": "Chen Tianzhong mistook someone. What should he say?",
+            "options": [
+              "没关系",
+              "你好",
+              "对不起"
+            ],
+            "correct_index": 2,
+            "options_pinyin": [
+              "méi guānxi",
+              "nǐ hǎo",
+              "duìbuqǐ"
+            ]
+          },
+          "correct_answer": "对不起",
+          "kp": "课文2：道歉"
+        },
+        {
+          "id": "r2_hsk1_02_05",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 15,
+          "prompt_cn": "读课文，选择正确答案",
+          "prompt_en": "Read and choose",
+          "data": {
+            "passage": "李文：很高兴认识你。白家月：认识你我也很高兴。",
+            "question_cn": "第一次见面，我们应该怎么说？",
+            "question_en": "When we meet someone for the first time, what should we say?",
+            "options": [
+              "对不起",
+              "很高兴认识你",
+              "我叫李文"
+            ],
+            "correct_index": 1,
+            "options_pinyin": [
+              "duìbuqǐ",
+              "Hěn gāoxìng rènshi nǐ",
+              "Wǒ jiào Lǐ Wén"
+            ]
+          },
+          "correct_answer": "很高兴认识你",
+          "kp": "课文3：初次见面"
+        }
+      ],
+      "r2_extra_hsk1_l02": [
+        {
+          "id": "r2_hsk1_02_03",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 15,
+          "prompt_cn": "读短文，选择正确答案",
+          "prompt_en": "Read and choose",
+          "data": {
+            "passage": "王一飞：请问，你叫什么名字？陈天中：我叫陈天中。",
+            "question_cn": "陈天中叫什么名字？",
+            "question_en": "What is Chen Tianzhong's name?",
+            "options": [
+              "王一飞",
+              "陈天中",
+              "白家月"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "陈天中",
+          "kp": "课文：认识学生"
+        },
+        {
+          "id": "r2_hsk1_02_04",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 15,
+          "prompt_cn": "读短文，选择正确答案",
+          "prompt_en": "Read and choose",
+          "data": {
+            "passage": "李文：很高兴认识你。白家月：认识你我也很高兴。",
+            "question_cn": "白家月也很怎么样？",
+            "question_en": "How does Bai Jiayue feel too?",
+            "options": [
+              "很高兴",
+              "对不起",
+              "没关系"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "很高兴",
+          "kp": "课文：初次相遇"
+        }
+      ],
+      "w1_component_char": [
+        {
+          "id": "w1_hsk1_02_01",
+          "type": "component_char",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择正确的汉字",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "很高兴___识你。",
+            "sentence_pinyin": "Hěn gāoxìng ___ shí nǐ.",
+            "options": [
+              "让",
+              "计",
+              "认",
+              "话"
+            ],
+            "options_pinyin": [],
+            "correct_index": 2,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "认",
+          "kp": "汉字区辨：认"
+        },
+        {
+          "id": "w1_hsk1_02_02",
+          "type": "component_char",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择正确的汉字",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "很高兴认___你。",
+            "sentence_pinyin": "Hěn gāoxìng rèn ___ nǐ.",
+            "options": [
+              "只",
+              "识",
+              "职",
+              "织"
+            ],
+            "options_pinyin": [],
+            "correct_index": 1,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "识",
+          "kp": "汉字区辨：识"
+        },
+        {
+          "id": "w1_hsk1_02_03",
+          "type": "component_char",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择正确的汉字",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "我___学生。",
+            "sentence_pinyin": "Wǒ ___ xuéshēng.",
+            "options": [
+              "早",
+              "是",
+              "日",
+              "目"
+            ],
+            "options_pinyin": [],
+            "correct_index": 1,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "是",
+          "kp": "汉字区辨：是"
+        },
+        {
+          "id": "w1_hsk1_02_04",
+          "type": "component_char",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择正确的汉字",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "我___是安妮。",
+            "sentence_pinyin": "Wǒ ___ shì Ānnī.",
+            "options": [
+              "木",
+              "本",
+              "不",
+              "下"
+            ],
+            "options_pinyin": [],
+            "correct_index": 2,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "不",
+          "kp": "汉字区辨：不"
+        },
+        {
+          "id": "w1_hsk1_02_05",
+          "type": "component_char",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择正确的汉字",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "我___高兴。",
+            "sentence_pinyin": "Wǒ ___ gāoxìng.",
+            "options": [
+              "很",
+              "狠",
+              "银",
+              "跟"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "很",
+          "kp": "汉字区辨：很"
+        },
+        {
+          "id": "w1_hsk1_02_06",
+          "type": "component_char",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择正确的汉字",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "你___什么名字？",
+            "sentence_pinyin": "Nǐ jiào shénme míngzi?",
+            "options": [
+              "叶",
+              "叫",
+              "叹",
+              "吃"
+            ],
+            "options_pinyin": [],
+            "correct_index": 1,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "叫",
+          "kp": "汉字区辨：叫"
+        },
+        {
+          "id": "w1_hsk1_02_07",
+          "type": "component_char",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择正确的汉字",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "我也很高___。",
+            "sentence_pinyin": "Wǒ yě hěn gāoxìng.",
+            "options": [
+              "兴",
+              "头",
+              "六",
+              "关"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "兴",
+          "kp": "汉字区辨：兴"
+        },
+        {
+          "id": "w1_hsk1_02_08",
+          "type": "component_char",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择正确的汉字",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "我叫白家___。",
+            "sentence_pinyin": "Wǒ jiào Bái Jiāyuè.",
+            "options": [
+              "用",
+              "月",
+              "目",
+              "且"
+            ],
+            "options_pinyin": [],
+            "correct_index": 1,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "月",
+          "kp": "汉字区辨：月"
+        },
+        {
+          "id": "w1_hsk1_02_09",
+          "type": "component_char",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择正确的汉字",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "没关___。",
+            "sentence_pinyin": "Méi guānxi.",
+            "options": [
+              "系",
+              "糸",
+              "紧",
+              "索"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "系",
+          "kp": "汉字区辨：系"
+        },
+        {
+          "id": "w1_hsk1_02_10",
+          "type": "component_char",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "选择正确的汉字",
+          "prompt_en": "Choose the correct answer.",
+          "data": {
+            "sentence": "你___。",
+            "sentence_pinyin": "Nǐ hǎo.",
+            "options": [
+              "好",
+              "妈",
+              "她",
+              "如"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "好",
+          "kp": "汉字区辨：好"
+        }
+      ],
+      "w2_pinyin_to_hanzi": [
+        {
+          "id": "w2_hsk1_02_01",
+          "type": "pinyin_to_hanzi",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 8,
+          "prompt_cn": "看拼音写汉字",
+          "prompt_en": "Write character from pinyin",
+          "data": {
+            "pinyin": "bu",
+            "correct_hanzi": "不"
+          },
+          "correct_answer": "不",
+          "kp": "汉字：不"
+        },
+        {
+          "id": "w2_hsk1_02_02",
+          "type": "pinyin_to_hanzi",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 8,
+          "prompt_cn": "看拼音写汉字",
+          "prompt_en": "Write character from pinyin",
+          "data": {
+            "pinyin": "shi",
+            "correct_hanzi": "是"
+          },
+          "correct_answer": "是",
+          "kp": "汉字：是"
+        },
+        {
+          "id": "w2_hsk1_02_03",
+          "type": "pinyin_to_hanzi",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "看拼音写汉字",
+          "prompt_en": "Write character from pinyin",
+          "data": {
+            "pinyin": "hen",
+            "correct_hanzi": "很"
+          },
+          "correct_answer": "很",
+          "kp": "汉字：很"
+        }
+      ],
+      "t1_fill_retell": [
+        {
+          "id": "t1_hsk1_02_01",
+          "type": "fill_retell",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 20,
+          "prompt_cn": "根据课文填空复述",
+          "prompt_en": "Fill blanks to retell",
+          "data": {
+            "passage": "王一飞：请问，你叫什么___？陈天中：我叫___。",
+            "blanks": [
+              "名字",
+              "陈天中"
+            ]
+          },
+          "correct_answer": "名字",
+          "kp": "课文：认识学生"
+        },
+        {
+          "id": "t1_hsk1_02_02",
+          "type": "fill_retell",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 20,
+          "prompt_cn": "根据课文填空复述",
+          "prompt_en": "Fill blanks to retell",
+          "data": {
+            "passage": "陈天中：你好，___！白家月：你好，陈天中！我不是___，我是白家月。",
+            "blanks": [
+              "安妮",
+              "安妮"
+            ]
+          },
+          "correct_answer": "安妮",
+          "kp": "课文：认错人"
+        }
+      ],
+      "tt_text_true_false": [
+        {
+          "id": "tt_hsk1_02_01",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 8,
+          "prompt_cn": "判断正误",
+          "prompt_en": "True or False",
+          "data": {
+            "statement": "课文1中，王一飞在认识学生。",
+            "statement_pinyin": "Kèwén yī zhōng, Wáng Yīfēi zài rènshi xuéshēng.",
+            "statement_en": "In Text 1, Wang Yifei is getting to know students.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文：认识学生"
+        },
+        {
+          "id": "tt_hsk1_02_02",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 8,
+          "prompt_cn": "判断正误",
+          "prompt_en": "True or False",
+          "data": {
+            "statement": "课文2中，白家月叫安妮。",
+            "statement_pinyin": "Kèwén èr zhōng, Bái Jiāyuè jiào Ānnī.",
+            "statement_en": "In Text 2, Bai Jiayue's name is Annie.",
+            "answer": false
+          },
+          "correct_answer": false,
+          "kp": "课文：认错人"
+        },
+        {
+          "id": "tt_hsk1_02_03",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 8,
+          "prompt_cn": "判断正误",
+          "prompt_en": "True or False",
+          "data": {
+            "statement": "课文3中，李文和白家月都说高兴。",
+            "statement_pinyin": "Kèwén sān zhōng, Lǐ Wén hé Bái Jiāyuè dōu shuō gāoxìng.",
+            "statement_en": "In Text 3, both Li Wen and Bai Jiayue say they are happy.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文：初次相遇"
+        }
+      ],
+      "pk_question": [
+        {
+          "id": "pk_hsk1_02_01",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 1,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "看见同学应该说____？",
+            "question_en": "When you meet a classmate, what should you say?",
+            "options": [
+              "对不起",
+              "再见",
+              "你好",
+              "谢谢"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "你好",
+          "kp": "综合：打招呼"
+        },
+        {
+          "id": "pk_hsk1_02_02",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 2,
+          "time_limit_sec": 8,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "踩到别人的脚，应该说____？",
+            "question_en": "If you step on someone's foot, what should you say?",
+            "options": [
+              "没关系",
+              "对不起",
+              "谢谢",
+              "你好"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "对不起",
+          "kp": "综合：道歉"
+        },
+        {
+          "id": "pk_hsk1_02_03",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 3,
+          "time_limit_sec": 8,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "听到“对不起”，应该回答____？",
+            "question_en": "When someone says dui bu qi (sorry), what can you reply?",
+            "options": [
+              "再见",
+              "对不起",
+              "没关系",
+              "你好"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "没关系",
+          "kp": "综合：回应道歉"
+        },
+        {
+          "id": "pk_hsk1_02_04",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 4,
+          "time_limit_sec": 8,
+          "prompt_cn": "Wo jiao Li Wen 的意思是____？",
+          "prompt_en": "What does Wo jiao Li Wen mean?",
+          "data": {
+            "question_cn": "Wo jiao Li Wen 的意思是____？",
+            "question_en": "What does Wo jiao Li Wen mean?",
+            "options": [
+              "我是李文",
+              "我叫李文",
+              "你好李文",
+              "李文明白"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "我叫李文",
+          "kp": "综合：自我介绍"
+        },
+        {
+          "id": "pk_l02_05",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 5,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "我___学生。",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "很",
+              "是",
+              "也",
+              "不"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "是",
+          "kp": "词汇：是"
+        },
+        {
+          "id": "pk_l02_06",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 6,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "我___是安妮。",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "不",
+              "是",
+              "很",
+              "也"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "不",
+          "kp": "词汇：不"
+        },
+        {
+          "id": "pk_l02_07",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 7,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "她___是学生。",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "是",
+              "不",
+              "也",
+              "很"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "也",
+          "kp": "词汇：也"
+        },
+        {
+          "id": "pk_l02_08",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 8,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "认识你我___高兴。",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "也",
+              "是",
+              "不",
+              "很"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "很",
+          "kp": "词汇：很"
+        },
+        {
+          "id": "pk_l02_09",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 9,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "A: 对不起！ B: ___。",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "你好",
+              "没关系",
+              "认识",
+              "高兴"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "没关系",
+          "kp": "词汇：没关系"
+        },
+        {
+          "id": "pk_l02_10",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 10,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "很高兴___你。",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "叫",
+              "是",
+              "认识",
+              "也"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "认识",
+          "kp": "词汇：认识"
+        },
+        {
+          "id": "pk_l02_11",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 11,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "你叫什么___？",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "学生",
+              "名字",
+              "老师",
+              "高兴"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "名字",
+          "kp": "词汇：名字"
+        },
+        {
+          "id": "pk_l02_12",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 12,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "我___白家月。",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "不是",
+              "也",
+              "很",
+              "叫"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "叫",
+          "kp": "词汇：叫"
+        },
+        {
+          "id": "pk_l02_13",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 13,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "A: 你好！ B: ___！",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "对不起",
+              "你好",
+              "没关系",
+              "高兴"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "你好",
+          "kp": "词汇：你好"
+        },
+        {
+          "id": "pk_l02_14",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 14,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "我是学生，你___是学生吗？",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "很",
+              "不",
+              "也",
+              "是"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "也",
+          "kp": "词汇：也"
+        },
+        {
+          "id": "pk_l02_15",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 15,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "很高兴___识你。",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "让",
+              "计",
+              "认",
+              "话"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "认",
+          "kp": "汉字区辨：认"
+        },
+        {
+          "id": "pk_l02_16",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 16,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "很高兴认___你。",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "只",
+              "识",
+              "职",
+              "织"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "识",
+          "kp": "汉字区辨：识"
+        },
+        {
+          "id": "pk_l02_17",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 17,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "我___学生。",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "早",
+              "是",
+              "日",
+              "目"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "是",
+          "kp": "汉字区辨：是"
+        },
+        {
+          "id": "pk_l02_18",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 18,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "我___是安妮。",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "木",
+              "本",
+              "不",
+              "下"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "不",
+          "kp": "汉字区辨：不"
+        },
+        {
+          "id": "pk_l02_19",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 19,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "我___高兴。",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "很",
+              "狠",
+              "银",
+              "跟"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "很",
+          "kp": "汉字区辨：很"
+        },
+        {
+          "id": "pk_l02_20",
+          "type": "pk_question",
+          "stage": "in_class",
+          "round": 20,
+          "time_limit_sec": 10,
+          "prompt_cn": "快速选择题！",
+          "prompt_en": "Quick quiz!",
+          "data": {
+            "question_cn": "你___什么名字？",
+            "question_en": "Choose the correct answer.",
+            "options": [
+              "叶",
+              "叫",
+              "叹",
+              "吃"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "叫",
+          "kp": "汉字区辨：叫"
+        }
+      ],
+      "l1_listening_choose": [
+        {
+          "id": "l1_hsk1_02_01",
+          "type": "listening_choose",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 10,
+          "prompt_cn": "听录音，选图片",
+          "prompt_en": "Listen and choose picture",
+          "data": {
+            "audio": "audio/L02/l1_duibuqi.mp3",
+            "transcript": "对不起",
+            "options": [
+              {
+                "id": "a",
+                "label": "鞠躬道歉"
+              },
+              {
+                "id": "b",
+                "label": "握手问好"
+              },
+              {
+                "id": "c",
+                "label": "挥手再见"
+              }
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "a",
+          "kp": "词汇：对不起"
+        },
+        {
+          "id": "l1_hsk1_02_02",
+          "type": "listening_choose",
+          "stage": "in_class",
+          "difficulty": 0.3,
+          "time_estimate_sec": 10,
+          "prompt_cn": "听录音，选图片",
+          "prompt_en": "Listen and choose picture",
+          "data": {
+            "audio": "audio/L02/l1_gaoxing.mp3",
+            "transcript": "很高兴认识你",
+            "options": [
+              {
+                "id": "a",
+                "label": "生气"
+              },
+              {
+                "id": "b",
+                "label": "开心握手"
+              },
+              {
+                "id": "c",
+                "label": "跑步"
+              }
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "b",
+          "kp": "词汇：高兴"
+        }
+      ],
+      "l2_listening_true_false": [
+        {
+          "id": "l2_hsk1_02_01",
+          "type": "listening_true_false",
+          "stage": "in_class",
+          "difficulty": 0.4,
+          "time_estimate_sec": 10,
+          "prompt_cn": "听对话，判断正误",
+          "prompt_en": "Listen and decide true/false",
+          "data": {
+            "audio": "audio/L02/l2_rencuo.mp3",
+            "transcript": "陈天中：你好，安妮！白家月：你好！",
+            "statement": "白家月说你好。",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文：认错人"
+        },
+        {
+          "id": "l2_hsk1_02_02",
+          "type": "listening_true_false",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 10,
+          "prompt_cn": "听对话，判断正误",
+          "prompt_en": "Listen and decide true/false",
+          "data": {
+            "audio": "audio/L02/l2_gaoxing.mp3",
+            "transcript": "李文：很高兴认识你。白家月：认识你我也很高兴。",
+            "statement": "两个人都在说高兴。",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文：初次相遇"
+        }
+      ],
+      "l3_listening_response": [
+        {
+          "id": "l3_hsk1_02_01",
+          "type": "listening_response",
+          "stage": "in_class",
+          "difficulty": 0.5,
+          "time_estimate_sec": 10,
+          "prompt_cn": "听录音，选合适的回答",
+          "prompt_en": "Listen and choose response",
+          "data": {
+            "audio": "audio/L02/l3_duibuqi_response.mp3",
+            "transcript": "对不起",
+            "options": [
+              {
+                "id": "a",
+                "hanzi": "没关系"
+              },
+              {
+                "id": "b",
+                "hanzi": "你好"
+              },
+              {
+                "id": "c",
+                "hanzi": "再见"
+              }
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "没关系",
+          "kp": "综合：回应道歉"
+        }
+      ]
+    },
+    "hanziWriting": {
+      "characters": []
+    }
+  },
+  "postClassHomework": {
+    "tiers": {
+      "A": {
+        "label": "A档：基础巩固",
+        "goal": "认得出、选得对、敢开口",
+        "suggestedMinutes": 15,
+        "suggestedMix": "12题补充巩固：客观练习 + 1题输出 + 1题汉字书写"
+      },
+      "B": {
+        "label": "B档：标准巩固",
+        "goal": "能完成本课交际任务",
+        "suggestedMinutes": 15,
+        "suggestedMix": "12题补充巩固：客观练习 + 1题输出 + 1题汉字书写"
+      },
+      "C": {
+        "label": "C档：挑战拓展",
+        "goal": "迁移使用，不是多刷题",
+        "suggestedMinutes": 15,
+        "suggestedMix": "12题补充巩固：客观练习 + 1题输出 + 1题汉字书写"
+      }
+    },
+    "sharedPool": [
+      {
+        "id": "hw_l02_s_001",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "choice",
+        "section": "词汇识别",
+        "prompt_cn": "“不”的意思是？",
+        "prompt_en": "What does 不 mean?",
+        "options": [
+          "not / no",
+          "also",
+          "very",
+          "name"
+        ],
+        "correct_answer": "not / no",
+        "acceptable_answers": [
+          "not / no"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "tags": [
+          "不",
+          "vocab"
+        ]
+      },
+      {
+        "id": "hw_l02_s_002",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "choice",
+        "section": "词汇识别",
+        "prompt_cn": "“是”的意思是？",
+        "prompt_en": "What does 是 mean?",
+        "options": [
+          "to be / am / is / are",
+          "to know",
+          "sorry",
+          "also"
+        ],
+        "correct_answer": "to be / am / is / are",
+        "acceptable_answers": [
+          "to be / am / is / are"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "tags": [
+          "是",
+          "vocab"
+        ]
+      },
+      {
+        "id": "hw_l02_s_003",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "choice",
+        "section": "词汇识别",
+        "prompt_cn": "“叫”的意思是？",
+        "prompt_en": "What does 叫 mean?",
+        "options": [
+          "to be called",
+          "teacher",
+          "student",
+          "very"
+        ],
+        "correct_answer": "to be called",
+        "acceptable_answers": [
+          "to be called"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "tags": [
+          "叫",
+          "vocab"
+        ]
+      },
+      {
+        "id": "hw_l02_s_004",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "choice",
+        "section": "词汇识别",
+        "prompt_cn": "“名字”的意思是？",
+        "prompt_en": "What does 名字 mean?",
+        "options": [
+          "name",
+          "student",
+          "teacher",
+          "sorry"
+        ],
+        "correct_answer": "name",
+        "acceptable_answers": [
+          "name"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "tags": [
+          "名字",
+          "vocab"
+        ]
+      },
+      {
+        "id": "hw_l02_s_005",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "choice",
+        "section": "词汇识别",
+        "prompt_cn": "“认识”的意思是？",
+        "prompt_en": "What does 认识 mean?",
+        "options": [
+          "to know / to meet",
+          "not",
+          "also",
+          "name"
+        ],
+        "correct_answer": "to know / to meet",
+        "acceptable_answers": [
+          "to know / to meet"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "tags": [
+          "认识",
+          "vocab"
+        ]
+      },
+      {
+        "id": "hw_l02_s_006",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "choice",
+        "section": "词汇识别",
+        "prompt_cn": "“很高兴”的意思是？",
+        "prompt_en": "What does 很高兴 mean?",
+        "options": [
+          "very happy / pleased",
+          "sorry",
+          "it doesn't matter",
+          "student"
+        ],
+        "correct_answer": "very happy / pleased",
+        "acceptable_answers": [
+          "very happy / pleased"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "tags": [
+          "很",
+          "高兴",
+          "vocab"
+        ]
+      },
+      {
+        "id": "hw_l02_s_007",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "choice",
+        "section": "情景反应",
+        "prompt_cn": "别人说“对不起”，你可以说什么？",
+        "prompt_en": "Someone says sorry. What can you say?",
+        "options": [
+          "没关系",
+          "我不是",
+          "你叫什么名字",
+          "学生"
+        ],
+        "correct_answer": "没关系",
+        "acceptable_answers": [
+          "没关系"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "tags": [
+          "没关系",
+          "function"
+        ]
+      },
+      {
+        "id": "hw_l02_s_008",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "choice",
+        "section": "情景反应",
+        "prompt_cn": "第一次见面，可以说什么？",
+        "prompt_en": "What can you say when meeting someone for the first time?",
+        "options": [
+          "很高兴认识你",
+          "我不是安妮",
+          "你也学生",
+          "没关系"
+        ],
+        "correct_answer": "很高兴认识你",
+        "acceptable_answers": [
+          "很高兴认识你"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "tags": [
+          "很高兴认识你",
+          "function"
+        ]
+      },
+      {
+        "id": "hw_l02_s_009",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "fill_blank",
+        "section": "选词填空",
+        "prompt_cn": "我___学生。",
+        "prompt_en": "",
+        "correct_answer": "是",
+        "acceptable_answers": [
+          "是"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "options": [
+          "是",
+          "不",
+          "也",
+          "很"
+        ],
+        "tags": [
+          "是",
+          "sentence"
+        ]
+      },
+      {
+        "id": "hw_l02_s_010",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "fill_blank",
+        "section": "选词填空",
+        "prompt_cn": "她___是学生。",
+        "prompt_en": "",
+        "correct_answer": "也",
+        "acceptable_answers": [
+          "也",
+          "不"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "options": [
+          "也",
+          "不",
+          "很",
+          "叫"
+        ],
+        "tags": [
+          "也",
+          "sentence"
+        ]
+      },
+      {
+        "id": "hw_l02_s_011",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "fill_blank",
+        "section": "选词填空",
+        "prompt_cn": "认识你我___高兴。",
+        "prompt_en": "",
+        "correct_answer": "很",
+        "acceptable_answers": [
+          "很"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "options": [
+          "很",
+          "是",
+          "不",
+          "也"
+        ],
+        "tags": [
+          "很",
+          "sentence"
+        ]
+      },
+      {
+        "id": "hw_l02_s_012",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "fill_blank",
+        "section": "选词填空",
+        "prompt_cn": "我___李文。",
+        "prompt_en": "",
+        "correct_answer": "叫",
+        "acceptable_answers": [
+          "叫",
+          "是"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "options": [
+          "叫",
+          "是",
+          "也",
+          "很"
+        ],
+        "tags": [
+          "叫",
+          "是",
+          "sentence"
+        ]
+      },
+      {
+        "id": "hw_l02_s_013",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "ordering",
+        "section": "连词成句",
+        "prompt_cn": "连词成句：你 / 叫 / 什么 / 名字",
+        "prompt_en": "Put the words in order.",
+        "tokens": [
+          "名字",
+          "什么",
+          "你",
+          "叫"
+        ],
+        "correct_answer": "你叫什么名字",
+        "acceptable_answers": [
+          "你叫什么名字"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "tags": [
+          "名字",
+          "ordering"
+        ]
+      },
+      {
+        "id": "hw_l02_s_014",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "ordering",
+        "section": "连词成句",
+        "prompt_cn": "连词成句：我 / 不 / 是 / 安妮",
+        "prompt_en": "Put the words in order.",
+        "tokens": [
+          "安妮",
+          "是",
+          "我",
+          "不"
+        ],
+        "correct_answer": "我不是安妮",
+        "acceptable_answers": [
+          "我不是安妮"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "tags": [
+          "不",
+          "是",
+          "ordering"
+        ]
+      },
+      {
+        "id": "hw_l02_s_015",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "ordering",
+        "section": "连词成句",
+        "prompt_cn": "连词成句：很 / 高兴 / 认识 / 你",
+        "prompt_en": "Put the words in order.",
+        "tokens": [
+          "认识",
+          "你",
+          "高兴",
+          "很"
+        ],
+        "correct_answer": "很高兴认识你",
+        "acceptable_answers": [
+          "很高兴认识你"
+        ],
+        "auto_grade": true,
+        "needs_teacher_review": false,
+        "repeat_ok": true,
+        "tags": [
+          "很高兴认识你",
+          "ordering"
+        ]
+      },
+      {
+        "id": "hw_l02_s_016",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "handwriting",
+        "section": "汉字描红",
+        "prompt_cn": "汉字描红：每个汉字描 4 遍。",
+        "prompt_en": "Trace each Chinese character 4 times.",
+        "characters": [
+          "不",
+          "是",
+          "叫",
+          "名",
+          "字"
+        ],
+        "repeat_count": 4,
+        "auto_grade": false,
+        "needs_teacher_review": false,
+        "optional_teacher_check": true,
+        "repeat_ok": true,
+        "tags": [
+          "handwriting",
+          "汉字",
+          "基础字"
+        ]
+      },
+      {
+        "id": "hw_l02_s_017",
+        "lesson": "HSK1-L02",
+        "stage": "post_class",
+        "tier": "shared",
+        "type": "handwriting",
+        "section": "汉字描红",
+        "prompt_cn": "汉字描红：每个汉字描 3 遍。",
+        "prompt_en": "Trace each Chinese character 3 times.",
+        "characters": [
+          "认",
+          "识",
+          "很",
+          "高",
+          "兴"
+        ],
+        "repeat_count": 3,
+        "auto_grade": false,
+        "needs_teacher_review": false,
+        "optional_teacher_check": true,
+        "repeat_ok": true,
+        "tags": [
+          "handwriting",
+          "汉字",
+          "交际词"
+        ]
+      }
+    ],
+    "tierPools": {
+      "A": [
+        {
+          "id": "hw_l02_a_001",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "choice",
+          "section": "词汇识别",
+          "prompt_cn": "Choose the correct Chinese: also / too",
+          "prompt_en": "",
+          "options": [
+            "也",
+            "不",
+            "是",
+            "很"
+          ],
+          "correct_answer": "也",
+          "acceptable_answers": [
+            "也"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "tags": [
+            "也",
+            "vocab"
+          ]
+        },
+        {
+          "id": "hw_l02_a_002",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "choice",
+          "section": "词汇识别",
+          "prompt_cn": "Choose the correct Chinese: not / no",
+          "prompt_en": "",
+          "options": [
+            "不",
+            "也",
+            "叫",
+            "很"
+          ],
+          "correct_answer": "不",
+          "acceptable_answers": [
+            "不"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "tags": [
+            "对不起",
+            "vocab"
+          ]
+        },
+        {
+          "id": "hw_l02_a_003",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "choice",
+          "section": "词汇识别",
+          "prompt_cn": "Choose the correct Chinese: to be / am / is / are",
+          "prompt_en": "",
+          "options": [
+            "是",
+            "叫",
+            "认识",
+            "名字"
+          ],
+          "correct_answer": "是",
+          "acceptable_answers": [
+            "是"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "tags": [
+            "没关系",
+            "vocab"
+          ]
+        },
+        {
+          "id": "hw_l02_a_004",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "fill_blank",
+          "section": "基础填空",
+          "prompt_cn": "A：对不起！ B：___。",
+          "prompt_en": "",
+          "correct_answer": "没关系",
+          "acceptable_answers": [
+            "没关系"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "options": [
+            "没关系",
+            "名字",
+            "学生",
+            "很"
+          ],
+          "tags": [
+            "没关系",
+            "dialogue"
+          ]
+        },
+        {
+          "id": "hw_l02_a_005",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "fill_blank",
+          "section": "基础填空",
+          "prompt_cn": "你叫什么___？",
+          "prompt_en": "",
+          "correct_answer": "名字",
+          "acceptable_answers": [
+            "名字"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "options": [
+            "名字",
+            "学生",
+            "老师",
+            "安妮"
+          ],
+          "tags": [
+            "名字",
+            "question"
+          ]
+        },
+        {
+          "id": "hw_l02_a_006",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "fill_blank",
+          "section": "基础填空",
+          "prompt_cn": "我___是安妮。",
+          "prompt_en": "",
+          "correct_answer": "不",
+          "acceptable_answers": [
+            "不"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "options": [
+            "不",
+            "也",
+            "很",
+            "叫"
+          ],
+          "tags": [
+            "不",
+            "sentence"
+          ]
+        },
+        {
+          "id": "hw_l02_a_007",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "fill_blank",
+          "section": "基础填空",
+          "prompt_cn": "___高兴认识你。",
+          "prompt_en": "",
+          "correct_answer": "很",
+          "acceptable_answers": [
+            "很"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "options": [
+            "很",
+            "不",
+            "也",
+            "是"
+          ],
+          "tags": [
+            "很",
+            "sentence"
+          ]
+        },
+        {
+          "id": "hw_l02_a_008",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "fill_blank",
+          "section": "基础填空",
+          "prompt_cn": "认识你我也很___。",
+          "prompt_en": "",
+          "correct_answer": "高兴",
+          "acceptable_answers": [
+            "高兴"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "options": [
+            "高兴",
+            "名字",
+            "老师",
+            "学生"
+          ],
+          "tags": [
+            "高兴",
+            "sentence"
+          ]
+        },
+        {
+          "id": "hw_l02_a_009",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "ordering",
+          "section": "模仿排序",
+          "prompt_cn": "Put the words in order: My name is Annie.",
+          "prompt_en": "",
+          "tokens": [
+            "安妮",
+            "叫",
+            "我"
+          ],
+          "correct_answer": "我叫安妮",
+          "acceptable_answers": [
+            "我叫安妮"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "tags": [
+            "叫",
+            "ordering"
+          ]
+        },
+        {
+          "id": "hw_l02_a_010",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "ordering",
+          "section": "模仿排序",
+          "prompt_cn": "Put the words in order: I am a student.",
+          "prompt_en": "",
+          "tokens": [
+            "学生",
+            "我",
+            "是"
+          ],
+          "correct_answer": "我是学生",
+          "acceptable_answers": [
+            "我是学生"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "tags": [
+            "是",
+            "ordering"
+          ]
+        },
+        {
+          "id": "hw_l02_a_011",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "output",
+          "section": "轻量输出",
+          "prompt_cn": "请模仿写三句：我叫___。我是___。我不是___。",
+          "prompt_en": "Imitate and write three short sentences.",
+          "sample_answer": "我叫安妮。我是学生。我不是老师。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": true,
+          "tags": [
+            "self_intro",
+            "output"
+          ]
+        },
+        {
+          "id": "hw_l02_a_012",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "handwriting",
+          "section": "汉字描红",
+          "prompt_cn": "汉字描红：每个汉字描 5 遍。",
+          "prompt_en": "Trace each Chinese character 5 times.",
+          "characters": [
+            "不",
+            "是",
+            "叫",
+            "名",
+            "字"
+          ],
+          "repeat_count": 5,
+          "auto_grade": false,
+          "needs_teacher_review": false,
+          "optional_teacher_check": true,
+          "repeat_ok": true,
+          "tags": [
+            "handwriting",
+            "基础巩固"
+          ]
+        }
+      ],
+      "B": [
+        {
+          "id": "hw_l02_b_001",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "fill_blank",
+          "section": "交际填空",
+          "prompt_cn": "A：你叫什么名字？ B：我___安妮。",
+          "prompt_en": "",
+          "correct_answer": "叫",
+          "acceptable_answers": [
+            "叫",
+            "是"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "options": [
+            "叫",
+            "是",
+            "不",
+            "也"
+          ],
+          "tags": [
+            "叫",
+            "dialogue"
+          ]
+        },
+        {
+          "id": "hw_l02_b_002",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "fill_blank",
+          "section": "交际填空",
+          "prompt_cn": "A：你是学生吗？ B：我___学生。",
+          "prompt_en": "",
+          "correct_answer": "是",
+          "acceptable_answers": [
+            "是"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "options": [
+            "是",
+            "不",
+            "也",
+            "很"
+          ],
+          "tags": [
+            "是",
+            "dialogue"
+          ]
+        },
+        {
+          "id": "hw_l02_b_003",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "fill_blank",
+          "section": "交际填空",
+          "prompt_cn": "A：你是老师吗？ B：我___是老师。",
+          "prompt_en": "",
+          "correct_answer": "不",
+          "acceptable_answers": [
+            "不"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "options": [
+            "不",
+            "也",
+            "很",
+            "叫"
+          ],
+          "tags": [
+            "不",
+            "dialogue"
+          ]
+        },
+        {
+          "id": "hw_l02_b_004",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "fill_blank",
+          "section": "交际填空",
+          "prompt_cn": "A：很高兴认识你。 B：认识你我___很高兴。",
+          "prompt_en": "",
+          "correct_answer": "也",
+          "acceptable_answers": [
+            "也"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "options": [
+            "也",
+            "不",
+            "是",
+            "叫"
+          ],
+          "tags": [
+            "也",
+            "dialogue"
+          ]
+        },
+        {
+          "id": "hw_l02_b_005",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "choice",
+          "section": "课文问答",
+          "prompt_cn": "陈天中认错人了，他应该说什么？",
+          "prompt_en": "",
+          "options": [
+            "对不起",
+            "没关系",
+            "你叫什么名字",
+            "我是学生"
+          ],
+          "correct_answer": "对不起",
+          "acceptable_answers": [
+            "对不起"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "tags": [
+            "对不起",
+            "text"
+          ]
+        },
+        {
+          "id": "hw_l02_b_006",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "choice",
+          "section": "课文问答",
+          "prompt_cn": "第一次见面，我们可以说什么？",
+          "prompt_en": "",
+          "options": [
+            "很高兴认识你",
+            "你不是学生",
+            "我叫名字",
+            "没关系"
+          ],
+          "correct_answer": "很高兴认识你",
+          "acceptable_answers": [
+            "很高兴认识你"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "tags": [
+            "很高兴认识你",
+            "text"
+          ]
+        },
+        {
+          "id": "hw_l02_b_007",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "ordering",
+          "section": "连词成句",
+          "prompt_cn": "Put the words in order: I am also happy to meet you.",
+          "prompt_en": "",
+          "tokens": [
+            "高兴",
+            "你",
+            "也",
+            "我",
+            "认识",
+            "很"
+          ],
+          "correct_answer": "我也很高兴认识你",
+          "acceptable_answers": [
+            "我也很高兴认识你",
+            "认识你我也很高兴"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "tags": [
+            "也",
+            "很高兴",
+            "ordering"
+          ]
+        },
+        {
+          "id": "hw_l02_b_008",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "ordering",
+          "section": "连词成句",
+          "prompt_cn": "Put the words in order: Are you a student?",
+          "prompt_en": "",
+          "tokens": [
+            "吗",
+            "学生",
+            "是",
+            "你"
+          ],
+          "correct_answer": "你是学生吗",
+          "acceptable_answers": [
+            "你是学生吗"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "tags": [
+            "是",
+            "question",
+            "ordering"
+          ]
+        },
+        {
+          "id": "hw_l02_b_009",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "ordering",
+          "section": "连词成句",
+          "prompt_cn": "Put the words in order: I am also a student.",
+          "prompt_en": "",
+          "tokens": [
+            "学生",
+            "也",
+            "是",
+            "我"
+          ],
+          "correct_answer": "我也是学生",
+          "acceptable_answers": [
+            "我也是学生"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "tags": [
+            "也",
+            "是",
+            "ordering"
+          ]
+        },
+        {
+          "id": "hw_l02_b_010",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "output",
+          "section": "标准输出",
+          "prompt_cn": "请写一个三句自我介绍：姓名、身份、否定句各一句。",
+          "prompt_en": "",
+          "sample_answer": "我叫安妮。我是学生。我不是老师。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": true,
+          "tags": [
+            "self_intro",
+            "output"
+          ]
+        },
+        {
+          "id": "hw_l02_b_011",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "handwriting",
+          "section": "汉字描红",
+          "prompt_cn": "汉字描红：每个汉字描 4 遍。",
+          "prompt_en": "Trace each Chinese character 4 times.",
+          "characters": [
+            "名",
+            "字",
+            "认",
+            "识",
+            "兴"
+          ],
+          "repeat_count": 4,
+          "auto_grade": false,
+          "needs_teacher_review": false,
+          "optional_teacher_check": true,
+          "repeat_ok": true,
+          "tags": [
+            "handwriting",
+            "标准巩固"
+          ]
+        }
+      ],
+      "C": [
+        {
+          "id": "hw_l02_c_001",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "choice",
+          "section": "迁移表达",
+          "prompt_cn": "Choose the correct Chinese sentence: What is your mother's name?",
+          "prompt_en": "",
+          "options": [
+            "你妈妈叫什么名字？",
+            "你叫什么妈妈？",
+            "妈妈你是名字？",
+            "你妈妈很名字？"
+          ],
+          "correct_answer": "你妈妈叫什么名字？",
+          "acceptable_answers": [
+            "你妈妈叫什么名字？"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "tags": [
+            "名字",
+            "transfer"
+          ]
+        },
+        {
+          "id": "hw_l02_c_002",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "choice",
+          "section": "迁移表达",
+          "prompt_cn": "Choose the correct Chinese sentence: I am also happy to meet you.",
+          "prompt_en": "",
+          "options": [
+            "认识你我也很高兴",
+            "我不很高兴认识你",
+            "我名字认识你",
+            "你也叫高兴"
+          ],
+          "correct_answer": "认识你我也很高兴",
+          "acceptable_answers": [
+            "认识你我也很高兴"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "tags": [
+            "也",
+            "很高兴",
+            "transfer"
+          ]
+        },
+        {
+          "id": "hw_l02_c_003",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "fill_blank",
+          "section": "句子转换",
+          "prompt_cn": "我叫李文。→ 否定句：我___李文。",
+          "prompt_en": "",
+          "correct_answer": "不叫",
+          "acceptable_answers": [
+            "不叫",
+            "不是"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "options": [
+            "不叫",
+            "也是",
+            "很叫",
+            "没关系"
+          ],
+          "tags": [
+            "不",
+            "transform"
+          ]
+        },
+        {
+          "id": "hw_l02_c_004",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "fill_blank",
+          "section": "句子转换",
+          "prompt_cn": "我是学生。她也是学生。→ 她___是学生。",
+          "prompt_en": "",
+          "correct_answer": "也",
+          "acceptable_answers": [
+            "也"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "options": [
+            "也",
+            "不",
+            "很",
+            "叫"
+          ],
+          "tags": [
+            "也",
+            "transform"
+          ]
+        },
+        {
+          "id": "hw_l02_c_005",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "ordering",
+          "section": "迁移排序",
+          "prompt_cn": "Put the words in order: What is the teacher's name?",
+          "prompt_en": "",
+          "tokens": [
+            "什么",
+            "名字",
+            "叫",
+            "老师"
+          ],
+          "correct_answer": "老师叫什么名字",
+          "acceptable_answers": [
+            "老师叫什么名字"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "tags": [
+            "名字",
+            "transfer"
+          ]
+        },
+        {
+          "id": "hw_l02_c_006",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "ordering",
+          "section": "迁移排序",
+          "prompt_cn": "Put the words in order: I don't know him.",
+          "prompt_en": "",
+          "tokens": [
+            "他",
+            "不",
+            "认识",
+            "我"
+          ],
+          "correct_answer": "我不认识他",
+          "acceptable_answers": [
+            "我不认识他"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "tags": [
+            "不",
+            "认识",
+            "transfer"
+          ]
+        },
+        {
+          "id": "hw_l02_c_007",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "output",
+          "section": "迁移输出",
+          "prompt_cn": "Write four self-introduction sentences. Use: 叫, 是, 不, 也.",
+          "prompt_en": "",
+          "sample_answer": "我叫安妮。我是学生。我不是老师。她也是学生。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": true,
+          "tags": [
+            "self_intro",
+            "output",
+            "transfer"
+          ]
+        },
+        {
+          "id": "hw_l02_c_008",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "output",
+          "section": "对话输出",
+          "prompt_cn": "Write a first-meeting dialogue, at least four lines.",
+          "prompt_en": "",
+          "sample_answer": "A：你好！你叫什么名字？B：我叫安妮。A：很高兴认识你。B：认识你我也很高兴。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": true,
+          "tags": [
+            "dialogue",
+            "output",
+            "transfer"
+          ]
+        },
+        {
+          "id": "hw_l02_c_009",
+          "lesson": "HSK1-L02",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "handwriting",
+          "section": "汉字描红",
+          "prompt_cn": "汉字描红：每个汉字描 3 遍。",
+          "prompt_en": "Trace each Chinese character 3 times.",
+          "characters": [
+            "认",
+            "识",
+            "高",
+            "兴"
+          ],
+          "repeat_count": 3,
+          "auto_grade": false,
+          "needs_teacher_review": false,
+          "optional_teacher_check": true,
+          "repeat_ok": true,
+          "tags": [
+            "handwriting",
+            "挑战拓展"
+          ]
+        }
+      ]
+    },
+    "assignmentSelection": {
+      "A": [
+        "hw_l02_s_001",
+        "hw_l02_s_002",
+        "hw_l02_s_003",
+        "hw_l02_s_007",
+        "hw_l02_s_009",
+        "hw_l02_a_004",
+        "hw_l02_a_005",
+        "hw_l02_a_006",
+        "hw_l02_a_007",
+        "hw_l02_a_009",
+        "hw_l02_a_011",
+        "hw_l02_a_012"
+      ],
+      "B": [
+        "hw_l02_s_001",
+        "hw_l02_s_002",
+        "hw_l02_s_004",
+        "hw_l02_s_007",
+        "hw_l02_s_008",
+        "hw_l02_b_001",
+        "hw_l02_b_002",
+        "hw_l02_b_003",
+        "hw_l02_b_004",
+        "hw_l02_b_007",
+        "hw_l02_b_010",
+        "hw_l02_b_011"
+      ],
+      "C": [
+        "hw_l02_s_001",
+        "hw_l02_s_002",
+        "hw_l02_s_003",
+        "hw_l02_s_007",
+        "hw_l02_s_008",
+        "hw_l02_c_001",
+        "hw_l02_c_002",
+        "hw_l02_c_003",
+        "hw_l02_c_004",
+        "hw_l02_c_005",
+        "hw_l02_c_007",
+        "hw_l02_c_009"
+      ]
+    },
+    "reviewPolicy": {
+      "auto_grade_types": [
+        "choice",
+        "fill_blank",
+        "ordering"
+      ],
+      "practice_types": [
+        "handwriting"
+      ],
+      "teacher_review_types": [
+        "output"
+      ],
+      "feedback_timing": "下课立即给学生自动报告；作业输出题完成后，教师再给针对性反馈。"
+    }
+  },
+  "report": {},
+  "compatibility": {
+    "generatedFrom": "source/in-class/data_L02.js + source/data-model/HSK1-L02_preclass.json",
+    "generatedAt": "2026-07-22T06:28:29.063Z",
+    "legacyQuestionGroups": [
+      "v5_vocab_fill",
+      "g1_ordering",
+      "pk_question"
+    ]
+  }
+}
