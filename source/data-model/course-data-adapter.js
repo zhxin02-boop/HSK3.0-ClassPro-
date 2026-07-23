@@ -24,6 +24,25 @@
     standard = standard || {};
     var features = standard.features || {};
     var groups = (standard.inClass && standard.inClass.questionGroups) || {};
+    var vocabImages = {};
+    (standard.vocabulary || []).forEach(function (v) {
+      if (v && v.image) vocabImages[v.hanzi || v.word] = v.image;
+    });
+    var normalizedGroups = {};
+    Object.keys(groups).forEach(function (groupId) {
+      normalizedGroups[groupId] = (groups[groupId] || []).map(function (question) {
+        if (!question || question.media || question.type !== 'image_guess') return question;
+        var image = vocabImages[question.correct_answer];
+        if (!image) {
+          Object.keys(vocabImages).sort(function (a, b) { return b.length - a.length; }).some(function (word) {
+            if (String(question.correct_answer || '').indexOf(word) < 0) return false;
+            image = vocabImages[word];
+            return true;
+          });
+        }
+        return image ? Object.assign({}, question, { media: { image: image } }) : question;
+      });
+    });
     return {
       schemaVersion: standard.schemaVersion || '',
       meta: Object.assign({}, standard.meta || {}, {
@@ -38,8 +57,9 @@
       v7QuestionAnswerPairs: standard.v7QuestionAnswerPairs || [],
       grammarTeachingNotes: standard.grammarTeachingNotes || {},
       hanziWriting: standard.hanziWriting || (standard.inClass && standard.inClass.hanziWriting) || {},
+      hanziRecognition: standard.hanziRecognition || (standard.inClass && standard.inClass.hanziRecognition) || {},
       preClass: standard.preClass || {},
-      classProQuestions: groups,
+      classProQuestions: normalizedGroups,
       postClassHomework: normalizeHomework(standard.postClassHomework),
       report: standard.report || {}
     };

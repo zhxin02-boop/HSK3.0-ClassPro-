@@ -8,7 +8,7 @@
 <script src="../shared/students.js"></script>
 <script src="../shared/context.js"></script>
 <script src="../data-model/course-data-adapter.js"></script>
-<script src="./lesson-data-loader.js?v=20260719-images-4"></script>
+<script src="./lesson-data-loader.js?v=20260723-l04-images-5"></script>
 <script src="./pinyin-lab.js"></script>
 <style>
 :root{--teach:#4A8FE7;--practice:#E8563A;--battle:#E8563A;--blue:#4A8FE7;--green:#5CC98C;--bg:#FAFAF7;--text:#1A1A2E;--sidebar-bg:#F5F4F0;--line:#E8E6E1;--primary:#E8563A}
@@ -638,6 +638,7 @@ var GT=window.LESSON_DATA.grammarTeachingNotes||{};
 var G=window.LESSON_DATA.grammar||[];
 var T=window.LESSON_DATA.texts||[];
 var Q=window.LESSON_DATA.classProQuestions||{};
+var HR=window.LESSON_DATA.hanziRecognition||{};
 var MT=window.LESSON_DATA.meta||{};
 var URL_LESSON=new URLSearchParams(location.search).get("lesson");
 if(URL_LESSON&&MT.lessonKey!==URL_LESSON){document.getElementById("app").innerHTML='<div style="max-width:720px;margin:80px auto;padding:28px;border:2px solid #f59e0b;border-radius:16px;background:#fff7ed;font:16px sans-serif;line-height:1.8"><h2>课程上下文错误</h2><p>请求课程：'+URL_LESSON+'</p><p>实际加载：'+(MT.lessonKey||"未知")+'</p><p>页面已停止，未进入课堂。请返回教师主页重新选择课程。</p></div>';throw new Error("Lesson context mismatch: "+URL_LESSON+" != "+MT.lessonKey)}
@@ -650,7 +651,7 @@ function rawStudentUrl(){return new URL("student.html?lesson="+encodeURIComponen
 function studentUrl(){return encodeURIComponent(rawStudentUrl())}
 var ap={
 mt:"home",st:"",tmode:0,pyzStep:0,tvOpen:false,timerOn:false,lw:false,sl:0,sg:0,gr:false,ti:0,tl:0,
-v1i:0,v1a:false,v1p:-1,v4i:0,v4a:false,v4p:-1,v5i:0,v5a:false,v5p:-1,ttqi:0,ttqa:false,ttqp:-1,g1i:0,g1a:[],g1s:[],g1sa:false,v7i:0,v7si:0,v7a:false,v7p:-1,v7L:-1,v7R:-1,v7m:{},v8i:0,v8qi:0,v8L:-1,v8R:-1,v8m:{},w1i:0,w1a:false,w1p:-1,w2i:0,w2a:false,w2p:-1,
+v1i:0,v1a:false,v1p:-1,v4i:0,v4a:false,v4p:-1,v5i:0,v5a:false,v5p:-1,ttqi:0,ttqa:false,ttqp:-1,g1i:0,g1a:[],g1s:[],g1sa:false,v7i:0,v7si:0,v7a:false,v7p:-1,v7L:-1,v7R:-1,v7m:{},v8i:0,v8qi:0,v8L:-1,v8R:-1,v8m:{},w1i:0,w1a:false,w1p:-1,w2i:0,w2a:false,w2p:-1,hri:0,
 pkp:"setup",pks:[],pkt:[],pkqi:0,pksa:false,pka:{},pkat:[],pktc:4,pkw:null,pkws:false,
 sc:{},la:[],qr:false,qrp:false,qrx:20,qry:200,
 cs:"disconnected",oc:0,td:30,tr:30,trun:false,tint:null,
@@ -1362,13 +1363,13 @@ ap.init();
 </style>
 <script>
 (function(){
-  var modes=['v1','v4','v5','v7','v8','g1','w1','ttq'];
+  var modes=['v1','v4','v5','v7','v8','g1','w1','hrec','ttq'];
   function active(s){return modes.indexOf(s)>=0}
-  function countFor(s){if(s==='v1')return(Q.v1_image_guess||[]).length;if(s==='v4')return(Q.v4_complete_sentence||[]).length;if(s==='v5')return(Q.v5_vocab_fill||[]).length;if(s==='v7')return(Q.v7_word_match||[]).length;if(s==='v8')return(Q.v8_memory_match||[]).length;if(s==='g1')return(Q.g1_ordering||[]).length;if(s==='w1')return(Q.w1_component_char||[]).length;if(s==='ttq')return(Q.r2_passage_choice||Q.tt_text_true_false||[]).length;return 0}
-  function indexFor(t){if(t.st==='v1')return t.v1i;if(t.st==='v4')return t.v4i;if(t.st==='v5')return t.v5i;if(t.st==='v7')return t.v7i;if(t.st==='v8')return t.v8i;if(t.st==='g1')return t.g1i;if(t.st==='w1')return t.w1i;return t.ttqi}
-  function advance(t){if(t.st==='v7'){var item=(Q.v7_word_match||[])[t.v7i],d=item&&item.data||{},ss=d.sentences||[];if(!d.pairs&&t.v7si<ss.length-1){t.v7si++;return}t.v7i++;t.v7si=0;t.v7L=-1;t.v7R=-1;t.v7m={};return}if(t.st==='v1')t.v1i++;if(t.st==='v4')t.v4i++;if(t.st==='v5')t.v5i++;if(t.st==='v8')t.v8i++;if(t.st==='g1')t.g1i++;if(t.st==='w1')t.w1i++;if(t.st==='ttq')t.ttqi++}
+  function countFor(s){if(s==='hrec')return(HR.enabled?((HR.groups||[]).length*(HR.rounds||[]).length):0);if(s==='v1')return(Q.v1_image_guess||[]).length;if(s==='v4')return(Q.v4_complete_sentence||[]).length;if(s==='v5')return(Q.v5_vocab_fill||[]).length;if(s==='v7')return(Q.v7_word_match||[]).length;if(s==='v8')return(Q.v8_memory_match||[]).length;if(s==='g1')return(Q.g1_ordering||[]).length;if(s==='w1')return(Q.w1_component_char||[]).length;if(s==='ttq')return(Q.r2_passage_choice||Q.tt_text_true_false||[]).length;return 0}
+  function indexFor(t){if(t.st==='hrec')return t.hri;if(t.st==='v1')return t.v1i;if(t.st==='v4')return t.v4i;if(t.st==='v5')return t.v5i;if(t.st==='v7')return t.v7i;if(t.st==='v8')return t.v8i;if(t.st==='g1')return t.g1i;if(t.st==='w1')return t.w1i;return t.ttqi}
+  function advance(t){if(t.st==='hrec'){t.hri++;return}if(t.st==='v7'){var item=(Q.v7_word_match||[])[t.v7i],d=item&&item.data||{},ss=d.sentences||[];if(!d.pairs&&t.v7si<ss.length-1){t.v7si++;return}t.v7i++;t.v7si=0;t.v7L=-1;t.v7R=-1;t.v7m={};return}if(t.st==='v1')t.v1i++;if(t.st==='v4')t.v4i++;if(t.st==='v5')t.v5i++;if(t.st==='v8')t.v8i++;if(t.st==='g1')t.g1i++;if(t.st==='w1')t.w1i++;if(t.st==='ttq')t.ttqi++}
   function resetAnswer(t){t.v1a=false;t.v1p=-1;t.v4a=false;t.v4p=-1;t.v5a=false;t.v5p=-1;t.v7a=false;t.v7p=-1;t.v7L=-1;t.v7R=-1;t.v7m={};t.v8L=-1;t.v8R=-1;t.v8m={};t.g1a=[];t.g1s=[];t.g1sa=false;t.w1a=false;t.w1p=-1;t.ttqa=false;t.ttqp=-1}
-  function keyFor(t){var q=t._cq2&&t._cq2(),d=q&&q.data||{};if((t.st==='v7'||t.st==='v8')&&d.pairs)return(d.pairs||[]).map(function(p){return p.left+'：'+p.right}).join('；');if(t.st==='ttq')return q&&((q.correct_answer!=null?q.correct_answer:'')||((d.answer===true||d.answer===false)?(d.answer?'对':'不对'):''))||'';if(typeof d.correct_index==='number'&&d.options)return d.options[d.correct_index]||'';return q&&q.correct_answer||''}
+  function keyFor(t){var q=t._cq2&&t._cq2(),d=q&&q.data||{};if(t.st==='hrec')return(d.items||[]).map(function(x){return x.answer}).join('、');if((t.st==='v7'||t.st==='v8')&&d.pairs)return(d.pairs||[]).map(function(p){return p.left+'：'+p.right}).join('；');if(t.st==='ttq')return q&&((q.correct_answer!=null?q.correct_answer:'')||((d.answer===true||d.answer===false)?(d.answer?'对':'不对'):''))||'';if(typeof d.correct_index==='number'&&d.options)return d.options[d.correct_index]||'';return q&&q.correct_answer||''}
   function rail(state){var total=countFor(state.st),idx=indexFor(state),h='<div class="practice-rail">';if(state.qp==='idle')h+='<button class="practice-rail-action" onclick="ap.qws()">答</button>';else if(state.qp==='answering')h+='<button class="practice-rail-action announce" onclick="ap.qwe()">Key</button>';else if(idx<total-1)h+='<button class="practice-rail-action next" onclick="ap.qwr()">下一题</button>';else h+='<div class="practice-rail-done">本组完成</div>';return h+'</div>'}
   function status(state){var h='<div class="practice-status-panel"><div class="practice-status-head">答题完成情况</div><div class="practice-status-body">';(state.as||[]).forEach(function(n){var done=Object.keys(state.qsub||{}).some(function(k){return state._rn(k)===n});h+='<div class="practice-student '+(done?'done':'')+'"><span>'+(done?'✓':'·')+'</span><b>'+es(n)+'</b><small>'+(done?'已答':'未答')+'</small></div>'});return h+'</div></div>'}
   var oldStart=ap.qws,oldEnd=ap.qwe,oldNext=ap.qwr,oldRender=ap._r;
@@ -1395,7 +1396,7 @@ ap.init();
 <script>
 /* L02 static hanzi writing demonstration: data-driven, teacher-side only. */
 (function(){
-  if(!window.LESSON_DATA||!["HSK1-L02","HSK1-L03"].includes(window.LESSON_DATA.meta.lessonKey)||!window.LESSON_DATA.meta.showHanziWritingDemo)return;
+  if(!window.LESSON_DATA||!window.LESSON_DATA.meta||!window.LESSON_DATA.meta.showHanziWritingDemo)return;
   ap.hwIndex=0;
   var oldSnav=ap._snav,oldCnt=ap._cnt;
   ap._snav=function(){
@@ -1433,9 +1434,10 @@ ap.init();
 <script>
 /* L03 teaching content: vocabulary extensions and grammar examples. */
 (function(){
-  if(!window.LESSON_DATA||window.LESSON_DATA.meta.lessonKey!=='HSK1-L03')return;
+  if(!window.LESSON_DATA||!window.LESSON_DATA.meta||!['HSK1-L03','HSK1-L04'].includes(window.LESSON_DATA.meta.lessonKey))return;
   var basePyL03=py,l03Py={"人":"rén","的":"de","这":"zhè","谁":"shéi","朋友":"péngyou","女朋友":"nǚpéngyou","哪":"nǎ","国":"guó","她":"tā","喂":"wèi","姐姐":"jiějie","工作":"gōngzuò","还":"hái","忙":"máng","吗":"ma","对":"duì","太":"tài","我们":"wǒmen","想":"xiǎng"};
   py=function(s){return l03Py[String(s||'')]||basePyL03(s)};
+  if(window.LESSON_DATA.meta.lessonKey==='HSK1-L04')py=function(s){var key=String(s||'');for(var pi=0;pi<V.length;pi++)if((V[pi].hanzi||V[pi].word)===key)return V[pi].pinyin||'';return basePyL03(s)};
   var l03SentencePy={"我是中国人。":"Wǒ shì Zhōngguó rén.","你是哪国人？":"Nǐ shì nǎ guó rén?","这是我女朋友。":"Zhè shì wǒ nǚpéngyou.","这是谁？":"Zhè shì shéi?","她是泰国人。":"Tā shì Tàiguó rén.","她是哪国人？":"Tā shì nǎ guó rén?","她也是学生。":"Tā yě shì xuésheng.","她是学生吗？":"Tā shì xuésheng ma?","喂，一飞！":"Wèi, Yīfēi!","你给谁打电话？":"Nǐ gěi shéi dǎ diànhuà?","对，还很忙。":"Duì, hái hěn máng.","你工作还忙吗？":"Nǐ gōngzuò hái máng ma?","我不太忙。":"Wǒ bú tài máng.","你也很忙吗？":"Nǐ yě hěn máng ma?","我们很想你。":"Wǒmen hěn xiǎng nǐ.","你们想我吗？":"Nǐmen xiǎng wǒ ma?","我叫李文。":"Wǒ jiào Lǐ Wén.","你叫什么？":"Nǐ jiào shénme?","很高兴认识你。":"Hěn gāoxìng rènshi nǐ.","认识你我也很高兴。":"Rènshi nǐ wǒ yě hěn gāoxìng.","我不是老师。":"Wǒ bú shì lǎoshī.","你是老师吗？":"Nǐ shì lǎoshī ma?"};
   V7QA=V7QA.map(function(group){return group.map(function(p){return Object.assign({},p,{left_pinyin:l03SentencePy[p.left]||'',right_pinyin:l03SentencePy[p.right]||''})})});
   var baseCqL03=ap._cq;
@@ -1462,6 +1464,110 @@ ap.init();
     grid.style.gridTemplateColumns='repeat(2,minmax(0,1fr))';grid.style.gap='24px';grid.style.width='100%';grid.style.overflow='hidden';
     var cols=grid.children;if(cols.length<2)return;var right=cols[1],qs=V7QA[this.v7i]||[],order=qs.map(function(_,i){return i}).sort(function(a,b){return ((a*7+3)%qs.length)-((b*7+3)%qs.length)}),btns=right.querySelectorAll('button');
     for(var i=0;i<btns.length;i++){var idx=order[i],p=qs[idx]||{},pyEl=btns[i].querySelector('.l03-match-py');if(!pyEl){pyEl=document.createElement('span');pyEl.className='l03-match-py';pyEl.style.cssText='display:block;font-size:13px;color:#78836f;margin-bottom:4px';pyEl.textContent=p.right_pinyin||'';btns[i].insertBefore(pyEl,btns[i].firstChild)}btns[i].style.width='100%';btns[i].style.height='96px';btns[i].style.boxSizing='border-box';btns[i].style.textAlign='left';btns[i].style.whiteSpace='normal';btns[i].style.overflowWrap='anywhere'}
+  };
+})();
+</script>
+<script>
+/* L03 pilot: five-round character-recognition cycle. */
+(function(){
+  if(!HR.enabled)return;
+  var oldSnav=ap._snav,oldCnt=ap._cnt,oldCq2=ap._cq2;
+  function vocab(id){for(var i=0;i<V.length;i++)if(V[i].id===id)return V[i];return{}}
+  function pickOptions(target,field,all){var vals=[];for(var i=0;i<all.length;i++){var x=vocab(all[i]);var v=field==='english'?(x.english||x.hanzi):field==='pinyin'?(x.pinyin||''):x.hanzi;if(v&&v!==target&&vals.indexOf(v)<0)vals.push(v);if(vals.length===3)break}return sh([target].concat(vals))}
+  function make(index){var rounds=HR.rounds||[],groups=HR.groups||[],ri=Math.floor(index/rounds.length),rj=index%rounds.length,g=groups[ri],round=rounds[rj];if(!g||!round)return null;var items=[],ids=g.vocabularyIds||[];for(var i=0;i<ids.length;i++){var w=vocab(ids[i]),target=w.hanzi||w.word||'',type=round.id,options=[],answer=target,stimulus='',pinyin=w.pinyin||'',image=w.image||'',images=[];if(type==='hanzi_to_pinyin'){stimulus=target;options=pickOptions(w.pinyin||'', 'pinyin', ids)}else if(type==='hanzi_to_meaning'){stimulus=target;options=pickOptions(w.english||target,'english',ids);answer=w.english||target}else if(type==='hanzi_to_picture'){stimulus=target;options=pickOptions(target,'hanzi',ids);for(var oi=0;oi<options.length;oi++){var ow=null;for(var z=0;z<ids.length;z++){var zz=vocab(ids[z]);if((zz.hanzi||zz.word)===options[oi]){ow=zz;break}}images.push(ow&&ow.image||'')}}else if(type==='sentence_to_word'){var ex=(HR.sentenceExamples||{})[ids[i]]||{};stimulus=(ex.sentence||'').replace(target,'___');pinyin=ex.pinyin||'';options=pickOptions(target,'hanzi',ids)}else{stimulus=image?'':(w.english||target);options=pickOptions(target,'hanzi',ids);images=[]}var ci=options.indexOf(answer);items.push({id:'hrec_'+g.id+'_'+round.id+'_'+i,word:target,stimulus:stimulus,pinyin:pinyin,image:image,options:options,option_images:images,answer:answer,correct_index:ci,meaning:w.english||''})}return{id:'hrec_'+g.id+'_'+round.id,prompt_cn:round.title+'（'+g.title+'）',prompt_en:round.titleEn+' — '+g.title,data:{groupTitle:g.title,roundId:round.id,roundTitle:round.title,items:items},correct_answer:items.map(function(x){return x.answer}).join('、'),sourceType:'teaching_extension'} }
+  window.buildHanziRecognitionQuestion=make;
+  ap._snav=function(){var h=oldSnav.call(this);if(this.mt==='practice'&&HR.enabled&&h.indexOf('hrec')<0)h=h.replace('</span></div>','<button class="sub-btn'+(this.st==='hrec'?' active':'')+'" onclick="ap.st=\'hrec\';ap.hri=0;ap.qp=\'idle\';ap._r()">汉字认读<br><small>Reading Cycle</small></button></span></div>');return h};
+  ap._cnt=function(){if(this.mt==='practice'&&this.st==='hrec'){var q=make(this.hri||0),d=q&&q.data||{},items=d.items||[],h='<div class="panel" style="max-width:1080px;width:100%;text-align:left"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap"><div><h2 style="margin:0;color:var(--blue)">汉字认读循环 <span style="font-size:14px;color:#8b96a3">Character Recognition Cycle</span></h2><div style="margin-top:6px;color:#74806d">一次完成一组6个词，教师公布答案后进入下一轮。</div></div><div style="font-weight:900;color:#3f7f32">'+((this.hri||0)+1)+' / '+((HR.groups||[]).length*(HR.rounds||[]).length)+'</div></div><div style="margin:18px 0;padding:12px 16px;border-radius:14px;background:#edf6d9;color:#3f7f32;font-weight:900">'+es(d.groupTitle||'')+' · '+es(d.roundTitle||'')+'</div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">';for(var i=0;i<items.length;i++){var x=items[i],visual=d.roundId==='picture_to_hanzi'?(x.image?'<img src="'+es(x.image)+'" alt="" style="width:100%;height:120px;object-fit:contain;border-radius:12px;background:#fff">':'<div style="font-size:18px;color:#74806d">'+es(x.meaning||'')+'</div>'):(x.stimulus||x.meaning||'');h+='<div style="padding:14px;border:1px solid var(--line);border-radius:16px;background:#fff"><div style="min-height:126px;display:flex;align-items:center;justify-content:center">'+visual+'</div><div style="font-weight:900;font-size:22px;color:var(--text);margin-top:8px">'+es(x.word)+'</div><div style="font-size:13px;color:#8b96a3;margin-top:4px">'+es(x.pinyin||'')+'</div></div>'}h+='</div>';return h}return oldCnt.call(this)};
+  ap._cq2=function(){if(this.st==='hrec')return make(this.hri||0);return oldCq2.call(this)};
+  var oldR=ap._r;ap._r=function(){oldR.call(this);if(this.mt!=='practice'||this.st!=='hrec')return;var side=document.querySelector('.cp-sidebar');if(!side)return;var rail=side.querySelector('.practice-rail');if(!rail){rail=document.createElement('div');rail.className='practice-rail';side.insertBefore(rail,side.querySelector('.sb-spacer')||null)}var total=(HR.groups||[]).length*(HR.rounds||[]).length,idx=this.hri||0,html=this.qp==='idle'?'<button class="practice-rail-action" onclick="ap.qws()">答</button>':this.qp==='answering'?'<button class="practice-rail-action announce" onclick="ap.qwe()">Key</button>':idx<total-1?'<button class="practice-rail-action next" onclick="ap.qwr()">下一题</button>':'<div class="practice-rail-done">本组完成</div>';rail.innerHTML=html};
+})();
+</script>
+<script>
+(function(){
+  if(!window.HR&&typeof HR==='undefined')return;
+  if(typeof HR!=='undefined'&&HR.rounds&&HR.rounds[0]){HR.rounds[0]={id:'hanzi_to_meaning',title:'汉字配意思',titleEn:'Character to meaning'};}
+  ap.hrecNext=function(){var total=(HR.groups||[]).length*(HR.rounds||[]).length;if(this.qp!=='published'||(this.hri||0)>=total-1)return;this.hri=(this.hri||0)+1;this.qp='idle';this.qsub={};this.lastQuestionPayload=null;this.currentQuestionId=null;this._r();this.qws()};
+  var oldR=ap._r;ap._r=function(){oldR.call(this);if(this.mt!=='practice'||this.st!=='hrec')return;document.querySelectorAll('.panel-area .panel[style*="max-width:1080px"] div[style*="font-size:13px"]').forEach(function(el){el.remove()});var b=document.querySelector('.practice-rail-action.next');if(b)b.setAttribute('onclick','ap.hrecNext()')};
+})();
+</script>
+<script>
+(function(){
+  var prev=ap._r;ap._r=function(){prev.call(this);if(this.mt!=='practice'||this.st!=='hrec')return;var panel=document.querySelector('.panel-area>.panel');if(!panel)return;var box=panel.querySelector('.hrec-teacher-controls');if(!box){box=document.createElement('div');box.className='hrec-teacher-controls';box.style.cssText='margin-top:22px;padding:16px;border-radius:16px;background:#f8faf3;border:1px solid #dfeac8;text-align:center';panel.appendChild(box)}var html='<div style="font-weight:900;color:#3f7f32;margin-bottom:6px">教师操作 / Teacher control</div>';if(this.qp==='idle')html+='<div style="font-size:13px;color:#74806d;margin-bottom:10px">点击“答”后，学生端会出现6个词的选择题。学生逐项选择后提交本组答案。</div><button type="button" onclick="ap.qws()" style="background:#2563d8">答 / Start this round</button>';else if(this.qp==='answering')html+='<div style="font-size:13px;color:#74806d;margin-bottom:10px">学生正在学生端选择答案。完成后点击 Key 公布本组答案。</div><button type="button" onclick="ap.qwe()" style="background:#f05a3f">Key / 公布答案</button>';else if((this.hri||0)<(HR.groups||[]).length*(HR.rounds||[]).length-1)html+='<div style="font-size:13px;color:#74806d;margin-bottom:10px">本组答案已公布。点击下一题进入下一轮。</div><button type="button" onclick="ap.hrecNext()" style="background:#4f8f2d">下一题 / Next round</button>';else html+='<div style="font-size:13px;color:#74806d">汉字认读循环完成。</div>';box.innerHTML=html};
+})();
+</script>
+<script>
+(function(){
+  if(typeof HR==='undefined'||!HR.enabled||typeof window.buildHanziRecognitionQuestion!=='function')return;
+  var baseBuild=window.buildHanziRecognitionQuestion;
+  function sentenceFor(word){var ids=Object.keys(HR.sentenceExamples||{});for(var i=0;i<ids.length;i++){var w=null;for(var j=0;j<V.length;j++)if(V[j].id===ids[i])w=V[j];if(w&&(w.hanzi||w.word)===word)return(HR.sentenceExamples[ids[i]]||{}).sentence||word}return word}
+  window.buildHanziRecognitionQuestion=function(index){var q=baseBuild(index);if(!q||index%5!==3)return q;var items=q.data&&q.data.items||[];for(var i=0;i<items.length;i++){var x=items[i],opts=[];for(var j=0;j<items.length;j++){if(j===i)continue;opts.push(sentenceFor(items[j].word));if(opts.length===3)break}var target=sentenceFor(x.word);opts=sh([target].concat(opts));x.stimulus=x.word;x.pinyin='';x.options=opts;x.option_images=[];x.answer=target;x.correct_index=opts.indexOf(target)}q.prompt_cn='看汉字选情景（'+(q.data.groupTitle||'')+'）';q.prompt_en='Choose the sentence that matches the character — '+(q.data.groupTitle||'');q.data.roundId='hanzi_to_scene';q.data.roundTitle='看汉字选情景';q.correct_answer=items.map(function(x){return x.answer}).join('、');return q};
+  var oldCq2=ap._cq2;ap._cq2=function(){if(this.st==='hrec')return window.buildHanziRecognitionQuestion(this.hri||0);return oldCq2.call(this)};
+  function cardHtml(x,round){var stimulus=round==='sentence_to_word'?'<div style="font-size:24px;font-weight:900;text-align:center;line-height:1.5">'+es(x.stimulus||'')+'</div>':'<div style="font-size:42px;font-weight:900;text-align:center;line-height:1.2">'+es(x.stimulus||x.word||'')+'</div>';var h='<div style="min-height:126px;display:flex;align-items:center;justify-content:center">'+stimulus+'</div><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px">';for(var i=0;i<(x.options||[]).length;i++)h+='<button type="button" disabled style="min-height:58px;padding:8px;border:2px solid #dfeac8;border-radius:14px;background:#fff;color:#203421;font-size:16px;font-weight:800">'+es(x.options[i])+'</button>';return h+'</div>'}
+  var oldR=ap._r;ap._r=function(){oldR.call(this);if(this.mt!=='practice'||this.st!=='hrec')return;var q=this.lastQuestionPayload&&this.lastQuestionPayload.question||window.buildHanziRecognitionQuestion(this.hri||0),grid=document.querySelector('.panel-area>.panel div[style*="grid-template-columns"]');if(!grid||!q||!q.data)return;var items=q.data.items||[];for(var i=0;i<grid.children.length&&i<items.length;i++){grid.children[i].innerHTML=cardHtml(items[i],q.data.roundId||'')}};
+})();
+</script>
+<script>
+(function(){
+  if(typeof HR==='undefined'||!HR.enabled||typeof window.buildHanziRecognitionQuestion!=='function')return;
+  var oldBuild=window.buildHanziRecognitionQuestion;
+  var overrides={
+    v_l03_13:{sentence:'我很忙。',pinyin:'Wǒ hěn máng。'},
+    v_l03_14:{sentence:'你忙吗？',pinyin:'Nǐ máng ma?'},
+    v_l03_15:{sentence:'对，还很忙。',pinyin:'Duì, hái hěn máng。'},
+    v_l03_16:{sentence:'太好了！',pinyin:'Tài hǎo le!'},
+    v_l03_17:{sentence:'我们很想你。',pinyin:'Wǒmen hěn xiǎng nǐ。'},
+    v_l03_18:{sentence:'我想你。',pinyin:'Wǒ xiǎng nǐ。'}
+  };
+  for(var id in overrides)HR.sentenceExamples[id]=overrides[id];
+  function build(index){var q=oldBuild(index);if(!q||index%5!==2)return q;var items=q.data&&q.data.items||[],words=items.map(function(x){return x.word}),out=[];for(var i=0;i<items.length;i++){var x=items[i],opts=[];for(var j=0;j<words.length;j++)if(j!==i&&opts.indexOf(words[j])<0){opts.push(words[j]);if(opts.length===3)break}opts=sh([x.word].concat(opts));out.push({id:x.id,word:x.word,stimulus:x.meaning||'',pinyin:'',image:'',options:opts,option_images:[],answer:x.word,correct_index:opts.indexOf(x.word),meaning:x.meaning||''})}q.data.roundId='meaning_to_hanzi';q.data.roundTitle='看意思选汉字';q.prompt_cn='看意思选汉字（'+(q.data.groupTitle||'')+'）';q.prompt_en='Choose the character that matches the meaning — '+(q.data.groupTitle||'');q.data.items=out;q.correct_answer=out.map(function(x){return x.answer}).join('、');return q}
+  window.buildHanziRecognitionQuestion=build;
+})();
+</script>
+<script>
+(function(){
+  if(typeof window.buildHanziRecognitionQuestion!=='function')return;
+  var prev=window.buildHanziRecognitionQuestion;
+  window.buildHanziRecognitionQuestion=function(index){var q=prev(index);if(q&&index%5===3){q.data.roundTitle='看汉字选短句';q.prompt_cn='选择最符合这个汉字的短句（'+(q.data.groupTitle||'')+'）';q.prompt_en='Choose the sentence that correctly uses the character — '+(q.data.groupTitle||'')}return q};
+})();
+</script>
+<script>
+(function(){
+  if(typeof HR==='undefined'||!HR.enabled||typeof window.buildHanziRecognitionQuestion!=='function')return;
+  var prior=window.buildHanziRecognitionQuestion;
+  HR.rounds[3]={id:'sentence_to_word',title:'短句找词',titleEn:'Sentence to word'};
+  HR.rounds[4]={id:'reading_choice',title:'英文阅读理解',titleEn:'English reading comprehension'};
+  var reading=HR.readingExamples||{
+    '人':'I am Chinese.','的':'This is my teacher.','这':'This is my sister.','谁':'Who is this?','女朋友':'This is my girlfriend.','哪':'What nationality are you?',
+    '国':'I am Chinese.','她':'She is French.','喂':'Hello, Yifei!','姐姐':'Older sister is still very busy.','工作':'Are you still busy with work?','还':'Yes, still very busy.',
+    '忙':'I am very busy.','吗':'Are you busy?','对':'That is right.','太':'Great!','我们':'We miss you.','想':'I miss you.'
+  };
+  function wordSentence(word){var ids=Object.keys(HR.sentenceExamples||{});for(var i=0;i<ids.length;i++){var v=null;for(var j=0;j<V.length;j++)if(V[j].id===ids[i])v=V[j];if(v&&(v.hanzi||v.word)===word)return(HR.sentenceExamples[ids[i]]||{}).sentence||word}return word}
+  window.buildHanziRecognitionQuestion=function(index){var q=prior(index),slot=index%5,items=q&&q.data&&q.data.items||[];if(!q)return q;if(slot===3){var words=items.map(function(x){return x.word}),out=[];for(var i=0;i<items.length;i++){var sentence=wordSentence(items[i].word),opts=[];for(var j=0;j<words.length;j++)if(j!==i)opts.push(words[j]);opts=sh([items[i].word].concat(opts.slice(0,3)));out.push({id:items[i].id,word:items[i].word,stimulus:sentence.replace(items[i].word,'___'),pinyin:'',image:'',options:opts,option_images:[],answer:items[i].word,correct_index:opts.indexOf(items[i].word),meaning:items[i].meaning||''})}q.data.roundId='sentence_to_word';q.data.roundTitle='短句找词';q.prompt_cn='读短句，选择应填入的词（'+(q.data.groupTitle||'')+'）';q.prompt_en='Read the sentence and choose the missing word — '+(q.data.groupTitle||'');q.data.items=out;q.correct_answer=out.map(function(x){return x.answer}).join('、');return q}if(slot===4){var words2=items.map(function(x){return x.word}),out2=[];for(var a=0;a<items.length;a++){var target=wordSentence(items[a].word),opts2=[];for(var b=0;b<words2.length;b++)if(b!==a)opts2.push(wordSentence(words2[b]));opts2=sh([target].concat(opts2.slice(0,3)));out2.push({id:items[a].id,word:items[a].word,stimulus:reading[items[a].word]||'',pinyin:'',image:'',options:opts2,option_images:[],answer:target,correct_index:opts2.indexOf(target),meaning:items[a].meaning||''})}q.data.roundId='reading_choice';q.data.roundTitle='英文阅读理解';q.prompt_cn='读英文，选择合适的中文表达（'+(q.data.groupTitle||'')+'）';q.prompt_en='Read the English sentence and choose the best Chinese sentence — '+(q.data.groupTitle||'');q.data.items=out2;q.correct_answer=out2.map(function(x){return x.answer}).join('、');return q}return q};
+})();
+</script>
+<script>
+/* L04 data-driven practice support: option order and character discrimination. */
+(function(){
+  if(typeof MT==='undefined'||MT.lessonKey!=='HSK1-L04')return;
+  function shuffleOptions(q){
+    if(!q||!q.data||!Array.isArray(q.data.options)||q.data._shuffled)return;
+    var opts=q.data.options.slice(),pys0=Array.isArray(q.data.options_pinyin)?q.data.options_pinyin.slice():[],answer=q.correct_answer,oldIndex=typeof q.data.correct_index==='number'?q.data.correct_index:opts.indexOf(answer),rows=opts.map(function(x,i){return{v:x,p:pys0[i]||'',i:i}});
+    sh(rows);q.data.options=rows.map(function(x){return x.v});q.data.options_pinyin=rows.map(function(x){return x.p});q.data.correct_index=answer!=null?q.data.options.indexOf(answer):rows.findIndex(function(x){return x.i===oldIndex});q.data._shuffled=true;
+  }
+  ['v4_complete_sentence','v5_vocab_fill','w1_component_char','r2_passage_choice'].forEach(function(name){(Q[name]||[]).forEach(shuffleOptions)});
+  var oldW1=ap._w1;
+  ap._w1=function(){
+    var qs=Q.w1_component_char||[];
+    if(!qs.length)return oldW1.call(this);
+    var i=this.w1i,c=qs[i];if(!c||!c.data)return'<div class="panel"><p>暂无题目</p></div>';
+    var body='<div style="text-align:center;background:#f8faf3;border:1px solid #dfeac8;border-radius:16px;padding:24px;margin:12px 0"><div style="font-size:16px;color:#74806d;margin-bottom:6px">'+es(c.data.sentence_pinyin||'')+'</div><div class="hanzi-font" style="font-size:34px;font-weight:900;color:var(--text);line-height:1.5">'+es(c.data.sentence||'')+'</div><div style="font-size:13px;color:#888;margin-top:8px">选择正确的汉字。Choose the correct character.</div></div>';
+    var nav=this._navBtn('ap.w1i=Math.max(0,ap.w1i-1);ap.w1a=false;ap.w1p=-1;ap._r()','ap.w1i=Math.min('+(qs.length-1)+',ap.w1i+1);ap.w1a=false;ap.w1p=-1;ap._r()',i,qs.length,'&larr; 上一题','下一题 &rarr;');
+    return this._mc('汉字区辨 / Character Check',c,c.data.options,c.data.correct_index,this.w1p,this.w1a,'ap.w1p=',body,nav);
+  };
+  var oldCq=ap._cq;
+  ap._cq=function(){
+    if(this.st==='w1'){var q=(Q.w1_component_char||[])[this.w1i];return q||null}
+    return oldCq.call(this);
   };
 })();
 </script>

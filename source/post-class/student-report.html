@@ -113,8 +113,8 @@ function parseMaybeJson(s){try{return JSON.parse(s||"")}catch(e){return null}}
 function renderStudentOptions(){var el=document.getElementById("studentName"),saved="";try{saved=localStorage.getItem("ClassProStudentName")||""}catch(e){}el.innerHTML='<option value="">Select your name / 选择姓名</option>'+(window.CLASS_STUDENTS||[]).map(function(n){return'<option value="'+esc(n)+'">'+esc(n)+'</option>'}).join("");if(saved&&(window.CLASS_STUDENTS||[]).indexOf(saved)>=0)el.value=saved}
 function saveStudentName(){try{localStorage.setItem("ClassProStudentName",getStudentName())}catch(e){}}
 function progressParts(){return[window.ClassProContext.read().lesson,"post_class",currentTier,getStudentName()||"anonymous"]}
-function shuffleArray(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),x=a[i];a[i]=a[j];a[j]=x}return a}function taskPool(tier){var hw=window.LESSON_DATA&&window.LESSON_DATA.postClassHomework;if(!hw)return[];var s=(hw.shared_pool||[]).slice(),t=(hw.tier_pools&&hw.tier_pools[tier]||[]).slice(),all=s.concat(t),selected=hw.assignment_selection&&hw.assignment_selection[tier],items=all;if(Array.isArray(selected)&&selected.length){var byId={};all.forEach(function(q){byId[q.id]=q});items=selected.map(function(id){return byId[id]}).filter(Boolean)}else if(tier==="C")items=items.filter(function(q){return q.type!=="ordering"});return items.map(function(q){var x=Object.assign({},q);if(x.options)x.options=shuffleArray(x.options.slice());return x})}
-function typeName(t){return{choice:"选择",fill_blank:"填空",ordering:"排序",output:"输出",handwriting:"书写"}[t]||t}
+function shuffleArray(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),x=a[i];a[i]=a[j];a[j]=x}return a}function taskPool(tier){var hw=window.LESSON_DATA&&window.LESSON_DATA.postClassHomework;if(!hw)return[];var s=(hw.shared_pool||[]).slice(),t=(hw.tier_pools&&hw.tier_pools[tier]||[]).slice(),all=s.concat(t),selected=hw.assignment_selection&&hw.assignment_selection[tier],items=all;if(Array.isArray(selected)&&selected.length){var byId={};all.forEach(function(q){byId[q.id]=q});items=selected.map(function(id){return byId[id]}).filter(Boolean)}return items.map(function(q){var x=Object.assign({},q);if(x.options)x.options=shuffleArray(x.options.slice());return x})}
+function typeName(t){return{choice:"选择",fill_blank:"填空",ordering:"排序",output:"输出",subjective:"主观题",handwriting:"书写"}[t]||t}
 function renderTask(q,i){
   var h='<div class="task" id="task_'+esc(q.id)+'"><div><span class="tag">'+typeName(q.type)+'</span></div><div>';
   h+='<div class="qtitle">'+(i+1)+'. '+esc(q.prompt_cn)+'</div>'; if(q.prompt_en)h+='<div class="en">'+esc(q.prompt_en)+'</div>';
@@ -126,8 +126,8 @@ function renderTask(q,i){
   }else if(q.type==="ordering"){
     if(q.tokens)h+='<div class="tokenbar">'+q.tokens.map(function(o){return'<span class="token">'+esc(o)+'</span>'}).join("")+'</div>';
     h+='<input class="answer-input" id="ans_'+esc(q.id)+'" placeholder="请写出完整句子">';
-  }else if(q.type==="output"){
-    h+='<textarea id="ans_'+esc(q.id)+'" placeholder="请在这里写你的答案"></textarea>';
+  }else if(q.type==="output"||q.type==="subjective"){
+    h+='<textarea id="ans_'+esc(q.id)+'" placeholder="'+esc(q.answer_placeholder||q.answerPlaceholder||'请在这里写你的答案')+'"></textarea>';
   }else if(q.type==="handwriting"){
     var repeat=Number(q.repeat_count||3);
     h+='<div class="writing-sheet">'+(q.characters||[]).map(function(c){var cells='<span class="writing-label">'+esc(c)+'</span><span class="charbox model">'+esc(c)+'</span>';for(var k=0;k<repeat;k++)cells+='<canvas class="write-canvas" width="116" height="116" data-qid="'+esc(q.id)+'" data-char="'+esc(c)+'" data-cell="'+k+'"></canvas>';return'<div class="writing-row">'+cells+'</div>'}).join("")+'</div>';
