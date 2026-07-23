@@ -37,7 +37,7 @@
       if (!standard || !standard.schemaVersion || !standard.meta || standard.meta.lessonKey !== lesson) throw new Error('Invalid standard course data');
       var normalized = window.ClassProCourseAdapter ? window.ClassProCourseAdapter.normalizeStandard(standard) : null;
       if (!normalized) throw new Error('Course data adapter unavailable');
-      var groups = (standard.inClass && standard.inClass.questionGroups) || {};
+      var groups = normalized.classProQuestions || {};
       if (lesson === 'HSK1-L03') {
         Object.keys(groups).forEach(function (groupKey) {
           (groups[groupKey] || []).forEach(function (question) {
