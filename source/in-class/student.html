@@ -206,5 +206,19 @@ client.on("close",function(){setStatus("disconnected")});
   };
 })();
 </script>
+<script>
+/* L03 pilot: student renderer for the five-round character-recognition cycle. */
+(function(){
+  var HR=window.LESSON_DATA&&window.LESSON_DATA.hanziRecognition||{};
+  var hrecAnswers=[],lastHrecId='';
+  function hrecQuestion(){return current&&current.mode==='hrec'?current.question:null}
+  function hrecOption(item,j){var img=(item.option_images||[])[j]||'';return img?'<img src="'+es(img)+'" alt="" style="width:100%;height:74px;object-fit:contain;border-radius:10px;background:#fff">':es((item.options||[])[j]||'')}
+  function hrecReady(items){for(var i=0;i<items.length;i++)if(typeof hrecAnswers[i]!=='number')return false;return items.length>0}
+  function renderHrec(){var q=hrecQuestion();if(!q)return;var d=q.data||{},items=d.items||[];if(lastHrecId!==q.id){lastHrecId=q.id;hrecAnswers=[]}var h='<div class="prompt">'+es(q.prompt_cn||'汉字认读循环')+'<br><span class="english">'+es(q.prompt_en||'Character Recognition Cycle')+'</span></div><div class="hint" style="text-align:center"><b>一次完成这一组6个词，再提交答案。</b><br><span class="muted">Complete all six items, then submit.</span></div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">';for(var i=0;i<items.length;i++){var x=items[i],round=d.roundId||'',stim='';if(round==='picture_to_hanzi')stim=x.image?'<img src="'+es(x.image)+'" alt="" style="width:100%;height:120px;object-fit:contain;border-radius:12px;background:#fff">':'<div style="font-size:18px;color:#74806d">'+es(x.meaning||'')+'</div>';else if(round==='hanzi_to_picture')stim='<div class="hanzi" style="font-size:42px">'+es(x.stimulus||x.word)+'</div>';else stim='<div class="hanzi" style="font-size:34px">'+es(x.stimulus||x.word)+'</div>'+((round==='sentence_to_word')?'<div class="pinyin" style="font-size:14px">'+es(x.pinyin||'')+'</div>':'');h+='<div style="padding:14px;border:1px solid #dfeac8;border-radius:16px;background:#fff"><div style="min-height:126px;display:flex;align-items:center;justify-content:center">'+stim+'</div><div class="options" style="grid-template-columns:repeat(2,minmax(0,1fr));gap:8px">';for(var j=0;j<(x.options||[]).length;j++){var sel=hrecAnswers[i]===j;h+='<button class="option '+(sel?'sel':'')+'" onclick="chooseHrec('+i+','+j+')" style="min-height:62px;transform:none">'+hrecOption(x,j)+'</button>'}h+='</div></div>'}h+='</div><button style="width:100%;margin-top:18px" onclick="submitHrec()" '+(!hrecReady(items)?'disabled':'')+'>提交本组 Submit Group</button>';if(current.phase==='published'){var key=current.answerKey||q.correct_answer||'';h='<div class="ok" style="margin-bottom:14px">本轮答案 / Key：<b>'+es(key)+'</b></div>'+h}document.getElementById('app').innerHTML=h;if(current.phase==='published')document.querySelectorAll('#app button').forEach(function(b){b.disabled=true;b.style.pointerEvents='none';b.style.opacity='.72'})}
+  window.chooseHrec=function(i,j){hrecAnswers[i]=j;render()};
+  window.submitHrec=function(){var q=hrecQuestion(),items=(q.data||{}).items||[],answers=hrecAnswers.map(function(j,i){return(items[i].options||[])[j]||''}),ok=answers.length===items.length&&answers.every(function(a,i){return a===items[i].answer}),payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:answers.join('；'),text:answers.join('；'),questionId:q.id,mode:'hrec',autoResult:ok?'correct':'wrong',submittedAt:new Date().toISOString()};client.publish('classpro/room/'+RM+'/answers',JSON.stringify(payload));document.getElementById('app').innerHTML='<div class="'+(ok?'ok':'bad')+'">'+(ok?'提交成功：本组全部正确！':'已提交，请看教师公布答案。')+'</div>'};
+  var oldRender=render;render=function(){if(current&&current.mode==='hrec'){renderHrec();return}oldRender()};
+})();
+</script>
 </body>
 </html>
