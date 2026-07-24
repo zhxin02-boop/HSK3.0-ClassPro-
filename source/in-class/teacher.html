@@ -1571,6 +1571,39 @@ ap.init();
   };
 })();
 </script>
+<script>
+/* HREC sync guard: keep the character-recognition publish path explicit. */
+(function(){
+  if(typeof HR==='undefined'||!HR.enabled||typeof window.buildHanziRecognitionQuestion!=='function')return;
+  var previousQws=ap.qws,previousQwe=ap.qwe;
+  function publishHrec(state){
+    var q=window.buildHanziRecognitionQuestion(state.hri||0);
+    if(!q||!state.mq||state.cs!=='connected')return false;
+    var payload={room:RM,lesson:MT.lessonKey||'HSK1-L02',mode:'hrec',duration:state.qtm,sentAt:new Date().toISOString(),phase:state.qp,question:q};
+    if(state.qp==='published'){
+      payload.answerKey=(q.data&&q.data.items||[]).map(function(x){return x.answer}).join('、');
+      payload.publishedAt=new Date().toISOString();
+    }
+    state.lastQuestionPayload=payload;state.currentQuestionId=q.id;
+    state.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(payload));
+    return true;
+  }
+  ap.qws=function(){
+    if(this.mt==='practice'&&this.st==='hrec'){
+      clearInterval(this.qtint);this.qp='answering';this.qt=0;this.qsub={};
+      publishHrec(this);this._r();return;
+    }
+    previousQws.call(this);
+  };
+  ap.qwe=function(){
+    if(this.mt==='practice'&&this.st==='hrec'){
+      clearInterval(this.qtint);this.qp='published';this.qsub={};
+      publishHrec(this);this._saveClassData();this._pubBoard();this._r();return;
+    }
+    previousQwe.call(this);
+  };
+})();
+</script>
 </body>
 </html>
 
