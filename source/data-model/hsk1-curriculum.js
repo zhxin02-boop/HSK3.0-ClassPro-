@@ -3,9 +3,9 @@
 window.HSK1_CURRICULUM=[
   {id:"HSK1-L01",no:1,title:"AI小语，你好！",en:"Hello, AI Xiaoyu!",page:"001",block:1,openForUse:true,teacherVisible:true},
   {id:"HSK1-L02",no:2,title:"我叫李文",en:"My name is Li Wen",page:"005",block:1,openForUse:true,teacherVisible:true},
-  {id:"HSK1-L03",no:3,title:"我是中国人",en:"I’m Chinese",page:"010",block:1,openForUse:false,teacherVisible:true},
-  {id:"HSK1-L04",no:4,title:"我有两个孩子",en:"I have two children",page:"018",block:1,openForUse:false,teacherVisible:true},
-  {id:"HSK1-L05",no:5,title:"今天我休息",en:"I’m off today",page:"027",block:1,openForUse:false,teacherVisible:true},
+  {id:"HSK1-L03",no:3,title:"我是中国人",en:"I’m Chinese",page:"010",block:1,openForUse:true,teacherVisible:true},
+  {id:"HSK1-L04",no:4,title:"我有两个孩子",en:"I have two children",page:"018",block:1,openForUse:true,teacherVisible:true},
+  {id:"HSK1-L05",no:5,title:"今天我休息",en:"I’m off today",page:"027",block:1,openForUse:true,teacherVisible:true},
   {id:"HSK1-L06",no:6,title:"你的手机号是多少？",en:"What’s your cell phone number?",page:"035",block:2,openForUse:false,teacherVisible:true},
   {id:"HSK1-L07",no:7,title:"我晚上六点半下班",en:"I’ll finish work at 6:30 in the evening",page:"045",block:2,openForUse:false,teacherVisible:true},
   {id:"HSK1-L08",no:8,title:"我爸爸也在医院工作",en:"My father also works at a hospital",page:"054",block:2,openForUse:false,teacherVisible:true},

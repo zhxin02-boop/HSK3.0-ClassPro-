@@ -14,7 +14,7 @@ body{min-height:100vh;background:#f5f0ee;color:#3d2b1f;font-family:-apple-system
 .level{background:#fff;border:1px solid #eadfd8;border-radius:18px;margin:12px 0;overflow:hidden;box-shadow:0 5px 16px rgba(100,70,50,.06)}
 .level-head{width:100%;border:0;background:#fff;color:#3d2b1f;display:flex;align-items:center;gap:14px;padding:18px 20px;text-align:left;cursor:pointer;font:inherit}
 .level-head:hover{background:#fffaf7}.level-no{width:42px;height:42px;border-radius:14px;background:#fcecea;display:grid;place-items:center;font-size:16px;font-weight:800;color:#c0392b;flex:none}.level-main{flex:1}.level-title{font-size:17px;font-weight:800}.level-sub{display:block;font-size:12px;color:#a08070;margin-top:4px}.level-count{font-size:11px;color:#c0392b;background:#fcecea;border-radius:999px;padding:4px 9px;font-weight:700}.chevron{font-size:18px;color:#c0b0a0;transition:transform .2s}.level.open .chevron{transform:rotate(90deg)}
-.lesson-list{display:none;padding:0 18px 16px 76px}.level.open .lesson-list{display:block}.lesson{display:flex;align-items:center;gap:10px;padding:13px 14px;margin-top:8px;border:1px solid #f0e8e4;border-radius:12px;text-decoration:none;color:#3d2b1f;background:#fcf8f6;transition:all .15s}.lesson:hover{background:#fff;border-color:#e2b8ae;transform:translateX(2px)}.lesson-code{font-size:11px;color:#c0392b;font-weight:700;min-width:76px}.lesson-name{font-size:14px;font-weight:700;flex:1}.lesson-en{font-size:12px;color:#a08070}.lesson-go{color:#c0392b;font-size:20px;line-height:1}.empty{padding:4px 0 2px;color:#a08070;font-size:13px}
+.lesson-list{display:none;padding:0 18px 16px 76px}.level.open .lesson-list{display:block}.lesson{display:flex;align-items:center;gap:10px;padding:13px 14px;margin-top:8px;border:1px solid #f0e8e4;border-radius:12px;text-decoration:none;color:#3d2b1f;background:#fcf8f6;transition:all .15s}.lesson:hover{background:#fff;border-color:#e2b8ae;transform:translateX(2px)}.lesson.disabled{opacity:.48;pointer-events:none;background:#f4efec}.lesson.disabled .lesson-go{font-size:12px;color:#a08070}.lesson-code{font-size:11px;color:#c0392b;font-weight:700;min-width:76px}.lesson-name{font-size:14px;font-weight:700;flex:1}.lesson-en{font-size:12px;color:#a08070}.lesson-go{color:#c0392b;font-size:20px;line-height:1}.empty{padding:4px 0 2px;color:#a08070;font-size:13px}
 @media(max-width:520px){.app{padding:16px 12px 32px}.top{padding:21px 18px}.top h1{font-size:24px}.level-head{padding:16px}.level-count{display:none}.lesson-list{padding-left:58px}.lesson{display:grid;grid-template-columns:1fr auto;gap:4px 8px}.lesson-code{grid-column:1}.lesson-name{grid-column:1}.lesson-en{grid-column:1}.lesson-go{grid-column:2;grid-row:1 / span 3;align-self:center}}
 </style>
 </head>
@@ -28,12 +28,11 @@ body{min-height:100vh;background:#f5f0ee;color:#3d2b1f;font-family:-apple-system
   </header>
   <section id="levels" aria-label="HSK课程级别"></section>
 </main>
+<script src="source/data-model/hsk1-curriculum.js"></script>
 <script>
+var hsk1Lessons=(window.HSK1_CURRICULUM||[]).map(function(x){return{id:x.id,name:x.title,en:x.en,open:!!x.openForUse}});
 var levels=[
-  {id:"1",name:"HSK 1级",desc:"入门级 · Beginner",lessons:[
-    {id:"HSK1-L01",name:"AI小语，你好！",en:"Hello, AI Xiaoyu!"},
-    {id:"HSK1-L02",name:"我叫李文",en:"My name is Li Wen"}
-  ]},
+  {id:"1",name:"HSK 1级",desc:"入门级 · Beginner",lessons:hsk1Lessons},
   {id:"2",name:"HSK 2级",desc:"初级 · Elementary",lessons:[]},
   {id:"3",name:"HSK 3级",desc:"中级 · Intermediate",lessons:[]},
   {id:"4",name:"HSK 4级",desc:"中高级 · Upper-Intermediate",lessons:[]},
@@ -43,7 +42,8 @@ function lessonUrl(id){return "source/student/index.html?lesson="+encodeURICompo
 function render(){
   document.getElementById("levels").innerHTML=levels.map(function(level,index){
     var items=level.lessons.length?level.lessons.map(function(lesson){
-      return '<a class="lesson" href="'+lessonUrl(lesson.id)+'"><span class="lesson-code">'+lesson.id+'</span><span class="lesson-name">'+lesson.name+'</span><span class="lesson-en">'+lesson.en+'</span><span class="lesson-go">›</span></a>';
+      var open=lesson.open!==false,tag=open?'›':'准备中';
+      return '<a class="lesson '+(open?'':'disabled')+'" href="'+(open?lessonUrl(lesson.id):'#')+'" aria-disabled="'+(!open)+'"><span class="lesson-code">'+lesson.id+'</span><span class="lesson-name">'+lesson.name+'</span><span class="lesson-en">'+lesson.en+'</span><span class="lesson-go">'+tag+'</span></a>';
     }).join(""):'<div class="empty">课程内容准备中</div>';
     return '<article class="level '+(index===0?'open':'')+'"><button class="level-head" type="button" aria-expanded="'+(index===0?'true':'false')+'" onclick="toggleLevel(this)"><span class="level-no">'+level.id+'</span><span class="level-main"><span class="level-title">'+level.name+'</span><span class="level-sub">'+level.desc+'</span></span><span class="level-count">'+level.lessons.length+' 课</span><span class="chevron">›</span></button><div class="lesson-list">'+items+'</div></article>';
   }).join("");

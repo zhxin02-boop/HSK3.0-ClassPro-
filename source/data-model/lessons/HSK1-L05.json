@@ -1,0 +1,5007 @@
+{
+  "schemaVersion": "hsk1-course-v1",
+  "meta": {
+    "level": "HSK1",
+    "lessonId": "L05",
+    "lessonKey": "HSK1-L05",
+    "title": "今天我休息",
+    "titleEn": "I'm off today",
+    "topic": "日期、星期、休息与能力表达",
+    "topicEn": "Dates, days of the week, rest and ability",
+    "sourceTextPolicy": "保留教材原句；新增内容标记为教学扩展"
+  },
+  "features": {
+    "pinyin": false,
+    "hanziWritingDemo": true,
+    "vocabExamples": true,
+    "competition": true,
+    "postClassHomework": true
+  },
+  "vocabulary": [
+    {
+      "id": "v_l05_01",
+      "hanzi": "今天",
+      "word": "今天",
+      "pinyin": "jīntiān",
+      "english": "today",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "今",
+          "天"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_02",
+      "hanzi": "号",
+      "word": "号",
+      "pinyin": "hào",
+      "english": "date",
+      "partOfSpeech": "量词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "号"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_03",
+      "hanzi": "月",
+      "word": "月",
+      "pinyin": "yuè",
+      "english": "month",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "月"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_04",
+      "hanzi": "日",
+      "word": "日",
+      "pinyin": "rì",
+      "english": "day; date",
+      "partOfSpeech": "量词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "日"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_05",
+      "hanzi": "星期",
+      "word": "星期",
+      "pinyin": "xīngqī",
+      "english": "week",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "星",
+          "期"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_06",
+      "hanzi": "星期日",
+      "word": "星期日",
+      "pinyin": "Xīngqīrì",
+      "english": "Sunday",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "星",
+          "期",
+          "日"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_07",
+      "hanzi": "星期天",
+      "word": "星期天",
+      "pinyin": "Xīngqītiān",
+      "english": "Sunday",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "星",
+          "期",
+          "天"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_08",
+      "hanzi": "休息",
+      "word": "休息",
+      "pinyin": "xiūxi",
+      "english": "have a rest",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "休",
+          "息"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_09",
+      "hanzi": "会",
+      "word": "会",
+      "pinyin": "huì",
+      "english": "can; be able to",
+      "partOfSpeech": "能愿动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "会"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_10",
+      "hanzi": "做饭",
+      "word": "做饭",
+      "pinyin": "zuò fàn",
+      "english": "cook",
+      "partOfSpeech": "动词短语",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "做",
+          "饭"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_11",
+      "hanzi": "做",
+      "word": "做",
+      "pinyin": "zuò",
+      "english": "make; do",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "做"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_12",
+      "hanzi": "面条儿",
+      "word": "面条儿",
+      "pinyin": "miàntiáor",
+      "english": "noodles",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "面",
+          "条",
+          "儿"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_13",
+      "hanzi": "饺子",
+      "word": "饺子",
+      "pinyin": "jiǎozi",
+      "english": "jiaozi; dumplings",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "饺",
+          "子"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_14",
+      "hanzi": "一些",
+      "word": "一些",
+      "pinyin": "yìxiē",
+      "english": "some",
+      "partOfSpeech": "数词/量词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "一",
+          "些"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_15",
+      "hanzi": "菜",
+      "word": "菜",
+      "pinyin": "cài",
+      "english": "dish; course",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "菜"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_16",
+      "hanzi": "下班",
+      "word": "下班",
+      "pinyin": "xiàbān",
+      "english": "get off work",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "下",
+          "班"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_17",
+      "hanzi": "新",
+      "word": "新",
+      "pinyin": "xīn",
+      "english": "new",
+      "partOfSpeech": "形容词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "新"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_18",
+      "hanzi": "电脑",
+      "word": "电脑",
+      "pinyin": "diànnǎo",
+      "english": "computer",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "电",
+          "脑"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_19",
+      "hanzi": "真",
+      "word": "真",
+      "pinyin": "zhēn",
+      "english": "really; truly",
+      "partOfSpeech": "副词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "真"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_20",
+      "hanzi": "好看",
+      "word": "好看",
+      "pinyin": "hǎokàn",
+      "english": "good-looking; nice",
+      "partOfSpeech": "形容词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "好",
+          "看"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_21",
+      "hanzi": "喜欢",
+      "word": "喜欢",
+      "pinyin": "xǐhuan",
+      "english": "like",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "喜",
+          "欢"
+        ]
+      }
+    },
+    {
+      "id": "v_l05_22",
+      "hanzi": "它",
+      "word": "它",
+      "pinyin": "tā",
+      "english": "it",
+      "partOfSpeech": "代词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "它"
+        ]
+      }
+    }
+  ],
+  "vocabExtensions": {
+    "今天": [
+      {
+        "hanzi": "今天星期日。",
+        "pinyin": "Jīntiān Xīngqīrì.",
+        "english": "Today is Sunday.",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "今天我休息。",
+        "pinyin": "Jīntiān wǒ xiūxi.",
+        "english": "I'm off today.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "今天我做饭。",
+        "pinyin": "Jīntiān wǒ zuò fàn.",
+        "english": "I cook today.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "号": [
+      {
+        "hanzi": "今天几号？",
+        "pinyin": "Jīntiān jǐ hào?",
+        "english": "What's the date today?",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "今天9月8号。",
+        "pinyin": "Jīntiān jiǔ yuè bā hào.",
+        "english": "Today is September 8.",
+        "sourceType": "textbook"
+      }
+    ],
+    "月": [
+      {
+        "hanzi": "9月8号。",
+        "pinyin": "Jiǔ yuè bā hào.",
+        "english": "September 8.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "今天5月1号。",
+        "pinyin": "Jīntiān wǔ yuè yī hào.",
+        "english": "Today is May 1.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "日": [
+      {
+        "hanzi": "星期日。",
+        "pinyin": "Xīngqīrì.",
+        "english": "Sunday.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "9月8日。",
+        "pinyin": "Jiǔ yuè bā rì.",
+        "english": "September 8.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "星期": [
+      {
+        "hanzi": "星期几？",
+        "pinyin": "Xīngqī jǐ?",
+        "english": "What day of the week?",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "今天星期天。",
+        "pinyin": "Jīntiān Xīngqītiān.",
+        "english": "Today is Sunday.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "星期日": [
+      {
+        "hanzi": "星期日我休息。",
+        "pinyin": "Xīngqīrì wǒ xiūxi.",
+        "english": "I rest on Sunday.",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "星期日。今天我休息。",
+        "pinyin": "Xīngqīrì. Jīntiān wǒ xiūxi.",
+        "english": "It's Sunday. I'm off today.",
+        "sourceType": "textbook"
+      }
+    ],
+    "星期天": [
+      {
+        "hanzi": "星期天我也做饭。",
+        "pinyin": "Xīngqītiān wǒ yě zuò fàn.",
+        "english": "I also cook on Sundays.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "星期天我休息。",
+        "pinyin": "Xīngqītiān wǒ xiūxi.",
+        "english": "I rest on Sunday.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "休息": [
+      {
+        "hanzi": "今天我休息。",
+        "pinyin": "Jīntiān wǒ xiūxi.",
+        "english": "I'm off today.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "星期日我休息。",
+        "pinyin": "Xīngqīrì wǒ xiūxi.",
+        "english": "I rest on Sunday.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "会": [
+      {
+        "hanzi": "你会做饭吗？",
+        "pinyin": "Nǐ huì zuò fàn ma?",
+        "english": "Can you cook?",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "我会做面条儿。",
+        "pinyin": "Wǒ huì zuò miàntiáor.",
+        "english": "I can make noodles.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "我不会做菜。",
+        "pinyin": "Wǒ bú huì zuò cài.",
+        "english": "I can't cook dishes.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "做饭": [
+      {
+        "hanzi": "你会做饭吗？",
+        "pinyin": "Nǐ huì zuò fàn ma?",
+        "english": "Can you cook?",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "星期天我也做饭。",
+        "pinyin": "Xīngqītiān wǒ yě zuò fàn.",
+        "english": "I also cook on Sundays.",
+        "sourceType": "textbook"
+      }
+    ],
+    "做": [
+      {
+        "hanzi": "我会做。",
+        "pinyin": "Wǒ huì zuò.",
+        "english": "I can do it.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "你会做什么？",
+        "pinyin": "Nǐ huì zuò shénme?",
+        "english": "What can you make?",
+        "sourceType": "textbook"
+      }
+    ],
+    "面条儿": [
+      {
+        "hanzi": "我会做面条儿。",
+        "pinyin": "Wǒ huì zuò miàntiáor.",
+        "english": "I can make noodles.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "我喜欢面条儿。",
+        "pinyin": "Wǒ xǐhuan miàntiáor.",
+        "english": "I like noodles.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "饺子": [
+      {
+        "hanzi": "我会做饺子。",
+        "pinyin": "Wǒ huì zuò jiǎozi.",
+        "english": "I can make jiaozi.",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "我喜欢饺子。",
+        "pinyin": "Wǒ xǐhuan jiǎozi.",
+        "english": "I like jiaozi.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "一些": [
+      {
+        "hanzi": "一些菜。",
+        "pinyin": "Yìxiē cài.",
+        "english": "Some dishes.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "我会做一些菜。",
+        "pinyin": "Wǒ huì zuò yìxiē cài.",
+        "english": "I can cook some dishes.",
+        "sourceType": "textbook"
+      }
+    ],
+    "菜": [
+      {
+        "hanzi": "我会做一些菜。",
+        "pinyin": "Wǒ huì zuò yìxiē cài.",
+        "english": "I can cook some dishes.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "这个菜真好看。",
+        "pinyin": "Zhège cài zhēn hǎokàn.",
+        "english": "This dish looks really nice.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "下班": [
+      {
+        "hanzi": "下班吗？",
+        "pinyin": "Xiàbān ma?",
+        "english": "Are you off work?",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "我下班了。",
+        "pinyin": "Wǒ xiàbān le.",
+        "english": "I'm off work.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "新": [
+      {
+        "hanzi": "新电脑。",
+        "pinyin": "Xīn diànnǎo.",
+        "english": "New computer.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "这是你的新电脑吗？",
+        "pinyin": "Zhè shì nǐ de xīn diànnǎo ma?",
+        "english": "Is this your new computer?",
+        "sourceType": "textbook"
+      }
+    ],
+    "电脑": [
+      {
+        "hanzi": "这是我的新电脑。",
+        "pinyin": "Zhè shì wǒ de xīn diànnǎo.",
+        "english": "This is my new computer.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "我喜欢这个电脑。",
+        "pinyin": "Wǒ xǐhuan zhège diànnǎo.",
+        "english": "I like this computer.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "真": [
+      {
+        "hanzi": "真好看！",
+        "pinyin": "Zhēn hǎokàn!",
+        "english": "Really nice!",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "这个菜真好看。",
+        "pinyin": "Zhège cài zhēn hǎokàn.",
+        "english": "This dish looks really nice.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "好看": [
+      {
+        "hanzi": "真好看！",
+        "pinyin": "Zhēn hǎokàn!",
+        "english": "Really nice!",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "你的电脑很好看。",
+        "pinyin": "Nǐ de diànnǎo hěn hǎokàn.",
+        "english": "Your computer looks nice.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "喜欢": [
+      {
+        "hanzi": "我也很喜欢它。",
+        "pinyin": "Wǒ yě hěn xǐhuan tā.",
+        "english": "I like it very much, too.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "我喜欢做饭。",
+        "pinyin": "Wǒ xǐhuan zuò fàn.",
+        "english": "I like cooking.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "它": [
+      {
+        "hanzi": "我也很喜欢它。",
+        "pinyin": "Wǒ yě hěn xǐhuan tā.",
+        "english": "I like it very much, too.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "它是我的电脑。",
+        "pinyin": "Tā shì wǒ de diànnǎo.",
+        "english": "It is my computer.",
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "grammarTeachingNotes": {
+    "g_l05_01": {
+      "structure": "年 + 月 + 日/号 + 星期",
+      "structureEn": "year + month + date + day of the week.",
+      "structureRu": "год + месяц + число + день недели.",
+      "english": "Chinese dates go from larger time units to smaller time units. In speech, 号 is common for dates; 日 is more formal.",
+      "russian": "В китайском даты идут от большего к меньшему: год, месяц, число, день недели. В разговорной речи часто используется 号, а 日 более книжное."
+    },
+    "g_l05_02": {
+      "structure": "主语 + 时间/年龄/日期。",
+      "structureEn": "Subject + time, age or date as the predicate.",
+      "structureRu": "Подлежащее + время, возраст или дата в роли сказуемого.",
+      "english": "A nominal-predicate sentence can use a noun phrase directly as the predicate, often for dates, age or time.",
+      "russian": "В именном сказуемом существительное или именная группа может быть сказуемым, чаще всего при выражении даты, возраста или времени."
+    },
+    "g_l05_03": {
+      "structure": "主语 + 会 + 动词/动词短语。否定：主语 + 不会 + 动词。",
+      "structureEn": "Subject + 会 + verb or verb phrase. Negative: Subject + 不会 + verb.",
+      "structureRu": "Подлежащее + 会 + глагол/глагольная фраза. Отрицание: подлежащее + 不会 + глагол.",
+      "english": "会 before a verb means someone has learned or has the ability to do something.",
+      "russian": "会 перед глаголом означает умение или способность, обычно приобретённую через обучение."
+    }
+  },
+  "properNouns": [
+    {
+      "hanzi": "刘明",
+      "pinyin": "Liú Míng",
+      "english": "Liu Ming",
+      "sourceType": "textbook"
+    },
+    {
+      "hanzi": "王一雪",
+      "pinyin": "Wáng Yīxuě",
+      "english": "Wang Yixue",
+      "sourceType": "textbook"
+    },
+    {
+      "hanzi": "杨同乐",
+      "pinyin": "Yáng Tónglè",
+      "english": "Yang Tongle",
+      "sourceType": "textbook"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g_l05_01",
+      "title": "时间的表达",
+      "titleEn": "Expression of Time",
+      "explanation": "表达日期、星期时，汉语顺序是年、月、日/号、星期。",
+      "sourceType": "textbook",
+      "examples": [
+        {
+          "hanzi": "今天9月8号。",
+          "pinyin": "Jīntiān jiǔ yuè bā hào.",
+          "english": "Today is September 8.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "今天是2025年5月22号。",
+          "pinyin": "Jīntiān shì èr líng èr wǔ nián wǔ yuè èrshí'èr hào.",
+          "english": "Today is May 22, 2025.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "明天是2024年8月18号，星期天。",
+          "pinyin": "Míngtiān shì èr líng èr sì nián bā yuè shíbā hào, Xīngqītiān.",
+          "english": "Tomorrow is Sunday, August 18, 2024.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "今天星期日。",
+          "pinyin": "Jīntiān Xīngqīrì.",
+          "english": "Today is Sunday.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    {
+      "id": "g_l05_02",
+      "title": "名词谓语句",
+      "titleEn": "Nominal-Predicate Sentences",
+      "explanation": "谓语部分只有名词或名词性成分，常用于时间、日期、年龄等表达。",
+      "sourceType": "textbook",
+      "examples": [
+        {
+          "hanzi": "今天5月1号。",
+          "pinyin": "Jīntiān wǔ yuè yī hào.",
+          "english": "Today is May 1.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我妹妹12岁。",
+          "pinyin": "Wǒ mèimei shí'èr suì.",
+          "english": "My younger sister is twelve.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "今天星期天。",
+          "pinyin": "Jīntiān Xīngqītiān.",
+          "english": "Today is Sunday.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    {
+      "id": "g_l05_03",
+      "title": "能愿动词“会”",
+      "titleEn": "Modal Verb 会",
+      "explanation": "“会”用在动词前，表示通过学习后懂得怎样做或有能力做。",
+      "sourceType": "textbook",
+      "examples": [
+        {
+          "hanzi": "你会做饭吗？",
+          "pinyin": "Nǐ huì zuò fàn ma?",
+          "english": "Can you cook?",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我会做面条儿。",
+          "pinyin": "Wǒ huì zuò miàntiáor.",
+          "english": "I can make noodles.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我不会做菜。",
+          "pinyin": "Wǒ bú huì zuò cài.",
+          "english": "I cannot cook dishes.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我会做饺子。",
+          "pinyin": "Wǒ huì zuò jiǎozi.",
+          "english": "I can make jiaozi.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "text_l05_01",
+      "title": "对话一",
+      "scene": "在家里，刘明和王一雪在聊天儿。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "speaker": "王一雪",
+          "hanzi": "今天几号？",
+          "pinyin": "Jīntiān jǐ hào?",
+          "english": "What's the date today?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "今天9月8号。",
+          "pinyin": "Jīntiān jiǔ yuè bā hào.",
+          "english": "It's September 8.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "星期几？",
+          "pinyin": "Xīngqī jǐ?",
+          "english": "What day is it today?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "星期日。今天我休息。",
+          "pinyin": "Xīngqīrì. Jīntiān wǒ xiūxi.",
+          "english": "It's Sunday. I'm off today.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "text_l05_02",
+      "title": "对话二",
+      "scene": "在公司里，王一雪和杨同乐休息时聊天儿。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "speaker": "王一雪",
+          "hanzi": "你会做饭吗？",
+          "pinyin": "Nǐ huì zuò fàn ma?",
+          "english": "Do you know how to cook?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "我会做。",
+          "pinyin": "Wǒ huì zuò.",
+          "english": "Yes, I do.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "你会做什么？",
+          "pinyin": "Nǐ huì zuò shénme?",
+          "english": "What dishes can you make?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "我会做面条儿、饺子，也会做一些菜。星期天我也做饭。",
+          "pinyin": "Wǒ huì zuò miàntiáor, jiǎozi, yě huì zuò yìxiē cài. Xīngqītiān wǒ yě zuò fàn.",
+          "english": "I can make noodles, jiaozi, and some other dishes. I also cook on Sundays.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "text_l05_03",
+      "title": "对话三",
+      "scene": "在公司里，王一雪和杨同乐下班时聊天儿。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "speaker": "王一雪",
+          "hanzi": "同乐，下班吗？",
+          "pinyin": "Tónglè, xiàbān ma?",
+          "english": "Tongle, are you off work?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "下班。",
+          "pinyin": "Xiàbān.",
+          "english": "Yes, I am.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "这是你的新电脑吗？",
+          "pinyin": "Zhè shì nǐ de xīn diànnǎo ma?",
+          "english": "Is this your new computer?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "是的，是我的新电脑。",
+          "pinyin": "Shì de, shì wǒ de xīn diànnǎo.",
+          "english": "Yes, it's my new computer.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "真好看！",
+          "pinyin": "Zhēn hǎokàn!",
+          "english": "It looks really nice!",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "我也很喜欢它。",
+          "pinyin": "Wǒ yě hěn xǐhuan tā.",
+          "english": "I really like it too.",
+          "sourceType": "textbook"
+        }
+      ]
+    }
+  ],
+  "preClass": {
+    "warmup": {
+      "title": "日期、休息和会做什么",
+      "prompt": "Think about today's date and what you can do.",
+      "intro": "这一课学完，你可以说今天几号、星期几，也可以说自己会做什么。",
+      "question": "请选择一种你今天可能会用到的表达。",
+      "questionEn": "Choose an expression you may use today.",
+      "knownQuestion": "下面哪些第五课词语你已经认识？",
+      "knownQuestionEn": "Which Lesson 5 words do you already know?",
+      "options": [
+        {
+          "word": "今天几号？",
+          "pinyin": "Jīntiān jǐ hào?",
+          "sourceType": "textbook"
+        },
+        {
+          "word": "你会做饭吗？",
+          "pinyin": "Nǐ huì zuò fàn ma?",
+          "sourceType": "textbook"
+        },
+        {
+          "word": "真好看！",
+          "pinyin": "Zhēn hǎokàn!",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": "pre_l05_01",
+        "type": "choice",
+        "module": "热身话题",
+        "question": "Which question asks for today's date? 哪一句是在问今天的日期？",
+        "options": [
+          {
+            "text": "今天几号？",
+            "pinyin": "Jīntiān jǐ hào?"
+          },
+          {
+            "text": "星期几？",
+            "pinyin": "Xīngqī jǐ?"
+          },
+          {
+            "text": "你会做饭吗？",
+            "pinyin": "Nǐ huì zuò fàn ma?"
+          },
+          {
+            "text": "下班吗？",
+            "pinyin": "Xiàbān ma?"
+          }
+        ],
+        "answer": "今天几号？",
+        "weakPoints": "日期提问",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l05_02",
+        "type": "choice",
+        "module": "词汇识别",
+        "question": "Choose the Chinese word for “today”.",
+        "options": [
+          {
+            "text": "休息",
+            "pinyin": "xiūxi"
+          },
+          {
+            "text": "星期",
+            "pinyin": "xīngqī"
+          },
+          {
+            "text": "今天",
+            "pinyin": "jīntiān"
+          },
+          {
+            "text": "电脑",
+            "pinyin": "diànnǎo"
+          }
+        ],
+        "answer": "今天",
+        "weakPoints": "词汇：今天",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l05_03",
+        "type": "choice",
+        "module": "词汇识别",
+        "question": "Choose the Chinese word for “computer”.",
+        "options": [
+          {
+            "text": "饺子",
+            "pinyin": "jiǎozi"
+          },
+          {
+            "text": "电脑",
+            "pinyin": "diànnǎo"
+          },
+          {
+            "text": "面条儿",
+            "pinyin": "miàntiáor"
+          },
+          {
+            "text": "菜",
+            "pinyin": "cài"
+          }
+        ],
+        "answer": "电脑",
+        "weakPoints": "词汇：电脑",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l05_04",
+        "type": "choice",
+        "module": "拼音识别",
+        "question": "Which pinyin matches “休息”?",
+        "options": [
+          {
+            "text": "xīngqī",
+            "pinyin": "xīngqī"
+          },
+          {
+            "text": "xǐhuan",
+            "pinyin": "xǐhuan"
+          },
+          {
+            "text": "xiàbān",
+            "pinyin": "xiàbān"
+          },
+          {
+            "text": "xiūxi",
+            "pinyin": "xiūxi"
+          }
+        ],
+        "answer": "xiūxi",
+        "weakPoints": "拼音：xiūxi",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l05_05",
+        "type": "choice",
+        "module": "日期表达",
+        "question": "Complete: 今天9___8号。",
+        "options": [
+          {
+            "text": "日",
+            "pinyin": "rì"
+          },
+          {
+            "text": "月",
+            "pinyin": "yuè"
+          },
+          {
+            "text": "号",
+            "pinyin": "hào"
+          },
+          {
+            "text": "星期",
+            "pinyin": "xīngqī"
+          }
+        ],
+        "answer": "月",
+        "weakPoints": "日期：月/号",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l05_06",
+        "type": "choice",
+        "module": "词汇识别",
+        "question": "哪个词常用来表示 Sunday？",
+        "options": [
+          "星期",
+          "今天",
+          "星期天",
+          "几号"
+        ],
+        "answer": "星期天",
+        "weakPoints": "课文一：星期日",
+        "sourceType": "teaching_extension",
+        "prompt_cn": "哪个词常用来表示 Sunday？",
+        "prompt_en": "Which word is commonly used for Sunday in spoken Chinese?",
+        "options_pinyin": [
+          "xing1 qi1",
+          "jin1 tian1",
+          "xing1 qi1 tian1",
+          "ji3 hao4"
+        ],
+        "correct_index": 2,
+        "correct_answer": "星期天",
+        "explanation": "“星期天”是口语中常用的“Sunday”。",
+        "weakPoint": "L05 词汇：星期天"
+      },
+      {
+        "id": "pre_l05_07",
+        "type": "choice",
+        "module": "语法预习",
+        "question": "“我会做面条儿” means:",
+        "options": [
+          {
+            "text": "I can make noodles.",
+            "pinyin": "Wǒ huì zuò miàntiáor."
+          },
+          {
+            "text": "I like noodles.",
+            "pinyin": "Wǒ xǐhuan miàntiáor."
+          },
+          {
+            "text": "I am off today.",
+            "pinyin": "Jīntiān wǒ xiūxi."
+          },
+          {
+            "text": "This is my computer.",
+            "pinyin": "Zhè shì wǒ de diànnǎo."
+          }
+        ],
+        "answer": "I can make noodles.",
+        "weakPoints": "会 + 动词",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l05_08",
+        "type": "choice",
+        "module": "词汇识别",
+        "question": "选择 “get off work” 的中文。",
+        "options": [
+          "休息",
+          "下班",
+          "做饭",
+          "喜欢"
+        ],
+        "answer": "下班",
+        "weakPoints": "课文二：会做饭",
+        "sourceType": "teaching_extension",
+        "prompt_cn": "选择 “get off work” 的中文。",
+        "prompt_en": "Choose the Chinese word for “get off work.”",
+        "options_pinyin": [
+          "xiu1 xi",
+          "xia4 ban1",
+          "zuo4 fan4",
+          "xi3 huan"
+        ],
+        "correct_index": 1,
+        "correct_answer": "下班",
+        "explanation": "“下班” means “to get off work.”",
+        "weakPoint": "L05 词汇：下班"
+      },
+      {
+        "id": "pre_l05_09",
+        "type": "choice",
+        "module": "词汇识别",
+        "question": "哪个短语表示 “new computer”？",
+        "options": [
+          "好看电脑",
+          "今天电脑",
+          "一些电脑",
+          "新电脑"
+        ],
+        "answer": "新电脑",
+        "weakPoints": "课文三：新电脑",
+        "sourceType": "teaching_extension",
+        "prompt_cn": "哪个短语表示 “new computer”？",
+        "prompt_en": "Which phrase means “new computer”?",
+        "options_pinyin": [
+          "hao3 kan4 dian4 nao3",
+          "jin1 tian1 dian4 nao3",
+          "yi4 xie1 dian4 nao3",
+          "xin1 dian4 nao3"
+        ],
+        "correct_index": 3,
+        "correct_answer": "新电脑",
+        "explanation": "“新” + noun means “new ...”.",
+        "weakPoint": "L05 词汇搭配：新电脑"
+      },
+      {
+        "id": "pre_l05_10",
+        "type": "choice",
+        "module": "客观题",
+        "question": "Which sentence uses “会” correctly? 哪一句正确使用“会”？",
+        "options": [
+          {
+            "text": "我会今天。",
+            "pinyin": "Wǒ huì jīntiān."
+          },
+          {
+            "text": "我会做饭。",
+            "pinyin": "Wǒ huì zuò fàn."
+          },
+          {
+            "text": "电脑会新。",
+            "pinyin": "Diànnǎo huì xīn."
+          },
+          {
+            "text": "星期会日。",
+            "pinyin": "Xīngqī huì rì."
+          }
+        ],
+        "answer": "我会做饭。",
+        "weakPoints": "会 + 动词",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l05_11",
+        "type": "subjective",
+        "module": "主观题",
+        "question": "教学扩展：Answer in Chinese: What can you cook?",
+        "prompt": "Write one Chinese sentence. Use: 我会做...",
+        "answerPlaceholder": "例如：我会做面条儿。",
+        "acceptable_answers": [
+          "我会做面条儿。",
+          "我会做饺子。",
+          "我会做饭。"
+        ],
+        "weakPoints": "会 + 做",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l05_12",
+        "type": "subjective",
+        "module": "主观题",
+        "question": "教学扩展：Write today's date or a sample date in Chinese.",
+        "prompt": "Use 月 and 号. Example: 今天9月8号。",
+        "answerPlaceholder": "今天___月___号。",
+        "acceptable_answers": [
+          "今天9月8号。"
+        ],
+        "weakPoints": "日期表达",
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "inClass": {
+    "questionGroups": {
+      "v1_image_guess": [
+        {
+          "id": "v1_hsk1_05_01",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A calendar showing today's date",
+            "options": [
+              "今天",
+              "电脑",
+              "饺子",
+              "休息"
+            ],
+            "options_pinyin": [
+              "jīntiān",
+              "diànnǎo",
+              "jiǎozi",
+              "xiūxi"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "今天",
+          "kp": "今天",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_05_02",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "The number of a date on a calendar",
+            "options": [
+              "月",
+              "号",
+              "日",
+              "星期"
+            ],
+            "options_pinyin": [
+              "yuè",
+              "hào",
+              "rì",
+              "xīngqī"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "号",
+          "kp": "号",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_05_03",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A month page on a calendar",
+            "options": [
+              "真",
+              "新",
+              "月",
+              "它"
+            ],
+            "options_pinyin": [
+              "zhēn",
+              "xīn",
+              "yuè",
+              "tā"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "月",
+          "kp": "月",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_05_04",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "Sunday marked on a weekly calendar",
+            "options": [
+              "下班",
+              "星期",
+              "今天",
+              "星期日"
+            ],
+            "options_pinyin": [
+              "xiàbān",
+              "xīngqī",
+              "jīntiān",
+              "Xīngqīrì"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "星期日",
+          "kp": "星期日",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_05_05",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A person resting at home",
+            "options": [
+              "休息",
+              "做饭",
+              "下班",
+              "喜欢"
+            ],
+            "options_pinyin": [
+              "xiūxi",
+              "zuò fàn",
+              "xiàbān",
+              "xǐhuan"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "休息",
+          "kp": "休息",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_05_06",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "Someone cooking in a kitchen",
+            "options": [
+              "休息",
+              "做饭",
+              "电脑",
+              "好看"
+            ],
+            "options_pinyin": [
+              "xiūxi",
+              "zuò fàn",
+              "diànnǎo",
+              "hǎokàn"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "做饭",
+          "kp": "做饭",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_05_07",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A bowl of noodles",
+            "options": [
+              "菜",
+              "饺子",
+              "面条儿",
+              "电脑"
+            ],
+            "options_pinyin": [
+              "cài",
+              "jiǎozi",
+              "miàntiáor",
+              "diànnǎo"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "面条儿",
+          "kp": "面条儿",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_05_08",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A plate of dumplings",
+            "options": [
+              "号",
+              "面条儿",
+              "一些",
+              "饺子"
+            ],
+            "options_pinyin": [
+              "hào",
+              "miàntiáor",
+              "yìxiē",
+              "jiǎozi"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "饺子",
+          "kp": "饺子",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_05_09",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A new laptop computer",
+            "options": [
+              "电脑",
+              "新",
+              "做",
+              "菜"
+            ],
+            "options_pinyin": [
+              "diànnǎo",
+              "xīn",
+              "zuò",
+              "cài"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "电脑",
+          "kp": "电脑",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_05_10",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A nice-looking object, someone likes it",
+            "options": [
+              "好看",
+              "喜欢",
+              "真",
+              "它"
+            ],
+            "options_pinyin": [
+              "hǎokàn",
+              "xǐhuan",
+              "zhēn",
+              "tā"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "喜欢",
+          "kp": "喜欢",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v5_vocab_fill": [
+        {
+          "id": "v5_hsk1_05_01",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选择合适的词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "___几号？",
+            "sentence_pinyin": "___ jǐ hào?",
+            "options": [
+              "今天",
+              "电脑",
+              "饺子",
+              "下班"
+            ],
+            "options_pinyin": [
+              "jīntiān",
+              "diànnǎo",
+              "jiǎozi",
+              "xiàbān"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "今天",
+          "kp": "今天几号",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_05_02",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选择合适的词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "今天9___8号。",
+            "sentence_pinyin": "Jīntiān jiǔ ___ bā hào.",
+            "options": [
+              "日",
+              "月",
+              "星期",
+              "号"
+            ],
+            "options_pinyin": [
+              "rì",
+              "yuè",
+              "xīngqī",
+              "hào"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "月",
+          "kp": "日期表达",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_05_03",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选择合适的词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "___几？",
+            "sentence_pinyin": "___ jǐ?",
+            "options": [
+              "休息",
+              "今天",
+              "星期",
+              "新"
+            ],
+            "options_pinyin": [
+              "xiūxi",
+              "jīntiān",
+              "xīngqī",
+              "xīn"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "星期",
+          "kp": "星期几",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_05_04",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选择合适的词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "今天我___。",
+            "sentence_pinyin": "Jīntiān wǒ ___.",
+            "options": [
+              "真",
+              "做",
+              "喜欢",
+              "休息"
+            ],
+            "options_pinyin": [
+              "zhēn",
+              "zuò",
+              "xǐhuan",
+              "xiūxi"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "休息",
+          "kp": "休息",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_05_05",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选择合适的词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "你___做饭吗？",
+            "sentence_pinyin": "Nǐ ___ zuò fàn ma?",
+            "options": [
+              "会",
+              "月",
+              "日",
+              "它"
+            ],
+            "options_pinyin": [
+              "huì",
+              "yuè",
+              "rì",
+              "tā"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "会",
+          "kp": "会",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_05_06",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选择合适的词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "我会做___。",
+            "sentence_pinyin": "Wǒ huì zuò ___.",
+            "options": [
+              "今天",
+              "面条儿",
+              "号",
+              "电脑"
+            ],
+            "options_pinyin": [
+              "jīntiān",
+              "miàntiáor",
+              "hào",
+              "diànnǎo"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "面条儿",
+          "kp": "面条儿",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_05_07",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选择合适的词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "我会做面条儿、___。",
+            "sentence_pinyin": "Wǒ huì zuò miàntiáor, ___.",
+            "options": [
+              "下班",
+              "星期",
+              "饺子",
+              "好看"
+            ],
+            "options_pinyin": [
+              "xiàbān",
+              "xīngqī",
+              "jiǎozi",
+              "hǎokàn"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "饺子",
+          "kp": "饺子",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_05_08",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选择合适的词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "也会做一些___。",
+            "sentence_pinyin": "Yě huì zuò yìxiē ___.",
+            "options": [
+              "真",
+              "电脑",
+              "星期日",
+              "菜"
+            ],
+            "options_pinyin": [
+              "zhēn",
+              "diànnǎo",
+              "Xīngqīrì",
+              "cài"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "菜",
+          "kp": "菜",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_05_09",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选择合适的词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "这是你的___电脑吗？",
+            "sentence_pinyin": "Zhè shì nǐ de ___ diànnǎo ma?",
+            "options": [
+              "新",
+              "会",
+              "日",
+              "一些"
+            ],
+            "options_pinyin": [
+              "xīn",
+              "huì",
+              "rì",
+              "yìxiē"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "新",
+          "kp": "新电脑",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_05_10",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选择合适的词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "我也很___它。",
+            "sentence_pinyin": "Wǒ yě hěn ___ tā.",
+            "options": [
+              "下班",
+              "喜欢",
+              "星期",
+              "做"
+            ],
+            "options_pinyin": [
+              "xiàbān",
+              "xǐhuan",
+              "xīngqī",
+              "zuò"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "喜欢",
+          "kp": "喜欢它",
+          "sourceType": "textbook"
+        }
+      ],
+      "v7_word_match": [
+        {
+          "id": "v7_l05_01",
+          "type": "word_sentence_match",
+          "prompt_cn": "把左侧回答和右侧问题配对。",
+          "prompt_en": "Match each answer on the left with the question on the right.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "words": [
+              "今天9月8号。",
+              "今天星期日。",
+              "不，今天我休息。",
+              "星期天我做饭。"
+            ],
+            "sentences": [
+              {
+                "sentence": "今天几号？",
+                "answer": "今天9月8号。"
+              },
+              {
+                "sentence": "今天星期几？",
+                "answer": "今天星期日。"
+              },
+              {
+                "sentence": "今天你做饭吗？",
+                "answer": "不，今天我休息。"
+              },
+              {
+                "sentence": "星期天你做什么？",
+                "answer": "星期天我做饭。"
+              }
+            ],
+            "pairs": [
+              {
+                "left": "今天9月8号。",
+                "right": "今天几号？"
+              },
+              {
+                "left": "今天星期日。",
+                "right": "今天星期几？"
+              },
+              {
+                "left": "不，今天我休息。",
+                "right": "今天你做饭吗？"
+              },
+              {
+                "left": "星期天我做饭。",
+                "right": "星期天你做什么？"
+              }
+            ]
+          },
+          "correct_answer": "今天9月8号。"
+        },
+        {
+          "id": "v7_l05_02",
+          "type": "word_sentence_match",
+          "prompt_cn": "把左侧回答和右侧问题配对。",
+          "prompt_en": "Match each answer on the left with the question on the right.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "words": [
+              "我会做饭。",
+              "我会做面条儿。",
+              "我不会做饺子。",
+              "我会做一些菜。"
+            ],
+            "sentences": [
+              {
+                "sentence": "你会做饭吗？",
+                "answer": "我会做饭。"
+              },
+              {
+                "sentence": "你会做什么？",
+                "answer": "我会做面条儿。"
+              },
+              {
+                "sentence": "你会做饺子吗？",
+                "answer": "我不会做饺子。"
+              },
+              {
+                "sentence": "你会做菜吗？",
+                "answer": "我会做一些菜。"
+              }
+            ],
+            "pairs": [
+              {
+                "left": "我会做饭。",
+                "right": "你会做饭吗？"
+              },
+              {
+                "left": "我会做面条儿。",
+                "right": "你会做什么？"
+              },
+              {
+                "left": "我不会做饺子。",
+                "right": "你会做饺子吗？"
+              },
+              {
+                "left": "我会做一些菜。",
+                "right": "你会做菜吗？"
+              }
+            ]
+          },
+          "correct_answer": "我会做饭。"
+        },
+        {
+          "id": "v7_l05_03",
+          "type": "word_sentence_match",
+          "prompt_cn": "把左侧回答和右侧问题配对。",
+          "prompt_en": "Match each answer on the left with the question on the right.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "words": [
+              "下班。",
+              "是的，是我的。",
+              "真好看。",
+              "我很喜欢它。"
+            ],
+            "sentences": [
+              {
+                "sentence": "下班吗？",
+                "answer": "下班。"
+              },
+              {
+                "sentence": "这是你的新电脑吗？",
+                "answer": "是的，是我的。"
+              },
+              {
+                "sentence": "你的新电脑好看吗？",
+                "answer": "真好看。"
+              },
+              {
+                "sentence": "你喜欢这台电脑吗？",
+                "answer": "我很喜欢它。"
+              }
+            ],
+            "pairs": [
+              {
+                "left": "下班。",
+                "right": "下班吗？"
+              },
+              {
+                "left": "是的，是我的。",
+                "right": "这是你的新电脑吗？"
+              },
+              {
+                "left": "真好看。",
+                "right": "你的新电脑好看吗？"
+              },
+              {
+                "left": "我很喜欢它。",
+                "right": "你喜欢这台电脑吗？"
+              }
+            ]
+          },
+          "correct_answer": "下班。"
+        },
+        {
+          "id": "v7_l05_04",
+          "type": "word_sentence_match",
+          "prompt_cn": "把左侧回答和右侧问题配对。",
+          "prompt_en": "Match each answer on the left with the question on the right.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "words": [
+              "我家有四口人。",
+              "我今年二十岁。",
+              "我是中国人。",
+              "我叫李文。"
+            ],
+            "sentences": [
+              {
+                "sentence": "你家有几口人？",
+                "answer": "我家有四口人。"
+              },
+              {
+                "sentence": "你今年多大？",
+                "answer": "我今年二十岁。"
+              },
+              {
+                "sentence": "你是哪国人？",
+                "answer": "我是中国人。"
+              },
+              {
+                "sentence": "你叫什么？",
+                "answer": "我叫李文。"
+              }
+            ],
+            "pairs": [
+              {
+                "left": "我家有四口人。",
+                "right": "你家有几口人？"
+              },
+              {
+                "left": "我今年二十岁。",
+                "right": "你今年多大？"
+              },
+              {
+                "left": "我是中国人。",
+                "right": "你是哪国人？"
+              },
+              {
+                "left": "我叫李文。",
+                "right": "你叫什么？"
+              }
+            ]
+          },
+          "correct_answer": "我家有四口人。"
+        },
+        {
+          "id": "v7_l05_05",
+          "type": "word_sentence_match",
+          "prompt_cn": "把左侧回答和右侧问题配对。",
+          "prompt_en": "Match each answer on the left with the question on the right.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "words": [
+              "我喜欢面条儿。",
+              "我不喜欢饺子。",
+              "今天我做饭。",
+              "我的电脑很新。"
+            ],
+            "sentences": [
+              {
+                "sentence": "你喜欢面条儿吗？",
+                "answer": "我喜欢面条儿。"
+              },
+              {
+                "sentence": "你喜欢饺子吗？",
+                "answer": "我不喜欢饺子。"
+              },
+              {
+                "sentence": "今天你做什么？",
+                "answer": "今天我做饭。"
+              },
+              {
+                "sentence": "你的电脑新吗？",
+                "answer": "我的电脑很新。"
+              }
+            ],
+            "pairs": [
+              {
+                "left": "我喜欢面条儿。",
+                "right": "你喜欢面条儿吗？"
+              },
+              {
+                "left": "我不喜欢饺子。",
+                "right": "你喜欢饺子吗？"
+              },
+              {
+                "left": "今天我做饭。",
+                "right": "今天你做什么？"
+              },
+              {
+                "left": "我的电脑很新。",
+                "right": "你的电脑新吗？"
+              }
+            ]
+          },
+          "correct_answer": "我喜欢面条儿。"
+        }
+      ],
+      "v8_memory_match": [
+        {
+          "id": "v8_hsk1_05_01",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：日期",
+          "prompt_en": "Match date words.",
+          "data": {
+            "pairs": [
+              {
+                "left": "今天",
+                "right": "today"
+              },
+              {
+                "left": "号",
+                "right": "date"
+              },
+              {
+                "left": "月",
+                "right": "month"
+              },
+              {
+                "left": "星期",
+                "right": "week"
+              }
+            ]
+          },
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_05_02",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：休息与能力",
+          "prompt_en": "Match rest and ability words.",
+          "data": {
+            "pairs": [
+              {
+                "left": "休息",
+                "right": "rest"
+              },
+              {
+                "left": "会",
+                "right": "can"
+              },
+              {
+                "left": "做饭",
+                "right": "cook"
+              },
+              {
+                "left": "做",
+                "right": "do; make"
+              }
+            ]
+          },
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_05_03",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：食物",
+          "prompt_en": "Match food words.",
+          "data": {
+            "pairs": [
+              {
+                "left": "面条儿",
+                "right": "noodles"
+              },
+              {
+                "left": "饺子",
+                "right": "jiaozi"
+              },
+              {
+                "left": "一些",
+                "right": "some"
+              },
+              {
+                "left": "菜",
+                "right": "dish"
+              }
+            ]
+          },
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_05_04",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：公司和电脑",
+          "prompt_en": "Match work and computer words.",
+          "data": {
+            "pairs": [
+              {
+                "left": "下班",
+                "right": "get off work"
+              },
+              {
+                "left": "新",
+                "right": "new"
+              },
+              {
+                "left": "电脑",
+                "right": "computer"
+              },
+              {
+                "left": "它",
+                "right": "it"
+              }
+            ]
+          },
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_05_05",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：评价",
+          "prompt_en": "Match evaluation words.",
+          "data": {
+            "pairs": [
+              {
+                "left": "真",
+                "right": "really"
+              },
+              {
+                "left": "好看",
+                "right": "nice-looking"
+              },
+              {
+                "left": "喜欢",
+                "right": "like"
+              },
+              {
+                "left": "星期天",
+                "right": "Sunday"
+              }
+            ]
+          },
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "w1_component_char": [
+        {
+          "id": "w1_hsk1_05_01",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的汉字。",
+          "prompt_en": "Choose the correct character.",
+          "data": {
+            "sentence": "today",
+            "sentence_pinyin": "",
+            "meaning_en": "today",
+            "options": [
+              "介",
+              "令",
+              "今",
+              "个"
+            ],
+            "options_pinyin": [],
+            "correct_index": 2,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "今",
+          "kp": "今天",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_05_02",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的汉字。",
+          "prompt_en": "Choose the correct character.",
+          "data": {
+            "sentence": "date number",
+            "sentence_pinyin": "",
+            "meaning_en": "date number",
+            "options": [
+              "号",
+              "亏",
+              "吃",
+              "叫"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "号",
+          "kp": "号",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_05_03",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的汉字。",
+          "prompt_en": "Choose the correct character.",
+          "data": {
+            "sentence": "month",
+            "sentence_pinyin": "",
+            "meaning_en": "month",
+            "options": [
+              "用",
+              "月",
+              "目",
+              "日"
+            ],
+            "options_pinyin": [],
+            "correct_index": 1,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "月",
+          "kp": "月",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_05_04",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "选择表示 “week” 的词。",
+          "prompt_en": "Choose the correct word for week.",
+          "data": {
+            "sentence": "week",
+            "sentence_pinyin": "",
+            "meaning_en": "week",
+            "options": [
+              "星星",
+              "星期",
+              "期中",
+              "暑期"
+            ],
+            "options_pinyin": [
+              "xing1 xing",
+              "xing1 qi1",
+              "qi1 zhong1",
+              "shu3 qi1"
+            ],
+            "correct_index": 1,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "星期",
+          "kp": "星期",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_05_05",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的汉字。",
+          "prompt_en": "Choose the correct character.",
+          "data": {
+            "sentence": "rest",
+            "sentence_pinyin": "",
+            "meaning_en": "rest",
+            "options": [
+              "付",
+              "体",
+              "伙",
+              "休"
+            ],
+            "options_pinyin": [],
+            "correct_index": 3,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "休",
+          "kp": "休息",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_05_06",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "选择表示 “cook / make a meal” 的词。",
+          "prompt_en": "Choose the correct word for cook / make a meal.",
+          "data": {
+            "sentence": "cook",
+            "sentence_pinyin": "",
+            "meaning_en": "cook / make a meal",
+            "options": [
+              "吃饭",
+              "休息",
+              "做饭",
+              "下班"
+            ],
+            "options_pinyin": [
+              "chi1 fan4",
+              "xiu1 xi",
+              "zuo4 fan4",
+              "xia4 ban1"
+            ],
+            "correct_index": 2,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "做饭",
+          "kp": "做饭",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_05_07",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "选择表示 “noodles” 的词。",
+          "prompt_en": "Choose the correct word for noodles.",
+          "data": {
+            "sentence": "noodles",
+            "sentence_pinyin": "",
+            "meaning_en": "noodles",
+            "options": [
+              "面条",
+              "面包",
+              "苗条",
+              "条目"
+            ],
+            "options_pinyin": [
+              "mian4 tiao2",
+              "mian4 bao1",
+              "miao2 tiao2",
+              "tiao2 mu4"
+            ],
+            "correct_index": 0,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "面条",
+          "kp": "面条儿",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_05_08",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "选择表示 “computer” 的词。",
+          "prompt_en": "Choose the correct word for computer.",
+          "data": {
+            "sentence": "computer",
+            "sentence_pinyin": "",
+            "meaning_en": "computer",
+            "options": [
+              "电影",
+              "电话",
+              "电车",
+              "电脑"
+            ],
+            "options_pinyin": [
+              "dian4 ying3",
+              "dian4 hua4",
+              "dian4 che1",
+              "dian4 nao3"
+            ],
+            "correct_index": 3,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "电脑",
+          "kp": "电脑",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_05_09",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的汉字。",
+          "prompt_en": "Choose the correct character.",
+          "data": {
+            "sentence": "new",
+            "sentence_pinyin": "",
+            "meaning_en": "new",
+            "options": [
+              "辛",
+              "亲",
+              "薪",
+              "新"
+            ],
+            "options_pinyin": [],
+            "correct_index": 3,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "新",
+          "kp": "新",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_05_10",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "选择表示 “like” 的词。",
+          "prompt_en": "Choose the correct word for like.",
+          "data": {
+            "sentence": "like",
+            "sentence_pinyin": "",
+            "meaning_en": "like",
+            "options": [
+              "欢喜",
+              "喜欢",
+              "吹欢",
+              "次欢"
+            ],
+            "options_pinyin": [
+              "huan1 xi3",
+              "xi3 huan",
+              "chui1 huan",
+              "ci4 huan"
+            ],
+            "correct_index": 1,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "喜欢",
+          "kp": "喜欢",
+          "sourceType": "textbook"
+        }
+      ],
+      "v4_complete_sentence": [
+        {
+          "id": "v4_hsk1_05_01",
+          "type": "sentence_transformation",
+          "prompt_cn": "按英文要求选择正确转换。",
+          "prompt_en": "Say the date as a question.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "template": "今天9月8号。",
+            "template_pinyin": "jīntiān jiǔ yuè bā hào.",
+            "options": [
+              "今天9月8号。",
+              "星期几？",
+              "今天几号？",
+              "今天星期日。"
+            ],
+            "options_pinyin": [
+              "jīntiān jiǔ yuè bā hào.",
+              "xīngqī jǐ?",
+              "jīntiān jǐ hào?",
+              "jīntiān xīngqīrì."
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "今天几号？"
+        },
+        {
+          "id": "v4_hsk1_05_02",
+          "type": "sentence_transformation",
+          "prompt_cn": "按英文要求选择正确转换。",
+          "prompt_en": "Add 今天 to say the activity happens today.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "template": "我休息。",
+            "template_pinyin": "wǒ xiūxi.",
+            "options": [
+              "今天休息我。",
+              "今天我休息。",
+              "我今天吗？",
+              "我休息今天吗？"
+            ],
+            "options_pinyin": [
+              "jīntiān xiūxi wǒ.",
+              "jīntiān wǒ xiūxi.",
+              "wǒ jīntiān ma?",
+              "wǒ xiūxi jīntiān ma?"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "今天我休息。"
+        },
+        {
+          "id": "v4_hsk1_05_03",
+          "type": "sentence_transformation",
+          "prompt_cn": "按英文要求选择正确转换。",
+          "prompt_en": "Change the sentence into a yes-no question.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "template": "我会做饭。",
+            "template_pinyin": "wǒ huì zuò fàn.",
+            "options": [
+              "我会做饭吗？",
+              "你做饭会吗？",
+              "会你做饭吗？",
+              "你会做饭吗？"
+            ],
+            "options_pinyin": [
+              "wǒ huì zuò fàn ma?",
+              "nǐ zuò fàn huì ma?",
+              "huì nǐ zuò fàn ma?",
+              "nǐ huì zuò fàn ma?"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "你会做饭吗？"
+        },
+        {
+          "id": "v4_hsk1_05_04",
+          "type": "sentence_transformation",
+          "prompt_cn": "按英文要求选择正确转换。",
+          "prompt_en": "Change the sentence into a negative sentence.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "template": "我会做菜。",
+            "template_pinyin": "wǒ huì zuò cài.",
+            "options": [
+              "我不做菜会。",
+              "我不会做菜。",
+              "我会不做菜。",
+              "我没会做菜。"
+            ],
+            "options_pinyin": [
+              "wǒ bù zuò cài huì.",
+              "wǒ bú huì zuò cài.",
+              "wǒ huì bù zuò cài.",
+              "wǒ méi huì zuò cài."
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "我不会做菜。"
+        },
+        {
+          "id": "v4_hsk1_05_05",
+          "type": "sentence_transformation",
+          "prompt_cn": "按英文要求选择正确转换。",
+          "prompt_en": "Ask what someone can make.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "template": "我会做面条儿。",
+            "template_pinyin": "wǒ huì zuò miàntiáor.",
+            "options": [
+              "你做什么会？",
+              "我会做什么？",
+              "你会做什么？",
+              "什么你会做？"
+            ],
+            "options_pinyin": [
+              "nǐ zuò shénme huì?",
+              "wǒ huì zuò shénme?",
+              "nǐ huì zuò shénme?",
+              "shénme nǐ huì zuò?"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "你会做什么？"
+        },
+        {
+          "id": "v4_hsk1_05_06",
+          "type": "sentence_transformation",
+          "prompt_cn": "按英文要求选择正确转换。",
+          "prompt_en": "Combine the two sentences with also.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "template": "我会做面条儿。我会做饺子。",
+            "template_pinyin": "wǒ huì zuò miàntiáor. wǒ huì zuò jiǎozi.",
+            "options": [
+              "我也会做面条儿，也会做饺子。",
+              "我会也做面条儿和饺子。",
+              "我会做面条儿，会也做饺子。",
+              "我会做面条儿，也会做饺子。"
+            ],
+            "options_pinyin": [
+              "wǒ yě huì zuò miàntiáor, yě huì zuò jiǎozi.",
+              "wǒ huì yě zuò miàntiáor hé jiǎozi.",
+              "wǒ huì zuò miàntiáor, huì yě zuò jiǎozi.",
+              "wǒ huì zuò miàntiáor, yě huì zuò jiǎozi."
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "我会做面条儿，也会做饺子。"
+        },
+        {
+          "id": "v4_hsk1_05_07",
+          "type": "sentence_transformation",
+          "prompt_cn": "按英文要求选择正确转换。",
+          "prompt_en": "Change the sentence into a negative sentence.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "template": "我喜欢饺子。",
+            "template_pinyin": "wǒ xǐhuan jiǎozi.",
+            "options": [
+              "我不喜欢饺子。",
+              "我喜欢不饺子。",
+              "我没喜欢饺子。",
+              "我喜欢饺子吗？"
+            ],
+            "options_pinyin": [
+              "wǒ bù xǐhuan jiǎozi.",
+              "wǒ xǐhuan bù jiǎozi.",
+              "wǒ méi xǐhuan jiǎozi.",
+              "wǒ xǐhuan jiǎozi ma?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我不喜欢饺子。"
+        },
+        {
+          "id": "v4_hsk1_05_08",
+          "type": "sentence_transformation",
+          "prompt_cn": "按英文要求选择正确转换。",
+          "prompt_en": "Make the sentence stronger with 真.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "template": "电脑好看。",
+            "template_pinyin": "diànnǎo hǎokàn.",
+            "options": [
+              "电脑真好看！",
+              "电脑好看真。",
+              "真电脑好看。",
+              "电脑真喜欢。"
+            ],
+            "options_pinyin": [
+              "diànnǎo zhēn hǎokàn!",
+              "diànnǎo hǎokàn zhēn.",
+              "zhēn diànnǎo hǎokàn.",
+              "diànnǎo zhēn xǐhuan."
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "电脑真好看！"
+        },
+        {
+          "id": "v4_hsk1_05_09",
+          "type": "sentence_transformation",
+          "prompt_cn": "按英文要求选择正确转换。",
+          "prompt_en": "Replace 电脑 with 它.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "template": "我喜欢电脑。",
+            "template_pinyin": "wǒ xǐhuan diànnǎo.",
+            "options": [
+              "我它喜欢。",
+              "我喜欢他。",
+              "我喜欢它。",
+              "它喜欢我。"
+            ],
+            "options_pinyin": [
+              "wǒ tā xǐhuan.",
+              "wǒ xǐhuan tā.",
+              "wǒ xǐhuan tā.",
+              "tā xǐhuan wǒ."
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "我喜欢它。"
+        },
+        {
+          "id": "v4_hsk1_05_10",
+          "type": "sentence_transformation",
+          "prompt_cn": "按英文要求选择正确转换。",
+          "prompt_en": "Answer “下班吗？” briefly with yes.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "template": "下班吗？",
+            "template_pinyin": "xiàbān ma?",
+            "options": [
+              "不下班。",
+              "下班。",
+              "下班吗？",
+              "我会下班吗？"
+            ],
+            "options_pinyin": [
+              "bù xiàbān.",
+              "xiàbān.",
+              "xiàbān ma?",
+              "wǒ huì xiàbān ma?"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "下班。"
+        }
+      ],
+      "g1_ordering": [
+        {
+          "id": "g1_hsk1_05_01",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "今天",
+              "几号"
+            ],
+            "chunks_pinyin": [
+              "jīntiān",
+              "jǐ hào"
+            ],
+            "answer": "今天几号？"
+          },
+          "correct_answer": "今天几号？",
+          "acceptable_answers": [
+            "今天几号？",
+            "今天几号"
+          ],
+          "kp": "日期提问",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "g1_hsk1_05_02",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "今天",
+              "9月8号"
+            ],
+            "chunks_pinyin": [
+              "jīntiān",
+              "jiǔ yuè bā hào"
+            ],
+            "answer": "今天9月8号。"
+          },
+          "correct_answer": "今天9月8号。",
+          "acceptable_answers": [
+            "今天9月8号。",
+            "今天9月8号"
+          ],
+          "kp": "日期回答",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "g1_hsk1_05_03",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "你",
+              "会",
+              "做饭",
+              "吗"
+            ],
+            "chunks_pinyin": [
+              "nǐ",
+              "huì",
+              "zuò fàn",
+              "ma"
+            ],
+            "answer": "你会做饭吗？"
+          },
+          "correct_answer": "你会做饭吗？",
+          "acceptable_answers": [
+            "你会做饭吗？",
+            "你会做饭吗"
+          ],
+          "kp": "会 + 动词",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "g1_hsk1_05_04",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "我",
+              "会",
+              "做",
+              "面条儿"
+            ],
+            "chunks_pinyin": [
+              "wǒ",
+              "huì",
+              "zuò",
+              "miàntiáor"
+            ],
+            "answer": "我会做面条儿。"
+          },
+          "correct_answer": "我会做面条儿。",
+          "acceptable_answers": [
+            "我会做面条儿。",
+            "我会做面条儿"
+          ],
+          "kp": "会做",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "g1_hsk1_05_05",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "我",
+              "也",
+              "很",
+              "喜欢",
+              "它"
+            ],
+            "chunks_pinyin": [
+              "wǒ",
+              "yě",
+              "hěn",
+              "xǐhuan",
+              "tā"
+            ],
+            "answer": "我也很喜欢它。"
+          },
+          "correct_answer": "我也很喜欢它。",
+          "acceptable_answers": [
+            "我也很喜欢它。",
+            "我也很喜欢它"
+          ],
+          "kp": "喜欢它",
+          "sourceType": "textbook"
+        }
+      ],
+      "r2_passage_choice": [
+        {
+          "id": "r2_hsk1_05_01",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据对话选择正确答案。",
+          "prompt_en": "Read the dialogue and choose the answer.",
+          "data": {
+            "passage": "今天9月8号。星期日。今天我休息。",
+            "passage_pinyin": "Jīntiān jiǔ yuè bā hào. Xīngqīrì. Jīntiān wǒ xiūxi.",
+            "question_cn": "今天几号？",
+            "question_en": "What's the date today?",
+            "options": [
+              "9月8号",
+              "5月1号",
+              "星期日",
+              "今天休息"
+            ],
+            "options_pinyin": [
+              "jiǔ yuè bā hào",
+              "wǔ yuè yī hào",
+              "Xīngqīrì",
+              "jīntiān xiūxi"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "9月8号",
+          "kp": "课文一：日期",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "r2_hsk1_05_02",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据对话选择正确答案。",
+          "prompt_en": "Read the dialogue and choose the answer.",
+          "data": {
+            "passage": "星期日。今天我休息。",
+            "passage_pinyin": "Xīngqīrì. Jīntiān wǒ xiūxi.",
+            "question_cn": "今天星期几？",
+            "question_en": "What day is it?",
+            "options": [
+              "星期一",
+              "星期日",
+              "星期六",
+              "9月8号"
+            ],
+            "options_pinyin": [
+              "Xīngqīyī",
+              "Xīngqīrì",
+              "Xīngqīliù",
+              "jiǔ yuè bā hào"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "星期日",
+          "kp": "课文一：星期日",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "r2_hsk1_05_03",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据对话选择正确答案。",
+          "prompt_en": "Read the dialogue and choose the answer.",
+          "data": {
+            "passage": "你会做饭吗？我会做。",
+            "passage_pinyin": "Nǐ huì zuò fàn ma? Wǒ huì zuò.",
+            "question_cn": "杨同乐会做饭吗？",
+            "question_en": "Can Yang Tongle cook?",
+            "options": [
+              "不知道",
+              "不会",
+              "会",
+              "没有电脑"
+            ],
+            "options_pinyin": [
+              "bù zhīdào",
+              "bú huì",
+              "huì",
+              "méiyǒu diànnǎo"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "会",
+          "kp": "课文二：会做饭",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "r2_hsk1_05_04",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据对话选择正确答案。",
+          "prompt_en": "Read the dialogue and choose the answer.",
+          "data": {
+            "passage": "我会做面条儿、饺子，也会做一些菜。",
+            "passage_pinyin": "Wǒ huì zuò miàntiáor, jiǎozi, yě huì zuò yìxiē cài.",
+            "question_cn": "杨同乐会做什么？",
+            "question_en": "What can Yang Tongle make?",
+            "options": [
+              "今天和星期日",
+              "电脑和手机",
+              "爸爸和妈妈",
+              "面条儿、饺子和一些菜"
+            ],
+            "options_pinyin": [
+              "jīntiān hé Xīngqīrì",
+              "diànnǎo hé shǒujī",
+              "bàba hé māma",
+              "miàntiáor, jiǎozi hé yìxiē cài"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "面条儿、饺子和一些菜",
+          "kp": "课文二：食物",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "r2_hsk1_05_05",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据对话选择正确答案。",
+          "prompt_en": "Read the dialogue and choose the answer.",
+          "data": {
+            "passage": "这是你的新电脑吗？是的，是我的新电脑。",
+            "passage_pinyin": "Zhè shì nǐ de xīn diànnǎo ma? Shì de, shì wǒ de xīn diànnǎo.",
+            "question_cn": "这是什么？",
+            "question_en": "What is this?",
+            "options": [
+              "新电脑",
+              "饺子",
+              "一些菜",
+              "9月8号"
+            ],
+            "options_pinyin": [
+              "xīn diànnǎo",
+              "jiǎozi",
+              "yìxiē cài",
+              "jiǔ yuè bā hào"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "新电脑",
+          "kp": "课文三：新电脑",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "r2_hsk1_05_06",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据短文选择正确答案。",
+          "prompt_en": "Read and choose the answer.",
+          "data": {
+            "passage": "今天星期天，我休息。我会做饭。",
+            "passage_pinyin": "Jīntiān Xīngqītiān, wǒ xiūxi. Wǒ huì zuò fàn.",
+            "question_cn": "我今天做什么？",
+            "question_en": "What do I do today?",
+            "options": [
+              "下班，不做饭",
+              "休息，也做饭",
+              "买电脑",
+              "问日期"
+            ],
+            "options_pinyin": [
+              "xiàbān, bù zuò fàn",
+              "xiūxi, yě zuò fàn",
+              "mǎi diànnǎo",
+              "wèn rìqī"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "休息，也做饭",
+          "kp": "休息、做饭",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r2_hsk1_05_07",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据短文选择正确答案。",
+          "prompt_en": "Read and choose the answer.",
+          "data": {
+            "passage": "我不会做菜，但是我会做面条儿。",
+            "passage_pinyin": "Wǒ bú huì zuò cài, dànshì wǒ huì zuò miàntiáor.",
+            "question_cn": "我会做什么？",
+            "question_en": "What can I make?",
+            "options": [
+              "电脑",
+              "菜",
+              "面条儿",
+              "饺子和菜"
+            ],
+            "options_pinyin": [
+              "diànnǎo",
+              "cài",
+              "miàntiáor",
+              "jiǎozi hé cài"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "面条儿",
+          "kp": "会/不会",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r2_hsk1_05_08",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据短文选择正确答案。",
+          "prompt_en": "Read and choose the answer.",
+          "data": {
+            "passage": "这是我的电脑。它很新，也很好看。",
+            "passage_pinyin": "Zhè shì wǒ de diànnǎo. Tā hěn xīn, yě hěn hǎokàn.",
+            "question_cn": "电脑怎么样？",
+            "question_en": "How is the computer?",
+            "options": [
+              "星期日",
+              "会做饭",
+              "9月8号",
+              "很新，也很好看"
+            ],
+            "options_pinyin": [
+              "Xīngqīrì",
+              "huì zuò fàn",
+              "jiǔ yuè bā hào",
+              "hěn xīn, yě hěn hǎokàn"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "很新，也很好看",
+          "kp": "新、好看",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r2_hsk1_05_09",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据短文选择正确答案。",
+          "prompt_en": "Read and choose the answer.",
+          "data": {
+            "passage": "今天5月1号，星期日。",
+            "passage_pinyin": "Jīntiān wǔ yuè yī hào, Xīngqīrì.",
+            "question_cn": "今天是几月几号？",
+            "question_en": "What's today's date?",
+            "options": [
+              "5月1号",
+              "9月8号",
+              "星期日",
+              "12岁"
+            ],
+            "options_pinyin": [
+              "wǔ yuè yī hào",
+              "jiǔ yuè bā hào",
+              "Xīngqīrì",
+              "shí'èr suì"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "5月1号",
+          "kp": "日期表达",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r2_hsk1_05_10",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据短文选择正确答案。",
+          "prompt_en": "Read and choose the answer.",
+          "data": {
+            "passage": "我喜欢饺子，也喜欢面条儿。星期天我做饭。",
+            "passage_pinyin": "Wǒ xǐhuan jiǎozi, yě xǐhuan miàntiáor. Xīngqītiān wǒ zuò fàn.",
+            "question_cn": "我喜欢什么？",
+            "question_en": "What do I like?",
+            "options": [
+              "新电脑",
+              "饺子和面条儿",
+              "日期",
+              "下班"
+            ],
+            "options_pinyin": [
+              "xīn diànnǎo",
+              "jiǎozi hé miàntiáor",
+              "rìqī",
+              "xiàbān"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "饺子和面条儿",
+          "kp": "喜欢、食物",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "tt_text_true_false": [
+        {
+          "id": "tt_hsk1_05_01",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "刘明说今天9月8号。",
+            "statement_pinyin": "Liú Míng shuō jīntiān jiǔ yuè bā hào.",
+            "statement_en": "Liu Ming says today is September 8.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文一：日期",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_05_02",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "今天是星期六。",
+            "statement_pinyin": "Jīntiān shì Xīngqīliù.",
+            "statement_en": "Today is Saturday.",
+            "answer": false
+          },
+          "correct_answer": false,
+          "kp": "课文一：星期日",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_05_03",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "刘明今天休息。",
+            "statement_pinyin": "Liú Míng jīntiān xiūxi.",
+            "statement_en": "Liu Ming is off today.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文一：休息",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_05_04",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "杨同乐不会做饭。",
+            "statement_pinyin": "Yáng Tónglè bú huì zuò fàn.",
+            "statement_en": "Yang Tongle cannot cook.",
+            "answer": false
+          },
+          "correct_answer": false,
+          "kp": "课文二：会做饭",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_05_05",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "杨同乐会做面条儿和饺子。",
+            "statement_pinyin": "Yáng Tónglè huì zuò miàntiáor hé jiǎozi.",
+            "statement_en": "Yang Tongle can make noodles and jiaozi.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文二：面条儿、饺子",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_05_06",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "杨同乐星期天也做饭。",
+            "statement_pinyin": "Yáng Tónglè Xīngqītiān yě zuò fàn.",
+            "statement_en": "Yang Tongle also cooks on Sundays.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文二：星期天",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_05_07",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "杨同乐的新电脑很好看。",
+            "statement_pinyin": "Yáng Tónglè de xīn diànnǎo hěn hǎokàn.",
+            "statement_en": "Yang Tongle's new computer looks nice.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文三：新电脑",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_05_08",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "王一雪不喜欢杨同乐的电脑。",
+            "statement_pinyin": "Wáng Yīxuě bù xǐhuan Yáng Tónglè de diànnǎo.",
+            "statement_en": "Wang Yixue does not like Yang Tongle's computer.",
+            "answer": false
+          },
+          "correct_answer": false,
+          "kp": "课文三：真好看",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_05_09",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "教学扩展：今天星期天，我休息。",
+            "statement_pinyin": "Jīntiān Xīngqītiān, wǒ xiūxi.",
+            "statement_en": "Today is Sunday, and I rest.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "日期与休息",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "tt_hsk1_05_10",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "教学扩展：我会做电脑。",
+            "statement_pinyin": "Wǒ huì zuò diànnǎo.",
+            "statement_en": "I can make a computer.",
+            "answer": false
+          },
+          "correct_answer": false,
+          "kp": "会做饭/做菜",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "pk_question": [
+        {
+          "id": "pk_l05_01",
+          "type": "pk_question",
+          "prompt_cn": "今天几号？",
+          "prompt_en": "Choose the right answer.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "今天几号？",
+            "question_en": "Choose the right answer.",
+            "options": [
+              "今天星期日。",
+              "我休息。",
+              "今天9月8号。",
+              "我会做饭。"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "今天9月8号。"
+        },
+        {
+          "id": "pk_l05_02",
+          "type": "pk_question",
+          "prompt_cn": "星期几？",
+          "prompt_en": "Choose the right answer.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "星期几？",
+            "question_en": "Choose the right answer.",
+            "options": [
+              "9月8号。",
+              "星期日。",
+              "新电脑。",
+              "一些菜。"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "星期日。"
+        },
+        {
+          "id": "pk_l05_03",
+          "type": "pk_question",
+          "prompt_cn": "“休息” 的英文意思是？",
+          "prompt_en": "Choose the meaning.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "“休息” 的英文意思是？",
+            "question_en": "Choose the meaning.",
+            "options": [
+              "cook",
+              "computer",
+              "like",
+              "rest"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "rest"
+        },
+        {
+          "id": "pk_l05_04",
+          "type": "pk_question",
+          "prompt_cn": "“做饭” 的英文意思是？",
+          "prompt_en": "Choose the meaning.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "“做饭” 的英文意思是？",
+            "question_en": "Choose the meaning.",
+            "options": [
+              "cook / make a meal",
+              "get off work",
+              "Sunday",
+              "new"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "cook / make a meal"
+        },
+        {
+          "id": "pk_l05_05",
+          "type": "pk_question",
+          "prompt_cn": "你会做饭吗？",
+          "prompt_en": "Choose the best answer.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "你会做饭吗？",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "今天几号？",
+              "真好看。",
+              "我会做。",
+              "这是电脑。"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "我会做。"
+        },
+        {
+          "id": "pk_l05_06",
+          "type": "pk_question",
+          "prompt_cn": "你会做什么？",
+          "prompt_en": "Choose the best answer.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "你会做什么？",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "今天星期天。",
+              "我会做饺子。",
+              "我下班。",
+              "这是它。"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "我会做饺子。"
+        },
+        {
+          "id": "pk_l05_07",
+          "type": "pk_question",
+          "prompt_cn": "下班吗？",
+          "prompt_en": "Choose the best short answer.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "下班吗？",
+            "question_en": "Choose the best short answer.",
+            "options": [
+              "星期。",
+              "一些。",
+              "电脑。",
+              "下班。"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "下班。"
+        },
+        {
+          "id": "pk_l05_08",
+          "type": "pk_question",
+          "prompt_cn": "这是你的新电脑吗？",
+          "prompt_en": "Choose the best answer.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "这是你的新电脑吗？",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "是的，是我的新电脑。",
+              "我会做饭。",
+              "今天9月8号。",
+              "我休息。"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "是的，是我的新电脑。"
+        },
+        {
+          "id": "pk_l05_09",
+          "type": "pk_question",
+          "prompt_cn": "“真好看” 的意思是？",
+          "prompt_en": "Choose the meaning.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "“真好看” 的意思是？",
+            "question_en": "Choose the meaning.",
+            "options": [
+              "very busy",
+              "not at work",
+              "really good-looking",
+              "some noodles"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "really good-looking"
+        },
+        {
+          "id": "pk_l05_10",
+          "type": "pk_question",
+          "prompt_cn": "我喜欢它。",
+          "prompt_en": "What does 它 refer to in English?",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "我喜欢它。",
+            "question_en": "What does 它 refer to in English?",
+            "options": [
+              "he",
+              "it",
+              "she",
+              "we"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "it"
+        },
+        {
+          "id": "pk_l05_11",
+          "type": "pk_question",
+          "prompt_cn": "选择正确句子。",
+          "prompt_en": "Choose the correct sentence.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "选择正确句子。",
+            "question_en": "Choose the correct sentence.",
+            "options": [
+              "今天休息星期日。",
+              "星期日今天我。",
+              "我星期日今天休息。",
+              "今天星期日，我休息。"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "今天星期日，我休息。"
+        },
+        {
+          "id": "pk_l05_12",
+          "type": "pk_question",
+          "prompt_cn": "选择正确否定句。",
+          "prompt_en": "Choose the correct negative sentence.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "选择正确否定句。",
+            "question_en": "Choose the correct negative sentence.",
+            "options": [
+              "我不会做菜。",
+              "我不做菜会。",
+              "我会不做菜。",
+              "我没会做菜。"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我不会做菜。"
+        },
+        {
+          "id": "pk_l05_13",
+          "type": "pk_question",
+          "prompt_cn": "“新电脑” 的拼音是？",
+          "prompt_en": "Choose the pinyin.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "“新电脑” 的拼音是？",
+            "question_en": "Choose the pinyin.",
+            "options": [
+              "zhen1 hao3 kan4",
+              "xia4 ban1",
+              "xin1 dian4 nao3",
+              "xiu1 xi"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "xin1 dian4 nao3"
+        },
+        {
+          "id": "pk_l05_14",
+          "type": "pk_question",
+          "prompt_cn": "“喜欢” 的拼音是？",
+          "prompt_en": "Choose the pinyin.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "“喜欢” 的拼音是？",
+            "question_en": "Choose the pinyin.",
+            "options": [
+              "xin1 huan",
+              "xi3 huan",
+              "xiu1 xi",
+              "xing1 qi1"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "xi3 huan"
+        },
+        {
+          "id": "pk_l05_15",
+          "type": "pk_question",
+          "prompt_cn": "哪个词是食物？",
+          "prompt_en": "Choose the food word.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "哪个词是食物？",
+            "question_en": "Choose the food word.",
+            "options": [
+              "电脑",
+              "今天",
+              "下班",
+              "饺子"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "饺子"
+        },
+        {
+          "id": "pk_l05_16",
+          "type": "pk_question",
+          "prompt_cn": "哪个词是时间词？",
+          "prompt_en": "Choose the time word.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "哪个词是时间词？",
+            "question_en": "Choose the time word.",
+            "options": [
+              "今天",
+              "电脑",
+              "喜欢",
+              "做饭"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "今天"
+        },
+        {
+          "id": "pk_l05_17",
+          "type": "pk_question",
+          "prompt_cn": "“一些菜” 的英文意思是？",
+          "prompt_en": "Choose the meaning.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "“一些菜” 的英文意思是？",
+            "question_en": "Choose the meaning.",
+            "options": [
+              "new computer",
+              "Sunday",
+              "some dishes",
+              "get off work"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "some dishes"
+        },
+        {
+          "id": "pk_l05_18",
+          "type": "pk_question",
+          "prompt_cn": "我也会做饭。",
+          "prompt_en": "Choose the closest English meaning.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "我也会做饭。",
+            "question_en": "Choose the closest English meaning.",
+            "options": [
+              "I get off work today.",
+              "I can cook too.",
+              "This computer is new.",
+              "Today is Sunday."
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "I can cook too."
+        },
+        {
+          "id": "pk_l05_19",
+          "type": "pk_question",
+          "prompt_cn": "电脑真好看！",
+          "prompt_en": "Choose the best English meaning.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "电脑真好看！",
+            "question_en": "Choose the best English meaning.",
+            "options": [
+              "The noodles are delicious.",
+              "I can make jiaozi.",
+              "What is the date today?",
+              "The computer really looks nice!"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "The computer really looks nice!"
+        },
+        {
+          "id": "pk_l05_20",
+          "type": "pk_question",
+          "prompt_cn": "我喜欢面条儿，也喜欢饺子。",
+          "prompt_en": "Choose the correct meaning.",
+          "sourceType": "teaching_extension",
+          "data": {
+            "question_cn": "我喜欢面条儿，也喜欢饺子。",
+            "question_en": "Choose the correct meaning.",
+            "options": [
+              "I like noodles and also jiaozi.",
+              "I rest and get off work.",
+              "The computer is new.",
+              "Today is September 8."
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "I like noodles and also jiaozi."
+        }
+      ]
+    }
+  },
+  "hanziWriting": {
+    "characters": [
+      "今",
+      "天",
+      "号",
+      "月",
+      "日",
+      "星",
+      "期",
+      "休",
+      "息",
+      "会",
+      "做",
+      "饭",
+      "面",
+      "条",
+      "儿",
+      "饺",
+      "子",
+      "一",
+      "些",
+      "菜",
+      "下",
+      "班",
+      "新",
+      "电",
+      "脑",
+      "真",
+      "好",
+      "看",
+      "喜",
+      "欢",
+      "它"
+    ]
+  },
+  "hanziRecognition": {
+    "enabled": true,
+    "showPinyin": false,
+    "title": "汉字认读循环",
+    "titleEn": "Character Recognition Cycle",
+    "groups": [
+      {
+        "id": "hrec_l05_g1",
+        "title": "第1组：今天、号、月、日、星期",
+        "vocabularyIds": [
+          "v_l05_01",
+          "v_l05_02",
+          "v_l05_03",
+          "v_l05_04",
+          "v_l05_05"
+        ]
+      },
+      {
+        "id": "hrec_l05_g2",
+        "title": "第2组：星期日、星期天、休息、会、做饭",
+        "vocabularyIds": [
+          "v_l05_06",
+          "v_l05_07",
+          "v_l05_08",
+          "v_l05_09",
+          "v_l05_10"
+        ]
+      },
+      {
+        "id": "hrec_l05_g3",
+        "title": "第3组：做、面条儿、饺子、一些、菜、下班",
+        "vocabularyIds": [
+          "v_l05_11",
+          "v_l05_12",
+          "v_l05_13",
+          "v_l05_14",
+          "v_l05_15",
+          "v_l05_16"
+        ]
+      },
+      {
+        "id": "hrec_l05_g4",
+        "title": "第4组：新、电脑、真、好看、喜欢、它",
+        "vocabularyIds": [
+          "v_l05_17",
+          "v_l05_18",
+          "v_l05_19",
+          "v_l05_20",
+          "v_l05_21",
+          "v_l05_22"
+        ]
+      }
+    ],
+    "rounds": [
+      {
+        "id": "hanzi_to_meaning",
+        "title": "汉字配意思",
+        "titleEn": "Character to meaning"
+      },
+      {
+        "id": "hanzi_to_pinyin",
+        "title": "看汉字选拼音",
+        "titleEn": "Character to pinyin"
+      },
+      {
+        "id": "meaning_to_hanzi",
+        "title": "看意思选汉字",
+        "titleEn": "Meaning to character"
+      },
+      {
+        "id": "sentence_to_word",
+        "title": "短句找词",
+        "titleEn": "Sentence to word"
+      },
+      {
+        "id": "reading_choice",
+        "title": "英文阅读理解",
+        "titleEn": "English reading comprehension"
+      }
+    ],
+    "sentenceExamples": {
+      "v_l05_01": "今天我休息。",
+      "v_l05_02": "今天几号？",
+      "v_l05_03": "9月8号。",
+      "v_l05_04": "星期日我休息。",
+      "v_l05_05": "今天星期几？",
+      "v_l05_06": "星期日我休息。",
+      "v_l05_07": "星期天我做饭。",
+      "v_l05_08": "今天我不休息。",
+      "v_l05_09": "我会做饭。",
+      "v_l05_10": "我喜欢做饭。",
+      "v_l05_11": "你会做什么？",
+      "v_l05_12": "我会做面条儿。",
+      "v_l05_13": "我会做饺子。",
+      "v_l05_14": "我有一些新书。",
+      "v_l05_15": "我做一些菜。",
+      "v_l05_16": "我下班了。",
+      "v_l05_17": "这是新书。",
+      "v_l05_18": "这是我的电脑。",
+      "v_l05_19": "这个菜真好。",
+      "v_l05_20": "你的电脑很好看。",
+      "v_l05_21": "我喜欢做饭。",
+      "v_l05_22": "我喜欢它。"
+    },
+    "readingExamples": {
+      "今天": "What's the date today?",
+      "号": "Today is September 8.",
+      "月": "Today is September 8.",
+      "日": "Sunday.",
+      "星期": "What day is it?",
+      "星期日": "It's Sunday. I'm off today.",
+      "星期天": "I also cook on Sundays.",
+      "休息": "I'm off today.",
+      "会": "Can you cook?",
+      "做饭": "I also cook on Sundays.",
+      "做": "What can you make?",
+      "面条儿": "I can make noodles.",
+      "饺子": "I can make jiaozi.",
+      "一些": "I can cook some dishes.",
+      "菜": "I can cook some dishes.",
+      "下班": "Are you off work?",
+      "新": "Is this your new computer?",
+      "电脑": "It is my new computer.",
+      "真": "Really nice!",
+      "好看": "Really nice!",
+      "喜欢": "I really like it too.",
+      "它": "I really like it too.",
+      "v_l05_01": "I rest today.",
+      "v_l05_02": "What is today’s date?",
+      "v_l05_03": "The date is September 8.",
+      "v_l05_04": "I rest on Sunday.",
+      "v_l05_05": "What day of the week is it today?",
+      "v_l05_06": "I rest on Sunday.",
+      "v_l05_07": "I cook on Sunday.",
+      "v_l05_08": "I do not rest today.",
+      "v_l05_09": "I can cook.",
+      "v_l05_10": "I like cooking.",
+      "v_l05_11": "What can you make?",
+      "v_l05_12": "I like noodles.",
+      "v_l05_13": "My younger sister likes jiaozi.",
+      "v_l05_14": "I have some new books.",
+      "v_l05_15": "I like this dish.",
+      "v_l05_16": "I am off work.",
+      "v_l05_17": "This is a new book.",
+      "v_l05_18": "This is my computer.",
+      "v_l05_19": "This dish is really good.",
+      "v_l05_20": "Your computer looks nice.",
+      "v_l05_21": "I like cooking.",
+      "v_l05_22": "I like it."
+    },
+    "sentenceDistractors": {
+      "星期日": [
+        "电脑",
+        "老师",
+        "饺子"
+      ],
+      "星期天": [
+        "电脑",
+        "老师",
+        "学生"
+      ],
+      "休息": [
+        "电脑",
+        "饺子",
+        "面条儿"
+      ],
+      "会": [
+        "电脑",
+        "老师",
+        "今天"
+      ],
+      "做饭": [
+        "电脑",
+        "老师",
+        "学生"
+      ],
+      "做": [
+        "电脑",
+        "今天",
+        "老师"
+      ],
+      "面条儿": [
+        "今天",
+        "会",
+        "喜欢"
+      ],
+      "饺子": [
+        "今天",
+        "电脑",
+        "喜欢"
+      ],
+      "一些": [
+        "电脑",
+        "下班",
+        "老师"
+      ],
+      "菜": [
+        "电脑",
+        "今天",
+        "下班"
+      ],
+      "下班": [
+        "电脑",
+        "饺子",
+        "面条儿"
+      ],
+      "新": [
+        "今天",
+        "喜欢",
+        "下班"
+      ],
+      "电脑": [
+        "今天",
+        "饺子",
+        "下班"
+      ],
+      "真": [
+        "电脑",
+        "今天",
+        "下班"
+      ],
+      "好看": [
+        "今天",
+        "饺子",
+        "下班"
+      ],
+      "喜欢": [
+        "电脑",
+        "今天",
+        "下班"
+      ],
+      "它": [
+        "今天",
+        "饺子",
+        "下班"
+      ]
+    },
+    "readingDistractors": {
+      "它": [
+        "今天我休息。",
+        "我会做饭。",
+        "你的电脑很好看。"
+      ]
+    }
+  },
+  "postClassHomework": {
+    "tiers": {
+      "A": {
+        "label": "A档：基础巩固",
+        "goal": "识别日期、星期、休息和会做饭等核心表达",
+        "suggestedMinutes": 15,
+        "suggestedMix": "9道客观题 + 2道主观题 + 1道汉字书写"
+      },
+      "B": {
+        "label": "B档：标准运用",
+        "goal": "能在日期、做饭和电脑情境中完成句子与简短回答",
+        "suggestedMinutes": 15,
+        "suggestedMix": "8道客观题 + 3道主观题 + 1道汉字书写"
+      },
+      "C": {
+        "label": "C档：挑战拓展",
+        "goal": "综合表达今天安排、能力和喜欢的物品",
+        "suggestedMinutes": 15,
+        "suggestedMix": "7道客观题 + 4道主观题 + 1道汉字书写"
+      }
+    },
+    "sharedPool": [],
+    "tierPools": {
+      "A": [
+        {
+          "id": "hw_l05_a_001",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "choice",
+          "section": "词汇识别",
+          "prompt_cn": "“今天”的意思是：",
+          "prompt_en": "What does 今天 mean?",
+          "options": [
+            "computer",
+            "week",
+            "today",
+            "cook"
+          ],
+          "correct_answer": "today",
+          "acceptable_answers": [
+            "today"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_a_002",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "choice",
+          "section": "词汇识别",
+          "prompt_cn": "“休息”的意思是：",
+          "prompt_en": "What does 休息 mean?",
+          "options": [
+            "have a rest",
+            "like",
+            "new",
+            "date"
+          ],
+          "correct_answer": "have a rest",
+          "acceptable_answers": [
+            "have a rest"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_a_003",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "choice",
+          "section": "日期表达",
+          "prompt_cn": "“今天几号？”是在问什么？",
+          "prompt_en": "What does 今天几号？ ask about?",
+          "options": [
+            "family",
+            "age",
+            "name",
+            "date"
+          ],
+          "correct_answer": "date",
+          "acceptable_answers": [
+            "date"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_a_004",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "fill_blank",
+          "section": "选词填空",
+          "prompt_cn": "今天9___8号。",
+          "prompt_en": "Fill in the blank.",
+          "options": [
+            "新",
+            "会",
+            "月",
+            "菜"
+          ],
+          "correct_answer": "月",
+          "acceptable_answers": [
+            "月"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_a_005",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "fill_blank",
+          "section": "选词填空",
+          "prompt_cn": "星期___。今天我休息。",
+          "prompt_en": "Fill in the blank.",
+          "options": [
+            "电脑",
+            "日",
+            "一些",
+            "真"
+          ],
+          "correct_answer": "日",
+          "acceptable_answers": [
+            "日"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_a_006",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "fill_blank",
+          "section": "选词填空",
+          "prompt_cn": "你___做饭吗？",
+          "prompt_en": "Fill in the blank.",
+          "options": [
+            "它",
+            "号",
+            "月",
+            "会"
+          ],
+          "correct_answer": "会",
+          "acceptable_answers": [
+            "会"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_a_007",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "ordering",
+          "section": "连词成句",
+          "prompt_cn": "连词成句：今天 / 几号",
+          "prompt_en": "Put the words in order.",
+          "tokens": [
+            "几号",
+            "今天"
+          ],
+          "correct_answer": "今天几号？",
+          "acceptable_answers": [
+            "今天几号？",
+            "今天几号"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_a_008",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "ordering",
+          "section": "连词成句",
+          "prompt_cn": "连词成句：我 / 会 / 做饭",
+          "prompt_en": "Put the words in order.",
+          "tokens": [
+            "做饭",
+            "我",
+            "会"
+          ],
+          "correct_answer": "我会做饭。",
+          "acceptable_answers": [
+            "我会做饭。",
+            "我会做饭"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_a_009",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "choice",
+          "section": "课文理解",
+          "prompt_cn": "课文一中，刘明今天做什么？",
+          "prompt_en": "In Text 1, what does Liu Ming do today?",
+          "options": [
+            "买饺子",
+            "做电脑",
+            "休息",
+            "下班"
+          ],
+          "correct_answer": "休息",
+          "acceptable_answers": [
+            "休息"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_a_010",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "subjective",
+          "section": "日期输出",
+          "prompt_cn": "教学扩展：用中文写一个日期。",
+          "prompt_en": "Write one date in Chinese. Use 月 and 号.",
+          "answerPlaceholder": "例如：今天9月8号。",
+          "sample_answer": "今天9月8号。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l05_a_011",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "subjective",
+          "section": "能力输出",
+          "prompt_cn": "教学扩展：回答“你会做饭吗？”",
+          "prompt_en": "Answer in Chinese: Can you cook?",
+          "answerPlaceholder": "例如：我会做饭。/ 我不会做饭。",
+          "sample_answer": "我会做饭。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l05_a_012",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "A",
+          "type": "handwriting",
+          "section": "汉字书写",
+          "prompt_cn": "书写本课汉字：今、天、月、号、会",
+          "prompt_en": "Write the characters 今、天、月、号、会.",
+          "characters": [
+            "今",
+            "天",
+            "月",
+            "号",
+            "会"
+          ],
+          "repeat_count": 3,
+          "auto_grade": false,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        }
+      ],
+      "B": [
+        {
+          "id": "hw_l05_b_001",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "choice",
+          "section": "词汇识别",
+          "prompt_cn": "“下班”的意思是：",
+          "prompt_en": "What does 下班 mean?",
+          "options": [
+            "get off work",
+            "cook",
+            "Sunday",
+            "some"
+          ],
+          "correct_answer": "get off work",
+          "acceptable_answers": [
+            "get off work"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_b_002",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "choice",
+          "section": "句型理解",
+          "prompt_cn": "“你会做什么？”是在问什么？",
+          "prompt_en": "What does 你会做什么？ ask?",
+          "options": [
+            "who your teacher is",
+            "today's date",
+            "how old you are",
+            "what you can make"
+          ],
+          "correct_answer": "what you can make",
+          "acceptable_answers": [
+            "what you can make"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_b_003",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "fill_blank",
+          "section": "选词填空",
+          "prompt_cn": "我会做面条儿、___。",
+          "prompt_en": "Fill in the blank.",
+          "options": [
+            "星期",
+            "电脑",
+            "饺子",
+            "今天"
+          ],
+          "correct_answer": "饺子",
+          "acceptable_answers": [
+            "饺子"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_b_004",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "fill_blank",
+          "section": "选词填空",
+          "prompt_cn": "这是我的新___。",
+          "prompt_en": "Fill in the blank.",
+          "options": [
+            "休息",
+            "电脑",
+            "号",
+            "一些"
+          ],
+          "correct_answer": "电脑",
+          "acceptable_answers": [
+            "电脑"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_b_005",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "choice",
+          "section": "语法理解",
+          "prompt_cn": "选择最合适的回答。",
+          "prompt_en": "Choose the best answer.",
+          "options": [
+            "今天星期日。",
+            "今天我休息。",
+            "今天9月8号。",
+            "我会做饭。"
+          ],
+          "correct_answer": "今天9月8号。",
+          "acceptable_answers": [
+            "今天5月1号。"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true,
+          "question": "今天几号？",
+          "options_pinyin": [
+            "jin1 tian1 xing1 qi1 ri4.",
+            "jin1 tian1 wo3 xiu1 xi.",
+            "jin1 tian1 jiu3 yue4 ba1 hao4.",
+            "wo3 hui4 zuo4 fan4."
+          ],
+          "correct_index": 2,
+          "answer": "今天9月8号。",
+          "explanation": "“几号”问日期。"
+        },
+        {
+          "id": "hw_l05_b_006",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "ordering",
+          "section": "连词成句",
+          "prompt_cn": "连词成句：今天 / 我 / 休息",
+          "prompt_en": "Put the words in order.",
+          "tokens": [
+            "休息",
+            "今天",
+            "我"
+          ],
+          "correct_answer": "今天我休息。",
+          "acceptable_answers": [
+            "今天我休息。",
+            "今天我休息"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_b_007",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "ordering",
+          "section": "连词成句",
+          "prompt_cn": "连词成句：你 / 会 / 做 / 什么",
+          "prompt_en": "Put the words in order.",
+          "tokens": [
+            "什么",
+            "你",
+            "做",
+            "会"
+          ],
+          "correct_answer": "你会做什么？",
+          "acceptable_answers": [
+            "你会做什么？",
+            "你会做什么"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_b_008",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "choice",
+          "section": "课文理解",
+          "prompt_cn": "课文三中，杨同乐有什么？",
+          "prompt_en": "In Text 3, what does Yang Tongle have?",
+          "options": [
+            "一些菜",
+            "两个孩子",
+            "新电脑",
+            "一个妹妹"
+          ],
+          "correct_answer": "新电脑",
+          "acceptable_answers": [
+            "新电脑"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_b_009",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "subjective",
+          "section": "日期与星期",
+          "prompt_cn": "教学扩展：写一句话，说今天星期几。",
+          "prompt_en": "Write one Chinese sentence saying what day of the week it is.",
+          "answerPlaceholder": "例如：今天星期日。",
+          "sample_answer": "今天星期日。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l05_b_010",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "subjective",
+          "section": "食物输出",
+          "prompt_cn": "教学扩展：写一句话，说你喜欢什么食物。",
+          "prompt_en": "Write one Chinese sentence about food you like.",
+          "answerPlaceholder": "例如：我喜欢饺子。",
+          "sample_answer": "我喜欢饺子。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l05_b_011",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "subjective",
+          "section": "评价输出",
+          "prompt_cn": "教学扩展：用“真好看”写一句话。",
+          "prompt_en": "Write one Chinese sentence with 真好看.",
+          "answerPlaceholder": "例如：你的电脑真好看！",
+          "sample_answer": "你的电脑真好看！",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l05_b_012",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "B",
+          "type": "handwriting",
+          "section": "汉字书写",
+          "prompt_cn": "书写本课汉字：休、息、做、饭、菜",
+          "prompt_en": "Write the characters 休、息、做、饭、菜.",
+          "characters": [
+            "休",
+            "息",
+            "做",
+            "饭",
+            "菜"
+          ],
+          "repeat_count": 3,
+          "auto_grade": false,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        }
+      ],
+      "C": [
+        {
+          "id": "hw_l05_c_001",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "choice",
+          "section": "综合理解",
+          "prompt_cn": "Choose the correct Chinese: I can make noodles and jiaozi.",
+          "prompt_en": "Choose the correct Chinese sentence.",
+          "options": [
+            "我不会休息。",
+            "我喜欢新电脑。",
+            "今天星期日。",
+            "我会做面条儿和饺子。"
+          ],
+          "correct_answer": "我会做面条儿和饺子。",
+          "acceptable_answers": [
+            "我会做面条儿和饺子。"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_c_002",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "choice",
+          "section": "综合理解",
+          "prompt_cn": "“我也很喜欢它”中的“它”可以指什么？",
+          "prompt_en": "What can 它 refer to in 我也很喜欢它?",
+          "options": [
+            "星期日",
+            "王一雪",
+            "电脑",
+            "今天"
+          ],
+          "correct_answer": "电脑",
+          "acceptable_answers": [
+            "电脑"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_c_003",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "fill_blank",
+          "section": "句子转换",
+          "prompt_cn": "我会做菜。→ 否定句：我___做菜。",
+          "prompt_en": "Change to a negative sentence.",
+          "options": [
+            "没有",
+            "不会",
+            "不是",
+            "不很"
+          ],
+          "correct_answer": "不会",
+          "acceptable_answers": [
+            "不会"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_c_004",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "fill_blank",
+          "section": "综合填空",
+          "prompt_cn": "今天星期天，我___，也做饭。",
+          "prompt_en": "Fill in the blank.",
+          "options": [
+            "一些",
+            "电脑",
+            "几号",
+            "休息"
+          ],
+          "correct_answer": "休息",
+          "acceptable_answers": [
+            "休息"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_c_005",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "ordering",
+          "section": "连词成句",
+          "prompt_cn": "连词成句：我 / 也 / 很 / 喜欢 / 它",
+          "prompt_en": "Put the words in order.",
+          "tokens": [
+            "它",
+            "我",
+            "很",
+            "也",
+            "喜欢"
+          ],
+          "correct_answer": "我也很喜欢它。",
+          "acceptable_answers": [
+            "我也很喜欢它。",
+            "我也很喜欢它"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_c_006",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "ordering",
+          "section": "连词成句",
+          "prompt_cn": "连词成句：星期天 / 我 / 也 / 做饭",
+          "prompt_en": "Put the words in order.",
+          "tokens": [
+            "做饭",
+            "也",
+            "星期天",
+            "我"
+          ],
+          "correct_answer": "星期天我也做饭。",
+          "acceptable_answers": [
+            "星期天我也做饭。",
+            "星期天我也做饭"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_c_007",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "choice",
+          "section": "课文理解",
+          "prompt_cn": "课文二中，杨同乐星期天也做什么？",
+          "prompt_en": "In Text 2, what does Yang Tongle also do on Sundays?",
+          "options": [
+            "买电脑",
+            "下班",
+            "做饭",
+            "问日期"
+          ],
+          "correct_answer": "做饭",
+          "acceptable_answers": [
+            "做饭"
+          ],
+          "auto_grade": true,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l05_c_008",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "subjective",
+          "section": "综合输出",
+          "prompt_cn": "教学扩展：写两句话，说今天几号、星期几。",
+          "prompt_en": "Write two Chinese sentences: the date and the day of the week.",
+          "answerPlaceholder": "例如：今天9月8号。今天星期日。",
+          "sample_answer": "今天9月8号。今天星期日。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l05_c_009",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "subjective",
+          "section": "能力输出",
+          "prompt_cn": "教学扩展：写两句话，说你会做什么、不会做什么。",
+          "prompt_en": "Write two Chinese sentences: what you can and cannot do.",
+          "answerPlaceholder": "例如：我会做面条儿。我不会做菜。",
+          "sample_answer": "我会做面条儿。我不会做菜。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l05_c_010",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "subjective",
+          "section": "情景对话",
+          "prompt_cn": "教学扩展：写一个两轮小对话，包含“会做饭吗”。",
+          "prompt_en": "Write a short two-turn dialogue using 会做饭吗.",
+          "answerPlaceholder": "A：你会做饭吗？ B：我会做。",
+          "sample_answer": "A：你会做饭吗？ B：我会做。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l05_c_011",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "subjective",
+          "section": "评价输出",
+          "prompt_cn": "教学扩展：写一句话评价一个东西，并说你喜欢它。",
+          "prompt_en": "Write one Chinese sentence praising something and saying you like it.",
+          "answerPlaceholder": "例如：这个电脑真好看，我喜欢它。",
+          "sample_answer": "这个电脑真好看，我喜欢它。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l05_c_012",
+          "lesson": "HSK1-L05",
+          "stage": "post_class",
+          "tier": "C",
+          "type": "handwriting",
+          "section": "汉字书写",
+          "prompt_cn": "书写本课汉字：新、电、脑、喜、欢、它",
+          "prompt_en": "Write the characters 新、电、脑、喜、欢、它.",
+          "characters": [
+            "新",
+            "电",
+            "脑",
+            "喜",
+            "欢",
+            "它"
+          ],
+          "repeat_count": 3,
+          "auto_grade": false,
+          "needs_teacher_review": false,
+          "repeat_ok": true
+        }
+      ]
+    },
+    "assignmentSelection": {
+      "A": [
+        "hw_l05_a_001",
+        "hw_l05_a_002",
+        "hw_l05_a_003",
+        "hw_l05_a_004",
+        "hw_l05_a_005",
+        "hw_l05_a_006",
+        "hw_l05_a_007",
+        "hw_l05_a_008",
+        "hw_l05_a_009",
+        "hw_l05_a_010",
+        "hw_l05_a_011",
+        "hw_l05_a_012"
+      ],
+      "B": [
+        "hw_l05_b_001",
+        "hw_l05_b_002",
+        "hw_l05_b_003",
+        "hw_l05_b_004",
+        "hw_l05_b_005",
+        "hw_l05_b_006",
+        "hw_l05_b_007",
+        "hw_l05_b_008",
+        "hw_l05_b_009",
+        "hw_l05_b_010",
+        "hw_l05_b_011",
+        "hw_l05_b_012"
+      ],
+      "C": [
+        "hw_l05_c_001",
+        "hw_l05_c_002",
+        "hw_l05_c_003",
+        "hw_l05_c_004",
+        "hw_l05_c_005",
+        "hw_l05_c_006",
+        "hw_l05_c_007",
+        "hw_l05_c_008",
+        "hw_l05_c_009",
+        "hw_l05_c_010",
+        "hw_l05_c_011",
+        "hw_l05_c_012"
+      ]
+    },
+    "reviewPolicy": {
+      "maxAttempts": 2,
+      "showLatestOnly": true,
+      "archiveReviewed": true,
+      "auto_grade_types": [
+        "choice",
+        "fill_blank",
+        "ordering"
+      ],
+      "teacher_review_types": [
+        "subjective",
+        "output"
+      ],
+      "practice_types": [
+        "handwriting"
+      ]
+    }
+  },
+  "report": {
+    "lessonFocus": [
+      "日期表达",
+      "星期表达",
+      "会 + 动词",
+      "名词谓语句",
+      "评价与喜欢"
+    ],
+    "reviewFields": [
+      "词汇",
+      "日期/星期",
+      "能力表达",
+      "课文理解",
+      "课后输出"
+    ],
+    "weakPointLabels": {
+      "date": "日期表达",
+      "weekday": "星期表达",
+      "ability": "会 + 动词",
+      "nominalPredicate": "名词谓语句",
+      "preference": "喜欢/它"
+    }
+  }
+}

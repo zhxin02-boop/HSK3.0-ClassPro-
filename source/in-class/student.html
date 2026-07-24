@@ -220,5 +220,27 @@ client.on("close",function(){setStatus("disconnected")});
   var oldRender=render;render=function(){if(current&&current.mode==='hrec'){renderHrec();return}oldRender()};
 })();
 </script>
+<script>
+/* L05 feedback pass: show sentence-transformation pinyin above each character. */
+(function(){
+  function rubyLine(text,pinyin,size){
+    var syl=String(pinyin||'').replace(/[.,!?;:，。？！；：]/g,' ').split(/\s+/).filter(Boolean),si=0;
+    return Array.from(String(text||'')).map(function(ch){
+      if(/[\s，。？！；：,.!?;:]/.test(ch))return '<span>'+es(ch)+'</span>';
+      var rt=syl[si++]||'';
+      return '<ruby style="display:inline-flex;flex-direction:column-reverse;align-items:center;margin:0 2px;font-size:'+(size||24)+'px;line-height:1.15"><rt style="font-size:11px;color:#78836f;font-weight:700;line-height:1.1">'+es(rt)+'</rt><span>'+es(ch)+'</span></ruby>';
+    }).join('');
+  }
+  var prevRender=render;
+  render=function(){
+    if(!current||current.mode!=='v4'){prevRender();return}
+    var q=current.question||{},d=qdata(),h='<div class="prompt">'+es(q.prompt_cn||'')+'<br><span class="english">'+es(q.prompt_en||'')+'</span></div>';
+    h+='<div class="hint"><div class="muted">Transform the sentence.</div><div class="hanzi">'+rubyLine(d.source_sentence||d.template||'',d.source_pinyin||d.template_pinyin||'',26)+'</div></div><div class="options">';
+    (d.options||[]).forEach(function(o,i){var sel=selected===i,opy=(d.options_pinyin||[])[i]||py(o);h+='<button class="option '+(sel?'sel':'')+'" onclick="pick('+i+')" style="min-width:210px;transform:none">'+rubyLine(o,opy,20)+'</button>'});
+    h+='</div><button style="width:100%;margin-top:16px" onclick="submitChoice()" '+(selected==null?'disabled':'')+'>提交 Submit</button>';
+    document.getElementById('app').innerHTML=h;
+  };
+})();
+</script>
 </body>
 </html>
