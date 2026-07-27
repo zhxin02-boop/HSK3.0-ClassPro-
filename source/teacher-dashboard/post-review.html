@@ -118,14 +118,15 @@ function inferredModule(x){
   if(totalOf(x)===0&&normResult(resultOf(x))==="submitted")return"output";
   return "";
 }
+function isReviewModule(m){m=String(m||"");return m==="output"||m==="subjective"||m==="handwriting"}
 function needsReview(x){
-  var m=inferredModule(x),st=String(statusOf(x)||""),nr=String(fuzzy(x,["needsReview","openEnded"],["needsReview","openEnded"]));
+  var m=inferredModule(x),st=String(statusOf(x)||""),nr=String(fuzzy(x,["needsReview","needs_teacher_review","needsTeacherReview","openEnded"],["needsReview","needs_teacher_review","needsTeacherReview","openEnded"])).toLowerCase();
   var feedback=String(fuzzy(x,["教师批改","teacherFeedback","correction"],["批改","feedback","correction"])||"");
   if(st.indexOf("已批改")>=0||st.indexOf("宸叉壒")>=0||st.toLowerCase()==="reviewed"||feedback.trim())return false;
   var sk=stageKey(x),ml=String(m||"");
   if(m==="homework_summary")return false;
-  if(sk==="pre"&&(ml.indexOf("造句")>=0||ml.indexOf("开放")>=0||ml==="output"||ml==="handwriting"))return true;
-  return m==="output"||m==="handwriting"||nr==="true"||nr==="yes"||st.indexOf("待")>=0;
+  if(sk==="pre"&&(ml.indexOf("造句")>=0||ml.indexOf("开放")>=0||isReviewModule(ml)))return true;
+  return isReviewModule(m)||nr==="true"||nr==="yes"||st.indexOf("待")>=0;
 }
 // 课前主观题统一按 openEnded 标记进入批改队列，避免依赖课程模块名称。
 (function(){
@@ -199,7 +200,7 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
     var latest={},others=[];
     rows.forEach(function(r){
       var stage=stageKey(r),m=inferredModule(r),qid=String(qidOf(r)||"");
-      if(stage!=="post"||!(m==="output"||m==="handwriting")||!qid){others.push(r);return}
+      if(stage!=="post"||!needsReview(r)||!qid){others.push(r);return}
       var key=String(studentOf(r)||"")+"|"+qid,old=latest[key];
       if(!old||new Date(timeOf(r)).getTime()>=new Date(timeOf(old)).getTime())latest[key]=r;
     });

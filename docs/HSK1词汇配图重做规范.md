@@ -86,7 +86,49 @@ Square composition for a vocabulary flashcard.
 text, letters, Chinese characters, pinyin, English words, watermark, logo, dark background, complex scene, crowded people, blurry, cropped face, abstract symbols, dramatic lighting
 ```
 
-## 五、HSK1-L02 配图建议
+## 五、后续课程的高效配图流程
+
+从 HSK1-L05 开始，配图不要按“每个生词单独生一张图”的方式推进。先做视觉复用清单，再生成图片，再把路径写回课程数据。
+
+推荐流程：
+
+1. 先把本课生词分成三类：
+   - 必须配图：图片猜词题的正确答案、具体名词、动作词、课堂一眼可识别的情景词。
+   - 可复用配图：同义/近义日期词、同一场景中的动作和物品、抽象词在情景图中呈现。
+   - 暂不配图：太抽象、单独成图会误导学生的虚词、助词、结构词。
+2. 每课先写一张 `image plan` 表，字段建议包括：`word`、`meaning`、`reuseGroup`、`imagePath`、`prompt`、`usedBy`、`status`。
+3. 图片猜词优先复用词汇表里的 `image` 字段。课程数据适配层会把词汇 `image` 自动传给 `v1_image_guess`，因此不要在 10 道图片猜词里重复维护图片路径。
+4. 同一课图片风格、尺寸和命名必须统一。建议路径：
+
+```text
+source/in-class/images/vocab/hsk1-l05/
+  v01_today_calendar.png
+  v02_date_calendar.png
+  v03_month_calendar.png
+  v06_sunday_calendar.png
+  v08_rest_home.png
+  v10_cook_meal.png
+  v12_noodles.png
+  v13_dumplings.png
+  v16_computer.png
+  v21_like_object.png
+```
+
+5. L05 可复用建议：
+   - `今天 / 号 / 月 / 日`：可用日历类图片，其中图片猜词可按题目目标选择不同裁切或不同日期重点。
+   - `星期日 / 星期天`：共用“周日被标记的周历”图片，但题目中要避免两个选项同时可作为正确答案。
+   - `做 / 做饭`：优先给“做饭”配图，`做` 如需展示可复用动作场景。
+   - `面条儿 / 饺子`：分别独立配图，避免食物类题目答案不唯一。
+   - `电脑 / 新 / 好看 / 喜欢 / 它`：可以用“一个新电脑，学生喜欢它”的情景图复用，但图片猜词如果目标是 `喜欢`，选项干扰必须避免 `好看`、`新` 同时成立。
+6. 生图前先完成图片清单和路径占位；生图后只替换实际文件，不改题型逻辑。上线前用验证脚本检查 `v1_image_guess` 的每道题是否最终能读到 `media.image`。
+
+通用批量提示词可以在原模板基础上补充：
+
+```text
+Use the same visual style as the other HSK1 lesson images. Make the target meaning clear for a beginner without any written text. The image will be used both as a vocabulary flashcard and a picture-guess question, so avoid adding extra objects that could match another answer choice.
+```
+
+## 六、HSK1-L02 配图建议
 
 | id | 词语 | 当前判断 | 推荐画面 | 生成提示词重点 |
 |---|---|---|---|---|
@@ -100,7 +142,7 @@ text, letters, Chinese characters, pinyin, English words, watermark, logo, dark 
 | v08 | 认识 | 初次认识/见面 | 两个学生第一次见面，微笑握手或互相打招呼 | “meeting for the first time”, “nice to meet you” |
 | v09 | 也 | 抽象词，建议用“我也”情境 | 两个学生都举手或都拿着同样物品，第二个学生表示“我也” | “also too”, “two students doing the same action” |
 
-## 六、逐词推荐英文提示词
+## 七、逐词推荐英文提示词
 
 ### v01 不
 
@@ -156,7 +198,7 @@ Create a clear educational illustration for HSK1 beginner Chinese learners. Targ
 Create a clear educational illustration for HSK1 beginner Chinese learners. Target word: "也" meaning "also / too". Show two students doing the same simple action, such as both raising their hands happily or both holding the same book, with the second student clearly joining in too. Simple light classroom background, square composition. No text, no Chinese characters, no pinyin, no English words, no logos, no watermark.
 ```
 
-## 七、验收标准
+## 八、验收标准
 
 每张图通过以下检查才进入样课：
 
@@ -167,7 +209,7 @@ Create a clear educational illustration for HSK1 beginner Chinese learners. Targ
 - 与 HSK1-L02 课堂语境一致。
 - 同一课图片风格统一。
 
-## 八、进入代码的建议
+## 九、进入代码的建议
 
 短期：
 

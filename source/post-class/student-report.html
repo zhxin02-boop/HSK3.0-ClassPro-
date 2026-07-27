@@ -113,7 +113,9 @@ function parseMaybeJson(s){try{return JSON.parse(s||"")}catch(e){return null}}
 function renderStudentOptions(){var el=document.getElementById("studentName"),saved="";try{saved=localStorage.getItem("ClassProStudentName")||""}catch(e){}el.innerHTML='<option value="">Select your name / 选择姓名</option>'+(window.CLASS_STUDENTS||[]).map(function(n){return'<option value="'+esc(n)+'">'+esc(n)+'</option>'}).join("");if(saved&&(window.CLASS_STUDENTS||[]).indexOf(saved)>=0)el.value=saved}
 function saveStudentName(){try{localStorage.setItem("ClassProStudentName",getStudentName())}catch(e){}}
 function progressParts(){return[window.ClassProContext.read().lesson,"post_class",currentTier,getStudentName()||"anonymous"]}
-function shuffleArray(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),x=a[i];a[i]=a[j];a[j]=x}return a}function taskPool(tier){var hw=window.LESSON_DATA&&window.LESSON_DATA.postClassHomework;if(!hw)return[];var s=(hw.shared_pool||[]).slice(),t=(hw.tier_pools&&hw.tier_pools[tier]||[]).slice(),all=s.concat(t),selected=hw.assignment_selection&&hw.assignment_selection[tier],items=all;if(Array.isArray(selected)&&selected.length){var byId={};all.forEach(function(q){byId[q.id]=q});items=selected.map(function(id){return byId[id]}).filter(Boolean)}return items.map(function(q){var x=Object.assign({},q);if(x.options)x.options=shuffleArray(x.options.slice());return x})}
+function shuffleArray(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),x=a[i];a[i]=a[j];a[j]=x}return a}
+function needsTeacherReviewQuestion(q){if(!q)return false;var flag=q.needs_teacher_review!=null?q.needs_teacher_review:q.needsTeacherReview;return flag===true||flag==="true"||flag==="yes"||q.type==="output"||q.type==="subjective"||q.type==="handwriting"}
+function taskPool(tier){var hw=window.LESSON_DATA&&window.LESSON_DATA.postClassHomework;if(!hw)return[];var s=(hw.shared_pool||[]).slice(),t=(hw.tier_pools&&hw.tier_pools[tier]||[]).slice(),all=s.concat(t),selected=hw.assignment_selection&&hw.assignment_selection[tier],items=all;if(Array.isArray(selected)&&selected.length){var byId={};all.forEach(function(q){byId[q.id]=q});items=selected.map(function(id){return byId[id]}).filter(Boolean)}return items.map(function(q){var x=Object.assign({},q);if(x.options)x.options=shuffleArray(x.options.slice());return x})}
 function typeName(t){return{choice:"选择",fill_blank:"填空",ordering:"排序",output:"输出",subjective:"主观题",handwriting:"书写"}[t]||t}
 function renderTask(q,i){
   var h='<div class="task" id="task_'+esc(q.id)+'"><div><span class="tag">'+typeName(q.type)+'</span></div><div>';
@@ -139,7 +141,7 @@ function setTier(tier,manual){
   currentTier=tier;if(manual){tierLocked=true;document.getElementById("tierRecommendation").textContent="当前档位 / Current: "+tier+"（已手动调整 / Manual）"}selectedAnswers={};writingStrokes={};submitted=false;
   var hw=window.LESSON_DATA&&window.LESSON_DATA.postClassHomework;if(!hw){document.getElementById("tasks").innerHTML='<div class="hint">没有读取到作业池。</div>';return}
   ["A","B","C"].forEach(function(t){document.getElementById("btn"+t).classList.toggle("active",t===tier)});
-  currentItems=taskPool(tier);var meta=hw.tiers[tier],review=currentItems.filter(function(q){return q.needs_teacher_review||q.type==="handwriting"}).length,auto=currentItems.length-review;
+  currentItems=taskPool(tier);var meta=hw.tiers[tier],review=currentItems.filter(needsTeacherReviewQuestion).length,auto=currentItems.length-review;
   document.getElementById("taskCount").textContent=currentItems.length;document.getElementById("autoCount").textContent=auto;document.getElementById("reviewCount").textContent=review;document.getElementById("minutes").textContent=(meta.suggested_minutes||"").replace("分钟左右","").replace("分钟","");
   var b=document.getElementById("tierBadge");b.textContent=tier;b.className="tier "+tier.toLowerCase();document.getElementById("tierTitle").textContent=meta.label;document.getElementById("tierGoal").textContent=meta.goal;document.getElementById("tierMix").textContent=meta.suggested_mix;
   document.getElementById("tasks").innerHTML=currentItems.map(renderTask).join("");setTimeout(function(){initWritingCanvases();bindProgressEvents();if(studentConfirmed)restoreProgress()},0);
@@ -161,7 +163,7 @@ function initWritingCanvases(){document.querySelectorAll(".write-canvas").forEac
 function clearHandwriting(qid){document.querySelectorAll('.write-canvas[data-qid="'+qid+'"]').forEach(function(c){writingStrokes[c.dataset.qid+"|"+c.dataset.char+"|"+c.dataset.cell]=[];gridCanvas(c)});saveProgressSoon()}
 function answerOf(q){if(q.type==="choice")return selectedAnswers[q.id]||"";var el=document.getElementById("ans_"+q.id);return el?el.value.trim():""}
 function handwritingAnswer(q){var cells=[].slice.call(document.querySelectorAll('.write-canvas[data-qid="'+q.id+'"]')).map(function(c){var key=c.dataset.qid+"|"+c.dataset.char+"|"+c.dataset.cell;return{char:c.dataset.char,cell:Number(c.dataset.cell),strokes:writingStrokes[key]||[]}});return JSON.stringify({type:"handwriting",questionId:q.id,tier:currentTier,submittedAt:new Date().toISOString(),cells:cells})}
-function grade(q,ans){if(q.type==="output"||q.type==="handwriting")return{score:0,total:0,result:"submitted"};var ok=(q.acceptable_answers||[q.correct_answer]).some(function(a){return norm(a)===norm(ans)});return{score:ok?1:0,total:1,result:ok?"correct":"wrong"}}
+function grade(q,ans){if(needsTeacherReviewQuestion(q))return{score:0,total:0,result:"submitted"};var ok=(q.acceptable_answers||[q.correct_answer]).some(function(a){return norm(a)===norm(ans)});return{score:ok?1:0,total:1,result:ok?"correct":"wrong"}}
 function correctText(q){return (q.acceptable_answers||[q.correct_answer]).filter(Boolean).join(" / ")}
 function collectProgress(extra){var textAnswers={};currentItems.forEach(function(q){if(q.type!=="choice"&&q.type!=="handwriting")textAnswers[q.id]=answerOf(q)});return Object.assign({tier:currentTier,studentName:getStudentName(),selectedAnswers:selectedAnswers,textAnswers:textAnswers,writingStrokes:writingStrokes,submitted:submitted},extra||{})}
 function saveProgressSoon(){if(restoring||!studentConfirmed)return;clearTimeout(saveTimer);saveTimer=setTimeout(function(){if(window.ClassProShared&&ClassProShared.saveProgress)ClassProShared.saveProgress(progressParts(),collectProgress())},250)}
@@ -181,15 +183,15 @@ function submitAllHomework(){
   var name=getStudentName();if(!name){alert("请先填写姓名");return}
   var now=new Date().toISOString(),correct=0,total=0,pending=0,records=[];
   currentItems.forEach(function(q){
-    var ans=q.type==="handwriting"?handwritingAnswer(q):answerOf(q),g=grade(q,ans),needs=q.type==="output"||q.type==="handwriting";
+    var ans=q.type==="handwriting"?handwritingAnswer(q):answerOf(q),g=grade(q,ans),needs=needsTeacherReviewQuestion(q);
     if(g.total){total+=g.total;correct+=g.score} if(needs)pending++;
     var res=document.getElementById("res_"+q.id);if(res){res.className="result "+(g.result==="correct"?"ok":g.result==="wrong"?"bad":"wait");res.textContent=g.result==="correct"?"正确":g.result==="wrong"?"错误。正确答案："+correctText(q):"已提交，等待老师查看/批改"}
     records.push({lesson:window.ClassProContext.read().lesson,room:window.ClassProContext.read().room,stage:"post_class",module:q.type,mode:q.type,questionId:q.id,studentName:name,score:g.score,total:g.total,points:g.score,result:g.result,needsReview:needs,openEnded:needs?"yes":"no",weakPoints:q.tags?(q.tags.join(",")):"",answer:ans,questionText:q.question||q.prompt||q.task||q.instruction||q.type,submittedAt:now});
   });
   records.push({lesson:window.ClassProContext.read().lesson,room:window.ClassProContext.read().room,stage:"post_class",module:"homework_summary",mode:"homework_summary",questionId:"homework_"+currentTier,studentName:name,score:correct,total:total,points:correct,result:"submitted",needsReview:pending>0,weakPoints:"",answer:JSON.stringify({tier:currentTier,taskCount:currentItems.length,objectiveCorrect:correct,objectiveTotal:total,pendingReview:pending}),submittedAt:now});
   document.getElementById("submitStatus").textContent="正在提交 "+records.length+" 条记录...";
-  var important=records.filter(function(r){return r.module==="output"||r.module==="handwriting"||r.module==="homework_summary"});
-  var normal=records.filter(function(r){return !(r.module==="output"||r.module==="handwriting"||r.module==="homework_summary")});
+  var important=records.filter(function(r){return r.needsReview||r.module==="homework_summary"});
+  var normal=records.filter(function(r){return !r.needsReview&&r.module!=="homework_summary"});
   important.reduce(function(p,r){return p.then(function(){return postRecord(r)})},Promise.resolve())
     .then(function(){return Promise.all(normal.map(postRecord))})
     .then(function(){submitted=true;if(window.ClassProShared&&ClassProShared.saveProgress)ClassProShared.saveProgress(progressParts(),collectProgress({submitted:true,submittedAt:now,objectiveCorrect:correct,objectiveTotal:total,pendingReview:pending}));document.getElementById("submitStatus").textContent="已提交。客观题正确率："+(total?Math.round(correct/total*100):0)+"%，待老师查看/批改："+pending+"题。";loadClassReport()})

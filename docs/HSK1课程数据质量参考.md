@@ -109,7 +109,11 @@
 ## 13. 数据记录与批改链路
 
 - 课前主观题、课后输出题和汉字书写都应进入统一待批改工作台。
-- 批改台不能依赖固定模块名称判断是否需要批改，应优先使用 `openEnded`、`needsTeacherReview`、`needs_review` 等标记。
+- 批改台不能依赖固定模块名称判断是否需要批改，应优先使用 `openEnded`、`needsTeacherReview`、`needs_teacher_review`、`needsReview`、`needs_review` 等标记。
+- 课后主观题可以使用 `type: "subjective"`，不能要求数据全部改成 `output` 才能进入批改台；提交端、数据面板、批改台必须把 `subjective/output/handwriting` 和教师批改标记按同一口径处理。
+- 数据面板显示“待批改”而批改台为空时，优先检查三个位置是否口径一致：学生提交时的 `needsReview/openEnded`、数据面板的待批改统计、批改台的待批改筛选和最后一次提交过滤。
+- `homework_summary` 只用于统计和提交次数判断，不应作为一条可批改任务进入批改台；但其中的 `pendingReview` 应和实际待批改题数一致。
+- 批改台“只显示最后一次提交”必须按 `student + lesson + questionId` 去重，且适用于所有需批改题型，不能只对 `output/handwriting` 生效。
 - 批改完成后，学生端必须能读取教师反馈。
 - 数据面板、课后报告、批改台字段必须统一。
 
