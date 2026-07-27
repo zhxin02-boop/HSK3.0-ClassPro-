@@ -157,11 +157,21 @@ var srv = http.createServer(function(req, res) {
     parseBody(req, function(body) {
       var rows = readLearningRecords();
       var target = new Date(body && body.timestamp || "").getTime();
+      var targetQuestion = String(body && body.questionId || "");
+      var targetModule = String(body && body.module || "");
+      var targetLesson = String(body && body.lesson || "");
       var found = false;
       rows.forEach(function(x) {
         var student = String(x.studentName || x.姓名 || x.name || "");
+        var lesson = String(x.lesson || x.课程 || x.lessonKey || "");
+        var question = String(x.questionId || x.题号 || "");
+        var module = String(x.module || x.mode || x.模块 || "");
         var stamp = new Date(x.submittedAt || x.receivedAt || x.timestamp || "").getTime();
-        if (!found && student === String(body.studentName || "") && (!isNaN(target) && !isNaN(stamp) ? Math.abs(target - stamp) < 5000 : false)) {
+        var sameTime = !isNaN(target) && !isNaN(stamp) ? Math.abs(target - stamp) < 5000 : false;
+        var sameQuestion = !targetQuestion || question === targetQuestion;
+        var sameModule = !targetModule || module === targetModule;
+        var sameLesson = !targetLesson || lesson === targetLesson;
+        if (!found && student === String(body.studentName || "") && sameLesson && sameQuestion && sameModule && sameTime) {
           x.correction = body.correction || "已查看。";
           x.teacherFeedback = x.correction;
           x.status = "已批改";

@@ -85,9 +85,14 @@ function updateReview_(ss, d, score, correction, status) {
   if (!sheet) return json_({ status: "error", message: "lesson sheet not found" });
   var rows = sheet.getDataRange().getValues();
   var targetTs = new Date(d.timestamp).getTime();
+  var targetQuestion = String(d.questionId || "");
+  var targetModule = String(d.module || d.mode || "");
   for (var i = 1; i < rows.length; i++) {
     var rowTs = rows[i][0] instanceof Date ? rows[i][0].getTime() : new Date(rows[i][0]).getTime();
-    if (Math.abs(rowTs - targetTs) < 3000 && rows[i][1] === d.studentName) {
+    var sameTime = Math.abs(rowTs - targetTs) < 3000;
+    var sameQuestion = !targetQuestion || String(rows[i][5] || "") === targetQuestion;
+    var sameModule = !targetModule || String(rows[i][4] || "") === targetModule;
+    if (sameTime && sameQuestion && sameModule && rows[i][1] === d.studentName) {
       if (score !== "") sheet.getRange(i + 1, 7).setValue(score);
       sheet.getRange(i + 1, 16).setValue(correction);
       sheet.getRange(i + 1, 17).setValue(status);
