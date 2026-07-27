@@ -171,7 +171,7 @@ function needsReview(x){
 })();
 function loadData(){
   document.getElementById("status").textContent="正在读取...";
-  var local=location.hostname==='localhost'||location.hostname==='127.0.0.1';var dataUrl=local?"/api/reviews":GAS+"?action=get_all";
+  var local=location.hostname==='localhost'||location.hostname==='127.0.0.1';var dataUrl=local?"/api/reviews?source=local":GAS+"?action=get_all";
   fetch(dataUrl).then(function(r){return r.json()}).then(function(d){
     var rows=[];if(d&&Array.isArray(d.data)){rows=d.data.slice()}else if(d&&d.data){for(var k in d.data){(d.data[k]||[]).forEach(function(x){rows.push(x)})}}
     records=rows.filter(function(x){var lesson=lessonOf(x),key=stageKey(x);return lessonInScope(lesson)&&(key==="pre"||key==="post"||needsReview(x))});
@@ -218,8 +218,12 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
 <script>
 (function(){
   var oldSaveReview=window.saveReview,oldSaveStudentReviews=window.saveStudentReviews;
-  window.saveReview=function(){oldSaveReview.apply(this,arguments);setTimeout(loadData,1200)};
-  window.saveStudentReviews=function(){oldSaveStudentReviews.apply(this,arguments);setTimeout(loadData,1500)};
+  if(typeof oldSaveReview==="function"){
+    window.saveReview=function(){oldSaveReview.apply(this,arguments);setTimeout(loadData,1200)};
+  }
+  if(typeof oldSaveStudentReviews==="function"){
+    window.saveStudentReviews=function(){oldSaveStudentReviews.apply(this,arguments);setTimeout(loadData,1500)};
+  }
 })();
 </script>
 <script>
@@ -235,15 +239,18 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
     Object.keys(latest).forEach(function(k){others.push(latest[k])});
     return others;
   }
-  var oldRender=render;
-  render=function(){records=latestReviewRows(records);oldRender()};
+  if(typeof window.render==="function"){
+    var oldRender=window.render;
+    window.render=function(){records=latestReviewRows(records);oldRender()};
+  }
 })();
 </script>
 <script>
 // 批改台字段兼容：反馈/状态等字段在部分 GAS 返回中只存在于 __values。
 (function(){
-  var oldFuzzy=fuzzy,idx={timestamp:0,提交时间:0,studentName:1,姓名:1,lesson:2,课程:2,stage:3,环节:3,module:4,模块:4,questionId:5,题号:5,score:6,得分:6,total:7,总分:7,answer:13,学生作答:13,result:14,结果:14,teacherFeedback:15,教师批改:15,status:16,批改状态:16};
-  fuzzy=function(o,keys,contains){
+  if(typeof window.fuzzy!=="function")return;
+  var oldFuzzy=window.fuzzy,idx={timestamp:0,提交时间:0,studentName:1,姓名:1,lesson:2,课程:2,stage:3,环节:3,module:4,模块:4,questionId:5,题号:5,score:6,得分:6,total:7,总分:7,answer:13,学生作答:13,result:14,结果:14,teacherFeedback:15,教师批改:15,status:16,批改状态:16};
+  window.fuzzy=function(o,keys,contains){
     var v=oldFuzzy(o,keys,contains);if(v!==''&&v!=null)return v;
     if(o&&Array.isArray(o.__values))for(var i=0;i<keys.length;i++){var n=idx[keys[i]];if(n!=null&&o.__values[n]!==''&&o.__values[n]!=null)return o.__values[n]}
     return '';

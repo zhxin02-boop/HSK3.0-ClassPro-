@@ -109,12 +109,15 @@ var srv = http.createServer(function(req, res) {
   // Proxy: fetch reviews from GAS
   if (method === "GET" && url === "/api/reviews") {
     var gasUrl = 'https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec';
-    var name = decodeURIComponent((req.url.split("?")[1]||"").replace(/name=/,""));
+    var query = new URL(req.url, "http://localhost").searchParams;
+    var name = query.get("name") || "";
+    var source = query.get("source") || "";
     var allLocalRows = readLearningRecords();
     var localRows = allLocalRows.filter(function(x){return !name || String(x.姓名||x.studentName||x.name||"")===String(name)});
     var replied = false;
     function reply(status, payload) { if (replied) return; replied = true; json(res, status, payload); }
     function localFallback() { reply(200, {status:"ok", source:"local", data:localRows}); }
+    if (source === "local") { localFallback(); return; }
     var https = require("https");
     https.get(gasUrl + "?action=get_all", function(gres) {
       var d = "";
