@@ -48,7 +48,7 @@ textarea{width:100%;min-height:78px;border:1px solid #d8e4bf;border-radius:12px;
 
 <script>
 var GAS="https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec";
-var params=new URLSearchParams(location.search||""),ctx=window.ClassProContext.read(),LESSON=ctx.lesson,LESSON_SCOPE=(params.get("scope")||params.get("lesson")||"HSK1-L01-L03"),records=[],reviewQueue={},reviewRowsById={};
+var params=new URLSearchParams(location.search||""),ctx=window.ClassProContext.read(),LESSON=ctx.lesson,LESSON_SCOPE=(params.get("scope")||params.get("lesson")||"HSK1-L01-L03"),records=[],reviewQueue={},reviewRowsById={},hiddenReviewRows=0;
 function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 function val(o,keys){for(var i=0;i<keys.length;i++){if(o&&o[keys[i]]!=null&&o[keys[i]]!=="")return o[keys[i]]}return""}
 function fuzzy(o,keys,contains){var v=val(o,keys);if(v!=="")return v;var ks=Object.keys(o||{});for(var i=0;i<ks.length;i++){for(var j=0;j<contains.length;j++){if(ks[i].indexOf(contains[j])>=0&&o[ks[i]]!=null&&o[ks[i]]!=="")return o[ks[i]]}}return""}
@@ -182,7 +182,7 @@ function loadData(){
 }
 function grouped(){var g={};records.filter(needsReview).forEach(function(r){var n=studentOf(r)||"未命名";(g[n]=g[n]||[]).push(r)});return g}
 function stats(rows){var score=0,total=0,pending=0,hand=0;rows.forEach(function(r){var m=inferredModule(r);if(needsReview(r))pending++;if(m==="handwriting")hand++;var t=totalOf(r);if(t>0){score+=scoreOf(r);total+=t}});return{score:score,total:total,acc:total?Math.round(score/total*100):0,pending:pending,handwriting:hand}}
-function render(){populateLessonScope();reviewRowsById={};var g=grouped(),names=Object.keys(g).sort(),pre=records.filter(function(x){return needsReview(x)&&stageKey(x)==="pre"}).length,post=records.filter(function(x){return needsReview(x)&&stageKey(x)==="post"}).length;var summary='<div class="review-summary"><div><b>'+ (pre+post) +'</b><span>待批改总数 / Total</span></div><div><b>'+pre+'</b><span>课前 / Pre-class</span></div><div><b>'+post+'</b><span>课后 / Post-class</span></div></div>';if(!names.length){document.getElementById("app").innerHTML=summary+'<div class="empty">暂无待批改句子或书写题。</div>';return}document.getElementById("app").innerHTML=summary+names.map(function(n){return renderStudent(n,g[n])}).join("");setTimeout(drawAllHandwriting,0)}
+function render(){populateLessonScope();reviewRowsById={};var g=grouped(),names=Object.keys(g).sort(),pre=records.filter(function(x){return needsReview(x)&&stageKey(x)==="pre"}).length,post=records.filter(function(x){return needsReview(x)&&stageKey(x)==="post"}).length;var note=hiddenReviewRows?'<div class="small" style="margin:-6px 0 12px">已按“最后一次提交”显示，隐藏旧提交 '+hiddenReviewRows+' 条。</div>':'';var summary='<div class="review-summary"><div><b>'+ (pre+post) +'</b><span>待批改总数 / Total</span></div><div><b>'+pre+'</b><span>课前 / Pre-class</span></div><div><b>'+post+'</b><span>课后 / Post-class</span></div></div>'+note;if(!names.length){document.getElementById("app").innerHTML=summary+'<div class="empty">暂无待批改句子或书写题。</div>';return}document.getElementById("app").innerHTML=summary+names.map(function(n){return renderStudent(n,g[n])}).join("");setTimeout(drawAllHandwriting,0)}
 function renderStudent(name,rows){
   var pre=rows.filter(function(r){return stageKey(r)==="pre"}),post=rows.filter(function(r){return stageKey(r)==="post"}),hand=rows.filter(function(r){return inferredModule(r)==="handwriting"});
   return '<div class="student"><h2 style="margin:0 0 8px;color:#315b29">'+esc(name)+'</h2>'+
@@ -233,10 +233,11 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
     rows.forEach(function(r){
       var stage=stageKey(r),m=inferredModule(r),qid=String(qidOf(r)||"");
       if(stage!=="post"||!needsReview(r)||!qid){others.push(r);return}
-      var key=String(studentOf(r)||"")+"|"+qid,old=latest[key];
+      var key=[lessonOf(r)||LESSON,studentOf(r)||"",m||"",qid].join("|"),old=latest[key];
       if(!old||new Date(timeOf(r)).getTime()>=new Date(timeOf(old)).getTime())latest[key]=r;
     });
     Object.keys(latest).forEach(function(k){others.push(latest[k])});
+    hiddenReviewRows=rows.length-others.length;
     return others;
   }
   if(typeof window.render==="function"){
