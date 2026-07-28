@@ -393,35 +393,76 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
 (function(){
   var studentRender=render,questionReviewGroups={};
   function reviewAppNode(){return document.getElementById("app")||{innerHTML:""}}
+  function qVal(x,keys,index){for(var i=0;i<keys.length;i++){if(x&&x[keys[i]]!=null&&x[keys[i]]!=="")return x[keys[i]]}if(x&&Array.isArray(x.__values)&&index!=null&&x.__values[index]!=null)return x.__values[index];return""}
+  function qAttemptTimeOf(x){return qVal(x,["originalSubmittedAt","submittedAt","原始提交时间"],19)||timeOf(x)}
   function layoutMode(){try{return localStorage.getItem("classpro_review_layout")||"question"}catch(e){return"question"}}
   function setLayout(mode){try{localStorage.setItem("classpro_review_layout",mode)}catch(e){}render()}
+  function reviewFilter(){try{return localStorage.getItem("classpro_review_filter")||"all"}catch(e){return"all"}}
+  function setFilter(filter){try{localStorage.setItem("classpro_review_filter",filter)}catch(e){}render()}
   function stageLabel(r){return stageKey(r)==="pre"?"课前 / Pre-class":"课后 / Post-class"}
-  function questionKey(r){
-    return [lessonOf(r)||LESSON,stageKey(r),inferredModule(r)||moduleRaw(r)||"review",qidOf(r)||questionPreviewText(r)||"no_qid"].join("|");
-  }
   function questionPreviewText(r){
-    var q=val(r,["题目说明","questionText","prompt","question","task","instruction"])||"";
+    var q=qVal(r,["questionText","题目说明","prompt","question","task","instruction"],20)||"";
     return String(q||"").slice(0,80);
+  }
+  function answerFingerprint(r){
+    var m=inferredModule(r),ans=String(answerOf(r)||"").trim();
+    if(m==="handwriting"){
+      var p=parseMaybeJson(findHandwritingAnswer(r)||ans),chars={};
+      if(p&&p.cells)(p.cells||[]).forEach(function(c){if(c.char)chars[c.char]=1});
+      return Object.keys(chars).sort().join("")||qidOf(r)||questionPreviewText(r)||"handwriting";
+    }
+    return qidOf(r)||questionPreviewText(r)||m||"review";
+  }
+  function questionKey(r){
+    return [lessonOf(r)||LESSON,stageKey(r),inferredModule(r)||moduleRaw(r)||"review",answerFingerprint(r)].join("|");
+  }
+  function hasEffectiveAnswer(r){
+    var m=inferredModule(r),ans=String(answerOf(r)||"").trim();
+    if(!ans||ans==="completed"||ans==="{}"||ans==="[]")return false;
+    if(m==="handwriting"){
+      var p=parseMaybeJson(findHandwritingAnswer(r)||ans);
+      if(!p||!p.cells)return false;
+      return (p.cells||[]).some(function(c){return (c.strokes||[]).some(function(st){return st&&st.length})});
+    }
+    return true;
+  }
+  function latestRowsByStudentAndQuestion(rows){
+    var latest={};
+    rows.filter(hasEffectiveAnswer).forEach(function(r){
+      var key=[studentOf(r)||"",questionKey(r)].join("|"),old=latest[key];
+      if(!old||new Date(qAttemptTimeOf(r)).getTime()>=new Date(qAttemptTimeOf(old)).getTime())latest[key]=r;
+    });
+    return Object.keys(latest).map(function(k){return latest[k]});
   }
   function groupedByQuestion(){
     var groups={};
-    records.filter(needsReview).forEach(function(r){
+    visibleQuestionRows().forEach(function(r){
       var key=questionKey(r),g=groups[key];
       if(!g){g=groups[key]={key:key,lesson:lessonOf(r)||LESSON,stage:stageLabel(r),module:inferredModule(r)||moduleRaw(r)||"review",qid:qidOf(r)||"",question:questionPreviewText(r),rows:[]}}
       g.rows.push(r);
     });
     return groups;
   }
+  function visibleQuestionRows(){
+    var f=reviewFilter();
+    return latestRowsByStudentAndQuestion(records.filter(needsReview)).filter(function(r){
+      var m=inferredModule(r);
+      if(f==="handwriting")return m==="handwriting";
+      if(f==="output")return m==="output"||m==="subjective";
+      return true;
+    });
+  }
   function questionTools(active){
-    return '<div class="tools" style="margin:0 0 14px"><button class="'+(active==="question"?"":"secondary")+'" onclick="setReviewLayoutMode(\'question\')">按题批改 / By Question</button><button class="'+(active==="student"?"":"secondary")+'" onclick="setReviewLayoutMode(\'student\')">按学生批改 / By Student</button><span class="muted">按题批改适合课后作业：同一道题集中查看，批量保存。</span></div>';
+    var f=reviewFilter();
+    return '<div class="tools" style="margin:0 0 14px"><button class="'+(active==="question"?"":"secondary")+'" onclick="setReviewLayoutMode(\'question\')">按题批改 / By Question</button><button class="'+(active==="student"?"":"secondary")+'" onclick="setReviewLayoutMode(\'student\')">按学生批改 / By Student</button><button class="'+(f==="all"?"":"secondary")+'" onclick="setReviewFilter(\'all\')">全部</button><button class="'+(f==="handwriting"?"":"secondary")+'" onclick="setReviewFilter(\'handwriting\')">只看汉字书写</button><button class="'+(f==="output"?"":"secondary")+'" onclick="setReviewFilter(\'output\')">只看输出题</button><span class="muted">按题批改适合课后作业：同一道题集中查看，批量保存。</span></div>';
   }
   function renderQuestionLayout(){
     populateLessonScope();reviewRowsById={};questionReviewGroups={};
-    var groups=groupedByQuestion(),keys=Object.keys(groups).sort(function(a,b){
+    var visibleRows=visibleQuestionRows(),groups=groupedByQuestion(),keys=Object.keys(groups).sort(function(a,b){
       var ga=groups[a],gb=groups[b];
       return (ga.lesson+ga.stage+ga.qid).localeCompare(gb.lesson+gb.stage+gb.qid);
     });
-    var pre=records.filter(function(x){return needsReview(x)&&stageKey(x)==="pre"}).length,post=records.filter(function(x){return needsReview(x)&&stageKey(x)==="post"}).length;
+    var pre=visibleRows.filter(function(x){return stageKey(x)==="pre"}).length,post=visibleRows.filter(function(x){return stageKey(x)==="post"}).length;
     var note=hiddenReviewRows?'<div class="small" style="margin:-6px 0 12px">已按“最后一次提交”显示，隐藏旧提交 '+hiddenReviewRows+' 条。</div>':'';
     var summary='<div class="review-summary"><div><b>'+ (pre+post) +'</b><span>待批改总数 / Total</span></div><div><b>'+pre+'</b><span>课前 / Pre-class</span></div><div><b>'+post+'</b><span>课后 / Post-class</span></div></div>'+note+questionTools("question");
     if(!keys.length){reviewAppNode().innerHTML=summary+'<div class="empty">暂无待批改句子或书写题。</div>';return}
@@ -448,6 +489,7 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
     return ok?"【正确】很好，答案正确。":"【需修改】请再检查答案。";
   }
   window.setReviewLayoutMode=setLayout;
+  window.setReviewFilter=setFilter;
   window.markQuestionGroup=function(gid,ok){
     (questionReviewGroups[gid]||{rows:[]}).rows.forEach(function(r,i){var id=safeId(gid+"_row_"+i),el=document.getElementById("ok_"+id);if(el)el.checked=ok});
   };
@@ -462,7 +504,13 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
         var st=document.getElementById("st_"+id);if(st)st.textContent="已保存";
         status.textContent="正在保存 "+(i+1)+" / "+g.rows.length+"...";
       });
-    })},Promise.resolve()).then(function(){status.textContent="本题全部批改已保存 / All saved";setTimeout(loadData,1200)}).catch(function(){status.textContent="部分保存失败，请刷新后重试 / Retry"});
+    })},Promise.resolve()).then(function(){
+      status.textContent="本题全部批改已保存，已从待批改列表移除 / All saved";
+      var done={};g.rows.forEach(function(r){done[reviewId(r,studentOf(r))]=1});
+      records=records.filter(function(r){return !done[reviewId(r,studentOf(r))]});
+      setTimeout(render,350);
+      setTimeout(loadData,1800);
+    }).catch(function(){status.textContent="部分保存失败，请刷新后重试 / Retry"});
   };
   render=function(){
     if(layoutMode()==="student")return studentRender();
