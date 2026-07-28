@@ -242,5 +242,47 @@ setTier(currentTier);
   window.refreshHomeworkAttemptCount=readAttemptCount;
 })();
 </script>
+<script>
+/* Student homework report: show teacher feedback from the latest homework attempt. */
+(function(){
+  var IDX={time:0,student:1,lesson:2,stage:3,module:4,qid:5,score:6,total:7,answer:13,result:14,feedback:15,status:16,originalTime:19,question:20};
+  function escHtml(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+  function rv(x,keys,index){for(var i=0;i<keys.length;i++){if(x&&x[keys[i]]!=null&&x[keys[i]]!=="")return x[keys[i]]}if(x&&Array.isArray(x.__values)&&index!=null&&x.__values[index]!=null)return x.__values[index];return""}
+  function stageKey(x){var s=String(rv(x,["stage","环节","阶段"],IDX.stage)||"").trim().toLowerCase().replace(/[\s-]/g,"");if(s==="预习"||s==="课前"||s==="pre"||s==="preclass"||s==="pre_class")return"pre";if(s==="课后"||s==="post"||s==="postclass"||s==="post_class")return"post";if(s==="课中"||s==="inclass"||s==="in_class")return"mid";return s}
+  function attemptTime(x){return rv(x,["originalSubmittedAt","submittedAt","原始提交时间"],IDX.originalTime)||rv(x,["timestamp","receivedAt","submittedAt","提交时间"],IDX.time)}
+  function flatten(d){var all=[];if(d&&Array.isArray(d.data))all=d.data.slice();else if(d&&d.data){for(var k in d.data)(d.data[k]||[]).forEach(function(x){all.push(x)})}else if(Array.isArray(d))all=d.slice();return all}
+  function latestPostRows(post){
+    var summaries=post.filter(function(x){return String(rv(x,["module","模块","mode"],IDX.module))==="homework_summary"});
+    if(!summaries.length)return post;
+    summaries.sort(function(a,b){return new Date(attemptTime(b)).getTime()-new Date(attemptTime(a)).getTime()});
+    var last=attemptTime(summaries[0]);
+    return post.filter(function(x){return attemptTime(x)===last});
+  }
+  function feedbackHtml(rows){
+    var reviewed=rows.filter(function(x){return String(rv(x,["teacherFeedback","教师批改","correction"],IDX.feedback)||"").trim()});
+    if(!reviewed.length)return'<div class="muted" style="margin-top:12px">暂无课后作业教师反馈。老师批改后，刷新这里即可查看。</div>';
+    return'<div style="margin-top:12px"><div class="report-title" style="font-size:16px">教师反馈 / Teacher Feedback</div>'+reviewed.map(function(x){
+      return'<div class="report-kpi" style="text-align:left;margin-top:8px"><b style="font-size:14px;color:#5847bc">'+escHtml(rv(x,["questionId","题号"],IDX.qid)||rv(x,["module","模块","mode"],IDX.module)||"作业题")+'</b><span>'+escHtml(rv(x,["questionText","题目说明","prompt","question"],IDX.question)||"")+'</span><div class="muted" style="margin-top:6px"><strong>作答：</strong>'+escHtml(String(rv(x,["answer","学生作答"],IDX.answer)).slice(0,180))+'</div><div class="muted" style="margin-top:6px"><strong>反馈：</strong>'+escHtml(rv(x,["teacherFeedback","教师批改","correction"],IDX.feedback))+'</div></div>'
+    }).join("")+'</div>';
+  }
+  loadClassReport=function(){
+    var name=getStudentName();
+    if(!name){document.getElementById("reportBody").textContent="请先选择姓名 / Select your name first.";return}
+    document.getElementById("reportBody").textContent="正在读取报告 / Loading...";
+    var url=(location.hostname==="localhost"||location.hostname==="127.0.0.1")?"/api/reviews?name="+encodeURIComponent(name):GAS_URL+"?action=get_all";
+    fetch(url).then(function(r){if(!r.ok)throw new Error("Report API "+r.status);return r.json()}).then(function(d){
+      var all=flatten(d),rows=all.filter(function(x){return String(rv(x,["studentName","姓名","学生姓名","name"],IDX.student))===name&&sameLesson(rv(x,["lesson","课程","课程编号","lessonKey"],IDX.lesson))});
+      var pre=rows.filter(function(x){return stageKey(x)==="pre"}),mid=rows.filter(function(x){return stageKey(x)==="mid"}),post=latestPostRows(rows.filter(function(x){return stageKey(x)==="post"}));
+      var correct=mid.filter(function(x){return String(rv(x,["result","autoResult","结果"],IDX.result)).toLowerCase()==="correct"}).length;
+      var summary=post.filter(function(x){return rv(x,["module","模块","mode"],IDX.module)==="homework_summary"})[0],report=summary?parseMaybeJson(rv(summary,["answer","学生作答"],IDX.answer)):null;
+      recommendedTier=tierFromReport(pre,mid);
+      if(!tierLocked){document.getElementById("tierRecommendation").textContent="推荐档位 / Recommended: "+recommendedTier;if(recommendedTier!==currentTier){setTier(recommendedTier,false);if(studentConfirmed)restoreProgress()}}
+      if(!rows.length){document.getElementById("reportBody").textContent="暂无报告数据。完成课前、课中或课后活动后，这里会生成报告。";return}
+      document.getElementById("reportHint").textContent="已生成："+name+" 的学习摘要；系统推荐 "+recommendedTier+" 档";
+      document.getElementById("reportBody").innerHTML='<div class="report-grid"><div class="report-kpi"><b>'+pre.length+'</b><span>课前记录 / Pre</span></div><div class="report-kpi"><b>'+mid.length+'</b><span>课中答题 / Class</span></div><div class="report-kpi"><b>'+ (mid.length?Math.round(correct/mid.length*100):0)+'%</b><span>课中正确率 / Accuracy</span></div><div class="report-kpi"><b>'+ (report?report.objectiveCorrect+'/'+report.objectiveTotal:'--')+'</b><span>最近一次课后客观题 / Latest Homework</span></div></div>'+feedbackHtml(post);
+    }).catch(function(){document.getElementById("reportBody").textContent="报告暂时无法读取，请稍后刷新 / Try again later."});
+  };
+})();
+</script>
 </body>
 </html>

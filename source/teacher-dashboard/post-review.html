@@ -262,7 +262,7 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
 // Final review desk adapter: keep the page resilient across old GAS rows,
 // local JSON arrays, grouped GAS payloads, and mixed Chinese/English headers.
 (function(){
-  var IDX={time:0,student:1,lesson:2,stage:3,module:4,qid:5,score:6,total:7,answer:13,result:14,feedback:15,status:16,question:20};
+  var IDX={time:0,student:1,lesson:2,stage:3,module:4,qid:5,score:6,total:7,answer:13,result:14,feedback:15,status:16,originalTime:19,question:20};
   function byIndex(x,i){return x&&Array.isArray(x.__values)&&x.__values[i]!=null?x.__values[i]:""}
   function first(x,keys,index){
     for(var i=0;i<keys.length;i++){if(x&&x[keys[i]]!=null&&x[keys[i]]!=="")return x[keys[i]]}
@@ -284,6 +284,7 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
   qidOf=function(x){return first(x,["questionId","题号","棰樺彿"],IDX.qid)}
   scoreOf=function(x){return Number(first(x,["score","得分","寰楀垎"],IDX.score))||0}
   totalOf=function(x){return Number(first(x,["total","总分","鎬诲垎"],IDX.total))||0}
+  function attemptTimeOf(x){return first(x,["originalSubmittedAt","submittedAt","原始提交时间"],IDX.originalTime)||timeOf(x)}
   stageKey=function(x){
     var s=String(stageOf(x)||"").trim().toLowerCase().replace(/[\s-]/g,"");
     if(s==="预习"||s==="课前"||s==="pre"||s==="preclass"||s==="pre_class")return"pre";
@@ -323,6 +324,22 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
     else if(Array.isArray(d))rows=d.slice();
     return rows;
   }
+  function latestHomeworkRows(rows){
+    var latestSummary={},out=[];
+    rows.forEach(function(r){
+      if(stageKey(r)!=="post"||String(moduleRaw(r)||"")!=="homework_summary")return;
+      var key=[lessonOf(r)||LESSON,studentOf(r)||""].join("|"),old=latestSummary[key];
+      if(!old||new Date(attemptTimeOf(r)).getTime()>=new Date(attemptTimeOf(old)).getTime())latestSummary[key]=r;
+    });
+    rows.forEach(function(r){
+      if(stageKey(r)!=="post"){out.push(r);return}
+      var key=[lessonOf(r)||LESSON,studentOf(r)||""].join("|"),latest=latestSummary[key];
+      if(!latest){out.push(r);return}
+      if(attemptTimeOf(r)===attemptTimeOf(latest))out.push(r);
+    });
+    hiddenReviewRows=rows.length-out.length;
+    return out;
+  }
   function setStatusText(text){
     var el=document.getElementById("status");
     if(el)el.textContent=text;
@@ -361,7 +378,7 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
     var local=location.hostname==='localhost'||location.hostname==='127.0.0.1',dataUrl=local?"/api/reviews?source=local":GAS+"?action=get_all";
     fetch(dataUrl).then(function(r){return r.json()}).then(function(d){
       var rows=flattenPayload(d);
-      records=rows.filter(function(x){var lesson=lessonOf(x),key=stageKey(x);return lessonInScope(lesson)&&(key==="pre"||key==="post"||needsReview(x))});
+      records=latestHomeworkRows(rows.filter(function(x){var lesson=lessonOf(x),key=stageKey(x);return lessonInScope(lesson)&&(key==="pre"||key==="post"||needsReview(x))}));
       var preCount=records.filter(function(x){return stageKey(x)==="pre"}).length,postCount=records.filter(function(x){return stageKey(x)==="post"}).length;
       setStatusText("已读取 "+records.length+" 条记录：课前 "+preCount+"，课后 "+postCount);
       render();
