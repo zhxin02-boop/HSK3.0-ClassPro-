@@ -472,7 +472,8 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
   }
   function questionTools(active){
     var f=reviewFilter();
-    return '<div class="tools" style="margin:0 0 14px"><button class="'+(active==="question"?"":"secondary")+'" onclick="setReviewLayoutMode(\'question\')">按题批改 / By Question</button><button class="'+(active==="student"?"":"secondary")+'" onclick="setReviewLayoutMode(\'student\')">按学生批改 / By Student</button><button class="'+(f==="all"?"":"secondary")+'" onclick="setReviewFilter(\'all\')">全部</button><button class="'+(f==="handwriting"?"":"secondary")+'" onclick="setReviewFilter(\'handwriting\')">只看汉字书写</button><button class="'+(f==="output"?"":"secondary")+'" onclick="setReviewFilter(\'output\')">只看输出题</button><span class="muted">按题批改适合课后作业：同一道题集中查看，批量保存。</span></div>';
+    var label=f==="handwriting"?"当前筛选：只看汉字书写":(f==="output"?"当前筛选：只看输出题":"当前筛选：全部有效作答");
+    return '<div class="tools" style="margin:0 0 14px"><button class="'+(active==="question"?"":"secondary")+'" onclick="setReviewLayoutMode(\'question\')">按题批改 / By Question</button><button class="'+(active==="student"?"":"secondary")+'" onclick="setReviewLayoutMode(\'student\')">按学生批改 / By Student</button><button class="'+(f==="all"?"":"secondary")+'" onclick="setReviewFilter(\'all\')">全部</button><button class="'+(f==="handwriting"?"":"secondary")+'" onclick="setReviewFilter(\'handwriting\')">只看汉字书写</button><button class="'+(f==="output"?"":"secondary")+'" onclick="setReviewFilter(\'output\')">只看输出题</button><span class="muted">'+label+'。同一道题集中查看，批量保存。</span></div>';
   }
   function renderQuestionLayout(){
     populateLessonScope();reviewRowsById={};questionReviewGroups={};
@@ -481,8 +482,9 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
       return (ga.lesson+ga.stage+ga.qid).localeCompare(gb.lesson+gb.stage+gb.qid);
     });
     var pre=visibleRows.filter(function(x){return stageKey(x)==="pre"}).length,post=visibleRows.filter(function(x){return stageKey(x)==="post"}).length;
-    var note=hiddenReviewRows?'<div class="small" style="margin:-6px 0 12px">已按“最后一次提交”显示，隐藏旧提交 '+hiddenReviewRows+' 条。</div>':'';
-    var summary='<div class="review-summary"><div><b>'+ (pre+post) +'</b><span>待批改总数 / Total</span></div><div><b>'+pre+'</b><span>课前 / Pre-class</span></div><div><b>'+post+'</b><span>课后 / Post-class</span></div></div>'+note+questionTools("question");
+    var rawPending=records.filter(needsReview).length;
+    var note='<div class="small" style="margin:-6px 0 12px">统计口径：已读取原始记录后，先排除已批改，再只保留每个学生最后一次有效作答，并应用当前筛选。'+(hiddenReviewRows?' 已隐藏旧提交 '+hiddenReviewRows+' 条。':'')+' 原始待批改候选 '+rawPending+' 条，当前显示 '+(pre+post)+' 条。</div>';
+    var summary='<div class="review-summary"><div><b>'+ (pre+post) +'</b><span>当前显示 / Visible</span></div><div><b>'+pre+'</b><span>课前有效作答 / Pre</span></div><div><b>'+post+'</b><span>课后有效作答 / Post</span></div></div>'+note+questionTools("question");
     if(!keys.length){reviewAppNode().innerHTML=summary+'<div class="empty">暂无待批改句子或书写题。</div>';return}
     reviewAppNode().innerHTML=summary+keys.map(function(k,i){return renderQuestionGroup(groups[k],i)}).join("");
     setTimeout(drawAllHandwriting,0);
