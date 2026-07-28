@@ -395,7 +395,11 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
   function reviewAppNode(){return document.getElementById("app")||{innerHTML:""}}
   function qVal(x,keys,index){for(var i=0;i<keys.length;i++){if(x&&x[keys[i]]!=null&&x[keys[i]]!=="")return x[keys[i]]}if(x&&Array.isArray(x.__values)&&index!=null&&x.__values[index]!=null)return x.__values[index];return""}
   function qAttemptTimeOf(x){return qVal(x,["originalSubmittedAt","submittedAt","原始提交时间"],19)||timeOf(x)}
-  function layoutMode(){try{return localStorage.getItem("classpro_review_layout")||"question"}catch(e){return"question"}}
+  function layoutMode(){
+    var urlMode=new URLSearchParams(location.search||"").get("layout");
+    if(urlMode==="question"||urlMode==="student")return urlMode;
+    try{return localStorage.getItem("classpro_review_layout")||"question"}catch(e){return"question"}
+  }
   function setLayout(mode){try{localStorage.setItem("classpro_review_layout",mode)}catch(e){}render()}
   function reviewFilter(){try{return localStorage.getItem("classpro_review_filter")||"all"}catch(e){return"all"}}
   function setFilter(filter){try{localStorage.setItem("classpro_review_filter",filter)}catch(e){}render()}
@@ -513,7 +517,11 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
     }).catch(function(){status.textContent="部分保存失败，请刷新后重试 / Retry"});
   };
   render=function(){
-    if(layoutMode()==="student")return studentRender();
+    if(layoutMode()==="student"){
+      studentRender();
+      reviewAppNode().innerHTML=questionTools("student")+reviewAppNode().innerHTML;
+      return;
+    }
     return renderQuestionLayout();
   };
 })();
