@@ -48,7 +48,7 @@ textarea{width:100%;min-height:78px;border:1px solid #d8e4bf;border-radius:12px;
 
 <script>
 var GAS="https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec";
-var params=new URLSearchParams(location.search||""),ctx=window.ClassProContext.read(),LESSON=ctx.lesson,LESSON_SCOPE=(params.get("scope")||params.get("lesson")||"HSK1-L01-L03"),records=[],reviewQueue={},reviewRowsById={},hiddenReviewRows=0;
+var params=new URLSearchParams(location.search||""),ctx=window.ClassProContext.read(),LESSON=ctx.lesson,LESSON_SCOPE=(params.get("scope")||"all"),records=[],reviewQueue={},reviewRowsById={},hiddenReviewRows=0;
 function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 function val(o,keys){for(var i=0;i<keys.length;i++){if(o&&o[keys[i]]!=null&&o[keys[i]]!=="")return o[keys[i]]}return""}
 function fuzzy(o,keys,contains){var v=val(o,keys);if(v!=="")return v;var ks=Object.keys(o||{});for(var i=0;i<ks.length;i++){for(var j=0;j<contains.length;j++){if(ks[i].indexOf(contains[j])>=0&&o[ks[i]]!=null&&o[ks[i]]!=="")return o[ks[i]]}}return""}

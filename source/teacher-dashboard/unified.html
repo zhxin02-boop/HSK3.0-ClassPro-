@@ -167,6 +167,7 @@ loadLocal();render();
   };
   function reviewUrl(){
     var q=window.ClassProContext&&ClassProContext.query?ClassProContext.query({lesson:LESSON,room:ROOM,student:state.student||''}):('lesson='+encodeURIComponent(LESSON)+'&room='+encodeURIComponent(ROOM));
+    q+=(q?'&':'')+'scope=all';
     return 'post-review.html?'+q;
   }
   window.openReview=function(){location.href=reviewUrl()};
