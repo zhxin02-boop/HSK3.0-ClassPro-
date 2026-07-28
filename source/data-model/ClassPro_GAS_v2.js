@@ -84,12 +84,25 @@ function updateReview_(ss, d, score, correction, status) {
   var sheet = ss.getSheetByName(d.lesson);
   if (!sheet) return json_({ status: "error", message: "lesson sheet not found" });
   var rows = sheet.getDataRange().getValues();
+  var directRow = Number(d.rowIndex || d.__rowIndex || 0);
+  if (directRow > 1 && directRow <= rows.length) {
+    var direct = rows[directRow - 1];
+    if (String(direct[1] || "") === String(d.studentName || "")) {
+      if (score !== "") sheet.getRange(directRow, 7).setValue(score);
+      sheet.getRange(directRow, 16).setValue(correction);
+      sheet.getRange(directRow, 17).setValue(status);
+      return json_({ status: "ok", match: "rowIndex" });
+    }
+  }
   var targetTs = new Date(d.timestamp).getTime();
+  var targetOriginalTs = new Date(d.originalSubmittedAt || d.submittedAt || "").getTime();
   var targetQuestion = String(d.questionId || "");
   var targetModule = String(d.module || d.mode || "");
   for (var i = 1; i < rows.length; i++) {
     var rowTs = rows[i][0] instanceof Date ? rows[i][0].getTime() : new Date(rows[i][0]).getTime();
-    var sameTime = Math.abs(rowTs - targetTs) < 3000;
+    var rowOriginalTs = new Date(rows[i][19] || "").getTime();
+    var sameTime = (!isNaN(targetTs) && Math.abs(rowTs - targetTs) < 3000) ||
+      (!isNaN(targetOriginalTs) && !isNaN(rowOriginalTs) && Math.abs(rowOriginalTs - targetOriginalTs) < 3000);
     var sameQuestion = !targetQuestion || String(rows[i][5] || "") === targetQuestion;
     var sameModule = !targetModule || String(rows[i][4] || "") === targetModule;
     if (sameTime && sameQuestion && sameModule && rows[i][1] === d.studentName) {

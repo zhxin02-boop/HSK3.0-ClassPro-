@@ -285,6 +285,20 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
   scoreOf=function(x){return Number(first(x,["score","得分","寰楀垎"],IDX.score))||0}
   totalOf=function(x){return Number(first(x,["total","总分","鎬诲垎"],IDX.total))||0}
   function attemptTimeOf(x){return first(x,["originalSubmittedAt","submittedAt","原始提交时间"],IDX.originalTime)||timeOf(x)}
+  reviewPayload=function(row,name,correction){
+    return {
+      action:"mark_reviewed",
+      lesson:lessonOf(row)||LESSON,
+      studentName:name||studentOf(row),
+      timestamp:timeOf(row),
+      originalSubmittedAt:attemptTimeOf(row),
+      rowIndex:row&&row.__rowIndex,
+      questionId:qidOf(row),
+      module:moduleRaw(row)||inferredModule(row),
+      mode:moduleRaw(row)||inferredModule(row),
+      correction:correction
+    };
+  }
   stageKey=function(x){
     var s=String(stageOf(x)||"").trim().toLowerCase().replace(/[\s-]/g,"");
     if(s==="预习"||s==="课前"||s==="pre"||s==="preclass"||s==="pre_class")return"pre";
