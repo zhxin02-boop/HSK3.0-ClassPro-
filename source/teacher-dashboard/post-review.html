@@ -388,5 +388,87 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",autoLoad);else autoLoad();
 })();
 </script>
+<script>
+// Question-first batch review: one question, many student answers.
+(function(){
+  var studentRender=render,questionReviewGroups={};
+  function reviewAppNode(){return document.getElementById("app")||{innerHTML:""}}
+  function layoutMode(){try{return localStorage.getItem("classpro_review_layout")||"question"}catch(e){return"question"}}
+  function setLayout(mode){try{localStorage.setItem("classpro_review_layout",mode)}catch(e){}render()}
+  function stageLabel(r){return stageKey(r)==="pre"?"课前 / Pre-class":"课后 / Post-class"}
+  function questionKey(r){
+    return [lessonOf(r)||LESSON,stageKey(r),inferredModule(r)||moduleRaw(r)||"review",qidOf(r)||questionPreviewText(r)||"no_qid"].join("|");
+  }
+  function questionPreviewText(r){
+    var q=val(r,["题目说明","questionText","prompt","question","task","instruction"])||"";
+    return String(q||"").slice(0,80);
+  }
+  function groupedByQuestion(){
+    var groups={};
+    records.filter(needsReview).forEach(function(r){
+      var key=questionKey(r),g=groups[key];
+      if(!g){g=groups[key]={key:key,lesson:lessonOf(r)||LESSON,stage:stageLabel(r),module:inferredModule(r)||moduleRaw(r)||"review",qid:qidOf(r)||"",question:questionPreviewText(r),rows:[]}}
+      g.rows.push(r);
+    });
+    return groups;
+  }
+  function questionTools(active){
+    return '<div class="tools" style="margin:0 0 14px"><button class="'+(active==="question"?"":"secondary")+'" onclick="setReviewLayoutMode(\'question\')">按题批改 / By Question</button><button class="'+(active==="student"?"":"secondary")+'" onclick="setReviewLayoutMode(\'student\')">按学生批改 / By Student</button><span class="muted">按题批改适合课后作业：同一道题集中查看，批量保存。</span></div>';
+  }
+  function renderQuestionLayout(){
+    populateLessonScope();reviewRowsById={};questionReviewGroups={};
+    var groups=groupedByQuestion(),keys=Object.keys(groups).sort(function(a,b){
+      var ga=groups[a],gb=groups[b];
+      return (ga.lesson+ga.stage+ga.qid).localeCompare(gb.lesson+gb.stage+gb.qid);
+    });
+    var pre=records.filter(function(x){return needsReview(x)&&stageKey(x)==="pre"}).length,post=records.filter(function(x){return needsReview(x)&&stageKey(x)==="post"}).length;
+    var note=hiddenReviewRows?'<div class="small" style="margin:-6px 0 12px">已按“最后一次提交”显示，隐藏旧提交 '+hiddenReviewRows+' 条。</div>':'';
+    var summary='<div class="review-summary"><div><b>'+ (pre+post) +'</b><span>待批改总数 / Total</span></div><div><b>'+pre+'</b><span>课前 / Pre-class</span></div><div><b>'+post+'</b><span>课后 / Post-class</span></div></div>'+note+questionTools("question");
+    if(!keys.length){reviewAppNode().innerHTML=summary+'<div class="empty">暂无待批改句子或书写题。</div>';return}
+    reviewAppNode().innerHTML=summary+keys.map(function(k,i){return renderQuestionGroup(groups[k],i)}).join("");
+    setTimeout(drawAllHandwriting,0);
+  }
+  function renderQuestionGroup(g,idx){
+    var gid=safeId("qgrp_"+idx+"_"+g.key);questionReviewGroups[gid]=g;
+    return '<div class="student"><h2 style="margin:0 0 8px;color:#315b29">'+esc(g.lesson)+' · '+esc(g.stage)+' · '+esc(g.qid||g.module)+'</h2>'+
+      '<div class="small"><span class="tag">'+esc(g.module)+'</span> 共 '+g.rows.length+' 份作答</div>'+
+      '<div class="answer-box" style="background:#fffaf0"><b>题目说明 / Task</b><br>'+esc(g.question||"题目说明暂缺")+'</div>'+
+      '<div class="tools"><button onclick="markQuestionGroup(\''+gid+'\',true)">本题全部正确</button><button class="secondary" onclick="markQuestionGroup(\''+gid+'\',false)">本题全部需修改</button><button onclick="saveQuestionGroup(\''+gid+'\')">保存本题全部批改 / Save Question</button><span class="small" id="qst_'+gid+'">可逐行修改反馈后保存。</span></div>'+
+      '<table><tr><th style="width:120px">学生</th><th>作答</th><th style="width:110px">判断</th><th>教师反馈</th><th style="width:90px">状态</th></tr>'+
+      g.rows.map(function(r,i){return renderQuestionRow(gid,r,i)}).join("")+'</table></div>';
+  }
+  function renderQuestionRow(gid,r,i){
+    var id=safeId(gid+"_row_"+i),m=inferredModule(r),ans=answerOf(r);reviewRowsById[id]=r;
+    var answer=m==="handwriting"?renderAnswerPreview(ans,m,id,r):'<div class="answer-box" style="margin:0">'+esc(ans||"未作答")+'</div>';
+    return '<tr id="review_'+id+'"><td><b>'+esc(studentOf(r)||"未命名")+'</b><div class="small">'+esc(timeOf(r))+'</div></td><td>'+questionPreview(r,m)+answer+'</td><td><label class="tag" style="cursor:pointer"><input type="checkbox" id="ok_'+id+'" checked> 正确</label></td><td><textarea id="fb_'+id+'" placeholder="可留空；留空时按正确/需修改自动生成反馈。">'+esc(val(r,["教师批改","teacherFeedback","correction","鏁欏笀鎵规敼"]))+'</textarea></td><td><span class="small" id="st_'+id+'">未保存</span></td></tr>';
+  }
+  function correctionFor(id){
+    var ok=document.getElementById("ok_"+id).checked,custom=(document.getElementById("fb_"+id).value||"").trim();
+    if(custom)return (ok?"【正确】":"【需修改】")+custom;
+    return ok?"【正确】很好，答案正确。":"【需修改】请再检查答案。";
+  }
+  window.setReviewLayoutMode=setLayout;
+  window.markQuestionGroup=function(gid,ok){
+    (questionReviewGroups[gid]||{rows:[]}).rows.forEach(function(r,i){var id=safeId(gid+"_row_"+i),el=document.getElementById("ok_"+id);if(el)el.checked=ok});
+  };
+  window.saveQuestionGroup=function(gid){
+    var g=questionReviewGroups[gid]||{rows:[]},status=document.getElementById("qst_"+gid);
+    if(!g.rows.length)return;
+    status.textContent="正在保存 0 / "+g.rows.length+"...";
+    var local=location.hostname==='localhost'||location.hostname==='127.0.0.1',url=local?"/api/mark-reviewed":GAS;
+    g.rows.reduce(function(p,r,i){return p.then(function(){
+      var id=safeId(gid+"_row_"+i),payload=reviewPayload(r,studentOf(r),correctionFor(id));
+      return fetch(url,{method:"POST",mode:local?"same-origin":"no-cors",headers:{"Content-Type":local?"application/json":"text/plain;charset=utf-8"},body:JSON.stringify(payload)}).then(function(){
+        var st=document.getElementById("st_"+id);if(st)st.textContent="已保存";
+        status.textContent="正在保存 "+(i+1)+" / "+g.rows.length+"...";
+      });
+    })},Promise.resolve()).then(function(){status.textContent="本题全部批改已保存 / All saved";setTimeout(loadData,1200)}).catch(function(){status.textContent="部分保存失败，请刷新后重试 / Retry"});
+  };
+  render=function(){
+    if(layoutMode()==="student")return studentRender();
+    return renderQuestionLayout();
+  };
+})();
+</script>
 </body>
 </html>
