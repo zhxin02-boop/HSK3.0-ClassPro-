@@ -258,5 +258,118 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
   };
 })();
 </script>
+<script>
+// Final review desk adapter: keep the page resilient across old GAS rows,
+// local JSON arrays, grouped GAS payloads, and mixed Chinese/English headers.
+(function(){
+  var IDX={time:0,student:1,lesson:2,stage:3,module:4,qid:5,score:6,total:7,answer:13,result:14,feedback:15,status:16,question:20};
+  function byIndex(x,i){return x&&Array.isArray(x.__values)&&x.__values[i]!=null?x.__values[i]:""}
+  function first(x,keys,index){
+    for(var i=0;i<keys.length;i++){if(x&&x[keys[i]]!=null&&x[keys[i]]!=="")return x[keys[i]]}
+    var indexed=byIndex(x,index);if(indexed!==""&&indexed!=null)return indexed;
+    return typeof fuzzy==="function"?fuzzy(x,keys,keys):"";
+  }
+  function boolText(x,keys){
+    var s=String(first(x,keys,null)||"").trim().toLowerCase();
+    return s==="true"||s==="yes"||s==="1";
+  }
+  lessonOf=function(x){return first(x,["lesson","lessonKey","课程","课程编号","璇剧▼"],IDX.lesson)}
+  stageOf=function(x){return first(x,["stage","环节","阶段","鐜妭"],IDX.stage)}
+  moduleRaw=function(x){return first(x,["module","mode","模块","妯″潡"],IDX.module)}
+  studentOf=function(x){return first(x,["studentName","name","姓名","学生姓名","濮撳悕"],IDX.student)}
+  timeOf=function(x){return first(x,["timestamp","receivedAt","submittedAt","提交时间","鎻愪氦鏃堕棿"],IDX.time)}
+  answerOf=function(x){return first(x,["answer","学生作答","瀛︾敓浣滅瓟"],IDX.answer)}
+  resultOf=function(x){return first(x,["result","autoResult","结果","缁撴灉"],IDX.result)}
+  statusOf=function(x){return first(x,["status","reviewStatus","批改状态","鎵规敼鐘舵€"],IDX.status)}
+  qidOf=function(x){return first(x,["questionId","题号","棰樺彿"],IDX.qid)}
+  scoreOf=function(x){return Number(first(x,["score","得分","寰楀垎"],IDX.score))||0}
+  totalOf=function(x){return Number(first(x,["total","总分","鎬诲垎"],IDX.total))||0}
+  stageKey=function(x){
+    var s=String(stageOf(x)||"").trim().toLowerCase().replace(/[\s-]/g,"");
+    if(s==="预习"||s==="课前"||s==="pre"||s==="preclass"||s==="pre_class")return"pre";
+    if(s==="课后"||s==="post"||s==="postclass"||s==="post_class")return"post";
+    if(s==="课中"||s==="inclass"||s==="in_class")return"in";
+    return s;
+  }
+  isReviewModule=function(m){m=String(m||"");return m==="output"||m==="subjective"||m==="handwriting"}
+  inferredModule=function(x){
+    var m=String(moduleRaw(x)||"").trim(),hw=findHandwritingAnswer(x);
+    var ans=hw||answerOf(x),parsed=parseMaybeJson(ans),qid=String(qidOf(x)||"");
+    if(hw||anyFieldHas(x,"handwriting"))return"handwriting";
+    if(parsed&&parsed.type==="handwriting")return"handwriting";
+    if(qid.indexOf("_a_011")>=0||qid.indexOf("_b_010")>=0||qid.indexOf("_c_007")>=0||qid.indexOf("_c_008")>=0)return"output";
+    if(m)return m;
+    if(totalOf(x)===0&&normResult(resultOf(x))==="submitted")return"output";
+    return "";
+  }
+  function reviewed(x){
+    var st=String(statusOf(x)||"").toLowerCase(),fb=String(first(x,["teacherFeedback","correction","教师批改","鏁欏笀鎵规敼"],IDX.feedback)||"").trim();
+    return !!fb||st==="reviewed"||st.indexOf("已")>=0||st.indexOf("宸")>=0;
+  }
+  needsReview=function(x){
+    var m=inferredModule(x),rawModule=String(moduleRaw(x)||""),st=String(statusOf(x)||""),sk=stageKey(x);
+    if(m==="homework_summary"||reviewed(x))return false;
+    if(isReviewModule(m)||boolText(x,["needsReview","needs_teacher_review","needsTeacherReview","openEnded","open_ended","isOpenEnded"]))return true;
+    if(st.indexOf("待")>=0||st.indexOf("寰")>=0)return true;
+    var ans=String(answerOf(x)||"").trim(),total=totalOf(x);
+    if(sk==="pre"&&ans&&total===0&&!/^pre_step/i.test(rawModule))return true;
+    if(sk==="post"&&ans&&total===0&&!/^homework_summary$/i.test(rawModule))return true;
+    return false;
+  }
+  function flattenPayload(d){
+    var rows=[];
+    if(d&&Array.isArray(d.data))rows=d.data.slice();
+    else if(d&&d.data){for(var k in d.data){(d.data[k]||[]).forEach(function(x){rows.push(x)})}}
+    else if(Array.isArray(d))rows=d.slice();
+    return rows;
+  }
+  function setStatusText(text){
+    var el=document.getElementById("status");
+    if(el)el.textContent=text;
+  }
+  function appNode(){
+    var el=document.getElementById("app");
+    return el||{innerHTML:""};
+  }
+  function diagHtml(rows){
+    var byStage={},byStatus={},byModule={};
+    rows.forEach(function(r){
+      var st=stageKey(r)||"unknown",status=statusOf(r)||"blank",m=inferredModule(r)||moduleRaw(r)||"blank";
+      byStage[st]=(byStage[st]||0)+1;byStatus[status]=(byStatus[status]||0)+1;byModule[m]=(byModule[m]||0)+1;
+    });
+    function list(o){return Object.keys(o).sort(function(a,b){return o[b]-o[a]}).slice(0,10).map(function(k){return esc(k)+" × "+o[k]}).join("；")||"无"}
+    window.__CLASS_PRO_REVIEW_DIAGNOSTICS={scope:LESSON_SCOPE,rows:rows.length,stage:byStage,status:byStatus,module:byModule};
+    return '<details class="empty" style="text-align:left"><summary>批改台诊断信息 / Diagnostics</summary><p>当前范围：'+esc(LESSON_SCOPE)+'；可在控制台查看 <code>__CLASS_PRO_REVIEW_DIAGNOSTICS</code>。</p><p>环节：'+list(byStage)+'</p><p>状态：'+list(byStatus)+'</p><p>模块：'+list(byModule)+'</p></details>';
+  }
+  render=function(){
+    populateLessonScope();reviewRowsById={};
+    var g=grouped(),names=Object.keys(g).sort(),pre=records.filter(function(x){return needsReview(x)&&stageKey(x)==="pre"}).length,post=records.filter(function(x){return needsReview(x)&&stageKey(x)==="post"}).length;
+    var note=hiddenReviewRows?'<div class="small" style="margin:-6px 0 12px">已按“最后一次提交”显示，隐藏旧提交 '+hiddenReviewRows+' 条。</div>':'';
+    var summary='<div class="review-summary"><div><b>'+ (pre+post) +'</b><span>待批改总数 / Total</span></div><div><b>'+pre+'</b><span>课前 / Pre-class</span></div><div><b>'+post+'</b><span>课后 / Post-class</span></div></div>'+note;
+    if(!names.length){appNode().innerHTML=summary+'<div class="empty">暂无待批改句子或书写题。</div>'+diagHtml(records);return}
+    appNode().innerHTML=summary+names.map(function(n){return renderStudent(n,g[n])}).join("");setTimeout(drawAllHandwriting,0);
+  }
+  loadData=function(){
+    setStatusText("正在读取...");
+    if(location.protocol==="file:"){
+      setStatusText("本地 file:// 无法读取云端数据，请使用本地服务或线上页面。");
+      appNode().innerHTML='<div class="empty">当前是 file:// 打开方式，浏览器会拦截课程数据和云端记录请求。请使用 GitHub Pages 线上地址，或启动本地服务后访问 <code>http://localhost:18765/source/teacher-dashboard/post-review.html?scope=all</code>。</div>';
+      return;
+    }
+    var q=new URLSearchParams(location.search||"");
+    if(!q.get("scope")){q.set("scope",LESSON_SCOPE||"all");history.replaceState({},'',location.pathname+'?'+q.toString())}
+    var local=location.hostname==='localhost'||location.hostname==='127.0.0.1',dataUrl=local?"/api/reviews?source=local":GAS+"?action=get_all";
+    fetch(dataUrl).then(function(r){return r.json()}).then(function(d){
+      var rows=flattenPayload(d);
+      records=rows.filter(function(x){var lesson=lessonOf(x),key=stageKey(x);return lessonInScope(lesson)&&(key==="pre"||key==="post"||needsReview(x))});
+      var preCount=records.filter(function(x){return stageKey(x)==="pre"}).length,postCount=records.filter(function(x){return stageKey(x)==="post"}).length;
+      setStatusText("已读取 "+records.length+" 条记录：课前 "+preCount+"，课后 "+postCount);
+      render();
+    }).catch(function(err){setStatusText("读取失败："+(err.message||err))});
+  }
+  function autoLoad(){setTimeout(function(){loadData()},0)}
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",autoLoad);else autoLoad();
+})();
+</script>
 </body>
 </html>
