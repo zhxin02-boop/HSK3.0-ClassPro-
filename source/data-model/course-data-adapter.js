@@ -12,6 +12,8 @@
       };
     });
     return {
+      mode: homework.mode || '',
+      instructions: homework.instructions || {},
       tiers: tiers,
       shared_pool: homework.sharedPool || [],
       tier_pools: homework.tierPools || {},

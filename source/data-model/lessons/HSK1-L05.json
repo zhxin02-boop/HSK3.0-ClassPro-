@@ -32,7 +32,8 @@
           "今",
           "天"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v01_jintian.png"
     },
     {
       "id": "v_l05_02",
@@ -47,7 +48,8 @@
         "characters": [
           "号"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v02_hao_date.png"
     },
     {
       "id": "v_l05_03",
@@ -62,7 +64,8 @@
         "characters": [
           "月"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v03_yue_month.png"
     },
     {
       "id": "v_l05_04",
@@ -77,7 +80,8 @@
         "characters": [
           "日"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v02_hao_date.png"
     },
     {
       "id": "v_l05_05",
@@ -93,7 +97,8 @@
           "星",
           "期"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v06_xingqiri.png"
     },
     {
       "id": "v_l05_06",
@@ -110,7 +115,8 @@
           "期",
           "日"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v06_xingqiri.png"
     },
     {
       "id": "v_l05_07",
@@ -127,7 +133,8 @@
           "期",
           "天"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v06_xingqiri.png"
     },
     {
       "id": "v_l05_08",
@@ -143,7 +150,8 @@
           "休",
           "息"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v08_xiuxi.png"
     },
     {
       "id": "v_l05_09",
@@ -174,7 +182,8 @@
           "做",
           "饭"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v10_zuofan.png"
     },
     {
       "id": "v_l05_11",
@@ -189,7 +198,8 @@
         "characters": [
           "做"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v10_zuofan.png"
     },
     {
       "id": "v_l05_12",
@@ -206,7 +216,8 @@
           "条",
           "儿"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v12_miantiaor.png"
     },
     {
       "id": "v_l05_13",
@@ -222,7 +233,8 @@
           "饺",
           "子"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v13_jiaozi.png"
     },
     {
       "id": "v_l05_14",
@@ -238,7 +250,8 @@
           "一",
           "些"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v10_zuofan.png"
     },
     {
       "id": "v_l05_15",
@@ -253,7 +266,8 @@
         "characters": [
           "菜"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v10_zuofan.png"
     },
     {
       "id": "v_l05_16",
@@ -269,7 +283,8 @@
           "下",
           "班"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v08_xiuxi.png"
     },
     {
       "id": "v_l05_17",
@@ -284,7 +299,8 @@
         "characters": [
           "新"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v18_diannao.png"
     },
     {
       "id": "v_l05_18",
@@ -300,7 +316,8 @@
           "电",
           "脑"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v18_diannao.png"
     },
     {
       "id": "v_l05_19",
@@ -331,7 +348,8 @@
           "好",
           "看"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v21_xihuan.png"
     },
     {
       "id": "v_l05_21",
@@ -347,7 +365,8 @@
           "喜",
           "欢"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v21_xihuan.png"
     },
     {
       "id": "v_l05_22",
@@ -362,7 +381,8 @@
         "characters": [
           "它"
         ]
-      }
+      },
+      "image": "images/vocab/hsk1-l05/v21_xihuan.png"
     }
   ],
   "vocabExtensions": {

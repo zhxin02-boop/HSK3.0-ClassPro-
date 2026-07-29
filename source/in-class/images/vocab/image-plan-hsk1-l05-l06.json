@@ -1,0 +1,163 @@
+{
+  "style": "friendly classroom-appropriate semi-realistic 3D educational illustration, simple light background, square flashcard composition",
+  "negative": "No text, no Chinese characters, no pinyin, no English words, no logos, no watermark. Avoid complex scenes, crowded people, dark backgrounds, cropped objects, and extra objects that could match another answer choice.",
+  "promptTemplate": "Create a clear educational illustration for HSK1 beginner Chinese learners. Target word: \"{word}\". Meaning: \"{meaning}\". {scene} The image should communicate the meaning at a glance, with one clear subject, a simple light background, and a friendly classroom-appropriate semi-realistic 3D educational illustration style. No text, no Chinese characters, no pinyin, no English words, no logos, no watermark. Avoid complex scenes, crowded people, dark backgrounds, cropped objects, and extra objects that could match another answer choice. Square composition for a vocabulary flashcard.",
+  "batches": [
+    {
+      "id": "L05-A-calendar",
+      "lesson": "HSK1-L05",
+      "targets": [
+        {
+          "word": "今天",
+          "meaning": "today",
+          "scene": "Show a clean desk calendar where the current day is clearly highlighted by color or shape, but without readable numbers or words.",
+          "path": "images/vocab/hsk1-l05/v01_jintian.png"
+        },
+        {
+          "word": "号",
+          "meaning": "date number",
+          "scene": "Show a calendar date concept with one date cell visually circled, but without readable numbers or words.",
+          "path": "images/vocab/hsk1-l05/v02_hao_date.png"
+        },
+        {
+          "word": "月",
+          "meaning": "month",
+          "scene": "Show a clean monthly calendar page or calendar flip view, clearly communicating a month, but without readable text.",
+          "path": "images/vocab/hsk1-l05/v03_yue_month.png"
+        },
+        {
+          "word": "星期日",
+          "meaning": "Sunday",
+          "scene": "Show a weekly calendar with the final day visually highlighted and a student resting happily nearby, but without readable text.",
+          "path": "images/vocab/hsk1-l05/v06_xingqiri.png"
+        }
+      ]
+    },
+    {
+      "id": "L05-B-life-food",
+      "lesson": "HSK1-L05",
+      "targets": [
+        {
+          "word": "休息",
+          "meaning": "rest",
+          "scene": "Show one student relaxing peacefully at home or on a campus bench, clearly resting.",
+          "path": "images/vocab/hsk1-l05/v08_xiuxi.png"
+        },
+        {
+          "word": "做饭",
+          "meaning": "cook",
+          "scene": "Show a simple home kitchen scene with one person cooking at a stove, with vegetables or a pot clearly visible.",
+          "path": "images/vocab/hsk1-l05/v10_zuofan.png"
+        },
+        {
+          "word": "面条儿",
+          "meaning": "noodles",
+          "scene": "Show one clear bowl of noodles as the central object.",
+          "path": "images/vocab/hsk1-l05/v12_miantiaor.png"
+        },
+        {
+          "word": "饺子",
+          "meaning": "dumplings",
+          "scene": "Show a plate of Chinese dumplings, visually distinct from steamed buns.",
+          "path": "images/vocab/hsk1-l05/v13_jiaozi.png"
+        }
+      ]
+    },
+    {
+      "id": "L05-C-computer-like",
+      "lesson": "HSK1-L05",
+      "targets": [
+        {
+          "word": "电脑",
+          "meaning": "computer",
+          "scene": "Show a laptop computer on a clean desk as the central object.",
+          "path": "images/vocab/hsk1-l05/v18_diannao.png"
+        },
+        {
+          "word": "喜欢",
+          "meaning": "like",
+          "scene": "Show a student smiling warmly and making a clear liking gesture toward a simple object, such as a laptop or food, without visual clutter.",
+          "path": "images/vocab/hsk1-l05/v21_xihuan.png"
+        }
+      ]
+    },
+    {
+      "id": "L06-A-phone-time",
+      "lesson": "HSK1-L06",
+      "targets": [
+        {
+          "word": "手机",
+          "meaning": "cell phone",
+          "scene": "Show one modern smartphone as the central object on a clean light background, with no visible readable interface text.",
+          "path": "images/vocab/hsk1-l06/v01_shouji.png"
+        },
+        {
+          "word": "电话",
+          "meaning": "telephone or phone call",
+          "scene": "Show a person answering a phone call or a simple telephone object, making it distinct from a smartphone vocabulary card.",
+          "path": "images/vocab/hsk1-l06/v02_dianhua.png"
+        },
+        {
+          "word": "号",
+          "meaning": "number",
+          "scene": "Show a phone number concept using abstract rounded number-like shapes on a card or phone screen, but no readable digits or text.",
+          "path": "images/vocab/hsk1-l06/v03_hao_number.png"
+        },
+        {
+          "word": "明天",
+          "meaning": "tomorrow",
+          "scene": "Show a calendar flipping to the next day with a hopeful future plan feeling, but without readable dates or words.",
+          "path": "images/vocab/hsk1-l06/v04_mingtian.png"
+        }
+      ]
+    },
+    {
+      "id": "L06-B-market-food",
+      "lesson": "HSK1-L06",
+      "targets": [
+        {
+          "word": "超市",
+          "meaning": "supermarket",
+          "scene": "Show a bright supermarket aisle with shelves and a shopping basket, no readable labels.",
+          "path": "images/vocab/hsk1-l06/v08_chaoshi.png"
+        },
+        {
+          "word": "牛奶",
+          "meaning": "milk",
+          "scene": "Show a bottle or carton of milk as the central object, with no readable brand or text.",
+          "path": "images/vocab/hsk1-l06/v12_niunai.png"
+        },
+        {
+          "word": "包子",
+          "meaning": "steamed stuffed bun",
+          "scene": "Show steamed buns in a bamboo steamer, clearly distinct from dumplings.",
+          "path": "images/vocab/hsk1-l06/v16_baozi.png"
+        },
+        {
+          "word": "米饭",
+          "meaning": "cooked rice",
+          "scene": "Show one bowl of plain cooked white rice as the central object.",
+          "path": "images/vocab/hsk1-l06/v19_mifan.png"
+        }
+      ]
+    },
+    {
+      "id": "L06-C-transport-dinner",
+      "lesson": "HSK1-L06",
+      "targets": [
+        {
+          "word": "出租车",
+          "meaning": "taxi",
+          "scene": "Show one taxi car as the central object, with taxi identity clear by color and roof light but no readable text.",
+          "path": "images/vocab/hsk1-l06/v22_chuzuche.png"
+        },
+        {
+          "word": "晚饭",
+          "meaning": "dinner",
+          "scene": "Show a simple evening dinner table with food bowls and warm light, clearly communicating dinner.",
+          "path": "images/vocab/hsk1-l06/v14_wanfan.png"
+        }
+      ]
+    }
+  ]
+}

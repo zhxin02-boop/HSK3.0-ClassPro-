@@ -9,7 +9,7 @@
       var item = homework.tiers[tier] || {};
       tiers[tier] = { label: item.label || tier, goal: item.goal || '', suggested_minutes: (item.suggestedMinutes || 15) + '分钟左右', suggested_mix: item.suggestedMix || '' };
     });
-    return { tiers: tiers, shared_pool: homework.sharedPool || [], tier_pools: homework.tierPools || {}, assignment_selection: homework.assignmentSelection || {}, review_policy: homework.reviewPolicy || {} };
+    return { mode: homework.mode || '', instructions: homework.instructions || {}, tiers: tiers, shared_pool: homework.sharedPool || [], tier_pools: homework.tierPools || {}, assignment_selection: homework.assignmentSelection || {}, review_policy: homework.reviewPolicy || {} };
   }
   if (/^HSK1-L\d{2}$/.test(lesson) && lesson !== 'HSK1-L01') {
     try {

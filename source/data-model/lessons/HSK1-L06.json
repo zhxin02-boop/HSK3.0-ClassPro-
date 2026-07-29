@@ -1,0 +1,3672 @@
+{
+  "schemaVersion": "hsk1-course-v1",
+  "meta": {
+    "level": "HSK1",
+    "lessonId": "L06",
+    "lessonKey": "HSK1-L06",
+    "title": "你的手机号是多少？",
+    "titleEn": "What's your cell phone number?",
+    "topic": "询问与告知手机号码、表达意愿、目的和交通方式",
+    "topicEn": "Phone numbers, intentions, purpose and transportation",
+    "sourceTextPolicy": "保留教材原句；新增内容标记为教学扩展"
+  },
+  "features": {
+    "pinyin": false,
+    "hanziWritingDemo": true,
+    "vocabExamples": true,
+    "competition": true,
+    "postClassHomework": true
+  },
+  "vocabulary": [
+    {
+      "id": "v_l06_01",
+      "hanzi": "手机",
+      "word": "手机",
+      "pinyin": "shǒujī",
+      "english": "cell phone",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "手",
+          "机"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v01_shouji.png"
+    },
+    {
+      "id": "v_l06_02",
+      "hanzi": "电话",
+      "word": "电话",
+      "pinyin": "diànhuà",
+      "english": "telephone; phone call",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "电",
+          "话"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v02_dianhua.png"
+    },
+    {
+      "id": "v_l06_03",
+      "hanzi": "号",
+      "word": "号",
+      "pinyin": "hào",
+      "english": "number",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "号"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v03_hao_number.png"
+    },
+    {
+      "id": "v_l06_04",
+      "hanzi": "明天",
+      "word": "明天",
+      "pinyin": "míngtiān",
+      "english": "tomorrow",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "明",
+          "天"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v04_mingtian.png"
+    },
+    {
+      "id": "v_l06_05",
+      "hanzi": "去",
+      "word": "去",
+      "pinyin": "qù",
+      "english": "go to",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "去"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v22_chuzuche.png"
+    },
+    {
+      "id": "v_l06_06",
+      "hanzi": "哪儿",
+      "word": "哪儿",
+      "pinyin": "nǎr",
+      "english": "where",
+      "partOfSpeech": "代词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "哪",
+          "儿"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v04_mingtian.png"
+    },
+    {
+      "id": "v_l06_07",
+      "hanzi": "想",
+      "word": "想",
+      "pinyin": "xiǎng",
+      "english": "want; would like",
+      "partOfSpeech": "能愿动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "想"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v04_mingtian.png"
+    },
+    {
+      "id": "v_l06_08",
+      "hanzi": "超市",
+      "word": "超市",
+      "pinyin": "chāoshì",
+      "english": "supermarket",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "超",
+          "市"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v08_chaoshi.png"
+    },
+    {
+      "id": "v_l06_09",
+      "hanzi": "买",
+      "word": "买",
+      "pinyin": "mǎi",
+      "english": "buy",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "买"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v08_chaoshi.png"
+    },
+    {
+      "id": "v_l06_10",
+      "hanzi": "东西",
+      "word": "东西",
+      "pinyin": "dōngxi",
+      "english": "thing; things",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "东",
+          "西"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v08_chaoshi.png"
+    },
+    {
+      "id": "v_l06_11",
+      "hanzi": "些",
+      "word": "些",
+      "pinyin": "xiē",
+      "english": "some; a few",
+      "partOfSpeech": "量词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "些"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v08_chaoshi.png"
+    },
+    {
+      "id": "v_l06_12",
+      "hanzi": "牛奶",
+      "word": "牛奶",
+      "pinyin": "niúnǎi",
+      "english": "milk",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "牛",
+          "奶"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v12_niunai.png"
+    },
+    {
+      "id": "v_l06_13",
+      "hanzi": "吃",
+      "word": "吃",
+      "pinyin": "chī",
+      "english": "eat; have",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "吃"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v14_wanfan.png"
+    },
+    {
+      "id": "v_l06_14",
+      "hanzi": "晚饭",
+      "word": "晚饭",
+      "pinyin": "wǎnfàn",
+      "english": "dinner; supper",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "晚",
+          "饭"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v14_wanfan.png"
+    },
+    {
+      "id": "v_l06_15",
+      "hanzi": "那边",
+      "word": "那边",
+      "pinyin": "nàbiān",
+      "english": "there; that side",
+      "partOfSpeech": "代词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "那",
+          "边"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v16_baozi.png"
+    },
+    {
+      "id": "v_l06_16",
+      "hanzi": "包子",
+      "word": "包子",
+      "pinyin": "bāozi",
+      "english": "steamed stuffed bun",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "包",
+          "子"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v16_baozi.png"
+    },
+    {
+      "id": "v_l06_17",
+      "hanzi": "非常",
+      "word": "非常",
+      "pinyin": "fēicháng",
+      "english": "very; extremely",
+      "partOfSpeech": "副词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "非",
+          "常"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v16_baozi.png"
+    },
+    {
+      "id": "v_l06_18",
+      "hanzi": "好吃",
+      "word": "好吃",
+      "pinyin": "hǎochī",
+      "english": "delicious; tasty",
+      "partOfSpeech": "形容词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "好",
+          "吃"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v16_baozi.png"
+    },
+    {
+      "id": "v_l06_19",
+      "hanzi": "米饭",
+      "word": "米饭",
+      "pinyin": "mǐfàn",
+      "english": "cooked rice",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "米",
+          "饭"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v19_mifan.png"
+    },
+    {
+      "id": "v_l06_20",
+      "hanzi": "怎么",
+      "word": "怎么",
+      "pinyin": "zěnme",
+      "english": "how",
+      "partOfSpeech": "代词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "怎",
+          "么"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v22_chuzuche.png"
+    },
+    {
+      "id": "v_l06_21",
+      "hanzi": "坐",
+      "word": "坐",
+      "pinyin": "zuò",
+      "english": "take; travel by or on",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "坐"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v22_chuzuche.png"
+    },
+    {
+      "id": "v_l06_22",
+      "hanzi": "出租车",
+      "word": "出租车",
+      "pinyin": "chūzūchē",
+      "english": "taxi",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "出",
+          "租",
+          "车"
+        ]
+      },
+      "image": "images/vocab/hsk1-l06/v22_chuzuche.png"
+    }
+  ],
+  "properNouns": [
+    {
+      "hanzi": "李文",
+      "pinyin": "Lǐ Wén",
+      "english": "Li Wen",
+      "sourceType": "textbook"
+    },
+    {
+      "hanzi": "白家月",
+      "pinyin": "Bái Jiāyuè",
+      "english": "Bai Jiayue",
+      "sourceType": "textbook"
+    },
+    {
+      "hanzi": "陈天中",
+      "pinyin": "Chén Tiānzhōng",
+      "english": "Chen Tianzhong",
+      "sourceType": "textbook"
+    },
+    {
+      "hanzi": "王一雪",
+      "pinyin": "Wáng Yīxuě",
+      "english": "Wang Yixue",
+      "sourceType": "textbook"
+    },
+    {
+      "hanzi": "刘明",
+      "pinyin": "Liú Míng",
+      "english": "Liu Ming",
+      "sourceType": "textbook"
+    },
+    {
+      "hanzi": "刘小雪",
+      "pinyin": "Liú Xiǎoxuě",
+      "english": "Liu Xiaoxue",
+      "sourceType": "textbook"
+    },
+    {
+      "hanzi": "刘小明",
+      "pinyin": "Liú Xiǎomíng",
+      "english": "Liu Xiaoming",
+      "sourceType": "textbook"
+    },
+    {
+      "hanzi": "西安饭店",
+      "pinyin": "Xī'ān Fàndiàn",
+      "english": "Xi'an Restaurant",
+      "sourceType": "textbook"
+    }
+  ],
+  "vocabExtensions": {
+    "手机": [
+      {
+        "hanzi": "我的手机很好看。",
+        "pinyin": "Wǒ de shǒujī hěn hǎokàn.",
+        "english": "My cell phone looks nice.",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "你的手机在哪儿？",
+        "pinyin": "Nǐ de shǒujī zài nǎr?",
+        "english": "Where is your cell phone?",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "电话": [
+      {
+        "hanzi": "我的电话是这个号。",
+        "pinyin": "Wǒ de diànhuà shì zhège hào.",
+        "english": "My phone number is this number.",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "你有他的电话吗？",
+        "pinyin": "Nǐ yǒu tā de diànhuà ma?",
+        "english": "Do you have his phone number?",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "号": [
+      {
+        "hanzi": "你的手机号是多少？",
+        "pinyin": "Nǐ de shǒujīhào shì duōshao?",
+        "english": "What is your cell phone number?",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "这个号不是我的。",
+        "pinyin": "Zhège hào bú shì wǒ de.",
+        "english": "This number is not mine.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "明天": [
+      {
+        "hanzi": "明天你去哪儿？",
+        "pinyin": "Míngtiān nǐ qù nǎr?",
+        "english": "Where are you going tomorrow?",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "明天我想休息。",
+        "pinyin": "Míngtiān wǒ xiǎng xiūxi.",
+        "english": "I want to rest tomorrow.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "去": [
+      {
+        "hanzi": "我想去超市。",
+        "pinyin": "Wǒ xiǎng qù chāoshì.",
+        "english": "I want to go to the supermarket.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "我们去西安饭店。",
+        "pinyin": "Wǒmen qù Xī'ān Fàndiàn.",
+        "english": "We are going to Xi'an Restaurant.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "哪儿": [
+      {
+        "hanzi": "你去哪儿？",
+        "pinyin": "Nǐ qù nǎr?",
+        "english": "Where are you going?",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "我们去哪儿吃晚饭？",
+        "pinyin": "Wǒmen qù nǎr chī wǎnfàn?",
+        "english": "Where are we going for dinner?",
+        "sourceType": "textbook"
+      }
+    ],
+    "想": [
+      {
+        "hanzi": "我想买些牛奶。",
+        "pinyin": "Wǒ xiǎng mǎi xiē niúnǎi.",
+        "english": "I want to buy some milk.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "我不想吃包子。",
+        "pinyin": "Wǒ bù xiǎng chī bāozi.",
+        "english": "I do not want to eat buns.",
+        "sourceType": "textbook"
+      }
+    ],
+    "超市": [
+      {
+        "hanzi": "我想去超市买东西。",
+        "pinyin": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
+        "english": "I want to go to the supermarket to buy things.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "超市那边有牛奶。",
+        "pinyin": "Chāoshì nàbiān yǒu niúnǎi.",
+        "english": "There is milk over by the supermarket.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "买": [
+      {
+        "hanzi": "你买什么？",
+        "pinyin": "Nǐ mǎi shénme?",
+        "english": "What are you buying?",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "我想买东西。",
+        "pinyin": "Wǒ xiǎng mǎi dōngxi.",
+        "english": "I want to buy things.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "东西": [
+      {
+        "hanzi": "你去超市买什么东西？",
+        "pinyin": "Nǐ qù chāoshì mǎi shénme dōngxi?",
+        "english": "What things are you going to buy at the supermarket?",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "这些东西很好。",
+        "pinyin": "Zhèxiē dōngxi hěn hǎo.",
+        "english": "These things are good.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "些": [
+      {
+        "hanzi": "我想买些牛奶。",
+        "pinyin": "Wǒ xiǎng mǎi xiē niúnǎi.",
+        "english": "I want to buy some milk.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "我想吃些米饭。",
+        "pinyin": "Wǒ xiǎng chī xiē mǐfàn.",
+        "english": "I want to eat some rice.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "牛奶": [
+      {
+        "hanzi": "我想买些牛奶。",
+        "pinyin": "Wǒ xiǎng mǎi xiē niúnǎi.",
+        "english": "I want to buy some milk.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "我喜欢牛奶。",
+        "pinyin": "Wǒ xǐhuan niúnǎi.",
+        "english": "I like milk.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "吃": [
+      {
+        "hanzi": "我想吃包子。",
+        "pinyin": "Wǒ xiǎng chī bāozi.",
+        "english": "I want to eat buns.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "你想吃什么？",
+        "pinyin": "Nǐ xiǎng chī shénme?",
+        "english": "What do you want to eat?",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "晚饭": [
+      {
+        "hanzi": "我们去哪儿吃晚饭？",
+        "pinyin": "Wǒmen qù nǎr chī wǎnfàn?",
+        "english": "Where are we going for dinner?",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "今天晚饭很好吃。",
+        "pinyin": "Jīntiān wǎnfàn hěn hǎochī.",
+        "english": "Today's dinner is delicious.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "那边": [
+      {
+        "hanzi": "那边的包子非常好吃。",
+        "pinyin": "Nàbiān de bāozi fēicháng hǎochī.",
+        "english": "The buns there are very delicious.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "老师在那边。",
+        "pinyin": "Lǎoshī zài nàbiān.",
+        "english": "The teacher is over there.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "包子": [
+      {
+        "hanzi": "我想吃包子。",
+        "pinyin": "Wǒ xiǎng chī bāozi.",
+        "english": "I want to eat buns.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "包子非常好吃。",
+        "pinyin": "Bāozi fēicháng hǎochī.",
+        "english": "The buns are very delicious.",
+        "sourceType": "textbook"
+      }
+    ],
+    "非常": [
+      {
+        "hanzi": "包子非常好吃。",
+        "pinyin": "Bāozi fēicháng hǎochī.",
+        "english": "The buns are very delicious.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "我非常喜欢这个手机。",
+        "pinyin": "Wǒ fēicháng xǐhuan zhège shǒujī.",
+        "english": "I like this cell phone very much.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "好吃": [
+      {
+        "hanzi": "那边的包子非常好吃。",
+        "pinyin": "Nàbiān de bāozi fēicháng hǎochī.",
+        "english": "The buns there are very delicious.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "米饭很好吃。",
+        "pinyin": "Mǐfàn hěn hǎochī.",
+        "english": "The rice is delicious.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "米饭": [
+      {
+        "hanzi": "我想吃米饭。",
+        "pinyin": "Wǒ xiǎng chī mǐfàn.",
+        "english": "I want to eat rice.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "妈妈做米饭。",
+        "pinyin": "Māma zuò mǐfàn.",
+        "english": "Mom cooks rice.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "怎么": [
+      {
+        "hanzi": "我们怎么去？",
+        "pinyin": "Wǒmen zěnme qù?",
+        "english": "How shall we go?",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "你怎么去超市？",
+        "pinyin": "Nǐ zěnme qù chāoshì?",
+        "english": "How do you go to the supermarket?",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "坐": [
+      {
+        "hanzi": "坐出租车去。",
+        "pinyin": "Zuò chūzūchē qù.",
+        "english": "Go by taxi.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "我坐出租车去超市。",
+        "pinyin": "Wǒ zuò chūzūchē qù chāoshì.",
+        "english": "I take a taxi to the supermarket.",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "出租车": [
+      {
+        "hanzi": "我们坐出租车去西安饭店。",
+        "pinyin": "Wǒmen zuò chūzūchē qù Xī'ān Fàndiàn.",
+        "english": "We take a taxi to Xi'an Restaurant.",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "出租车在那边。",
+        "pinyin": "Chūzūchē zài nàbiān.",
+        "english": "The taxi is over there.",
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "grammarTeachingNotes": {
+    "g_l06_01": {
+      "structure": "主语 + 想 + 动词/动词短语",
+      "structureEn": "Subject + 想 + verb or verb phrase.",
+      "structureRu": "Подлежащее + 想 + глагол/глагольная фраза.",
+      "english": "想 before a verb expresses a wish or plan. The negative form is 不想.",
+      "russian": "想 перед глаголом выражает желание или намерение. Отрицательная форма — 不想."
+    },
+    "g_l06_02": {
+      "structure": "主语 + 动词1 + 地点 + 动词2 + 宾语",
+      "structureEn": "Subject + verb 1 + place + verb 2 + object.",
+      "structureRu": "Подлежащее + глагол 1 + место + глагол 2 + объект.",
+      "english": "A serial verb sentence can show purpose: go somewhere to do something.",
+      "russian": "Последовательные глаголы могут показывать цель: пойти куда-то, чтобы что-то сделать."
+    },
+    "g_l06_03": {
+      "structure": "主语 + 怎么 + 动词",
+      "structureEn": "Subject + 怎么 + verb.",
+      "structureRu": "Подлежащее + 怎么 + глагол.",
+      "english": "怎么 before a verb asks about the way or method of doing something.",
+      "russian": "怎么 перед глаголом спрашивает о способе действия."
+    }
+  },
+  "grammar": [
+    {
+      "id": "g_l06_01",
+      "title": "能愿动词“想”",
+      "titleEn": "Modal Verb 想",
+      "explanation": "“想”用在动词前，表示希望、打算；否定形式是“不想”。",
+      "sourceType": "textbook",
+      "examples": [
+        {
+          "hanzi": "我想去超市。",
+          "pinyin": "Wǒ xiǎng qù chāoshì.",
+          "english": "I want to go to the supermarket.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我想买些牛奶。",
+          "pinyin": "Wǒ xiǎng mǎi xiē niúnǎi.",
+          "english": "I want to buy some milk.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我不想吃包子。",
+          "pinyin": "Wǒ bù xiǎng chī bāozi.",
+          "english": "I do not want to eat buns.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "明天我想休息。",
+          "pinyin": "Míngtiān wǒ xiǎng xiūxi.",
+          "english": "I want to rest tomorrow.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    {
+      "id": "g_l06_02",
+      "title": "连动句（1）",
+      "titleEn": "Serial Verb Sentences (1)",
+      "explanation": "一个句子中连续使用两个或两个以上动词性短语，可以表示动作目的或方式。",
+      "sourceType": "textbook",
+      "examples": [
+        {
+          "hanzi": "我想去超市买东西。",
+          "pinyin": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
+          "english": "I want to go to the supermarket to buy things.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我们去西安饭店吃晚饭。",
+          "pinyin": "Wǒmen qù Xī'ān Fàndiàn chī wǎnfàn.",
+          "english": "We go to Xi'an Restaurant to have dinner.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我们坐出租车去西安饭店。",
+          "pinyin": "Wǒmen zuò chūzūchē qù Xī'ān Fàndiàn.",
+          "english": "We take a taxi to Xi'an Restaurant.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "她坐出租车去超市。",
+          "pinyin": "Tā zuò chūzūchē qù chāoshì.",
+          "english": "She takes a taxi to the supermarket.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "g_l06_03",
+      "title": "疑问代词“怎么”",
+      "titleEn": "Interrogative Pronoun 怎么",
+      "explanation": "“怎么”用在动词前，询问动作的方式。回答常说明交通方式或做法。",
+      "sourceType": "textbook",
+      "examples": [
+        {
+          "hanzi": "我们怎么去？",
+          "pinyin": "Wǒmen zěnme qù?",
+          "english": "How shall we go?",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "她怎么去超市？",
+          "pinyin": "Tā zěnme qù chāoshì?",
+          "english": "How does she go to the supermarket?",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "你怎么去学校？",
+          "pinyin": "Nǐ zěnme qù xuéxiào?",
+          "english": "How do you go to school?",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "text_l06_01",
+      "title": "对话一",
+      "scene": "在校园里，李文向白家月要手机号。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "speaker": "李文",
+          "hanzi": "家月，你的手机号是多少？",
+          "pinyin": "Jiāyuè, nǐ de shǒujīhào shì duōshao?",
+          "english": "Jiayue, what's your cell phone number?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "白家月",
+          "hanzi": "我的手机号是 +33 601493190。",
+          "pinyin": "Wǒ de shǒujīhào shì +33 liù líng yī sì jiǔ sān yī jiǔ líng.",
+          "english": "My cell phone number is +33 601493190.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "李文",
+          "hanzi": "我的手机号是 +86 13552721160。",
+          "pinyin": "Wǒ de shǒujīhào shì +86 yī sān wǔ wǔ èr qī èr yī yī liù líng.",
+          "english": "My cell phone number is +86 13552721160.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "白家月",
+          "hanzi": "好的。",
+          "pinyin": "Hǎo de.",
+          "english": "Alright.",
+          "sourceType": "textbook"
+        }
+      ],
+      "teachingNotes": [
+        {
+          "text": "手机号码要一位一位地读；数字“1”在电话号码中常读成“yāo”。",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "text_l06_02",
+      "title": "对话二",
+      "scene": "在教室里，下课后，白家月和陈天中在聊天儿。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "speaker": "陈天中",
+          "hanzi": "家月，明天你去哪儿？",
+          "pinyin": "Jiāyuè, míngtiān nǐ qù nǎr?",
+          "english": "Jiayue, where are you going tomorrow?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "白家月",
+          "hanzi": "我想去超市买东西。",
+          "pinyin": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
+          "english": "I want to go to the supermarket to buy groceries.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "陈天中",
+          "hanzi": "你去超市买什么？",
+          "pinyin": "Nǐ qù chāoshì mǎi shénme?",
+          "english": "What are you going to buy at the supermarket?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "白家月",
+          "hanzi": "我想买些牛奶。",
+          "pinyin": "Wǒ xiǎng mǎi xiē niúnǎi.",
+          "english": "I want to buy some milk.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "text_l06_03",
+      "title": "对话三",
+      "scene": "在家里，王一雪全家在讨论周末晚餐安排。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "speaker": "王一雪",
+          "hanzi": "星期天我们去哪儿吃晚饭？",
+          "pinyin": "Xīngqītiān wǒmen qù nǎr chī wǎnfàn?",
+          "english": "Where are we going for dinner on Sunday?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "我还想去西安饭店。",
+          "pinyin": "Wǒ hái xiǎng qù Xī'ān Fàndiàn.",
+          "english": "I'd like to go to Xi'an Restaurant again.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "刘小雪",
+          "hanzi": "那边的包子非常好吃，我想吃包子。",
+          "pinyin": "Nàbiān de bāozi fēicháng hǎochī, wǒ xiǎng chī bāozi.",
+          "english": "The steamed stuffed buns there are very delicious; I'd love to eat some.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "刘小明",
+          "hanzi": "妈妈，我想吃米饭，不想吃包子。",
+          "pinyin": "Māma, wǒ xiǎng chī mǐfàn, bù xiǎng chī bāozi.",
+          "english": "Mom, I'd rather have rice, not steamed stuffed buns.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "好的。我们怎么去？",
+          "pinyin": "Hǎo de. Wǒmen zěnme qù?",
+          "english": "Alright. How shall we get there?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "坐出租车去。",
+          "pinyin": "Zuò chūzūchē qù.",
+          "english": "Let's take a taxi.",
+          "sourceType": "textbook"
+        }
+      ]
+    }
+  ],
+  "preClass": {
+    "warmup": {
+      "title": "号码、计划和出行",
+      "prompt": "Think about phone numbers, tomorrow's plan and transportation.",
+      "intro": "这一课学完，你可以询问手机号、说明想去哪儿和怎么去。",
+      "question": "如果你想问朋友的手机号，下面哪句话最合适？",
+      "questionEn": "Which sentence asks for a friend's cell phone number?",
+      "options": [
+        {
+          "word": "你的手机号是多少？",
+          "pinyin": "Nǐ de shǒujīhào shì duōshao?"
+        },
+        {
+          "word": "你去哪儿吃晚饭？",
+          "pinyin": "Nǐ qù nǎr chī wǎnfàn?"
+        },
+        {
+          "word": "你怎么去超市？",
+          "pinyin": "Nǐ zěnme qù chāoshì?"
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": "pre_l06_01",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“手机”的意思是：",
+        "options": [
+          {
+            "text": "cell phone",
+            "pinyin": "shǒujī"
+          },
+          {
+            "text": "taxi",
+            "pinyin": "chūzūchē"
+          },
+          {
+            "text": "milk",
+            "pinyin": "niúnǎi"
+          },
+          {
+            "text": "dinner",
+            "pinyin": "wǎnfàn"
+          }
+        ],
+        "answer": "cell phone",
+        "weakPoints": "词汇：手机",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l06_02",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“超市”的意思是：",
+        "options": [
+          {
+            "text": "supermarket",
+            "pinyin": "chāoshì"
+          },
+          {
+            "text": "restaurant",
+            "pinyin": "fàndiàn"
+          },
+          {
+            "text": "school",
+            "pinyin": "xuéxiào"
+          },
+          {
+            "text": "home",
+            "pinyin": "jiā"
+          }
+        ],
+        "answer": "supermarket",
+        "weakPoints": "词汇：超市",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l06_03",
+        "type": "choice",
+        "module": "情景理解",
+        "question": "选择可以回答“你明天想去哪儿？”的句子。",
+        "options": [
+          {
+            "text": "我想去学校。",
+            "pinyin": "Wǒ xiǎng qù xuéxiào."
+          },
+          {
+            "text": "我的手机号是13552721160。",
+            "pinyin": "Wǒ de shǒujīhào shì 13552721160."
+          },
+          {
+            "text": "那边的包子很好吃。",
+            "pinyin": "Nàbiān de bāozi hěn hǎochī."
+          },
+          {
+            "text": "我坐出租车去。",
+            "pinyin": "Wǒ zuò chūzūchē qù."
+          }
+        ],
+        "answer": "我想去学校。",
+        "weakPoints": "交际：想去哪儿",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l06_04",
+        "type": "choice",
+        "module": "交际预热",
+        "question": "选择可以回答“你想买什么？”的句子。",
+        "options": [
+          {
+            "text": "我想买些牛奶。",
+            "pinyin": "Wǒ xiǎng mǎi xiē niúnǎi."
+          },
+          {
+            "text": "我叫白家月。",
+            "pinyin": "Wǒ jiào Bái Jiāyuè."
+          },
+          {
+            "text": "我今年十二岁。",
+            "pinyin": "Wǒ jīnnián shí'èr suì."
+          },
+          {
+            "text": "我没有哥哥。",
+            "pinyin": "Wǒ méiyǒu gēge."
+          }
+        ],
+        "answer": "我想买些牛奶。",
+        "weakPoints": "交际：买东西",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l06_05",
+        "type": "subjective",
+        "module": "生活经验开放题",
+        "question": "教学扩展：你明天想去哪儿？请试着写一个中文短句。",
+        "questionEn": "Where do you want to go tomorrow? Try one Chinese sentence.",
+        "answerPlaceholder": "例如：明天我想去超市。",
+        "needsTeacherReview": true,
+        "openEnded": true,
+        "weakPoints": "输出：想去哪里",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l06_06",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“出租车”的意思是：",
+        "options": [
+          {
+            "text": "taxi",
+            "pinyin": "chūzūchē"
+          },
+          {
+            "text": "cell phone",
+            "pinyin": "shǒujī"
+          },
+          {
+            "text": "supermarket",
+            "pinyin": "chāoshì"
+          },
+          {
+            "text": "tomorrow",
+            "pinyin": "míngtiān"
+          }
+        ],
+        "answer": "taxi",
+        "weakPoints": "词汇：出租车",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l06_07",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“些”在“买些牛奶”里的意思接近：",
+        "options": [
+          {
+            "text": "some",
+            "pinyin": "xiē"
+          },
+          {
+            "text": "all",
+            "pinyin": "dōu"
+          },
+          {
+            "text": "very",
+            "pinyin": "hěn"
+          },
+          {
+            "text": "not",
+            "pinyin": "bù"
+          }
+        ],
+        "answer": "some",
+        "weakPoints": "词汇：些",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l06_08",
+        "type": "choice",
+        "module": "句子理解",
+        "question": "选择可以回答“你怎么去学校？”的句子。",
+        "options": [
+          {
+            "text": "我坐出租车去学校。",
+            "pinyin": "Wǒ zuò chūzūchē qù xuéxiào."
+          },
+          {
+            "text": "我的手机号是13552721160。",
+            "pinyin": "Wǒ de shǒujīhào shì 13552721160."
+          },
+          {
+            "text": "那边的包子很好吃。",
+            "pinyin": "Nàbiān de bāozi hěn hǎochī."
+          },
+          {
+            "text": "我妈妈想吃米饭。",
+            "pinyin": "Wǒ māma xiǎng chī mǐfàn."
+          }
+        ],
+        "answer": "我坐出租车去学校。",
+        "weakPoints": "交际：怎么去",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l06_09",
+        "type": "choice",
+        "module": "句子理解",
+        "question": "你想买牛奶，可以说：",
+        "options": [
+          {
+            "text": "我想买些牛奶。",
+            "pinyin": "Wǒ xiǎng mǎi xiē niúnǎi."
+          },
+          {
+            "text": "我坐出租车去学校。",
+            "pinyin": "Wǒ zuò chūzūchē qù xuéxiào."
+          },
+          {
+            "text": "你的手机号是多少？",
+            "pinyin": "Nǐ de shǒujīhào shì duōshao?"
+          },
+          {
+            "text": "那边有什么好吃的？",
+            "pinyin": "Nàbiān yǒu shénme hǎochī de?"
+          }
+        ],
+        "answer": "我想买些牛奶。",
+        "weakPoints": "交际：买东西",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l06_10",
+        "type": "subjective",
+        "module": "生活经验开放题",
+        "question": "教学扩展：你常用什么交通方式去学校？请试着写一个中文短句。",
+        "questionEn": "How do you usually go to school? Try one Chinese sentence.",
+        "answerPlaceholder": "例如：我坐出租车去学校。",
+        "needsTeacherReview": true,
+        "openEnded": true,
+        "weakPoints": "输出：交通方式",
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "inClass": {
+    "questionGroups": {
+      "v1_image_guess": [
+        {
+          "id": "v1_hsk1_06_01",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A person holding a cell phone",
+            "options": [
+              "手机",
+              "出租车",
+              "牛奶",
+              "包子"
+            ],
+            "options_pinyin": [
+              "shǒujī",
+              "chūzūchē",
+              "niúnǎi",
+              "bāozi"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "手机",
+          "kp": "手机",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_06_02",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A phone keypad and phone number",
+            "options": [
+              "超市",
+              "电话",
+              "米饭",
+              "明天"
+            ],
+            "options_pinyin": [
+              "chāoshì",
+              "diànhuà",
+              "mǐfàn",
+              "míngtiān"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "电话",
+          "kp": "电话",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_06_03",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A card showing a number",
+            "options": [
+              "坐",
+              "些",
+              "号",
+              "去"
+            ],
+            "options_pinyin": [
+              "zuò",
+              "xiē",
+              "hào",
+              "qù"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "号",
+          "kp": "号",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_06_04",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A calendar pointing to tomorrow",
+            "options": [
+              "今天",
+              "今年",
+              "星期天",
+              "明天"
+            ],
+            "options_pinyin": [
+              "jīntiān",
+              "jīnnián",
+              "Xīngqītiān",
+              "míngtiān"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "明天",
+          "kp": "明天",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_06_05",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A supermarket aisle",
+            "options": [
+              "超市",
+              "西安饭店",
+              "家",
+              "教室"
+            ],
+            "options_pinyin": [
+              "chāoshì",
+              "Xī'ān Fàndiàn",
+              "jiā",
+              "jiàoshì"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "超市",
+          "kp": "超市",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_06_06",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A bottle and glass of milk",
+            "options": [
+              "米饭",
+              "牛奶",
+              "包子",
+              "晚饭"
+            ],
+            "options_pinyin": [
+              "mǐfàn",
+              "niúnǎi",
+              "bāozi",
+              "wǎnfàn"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "牛奶",
+          "kp": "牛奶",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_06_07",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "Steamed stuffed buns on a plate",
+            "options": [
+              "面条儿",
+              "饺子",
+              "包子",
+              "菜"
+            ],
+            "options_pinyin": [
+              "miàntiáor",
+              "jiǎozi",
+              "bāozi",
+              "cài"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "包子",
+          "kp": "包子",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_06_08",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A bowl of cooked rice",
+            "options": [
+              "东西",
+              "牛奶",
+              "包子",
+              "米饭"
+            ],
+            "options_pinyin": [
+              "dōngxi",
+              "niúnǎi",
+              "bāozi",
+              "mǐfàn"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "米饭",
+          "kp": "米饭",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_06_09",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "A taxi on a street",
+            "options": [
+              "出租车",
+              "手机",
+              "电话",
+              "超市"
+            ],
+            "options_pinyin": [
+              "chūzūchē",
+              "shǒujī",
+              "diànhuà",
+              "chāoshì"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "出租车",
+          "kp": "出租车",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v1_hsk1_06_10",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "media": {},
+          "data": {
+            "image_hint": "People eating dinner together",
+            "options": [
+              "电话",
+              "晚饭",
+              "些",
+              "哪儿"
+            ],
+            "options_pinyin": [
+              "diànhuà",
+              "wǎnfàn",
+              "xiē",
+              "nǎr"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "晚饭",
+          "kp": "晚饭",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v5_vocab_fill": [
+        {
+          "id": "v5_hsk1_06_01",
+          "type": "fill_blank",
+          "stage": "in_class",
+          "prompt_cn": "我的___号是 +86 13552721160。",
+          "prompt_en": "Fill in the blank.",
+          "data": {
+            "sentence": "我的___号是 +86 13552721160。",
+            "sentence_pinyin": "Wǒ de ___ hào shì +86 yī sān wǔ wǔ èr qī èr yī yī liù líng.",
+            "options": [
+              "晚饭",
+              "牛奶",
+              "手机",
+              "包子"
+            ],
+            "options_pinyin": [
+              "wǎnfàn",
+              "niúnǎi",
+              "shǒujī",
+              "bāozi"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "手机",
+          "acceptable_answers": [
+            "手机"
+          ],
+          "kp": "手机号",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_06_02",
+          "type": "fill_blank",
+          "stage": "in_class",
+          "prompt_cn": "明天你去___？",
+          "prompt_en": "Fill in the blank.",
+          "data": {
+            "sentence": "明天你去___？",
+            "sentence_pinyin": "Míngtiān nǐ qù ___?",
+            "options": [
+              "非常",
+              "怎么",
+              "些",
+              "哪儿"
+            ],
+            "options_pinyin": [
+              "fēicháng",
+              "zěnme",
+              "xiē",
+              "nǎr"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "哪儿",
+          "acceptable_answers": [
+            "哪儿"
+          ],
+          "kp": "哪儿",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_06_03",
+          "type": "fill_blank",
+          "stage": "in_class",
+          "prompt_cn": "我___去超市买东西。",
+          "prompt_en": "Fill in the blank.",
+          "data": {
+            "sentence": "我___去超市买东西。",
+            "sentence_pinyin": "Wǒ ___ qù chāoshì mǎi dōngxi.",
+            "options": [
+              "想",
+              "坐",
+              "号",
+              "些"
+            ],
+            "options_pinyin": [
+              "xiǎng",
+              "zuò",
+              "hào",
+              "xiē"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "想",
+          "acceptable_answers": [
+            "想"
+          ],
+          "kp": "想",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_06_04",
+          "type": "fill_blank",
+          "stage": "in_class",
+          "prompt_cn": "我想买些___。",
+          "prompt_en": "Fill in the blank.",
+          "data": {
+            "sentence": "我想买些___。",
+            "sentence_pinyin": "Wǒ xiǎng mǎi xiē ___.",
+            "options": [
+              "怎么",
+              "牛奶",
+              "哪儿",
+              "非常"
+            ],
+            "options_pinyin": [
+              "zěnme",
+              "niúnǎi",
+              "nǎr",
+              "fēicháng"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "牛奶",
+          "acceptable_answers": [
+            "牛奶"
+          ],
+          "kp": "牛奶",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_06_05",
+          "type": "fill_blank",
+          "stage": "in_class",
+          "prompt_cn": "星期天我们去哪儿吃___？",
+          "prompt_en": "Fill in the blank.",
+          "data": {
+            "sentence": "星期天我们去哪儿吃___？",
+            "sentence_pinyin": "Xīngqītiān wǒmen qù nǎr chī ___?",
+            "options": [
+              "电话",
+              "手机",
+              "晚饭",
+              "号"
+            ],
+            "options_pinyin": [
+              "diànhuà",
+              "shǒujī",
+              "wǎnfàn",
+              "hào"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "晚饭",
+          "acceptable_answers": [
+            "晚饭"
+          ],
+          "kp": "晚饭",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_06_06",
+          "type": "fill_blank",
+          "stage": "in_class",
+          "prompt_cn": "那边的包子___好吃。",
+          "prompt_en": "Fill in the blank.",
+          "data": {
+            "sentence": "那边的包子___好吃。",
+            "sentence_pinyin": "Nàbiān de bāozi ___ hǎochī.",
+            "options": [
+              "些",
+              "怎么",
+              "哪儿",
+              "非常"
+            ],
+            "options_pinyin": [
+              "xiē",
+              "zěnme",
+              "nǎr",
+              "fēicháng"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "非常",
+          "acceptable_answers": [
+            "非常"
+          ],
+          "kp": "非常",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_06_07",
+          "type": "fill_blank",
+          "stage": "in_class",
+          "prompt_cn": "我想吃米饭，不想吃___。",
+          "prompt_en": "Fill in the blank.",
+          "data": {
+            "sentence": "我想吃米饭，不想吃___。",
+            "sentence_pinyin": "Wǒ xiǎng chī mǐfàn, bù xiǎng chī ___.",
+            "options": [
+              "包子",
+              "手机",
+              "电话",
+              "出租车"
+            ],
+            "options_pinyin": [
+              "bāozi",
+              "shǒujī",
+              "diànhuà",
+              "chūzūchē"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "包子",
+          "acceptable_answers": [
+            "包子"
+          ],
+          "kp": "包子",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_06_08",
+          "type": "fill_blank",
+          "stage": "in_class",
+          "prompt_cn": "我们___去？",
+          "prompt_en": "Fill in the blank.",
+          "data": {
+            "sentence": "我们___去？",
+            "sentence_pinyin": "Wǒmen ___ qù?",
+            "options": [
+              "哪儿",
+              "怎么",
+              "些",
+              "非常"
+            ],
+            "options_pinyin": [
+              "nǎr",
+              "zěnme",
+              "xiē",
+              "fēicháng"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "怎么",
+          "acceptable_answers": [
+            "怎么"
+          ],
+          "kp": "怎么",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_06_09",
+          "type": "fill_blank",
+          "stage": "in_class",
+          "prompt_cn": "坐___去。",
+          "prompt_en": "Fill in the blank.",
+          "data": {
+            "sentence": "坐___去。",
+            "sentence_pinyin": "Zuò ___ qù.",
+            "options": [
+              "包子",
+              "牛奶",
+              "出租车",
+              "电话"
+            ],
+            "options_pinyin": [
+              "bāozi",
+              "niúnǎi",
+              "chūzūchē",
+              "diànhuà"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "出租车",
+          "acceptable_answers": [
+            "出租车"
+          ],
+          "kp": "出租车",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_06_10",
+          "type": "fill_blank",
+          "stage": "in_class",
+          "prompt_cn": "你去超市___什么？",
+          "prompt_en": "Fill in the blank.",
+          "data": {
+            "sentence": "你去超市___什么？",
+            "sentence_pinyin": "Nǐ qù chāoshì ___ shénme?",
+            "options": [
+              "吃",
+              "坐",
+              "号",
+              "买"
+            ],
+            "options_pinyin": [
+              "chī",
+              "zuò",
+              "hào",
+              "mǎi"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "买",
+          "acceptable_answers": [
+            "买"
+          ],
+          "kp": "买",
+          "sourceType": "textbook"
+        }
+      ],
+      "v7_word_match": [
+        {
+          "id": "v7_hsk1_06_01",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "匹配问句和回答。",
+          "prompt_en": "Match each question with the best reply.",
+          "data": {
+            "pairs": [
+              {
+                "left": "你的手机号是多少？",
+                "left_pinyin": "Nǐ de shǒujīhào shì duōshao?",
+                "right": "我的手机号是 +86 13552721160。",
+                "right_pinyin": "Wǒ de shǒujīhào shì +86 yī sān wǔ wǔ èr qī èr yī yī liù líng."
+              },
+              {
+                "left": "明天你去哪儿？",
+                "left_pinyin": "Míngtiān nǐ qù nǎr?",
+                "right": "我想去超市。",
+                "right_pinyin": "Wǒ xiǎng qù chāoshì."
+              },
+              {
+                "left": "你去超市买什么？",
+                "left_pinyin": "Nǐ qù chāoshì mǎi shénme?",
+                "right": "我想买些牛奶。",
+                "right_pinyin": "Wǒ xiǎng mǎi xiē niúnǎi."
+              },
+              {
+                "left": "我们怎么去？",
+                "left_pinyin": "Wǒmen zěnme qù?",
+                "right": "坐出租车去。",
+                "right_pinyin": "Zuò chūzūchē qù."
+              }
+            ]
+          },
+          "kp": "问答匹配",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v7_hsk1_06_02",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "匹配问句和回答。",
+          "prompt_en": "Match each question with the best reply.",
+          "data": {
+            "pairs": [
+              {
+                "left": "你想吃什么？",
+                "left_pinyin": "Nǐ xiǎng chī shénme?",
+                "right": "我想吃米饭。",
+                "right_pinyin": "Wǒ xiǎng chī mǐfàn."
+              },
+              {
+                "left": "包子怎么样？",
+                "left_pinyin": "Bāozi zěnmeyàng?",
+                "right": "包子非常好吃。",
+                "right_pinyin": "Bāozi fēicháng hǎochī."
+              },
+              {
+                "left": "出租车在哪儿？",
+                "left_pinyin": "Chūzūchē zài nǎr?",
+                "right": "出租车在那边。",
+                "right_pinyin": "Chūzūchē zài nàbiān."
+              },
+              {
+                "left": "你想去哪儿？",
+                "left_pinyin": "Nǐ xiǎng qù nǎr?",
+                "right": "我想去西安饭店。",
+                "right_pinyin": "Wǒ xiǎng qù Xī'ān Fàndiàn."
+              }
+            ]
+          },
+          "kp": "教学扩展问答",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_06_03",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "匹配问句和回答。",
+          "prompt_en": "Match each question with the best reply.",
+          "data": {
+            "pairs": [
+              {
+                "left": "你的电话是多少？",
+                "left_pinyin": "Nǐ de diànhuà shì duōshao?",
+                "right": "我的电话是这个号。",
+                "right_pinyin": "Wǒ de diànhuà shì zhège hào."
+              },
+              {
+                "left": "明天你想买什么？",
+                "left_pinyin": "Míngtiān nǐ xiǎng mǎi shénme?",
+                "right": "我想买些东西。",
+                "right_pinyin": "Wǒ xiǎng mǎi xiē dōngxi."
+              },
+              {
+                "left": "你想坐出租车去吗？",
+                "left_pinyin": "Nǐ xiǎng zuò chūzūchē qù ma?",
+                "right": "我不想坐出租车去。",
+                "right_pinyin": "Wǒ bù xiǎng zuò chūzūchē qù."
+              },
+              {
+                "left": "你想吃包子还是米饭？",
+                "left_pinyin": "Nǐ xiǎng chī bāozi háishi mǐfàn?",
+                "right": "我想吃米饭。",
+                "right_pinyin": "Wǒ xiǎng chī mǐfàn."
+              }
+            ]
+          },
+          "kp": "想/不想问答",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_06_04",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "匹配问句和回答。",
+          "prompt_en": "Match each question with the best reply.",
+          "data": {
+            "pairs": [
+              {
+                "left": "你去哪儿吃晚饭？",
+                "left_pinyin": "Nǐ qù nǎr chī wǎnfàn?",
+                "right": "我去西安饭店吃晚饭。",
+                "right_pinyin": "Wǒ qù Xī'ān Fàndiàn chī wǎnfàn."
+              },
+              {
+                "left": "你去超市做什么？",
+                "left_pinyin": "Nǐ qù chāoshì zuò shénme?",
+                "right": "我去超市买东西。",
+                "right_pinyin": "Wǒ qù chāoshì mǎi dōngxi."
+              },
+              {
+                "left": "你怎么去西安饭店？",
+                "left_pinyin": "Nǐ zěnme qù Xī'ān Fàndiàn?",
+                "right": "我坐出租车去。",
+                "right_pinyin": "Wǒ zuò chūzūchē qù."
+              },
+              {
+                "left": "你想买些牛奶吗？",
+                "left_pinyin": "Nǐ xiǎng mǎi xiē niúnǎi ma?",
+                "right": "我想买些牛奶。",
+                "right_pinyin": "Wǒ xiǎng mǎi xiē niúnǎi."
+              }
+            ]
+          },
+          "kp": "目的/方式问答",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_06_05",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "匹配问句和回答。",
+          "prompt_en": "Match each question with the best reply.",
+          "data": {
+            "pairs": [
+              {
+                "left": "那边有什么好吃的？",
+                "left_pinyin": "Nàbiān yǒu shénme hǎochī de?",
+                "right": "那边的包子非常好吃。",
+                "right_pinyin": "Nàbiān de bāozi fēicháng hǎochī."
+              },
+              {
+                "left": "你妈妈想吃什么？",
+                "left_pinyin": "Nǐ māma xiǎng chī shénme?",
+                "right": "她想吃米饭。",
+                "right_pinyin": "Tā xiǎng chī mǐfàn."
+              },
+              {
+                "left": "你想去超市还是饭店？",
+                "left_pinyin": "Nǐ xiǎng qù chāoshì háishi fàndiàn?",
+                "right": "我想去超市。",
+                "right_pinyin": "Wǒ xiǎng qù chāoshì."
+              },
+              {
+                "left": "你明天怎么去学校？",
+                "left_pinyin": "Nǐ míngtiān zěnme qù xuéxiào?",
+                "right": "我坐出租车去学校。",
+                "right_pinyin": "Wǒ zuò chūzūchē qù xuéxiào."
+              }
+            ]
+          },
+          "kp": "综合问答",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v8_memory_match": [
+        {
+          "id": "v8_hsk1_06_01",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：词语和英文释义配对。",
+          "prompt_en": "Matching Game: Match words with meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "手机",
+                "left_pinyin": "shǒujī",
+                "right": "cell phone"
+              },
+              {
+                "left": "电话",
+                "left_pinyin": "diànhuà",
+                "right": "phone call"
+              },
+              {
+                "left": "号",
+                "left_pinyin": "hào",
+                "right": "number"
+              },
+              {
+                "left": "明天",
+                "left_pinyin": "míngtiān",
+                "right": "tomorrow"
+              }
+            ]
+          },
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_06_02",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：词语和英文释义配对。",
+          "prompt_en": "Matching Game: Match words with meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "超市",
+                "left_pinyin": "chāoshì",
+                "right": "supermarket"
+              },
+              {
+                "left": "牛奶",
+                "left_pinyin": "niúnǎi",
+                "right": "milk"
+              },
+              {
+                "left": "包子",
+                "left_pinyin": "bāozi",
+                "right": "steamed bun"
+              },
+              {
+                "left": "出租车",
+                "left_pinyin": "chūzūchē",
+                "right": "taxi"
+              }
+            ]
+          },
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_06_03",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：短语和英文释义配对。",
+          "prompt_en": "Matching Game: Match phrases with meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "手机号",
+                "left_pinyin": "shǒujīhào",
+                "right": "cell phone number"
+              },
+              {
+                "left": "买东西",
+                "left_pinyin": "mǎi dōngxi",
+                "right": "buy things"
+              },
+              {
+                "left": "吃晚饭",
+                "left_pinyin": "chī wǎnfàn",
+                "right": "have dinner"
+              },
+              {
+                "left": "坐出租车",
+                "left_pinyin": "zuò chūzūchē",
+                "right": "take a taxi"
+              }
+            ]
+          },
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_06_04",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：句子和英文意思配对。",
+          "prompt_en": "Matching Game: Match sentences with meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "我想去超市。",
+                "left_pinyin": "Wǒ xiǎng qù chāoshì.",
+                "right": "I want to go to the supermarket."
+              },
+              {
+                "left": "我想买些牛奶。",
+                "left_pinyin": "Wǒ xiǎng mǎi xiē niúnǎi.",
+                "right": "I want to buy some milk."
+              },
+              {
+                "left": "我们怎么去？",
+                "left_pinyin": "Wǒmen zěnme qù?",
+                "right": "How shall we go?"
+              },
+              {
+                "left": "坐出租车去。",
+                "left_pinyin": "Zuò chūzūchē qù.",
+                "right": "Go by taxi."
+              }
+            ]
+          },
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_06_05",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：句子和英文意思配对。",
+          "prompt_en": "Matching Game: Match sentences with meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "包子非常好吃。",
+                "left_pinyin": "Bāozi fēicháng hǎochī.",
+                "right": "The buns are very delicious."
+              },
+              {
+                "left": "我想吃米饭。",
+                "left_pinyin": "Wǒ xiǎng chī mǐfàn.",
+                "right": "I want to eat rice."
+              },
+              {
+                "left": "你去超市买什么？",
+                "left_pinyin": "Nǐ qù chāoshì mǎi shénme?",
+                "right": "What will you buy at the supermarket?"
+              },
+              {
+                "left": "我的电话是这个号。",
+                "left_pinyin": "Wǒ de diànhuà shì zhège hào.",
+                "right": "My phone number is this number."
+              }
+            ]
+          },
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "w1_component_char": [
+        {
+          "id": "w1_hsk1_06_01",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "听/看拼音，选择正确的词。",
+          "prompt_en": "Choose the correct word.",
+          "data": {
+            "sentence": "shǒujī",
+            "sentence_pinyin": "shǒujī",
+            "options": [
+              "手机",
+              "手几",
+              "毛机",
+              "手机儿"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "手机",
+          "kp": "汉字区辨：手机",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_06_02",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "听/看拼音，选择正确的词。",
+          "prompt_en": "Choose the correct word.",
+          "data": {
+            "sentence": "diànhuà",
+            "sentence_pinyin": "diànhuà",
+            "options": [
+              "电活",
+              "电话",
+              "电脑",
+              "电视"
+            ],
+            "options_pinyin": [],
+            "correct_index": 1,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "电话",
+          "kp": "汉字区辨：电话",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_06_03",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "听/看拼音，选择正确的词。",
+          "prompt_en": "Choose the correct word.",
+          "data": {
+            "sentence": "chāoshì",
+            "sentence_pinyin": "chāoshì",
+            "options": [
+              "超巿",
+              "起市",
+              "超市",
+              "老师"
+            ],
+            "options_pinyin": [],
+            "correct_index": 2,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "超市",
+          "kp": "汉字区辨：超市",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_06_04",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "听/看拼音，选择正确的词。",
+          "prompt_en": "Choose the correct word.",
+          "data": {
+            "sentence": "niúnǎi",
+            "sentence_pinyin": "niúnǎi",
+            "options": [
+              "妞奶",
+              "午奶",
+              "牛妈",
+              "牛奶"
+            ],
+            "options_pinyin": [],
+            "correct_index": 3,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "牛奶",
+          "kp": "汉字区辨：牛奶",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_06_05",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "听/看拼音，选择正确的词。",
+          "prompt_en": "Choose the correct word.",
+          "data": {
+            "sentence": "chūzūchē",
+            "sentence_pinyin": "chūzūchē",
+            "options": [
+              "出租车",
+              "出粗车",
+              "出租东",
+              "坐车"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "出租车",
+          "kp": "汉字区辨：出租车",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_06_06",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "听/看拼音，选择正确的词。",
+          "prompt_en": "Choose the correct word.",
+          "data": {
+            "sentence": "míngtiān",
+            "sentence_pinyin": "míngtiān",
+            "options": [
+              "朋天",
+              "明天",
+              "明夫",
+              "今天"
+            ],
+            "options_pinyin": [],
+            "correct_index": 1,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "明天",
+          "kp": "汉字区辨：明天",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_06_07",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "听/看拼音，选择正确的词。",
+          "prompt_en": "Choose the correct word.",
+          "data": {
+            "sentence": "xiǎng",
+            "sentence_pinyin": "xiǎng",
+            "options": [
+              "息",
+              "相",
+              "想",
+              "您"
+            ],
+            "options_pinyin": [],
+            "correct_index": 2,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "想",
+          "kp": "汉字区辨：想",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_06_08",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "听/看拼音，选择正确的词。",
+          "prompt_en": "Choose the correct word.",
+          "data": {
+            "sentence": "mǎi",
+            "sentence_pinyin": "mǎi",
+            "options": [
+              "米",
+              "卖",
+              "来",
+              "买"
+            ],
+            "options_pinyin": [],
+            "correct_index": 3,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "买",
+          "kp": "汉字区辨：买",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_06_09",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "听/看拼音，选择正确的词。",
+          "prompt_en": "Choose the correct word.",
+          "data": {
+            "sentence": "wǎnfàn",
+            "sentence_pinyin": "wǎnfàn",
+            "options": [
+              "晚饭",
+              "免饭",
+              "晚反",
+              "米饭"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "晚饭",
+          "kp": "汉字区辨：晚饭",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_06_10",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "听/看拼音，选择正确的词。",
+          "prompt_en": "Choose the correct word.",
+          "data": {
+            "sentence": "zěnme",
+            "sentence_pinyin": "zěnme",
+            "options": [
+              "怎吗",
+              "怎么",
+              "作么",
+              "什么"
+            ],
+            "options_pinyin": [],
+            "correct_index": 1,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "怎么",
+          "kp": "汉字区辨：怎么",
+          "sourceType": "textbook"
+        }
+      ],
+      "v4_complete_sentence": [
+        {
+          "id": "v4_hsk1_06_01",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的句子。",
+          "prompt_en": "Change the sentence to a negative sentence.",
+          "data": {
+            "source_sentence": "我想吃包子。",
+            "source_pinyin": "Wǒ xiǎng chī bāozi.",
+            "template": "我想吃包子。",
+            "template_pinyin": "Wǒ xiǎng chī bāozi.",
+            "transform_en": "Change the sentence to a negative sentence.",
+            "options": [
+              "我没有吃包子。",
+              "我想不吃包子。",
+              "我不想吃包子。",
+              "我不是想吃包子。"
+            ],
+            "options_pinyin": [
+              "Wǒ méiyǒu chī bāozi.",
+              "Wǒ xiǎng bù chī bāozi.",
+              "Wǒ bù xiǎng chī bāozi.",
+              "Wǒ bú shì xiǎng chī bāozi."
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "我不想吃包子。",
+          "kp": "不想",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v4_hsk1_06_02",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的句子。",
+          "prompt_en": "Change the sentence to ask about the place.",
+          "data": {
+            "source_sentence": "明天我去超市。",
+            "source_pinyin": "Míngtiān wǒ qù chāoshì.",
+            "template": "明天我去超市。",
+            "template_pinyin": "Míngtiān wǒ qù chāoshì.",
+            "transform_en": "Change the sentence to ask about the place.",
+            "options": [
+              "明天你想不想？",
+              "明天你怎么去？",
+              "明天你买什么？",
+              "明天你去哪儿？"
+            ],
+            "options_pinyin": [
+              "Míngtiān nǐ xiǎng bù xiǎng?",
+              "Míngtiān nǐ zěnme qù?",
+              "Míngtiān nǐ mǎi shénme?",
+              "Míngtiān nǐ qù nǎr?"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "明天你去哪儿？",
+          "kp": "哪儿",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_06_03",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的句子。",
+          "prompt_en": "Add a purpose using a serial verb sentence.",
+          "data": {
+            "source_sentence": "我去超市。",
+            "source_pinyin": "Wǒ qù chāoshì.",
+            "template": "我去超市。",
+            "template_pinyin": "Wǒ qù chāoshì.",
+            "transform_en": "Add a purpose using a serial verb sentence.",
+            "options": [
+              "我去超市买东西。",
+              "我买东西去超市。",
+              "我去买超市东西。",
+              "我超市去买东西。"
+            ],
+            "options_pinyin": [
+              "Wǒ qù chāoshì mǎi dōngxi.",
+              "Wǒ mǎi dōngxi qù chāoshì.",
+              "Wǒ qù mǎi chāoshì dōngxi.",
+              "Wǒ chāoshì qù mǎi dōngxi."
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我去超市买东西。",
+          "kp": "连动句目的",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_06_04",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的句子。",
+          "prompt_en": "Ask about the method of going.",
+          "data": {
+            "source_sentence": "我们坐出租车去。",
+            "source_pinyin": "Wǒmen zuò chūzūchē qù.",
+            "template": "我们坐出租车去。",
+            "template_pinyin": "Wǒmen zuò chūzūchē qù.",
+            "transform_en": "Ask about the method of going.",
+            "options": [
+              "我们去哪儿？",
+              "我们怎么去？",
+              "我们吃什么？",
+              "我们买什么？"
+            ],
+            "options_pinyin": [
+              "Wǒmen qù nǎr?",
+              "Wǒmen zěnme qù?",
+              "Wǒmen chī shénme?",
+              "Wǒmen mǎi shénme?"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "我们怎么去？",
+          "kp": "怎么",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v4_hsk1_06_05",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的句子。",
+          "prompt_en": "Use 非常 to intensify the adjective.",
+          "data": {
+            "source_sentence": "包子好吃。",
+            "source_pinyin": "Bāozi hǎochī.",
+            "template": "包子好吃。",
+            "template_pinyin": "Bāozi hǎochī.",
+            "transform_en": "Use 非常 to intensify the adjective.",
+            "options": [
+              "包子好吃非常。",
+              "非常包子好吃。",
+              "包子非常好吃。",
+              "包子非常吃好。"
+            ],
+            "options_pinyin": [
+              "Bāozi hǎochī fēicháng.",
+              "Fēicháng bāozi hǎochī.",
+              "Bāozi fēicháng hǎochī.",
+              "Bāozi fēicháng chī hǎo."
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "包子非常好吃。",
+          "kp": "非常",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v4_hsk1_06_06",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的句子。",
+          "prompt_en": "Add 些 before the object.",
+          "data": {
+            "source_sentence": "我买牛奶。",
+            "source_pinyin": "Wǒ mǎi niúnǎi.",
+            "template": "我买牛奶。",
+            "template_pinyin": "Wǒ mǎi niúnǎi.",
+            "transform_en": "Add 些 before the object.",
+            "options": [
+              "我买一些些牛奶。",
+              "我些买牛奶。",
+              "我买牛奶些。",
+              "我买些牛奶。"
+            ],
+            "options_pinyin": [
+              "Wǒ mǎi yìxiē xiē niúnǎi.",
+              "Wǒ xiē mǎi niúnǎi.",
+              "Wǒ mǎi niúnǎi xiē.",
+              "Wǒ mǎi xiē niúnǎi."
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "我买些牛奶。",
+          "kp": "些",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_06_07",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的句子。",
+          "prompt_en": "Add 想 before the verb.",
+          "data": {
+            "source_sentence": "我吃米饭。",
+            "source_pinyin": "Wǒ chī mǐfàn.",
+            "template": "我吃米饭。",
+            "template_pinyin": "Wǒ chī mǐfàn.",
+            "transform_en": "Add 想 before the verb.",
+            "options": [
+              "我想吃米饭。",
+              "我吃想米饭。",
+              "我想米饭吃。",
+              "我米饭想吃。"
+            ],
+            "options_pinyin": [
+              "Wǒ xiǎng chī mǐfàn.",
+              "Wǒ chī xiǎng mǐfàn.",
+              "Wǒ xiǎng mǐfàn chī.",
+              "Wǒ mǐfàn xiǎng chī."
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我想吃米饭。",
+          "kp": "想",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v4_hsk1_06_08",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的句子。",
+          "prompt_en": "Change the subject to 我们.",
+          "data": {
+            "source_sentence": "我去西安饭店吃晚饭。",
+            "source_pinyin": "Wǒ qù Xī'ān Fàndiàn chī wǎnfàn.",
+            "template": "我去西安饭店吃晚饭。",
+            "template_pinyin": "Wǒ qù Xī'ān Fàndiàn chī wǎnfàn.",
+            "transform_en": "Change the subject to 我们.",
+            "options": [
+              "我们西安饭店去吃晚饭。",
+              "我们去西安饭店吃晚饭。",
+              "去我们西安饭店吃晚饭。",
+              "我们吃晚饭去西安饭店。"
+            ],
+            "options_pinyin": [
+              "Wǒmen Xī'ān Fàndiàn qù chī wǎnfàn.",
+              "Wǒmen qù Xī'ān Fàndiàn chī wǎnfàn.",
+              "Qù wǒmen Xī'ān Fàndiàn chī wǎnfàn.",
+              "Wǒmen chī wǎnfàn qù Xī'ān Fàndiàn."
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "我们去西安饭店吃晚饭。",
+          "kp": "连动句目的",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v4_hsk1_06_09",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的句子。",
+          "prompt_en": "Ask a yes-or-no question with 吗.",
+          "data": {
+            "source_sentence": "我想去超市。",
+            "source_pinyin": "Wǒ xiǎng qù chāoshì.",
+            "template": "我想去超市。",
+            "template_pinyin": "Wǒ xiǎng qù chāoshì.",
+            "transform_en": "Ask a yes-or-no question with 吗.",
+            "options": [
+              "你想超市去吗？",
+              "你去想超市吗？",
+              "你想去超市吗？",
+              "你想去超市哪儿？"
+            ],
+            "options_pinyin": [
+              "Nǐ xiǎng chāoshì qù ma?",
+              "Nǐ qù xiǎng chāoshì ma?",
+              "Nǐ xiǎng qù chāoshì ma?",
+              "Nǐ xiǎng qù chāoshì nǎr?"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "你想去超市吗？",
+          "kp": "想不想",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_06_10",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的句子。",
+          "prompt_en": "Add 我们 as the subject.",
+          "data": {
+            "source_sentence": "坐出租车去。",
+            "source_pinyin": "Zuò chūzūchē qù.",
+            "template": "坐出租车去。",
+            "template_pinyin": "Zuò chūzūchē qù.",
+            "transform_en": "Add 我们 as the subject.",
+            "options": [
+              "我们去坐出租车。",
+              "我们出租车坐去。",
+              "坐我们出租车去。",
+              "我们坐出租车去。"
+            ],
+            "options_pinyin": [
+              "Wǒmen qù zuò chūzūchē.",
+              "Wǒmen chūzūchē zuò qù.",
+              "Zuò wǒmen chūzūchē qù.",
+              "Wǒmen zuò chūzūchē qù."
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "我们坐出租车去。",
+          "kp": "连动句方式",
+          "sourceType": "textbook"
+        }
+      ],
+      "g1_ordering": [
+        {
+          "id": "g1_hsk1_06_01",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "把词语排成正确的句子。",
+          "prompt_en": "Arrange the words into a correct sentence.",
+          "data": {
+            "chunks": [
+              "是多少",
+              "你的",
+              "手机号"
+            ],
+            "chunks_pinyin": [
+              "shì duōshao",
+              "nǐ de",
+              "shǒujīhào"
+            ],
+            "num_chunks": 3,
+            "distractors": []
+          },
+          "correct_answer": "你的手机号是多少？",
+          "acceptable_answers": [
+            "你的手机号是多少？",
+            "你的手机号是多少"
+          ],
+          "needs_teacher_review": false,
+          "kp": "手机号是多少",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "g1_hsk1_06_02",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "把词语排成正确的句子。",
+          "prompt_en": "Arrange the words into a correct sentence.",
+          "data": {
+            "chunks": [
+              "去超市",
+              "我想",
+              "买东西"
+            ],
+            "chunks_pinyin": [
+              "qù chāoshì",
+              "wǒ xiǎng",
+              "mǎi dōngxi"
+            ],
+            "num_chunks": 3,
+            "distractors": []
+          },
+          "correct_answer": "我想去超市买东西。",
+          "acceptable_answers": [
+            "我想去超市买东西。",
+            "我想去超市买东西"
+          ],
+          "needs_teacher_review": false,
+          "kp": "连动句目的",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "g1_hsk1_06_03",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "把词语排成正确的句子。",
+          "prompt_en": "Arrange the words into a correct sentence.",
+          "data": {
+            "chunks": [
+              "我",
+              "想买",
+              "些牛奶"
+            ],
+            "chunks_pinyin": [
+              "wǒ",
+              "xiǎng mǎi",
+              "xiē niúnǎi"
+            ],
+            "num_chunks": 3,
+            "distractors": []
+          },
+          "correct_answer": "我想买些牛奶。",
+          "acceptable_answers": [
+            "我想买些牛奶。",
+            "我想买些牛奶"
+          ],
+          "needs_teacher_review": false,
+          "kp": "想买些",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "g1_hsk1_06_04",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "把词语排成正确的句子。",
+          "prompt_en": "Arrange the words into a correct sentence.",
+          "data": {
+            "chunks": [
+              "怎么",
+              "我们",
+              "去"
+            ],
+            "chunks_pinyin": [
+              "zěnme",
+              "wǒmen",
+              "qù"
+            ],
+            "num_chunks": 3,
+            "distractors": []
+          },
+          "correct_answer": "我们怎么去？",
+          "acceptable_answers": [
+            "我们怎么去？",
+            "我们怎么去"
+          ],
+          "needs_teacher_review": false,
+          "kp": "怎么",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "g1_hsk1_06_05",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "把词语排成正确的句子。",
+          "prompt_en": "Arrange the words into a correct sentence.",
+          "data": {
+            "chunks": [
+              "去",
+              "坐出租车",
+              "我们"
+            ],
+            "chunks_pinyin": [
+              "qù",
+              "zuò chūzūchē",
+              "wǒmen"
+            ],
+            "num_chunks": 3,
+            "distractors": []
+          },
+          "correct_answer": "我们坐出租车去。",
+          "acceptable_answers": [
+            "我们坐出租车去。",
+            "我们坐出租车去"
+          ],
+          "needs_teacher_review": false,
+          "kp": "连动句方式",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "r2_passage_choice": [
+        {
+          "id": "r2_hsk1_06_01",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据对话选择正确答案。",
+          "prompt_en": "Read the dialogue and choose the answer.",
+          "data": {
+            "passage": "家月，你的手机号是多少？",
+            "passage_pinyin": "Jiāyuè, nǐ de shǒujīhào shì duōshao?",
+            "question_cn": "李文问什么？",
+            "question_en": "What does Li Wen ask?",
+            "options": [
+              "手机号",
+              "年龄",
+              "家庭人数",
+              "星期几"
+            ],
+            "options_pinyin": [
+              "shǒujīhào",
+              "niánlíng",
+              "jiātíng rénshù",
+              "xīngqī jǐ"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "手机号",
+          "kp": "课文一：手机号",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "r2_hsk1_06_02",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据对话选择正确答案。",
+          "prompt_en": "Read the dialogue and choose the answer.",
+          "data": {
+            "passage": "我想去超市买东西。",
+            "passage_pinyin": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
+            "question_cn": "白家月想去哪儿？",
+            "question_en": "Where does Bai Jiayue want to go?",
+            "options": [
+              "家",
+              "超市",
+              "学校",
+              "西安饭店"
+            ],
+            "options_pinyin": [
+              "jiā",
+              "chāoshì",
+              "xuéxiào",
+              "Xī'ān Fàndiàn"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "超市",
+          "kp": "课文二：超市",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "r2_hsk1_06_03",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据对话选择正确答案。",
+          "prompt_en": "Read the dialogue and choose the answer.",
+          "data": {
+            "passage": "我想买些牛奶。",
+            "passage_pinyin": "Wǒ xiǎng mǎi xiē niúnǎi.",
+            "question_cn": "白家月想买什么？",
+            "question_en": "What does Bai Jiayue want to buy?",
+            "options": [
+              "米饭",
+              "包子",
+              "牛奶",
+              "电脑"
+            ],
+            "options_pinyin": [
+              "mǐfàn",
+              "bāozi",
+              "niúnǎi",
+              "diànnǎo"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "牛奶",
+          "kp": "课文二：牛奶",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "r2_hsk1_06_04",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据对话选择正确答案。",
+          "prompt_en": "Read the dialogue and choose the answer.",
+          "data": {
+            "passage": "那边的包子非常好吃，我想吃包子。",
+            "passage_pinyin": "Nàbiān de bāozi fēicháng hǎochī, wǒ xiǎng chī bāozi.",
+            "question_cn": "刘小雪想吃什么？",
+            "question_en": "What does Liu Xiaoxue want to eat?",
+            "options": [
+              "米饭",
+              "面条儿",
+              "牛奶",
+              "包子"
+            ],
+            "options_pinyin": [
+              "mǐfàn",
+              "miàntiáor",
+              "niúnǎi",
+              "bāozi"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "包子",
+          "kp": "课文三：包子",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "r2_hsk1_06_05",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据对话选择正确答案。",
+          "prompt_en": "Read the dialogue and choose the answer.",
+          "data": {
+            "passage": "坐出租车去。",
+            "passage_pinyin": "Zuò chūzūchē qù.",
+            "question_cn": "他们怎么去？",
+            "question_en": "How do they go?",
+            "options": [
+              "坐出租车",
+              "去超市",
+              "吃晚饭",
+              "买东西"
+            ],
+            "options_pinyin": [
+              "zuò chūzūchē",
+              "qù chāoshì",
+              "chī wǎnfàn",
+              "mǎi dōngxi"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "坐出租车",
+          "kp": "课文三：怎么去",
+          "sourceType": "textbook"
+        }
+      ],
+      "tt_text_true_false": [
+        {
+          "id": "tt_hsk1_06_01",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "白家月的手机号是 +33 601493190。",
+            "statement_pinyin": "Bái Jiāyuè de shǒujīhào shì +33 liù líng yī sì jiǔ sān yī jiǔ líng.",
+            "statement_en": "Bai Jiayue's cell phone number is +33 601493190.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文一：手机号",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_06_02",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "白家月想去超市买东西。",
+            "statement_pinyin": "Bái Jiāyuè xiǎng qù chāoshì mǎi dōngxi.",
+            "statement_en": "Bai Jiayue wants to go to the supermarket to buy things.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文二：超市",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_06_03",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "白家月想买些包子。",
+            "statement_pinyin": "Bái Jiāyuè xiǎng mǎi xiē bāozi.",
+            "statement_en": "Bai Jiayue wants to buy some buns.",
+            "answer": false
+          },
+          "correct_answer": false,
+          "kp": "课文二：牛奶",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_06_04",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "刘小明想吃米饭，不想吃包子。",
+            "statement_pinyin": "Liú Xiǎomíng xiǎng chī mǐfàn, bù xiǎng chī bāozi.",
+            "statement_en": "Liu Xiaoming wants to eat rice and does not want buns.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文三：米饭",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_06_05",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "他们坐出租车去西安饭店。",
+            "statement_pinyin": "Tāmen zuò chūzūchē qù Xī'ān Fàndiàn.",
+            "statement_en": "They take a taxi to Xi'an Restaurant.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文三：出租车",
+          "sourceType": "textbook"
+        }
+      ],
+      "pk_question": [
+        {
+          "id": "pk_hsk1_06_01",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "“cell phone”的中文是：",
+            "question_en": "Choose the Chinese word.",
+            "options": [
+              "晚饭",
+              "手机",
+              "出租车",
+              "电话"
+            ],
+            "options_pinyin": [
+              "wǎnfàn",
+              "shǒujī",
+              "chūzūchē",
+              "diànhuà"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "手机",
+          "kp": "手机",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "pk_hsk1_06_02",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "我们___去？",
+            "question_en": "Fill in the blank.",
+            "options": [
+              "些",
+              "哪儿",
+              "怎么",
+              "非常"
+            ],
+            "options_pinyin": [
+              "xiē",
+              "nǎr",
+              "zěnme",
+              "fēicháng"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "怎么",
+          "kp": "怎么",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "pk_hsk1_06_03",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "我想去超市___东西。",
+            "question_en": "Fill in the blank.",
+            "options": [
+              "坐",
+              "号",
+              "吃",
+              "买"
+            ],
+            "options_pinyin": [
+              "zuò",
+              "hào",
+              "chī",
+              "mǎi"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "买",
+          "kp": "买",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "pk_hsk1_06_04",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "“taxi”的中文是：",
+            "question_en": "Choose the Chinese word.",
+            "options": [
+              "出租车",
+              "超市",
+              "电话",
+              "包子"
+            ],
+            "options_pinyin": [
+              "chūzūchē",
+              "chāoshì",
+              "diànhuà",
+              "bāozi"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "出租车",
+          "kp": "出租车",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "pk_hsk1_06_05",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "我不想吃___。",
+            "question_en": "Fill in the blank.",
+            "options": [
+              "出租车",
+              "包子",
+              "电话",
+              "手机"
+            ],
+            "options_pinyin": [
+              "chūzūchē",
+              "bāozi",
+              "diànhuà",
+              "shǒujī"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "包子",
+          "kp": "包子",
+          "sourceType": "textbook"
+        }
+      ]
+    }
+  },
+  "hanziWriting": {
+    "characters": [
+      "手",
+      "机",
+      "电",
+      "话",
+      "号",
+      "明",
+      "天",
+      "去",
+      "哪",
+      "儿",
+      "想",
+      "超",
+      "市",
+      "买",
+      "东",
+      "西",
+      "些",
+      "牛",
+      "奶",
+      "吃",
+      "晚",
+      "饭",
+      "那",
+      "边",
+      "包",
+      "子",
+      "非",
+      "常",
+      "好",
+      "米",
+      "怎",
+      "么",
+      "坐",
+      "出",
+      "租",
+      "车"
+    ]
+  },
+  "hanziRecognition": {
+    "enabled": true,
+    "showPinyin": false,
+    "title": "汉字认读循环",
+    "titleEn": "Character Recognition Cycle",
+    "groups": [
+      {
+        "id": "hrec_l06_g1",
+        "title": "第1组：手机、电话、号、明天、去、哪儿",
+        "vocabularyIds": [
+          "v_l06_01",
+          "v_l06_02",
+          "v_l06_03",
+          "v_l06_04",
+          "v_l06_05",
+          "v_l06_06"
+        ]
+      },
+      {
+        "id": "hrec_l06_g2",
+        "title": "第2组：想、超市、买、东西、些、牛奶",
+        "vocabularyIds": [
+          "v_l06_07",
+          "v_l06_08",
+          "v_l06_09",
+          "v_l06_10",
+          "v_l06_11",
+          "v_l06_12"
+        ]
+      },
+      {
+        "id": "hrec_l06_g3",
+        "title": "第3组：吃、晚饭、那边、包子、非常、好吃",
+        "vocabularyIds": [
+          "v_l06_13",
+          "v_l06_14",
+          "v_l06_15",
+          "v_l06_16",
+          "v_l06_17",
+          "v_l06_18"
+        ]
+      },
+      {
+        "id": "hrec_l06_g4",
+        "title": "第4组：米饭、怎么、坐、出租车",
+        "vocabularyIds": [
+          "v_l06_19",
+          "v_l06_20",
+          "v_l06_21",
+          "v_l06_22"
+        ]
+      }
+    ],
+    "rounds": [
+      {
+        "id": "hanzi_to_meaning",
+        "title": "汉字配意思",
+        "titleEn": "Character to meaning"
+      },
+      {
+        "id": "hanzi_to_pinyin",
+        "title": "看汉字选拼音",
+        "titleEn": "Character to pinyin"
+      },
+      {
+        "id": "meaning_to_hanzi",
+        "title": "看意思选汉字",
+        "titleEn": "Meaning to character"
+      },
+      {
+        "id": "sentence_to_word",
+        "title": "短句找词",
+        "titleEn": "Sentence to word"
+      },
+      {
+        "id": "reading_choice",
+        "title": "英文阅读理解",
+        "titleEn": "English reading comprehension"
+      }
+    ],
+    "sentenceExamples": {
+      "v_l06_01": {
+        "sentence": "你的手机号是多少？",
+        "pinyin": "Nǐ de shǒujīhào shì duōshao?"
+      },
+      "v_l06_02": {
+        "sentence": "我的电话是这个号。",
+        "pinyin": "Wǒ de diànhuà shì zhège hào."
+      },
+      "v_l06_03": {
+        "sentence": "我的手机号是 +86 13552721160。",
+        "pinyin": "Wǒ de shǒujīhào shì +86 yī sān wǔ wǔ èr qī èr yī yī liù líng."
+      },
+      "v_l06_04": {
+        "sentence": "明天你去哪儿？",
+        "pinyin": "Míngtiān nǐ qù nǎr?"
+      },
+      "v_l06_05": {
+        "sentence": "我想去超市。",
+        "pinyin": "Wǒ xiǎng qù chāoshì."
+      },
+      "v_l06_06": {
+        "sentence": "你去哪儿？",
+        "pinyin": "Nǐ qù nǎr?"
+      },
+      "v_l06_07": {
+        "sentence": "我想买些牛奶。",
+        "pinyin": "Wǒ xiǎng mǎi xiē niúnǎi."
+      },
+      "v_l06_08": {
+        "sentence": "我想去超市买东西。",
+        "pinyin": "Wǒ xiǎng qù chāoshì mǎi dōngxi."
+      },
+      "v_l06_09": {
+        "sentence": "你去超市买什么？",
+        "pinyin": "Nǐ qù chāoshì mǎi shénme?"
+      },
+      "v_l06_10": {
+        "sentence": "我想去超市买东西。",
+        "pinyin": "Wǒ xiǎng qù chāoshì mǎi dōngxi."
+      },
+      "v_l06_11": {
+        "sentence": "我想买些牛奶。",
+        "pinyin": "Wǒ xiǎng mǎi xiē niúnǎi."
+      },
+      "v_l06_12": {
+        "sentence": "我想买些牛奶。",
+        "pinyin": "Wǒ xiǎng mǎi xiē niúnǎi."
+      },
+      "v_l06_13": {
+        "sentence": "我想吃包子。",
+        "pinyin": "Wǒ xiǎng chī bāozi."
+      },
+      "v_l06_14": {
+        "sentence": "我们去哪儿吃晚饭？",
+        "pinyin": "Wǒmen qù nǎr chī wǎnfàn?"
+      },
+      "v_l06_15": {
+        "sentence": "那边的包子非常好吃。",
+        "pinyin": "Nàbiān de bāozi fēicháng hǎochī."
+      },
+      "v_l06_16": {
+        "sentence": "我想吃包子。",
+        "pinyin": "Wǒ xiǎng chī bāozi."
+      },
+      "v_l06_17": {
+        "sentence": "包子非常好吃。",
+        "pinyin": "Bāozi fēicháng hǎochī."
+      },
+      "v_l06_18": {
+        "sentence": "那边的包子非常好吃。",
+        "pinyin": "Nàbiān de bāozi fēicháng hǎochī."
+      },
+      "v_l06_19": {
+        "sentence": "我想吃米饭。",
+        "pinyin": "Wǒ xiǎng chī mǐfàn."
+      },
+      "v_l06_20": {
+        "sentence": "我们怎么去？",
+        "pinyin": "Wǒmen zěnme qù?"
+      },
+      "v_l06_21": {
+        "sentence": "坐出租车去。",
+        "pinyin": "Zuò chūzūchē qù."
+      },
+      "v_l06_22": {
+        "sentence": "我们坐出租车去西安饭店。",
+        "pinyin": "Wǒmen zuò chūzūchē qù Xī'ān Fàndiàn."
+      }
+    },
+    "sentenceDistractors": {
+      "v_l06_07": [
+        "会",
+        "喜欢",
+        "有"
+      ],
+      "v_l06_12": [
+        "包子",
+        "米饭",
+        "饺子"
+      ],
+      "v_l06_16": [
+        "米饭",
+        "面条儿",
+        "牛奶"
+      ],
+      "v_l06_18": [
+        "好看",
+        "很忙",
+        "喜欢"
+      ],
+      "v_l06_20": [
+        "哪儿",
+        "什么",
+        "多少"
+      ]
+    },
+    "readingExamples": {
+      "手机": "What is your cell phone number?",
+      "电话": "My phone number is this number.",
+      "号": "My cell phone number is +86 13552721160.",
+      "明天": "Where are you going tomorrow?",
+      "去": "I want to go to the supermarket.",
+      "哪儿": "Where are you going?",
+      "想": "I want to buy some milk.",
+      "超市": "I want to go to the supermarket to buy things.",
+      "买": "What are you going to buy at the supermarket?",
+      "东西": "I want to go to the supermarket to buy things.",
+      "些": "I want to buy some milk.",
+      "牛奶": "I want to buy some milk.",
+      "吃": "I want to eat buns.",
+      "晚饭": "Where are we going for dinner?",
+      "那边": "The buns there are very delicious.",
+      "包子": "I want to eat buns.",
+      "非常": "The buns are very delicious.",
+      "好吃": "The buns there are very delicious.",
+      "米饭": "I want to eat rice.",
+      "怎么": "How shall we go?",
+      "坐": "Go by taxi.",
+      "出租车": "We take a taxi to Xi'an Restaurant."
+    },
+    "readingDistractors": {
+      "牛奶": [
+        "我想吃包子。",
+        "我想吃米饭。",
+        "我喜欢饺子。"
+      ],
+      "包子": [
+        "我想吃米饭。",
+        "我想买些牛奶。",
+        "我会做面条儿。"
+      ],
+      "米饭": [
+        "我想吃包子。",
+        "我想买些牛奶。",
+        "我想吃面条儿。"
+      ],
+      "怎么": [
+        "明天你去哪儿？",
+        "你去超市买什么？",
+        "你的手机号是多少？"
+      ],
+      "出租车": [
+        "我想去超市买东西。",
+        "我想买些牛奶。",
+        "那边的包子非常好吃。"
+      ]
+    }
+  },
+  "postClassHomework": {
+    "mode": "required_optional",
+    "instructions": {
+      "title": "第6课课后作业",
+      "summary": "ClassPro 课后作业不重复练习册的大量客观题，重点完成汉字书写、表达输出、个性化准备和课堂闭环。",
+      "required": "必选：完成汉字书写任务。",
+      "optional": "可选：从写一段话、口语准备、学习反思中选择完成；鼓励用今天学过的词和句型。",
+      "aiPolicy": "准备口语话题时可以借助 AI 查词或打草稿，但请改成自己能说出来的中文。"
+    },
+    "tiers": {
+      "default": {
+        "label": "第6课课后作业",
+        "goal": "完成必选书写，并准备能在课堂上使用的表达。",
+        "suggestedMinutes": 18,
+        "suggestedMix": "必选：汉字书写；可选：写一段话、口语准备、学习反思。"
+      }
+    },
+    "sharedPool": [],
+    "tierPools": {
+      "default": [
+        {
+          "id": "hw_l06_required_writing",
+          "lesson": "HSK1-L06",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "handwriting",
+          "requirement": "required",
+          "section": "必选：汉字书写",
+          "prompt_cn": "必选：书写本课汉字：手、机、电、话、号、想、明、去、哪、超、市、买、些、坐、车",
+          "prompt_en": "Required: Write the lesson characters.",
+          "characters": [
+            "手",
+            "机",
+            "电",
+            "话",
+            "号",
+            "想",
+            "明",
+            "去",
+            "哪",
+            "超",
+            "市",
+            "买",
+            "些",
+            "坐",
+            "车"
+          ],
+          "repeat_count": 3,
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l06_optional_vocab_paragraph",
+          "lesson": "HSK1-L06",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "subjective",
+          "requirement": "optional",
+          "section": "可选：写一段话",
+          "prompt_cn": "教学扩展：请随机从今天所学生词中选择3-5个，写一段话。",
+          "prompt_en": "Optional: Randomly choose 3-5 words from today's vocabulary and write a short paragraph.",
+          "instructions": "可选生词：手机、手机号、明天、哪儿、想、去、超市、买、些、牛奶、吃、晚饭、米饭、包子、那边、好吃、坐、出租车、学校。请至少用3个，最多用5个。",
+          "answerPlaceholder": "例如：明天我想去超市。我想买些牛奶。我坐出租车去。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l06_optional_speaking_family",
+          "lesson": "HSK1-L06",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "subjective",
+          "requirement": "optional",
+          "section": "可选：口语准备",
+          "prompt_cn": "教学扩展：请准备话题“介绍你的家人”，明天上课时口头表达。",
+          "prompt_en": "Optional speaking prep: Prepare the topic “Introduce your family” for oral sharing next class.",
+          "instructions": "可以借助 AI 查词或整理草稿，但请改成自己能读、能说的中文。建议包含：家里有几口人、他们是谁、他们喜欢吃什么、明天你想和家人去哪儿。",
+          "answerPlaceholder": "例子：我家有四口人：爸爸、妈妈、哥哥和我。我妈妈喜欢吃米饭。我爸爸喜欢吃包子。明天我想和妈妈去超市买些牛奶。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l06_optional_reflection",
+          "lesson": "HSK1-L06",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "subjective",
+          "requirement": "optional",
+          "section": "可选：学习反思",
+          "prompt_cn": "教学扩展：今天哪一个词或句子最难？你想明天再练什么？",
+          "prompt_en": "Optional reflection: Which word or sentence was hardest today? What do you want to practice tomorrow?",
+          "answerPlaceholder": "例如：我觉得“出租车”最难。明天我想再练手机号。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        }
+      ]
+    },
+    "assignmentSelection": {
+      "default": [
+        "hw_l06_required_writing",
+        "hw_l06_optional_vocab_paragraph",
+        "hw_l06_optional_speaking_family",
+        "hw_l06_optional_reflection"
+      ]
+    },
+    "reviewPolicy": {
+      "maxAttempts": 2,
+      "showLatestOnly": true,
+      "archiveReviewed": true,
+      "homeworkPositioning": "ClassPro课后作业不重复练习册大量客观题，主要负责汉字书写、表达输出、个性化任务和课堂闭环。",
+      "requiredOptionalSupportedInData": true,
+      "auto_grade_types": [],
+      "teacher_review_types": [
+        "subjective",
+        "output",
+        "handwriting"
+      ]
+    }
+  },
+  "report": {
+    "lessonFocus": [
+      "手机号",
+      "想 + 动词",
+      "连动句：目的",
+      "连动句：方式",
+      "怎么"
+    ],
+    "reviewFields": [
+      "词汇",
+      "手机号表达",
+      "购物计划",
+      "出行方式",
+      "课后输出"
+    ],
+    "weakPointLabels": {
+      "phoneNumber": "手机号表达",
+      "want": "想 + 动词",
+      "serialPurpose": "连动句：目的",
+      "serialMethod": "连动句：方式",
+      "how": "怎么"
+    }
+  }
+}
