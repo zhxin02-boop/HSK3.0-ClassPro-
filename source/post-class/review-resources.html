@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>课后复习资源 / Review Resources</title>
+<script src="../shared/context.js"></script>
+<script src="../data-model/course-data-adapter.js"></script>
+<style>
+*{box-sizing:border-box}
+:root{--green:#4f8f2f;--line:#dfe9c8;--dark:#24351f;--blue:#2563eb;--muted:#6f7d68}
+body{margin:0;min-height:100vh;font-family:Arial,"Microsoft YaHei",sans-serif;background:radial-gradient(circle at top,#eef7da,#fffaf2 58%,#fff);color:var(--dark);padding:16px}
+.product-nav{display:flex;gap:4px;align-items:center;flex-wrap:nowrap;overflow-x:auto;padding:8px 10px;margin:-16px auto 12px;max-width:1040px;white-space:nowrap}
+.product-nav a{padding:6px 8px;border-radius:999px;text-decoration:none;color:#74806d;background:rgba(255,255,255,.75);font-size:11px;font-weight:900;white-space:nowrap;flex:0 0 auto}
+.product-nav a.active,.product-nav a:hover{background:#edf6d9;color:#3f7f32}.product-nav .brand{font-weight:900;color:#3f7f32}
+.wrap{max-width:1040px;margin:0 auto}.hero,.section,.card{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:22px;box-shadow:0 14px 32px rgba(80,110,50,.1)}
+.hero{padding:22px;margin-bottom:14px;background:linear-gradient(135deg,#fff,#f2f8e4)}.badge{display:inline-flex;background:#edf6d9;color:#44782b;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:900}
+h1{margin:12px 0 6px;font-size:28px;color:#3f7f32}.muted{color:var(--muted);font-size:14px;line-height:1.55}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.tabs button{border:1px solid #bfd99b;border-radius:999px;padding:9px 14px;background:#fff;color:var(--green);font-weight:900;cursor:pointer}.tabs button.active{background:var(--green);color:#fff}
+.section{padding:18px;margin-bottom:14px}.section h2{margin:0 0 12px;color:#3f7f32;font-size:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.card{padding:14px;box-shadow:none}.word{font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:36px;font-weight:900;line-height:1.1}.py{color:#68765e;font-weight:900;margin-top:4px}.en{font-size:13px;color:#75806e;margin-top:3px}.img{width:100%;height:120px;object-fit:contain;border-radius:14px;background:#fbfdf6;border:1px solid #eef3df;margin-bottom:10px}
+.examples{margin-top:10px;display:grid;gap:8px}.ex{padding:9px;border-radius:12px;background:#f8faf3;border:1px solid #edf2df}.ex b{display:block;font-size:17px}.tag{display:inline-flex;margin-top:5px;border-radius:999px;padding:3px 8px;background:#eef6dd;color:#4f7d2e;font-size:11px;font-weight:900}
+.hanzi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:12px}.char-card{text-align:center}.charbox{height:86px;border:1px solid #dce7c8;border-radius:14px;background:linear-gradient(90deg,transparent 49%,#edf2df 50%,transparent 51%),linear-gradient(0deg,transparent 49%,#edf2df 50%,transparent 51%),linear-gradient(45deg,transparent 49.4%,#f3eadb 50%,transparent 50.6%),linear-gradient(-45deg,transparent 49.4%,#f3eadb 50%,transparent 50.6%),#fff;display:flex;align-items:center;justify-content:center;font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:48px;color:rgba(45,59,41,.28);font-weight:900}
+.text-card{padding:16px;border:1px solid #dce7c8;border-radius:18px;background:#fff;margin-bottom:12px}.text-title{font-size:18px;font-weight:900;color:#2563eb;margin-bottom:8px}.line{display:grid;grid-template-columns:90px 1fr;gap:10px;padding:8px 0;border-top:1px dashed #edf2df}.line:first-of-type{border-top:0}.speaker{font-weight:900;color:#64745d}.hanzi{font-size:21px;font-weight:900;line-height:1.55}.hanzi-only{font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:24px;line-height:1.8;font-weight:900}.empty{padding:24px;text-align:center;color:#8a9483}
+@media(max-width:620px){body{padding:12px}.line{grid-template-columns:1fr}.hero{padding:18px}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<nav class="product-nav"><a class="brand" href="../student/index.html">学生界面 / Student Home</a><a href="../pre-class/index.html">课前预习 / Preview</a><a href="../in-class/student.html">课中互动 / Class</a><a href="student-report.html">课后作业 / Homework</a><a class="active" href="review-resources.html">课后复习 / Review</a></nav>
+<main class="wrap">
+  <section class="hero">
+    <span class="badge" id="lessonBadge">Review</span>
+    <h1>课后复习资源</h1>
+    <div class="muted">复习生词、例句、汉字范字和课文。这里只做复习，不提交作业记录。</div>
+    <div class="tabs">
+      <button class="active" data-view="vocab" onclick="showView('vocab')">生词</button>
+      <button data-view="hanzi" onclick="showView('hanzi')">汉字</button>
+      <button data-view="texts" onclick="showView('texts')">课文</button>
+    </div>
+  </section>
+  <section class="section" id="content"><div class="empty">正在读取课程数据...</div></section>
+</main>
+<script>
+var params=new URLSearchParams(location.search),ctx=window.ClassProContext?ClassProContext.read():{};
+var lessonKey=params.get("lesson")||ctx.lesson||"HSK1-L01",DATA=null,currentView="vocab";
+function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+function getJson(path){var x=new XMLHttpRequest();x.open("GET",path,false);x.send(null);if(x.status<200||x.status>=300)throw new Error(path);return JSON.parse(x.responseText)}
+function loadLesson(){
+  try{
+    var raw=/^HSK1-L\d{2}$/.test(lessonKey)?getJson("../data-model/lessons/"+lessonKey+".json"):null;
+    DATA=window.ClassProCourseAdapter&&raw?window.ClassProCourseAdapter.normalizeStandard(raw):raw;
+  }catch(e){DATA={meta:{lessonKey:lessonKey,title:"课程数据读取失败"},vocabulary:[],texts:[],vocabExtensions:{},hanziWriting:{characters:[]}}}
+  document.title=lessonKey+" 课后复习资源";
+  document.getElementById("lessonBadge").textContent=lessonKey+" · "+((DATA.meta&&DATA.meta.title)||"Review");
+}
+function examplesFor(v){var ext=(DATA.vocabExtensions||{})[v.id]||{};return (ext.examples||ext.collocations||v.examples||[]).slice(0,3)}
+function renderVocab(){
+  var v=DATA.vocabulary||[],h="<h2>生词复习 / Vocabulary</h2><div class=\"grid\">";
+  if(!v.length)return "<div class=\"empty\">暂无生词数据。</div>";
+  v.forEach(function(x){
+    var img=x.image?'<img class="img" src="'+esc(x.image)+'" alt="">':'';
+    h+='<article class="card">'+img+'<div class="word">'+esc(x.hanzi||x.word||"")+'</div><div class="py">'+esc(x.pinyin||"")+'</div><div class="en">'+esc(x.english||"")+'</div>';
+    var exs=examplesFor(x);if(exs.length){h+='<div class="examples">';exs.forEach(function(e){h+='<div class="ex"><b>'+esc(e.hanzi||e.word||"")+'</b><div class="py">'+esc(e.pinyin||"")+'</div><div class="en">'+esc(e.english||"")+'</div>'+(e.sourceType==='teaching_extension'?'<span class="tag">教学扩展</span>':'')+'</div>'});h+='</div>'}
+    h+='</article>';
+  });
+  return h+"</div>";
+}
+function renderHanzi(){
+  var chars=((DATA.hanziWriting||{}).characters||[]).slice();
+  if(!chars.length){(DATA.vocabulary||[]).forEach(function(v){Array.from(v.hanzi||v.word||"").forEach(function(c){if(/[\u4e00-\u9fff]/.test(c)&&chars.indexOf(c)<0)chars.push(c)})})}
+  var h="<h2>汉字范字 / Hanzi Writing</h2><div class=\"muted\" style=\"margin-bottom:12px\">灰色范字和米字格用于临摹。笔顺动画后续统一补充。</div><div class=\"hanzi-grid\">";
+  chars.forEach(function(c){h+='<div class="char-card"><div class="charbox">'+esc(c)+'</div></div>'});
+  return h+"</div>";
+}
+function renderTexts(){
+  var texts=DATA.texts||[],h="<h2>课文复习 / Texts</h2>";
+  if(!texts.length)return "<div class=\"empty\">暂无课文数据。</div>";
+  texts.forEach(function(t){
+    h+='<article class="text-card"><div class="text-title">'+esc(t.title||"课文")+'</div>';
+    if(t.scene)h+='<div class="muted" style="margin-bottom:8px">'+esc(t.scene)+'</div>';
+    (t.lines||t.dialogue||[]).forEach(function(l){h+='<div class="line"><div class="speaker">'+esc(l.speaker||"")+'</div><div><div class="hanzi">'+esc(l.hanzi||l.text||"")+'</div><div class="py">'+esc(l.pinyin||"")+'</div><div class="en">'+esc(l.english||"")+'</div></div></div>'});
+    h+='<div class="text-title" style="font-size:15px;margin-top:14px">只汉字版</div><div class="hanzi-only">'+(t.lines||t.dialogue||[]).map(function(l){return esc(l.hanzi||l.text||"")}).join("<br>")+'</div></article>';
+  });
+  return h;
+}
+function showView(view){currentView=view;document.querySelectorAll(".tabs button").forEach(function(b){b.classList.toggle("active",b.dataset.view===view)});var html=view==="hanzi"?renderHanzi():view==="texts"?renderTexts():renderVocab();document.getElementById("content").innerHTML=html}
+loadLesson();showView("vocab");
+</script>
+</body>
+</html>
