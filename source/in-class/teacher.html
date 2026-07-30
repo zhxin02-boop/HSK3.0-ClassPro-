@@ -1650,6 +1650,40 @@ ap.init();
   }
 })();
 </script>
+<script>
+/* Text Q&A grouped narrative mode: one rewritten text with three questions. */
+(function(){
+  if(typeof ap==='undefined')return;
+  function isGroupedTextQa(q){return q&&q.data&&Array.isArray(q.data.questions)&&q.data.questions.length}
+  function groupedKey(q){return(q.data.questions||[]).map(function(x,i){return(i+1)+'. '+(x.answer||((x.options||[])[x.correct_index]||''))}).join('；')}
+  ap.textQaShowPinyin=false;
+  var oldTtq=ap._ttq;
+  ap._ttq=function(){
+    var qs=Q.r2_passage_choice||[],i=this.ttqi,c=qs[i];
+    if(!isGroupedTextQa(c))return oldTtq.call(this);
+    var d=c.data,questions=d.questions||[];
+    var h='<div class="panel" style="text-align:left;max-width:980px;width:100%"><h3 style="color:var(--blue);margin-top:0;text-align:center">课文问答 / Text Q&A</h3>';
+    h+='<div style="display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px"><div style="font-size:13px;color:#888">'+es(c.prompt_cn||'')+'</div><button class="grammar-tab" onclick="ap.textQaShowPinyin=!ap.textQaShowPinyin;ap._r()">'+(this.textQaShowPinyin?'隐藏拼音':'显示拼音')+'</button></div>';
+    h+='<div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:16px;padding:20px;margin:14px 0"><div style="font-weight:900;color:var(--blue);margin-bottom:8px">'+es(d.title||'')+'</div><div class="text-hanzi" style="font-size:22px;line-height:1.75;color:var(--text);font-weight:700">'+es(d.passage||'')+'</div>'+(this.textQaShowPinyin?'<div style="font-size:14px;line-height:1.6;color:#74806d;margin-top:10px">'+es(d.passage_pinyin||'')+'</div>':'')+'</div>';
+    h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0">';
+    questions.forEach(function(qq,qi){
+      h+='<div style="background:#fff;border:1px solid #dfeac8;border-radius:16px;padding:16px"><div style="font-weight:900;color:var(--text);font-size:18px;line-height:1.5">'+(qi+1)+'. '+es(qq.question_cn||'')+'</div><div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">';
+      (qq.options||[]).forEach(function(o,oi){
+        var published=ap.qp==='published',correct=oi===qq.correct_index;
+        h+='<div style="padding:9px 12px;border-radius:12px;border:1px solid '+(published&&correct?'#86efac':'#e5e7eb')+';background:'+(published&&correct?'#dcfce7':'#fff')+';font-weight:800;color:'+(published&&correct?'#166534':'var(--text)')+'">'+es(o)+(published&&correct?' ✓':'')+'</div>';
+      });
+      h+='</div></div>';
+    });
+    h+='</div>';
+    var nav=this._navBtn('ap.ttqi=Math.max(0,ap.ttqi-1);ap.ttqa=false;ap.ttqp=-1;ap.qp=\'idle\';ap._r()','ap.ttqi=Math.min('+(qs.length-1)+',ap.ttqi+1);ap.ttqa=false;ap.ttqp=-1;ap.qp=\'idle\';ap._r()',i,qs.length,'&larr; 上一篇','下一篇 &rarr;');
+    return h+nav+'</div>';
+  };
+  var oldCq2=ap._cq2;
+  ap._cq2=function(){var q=oldCq2.call(this);if(this.st==='ttq'&&isGroupedTextQa(q))q.correct_answer=groupedKey(q);return q};
+  var oldRenderGroupedQa=ap._r;
+  ap._r=function(){oldRenderGroupedQa.call(this);var q=this._cq2&&this._cq2();if(this.st==='ttq'&&isGroupedTextQa(q)){var oldKey=document.querySelector('.practice-key-answer');if(oldKey)oldKey.remove()}};
+})();
+</script>
 </body>
 </html>
 

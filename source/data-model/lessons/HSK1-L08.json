@@ -1,0 +1,4833 @@
+{
+  "schemaVersion": "hsk1-course-v1",
+  "meta": {
+    "level": "HSK1",
+    "lessonId": "L08",
+    "lessonKey": "HSK1-L08",
+    "title": "我爸爸也在医院工作",
+    "titleEn": "My father also works at a hospital",
+    "topic": "方位、位置、能愿动词“能”和工作场景",
+    "topicEn": "Locations, positional words, modal verb 能 and work settings",
+    "sourceTextPolicy": "保留教材原句；新增内容标记为教学扩展",
+    "dataQualityNotes": [
+      "textbook data/L8.txt 中“内们在哪儿见呢？”按语义校正为“我们在哪儿见呢？”。"
+    ]
+  },
+  "features": {
+    "pinyin": false,
+    "hanziWritingDemo": true,
+    "vocabExamples": true,
+    "competition": true,
+    "postClassHomework": true
+  },
+  "vocabulary": [
+    {
+      "id": "v_l08_01",
+      "hanzi": "房间",
+      "word": "房间",
+      "pinyin": "fángjiān",
+      "english": "room",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "房",
+          "间"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"room\", no text"
+    },
+    {
+      "id": "v_l08_02",
+      "hanzi": "外",
+      "word": "外",
+      "pinyin": "wài",
+      "english": "outside",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "外"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"outside\", no text"
+    },
+    {
+      "id": "v_l08_03",
+      "hanzi": "只",
+      "word": "只",
+      "pinyin": "zhī",
+      "english": "measure word for animals",
+      "partOfSpeech": "量词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "只"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"measure word for animals\", no text"
+    },
+    {
+      "id": "v_l08_04",
+      "hanzi": "小",
+      "word": "小",
+      "pinyin": "xiǎo",
+      "english": "small; little",
+      "partOfSpeech": "形容词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "小"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"small; little\", no text"
+    },
+    {
+      "id": "v_l08_05",
+      "hanzi": "猫",
+      "word": "猫",
+      "pinyin": "māo",
+      "english": "cat",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "猫"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"cat\", no text"
+    },
+    {
+      "id": "v_l08_06",
+      "hanzi": "没",
+      "word": "没",
+      "pinyin": "méi",
+      "english": "not; not yet",
+      "partOfSpeech": "副词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "没"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"not; not yet\", no text"
+    },
+    {
+      "id": "v_l08_07",
+      "hanzi": "看见",
+      "word": "看见",
+      "pinyin": "kànjiàn",
+      "english": "see",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "看",
+          "见"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"see\", no text"
+    },
+    {
+      "id": "v_l08_08",
+      "hanzi": "桌子",
+      "word": "桌子",
+      "pinyin": "zhuōzi",
+      "english": "table; desk",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "桌",
+          "子"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"table; desk\", no text"
+    },
+    {
+      "id": "v_l08_09",
+      "hanzi": "下",
+      "word": "下",
+      "pinyin": "xià",
+      "english": "under; below",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "下"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"under; below\", no text"
+    },
+    {
+      "id": "v_l08_10",
+      "hanzi": "漂亮",
+      "word": "漂亮",
+      "pinyin": "piàoliang",
+      "english": "beautiful",
+      "partOfSpeech": "形容词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "漂",
+          "亮"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"beautiful\", no text"
+    },
+    {
+      "id": "v_l08_11",
+      "hanzi": "在",
+      "word": "在",
+      "pinyin": "zài",
+      "english": "at; in",
+      "partOfSpeech": "介词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "在"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"at; in\", no text"
+    },
+    {
+      "id": "v_l08_12",
+      "hanzi": "学校",
+      "word": "学校",
+      "pinyin": "xuéxiào",
+      "english": "school",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "学",
+          "校"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"school\", no text"
+    },
+    {
+      "id": "v_l08_13",
+      "hanzi": "书店",
+      "word": "书店",
+      "pinyin": "shūdiàn",
+      "english": "bookstore",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "书",
+          "店"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"bookstore\", no text"
+    },
+    {
+      "id": "v_l08_14",
+      "hanzi": "前",
+      "word": "前",
+      "pinyin": "qián",
+      "english": "front",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "前"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"front\", no text"
+    },
+    {
+      "id": "v_l08_15",
+      "hanzi": "能",
+      "word": "能",
+      "pinyin": "néng",
+      "english": "can; be able to",
+      "partOfSpeech": "能愿动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "能"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"can; be able to\", no text"
+    },
+    {
+      "id": "v_l08_16",
+      "hanzi": "到",
+      "word": "到",
+      "pinyin": "dào",
+      "english": "arrive",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "到"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"arrive\", no text"
+    },
+    {
+      "id": "v_l08_17",
+      "hanzi": "午饭",
+      "word": "午饭",
+      "pinyin": "wǔfàn",
+      "english": "lunch",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "午",
+          "饭"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"lunch\", no text"
+    },
+    {
+      "id": "v_l08_18",
+      "hanzi": "饭",
+      "word": "饭",
+      "pinyin": "fàn",
+      "english": "meal",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "饭"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"meal\", no text"
+    },
+    {
+      "id": "v_l08_19",
+      "hanzi": "大",
+      "word": "大",
+      "pinyin": "dà",
+      "english": "big",
+      "partOfSpeech": "形容词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "大"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"big\", no text"
+    },
+    {
+      "id": "v_l08_20",
+      "hanzi": "病人",
+      "word": "病人",
+      "pinyin": "bìngrén",
+      "english": "patient",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "病",
+          "人"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"patient\", no text"
+    },
+    {
+      "id": "v_l08_21",
+      "hanzi": "多",
+      "word": "多",
+      "pinyin": "duō",
+      "english": "many; much",
+      "partOfSpeech": "形容词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "多"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"many; much\", no text"
+    },
+    {
+      "id": "v_l08_22",
+      "hanzi": "医生",
+      "word": "医生",
+      "pinyin": "yīshēng",
+      "english": "doctor",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "医",
+          "生"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"doctor\", no text"
+    },
+    {
+      "id": "v_l08_23",
+      "hanzi": "工作",
+      "word": "工作",
+      "pinyin": "gōngzuò",
+      "english": "work",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "工",
+          "作"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"work\", no text"
+    }
+  ],
+  "properNouns": [
+    {
+      "id": "pn_l08_01",
+      "hanzi": "胡医生",
+      "pinyin": "Hú yīshēng",
+      "english": "Dr. Hu",
+      "sourceType": "textbook"
+    }
+  ],
+  "vocabExtensions": {
+    "v_l08_01": {
+      "word": "房间",
+      "collocations": [
+        {
+          "hanzi": "我的房间",
+          "pinyin": "wǒ de fángjiān",
+          "english": "my room",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "房间里",
+          "pinyin": "fángjiān li",
+          "english": "inside the room",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "房间外",
+          "pinyin": "fángjiān wài",
+          "english": "outside the room",
+          "sourceType": "textbook"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "我的房间",
+          "pinyin": "wǒ de fángjiān",
+          "english": "my room",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "房间里",
+          "pinyin": "fángjiān li",
+          "english": "inside the room",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "房间外",
+          "pinyin": "fángjiān wài",
+          "english": "outside the room",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    "v_l08_02": {
+      "word": "外",
+      "collocations": [
+        {
+          "hanzi": "房间外",
+          "pinyin": "fángjiān wài",
+          "english": "outside the room",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "学校外",
+          "pinyin": "xuéxiào wài",
+          "english": "outside the school",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "书店外",
+          "pinyin": "shūdiàn wài",
+          "english": "outside the bookstore",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "房间外",
+          "pinyin": "fángjiān wài",
+          "english": "outside the room",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "学校外",
+          "pinyin": "xuéxiào wài",
+          "english": "outside the school",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "书店外",
+          "pinyin": "shūdiàn wài",
+          "english": "outside the bookstore",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_03": {
+      "word": "只",
+      "collocations": [
+        {
+          "hanzi": "一只猫",
+          "pinyin": "yì zhī māo",
+          "english": "one cat",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这只猫",
+          "pinyin": "zhè zhī māo",
+          "english": "this cat",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "一只小猫",
+          "pinyin": "yì zhī xiǎo māo",
+          "english": "a little cat",
+          "sourceType": "textbook"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "一只猫",
+          "pinyin": "yì zhī māo",
+          "english": "one cat",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这只猫",
+          "pinyin": "zhè zhī māo",
+          "english": "this cat",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "一只小猫",
+          "pinyin": "yì zhī xiǎo māo",
+          "english": "a little cat",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    "v_l08_04": {
+      "word": "小",
+      "collocations": [
+        {
+          "hanzi": "小猫",
+          "pinyin": "xiǎo māo",
+          "english": "little cat",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "小房间",
+          "pinyin": "xiǎo fángjiān",
+          "english": "small room",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "小书店",
+          "pinyin": "xiǎo shūdiàn",
+          "english": "small bookstore",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "小猫",
+          "pinyin": "xiǎo māo",
+          "english": "little cat",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "小房间",
+          "pinyin": "xiǎo fángjiān",
+          "english": "small room",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "小书店",
+          "pinyin": "xiǎo shūdiàn",
+          "english": "small bookstore",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_05": {
+      "word": "猫",
+      "collocations": [
+        {
+          "hanzi": "一只猫",
+          "pinyin": "yì zhī māo",
+          "english": "one cat",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "小猫",
+          "pinyin": "xiǎo māo",
+          "english": "little cat",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "漂亮的猫",
+          "pinyin": "piàoliang de māo",
+          "english": "beautiful cat",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "一只猫",
+          "pinyin": "yì zhī māo",
+          "english": "one cat",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "小猫",
+          "pinyin": "xiǎo māo",
+          "english": "little cat",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "漂亮的猫",
+          "pinyin": "piàoliang de māo",
+          "english": "beautiful cat",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_06": {
+      "word": "没",
+      "collocations": [
+        {
+          "hanzi": "没看见",
+          "pinyin": "méi kànjiàn",
+          "english": "did not see",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "没吃饭",
+          "pinyin": "méi chī fàn",
+          "english": "have not eaten",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "没到",
+          "pinyin": "méi dào",
+          "english": "have not arrived",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "没看见",
+          "pinyin": "méi kànjiàn",
+          "english": "did not see",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "没吃饭",
+          "pinyin": "méi chī fàn",
+          "english": "have not eaten",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "没到",
+          "pinyin": "méi dào",
+          "english": "have not arrived",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_07": {
+      "word": "看见",
+      "collocations": [
+        {
+          "hanzi": "看见小猫",
+          "pinyin": "kànjiàn xiǎo māo",
+          "english": "see the little cat",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "没看见",
+          "pinyin": "méi kànjiàn",
+          "english": "did not see",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "看见医生",
+          "pinyin": "kànjiàn yīshēng",
+          "english": "see a doctor",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "看见小猫",
+          "pinyin": "kànjiàn xiǎo māo",
+          "english": "see the little cat",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "没看见",
+          "pinyin": "méi kànjiàn",
+          "english": "did not see",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "看见医生",
+          "pinyin": "kànjiàn yīshēng",
+          "english": "see a doctor",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_08": {
+      "word": "桌子",
+      "collocations": [
+        {
+          "hanzi": "桌子下",
+          "pinyin": "zhuōzi xià",
+          "english": "under the table",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "桌子上",
+          "pinyin": "zhuōzi shàng",
+          "english": "on the table",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我的桌子",
+          "pinyin": "wǒ de zhuōzi",
+          "english": "my desk",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "桌子下",
+          "pinyin": "zhuōzi xià",
+          "english": "under the table",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "桌子上",
+          "pinyin": "zhuōzi shàng",
+          "english": "on the table",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我的桌子",
+          "pinyin": "wǒ de zhuōzi",
+          "english": "my desk",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_09": {
+      "word": "下",
+      "collocations": [
+        {
+          "hanzi": "桌子下",
+          "pinyin": "zhuōzi xià",
+          "english": "under the table",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "房间下",
+          "pinyin": "fángjiān xià",
+          "english": "under the room",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "书下",
+          "pinyin": "shū xià",
+          "english": "under the book",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "桌子下",
+          "pinyin": "zhuōzi xià",
+          "english": "under the table",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "房间下",
+          "pinyin": "fángjiān xià",
+          "english": "under the room",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "书下",
+          "pinyin": "shū xià",
+          "english": "under the book",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_10": {
+      "word": "漂亮",
+      "collocations": [
+        {
+          "hanzi": "真漂亮",
+          "pinyin": "zhēn piàoliang",
+          "english": "really beautiful",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "小猫漂亮",
+          "pinyin": "xiǎo māo piàoliang",
+          "english": "the cat is beautiful",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "漂亮的房间",
+          "pinyin": "piàoliang de fángjiān",
+          "english": "beautiful room",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "真漂亮",
+          "pinyin": "zhēn piàoliang",
+          "english": "really beautiful",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "小猫漂亮",
+          "pinyin": "xiǎo māo piàoliang",
+          "english": "the cat is beautiful",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "漂亮的房间",
+          "pinyin": "piàoliang de fángjiān",
+          "english": "beautiful room",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_11": {
+      "word": "在",
+      "collocations": [
+        {
+          "hanzi": "在学校",
+          "pinyin": "zài xuéxiào",
+          "english": "at school",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在医院",
+          "pinyin": "zài yīyuàn",
+          "english": "at the hospital",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在桌子下",
+          "pinyin": "zài zhuōzi xià",
+          "english": "under the table",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "在学校",
+          "pinyin": "zài xuéxiào",
+          "english": "at school",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在医院",
+          "pinyin": "zài yīyuàn",
+          "english": "at the hospital",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在桌子下",
+          "pinyin": "zài zhuōzi xià",
+          "english": "under the table",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_12": {
+      "word": "学校",
+      "collocations": [
+        {
+          "hanzi": "在学校",
+          "pinyin": "zài xuéxiào",
+          "english": "at school",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "学校书店",
+          "pinyin": "xuéxiào shūdiàn",
+          "english": "school bookstore",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去学校",
+          "pinyin": "qù xuéxiào",
+          "english": "go to school",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "在学校",
+          "pinyin": "zài xuéxiào",
+          "english": "at school",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "学校书店",
+          "pinyin": "xuéxiào shūdiàn",
+          "english": "school bookstore",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去学校",
+          "pinyin": "qù xuéxiào",
+          "english": "go to school",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_13": {
+      "word": "书店",
+      "collocations": [
+        {
+          "hanzi": "学校书店",
+          "pinyin": "xuéxiào shūdiàn",
+          "english": "school bookstore",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "书店前",
+          "pinyin": "shūdiàn qián",
+          "english": "in front of the bookstore",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在书店",
+          "pinyin": "zài shūdiàn",
+          "english": "at the bookstore",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "学校书店",
+          "pinyin": "xuéxiào shūdiàn",
+          "english": "school bookstore",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "书店前",
+          "pinyin": "shūdiàn qián",
+          "english": "in front of the bookstore",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在书店",
+          "pinyin": "zài shūdiàn",
+          "english": "at the bookstore",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_14": {
+      "word": "前",
+      "collocations": [
+        {
+          "hanzi": "书店前",
+          "pinyin": "shūdiàn qián",
+          "english": "in front of the bookstore",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "学校前",
+          "pinyin": "xuéxiào qián",
+          "english": "in front of the school",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "房间前",
+          "pinyin": "fángjiān qián",
+          "english": "in front of the room",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "书店前",
+          "pinyin": "shūdiàn qián",
+          "english": "in front of the bookstore",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "学校前",
+          "pinyin": "xuéxiào qián",
+          "english": "in front of the school",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "房间前",
+          "pinyin": "fángjiān qián",
+          "english": "in front of the room",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_15": {
+      "word": "能",
+      "collocations": [
+        {
+          "hanzi": "能到",
+          "pinyin": "néng dào",
+          "english": "can arrive",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "能去",
+          "pinyin": "néng qù",
+          "english": "can go",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "不能去",
+          "pinyin": "bù néng qù",
+          "english": "cannot go",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "能到",
+          "pinyin": "néng dào",
+          "english": "can arrive",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "能去",
+          "pinyin": "néng qù",
+          "english": "can go",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "不能去",
+          "pinyin": "bù néng qù",
+          "english": "cannot go",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_16": {
+      "word": "到",
+      "collocations": [
+        {
+          "hanzi": "能到",
+          "pinyin": "néng dào",
+          "english": "can arrive",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两点到",
+          "pinyin": "liǎng diǎn dào",
+          "english": "arrive at two",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "到学校",
+          "pinyin": "dào xuéxiào",
+          "english": "arrive at school",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "能到",
+          "pinyin": "néng dào",
+          "english": "can arrive",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两点到",
+          "pinyin": "liǎng diǎn dào",
+          "english": "arrive at two",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "到学校",
+          "pinyin": "dào xuéxiào",
+          "english": "arrive at school",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_17": {
+      "word": "午饭",
+      "collocations": [
+        {
+          "hanzi": "吃午饭",
+          "pinyin": "chī wǔfàn",
+          "english": "eat lunch",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在学校吃午饭",
+          "pinyin": "zài xuéxiào chī wǔfàn",
+          "english": "eat lunch at school",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "午饭后",
+          "pinyin": "wǔfàn hòu",
+          "english": "after lunch",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "吃午饭",
+          "pinyin": "chī wǔfàn",
+          "english": "eat lunch",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在学校吃午饭",
+          "pinyin": "zài xuéxiào chī wǔfàn",
+          "english": "eat lunch at school",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "午饭后",
+          "pinyin": "wǔfàn hòu",
+          "english": "after lunch",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_18": {
+      "word": "饭",
+      "collocations": [
+        {
+          "hanzi": "吃饭",
+          "pinyin": "chī fàn",
+          "english": "eat",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "没吃饭",
+          "pinyin": "méi chī fàn",
+          "english": "have not eaten",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "晚饭",
+          "pinyin": "wǎnfàn",
+          "english": "dinner",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "吃饭",
+          "pinyin": "chī fàn",
+          "english": "eat",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "没吃饭",
+          "pinyin": "méi chī fàn",
+          "english": "have not eaten",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "晚饭",
+          "pinyin": "wǎnfàn",
+          "english": "dinner",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_19": {
+      "word": "大",
+      "collocations": [
+        {
+          "hanzi": "大医院",
+          "pinyin": "dà yīyuàn",
+          "english": "big hospital",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "大房间",
+          "pinyin": "dà fángjiān",
+          "english": "big room",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "大学校",
+          "pinyin": "dà xuéxiào",
+          "english": "big school",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "大医院",
+          "pinyin": "dà yīyuàn",
+          "english": "big hospital",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "大房间",
+          "pinyin": "dà fángjiān",
+          "english": "big room",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "大学校",
+          "pinyin": "dà xuéxiào",
+          "english": "big school",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_20": {
+      "word": "病人",
+      "collocations": [
+        {
+          "hanzi": "病人多",
+          "pinyin": "bìngrén duō",
+          "english": "many patients",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "医院病人",
+          "pinyin": "yīyuàn bìngrén",
+          "english": "hospital patients",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两个病人",
+          "pinyin": "liǎng gè bìngrén",
+          "english": "two patients",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "病人多",
+          "pinyin": "bìngrén duō",
+          "english": "many patients",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "医院病人",
+          "pinyin": "yīyuàn bìngrén",
+          "english": "hospital patients",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两个病人",
+          "pinyin": "liǎng gè bìngrén",
+          "english": "two patients",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_21": {
+      "word": "多",
+      "collocations": [
+        {
+          "hanzi": "病人多",
+          "pinyin": "bìngrén duō",
+          "english": "many patients",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "学生多",
+          "pinyin": "xuésheng duō",
+          "english": "many students",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "医生多",
+          "pinyin": "yīshēng duō",
+          "english": "many doctors",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "病人多",
+          "pinyin": "bìngrén duō",
+          "english": "many patients",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "学生多",
+          "pinyin": "xuésheng duō",
+          "english": "many students",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "医生多",
+          "pinyin": "yīshēng duō",
+          "english": "many doctors",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_22": {
+      "word": "医生",
+      "collocations": [
+        {
+          "hanzi": "胡医生",
+          "pinyin": "Hú yīshēng",
+          "english": "Dr. Hu",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "两个医生",
+          "pinyin": "liǎng gè yīshēng",
+          "english": "two doctors",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "医生很忙",
+          "pinyin": "yīshēng hěn máng",
+          "english": "the doctor is busy",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "胡医生",
+          "pinyin": "Hú yīshēng",
+          "english": "Dr. Hu",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "两个医生",
+          "pinyin": "liǎng gè yīshēng",
+          "english": "two doctors",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "医生很忙",
+          "pinyin": "yīshēng hěn máng",
+          "english": "the doctor is busy",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l08_23": {
+      "word": "工作",
+      "collocations": [
+        {
+          "hanzi": "在医院工作",
+          "pinyin": "zài yīyuàn gōngzuò",
+          "english": "work at the hospital",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "爸爸工作",
+          "pinyin": "bàba gōngzuò",
+          "english": "Dad works",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "工作很忙",
+          "pinyin": "gōngzuò hěn máng",
+          "english": "work is busy",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "在医院工作",
+          "pinyin": "zài yīyuàn gōngzuò",
+          "english": "work at the hospital",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "爸爸工作",
+          "pinyin": "bàba gōngzuò",
+          "english": "Dad works",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "工作很忙",
+          "pinyin": "gōngzuò hěn máng",
+          "english": "work is busy",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "房间": [
+      {
+        "hanzi": "我的房间",
+        "pinyin": "wǒ de fángjiān",
+        "english": "my room",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "房间里",
+        "pinyin": "fángjiān li",
+        "english": "inside the room",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "房间外",
+        "pinyin": "fángjiān wài",
+        "english": "outside the room",
+        "sourceType": "textbook"
+      }
+    ],
+    "外": [
+      {
+        "hanzi": "房间外",
+        "pinyin": "fángjiān wài",
+        "english": "outside the room",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "学校外",
+        "pinyin": "xuéxiào wài",
+        "english": "outside the school",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "书店外",
+        "pinyin": "shūdiàn wài",
+        "english": "outside the bookstore",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "只": [
+      {
+        "hanzi": "一只猫",
+        "pinyin": "yì zhī māo",
+        "english": "one cat",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "这只猫",
+        "pinyin": "zhè zhī māo",
+        "english": "this cat",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "一只小猫",
+        "pinyin": "yì zhī xiǎo māo",
+        "english": "a little cat",
+        "sourceType": "textbook"
+      }
+    ],
+    "小": [
+      {
+        "hanzi": "小猫",
+        "pinyin": "xiǎo māo",
+        "english": "little cat",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "小房间",
+        "pinyin": "xiǎo fángjiān",
+        "english": "small room",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "小书店",
+        "pinyin": "xiǎo shūdiàn",
+        "english": "small bookstore",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "猫": [
+      {
+        "hanzi": "一只猫",
+        "pinyin": "yì zhī māo",
+        "english": "one cat",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "小猫",
+        "pinyin": "xiǎo māo",
+        "english": "little cat",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "漂亮的猫",
+        "pinyin": "piàoliang de māo",
+        "english": "beautiful cat",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "没": [
+      {
+        "hanzi": "没看见",
+        "pinyin": "méi kànjiàn",
+        "english": "did not see",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "没吃饭",
+        "pinyin": "méi chī fàn",
+        "english": "have not eaten",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "没到",
+        "pinyin": "méi dào",
+        "english": "have not arrived",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "看见": [
+      {
+        "hanzi": "看见小猫",
+        "pinyin": "kànjiàn xiǎo māo",
+        "english": "see the little cat",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "没看见",
+        "pinyin": "méi kànjiàn",
+        "english": "did not see",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "看见医生",
+        "pinyin": "kànjiàn yīshēng",
+        "english": "see a doctor",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "桌子": [
+      {
+        "hanzi": "桌子下",
+        "pinyin": "zhuōzi xià",
+        "english": "under the table",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "桌子上",
+        "pinyin": "zhuōzi shàng",
+        "english": "on the table",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "我的桌子",
+        "pinyin": "wǒ de zhuōzi",
+        "english": "my desk",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "下": [
+      {
+        "hanzi": "桌子下",
+        "pinyin": "zhuōzi xià",
+        "english": "under the table",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "房间下",
+        "pinyin": "fángjiān xià",
+        "english": "under the room",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "书下",
+        "pinyin": "shū xià",
+        "english": "under the book",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "漂亮": [
+      {
+        "hanzi": "真漂亮",
+        "pinyin": "zhēn piàoliang",
+        "english": "really beautiful",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "小猫漂亮",
+        "pinyin": "xiǎo māo piàoliang",
+        "english": "the cat is beautiful",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "漂亮的房间",
+        "pinyin": "piàoliang de fángjiān",
+        "english": "beautiful room",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "在": [
+      {
+        "hanzi": "在学校",
+        "pinyin": "zài xuéxiào",
+        "english": "at school",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "在医院",
+        "pinyin": "zài yīyuàn",
+        "english": "at the hospital",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "在桌子下",
+        "pinyin": "zài zhuōzi xià",
+        "english": "under the table",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "学校": [
+      {
+        "hanzi": "在学校",
+        "pinyin": "zài xuéxiào",
+        "english": "at school",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "学校书店",
+        "pinyin": "xuéxiào shūdiàn",
+        "english": "school bookstore",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "去学校",
+        "pinyin": "qù xuéxiào",
+        "english": "go to school",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "书店": [
+      {
+        "hanzi": "学校书店",
+        "pinyin": "xuéxiào shūdiàn",
+        "english": "school bookstore",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "书店前",
+        "pinyin": "shūdiàn qián",
+        "english": "in front of the bookstore",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "在书店",
+        "pinyin": "zài shūdiàn",
+        "english": "at the bookstore",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "前": [
+      {
+        "hanzi": "书店前",
+        "pinyin": "shūdiàn qián",
+        "english": "in front of the bookstore",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "学校前",
+        "pinyin": "xuéxiào qián",
+        "english": "in front of the school",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "房间前",
+        "pinyin": "fángjiān qián",
+        "english": "in front of the room",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "能": [
+      {
+        "hanzi": "能到",
+        "pinyin": "néng dào",
+        "english": "can arrive",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "能去",
+        "pinyin": "néng qù",
+        "english": "can go",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "不能去",
+        "pinyin": "bù néng qù",
+        "english": "cannot go",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "到": [
+      {
+        "hanzi": "能到",
+        "pinyin": "néng dào",
+        "english": "can arrive",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "两点到",
+        "pinyin": "liǎng diǎn dào",
+        "english": "arrive at two",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "到学校",
+        "pinyin": "dào xuéxiào",
+        "english": "arrive at school",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "午饭": [
+      {
+        "hanzi": "吃午饭",
+        "pinyin": "chī wǔfàn",
+        "english": "eat lunch",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "在学校吃午饭",
+        "pinyin": "zài xuéxiào chī wǔfàn",
+        "english": "eat lunch at school",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "午饭后",
+        "pinyin": "wǔfàn hòu",
+        "english": "after lunch",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "饭": [
+      {
+        "hanzi": "吃饭",
+        "pinyin": "chī fàn",
+        "english": "eat",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "没吃饭",
+        "pinyin": "méi chī fàn",
+        "english": "have not eaten",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "晚饭",
+        "pinyin": "wǎnfàn",
+        "english": "dinner",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "大": [
+      {
+        "hanzi": "大医院",
+        "pinyin": "dà yīyuàn",
+        "english": "big hospital",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "大房间",
+        "pinyin": "dà fángjiān",
+        "english": "big room",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "大学校",
+        "pinyin": "dà xuéxiào",
+        "english": "big school",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "病人": [
+      {
+        "hanzi": "病人多",
+        "pinyin": "bìngrén duō",
+        "english": "many patients",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "医院病人",
+        "pinyin": "yīyuàn bìngrén",
+        "english": "hospital patients",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "两个病人",
+        "pinyin": "liǎng gè bìngrén",
+        "english": "two patients",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "多": [
+      {
+        "hanzi": "病人多",
+        "pinyin": "bìngrén duō",
+        "english": "many patients",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "学生多",
+        "pinyin": "xuésheng duō",
+        "english": "many students",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "医生多",
+        "pinyin": "yīshēng duō",
+        "english": "many doctors",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "医生": [
+      {
+        "hanzi": "胡医生",
+        "pinyin": "Hú yīshēng",
+        "english": "Dr. Hu",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "两个医生",
+        "pinyin": "liǎng gè yīshēng",
+        "english": "two doctors",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "医生很忙",
+        "pinyin": "yīshēng hěn máng",
+        "english": "the doctor is busy",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "工作": [
+      {
+        "hanzi": "在医院工作",
+        "pinyin": "zài yīyuàn gōngzuò",
+        "english": "work at the hospital",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "爸爸工作",
+        "pinyin": "bàba gōngzuò",
+        "english": "Dad works",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "工作很忙",
+        "pinyin": "gōngzuò hěn máng",
+        "english": "work is busy",
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "grammarTeachingNotes": {
+    "g_l08_01": {
+      "structure": "名词/地点 + 方位词\n在 + 地点/名词 + 方位词",
+      "structureEn": "Noun/place + positional word, such as 桌子下 or 书店前.",
+      "structureRu": "Существительное/место + слово направления: 桌子下, 书店前.",
+      "english": "Use positional words to say where a person or thing is. Keep the location phrase compact.",
+      "russian": "Слова направления помогают сказать, где находится предмет или человек."
+    },
+    "g_l08_02": {
+      "structure": "主语 + 在 + 地点 + 动作",
+      "structureEn": "Subject + 在 + place + action.",
+      "structureRu": "Подлежащее + 在 + место + действие.",
+      "english": "在 before a place tells where the action happens.",
+      "russian": "在 перед местом показывает, где происходит действие."
+    },
+    "g_l08_03": {
+      "structure": "主语 + 能 / 不能 + 动词",
+      "structureEn": "Subject + 能 / 不能 + verb.",
+      "structureRu": "Подлежащее + 能 / 不能 + глагол.",
+      "english": "能 asks or states whether someone can do something, often because of time, ability, or conditions.",
+      "russian": "能 показывает возможность, способность или условие для действия."
+    }
+  },
+  "grammar": [
+    {
+      "id": "g_l08_01",
+      "title": "方位词",
+      "titleEn": "Positional Words",
+      "explanation": "方位词表示方向和位置，如“上、下、里、外、前、后”。",
+      "structure": "地点/名词 + 方位词",
+      "examples": [
+        {
+          "hanzi": "房间外有一只小猫。",
+          "pinyin": "Fángjiān wài yǒu yì zhī xiǎo māo.",
+          "english": "There is a little cat outside the room.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "它在桌子下呢。",
+          "pinyin": "Tā zài zhuōzi xià ne.",
+          "english": "It's under the table.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "在学校书店前见吧。",
+          "pinyin": "Zài xuéxiào shūdiàn qián jiàn ba.",
+          "english": "Let's meet in front of the school bookstore.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "g_l08_02",
+      "title": "介词“在”",
+      "titleEn": "Preposition “在”",
+      "explanation": "“在”和地点词语组合，放在动词前，说明动作发生的位置。",
+      "structure": "主语 + 在 + 地点 + 动作",
+      "examples": [
+        {
+          "hanzi": "我在学校吃午饭。",
+          "pinyin": "Wǒ zài xuéxiào chī wǔfàn.",
+          "english": "I have lunch at school.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我爸爸也在医院工作。",
+          "pinyin": "Wǒ bàba yě zài yīyuàn gōngzuò.",
+          "english": "My father also works at a hospital.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "你在哪儿买菜？",
+          "pinyin": "Nǐ zài nǎr mǎi cài?",
+          "english": "Where do you buy vegetables?",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    {
+      "id": "g_l08_03",
+      "title": "能愿动词“能”",
+      "titleEn": "Modal Verb “能”",
+      "explanation": "“能”放在动词前，表示有能力、有条件或可能做某事。",
+      "structure": "主语 + 能/不能 + 动词",
+      "examples": [
+        {
+          "hanzi": "下午两点你能到吗？",
+          "pinyin": "Xiàwǔ liǎng diǎn nǐ néng dào ma?",
+          "english": "Can you arrive at two in the afternoon?",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我能到。",
+          "pinyin": "Wǒ néng dào.",
+          "english": "I can arrive.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我不能去学校吃午饭。",
+          "pinyin": "Wǒ bù néng qù xuéxiào chī wǔfàn.",
+          "english": "I can't go to school for lunch.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "text_l08_01",
+      "title": "课文一",
+      "scene": "在王一飞家，白家月和陈天中来做客。",
+      "lines": [
+        {
+          "speaker": "白家月",
+          "hanzi": "房间外有一只小猫。",
+          "pinyin": "Fángjiān wài yǒu yì zhī xiǎo māo.",
+          "english": "There is a little cat outside the room.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "陈天中",
+          "hanzi": "我没看见，它在哪儿呢？",
+          "pinyin": "Wǒ méi kànjiàn, tā zài nǎr ne?",
+          "english": "I don't see it. Where is it?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "白家月",
+          "hanzi": "它在桌子下呢。",
+          "pinyin": "Tā zài zhuōzi xià ne.",
+          "english": "It's under the table.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "陈天中",
+          "hanzi": "这只小猫真漂亮！",
+          "pinyin": "Zhè zhī xiǎo māo zhēn piàoliang!",
+          "english": "This little cat is so beautiful!",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "text_l08_02",
+      "title": "课文二",
+      "scene": "在教室里，下课后，白家月给李文打电话。",
+      "lines": [
+        {
+          "speaker": "白家月",
+          "hanzi": "我们在哪儿见呢？",
+          "pinyin": "Wǒmen zài nǎr jiàn ne?",
+          "english": "Where shall we meet?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "李文",
+          "hanzi": "在学校书店前见吧。",
+          "pinyin": "Zài xuéxiào shūdiàn qián jiàn ba.",
+          "english": "Let's meet in front of the school bookstore.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "白家月",
+          "hanzi": "好的。下午两点你能到吗？",
+          "pinyin": "Hǎo de. Xiàwǔ liǎng diǎn nǐ néng dào ma?",
+          "english": "Okay. Can you arrive at 2:00 in the afternoon?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "李文",
+          "hanzi": "我能到。我在学校吃午饭。",
+          "pinyin": "Wǒ néng dào. Wǒ zài xuéxiào chī wǔfàn.",
+          "english": "Yes, I can. I'll have lunch at school.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "text_l08_03",
+      "title": "课文三",
+      "scene": "在医院里，刘明和同事胡医生在聊天儿。",
+      "lines": [
+        {
+          "speaker": "刘明",
+          "hanzi": "小胡，还没吃饭呢？",
+          "pinyin": "Xiǎo Hú, hái méi chī fàn ne?",
+          "english": "Xiao Hu, haven't you eaten yet?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "胡医生",
+          "hanzi": "没吃呢。",
+          "pinyin": "Méi chī ne.",
+          "english": "No, I haven't.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "大医院病人多，医生非常忙。",
+          "pinyin": "Dà yīyuàn bìngrén duō, yīshēng fēicháng máng.",
+          "english": "Big hospitals have a lot of patients, and doctors are very busy.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "胡医生",
+          "hanzi": "是的。我爸爸也在医院工作，他也非常忙。",
+          "pinyin": "Shì de. Wǒ bàba yě zài yīyuàn gōngzuò, tā yě fēicháng máng.",
+          "english": "True. My father also works at a hospital, and he's extremely busy too.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "你家有两个医生？",
+          "pinyin": "Nǐ jiā yǒu liǎng gè yīshēng?",
+          "english": "So there are two doctors in your family?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "胡医生",
+          "hanzi": "对。",
+          "pinyin": "Duì.",
+          "english": "Yes.",
+          "sourceType": "textbook"
+        }
+      ]
+    }
+  ],
+  "preClass": {
+    "warmup": {
+      "title": "我的东西在哪儿？",
+      "prompt": "Look around: where is your phone, book, desk, room or dormitory?",
+      "intro": "这一课预习只做“地点 + 方位”的热身：在桌子上/下、在房间里/外、在书店前、在学校吃午饭。",
+      "question": "如果你想问“它在哪里？”，下面哪句话最合适？",
+      "questionEn": "Which sentence asks where something is?",
+      "options": [
+        {
+          "word": "它在哪儿呢？",
+          "pinyin": "Tā zài nǎr ne?"
+        },
+        {
+          "word": "你几点下课？",
+          "pinyin": "Nǐ jǐ diǎn xiàkè?"
+        },
+        {
+          "word": "你想买什么？",
+          "pinyin": "Nǐ xiǎng mǎi shénme?"
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": "pre_l08_01",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“房间”的意思是：",
+        "options": [
+          {
+            "text": "room"
+          },
+          {
+            "text": "cat"
+          },
+          {
+            "text": "doctor"
+          },
+          {
+            "text": "bookstore"
+          }
+        ],
+        "answer": "room",
+        "weakPoints": "词汇：房间",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l08_02",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“猫”的意思是：",
+        "options": [
+          {
+            "text": "cat"
+          },
+          {
+            "text": "dog"
+          },
+          {
+            "text": "doctor"
+          },
+          {
+            "text": "table"
+          }
+        ],
+        "answer": "cat",
+        "weakPoints": "词汇：猫",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l08_03",
+        "type": "choice",
+        "module": "位置预热",
+        "question": "“桌子下”表示：",
+        "options": [
+          {
+            "text": "under the table"
+          },
+          {
+            "text": "in front of the bookstore"
+          },
+          {
+            "text": "outside the room"
+          },
+          {
+            "text": "at school"
+          }
+        ],
+        "answer": "under the table",
+        "weakPoints": "方位：下",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l08_04",
+        "type": "choice",
+        "module": "交际预热",
+        "question": "选择可以回答“它在哪儿？”的句子。",
+        "options": [
+          {
+            "text": "它在桌子下。"
+          },
+          {
+            "text": "它真漂亮。"
+          },
+          {
+            "text": "我能到。"
+          },
+          {
+            "text": "我吃午饭。"
+          }
+        ],
+        "answer": "它在桌子下。",
+        "weakPoints": "交际：位置回答",
+        "sourceType": "teaching_extension",
+        "questionEn": "Choose the sentence that can answer “Where is it?”",
+        "prompt_en": "Choose the sentence that can answer “Where is it?”"
+      },
+      {
+        "id": "pre_l08_05",
+        "type": "subjective",
+        "module": "生活经验开放题",
+        "question": "教学扩展：你现在在哪儿？请写一个中文短句。",
+        "questionEn": "Where are you now? Try one Chinese sentence.",
+        "answerPlaceholder": "例如：我在学校。",
+        "needsTeacherReview": true,
+        "openEnded": true,
+        "weakPoints": "输出：在+地点",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l08_06",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“医生”的意思是：",
+        "options": [
+          {
+            "text": "doctor"
+          },
+          {
+            "text": "patient"
+          },
+          {
+            "text": "student"
+          },
+          {
+            "text": "father"
+          }
+        ],
+        "answer": "doctor",
+        "weakPoints": "词汇：医生",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l08_07",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“病人”的意思是：",
+        "options": [
+          {
+            "text": "patient"
+          },
+          {
+            "text": "doctor"
+          },
+          {
+            "text": "teacher"
+          },
+          {
+            "text": "cat"
+          }
+        ],
+        "answer": "patient",
+        "weakPoints": "词汇：病人",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l08_08",
+        "type": "choice",
+        "module": "交际预热",
+        "question": "如果你想问“Can you arrive at two?”，可以说：",
+        "options": [
+          {
+            "text": "下午两点你能到吗？"
+          },
+          {
+            "text": "你在哪儿见呢？"
+          },
+          {
+            "text": "它在桌子下呢。"
+          },
+          {
+            "text": "医生非常忙。"
+          }
+        ],
+        "answer": "下午两点你能到吗？",
+        "weakPoints": "交际：能到吗",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l08_09",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“工作”的意思是：",
+        "options": [
+          {
+            "text": "work"
+          },
+          {
+            "text": "lunch"
+          },
+          {
+            "text": "bookstore"
+          },
+          {
+            "text": "beautiful"
+          }
+        ],
+        "answer": "work",
+        "weakPoints": "词汇：工作",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l08_10",
+        "type": "subjective",
+        "module": "生活经验开放题",
+        "question": "教学扩展：你想和同学在哪儿见？请写一个短句。",
+        "questionEn": "Where do you want to meet your classmate? Try one short sentence.",
+        "answerPlaceholder": "例如：我们在学校书店前见。",
+        "needsTeacherReview": true,
+        "openEnded": true,
+        "weakPoints": "输出：地点表达",
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "inClass": {
+    "questionGroups": {
+      "v1_image_guess": [
+        {
+          "id": "v1_hsk1_08_01",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for room",
+            "options": [
+              "房间",
+              "外",
+              "只",
+              "小"
+            ],
+            "options_pinyin": [
+              "fángjiān",
+              "wài",
+              "zhī",
+              "xiǎo"
+            ]
+          },
+          "correct_answer": "房间",
+          "kp": "房间",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_08_02",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for outside",
+            "options": [
+              "外",
+              "房间",
+              "只",
+              "小"
+            ],
+            "options_pinyin": [
+              "wài",
+              "fángjiān",
+              "zhī",
+              "xiǎo"
+            ]
+          },
+          "correct_answer": "外",
+          "kp": "外",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_08_03",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for measure word for animals",
+            "options": [
+              "只",
+              "房间",
+              "外",
+              "小"
+            ],
+            "options_pinyin": [
+              "zhī",
+              "fángjiān",
+              "wài",
+              "xiǎo"
+            ]
+          },
+          "correct_answer": "只",
+          "kp": "只",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_08_04",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for small; little",
+            "options": [
+              "小",
+              "房间",
+              "外",
+              "只"
+            ],
+            "options_pinyin": [
+              "xiǎo",
+              "fángjiān",
+              "wài",
+              "zhī"
+            ]
+          },
+          "correct_answer": "小",
+          "kp": "小",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_08_05",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for cat",
+            "options": [
+              "猫",
+              "房间",
+              "外",
+              "只"
+            ],
+            "options_pinyin": [
+              "māo",
+              "fángjiān",
+              "wài",
+              "zhī"
+            ]
+          },
+          "correct_answer": "猫",
+          "kp": "猫",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_08_06",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for not; not yet",
+            "options": [
+              "没",
+              "房间",
+              "外",
+              "只"
+            ],
+            "options_pinyin": [
+              "méi",
+              "fángjiān",
+              "wài",
+              "zhī"
+            ]
+          },
+          "correct_answer": "没",
+          "kp": "没",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_08_07",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for see",
+            "options": [
+              "看见",
+              "房间",
+              "外",
+              "只"
+            ],
+            "options_pinyin": [
+              "kànjiàn",
+              "fángjiān",
+              "wài",
+              "zhī"
+            ]
+          },
+          "correct_answer": "看见",
+          "kp": "看见",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_08_08",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for table; desk",
+            "options": [
+              "桌子",
+              "房间",
+              "外",
+              "只"
+            ],
+            "options_pinyin": [
+              "zhuōzi",
+              "fángjiān",
+              "wài",
+              "zhī"
+            ]
+          },
+          "correct_answer": "桌子",
+          "kp": "桌子",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_08_09",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for under; below",
+            "options": [
+              "下",
+              "房间",
+              "外",
+              "只"
+            ],
+            "options_pinyin": [
+              "xià",
+              "fángjiān",
+              "wài",
+              "zhī"
+            ]
+          },
+          "correct_answer": "下",
+          "kp": "下",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_08_10",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for beautiful",
+            "options": [
+              "漂亮",
+              "房间",
+              "外",
+              "只"
+            ],
+            "options_pinyin": [
+              "piàoliang",
+              "fángjiān",
+              "wài",
+              "zhī"
+            ]
+          },
+          "correct_answer": "漂亮",
+          "kp": "漂亮",
+          "sourceType": "textbook"
+        }
+      ],
+      "v5_vocab_fill": [
+        {
+          "id": "v5_hsk1_08_01",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "房间外有一___小猫。",
+            "sentence_pinyin": "Fángjiān wài yǒu yì ___ xiǎo māo.",
+            "options": [
+              "只",
+              "个",
+              "口",
+              "本"
+            ],
+            "options_pinyin": [
+              "zhī",
+              "gè",
+              "kǒu",
+              "běn"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "只",
+          "kp": "只",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_08_02",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "我没___，它在哪儿呢？",
+            "sentence_pinyin": "Wǒ méi ___, tā zài nǎr ne?",
+            "options": [
+              "看见",
+              "到",
+              "工作",
+              "吃饭"
+            ],
+            "options_pinyin": [
+              "kànjiàn",
+              "dào",
+              "gōngzuò",
+              "chī fàn"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "看见",
+          "kp": "看见",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_08_03",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "它在桌子___呢。",
+            "sentence_pinyin": "Tā zài zhuōzi ___ ne.",
+            "options": [
+              "下",
+              "外",
+              "前",
+              "大"
+            ],
+            "options_pinyin": [
+              "xià",
+              "wài",
+              "qián",
+              "dà"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "下",
+          "kp": "下",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_08_04",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "这只小猫真___！",
+            "sentence_pinyin": "Zhè zhī xiǎo māo zhēn ___!",
+            "options": [
+              "漂亮",
+              "多",
+              "忙",
+              "大"
+            ],
+            "options_pinyin": [
+              "piàoliang",
+              "duō",
+              "máng",
+              "dà"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "漂亮",
+          "kp": "漂亮",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_08_05",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "我们在学校书店___见吧。",
+            "sentence_pinyin": "Wǒmen zài xuéxiào shūdiàn ___ jiàn ba.",
+            "options": [
+              "前",
+              "饭",
+              "猫",
+              "只"
+            ],
+            "options_pinyin": [
+              "qián",
+              "fàn",
+              "māo",
+              "zhī"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "前",
+          "kp": "前",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_08_06",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "下午两点你___到吗？",
+            "sentence_pinyin": "Xiàwǔ liǎng diǎn nǐ ___ dào ma?",
+            "options": [
+              "能",
+              "没",
+              "在",
+              "多"
+            ],
+            "options_pinyin": [
+              "néng",
+              "méi",
+              "zài",
+              "duō"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "能",
+          "kp": "能",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_08_07",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "我在学校吃___。",
+            "sentence_pinyin": "Wǒ zài xuéxiào chī ___.",
+            "options": [
+              "午饭",
+              "医生",
+              "书店",
+              "工作"
+            ],
+            "options_pinyin": [
+              "wǔfàn",
+              "yīshēng",
+              "shūdiàn",
+              "gōngzuò"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "午饭",
+          "kp": "午饭",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_08_08",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "大医院___多。",
+            "sentence_pinyin": "Dà yīyuàn ___ duō.",
+            "options": [
+              "病人",
+              "猫",
+              "书店",
+              "桌子"
+            ],
+            "options_pinyin": [
+              "bìngrén",
+              "māo",
+              "shūdiàn",
+              "zhuōzi"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "病人",
+          "kp": "病人",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_08_09",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "医生非常___。",
+            "sentence_pinyin": "Yīshēng fēicháng ___.",
+            "options": [
+              "忙",
+              "小",
+              "前",
+              "外"
+            ],
+            "options_pinyin": [
+              "máng",
+              "xiǎo",
+              "qián",
+              "wài"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "忙",
+          "kp": "医生",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_08_10",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "我爸爸也在医院___。",
+            "sentence_pinyin": "Wǒ bàba yě zài yīyuàn ___.",
+            "options": [
+              "工作",
+              "看见",
+              "到",
+              "吃饭"
+            ],
+            "options_pinyin": [
+              "gōngzuò",
+              "kànjiàn",
+              "dào",
+              "chī fàn"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "工作",
+          "kp": "工作",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v7_word_match": [
+        {
+          "id": "v7_hsk1_08_01",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把左侧问句与右侧答句配对。",
+          "prompt_en": "Match each question with a reply.",
+          "data": {
+            "pairs": [
+              {
+                "id": "pair_1",
+                "left": "它在哪儿呢？",
+                "left_pinyin": "Tā zài nǎr ne?",
+                "right": "它在桌子下呢。",
+                "right_pinyin": "Tā zài zhuōzi xià ne."
+              },
+              {
+                "id": "pair_2",
+                "left": "房间外有什么？",
+                "left_pinyin": "Fángjiān wài yǒu shénme?",
+                "right": "房间外有一只小猫。",
+                "right_pinyin": "Fángjiān wài yǒu yì zhī xiǎo māo."
+              },
+              {
+                "id": "pair_3",
+                "left": "这只小猫怎么样？",
+                "left_pinyin": "Zhè zhī xiǎo māo zěnmeyàng?",
+                "right": "这只小猫真漂亮！",
+                "right_pinyin": "Zhè zhī xiǎo māo zhēn piàoliang!"
+              },
+              {
+                "id": "pair_4",
+                "left": "你看见小猫了吗？",
+                "left_pinyin": "Nǐ kànjiàn xiǎo māo le ma?",
+                "right": "我没看见。",
+                "right_pinyin": "Wǒ méi kànjiàn."
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词句匹配1",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_08_02",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把左侧问句与右侧答句配对。",
+          "prompt_en": "Match each question with a reply.",
+          "data": {
+            "pairs": [
+              {
+                "id": "pair_1",
+                "left": "我们在哪儿见呢？",
+                "left_pinyin": "Wǒmen zài nǎr jiàn ne?",
+                "right": "在学校书店前见吧。",
+                "right_pinyin": "Zài xuéxiào shūdiàn qián jiàn ba."
+              },
+              {
+                "id": "pair_2",
+                "left": "下午两点你能到吗？",
+                "left_pinyin": "Xiàwǔ liǎng diǎn nǐ néng dào ma?",
+                "right": "我能到。",
+                "right_pinyin": "Wǒ néng dào."
+              },
+              {
+                "id": "pair_3",
+                "left": "你在哪儿吃午饭？",
+                "left_pinyin": "Nǐ zài nǎr chī wǔfàn?",
+                "right": "我在学校吃午饭。",
+                "right_pinyin": "Wǒ zài xuéxiào chī wǔfàn."
+              },
+              {
+                "id": "pair_4",
+                "left": "你去书店吗？",
+                "left_pinyin": "Nǐ qù shūdiàn ma?",
+                "right": "我不能去书店。",
+                "right_pinyin": "Wǒ bù néng qù shūdiàn."
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词句匹配2",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_08_03",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把左侧问句与右侧答句配对。",
+          "prompt_en": "Match each question with a reply.",
+          "data": {
+            "pairs": [
+              {
+                "id": "pair_1",
+                "left": "小胡吃饭了吗？",
+                "left_pinyin": "Xiǎo Hú chī fàn le ma?",
+                "right": "还没吃饭呢。",
+                "right_pinyin": "Hái méi chī fàn ne."
+              },
+              {
+                "id": "pair_2",
+                "left": "医院怎么样？",
+                "left_pinyin": "Yīyuàn zěnmeyàng?",
+                "right": "大医院病人多。",
+                "right_pinyin": "Dà yīyuàn bìngrén duō."
+              },
+              {
+                "id": "pair_3",
+                "left": "医生忙吗？",
+                "left_pinyin": "Yīshēng máng ma?",
+                "right": "医生非常忙。",
+                "right_pinyin": "Yīshēng fēicháng máng."
+              },
+              {
+                "id": "pair_4",
+                "left": "你爸爸在哪儿工作？",
+                "left_pinyin": "Nǐ bàba zài nǎr gōngzuò?",
+                "right": "我爸爸也在医院工作。",
+                "right_pinyin": "Wǒ bàba yě zài yīyuàn gōngzuò."
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词句匹配3",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_08_04",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把左侧问句与右侧答句配对。",
+          "prompt_en": "Match each question with a reply.",
+          "data": {
+            "pairs": [
+              {
+                "id": "pair_1",
+                "left": "桌子在哪儿？",
+                "left_pinyin": "Zhuōzi zài nǎr?",
+                "right": "桌子在房间里。",
+                "right_pinyin": "Zhuōzi zài fángjiān li."
+              },
+              {
+                "id": "pair_2",
+                "left": "猫在哪儿？",
+                "left_pinyin": "Māo zài nǎr?",
+                "right": "猫在桌子下。",
+                "right_pinyin": "Māo zài zhuōzi xià."
+              },
+              {
+                "id": "pair_3",
+                "left": "书店在哪儿？",
+                "left_pinyin": "Shūdiàn zài nǎr?",
+                "right": "书店在学校前。",
+                "right_pinyin": "Shūdiàn zài xuéxiào qián."
+              },
+              {
+                "id": "pair_4",
+                "left": "医生在哪儿？",
+                "left_pinyin": "Yīshēng zài nǎr?",
+                "right": "医生在医院。",
+                "right_pinyin": "Yīshēng zài yīyuàn."
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词句匹配4",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_08_05",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把左侧问句与右侧答句配对。",
+          "prompt_en": "Match each question with a reply.",
+          "data": {
+            "pairs": [
+              {
+                "id": "pair_1",
+                "left": "你能到吗？",
+                "left_pinyin": "Nǐ néng dào ma?",
+                "right": "我能到。",
+                "right_pinyin": "Wǒ néng dào."
+              },
+              {
+                "id": "pair_2",
+                "left": "你能去吗？",
+                "left_pinyin": "Nǐ néng qù ma?",
+                "right": "我不能去。",
+                "right_pinyin": "Wǒ bù néng qù."
+              },
+              {
+                "id": "pair_3",
+                "left": "你能看见吗？",
+                "left_pinyin": "Nǐ néng kànjiàn ma?",
+                "right": "我没看见。",
+                "right_pinyin": "Wǒ méi kànjiàn."
+              },
+              {
+                "id": "pair_4",
+                "left": "你能工作吗？",
+                "left_pinyin": "Nǐ néng gōngzuò ma?",
+                "right": "我能工作。",
+                "right_pinyin": "Wǒ néng gōngzuò."
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词句匹配5",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v8_memory_match": [
+        {
+          "id": "v8_hsk1_08_01",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配词语和意思。",
+          "prompt_en": "Match words and meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "房间",
+                "left_pinyin": "fángjiān",
+                "right": "room"
+              },
+              {
+                "left": "桌子",
+                "left_pinyin": "zhuōzi",
+                "right": "table"
+              },
+              {
+                "left": "书店",
+                "left_pinyin": "shūdiàn",
+                "right": "bookstore"
+              },
+              {
+                "left": "医院",
+                "left_pinyin": "yīyuàn",
+                "right": "hospital"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词语匹配1",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_08_02",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配词语和意思。",
+          "prompt_en": "Match words and meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "外",
+                "left_pinyin": "wài",
+                "right": "outside"
+              },
+              {
+                "left": "下",
+                "left_pinyin": "xià",
+                "right": "under"
+              },
+              {
+                "left": "前",
+                "left_pinyin": "qián",
+                "right": "front"
+              },
+              {
+                "left": "里",
+                "left_pinyin": "li",
+                "right": "inside"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词语匹配2",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_08_03",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配词语和意思。",
+          "prompt_en": "Match words and meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "小",
+                "left_pinyin": "xiǎo",
+                "right": "small"
+              },
+              {
+                "left": "大",
+                "left_pinyin": "dà",
+                "right": "big"
+              },
+              {
+                "left": "漂亮",
+                "left_pinyin": "piàoliang",
+                "right": "beautiful"
+              },
+              {
+                "left": "多",
+                "left_pinyin": "duō",
+                "right": "many"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词语匹配3",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_08_04",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配词语和意思。",
+          "prompt_en": "Match words and meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "猫",
+                "left_pinyin": "māo",
+                "right": "cat"
+              },
+              {
+                "left": "病人",
+                "left_pinyin": "bìngrén",
+                "right": "patient"
+              },
+              {
+                "left": "医生",
+                "left_pinyin": "yīshēng",
+                "right": "doctor"
+              },
+              {
+                "left": "饭",
+                "left_pinyin": "fàn",
+                "right": "meal"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词语匹配4",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_08_05",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配词语和意思。",
+          "prompt_en": "Match words and meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "看见",
+                "left_pinyin": "kànjiàn",
+                "right": "see"
+              },
+              {
+                "left": "能",
+                "left_pinyin": "néng",
+                "right": "can"
+              },
+              {
+                "left": "到",
+                "left_pinyin": "dào",
+                "right": "arrive"
+              },
+              {
+                "left": "工作",
+                "left_pinyin": "gōngzuò",
+                "right": "work"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词语匹配5",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "w1_component_char": [
+        {
+          "id": "w1_hsk1_08_01",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "fángjiān",
+            "options": [
+              "房间",
+              "方间",
+              "房问",
+              "放间"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "房间",
+          "kp": "房间",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_08_02",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "xiǎo māo",
+            "options": [
+              "小猫",
+              "少猫",
+              "小描",
+              "小苗"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "小猫",
+          "kp": "小猫",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_08_03",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "kànjiàn",
+            "options": [
+              "看见",
+              "看贝",
+              "着见",
+              "看现"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "看见",
+          "kp": "看见",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_08_04",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "zhuōzi",
+            "options": [
+              "桌子",
+              "卓子",
+              "桌了",
+              "果子"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "桌子",
+          "kp": "桌子",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_08_05",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "piàoliang",
+            "options": [
+              "漂亮",
+              "漂高",
+              "漂壳",
+              "飘亮"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "漂亮",
+          "kp": "漂亮",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_08_06",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "xuéxiào",
+            "options": [
+              "学校",
+              "学较",
+              "字校",
+              "学效"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "学校",
+          "kp": "学校",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_08_07",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "shūdiàn",
+            "options": [
+              "书店",
+              "书电",
+              "手店",
+              "书点"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "书店",
+          "kp": "书店",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_08_08",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "wǔfàn",
+            "options": [
+              "午饭",
+              "牛饭",
+              "午反",
+              "午钣"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "午饭",
+          "kp": "午饭",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_08_09",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "bìngrén",
+            "options": [
+              "病人",
+              "疼人",
+              "病入",
+              "疒人"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "病人",
+          "kp": "病人",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_08_10",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "gōngzuò",
+            "options": [
+              "工作",
+              "工做",
+              "公作",
+              "土作"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "工作",
+          "kp": "工作",
+          "sourceType": "textbook"
+        }
+      ],
+      "v4_complete_sentence": [
+        {
+          "id": "v4_hsk1_08_01",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "它在桌子下呢。",
+            "source_pinyin": "Tā zài zhuōzi xià ne.",
+            "template": "它在桌子下呢。",
+            "template_pinyin": "Tā zài zhuōzi xià ne.",
+            "question_hint": "它在哪儿呢？",
+            "question_hint_en": "Where is it?",
+            "options": [
+              "它在哪儿呢？",
+              "它什么时候到？",
+              "它能工作吗？",
+              "它吃什么？"
+            ],
+            "options_pinyin": [
+              "Tā zài nǎr ne?",
+              "Tā shénme shíhou dào?",
+              "Tā néng gōngzuò ma?",
+              "Tā chī shénme?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "它在哪儿呢？",
+          "kp": "问位置",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_08_02",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "房间外有一只小猫。",
+            "source_pinyin": "Fángjiān wài yǒu yì zhī xiǎo māo.",
+            "template": "房间外有一只小猫。",
+            "template_pinyin": "Fángjiān wài yǒu yì zhī xiǎo māo.",
+            "question_hint": "房间外有什么？",
+            "question_hint_en": "What is outside the room?",
+            "options": [
+              "房间外有什么？",
+              "房间外几点？",
+              "房间外谁工作？",
+              "房间外能到吗？"
+            ],
+            "options_pinyin": [
+              "Fángjiān wài yǒu shénme?",
+              "Fángjiān wài jǐ diǎn?",
+              "Fángjiān wài shéi gōngzuò?",
+              "Fángjiān wài néng dào ma?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "房间外有什么？",
+          "kp": "有什么",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_08_03",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我没看见它。",
+            "source_pinyin": "Wǒ méi kànjiàn tā.",
+            "template": "我没看见它。",
+            "template_pinyin": "Wǒ méi kànjiàn tā.",
+            "question_hint": "你看见它了吗？",
+            "question_hint_en": "Did you see it?",
+            "options": [
+              "你看见它了吗？",
+              "你喜欢它吗？",
+              "你在哪儿见它？",
+              "你几点看见？"
+            ],
+            "options_pinyin": [
+              "Nǐ kànjiàn tā le ma?",
+              "Nǐ xǐhuan tā ma?",
+              "Nǐ zài nǎr jiàn tā?",
+              "Nǐ jǐ diǎn kànjiàn?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你看见它了吗？",
+          "kp": "看见了吗",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_08_04",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "这只小猫真漂亮。",
+            "source_pinyin": "Zhè zhī xiǎo māo zhēn piàoliang.",
+            "template": "这只小猫真漂亮。",
+            "template_pinyin": "Zhè zhī xiǎo māo zhēn piàoliang.",
+            "question_hint": "这只小猫怎么样？",
+            "question_hint_en": "What is this little cat like?",
+            "options": [
+              "这只小猫怎么样？",
+              "这只小猫在哪儿？",
+              "这只小猫几点到？",
+              "这只小猫能工作吗？"
+            ],
+            "options_pinyin": [
+              "Zhè zhī xiǎo māo zěnmeyàng?",
+              "Zhè zhī xiǎo māo zài nǎr?",
+              "Zhè zhī xiǎo māo jǐ diǎn dào?",
+              "Zhè zhī xiǎo māo néng gōngzuò ma?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这只小猫怎么样？",
+          "kp": "怎么样",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_08_05",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我们在学校书店前见。",
+            "source_pinyin": "Wǒmen zài xuéxiào shūdiàn qián jiàn.",
+            "template": "我们在学校书店前见。",
+            "template_pinyin": "Wǒmen zài xuéxiào shūdiàn qián jiàn.",
+            "question_hint": "我们在哪儿见？",
+            "question_hint_en": "Where shall we meet?",
+            "options": [
+              "我们在哪儿见？",
+              "我们几点上课？",
+              "我们吃什么？",
+              "我们是谁？"
+            ],
+            "options_pinyin": [
+              "Wǒmen zài nǎr jiàn?",
+              "Wǒmen jǐ diǎn shàngkè?",
+              "Wǒmen chī shénme?",
+              "Wǒmen shì shéi?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我们在哪儿见？",
+          "kp": "在哪儿见",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_08_06",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我能到。",
+            "source_pinyin": "Wǒ néng dào.",
+            "template": "我能到。",
+            "template_pinyin": "Wǒ néng dào.",
+            "question_hint": "你能到吗？",
+            "question_hint_en": "Can you arrive?",
+            "options": [
+              "你能到吗？",
+              "你到哪儿？",
+              "你几点到？",
+              "你怎么到？"
+            ],
+            "options_pinyin": [
+              "Nǐ néng dào ma?",
+              "Nǐ dào nǎr?",
+              "Nǐ jǐ diǎn dào?",
+              "Nǐ zěnme dào?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你能到吗？",
+          "kp": "能到吗",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_08_07",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我在学校吃午饭。",
+            "source_pinyin": "Wǒ zài xuéxiào chī wǔfàn.",
+            "template": "我在学校吃午饭。",
+            "template_pinyin": "Wǒ zài xuéxiào chī wǔfàn.",
+            "question_hint": "你在哪儿吃午饭？",
+            "question_hint_en": "Where do you have lunch?",
+            "options": [
+              "你在哪儿吃午饭？",
+              "你几点吃午饭？",
+              "你和谁吃午饭？",
+              "你能吃午饭吗？"
+            ],
+            "options_pinyin": [
+              "Nǐ zài nǎr chī wǔfàn?",
+              "Nǐ jǐ diǎn chī wǔfàn?",
+              "Nǐ hé shéi chī wǔfàn?",
+              "Nǐ néng chī wǔfàn ma?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你在哪儿吃午饭？",
+          "kp": "在+地点",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_08_08",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "大医院病人多。",
+            "source_pinyin": "Dà yīyuàn bìngrén duō.",
+            "template": "大医院病人多。",
+            "template_pinyin": "Dà yīyuàn bìngrén duō.",
+            "question_hint": "大医院病人多吗？",
+            "question_hint_en": "Do big hospitals have many patients?",
+            "options": [
+              "大医院病人多吗？",
+              "大医院医生漂亮吗？",
+              "大医院在哪儿见？",
+              "大医院几点下课？"
+            ],
+            "options_pinyin": [
+              "Dà yīyuàn bìngrén duō ma?",
+              "Dà yīyuàn yīshēng piàoliang ma?",
+              "Dà yīyuàn zài nǎr jiàn?",
+              "Dà yīyuàn jǐ diǎn xiàkè?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "大医院病人多吗？",
+          "kp": "形容词谓语问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_08_09",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我爸爸也在医院工作。",
+            "source_pinyin": "Wǒ bàba yě zài yīyuàn gōngzuò.",
+            "template": "我爸爸也在医院工作。",
+            "template_pinyin": "Wǒ bàba yě zài yīyuàn gōngzuò.",
+            "question_hint": "你爸爸在哪儿工作？",
+            "question_hint_en": "Where does your father work?",
+            "options": [
+              "你爸爸在哪儿工作？",
+              "你爸爸几点下班？",
+              "你爸爸想吃什么？",
+              "你爸爸能到吗？"
+            ],
+            "options_pinyin": [
+              "Nǐ bàba zài nǎr gōngzuò?",
+              "Nǐ bàba jǐ diǎn xiàbān?",
+              "Nǐ bàba xiǎng chī shénme?",
+              "Nǐ bàba néng dào ma?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你爸爸在哪儿工作？",
+          "kp": "工作地点",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_08_10",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我家有两个医生。",
+            "source_pinyin": "Wǒ jiā yǒu liǎng gè yīshēng.",
+            "template": "我家有两个医生。",
+            "template_pinyin": "Wǒ jiā yǒu liǎng gè yīshēng.",
+            "question_hint": "你家有几个医生？",
+            "question_hint_en": "How many doctors are in your family?",
+            "options": [
+              "你家有几个医生？",
+              "你家在哪儿？",
+              "你家几点吃饭？",
+              "你家有猫吗？"
+            ],
+            "options_pinyin": [
+              "Nǐ jiā yǒu jǐ gè yīshēng?",
+              "Nǐ jiā zài nǎr?",
+              "Nǐ jiā jǐ diǎn chī fàn?",
+              "Nǐ jiā yǒu māo ma?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你家有几个医生？",
+          "kp": "几个",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "g1_ordering": [
+        {
+          "id": "g1_hsk1_08_01",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "房间外",
+              "有",
+              "一只小猫"
+            ],
+            "chunks_pinyin": [
+              "fángjiān wài",
+              "yǒu",
+              "yì zhī xiǎo māo"
+            ],
+            "answer": "房间外有一只小猫。",
+            "acceptable_answers": [
+              "房间外有一只小猫。"
+            ]
+          },
+          "correct_answer": "房间外有一只小猫。",
+          "kp": "方位词",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_hsk1_08_02",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "它",
+              "在桌子下",
+              "呢"
+            ],
+            "chunks_pinyin": [
+              "tā",
+              "zài zhuōzi xià",
+              "ne"
+            ],
+            "answer": "它在桌子下呢。",
+            "acceptable_answers": [
+              "它在桌子下呢。"
+            ]
+          },
+          "correct_answer": "它在桌子下呢。",
+          "kp": "位置",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_hsk1_08_03",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "我们",
+              "在学校书店前",
+              "见吧"
+            ],
+            "chunks_pinyin": [
+              "wǒmen",
+              "zài xuéxiào shūdiàn qián",
+              "jiàn ba"
+            ],
+            "answer": "我们在学校书店前见吧。",
+            "acceptable_answers": [
+              "我们在学校书店前见吧。"
+            ]
+          },
+          "correct_answer": "我们在学校书店前见吧。",
+          "kp": "在+地点",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_hsk1_08_04",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "下午两点",
+              "你",
+              "能到吗"
+            ],
+            "chunks_pinyin": [
+              "xiàwǔ liǎng diǎn",
+              "nǐ",
+              "néng dào ma"
+            ],
+            "answer": "下午两点你能到吗？",
+            "acceptable_answers": [
+              "下午两点你能到吗？"
+            ]
+          },
+          "correct_answer": "下午两点你能到吗？",
+          "kp": "能",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_hsk1_08_05",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "我爸爸",
+              "也在医院",
+              "工作"
+            ],
+            "chunks_pinyin": [
+              "wǒ bàba",
+              "yě zài yīyuàn",
+              "gōngzuò"
+            ],
+            "answer": "我爸爸也在医院工作。",
+            "acceptable_answers": [
+              "我爸爸也在医院工作。"
+            ]
+          },
+          "correct_answer": "我爸爸也在医院工作。",
+          "kp": "也/在",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "r2_passage_choice": [
+        {
+          "id": "r2_hsk1_08_01",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：读叙述，回答三个问题。",
+          "prompt_en": "Text Q&A: read the narrative and answer three questions.",
+          "data": {
+            "title": "课文一：房间外的小猫",
+            "passage": "白家月和陈天中在王一飞家。白家月说房间外有一只小猫。陈天中没看见小猫。白家月说小猫在桌子下。陈天中说这只小猫真漂亮。",
+            "passage_pinyin": "Bái Jiāyuè hé Chén Tiānzhōng zài Wáng Yīfēi jiā. Bái Jiāyuè shuō fángjiān wài yǒu yì zhī xiǎo māo. Chén Tiānzhōng méi kànjiàn xiǎo māo. Bái Jiāyuè shuō xiǎo māo zài zhuōzi xià. Chén Tiānzhōng shuō zhè zhī xiǎo māo zhēn piàoliang.",
+            "passage_en": "Bai Jiayue and Chen Tianzhong are at Wang Yifei’s home. Bai Jiayue says there is a little cat outside the room. Chen Tianzhong does not see the cat. Bai Jiayue says the cat is under the table. Chen Tianzhong says the cat is really beautiful.",
+            "questions": [
+              {
+                "id": "r2_hsk1_08_01_q1",
+                "question_cn": "房间外有什么？",
+                "question_en": "What is outside the room?",
+                "options": [
+                  "一只小猫",
+                  "一个医生",
+                  "一个病人",
+                  "一本书"
+                ],
+                "correct_index": 0,
+                "answer": "一只小猫"
+              },
+              {
+                "id": "r2_hsk1_08_01_q2",
+                "question_cn": "小猫在哪儿？",
+                "question_en": "Where is the cat?",
+                "options": [
+                  "桌子下",
+                  "房间外",
+                  "书店前",
+                  "医院里"
+                ],
+                "correct_index": 0,
+                "answer": "桌子下"
+              },
+              {
+                "id": "r2_hsk1_08_01_q3",
+                "question_cn": "陈天中觉得小猫怎么样？",
+                "question_en": "What does Chen Tianzhong think of the cat?",
+                "options": [
+                  "真漂亮",
+                  "非常忙",
+                  "病人多",
+                  "不能到"
+                ],
+                "correct_index": 0,
+                "answer": "真漂亮"
+              }
+            ]
+          },
+          "correct_answer": "房间外有什么？：一只小猫；小猫在哪儿？：桌子下；陈天中觉得小猫怎么样？：真漂亮",
+          "kp": "课文一整体理解",
+          "sourceType": "textbook_adaptation",
+          "sourceTextPolicy": "课文原句改写为叙述体；问题基于课文整体内容"
+        },
+        {
+          "id": "r2_hsk1_08_02",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：读叙述，回答三个问题。",
+          "prompt_en": "Text Q&A: read the narrative and answer three questions.",
+          "data": {
+            "title": "课文二：书店前见面",
+            "passage": "下课后，白家月给李文打电话。白家月问在哪儿见。李文说在学校书店前见。白家月问下午两点李文能不能到。李文说他能到，他在学校吃午饭。",
+            "passage_pinyin": "Xiàkè hòu, Bái Jiāyuè gěi Lǐ Wén dǎ diànhuà. Bái Jiāyuè wèn zài nǎr jiàn. Lǐ Wén shuō zài xuéxiào shūdiàn qián jiàn. Bái Jiāyuè wèn xiàwǔ liǎng diǎn Lǐ Wén néng bù néng dào. Lǐ Wén shuō tā néng dào, tā zài xuéxiào chī wǔfàn.",
+            "passage_en": "After class, Bai Jiayue calls Li Wen. Bai Jiayue asks where to meet. Li Wen says to meet in front of the school bookstore. Bai Jiayue asks whether Li Wen can arrive at 2:00 p.m. Li Wen says he can arrive; he eats lunch at school.",
+            "questions": [
+              {
+                "id": "r2_hsk1_08_02_q1",
+                "question_cn": "他们在哪儿见？",
+                "question_en": "Where will they meet?",
+                "options": [
+                  "学校书店前",
+                  "桌子下",
+                  "房间外",
+                  "医院里"
+                ],
+                "correct_index": 0,
+                "answer": "学校书店前"
+              },
+              {
+                "id": "r2_hsk1_08_02_q2",
+                "question_cn": "李文下午两点能到吗？",
+                "question_en": "Can Li Wen arrive at two?",
+                "options": [
+                  "能到",
+                  "不能到",
+                  "没看见",
+                  "没吃饭"
+                ],
+                "correct_index": 0,
+                "answer": "能到"
+              },
+              {
+                "id": "r2_hsk1_08_02_q3",
+                "question_cn": "李文在哪儿吃午饭？",
+                "question_en": "Where does Li Wen have lunch?",
+                "options": [
+                  "学校",
+                  "医院",
+                  "书店前",
+                  "房间外"
+                ],
+                "correct_index": 0,
+                "answer": "学校"
+              }
+            ]
+          },
+          "correct_answer": "他们在哪儿见？：学校书店前；李文下午两点能到吗？：能到；李文在哪儿吃午饭？：学校",
+          "kp": "课文二整体理解",
+          "sourceType": "textbook_adaptation",
+          "sourceTextPolicy": "课文原句改写为叙述体；问题基于课文整体内容"
+        },
+        {
+          "id": "r2_hsk1_08_03",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：读叙述，回答三个问题。",
+          "prompt_en": "Text Q&A: read the narrative and answer three questions.",
+          "data": {
+            "title": "课文三：医院里的医生",
+            "passage": "刘明和胡医生在医院里。胡医生还没吃饭。刘明说大医院病人多，医生非常忙。胡医生说他爸爸也在医院工作，他也非常忙。胡医生家有两个医生。",
+            "passage_pinyin": "Liú Míng hé Hú yīshēng zài yīyuàn li. Hú yīshēng hái méi chī fàn. Liú Míng shuō dà yīyuàn bìngrén duō, yīshēng fēicháng máng. Hú yīshēng shuō tā bàba yě zài yīyuàn gōngzuò, tā yě fēicháng máng. Hú yīshēng jiā yǒu liǎng gè yīshēng.",
+            "passage_en": "Liu Ming and Dr. Hu are at the hospital. Dr. Hu has not eaten yet. Liu Ming says big hospitals have many patients and doctors are very busy. Dr. Hu says his father also works at a hospital and is also very busy. There are two doctors in Dr. Hu’s family.",
+            "questions": [
+              {
+                "id": "r2_hsk1_08_03_q1",
+                "question_cn": "胡医生吃饭了吗？",
+                "question_en": "Has Dr. Hu eaten?",
+                "options": [
+                  "没吃",
+                  "吃了",
+                  "能到",
+                  "看见了"
+                ],
+                "correct_index": 0,
+                "answer": "没吃"
+              },
+              {
+                "id": "r2_hsk1_08_03_q2",
+                "question_cn": "为什么医生非常忙？",
+                "question_en": "Why are doctors very busy?",
+                "options": [
+                  "大医院病人多",
+                  "医生很漂亮",
+                  "小猫在桌子下",
+                  "他们两点见"
+                ],
+                "correct_index": 0,
+                "answer": "大医院病人多"
+              },
+              {
+                "id": "r2_hsk1_08_03_q3",
+                "question_cn": "胡医生家有几个医生？",
+                "question_en": "How many doctors are in Dr. Hu’s family?",
+                "options": [
+                  "两个",
+                  "一个",
+                  "三个",
+                  "没有"
+                ],
+                "correct_index": 0,
+                "answer": "两个"
+              }
+            ]
+          },
+          "correct_answer": "胡医生吃饭了吗？：没吃；为什么医生非常忙？：大医院病人多；胡医生家有几个医生？：两个",
+          "kp": "课文三整体理解",
+          "sourceType": "textbook_adaptation",
+          "sourceTextPolicy": "课文原句改写为叙述体；问题基于课文整体内容"
+        }
+      ],
+      "tt_text_true_false": [
+        {
+          "id": "tt_hsk1_08_01",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "房间外有一只小猫。",
+            "statement_pinyin": "Fángjiān wài yǒu yì zhī xiǎo māo.",
+            "statement_en": "There is a little cat outside the room.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文一",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_08_02",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "陈天中看见了小猫。",
+            "statement_pinyin": "Chén Tiānzhōng kànjiàn le xiǎo māo.",
+            "statement_en": "Chen Tianzhong saw the cat.",
+            "answer": false
+          },
+          "correct_answer": false,
+          "kp": "课文一",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_08_03",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "小猫在桌子下。",
+            "statement_pinyin": "Xiǎo māo zài zhuōzi xià.",
+            "statement_en": "The cat is under the table.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文一",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_08_04",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "小猫不漂亮。",
+            "statement_pinyin": "Xiǎo māo bù piàoliang.",
+            "statement_en": "The cat is not pretty.",
+            "answer": false
+          },
+          "correct_answer": false,
+          "kp": "课文一",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_08_05",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "他们在学校书店前见。",
+            "statement_pinyin": "Tāmen zài xuéxiào shūdiàn qián jiàn.",
+            "statement_en": "They meet in front of the school bookstore.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文二",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_08_06",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "李文下午两点不能到。",
+            "statement_pinyin": "Lǐ Wén xiàwǔ liǎng diǎn bù néng dào.",
+            "statement_en": "Li Wen cannot arrive at two.",
+            "answer": false
+          },
+          "correct_answer": false,
+          "kp": "课文二",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_08_07",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "李文在学校吃午饭。",
+            "statement_pinyin": "Lǐ Wén zài xuéxiào chī wǔfàn.",
+            "statement_en": "Li Wen has lunch at school.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文二",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_08_08",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "小胡还没吃饭。",
+            "statement_pinyin": "Xiǎo Hú hái méi chī fàn.",
+            "statement_en": "Xiao Hu has not eaten yet.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文三",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_08_09",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "大医院病人少。",
+            "statement_pinyin": "Dà yīyuàn bìngrén shǎo.",
+            "statement_en": "Big hospitals have few patients.",
+            "answer": false
+          },
+          "correct_answer": false,
+          "kp": "课文三",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_08_10",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "胡医生的爸爸也在医院工作。",
+            "statement_pinyin": "Hú yīshēng de bàba yě zài yīyuàn gōngzuò.",
+            "statement_en": "Dr. Hu’s father also works at a hospital.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文三",
+          "sourceType": "textbook"
+        }
+      ],
+      "pk_question": [
+        {
+          "id": "pk_hsk1_08_01",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "“room”的中文是：",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "房间",
+              "医生",
+              "午饭",
+              "书店"
+            ],
+            "options_pinyin": [
+              "fángjiān",
+              "yīshēng",
+              "wǔfàn",
+              "shūdiàn"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "房间",
+          "kp": "房间",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_08_02",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "一___小猫",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "只",
+              "个",
+              "口",
+              "本"
+            ],
+            "options_pinyin": [
+              "zhī",
+              "gè",
+              "kǒu",
+              "běn"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "只",
+          "kp": "只",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_08_03",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "我没___它。",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "看见",
+              "工作",
+              "到",
+              "吃饭"
+            ],
+            "options_pinyin": [
+              "kànjiàn",
+              "gōngzuò",
+              "dào",
+              "chī fàn"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "看见",
+          "kp": "看见",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_08_04",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "它在桌子___。",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "下",
+              "外",
+              "前",
+              "多"
+            ],
+            "options_pinyin": [
+              "xià",
+              "wài",
+              "qián",
+              "duō"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "下",
+          "kp": "下",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_08_05",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "下午两点你___到吗？",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "能",
+              "没",
+              "在",
+              "也"
+            ],
+            "options_pinyin": [
+              "néng",
+              "méi",
+              "zài",
+              "yě"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "能",
+          "kp": "能",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_08_06",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "我在学校吃___。",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "午饭",
+              "医生",
+              "病人",
+              "工作"
+            ],
+            "options_pinyin": [
+              "wǔfàn",
+              "yīshēng",
+              "bìngrén",
+              "gōngzuò"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "午饭",
+          "kp": "午饭",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_08_07",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "“doctor”的中文是：",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "医生",
+              "病人",
+              "学生",
+              "爸爸"
+            ],
+            "options_pinyin": [
+              "yīshēng",
+              "bìngrén",
+              "xuésheng",
+              "bàba"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "医生",
+          "kp": "医生",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_08_08",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "医生非常___。",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "忙",
+              "小",
+              "前",
+              "外"
+            ],
+            "options_pinyin": [
+              "máng",
+              "xiǎo",
+              "qián",
+              "wài"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "忙",
+          "kp": "医生",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_08_09",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "我爸爸也在医院___。",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "工作",
+              "看见",
+              "到",
+              "吃饭"
+            ],
+            "options_pinyin": [
+              "gōngzuò",
+              "kànjiàn",
+              "dào",
+              "chī fàn"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "工作",
+          "kp": "工作",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_08_10",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "“many patients”可以说：",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "病人多",
+              "医生漂亮",
+              "房间外",
+              "没吃饭"
+            ],
+            "options_pinyin": [
+              "bìngrén duō",
+              "yīshēng piàoliang",
+              "fángjiān wài",
+              "méi chī fàn"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "病人多",
+          "kp": "病人多",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "hanziWriting": {
+    "characters": [
+      "房",
+      "间",
+      "外",
+      "只",
+      "小",
+      "猫",
+      "没",
+      "看",
+      "见",
+      "桌",
+      "子",
+      "下",
+      "漂",
+      "亮",
+      "在",
+      "学",
+      "校",
+      "书",
+      "店",
+      "前",
+      "能",
+      "到",
+      "午",
+      "饭",
+      "大",
+      "病",
+      "人",
+      "多",
+      "医",
+      "生",
+      "工",
+      "作"
+    ]
+  },
+  "hanziRecognition": {
+    "enabled": true,
+    "showPinyin": false,
+    "title": "汉字认读循环",
+    "titleEn": "Character Recognition Cycle",
+    "groups": [
+      {
+        "id": "hrec_l08_g1",
+        "title": "第1组：房间、外、只、小、猫、没",
+        "vocabularyIds": [
+          "v_l08_01",
+          "v_l08_02",
+          "v_l08_03",
+          "v_l08_04",
+          "v_l08_05",
+          "v_l08_06"
+        ]
+      },
+      {
+        "id": "hrec_l08_g2",
+        "title": "第2组：看见、桌子、下、漂亮、在、学校",
+        "vocabularyIds": [
+          "v_l08_07",
+          "v_l08_08",
+          "v_l08_09",
+          "v_l08_10",
+          "v_l08_11",
+          "v_l08_12"
+        ]
+      },
+      {
+        "id": "hrec_l08_g3",
+        "title": "第3组：书店、前、能、到、午饭、饭",
+        "vocabularyIds": [
+          "v_l08_13",
+          "v_l08_14",
+          "v_l08_15",
+          "v_l08_16",
+          "v_l08_17",
+          "v_l08_18"
+        ]
+      },
+      {
+        "id": "hrec_l08_g4",
+        "title": "第4组：大、病人、多、医生、工作",
+        "vocabularyIds": [
+          "v_l08_19",
+          "v_l08_20",
+          "v_l08_21",
+          "v_l08_22",
+          "v_l08_23"
+        ]
+      }
+    ],
+    "rounds": [
+      {
+        "id": "hanzi_to_meaning",
+        "title": "汉字配意思",
+        "titleEn": "Character to meaning"
+      },
+      {
+        "id": "hanzi_to_pinyin",
+        "title": "看汉字选拼音",
+        "titleEn": "Character to pinyin"
+      },
+      {
+        "id": "meaning_to_hanzi",
+        "title": "看意思选汉字",
+        "titleEn": "Meaning to character"
+      },
+      {
+        "id": "sentence_to_word",
+        "title": "短句找词",
+        "titleEn": "Sentence to word"
+      },
+      {
+        "id": "reading_choice",
+        "title": "英文阅读理解",
+        "titleEn": "English reading comprehension"
+      }
+    ],
+    "sentenceExamples": {
+      "房间": {
+        "sentence": "房间外有一只小猫。",
+        "pinyin": "Fángjiān wài yǒu yì zhī xiǎo māo."
+      },
+      "猫": {
+        "sentence": "这只小猫真漂亮。",
+        "pinyin": "Zhè zhī xiǎo māo zhēn piàoliang."
+      },
+      "看见": {
+        "sentence": "我没看见它。",
+        "pinyin": "Wǒ méi kànjiàn tā."
+      },
+      "桌子": {
+        "sentence": "它在桌子下。",
+        "pinyin": "Tā zài zhuōzi xià."
+      },
+      "学校": {
+        "sentence": "我在学校吃午饭。",
+        "pinyin": "Wǒ zài xuéxiào chī wǔfàn."
+      },
+      "书店": {
+        "sentence": "在学校书店前见吧。",
+        "pinyin": "Zài xuéxiào shūdiàn qián jiàn ba."
+      },
+      "能": {
+        "sentence": "我能到。",
+        "pinyin": "Wǒ néng dào."
+      },
+      "病人": {
+        "sentence": "大医院病人多。",
+        "pinyin": "Dà yīyuàn bìngrén duō."
+      },
+      "医生": {
+        "sentence": "医生非常忙。",
+        "pinyin": "Yīshēng fēicháng máng."
+      },
+      "工作": {
+        "sentence": "我爸爸也在医院工作。",
+        "pinyin": "Wǒ bàba yě zài yīyuàn gōngzuò."
+      }
+    },
+    "readingExamples": {
+      "房间": "There is a little cat outside the room.",
+      "猫": "This little cat is very beautiful.",
+      "看见": "I don't see it.",
+      "桌子": "It is under the table.",
+      "学校": "I eat lunch at school.",
+      "书店": "Meet in front of the school bookstore.",
+      "能": "Can you arrive at two?",
+      "病人": "Big hospitals have many patients.",
+      "医生": "Doctors are very busy.",
+      "工作": "My father also works at a hospital."
+    },
+    "sentenceDistractors": {},
+    "readingDistractors": {}
+  },
+  "postClassHomework": {
+    "mode": "required_optional",
+    "instructions": {
+      "title": "第8课课后作业",
+      "summary": "ClassPro 课后作业重点完成汉字书写、表达输出、个性化准备和课堂闭环，不重复练习册的大量客观题。",
+      "required": "必选：完成汉字书写任务。",
+      "optional": "可选：从写一段话、口语准备、学习反思中选择完成；鼓励用今天学过的词和句型。",
+      "aiPolicy": "准备口语话题时可以借助 AI 查词或打草稿，但请改成自己能说出来的中文。"
+    },
+    "tiers": {
+      "default": {
+        "label": "第8课课后作业",
+        "goal": "完成必选书写，并准备能在课堂上使用的表达。",
+        "suggestedMinutes": 18,
+        "suggestedMix": "必选：汉字书写；可选：写一段话、口语准备、学习反思。"
+      }
+    },
+    "sharedPool": [],
+    "tierPools": {
+      "default": [
+        {
+          "id": "hw_l08_required_writing",
+          "lesson": "HSK1-L08",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "handwriting",
+          "requirement": "required",
+          "section": "必选：汉字书写",
+          "prompt_cn": "必选：书写本课汉字：房、间、外、只、小、猫、看、见、桌、下、漂、亮、在、校、书、店、前、能、到、饭、病、医、工、作",
+          "prompt_en": "Required: Write the lesson characters.",
+          "characters": [
+            "房",
+            "间",
+            "外",
+            "只",
+            "小",
+            "猫",
+            "看",
+            "见",
+            "桌",
+            "下",
+            "漂",
+            "亮",
+            "在",
+            "校",
+            "书",
+            "店",
+            "前",
+            "能",
+            "到",
+            "饭",
+            "病",
+            "医",
+            "工",
+            "作"
+          ],
+          "repeat_count": 3,
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l08_optional_vocab_paragraph",
+          "lesson": "HSK1-L08",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "subjective",
+          "requirement": "optional",
+          "section": "可选：写一段话",
+          "prompt_cn": "教学扩展：请随机从今天所学生词中选择3-5个，写一段话。",
+          "prompt_en": "Optional: Randomly choose 3-5 words from today's vocabulary and write a short paragraph.",
+          "instructions": "可选生词：房间、外、小猫、看见、桌子、下、漂亮、在、学校、书店、前、能、到、午饭、医院、病人、医生、工作。请至少用3个，最多用5个。",
+          "answerPlaceholder": "例如：我在学校。学校书店前有同学。下午两点我能到。我的爸爸在医院工作。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l08_optional_speaking",
+          "lesson": "HSK1-L08",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "subjective",
+          "requirement": "optional",
+          "section": "可选：口语准备",
+          "prompt_cn": "教学扩展：请准备话题“介绍一下你的宿舍”，下次上课时口头表达。",
+          "prompt_en": "Optional speaking prep: Prepare the topic “Introduce your dormitory” for oral sharing next class.",
+          "instructions": "可以借助 AI 查词或整理草稿，但请改成自己能读、能说的中文。建议包含：宿舍里有什么、东西在哪儿、宿舍大不大、你喜欢不喜欢你的宿舍。",
+          "answerPlaceholder": "例子：我的宿舍不大。宿舍里有桌子和电脑。我的手机在桌子上。书在桌子下。我喜欢我的宿舍。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l08_optional_reflection",
+          "lesson": "HSK1-L08",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "subjective",
+          "requirement": "optional",
+          "section": "可选：学习反思",
+          "prompt_cn": "教学扩展：今天哪一个词或句子最难？你想下次再练什么？",
+          "prompt_en": "Optional reflection: Which word or sentence was hardest today? What do you want to practice next time?",
+          "answerPlaceholder": "例如：我觉得“六点半”最难。我想再练时间。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        }
+      ]
+    },
+    "assignmentSelection": {
+      "default": [
+        "hw_l08_required_writing",
+        "hw_l08_optional_vocab_paragraph",
+        "hw_l08_optional_speaking",
+        "hw_l08_optional_reflection"
+      ]
+    },
+    "reviewPolicy": {
+      "maxSubmissions": 2,
+      "teacherReview": "latest_submission_only"
+    }
+  },
+  "report": {
+    "weakPointLabels": {
+      "location": "方位表达",
+      "zai": "介词“在”",
+      "neng": "能愿动词“能”",
+      "work": "工作场景表达"
+    },
+    "recommendationRules": {},
+    "feedbackTemplates": {
+      "defaultPraise": "已收到，写得不错，继续加油！",
+      "defaultRevise": "请再检查字形、笔顺或表达是否准确。"
+    }
+  }
+}

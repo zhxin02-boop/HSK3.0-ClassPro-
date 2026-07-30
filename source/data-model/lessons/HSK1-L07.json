@@ -1,0 +1,5227 @@
+{
+  "schemaVersion": "hsk1-course-v1",
+  "meta": {
+    "level": "HSK1",
+    "lessonId": "L07",
+    "lessonKey": "HSK1-L07",
+    "title": "我晚上六点半下班",
+    "titleEn": "I'll finish work at 6:30 in the evening",
+    "topic": "时间点、时间段、约见与下班后的安排",
+    "topicEn": "Telling time, arranging meetings, and after-work plans",
+    "sourceTextPolicy": "保留教材原句；新增内容标记为教学扩展",
+    "dataQualityNotes": [
+      "“下班”见于课题和课文原句，教材生词资料未单列；课程数据补为 textbook_context 词条。"
+    ]
+  },
+  "features": {
+    "pinyin": false,
+    "hanziWritingDemo": true,
+    "vocabExamples": true,
+    "competition": true,
+    "postClassHomework": true
+  },
+  "vocabulary": [
+    {
+      "id": "v_l07_01",
+      "hanzi": "现在",
+      "word": "现在",
+      "pinyin": "xiànzài",
+      "english": "now",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "现",
+          "在"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"now\", no text"
+    },
+    {
+      "id": "v_l07_02",
+      "hanzi": "点",
+      "word": "点",
+      "pinyin": "diǎn",
+      "english": "o'clock",
+      "partOfSpeech": "量词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "点"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"o'clock\", no text"
+    },
+    {
+      "id": "v_l07_03",
+      "hanzi": "早上",
+      "word": "早上",
+      "pinyin": "zǎoshang",
+      "english": "(early) morning",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "早",
+          "上"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"(early) morning\", no text"
+    },
+    {
+      "id": "v_l07_04",
+      "hanzi": "上午",
+      "word": "上午",
+      "pinyin": "shàngwǔ",
+      "english": "morning",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "上",
+          "午"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"morning\", no text"
+    },
+    {
+      "id": "v_l07_05",
+      "hanzi": "分",
+      "word": "分",
+      "pinyin": "fēn",
+      "english": "minute",
+      "partOfSpeech": "量词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "分"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"minute\", no text"
+    },
+    {
+      "id": "v_l07_06",
+      "hanzi": "课",
+      "word": "课",
+      "pinyin": "kè",
+      "english": "class; lesson",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "课"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"class; lesson\", no text"
+    },
+    {
+      "id": "v_l07_07",
+      "hanzi": "下午",
+      "word": "下午",
+      "pinyin": "xiàwǔ",
+      "english": "afternoon",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "下",
+          "午"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"afternoon\", no text"
+    },
+    {
+      "id": "v_l07_08",
+      "hanzi": "见",
+      "word": "见",
+      "pinyin": "jiàn",
+      "english": "meet",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "见"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"meet\", no text"
+    },
+    {
+      "id": "v_l07_09",
+      "hanzi": "吧",
+      "word": "吧",
+      "pinyin": "ba",
+      "english": "sentence-final particle for suggestion",
+      "partOfSpeech": "助词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "吧"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"sentence-final particle for suggestion\", no text"
+    },
+    {
+      "id": "v_l07_10",
+      "hanzi": "电影院",
+      "word": "电影院",
+      "pinyin": "diànyǐngyuàn",
+      "english": "cinema",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "电",
+          "影",
+          "院"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"cinema\", no text"
+    },
+    {
+      "id": "v_l07_11",
+      "hanzi": "看",
+      "word": "看",
+      "pinyin": "kàn",
+      "english": "watch; see; read",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "看"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"watch; see; read\", no text"
+    },
+    {
+      "id": "v_l07_12",
+      "hanzi": "电影",
+      "word": "电影",
+      "pinyin": "diànyǐng",
+      "english": "movie; film",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "电",
+          "影"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"movie; film\", no text"
+    },
+    {
+      "id": "v_l07_13",
+      "hanzi": "事",
+      "word": "事",
+      "pinyin": "shì",
+      "english": "thing; affair",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "事"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"thing; affair\", no text"
+    },
+    {
+      "id": "v_l07_14",
+      "hanzi": "上课",
+      "word": "上课",
+      "pinyin": "shàngkè",
+      "english": "attend a class",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "上",
+          "课"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"attend a class\", no text"
+    },
+    {
+      "id": "v_l07_15",
+      "hanzi": "呢",
+      "word": "呢",
+      "pinyin": "ne",
+      "english": "sentence-final particle",
+      "partOfSpeech": "助词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "呢"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"sentence-final particle\", no text"
+    },
+    {
+      "id": "v_l07_16",
+      "hanzi": "半",
+      "word": "半",
+      "pinyin": "bàn",
+      "english": "half",
+      "partOfSpeech": "数词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "半"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"half\", no text"
+    },
+    {
+      "id": "v_l07_17",
+      "hanzi": "下课",
+      "word": "下课",
+      "pinyin": "xiàkè",
+      "english": "finish class",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "下",
+          "课"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"finish class\", no text"
+    },
+    {
+      "id": "v_l07_18",
+      "hanzi": "在",
+      "word": "在",
+      "pinyin": "zài",
+      "english": "be at/in/on",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "在"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"be at/in/on\", no text"
+    },
+    {
+      "id": "v_l07_19",
+      "hanzi": "家",
+      "word": "家",
+      "pinyin": "jiā",
+      "english": "home",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "家"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"home\", no text"
+    },
+    {
+      "id": "v_l07_20",
+      "hanzi": "里",
+      "word": "里",
+      "pinyin": "lǐ/li",
+      "english": "inside",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "里"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"inside\", no text"
+    },
+    {
+      "id": "v_l07_21",
+      "hanzi": "晚上",
+      "word": "晚上",
+      "pinyin": "wǎnshang",
+      "english": "evening",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "晚",
+          "上"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"evening\", no text"
+    },
+    {
+      "id": "v_l07_22",
+      "hanzi": "医院",
+      "word": "医院",
+      "pinyin": "yīyuàn",
+      "english": "hospital",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "医",
+          "院"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"hospital\", no text"
+    },
+    {
+      "id": "v_l07_23",
+      "hanzi": "上班",
+      "word": "上班",
+      "pinyin": "shàngbān",
+      "english": "go to work",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "上",
+          "班"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"go to work\", no text"
+    },
+    {
+      "id": "v_l07_28",
+      "hanzi": "下班",
+      "word": "下班",
+      "pinyin": "xiàbān",
+      "english": "finish work; get off work",
+      "partOfSpeech": "动词",
+      "sourceType": "textbook_context",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "下",
+          "班"
+        ]
+      },
+      "imagePrompt": "A worker leaving work in the evening, no text"
+    },
+    {
+      "id": "v_l07_24",
+      "hanzi": "店",
+      "word": "店",
+      "pinyin": "diàn",
+      "english": "shop; store",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "店"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"shop; store\", no text"
+    },
+    {
+      "id": "v_l07_25",
+      "hanzi": "菜",
+      "word": "菜",
+      "pinyin": "cài",
+      "english": "vegetable; dish",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "菜"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"vegetable; dish\", no text"
+    },
+    {
+      "id": "v_l07_26",
+      "hanzi": "分钟",
+      "word": "分钟",
+      "pinyin": "fēnzhōng",
+      "english": "minute",
+      "partOfSpeech": "量词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "分",
+          "钟"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"minute\", no text"
+    },
+    {
+      "id": "v_l07_27",
+      "hanzi": "后",
+      "word": "后",
+      "pinyin": "hòu",
+      "english": "after; later",
+      "partOfSpeech": "名词",
+      "sourceType": "textbook",
+      "writing": {
+        "enabled": true,
+        "characters": [
+          "后"
+        ]
+      },
+      "imagePrompt": "A clear real-life photo representing \"after; later\", no text"
+    }
+  ],
+  "properNouns": [],
+  "vocabExtensions": {
+    "v_l07_01": {
+      "word": "现在",
+      "collocations": [
+        {
+          "hanzi": "现在几点？",
+          "pinyin": "Xiànzài jǐ diǎn?",
+          "english": "What time is it now?",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "现在上课",
+          "pinyin": "xiànzài shàngkè",
+          "english": "have class now",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "现在在家",
+          "pinyin": "xiànzài zài jiā",
+          "english": "be at home now",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "现在几点？",
+          "pinyin": "Xiànzài jǐ diǎn?",
+          "english": "What time is it now?",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "现在上课",
+          "pinyin": "xiànzài shàngkè",
+          "english": "have class now",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "现在在家",
+          "pinyin": "xiànzài zài jiā",
+          "english": "be at home now",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_02": {
+      "word": "点",
+      "collocations": [
+        {
+          "hanzi": "八点",
+          "pinyin": "bā diǎn",
+          "english": "eight o’clock",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两点",
+          "pinyin": "liǎng diǎn",
+          "english": "two o’clock",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "六点半",
+          "pinyin": "liù diǎn bàn",
+          "english": "six thirty",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "八点",
+          "pinyin": "bā diǎn",
+          "english": "eight o’clock",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两点",
+          "pinyin": "liǎng diǎn",
+          "english": "two o’clock",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "六点半",
+          "pinyin": "liù diǎn bàn",
+          "english": "six thirty",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_03": {
+      "word": "早上",
+      "collocations": [
+        {
+          "hanzi": "早上八点",
+          "pinyin": "zǎoshang bā diǎn",
+          "english": "8:00 in the morning",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "早上有课",
+          "pinyin": "zǎoshang yǒu kè",
+          "english": "have class in the early morning",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "早上吃饭",
+          "pinyin": "zǎoshang chī fàn",
+          "english": "eat in the morning",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "早上八点",
+          "pinyin": "zǎoshang bā diǎn",
+          "english": "8:00 in the morning",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "早上有课",
+          "pinyin": "zǎoshang yǒu kè",
+          "english": "have class in the early morning",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "早上吃饭",
+          "pinyin": "zǎoshang chī fàn",
+          "english": "eat in the morning",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_04": {
+      "word": "上午",
+      "collocations": [
+        {
+          "hanzi": "上午十点",
+          "pinyin": "shàngwǔ shí diǎn",
+          "english": "10:00 in the morning",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "上午有课",
+          "pinyin": "shàngwǔ yǒu kè",
+          "english": "have class in the morning",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "上午去学校",
+          "pinyin": "shàngwǔ qù xuéxiào",
+          "english": "go to school in the morning",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "上午十点",
+          "pinyin": "shàngwǔ shí diǎn",
+          "english": "10:00 in the morning",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "上午有课",
+          "pinyin": "shàngwǔ yǒu kè",
+          "english": "have class in the morning",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "上午去学校",
+          "pinyin": "shàngwǔ qù xuéxiào",
+          "english": "go to school in the morning",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_05": {
+      "word": "分",
+      "collocations": [
+        {
+          "hanzi": "十分",
+          "pinyin": "shí fēn",
+          "english": "ten minutes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "四十分",
+          "pinyin": "sìshí fēn",
+          "english": "forty minutes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "十点十分",
+          "pinyin": "shí diǎn shí fēn",
+          "english": "10:10",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "十分",
+          "pinyin": "shí fēn",
+          "english": "ten minutes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "四十分",
+          "pinyin": "sìshí fēn",
+          "english": "forty minutes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "十点十分",
+          "pinyin": "shí diǎn shí fēn",
+          "english": "10:10",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_06": {
+      "word": "课",
+      "collocations": [
+        {
+          "hanzi": "有课",
+          "pinyin": "yǒu kè",
+          "english": "have class",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "汉语课",
+          "pinyin": "Hànyǔ kè",
+          "english": "Chinese class",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "上午有课",
+          "pinyin": "shàngwǔ yǒu kè",
+          "english": "have class in the morning",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "有课",
+          "pinyin": "yǒu kè",
+          "english": "have class",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "汉语课",
+          "pinyin": "Hànyǔ kè",
+          "english": "Chinese class",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "上午有课",
+          "pinyin": "shàngwǔ yǒu kè",
+          "english": "have class in the morning",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_07": {
+      "word": "下午",
+      "collocations": [
+        {
+          "hanzi": "下午两点",
+          "pinyin": "xiàwǔ liǎng diǎn",
+          "english": "2:00 p.m.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下午见",
+          "pinyin": "xiàwǔ jiàn",
+          "english": "meet in the afternoon",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下午有事",
+          "pinyin": "xiàwǔ yǒu shì",
+          "english": "have something to do in the afternoon",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "下午两点",
+          "pinyin": "xiàwǔ liǎng diǎn",
+          "english": "2:00 p.m.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下午见",
+          "pinyin": "xiàwǔ jiàn",
+          "english": "meet in the afternoon",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下午有事",
+          "pinyin": "xiàwǔ yǒu shì",
+          "english": "have something to do in the afternoon",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_08": {
+      "word": "见",
+      "collocations": [
+        {
+          "hanzi": "两点见",
+          "pinyin": "liǎng diǎn jiàn",
+          "english": "meet at two",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "明天见",
+          "pinyin": "míngtiān jiàn",
+          "english": "see you tomorrow",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在学校见",
+          "pinyin": "zài xuéxiào jiàn",
+          "english": "meet at school",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "两点见",
+          "pinyin": "liǎng diǎn jiàn",
+          "english": "meet at two",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "明天见",
+          "pinyin": "míngtiān jiàn",
+          "english": "see you tomorrow",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在学校见",
+          "pinyin": "zài xuéxiào jiàn",
+          "english": "meet at school",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_09": {
+      "word": "吧",
+      "collocations": [
+        {
+          "hanzi": "见吧",
+          "pinyin": "jiàn ba",
+          "english": "let’s meet",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去吧",
+          "pinyin": "qù ba",
+          "english": "please go / let’s go",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "买些菜吧",
+          "pinyin": "mǎi xiē cài ba",
+          "english": "buy some vegetables, please",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "见吧",
+          "pinyin": "jiàn ba",
+          "english": "let’s meet",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去吧",
+          "pinyin": "qù ba",
+          "english": "please go / let’s go",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "买些菜吧",
+          "pinyin": "mǎi xiē cài ba",
+          "english": "buy some vegetables, please",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_10": {
+      "word": "电影院",
+      "collocations": [
+        {
+          "hanzi": "去电影院",
+          "pinyin": "qù diànyǐngyuàn",
+          "english": "go to the cinema",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在电影院",
+          "pinyin": "zài diànyǐngyuàn",
+          "english": "at the cinema",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "电影院见",
+          "pinyin": "diànyǐngyuàn jiàn",
+          "english": "meet at the cinema",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "去电影院",
+          "pinyin": "qù diànyǐngyuàn",
+          "english": "go to the cinema",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在电影院",
+          "pinyin": "zài diànyǐngyuàn",
+          "english": "at the cinema",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "电影院见",
+          "pinyin": "diànyǐngyuàn jiàn",
+          "english": "meet at the cinema",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_11": {
+      "word": "看",
+      "collocations": [
+        {
+          "hanzi": "看电影",
+          "pinyin": "kàn diànyǐng",
+          "english": "watch a movie",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "看手机",
+          "pinyin": "kàn shǒujī",
+          "english": "look at a phone",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "看电脑",
+          "pinyin": "kàn diànnǎo",
+          "english": "look at a computer",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "看电影",
+          "pinyin": "kàn diànyǐng",
+          "english": "watch a movie",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "看手机",
+          "pinyin": "kàn shǒujī",
+          "english": "look at a phone",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "看电脑",
+          "pinyin": "kàn diànnǎo",
+          "english": "look at a computer",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_12": {
+      "word": "电影",
+      "collocations": [
+        {
+          "hanzi": "看电影",
+          "pinyin": "kàn diànyǐng",
+          "english": "watch a movie",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "好看的电影",
+          "pinyin": "hǎokàn de diànyǐng",
+          "english": "a good movie",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "喜欢电影",
+          "pinyin": "xǐhuan diànyǐng",
+          "english": "like movies",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "看电影",
+          "pinyin": "kàn diànyǐng",
+          "english": "watch a movie",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "好看的电影",
+          "pinyin": "hǎokàn de diànyǐng",
+          "english": "a good movie",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "喜欢电影",
+          "pinyin": "xǐhuan diànyǐng",
+          "english": "like movies",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_13": {
+      "word": "事",
+      "collocations": [
+        {
+          "hanzi": "有事",
+          "pinyin": "yǒu shì",
+          "english": "have something to do",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "还有事",
+          "pinyin": "hái yǒu shì",
+          "english": "still have something to do",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下午有事",
+          "pinyin": "xiàwǔ yǒu shì",
+          "english": "be busy in the afternoon",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "有事",
+          "pinyin": "yǒu shì",
+          "english": "have something to do",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "还有事",
+          "pinyin": "hái yǒu shì",
+          "english": "still have something to do",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下午有事",
+          "pinyin": "xiàwǔ yǒu shì",
+          "english": "be busy in the afternoon",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_14": {
+      "word": "上课",
+      "collocations": [
+        {
+          "hanzi": "上午上课",
+          "pinyin": "shàngwǔ shàngkè",
+          "english": "have class in the morning",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两点上课",
+          "pinyin": "liǎng diǎn shàngkè",
+          "english": "have class at two",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在学校上课",
+          "pinyin": "zài xuéxiào shàngkè",
+          "english": "have class at school",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "上午上课",
+          "pinyin": "shàngwǔ shàngkè",
+          "english": "have class in the morning",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两点上课",
+          "pinyin": "liǎng diǎn shàngkè",
+          "english": "have class at two",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在学校上课",
+          "pinyin": "zài xuéxiào shàngkè",
+          "english": "have class at school",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_15": {
+      "word": "呢",
+      "collocations": [
+        {
+          "hanzi": "我在家里呢",
+          "pinyin": "wǒ zài jiā li ne",
+          "english": "I am at home",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我有课呢",
+          "pinyin": "wǒ yǒu kè ne",
+          "english": "I do have class",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "明天呢",
+          "pinyin": "míngtiān ne",
+          "english": "how about tomorrow?",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "我在家里呢",
+          "pinyin": "wǒ zài jiā li ne",
+          "english": "I am at home",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我有课呢",
+          "pinyin": "wǒ yǒu kè ne",
+          "english": "I do have class",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "明天呢",
+          "pinyin": "míngtiān ne",
+          "english": "how about tomorrow?",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_16": {
+      "word": "半",
+      "collocations": [
+        {
+          "hanzi": "六点半",
+          "pinyin": "liù diǎn bàn",
+          "english": "6:30",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "四点半",
+          "pinyin": "sì diǎn bàn",
+          "english": "4:30",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两点半",
+          "pinyin": "liǎng diǎn bàn",
+          "english": "2:30",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "六点半",
+          "pinyin": "liù diǎn bàn",
+          "english": "6:30",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "四点半",
+          "pinyin": "sì diǎn bàn",
+          "english": "4:30",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两点半",
+          "pinyin": "liǎng diǎn bàn",
+          "english": "2:30",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_17": {
+      "word": "下课",
+      "collocations": [
+        {
+          "hanzi": "四点半下课",
+          "pinyin": "sì diǎn bàn xiàkè",
+          "english": "finish class at 4:30",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下课以后",
+          "pinyin": "xiàkè yǐhòu",
+          "english": "after class",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下午下课",
+          "pinyin": "xiàwǔ xiàkè",
+          "english": "finish class in the afternoon",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "四点半下课",
+          "pinyin": "sì diǎn bàn xiàkè",
+          "english": "finish class at 4:30",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下课以后",
+          "pinyin": "xiàkè yǐhòu",
+          "english": "after class",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下午下课",
+          "pinyin": "xiàwǔ xiàkè",
+          "english": "finish class in the afternoon",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_18": {
+      "word": "在",
+      "collocations": [
+        {
+          "hanzi": "在家里",
+          "pinyin": "zài jiā li",
+          "english": "at home",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在学校",
+          "pinyin": "zài xuéxiào",
+          "english": "at school",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在医院",
+          "pinyin": "zài yīyuàn",
+          "english": "at the hospital",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "在家里",
+          "pinyin": "zài jiā li",
+          "english": "at home",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在学校",
+          "pinyin": "zài xuéxiào",
+          "english": "at school",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在医院",
+          "pinyin": "zài yīyuàn",
+          "english": "at the hospital",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_19": {
+      "word": "家",
+      "collocations": [
+        {
+          "hanzi": "在家",
+          "pinyin": "zài jiā",
+          "english": "at home",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "回家",
+          "pinyin": "huí jiā",
+          "english": "go home",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我家",
+          "pinyin": "wǒ jiā",
+          "english": "my home / my family",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "在家",
+          "pinyin": "zài jiā",
+          "english": "at home",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "回家",
+          "pinyin": "huí jiā",
+          "english": "go home",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我家",
+          "pinyin": "wǒ jiā",
+          "english": "my home / my family",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_20": {
+      "word": "里",
+      "collocations": [
+        {
+          "hanzi": "家里",
+          "pinyin": "jiā li",
+          "english": "at home / inside the home",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "店里",
+          "pinyin": "diàn li",
+          "english": "inside the store",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "学校里",
+          "pinyin": "xuéxiào li",
+          "english": "inside the school",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "家里",
+          "pinyin": "jiā li",
+          "english": "at home / inside the home",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "店里",
+          "pinyin": "diàn li",
+          "english": "inside the store",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "学校里",
+          "pinyin": "xuéxiào li",
+          "english": "inside the school",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_21": {
+      "word": "晚上",
+      "collocations": [
+        {
+          "hanzi": "晚上六点半",
+          "pinyin": "wǎnshang liù diǎn bàn",
+          "english": "6:30 in the evening",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "晚上下班",
+          "pinyin": "wǎnshang xiàbān",
+          "english": "finish work in the evening",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "晚上看电影",
+          "pinyin": "wǎnshang kàn diànyǐng",
+          "english": "watch a movie in the evening",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "晚上六点半",
+          "pinyin": "wǎnshang liù diǎn bàn",
+          "english": "6:30 in the evening",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "晚上下班",
+          "pinyin": "wǎnshang xiàbān",
+          "english": "finish work in the evening",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "晚上看电影",
+          "pinyin": "wǎnshang kàn diànyǐng",
+          "english": "watch a movie in the evening",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_22": {
+      "word": "医院",
+      "collocations": [
+        {
+          "hanzi": "去医院",
+          "pinyin": "qù yīyuàn",
+          "english": "go to the hospital",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在医院",
+          "pinyin": "zài yīyuàn",
+          "english": "at the hospital",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "医院上班",
+          "pinyin": "yīyuàn shàngbān",
+          "english": "work at the hospital",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "去医院",
+          "pinyin": "qù yīyuàn",
+          "english": "go to the hospital",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在医院",
+          "pinyin": "zài yīyuàn",
+          "english": "at the hospital",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "医院上班",
+          "pinyin": "yīyuàn shàngbān",
+          "english": "work at the hospital",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_23": {
+      "word": "上班",
+      "collocations": [
+        {
+          "hanzi": "八点上班",
+          "pinyin": "bā diǎn shàngbān",
+          "english": "start work at eight",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去医院上班",
+          "pinyin": "qù yīyuàn shàngbān",
+          "english": "go work at the hospital",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "晚上上班",
+          "pinyin": "wǎnshang shàngbān",
+          "english": "work in the evening",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "八点上班",
+          "pinyin": "bā diǎn shàngbān",
+          "english": "start work at eight",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去医院上班",
+          "pinyin": "qù yīyuàn shàngbān",
+          "english": "go work at the hospital",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "晚上上班",
+          "pinyin": "wǎnshang shàngbān",
+          "english": "work in the evening",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_24": {
+      "word": "店",
+      "collocations": [
+        {
+          "hanzi": "店里",
+          "pinyin": "diàn li",
+          "english": "inside the store",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去店里",
+          "pinyin": "qù diàn li",
+          "english": "go to the store",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "书店",
+          "pinyin": "shūdiàn",
+          "english": "bookstore",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "店里",
+          "pinyin": "diàn li",
+          "english": "inside the store",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去店里",
+          "pinyin": "qù diàn li",
+          "english": "go to the store",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "书店",
+          "pinyin": "shūdiàn",
+          "english": "bookstore",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_25": {
+      "word": "菜",
+      "collocations": [
+        {
+          "hanzi": "买菜",
+          "pinyin": "mǎi cài",
+          "english": "buy vegetables",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "做菜",
+          "pinyin": "zuò cài",
+          "english": "cook dishes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "些菜",
+          "pinyin": "xiē cài",
+          "english": "some vegetables",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "买菜",
+          "pinyin": "mǎi cài",
+          "english": "buy vegetables",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "做菜",
+          "pinyin": "zuò cài",
+          "english": "cook dishes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "些菜",
+          "pinyin": "xiē cài",
+          "english": "some vegetables",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_26": {
+      "word": "分钟",
+      "collocations": [
+        {
+          "hanzi": "十分钟",
+          "pinyin": "shí fēnzhōng",
+          "english": "ten minutes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "二十分钟",
+          "pinyin": "èrshí fēnzhōng",
+          "english": "twenty minutes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "十分钟后",
+          "pinyin": "shí fēnzhōng hòu",
+          "english": "after ten minutes",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "十分钟",
+          "pinyin": "shí fēnzhōng",
+          "english": "ten minutes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "二十分钟",
+          "pinyin": "èrshí fēnzhōng",
+          "english": "twenty minutes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "十分钟后",
+          "pinyin": "shí fēnzhōng hòu",
+          "english": "after ten minutes",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_27": {
+      "word": "后",
+      "collocations": [
+        {
+          "hanzi": "十分钟后",
+          "pinyin": "shí fēnzhōng hòu",
+          "english": "after ten minutes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下课后",
+          "pinyin": "xiàkè hòu",
+          "english": "after class",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下班后",
+          "pinyin": "xiàbān hòu",
+          "english": "after work",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "十分钟后",
+          "pinyin": "shí fēnzhōng hòu",
+          "english": "after ten minutes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下课后",
+          "pinyin": "xiàkè hòu",
+          "english": "after class",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下班后",
+          "pinyin": "xiàbān hòu",
+          "english": "after work",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l07_28": {
+      "word": "下班",
+      "collocations": [
+        {
+          "hanzi": "六点半下班",
+          "pinyin": "liù diǎn bàn xiàbān",
+          "english": "finish work at 6:30",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "晚上下班",
+          "pinyin": "wǎnshang xiàbān",
+          "english": "finish work in the evening",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下班以后",
+          "pinyin": "xiàbān yǐhòu",
+          "english": "after work",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "六点半下班",
+          "pinyin": "liù diǎn bàn xiàbān",
+          "english": "finish work at 6:30",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "晚上下班",
+          "pinyin": "wǎnshang xiàbān",
+          "english": "finish work in the evening",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下班以后",
+          "pinyin": "xiàbān yǐhòu",
+          "english": "after work",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "现在": [
+      {
+        "hanzi": "现在几点？",
+        "pinyin": "Xiànzài jǐ diǎn?",
+        "english": "What time is it now?",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "现在上课",
+        "pinyin": "xiànzài shàngkè",
+        "english": "have class now",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "现在在家",
+        "pinyin": "xiànzài zài jiā",
+        "english": "be at home now",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "点": [
+      {
+        "hanzi": "八点",
+        "pinyin": "bā diǎn",
+        "english": "eight o’clock",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "两点",
+        "pinyin": "liǎng diǎn",
+        "english": "two o’clock",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "六点半",
+        "pinyin": "liù diǎn bàn",
+        "english": "six thirty",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "早上": [
+      {
+        "hanzi": "早上八点",
+        "pinyin": "zǎoshang bā diǎn",
+        "english": "8:00 in the morning",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "早上有课",
+        "pinyin": "zǎoshang yǒu kè",
+        "english": "have class in the early morning",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "早上吃饭",
+        "pinyin": "zǎoshang chī fàn",
+        "english": "eat in the morning",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "上午": [
+      {
+        "hanzi": "上午十点",
+        "pinyin": "shàngwǔ shí diǎn",
+        "english": "10:00 in the morning",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "上午有课",
+        "pinyin": "shàngwǔ yǒu kè",
+        "english": "have class in the morning",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "上午去学校",
+        "pinyin": "shàngwǔ qù xuéxiào",
+        "english": "go to school in the morning",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "分": [
+      {
+        "hanzi": "十分",
+        "pinyin": "shí fēn",
+        "english": "ten minutes",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "四十分",
+        "pinyin": "sìshí fēn",
+        "english": "forty minutes",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "十点十分",
+        "pinyin": "shí diǎn shí fēn",
+        "english": "10:10",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "课": [
+      {
+        "hanzi": "有课",
+        "pinyin": "yǒu kè",
+        "english": "have class",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "汉语课",
+        "pinyin": "Hànyǔ kè",
+        "english": "Chinese class",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "上午有课",
+        "pinyin": "shàngwǔ yǒu kè",
+        "english": "have class in the morning",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "下午": [
+      {
+        "hanzi": "下午两点",
+        "pinyin": "xiàwǔ liǎng diǎn",
+        "english": "2:00 p.m.",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "下午见",
+        "pinyin": "xiàwǔ jiàn",
+        "english": "meet in the afternoon",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "下午有事",
+        "pinyin": "xiàwǔ yǒu shì",
+        "english": "have something to do in the afternoon",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "见": [
+      {
+        "hanzi": "两点见",
+        "pinyin": "liǎng diǎn jiàn",
+        "english": "meet at two",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "明天见",
+        "pinyin": "míngtiān jiàn",
+        "english": "see you tomorrow",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "在学校见",
+        "pinyin": "zài xuéxiào jiàn",
+        "english": "meet at school",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "吧": [
+      {
+        "hanzi": "见吧",
+        "pinyin": "jiàn ba",
+        "english": "let’s meet",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "去吧",
+        "pinyin": "qù ba",
+        "english": "please go / let’s go",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "买些菜吧",
+        "pinyin": "mǎi xiē cài ba",
+        "english": "buy some vegetables, please",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "电影院": [
+      {
+        "hanzi": "去电影院",
+        "pinyin": "qù diànyǐngyuàn",
+        "english": "go to the cinema",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "在电影院",
+        "pinyin": "zài diànyǐngyuàn",
+        "english": "at the cinema",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "电影院见",
+        "pinyin": "diànyǐngyuàn jiàn",
+        "english": "meet at the cinema",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "看": [
+      {
+        "hanzi": "看电影",
+        "pinyin": "kàn diànyǐng",
+        "english": "watch a movie",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "看手机",
+        "pinyin": "kàn shǒujī",
+        "english": "look at a phone",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "看电脑",
+        "pinyin": "kàn diànnǎo",
+        "english": "look at a computer",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "电影": [
+      {
+        "hanzi": "看电影",
+        "pinyin": "kàn diànyǐng",
+        "english": "watch a movie",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "好看的电影",
+        "pinyin": "hǎokàn de diànyǐng",
+        "english": "a good movie",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "喜欢电影",
+        "pinyin": "xǐhuan diànyǐng",
+        "english": "like movies",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "事": [
+      {
+        "hanzi": "有事",
+        "pinyin": "yǒu shì",
+        "english": "have something to do",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "还有事",
+        "pinyin": "hái yǒu shì",
+        "english": "still have something to do",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "下午有事",
+        "pinyin": "xiàwǔ yǒu shì",
+        "english": "be busy in the afternoon",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "上课": [
+      {
+        "hanzi": "上午上课",
+        "pinyin": "shàngwǔ shàngkè",
+        "english": "have class in the morning",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "两点上课",
+        "pinyin": "liǎng diǎn shàngkè",
+        "english": "have class at two",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "在学校上课",
+        "pinyin": "zài xuéxiào shàngkè",
+        "english": "have class at school",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "呢": [
+      {
+        "hanzi": "我在家里呢",
+        "pinyin": "wǒ zài jiā li ne",
+        "english": "I am at home",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "我有课呢",
+        "pinyin": "wǒ yǒu kè ne",
+        "english": "I do have class",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "明天呢",
+        "pinyin": "míngtiān ne",
+        "english": "how about tomorrow?",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "半": [
+      {
+        "hanzi": "六点半",
+        "pinyin": "liù diǎn bàn",
+        "english": "6:30",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "四点半",
+        "pinyin": "sì diǎn bàn",
+        "english": "4:30",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "两点半",
+        "pinyin": "liǎng diǎn bàn",
+        "english": "2:30",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "下课": [
+      {
+        "hanzi": "四点半下课",
+        "pinyin": "sì diǎn bàn xiàkè",
+        "english": "finish class at 4:30",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "下课以后",
+        "pinyin": "xiàkè yǐhòu",
+        "english": "after class",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "下午下课",
+        "pinyin": "xiàwǔ xiàkè",
+        "english": "finish class in the afternoon",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "在": [
+      {
+        "hanzi": "在家里",
+        "pinyin": "zài jiā li",
+        "english": "at home",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "在学校",
+        "pinyin": "zài xuéxiào",
+        "english": "at school",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "在医院",
+        "pinyin": "zài yīyuàn",
+        "english": "at the hospital",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "家": [
+      {
+        "hanzi": "在家",
+        "pinyin": "zài jiā",
+        "english": "at home",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "回家",
+        "pinyin": "huí jiā",
+        "english": "go home",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "我家",
+        "pinyin": "wǒ jiā",
+        "english": "my home / my family",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "里": [
+      {
+        "hanzi": "家里",
+        "pinyin": "jiā li",
+        "english": "at home / inside the home",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "店里",
+        "pinyin": "diàn li",
+        "english": "inside the store",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "学校里",
+        "pinyin": "xuéxiào li",
+        "english": "inside the school",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "晚上": [
+      {
+        "hanzi": "晚上六点半",
+        "pinyin": "wǎnshang liù diǎn bàn",
+        "english": "6:30 in the evening",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "晚上下班",
+        "pinyin": "wǎnshang xiàbān",
+        "english": "finish work in the evening",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "晚上看电影",
+        "pinyin": "wǎnshang kàn diànyǐng",
+        "english": "watch a movie in the evening",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "医院": [
+      {
+        "hanzi": "去医院",
+        "pinyin": "qù yīyuàn",
+        "english": "go to the hospital",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "在医院",
+        "pinyin": "zài yīyuàn",
+        "english": "at the hospital",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "医院上班",
+        "pinyin": "yīyuàn shàngbān",
+        "english": "work at the hospital",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "上班": [
+      {
+        "hanzi": "八点上班",
+        "pinyin": "bā diǎn shàngbān",
+        "english": "start work at eight",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "去医院上班",
+        "pinyin": "qù yīyuàn shàngbān",
+        "english": "go work at the hospital",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "晚上上班",
+        "pinyin": "wǎnshang shàngbān",
+        "english": "work in the evening",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "下班": [
+      {
+        "hanzi": "六点半下班",
+        "pinyin": "liù diǎn bàn xiàbān",
+        "english": "finish work at 6:30",
+        "sourceType": "textbook"
+      },
+      {
+        "hanzi": "晚上下班",
+        "pinyin": "wǎnshang xiàbān",
+        "english": "finish work in the evening",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "下班以后",
+        "pinyin": "xiàbān yǐhòu",
+        "english": "after work",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "店": [
+      {
+        "hanzi": "店里",
+        "pinyin": "diàn li",
+        "english": "inside the store",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "去店里",
+        "pinyin": "qù diàn li",
+        "english": "go to the store",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "书店",
+        "pinyin": "shūdiàn",
+        "english": "bookstore",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "菜": [
+      {
+        "hanzi": "买菜",
+        "pinyin": "mǎi cài",
+        "english": "buy vegetables",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "做菜",
+        "pinyin": "zuò cài",
+        "english": "cook dishes",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "些菜",
+        "pinyin": "xiē cài",
+        "english": "some vegetables",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "分钟": [
+      {
+        "hanzi": "十分钟",
+        "pinyin": "shí fēnzhōng",
+        "english": "ten minutes",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "二十分钟",
+        "pinyin": "èrshí fēnzhōng",
+        "english": "twenty minutes",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "十分钟后",
+        "pinyin": "shí fēnzhōng hòu",
+        "english": "after ten minutes",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "后": [
+      {
+        "hanzi": "十分钟后",
+        "pinyin": "shí fēnzhōng hòu",
+        "english": "after ten minutes",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "下课后",
+        "pinyin": "xiàkè hòu",
+        "english": "after class",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "hanzi": "下班后",
+        "pinyin": "xiàbān hòu",
+        "english": "after work",
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "grammarTeachingNotes": {
+    "g_l07_01": {
+      "structure": "时间段 + 时间点\n主语 + 时间 + 动作 / 有 + 名词",
+      "structureEn": "Time period + clock time. Time usually appears before the action.",
+      "structureRu": "Время обычно ставится перед действием: подлежащее + время + действие.",
+      "english": "Use 点, 分 and 半 to say clock time. 上午/下午/晚上 help avoid ambiguity.",
+      "russian": "点, 分 и 半 используются для времени; 上午/下午/晚上 уточняют часть дня."
+    },
+    "g_l07_02": {
+      "structure": "句子 + 吧",
+      "structureEn": "Sentence + 吧 marks a suggestion, consultation, or soft request.",
+      "structureRu": "Частица 吧 в конце предложения выражает предложение, совет или мягкую просьбу.",
+      "english": "Use 吧 when proposing a time/place or asking someone to do something softly.",
+      "russian": "Используйте 吧, когда предлагаете встретиться или просите что-то сделать мягко."
+    },
+    "g_l07_03": {
+      "structure": "主语 + 时间 + 动词\n主语 + 不/还/也 + 动词/形容词",
+      "structureEn": "Time expressions and adverbs normally come before the verb/adjective.",
+      "structureRu": "Обстоятельства времени и наречия обычно стоят перед глаголом или прилагательным.",
+      "english": "This is important for Russian-speaking learners because Chinese does not usually move time expressions after the verb.",
+      "russian": "Это важно для русскоязычных студентов: в китайском время обычно не ставится после глагола."
+    }
+  },
+  "grammar": [
+    {
+      "id": "g_l07_01",
+      "title": "时间的表达（2）",
+      "titleEn": "Expression of Time (2)",
+      "explanation": "用“点、分、半”和“上午/下午/晚上”等词表达具体时间。",
+      "structure": "时间段 + 数字 + 点 + 分/半",
+      "examples": [
+        {
+          "hanzi": "早上八点四十。",
+          "pinyin": "Zǎoshang bā diǎn sìshí.",
+          "english": "It's 8:40 in the morning.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我上午十点十分有课。",
+          "pinyin": "Wǒ shàngwǔ shí diǎn shí fēn yǒu kè.",
+          "english": "I have a class at 10:10 in the morning.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我晚上六点半下班。",
+          "pinyin": "Wǒ wǎnshang liù diǎn bàn xiàbān.",
+          "english": "I finish work at 6:30 in the evening.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "g_l07_02",
+      "title": "语气助词“吧”",
+      "titleEn": "Modal Particle “吧”",
+      "explanation": "“吧”在句末，可以表示建议、商量、请求。",
+      "structure": "句子 + 吧",
+      "examples": [
+        {
+          "hanzi": "我们下午两点见吧。",
+          "pinyin": "Wǒmen xiàwǔ liǎng diǎn jiàn ba.",
+          "english": "Let's meet at two in the afternoon.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "你去店里买些菜吧。",
+          "pinyin": "Nǐ qù diàn li mǎi xiē cài ba.",
+          "english": "Could you go to the store to buy some vegetables?",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我们明天看电影吧。",
+          "pinyin": "Wǒmen míngtiān kàn diànyǐng ba.",
+          "english": "Let's watch a movie tomorrow.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    {
+      "id": "g_l07_03",
+      "title": "时间词语作状语的位置",
+      "titleEn": "Position of Time Expressions",
+      "explanation": "时间词语一般放在动词或形容词前。",
+      "structure": "主语 + 时间 + 动作",
+      "examples": [
+        {
+          "hanzi": "我上午十点十分有课。",
+          "pinyin": "Wǒ shàngwǔ shí diǎn shí fēn yǒu kè.",
+          "english": "I have a class at 10:10 in the morning.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我八点去医院上班。",
+          "pinyin": "Wǒ bā diǎn qù yīyuàn shàngbān.",
+          "english": "I go to work at the hospital at eight.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "她下午三点上课。",
+          "pinyin": "Tā xiàwǔ sān diǎn shàngkè.",
+          "english": "She has class at three in the afternoon.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "text_l07_01",
+      "title": "课文一",
+      "scene": "白家月和安妮在打电话。",
+      "lines": [
+        {
+          "speaker": "白家月",
+          "hanzi": "现在几点？",
+          "pinyin": "Xiànzài jǐ diǎn?",
+          "english": "What time is it now?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "安妮",
+          "hanzi": "早上八点四十。",
+          "pinyin": "Zǎoshang bā diǎn sìshí.",
+          "english": "It's 8:40 in the morning.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "白家月",
+          "hanzi": "我上午十点十分有课。",
+          "pinyin": "Wǒ shàngwǔ shí diǎn shí fēn yǒu kè.",
+          "english": "I have a class at 10:10 in the morning.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "安妮",
+          "hanzi": "好的，我们下午两点见吧。",
+          "pinyin": "Hǎo de, wǒmen xiàwǔ liǎng diǎn jiàn ba.",
+          "english": "Alright, let's meet at 2:00 in the afternoon.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "text_l07_02",
+      "title": "课文二",
+      "scene": "在校园里，李文遇到白家月。",
+      "lines": [
+        {
+          "speaker": "李文",
+          "hanzi": "下午我想去电影院看电影，你去吗？",
+          "pinyin": "Xiàwǔ wǒ xiǎng qù diànyǐngyuàn kàn diànyǐng, nǐ qù ma?",
+          "english": "I want to go to the cinema to watch a movie this afternoon. Are you going?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "白家月",
+          "hanzi": "我不想去，下午还有事。",
+          "pinyin": "Wǒ bù xiǎng qù, xiàwǔ hái yǒu shì.",
+          "english": "I don't want to go. I still have something to do this afternoon.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "李文",
+          "hanzi": "好的。明天呢？",
+          "pinyin": "Hǎo de. Míngtiān ne?",
+          "english": "Okay. How about tomorrow?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "白家月",
+          "hanzi": "我明天下午两点还上课呢，四点半下课。",
+          "pinyin": "Wǒ míngtiān xiàwǔ liǎng diǎn hái shàngkè ne, sì diǎn bàn xiàkè.",
+          "english": "I have a class tomorrow afternoon at 2:00 and it finishes at 4:30.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "text_l07_03",
+      "title": "课文三",
+      "scene": "王一雪在办公室给刘明打电话。",
+      "lines": [
+        {
+          "speaker": "王一雪",
+          "hanzi": "喂，你在哪儿呢？",
+          "pinyin": "Wèi, nǐ zài nǎr ne?",
+          "english": "Hey, where are you?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "我在家里呢。",
+          "pinyin": "Wǒ zài jiā li ne.",
+          "english": "I'm at home.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "我晚上六点半下班。",
+          "pinyin": "Wǒ wǎnshang liù diǎn bàn xiàbān.",
+          "english": "I'll finish work at 6:30 in the evening.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "我八点去医院上班。",
+          "pinyin": "Wǒ bā diǎn qù yīyuàn shàngbān.",
+          "english": "I'll go to work at the hospital at 8:00.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "好的，你去店里买些菜吧。",
+          "pinyin": "Hǎo de, nǐ qù diàn li mǎi xiē cài ba.",
+          "english": "Alright, could you go to the store to buy some vegetables?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "好，我十分钟后去。",
+          "pinyin": "Hǎo, wǒ shí fēnzhōng hòu qù.",
+          "english": "Okay, I'll go in ten minutes.",
+          "sourceType": "textbook"
+        }
+      ]
+    }
+  ],
+  "preClass": {
+    "warmup": {
+      "title": "今天几点上课？",
+      "prompt": "Look at your real schedule: class time, meeting time and evening plans.",
+      "intro": "这一课预习只做“时间 + 活动”的热身：现在几点、几点上课、几点见、晚上几点下班/下课。",
+      "question": "如果你想问现在的时间，下面哪句话最合适？",
+      "questionEn": "Which sentence asks for the current time?",
+      "options": [
+        {
+          "word": "现在几点？",
+          "pinyin": "Xiànzài jǐ diǎn?"
+        },
+        {
+          "word": "你去哪儿？",
+          "pinyin": "Nǐ qù nǎr?"
+        },
+        {
+          "word": "你想吃什么？",
+          "pinyin": "Nǐ xiǎng chī shénme?"
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": "pre_l07_01",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“现在”的意思是：",
+        "options": [
+          {
+            "text": "now"
+          },
+          {
+            "text": "tomorrow"
+          },
+          {
+            "text": "morning"
+          },
+          {
+            "text": "home"
+          }
+        ],
+        "answer": "now",
+        "weakPoints": "词汇：现在",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l07_02",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“电影院”的意思是：",
+        "options": [
+          {
+            "text": "cinema"
+          },
+          {
+            "text": "hospital"
+          },
+          {
+            "text": "store"
+          },
+          {
+            "text": "school"
+          }
+        ],
+        "answer": "cinema",
+        "weakPoints": "词汇：电影院",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l07_03",
+        "type": "choice",
+        "module": "时间预热",
+        "question": "8:40 可以说：",
+        "options": [
+          {
+            "text": "八点四十"
+          },
+          {
+            "text": "八点半"
+          },
+          {
+            "text": "四点八十"
+          },
+          {
+            "text": "十点八分"
+          }
+        ],
+        "answer": "八点四十",
+        "weakPoints": "时间：点和分",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l07_04",
+        "type": "choice",
+        "module": "交际预热",
+        "question": "选择可以回答“现在几点？”的句子。",
+        "options": [
+          {
+            "text": "现在八点。"
+          },
+          {
+            "text": "我去医院。"
+          },
+          {
+            "text": "我喜欢电影。"
+          },
+          {
+            "text": "我买菜。"
+          }
+        ],
+        "answer": "现在八点。",
+        "weakPoints": "交际：问时间",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l07_05",
+        "type": "subjective",
+        "module": "生活经验开放题",
+        "question": "教学扩展：你今天几点上课？请写一个中文短句。",
+        "questionEn": "What time is your class today? Try one Chinese sentence.",
+        "answerPlaceholder": "例如：我上午十点上课。",
+        "needsTeacherReview": true,
+        "openEnded": true,
+        "weakPoints": "输出：时间表达",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l07_06",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“下课”的意思是：",
+        "options": [
+          {
+            "text": "finish class"
+          },
+          {
+            "text": "go to work"
+          },
+          {
+            "text": "watch a movie"
+          },
+          {
+            "text": "buy vegetables"
+          }
+        ],
+        "answer": "finish class",
+        "weakPoints": "词汇：下课",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l07_07",
+        "type": "choice",
+        "module": "交际预热",
+        "question": "如果你想建议一起见面，可以说：",
+        "options": [
+          {
+            "text": "我们下午两点见吧。"
+          },
+          {
+            "text": "我不想去。"
+          },
+          {
+            "text": "我在家里呢。"
+          },
+          {
+            "text": "现在几点？"
+          }
+        ],
+        "answer": "我们下午两点见吧。",
+        "weakPoints": "交际：吧",
+        "sourceType": "teaching_extension",
+        "questionEn": "If you want to suggest meeting, which sentence can you say?",
+        "prompt_en": "If you want to suggest meeting, which sentence can you say?"
+      },
+      {
+        "id": "pre_l07_08",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“医院”的意思是：",
+        "options": [
+          {
+            "text": "hospital"
+          },
+          {
+            "text": "cinema"
+          },
+          {
+            "text": "class"
+          },
+          {
+            "text": "vegetable"
+          }
+        ],
+        "answer": "hospital",
+        "weakPoints": "词汇：医院",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l07_09",
+        "type": "choice",
+        "module": "时间预热",
+        "question": "“六点半”的意思是：",
+        "options": [
+          {
+            "text": "6:30"
+          },
+          {
+            "text": "6:00"
+          },
+          {
+            "text": "6:15"
+          },
+          {
+            "text": "7:30"
+          }
+        ],
+        "answer": "6:30",
+        "weakPoints": "时间：半",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l07_10",
+        "type": "subjective",
+        "module": "生活经验开放题",
+        "question": "教学扩展：你晚上想做什么？请写一个短句。",
+        "questionEn": "What do you want to do in the evening? Try one short sentence.",
+        "answerPlaceholder": "例如：我晚上想看电影。",
+        "needsTeacherReview": true,
+        "openEnded": true,
+        "weakPoints": "输出：晚上安排",
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "inClass": {
+    "questionGroups": {
+      "v1_image_guess": [
+        {
+          "id": "v1_hsk1_07_01",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for now",
+            "options": [
+              "现在",
+              "点",
+              "早上",
+              "上午"
+            ],
+            "options_pinyin": [
+              "xiànzài",
+              "diǎn",
+              "zǎoshang",
+              "shàngwǔ"
+            ]
+          },
+          "correct_answer": "现在",
+          "kp": "现在",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_07_02",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for o'clock",
+            "options": [
+              "点",
+              "现在",
+              "早上",
+              "上午"
+            ],
+            "options_pinyin": [
+              "diǎn",
+              "xiànzài",
+              "zǎoshang",
+              "shàngwǔ"
+            ]
+          },
+          "correct_answer": "点",
+          "kp": "点",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_07_03",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for (early) morning",
+            "options": [
+              "早上",
+              "现在",
+              "点",
+              "上午"
+            ],
+            "options_pinyin": [
+              "zǎoshang",
+              "xiànzài",
+              "diǎn",
+              "shàngwǔ"
+            ]
+          },
+          "correct_answer": "早上",
+          "kp": "早上",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_07_04",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for morning",
+            "options": [
+              "上午",
+              "现在",
+              "点",
+              "早上"
+            ],
+            "options_pinyin": [
+              "shàngwǔ",
+              "xiànzài",
+              "diǎn",
+              "zǎoshang"
+            ]
+          },
+          "correct_answer": "上午",
+          "kp": "上午",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_07_05",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for minute",
+            "options": [
+              "分",
+              "现在",
+              "点",
+              "早上"
+            ],
+            "options_pinyin": [
+              "fēn",
+              "xiànzài",
+              "diǎn",
+              "zǎoshang"
+            ]
+          },
+          "correct_answer": "分",
+          "kp": "分",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_07_06",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for class; lesson",
+            "options": [
+              "课",
+              "现在",
+              "点",
+              "早上"
+            ],
+            "options_pinyin": [
+              "kè",
+              "xiànzài",
+              "diǎn",
+              "zǎoshang"
+            ]
+          },
+          "correct_answer": "课",
+          "kp": "课",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_07_07",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for afternoon",
+            "options": [
+              "下午",
+              "现在",
+              "点",
+              "早上"
+            ],
+            "options_pinyin": [
+              "xiàwǔ",
+              "xiànzài",
+              "diǎn",
+              "zǎoshang"
+            ]
+          },
+          "correct_answer": "下午",
+          "kp": "下午",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_07_08",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for meet",
+            "options": [
+              "见",
+              "现在",
+              "点",
+              "早上"
+            ],
+            "options_pinyin": [
+              "jiàn",
+              "xiànzài",
+              "diǎn",
+              "zǎoshang"
+            ]
+          },
+          "correct_answer": "见",
+          "kp": "见",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_07_09",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for sentence-final particle for suggestion",
+            "options": [
+              "吧",
+              "现在",
+              "点",
+              "早上"
+            ],
+            "options_pinyin": [
+              "ba",
+              "xiànzài",
+              "diǎn",
+              "zǎoshang"
+            ]
+          },
+          "correct_answer": "吧",
+          "kp": "吧",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_07_10",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for cinema",
+            "options": [
+              "电影院",
+              "现在",
+              "点",
+              "早上"
+            ],
+            "options_pinyin": [
+              "diànyǐngyuàn",
+              "xiànzài",
+              "diǎn",
+              "zǎoshang"
+            ]
+          },
+          "correct_answer": "电影院",
+          "kp": "电影院",
+          "sourceType": "textbook"
+        }
+      ],
+      "v5_vocab_fill": [
+        {
+          "id": "v5_hsk1_07_01",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "现在几___？",
+            "sentence_pinyin": "Xiànzài jǐ ___?",
+            "options": [
+              "点",
+              "课",
+              "菜",
+              "事"
+            ],
+            "options_pinyin": [
+              "diǎn",
+              "kè",
+              "cài",
+              "shì"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "点",
+          "kp": "点",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_07_02",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "我上午十点十分有___。",
+            "sentence_pinyin": "Wǒ shàngwǔ shí diǎn shí fēn yǒu ___.",
+            "options": [
+              "课",
+              "电影",
+              "医院",
+              "菜"
+            ],
+            "options_pinyin": [
+              "kè",
+              "diànyǐng",
+              "yīyuàn",
+              "cài"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "课",
+          "kp": "课",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_07_03",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "我们下午两点___吧。",
+            "sentence_pinyin": "Wǒmen xiàwǔ liǎng diǎn ___ ba.",
+            "options": [
+              "见",
+              "看",
+              "买",
+              "上班"
+            ],
+            "options_pinyin": [
+              "jiàn",
+              "kàn",
+              "mǎi",
+              "shàngbān"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "见",
+          "kp": "见",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_07_04",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "下午我想去电影院看___。",
+            "sentence_pinyin": "Xiàwǔ wǒ xiǎng qù diànyǐngyuàn kàn ___.",
+            "options": [
+              "电影",
+              "课",
+              "家",
+              "菜"
+            ],
+            "options_pinyin": [
+              "diànyǐng",
+              "kè",
+              "jiā",
+              "cài"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "电影",
+          "kp": "电影",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_07_05",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "我不想去，下午还有___。",
+            "sentence_pinyin": "Wǒ bù xiǎng qù, xiàwǔ hái yǒu ___.",
+            "options": [
+              "事",
+              "半",
+              "里",
+              "分"
+            ],
+            "options_pinyin": [
+              "shì",
+              "bàn",
+              "li",
+              "fēn"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "事",
+          "kp": "事",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_07_06",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "四点半___。",
+            "sentence_pinyin": "Sì diǎn bàn ___.",
+            "options": [
+              "下课",
+              "上班",
+              "买菜",
+              "看电影"
+            ],
+            "options_pinyin": [
+              "xiàkè",
+              "shàngbān",
+              "mǎi cài",
+              "kàn diànyǐng"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "下课",
+          "kp": "下课",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_07_07",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "我在家___呢。",
+            "sentence_pinyin": "Wǒ zài jiā ___ ne.",
+            "options": [
+              "里",
+              "后",
+              "分",
+              "吧"
+            ],
+            "options_pinyin": [
+              "li",
+              "hòu",
+              "fēn",
+              "ba"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "里",
+          "kp": "里",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_07_08",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "我晚上六点半___。",
+            "sentence_pinyin": "Wǒ wǎnshang liù diǎn bàn ___.",
+            "options": [
+              "下班",
+              "下课",
+              "看",
+              "见"
+            ],
+            "options_pinyin": [
+              "xiàbān",
+              "xiàkè",
+              "kàn",
+              "jiàn"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "下班",
+          "kp": "下班",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_07_09",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "你去店里买些___吧。",
+            "sentence_pinyin": "Nǐ qù diàn li mǎi xiē ___ ba.",
+            "options": [
+              "菜",
+              "课",
+              "电影",
+              "分"
+            ],
+            "options_pinyin": [
+              "cài",
+              "kè",
+              "diànyǐng",
+              "fēn"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "菜",
+          "kp": "菜",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_07_10",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best word.",
+          "data": {
+            "sentence": "我十分钟___去。",
+            "sentence_pinyin": "Wǒ shí fēnzhōng ___ qù.",
+            "options": [
+              "后",
+              "里",
+              "半",
+              "现在"
+            ],
+            "options_pinyin": [
+              "hòu",
+              "li",
+              "bàn",
+              "xiànzài"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "后",
+          "kp": "后",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v7_word_match": [
+        {
+          "id": "v7_hsk1_07_01",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把左侧问句与右侧答句配对。",
+          "prompt_en": "Match each question with a reply.",
+          "data": {
+            "pairs": [
+              {
+                "id": "pair_1",
+                "left": "现在几点？",
+                "left_pinyin": "Xiànzài jǐ diǎn?",
+                "right": "现在八点四十。",
+                "right_pinyin": "Xiànzài bā diǎn sìshí."
+              },
+              {
+                "id": "pair_2",
+                "left": "你上午有课吗？",
+                "left_pinyin": "Nǐ shàngwǔ yǒu kè ma?",
+                "right": "我上午十点有课。",
+                "right_pinyin": "Wǒ shàngwǔ shí diǎn yǒu kè."
+              },
+              {
+                "id": "pair_3",
+                "left": "我们几点见？",
+                "left_pinyin": "Wǒmen jǐ diǎn jiàn?",
+                "right": "我们下午两点见吧。",
+                "right_pinyin": "Wǒmen xiàwǔ liǎng diǎn jiàn ba."
+              },
+              {
+                "id": "pair_4",
+                "left": "你晚上几点下班？",
+                "left_pinyin": "Nǐ wǎnshang jǐ diǎn xiàbān?",
+                "right": "我晚上六点半下班。",
+                "right_pinyin": "Wǒ wǎnshang liù diǎn bàn xiàbān."
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "时间问答",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_07_02",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把左侧问句与右侧答句配对。",
+          "prompt_en": "Match each question with a reply.",
+          "data": {
+            "pairs": [
+              {
+                "id": "pair_1",
+                "left": "下午你想去哪儿？",
+                "left_pinyin": "Xiàwǔ nǐ xiǎng qù nǎr?",
+                "right": "我想去学校书店。",
+                "right_pinyin": "Wǒ xiǎng qù xuéxiào shūdiàn."
+              },
+              {
+                "id": "pair_2",
+                "left": "你想买什么？",
+                "left_pinyin": "Nǐ xiǎng mǎi shénme?",
+                "right": "我想买些牛奶和菜。",
+                "right_pinyin": "Wǒ xiǎng mǎi xiē niúnǎi hé cài."
+              },
+              {
+                "id": "pair_3",
+                "left": "明天呢？",
+                "left_pinyin": "Míngtiān ne?",
+                "right": "我明天下午还上课呢。",
+                "right_pinyin": "Wǒ míngtiān xiàwǔ hái shàngkè ne."
+              },
+              {
+                "id": "pair_4",
+                "left": "你下午有事吗？",
+                "left_pinyin": "Nǐ xiàwǔ yǒu shì ma?",
+                "right": "我下午没有事。",
+                "right_pinyin": "Wǒ xiàwǔ méiyǒu shì."
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "计划与复现",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_07_03",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把左侧问句与右侧答句配对。",
+          "prompt_en": "Match each question with a reply.",
+          "data": {
+            "pairs": [
+              {
+                "id": "pair_1",
+                "left": "你在哪儿呢？",
+                "left_pinyin": "Nǐ zài nǎr ne?",
+                "right": "我在家里呢。",
+                "right_pinyin": "Wǒ zài jiā li ne."
+              },
+              {
+                "id": "pair_2",
+                "left": "你几点去医院？",
+                "left_pinyin": "Nǐ jǐ diǎn qù yīyuàn?",
+                "right": "我八点去医院。",
+                "right_pinyin": "Wǒ bā diǎn qù yīyuàn."
+              },
+              {
+                "id": "pair_3",
+                "left": "你去店里买什么？",
+                "left_pinyin": "Nǐ qù diàn li mǎi shénme?",
+                "right": "我去店里买些菜。",
+                "right_pinyin": "Wǒ qù diàn li mǎi xiē cài."
+              },
+              {
+                "id": "pair_4",
+                "left": "你什么时候去？",
+                "left_pinyin": "Nǐ shénme shíhou qù?",
+                "right": "我十分钟后去。",
+                "right_pinyin": "Wǒ shí fēnzhōng hòu qù."
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "地点与时间",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_07_04",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把左侧问句与右侧答句配对。",
+          "prompt_en": "Match each question with a reply.",
+          "data": {
+            "pairs": [
+              {
+                "id": "pair_1",
+                "left": "你妈妈会做什么？",
+                "left_pinyin": "Nǐ māma huì zuò shénme?",
+                "right": "她会做饺子和米饭。",
+                "right_pinyin": "Tā huì zuò jiǎozi hé mǐfàn."
+              },
+              {
+                "id": "pair_2",
+                "left": "你喜欢吃什么？",
+                "left_pinyin": "Nǐ xǐhuan chī shénme?",
+                "right": "我喜欢吃包子。",
+                "right_pinyin": "Wǒ xǐhuan chī bāozi."
+              },
+              {
+                "id": "pair_3",
+                "left": "你的手机号是多少？",
+                "left_pinyin": "Nǐ de shǒujīhào shì duōshao?",
+                "right": "我的手机号是这个号。",
+                "right_pinyin": "Wǒ de shǒujīhào shì zhège hào."
+              },
+              {
+                "id": "pair_4",
+                "left": "你明天想去哪儿？",
+                "left_pinyin": "Nǐ míngtiān xiǎng qù nǎr?",
+                "right": "我明天想去超市。",
+                "right_pinyin": "Wǒ míngtiān xiǎng qù chāoshì."
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "前课复现",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_07_05",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把左侧问句与右侧答句配对。",
+          "prompt_en": "Match each question with a reply.",
+          "data": {
+            "pairs": [
+              {
+                "id": "pair_1",
+                "left": "你几点上课？",
+                "left_pinyin": "Nǐ jǐ diǎn shàngkè?",
+                "right": "我上午十点上课。",
+                "right_pinyin": "Wǒ shàngwǔ shí diǎn shàngkè."
+              },
+              {
+                "id": "pair_2",
+                "left": "你几点下课？",
+                "left_pinyin": "Nǐ jǐ diǎn xiàkè?",
+                "right": "我下午四点半下课。",
+                "right_pinyin": "Wǒ xiàwǔ sì diǎn bàn xiàkè."
+              },
+              {
+                "id": "pair_3",
+                "left": "你爸爸几点上班？",
+                "left_pinyin": "Nǐ bàba jǐ diǎn shàngbān?",
+                "right": "他早上八点上班。",
+                "right_pinyin": "Tā zǎoshang bā diǎn shàngbān."
+              },
+              {
+                "id": "pair_4",
+                "left": "你妈妈几点下班？",
+                "left_pinyin": "Nǐ māma jǐ diǎn xiàbān?",
+                "right": "她晚上六点下班。",
+                "right_pinyin": "Tā wǎnshang liù diǎn xiàbān."
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "时间与家庭",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v8_memory_match": [
+        {
+          "id": "v8_hsk1_07_01",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配词语和意思。",
+          "prompt_en": "Match words and meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "现在",
+                "left_pinyin": "xiànzài",
+                "right": "now"
+              },
+              {
+                "left": "早上",
+                "left_pinyin": "zǎoshang",
+                "right": "early morning"
+              },
+              {
+                "left": "上午",
+                "left_pinyin": "shàngwǔ",
+                "right": "morning"
+              },
+              {
+                "left": "下午",
+                "left_pinyin": "xiàwǔ",
+                "right": "afternoon"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词语匹配1",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_07_02",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配词语和意思。",
+          "prompt_en": "Match words and meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "电影院",
+                "left_pinyin": "diànyǐngyuàn",
+                "right": "cinema"
+              },
+              {
+                "left": "电影",
+                "left_pinyin": "diànyǐng",
+                "right": "movie"
+              },
+              {
+                "left": "医院",
+                "left_pinyin": "yīyuàn",
+                "right": "hospital"
+              },
+              {
+                "left": "店",
+                "left_pinyin": "diàn",
+                "right": "shop"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词语匹配2",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_07_03",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配词语和意思。",
+          "prompt_en": "Match words and meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "上课",
+                "left_pinyin": "shàngkè",
+                "right": "attend class"
+              },
+              {
+                "left": "下课",
+                "left_pinyin": "xiàkè",
+                "right": "finish class"
+              },
+              {
+                "left": "上班",
+                "left_pinyin": "shàngbān",
+                "right": "go to work"
+              },
+              {
+                "left": "下班",
+                "left_pinyin": "xiàbān",
+                "right": "finish work"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词语匹配3",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_07_04",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配词语和意思。",
+          "prompt_en": "Match words and meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "点",
+                "left_pinyin": "diǎn",
+                "right": "o'clock"
+              },
+              {
+                "left": "分",
+                "left_pinyin": "fēn",
+                "right": "minute"
+              },
+              {
+                "left": "半",
+                "left_pinyin": "bàn",
+                "right": "half"
+              },
+              {
+                "left": "分钟",
+                "left_pinyin": "fēnzhōng",
+                "right": "minute"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词语匹配4",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_07_05",
+          "type": "vocab_collocations",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配词语和意思。",
+          "prompt_en": "Match words and meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "见",
+                "left_pinyin": "jiàn",
+                "right": "meet"
+              },
+              {
+                "left": "看",
+                "left_pinyin": "kàn",
+                "right": "watch"
+              },
+              {
+                "left": "事",
+                "left_pinyin": "shì",
+                "right": "thing"
+              },
+              {
+                "left": "菜",
+                "left_pinyin": "cài",
+                "right": "vegetables"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "kp": "词语匹配5",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "w1_component_char": [
+        {
+          "id": "w1_hsk1_07_01",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "xiànzài",
+            "options": [
+              "现在",
+              "再现",
+              "观在",
+              "现再"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "现在",
+          "kp": "现在",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_07_02",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "shàngwǔ",
+            "options": [
+              "上午",
+              "上牛",
+              "土午",
+              "上午"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "上午",
+          "kp": "上午",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_07_03",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "xiàwǔ",
+            "options": [
+              "下午",
+              "下牛",
+              "卞午",
+              "下年"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "下午",
+          "kp": "下午",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_07_04",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "diànyǐng",
+            "options": [
+              "电影",
+              "电脑",
+              "电活",
+              "申影"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "电影",
+          "kp": "电影",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_07_05",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "shàngkè",
+            "options": [
+              "上课",
+              "上棵",
+              "土课",
+              "上果"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "上课",
+          "kp": "上课",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_07_06",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "xiàkè",
+            "options": [
+              "下课",
+              "下棵",
+              "不课",
+              "下果"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "下课",
+          "kp": "下课",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_07_07",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "wǎnshang",
+            "options": [
+              "晚上",
+              "免上",
+              "晚土",
+              "睌上"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "晚上",
+          "kp": "晚上",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_07_08",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "yīyuàn",
+            "options": [
+              "医院",
+              "衣院",
+              "医院",
+              "医完"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "医院",
+          "kp": "医院",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_07_09",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "shàngbān",
+            "options": [
+              "上班",
+              "上斑",
+              "土班",
+              "上半"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "上班",
+          "kp": "上班",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_07_10",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct characters.",
+          "data": {
+            "clue_pinyin": "fēnzhōng",
+            "options": [
+              "分钟",
+              "分种",
+              "份钟",
+              "分中"
+            ],
+            "hide_option_pinyin": true,
+            "correct_index": 0
+          },
+          "correct_answer": "分钟",
+          "kp": "分钟",
+          "sourceType": "textbook"
+        }
+      ],
+      "v4_complete_sentence": [
+        {
+          "id": "v4_hsk1_07_01",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "现在八点四十。",
+            "source_pinyin": "Xiànzài bā diǎn sìshí.",
+            "template": "现在八点四十。",
+            "template_pinyin": "Xiànzài bā diǎn sìshí.",
+            "question_hint": "现在几点？",
+            "question_hint_en": "What time is it now?",
+            "options": [
+              "现在几点？",
+              "你现在去哪儿？",
+              "现在谁有课？",
+              "现在吃什么？"
+            ],
+            "options_pinyin": [
+              "Xiànzài jǐ diǎn?",
+              "Nǐ xiànzài qù nǎr?",
+              "Xiànzài shéi yǒu kè?",
+              "Xiànzài chī shénme?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "现在几点？",
+          "kp": "问时间",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_07_02",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我上午十点有课。",
+            "source_pinyin": "Wǒ shàngwǔ shí diǎn yǒu kè.",
+            "template": "我上午十点有课。",
+            "template_pinyin": "Wǒ shàngwǔ shí diǎn yǒu kè.",
+            "question_hint": "你什么时候有课？",
+            "question_hint_en": "When do you have class?",
+            "options": [
+              "你什么时候有课？",
+              "你有什么课？",
+              "你在哪儿有课？",
+              "你是谁？"
+            ],
+            "options_pinyin": [
+              "Nǐ shénme shíhou yǒu kè?",
+              "Nǐ yǒu shénme kè?",
+              "Nǐ zài nǎr yǒu kè?",
+              "Nǐ shì shéi?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你什么时候有课？",
+          "kp": "什么时候",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_07_03",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我们下午两点见吧。",
+            "source_pinyin": "Wǒmen xiàwǔ liǎng diǎn jiàn ba.",
+            "template": "我们下午两点见吧。",
+            "template_pinyin": "Wǒmen xiàwǔ liǎng diǎn jiàn ba.",
+            "question_hint": "我们几点见？",
+            "question_hint_en": "What time shall we meet?",
+            "options": [
+              "我们几点见？",
+              "我们见谁？",
+              "我们吃什么？",
+              "我们是哪国人？"
+            ],
+            "options_pinyin": [
+              "Wǒmen jǐ diǎn jiàn?",
+              "Wǒmen jiàn shéi?",
+              "Wǒmen chī shénme?",
+              "Wǒmen shì nǎ guó rén?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我们几点见？",
+          "kp": "几点见",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_07_04",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我想去学校书店。",
+            "source_pinyin": "Wǒ xiǎng qù xuéxiào shūdiàn.",
+            "template": "我想去学校书店。",
+            "template_pinyin": "Wǒ xiǎng qù xuéxiào shūdiàn.",
+            "question_hint": "你想去哪儿？",
+            "question_hint_en": "Where do you want to go?",
+            "options": [
+              "你想去哪儿？",
+              "你想吃什么？",
+              "你几点下课？",
+              "你在哪儿上班？"
+            ],
+            "options_pinyin": [
+              "Nǐ xiǎng qù nǎr?",
+              "Nǐ xiǎng chī shénme?",
+              "Nǐ jǐ diǎn xiàkè?",
+              "Nǐ zài nǎr shàngbān?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你想去哪儿？",
+          "kp": "哪儿",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_07_05",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我下午还有事。",
+            "source_pinyin": "Wǒ xiàwǔ hái yǒu shì.",
+            "template": "我下午还有事。",
+            "template_pinyin": "Wǒ xiàwǔ hái yǒu shì.",
+            "question_hint": "你下午有事吗？",
+            "question_hint_en": "Do you have something to do this afternoon?",
+            "options": [
+              "你下午有事吗？",
+              "你下午几点？",
+              "你下午想吃什么？",
+              "你下午去哪儿见？"
+            ],
+            "options_pinyin": [
+              "Nǐ xiàwǔ yǒu shì ma?",
+              "Nǐ xiàwǔ jǐ diǎn?",
+              "Nǐ xiàwǔ xiǎng chī shénme?",
+              "Nǐ xiàwǔ qù nǎr jiàn?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你下午有事吗？",
+          "kp": "有事吗",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_07_06",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我四点半下课。",
+            "source_pinyin": "Wǒ sì diǎn bàn xiàkè.",
+            "template": "我四点半下课。",
+            "template_pinyin": "Wǒ sì diǎn bàn xiàkè.",
+            "question_hint": "你几点下课？",
+            "question_hint_en": "What time do you finish class?",
+            "options": [
+              "你几点下课？",
+              "你几点上课？",
+              "你几点上班？",
+              "你几点见？"
+            ],
+            "options_pinyin": [
+              "Nǐ jǐ diǎn xiàkè?",
+              "Nǐ jǐ diǎn shàngkè?",
+              "Nǐ jǐ diǎn shàngbān?",
+              "Nǐ jǐ diǎn jiàn?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你几点下课？",
+          "kp": "下课时间",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_07_07",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我在家里呢。",
+            "source_pinyin": "Wǒ zài jiā li ne.",
+            "template": "我在家里呢。",
+            "template_pinyin": "Wǒ zài jiā li ne.",
+            "question_hint": "你在哪儿呢？",
+            "question_hint_en": "Where are you?",
+            "options": [
+              "你在哪儿呢？",
+              "你是谁呢？",
+              "你几点呢？",
+              "你吃什么呢？"
+            ],
+            "options_pinyin": [
+              "Nǐ zài nǎr ne?",
+              "Nǐ shì shéi ne?",
+              "Nǐ jǐ diǎn ne?",
+              "Nǐ chī shénme ne?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你在哪儿呢？",
+          "kp": "在哪儿",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_07_08",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我晚上六点半下班。",
+            "source_pinyin": "Wǒ wǎnshang liù diǎn bàn xiàbān.",
+            "template": "我晚上六点半下班。",
+            "template_pinyin": "Wǒ wǎnshang liù diǎn bàn xiàbān.",
+            "question_hint": "你晚上几点下班？",
+            "question_hint_en": "What time do you finish work in the evening?",
+            "options": [
+              "你晚上几点下班？",
+              "你晚上几点上班？",
+              "你晚上去哪儿？",
+              "你晚上想买什么？"
+            ],
+            "options_pinyin": [
+              "Nǐ wǎnshang jǐ diǎn xiàbān?",
+              "Nǐ wǎnshang jǐ diǎn shàngbān?",
+              "Nǐ wǎnshang qù nǎr?",
+              "Nǐ wǎnshang xiǎng mǎi shénme?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你晚上几点下班？",
+          "kp": "下班时间",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_07_09",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我八点去医院上班。",
+            "source_pinyin": "Wǒ bā diǎn qù yīyuàn shàngbān.",
+            "template": "我八点去医院上班。",
+            "template_pinyin": "Wǒ bā diǎn qù yīyuàn shàngbān.",
+            "question_hint": "你几点去医院上班？",
+            "question_hint_en": "What time do you go to work at the hospital?",
+            "options": [
+              "你几点去医院上班？",
+              "你怎么去医院？",
+              "你去医院买什么？",
+              "你在哪儿吃晚饭？"
+            ],
+            "options_pinyin": [
+              "Nǐ jǐ diǎn qù yīyuàn shàngbān?",
+              "Nǐ zěnme qù yīyuàn?",
+              "Nǐ qù yīyuàn mǎi shénme?",
+              "Nǐ zài nǎr chī wǎnfàn?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你几点去医院上班？",
+          "kp": "去医院上班",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_07_10",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "根据答句选择合适的问句。",
+          "prompt_en": "Choose the best question for the answer.",
+          "data": {
+            "instruction": "看答句，选出最自然、最准确的问句。",
+            "instruction_en": "Read the answer and choose the most natural question.",
+            "source_sentence": "我十分钟后去。",
+            "source_pinyin": "Wǒ shí fēnzhōng hòu qù.",
+            "template": "我十分钟后去。",
+            "template_pinyin": "Wǒ shí fēnzhōng hòu qù.",
+            "question_hint": "你什么时候去？",
+            "question_hint_en": "When will you go?",
+            "options": [
+              "你什么时候去？",
+              "你去哪儿去？",
+              "你怎么去？",
+              "你和谁去？"
+            ],
+            "options_pinyin": [
+              "Nǐ shénme shíhou qù?",
+              "Nǐ qù nǎr qù?",
+              "Nǐ zěnme qù?",
+              "Nǐ hé shéi qù?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你什么时候去？",
+          "kp": "什么时候",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "g1_ordering": [
+        {
+          "id": "g1_hsk1_07_01",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "我",
+              "上午十点十分",
+              "有课"
+            ],
+            "chunks_pinyin": [
+              "wǒ",
+              "shàngwǔ shí diǎn shí fēn",
+              "yǒu kè"
+            ],
+            "answer": "我上午十点十分有课。",
+            "acceptable_answers": [
+              "我上午十点十分有课。"
+            ]
+          },
+          "correct_answer": "我上午十点十分有课。",
+          "kp": "时间状语",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_hsk1_07_02",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "我们",
+              "下午两点",
+              "见吧"
+            ],
+            "chunks_pinyin": [
+              "wǒmen",
+              "xiàwǔ liǎng diǎn",
+              "jiàn ba"
+            ],
+            "answer": "我们下午两点见吧。",
+            "acceptable_answers": [
+              "我们下午两点见吧。"
+            ]
+          },
+          "correct_answer": "我们下午两点见吧。",
+          "kp": "吧",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_hsk1_07_03",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "我",
+              "不想去",
+              "电影院"
+            ],
+            "chunks_pinyin": [
+              "wǒ",
+              "bù xiǎng qù",
+              "diànyǐngyuàn"
+            ],
+            "answer": "我不想去电影院。",
+            "acceptable_answers": [
+              "我不想去电影院。"
+            ]
+          },
+          "correct_answer": "我不想去电影院。",
+          "kp": "否定",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_hsk1_07_04",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "我",
+              "在家里",
+              "呢"
+            ],
+            "chunks_pinyin": [
+              "wǒ",
+              "zài jiā li",
+              "ne"
+            ],
+            "answer": "我在家里呢。",
+            "acceptable_answers": [
+              "我在家里呢。"
+            ]
+          },
+          "correct_answer": "我在家里呢。",
+          "kp": "呢",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_hsk1_07_05",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the words in order.",
+          "data": {
+            "chunks": [
+              "我",
+              "十分钟后",
+              "去"
+            ],
+            "chunks_pinyin": [
+              "wǒ",
+              "shí fēnzhōng hòu",
+              "qù"
+            ],
+            "answer": "我十分钟后去。",
+            "acceptable_answers": [
+              "我十分钟后去。"
+            ]
+          },
+          "correct_answer": "我十分钟后去。",
+          "kp": "后",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "r2_passage_choice": [
+        {
+          "id": "r2_hsk1_07_01",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：读叙述，回答三个问题。",
+          "prompt_en": "Text Q&A: read the narrative and answer three questions.",
+          "data": {
+            "title": "课文一：约下午见面",
+            "passage": "白家月和安妮打电话。现在是早上八点四十。白家月上午十点十分有课。她们下午两点见。",
+            "passage_pinyin": "Bái Jiāyuè hé Ānnī dǎ diànhuà. Xiànzài shì zǎoshang bā diǎn sìshí. Bái Jiāyuè shàngwǔ shí diǎn shí fēn yǒu kè. Tāmen xiàwǔ liǎng diǎn jiàn.",
+            "passage_en": "Bai Jiayue and Annie talk on the phone. It is 8:40 in the morning. Bai Jiayue has class at 10:10 in the morning. They meet at 2:00 in the afternoon.",
+            "questions": [
+              {
+                "id": "r2_hsk1_07_01_q1",
+                "question_cn": "现在几点？",
+                "question_en": "What time is it now?",
+                "options": [
+                  "早上八点四十",
+                  "上午十点十分",
+                  "下午两点",
+                  "晚上六点半"
+                ],
+                "correct_index": 0,
+                "answer": "早上八点四十"
+              },
+              {
+                "id": "r2_hsk1_07_01_q2",
+                "question_cn": "白家月什么时候有课？",
+                "question_en": "When does Bai Jiayue have class?",
+                "options": [
+                  "上午十点十分",
+                  "早上八点四十",
+                  "下午两点",
+                  "晚上八点"
+                ],
+                "correct_index": 0,
+                "answer": "上午十点十分"
+              },
+              {
+                "id": "r2_hsk1_07_01_q3",
+                "question_cn": "她们什么时候见面？",
+                "question_en": "When will they meet?",
+                "options": [
+                  "下午两点",
+                  "上午十点十分",
+                  "四点半",
+                  "十分钟后"
+                ],
+                "correct_index": 0,
+                "answer": "下午两点"
+              }
+            ]
+          },
+          "correct_answer": "现在几点？：早上八点四十；白家月什么时候有课？：上午十点十分；她们什么时候见面？：下午两点",
+          "kp": "课文一整体理解",
+          "sourceType": "textbook_adaptation",
+          "sourceTextPolicy": "课文原句改写为叙述体；问题基于课文整体内容"
+        },
+        {
+          "id": "r2_hsk1_07_02",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：读叙述，回答三个问题。",
+          "prompt_en": "Text Q&A: read the narrative and answer three questions.",
+          "data": {
+            "title": "课文二：电影和明天的安排",
+            "passage": "李文下午想去电影院看电影。他问白家月去不去。白家月不想去。她下午还有事。白家月明天下午两点还上课，四点半下课。",
+            "passage_pinyin": "Lǐ Wén xiàwǔ xiǎng qù diànyǐngyuàn kàn diànyǐng. Tā wèn Bái Jiāyuè qù bu qù. Bái Jiāyuè bù xiǎng qù. Tā xiàwǔ hái yǒu shì. Bái Jiāyuè míngtiān xiàwǔ liǎng diǎn hái shàngkè, sì diǎn bàn xiàkè.",
+            "passage_en": "Li Wen wants to go to the cinema to watch a movie in the afternoon. He asks whether Bai Jiayue will go. Bai Jiayue does not want to go. She still has something to do in the afternoon. Bai Jiayue still has class at 2:00 tomorrow afternoon and finishes class at 4:30.",
+            "questions": [
+              {
+                "id": "r2_hsk1_07_02_q1",
+                "question_cn": "李文下午想做什么？",
+                "question_en": "What does Li Wen want to do this afternoon?",
+                "options": [
+                  "去电影院看电影",
+                  "去超市买牛奶",
+                  "在家做饭",
+                  "去医院上班"
+                ],
+                "correct_index": 0,
+                "answer": "去电影院看电影"
+              },
+              {
+                "id": "r2_hsk1_07_02_q2",
+                "question_cn": "白家月为什么不去？",
+                "question_en": "Why does Bai Jiayue not go?",
+                "options": [
+                  "下午还有事",
+                  "不喜欢电影",
+                  "想去书店",
+                  "晚上上班"
+                ],
+                "correct_index": 0,
+                "answer": "下午还有事"
+              },
+              {
+                "id": "r2_hsk1_07_02_q3",
+                "question_cn": "白家月明天下午几点下课？",
+                "question_en": "What time does Bai Jiayue finish class tomorrow afternoon?",
+                "options": [
+                  "四点半",
+                  "两点",
+                  "十点十分",
+                  "八点四十"
+                ],
+                "correct_index": 0,
+                "answer": "四点半"
+              }
+            ]
+          },
+          "correct_answer": "李文下午想做什么？：去电影院看电影；白家月为什么不去？：下午还有事；白家月明天下午几点下课？：四点半",
+          "kp": "课文二整体理解",
+          "sourceType": "textbook_adaptation",
+          "sourceTextPolicy": "课文原句改写为叙述体；问题基于课文整体内容"
+        },
+        {
+          "id": "r2_hsk1_07_03",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：读叙述，回答三个问题。",
+          "prompt_en": "Text Q&A: read the narrative and answer three questions.",
+          "data": {
+            "title": "课文三：下班、上班和买菜",
+            "passage": "王一雪给刘明打电话。刘明在家里。王一雪晚上六点半下班。刘明八点去医院上班。刘明十分钟后去店里买菜。",
+            "passage_pinyin": "Wáng Yīxuě gěi Liú Míng dǎ diànhuà. Liú Míng zài jiā li. Wáng Yīxuě wǎnshang liù diǎn bàn xiàbān. Liú Míng bā diǎn qù yīyuàn shàngbān. Liú Míng shí fēnzhōng hòu qù diàn li mǎi cài.",
+            "passage_en": "Wang Yixue calls Liu Ming. Liu Ming is at home. Wang Yixue finishes work at 6:30 in the evening. Liu Ming goes to work at the hospital at 8:00. Liu Ming goes to the store to buy vegetables after ten minutes.",
+            "questions": [
+              {
+                "id": "r2_hsk1_07_03_q1",
+                "question_cn": "刘明在哪儿？",
+                "question_en": "Where is Liu Ming?",
+                "options": [
+                  "家里",
+                  "医院",
+                  "电影院",
+                  "店里"
+                ],
+                "correct_index": 0,
+                "answer": "家里"
+              },
+              {
+                "id": "r2_hsk1_07_03_q2",
+                "question_cn": "王一雪几点下班？",
+                "question_en": "What time does Wang Yixue finish work?",
+                "options": [
+                  "晚上六点半",
+                  "早上八点",
+                  "下午两点",
+                  "十分钟后"
+                ],
+                "correct_index": 0,
+                "answer": "晚上六点半"
+              },
+              {
+                "id": "r2_hsk1_07_03_q3",
+                "question_cn": "刘明什么时候去店里？",
+                "question_en": "When will Liu Ming go to the store?",
+                "options": [
+                  "十分钟后",
+                  "现在",
+                  "下午两点",
+                  "晚上八点"
+                ],
+                "correct_index": 0,
+                "answer": "十分钟后"
+              }
+            ]
+          },
+          "correct_answer": "刘明在哪儿？：家里；王一雪几点下班？：晚上六点半；刘明什么时候去店里？：十分钟后",
+          "kp": "课文三整体理解",
+          "sourceType": "textbook_adaptation",
+          "sourceTextPolicy": "课文原句改写为叙述体；问题基于课文整体内容"
+        }
+      ],
+      "tt_text_true_false": [
+        {
+          "id": "tt_hsk1_07_01",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "现在是早上八点四十。",
+            "statement_pinyin": "Xiànzài shì zǎoshang bā diǎn sìshí.",
+            "statement_en": "It is 8:40 in the morning.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文一",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_07_02",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "白家月上午十点十分有课。",
+            "statement_pinyin": "Bái Jiāyuè shàngwǔ shí diǎn shí fēn yǒu kè.",
+            "statement_en": "Bai Jiayue has class at 10:10.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文一",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_07_03",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "他们下午三点见。",
+            "statement_pinyin": "Tāmen xiàwǔ sān diǎn jiàn.",
+            "statement_en": "They meet at 3:00 p.m.",
+            "answer": false
+          },
+          "correct_answer": false,
+          "kp": "课文一",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_07_04",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "李文下午想去电影院看电影。",
+            "statement_pinyin": "Lǐ Wén xiàwǔ xiǎng qù diànyǐngyuàn kàn diànyǐng.",
+            "statement_en": "Li Wen wants to watch a movie in the afternoon.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文二",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_07_05",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "白家月下午没有事。",
+            "statement_pinyin": "Bái Jiāyuè xiàwǔ méiyǒu shì.",
+            "statement_en": "Bai Jiayue has nothing to do in the afternoon.",
+            "answer": false
+          },
+          "correct_answer": false,
+          "kp": "课文二",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_07_06",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "白家月四点半下课。",
+            "statement_pinyin": "Bái Jiāyuè sì diǎn bàn xiàkè.",
+            "statement_en": "Bai Jiayue finishes class at 4:30.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文二",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_07_07",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "刘明在家里呢。",
+            "statement_pinyin": "Liú Míng zài jiā li ne.",
+            "statement_en": "Liu Ming is at home.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文三",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_07_08",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "王一雪晚上六点半上班。",
+            "statement_pinyin": "Wáng Yīxuě wǎnshang liù diǎn bàn shàngbān.",
+            "statement_en": "Wang Yixue starts work at 6:30 p.m.",
+            "answer": false
+          },
+          "correct_answer": false,
+          "kp": "课文三",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_07_09",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "刘明八点去医院上班。",
+            "statement_pinyin": "Liú Míng bā diǎn qù yīyuàn shàngbān.",
+            "statement_en": "Liu Ming goes to work at the hospital at eight.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文三",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "tt_hsk1_07_10",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "判断正误。",
+          "prompt_en": "True or false?",
+          "data": {
+            "statement": "刘明十分钟后去店里。",
+            "statement_pinyin": "Liú Míng shí fēnzhōng hòu qù diàn li.",
+            "statement_en": "Liu Ming goes to the store after ten minutes.",
+            "answer": true
+          },
+          "correct_answer": true,
+          "kp": "课文三",
+          "sourceType": "textbook"
+        }
+      ],
+      "pk_question": [
+        {
+          "id": "pk_hsk1_07_01",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "“now”的中文是：",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "现在",
+              "后",
+              "上午",
+              "分钟"
+            ],
+            "options_pinyin": [
+              "xiànzài",
+              "hòu",
+              "shàngwǔ",
+              "fēnzhōng"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "现在",
+          "kp": "现在",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_07_02",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "现在几___？",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "点",
+              "课",
+              "菜",
+              "事"
+            ],
+            "options_pinyin": [
+              "diǎn",
+              "kè",
+              "cài",
+              "shì"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "点",
+          "kp": "点",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_07_03",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "“cinema”的中文是：",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "电影院",
+              "医院",
+              "店",
+              "家"
+            ],
+            "options_pinyin": [
+              "diànyǐngyuàn",
+              "yīyuàn",
+              "diàn",
+              "jiā"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "电影院",
+          "kp": "电影院",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_07_04",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "我下午想___电影。",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "看",
+              "见",
+              "上班",
+              "下课"
+            ],
+            "options_pinyin": [
+              "kàn",
+              "jiàn",
+              "shàngbān",
+              "xiàkè"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "看",
+          "kp": "看",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_07_05",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "我们下午两点见___。",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "吧",
+              "呢",
+              "分",
+              "后"
+            ],
+            "options_pinyin": [
+              "ba",
+              "ne",
+              "fēn",
+              "hòu"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "吧",
+          "kp": "吧",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_07_06",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "四点___下课。",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "半",
+              "菜",
+              "事",
+              "里"
+            ],
+            "options_pinyin": [
+              "bàn",
+              "cài",
+              "shì",
+              "li"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "半",
+          "kp": "半",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_07_07",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "我在家里___。",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "呢",
+              "吧",
+              "点",
+              "分"
+            ],
+            "options_pinyin": [
+              "ne",
+              "ba",
+              "diǎn",
+              "fēn"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "呢",
+          "kp": "呢",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_07_08",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "“hospital”的中文是：",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "医院",
+              "电影院",
+              "学校",
+              "超市"
+            ],
+            "options_pinyin": [
+              "yīyuàn",
+              "diànyǐngyuàn",
+              "xuéxiào",
+              "chāoshì"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "医院",
+          "kp": "医院",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_07_09",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "我晚上六点半___。",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "下班",
+              "下课",
+              "看电影",
+              "买菜"
+            ],
+            "options_pinyin": [
+              "xiàbān",
+              "xiàkè",
+              "kàn diànyǐng",
+              "mǎi cài"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "下班",
+          "kp": "下班",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "pk_hsk1_07_10",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "快速选择正确答案。",
+          "prompt_en": "Choose quickly.",
+          "data": {
+            "question_cn": "我十分钟___去。",
+            "question_en": "Choose the best answer.",
+            "options": [
+              "后",
+              "里",
+              "半",
+              "吧"
+            ],
+            "options_pinyin": [
+              "hòu",
+              "li",
+              "bàn",
+              "ba"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "后",
+          "kp": "后",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "hanziWriting": {
+    "characters": [
+      "现",
+      "在",
+      "点",
+      "早",
+      "上",
+      "午",
+      "分",
+      "课",
+      "下",
+      "见",
+      "吧",
+      "电",
+      "影",
+      "事",
+      "半",
+      "家",
+      "里",
+      "晚",
+      "医",
+      "院",
+      "班",
+      "店",
+      "菜",
+      "钟",
+      "后"
+    ]
+  },
+  "hanziRecognition": {
+    "enabled": true,
+    "showPinyin": false,
+    "title": "汉字认读循环",
+    "titleEn": "Character Recognition Cycle",
+    "groups": [
+      {
+        "id": "hrec_l07_g1",
+        "title": "第1组：现在、点、早上、上午、分、课",
+        "vocabularyIds": [
+          "v_l07_01",
+          "v_l07_02",
+          "v_l07_03",
+          "v_l07_04",
+          "v_l07_05",
+          "v_l07_06"
+        ]
+      },
+      {
+        "id": "hrec_l07_g2",
+        "title": "第2组：下午、见、吧、电影院、看、电影",
+        "vocabularyIds": [
+          "v_l07_07",
+          "v_l07_08",
+          "v_l07_09",
+          "v_l07_10",
+          "v_l07_11",
+          "v_l07_12"
+        ]
+      },
+      {
+        "id": "hrec_l07_g3",
+        "title": "第3组：事、上课、呢、半、下课、在",
+        "vocabularyIds": [
+          "v_l07_13",
+          "v_l07_14",
+          "v_l07_15",
+          "v_l07_16",
+          "v_l07_17",
+          "v_l07_18"
+        ]
+      },
+      {
+        "id": "hrec_l07_g4",
+        "title": "第4组：家、里、晚上、医院、上班、店",
+        "vocabularyIds": [
+          "v_l07_19",
+          "v_l07_20",
+          "v_l07_21",
+          "v_l07_22",
+          "v_l07_23",
+          "v_l07_24"
+        ]
+      },
+      {
+        "id": "hrec_l07_g5",
+        "title": "第5组：菜、分钟、后、下班",
+        "vocabularyIds": [
+          "v_l07_25",
+          "v_l07_26",
+          "v_l07_27",
+          "v_l07_28"
+        ]
+      }
+    ],
+    "rounds": [
+      {
+        "id": "hanzi_to_meaning",
+        "title": "汉字配意思",
+        "titleEn": "Character to meaning"
+      },
+      {
+        "id": "hanzi_to_pinyin",
+        "title": "看汉字选拼音",
+        "titleEn": "Character to pinyin"
+      },
+      {
+        "id": "meaning_to_hanzi",
+        "title": "看意思选汉字",
+        "titleEn": "Meaning to character"
+      },
+      {
+        "id": "sentence_to_word",
+        "title": "短句找词",
+        "titleEn": "Sentence to word"
+      },
+      {
+        "id": "reading_choice",
+        "title": "英文阅读理解",
+        "titleEn": "English reading comprehension"
+      }
+    ],
+    "sentenceExamples": {
+      "现在": {
+        "sentence": "现在几点？",
+        "pinyin": "Xiànzài jǐ diǎn?"
+      },
+      "点": {
+        "sentence": "早上八点四十。",
+        "pinyin": "Zǎoshang bā diǎn sìshí."
+      },
+      "上午": {
+        "sentence": "我上午十点十分有课。",
+        "pinyin": "Wǒ shàngwǔ shí diǎn shí fēn yǒu kè."
+      },
+      "下午": {
+        "sentence": "我们下午两点见吧。",
+        "pinyin": "Wǒmen xiàwǔ liǎng diǎn jiàn ba."
+      },
+      "电影院": {
+        "sentence": "下午我想去电影院看电影。",
+        "pinyin": "Xiàwǔ wǒ xiǎng qù diànyǐngyuàn kàn diànyǐng."
+      },
+      "电影": {
+        "sentence": "我想看电影。",
+        "pinyin": "Wǒ xiǎng kàn diànyǐng."
+      },
+      "下课": {
+        "sentence": "四点半下课。",
+        "pinyin": "Sì diǎn bàn xiàkè."
+      },
+      "晚上": {
+        "sentence": "我晚上六点半下班。",
+        "pinyin": "Wǒ wǎnshang liù diǎn bàn xiàbān."
+      },
+      "医院": {
+        "sentence": "我八点去医院上班。",
+        "pinyin": "Wǒ bā diǎn qù yīyuàn shàngbān."
+      },
+      "分钟": {
+        "sentence": "我十分钟后去。",
+        "pinyin": "Wǒ shí fēnzhōng hòu qù."
+      },
+      "v_l07_28": {
+        "sentence": "我晚上六点半下班。",
+        "pinyin": "Wǒ wǎnshang liù diǎn bàn xiàbān."
+      }
+    },
+    "readingExamples": {
+      "现在": "What time is it now?",
+      "点": "It's eight forty.",
+      "课": "I have a class at 10:10.",
+      "下午": "Let's meet at two in the afternoon.",
+      "电影院": "I want to go to the cinema.",
+      "电影": "I want to watch a movie.",
+      "事": "I still have something to do.",
+      "下课": "Class finishes at 4:30.",
+      "医院": "I go to work at the hospital at eight.",
+      "菜": "Buy some vegetables at the store.",
+      "下班": "I finish work at 6:30 in the evening."
+    },
+    "sentenceDistractors": {},
+    "readingDistractors": {}
+  },
+  "postClassHomework": {
+    "mode": "required_optional",
+    "instructions": {
+      "title": "第7课课后作业",
+      "summary": "ClassPro 课后作业重点完成汉字书写、表达输出、个性化准备和课堂闭环，不重复练习册的大量客观题。",
+      "required": "必选：完成汉字书写任务。",
+      "optional": "可选：从写一段话、口语准备、学习反思中选择完成；鼓励用今天学过的词和句型。",
+      "aiPolicy": "准备口语话题时可以借助 AI 查词或打草稿，但请改成自己能说出来的中文。"
+    },
+    "tiers": {
+      "default": {
+        "label": "第7课课后作业",
+        "goal": "完成必选书写，并准备能在课堂上使用的表达。",
+        "suggestedMinutes": 18,
+        "suggestedMix": "必选：汉字书写；可选：写一段话、口语准备、学习反思。"
+      }
+    },
+    "sharedPool": [],
+    "tierPools": {
+      "default": [
+        {
+          "id": "hw_l07_required_writing",
+          "lesson": "HSK1-L07",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "handwriting",
+          "requirement": "required",
+          "section": "必选：汉字书写",
+          "prompt_cn": "必选：书写本课汉字：现、在、点、早、午、分、课、见、电、影、事、半、晚、医、院、班、菜、后",
+          "prompt_en": "Required: Write the lesson characters.",
+          "characters": [
+            "现",
+            "在",
+            "点",
+            "早",
+            "午",
+            "分",
+            "课",
+            "见",
+            "电",
+            "影",
+            "事",
+            "半",
+            "晚",
+            "医",
+            "院",
+            "班",
+            "菜",
+            "后"
+          ],
+          "repeat_count": 3,
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l07_optional_vocab_paragraph",
+          "lesson": "HSK1-L07",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "subjective",
+          "requirement": "optional",
+          "section": "可选：写一段话",
+          "prompt_cn": "教学扩展：请随机从今天所学生词中选择3-5个，写一段话。",
+          "prompt_en": "Optional: Randomly choose 3-5 words from today's vocabulary and write a short paragraph.",
+          "instructions": "可选生词：现在、点、早上、上午、下午、见、电影院、电影、事、上课、下课、晚上、医院、上班、店、菜、十分钟后。请至少用3个，最多用5个。",
+          "answerPlaceholder": "例如：我上午十点上课。下午两点我想看电影。晚上六点半我下课。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l07_optional_speaking",
+          "lesson": "HSK1-L07",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "subjective",
+          "requirement": "optional",
+          "section": "可选：口语准备",
+          "prompt_cn": "教学扩展：请准备话题“介绍你一天的时间安排”，下次上课时口头表达。",
+          "prompt_en": "Optional speaking prep: Prepare the topic \"介绍你一天的时间安排\" for oral sharing next class.",
+          "instructions": "可以借助 AI 查词或整理草稿，但请改成自己能读、能说的中文。",
+          "answerPlaceholder": "例如：我上午十点上课。下午两点我想看电影。晚上六点半我下课。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l07_optional_reflection",
+          "lesson": "HSK1-L07",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "subjective",
+          "requirement": "optional",
+          "section": "可选：学习反思",
+          "prompt_cn": "教学扩展：今天哪一个词或句子最难？你想下次再练什么？",
+          "prompt_en": "Optional reflection: Which word or sentence was hardest today? What do you want to practice next time?",
+          "answerPlaceholder": "例如：我觉得“六点半”最难。我想再练时间。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        }
+      ]
+    },
+    "assignmentSelection": {
+      "default": [
+        "hw_l07_required_writing",
+        "hw_l07_optional_vocab_paragraph",
+        "hw_l07_optional_speaking",
+        "hw_l07_optional_reflection"
+      ]
+    },
+    "reviewPolicy": {
+      "maxSubmissions": 2,
+      "teacherReview": "latest_submission_only"
+    }
+  },
+  "report": {
+    "weakPointLabels": {
+      "time": "时间表达",
+      "ba": "语气助词“吧”",
+      "ne": "语气助词“呢”",
+      "schedule": "日程表达"
+    },
+    "recommendationRules": {},
+    "feedbackTemplates": {
+      "defaultPraise": "已收到，写得不错，继续加油！",
+      "defaultRevise": "请再检查字形、笔顺或表达是否准确。"
+    }
+  }
+}
