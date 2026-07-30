@@ -4920,18 +4920,18 @@
             "prompt_en": "What time is it now?",
             "prompt_ru": "Сейчас который час?",
             "options": [
-              "现在几点？",
               "你现在去哪儿？",
               "你现在吃什么？",
+              "现在几点？",
               "你是谁？"
             ],
             "options_pinyin": [
-              "Xiànzài jǐ diǎn?",
               "Nǐ xiànzài qù nǎr?",
               "Nǐ xiànzài chī shénme?",
+              "Xiànzài jǐ diǎn?",
               "Nǐ shì shéi?"
             ],
-            "correct_index": 0
+            "correct_index": 2
           },
           "correct_answer": "现在几点？",
           "kp": "英/俄译中选句",
@@ -4976,18 +4976,18 @@
             "prompt_en": "Let us meet at two in the afternoon.",
             "prompt_ru": "Давайте встретимся в два часа дня.",
             "options": [
-              "我们下午两点见吧。",
               "我们上午十点有课吧。",
               "我们晚上去医院吧。",
-              "我们现在吃包子吧。"
+              "我们现在吃包子吧。",
+              "我们下午两点见吧。"
             ],
             "options_pinyin": [
-              "Wǒmen xiàwǔ liǎng diǎn jiàn ba.",
               "Wǒmen shàngwǔ shí diǎn yǒu kè ba.",
               "Wǒmen wǎnshang qù yīyuàn ba.",
-              "Wǒmen xiànzài chī bāozi ba."
+              "Wǒmen xiànzài chī bāozi ba.",
+              "Wǒmen xiàwǔ liǎng diǎn jiàn ba."
             ],
-            "correct_index": 0
+            "correct_index": 3
           },
           "correct_answer": "我们下午两点见吧。",
           "kp": "英/俄译中选句",
@@ -5004,18 +5004,18 @@
             "prompt_en": "Li Wen wants to go to the cinema to watch a movie.",
             "prompt_ru": "Ли Вэнь хочет пойти в кинотеатр смотреть фильм.",
             "options": [
-              "李文想去电影院看电影。",
               "李文想去医院看医生。",
+              "李文想去电影院看电影。",
               "李文想去学校上课。",
               "李文想去家里休息。"
             ],
             "options_pinyin": [
-              "Lǐ Wén xiǎng qù diànyǐngyuàn kàn diànyǐng.",
               "Lǐ Wén xiǎng qù yīyuàn kàn yīshēng.",
+              "Lǐ Wén xiǎng qù diànyǐngyuàn kàn diànyǐng.",
               "Lǐ Wén xiǎng qù xuéxiào shàngkè.",
               "Lǐ Wén xiǎng qù jiā lǐ xiūxi."
             ],
-            "correct_index": 0
+            "correct_index": 1
           },
           "correct_answer": "李文想去电影院看电影。",
           "kp": "英/俄译中选句",
@@ -5032,18 +5032,18 @@
             "prompt_en": "I still have something to do this afternoon.",
             "prompt_ru": "У меня днём ещё есть дела.",
             "options": [
-              "我下午还有事。",
               "我上午没有课。",
               "我晚上看电影。",
+              "我下午还有事。",
               "我现在很高兴。"
             ],
             "options_pinyin": [
-              "Wǒ xiàwǔ hái yǒu shì.",
               "Wǒ shàngwǔ méiyǒu kè.",
               "Wǒ wǎnshang kàn diànyǐng.",
+              "Wǒ xiàwǔ hái yǒu shì.",
               "Wǒ xiànzài hěn gāoxìng."
             ],
-            "correct_index": 0
+            "correct_index": 2
           },
           "correct_answer": "我下午还有事。",
           "kp": "英/俄译中选句",
@@ -5088,18 +5088,18 @@
             "prompt_en": "My family has two children.",
             "prompt_ru": "В моей семье двое детей.",
             "options": [
-              "我家有两个孩子。",
               "我家有两个医生。",
               "我家有两个房间。",
-              "我家有两个学校。"
+              "我家有两个学校。",
+              "我家有两个孩子。"
             ],
             "options_pinyin": [
-              "Wǒ jiā yǒu liǎng gè háizi.",
               "Wǒ jiā yǒu liǎng gè yīshēng.",
               "Wǒ jiā yǒu liǎng gè fángjiān.",
-              "Wǒ jiā yǒu liǎng gè xuéxiào."
+              "Wǒ jiā yǒu liǎng gè xuéxiào.",
+              "Wǒ jiā yǒu liǎng gè háizi."
             ],
-            "correct_index": 0
+            "correct_index": 3
           },
           "correct_answer": "我家有两个孩子。",
           "kp": "英/俄译中选句",
@@ -5116,18 +5116,18 @@
             "prompt_en": "What does your father want to eat?",
             "prompt_ru": "Что хочет есть твой папа?",
             "options": [
-              "你爸爸想吃什么？",
               "你爸爸在哪儿工作？",
+              "你爸爸想吃什么？",
               "你爸爸几点下班？",
               "你爸爸叫什么？"
             ],
             "options_pinyin": [
-              "Nǐ bàba xiǎng chī shénme?",
               "Nǐ bàba zài nǎr gōngzuò?",
+              "Nǐ bàba xiǎng chī shénme?",
               "Nǐ bàba jǐ diǎn xiàbān?",
               "Nǐ bàba jiào shénme?"
             ],
-            "correct_index": 0
+            "correct_index": 1
           },
           "correct_answer": "你爸爸想吃什么？",
           "kp": "英/俄译中选句",
@@ -5144,18 +5144,18 @@
             "prompt_en": "I do not want to eat rice.",
             "prompt_ru": "Я не хочу есть рис.",
             "options": [
-              "我不想吃米饭。",
               "我想吃米饭。",
               "我不去吃米饭。",
+              "我不想吃米饭。",
               "我没看见米饭。"
             ],
             "options_pinyin": [
-              "Wǒ bù xiǎng chī mǐfàn.",
               "Wǒ xiǎng chī mǐfàn.",
               "Wǒ bù qù chī mǐfàn.",
+              "Wǒ bù xiǎng chī mǐfàn.",
               "Wǒ méi kànjiàn mǐfàn."
             ],
-            "correct_index": 0
+            "correct_index": 2
           },
           "correct_answer": "我不想吃米饭。",
           "kp": "英/俄译中选句",
@@ -5172,18 +5172,18 @@
             "prompt_en": "He finishes class at 4:30.",
             "prompt_ru": "Он заканчивает урок в 4:30.",
             "options": [
-              "他四点半下课。",
               "他六点半下班。",
+              "他四点半下课。",
               "他十点十分上课。",
               "他两点去电影院。"
             ],
             "options_pinyin": [
-              "Tā sì diǎn bàn xiàkè.",
               "Tā liù diǎn bàn xiàbān.",
+              "Tā sì diǎn bàn xiàkè.",
               "Tā shí diǎn shí fēn shàngkè.",
               "Tā liǎng diǎn qù diànyǐngyuàn."
             ],
-            "correct_index": 0
+            "correct_index": 1
           },
           "correct_answer": "他四点半下课。",
           "kp": "英/俄译中选句",

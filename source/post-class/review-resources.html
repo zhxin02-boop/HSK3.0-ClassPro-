@@ -19,8 +19,9 @@ h1{margin:12px 0 6px;font-size:28px;color:#3f7f32}.muted{color:var(--muted);font
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.tabs button{border:1px solid #bfd99b;border-radius:999px;padding:9px 14px;background:#fff;color:var(--green);font-weight:900;cursor:pointer}.tabs button.active{background:var(--green);color:#fff}
 .section{padding:18px;margin-bottom:14px}.section h2{margin:0 0 12px;color:#3f7f32;font-size:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
 .card{padding:14px;box-shadow:none}.word{font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:36px;font-weight:900;line-height:1.1}.py{color:#68765e;font-weight:900;margin-top:4px}.en{font-size:13px;color:#75806e;margin-top:3px}.img{width:100%;height:120px;object-fit:contain;border-radius:14px;background:#fbfdf6;border:1px solid #eef3df;margin-bottom:10px}
-.examples{margin-top:10px;display:grid;gap:8px}.ex{padding:9px;border-radius:12px;background:#f8faf3;border:1px solid #edf2df}.ex b{display:block;font-size:17px}.tag{display:inline-flex;margin-top:5px;border-radius:999px;padding:3px 8px;background:#eef6dd;color:#4f7d2e;font-size:11px;font-weight:900}
+.examples{margin-top:10px;display:grid;gap:8px}.examples-title{font-size:13px;font-weight:900;color:#3f7f32;margin-top:12px}.ex{padding:9px;border-radius:12px;background:#f8faf3;border:1px solid #edf2df}.ex b{display:block;font-size:17px}.tag{display:inline-flex;margin-top:5px;border-radius:999px;padding:3px 8px;background:#eef6dd;color:#4f7d2e;font-size:11px;font-weight:900}
 .hanzi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:12px}.char-card{text-align:center}.charbox{height:86px;border:1px solid #dce7c8;border-radius:14px;background:linear-gradient(90deg,transparent 49%,#edf2df 50%,transparent 51%),linear-gradient(0deg,transparent 49%,#edf2df 50%,transparent 51%),linear-gradient(45deg,transparent 49.4%,#f3eadb 50%,transparent 50.6%),linear-gradient(-45deg,transparent 49.4%,#f3eadb 50%,transparent 50.6%),#fff;display:flex;align-items:center;justify-content:center;font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:48px;color:rgba(45,59,41,.28);font-weight:900}
+.stroke-btn{margin-top:8px;border:1px solid #bfd99b;border-radius:999px;background:#fff;color:#4f8f2f;font-size:12px;font-weight:900;padding:6px 9px;cursor:pointer}.stroke-panel{grid-column:1/-1;background:#fff;border:1px solid #dce7c8;border-radius:18px;padding:14px;overflow:auto}.stroke-title{font-weight:900;color:#3f7f32;margin-bottom:8px}.stroke-row{display:flex;gap:8px;min-width:max-content}.stroke-svg{width:74px;height:74px;background:#fffaf1;border:1px solid #dfeac8;border-radius:9px}.grid-line{fill:none;stroke:#ead9bf;stroke-width:8;stroke-dasharray:22 16}.done-stroke{fill:#315b29}.current-stroke{fill:#e85a47}.next-stroke{fill:#cbd5c0}
 .text-card{padding:16px;border:1px solid #dce7c8;border-radius:18px;background:#fff;margin-bottom:12px}.text-title{font-size:18px;font-weight:900;color:#2563eb;margin-bottom:8px}.line{display:grid;grid-template-columns:90px 1fr;gap:10px;padding:8px 0;border-top:1px dashed #edf2df}.line:first-of-type{border-top:0}.speaker{font-weight:900;color:#64745d}.hanzi{font-size:21px;font-weight:900;line-height:1.55}.hanzi-only{font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:24px;line-height:1.8;font-weight:900}.empty{padding:24px;text-align:center;color:#8a9483}
 @media(max-width:620px){body{padding:12px}.line{grid-template-columns:1fr}.hero{padding:18px}h1{font-size:24px}}
 </style>
@@ -53,14 +54,13 @@ function loadLesson(){
   document.title=lessonKey+" 课后复习资源";
   document.getElementById("lessonBadge").textContent=lessonKey+" · "+((DATA.meta&&DATA.meta.title)||"Review");
 }
-function examplesFor(v){var ext=(DATA.vocabExtensions||{})[v.id]||{};return (ext.examples||ext.collocations||v.examples||[]).slice(0,3)}
+function examplesFor(v){var ext=(DATA.vocabExtensions||{})[v.id]||{};return (ext.examples&&ext.examples.length?ext.examples:ext.collocations&&ext.collocations.length?ext.collocations:v.examples||[]).slice(0,3)}
 function renderVocab(){
   var v=DATA.vocabulary||[],h="<h2>生词复习 / Vocabulary</h2><div class=\"grid\">";
   if(!v.length)return "<div class=\"empty\">暂无生词数据。</div>";
   v.forEach(function(x){
-    var img=x.image?'<img class="img" src="'+esc(x.image)+'" alt="">':'';
-    h+='<article class="card">'+img+'<div class="word">'+esc(x.hanzi||x.word||"")+'</div><div class="py">'+esc(x.pinyin||"")+'</div><div class="en">'+esc(x.english||"")+'</div>';
-    var exs=examplesFor(x);if(exs.length){h+='<div class="examples">';exs.forEach(function(e){h+='<div class="ex"><b>'+esc(e.hanzi||e.word||"")+'</b><div class="py">'+esc(e.pinyin||"")+'</div><div class="en">'+esc(e.english||"")+'</div>'+(e.sourceType==='teaching_extension'?'<span class="tag">教学扩展</span>':'')+'</div>'});h+='</div>'}
+    h+='<article class="card"><div class="word">'+esc(x.hanzi||x.word||"")+'</div><div class="py">'+esc(x.pinyin||"")+'</div><div class="en">'+esc(x.english||"")+'</div>';
+    var exs=examplesFor(x);if(exs.length){h+='<div class="examples-title">例句 / 短语</div><div class="examples">';exs.forEach(function(e){h+='<div class="ex"><b>'+esc(e.hanzi||e.word||"")+'</b><div class="py">'+esc(e.pinyin||"")+'</div><div class="en">'+esc(e.english||"")+'</div>'+(e.sourceType==='teaching_extension'?'<span class="tag">教学扩展</span>':'')+'</div>'});h+='</div>'}
     h+='</article>';
   });
   return h+"</div>";
@@ -68,9 +68,22 @@ function renderVocab(){
 function renderHanzi(){
   var chars=((DATA.hanziWriting||{}).characters||[]).slice();
   if(!chars.length){(DATA.vocabulary||[]).forEach(function(v){Array.from(v.hanzi||v.word||"").forEach(function(c){if(/[\u4e00-\u9fff]/.test(c)&&chars.indexOf(c)<0)chars.push(c)})})}
-  var h="<h2>汉字范字 / Hanzi Writing</h2><div class=\"muted\" style=\"margin-bottom:12px\">灰色范字和米字格用于临摹。笔顺动画后续统一补充。</div><div class=\"hanzi-grid\">";
-  chars.forEach(function(c){h+='<div class="char-card"><div class="charbox">'+esc(c)+'</div></div>'});
+  var h="<h2>汉字范字 / Hanzi Writing</h2><div class=\"muted\" style=\"margin-bottom:12px\">灰色范字和米字格用于临摹；点击按钮查看静态笔顺步骤。</div><div class=\"hanzi-grid\">";
+  chars.forEach(function(c){h+='<div class="char-card"><div class="charbox">'+esc(c)+'</div><button class="stroke-btn" onclick="showStrokeOrder(\''+esc(c)+'\')">显示笔顺</button></div>'});
   return h+"</div>";
+}
+function gridSvg(paths,step){
+  var s='<svg class="stroke-svg" viewBox="0 0 1024 1024" aria-label="stroke '+(step+1)+'"><path class="grid-line" d="M512 0V1024M0 512H1024M0 0L1024 1024M1024 0L0 1024"/><g transform="translate(0 1024) scale(1 -1)">';
+  for(var i=0;i<paths.length;i++)s+='<path d="'+paths[i]+'" class="'+(i<step?'done-stroke':i===step?'current-stroke':'next-stroke')+'"/>';
+  return s+'</g></svg>';
+}
+function showStrokeOrder(ch){
+  var grid=document.querySelector(".hanzi-grid");if(!grid)return;
+  var old=document.getElementById("strokePanel");if(old)old.remove();
+  var panel=document.createElement("div");panel.id="strokePanel";panel.className="stroke-panel";panel.innerHTML='<div class="stroke-title">'+esc(ch)+' · 笔顺加载中...</div>';grid.insertBefore(panel,grid.firstChild);
+  fetch("https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0.1/"+encodeURIComponent(ch)+".json").then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){
+    var paths=d.strokes||[];panel.innerHTML='<div class="stroke-title">'+esc(ch)+' · '+paths.length+'笔</div><div class="stroke-row">'+paths.map(function(_,i){return gridSvg(paths,i)}).join("")+'</div>';
+  }).catch(function(){panel.innerHTML='<div class="stroke-title">'+esc(ch)+' · 笔顺数据暂时无法加载</div><div class="muted">可以先按灰色范字临摹，稍后联网后再刷新查看。</div>'});
 }
 function renderTexts(){
   var texts=DATA.texts||[],h="<h2>课文复习 / Texts</h2>";

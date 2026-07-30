@@ -4529,18 +4529,18 @@
             "prompt_en": "There is a small cat outside the room.",
             "prompt_ru": "Снаружи комнаты есть маленькая кошка.",
             "options": [
-              "房间外有一只小猫。",
               "房间里有一个医生。",
               "桌子下有一本书。",
+              "房间外有一只小猫。",
               "学校前有一家医院。"
             ],
             "options_pinyin": [
-              "Fángjiān wài yǒu yì zhī xiǎo māo.",
               "Fángjiān lǐ yǒu yí gè yīshēng.",
               "Zhuōzi xià yǒu yì běn shū.",
+              "Fángjiān wài yǒu yì zhī xiǎo māo.",
               "Xuéxiào qián yǒu yì jiā yīyuàn."
             ],
-            "correct_index": 0
+            "correct_index": 2
           },
           "correct_answer": "房间外有一只小猫。",
           "kp": "英/俄译中选句",
@@ -4585,18 +4585,18 @@
             "prompt_en": "Li Wen can arrive at two in the afternoon.",
             "prompt_ru": "Ли Вэнь может прийти в два часа дня.",
             "options": [
-              "李文下午两点能到。",
               "李文下午两点不能到。",
               "李文上午十点上课。",
-              "李文晚上六点下班。"
+              "李文晚上六点下班。",
+              "李文下午两点能到。"
             ],
             "options_pinyin": [
-              "Lǐ Wén xiàwǔ liǎng diǎn néng dào.",
               "Lǐ Wén xiàwǔ liǎng diǎn bù néng dào.",
               "Lǐ Wén shàngwǔ shí diǎn shàngkè.",
-              "Lǐ Wén wǎnshang liù diǎn xiàbān."
+              "Lǐ Wén wǎnshang liù diǎn xiàbān.",
+              "Lǐ Wén xiàwǔ liǎng diǎn néng dào."
             ],
-            "correct_index": 0
+            "correct_index": 3
           },
           "correct_answer": "李文下午两点能到。",
           "kp": "英/俄译中选句",
@@ -4613,18 +4613,18 @@
             "prompt_en": "He eats lunch at school.",
             "prompt_ru": "Он обедает в школе.",
             "options": [
-              "他在学校吃午饭。",
               "他在医院看医生。",
+              "他在学校吃午饭。",
               "他在家看电影。",
               "他在书店前见朋友。"
             ],
             "options_pinyin": [
-              "Tā zài xuéxiào chī wǔfàn.",
               "Tā zài yīyuàn kàn yīshēng.",
+              "Tā zài xuéxiào chī wǔfàn.",
               "Tā zài jiā kàn diànyǐng.",
               "Tā zài shūdiàn qián jiàn péngyou."
             ],
-            "correct_index": 0
+            "correct_index": 1
           },
           "correct_answer": "他在学校吃午饭。",
           "kp": "英/俄译中选句",
@@ -4641,18 +4641,18 @@
             "prompt_en": "My father also works in a hospital.",
             "prompt_ru": "Мой папа тоже работает в больнице.",
             "options": [
-              "我爸爸也在医院工作。",
               "我爸爸也在学校学习。",
               "我爸爸也在电影院看电影。",
+              "我爸爸也在医院工作。",
               "我爸爸也在房间外。"
             ],
             "options_pinyin": [
-              "Wǒ bàba yě zài yīyuàn gōngzuò.",
               "Wǒ bàba yě zài xuéxiào xuéxí.",
               "Wǒ bàba yě zài diànyǐngyuàn kàn diànyǐng.",
+              "Wǒ bàba yě zài yīyuàn gōngzuò.",
               "Wǒ bàba yě zài fángjiān wài."
             ],
-            "correct_index": 0
+            "correct_index": 2
           },
           "correct_answer": "我爸爸也在医院工作。",
           "kp": "英/俄译中选句",
@@ -4697,18 +4697,18 @@
             "prompt_en": "The doctor is very busy.",
             "prompt_ru": "Врач очень занят.",
             "options": [
-              "医生很忙。",
               "医生很漂亮。",
               "医生很高兴。",
-              "医生很小。"
+              "医生很小。",
+              "医生很忙。"
             ],
             "options_pinyin": [
-              "Yīshēng hěn máng.",
               "Yīshēng hěn piàoliang.",
               "Yīshēng hěn gāoxìng.",
-              "Yīshēng hěn xiǎo."
+              "Yīshēng hěn xiǎo.",
+              "Yīshēng hěn máng."
             ],
-            "correct_index": 0
+            "correct_index": 3
           },
           "correct_answer": "医生很忙。",
           "kp": "英/俄译中选句",
@@ -4725,18 +4725,18 @@
             "prompt_en": "Let us meet in front of the school bookstore.",
             "prompt_ru": "Давайте встретимся перед школьным книжным магазином.",
             "options": [
-              "我们在学校书店前见吧。",
               "我们在房间外看猫吧。",
+              "我们在学校书店前见吧。",
               "我们在医院里吃饭吧。",
               "我们在电影院下班吧。"
             ],
             "options_pinyin": [
-              "Wǒmen zài xuéxiào shūdiàn qián jiàn ba.",
               "Wǒmen zài fángjiān wài kàn māo ba.",
+              "Wǒmen zài xuéxiào shūdiàn qián jiàn ba.",
               "Wǒmen zài yīyuàn lǐ chī fàn ba.",
               "Wǒmen zài diànyǐngyuàn xiàbān ba."
             ],
-            "correct_index": 0
+            "correct_index": 1
           },
           "correct_answer": "我们在学校书店前见吧。",
           "kp": "英/俄译中选句",
@@ -4753,18 +4753,18 @@
             "prompt_en": "I did not see the cat.",
             "prompt_ru": "Я не увидел маленькую кошку.",
             "options": [
-              "我没看见小猫。",
               "我看见小猫了。",
               "我没有小猫。",
+              "我没看见小猫。",
               "我不想看小猫。"
             ],
             "options_pinyin": [
-              "Wǒ méi kànjiàn xiǎo māo.",
               "Wǒ kànjiàn xiǎo māo le.",
               "Wǒ méiyǒu xiǎo māo.",
+              "Wǒ méi kànjiàn xiǎo māo.",
               "Wǒ bù xiǎng kàn xiǎo māo."
             ],
-            "correct_index": 0
+            "correct_index": 2
           },
           "correct_answer": "我没看见小猫。",
           "kp": "英/俄译中选句",
@@ -4781,18 +4781,18 @@
             "prompt_en": "This room is big and also very beautiful.",
             "prompt_ru": "Эта комната большая и красивая.",
             "options": [
-              "这个房间很大，也很漂亮。",
               "这个房间很小，也很忙。",
+              "这个房间很大，也很漂亮。",
               "这个医院很大，也很忙。",
               "这个书店很漂亮，也很多。"
             ],
             "options_pinyin": [
-              "Zhège fángjiān hěn dà, yě hěn piàoliang.",
               "Zhège fángjiān hěn xiǎo, yě hěn máng.",
+              "Zhège fángjiān hěn dà, yě hěn piàoliang.",
               "Zhège yīyuàn hěn dà, yě hěn máng.",
               "Zhège shūdiàn hěn piàoliang, yě hěn duō."
             ],
-            "correct_index": 0
+            "correct_index": 1
           },
           "correct_answer": "这个房间很大，也很漂亮。",
           "kp": "英/俄译中选句",

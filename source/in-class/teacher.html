@@ -1553,7 +1553,7 @@ ap.init();
     var opts=q.data.options.slice(),pys0=Array.isArray(q.data.options_pinyin)?q.data.options_pinyin.slice():[],answer=q.correct_answer,oldIndex=typeof q.data.correct_index==='number'?q.data.correct_index:opts.indexOf(answer),rows=opts.map(function(x,i){return{v:x,p:pys0[i]||'',i:i}});
     sh(rows);q.data.options=rows.map(function(x){return x.v});q.data.options_pinyin=rows.map(function(x){return x.p});q.data.correct_index=answer!=null?q.data.options.indexOf(answer):rows.findIndex(function(x){return x.i===oldIndex});q.data._shuffled=true;
   }
-  ['v4_complete_sentence','v5_vocab_fill','w1_component_char','r2_passage_choice'].forEach(function(name){(Q[name]||[]).forEach(shuffleOptions)});
+  ['v4_complete_sentence','v5_vocab_fill','w1_component_char','r2_passage_choice','r3_translation_choice','translation_choice','translationSentenceChoice'].forEach(function(name){(Q[name]||[]).forEach(shuffleOptions)});
   var oldW1=ap._w1;
   ap._w1=function(){
     var qs=Q.w1_component_char||[];
