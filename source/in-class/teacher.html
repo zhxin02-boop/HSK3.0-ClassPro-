@@ -1684,6 +1684,85 @@ ap.init();
   ap._r=function(){oldRenderGroupedQa.call(this);var q=this._cq2&&this._cq2();if(this.st==='ttq'&&isGroupedTextQa(q)){var oldKey=document.querySelector('.practice-key-answer');if(oldKey)oldKey.remove()}};
 })();
 </script>
+<script>
+/* 2026-07-30: consolidate Hanzi practice and add translation-choice shell. */
+(function(){
+  if(typeof ap==='undefined')return;
+  function shuffle(a){var out=a.slice();for(var i=out.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=out[i];out[i]=out[j];out[j]=t}return out}
+  function questions(){return Q.r3_translation_choice||Q.translation_choice||Q.translationSentenceChoice||[]}
+  function vocabById(id){for(var i=0;i<V.length;i++)if(V[i].id===id)return V[i];return null}
+  function vocabByText(text){for(var i=0;i<V.length;i++)if((V[i].hanzi||V[i].word)===text)return V[i];return null}
+  function optionValues(ids,field,target){
+    var vals=[];
+    for(var i=0;i<ids.length;i++){var w=vocabById(ids[i]);if(!w)continue;var v=field==='hanzi'?(w.hanzi||w.word):field==='pinyin'?w.pinyin:(w.english||w.meaning_en||w.translation||w.hanzi||w.word);if(v&&vals.indexOf(v)<0)vals.push(v)}
+    for(var j=0;j<V.length&&vals.length<4;j++){var x=V[j],vv=field==='hanzi'?(x.hanzi||x.word):field==='pinyin'?x.pinyin:(x.english||x.meaning_en||x.translation||x.hanzi||x.word);if(vv&&vals.indexOf(vv)<0)vals.push(vv)}
+    vals=vals.filter(function(v){return v!==target}).slice(0,3);
+    return shuffle([target].concat(vals));
+  }
+  function coreRounds(){
+    return [
+      {id:'hanzi_to_pinyin',title:'看汉字选拼音',titleEn:'Character to pinyin'},
+      {id:'hanzi_to_meaning',title:'看汉字选意思',titleEn:'Character to meaning'},
+      {id:'meaning_to_hanzi',title:'字形辨认',titleEn:'Recognize the character'}
+    ];
+  }
+  function buildHanziCore(index){
+    var rounds=coreRounds(),groups=HR.groups||[],ri=Math.floor(index/rounds.length),rj=index%rounds.length,g=groups[ri],round=rounds[rj];
+    if(!g||!round)return null;
+    var ids=g.vocabularyIds||[],items=[];
+    for(var i=0;i<ids.length;i++){
+      var w=vocabById(ids[i]);if(!w)continue;
+      var word=w.hanzi||w.word||'',meaning=w.english||w.meaning_en||w.translation||word,pinyin=w.pinyin||'',stimulus=word,field='pinyin',answer=pinyin;
+      if(round.id==='hanzi_to_meaning'){field='meaning';answer=meaning;stimulus=word}
+      if(round.id==='meaning_to_hanzi'){field='hanzi';answer=word;stimulus=meaning}
+      var opts=optionValues(ids,field,answer);
+      items.push({id:'hrec_'+g.id+'_'+round.id+'_'+i,word:word,stimulus:stimulus,pinyin:round.id==='hanzi_to_pinyin'?pinyin:'',image:'',options:opts,option_images:[],answer:answer,correct_index:opts.indexOf(answer),meaning:meaning});
+    }
+    return {id:'hrec_'+g.id+'_'+round.id,prompt_cn:round.title+'（'+g.title+'）',prompt_en:round.titleEn+' — '+g.title,data:{groupTitle:g.title,roundId:round.id,roundTitle:round.title,items:items},correct_answer:items.map(function(x){return x.answer}).join('、'),sourceType:'teaching_extension'};
+  }
+  if(typeof HR!=='undefined'&&HR.enabled){
+    HR.rounds=coreRounds();
+    window.buildHanziRecognitionQuestion=buildHanziCore;
+    ap.hrecNext=function(){var total=(HR.groups||[]).length*(HR.rounds||[]).length;if(this.qp!=='published'||(this.hri||0)>=total-1)return;this.hri=(this.hri||0)+1;this.qp='idle';this.qsub={};this.lastQuestionPayload=null;this.currentQuestionId=null;this._r();this.qws()};
+  }
+  var oldSnav=ap._snav;
+  ap._snav=function(){
+    var h=oldSnav.call(this);
+    if(this.mt==='practice'){
+      h=h.replace('汉字认读<br><small>Reading Cycle</small>','汉字练习<br><small>Hanzi Practice</small>');
+      var qs=questions();
+      if(qs.length&&h.indexOf("ap.st='trc'")<0){
+        h=h.replace('</span></div>','<button class="sub-btn'+(this.st==='trc'?' active':'')+'" onclick="ap.st=\'trc\';ap.trci=0;ap.trca=false;ap.trcp=-1;ap.qp=\'idle\';ap._r()">译文选句<br><small>Translation</small></button></span></div>');
+      }
+    }
+    return h;
+  };
+  function renderHanziCore(state){
+    var q=window.buildHanziRecognitionQuestion&&window.buildHanziRecognitionQuestion(state.hri||0),d=q&&q.data||{},items=d.items||[],total=(HR.groups||[]).length*(HR.rounds||[]).length,kf='KaiTi,STKaiti,&quot;Kaiti SC&quot;,&quot;楷体&quot;,serif';
+    if(!q)return'<div class="panel"><p>暂无题目</p></div>';
+    var h='<div class="panel" style="max-width:1080px;width:100%;text-align:left"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap"><div><h2 style="margin:0;color:var(--blue)">汉字练习 <span style="font-size:14px;color:#8b96a3">Hanzi Practice</span></h2><div style="margin-top:6px;color:#74806d">三类核心练习：拼音、意思、字形辨认。一次完成一组词。</div></div><div style="font-weight:900;color:#3f7f32">'+((state.hri||0)+1)+' / '+total+'</div></div><div style="margin:18px 0;padding:12px 16px;border-radius:14px;background:#edf6d9;color:#3f7f32;font-weight:900">'+es(d.groupTitle||'')+' · '+es(d.roundTitle||'')+'</div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">';
+    for(var i=0;i<items.length;i++){var x=items[i],isHanzi=/[\u4e00-\u9fff]/.test(x.stimulus||''),visual=isHanzi?'<div style="font-family:'+kf+';font-size:34px;font-weight:900;color:var(--text);line-height:1.35">'+es(x.stimulus||'')+'</div>':'<div style="font-size:18px;color:#74806d;font-weight:800;text-align:center;line-height:1.45">'+es(x.stimulus||'')+'</div>';h+='<div style="padding:14px;border:1px solid var(--line);border-radius:16px;background:#fff"><div style="min-height:126px;display:flex;align-items:center;justify-content:center">'+visual+'</div><div style="font-family:'+kf+';font-weight:900;font-size:28px;color:var(--text);margin-top:8px">'+es(x.word)+'</div><div data-pinyin="1" style="font-size:13px;color:#8b96a3;margin-top:4px">'+es(x.pinyin||'')+'</div></div>'}
+    return h+'</div></div>';
+  }
+  var oldCnt=ap._cnt;
+  ap._cnt=function(){
+    if(this.mt==='practice'&&this.st==='hrec'&&typeof HR!=='undefined'&&HR.enabled)return renderHanziCore(this);
+    if(this.mt==='practice'&&this.st==='trc'){
+      var qs=questions(),i=this.trci||0,c=qs[i];if(!c||!c.data)return'<div class="panel"><p>暂无题目</p></div>';
+      var d=c.data,body='<div style="text-align:center;background:#f8faf3;border:1px solid #dfeac8;border-radius:16px;padding:24px;margin:12px 0"><div style="font-size:16px;color:#74806d;margin-bottom:8px">'+es(d.prompt_ru||d.russian||'')+'</div><div style="font-size:22px;font-weight:900;color:var(--text);line-height:1.45">'+es(d.prompt_en||d.english||c.prompt_en||'')+'</div><div style="font-size:13px;color:#888;margin-top:8px">选择最合适的中文句子。Choose the best Chinese sentence.</div></div>';
+      var nav=this._navBtn('ap.trci=Math.max(0,ap.trci-1);ap.trca=false;ap.trcp=-1;ap.qp=\'idle\';ap._r()','ap.trci=Math.min('+(qs.length-1)+',ap.trci+1);ap.trca=false;ap.trcp=-1;ap.qp=\'idle\';ap._r()',i,qs.length,'&larr; 上一题','下一题 &rarr;');
+      return this._mc('译文选句 / Translation Choice',c,d.options||[],d.correct_index,this.trcp,this.trca,'ap.trcp=',body,nav);
+    }
+    return oldCnt.call(this);
+  };
+  var oldCq=ap._cq;
+  ap._cq=function(){if(this.st==='trc')return questions()[this.trci||0]||null;if(this.st==='hrec'&&typeof HR!=='undefined'&&HR.enabled)return window.buildHanziRecognitionQuestion(this.hri||0);return oldCq.call(this)};
+  var oldCq2=ap._cq2;
+  ap._cq2=function(){if(this.st==='trc'||this.st==='hrec')return this._cq();return oldCq2.call(this)};
+  var oldQw=ap._qw;
+  ap._qw=function(){if(this.st==='trc'||this.st==='hrec'){var s=this.st;this.st='v4';var h=oldQw.call(this);this.st=s;return h}return oldQw.call(this)};
+})();
+</script>
 <style>
 body.classpro-hide-pinyin rt,
 body.classpro-hide-pinyin .py,
