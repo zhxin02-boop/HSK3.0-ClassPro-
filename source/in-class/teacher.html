@@ -1360,15 +1360,17 @@ ap.init();
 .unified-answer-controls .main-content{padding-left:330px!important;padding-right:330px!important;justify-content:center}
 .unified-answer-controls .live-panel{position:fixed;right:20px;top:145px;width:280px;min-width:280px;height:calc(100vh - 175px);z-index:60}
 .practice-key-answer{margin:14px auto 0;max-width:760px;padding:12px 16px;border:2px solid #86efac;border-radius:12px;background:#dcfce7;color:#166534;text-align:center;font-size:17px;font-weight:900}
+.question-accuracy-badge{position:absolute;right:16px;top:14px;z-index:5;display:flex;align-items:center;gap:8px;padding:8px 11px;border-radius:999px;background:#f8faf3;border:1px solid #dfeac8;box-shadow:0 8px 18px rgba(65,96,42,.08);font-size:12px;color:#64745d;font-weight:900}
+.question-accuracy-badge b{font-size:18px;color:#3f7f32}.question-accuracy-badge.low b{color:#b91c1c}.question-accuracy-badge.mid b{color:#b45309}
 </style>
 <script>
 (function(){
-  var modes=['v1','v4','v5','v7','v8','g1','w1','hrec','ttq'];
+  var modes=['v1','v4','v5','v7','v8','g1','w1','hrec','ttq','trc'];
   function active(s){return modes.indexOf(s)>=0}
-  function countFor(s){if(s==='hrec')return(HR.enabled?((HR.groups||[]).length*(HR.rounds||[]).length):0);if(s==='v1')return(Q.v1_image_guess||[]).length;if(s==='v4')return(Q.v4_complete_sentence||[]).length;if(s==='v5')return(Q.v5_vocab_fill||[]).length;if(s==='v7')return(Q.v7_word_match||[]).length;if(s==='v8')return(Q.v8_memory_match||[]).length;if(s==='g1')return(Q.g1_ordering||[]).length;if(s==='w1')return(Q.w1_component_char||[]).length;if(s==='ttq')return(Q.r2_passage_choice||Q.tt_text_true_false||[]).length;return 0}
-  function indexFor(t){if(t.st==='hrec')return t.hri;if(t.st==='v1')return t.v1i;if(t.st==='v4')return t.v4i;if(t.st==='v5')return t.v5i;if(t.st==='v7')return t.v7i;if(t.st==='v8')return t.v8i;if(t.st==='g1')return t.g1i;if(t.st==='w1')return t.w1i;return t.ttqi}
-  function advance(t){if(t.st==='hrec'){t.hri++;return}if(t.st==='v7'){var item=(Q.v7_word_match||[])[t.v7i],d=item&&item.data||{},ss=d.sentences||[];if(!d.pairs&&t.v7si<ss.length-1){t.v7si++;return}t.v7i++;t.v7si=0;t.v7L=-1;t.v7R=-1;t.v7m={};return}if(t.st==='v1')t.v1i++;if(t.st==='v4')t.v4i++;if(t.st==='v5')t.v5i++;if(t.st==='v8')t.v8i++;if(t.st==='g1')t.g1i++;if(t.st==='w1')t.w1i++;if(t.st==='ttq')t.ttqi++}
-  function resetAnswer(t){t.v1a=false;t.v1p=-1;t.v4a=false;t.v4p=-1;t.v5a=false;t.v5p=-1;t.v7a=false;t.v7p=-1;t.v7L=-1;t.v7R=-1;t.v7m={};t.v8L=-1;t.v8R=-1;t.v8m={};t.g1a=[];t.g1s=[];t.g1sa=false;t.w1a=false;t.w1p=-1;t.ttqa=false;t.ttqp=-1}
+  function countFor(s){if(s==='hrec')return(HR.enabled?((HR.groups||[]).length*(HR.rounds||[]).length):0);if(s==='v1')return(Q.v1_image_guess||[]).length;if(s==='v4')return(Q.v4_complete_sentence||[]).length;if(s==='v5')return(Q.v5_vocab_fill||[]).length;if(s==='v7')return(Q.v7_word_match||[]).length;if(s==='v8')return(Q.v8_memory_match||[]).length;if(s==='g1')return(Q.g1_ordering||[]).length;if(s==='w1')return(Q.w1_component_char||[]).length;if(s==='trc')return(Q.r3_translation_choice||Q.translation_choice||Q.translationSentenceChoice||[]).length;if(s==='ttq')return(Q.r2_passage_choice||Q.tt_text_true_false||[]).length;return 0}
+  function indexFor(t){if(t.st==='hrec')return t.hri;if(t.st==='v1')return t.v1i;if(t.st==='v4')return t.v4i;if(t.st==='v5')return t.v5i;if(t.st==='v7')return t.v7i;if(t.st==='v8')return t.v8i;if(t.st==='g1')return t.g1i;if(t.st==='w1')return t.w1i;if(t.st==='trc')return t.trci||0;return t.ttqi}
+  function advance(t){if(t.st==='hrec'){t.hri++;return}if(t.st==='v7'){var item=(Q.v7_word_match||[])[t.v7i],d=item&&item.data||{},ss=d.sentences||[];if(!d.pairs&&t.v7si<ss.length-1){t.v7si++;return}t.v7i++;t.v7si=0;t.v7L=-1;t.v7R=-1;t.v7m={};return}if(t.st==='v1')t.v1i++;if(t.st==='v4')t.v4i++;if(t.st==='v5')t.v5i++;if(t.st==='v8')t.v8i++;if(t.st==='g1')t.g1i++;if(t.st==='w1')t.w1i++;if(t.st==='trc')t.trci=(t.trci||0)+1;if(t.st==='ttq')t.ttqi++}
+  function resetAnswer(t){t.v1a=false;t.v1p=-1;t.v4a=false;t.v4p=-1;t.v5a=false;t.v5p=-1;t.v7a=false;t.v7p=-1;t.v7L=-1;t.v7R=-1;t.v7m={};t.v8L=-1;t.v8R=-1;t.v8m={};t.g1a=[];t.g1s=[];t.g1sa=false;t.w1a=false;t.w1p=-1;t.ttqa=false;t.ttqp=-1;t.trca=false;t.trcp=-1}
   function keyFor(t){var q=t._cq2&&t._cq2(),d=q&&q.data||{};if(t.st==='hrec')return(d.items||[]).map(function(x){return x.answer}).join('、');if((t.st==='v7'||t.st==='v8')&&d.pairs)return(d.pairs||[]).map(function(p){return p.left+'：'+p.right}).join('；');if(t.st==='ttq')return q&&((q.correct_answer!=null?q.correct_answer:'')||((d.answer===true||d.answer===false)?(d.answer?'对':'不对'):''))||'';if(typeof d.correct_index==='number'&&d.options)return d.options[d.correct_index]||'';return q&&q.correct_answer||''}
   function rail(state){var total=countFor(state.st),idx=indexFor(state),h='<div class="practice-rail">';if(state.qp==='idle')h+='<button class="practice-rail-action" onclick="ap.qws()">答</button>';else if(state.qp==='answering')h+='<button class="practice-rail-action announce" onclick="ap.qwe()">Key</button>';else if(idx<total-1)h+='<button class="practice-rail-action next" onclick="ap.qwr()">下一题</button>';else h+='<div class="practice-rail-done">本组完成</div>';return h+'</div>'}
   function status(state){var h='<div class="practice-status-panel"><div class="practice-status-head">答题完成情况</div><div class="practice-status-body">';(state.as||[]).forEach(function(n){var done=Object.keys(state.qsub||{}).some(function(k){return state._rn(k)===n});h+='<div class="practice-student '+(done?'done':'')+'"><span>'+(done?'✓':'·')+'</span><b>'+es(n)+'</b><small>'+(done?'已答':'未答')+'</small></div>'});return h+'</div></div>'}
@@ -1377,6 +1379,40 @@ ap.init();
   ap.qwe=function(){if((this.mt==='practice'&&active(this.st))||this.st==='ttq'){var d=this._cq2&&this._cq2(),data=d&&d.data||{},map={v1:'v1',v4:'v4',v5:'v5',v7:'v7',w1:'w1',ttq:'ttq'},key=map[this.st];if(key&&typeof data.correct_index==='number'){this[key+'p']=data.correct_index;this[key+'a']=true}oldEnd.call(this);if(this.lastQuestionPayload){this.lastQuestionPayload.phase='published';this.lastQuestionPayload.answerKey=keyFor(this);if(this.mq&&this.cs==='connected')this.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(this.lastQuestionPayload))}this._r();return}oldEnd.call(this)};
   ap.qwr=function(){if((this.mt==='practice'&&active(this.st))||this.st==='ttq'){if(this.qp==='published'&&indexFor(this)<countFor(this)-1){advance(this);resetAnswer(this);this.qp='idle';this.qsub={};this.lastQuestionPayload=null;this.currentQuestionId=null;this.qws();return}oldNext.call(this);return}oldNext.call(this)};
   ap._r=function(){oldRender.call(this);var on=(this.mt==='practice'&&active(this.st))||this.st==='ttq';document.body.classList.toggle('unified-answer-controls',on);if(!on)return;var side=document.querySelector('.cp-sidebar'),oldRail=document.querySelector('.practice-rail'),oldStatus=document.querySelector('.practice-status-panel');if(oldRail)oldRail.remove();if(oldStatus)oldStatus.remove();if(side){var x=document.createElement('div');x.innerHTML=rail(this);side.insertBefore(x.firstChild,side.querySelector('.sb-spacer')||null)}var y=document.createElement('div');y.innerHTML=status(this);if(y.firstChild)document.body.appendChild(y.firstChild);var panel=document.querySelector('.panel-area>.panel'),oldKey=document.querySelector('.practice-key-answer');if(oldKey)oldKey.remove();if(this.qp==='published'&&panel){var b=document.createElement('div');b.className='practice-key-answer';b.textContent='答案：'+keyFor(this);panel.appendChild(b)}};
+})();
+</script>
+<script>
+/* Current-question accuracy badge: compact KPI in the question panel. */
+(function(){
+  if(typeof ap==='undefined')return;
+  var objectiveModes=['v1','v4','v5','v7','v8','g1','w1','hrec','ttq','trc'];
+  function isOn(state){return state&&((state.mt==='practice'&&objectiveModes.indexOf(state.st)>=0)||state.st==='ttq')}
+  function qid(state){var q=state._cq2&&state._cq2();return state.currentQuestionId||(state.lastQuestionPayload&&state.lastQuestionPayload.question&&state.lastQuestionPayload.question.id)||(q&&q.id)||''}
+  function latestRows(state,id){
+    var byStudent={};
+    (state.records||[]).forEach(function(r){
+      if(!r||String(r.questionId||'')!==String(id||''))return;
+      if(r.sessionId&&state.sessionId&&r.sessionId!==state.sessionId)return;
+      byStudent[state._rn(r.studentName||r.name||'unknown')]=r;
+    });
+    return Object.keys(byStudent).map(function(k){return byStudent[k]});
+  }
+  function stats(state){
+    var id=qid(state),rows=id?latestRows(state,id):[],total=rows.length,correct=rows.filter(function(r){return String(r.result||r.autoResult||'').toLowerCase()==='correct'}).length;
+    return{total:total,correct:correct,rate:total?Math.round(correct/total*100):0};
+  }
+  var oldRender=ap._r;
+  ap._r=function(){
+    oldRender.call(this);
+    var old=document.querySelector('.question-accuracy-badge');if(old)old.remove();
+    if(!isOn(this))return;
+    var panel=document.querySelector('.panel-area>.panel');if(!panel)return;
+    if(getComputedStyle(panel).position==='static')panel.style.position='relative';
+    var s=stats(this),cls=s.total?(s.rate>=80?'':' '+(s.rate>=60?'mid':'low')):'';
+    var badge=document.createElement('div');badge.className='question-accuracy-badge'+cls;
+    badge.innerHTML=s.total?'<span>正确率</span><b>'+s.rate+'%</b><span>'+s.correct+'/'+s.total+'</span>':'<span>正确率</span><b>--</b><span>等待作答</span>';
+    panel.appendChild(badge);
+  };
 })();
 </script>
 <script>
