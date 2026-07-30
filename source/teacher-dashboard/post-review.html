@@ -392,7 +392,15 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
     var q=new URLSearchParams(location.search||"");
     if(!q.get("scope")){q.set("scope",LESSON_SCOPE||"all");history.replaceState({},'',location.pathname+'?'+q.toString())}
     var local=location.hostname==='localhost'||location.hostname==='127.0.0.1',dataUrl=local?"/api/reviews?source=local":GAS+"?action=get_all";
-    fetch(dataUrl).then(function(r){return r.json()}).then(function(d){
+    fetch(dataUrl).then(function(r){return r.text()}).then(function(txt){
+      if(/^\s*</.test(txt)){
+        setStatusText("当前 8787 静态服务不支持批改台 API。");
+        appNode().innerHTML='<div class="empty">批改台需要本地 API 服务才能读取测试数据。请打开 <code>http://localhost:18765/source/teacher-dashboard/post-review.html?lesson='+esc(LESSON)+'&room='+esc(RM)+'&scope=all</code>，或在线上页面读取 GAS 数据。</div>';
+        return null;
+      }
+      return JSON.parse(txt);
+    }).then(function(d){
+      if(!d)return;
       var rows=flattenPayload(d);
       records=latestHomeworkRows(rows.filter(function(x){var lesson=lessonOf(x),key=stageKey(x);return lessonInScope(lesson)&&(key==="pre"||key==="post"||needsReview(x))}));
       var preCount=records.filter(function(x){return stageKey(x)==="pre"}).length,postCount=records.filter(function(x){return stageKey(x)==="post"}).length;
