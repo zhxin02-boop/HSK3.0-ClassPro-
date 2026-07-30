@@ -1852,6 +1852,79 @@ body.classpro-hide-pinyin [data-pinyin="1"]{display:none!important}
   };
 })();
 </script>
+<style>
+.cloud-wall-active .live-panel{display:none!important}
+.cloud-wall-panel{margin:16px auto 0;max-width:980px;width:100%;padding:20px;border:1px solid #dfeac8;border-radius:18px;background:#fff;box-shadow:0 14px 34px rgba(86,115,55,.12)}
+.cloud-wall-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:14px;color:#3f7f32}
+.cloud-wall-head h3{margin:0;font-size:24px;line-height:1.2}.cloud-wall-head small{display:block;color:#74806d;font-size:12px;margin-top:4px}
+.cloud-wall-count{padding:7px 12px;border-radius:999px;background:#edf6d9;color:#3f7f32;font-weight:900;font-size:13px;white-space:nowrap}
+.cloud-wall-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.cloud-wall-card{min-height:96px;padding:14px;border:1px solid #e2ebd1;border-radius:14px;background:#fbfcf7}
+.cloud-wall-name{font-weight:900;color:#2563eb;font-size:13px;margin-bottom:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cloud-wall-answer{font-size:20px;line-height:1.55;color:#203421;font-family:KaiTi,STKaiti,"Kaiti SC","Microsoft YaHei",serif;font-weight:900;white-space:pre-wrap;overflow-wrap:anywhere}
+.cloud-wall-empty{padding:24px;border:1px dashed #dfeac8;border-radius:14px;color:#74806d;text-align:center;font-weight:800}
+</style>
+<script>
+/* Cloud wall: show current-question open responses in the center panel. */
+(function(){
+  if(typeof ap==='undefined')return;
+  var openModes=['subjective','open','open_response','text_output','output','oral','cloud','writing'];
+  function normMode(v){return String(v||'').toLowerCase().replace(/-/g,'_')}
+  function isOpenMode(v){return openModes.indexOf(normMode(v))>=0}
+  function currentQuestion(state){
+    return state&&((state.lastQuestionPayload&&state.lastQuestionPayload.question)||(state._cq2&&state._cq2())||null);
+  }
+  function currentQuestionId(state){
+    var q=currentQuestion(state);
+    return String(state.currentQuestionId||(state.lastQuestionPayload&&state.lastQuestionPayload.question&&state.lastQuestionPayload.question.id)||(q&&q.id)||'');
+  }
+  function isOpenQuestion(q,state){
+    if(!q)return isOpenMode(state&&state.st);
+    return isOpenMode(q.mode||q.type||q.kind||state.st)||q.openEnded===true||q.needsTeacherReview===true||q.cloudWall===true;
+  }
+  function latestOpenRows(state,id){
+    var latest={};
+    (state.records||[]).forEach(function(r){
+      if(!r||String(r.questionId||'')!==id)return;
+      if(r.sessionId&&state.sessionId&&r.sessionId!==state.sessionId)return;
+      var result=String(r.result||r.autoResult||'').toLowerCase();
+      var answer=String(r.answer||r.text||'').trim();
+      if(!answer)return;
+      if(!isOpenMode(r.mode)&&result!=='review'&&!r.needsReview)return;
+      var name=state._rn?state._rn(r.studentName||r.name||'unknown'):String(r.studentName||r.name||'unknown');
+      latest[name]=r;
+    });
+    return Object.keys(latest).map(function(k){return latest[k]}).sort(function(a,b){
+      return String(a.studentName||a.name||'').localeCompare(String(b.studentName||b.name||''));
+    });
+  }
+  function renderCloudWall(state,q,rows){
+    var title=(q&&q.prompt_cn)||'主观回答';
+    var h='<div class="cloud-wall-panel"><div class="cloud-wall-head"><div><h3>云墙 / Cloud Wall</h3><small>当前题：'+es(title)+'</small></div><div class="cloud-wall-count">'+rows.length+' 份回答</div></div>';
+    if(!rows.length)return h+'<div class="cloud-wall-empty">等待学生提交当前题回答...</div></div>';
+    h+='<div class="cloud-wall-grid">';
+    rows.forEach(function(r){
+      h+='<div class="cloud-wall-card"><div class="cloud-wall-name">'+es(r.studentName||r.name||'Student')+'</div><div class="cloud-wall-answer">'+es(r.answer||r.text||'')+'</div></div>';
+    });
+    return h+'</div></div>';
+  }
+  var oldRender=ap._r;
+  ap._r=function(){
+    oldRender.call(this);
+    var old=document.querySelector('.cloud-wall-panel');if(old)old.remove();
+    document.body.classList.remove('cloud-wall-active');
+    var q=currentQuestion(this),id=currentQuestionId(this);
+    if(!id)return;
+    var rows=latestOpenRows(this,id),shouldShow=isOpenQuestion(q,this)||rows.length>0;
+    if(!shouldShow)return;
+    var panel=document.querySelector('.panel-area>.panel')||document.querySelector('.panel-area');
+    if(!panel)return;
+    var box=document.createElement('div');box.innerHTML=renderCloudWall(this,q,rows);
+    panel.parentNode.insertBefore(box.firstChild,panel.nextSibling);
+    document.body.classList.add('cloud-wall-active');
+  };
+})();
+</script>
 </body>
 </html>
 

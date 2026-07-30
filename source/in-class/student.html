@@ -320,5 +320,53 @@ client.on("close",function(){setStatus("disconnected")});
   };
 })();
 </script>
+<style>
+.open-answer-box{display:flex;flex-direction:column;gap:12px}
+.open-answer-textarea{width:100%;min-height:150px;padding:14px 16px;border:1px solid #d8e4bf;border-radius:16px;background:#fff;color:#203421;font-size:20px;line-height:1.55;font-family:KaiTi,STKaiti,"Kaiti SC","Microsoft YaHei",serif;font-weight:900;resize:vertical}
+.open-answer-textarea:focus{outline:3px solid rgba(110,167,45,.18);border-color:#8fc155}
+.open-answer-hint{padding:14px 16px;border-radius:16px;background:#f8faf3;border:1px solid #dfeac8;color:#74806d;font-size:14px;line-height:1.55}
+</style>
+<script>
+/* Generic open-response renderer for future cloud-wall questions. */
+(function(){
+  var openModes=['subjective','open','open_response','text_output','output','oral','cloud','writing'];
+  function normMode(v){return String(v||'').toLowerCase().replace(/-/g,'_')}
+  function isOpenCurrent(){
+    if(!current||!current.question)return false;
+    var q=current.question;
+    return openModes.indexOf(normMode(current.mode||q.mode||q.type||q.kind))>=0||q.openEnded===true||q.needsTeacherReview===true||q.cloudWall===true;
+  }
+  function textValue(){
+    var el=document.getElementById('openAnswerText');
+    return el?String(el.value||'').trim():'';
+  }
+  window.submitOpenAnswer=function(){
+    if(!current||!current.question)return;
+    var ans=textValue();
+    if(!ans)return;
+    if(!nameReady)confirmName();
+    var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:ans,text:ans,questionId:current.question.id,mode:current.mode||'open_response',autoResult:'review',result:'review',needsReview:true,submittedAt:new Date().toISOString()};
+    client.publish('classpro/room/'+RM+'/answers',JSON.stringify(payload));
+    document.getElementById('app').innerHTML='<div class="ok">已提交，老师会在云墙中查看你的回答。</div>';
+  };
+  var oldRender=render;
+  render=function(){
+    if(!isOpenCurrent()){oldRender();return}
+    var q=current.question||{},d=qdata(),published=current.phase==='published';
+    var h='<div class="prompt">'+es(q.prompt_cn||d.prompt_cn||'请回答问题')+(q.prompt_en||d.prompt_en?'<br><span class="english">'+es(q.prompt_en||d.prompt_en)+'</span>':'')+'</div>';
+    if(d.context||d.context_cn||d.sentence||d.passage){
+      h+='<div class="hint" style="text-align:left"><div class="hanzi" style="font-size:22px;line-height:1.65;text-align:left">'+es(d.context||d.context_cn||d.sentence||d.passage)+'</div>';
+      if(d.pinyin||d.context_pinyin||d.sentence_pinyin)h+='<div class="pinyin" style="text-align:left;margin-top:8px">'+es(d.pinyin||d.context_pinyin||d.sentence_pinyin)+'</div>';
+      h+='</div>';
+    }
+    h+='<div class="open-answer-box"><div class="open-answer-hint">'+es(d.instructions||q.instructions||'请用中文写下你的回答。')+'</div>';
+    h+='<textarea id="openAnswerText" class="open-answer-textarea" placeholder="在这里输入中文回答"></textarea>';
+    h+='<button style="width:100%" onclick="submitOpenAnswer()" '+(published?'disabled':'')+'>提交到云墙 Submit</button></div>';
+    document.getElementById('app').innerHTML=h;
+    if(published)document.querySelectorAll('#app button,#app textarea').forEach(function(el){el.disabled=true;el.style.pointerEvents='none';el.style.opacity='.72'});
+    applyPinyinVisibility();
+  };
+})();
+</script>
 </body>
 </html>
