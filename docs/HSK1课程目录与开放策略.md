@@ -22,7 +22,7 @@ HSK1 共 15 课，课程编号统一使用：`HSK1-L01` 至 `HSK1-L15`。
 | HSK1-L06 | 你的手机号是多少？ | What’s your cell phone number? | 035 | 已开放 |
 | HSK1-L07 | 我晚上六点半下班 | I’ll finish work at 6:30 in the evening | 045 | 准备中 |
 | HSK1-L08 | 我爸爸也在医院工作 | My father also works at a hospital | 054 | 准备中 |
-| HSK1-L09 | 我明天上午在学校学习 | I’ll be studying at school tomorrow morning | 061 | 暂未开发 |
+| HSK1-L09 | 我明天上午在学校学习 | I’ll be studying at school tomorrow morning | 061 | 数据初稿已生成，本地待人工审核 |
 | HSK1-L10 | 这儿的苹果真便宜！ | The apples here are really affordable! | 070 | 暂未开发 |
 | HSK1-L11 | 我读大学呢 | I’m studying at a university | 078 | 暂未开发 |
 | HSK1-L12 | 昨天下雪了 | It snowed yesterday | 086 | 暂未开发 |

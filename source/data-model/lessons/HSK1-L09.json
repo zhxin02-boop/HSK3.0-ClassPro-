@@ -1,0 +1,4662 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "level": "HSK1",
+    "lessonId": "L09",
+    "lessonKey": "HSK1-L09",
+    "title": "我明天上午在学校学习",
+    "titleEn": "I'll be studying at school tomorrow morning",
+    "topic": "存现句、时间和处所状语顺序、序数“第”",
+    "topicEn": "Existential sentences, time-location order, and ordinal 第",
+    "sourceTextPolicy": "保留教材原句；新增内容标记为教学扩展",
+    "dataQualityNotes": [
+      "根据 textbook data/L9.txt 生成；L09 课文原句完整保留。"
+    ]
+  },
+  "features": {
+    "pinyin": true,
+    "hanziWritingDemo": true,
+    "vocabExamples": true,
+    "competition": true,
+    "postClassHomework": true
+  },
+  "vocabulary": [
+    {
+      "id": "v_l09_01",
+      "hanzi": "前边",
+      "word": "前边",
+      "pinyin": "qiánbian",
+      "pos": "名词",
+      "english": "front",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_02",
+      "hanzi": "边",
+      "word": "边",
+      "pinyin": "bian / biān",
+      "pos": "后缀/名词",
+      "english": "locality suffix; side",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_03",
+      "hanzi": "家",
+      "word": "家",
+      "pinyin": "jiā",
+      "pos": "量词",
+      "english": "measure word for families or enterprises",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_04",
+      "hanzi": "那个",
+      "word": "那个",
+      "pinyin": "nàge",
+      "pos": "代词",
+      "english": "that",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_05",
+      "hanzi": "外边",
+      "word": "外边",
+      "pinyin": "wàibian",
+      "pos": "名词",
+      "english": "outside",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_06",
+      "hanzi": "椅子",
+      "word": "椅子",
+      "pinyin": "yǐzi",
+      "pos": "名词",
+      "english": "chair",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_07",
+      "hanzi": "上",
+      "word": "上",
+      "pinyin": "shang / shàng",
+      "pos": "名词",
+      "english": "on; above",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_08",
+      "hanzi": "本",
+      "word": "本",
+      "pinyin": "běn",
+      "pos": "量词",
+      "english": "measure word for books",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_09",
+      "hanzi": "书",
+      "word": "书",
+      "pinyin": "shū",
+      "pos": "名词",
+      "english": "book",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_10",
+      "hanzi": "那",
+      "word": "那",
+      "pinyin": "nà",
+      "pos": "代词",
+      "english": "that",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_11",
+      "hanzi": "第",
+      "word": "第",
+      "pinyin": "dì",
+      "pos": "前缀",
+      "english": "ordinal prefix",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_12",
+      "hanzi": "学习",
+      "word": "学习",
+      "pinyin": "xuéxí",
+      "pos": "动词",
+      "english": "study; learn",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_13",
+      "hanzi": "做",
+      "word": "做",
+      "pinyin": "zuò",
+      "pos": "动词",
+      "english": "do",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_14",
+      "hanzi": "白天",
+      "word": "白天",
+      "pinyin": "báitiān",
+      "pos": "名词",
+      "english": "daytime",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_15",
+      "hanzi": "读书",
+      "word": "读书",
+      "pinyin": "dúshū",
+      "pos": "动词",
+      "english": "read; study",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_16",
+      "hanzi": "和",
+      "word": "和",
+      "pinyin": "hé",
+      "pos": "介词",
+      "english": "with",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_17",
+      "hanzi": "朋友",
+      "word": "朋友",
+      "pinyin": "péngyou",
+      "pos": "名词",
+      "english": "friend",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_18",
+      "hanzi": "唱",
+      "word": "唱",
+      "pinyin": "chàng",
+      "pos": "动词",
+      "english": "sing",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_19",
+      "hanzi": "歌",
+      "word": "歌",
+      "pinyin": "gē",
+      "pos": "名词",
+      "english": "song",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_20",
+      "hanzi": "好听",
+      "word": "好听",
+      "pinyin": "hǎotīng",
+      "pos": "形容词",
+      "english": "pleasant to hear",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_21",
+      "hanzi": "电视",
+      "word": "电视",
+      "pinyin": "diànshì",
+      "pos": "名词",
+      "english": "television",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_22",
+      "hanzi": "狗",
+      "word": "狗",
+      "pinyin": "gǒu",
+      "pos": "名词",
+      "english": "dog",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    },
+    {
+      "id": "v_l09_23",
+      "hanzi": "玩",
+      "word": "玩",
+      "pinyin": "wán",
+      "pos": "动词",
+      "english": "play; have fun",
+      "sourceType": "textbook",
+      "tags": [
+        "L09"
+      ]
+    }
+  ],
+  "properNouns": [
+    {
+      "id": "pn_l09_01",
+      "hanzi": "李文",
+      "word": "李文",
+      "pinyin": "",
+      "pos": "专有名词",
+      "english": "proper noun",
+      "sourceType": "textbook"
+    },
+    {
+      "id": "pn_l09_02",
+      "hanzi": "白家月",
+      "word": "白家月",
+      "pinyin": "",
+      "pos": "专有名词",
+      "english": "proper noun",
+      "sourceType": "textbook"
+    },
+    {
+      "id": "pn_l09_03",
+      "hanzi": "陈天中",
+      "word": "陈天中",
+      "pinyin": "",
+      "pos": "专有名词",
+      "english": "proper noun",
+      "sourceType": "textbook"
+    },
+    {
+      "id": "pn_l09_04",
+      "hanzi": "王一雪",
+      "word": "王一雪",
+      "pinyin": "",
+      "pos": "专有名词",
+      "english": "proper noun",
+      "sourceType": "textbook"
+    },
+    {
+      "id": "pn_l09_05",
+      "hanzi": "杨同乐",
+      "word": "杨同乐",
+      "pinyin": "",
+      "pos": "专有名词",
+      "english": "proper noun",
+      "sourceType": "textbook"
+    },
+    {
+      "id": "pn_l09_06",
+      "hanzi": "中文",
+      "word": "中文",
+      "pinyin": "",
+      "pos": "专有名词",
+      "english": "proper noun",
+      "sourceType": "textbook"
+    },
+    {
+      "id": "pn_l09_07",
+      "hanzi": "电影院",
+      "word": "电影院",
+      "pinyin": "",
+      "pos": "专有名词",
+      "english": "proper noun",
+      "sourceType": "textbook"
+    },
+    {
+      "id": "pn_l09_08",
+      "hanzi": "学校",
+      "word": "学校",
+      "pinyin": "",
+      "pos": "专有名词",
+      "english": "proper noun",
+      "sourceType": "textbook"
+    }
+  ],
+  "vocabExtensions": {
+    "v_l09_01": {
+      "word": "前边",
+      "collocations": [
+        {
+          "hanzi": "学校前边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "电影院前边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "桌子前边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "学校前边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "电影院前边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "桌子前边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_02": {
+      "word": "边",
+      "collocations": [
+        {
+          "hanzi": "前边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "外边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "里边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "前边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "外边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "里边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_03": {
+      "word": "家",
+      "collocations": [
+        {
+          "hanzi": "一家电影院",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "三家公司",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两家书店",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "一家电影院",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "三家公司",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两家书店",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_04": {
+      "word": "那个",
+      "collocations": [
+        {
+          "hanzi": "那个电影院",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那个学生",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那个朋友",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "那个电影院",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那个学生",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那个朋友",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_05": {
+      "word": "外边",
+      "collocations": [
+        {
+          "hanzi": "电影院外边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "学校外边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "房间外边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "电影院外边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "学校外边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "房间外边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_06": {
+      "word": "椅子",
+      "collocations": [
+        {
+          "hanzi": "一把椅子",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "椅子上",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "椅子前边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "一把椅子",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "椅子上",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "椅子前边",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_07": {
+      "word": "上",
+      "collocations": [
+        {
+          "hanzi": "椅子上",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "桌子上",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "书上",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "椅子上",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "桌子上",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "书上",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_08": {
+      "word": "本",
+      "collocations": [
+        {
+          "hanzi": "一本书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "第二本书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "三本中文书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "一本书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "第二本书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "三本中文书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_09": {
+      "word": "书",
+      "collocations": [
+        {
+          "hanzi": "中文书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我的书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "一本书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "中文书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我的书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "一本书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_10": {
+      "word": "那",
+      "collocations": [
+        {
+          "hanzi": "那是谁的书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那是我的书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那很好",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "那是谁的书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那是我的书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那很好",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_11": {
+      "word": "第",
+      "collocations": [
+        {
+          "hanzi": "第一",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "第二本书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "第一个学生",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "第一",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "第二本书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "第一个学生",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_12": {
+      "word": "学习",
+      "collocations": [
+        {
+          "hanzi": "在学校学习",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "学习中文",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "明天学习",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "在学校学习",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "学习中文",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "明天学习",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_13": {
+      "word": "做",
+      "collocations": [
+        {
+          "hanzi": "做饭",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "做什么",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在家做作业",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "做饭",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "做什么",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在家做作业",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_14": {
+      "word": "白天",
+      "collocations": [
+        {
+          "hanzi": "明天白天",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "白天读书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "白天在家",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "明天白天",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "白天读书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "白天在家",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_15": {
+      "word": "读书",
+      "collocations": [
+        {
+          "hanzi": "在家读书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "白天读书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "读中文书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "在家读书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "白天读书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "读中文书",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_16": {
+      "word": "和",
+      "collocations": [
+        {
+          "hanzi": "和朋友",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "和孩子们",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "和老师",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "和朋友",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "和孩子们",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "和老师",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_17": {
+      "word": "朋友",
+      "collocations": [
+        {
+          "hanzi": "我的朋友",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "朋友们",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "和朋友唱歌",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "我的朋友",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "朋友们",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "和朋友唱歌",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_18": {
+      "word": "唱",
+      "collocations": [
+        {
+          "hanzi": "唱歌",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "唱得好听",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在外边唱歌",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "唱歌",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "唱得好听",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在外边唱歌",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_19": {
+      "word": "歌",
+      "collocations": [
+        {
+          "hanzi": "一首歌",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "唱歌",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "歌很好听",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "一首歌",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "唱歌",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "歌很好听",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_20": {
+      "word": "好听",
+      "collocations": [
+        {
+          "hanzi": "很好听",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "歌好听",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "唱歌好听",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "很好听",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "歌好听",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "唱歌好听",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_21": {
+      "word": "电视",
+      "collocations": [
+        {
+          "hanzi": "看电视",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我的电视",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "家里的电视",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "看电视",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我的电视",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "家里的电视",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_22": {
+      "word": "狗",
+      "collocations": [
+        {
+          "hanzi": "一只狗",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "小狗",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我的狗",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "一只狗",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "小狗",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我的狗",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l09_23": {
+      "word": "玩",
+      "collocations": [
+        {
+          "hanzi": "和小狗玩",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在家玩",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "和孩子们玩",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "和小狗玩",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在家玩",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "和孩子们玩",
+          "pinyin": "",
+          "english": "",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "grammarTeachingNotes": {
+    "g_l09_01": {
+      "structure": "地点/方位 + 有/是 + 人或物",
+      "structureEn": "Place/location + 有/是 + person or thing.",
+      "structureRu": "Место + 有/是 + человек или предмет.",
+      "english": "Use this pattern to say what exists at a place. For negation, use 没有.",
+      "russian": "Эта конструкция показывает, что где-то что-то есть."
+    },
+    "g_l09_02": {
+      "structure": "主语 + 时间 + 在 + 地点 + 动作",
+      "structureEn": "Subject + time + 在 + place + action.",
+      "structureRu": "Подлежащее + время + 在 + место + действие.",
+      "english": "When time and place both appear before the verb, put time before place.",
+      "russian": "Если есть и время, и место, сначала обычно идет время, потом место."
+    },
+    "g_l09_03": {
+      "structure": "第 + 数词；第 + 数词 + 量词 + 名词",
+      "structureEn": "第 + number; 第 + number + measure word + noun.",
+      "structureRu": "第 + число; 第 + число + счетное слово + существительное.",
+      "english": "第 turns a number into an ordinal number.",
+      "russian": "第 превращает количественное числительное в порядковое."
+    }
+  },
+  "grammar": [
+    {
+      "id": "g_l09_01",
+      "title": "存现句（1）",
+      "titleEn": "Existential Sentences (1)",
+      "explanation": "用“地方 + 有/是 + 人或物”表示某地存在某人或某物。否定时通常说“地方 + 没有 + 人/物”。",
+      "structure": "地点/方位 + 有/是 + 人/物",
+      "examples": [
+        {
+          "hanzi": "学校前边有一家电影院。",
+          "pinyin": "Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn.",
+          "english": "There is a cinema in front of the school.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "电影院前边是一家超市。",
+          "pinyin": "Diànyǐngyuàn qiánbian shì yì jiā chāoshì.",
+          "english": "In front of the cinema is a supermarket.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "桌子上没有小猫。",
+          "pinyin": "Zhuōzi shang méiyǒu xiǎo māo.",
+          "english": "There is no little cat on the table.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    {
+      "id": "g_l09_02",
+      "title": "时间词语和处所词语的顺序",
+      "titleEn": "Time before Location",
+      "explanation": "时间词语和处所词语同时作状语时，时间一般放在地点前。",
+      "structure": "主语 + 时间 + 在 + 地点 + 动作",
+      "examples": [
+        {
+          "hanzi": "我们七点在电影院外见。",
+          "pinyin": "Wǒmen qī diǎn zài diànyǐngyuàn wài jiàn.",
+          "english": "We meet outside the cinema at seven.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "安妮下午在家里学中文。",
+          "pinyin": "Ānní xiàwǔ zài jiā li xué Zhōngwén.",
+          "english": "Annie studies Chinese at home in the afternoon.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "陈天中明天中午在学校吃午饭。",
+          "pinyin": "Chén Tiānzhōng míngtiān zhōngwǔ zài xuéxiào chī wǔfàn.",
+          "english": "Chen Tianzhong will have lunch at school tomorrow noon.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    {
+      "id": "g_l09_03",
+      "title": "表示序数的“第”",
+      "titleEn": "Ordinal 第",
+      "explanation": "“第”放在数词前表示顺序，可以说“第一、第二”，也可以说“第一本书”。",
+      "structure": "第 + 数词 / 第 + 数词 + 量词 + 名词",
+      "examples": [
+        {
+          "hanzi": "第一、第二、第三",
+          "pinyin": "dì-yī, dì-èr, dì-sān",
+          "english": "first, second, third",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "这是我的第二本中文书。",
+          "pinyin": "Zhè shì wǒ de dì-èr běn Zhōngwén shū.",
+          "english": "This is my second Chinese book.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "她是第一个学生。",
+          "pinyin": "Tā shì dì-yī gè xuésheng.",
+          "english": "She is the first student.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "text_l09_01",
+      "title": "课文一",
+      "textId": "text_l09_01",
+      "scene": "在校园里，李文和白家月在聊天儿。",
+      "lines": [
+        {
+          "speaker": "李文",
+          "hanzi": "学校前边有一家电影院。",
+          "pinyin": "Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn.",
+          "english": "There is a cinema in front of the school.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "白家月",
+          "hanzi": "对。我们晚上去那个电影院看电影吧。",
+          "pinyin": "Duì. Wǒmen wǎnshang qù nàge diànyǐngyuàn kàn diànyǐng ba.",
+          "english": "Yes. Let’s go to that cinema to watch a movie tonight.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "李文",
+          "hanzi": "好！我们七点在电影院外见，好吗？",
+          "pinyin": "Hǎo! Wǒmen qī diǎn zài diànyǐngyuàn wàibian jiàn, hǎo ma?",
+          "english": "Great! Let’s meet outside the cinema at 7:00, okay?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "白家月",
+          "hanzi": "好的，晚上七点见！",
+          "pinyin": "Hǎo de, wǎnshang qī diǎn jiàn!",
+          "english": "Okay, see you at 7:00 in the evening!",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "text_l09_02",
+      "title": "课文二",
+      "textId": "text_l09_02",
+      "scene": "在教室里，下课后，白家月和陈天中在对话。",
+      "lines": [
+        {
+          "speaker": "白家月",
+          "hanzi": "椅子上有一本书，那是谁的书？",
+          "pinyin": "Yǐzi shang yǒu yì běn shū, nà shì shéi de shū?",
+          "english": "There is a book on the chair. Whose book is that?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "陈天中",
+          "hanzi": "是我的书，谢谢。这是我的第二本中文书。",
+          "pinyin": "Shì wǒ de shū, xièxie. Zhè shì wǒ de dì-èr běn Zhōngwén shū.",
+          "english": "It’s my book. Thank you. This is my second Chinese book.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "白家月",
+          "hanzi": "不客气。你明天上午在哪儿？",
+          "pinyin": "Bú kèqi. Nǐ míngtiān shàngwǔ zài nǎr?",
+          "english": "You’re welcome. Where will you be tomorrow morning?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "陈天中",
+          "hanzi": "我明天上午在学校学习。",
+          "pinyin": "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.",
+          "english": "I’ll be studying at school tomorrow morning.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "text_l09_03",
+      "title": "课文三",
+      "textId": "text_l09_03",
+      "scene": "在办公室里，休息时，王一雪和杨同乐讨论周末生活。",
+      "lines": [
+        {
+          "speaker": "王一雪",
+          "hanzi": "明天星期六，你做什么？",
+          "pinyin": "Míngtiān Xīngqīliù, nǐ zuò shénme?",
+          "english": "Tomorrow is Saturday. What are you going to do?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "我白天在家里读书，晚上和朋友们去外边唱歌。",
+          "pinyin": "Wǒ báitiān zài jiā li dúshū, wǎnshang hé péngyoumen qù wàibian chàng gē.",
+          "english": "I will read at home during the day and go out to sing with my friends in the evening.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "你唱歌很好听。",
+          "pinyin": "Nǐ chàng gē hěn hǎotīng.",
+          "english": "You sing very well.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "谢谢！您星期六做什么？",
+          "pinyin": "Xièxie! Nín Xīngqīliù zuò shénme?",
+          "english": "Thank you! What will you do on Saturday?",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "我在家里做饭、看电视，和孩子们、小狗玩。",
+          "pinyin": "Wǒ zài jiā li zuò fàn, kàn diànshì, hé háizimen, xiǎogǒu wán.",
+          "english": "I will cook, watch TV, and play with my children and my little dog at home.",
+          "sourceType": "textbook"
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "我也有一只小狗。",
+          "pinyin": "Wǒ yě yǒu yì zhī xiǎogǒu.",
+          "english": "I also have a little dog.",
+          "sourceType": "textbook"
+        }
+      ]
+    }
+  ],
+  "preClass": {
+    "warmup": {
+      "title": "明天你在哪儿？",
+      "prompt": "Think about tomorrow: where will you study, eat, read or meet friends?",
+      "intro": "这一课预习只做地点、时间和活动的热身：前边、外边、椅子上、一本书、明天上午在学校学习。",
+      "question": "如果你想问“Where will you be tomorrow morning?”，下面哪句话最合适？",
+      "questionEn": "Which sentence asks where someone will be tomorrow morning?",
+      "options": [
+        {
+          "word": "你明天上午在哪儿？",
+          "pinyin": "Nǐ míngtiān shàngwǔ zài nǎr?"
+        },
+        {
+          "word": "那是谁的书？",
+          "pinyin": "Nà shì shéi de shū?"
+        },
+        {
+          "word": "你唱歌很好听。",
+          "pinyin": "Nǐ chàng gē hěn hǎotīng."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": "pre_l09_01",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“椅子”的意思是：",
+        "questionEn": "chair",
+        "weakPoints": "词汇：椅子",
+        "sourceType": "textbook",
+        "options": [
+          {
+            "text": "chair"
+          },
+          {
+            "text": "book"
+          },
+          {
+            "text": "dog"
+          },
+          {
+            "text": "song"
+          }
+        ],
+        "answer": "chair"
+      },
+      {
+        "id": "pre_l09_02",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“书”的意思是：",
+        "questionEn": "book",
+        "weakPoints": "词汇：书",
+        "sourceType": "textbook",
+        "options": [
+          {
+            "text": "television"
+          },
+          {
+            "text": "book"
+          },
+          {
+            "text": "chair"
+          },
+          {
+            "text": "friend"
+          }
+        ],
+        "answer": "book"
+      },
+      {
+        "id": "pre_l09_03",
+        "type": "choice",
+        "module": "位置预热",
+        "question": "“学校前边”表示：",
+        "questionEn": "in front of the school",
+        "weakPoints": "方位：前边",
+        "sourceType": "teaching_extension",
+        "options": [
+          {
+            "text": "on the chair"
+          },
+          {
+            "text": "outside the room"
+          },
+          {
+            "text": "in front of the school"
+          },
+          {
+            "text": "at home"
+          }
+        ],
+        "answer": "in front of the school"
+      },
+      {
+        "id": "pre_l09_04",
+        "type": "choice",
+        "module": "量词预热",
+        "question": "选择最合适的量词：一___书。",
+        "questionEn": "Choose the best measure word: one ___ book.",
+        "weakPoints": "量词：本",
+        "sourceType": "teaching_extension",
+        "options": [
+          {
+            "text": "只"
+          },
+          {
+            "text": "家"
+          },
+          {
+            "text": "个"
+          },
+          {
+            "text": "本"
+          }
+        ],
+        "answer": "本"
+      },
+      {
+        "id": "pre_l09_05",
+        "type": "subjective",
+        "module": "生活经验开放题",
+        "question": "教学扩展：你明天上午在哪儿？请写一个中文短句。",
+        "questionEn": "Where will you be tomorrow morning? Try one Chinese sentence.",
+        "weakPoints": "输出：时间+地点",
+        "sourceType": "teaching_extension",
+        "answerPlaceholder": "例如：我明天上午在学校学习。",
+        "needsTeacherReview": true,
+        "openEnded": true
+      },
+      {
+        "id": "pre_l09_06",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“朋友”的意思是：",
+        "questionEn": "friend",
+        "weakPoints": "词汇：朋友",
+        "sourceType": "textbook",
+        "options": [
+          {
+            "text": "friend"
+          },
+          {
+            "text": "doctor"
+          },
+          {
+            "text": "teacher"
+          },
+          {
+            "text": "child"
+          }
+        ],
+        "answer": "friend"
+      },
+      {
+        "id": "pre_l09_07",
+        "type": "choice",
+        "module": "词汇理解",
+        "question": "“唱歌”的意思是：",
+        "questionEn": "sing a song",
+        "weakPoints": "词汇：唱歌",
+        "sourceType": "textbook",
+        "options": [
+          {
+            "text": "watch TV"
+          },
+          {
+            "text": "sing a song"
+          },
+          {
+            "text": "read a book"
+          },
+          {
+            "text": "cook"
+          }
+        ],
+        "answer": "sing a song"
+      },
+      {
+        "id": "pre_l09_08",
+        "type": "choice",
+        "module": "语序预热",
+        "question": "选择自然的句子：",
+        "questionEn": "Choose the natural sentence.",
+        "weakPoints": "语序：时间在地点前",
+        "sourceType": "teaching_extension",
+        "options": [
+          {
+            "text": "在学校我学习明天上午。"
+          },
+          {
+            "text": "我在学校明天上午学习。"
+          },
+          {
+            "text": "我明天上午在学校学习。"
+          },
+          {
+            "text": "明天学习我在学校上午。"
+          }
+        ],
+        "answer": "我明天上午在学校学习。"
+      },
+      {
+        "id": "pre_l09_09",
+        "type": "choice",
+        "module": "序数预热",
+        "question": "“第二本中文书”的意思是：",
+        "questionEn": "second Chinese book",
+        "weakPoints": "语法：第",
+        "sourceType": "teaching_extension",
+        "options": [
+          {
+            "text": "that Chinese book"
+          },
+          {
+            "text": "two Chinese books"
+          },
+          {
+            "text": "a Chinese teacher"
+          },
+          {
+            "text": "second Chinese book"
+          }
+        ],
+        "answer": "second Chinese book"
+      },
+      {
+        "id": "pre_l09_10",
+        "type": "subjective",
+        "module": "生活经验开放题",
+        "question": "教学扩展：你明天白天想做什么？请写一个中文短句。",
+        "questionEn": "What do you want to do tomorrow during the day? Try one short Chinese sentence.",
+        "weakPoints": "输出：明天+活动",
+        "sourceType": "teaching_extension",
+        "answerPlaceholder": "例如：我明天白天在家读书。",
+        "needsTeacherReview": true,
+        "openEnded": true
+      }
+    ]
+  },
+  "inClass": {
+    "questionGroups": {
+      "v1_image_guess": [
+        {
+          "id": "v1_hsk1_09_01",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for front",
+            "options": [
+              "前边",
+              "椅子",
+              "书",
+              "朋友"
+            ],
+            "options_pinyin": [
+              "qiánbian",
+              "yǐzi",
+              "shū",
+              "péngyou"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "前边",
+          "kp": "前边",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_09_02",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for outside",
+            "options": [
+              "椅子",
+              "外边",
+              "书",
+              "朋友"
+            ],
+            "options_pinyin": [
+              "yǐzi",
+              "wàibian",
+              "shū",
+              "péngyou"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "外边",
+          "kp": "外边",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_09_03",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for chair",
+            "options": [
+              "朋友",
+              "书",
+              "椅子",
+              "电视"
+            ],
+            "options_pinyin": [
+              "péngyou",
+              "shū",
+              "yǐzi",
+              "diànshì"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "椅子",
+          "kp": "椅子",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_09_04",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for book",
+            "options": [
+              "电视",
+              "椅子",
+              "朋友",
+              "书"
+            ],
+            "options_pinyin": [
+              "diànshì",
+              "yǐzi",
+              "péngyou",
+              "shū"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "书",
+          "kp": "书",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_09_05",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for study; learn",
+            "options": [
+              "学习",
+              "椅子",
+              "书",
+              "朋友"
+            ],
+            "options_pinyin": [
+              "xuéxí",
+              "yǐzi",
+              "shū",
+              "péngyou"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "学习",
+          "kp": "学习",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_09_06",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for do",
+            "options": [
+              "椅子",
+              "做",
+              "书",
+              "朋友"
+            ],
+            "options_pinyin": [
+              "yǐzi",
+              "zuò",
+              "shū",
+              "péngyou"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "做",
+          "kp": "做",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_09_07",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for read; study",
+            "options": [
+              "书",
+              "椅子",
+              "读书",
+              "朋友"
+            ],
+            "options_pinyin": [
+              "shū",
+              "yǐzi",
+              "dúshū",
+              "péngyou"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "读书",
+          "kp": "读书",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_09_08",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for friend",
+            "options": [
+              "电视",
+              "椅子",
+              "书",
+              "朋友"
+            ],
+            "options_pinyin": [
+              "diànshì",
+              "yǐzi",
+              "shū",
+              "péngyou"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "朋友",
+          "kp": "朋友",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_09_09",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for television",
+            "options": [
+              "电视",
+              "椅子",
+              "书",
+              "朋友"
+            ],
+            "options_pinyin": [
+              "diànshì",
+              "yǐzi",
+              "shū",
+              "péngyou"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "电视",
+          "kp": "电视",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_09_10",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for dog",
+            "options": [
+              "椅子",
+              "狗",
+              "书",
+              "朋友"
+            ],
+            "options_pinyin": [
+              "yǐzi",
+              "gǒu",
+              "shū",
+              "péngyou"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "狗",
+          "kp": "狗",
+          "sourceType": "textbook"
+        }
+      ],
+      "v5_vocab_fill": [
+        {
+          "id": "v5_hsk1_09_01",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "sentence": "学校___有一家电影院。",
+            "sentence_pinyin": "Xuéxiào ___ yǒu yì jiā diànyǐngyuàn.",
+            "options": [
+              "朋友",
+              "白天",
+              "前边",
+              "电视"
+            ],
+            "options_pinyin": [
+              "péngyou",
+              "báitiān",
+              "qiánbian",
+              "diànshì"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "前边",
+          "kp": "前边",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_09_02",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "sentence": "椅子上有一___书。",
+            "sentence_pinyin": "Yǐzi shang yǒu yì ___ shū.",
+            "options": [
+              "只",
+              "家",
+              "个",
+              "本"
+            ],
+            "options_pinyin": [
+              "",
+              "jiā",
+              "",
+              "běn"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "本",
+          "kp": "本",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_09_03",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "sentence": "这是我的___二本中文书。",
+            "sentence_pinyin": "Zhè shì wǒ de ___ èr běn Zhōngwén shū.",
+            "options": [
+              "第",
+              "那",
+              "和",
+              "边"
+            ],
+            "options_pinyin": [
+              "dì",
+              "nà",
+              "hé",
+              "bian"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "第",
+          "kp": "第",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_09_04",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "sentence": "我明天上午在学校___。",
+            "sentence_pinyin": "Wǒ míngtiān shàngwǔ zài xuéxiào ___.",
+            "options": [
+              "唱",
+              "学习",
+              "玩",
+              "好听"
+            ],
+            "options_pinyin": [
+              "chàng",
+              "xuéxí",
+              "wán",
+              "hǎotīng"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "学习",
+          "kp": "学习",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_hsk1_09_05",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "sentence": "我白天在家里___。",
+            "sentence_pinyin": "Wǒ báitiān zài jiā li ___.",
+            "options": [
+              "电视",
+              "朋友",
+              "读书",
+              "椅子"
+            ],
+            "options_pinyin": [
+              "diànshì",
+              "péngyou",
+              "dúshū",
+              "yǐzi"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "读书",
+          "kp": "读书",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_09_06",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "sentence": "晚上和朋友们去外边___歌。",
+            "sentence_pinyin": "Wǎnshang hé péngyoumen qù wàibian ___ gē.",
+            "options": [
+              "读",
+              "做",
+              "看",
+              "唱"
+            ],
+            "options_pinyin": [
+              "",
+              "zuò",
+              "",
+              "chàng"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "唱",
+          "kp": "唱",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_09_07",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "sentence": "你唱歌很___。",
+            "sentence_pinyin": "Nǐ chàng gē hěn ___.",
+            "options": [
+              "好听",
+              "前边",
+              "那个",
+              "白天"
+            ],
+            "options_pinyin": [
+              "hǎotīng",
+              "qiánbian",
+              "nàge",
+              "báitiān"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "好听",
+          "kp": "好听",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_09_08",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "sentence": "我在家里做饭、看___。",
+            "sentence_pinyin": "Wǒ zài jiā li zuò fàn, kàn ___.",
+            "options": [
+              "书",
+              "电视",
+              "椅子",
+              "狗"
+            ],
+            "options_pinyin": [
+              "shū",
+              "diànshì",
+              "yǐzi",
+              "gǒu"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "电视",
+          "kp": "电视",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_09_09",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "sentence": "我也有一只小___。",
+            "sentence_pinyin": "Wǒ yě yǒu yì zhī xiǎo ___.",
+            "options": [
+              "歌",
+              "书",
+              "狗",
+              "家"
+            ],
+            "options_pinyin": [
+              "gē",
+              "shū",
+              "gǒu",
+              "jiā"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "狗",
+          "kp": "狗",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_hsk1_09_10",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the word that fits the sentence.",
+          "data": {
+            "sentence": "明天星期六，你___什么？",
+            "sentence_pinyin": "Míngtiān Xīngqīliù, nǐ ___ shénme?",
+            "options": [
+              "边",
+              "第",
+              "那",
+              "做"
+            ],
+            "options_pinyin": [
+              "bian",
+              "dì",
+              "nà",
+              "zuò"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "做",
+          "kp": "做",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v7_word_match": [
+        {
+          "id": "v7_hsk1_09_01",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把问句和回答配对。",
+          "prompt_en": "Match each question with the answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "学校前边有什么？",
+                "left_pinyin": "",
+                "right": "学校前边有一家电影院。"
+              },
+              {
+                "left": "明天上午你在哪儿？",
+                "left_pinyin": "",
+                "right": "我明天上午在学校学习。"
+              },
+              {
+                "left": "椅子上有什么？",
+                "left_pinyin": "",
+                "right": "椅子上有一本书。"
+              },
+              {
+                "left": "晚上几点见？",
+                "left_pinyin": "",
+                "right": "晚上七点见。"
+              }
+            ],
+            "words": [
+              "学校前边有一家电影院。",
+              "我明天上午在学校学习。",
+              "椅子上有一本书。",
+              "晚上七点见。"
+            ],
+            "sentences": [
+              {
+                "sentence": "学校前边有什么？",
+                "answer": "学校前边有一家电影院。"
+              },
+              {
+                "sentence": "明天上午你在哪儿？",
+                "answer": "我明天上午在学校学习。"
+              },
+              {
+                "sentence": "椅子上有什么？",
+                "answer": "椅子上有一本书。"
+              },
+              {
+                "sentence": "晚上几点见？",
+                "answer": "晚上七点见。"
+              }
+            ]
+          },
+          "correct_answer": "全部匹配",
+          "kp": "词句匹配 1",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_09_02",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把问句和回答配对。",
+          "prompt_en": "Match each question with the answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "你明天白天做什么？",
+                "left_pinyin": "",
+                "right": "我白天在家里读书。"
+              },
+              {
+                "left": "你晚上和谁唱歌？",
+                "left_pinyin": "",
+                "right": "我晚上和朋友们唱歌。"
+              },
+              {
+                "left": "谁唱歌很好听？",
+                "left_pinyin": "",
+                "right": "杨同乐唱歌很好听。"
+              },
+              {
+                "left": "你也有什么？",
+                "left_pinyin": "",
+                "right": "我也有一只小狗。"
+              }
+            ],
+            "words": [
+              "我白天在家里读书。",
+              "我晚上和朋友们唱歌。",
+              "杨同乐唱歌很好听。",
+              "我也有一只小狗。"
+            ],
+            "sentences": [
+              {
+                "sentence": "你明天白天做什么？",
+                "answer": "我白天在家里读书。"
+              },
+              {
+                "sentence": "你晚上和谁唱歌？",
+                "answer": "我晚上和朋友们唱歌。"
+              },
+              {
+                "sentence": "谁唱歌很好听？",
+                "answer": "杨同乐唱歌很好听。"
+              },
+              {
+                "sentence": "你也有什么？",
+                "answer": "我也有一只小狗。"
+              }
+            ]
+          },
+          "correct_answer": "全部匹配",
+          "kp": "词句匹配 2",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_09_03",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把问句和回答配对。",
+          "prompt_en": "Match each question with the answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "那是谁的书？",
+                "left_pinyin": "",
+                "right": "那是陈天中的书。"
+              },
+              {
+                "left": "这是你的第几本中文书？",
+                "left_pinyin": "",
+                "right": "这是我的第二本中文书。"
+              },
+              {
+                "left": "你在哪儿看电视？",
+                "left_pinyin": "",
+                "right": "我在家里看电视。"
+              },
+              {
+                "left": "你和孩子们做什么？",
+                "left_pinyin": "",
+                "right": "我和孩子们、小狗玩。"
+              }
+            ],
+            "words": [
+              "那是陈天中的书。",
+              "这是我的第二本中文书。",
+              "我在家里看电视。",
+              "我和孩子们、小狗玩。"
+            ],
+            "sentences": [
+              {
+                "sentence": "那是谁的书？",
+                "answer": "那是陈天中的书。"
+              },
+              {
+                "sentence": "这是你的第几本中文书？",
+                "answer": "这是我的第二本中文书。"
+              },
+              {
+                "sentence": "你在哪儿看电视？",
+                "answer": "我在家里看电视。"
+              },
+              {
+                "sentence": "你和孩子们做什么？",
+                "answer": "我和孩子们、小狗玩。"
+              }
+            ]
+          },
+          "correct_answer": "全部匹配",
+          "kp": "词句匹配 3",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_09_04",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把问句和回答配对。",
+          "prompt_en": "Match each question with the answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "我们在哪儿见？",
+                "left_pinyin": "",
+                "right": "我们在电影院外边见。"
+              },
+              {
+                "left": "你去电影院做什么？",
+                "left_pinyin": "",
+                "right": "我去电影院看电影。"
+              },
+              {
+                "left": "你想在哪儿学习？",
+                "left_pinyin": "",
+                "right": "我想在学校学习。"
+              },
+              {
+                "left": "你星期六做什么？",
+                "left_pinyin": "",
+                "right": "我星期六在家读书。"
+              }
+            ],
+            "words": [
+              "我们在电影院外边见。",
+              "我去电影院看电影。",
+              "我想在学校学习。",
+              "我星期六在家读书。"
+            ],
+            "sentences": [
+              {
+                "sentence": "我们在哪儿见？",
+                "answer": "我们在电影院外边见。"
+              },
+              {
+                "sentence": "你去电影院做什么？",
+                "answer": "我去电影院看电影。"
+              },
+              {
+                "sentence": "你想在哪儿学习？",
+                "answer": "我想在学校学习。"
+              },
+              {
+                "sentence": "你星期六做什么？",
+                "answer": "我星期六在家读书。"
+              }
+            ]
+          },
+          "correct_answer": "全部匹配",
+          "kp": "词句匹配 4",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_hsk1_09_05",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "把问句和回答配对。",
+          "prompt_en": "Match each question with the answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "学校外边有书店吗？",
+                "left_pinyin": "",
+                "right": "学校外边有书店。"
+              },
+              {
+                "left": "你家前边有什么？",
+                "left_pinyin": "",
+                "right": "我家前边有一家超市。"
+              },
+              {
+                "left": "你和谁去超市？",
+                "left_pinyin": "",
+                "right": "我和朋友去超市。"
+              },
+              {
+                "left": "你想买什么？",
+                "left_pinyin": "",
+                "right": "我想买牛奶。"
+              }
+            ],
+            "words": [
+              "学校外边有书店。",
+              "我家前边有一家超市。",
+              "我和朋友去超市。",
+              "我想买牛奶。"
+            ],
+            "sentences": [
+              {
+                "sentence": "学校外边有书店吗？",
+                "answer": "学校外边有书店。"
+              },
+              {
+                "sentence": "你家前边有什么？",
+                "answer": "我家前边有一家超市。"
+              },
+              {
+                "sentence": "你和谁去超市？",
+                "answer": "我和朋友去超市。"
+              },
+              {
+                "sentence": "你想买什么？",
+                "answer": "我想买牛奶。"
+              }
+            ]
+          },
+          "correct_answer": "全部匹配",
+          "kp": "词句匹配 5",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v8_memory_match": [
+        {
+          "id": "v8_hsk1_09_01",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配中文和英文意思。",
+          "prompt_en": "Matching game: match Chinese and English meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "前边",
+                "left_pinyin": "qiánbian",
+                "right": "front"
+              },
+              {
+                "left": "外边",
+                "left_pinyin": "wàibian",
+                "right": "outside"
+              },
+              {
+                "left": "椅子",
+                "left_pinyin": "yǐzi",
+                "right": "chair"
+              },
+              {
+                "left": "书",
+                "left_pinyin": "shū",
+                "right": "book"
+              }
+            ]
+          },
+          "correct_answer": "全部匹配",
+          "kp": "词了个词 1",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_09_02",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配中文和英文意思。",
+          "prompt_en": "Matching game: match Chinese and English meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "学习",
+                "left_pinyin": "xuéxí",
+                "right": "study; learn"
+              },
+              {
+                "left": "做",
+                "left_pinyin": "zuò",
+                "right": "do"
+              },
+              {
+                "left": "白天",
+                "left_pinyin": "báitiān",
+                "right": "daytime"
+              },
+              {
+                "left": "读书",
+                "left_pinyin": "dúshū",
+                "right": "read; study"
+              }
+            ]
+          },
+          "correct_answer": "全部匹配",
+          "kp": "词了个词 2",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_09_03",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配中文和英文意思。",
+          "prompt_en": "Matching game: match Chinese and English meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "朋友",
+                "left_pinyin": "péngyou",
+                "right": "friend"
+              },
+              {
+                "left": "唱",
+                "left_pinyin": "chàng",
+                "right": "sing"
+              },
+              {
+                "left": "歌",
+                "left_pinyin": "gē",
+                "right": "song"
+              },
+              {
+                "left": "好听",
+                "left_pinyin": "hǎotīng",
+                "right": "pleasant to hear"
+              }
+            ]
+          },
+          "correct_answer": "全部匹配",
+          "kp": "词了个词 3",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_09_04",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配中文和英文意思。",
+          "prompt_en": "Matching game: match Chinese and English meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "电视",
+                "left_pinyin": "diànshì",
+                "right": "television"
+              },
+              {
+                "left": "狗",
+                "left_pinyin": "gǒu",
+                "right": "dog"
+              },
+              {
+                "left": "玩",
+                "left_pinyin": "wán",
+                "right": "play; have fun"
+              },
+              {
+                "left": "那个",
+                "left_pinyin": "nàge",
+                "right": "that"
+              }
+            ]
+          },
+          "correct_answer": "全部匹配",
+          "kp": "词了个词 4",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_hsk1_09_05",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词：匹配中文和英文意思。",
+          "prompt_en": "Matching game: match Chinese and English meanings.",
+          "data": {
+            "pairs": [
+              {
+                "left": "本",
+                "left_pinyin": "běn",
+                "right": "measure word for books"
+              },
+              {
+                "left": "第",
+                "left_pinyin": "dì",
+                "right": "ordinal prefix"
+              },
+              {
+                "left": "家",
+                "left_pinyin": "jiā",
+                "right": "measure word for families or enterprises"
+              },
+              {
+                "left": "那",
+                "left_pinyin": "nà",
+                "right": "that"
+              }
+            ]
+          },
+          "correct_answer": "全部匹配",
+          "kp": "词了个词 5",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "w1_component_char": [
+        {
+          "id": "w1_hsk1_09_01",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct Chinese characters by pinyin.",
+          "data": {
+            "sentence": "qiánbian",
+            "sentence_pinyin": "",
+            "options": [
+              "前边",
+              "外边",
+              "椅子",
+              "书"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 0,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "前边",
+          "kp": "汉字区辨：前边",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_09_02",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct Chinese characters by pinyin.",
+          "data": {
+            "sentence": "wàibian",
+            "sentence_pinyin": "",
+            "options": [
+              "前边",
+              "外边",
+              "椅子",
+              "书"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 1,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "外边",
+          "kp": "汉字区辨：外边",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_09_03",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct Chinese characters by pinyin.",
+          "data": {
+            "sentence": "yǐzi",
+            "sentence_pinyin": "",
+            "options": [
+              "外边",
+              "前边",
+              "椅子",
+              "书"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 2,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "椅子",
+          "kp": "汉字区辨：椅子",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_09_04",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct Chinese characters by pinyin.",
+          "data": {
+            "sentence": "shū",
+            "sentence_pinyin": "",
+            "options": [
+              "椅子",
+              "前边",
+              "外边",
+              "书"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 3,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "书",
+          "kp": "汉字区辨：书",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_09_05",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct Chinese characters by pinyin.",
+          "data": {
+            "sentence": "nà",
+            "sentence_pinyin": "",
+            "options": [
+              "那",
+              "前边",
+              "外边",
+              "椅子"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 0,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "那",
+          "kp": "汉字区辨：那",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_09_06",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct Chinese characters by pinyin.",
+          "data": {
+            "sentence": "dì",
+            "sentence_pinyin": "",
+            "options": [
+              "前边",
+              "第",
+              "外边",
+              "椅子"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 1,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "第",
+          "kp": "汉字区辨：第",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_09_07",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct Chinese characters by pinyin.",
+          "data": {
+            "sentence": "xuéxí",
+            "sentence_pinyin": "",
+            "options": [
+              "外边",
+              "前边",
+              "学习",
+              "椅子"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 2,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "学习",
+          "kp": "汉字区辨：学习",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_09_08",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct Chinese characters by pinyin.",
+          "data": {
+            "sentence": "zuò",
+            "sentence_pinyin": "",
+            "options": [
+              "椅子",
+              "前边",
+              "外边",
+              "做"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 3,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "做",
+          "kp": "汉字区辨：做",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_09_09",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct Chinese characters by pinyin.",
+          "data": {
+            "sentence": "péngyou",
+            "sentence_pinyin": "",
+            "options": [
+              "朋友",
+              "前边",
+              "外边",
+              "椅子"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 0,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "朋友",
+          "kp": "汉字区辨：朋友",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "w1_hsk1_09_10",
+          "type": "component_char",
+          "stage": "in_class",
+          "prompt_cn": "根据拼音选择正确汉字。",
+          "prompt_en": "Choose the correct Chinese characters by pinyin.",
+          "data": {
+            "sentence": "diànshì",
+            "sentence_pinyin": "",
+            "options": [
+              "前边",
+              "电视",
+              "外边",
+              "椅子"
+            ],
+            "options_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "correct_index": 1,
+            "hide_option_pinyin": true
+          },
+          "correct_answer": "电视",
+          "kp": "汉字区辨：电视",
+          "sourceType": "textbook"
+        }
+      ],
+      "v4_complete_sentence": [
+        {
+          "id": "v4_hsk1_09_01",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Ask where the person studies.",
+          "data": {
+            "template": "我在学校学习。",
+            "template_pinyin": "",
+            "source_sentence": "我在学校学习。",
+            "source_pinyin": "",
+            "options": [
+              "学校前边有什么？",
+              "你做什么学习？",
+              "你在哪儿学习？",
+              "你和谁学习？"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "你在哪儿学习？",
+          "kp": "句型转换：答句提问",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_09_02",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Ask where the person will be tomorrow morning.",
+          "data": {
+            "template": "我明天上午在学校学习。",
+            "template_pinyin": "",
+            "source_sentence": "我明天上午在学校学习。",
+            "source_pinyin": "",
+            "options": [
+              "你上午几点下班？",
+              "你明天上午做什么？",
+              "你明天白天和谁玩？",
+              "你明天上午在哪儿？"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "你明天上午在哪儿？",
+          "kp": "句型转换：答句提问",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_09_03",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Ask what is on the chair.",
+          "data": {
+            "template": "椅子上有一本书。",
+            "template_pinyin": "",
+            "source_sentence": "椅子上有一本书。",
+            "source_pinyin": "",
+            "options": [
+              "椅子上有什么？",
+              "那是谁的书？",
+              "椅子在哪儿？",
+              "你有几本书？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "椅子上有什么？",
+          "kp": "句型转换：答句提问",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_09_04",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Ask whose book that is.",
+          "data": {
+            "template": "那是我的书。",
+            "template_pinyin": "",
+            "source_sentence": "那是我的书。",
+            "source_pinyin": "",
+            "options": [
+              "那是什么书？",
+              "那是谁的书？",
+              "那是第几本书？",
+              "你有书吗？"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "那是谁的书？",
+          "kp": "句型转换：答句提问",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_09_05",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Ask what the person does during the day.",
+          "data": {
+            "template": "我白天在家里读书。",
+            "template_pinyin": "",
+            "source_sentence": "我白天在家里读书。",
+            "source_pinyin": "",
+            "options": [
+              "你晚上做什么？",
+              "你白天在哪儿？",
+              "你白天做什么？",
+              "你和谁读书？"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "你白天做什么？",
+          "kp": "句型转换：答句提问",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_09_06",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Ask who the person sings with.",
+          "data": {
+            "template": "我晚上和朋友们去外边唱歌。",
+            "template_pinyin": "",
+            "source_sentence": "我晚上和朋友们去外边唱歌。",
+            "source_pinyin": "",
+            "options": [
+              "你唱歌好听吗？",
+              "你晚上在哪儿学习？",
+              "你朋友做什么？",
+              "你晚上和谁去外边唱歌？"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "你晚上和谁去外边唱歌？",
+          "kp": "句型转换：答句提问",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_09_07",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Change to a yes-no question.",
+          "data": {
+            "template": "你唱歌很好听。",
+            "template_pinyin": "",
+            "source_sentence": "你唱歌很好听。",
+            "source_pinyin": "",
+            "options": [
+              "我唱歌好听吗？",
+              "你唱歌很好听。",
+              "你唱歌不好听。",
+              "你听歌吗？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我唱歌好听吗？",
+          "kp": "句型转换：答句提问",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_09_08",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Ask where the person watches TV.",
+          "data": {
+            "template": "我在家里看电视。",
+            "template_pinyin": "",
+            "source_sentence": "我在家里看电视。",
+            "source_pinyin": "",
+            "options": [
+              "你看什么电视？",
+              "你在哪儿看电视？",
+              "你几点看电视？",
+              "你和谁看电视？"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "你在哪儿看电视？",
+          "kp": "句型转换：答句提问",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_09_09",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Ask whether the person also has a dog.",
+          "data": {
+            "template": "我也有一只小狗。",
+            "template_pinyin": "",
+            "source_sentence": "我也有一只小狗。",
+            "source_pinyin": "",
+            "options": [
+              "小狗做什么？",
+              "你的小狗在哪儿？",
+              "你也有小狗吗？",
+              "谁有一本书？"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "你也有小狗吗？",
+          "kp": "句型转换：答句提问",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_hsk1_09_10",
+          "type": "complete_sentence",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Ask what time they meet.",
+          "data": {
+            "template": "我们七点在电影院外见。",
+            "template_pinyin": "",
+            "source_sentence": "我们七点在电影院外见。",
+            "source_pinyin": "",
+            "options": [
+              "你们和谁见？",
+              "你们在哪儿见？",
+              "你们看什么？",
+              "你们几点见？"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "你们几点见？",
+          "kp": "句型转换：答句提问",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "g1_ordering": [
+        {
+          "id": "g1_hsk1_09_01",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "有",
+              "学校前边",
+              "一家电影院"
+            ],
+            "chunks_pinyin": [
+              "",
+              "",
+              ""
+            ],
+            "answer": "学校前边有一家电影院。",
+            "acceptable_answers": [
+              "学校前边有一家电影院。"
+            ]
+          },
+          "correct_answer": "学校前边有一家电影院。",
+          "kp": "连词成句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_hsk1_09_02",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "学习",
+              "我",
+              "在学校",
+              "明天上午"
+            ],
+            "chunks_pinyin": [
+              "xuéxí",
+              "",
+              "",
+              ""
+            ],
+            "answer": "我明天上午在学校学习。",
+            "acceptable_answers": [
+              "我明天上午在学校学习。"
+            ]
+          },
+          "correct_answer": "我明天上午在学校学习。",
+          "kp": "连词成句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_hsk1_09_03",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "一本书",
+              "有",
+              "椅子上"
+            ],
+            "chunks_pinyin": [
+              "",
+              "",
+              ""
+            ],
+            "answer": "椅子上有一本书。",
+            "acceptable_answers": [
+              "椅子上有一本书。"
+            ]
+          },
+          "correct_answer": "椅子上有一本书。",
+          "kp": "连词成句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_hsk1_09_04",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "读书",
+              "在家里",
+              "白天",
+              "我"
+            ],
+            "chunks_pinyin": [
+              "dúshū",
+              "",
+              "báitiān",
+              ""
+            ],
+            "answer": "我白天在家里读书。",
+            "acceptable_answers": [
+              "我白天在家里读书。"
+            ]
+          },
+          "correct_answer": "我白天在家里读书。",
+          "kp": "连词成句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_hsk1_09_05",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "唱歌",
+              "我",
+              "去外边",
+              "和朋友们"
+            ],
+            "chunks_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "answer": "我和朋友们去外边唱歌。",
+            "acceptable_answers": [
+              "我和朋友们去外边唱歌。"
+            ]
+          },
+          "correct_answer": "我和朋友们去外边唱歌。",
+          "kp": "连词成句",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "r2_passage_choice": [
+        {
+          "id": "r2_hsk1_09_01",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：读叙述，回答三个问题。",
+          "prompt_en": "Text Q&A: read the narrative and answer three questions.",
+          "data": {
+            "title": "课文一：电影院外见",
+            "passage": "学校前边有一家电影院。李文和白家月晚上去那个电影院看电影。他们七点在电影院外边见。",
+            "passage_pinyin": "",
+            "passage_en": "",
+            "questions": [
+              {
+                "id": "r2_hsk1_09_01_q1",
+                "question_cn": "学校前边有什么？",
+                "question_en": "What is in front of the school?",
+                "options": [
+                  "一家电影院",
+                  "一家医院",
+                  "一本书",
+                  "一只小狗"
+                ],
+                "correct_index": 0,
+                "answer": "一家电影院"
+              },
+              {
+                "id": "r2_hsk1_09_01_q2",
+                "question_cn": "李文和白家月晚上去哪儿？",
+                "question_en": "Where do Li Wen and Bai Jiayue go tonight?",
+                "options": [
+                  "学校书店",
+                  "那个电影院",
+                  "陈天中家",
+                  "医院外边"
+                ],
+                "correct_index": 1,
+                "answer": "那个电影院"
+              },
+              {
+                "id": "r2_hsk1_09_01_q3",
+                "question_cn": "他们几点见？",
+                "question_en": "What time will they meet?",
+                "options": [
+                  "下午两点",
+                  "上午十点",
+                  "晚上七点",
+                  "早上八点"
+                ],
+                "correct_index": 2,
+                "answer": "晚上七点"
+              }
+            ]
+          },
+          "correct_answer": "学校前边有什么？：一家电影院；李文和白家月晚上去哪儿？：那个电影院；他们几点见？：晚上七点",
+          "kp": "课文一：电影院外见",
+          "sourceType": "textbook_adaptation"
+        },
+        {
+          "id": "r2_hsk1_09_02",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：读叙述，回答三个问题。",
+          "prompt_en": "Text Q&A: read the narrative and answer three questions.",
+          "data": {
+            "title": "课文二：第二本中文书",
+            "passage": "椅子上有一本书。那是陈天中的书，也是他的第二本中文书。白家月问陈天中明天上午在哪儿。陈天中明天上午在学校学习。",
+            "passage_pinyin": "",
+            "passage_en": "",
+            "questions": [
+              {
+                "id": "r2_hsk1_09_02_q1",
+                "question_cn": "椅子上有什么？",
+                "question_en": "What is on the chair?",
+                "options": [
+                  "一杯牛奶",
+                  "一只狗",
+                  "一个手机",
+                  "一本书"
+                ],
+                "correct_index": 3,
+                "answer": "一本书"
+              },
+              {
+                "id": "r2_hsk1_09_02_q2",
+                "question_cn": "那是谁的书？",
+                "question_en": "Whose book is that?",
+                "options": [
+                  "陈天中的书",
+                  "白家月的书",
+                  "李文的书",
+                  "王一雪的书"
+                ],
+                "correct_index": 0,
+                "answer": "陈天中的书"
+              },
+              {
+                "id": "r2_hsk1_09_02_q3",
+                "question_cn": "陈天中明天上午在哪儿？",
+                "question_en": "Where will Chen Tianzhong be tomorrow morning?",
+                "options": [
+                  "在医院",
+                  "在学校",
+                  "在超市",
+                  "在电影院"
+                ],
+                "correct_index": 1,
+                "answer": "在学校"
+              }
+            ]
+          },
+          "correct_answer": "椅子上有什么？：一本书；那是谁的书？：陈天中的书；陈天中明天上午在哪儿？：在学校",
+          "kp": "课文二：第二本中文书",
+          "sourceType": "textbook_adaptation"
+        },
+        {
+          "id": "r2_hsk1_09_03",
+          "type": "passage_choice",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：读叙述，回答三个问题。",
+          "prompt_en": "Text Q&A: read the narrative and answer three questions.",
+          "data": {
+            "title": "课文三：星期六做什么",
+            "passage": "明天星期六。杨同乐白天在家里读书，晚上和朋友们去外边唱歌。王一雪在家里做饭、看电视，和孩子们、小狗玩。杨同乐也有一只小狗。",
+            "passage_pinyin": "",
+            "passage_en": "",
+            "questions": [
+              {
+                "id": "r2_hsk1_09_03_q1",
+                "question_cn": "杨同乐白天做什么？",
+                "question_en": "What does Yang Tongle do during the day?",
+                "options": [
+                  "去电影院看电影",
+                  "在医院工作",
+                  "在家里读书",
+                  "在学校吃午饭"
+                ],
+                "correct_index": 2,
+                "answer": "在家里读书"
+              },
+              {
+                "id": "r2_hsk1_09_03_q2",
+                "question_cn": "杨同乐晚上和谁唱歌？",
+                "question_en": "Who does Yang Tongle sing with in the evening?",
+                "options": [
+                  "老师",
+                  "孩子们",
+                  "医生",
+                  "朋友们"
+                ],
+                "correct_index": 3,
+                "answer": "朋友们"
+              },
+              {
+                "id": "r2_hsk1_09_03_q3",
+                "question_cn": "王一雪在家里做什么？",
+                "question_en": "What does Wang Yixue do at home?",
+                "options": [
+                  "做饭、看电视、和孩子们小狗玩",
+                  "读书、学习、下班",
+                  "打电话、买牛奶",
+                  "去外边唱歌"
+                ],
+                "correct_index": 0,
+                "answer": "做饭、看电视、和孩子们小狗玩"
+              }
+            ]
+          },
+          "correct_answer": "杨同乐白天做什么？：在家里读书；杨同乐晚上和谁唱歌？：朋友们；王一雪在家里做什么？：做饭、看电视、和孩子们小狗玩",
+          "kp": "课文三：星期六做什么",
+          "sourceType": "textbook_adaptation"
+        }
+      ],
+      "tt_text_true_false": [
+        {
+          "id": "tt_hsk1_09_1_1",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "根据课文内容选择正确答案。",
+          "prompt_en": "Choose the correct answer based on the text.",
+          "data": {
+            "statement": "学校前边有一家电影院。李文和白家月晚上去那个电影院看电影。他们七点在电影院外边见。",
+            "question_cn": "学校前边有什么？",
+            "question_en": "What is in front of the school?",
+            "options": [
+              "一家医院",
+              "一家电影院",
+              "一本书",
+              "一只小狗"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "一家电影院",
+          "kp": "课文理解",
+          "sourceType": "textbook_adaptation"
+        },
+        {
+          "id": "tt_hsk1_09_1_2",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "根据课文内容选择正确答案。",
+          "prompt_en": "Choose the correct answer based on the text.",
+          "data": {
+            "statement": "学校前边有一家电影院。李文和白家月晚上去那个电影院看电影。他们七点在电影院外边见。",
+            "question_cn": "李文和白家月晚上去哪儿？",
+            "question_en": "Where do Li Wen and Bai Jiayue go tonight?",
+            "options": [
+              "陈天中家",
+              "学校书店",
+              "那个电影院",
+              "医院外边"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "那个电影院",
+          "kp": "课文理解",
+          "sourceType": "textbook_adaptation"
+        },
+        {
+          "id": "tt_hsk1_09_1_3",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "根据课文内容选择正确答案。",
+          "prompt_en": "Choose the correct answer based on the text.",
+          "data": {
+            "statement": "学校前边有一家电影院。李文和白家月晚上去那个电影院看电影。他们七点在电影院外边见。",
+            "question_cn": "他们几点见？",
+            "question_en": "What time will they meet?",
+            "options": [
+              "早上八点",
+              "上午十点",
+              "下午两点",
+              "晚上七点"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "晚上七点",
+          "kp": "课文理解",
+          "sourceType": "textbook_adaptation"
+        },
+        {
+          "id": "tt_hsk1_09_2_1",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "根据课文内容选择正确答案。",
+          "prompt_en": "Choose the correct answer based on the text.",
+          "data": {
+            "statement": "椅子上有一本书。那是陈天中的书，也是他的第二本中文书。白家月问陈天中明天上午在哪儿。陈天中明天上午在学校学习。",
+            "question_cn": "椅子上有什么？",
+            "question_en": "What is on the chair?",
+            "options": [
+              "一本书",
+              "一只狗",
+              "一个手机",
+              "一杯牛奶"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "一本书",
+          "kp": "课文理解",
+          "sourceType": "textbook_adaptation"
+        },
+        {
+          "id": "tt_hsk1_09_2_2",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "根据课文内容选择正确答案。",
+          "prompt_en": "Choose the correct answer based on the text.",
+          "data": {
+            "statement": "椅子上有一本书。那是陈天中的书，也是他的第二本中文书。白家月问陈天中明天上午在哪儿。陈天中明天上午在学校学习。",
+            "question_cn": "那是谁的书？",
+            "question_en": "Whose book is that?",
+            "options": [
+              "白家月的书",
+              "陈天中的书",
+              "李文的书",
+              "王一雪的书"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "陈天中的书",
+          "kp": "课文理解",
+          "sourceType": "textbook_adaptation"
+        },
+        {
+          "id": "tt_hsk1_09_2_3",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "根据课文内容选择正确答案。",
+          "prompt_en": "Choose the correct answer based on the text.",
+          "data": {
+            "statement": "椅子上有一本书。那是陈天中的书，也是他的第二本中文书。白家月问陈天中明天上午在哪儿。陈天中明天上午在学校学习。",
+            "question_cn": "陈天中明天上午在哪儿？",
+            "question_en": "Where will Chen Tianzhong be tomorrow morning?",
+            "options": [
+              "在超市",
+              "在医院",
+              "在学校",
+              "在电影院"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "在学校",
+          "kp": "课文理解",
+          "sourceType": "textbook_adaptation"
+        },
+        {
+          "id": "tt_hsk1_09_3_1",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "根据课文内容选择正确答案。",
+          "prompt_en": "Choose the correct answer based on the text.",
+          "data": {
+            "statement": "明天星期六。杨同乐白天在家里读书，晚上和朋友们去外边唱歌。王一雪在家里做饭、看电视，和孩子们、小狗玩。杨同乐也有一只小狗。",
+            "question_cn": "杨同乐白天做什么？",
+            "question_en": "What does Yang Tongle do during the day?",
+            "options": [
+              "在学校吃午饭",
+              "在医院工作",
+              "去电影院看电影",
+              "在家里读书"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "在家里读书",
+          "kp": "课文理解",
+          "sourceType": "textbook_adaptation"
+        },
+        {
+          "id": "tt_hsk1_09_3_2",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "根据课文内容选择正确答案。",
+          "prompt_en": "Choose the correct answer based on the text.",
+          "data": {
+            "statement": "明天星期六。杨同乐白天在家里读书，晚上和朋友们去外边唱歌。王一雪在家里做饭、看电视，和孩子们、小狗玩。杨同乐也有一只小狗。",
+            "question_cn": "杨同乐晚上和谁唱歌？",
+            "question_en": "Who does Yang Tongle sing with in the evening?",
+            "options": [
+              "朋友们",
+              "孩子们",
+              "医生",
+              "老师"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "朋友们",
+          "kp": "课文理解",
+          "sourceType": "textbook_adaptation"
+        },
+        {
+          "id": "tt_hsk1_09_3_3",
+          "type": "text_true_false",
+          "stage": "in_class",
+          "prompt_cn": "根据课文内容选择正确答案。",
+          "prompt_en": "Choose the correct answer based on the text.",
+          "data": {
+            "statement": "明天星期六。杨同乐白天在家里读书，晚上和朋友们去外边唱歌。王一雪在家里做饭、看电视，和孩子们、小狗玩。杨同乐也有一只小狗。",
+            "question_cn": "王一雪在家里做什么？",
+            "question_en": "What does Wang Yixue do at home?",
+            "options": [
+              "读书、学习、下班",
+              "做饭、看电视、和孩子们小狗玩",
+              "打电话、买牛奶",
+              "去外边唱歌"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "做饭、看电视、和孩子们小狗玩",
+          "kp": "课文理解",
+          "sourceType": "textbook_adaptation"
+        }
+      ],
+      "pk_question": [
+        {
+          "id": "pk_hsk1_09_01",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "PK：快速选择正确答案。",
+          "prompt_en": "PK: choose quickly.",
+          "data": {
+            "sentence": "学校___有一家电影院。",
+            "sentence_pinyin": "Xuéxiào ___ yǒu yì jiā diànyǐngyuàn.",
+            "options": [
+              "朋友",
+              "白天",
+              "前边",
+              "电视"
+            ],
+            "options_pinyin": [
+              "péngyou",
+              "báitiān",
+              "qiánbian",
+              "diànshì"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "前边",
+          "kp": "前边",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "pk_hsk1_09_02",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "PK：快速选择正确答案。",
+          "prompt_en": "PK: choose quickly.",
+          "data": {
+            "sentence": "椅子上有一___书。",
+            "sentence_pinyin": "Yǐzi shang yǒu yì ___ shū.",
+            "options": [
+              "只",
+              "家",
+              "个",
+              "本"
+            ],
+            "options_pinyin": [
+              "",
+              "jiā",
+              "",
+              "běn"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "本",
+          "kp": "本",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "pk_hsk1_09_03",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "PK：快速选择正确答案。",
+          "prompt_en": "PK: choose quickly.",
+          "data": {
+            "sentence": "这是我的___二本中文书。",
+            "sentence_pinyin": "Zhè shì wǒ de ___ èr běn Zhōngwén shū.",
+            "options": [
+              "第",
+              "那",
+              "和",
+              "边"
+            ],
+            "options_pinyin": [
+              "dì",
+              "nà",
+              "hé",
+              "bian"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "第",
+          "kp": "第",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "pk_hsk1_09_04",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "PK：快速选择正确答案。",
+          "prompt_en": "PK: choose quickly.",
+          "data": {
+            "sentence": "我明天上午在学校___。",
+            "sentence_pinyin": "Wǒ míngtiān shàngwǔ zài xuéxiào ___.",
+            "options": [
+              "唱",
+              "学习",
+              "玩",
+              "好听"
+            ],
+            "options_pinyin": [
+              "chàng",
+              "xuéxí",
+              "wán",
+              "hǎotīng"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "学习",
+          "kp": "学习",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "pk_hsk1_09_05",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "PK：快速选择正确答案。",
+          "prompt_en": "PK: choose quickly.",
+          "data": {
+            "sentence": "我白天在家里___。",
+            "sentence_pinyin": "Wǒ báitiān zài jiā li ___.",
+            "options": [
+              "电视",
+              "朋友",
+              "读书",
+              "椅子"
+            ],
+            "options_pinyin": [
+              "diànshì",
+              "péngyou",
+              "dúshū",
+              "yǐzi"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "读书",
+          "kp": "读书",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_09_06",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "PK：快速选择正确答案。",
+          "prompt_en": "PK: choose quickly.",
+          "data": {
+            "sentence": "晚上和朋友们去外边___歌。",
+            "sentence_pinyin": "Wǎnshang hé péngyoumen qù wàibian ___ gē.",
+            "options": [
+              "读",
+              "做",
+              "看",
+              "唱"
+            ],
+            "options_pinyin": [
+              "",
+              "zuò",
+              "",
+              "chàng"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "唱",
+          "kp": "唱",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_09_07",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "PK：快速选择正确答案。",
+          "prompt_en": "PK: choose quickly.",
+          "data": {
+            "sentence": "你唱歌很___。",
+            "sentence_pinyin": "Nǐ chàng gē hěn ___.",
+            "options": [
+              "好听",
+              "前边",
+              "那个",
+              "白天"
+            ],
+            "options_pinyin": [
+              "hǎotīng",
+              "qiánbian",
+              "nàge",
+              "báitiān"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "好听",
+          "kp": "好听",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_09_08",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "PK：快速选择正确答案。",
+          "prompt_en": "PK: choose quickly.",
+          "data": {
+            "sentence": "我在家里做饭、看___。",
+            "sentence_pinyin": "Wǒ zài jiā li zuò fàn, kàn ___.",
+            "options": [
+              "书",
+              "电视",
+              "椅子",
+              "狗"
+            ],
+            "options_pinyin": [
+              "shū",
+              "diànshì",
+              "yǐzi",
+              "gǒu"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "电视",
+          "kp": "电视",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_09_09",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "PK：快速选择正确答案。",
+          "prompt_en": "PK: choose quickly.",
+          "data": {
+            "sentence": "我也有一只小___。",
+            "sentence_pinyin": "Wǒ yě yǒu yì zhī xiǎo ___.",
+            "options": [
+              "歌",
+              "书",
+              "狗",
+              "家"
+            ],
+            "options_pinyin": [
+              "gē",
+              "shū",
+              "gǒu",
+              "jiā"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "狗",
+          "kp": "狗",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "pk_hsk1_09_10",
+          "type": "pk_question",
+          "stage": "in_class",
+          "prompt_cn": "PK：快速选择正确答案。",
+          "prompt_en": "PK: choose quickly.",
+          "data": {
+            "sentence": "明天星期六，你___什么？",
+            "sentence_pinyin": "Míngtiān Xīngqīliù, nǐ ___ shénme?",
+            "options": [
+              "边",
+              "第",
+              "那",
+              "做"
+            ],
+            "options_pinyin": [
+              "bian",
+              "dì",
+              "nà",
+              "zuò"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "做",
+          "kp": "做",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "hanziWriting": {
+    "characters": [
+      {
+        "id": "hz_l09_01",
+        "char": "前",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_02",
+        "char": "边",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_03",
+        "char": "家",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_04",
+        "char": "那",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_05",
+        "char": "外",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_06",
+        "char": "椅",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_07",
+        "char": "子",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_08",
+        "char": "上",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_09",
+        "char": "本",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_10",
+        "char": "书",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_11",
+        "char": "第",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_12",
+        "char": "学",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_13",
+        "char": "习",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_14",
+        "char": "做",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_15",
+        "char": "白",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_16",
+        "char": "天",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_17",
+        "char": "读",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_18",
+        "char": "和",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_19",
+        "char": "朋",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_20",
+        "char": "友",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_21",
+        "char": "唱",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_22",
+        "char": "歌",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_23",
+        "char": "听",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_24",
+        "char": "电",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_25",
+        "char": "视",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_26",
+        "char": "狗",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "hz_l09_27",
+        "char": "玩",
+        "pinyin": "",
+        "word": "",
+        "sourceType": "textbook"
+      }
+    ]
+  },
+  "hanziRecognition": {
+    "enabled": true,
+    "showPinyin": false,
+    "title": "汉字认读循环",
+    "titleEn": "Character Recognition Cycle",
+    "groups": [
+      {
+        "id": "hrec_l09_g1",
+        "title": "第1组：前边、外边、椅子、上、书",
+        "vocabularyIds": [
+          "v_l09_01",
+          "v_l09_05",
+          "v_l09_06",
+          "v_l09_07",
+          "v_l09_09"
+        ]
+      },
+      {
+        "id": "hrec_l09_g2",
+        "title": "第2组：第、本、学习、做、白天",
+        "vocabularyIds": [
+          "v_l09_08",
+          "v_l09_11",
+          "v_l09_12",
+          "v_l09_13",
+          "v_l09_14"
+        ]
+      },
+      {
+        "id": "hrec_l09_g3",
+        "title": "第3组：读书、和、朋友、唱歌、好听",
+        "vocabularyIds": [
+          "v_l09_15",
+          "v_l09_16",
+          "v_l09_17",
+          "v_l09_18",
+          "v_l09_20"
+        ]
+      },
+      {
+        "id": "hrec_l09_g4",
+        "title": "第4组：电视、狗、玩、那个、家",
+        "vocabularyIds": [
+          "v_l09_21",
+          "v_l09_22",
+          "v_l09_23",
+          "v_l09_04",
+          "v_l09_03"
+        ]
+      }
+    ],
+    "rounds": [
+      {
+        "id": "hanzi_to_meaning",
+        "title": "汉字配意思",
+        "titleEn": "Character to meaning"
+      },
+      {
+        "id": "hanzi_to_pinyin",
+        "title": "看汉字选拼音",
+        "titleEn": "Character to pinyin"
+      },
+      {
+        "id": "meaning_to_hanzi",
+        "title": "看意思选汉字",
+        "titleEn": "Meaning to character"
+      },
+      {
+        "id": "sentence_to_word",
+        "title": "短句找词",
+        "titleEn": "Sentence to word"
+      },
+      {
+        "id": "reading_choice",
+        "title": "英文阅读理解",
+        "titleEn": "English reading comprehension"
+      }
+    ],
+    "sentenceExamples": {
+      "v_l09_01": {
+        "sentence": "学校前边。",
+        "pinyin": ""
+      },
+      "v_l09_02": {
+        "sentence": "前边。",
+        "pinyin": ""
+      },
+      "v_l09_03": {
+        "sentence": "一家电影院。",
+        "pinyin": ""
+      },
+      "v_l09_04": {
+        "sentence": "那个电影院。",
+        "pinyin": ""
+      },
+      "v_l09_05": {
+        "sentence": "电影院外边。",
+        "pinyin": ""
+      },
+      "v_l09_06": {
+        "sentence": "一把椅子。",
+        "pinyin": ""
+      },
+      "v_l09_07": {
+        "sentence": "椅子上。",
+        "pinyin": ""
+      },
+      "v_l09_08": {
+        "sentence": "一本书。",
+        "pinyin": ""
+      },
+      "v_l09_09": {
+        "sentence": "中文书。",
+        "pinyin": ""
+      },
+      "v_l09_10": {
+        "sentence": "那是谁的书。",
+        "pinyin": ""
+      },
+      "v_l09_11": {
+        "sentence": "第一。",
+        "pinyin": ""
+      },
+      "v_l09_12": {
+        "sentence": "在学校学习。",
+        "pinyin": ""
+      },
+      "v_l09_13": {
+        "sentence": "做饭。",
+        "pinyin": ""
+      },
+      "v_l09_14": {
+        "sentence": "明天白天。",
+        "pinyin": ""
+      },
+      "v_l09_15": {
+        "sentence": "在家读书。",
+        "pinyin": ""
+      },
+      "v_l09_16": {
+        "sentence": "和朋友。",
+        "pinyin": ""
+      },
+      "v_l09_17": {
+        "sentence": "我的朋友。",
+        "pinyin": ""
+      },
+      "v_l09_18": {
+        "sentence": "唱歌。",
+        "pinyin": ""
+      },
+      "v_l09_19": {
+        "sentence": "一首歌。",
+        "pinyin": ""
+      },
+      "v_l09_20": {
+        "sentence": "很好听。",
+        "pinyin": ""
+      },
+      "v_l09_21": {
+        "sentence": "看电视。",
+        "pinyin": ""
+      },
+      "v_l09_22": {
+        "sentence": "一只狗。",
+        "pinyin": ""
+      },
+      "v_l09_23": {
+        "sentence": "和小狗玩。",
+        "pinyin": ""
+      }
+    },
+    "readingExamples": {
+      "前边": "front",
+      "边": "locality suffix; side",
+      "家": "measure word for families or enterprises",
+      "那个": "that",
+      "外边": "outside",
+      "椅子": "chair",
+      "上": "on; above",
+      "本": "measure word for books",
+      "书": "book",
+      "那": "that",
+      "第": "ordinal prefix",
+      "学习": "study; learn",
+      "做": "do",
+      "白天": "daytime",
+      "读书": "read; study",
+      "和": "with",
+      "朋友": "friend",
+      "唱": "sing",
+      "歌": "song",
+      "好听": "pleasant to hear",
+      "电视": "television",
+      "狗": "dog",
+      "玩": "play; have fun"
+    }
+  },
+  "postClassHomework": {
+    "mode": "required_optional",
+    "instructions": {
+      "title": "第9课课后作业",
+      "summary": "ClassPro 课后作业重点完成汉字书写、表达输出、个性化准备和课堂闭环，不重复练习册的大量客观题。",
+      "required": "必选：完成汉字书写任务。",
+      "optional": "可选：从写一段话、口语准备、学习反思中选择完成；鼓励使用今天的时间、地点和活动表达。",
+      "aiPolicy": "准备口语话题时可以借助 AI 查词或打草稿，但请改成自己能说出来的中文。"
+    },
+    "tiers": {
+      "default": {
+        "label": "第9课课后作业",
+        "goal": "完成必选书写，并准备能在课堂上使用的表达。",
+        "suggestedMinutes": 18,
+        "suggestedMix": "必选：汉字书写；可选：写一段话、口语准备、学习反思。"
+      }
+    },
+    "sharedPool": [],
+    "tierPools": {
+      "default": [
+        {
+          "id": "hw_l09_required_writing",
+          "lesson": "HSK1-L09",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "handwriting",
+          "requirement": "required",
+          "section": "必选：汉字书写",
+          "prompt_cn": "必选：书写本课汉字：前、边、家、那、外、椅、子、上、本、书、第、学、习、做、白、天、读、和、朋、友、唱、歌、听、电、视、狗、玩",
+          "prompt_en": "Required: Write the lesson characters.",
+          "characters": [
+            "前",
+            "边",
+            "家",
+            "那",
+            "外",
+            "椅",
+            "子",
+            "上",
+            "本",
+            "书",
+            "第",
+            "学",
+            "习",
+            "做",
+            "白",
+            "天",
+            "读",
+            "和",
+            "朋",
+            "友",
+            "唱",
+            "歌",
+            "听",
+            "电",
+            "视",
+            "狗",
+            "玩"
+          ],
+          "repeat_count": 3,
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": true
+        },
+        {
+          "id": "hw_l09_optional_vocab_paragraph",
+          "lesson": "HSK1-L09",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "subjective",
+          "requirement": "optional",
+          "section": "可选：写一段话",
+          "prompt_cn": "教学扩展：请随机从今天所学生词中选择3-5个，写一段话。",
+          "prompt_en": "Optional: Randomly choose 3-5 words from today’s vocabulary and write a short paragraph.",
+          "instructions": "可选生词：前边、外边、椅子、书、学习、白天、读书、朋友、唱歌、电视、狗、玩。请至少用3个，最多用5个。",
+          "answerPlaceholder": "例如：我明天白天在家里读书。晚上我和朋友们看电视。我的小狗也在家。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l09_optional_speaking",
+          "lesson": "HSK1-L09",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "subjective",
+          "requirement": "optional",
+          "section": "可选：口语准备",
+          "prompt_cn": "教学扩展：请准备话题“介绍你明天一天的安排”，下次上课时口头表达。",
+          "prompt_en": "Optional speaking prep: Prepare the topic “Introduce your plan for tomorrow” for oral sharing next class.",
+          "instructions": "可以借助 AI 查词或整理草稿，但请改成自己能读、能说的中文。建议包含：明天上午在哪儿、白天做什么、晚上和谁做什么。",
+          "answerPlaceholder": "例子：我明天上午在学校学习。白天我在家里读书。晚上我和朋友们去外边唱歌。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        },
+        {
+          "id": "hw_l09_optional_reflection",
+          "lesson": "HSK1-L09",
+          "stage": "post_class",
+          "tier": "default",
+          "type": "subjective",
+          "requirement": "optional",
+          "section": "可选：学习反思",
+          "prompt_cn": "教学扩展：今天哪一个时间+地点+动作的句子最难？你想下次再练什么？",
+          "prompt_en": "Optional reflection: Which time-place-action sentence was hardest today? What do you want to practice next time?",
+          "answerPlaceholder": "例如：我觉得“我明天上午在学校学习”最难。我想再练语序。",
+          "auto_grade": false,
+          "needs_teacher_review": true,
+          "repeat_ok": false
+        }
+      ]
+    },
+    "assignmentSelection": {
+      "default": [
+        "hw_l09_required_writing",
+        "hw_l09_optional_vocab_paragraph",
+        "hw_l09_optional_speaking",
+        "hw_l09_optional_reflection"
+      ]
+    },
+    "reviewPolicy": {
+      "maxSubmissions": 2,
+      "teacherReview": "latest_submission_only"
+    }
+  },
+  "report": {
+    "lesson": "HSK1-L09",
+    "focus": [
+      "地点存在表达",
+      "时间+地点+动作语序",
+      "第+数词序数表达"
+    ],
+    "teacherNotes": "重点观察学生能否从答句反推问句，并能把前课词汇放进时间地点语序中。"
+  }
+}
