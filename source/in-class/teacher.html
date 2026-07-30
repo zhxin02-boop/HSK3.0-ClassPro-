@@ -1689,6 +1689,7 @@ ap.init();
 (function(){
   if(typeof ap==='undefined')return;
   function shuffle(a){var out=a.slice();for(var i=out.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=out[i];out[i]=out[j];out[j]=t}return out}
+  var hrecQuestionCache={};
   function questions(){return Q.r3_translation_choice||Q.translation_choice||Q.translationSentenceChoice||[]}
   function vocabById(id){for(var i=0;i<V.length;i++)if(V[i].id===id)return V[i];return null}
   function vocabByText(text){for(var i=0;i<V.length;i++)if((V[i].hanzi||V[i].word)===text)return V[i];return null}
@@ -1707,6 +1708,7 @@ ap.init();
     ];
   }
   function buildHanziCore(index){
+    if(hrecQuestionCache[index])return hrecQuestionCache[index];
     var rounds=coreRounds(),groups=HR.groups||[],ri=Math.floor(index/rounds.length),rj=index%rounds.length,g=groups[ri],round=rounds[rj];
     if(!g||!round)return null;
     var ids=g.vocabularyIds||[],items=[];
@@ -1718,7 +1720,9 @@ ap.init();
       var opts=optionValues(ids,field,answer);
       items.push({id:'hrec_'+g.id+'_'+round.id+'_'+i,word:word,stimulus:stimulus,pinyin:round.id==='hanzi_to_pinyin'?pinyin:'',image:'',options:opts,option_images:[],answer:answer,correct_index:opts.indexOf(answer),meaning:meaning});
     }
-    return {id:'hrec_'+g.id+'_'+round.id,prompt_cn:round.title+'（'+g.title+'）',prompt_en:round.titleEn+' — '+g.title,data:{groupTitle:g.title,roundId:round.id,roundTitle:round.title,items:items},correct_answer:items.map(function(x){return x.answer}).join('、'),sourceType:'teaching_extension'};
+    items=shuffle(items);
+    hrecQuestionCache[index]={id:'hrec_'+g.id+'_'+round.id,prompt_cn:round.title+'（'+g.title+'）',prompt_en:round.titleEn+' — '+g.title,data:{groupTitle:g.title,roundId:round.id,roundTitle:round.title,items:items},correct_answer:items.map(function(x){return x.answer}).join('、'),sourceType:'teaching_extension'};
+    return hrecQuestionCache[index];
   }
   if(typeof HR!=='undefined'&&HR.enabled){
     HR.rounds=coreRounds();
