@@ -1,6 +1,6 @@
 # HSK1 课程目录与开放策略
 
-更新时间：2026-07-16
+更新时间：2026-07-30
 
 ## 一、课程范围
 
@@ -16,12 +16,12 @@ HSK1 共 15 课，课程编号统一使用：`HSK1-L01` 至 `HSK1-L15`。
 |---|---|---|---:|---|
 | HSK1-L01 | AI小语，你好！ | Hello, AI Xiaoyu! | 001 | 已开放 |
 | HSK1-L02 | 我叫李文 | My name is Li Wen | 005 | 已开放 |
-| HSK1-L03 | 我是中国人 | I’m Chinese | 010 | 暂未开发 |
-| HSK1-L04 | 我有两个孩子 | I have two children | 018 | 暂未开发 |
-| HSK1-L05 | 今天我休息 | I’m off today | 027 | 暂未开发 |
-| HSK1-L06 | 你的手机号是多少？ | What’s your cell phone number? | 035 | 暂未开发 |
-| HSK1-L07 | 我晚上六点半下班 | I’ll finish work at 6:30 in the evening | 045 | 暂未开发 |
-| HSK1-L08 | 我爸爸也在医院工作 | My father also works at a hospital | 054 | 暂未开发 |
+| HSK1-L03 | 我是中国人 | I’m Chinese | 010 | 已开放 |
+| HSK1-L04 | 我有两个孩子 | I have two children | 018 | 已开放 |
+| HSK1-L05 | 今天我休息 | I’m off today | 027 | 已开放 |
+| HSK1-L06 | 你的手机号是多少？ | What’s your cell phone number? | 035 | 已开放 |
+| HSK1-L07 | 我晚上六点半下班 | I’ll finish work at 6:30 in the evening | 045 | 准备中 |
+| HSK1-L08 | 我爸爸也在医院工作 | My father also works at a hospital | 054 | 准备中 |
 | HSK1-L09 | 我明天上午在学校学习 | I’ll be studying at school tomorrow morning | 061 | 暂未开发 |
 | HSK1-L10 | 这儿的苹果真便宜！ | The apples here are really affordable! | 070 | 暂未开发 |
 | HSK1-L11 | 我读大学呢 | I’m studying at a university | 078 | 暂未开发 |
@@ -37,6 +37,7 @@ HSK1 共 15 课，课程编号统一使用：`HSK1-L01` 至 `HSK1-L15`。
 - 教师端可以查看 HSK1 全部 15 课。
 - 未开发课程显示在目录中，但标记为“暂未开发”，不进入可用课堂流程。
 - 某课完成题库、学生端、教师端和数据链路后，将 `openForUse` 改为 `true`。
+- 当前主页和学生首页的入口状态由 `source/data-model/hsk1-curriculum.js` 中的 `openForUse` 控制；仅新增课程 JSON 不会自动点亮入口。
 
 ### 学生端
 
