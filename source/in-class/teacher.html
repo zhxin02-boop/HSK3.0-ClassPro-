@@ -1697,7 +1697,19 @@ body.classpro-hide-pinyin [data-pinyin="1"]{display:none!important}
 (function(){
   if(typeof ap==='undefined')return;
   ap.globalPinyinVisible=true;
-  function applyPinyinClass(){document.body.classList.toggle('classpro-hide-pinyin',!ap.globalPinyinVisible)}
+  var pinyinToneRe=/[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜüĀÁǍÀĒÉĚÈĪÍǏÌŌÓǑÒŪÚǓÙǕǗǙǛÜ]/;
+  function markPinyinNodes(){
+    var root=document.querySelector('.panel-area');
+    if(!root)return;
+    root.querySelectorAll('div,span,small').forEach(function(el){
+      if(el.children.length||el.getAttribute('data-pinyin')==='1')return;
+      var text=(el.textContent||'').replace(/\s+/g,' ').trim();
+      if(!text||/[\u4e00-\u9fff]/.test(text)||!pinyinToneRe.test(text))return;
+      if(text.length>120||/[.!?]{2,}/.test(text))return;
+      el.setAttribute('data-pinyin','1');
+    });
+  }
+  function applyPinyinClass(){markPinyinNodes();document.body.classList.toggle('classpro-hide-pinyin',!ap.globalPinyinVisible)}
   function publishPinyin(){
     if(ap.lastQuestionPayload)ap.lastQuestionPayload.pinyinVisible=ap.globalPinyinVisible;
     if(ap.mq&&ap.cs==='connected'){

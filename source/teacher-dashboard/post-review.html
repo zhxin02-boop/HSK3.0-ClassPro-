@@ -505,24 +505,36 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
     return '<div class="student"><h2 style="margin:0 0 8px;color:#315b29">'+esc(g.lesson)+' · '+esc(g.stage)+' · '+esc(g.qid||g.module)+'</h2>'+
       '<div class="small"><span class="tag">'+esc(moduleLabel(g.module))+'</span> 共 '+g.rows.length+' 份作答</div>'+
       '<div class="answer-box" style="background:#fffaf0"><b>题目说明 / Task</b><br>'+esc(g.question||"题目说明暂缺")+'</div>'+
-      '<div class="tools"><button onclick="markQuestionGroup(\''+gid+'\',true)">本题全部正确</button><button class="secondary" onclick="markQuestionGroup(\''+gid+'\',false)">本题全部需修改</button><button onclick="saveQuestionGroup(\''+gid+'\')">保存本题全部批改 / Save Question</button><span class="small" id="qst_'+gid+'">可逐行修改反馈后保存。</span></div>'+
+      '<div class="tools"><button onclick="markQuestionGroup(\''+gid+'\',true)">本题全部正确（自动反馈）</button><button class="secondary" onclick="markQuestionGroup(\''+gid+'\',false)">本题全部需修改（自动反馈）</button><button onclick="saveQuestionGroup(\''+gid+'\')">保存本题全部批改 / Save Question</button><span class="small" id="qst_'+gid+'">可逐行修改反馈后保存。</span></div>'+
       '<table><tr><th style="width:120px">学生</th><th>作答</th><th style="width:110px">判断</th><th>教师反馈</th><th style="width:90px">状态</th></tr>'+
       g.rows.map(function(r,i){return renderQuestionRow(gid,r,i)}).join("")+'</table></div>';
   }
   function renderQuestionRow(gid,r,i){
     var id=safeId(gid+"_row_"+i),m=inferredModule(r),ans=answerOf(r);reviewRowsById[id]=r;
     var answer=m==="handwriting"?renderAnswerPreview(ans,m,id,r):'<div class="answer-box" style="margin:0">'+esc(ans||"未作答")+'</div>';
-    return '<tr id="review_'+id+'"><td><b>'+esc(studentOf(r)||"未命名")+'</b><div class="small">'+esc(timeOf(r))+'</div></td><td>'+questionPreview(r,m)+answer+'</td><td><label class="tag" style="cursor:pointer"><input type="checkbox" id="ok_'+id+'" checked> 正确</label></td><td><textarea id="fb_'+id+'" placeholder="可留空；留空时按正确/需修改自动生成反馈。">'+esc(val(r,["教师批改","teacherFeedback","correction","鏁欏笀鎵规敼"]))+'</textarea></td><td><span class="small" id="st_'+id+'">未保存</span></td></tr>';
+    var existing=val(r,["教师批改","teacherFeedback","correction","鏁欏笀鎵规敼"]),feedback=existing||defaultFeedback(true);
+    return '<tr id="review_'+id+'"><td><b>'+esc(studentOf(r)||"未命名")+'</b><div class="small">'+esc(timeOf(r))+'</div></td><td>'+questionPreview(r,m)+answer+'</td><td><label class="tag" style="cursor:pointer"><input type="checkbox" id="ok_'+id+'" checked onchange="syncDefaultFeedback(\''+id+'\')"> 正确</label></td><td><textarea id="fb_'+id+'" placeholder="可修改；默认按判断生成反馈。">'+esc(feedback)+'</textarea></td><td><span class="small" id="st_'+id+'">未保存</span></td></tr>';
+  }
+  function defaultFeedback(ok){
+    return ok?"已收到，写得不错，继续加油！":"请再检查字形、笔顺或表达是否准确。";
+  }
+  function isAutoFeedback(text){
+    text=String(text||"").trim();
+    return !text||text===defaultFeedback(true)||text===defaultFeedback(false);
   }
   function correctionFor(id){
     var ok=document.getElementById("ok_"+id).checked,custom=(document.getElementById("fb_"+id).value||"").trim();
     if(custom)return custom;
-    return ok?"已收到，写得不错，继续加油！":"请再检查字形、笔顺或表达是否准确。";
+    return defaultFeedback(ok);
   }
   window.setReviewLayoutMode=setLayout;
   window.setReviewFilter=setFilter;
+  window.syncDefaultFeedback=function(id){
+    var okEl=document.getElementById("ok_"+id),fb=document.getElementById("fb_"+id);
+    if(okEl&&fb&&isAutoFeedback(fb.value))fb.value=defaultFeedback(okEl.checked);
+  };
   window.markQuestionGroup=function(gid,ok){
-    (questionReviewGroups[gid]||{rows:[]}).rows.forEach(function(r,i){var id=safeId(gid+"_row_"+i),el=document.getElementById("ok_"+id);if(el)el.checked=ok});
+    (questionReviewGroups[gid]||{rows:[]}).rows.forEach(function(r,i){var id=safeId(gid+"_row_"+i),el=document.getElementById("ok_"+id);if(el)el.checked=ok;window.syncDefaultFeedback(id)});
   };
   window.saveQuestionGroup=function(gid){
     var g=questionReviewGroups[gid]||{rows:[]},status=document.getElementById("qst_"+gid);
