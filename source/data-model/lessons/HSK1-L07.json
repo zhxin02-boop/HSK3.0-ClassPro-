@@ -4908,6 +4908,288 @@
           "kp": "后",
           "sourceType": "teaching_extension"
         }
+      ],
+      "r3_translation_choice": [
+        {
+          "id": "r3_hsk1_l07_01",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "What time is it now?",
+            "prompt_ru": "Сейчас который час?",
+            "options": [
+              "现在几点？",
+              "你现在去哪儿？",
+              "你现在吃什么？",
+              "你是谁？"
+            ],
+            "options_pinyin": [
+              "Xiànzài jǐ diǎn?",
+              "Nǐ xiànzài qù nǎr?",
+              "Nǐ xiànzài chī shénme?",
+              "Nǐ shì shéi?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "现在几点？",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l07_02",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "I have class at 10:10 in the morning.",
+            "prompt_ru": "У меня урок в 10:10 утра.",
+            "options": [
+              "我上午十点十分有课。",
+              "我下午两点见。",
+              "我晚上六点半下班。",
+              "我早上八点四十吃饭。"
+            ],
+            "options_pinyin": [
+              "Wǒ shàngwǔ shí diǎn shí fēn yǒu kè.",
+              "Wǒ xiàwǔ liǎng diǎn jiàn.",
+              "Wǒ wǎnshang liù diǎn bàn xiàbān.",
+              "Wǒ zǎoshang bā diǎn sìshí chī fàn."
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我上午十点十分有课。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l07_03",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "Let us meet at two in the afternoon.",
+            "prompt_ru": "Давайте встретимся в два часа дня.",
+            "options": [
+              "我们下午两点见吧。",
+              "我们上午十点有课吧。",
+              "我们晚上去医院吧。",
+              "我们现在吃包子吧。"
+            ],
+            "options_pinyin": [
+              "Wǒmen xiàwǔ liǎng diǎn jiàn ba.",
+              "Wǒmen shàngwǔ shí diǎn yǒu kè ba.",
+              "Wǒmen wǎnshang qù yīyuàn ba.",
+              "Wǒmen xiànzài chī bāozi ba."
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我们下午两点见吧。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l07_04",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "Li Wen wants to go to the cinema to watch a movie.",
+            "prompt_ru": "Ли Вэнь хочет пойти в кинотеатр смотреть фильм.",
+            "options": [
+              "李文想去电影院看电影。",
+              "李文想去医院看医生。",
+              "李文想去学校上课。",
+              "李文想去家里休息。"
+            ],
+            "options_pinyin": [
+              "Lǐ Wén xiǎng qù diànyǐngyuàn kàn diànyǐng.",
+              "Lǐ Wén xiǎng qù yīyuàn kàn yīshēng.",
+              "Lǐ Wén xiǎng qù xuéxiào shàngkè.",
+              "Lǐ Wén xiǎng qù jiā lǐ xiūxi."
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "李文想去电影院看电影。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l07_05",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "I still have something to do this afternoon.",
+            "prompt_ru": "У меня днём ещё есть дела.",
+            "options": [
+              "我下午还有事。",
+              "我上午没有课。",
+              "我晚上看电影。",
+              "我现在很高兴。"
+            ],
+            "options_pinyin": [
+              "Wǒ xiàwǔ hái yǒu shì.",
+              "Wǒ shàngwǔ méiyǒu kè.",
+              "Wǒ wǎnshang kàn diànyǐng.",
+              "Wǒ xiànzài hěn gāoxìng."
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我下午还有事。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l07_06",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "Where is your mother?",
+            "prompt_ru": "Где твоя мама?",
+            "options": [
+              "你妈妈在哪儿？",
+              "你妈妈吃什么？",
+              "你妈妈叫什么？",
+              "你妈妈几点下班？"
+            ],
+            "options_pinyin": [
+              "Nǐ māma zài nǎr?",
+              "Nǐ māma chī shénme?",
+              "Nǐ māma jiào shénme?",
+              "Nǐ māma jǐ diǎn xiàbān?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你妈妈在哪儿？",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l07_07",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "My family has two children.",
+            "prompt_ru": "В моей семье двое детей.",
+            "options": [
+              "我家有两个孩子。",
+              "我家有两个医生。",
+              "我家有两个房间。",
+              "我家有两个学校。"
+            ],
+            "options_pinyin": [
+              "Wǒ jiā yǒu liǎng gè háizi.",
+              "Wǒ jiā yǒu liǎng gè yīshēng.",
+              "Wǒ jiā yǒu liǎng gè fángjiān.",
+              "Wǒ jiā yǒu liǎng gè xuéxiào."
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我家有两个孩子。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l07_08",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "What does your father want to eat?",
+            "prompt_ru": "Что хочет есть твой папа?",
+            "options": [
+              "你爸爸想吃什么？",
+              "你爸爸在哪儿工作？",
+              "你爸爸几点下班？",
+              "你爸爸叫什么？"
+            ],
+            "options_pinyin": [
+              "Nǐ bàba xiǎng chī shénme?",
+              "Nǐ bàba zài nǎr gōngzuò?",
+              "Nǐ bàba jǐ diǎn xiàbān?",
+              "Nǐ bàba jiào shénme?"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你爸爸想吃什么？",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l07_09",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "I do not want to eat rice.",
+            "prompt_ru": "Я не хочу есть рис.",
+            "options": [
+              "我不想吃米饭。",
+              "我想吃米饭。",
+              "我不去吃米饭。",
+              "我没看见米饭。"
+            ],
+            "options_pinyin": [
+              "Wǒ bù xiǎng chī mǐfàn.",
+              "Wǒ xiǎng chī mǐfàn.",
+              "Wǒ bù qù chī mǐfàn.",
+              "Wǒ méi kànjiàn mǐfàn."
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我不想吃米饭。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l07_10",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "He finishes class at 4:30.",
+            "prompt_ru": "Он заканчивает урок в 4:30.",
+            "options": [
+              "他四点半下课。",
+              "他六点半下班。",
+              "他十点十分上课。",
+              "他两点去电影院。"
+            ],
+            "options_pinyin": [
+              "Tā sì diǎn bàn xiàkè.",
+              "Tā liù diǎn bàn xiàbān.",
+              "Tā shí diǎn shí fēn shàngkè.",
+              "Tā liǎng diǎn qù diànyǐngyuàn."
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "他四点半下课。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        }
       ]
     }
   },
