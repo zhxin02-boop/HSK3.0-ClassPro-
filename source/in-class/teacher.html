@@ -1664,7 +1664,7 @@ ap.init();
     var d=c.data,questions=d.questions||[];
     var h='<div class="panel" style="text-align:left;max-width:980px;width:100%"><h3 style="color:var(--blue);margin-top:0;text-align:center">课文问答 / Text Q&A</h3>';
     h+='<div style="display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px"><div style="font-size:13px;color:#888">'+es(c.prompt_cn||'')+'</div><button class="grammar-tab" onclick="ap.textQaShowPinyin=!ap.textQaShowPinyin;ap._r()">'+(this.textQaShowPinyin?'隐藏拼音':'显示拼音')+'</button></div>';
-    h+='<div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:16px;padding:20px;margin:14px 0"><div style="font-weight:900;color:var(--blue);margin-bottom:8px">'+es(d.title||'')+'</div><div class="text-hanzi" style="font-size:22px;line-height:1.75;color:var(--text);font-weight:700">'+es(d.passage||'')+'</div>'+(this.textQaShowPinyin?'<div style="font-size:14px;line-height:1.6;color:#74806d;margin-top:10px">'+es(d.passage_pinyin||'')+'</div>':'')+'</div>';
+    h+='<div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:16px;padding:20px;margin:14px 0"><div style="font-weight:900;color:var(--blue);margin-bottom:8px">'+es(d.title||'')+'</div><div class="text-hanzi" style="font-size:22px;line-height:1.75;color:var(--text);font-weight:700">'+es(d.passage||'')+'</div>'+(this.textQaShowPinyin?'<div data-pinyin="1" style="font-size:14px;line-height:1.6;color:#74806d;margin-top:10px">'+es(d.passage_pinyin||'')+'</div>':'')+'</div>';
     h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0">';
     questions.forEach(function(qq,qi){
       h+='<div style="background:#fff;border:1px solid #dfeac8;border-radius:16px;padding:16px"><div style="font-weight:900;color:var(--text);font-size:18px;line-height:1.5">'+(qi+1)+'. '+es(qq.question_cn||'')+'</div><div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">';
@@ -1682,6 +1682,43 @@ ap.init();
   ap._cq2=function(){var q=oldCq2.call(this);if(this.st==='ttq'&&isGroupedTextQa(q))q.correct_answer=groupedKey(q);return q};
   var oldRenderGroupedQa=ap._r;
   ap._r=function(){oldRenderGroupedQa.call(this);var q=this._cq2&&this._cq2();if(this.st==='ttq'&&isGroupedTextQa(q)){var oldKey=document.querySelector('.practice-key-answer');if(oldKey)oldKey.remove()}};
+})();
+</script>
+<style>
+body.classpro-hide-pinyin rt,
+body.classpro-hide-pinyin .py,
+body.classpro-hide-pinyin .pinyin,
+body.classpro-hide-pinyin [data-pinyin="1"]{display:none!important}
+.pinyin-toggle-btn{display:inline-flex;align-items:center;gap:5px;height:34px;padding:0 12px;border-radius:999px;border:1px solid #d8e6c5;background:#fff;color:#4f8f2d;font-size:12px;font-weight:900;cursor:pointer;box-shadow:0 4px 10px rgba(76,107,43,.08)}
+.pinyin-toggle-btn.off{background:#f8fafc;color:#64748b;border-color:#dbe3ef}
+</style>
+<script>
+/* Global pinyin visibility: teacher toggle synced to student clients. */
+(function(){
+  if(typeof ap==='undefined')return;
+  ap.globalPinyinVisible=true;
+  function applyPinyinClass(){document.body.classList.toggle('classpro-hide-pinyin',!ap.globalPinyinVisible)}
+  function publishPinyin(){
+    if(ap.lastQuestionPayload)ap.lastQuestionPayload.pinyinVisible=ap.globalPinyinVisible;
+    if(ap.mq&&ap.cs==='connected'){
+      try{ap.mq.publish('classpro/room/'+RM+'/display',JSON.stringify({room:RM,lesson:MT.lessonKey||'',type:'pinyinVisibility',show:ap.globalPinyinVisible,updatedAt:new Date().toISOString()}))}catch(e){}
+    }
+  }
+  window.toggleGlobalPinyin=function(){ap.globalPinyinVisible=!ap.globalPinyinVisible;applyPinyinClass();publishPinyin();ap._r()};
+  var oldPubq=ap._pubq;
+  ap._pubq=function(){oldPubq.call(this);if(this.lastQuestionPayload)this.lastQuestionPayload.pinyinVisible=this.globalPinyinVisible;publishPinyin()};
+  var oldQwe=ap.qwe;
+  ap.qwe=function(){oldQwe.call(this);if(this.lastQuestionPayload)this.lastQuestionPayload.pinyinVisible=this.globalPinyinVisible;publishPinyin()};
+  var oldR=ap._r;
+  ap._r=function(){
+    oldR.call(this);applyPinyinClass();
+    var host=document.querySelector('.header-right')||document.querySelector('.topbar')||document.body;
+    if(!document.getElementById('globalPinyinToggle')){
+      var b=document.createElement('button');b.id='globalPinyinToggle';b.type='button';b.className='pinyin-toggle-btn';b.onclick=window.toggleGlobalPinyin;host.insertBefore(b,host.firstChild);
+    }
+    var btn=document.getElementById('globalPinyinToggle');
+    if(btn){btn.classList.toggle('off',!this.globalPinyinVisible);btn.textContent=this.globalPinyinVisible?'隐藏拼音':'显示拼音'}
+  };
 })();
 </script>
 </body>

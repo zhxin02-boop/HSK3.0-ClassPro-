@@ -77,7 +77,7 @@ function saveScore_(ss, d) {
 }
 
 function markReviewed_(ss, d) {
-  return updateReview_(ss, d, "", d.correction || "", "已批改");
+  return updateReview_(ss, d, "", d.correction || "", d.reviewStatus || d.status || "已归档");
 }
 
 function updateReview_(ss, d, score, correction, status) {

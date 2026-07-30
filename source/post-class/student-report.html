@@ -278,10 +278,14 @@ setTier(currentTier);
       var pre=rows.filter(function(x){return stageKey(x)==="pre"}),mid=rows.filter(function(x){return stageKey(x)==="mid"}),post=latestPostRows(rows.filter(function(x){return stageKey(x)==="post"}));
       var correct=mid.filter(function(x){return String(rv(x,["result","autoResult","结果"],IDX.result)).toLowerCase()==="correct"}).length;
       var summary=post.filter(function(x){return rv(x,["module","模块","mode"],IDX.module)==="homework_summary"})[0],report=summary?parseMaybeJson(rv(summary,["answer","学生作答"],IDX.answer)):null;
-      recommendedTier=tierFromReport(pre,mid);
-      if(!tierLocked){document.getElementById("tierRecommendation").textContent="推荐档位 / Recommended: "+recommendedTier;if(recommendedTier!==currentTier){setTier(recommendedTier,false);if(studentConfirmed)restoreProgress()}}
+      if(isRequiredOptionalHomework()){
+        document.getElementById("tierRecommendation").textContent="作业要求 / Homework Instructions";
+      }else{
+        recommendedTier=tierFromReport(pre,mid);
+        if(!tierLocked){document.getElementById("tierRecommendation").textContent="推荐档位 / Recommended: "+recommendedTier;if(recommendedTier!==currentTier){setTier(recommendedTier,false);if(studentConfirmed)restoreProgress()}}
+      }
       if(!rows.length){document.getElementById("reportBody").textContent="暂无报告数据。完成课前、课中或课后活动后，这里会生成报告。";return}
-      document.getElementById("reportHint").textContent="已生成："+name+" 的学习摘要；系统推荐 "+recommendedTier+" 档";
+      document.getElementById("reportHint").textContent=isRequiredOptionalHomework()?("已生成："+name+" 的学习摘要。"):("已生成："+name+" 的学习摘要；系统推荐 "+recommendedTier+" 档");
       document.getElementById("reportBody").innerHTML='<div class="report-grid"><div class="report-kpi"><b>'+pre.length+'</b><span>课前记录 / Pre</span></div><div class="report-kpi"><b>'+mid.length+'</b><span>课中答题 / Class</span></div><div class="report-kpi"><b>'+ (mid.length?Math.round(correct/mid.length*100):0)+'%</b><span>课中正确率 / Accuracy</span></div><div class="report-kpi"><b>'+ (report?report.objectiveCorrect+'/'+report.objectiveTotal:'--')+'</b><span>最近一次课后客观题 / Latest Homework</span></div></div>'+feedbackHtml(post);
     }).catch(function(){document.getElementById("reportBody").textContent="报告暂时无法读取，请稍后刷新 / Try again later."});
   };
