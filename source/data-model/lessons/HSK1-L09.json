@@ -2494,27 +2494,27 @@
             "pairs": [
               {
                 "left": "学校前边有什么？",
-                "left_pinyin": "Xuexiao qianbian you shenme?",
+                "left_pinyin": "Xuéxiào qiánbian yǒu shénme?",
                 "right": "学校前边有一家电影院。",
-                "right_pinyin": "Xuexiao qianbian you yi jia dianyingyuan."
+                "right_pinyin": "Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn."
               },
               {
                 "left": "明天上午你在哪儿？",
-                "left_pinyin": "Mingtian shangwu ni zai nar?",
+                "left_pinyin": "Míngtiān shàngwǔ nǐ zài nǎr?",
                 "right": "我明天上午在学校学习。",
-                "right_pinyin": "Wo mingtian shangwu zai xuexiao xuexi."
+                "right_pinyin": "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí."
               },
               {
                 "left": "椅子上有什么？",
-                "left_pinyin": "Yizi shang you shenme?",
+                "left_pinyin": "Yǐzi shang yǒu shénme?",
                 "right": "椅子上有一本书。",
-                "right_pinyin": "Yizi shang you yi ben shu."
+                "right_pinyin": "Yǐzi shang yǒu yì běn shū."
               },
               {
                 "left": "晚上几点见？",
-                "left_pinyin": "Wanshang ji dian jian?",
+                "left_pinyin": "Wǎnshang jǐ diǎn jiàn?",
                 "right": "晚上七点见。",
-                "right_pinyin": "Wanshang qi dian jian."
+                "right_pinyin": "Wǎnshang qī diǎn jiàn."
               }
             ],
             "words": [
@@ -2527,29 +2527,29 @@
               {
                 "sentence": "学校前边有什么？",
                 "answer": "学校前边有一家电影院。",
-                "sentence_pinyin": "Xuexiao qianbian you shenme?"
+                "sentence_pinyin": "Xuéxiào qiánbian yǒu shénme?"
               },
               {
                 "sentence": "明天上午你在哪儿？",
                 "answer": "我明天上午在学校学习。",
-                "sentence_pinyin": "Mingtian shangwu ni zai nar?"
+                "sentence_pinyin": "Míngtiān shàngwǔ nǐ zài nǎr?"
               },
               {
                 "sentence": "椅子上有什么？",
                 "answer": "椅子上有一本书。",
-                "sentence_pinyin": "Yizi shang you shenme?"
+                "sentence_pinyin": "Yǐzi shang yǒu shénme?"
               },
               {
                 "sentence": "晚上几点见？",
                 "answer": "晚上七点见。",
-                "sentence_pinyin": "Wanshang ji dian jian?"
+                "sentence_pinyin": "Wǎnshang jǐ diǎn jiàn?"
               }
             ],
             "options_pinyin": [
-              "Xuexiao qianbian you yi jia dianyingyuan.",
-              "Wo mingtian shangwu zai xuexiao xuexi.",
-              "Yizi shang you yi ben shu.",
-              "Wanshang qi dian jian."
+              "Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn.",
+              "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.",
+              "Yǐzi shang yǒu yì běn shū.",
+              "Wǎnshang qī diǎn jiàn."
             ]
           },
           "correct_answer": "全部匹配",
@@ -2566,27 +2566,27 @@
             "pairs": [
               {
                 "left": "你明天白天做什么？",
-                "left_pinyin": "Ni mingtian baitian zuo shenme?",
+                "left_pinyin": "Nǐ míngtiān báitiān zuò shénme?",
                 "right": "我白天在家里读书。",
-                "right_pinyin": "Wo baitian zai jia li dushu."
+                "right_pinyin": "Wǒ báitiān zài jiā li dúshū."
               },
               {
                 "left": "你晚上和谁唱歌？",
-                "left_pinyin": "Ni wanshang he shei chang ge?",
+                "left_pinyin": "Nǐ wǎnshang hé shéi chàng gē?",
                 "right": "我晚上和朋友们唱歌。",
-                "right_pinyin": "Wo wanshang he pengyoumen chang ge."
+                "right_pinyin": "Wǒ wǎnshang hé péngyoumen chàng gē."
               },
               {
                 "left": "谁唱歌很好听？",
-                "left_pinyin": "Shei chang ge hen haoting?",
+                "left_pinyin": "Shéi chàng gē hěn hǎotīng?",
                 "right": "杨同乐唱歌很好听。",
-                "right_pinyin": "Yang Tongle chang ge hen haoting."
+                "right_pinyin": "Yáng Tónglè chàng gē hěn hǎotīng."
               },
               {
                 "left": "你也有小狗吗？",
-                "left_pinyin": "Ni ye you xiaogou ma?",
+                "left_pinyin": "Nǐ yě yǒu xiǎogǒu ma?",
                 "right": "我也有一只小狗。",
-                "right_pinyin": "Wo ye you yi zhi xiaogou."
+                "right_pinyin": "Wǒ yě yǒu yì zhī xiǎogǒu."
               }
             ],
             "words": [
@@ -2599,29 +2599,29 @@
               {
                 "sentence": "你明天白天做什么？",
                 "answer": "我白天在家里读书。",
-                "sentence_pinyin": "Ni mingtian baitian zuo shenme?"
+                "sentence_pinyin": "Nǐ míngtiān báitiān zuò shénme?"
               },
               {
                 "sentence": "你晚上和谁唱歌？",
                 "answer": "我晚上和朋友们唱歌。",
-                "sentence_pinyin": "Ni wanshang he shei chang ge?"
+                "sentence_pinyin": "Nǐ wǎnshang hé shéi chàng gē?"
               },
               {
                 "sentence": "谁唱歌很好听？",
                 "answer": "杨同乐唱歌很好听。",
-                "sentence_pinyin": "Shei chang ge hen haoting?"
+                "sentence_pinyin": "Shéi chàng gē hěn hǎotīng?"
               },
               {
                 "sentence": "你也有小狗吗？",
                 "answer": "我也有一只小狗。",
-                "sentence_pinyin": "Ni ye you xiaogou ma?"
+                "sentence_pinyin": "Nǐ yě yǒu xiǎogǒu ma?"
               }
             ],
             "options_pinyin": [
-              "Wo baitian zai jia li dushu.",
-              "Wo wanshang he pengyoumen chang ge.",
-              "Yang Tongle chang ge hen haoting.",
-              "Wo ye you yi zhi xiaogou."
+              "Wǒ báitiān zài jiā li dúshū.",
+              "Wǒ wǎnshang hé péngyoumen chàng gē.",
+              "Yáng Tónglè chàng gē hěn hǎotīng.",
+              "Wǒ yě yǒu yì zhī xiǎogǒu."
             ]
           },
           "correct_answer": "全部匹配",
@@ -2638,27 +2638,27 @@
             "pairs": [
               {
                 "left": "那是谁的书？",
-                "left_pinyin": "Na shi shei de shu?",
+                "left_pinyin": "Nà shì shéi de shū?",
                 "right": "那是陈天中的书。",
-                "right_pinyin": "Na shi Chen Tianzhong de shu."
+                "right_pinyin": "Nà shì Chén Tiānzhōng de shū."
               },
               {
                 "left": "这是你的第几本中文书？",
-                "left_pinyin": "Zhe shi ni de di ji ben Zhongwen shu?",
+                "left_pinyin": "Zhè shì nǐ de dì jǐ běn Zhōngwén shū?",
                 "right": "这是我的第二本中文书。",
-                "right_pinyin": "Zhe shi wo de di-er ben Zhongwen shu."
+                "right_pinyin": "Zhè shì wǒ de dì-èr běn Zhōngwén shū."
               },
               {
                 "left": "你在哪儿看电视？",
-                "left_pinyin": "Ni zai nar kan dianshi?",
+                "left_pinyin": "Nǐ zài nǎr kàn diànshì?",
                 "right": "我在家里看电视。",
-                "right_pinyin": "Wo zai jia li kan dianshi."
+                "right_pinyin": "Wǒ zài jiā li kàn diànshì."
               },
               {
                 "left": "你和孩子们做什么？",
-                "left_pinyin": "Ni he haizimen zuo shenme?",
+                "left_pinyin": "Nǐ hé háizimen zuò shénme?",
                 "right": "我和孩子们、小狗玩。",
-                "right_pinyin": "Wo he haizimen, xiaogou wan."
+                "right_pinyin": "Wǒ hé háizimen, xiǎogǒu wán."
               }
             ],
             "words": [
@@ -2671,29 +2671,29 @@
               {
                 "sentence": "那是谁的书？",
                 "answer": "那是陈天中的书。",
-                "sentence_pinyin": "Na shi shei de shu?"
+                "sentence_pinyin": "Nà shì shéi de shū?"
               },
               {
                 "sentence": "这是你的第几本中文书？",
                 "answer": "这是我的第二本中文书。",
-                "sentence_pinyin": "Zhe shi ni de di ji ben Zhongwen shu?"
+                "sentence_pinyin": "Zhè shì nǐ de dì jǐ běn Zhōngwén shū?"
               },
               {
                 "sentence": "你在哪儿看电视？",
                 "answer": "我在家里看电视。",
-                "sentence_pinyin": "Ni zai nar kan dianshi?"
+                "sentence_pinyin": "Nǐ zài nǎr kàn diànshì?"
               },
               {
                 "sentence": "你和孩子们做什么？",
                 "answer": "我和孩子们、小狗玩。",
-                "sentence_pinyin": "Ni he haizimen zuo shenme?"
+                "sentence_pinyin": "Nǐ hé háizimen zuò shénme?"
               }
             ],
             "options_pinyin": [
-              "Na shi Chen Tianzhong de shu.",
-              "Zhe shi wo de di-er ben Zhongwen shu.",
-              "Wo zai jia li kan dianshi.",
-              "Wo he haizimen, xiaogou wan."
+              "Nà shì Chén Tiānzhōng de shū.",
+              "Zhè shì wǒ de dì-èr běn Zhōngwén shū.",
+              "Wǒ zài jiā li kàn diànshì.",
+              "Wǒ hé háizimen, xiǎogǒu wán."
             ]
           },
           "correct_answer": "全部匹配",
@@ -2710,27 +2710,27 @@
             "pairs": [
               {
                 "left": "我们在哪儿见？",
-                "left_pinyin": "Women zai nar jian?",
+                "left_pinyin": "Wǒmen zài nǎr jiàn?",
                 "right": "我们在电影院外边见。",
-                "right_pinyin": "Women zai dianyingyuan waibian jian."
+                "right_pinyin": "Wǒmen zài diànyǐngyuàn wàibian jiàn."
               },
               {
                 "left": "你去电影院做什么？",
-                "left_pinyin": "Ni qu dianyingyuan zuo shenme?",
+                "left_pinyin": "Nǐ qù diànyǐngyuàn zuò shénme?",
                 "right": "我去电影院看电影。",
-                "right_pinyin": "Wo qu dianyingyuan kan dianying."
+                "right_pinyin": "Wǒ qù diànyǐngyuàn kàn diànyǐng."
               },
               {
                 "left": "你想在哪儿学习？",
-                "left_pinyin": "Ni xiang zai nar xuexi?",
+                "left_pinyin": "Nǐ xiǎng zài nǎr xuéxí?",
                 "right": "我想在学校学习。",
-                "right_pinyin": "Wo xiang zai xuexiao xuexi."
+                "right_pinyin": "Wǒ xiǎng zài xuéxiào xuéxí."
               },
               {
                 "left": "你星期六做什么？",
-                "left_pinyin": "Ni Xingqiliu zuo shenme?",
+                "left_pinyin": "Nǐ Xīngqīliù zuò shénme?",
                 "right": "我星期六在家读书。",
-                "right_pinyin": "Wo Xingqiliu zai jia dushu."
+                "right_pinyin": "Wǒ Xīngqīliù zài jiā dúshū."
               }
             ],
             "words": [
@@ -2743,29 +2743,29 @@
               {
                 "sentence": "我们在哪儿见？",
                 "answer": "我们在电影院外边见。",
-                "sentence_pinyin": "Women zai nar jian?"
+                "sentence_pinyin": "Wǒmen zài nǎr jiàn?"
               },
               {
                 "sentence": "你去电影院做什么？",
                 "answer": "我去电影院看电影。",
-                "sentence_pinyin": "Ni qu dianyingyuan zuo shenme?"
+                "sentence_pinyin": "Nǐ qù diànyǐngyuàn zuò shénme?"
               },
               {
                 "sentence": "你想在哪儿学习？",
                 "answer": "我想在学校学习。",
-                "sentence_pinyin": "Ni xiang zai nar xuexi?"
+                "sentence_pinyin": "Nǐ xiǎng zài nǎr xuéxí?"
               },
               {
                 "sentence": "你星期六做什么？",
                 "answer": "我星期六在家读书。",
-                "sentence_pinyin": "Ni Xingqiliu zuo shenme?"
+                "sentence_pinyin": "Nǐ Xīngqīliù zuò shénme?"
               }
             ],
             "options_pinyin": [
-              "Women zai dianyingyuan waibian jian.",
-              "Wo qu dianyingyuan kan dianying.",
-              "Wo xiang zai xuexiao xuexi.",
-              "Wo Xingqiliu zai jia dushu."
+              "Wǒmen zài diànyǐngyuàn wàibian jiàn.",
+              "Wǒ qù diànyǐngyuàn kàn diànyǐng.",
+              "Wǒ xiǎng zài xuéxiào xuéxí.",
+              "Wǒ Xīngqīliù zài jiā dúshū."
             ]
           },
           "correct_answer": "全部匹配",
@@ -2782,27 +2782,27 @@
             "pairs": [
               {
                 "left": "学校外边有书店吗？",
-                "left_pinyin": "Xuexiao waibian you shudian ma?",
+                "left_pinyin": "Xuéxiào wàibian yǒu shūdiàn ma?",
                 "right": "学校外边有书店。",
-                "right_pinyin": "Xuexiao waibian you shudian."
+                "right_pinyin": "Xuéxiào wàibian yǒu shūdiàn."
               },
               {
                 "left": "你家前边有什么？",
-                "left_pinyin": "Ni jia qianbian you shenme?",
+                "left_pinyin": "Nǐ jiā qiánbian yǒu shénme?",
                 "right": "我家前边有一家超市。",
-                "right_pinyin": "Wo jia qianbian you yi jia chaoshi."
+                "right_pinyin": "Wǒ jiā qiánbian yǒu yì jiā chāoshì."
               },
               {
                 "left": "你和谁去超市？",
-                "left_pinyin": "Ni he shei qu chaoshi?",
+                "left_pinyin": "Nǐ hé shéi qù chāoshì?",
                 "right": "我和朋友去超市。",
-                "right_pinyin": "Wo he pengyou qu chaoshi."
+                "right_pinyin": "Wǒ hé péngyou qù chāoshì."
               },
               {
                 "left": "你想买什么？",
-                "left_pinyin": "Ni xiang mai shenme?",
+                "left_pinyin": "Nǐ xiǎng mǎi shénme?",
                 "right": "我想买牛奶。",
-                "right_pinyin": "Wo xiang mai niunai."
+                "right_pinyin": "Wǒ xiǎng mǎi niúnǎi."
               }
             ],
             "words": [
@@ -2815,29 +2815,29 @@
               {
                 "sentence": "学校外边有书店吗？",
                 "answer": "学校外边有书店。",
-                "sentence_pinyin": "Xuexiao waibian you shudian ma?"
+                "sentence_pinyin": "Xuéxiào wàibian yǒu shūdiàn ma?"
               },
               {
                 "sentence": "你家前边有什么？",
                 "answer": "我家前边有一家超市。",
-                "sentence_pinyin": "Ni jia qianbian you shenme?"
+                "sentence_pinyin": "Nǐ jiā qiánbian yǒu shénme?"
               },
               {
                 "sentence": "你和谁去超市？",
                 "answer": "我和朋友去超市。",
-                "sentence_pinyin": "Ni he shei qu chaoshi?"
+                "sentence_pinyin": "Nǐ hé shéi qù chāoshì?"
               },
               {
                 "sentence": "你想买什么？",
                 "answer": "我想买牛奶。",
-                "sentence_pinyin": "Ni xiang mai shenme?"
+                "sentence_pinyin": "Nǐ xiǎng mǎi shénme?"
               }
             ],
             "options_pinyin": [
-              "Xuexiao waibian you shudian.",
-              "Wo jia qianbian you yi jia chaoshi.",
-              "Wo he pengyou qu chaoshi.",
-              "Wo xiang mai niunai."
+              "Xuéxiào wàibian yǒu shūdiàn.",
+              "Wǒ jiā qiánbian yǒu yì jiā chāoshì.",
+              "Wǒ hé péngyou qù chāoshì.",
+              "Wǒ xiǎng mǎi niúnǎi."
             ]
           },
           "correct_answer": "全部匹配",
@@ -3308,9 +3308,9 @@
           "prompt_en": "Ask where the person studies.",
           "data": {
             "template": "我在学校学习。",
-            "template_pinyin": "Wo zai xuexiao xuexi.",
+            "template_pinyin": "Wǒ zài xuéxiào xuéxí.",
             "source_sentence": "我在学校学习。",
-            "source_pinyin": "Wo zai xuexiao xuexi.",
+            "source_pinyin": "Wǒ zài xuéxiào xuéxí.",
             "options": [
               "学校前边有什么？",
               "你做什么学习？",
@@ -3319,10 +3319,10 @@
             ],
             "correct_index": 2,
             "options_pinyin": [
-              "Xuexiao qianbian you shenme?",
-              "Ni zuo shenme xuexi?",
-              "Ni zai nar xuexi?",
-              "Ni he shei xuexi?"
+              "Xuéxiào qiánbian yǒu shénme?",
+              "Nǐ zuò shénme xuéxí?",
+              "Nǐ zài nǎr xuéxí?",
+              "Nǐ hé shéi xuéxí?"
             ]
           },
           "correct_answer": "你在哪儿学习？",
@@ -3337,9 +3337,9 @@
           "prompt_en": "Ask where the person will be tomorrow morning.",
           "data": {
             "template": "我明天上午在学校学习。",
-            "template_pinyin": "Wo mingtian shangwu zai xuexiao xuexi.",
+            "template_pinyin": "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.",
             "source_sentence": "我明天上午在学校学习。",
-            "source_pinyin": "Wo mingtian shangwu zai xuexiao xuexi.",
+            "source_pinyin": "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.",
             "options": [
               "你上午几点下班？",
               "你明天上午做什么？",
@@ -3348,10 +3348,10 @@
             ],
             "correct_index": 3,
             "options_pinyin": [
-              "Ni shangwu ji dian xiaban?",
-              "Ni mingtian shangwu zuo shenme?",
-              "Ni mingtian baitian he shei wan?",
-              "Ni mingtian shangwu zai nar?"
+              "Nǐ shàngwǔ jǐ diǎn xiàbān?",
+              "Nǐ míngtiān shàngwǔ zuò shénme?",
+              "Nǐ míngtiān báitiān hé shéi wán?",
+              "Nǐ míngtiān shàngwǔ zài nǎr?"
             ]
           },
           "correct_answer": "你明天上午在哪儿？",
@@ -3366,9 +3366,9 @@
           "prompt_en": "Ask what is on the chair.",
           "data": {
             "template": "椅子上有一本书。",
-            "template_pinyin": "Yizi shang you yi ben shu.",
+            "template_pinyin": "Yǐzi shang yǒu yì běn shū.",
             "source_sentence": "椅子上有一本书。",
-            "source_pinyin": "Yizi shang you yi ben shu.",
+            "source_pinyin": "Yǐzi shang yǒu yì běn shū.",
             "options": [
               "椅子上有什么？",
               "那是谁的书？",
@@ -3377,10 +3377,10 @@
             ],
             "correct_index": 0,
             "options_pinyin": [
-              "Yizi shang you shenme?",
-              "Na shi shei de shu?",
-              "Yizi zai nar?",
-              "Ni you ji ben shu?"
+              "Yǐzi shang yǒu shénme?",
+              "Nà shì shéi de shū?",
+              "Yǐzi zài nǎr?",
+              "Nǐ yǒu jǐ běn shū?"
             ]
           },
           "correct_answer": "椅子上有什么？",
@@ -3395,9 +3395,9 @@
           "prompt_en": "Ask whose book that is.",
           "data": {
             "template": "那是我的书。",
-            "template_pinyin": "Na shi wo de shu.",
+            "template_pinyin": "Nà shì wǒ de shū.",
             "source_sentence": "那是我的书。",
-            "source_pinyin": "Na shi wo de shu.",
+            "source_pinyin": "Nà shì wǒ de shū.",
             "options": [
               "那是什么书？",
               "那是谁的书？",
@@ -3406,10 +3406,10 @@
             ],
             "correct_index": 1,
             "options_pinyin": [
-              "Na shi shenme shu?",
-              "Na shi shei de shu?",
-              "Na shi di ji ben shu?",
-              "Ni you shu ma?"
+              "Nà shì shénme shū?",
+              "Nà shì shéi de shū?",
+              "Nà shì dì jǐ běn shū?",
+              "Nǐ yǒu shū ma?"
             ]
           },
           "correct_answer": "那是谁的书？",
@@ -3424,9 +3424,9 @@
           "prompt_en": "Ask what the person does during the day.",
           "data": {
             "template": "我白天在家里读书。",
-            "template_pinyin": "Wo baitian zai jia li dushu.",
+            "template_pinyin": "Wǒ báitiān zài jiā li dúshū.",
             "source_sentence": "我白天在家里读书。",
-            "source_pinyin": "Wo baitian zai jia li dushu.",
+            "source_pinyin": "Wǒ báitiān zài jiā li dúshū.",
             "options": [
               "你晚上做什么？",
               "你白天在哪儿？",
@@ -3435,10 +3435,10 @@
             ],
             "correct_index": 2,
             "options_pinyin": [
-              "Ni wanshang zuo shenme?",
-              "Ni baitian zai nar?",
-              "Ni baitian zuo shenme?",
-              "Ni he shei dushu?"
+              "Nǐ wǎnshang zuò shénme?",
+              "Nǐ báitiān zài nǎr?",
+              "Nǐ báitiān zuò shénme?",
+              "Nǐ hé shéi dúshū?"
             ]
           },
           "correct_answer": "你白天做什么？",
@@ -3453,9 +3453,9 @@
           "prompt_en": "Ask who the person sings with.",
           "data": {
             "template": "我晚上和朋友们去外边唱歌。",
-            "template_pinyin": "Wo wanshang he pengyoumen qu waibian chang ge.",
+            "template_pinyin": "Wǒ wǎnshang hé péngyoumen qù wàibian chàng gē.",
             "source_sentence": "我晚上和朋友们去外边唱歌。",
-            "source_pinyin": "Wo wanshang he pengyoumen qu waibian chang ge.",
+            "source_pinyin": "Wǒ wǎnshang hé péngyoumen qù wàibian chàng gē.",
             "options": [
               "你唱歌好听吗？",
               "你晚上在哪儿学习？",
@@ -3464,10 +3464,10 @@
             ],
             "correct_index": 3,
             "options_pinyin": [
-              "Ni chang ge haoting ma?",
-              "Ni wanshang zai nar xuexi?",
-              "Ni pengyou zuo shenme?",
-              "Ni wanshang he shei qu waibian chang ge?"
+              "Nǐ chàng gē hǎotīng ma?",
+              "Nǐ wǎnshang zài nǎr xuéxí?",
+              "Nǐ péngyou zuò shénme?",
+              "Nǐ wǎnshang hé shéi qù wàibian chàng gē?"
             ]
           },
           "correct_answer": "你晚上和谁去外边唱歌？",
@@ -3482,9 +3482,9 @@
           "prompt_en": "Change to a yes-no question.",
           "data": {
             "template": "我唱歌很好听。",
-            "template_pinyin": "Wo chang ge hen haoting.",
+            "template_pinyin": "Wǒ chàng gē hěn hǎotīng.",
             "source_sentence": "我唱歌很好听。",
-            "source_pinyin": "Wo chang ge hen haoting.",
+            "source_pinyin": "Wǒ chàng gē hěn hǎotīng.",
             "options": [
               "我唱歌好听吗？",
               "你几点唱歌？",
@@ -3493,10 +3493,10 @@
             ],
             "correct_index": 0,
             "options_pinyin": [
-              "Wo chang ge haoting ma?",
-              "Ni ji dian chang ge?",
-              "Ni zai nar chang ge?",
-              "Ni ting ge ma?"
+              "Wǒ chàng gē hǎotīng ma?",
+              "Nǐ jǐ diǎn chàng gē?",
+              "Nǐ zài nǎr chàng gē?",
+              "Nǐ tīng gē ma?"
             ]
           },
           "correct_answer": "我唱歌好听吗？",
@@ -3511,9 +3511,9 @@
           "prompt_en": "Ask where the person watches TV.",
           "data": {
             "template": "我在家里看电视。",
-            "template_pinyin": "Wo zai jia li kan dianshi.",
+            "template_pinyin": "Wǒ zài jiā li kàn diànshì.",
             "source_sentence": "我在家里看电视。",
-            "source_pinyin": "Wo zai jia li kan dianshi.",
+            "source_pinyin": "Wǒ zài jiā li kàn diànshì.",
             "options": [
               "你看什么电视？",
               "你在哪儿看电视？",
@@ -3522,10 +3522,10 @@
             ],
             "correct_index": 1,
             "options_pinyin": [
-              "Ni kan shenme dianshi?",
-              "Ni zai nar kan dianshi?",
-              "Ni ji dian kan dianshi?",
-              "Ni he shei kan dianshi?"
+              "Nǐ kàn shénme diànshì?",
+              "Nǐ zài nǎr kàn diànshì?",
+              "Nǐ jǐ diǎn kàn diànshì?",
+              "Nǐ hé shéi kàn diànshì?"
             ]
           },
           "correct_answer": "你在哪儿看电视？",
@@ -3540,9 +3540,9 @@
           "prompt_en": "Ask whether the person also has a dog.",
           "data": {
             "template": "我也有一只小狗。",
-            "template_pinyin": "Wo ye you yi zhi xiaogou.",
+            "template_pinyin": "Wǒ yě yǒu yì zhī xiǎogǒu.",
             "source_sentence": "我也有一只小狗。",
-            "source_pinyin": "Wo ye you yi zhi xiaogou.",
+            "source_pinyin": "Wǒ yě yǒu yì zhī xiǎogǒu.",
             "options": [
               "小狗做什么？",
               "你的小狗在哪儿？",
@@ -3551,10 +3551,10 @@
             ],
             "correct_index": 2,
             "options_pinyin": [
-              "Xiaogou zuo shenme?",
-              "Ni de xiaogou zai nar?",
-              "Ni ye you xiaogou ma?",
-              "Shei you yi ben shu?"
+              "Xiǎogǒu zuò shénme?",
+              "Nǐ de xiǎogǒu zài nǎr?",
+              "Nǐ yě yǒu xiǎogǒu ma?",
+              "Shéi yǒu yì běn shū?"
             ]
           },
           "correct_answer": "你也有小狗吗？",
@@ -3569,9 +3569,9 @@
           "prompt_en": "Ask what time they meet.",
           "data": {
             "template": "我们七点见。",
-            "template_pinyin": "Women qi dian jian.",
+            "template_pinyin": "Wǒmen qī diǎn jiàn.",
             "source_sentence": "我们七点见。",
-            "source_pinyin": "Women qi dian jian.",
+            "source_pinyin": "Wǒmen qī diǎn jiàn.",
             "options": [
               "你们和谁见？",
               "你们在哪儿见？",
@@ -3580,10 +3580,10 @@
             ],
             "correct_index": 3,
             "options_pinyin": [
-              "Nimen he shei jian?",
-              "Nimen zai nar jian?",
-              "Nimen kan shenme?",
-              "Nimen ji dian jian?"
+              "Nǐmen hé shéi jiàn?",
+              "Nǐmen zài nǎr jiàn?",
+              "Nǐmen kàn shénme?",
+              "Nǐmen jǐ diǎn jiàn?"
             ]
           },
           "correct_answer": "你们几点见？",
@@ -3605,9 +3605,9 @@
               "一家电影院"
             ],
             "chunks_pinyin": [
-              "you",
-              "xuexiao qianbian",
-              "yi jia dianyingyuan"
+              "yǒu",
+              "xuéxiào qiánbian",
+              "yì jiā diànyǐngyuàn"
             ],
             "answer": "学校前边有一家电影院。",
             "acceptable_answers": [
@@ -3632,10 +3632,10 @@
               "明天上午"
             ],
             "chunks_pinyin": [
-              "xuexi",
-              "wo",
-              "zai xuexiao",
-              "mingtian shangwu"
+              "xuéxí",
+              "wǒ",
+              "zài xuéxiào",
+              "míngtiān shàngwǔ"
             ],
             "answer": "我明天上午在学校学习。",
             "acceptable_answers": [
@@ -3659,9 +3659,9 @@
               "椅子上"
             ],
             "chunks_pinyin": [
-              "yi ben shu",
-              "you",
-              "yizi shang"
+              "yì běn shū",
+              "yǒu",
+              "yǐzi shang"
             ],
             "answer": "椅子上有一本书。",
             "acceptable_answers": [
@@ -3686,10 +3686,10 @@
               "我"
             ],
             "chunks_pinyin": [
-              "dushu",
-              "zai jia li",
-              "baitian",
-              "wo"
+              "dúshū",
+              "zài jiā li",
+              "báitiān",
+              "wǒ"
             ],
             "answer": "我白天在家里读书。",
             "acceptable_answers": [
@@ -3714,10 +3714,10 @@
               "和朋友们"
             ],
             "chunks_pinyin": [
-              "chang ge",
-              "wo",
-              "qu waibian",
-              "he pengyoumen"
+              "chàng gē",
+              "wǒ",
+              "qù wàibian",
+              "hé péngyoumen"
             ],
             "answer": "我和朋友们去外边唱歌。",
             "acceptable_answers": [

@@ -738,11 +738,11 @@ ap._v7=function(){
   var qs=Q.v7_word_match||[],i=this.v7i,c=qs[i];
   if(!c||!c.data)return'<div class="panel"><p>&#26242;&#26080;&#39064;&#30446;</p></div>';
   var cur=(c.data.sentences||[])[0]||{},opts=c.data.words||[],ci=opts.indexOf(cur.answer);
-  var body='<div style="text-align:center;background:#fffaf0;border:1px solid #fde68a;border-radius:16px;padding:22px;margin:12px 0"><div style="font-size:13px;color:#888;margin-bottom:6px">Choose the word that fits the sentence.</div><div style="font-size:15px;color:#74806d;margin-bottom:6px">'+es(pys(cur.sentence||''))+'</div><div class="text-hanzi" style="font-size:26px;font-weight:900;color:var(--text);line-height:1.5">'+es(cur.sentence||'')+'</div></div>';
+  var body='<div style="text-align:center;background:#fffaf0;border:1px solid #fde68a;border-radius:16px;padding:22px;margin:12px 0"><div style="font-size:13px;color:#888;margin-bottom:6px">Choose the word that fits the sentence.</div><div data-pinyin="1" style="font-size:15px;color:#74806d;margin-bottom:6px">'+es(cur.sentence_pinyin||pys(cur.sentence||''))+'</div><div class="text-hanzi" style="font-size:26px;font-weight:900;color:var(--text);line-height:1.5">'+es(cur.sentence||'')+'</div></div>';
   var nav=this._navBtn('ap.v7i=Math.max(0,ap.v7i-1);ap.v7a=false;ap.v7p=-1;ap._r()','ap.v7i=Math.min('+(qs.length-1)+',ap.v7i+1);ap.v7a=false;ap.v7p=-1;ap._r()',i,qs.length,'&larr; &#19978;&#19968;&#32452;','&#19979;&#19968;&#32452; &rarr;');
   var qc=Object.assign({},c,{
     acceptable_answers:cur.acceptable_answers||[cur.answer],
-    data:Object.assign({},c.data,{options:opts,options_pinyin:c.data.words_pinyin||opts.map(py),correct_index:ci})
+    data:Object.assign({},c.data,{options:opts,options_pinyin:c.data.options_pinyin||c.data.words_pinyin||opts.map(py),correct_index:ci})
   });
   return this._mc('&#35789;&#21477;&#21305;&#37197; / Word in Sentence',qc,opts,ci,this.v7p,this.v7a,'ap.v7p=',body,nav);
 };
@@ -790,7 +790,7 @@ ap._cq=function(){
     if(!c||!c.data)return'<div class="panel"><p>暂无题目</p></div>';
     var d=c.data,opts=d.options||[],ci=typeof d.correct_index==='number'?d.correct_index:opts.indexOf(c.correct_answer);
     var source=d.source_sentence||d.template||'',sourcePy=d.source_pinyin||d.template_pinyin||'';
-    var body='<div style="text-align:center;background:#fffaf0;border:1px solid #fde68a;border-radius:16px;padding:22px;margin:12px 0"><div style="font-size:13px;color:#888;margin-bottom:6px">'+es(c.prompt_en||'Transform the sentence.')+'</div><div style="font-size:15px;color:#74806d;margin-bottom:6px">'+es(sourcePy)+'</div><div class="text-hanzi" style="font-size:28px;font-weight:900;color:var(--text);line-height:1.5">'+es(source)+'</div></div>';
+    var body='<div style="text-align:center;background:#fffaf0;border:1px solid #fde68a;border-radius:16px;padding:22px;margin:12px 0"><div style="font-size:13px;color:#888;margin-bottom:6px">'+es(c.prompt_en||'Transform the sentence.')+'</div><div data-pinyin="1" style="font-size:15px;color:#74806d;margin-bottom:6px">'+es(sourcePy)+'</div><div class="text-hanzi" style="font-size:28px;font-weight:900;color:var(--text);line-height:1.5">'+es(source)+'</div></div>';
     var nav=this._navBtn('ap.v4i=Math.max(0,ap.v4i-1);ap.v4a=false;ap.v4p=-1;ap._r()','ap.v4i=Math.min('+(qs.length-1)+',ap.v4i+1);ap.v4a=false;ap.v4p=-1;ap._r()',i,qs.length,'&larr; 上一题','下一题 &rarr;');
     return this._mc('句子转换 / Sentence Transform',c,opts,ci,this.v4p,this.v4a,'ap.v4p=',body,nav);
   };
@@ -883,7 +883,7 @@ ap._cq=function(){
     var iq=(Q.v1_image_guess||[])[this.v1i];if(!iq)return null;var sourceOpts=(iq.data&&iq.data.options&&iq.data.options.length?iq.data.options:['你好','对不起','认识','没关系','高兴','是','不','也','很','叫']);var opts=sh(sourceOpts.slice()),sourcePy=(iq.data&&iq.data.options_pinyin)||[];return Object.assign({},iq,{data:Object.assign({},iq.data||{},{image:(iq.media&&iq.media.image)||'',options:opts,options_pinyin:opts.map(function(o){var at=sourceOpts.indexOf(o);return sourcePy[at]||py(o)}),correct_index:opts.indexOf(iq.correct_answer)})});
   }
   if(this.st==='v7'){
-    var vq=(Q.v7_word_match||[])[this.v7i];if(!vq||!vq.data)return null;var cur=(vq.data.sentences||[])[0]||{},opts2=vq.data.words||[];return Object.assign({},vq,{id:vq.id+'_0',acceptable_answers:cur.acceptable_answers||[cur.answer],data:{sentence:cur.sentence,sentence_pinyin:pys(cur.sentence),options:opts2,options_pinyin:vq.data.words_pinyin||opts2.map(py),correct_index:opts2.indexOf(cur.answer)}});
+    var vq=(Q.v7_word_match||[])[this.v7i];if(!vq||!vq.data)return null;var cur=(vq.data.sentences||[])[0]||{},opts2=vq.data.words||[];return Object.assign({},vq,{id:vq.id+'_0',acceptable_answers:cur.acceptable_answers||[cur.answer],data:{sentence:cur.sentence,sentence_pinyin:cur.sentence_pinyin||pys(cur.sentence),options:opts2,options_pinyin:vq.data.options_pinyin||vq.data.words_pinyin||opts2.map(py),correct_index:opts2.indexOf(cur.answer)}});
   }
   if(this.st==='ttq')return(Q.r2_passage_choice||[])[this.ttqi]||null;
   if(this.st==='w1'){var wq=(Q.w1_component_char||[])[this.w1i];if(!wq)return null;var wd=wq.data||{},safe=Object.assign({},wq,{data:Object.assign({},wd,{sentence:wd.meaning_en||String(wq.prompt_en||'').replace(/[\u4e00-\u9fff]/g,'').replace(/\s+/g,' ').trim(),sentence_pinyin:''})});return safe;}
