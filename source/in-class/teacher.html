@@ -1862,7 +1862,12 @@ ap.init();
   }
   function extItems(w){
     if(!w)return[];
-    return VX[w.id]||VX[wordText(w)]||w.phrases||w.examples||[];
+    var raw=VX[w.id]||VX[wordText(w)]||w.phrases||w.examples||[];
+    if(Array.isArray(raw))return raw;
+    if(raw&&Array.isArray(raw.collocations))return raw.collocations;
+    if(raw&&Array.isArray(raw.examples))return raw.examples;
+    if(raw&&Array.isArray(raw.items))return raw.items;
+    return[];
   }
   function safeCallTts(text){return "ap._tts('"+es(text).replace(/'/g,"\\'")+"')"}
   function vocabButton(w,i,active){
