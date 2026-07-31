@@ -31,7 +31,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "place"
     },
     {
       "id": "v_l09_02",
@@ -43,7 +44,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "place"
     },
     {
       "id": "v_l09_03",
@@ -55,7 +57,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "function"
     },
     {
       "id": "v_l09_04",
@@ -67,7 +70,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "function"
     },
     {
       "id": "v_l09_05",
@@ -79,7 +83,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "place"
     },
     {
       "id": "v_l09_06",
@@ -91,7 +96,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "object"
     },
     {
       "id": "v_l09_07",
@@ -103,7 +109,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "place"
     },
     {
       "id": "v_l09_08",
@@ -115,7 +122,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "function"
     },
     {
       "id": "v_l09_09",
@@ -127,7 +135,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "object"
     },
     {
       "id": "v_l09_10",
@@ -139,7 +148,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "function"
     },
     {
       "id": "v_l09_11",
@@ -151,7 +161,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "function"
     },
     {
       "id": "v_l09_12",
@@ -163,7 +174,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "action"
     },
     {
       "id": "v_l09_13",
@@ -175,7 +187,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "action"
     },
     {
       "id": "v_l09_14",
@@ -187,7 +200,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "time"
     },
     {
       "id": "v_l09_15",
@@ -199,7 +213,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "action"
     },
     {
       "id": "v_l09_16",
@@ -211,7 +226,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "function"
     },
     {
       "id": "v_l09_17",
@@ -223,7 +239,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "person"
     },
     {
       "id": "v_l09_18",
@@ -235,7 +252,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "action"
     },
     {
       "id": "v_l09_19",
@@ -247,7 +265,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "object"
     },
     {
       "id": "v_l09_20",
@@ -259,7 +278,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "quality"
     },
     {
       "id": "v_l09_21",
@@ -271,7 +291,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "object"
     },
     {
       "id": "v_l09_22",
@@ -283,7 +304,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "object"
     },
     {
       "id": "v_l09_23",
@@ -295,7 +317,8 @@
       "sourceType": "textbook",
       "tags": [
         "L09"
-      ]
+      ],
+      "category": "action"
     }
   ],
   "properNouns": [
@@ -4129,6 +4152,288 @@
           "correct_answer": "做",
           "kp": "做",
           "sourceType": "teaching_extension"
+        }
+      ],
+      "r3_translation_choice": [
+        {
+          "id": "r3_hsk1_l09_01",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "There is a cinema in front of the school.",
+            "prompt_ru": "Перед школой есть кинотеатр.",
+            "options": [
+              "我明天上午在学校学习。",
+              "学校前边有一家电影院。",
+              "电影院外边有一本书。",
+              "我白天在家里读书。"
+            ],
+            "options_pinyin": [
+              "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.",
+              "Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn.",
+              "Diànyǐngyuàn wàibian yǒu yì běn shū.",
+              "Wǒ báitiān zài jiā li dúshū."
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "学校前边有一家电影院。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l09_02",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "Let us meet outside the cinema at seven.",
+            "prompt_ru": "Давайте встретимся у кинотеатра в семь часов.",
+            "options": [
+              "我们七点在电影院外边见。",
+              "我们晚上去看电视。",
+              "我们明天上午在学校见。",
+              "我们白天在家里学习。"
+            ],
+            "options_pinyin": [
+              "Wǒmen qī diǎn zài diànyǐngyuàn wàibian jiàn.",
+              "Wǒmen wǎnshang qù kàn diànshì.",
+              "Wǒmen míngtiān shàngwǔ zài xuéxiào jiàn.",
+              "Wǒmen báitiān zài jiā li xuéxí."
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我们七点在电影院外边见。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l09_03",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "There is a book on the chair.",
+            "prompt_ru": "На стуле есть книга.",
+            "options": [
+              "桌子下有一只小猫。",
+              "学校前边有一家书店。",
+              "那是我的第二本书。",
+              "椅子上有一本书。"
+            ],
+            "options_pinyin": [
+              "Zhuōzi xià yǒu yì zhī xiǎo māo.",
+              "Xuéxiào qiánbian yǒu yì jiā shūdiàn.",
+              "Nà shì wǒ de dì èr běn shū.",
+              "Yǐzi shang yǒu yì běn shū."
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "椅子上有一本书。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l09_04",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "This is my second Chinese book.",
+            "prompt_ru": "Это моя вторая книга по китайскому языку.",
+            "options": [
+              "这是我的第一本中文书。",
+              "那是我的中文老师。",
+              "这是我的第二本中文书。",
+              "这是我的两个孩子。"
+            ],
+            "options_pinyin": [
+              "Zhè shì wǒ de dì yī běn Zhōngwén shū.",
+              "Nà shì wǒ de Zhōngwén lǎoshī.",
+              "Zhè shì wǒ de dì èr běn Zhōngwén shū.",
+              "Zhè shì wǒ de liǎng ge háizi."
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "这是我的第二本中文书。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l09_05",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "I will study at school tomorrow morning.",
+            "prompt_ru": "Завтра утром я буду учиться в школе.",
+            "options": [
+              "我白天在家里读书。",
+              "我晚上和朋友唱歌。",
+              "我明天上午在学校学习。",
+              "我现在在医院上班。"
+            ],
+            "options_pinyin": [
+              "Wǒ báitiān zài jiā li dúshū.",
+              "Wǒ wǎnshang hé péngyou chàng gē.",
+              "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.",
+              "Wǒ xiànzài zài yīyuàn shàngbān."
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "我明天上午在学校学习。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l09_06",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "During the day, I read at home.",
+            "prompt_ru": "Днём я читаю дома.",
+            "options": [
+              "我上午在学校学习。",
+              "我白天在家里读书。",
+              "我晚上去外边唱歌。",
+              "我在家里看电视。"
+            ],
+            "options_pinyin": [
+              "Wǒ shàngwǔ zài xuéxiào xuéxí.",
+              "Wǒ báitiān zài jiā li dúshū.",
+              "Wǒ wǎnshang qù wàibian chàng gē.",
+              "Wǒ zài jiā li kàn diànshì."
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "我白天在家里读书。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l09_07",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "In the evening, I go outside to sing with friends.",
+            "prompt_ru": "Вечером я иду петь с друзьями на улицу.",
+            "options": [
+              "我白天和孩子们在家玩。",
+              "我晚上在电影院看电影。",
+              "我上午和朋友去学校。",
+              "我晚上和朋友们去外边唱歌。"
+            ],
+            "options_pinyin": [
+              "Wǒ báitiān hé háizimen zài jiā wán.",
+              "Wǒ wǎnshang zài diànyǐngyuàn kàn diànyǐng.",
+              "Wǒ shàngwǔ hé péngyou qù xuéxiào.",
+              "Wǒ wǎnshang hé péngyoumen qù wàibian chàng gē."
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "我晚上和朋友们去外边唱歌。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l09_08",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "You sing very well.",
+            "prompt_ru": "Ты очень хорошо поёшь.",
+            "options": [
+              "你听歌很好。",
+              "你唱歌很好听。",
+              "你看电视很好看。",
+              "你读书很高兴。"
+            ],
+            "options_pinyin": [
+              "Nǐ tīng gē hěn hǎo.",
+              "Nǐ chàng gē hěn hǎotīng.",
+              "Nǐ kàn diànshì hěn hǎokàn.",
+              "Nǐ dúshū hěn gāoxìng."
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "你唱歌很好听。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l09_09",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "I cook, watch TV, and play with the children at home.",
+            "prompt_ru": "Дома я готовлю, смотрю телевизор и играю с детьми.",
+            "options": [
+              "我在家里做饭、看电视，和孩子们玩。",
+              "我在学校学习，和朋友们唱歌。",
+              "我在电影院看电影，和小狗玩。",
+              "我在医院上班，晚上下班。"
+            ],
+            "options_pinyin": [
+              "Wǒ zài jiā li zuò fàn, kàn diànshì, hé háizimen wán.",
+              "Wǒ zài xuéxiào xuéxí, hé péngyoumen chàng gē.",
+              "Wǒ zài diànyǐngyuàn kàn diànyǐng, hé xiǎo gǒu wán.",
+              "Wǒ zài yīyuàn shàngbān, wǎnshang xiàbān."
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我在家里做饭、看电视，和孩子们玩。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        },
+        {
+          "id": "r3_hsk1_l09_10",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文或俄文翻译选择合适的中文句子。",
+          "prompt_en": "Choose the Chinese sentence that matches the English or Russian translation.",
+          "data": {
+            "prompt_en": "I also have a little dog.",
+            "prompt_ru": "У меня тоже есть маленькая собака.",
+            "options": [
+              "我有一本中文书。",
+              "我没有看见小猫。",
+              "我也有一只小狗。",
+              "我也想去超市。"
+            ],
+            "options_pinyin": [
+              "Wǒ yǒu yì běn Zhōngwén shū.",
+              "Wǒ méiyǒu kànjiàn xiǎo māo.",
+              "Wǒ yě yǒu yì zhī xiǎo gǒu.",
+              "Wǒ yě xiǎng qù chāoshì."
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "我也有一只小狗。",
+          "kp": "英/俄译中选句",
+          "sourceType": "teaching_extension",
+          "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
         }
       ]
     }
