@@ -1866,21 +1866,111 @@
       "structureEn": "Noun/place + positional word, such as 桌子下 or 书店前.",
       "structureRu": "Существительное/место + слово направления: 桌子下, 书店前.",
       "english": "Use positional words to say where a person or thing is. Keep the location phrase compact.",
-      "russian": "Слова направления помогают сказать, где находится предмет или человек."
+      "russian": "Слова направления помогают сказать, где находится предмет или человек.",
+      "title": "方位词",
+      "titleEn": "Positional Words",
+      "explanation": "方位词表示方向和位置，如“上、下、里、外、前、后”。",
+      "formula": {
+        "pattern": "地点/名词 + 方位词",
+        "patternEn": "Noun/place + positional word, such as 桌子下 or 书店前.",
+        "note": "方位词表示方向和位置，如“上、下、里、外、前、后”。",
+        "noteEn": "Use positional words to say where a person or thing is. Keep the location phrase compact.",
+        "noteRu": "Слова направления помогают сказать, где находится предмет или человек."
+      },
+      "examples": [
+        {
+          "hanzi": "房间外有一只小猫。",
+          "pinyin": "Fángjiān wài yǒu yì zhī xiǎo māo.",
+          "english": "There is a little cat outside the room.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "它在桌子下呢。",
+          "pinyin": "Tā zài zhuōzi xià ne.",
+          "english": "It's under the table.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "在学校书店前见吧。",
+          "pinyin": "Zài xuéxiào shūdiàn qián jiàn ba.",
+          "english": "Let's meet in front of the school bookstore.",
+          "sourceType": "textbook"
+        }
+      ]
     },
     "g_l08_02": {
       "structure": "主语 + 在 + 地点 + 动作",
       "structureEn": "Subject + 在 + place + action.",
       "structureRu": "Подлежащее + 在 + место + действие.",
       "english": "在 before a place tells where the action happens.",
-      "russian": "在 перед местом показывает, где происходит действие."
+      "russian": "在 перед местом показывает, где происходит действие.",
+      "title": "介词“在”",
+      "titleEn": "Preposition “在”",
+      "explanation": "“在”和地点词语组合，放在动词前，说明动作发生的位置。",
+      "formula": {
+        "pattern": "主语 + 在 + 地点 + 动作",
+        "patternEn": "Subject + 在 + place + action.",
+        "note": "“在”和地点词语组合，放在动词前，说明动作发生的位置。",
+        "noteEn": "在 before a place tells where the action happens.",
+        "noteRu": "在 перед местом показывает, где происходит действие."
+      },
+      "examples": [
+        {
+          "hanzi": "我在学校吃午饭。",
+          "pinyin": "Wǒ zài xuéxiào chī wǔfàn.",
+          "english": "I have lunch at school.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我爸爸也在医院工作。",
+          "pinyin": "Wǒ bàba yě zài yīyuàn gōngzuò.",
+          "english": "My father also works at a hospital.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "你在哪儿买菜？",
+          "pinyin": "Nǐ zài nǎr mǎi cài?",
+          "english": "Where do you buy vegetables?",
+          "sourceType": "teaching_extension"
+        }
+      ]
     },
     "g_l08_03": {
       "structure": "主语 + 能 / 不能 + 动词",
       "structureEn": "Subject + 能 / 不能 + verb.",
       "structureRu": "Подлежащее + 能 / 不能 + глагол.",
       "english": "能 asks or states whether someone can do something, often because of time, ability, or conditions.",
-      "russian": "能 показывает возможность, способность или условие для действия."
+      "russian": "能 показывает возможность, способность или условие для действия.",
+      "title": "能愿动词“能”",
+      "titleEn": "Modal Verb “能”",
+      "explanation": "“能”放在动词前，表示有能力、有条件或可能做某事。",
+      "formula": {
+        "pattern": "主语 + 能/不能 + 动词",
+        "patternEn": "Subject + 能 / 不能 + verb.",
+        "note": "“能”放在动词前，表示有能力、有条件或可能做某事。",
+        "noteEn": "能 asks or states whether someone can do something, often because of time, ability, or conditions.",
+        "noteRu": "能 показывает возможность, способность или условие для действия."
+      },
+      "examples": [
+        {
+          "hanzi": "下午两点你能到吗？",
+          "pinyin": "Xiàwǔ liǎng diǎn nǐ néng dào ma?",
+          "english": "Can you arrive at two in the afternoon?",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我能到。",
+          "pinyin": "Wǒ néng dào.",
+          "english": "I can arrive.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我不能去学校吃午饭。",
+          "pinyin": "Wǒ bù néng qù xuéxiào chī wǔfàn.",
+          "english": "I can't go to school for lunch.",
+          "sourceType": "teaching_extension"
+        }
+      ]
     }
   },
   "grammar": [

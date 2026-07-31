@@ -1392,21 +1392,111 @@
       "structureEn": "Place/location + 有/是 + person or thing.",
       "structureRu": "Место + 有/是 + человек или предмет.",
       "english": "Use this pattern to say what exists at a place. For negation, use 没有.",
-      "russian": "Эта конструкция показывает, что где-то что-то есть."
+      "russian": "Эта конструкция показывает, что где-то что-то есть.",
+      "title": "存现句（1）",
+      "titleEn": "Existential Sentences (1)",
+      "explanation": "用“地方 + 有/是 + 人或物”表示某地存在某人或某物。否定时通常说“地方 + 没有 + 人/物”。",
+      "formula": {
+        "pattern": "地点/方位 + 有/是 + 人/物",
+        "patternEn": "Place/location + 有/是 + person or thing.",
+        "note": "用“地方 + 有/是 + 人或物”表示某地存在某人或某物。否定时通常说“地方 + 没有 + 人/物”。",
+        "noteEn": "Use this pattern to say what exists at a place. For negation, use 没有.",
+        "noteRu": "Эта конструкция показывает, что где-то что-то есть."
+      },
+      "examples": [
+        {
+          "hanzi": "学校前边有一家电影院。",
+          "pinyin": "Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn.",
+          "english": "There is a cinema in front of the school.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "电影院前边是一家超市。",
+          "pinyin": "Diànyǐngyuàn qiánbian shì yì jiā chāoshì.",
+          "english": "In front of the cinema is a supermarket.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "桌子上没有小猫。",
+          "pinyin": "Zhuōzi shang méiyǒu xiǎo māo.",
+          "english": "There is no little cat on the table.",
+          "sourceType": "teaching_extension"
+        }
+      ]
     },
     "g_l09_02": {
       "structure": "主语 + 时间 + 在 + 地点 + 动作",
       "structureEn": "Subject + time + 在 + place + action.",
       "structureRu": "Подлежащее + время + 在 + место + действие.",
       "english": "When time and place both appear before the verb, put time before place.",
-      "russian": "Если есть и время, и место, сначала обычно идет время, потом место."
+      "russian": "Если есть и время, и место, сначала обычно идет время, потом место.",
+      "title": "时间词语和处所词语的顺序",
+      "titleEn": "Time before Location",
+      "explanation": "时间词语和处所词语同时作状语时，时间一般放在地点前。",
+      "formula": {
+        "pattern": "主语 + 时间 + 在 + 地点 + 动作",
+        "patternEn": "Subject + time + 在 + place + action.",
+        "note": "时间词语和处所词语同时作状语时，时间一般放在地点前。",
+        "noteEn": "When time and place both appear before the verb, put time before place.",
+        "noteRu": "Если есть и время, и место, сначала обычно идет время, потом место."
+      },
+      "examples": [
+        {
+          "hanzi": "我们七点在电影院外见。",
+          "pinyin": "Wǒmen qī diǎn zài diànyǐngyuàn wài jiàn.",
+          "english": "We meet outside the cinema at seven.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "安妮下午在家里学中文。",
+          "pinyin": "Ānní xiàwǔ zài jiā li xué Zhōngwén.",
+          "english": "Annie studies Chinese at home in the afternoon.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "陈天中明天中午在学校吃午饭。",
+          "pinyin": "Chén Tiānzhōng míngtiān zhōngwǔ zài xuéxiào chī wǔfàn.",
+          "english": "Chen Tianzhong will have lunch at school tomorrow noon.",
+          "sourceType": "teaching_extension"
+        }
+      ]
     },
     "g_l09_03": {
       "structure": "第 + 数词；第 + 数词 + 量词 + 名词",
       "structureEn": "第 + number; 第 + number + measure word + noun.",
       "structureRu": "第 + число; 第 + число + счетное слово + существительное.",
       "english": "第 turns a number into an ordinal number.",
-      "russian": "第 превращает количественное числительное в порядковое."
+      "russian": "第 превращает количественное числительное в порядковое.",
+      "title": "表示序数的“第”",
+      "titleEn": "Ordinal 第",
+      "explanation": "“第”放在数词前表示顺序，可以说“第一、第二”，也可以说“第一本书”。",
+      "formula": {
+        "pattern": "第 + 数词 / 第 + 数词 + 量词 + 名词",
+        "patternEn": "第 + number; 第 + number + measure word + noun.",
+        "note": "“第”放在数词前表示顺序，可以说“第一、第二”，也可以说“第一本书”。",
+        "noteEn": "第 turns a number into an ordinal number.",
+        "noteRu": "第 превращает количественное числительное в порядковое."
+      },
+      "examples": [
+        {
+          "hanzi": "第一、第二、第三",
+          "pinyin": "dì-yī, dì-èr, dì-sān",
+          "english": "first, second, third",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "这是我的第二本中文书。",
+          "pinyin": "Zhè shì wǒ de dì-èr běn Zhōngwén shū.",
+          "english": "This is my second Chinese book.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "她是第一个学生。",
+          "pinyin": "Tā shì dì-yī gè xuésheng.",
+          "english": "She is the first student.",
+          "sourceType": "teaching_extension"
+        }
+      ]
     }
   },
   "grammar": [
@@ -1798,50 +1888,50 @@
       {
         "id": "pre_l09_08",
         "type": "choice",
-        "module": "语序预热",
-        "question": "选择自然的句子：",
-        "questionEn": "Choose the natural sentence.",
-        "weakPoints": "语序：时间在地点前",
-        "sourceType": "teaching_extension",
+        "module": "词汇理解",
+        "question": "“外边”的意思是：",
+        "questionEn": "outside",
+        "weakPoints": "词汇：外边",
+        "sourceType": "textbook",
         "options": [
           {
-            "text": "在学校我学习明天上午。"
+            "text": "inside"
           },
           {
-            "text": "我在学校明天上午学习。"
+            "text": "outside"
           },
           {
-            "text": "我明天上午在学校学习。"
+            "text": "morning"
           },
           {
-            "text": "明天学习我在学校上午。"
+            "text": "book"
           }
         ],
-        "answer": "我明天上午在学校学习。"
+        "answer": "outside"
       },
       {
         "id": "pre_l09_09",
         "type": "choice",
-        "module": "序数预热",
-        "question": "“第二本中文书”的意思是：",
-        "questionEn": "second Chinese book",
-        "weakPoints": "语法：第",
-        "sourceType": "teaching_extension",
+        "module": "词汇理解",
+        "question": "“读书”的意思是：",
+        "questionEn": "read a book",
+        "weakPoints": "词汇：读书",
+        "sourceType": "textbook",
         "options": [
           {
-            "text": "that Chinese book"
+            "text": "sing a song"
           },
           {
-            "text": "two Chinese books"
+            "text": "read a book"
           },
           {
-            "text": "a Chinese teacher"
+            "text": "watch TV"
           },
           {
-            "text": "second Chinese book"
+            "text": "cook"
           }
         ],
-        "answer": "second Chinese book"
+        "answer": "read a book"
       },
       {
         "id": "pre_l09_10",

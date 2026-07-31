@@ -2257,21 +2257,111 @@
       "structureEn": "Time period + clock time. Time usually appears before the action.",
       "structureRu": "Время обычно ставится перед действием: подлежащее + время + действие.",
       "english": "Use 点, 分 and 半 to say clock time. 上午/下午/晚上 help avoid ambiguity.",
-      "russian": "点, 分 и 半 используются для времени; 上午/下午/晚上 уточняют часть дня."
+      "russian": "点, 分 и 半 используются для времени; 上午/下午/晚上 уточняют часть дня.",
+      "title": "时间的表达（2）",
+      "titleEn": "Expression of Time (2)",
+      "explanation": "用“点、分、半”和“上午/下午/晚上”等词表达具体时间。",
+      "formula": {
+        "pattern": "时间段 + 数字 + 点 + 分/半",
+        "patternEn": "Time period + clock time. Time usually appears before the action.",
+        "note": "用“点、分、半”和“上午/下午/晚上”等词表达具体时间。",
+        "noteEn": "Use 点, 分 and 半 to say clock time. 上午/下午/晚上 help avoid ambiguity.",
+        "noteRu": "点, 分 и 半 используются для времени; 上午/下午/晚上 уточняют часть дня."
+      },
+      "examples": [
+        {
+          "hanzi": "早上八点四十。",
+          "pinyin": "Zǎoshang bā diǎn sìshí.",
+          "english": "It's 8:40 in the morning.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我上午十点十分有课。",
+          "pinyin": "Wǒ shàngwǔ shí diǎn shí fēn yǒu kè.",
+          "english": "I have a class at 10:10 in the morning.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我晚上六点半下班。",
+          "pinyin": "Wǒ wǎnshang liù diǎn bàn xiàbān.",
+          "english": "I finish work at 6:30 in the evening.",
+          "sourceType": "textbook"
+        }
+      ]
     },
     "g_l07_02": {
       "structure": "句子 + 吧",
       "structureEn": "Sentence + 吧 marks a suggestion, consultation, or soft request.",
       "structureRu": "Частица 吧 в конце предложения выражает предложение, совет или мягкую просьбу.",
       "english": "Use 吧 when proposing a time/place or asking someone to do something softly.",
-      "russian": "Используйте 吧, когда предлагаете встретиться или просите что-то сделать мягко."
+      "russian": "Используйте 吧, когда предлагаете встретиться или просите что-то сделать мягко.",
+      "title": "语气助词“吧”",
+      "titleEn": "Modal Particle “吧”",
+      "explanation": "“吧”在句末，可以表示建议、商量、请求。",
+      "formula": {
+        "pattern": "句子 + 吧",
+        "patternEn": "Sentence + 吧 marks a suggestion, consultation, or soft request.",
+        "note": "“吧”在句末，可以表示建议、商量、请求。",
+        "noteEn": "Use 吧 when proposing a time/place or asking someone to do something softly.",
+        "noteRu": "Используйте 吧, когда предлагаете встретиться или просите что-то сделать мягко."
+      },
+      "examples": [
+        {
+          "hanzi": "我们下午两点见吧。",
+          "pinyin": "Wǒmen xiàwǔ liǎng diǎn jiàn ba.",
+          "english": "Let's meet at two in the afternoon.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "你去店里买些菜吧。",
+          "pinyin": "Nǐ qù diàn li mǎi xiē cài ba.",
+          "english": "Could you go to the store to buy some vegetables?",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我们明天看电影吧。",
+          "pinyin": "Wǒmen míngtiān kàn diànyǐng ba.",
+          "english": "Let's watch a movie tomorrow.",
+          "sourceType": "teaching_extension"
+        }
+      ]
     },
     "g_l07_03": {
       "structure": "主语 + 时间 + 动词\n主语 + 不/还/也 + 动词/形容词",
       "structureEn": "Time expressions and adverbs normally come before the verb/adjective.",
       "structureRu": "Обстоятельства времени и наречия обычно стоят перед глаголом или прилагательным.",
       "english": "This is important for Russian-speaking learners because Chinese does not usually move time expressions after the verb.",
-      "russian": "Это важно для русскоязычных студентов: в китайском время обычно не ставится после глагола."
+      "russian": "Это важно для русскоязычных студентов: в китайском время обычно не ставится после глагола.",
+      "title": "时间词语作状语的位置",
+      "titleEn": "Position of Time Expressions",
+      "explanation": "时间词语一般放在动词或形容词前。",
+      "formula": {
+        "pattern": "主语 + 时间 + 动作",
+        "patternEn": "Time expressions and adverbs normally come before the verb/adjective.",
+        "note": "时间词语一般放在动词或形容词前。",
+        "noteEn": "This is important for Russian-speaking learners because Chinese does not usually move time expressions after the verb.",
+        "noteRu": "Это важно для русскоязычных студентов: в китайском время обычно не ставится после глагола."
+      },
+      "examples": [
+        {
+          "hanzi": "我上午十点十分有课。",
+          "pinyin": "Wǒ shàngwǔ shí diǎn shí fēn yǒu kè.",
+          "english": "I have a class at 10:10 in the morning.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我八点去医院上班。",
+          "pinyin": "Wǒ bā diǎn qù yīyuàn shàngbān.",
+          "english": "I go to work at the hospital at eight.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "她下午三点上课。",
+          "pinyin": "Tā xiàwǔ sān diǎn shàngkè.",
+          "english": "She has class at three in the afternoon.",
+          "sourceType": "teaching_extension"
+        }
+      ]
     }
   },
   "grammar": [
