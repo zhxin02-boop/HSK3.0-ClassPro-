@@ -2566,7 +2566,7 @@
                 "right": "杨同乐唱歌很好听。"
               },
               {
-          "left": "你也有小狗吗？",
+                "left": "你也有小狗吗？",
                 "left_pinyin": "",
                 "right": "我也有一只小狗。"
               }
@@ -2591,7 +2591,7 @@
                 "answer": "杨同乐唱歌很好听。"
               },
               {
-          "sentence": "你也有小狗吗？",
+                "sentence": "你也有小狗吗？",
                 "answer": "我也有一只小狗。"
               }
             ]
@@ -3375,16 +3375,16 @@
           "prompt_cn": "选择正确的问句。",
           "prompt_en": "Change to a yes-no question.",
           "data": {
-      "template": "我唱歌很好听。",
-      "template_pinyin": "",
-      "source_sentence": "我唱歌很好听。",
-      "source_pinyin": "",
-      "options": [
-        "我唱歌好听吗？",
-        "你几点唱歌？",
-        "你在哪儿唱歌？",
-        "你听歌吗？"
-      ],
+            "template": "我唱歌很好听。",
+            "template_pinyin": "",
+            "source_sentence": "我唱歌很好听。",
+            "source_pinyin": "",
+            "options": [
+              "我唱歌好听吗？",
+              "你几点唱歌？",
+              "你在哪儿唱歌？",
+              "你听歌吗？"
+            ],
             "correct_index": 0
           },
           "correct_answer": "我唱歌好听吗？",
@@ -3444,13 +3444,13 @@
           "prompt_cn": "选择正确的问句。",
           "prompt_en": "Ask what time they meet.",
           "data": {
-      "template": "我们七点见。",
-      "template_pinyin": "",
-      "source_sentence": "我们七点见。",
-      "source_pinyin": "",
-      "options": [
-        "你们和谁见？",
-        "你们在哪儿见？",
+            "template": "我们七点见。",
+            "template_pinyin": "",
+            "source_sentence": "我们七点见。",
+            "source_pinyin": "",
+            "options": [
+              "你们和谁见？",
+              "你们在哪儿见？",
               "你们看什么？",
               "你们几点见？"
             ],
@@ -3609,7 +3609,7 @@
           "data": {
             "title": "课文一：电影院外见",
             "passage": "学校前边有一家电影院。李文和白家月晚上去那个电影院看电影。他们七点在电影院外边见。",
-            "passage_pinyin": "",
+            "passage_pinyin": "Xu\u00e9xi\u00e0o qi\u00e1nbian y\u01d2u y\u00ec ji\u0101 di\u00e0ny\u01d0ngyu\u00e0n. L\u01d0 W\u00e9n h\u00e9 B\u00e1i Ji\u0101yu\u00e8 w\u01censhang q\u00f9 n\u00e0ge di\u00e0ny\u01d0ngyu\u00e0n k\u00e0n di\u00e0ny\u01d0ng. T\u0101men q\u012b di\u01cen z\u00e0i di\u00e0ny\u01d0ngyu\u00e0n w\u00e0ibian ji\u00e0n.",
             "passage_en": "",
             "questions": [
               {
@@ -3666,7 +3666,7 @@
           "data": {
             "title": "课文二：第二本中文书",
             "passage": "椅子上有一本书。那是陈天中的书，也是他的第二本中文书。白家月问陈天中明天上午在哪儿。陈天中明天上午在学校学习。",
-            "passage_pinyin": "",
+            "passage_pinyin": "Y\u01d0zi shang y\u01d2u y\u00ec b\u011bn sh\u016b. N\u00e0 sh\u00ec Ch\u00e9n Ti\u0101nzh\u014dng de sh\u016b, y\u011b sh\u00ec t\u0101 de d\u00ec-\u00e8r b\u011bn Zh\u014dngw\u00e9n sh\u016b. B\u00e1i Ji\u0101yu\u00e8 w\u00e8n Ch\u00e9n Ti\u0101nzh\u014dng m\u00edngti\u0101n sh\u00e0ngw\u01d4 z\u00e0i n\u01cer. Ch\u00e9n Ti\u0101nzh\u014dng m\u00edngti\u0101n sh\u00e0ngw\u01d4 z\u00e0i xu\u00e9xi\u00e0o xu\u00e9x\u00ed.",
             "passage_en": "",
             "questions": [
               {
@@ -3723,7 +3723,7 @@
           "data": {
             "title": "课文三：星期六做什么",
             "passage": "明天星期六。杨同乐白天在家里读书，晚上和朋友们去外边唱歌。王一雪在家里做饭、看电视，和孩子们、小狗玩。杨同乐也有一只小狗。",
-            "passage_pinyin": "",
+            "passage_pinyin": "M\u00edngti\u0101n X\u012bngq\u012bli\u00f9. Y\u00e1ng T\u00f3ngl\u00e8 b\u00e1iti\u0101n z\u00e0i ji\u0101 li d\u00fash\u016b, w\u01censhang h\u00e9 p\u00e9ngyoumen q\u00f9 w\u00e0ibian ch\u00e0ng g\u0113. W\u00e1ng Y\u012bxu\u011b z\u00e0i ji\u0101 li zu\u00f2 f\u00e0n, k\u00e0n di\u00e0nsh\u00ec, h\u00e9 h\u00e1izimen, xi\u01ceog\u01d2u w\u00e1n. Y\u00e1ng T\u00f3ngl\u00e8 y\u011b y\u01d2u y\u00ec zh\u012b xi\u01ceog\u01d2u.",
             "passage_en": "",
             "questions": [
               {
