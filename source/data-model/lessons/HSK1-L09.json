@@ -2566,7 +2566,7 @@
                 "right": "杨同乐唱歌很好听。"
               },
               {
-                "left": "你也有什么？",
+          "left": "你也有小狗吗？",
                 "left_pinyin": "",
                 "right": "我也有一只小狗。"
               }
@@ -2591,7 +2591,7 @@
                 "answer": "杨同乐唱歌很好听。"
               },
               {
-                "sentence": "你也有什么？",
+          "sentence": "你也有小狗吗？",
                 "answer": "我也有一只小狗。"
               }
             ]
@@ -3375,16 +3375,16 @@
           "prompt_cn": "选择正确的问句。",
           "prompt_en": "Change to a yes-no question.",
           "data": {
-            "template": "你唱歌很好听。",
-            "template_pinyin": "",
-            "source_sentence": "你唱歌很好听。",
-            "source_pinyin": "",
-            "options": [
-              "我唱歌好听吗？",
-              "你唱歌很好听。",
-              "你唱歌不好听。",
-              "你听歌吗？"
-            ],
+      "template": "我唱歌很好听。",
+      "template_pinyin": "",
+      "source_sentence": "我唱歌很好听。",
+      "source_pinyin": "",
+      "options": [
+        "我唱歌好听吗？",
+        "你几点唱歌？",
+        "你在哪儿唱歌？",
+        "你听歌吗？"
+      ],
             "correct_index": 0
           },
           "correct_answer": "我唱歌好听吗？",
@@ -3444,13 +3444,13 @@
           "prompt_cn": "选择正确的问句。",
           "prompt_en": "Ask what time they meet.",
           "data": {
-            "template": "我们七点在电影院外见。",
-            "template_pinyin": "",
-            "source_sentence": "我们七点在电影院外见。",
-            "source_pinyin": "",
-            "options": [
-              "你们和谁见？",
-              "你们在哪儿见？",
+      "template": "我们七点见。",
+      "template_pinyin": "",
+      "source_sentence": "我们七点见。",
+      "source_pinyin": "",
+      "options": [
+        "你们和谁见？",
+        "你们在哪儿见？",
               "你们看什么？",
               "你们几点见？"
             ],
