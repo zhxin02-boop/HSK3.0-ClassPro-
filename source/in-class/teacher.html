@@ -997,7 +997,7 @@ ap._speedBonus=function(rank){return bonus[rank-1]||0};
       weakPoints:rec.result==='wrong'?(rec.mode||''):'',
       correction:''
     },rec);
-    payload.score=rec.result==='correct'?1:0;
+    payload.score=rec.basePoint!=null?rec.basePoint:(rec.result==='correct'?1:0);
       payload.points=rec.pointsAwarded||0;
       if(location.hostname==='localhost'||location.hostname==='127.0.0.1'){
         fetch('/api/pre-class-record',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(e){console.log('local cloud sync',e)});
@@ -1045,12 +1045,22 @@ ap.qwe=function(){if(this.mt==='practice'&&this.st==='v1'){var cq=this._cq2&&thi
 ap._ha=function(m){
   var n=this._rn(m.name||m.studentName||"unknown"),tx=m.text||m.answer||"",res=m.autoResult||null,now=new Date();
   var q=this._cq2?this._cq2():null,rank=0,sb=0,base=0,totalPts=0;
-  if(res==="correct"&&!this.qcorrect[n]){
+  var alreadySubmitted=this.qsub&&this.qsub[n];
+  var submittedScore=m.score!=null?Number(m.score):null,submittedTotal=m.total!=null?Number(m.total):null;
+  if(submittedScore!=null&&!isNaN(submittedScore)){
+    base=submittedScore;
+  }else if(res==="correct"){
+    base=1;
+  }
+  if(alreadySubmitted){
+    base=0;
+  }else if(base>0&&!this.qcorrect[n]){
     rank=Object.keys(this.qcorrect).length+1;
     this.qcorrect[n]=rank;
-    base=1;sb=this._speedBonus(rank);totalPts=base+sb;
+    sb=this._speedBonus(rank);
   }
-  var rec={room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,studentName:n,mode:m.mode||this.st,questionId:m.questionId||(q&&q.id)||"",answer:tx,result:res,submittedAt:m.submittedAt||now.toISOString(),receivedAt:now.toISOString(),speedRank:rank||"",speedBonus:sb,basePoint:base,pointsAwarded:totalPts,needsReview:false};
+  totalPts=base+sb;
+  var rec={room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,studentName:n,mode:m.mode||this.st,questionId:m.questionId||(q&&q.id)||"",answer:tx,result:res,submittedAt:m.submittedAt||now.toISOString(),receivedAt:now.toISOString(),speedRank:rank||"",speedBonus:sb,basePoint:base,total:submittedTotal||1,pointsAwarded:totalPts,needsReview:false};
   this.records.unshift(rec);
   this.la.unshift({n:n,x:tx+(sb?("  +速度奖励"+sb):""),t:now.toLocaleTimeString(),ar:res});
   if(totalPts>0)this._as(n,totalPts);else{this._saveClassData();this._pubBoard()}
