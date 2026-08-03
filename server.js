@@ -177,6 +177,9 @@ var srv = http.createServer(function(req, res) {
         if (!found && student === String(body.studentName || "") && sameLesson && sameQuestion && sameModule && sameTime) {
           x.correction = body.correction || "已查看。";
           x.teacherFeedback = x.correction;
+          if (body.score !== undefined) x.score = Number(body.score);
+          if (body.total !== undefined) x.total = Number(body.total);
+          if (body.result) x.result = body.result;
           x.status = body.status || body.reviewStatus || "已归档";
           x.reviewStatus = body.reviewStatus || body.status || "已归档";
           found = true;

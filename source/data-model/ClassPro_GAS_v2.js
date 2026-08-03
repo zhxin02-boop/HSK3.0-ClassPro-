@@ -2,6 +2,7 @@
 // Deploy as Web App. Execute as: Me. Access: Anyone with the link.
 
 var SHEET_ID = "1ILjSScbsUKwh7za0iEzRcHWOJf3QnonrTaIafEkbhiw";
+var JSONP_CALLBACK = "";
 var HEADERS = [
   "提交时间","姓名","课程","环节","模块","题号","得分","总分","积分",
   "基础分","速度名次","速度奖励","薄弱点","学生作答","结果",
@@ -10,6 +11,7 @@ var HEADERS = [
 
 function doPost(e) {
   try {
+    JSONP_CALLBACK = "";
     var ss = SpreadsheetApp.openById(SHEET_ID);
     var d = parsePayload_(e);
     if (d.action === "save_score") return saveScore_(ss, d);
@@ -22,10 +24,13 @@ function doPost(e) {
 
 function doGet(e) {
   try {
+    JSONP_CALLBACK = (e.parameter && e.parameter.callback) || "";
     var ss = SpreadsheetApp.openById(SHEET_ID);
     var a = (e.parameter && e.parameter.action) || "get_all";
     if (a === "list_sheets") return json_({ status: "ok", sheets: ss.getSheets().map(function (s) { return s.getName(); }) });
     if (a === "get_data") return json_({ status: "ok", data: readSheet_(ss, e.parameter.lesson || "") });
+    if (a === "save_score") return saveScore_(ss, e.parameter);
+    if (a === "mark_reviewed") return markReviewed_(ss, e.parameter);
     if (a === "get_all") {
       var all = {}, sheets = ss.getSheets();
       for (var i = 0; i < sheets.length; i++) {
@@ -73,14 +78,14 @@ function appendRecord_(ss, d) {
 }
 
 function saveScore_(ss, d) {
-  return updateReview_(ss, d, d.score, d.correction || "", "已批改");
+  return updateReview_(ss, d, d.score, d.correction || "", "已批改", d.total, d.result);
 }
 
 function markReviewed_(ss, d) {
-  return updateReview_(ss, d, "", d.correction || "", d.reviewStatus || d.status || "已归档");
+  return updateReview_(ss, d, d.score, d.correction || "", d.reviewStatus || d.status || "已归档", d.total, d.result);
 }
 
-function updateReview_(ss, d, score, correction, status) {
+function updateReview_(ss, d, score, correction, status, total, result) {
   var sheet = ss.getSheetByName(d.lesson);
   if (!sheet) return json_({ status: "error", message: "lesson sheet not found" });
   var rows = sheet.getDataRange().getValues();
@@ -88,7 +93,9 @@ function updateReview_(ss, d, score, correction, status) {
   if (directRow > 1 && directRow <= rows.length) {
     var direct = rows[directRow - 1];
     if (String(direct[1] || "") === String(d.studentName || "")) {
-      if (score !== "") sheet.getRange(directRow, 7).setValue(score);
+      if (score !== "" && score != null) sheet.getRange(directRow, 7).setValue(score);
+      if (total !== "" && total != null) sheet.getRange(directRow, 8).setValue(total);
+      if (result) sheet.getRange(directRow, 15).setValue(result);
       sheet.getRange(directRow, 16).setValue(correction);
       sheet.getRange(directRow, 17).setValue(status);
       return json_({ status: "ok", match: "rowIndex" });
@@ -106,7 +113,9 @@ function updateReview_(ss, d, score, correction, status) {
     var sameQuestion = !targetQuestion || String(rows[i][5] || "") === targetQuestion;
     var sameModule = !targetModule || String(rows[i][4] || "") === targetModule;
     if (sameTime && sameQuestion && sameModule && rows[i][1] === d.studentName) {
-      if (score !== "") sheet.getRange(i + 1, 7).setValue(score);
+      if (score !== "" && score != null) sheet.getRange(i + 1, 7).setValue(score);
+      if (total !== "" && total != null) sheet.getRange(i + 1, 8).setValue(total);
+      if (result) sheet.getRange(i + 1, 15).setValue(result);
       sheet.getRange(i + 1, 16).setValue(correction);
       sheet.getRange(i + 1, 17).setValue(status);
       return json_({ status: "ok" });
@@ -161,5 +170,9 @@ function number_(v) {
 }
 
 function json_(obj) {
+  if (JSONP_CALLBACK) {
+    var safe = String(JSONP_CALLBACK).replace(/[^\w$.]/g, "");
+    return ContentService.createTextOutput(safe + "(" + JSON.stringify(obj) + ")").setMimeType(ContentService.MimeType.JAVASCRIPT);
+  }
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
 }
