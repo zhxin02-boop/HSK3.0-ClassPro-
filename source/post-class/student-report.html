@@ -261,6 +261,27 @@ setTier(currentTier);
     var last=attemptTime(summaries[0]);
     return post.filter(function(x){return attemptTime(x)===last});
   }
+  function studentNameOf(x){return String(rv(x,["studentName","姓名","学生姓名","name"],IDX.student)||"")}
+  function scoreOf(x){return Number(rv(x,["score","得分"],IDX.score))||0}
+  function totalOf(x){return Number(rv(x,["total","总分"],IDX.total))||0}
+  function resultOf(x){return String(rv(x,["result","autoResult","结果"],IDX.result)||"").toLowerCase()}
+  function rankHtml(allLessonRows,name){
+    var by={};
+    allLessonRows.forEach(function(x){var n=studentNameOf(x);if(!n)return;if(!by[n])by[n]={score:0,total:0};by[n].score+=scoreOf(x);by[n].total+=totalOf(x)});
+    var list=Object.keys(by).map(function(n){return{name:n,score:by[n].score,total:by[n].total}}).sort(function(a,b){return b.score-a.score||b.total-a.total||a.name.localeCompare(b.name)});
+    var idx=list.findIndex(function(x){return x.name===name}),me=idx>=0?list[idx]:{score:0,total:0};
+    return'<div class="report-kpi"><b>'+(idx>=0?("#"+(idx+1)):"--")+'</b><span>当前课排名 / Rank</span></div><div class="report-kpi"><b>'+me.score+'/'+me.total+'</b><span>当前课总得分 / Total</span></div>';
+  }
+  function wrongHtml(rows){
+    var wrong=rows.filter(function(x){var t=totalOf(x),s=scoreOf(x),r=resultOf(x);return r==="wrong"||(t>0&&s<t)}).slice(0,8);
+    if(!wrong.length)return'<div class="muted" style="margin-top:12px">暂无错题记录。可以进入复习资源继续巩固。</div>';
+    return'<div style="margin-top:12px"><div class="report-title" style="font-size:16px">错题与薄弱点 / Mistakes</div>'+wrong.map(function(x){
+      return'<div class="report-kpi" style="text-align:left;margin-top:8px"><b style="font-size:14px;color:#b42318">'+escHtml(rv(x,["questionId","题号"],IDX.qid)||rv(x,["module","模块","mode"],IDX.module)||"题目")+'</b><span>'+escHtml(rv(x,["module","模块","mode"],IDX.module)||"")+'</span><div class="muted" style="margin-top:6px"><strong>作答：</strong>'+escHtml(String(rv(x,["answer","学生作答"],IDX.answer)).slice(0,180))+'</div></div>'
+    }).join("")+'</div>';
+  }
+  function reviewLinkHtml(){
+    return'<div style="margin-top:12px"><a href="review-resources.html?lesson='+encodeURIComponent(lessonKey)+'" style="display:inline-flex;border-radius:999px;padding:9px 14px;background:#edf3ff;color:#2563eb;font-weight:900;text-decoration:none">进入本课复习资源 / Review Resources</a></div>';
+  }
   function feedbackHtml(rows){
     var reviewed=rows.filter(function(x){return String(rv(x,["teacherFeedback","教师批改","correction"],IDX.feedback)||"").trim()});
     if(!reviewed.length)return'<div class="muted" style="margin-top:12px">暂无课后作业教师反馈。老师批改后，刷新这里即可查看。</div>';
@@ -274,7 +295,7 @@ setTier(currentTier);
     document.getElementById("reportBody").textContent="正在读取报告 / Loading...";
     var url=(location.hostname==="localhost"||location.hostname==="127.0.0.1")?"/api/reviews?name="+encodeURIComponent(name):GAS_URL+"?action=get_all";
     fetch(url).then(function(r){if(!r.ok)throw new Error("Report API "+r.status);return r.json()}).then(function(d){
-      var all=flatten(d),rows=all.filter(function(x){return String(rv(x,["studentName","姓名","学生姓名","name"],IDX.student))===name&&sameLesson(rv(x,["lesson","课程","课程编号","lessonKey"],IDX.lesson))});
+      var all=flatten(d),lessonRows=all.filter(function(x){return sameLesson(rv(x,["lesson","课程","课程编号","lessonKey"],IDX.lesson))}),rows=lessonRows.filter(function(x){return studentNameOf(x)===name});
       var pre=rows.filter(function(x){return stageKey(x)==="pre"}),mid=rows.filter(function(x){return stageKey(x)==="mid"}),post=latestPostRows(rows.filter(function(x){return stageKey(x)==="post"}));
       var correct=mid.filter(function(x){return String(rv(x,["result","autoResult","结果"],IDX.result)).toLowerCase()==="correct"}).length;
       var summary=post.filter(function(x){return rv(x,["module","模块","mode"],IDX.module)==="homework_summary"})[0],report=summary?parseMaybeJson(rv(summary,["answer","学生作答"],IDX.answer)):null;
@@ -286,7 +307,7 @@ setTier(currentTier);
       }
       if(!rows.length){document.getElementById("reportBody").textContent="暂无报告数据。完成课前、课中或课后活动后，这里会生成报告。";return}
       document.getElementById("reportHint").textContent=isRequiredOptionalHomework()?("已生成："+name+" 的学习摘要。"):("已生成："+name+" 的学习摘要；系统推荐 "+recommendedTier+" 档");
-      document.getElementById("reportBody").innerHTML='<div class="report-grid"><div class="report-kpi"><b>'+pre.length+'</b><span>课前记录 / Pre</span></div><div class="report-kpi"><b>'+mid.length+'</b><span>课中答题 / Class</span></div><div class="report-kpi"><b>'+ (mid.length?Math.round(correct/mid.length*100):0)+'%</b><span>课中正确率 / Accuracy</span></div><div class="report-kpi"><b>'+ (report?report.objectiveCorrect+'/'+report.objectiveTotal:'--')+'</b><span>最近一次课后客观题 / Latest Homework</span></div></div>'+feedbackHtml(post);
+      document.getElementById("reportBody").innerHTML='<div class="report-grid"><div class="report-kpi"><b>'+pre.length+'</b><span>课前记录 / Pre</span></div><div class="report-kpi"><b>'+mid.length+'</b><span>课中答题 / Class</span></div><div class="report-kpi"><b>'+ (mid.length?Math.round(correct/mid.length*100):0)+'%</b><span>课中正确率 / Accuracy</span></div><div class="report-kpi"><b>'+ (report?report.objectiveCorrect+'/'+report.objectiveTotal:'--')+'</b><span>最近一次课后客观题 / Latest Homework</span></div>'+rankHtml(lessonRows,name)+'</div>'+wrongHtml(rows)+feedbackHtml(post)+reviewLinkHtml();
     }).catch(function(){document.getElementById("reportBody").textContent="报告暂时无法读取，请稍后刷新 / Try again later."});
   };
 })();
