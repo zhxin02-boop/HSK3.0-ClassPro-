@@ -1775,6 +1775,9 @@ ap.init();
   ap._snav=function(){
     var h=oldSnav.call(this);
     if(this.mt==='practice'){
+      if(typeof HR!=='undefined'&&HR.enabled){
+        h=h.replace(/<button class="sub-btn[^"]*" onclick="ap\.st='w1'[\s\S]*?<\/button>/,'');
+      }
       h=h.replace('汉字认读<br><small>Reading Cycle</small>','汉字练习<br><small>Hanzi Practice</small>');
       var qs=questions();
       if(qs.length&&h.indexOf("ap.st='trc'")<0){
