@@ -48,13 +48,16 @@ function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"
 function getJson(path){var x=new XMLHttpRequest();x.open("GET",path,false);x.send(null);if(x.status<200||x.status>=300)throw new Error(path);return JSON.parse(x.responseText)}
 function loadLesson(){
   try{
-    var raw=/^HSK1-L\d{2}$/.test(lessonKey)?getJson("../data-model/lessons/"+lessonKey+".json"):null;
-    DATA=window.ClassProCourseAdapter&&raw?window.ClassProCourseAdapter.normalizeStandard(raw):raw;
+    var raw=lessonKey==="HSK1-L01"?getJson("../data-model/HSK1-L01_content_draft.json"):(/^HSK1-L\d{2}$/.test(lessonKey)?getJson("../data-model/lessons/"+lessonKey+".json"):null);
+    DATA=raw&&raw.schemaVersion&&window.ClassProCourseAdapter?window.ClassProCourseAdapter.normalizeStandard(raw):raw;
   }catch(e){DATA={meta:{lessonKey:lessonKey,title:"课程数据读取失败"},vocabulary:[],texts:[],vocabExtensions:{},hanziWriting:{characters:[]}}}
   document.title=lessonKey+" 课后复习资源";
   document.getElementById("lessonBadge").textContent=lessonKey+" · "+((DATA.meta&&DATA.meta.title)||"Review");
 }
-function examplesFor(v){var ext=(DATA.vocabExtensions||{})[v.id]||{};return (ext.examples&&ext.examples.length?ext.examples:ext.collocations&&ext.collocations.length?ext.collocations:v.examples||[]).slice(0,3)}
+function rowsFrom(x){if(Array.isArray(x))return x;if(!x)return[];return x.examples||x.collocations||x.phrases||x.shortPhrases||x.sentences||[]}
+function normalizeRows(rows){return (rows||[]).map(function(e){return typeof e==="string"?{hanzi:e}:e}).filter(function(e){return e&&((e.hanzi||e.word||"").trim())})}
+function textExamplesFor(v){var id=v.id||"",word=v.hanzi||v.word||"",out=[],seen={};(DATA.texts||[]).forEach(function(t){(t.lines||t.dialogue||[]).forEach(function(l){var h=l.hanzi||l.text||"",hit=(l.highlightVocab||[]).indexOf(id)>=0||(word&&h.indexOf(word)>=0);if(hit&&!seen[h]){seen[h]=1;out.push({hanzi:h,pinyin:l.pinyin||"",english:l.english||"",sourceType:"textbook"})}})});return out}
+function examplesFor(v){var ext=DATA.vocabExtensions||{},key=v.id||"",word=v.hanzi||v.word||"",rows=rowsFrom(ext[key]||ext[word]||{});if(!rows.length)rows=rowsFrom(v.examples&&v.examples.length?{examples:v.examples}:{phrases:v.phrases});if(!rows.length)rows=textExamplesFor(v);return normalizeRows(rows).slice(0,3)}
 function renderVocab(){
   var v=DATA.vocabulary||[],h="<h2>生词复习 / Vocabulary</h2><div class=\"grid\">";
   if(!v.length)return "<div class=\"empty\">暂无生词数据。</div>";
