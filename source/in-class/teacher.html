@@ -2074,6 +2074,35 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
   };
 })();
 </script>
+<script>
+/* Final guard: when unified Hanzi Practice is available, hide the legacy w1 entry. */
+(function(){
+  if(typeof ap==='undefined')return;
+  function hasUnifiedHanzi(){return typeof HR!=='undefined'&&HR&&HR.enabled&&Array.isArray(HR.groups)&&HR.groups.length>0}
+  function removeLegacyHanziButton(){
+    if(!hasUnifiedHanzi())return;
+    document.querySelectorAll('.sub-nav button').forEach(function(btn){
+      var action=btn.getAttribute('onclick')||'';
+      if(action.indexOf("ap.st='w1'")>=0||action.indexOf('ap.st="w1"')>=0)btn.remove();
+    });
+  }
+  var oldSnav=ap._snav;
+  ap._snav=function(){
+    var h=oldSnav.call(this);
+    if(hasUnifiedHanzi()){
+      h=h.replace(/<button class="sub-btn[^"]*" onclick="ap\.st=(['"])w1\1[\s\S]*?<\/button>/g,'');
+      if(this.mt==='practice'&&this.st==='w1')this.st='hrec';
+    }
+    return h;
+  };
+  var oldRender=ap._r;
+  ap._r=function(){
+    if(hasUnifiedHanzi()&&this.mt==='practice'&&this.st==='w1')this.st='hrec';
+    oldRender.call(this);
+    removeLegacyHanziButton();
+  };
+})();
+</script>
 </body>
 </html>
 
