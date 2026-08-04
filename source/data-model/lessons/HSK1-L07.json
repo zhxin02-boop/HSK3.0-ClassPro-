@@ -36,7 +36,8 @@
           "在"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"now\", no text"
+      "imagePrompt": "A clear real-life photo representing \"now\", no text",
+      "image": "images/vocab/hsk1-l07/v01_xianzai_time.png"
     },
     {
       "id": "v_l07_02",
@@ -52,7 +53,8 @@
           "点"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"o'clock\", no text"
+      "imagePrompt": "A clear real-life photo representing \"o'clock\", no text",
+      "image": "images/vocab/hsk1-l07/v01_xianzai_time.png"
     },
     {
       "id": "v_l07_03",
@@ -69,7 +71,8 @@
           "上"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"(early) morning\", no text"
+      "imagePrompt": "A clear real-life photo representing \"(early) morning\", no text",
+      "image": "images/vocab/hsk1-l07/v02_zaoshang.png"
     },
     {
       "id": "v_l07_04",
@@ -86,7 +89,8 @@
           "午"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"morning\", no text"
+      "imagePrompt": "A clear real-life photo representing \"morning\", no text",
+      "image": "images/vocab/hsk1-l07/v02_zaoshang.png"
     },
     {
       "id": "v_l07_05",
@@ -102,7 +106,8 @@
           "分"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"minute\", no text"
+      "imagePrompt": "A clear real-life photo representing \"minute\", no text",
+      "image": "images/vocab/hsk1-l07/v01_xianzai_time.png"
     },
     {
       "id": "v_l07_06",
@@ -118,7 +123,8 @@
           "课"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"class; lesson\", no text"
+      "imagePrompt": "A clear real-life photo representing \"class; lesson\", no text",
+      "image": "images/vocab/hsk1-l07/v03_ke_class.png"
     },
     {
       "id": "v_l07_07",
@@ -135,7 +141,8 @@
           "午"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"afternoon\", no text"
+      "imagePrompt": "A clear real-life photo representing \"afternoon\", no text",
+      "image": "images/vocab/hsk1-l07/v04_jian_meet.png"
     },
     {
       "id": "v_l07_08",
@@ -151,7 +158,8 @@
           "见"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"meet\", no text"
+      "imagePrompt": "A clear real-life photo representing \"meet\", no text",
+      "image": "images/vocab/hsk1-l07/v04_jian_meet.png"
     },
     {
       "id": "v_l07_09",
@@ -185,7 +193,8 @@
           "院"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"cinema\", no text"
+      "imagePrompt": "A clear real-life photo representing \"cinema\", no text",
+      "image": "images/vocab/hsk1-l07/v05_dianyingyuan.png"
     },
     {
       "id": "v_l07_11",
@@ -201,7 +210,8 @@
           "看"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"watch; see; read\", no text"
+      "imagePrompt": "A clear real-life photo representing \"watch; see; read\", no text",
+      "image": "images/vocab/hsk1-l07/v06_dianying.png"
     },
     {
       "id": "v_l07_12",
@@ -218,7 +228,8 @@
           "影"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"movie; film\", no text"
+      "imagePrompt": "A clear real-life photo representing \"movie; film\", no text",
+      "image": "images/vocab/hsk1-l07/v06_dianying.png"
     },
     {
       "id": "v_l07_13",
@@ -251,7 +262,8 @@
           "课"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"attend a class\", no text"
+      "imagePrompt": "A clear real-life photo representing \"attend a class\", no text",
+      "image": "images/vocab/hsk1-l07/v03_ke_class.png"
     },
     {
       "id": "v_l07_15",
@@ -283,7 +295,8 @@
           "半"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"half\", no text"
+      "imagePrompt": "A clear real-life photo representing \"half\", no text",
+      "image": "images/vocab/hsk1-l07/v01_xianzai_time.png"
     },
     {
       "id": "v_l07_17",
@@ -332,7 +345,8 @@
           "家"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"home\", no text"
+      "imagePrompt": "A clear real-life photo representing \"home\", no text",
+      "image": "images/vocab/hsk1-l07/v07_jia_li.png"
     },
     {
       "id": "v_l07_20",
@@ -348,7 +362,8 @@
           "里"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"inside\", no text"
+      "imagePrompt": "A clear real-life photo representing \"inside\", no text",
+      "image": "images/vocab/hsk1-l07/v07_jia_li.png"
     },
     {
       "id": "v_l07_21",
@@ -365,7 +380,8 @@
           "上"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"evening\", no text"
+      "imagePrompt": "A clear real-life photo representing \"evening\", no text",
+      "image": "images/vocab/hsk1-l07/v08_wanshang.png"
     },
     {
       "id": "v_l07_22",
@@ -382,7 +398,8 @@
           "院"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"hospital\", no text"
+      "imagePrompt": "A clear real-life photo representing \"hospital\", no text",
+      "image": "images/vocab/hsk1-l07/v09_yiyuan.png"
     },
     {
       "id": "v_l07_23",
@@ -399,7 +416,8 @@
           "班"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"go to work\", no text"
+      "imagePrompt": "A clear real-life photo representing \"go to work\", no text",
+      "image": "images/vocab/hsk1-l07/v10_shangban.png"
     },
     {
       "id": "v_l07_28",
@@ -416,7 +434,8 @@
           "班"
         ]
       },
-      "imagePrompt": "A worker leaving work in the evening, no text"
+      "imagePrompt": "A worker leaving work in the evening, no text",
+      "image": "images/vocab/hsk1-l07/v11_xiaban.png"
     },
     {
       "id": "v_l07_24",
@@ -432,7 +451,8 @@
           "店"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"shop; store\", no text"
+      "imagePrompt": "A clear real-life photo representing \"shop; store\", no text",
+      "image": "images/vocab/hsk1-l07/v12_dian_cai.png"
     },
     {
       "id": "v_l07_25",
@@ -448,7 +468,8 @@
           "菜"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"vegetable; dish\", no text"
+      "imagePrompt": "A clear real-life photo representing \"vegetable; dish\", no text",
+      "image": "images/vocab/hsk1-l07/v12_dian_cai.png"
     },
     {
       "id": "v_l07_26",
@@ -465,7 +486,8 @@
           "钟"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"minute\", no text"
+      "imagePrompt": "A clear real-life photo representing \"minute\", no text",
+      "image": "images/vocab/hsk1-l07/v01_xianzai_time.png"
     },
     {
       "id": "v_l07_27",
@@ -2807,253 +2829,283 @@
     "questionGroups": {
       "v1_image_guess": [
         {
-          "id": "v1_hsk1_07_01",
+          "id": "v1_hsk1_l07_01",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for now",
+            "image_hint": "A real-life scene for 现在",
             "options": [
               "现在",
-              "点",
               "早上",
-              "上午"
+              "课",
+              "下午"
             ],
             "options_pinyin": [
               "xiànzài",
-              "diǎn",
               "zǎoshang",
-              "shàngwǔ"
+              "kè",
+              "xiàwǔ"
             ]
           },
           "correct_answer": "现在",
           "kp": "现在",
-          "sourceType": "textbook"
-        },
-        {
-          "id": "v1_hsk1_07_02",
-          "type": "image_guess",
-          "stage": "in_class",
-          "prompt_cn": "看图猜词。",
-          "prompt_en": "Look at the picture and choose the word.",
-          "data": {
-            "image_hint": "A real-life scene for o'clock",
-            "options": [
-              "点",
-              "现在",
-              "早上",
-              "上午"
-            ],
-            "options_pinyin": [
-              "diǎn",
-              "xiànzài",
-              "zǎoshang",
-              "shàngwǔ"
-            ]
+          "media": {
+            "image": "images/vocab/hsk1-l07/v01_xianzai_time.png"
           },
-          "correct_answer": "点",
-          "kp": "点",
           "sourceType": "textbook"
         },
         {
-          "id": "v1_hsk1_07_03",
+          "id": "v1_hsk1_l07_02",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for (early) morning",
+            "image_hint": "A real-life scene for 早上",
             "options": [
               "早上",
-              "现在",
-              "点",
-              "上午"
+              "课",
+              "下午",
+              "电影院"
             ],
             "options_pinyin": [
               "zǎoshang",
-              "xiànzài",
-              "diǎn",
-              "shàngwǔ"
+              "kè",
+              "xiàwǔ",
+              "diànyǐngyuàn"
             ]
           },
           "correct_answer": "早上",
           "kp": "早上",
-          "sourceType": "textbook"
-        },
-        {
-          "id": "v1_hsk1_07_04",
-          "type": "image_guess",
-          "stage": "in_class",
-          "prompt_cn": "看图猜词。",
-          "prompt_en": "Look at the picture and choose the word.",
-          "data": {
-            "image_hint": "A real-life scene for morning",
-            "options": [
-              "上午",
-              "现在",
-              "点",
-              "早上"
-            ],
-            "options_pinyin": [
-              "shàngwǔ",
-              "xiànzài",
-              "diǎn",
-              "zǎoshang"
-            ]
+          "media": {
+            "image": "images/vocab/hsk1-l07/v02_zaoshang.png"
           },
-          "correct_answer": "上午",
-          "kp": "上午",
           "sourceType": "textbook"
         },
         {
-          "id": "v1_hsk1_07_05",
+          "id": "v1_hsk1_l07_03",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for minute",
-            "options": [
-              "分",
-              "现在",
-              "点",
-              "早上"
-            ],
-            "options_pinyin": [
-              "fēn",
-              "xiànzài",
-              "diǎn",
-              "zǎoshang"
-            ]
-          },
-          "correct_answer": "分",
-          "kp": "分",
-          "sourceType": "textbook"
-        },
-        {
-          "id": "v1_hsk1_07_06",
-          "type": "image_guess",
-          "stage": "in_class",
-          "prompt_cn": "看图猜词。",
-          "prompt_en": "Look at the picture and choose the word.",
-          "data": {
-            "image_hint": "A real-life scene for class; lesson",
+            "image_hint": "A real-life scene for 课",
             "options": [
               "课",
-              "现在",
-              "点",
-              "早上"
+              "下午",
+              "电影院",
+              "电影"
             ],
             "options_pinyin": [
               "kè",
-              "xiànzài",
-              "diǎn",
-              "zǎoshang"
+              "xiàwǔ",
+              "diànyǐngyuàn",
+              "diànyǐng"
             ]
           },
           "correct_answer": "课",
           "kp": "课",
+          "media": {
+            "image": "images/vocab/hsk1-l07/v03_ke_class.png"
+          },
           "sourceType": "textbook"
         },
         {
-          "id": "v1_hsk1_07_07",
+          "id": "v1_hsk1_l07_04",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for afternoon",
+            "image_hint": "A real-life scene for 下午",
             "options": [
               "下午",
-              "现在",
-              "点",
-              "早上"
+              "电影院",
+              "电影",
+              "家"
             ],
             "options_pinyin": [
               "xiàwǔ",
-              "xiànzài",
-              "diǎn",
-              "zǎoshang"
+              "diànyǐngyuàn",
+              "diànyǐng",
+              "jiā"
             ]
           },
           "correct_answer": "下午",
           "kp": "下午",
-          "sourceType": "textbook"
-        },
-        {
-          "id": "v1_hsk1_07_08",
-          "type": "image_guess",
-          "stage": "in_class",
-          "prompt_cn": "看图猜词。",
-          "prompt_en": "Look at the picture and choose the word.",
-          "data": {
-            "image_hint": "A real-life scene for meet",
-            "options": [
-              "见",
-              "现在",
-              "点",
-              "早上"
-            ],
-            "options_pinyin": [
-              "jiàn",
-              "xiànzài",
-              "diǎn",
-              "zǎoshang"
-            ]
+          "media": {
+            "image": "images/vocab/hsk1-l07/v04_jian_meet.png"
           },
-          "correct_answer": "见",
-          "kp": "见",
           "sourceType": "textbook"
         },
         {
-          "id": "v1_hsk1_07_09",
+          "id": "v1_hsk1_l07_05",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for sentence-final particle for suggestion",
-            "options": [
-              "吧",
-              "现在",
-              "点",
-              "早上"
-            ],
-            "options_pinyin": [
-              "ba",
-              "xiànzài",
-              "diǎn",
-              "zǎoshang"
-            ]
-          },
-          "correct_answer": "吧",
-          "kp": "吧",
-          "sourceType": "textbook"
-        },
-        {
-          "id": "v1_hsk1_07_10",
-          "type": "image_guess",
-          "stage": "in_class",
-          "prompt_cn": "看图猜词。",
-          "prompt_en": "Look at the picture and choose the word.",
-          "data": {
-            "image_hint": "A real-life scene for cinema",
+            "image_hint": "A real-life scene for 电影院",
             "options": [
               "电影院",
-              "现在",
-              "点",
-              "早上"
+              "电影",
+              "家",
+              "晚上"
             ],
             "options_pinyin": [
               "diànyǐngyuàn",
-              "xiànzài",
-              "diǎn",
-              "zǎoshang"
+              "diànyǐng",
+              "jiā",
+              "wǎnshang"
             ]
           },
           "correct_answer": "电影院",
           "kp": "电影院",
+          "media": {
+            "image": "images/vocab/hsk1-l07/v05_dianyingyuan.png"
+          },
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_l07_06",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for 电影",
+            "options": [
+              "电影",
+              "家",
+              "晚上",
+              "医院"
+            ],
+            "options_pinyin": [
+              "diànyǐng",
+              "jiā",
+              "wǎnshang",
+              "yīyuàn"
+            ]
+          },
+          "correct_answer": "电影",
+          "kp": "电影",
+          "media": {
+            "image": "images/vocab/hsk1-l07/v06_dianying.png"
+          },
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_l07_07",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for 家",
+            "options": [
+              "家",
+              "晚上",
+              "医院",
+              "店"
+            ],
+            "options_pinyin": [
+              "jiā",
+              "wǎnshang",
+              "yīyuàn",
+              "diàn"
+            ]
+          },
+          "correct_answer": "家",
+          "kp": "家",
+          "media": {
+            "image": "images/vocab/hsk1-l07/v07_jia_li.png"
+          },
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_l07_08",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for 晚上",
+            "options": [
+              "晚上",
+              "医院",
+              "店",
+              "现在"
+            ],
+            "options_pinyin": [
+              "wǎnshang",
+              "yīyuàn",
+              "diàn",
+              "xiànzài"
+            ]
+          },
+          "correct_answer": "晚上",
+          "kp": "晚上",
+          "media": {
+            "image": "images/vocab/hsk1-l07/v08_wanshang.png"
+          },
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_l07_09",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for 医院",
+            "options": [
+              "医院",
+              "店",
+              "现在",
+              "早上"
+            ],
+            "options_pinyin": [
+              "yīyuàn",
+              "diàn",
+              "xiànzài",
+              "zǎoshang"
+            ]
+          },
+          "correct_answer": "医院",
+          "kp": "医院",
+          "media": {
+            "image": "images/vocab/hsk1-l07/v09_yiyuan.png"
+          },
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_l07_10",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for 店",
+            "options": [
+              "店",
+              "现在",
+              "早上",
+              "课"
+            ],
+            "options_pinyin": [
+              "diàn",
+              "xiànzài",
+              "zǎoshang",
+              "kè"
+            ]
+          },
+          "correct_answer": "店",
+          "kp": "店",
+          "media": {
+            "image": "images/vocab/hsk1-l07/v12_dian_cai.png"
+          },
           "sourceType": "textbook"
         }
       ],

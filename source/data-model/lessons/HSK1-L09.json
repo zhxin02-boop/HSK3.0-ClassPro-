@@ -32,7 +32,8 @@
       "tags": [
         "L09"
       ],
-      "category": "place"
+      "category": "place",
+      "image": "images/vocab/hsk1-l09/v01_qianbian.png"
     },
     {
       "id": "v_l09_02",
@@ -84,7 +85,8 @@
       "tags": [
         "L09"
       ],
-      "category": "place"
+      "category": "place",
+      "image": "images/vocab/hsk1-l09/v02_waibian.png"
     },
     {
       "id": "v_l09_06",
@@ -97,7 +99,8 @@
       "tags": [
         "L09"
       ],
-      "category": "object"
+      "category": "object",
+      "image": "images/vocab/hsk1-l09/v03_yizi.png"
     },
     {
       "id": "v_l09_07",
@@ -110,7 +113,8 @@
       "tags": [
         "L09"
       ],
-      "category": "place"
+      "category": "place",
+      "image": "images/vocab/hsk1-l09/v04_shang.png"
     },
     {
       "id": "v_l09_08",
@@ -123,7 +127,8 @@
       "tags": [
         "L09"
       ],
-      "category": "function"
+      "category": "function",
+      "image": "images/vocab/hsk1-l09/v05_shu.png"
     },
     {
       "id": "v_l09_09",
@@ -136,7 +141,8 @@
       "tags": [
         "L09"
       ],
-      "category": "object"
+      "category": "object",
+      "image": "images/vocab/hsk1-l09/v05_shu.png"
     },
     {
       "id": "v_l09_10",
@@ -175,7 +181,8 @@
       "tags": [
         "L09"
       ],
-      "category": "action"
+      "category": "action",
+      "image": "images/vocab/hsk1-l09/v06_xuexi.png"
     },
     {
       "id": "v_l09_13",
@@ -188,7 +195,8 @@
       "tags": [
         "L09"
       ],
-      "category": "action"
+      "category": "action",
+      "image": "images/vocab/hsk1-l09/v06_xuexi.png"
     },
     {
       "id": "v_l09_14",
@@ -201,7 +209,8 @@
       "tags": [
         "L09"
       ],
-      "category": "time"
+      "category": "time",
+      "image": "images/vocab/hsk1-l09/v07_baitian.png"
     },
     {
       "id": "v_l09_15",
@@ -214,7 +223,8 @@
       "tags": [
         "L09"
       ],
-      "category": "action"
+      "category": "action",
+      "image": "images/vocab/hsk1-l09/v08_dushu.png"
     },
     {
       "id": "v_l09_16",
@@ -240,7 +250,8 @@
       "tags": [
         "L09"
       ],
-      "category": "person"
+      "category": "person",
+      "image": "images/vocab/hsk1-l09/v09_pengyou.png"
     },
     {
       "id": "v_l09_18",
@@ -253,7 +264,8 @@
       "tags": [
         "L09"
       ],
-      "category": "action"
+      "category": "action",
+      "image": "images/vocab/hsk1-l09/v10_changge.png"
     },
     {
       "id": "v_l09_19",
@@ -266,7 +278,8 @@
       "tags": [
         "L09"
       ],
-      "category": "object"
+      "category": "object",
+      "image": "images/vocab/hsk1-l09/v10_changge.png"
     },
     {
       "id": "v_l09_20",
@@ -279,7 +292,8 @@
       "tags": [
         "L09"
       ],
-      "category": "quality"
+      "category": "quality",
+      "image": "images/vocab/hsk1-l09/v10_changge.png"
     },
     {
       "id": "v_l09_21",
@@ -292,7 +306,8 @@
       "tags": [
         "L09"
       ],
-      "category": "object"
+      "category": "object",
+      "image": "images/vocab/hsk1-l09/v11_dianshi.png"
     },
     {
       "id": "v_l09_22",
@@ -305,7 +320,8 @@
       "tags": [
         "L09"
       ],
-      "category": "object"
+      "category": "object",
+      "image": "images/vocab/hsk1-l09/v12_gou_wan.png"
     },
     {
       "id": "v_l09_23",
@@ -318,7 +334,8 @@
       "tags": [
         "L09"
       ],
-      "category": "action"
+      "category": "action",
+      "image": "images/vocab/hsk1-l09/v12_gou_wan.png"
     }
   ],
   "properNouns": [
@@ -1951,263 +1968,283 @@
     "questionGroups": {
       "v1_image_guess": [
         {
-          "id": "v1_hsk1_09_01",
+          "id": "v1_hsk1_l09_01",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for front",
+            "image_hint": "A real-life scene for 前边",
             "options": [
               "前边",
+              "外边",
               "椅子",
-              "书",
-              "朋友"
+              "上"
             ],
             "options_pinyin": [
               "qiánbian",
+              "wàibian",
               "yǐzi",
-              "shū",
-              "péngyou"
-            ],
-            "correct_index": 0
+              "shang / shàng"
+            ]
           },
           "correct_answer": "前边",
           "kp": "前边",
+          "media": {
+            "image": "images/vocab/hsk1-l09/v01_qianbian.png"
+          },
           "sourceType": "textbook"
         },
         {
-          "id": "v1_hsk1_09_02",
+          "id": "v1_hsk1_l09_02",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for outside",
+            "image_hint": "A real-life scene for 外边",
             "options": [
-              "椅子",
               "外边",
-              "书",
-              "朋友"
-            ],
-            "options_pinyin": [
-              "yǐzi",
-              "wàibian",
-              "shū",
-              "péngyou"
-            ],
-            "correct_index": 1
-          },
-          "correct_answer": "外边",
-          "kp": "外边",
-          "sourceType": "textbook"
-        },
-        {
-          "id": "v1_hsk1_09_03",
-          "type": "image_guess",
-          "stage": "in_class",
-          "prompt_cn": "看图猜词。",
-          "prompt_en": "Look at the picture and choose the word.",
-          "data": {
-            "image_hint": "A real-life scene for chair",
-            "options": [
-              "朋友",
-              "书",
               "椅子",
-              "电视"
-            ],
-            "options_pinyin": [
-              "péngyou",
-              "shū",
-              "yǐzi",
-              "diànshì"
-            ],
-            "correct_index": 2
-          },
-          "correct_answer": "椅子",
-          "kp": "椅子",
-          "sourceType": "textbook"
-        },
-        {
-          "id": "v1_hsk1_09_04",
-          "type": "image_guess",
-          "stage": "in_class",
-          "prompt_cn": "看图猜词。",
-          "prompt_en": "Look at the picture and choose the word.",
-          "data": {
-            "image_hint": "A real-life scene for book",
-            "options": [
-              "电视",
-              "椅子",
-              "朋友",
+              "上",
               "书"
             ],
             "options_pinyin": [
-              "diànshì",
+              "wàibian",
               "yǐzi",
-              "péngyou",
+              "shang / shàng",
               "shū"
+            ]
+          },
+          "correct_answer": "外边",
+          "kp": "外边",
+          "media": {
+            "image": "images/vocab/hsk1-l09/v02_waibian.png"
+          },
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_l09_03",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for 椅子",
+            "options": [
+              "椅子",
+              "上",
+              "书",
+              "学习"
             ],
-            "correct_index": 3
+            "options_pinyin": [
+              "yǐzi",
+              "shang / shàng",
+              "shū",
+              "xuéxí"
+            ]
+          },
+          "correct_answer": "椅子",
+          "kp": "椅子",
+          "media": {
+            "image": "images/vocab/hsk1-l09/v03_yizi.png"
+          },
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_l09_04",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for 上",
+            "options": [
+              "上",
+              "书",
+              "学习",
+              "白天"
+            ],
+            "options_pinyin": [
+              "shang / shàng",
+              "shū",
+              "xuéxí",
+              "báitiān"
+            ]
+          },
+          "correct_answer": "上",
+          "kp": "上",
+          "media": {
+            "image": "images/vocab/hsk1-l09/v04_shang.png"
+          },
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_l09_05",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for 书",
+            "options": [
+              "书",
+              "学习",
+              "白天",
+              "读书"
+            ],
+            "options_pinyin": [
+              "shū",
+              "xuéxí",
+              "báitiān",
+              "dúshū"
+            ]
           },
           "correct_answer": "书",
           "kp": "书",
+          "media": {
+            "image": "images/vocab/hsk1-l09/v05_shu.png"
+          },
           "sourceType": "textbook"
         },
         {
-          "id": "v1_hsk1_09_05",
+          "id": "v1_hsk1_l09_06",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for study; learn",
+            "image_hint": "A real-life scene for 学习",
             "options": [
               "学习",
-              "椅子",
-              "书",
-              "朋友"
-            ],
-            "options_pinyin": [
-              "xuéxí",
-              "yǐzi",
-              "shū",
-              "péngyou"
-            ],
-            "correct_index": 0
-          },
-          "correct_answer": "学习",
-          "kp": "学习",
-          "sourceType": "textbook"
-        },
-        {
-          "id": "v1_hsk1_09_06",
-          "type": "image_guess",
-          "stage": "in_class",
-          "prompt_cn": "看图猜词。",
-          "prompt_en": "Look at the picture and choose the word.",
-          "data": {
-            "image_hint": "A real-life scene for do",
-            "options": [
-              "椅子",
-              "做",
-              "书",
-              "朋友"
-            ],
-            "options_pinyin": [
-              "yǐzi",
-              "zuò",
-              "shū",
-              "péngyou"
-            ],
-            "correct_index": 1
-          },
-          "correct_answer": "做",
-          "kp": "做",
-          "sourceType": "textbook"
-        },
-        {
-          "id": "v1_hsk1_09_07",
-          "type": "image_guess",
-          "stage": "in_class",
-          "prompt_cn": "看图猜词。",
-          "prompt_en": "Look at the picture and choose the word.",
-          "data": {
-            "image_hint": "A real-life scene for read; study",
-            "options": [
-              "书",
-              "椅子",
+              "白天",
               "读书",
               "朋友"
             ],
             "options_pinyin": [
-              "shū",
-              "yǐzi",
+              "xuéxí",
+              "báitiān",
               "dúshū",
               "péngyou"
+            ]
+          },
+          "correct_answer": "学习",
+          "kp": "学习",
+          "media": {
+            "image": "images/vocab/hsk1-l09/v06_xuexi.png"
+          },
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_l09_07",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for 白天",
+            "options": [
+              "白天",
+              "读书",
+              "朋友",
+              "狗"
             ],
-            "correct_index": 2
+            "options_pinyin": [
+              "báitiān",
+              "dúshū",
+              "péngyou",
+              "gǒu"
+            ]
+          },
+          "correct_answer": "白天",
+          "kp": "白天",
+          "media": {
+            "image": "images/vocab/hsk1-l09/v07_baitian.png"
+          },
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_l09_08",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for 读书",
+            "options": [
+              "读书",
+              "朋友",
+              "狗",
+              "前边"
+            ],
+            "options_pinyin": [
+              "dúshū",
+              "péngyou",
+              "gǒu",
+              "qiánbian"
+            ]
           },
           "correct_answer": "读书",
           "kp": "读书",
+          "media": {
+            "image": "images/vocab/hsk1-l09/v08_dushu.png"
+          },
           "sourceType": "textbook"
         },
         {
-          "id": "v1_hsk1_09_08",
+          "id": "v1_hsk1_l09_09",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for friend",
+            "image_hint": "A real-life scene for 朋友",
             "options": [
-              "电视",
-              "椅子",
-              "书",
-              "朋友"
+              "朋友",
+              "狗",
+              "前边",
+              "外边"
             ],
             "options_pinyin": [
-              "diànshì",
-              "yǐzi",
-              "shū",
-              "péngyou"
-            ],
-            "correct_index": 3
+              "péngyou",
+              "gǒu",
+              "qiánbian",
+              "wàibian"
+            ]
           },
           "correct_answer": "朋友",
           "kp": "朋友",
-          "sourceType": "textbook"
-        },
-        {
-          "id": "v1_hsk1_09_09",
-          "type": "image_guess",
-          "stage": "in_class",
-          "prompt_cn": "看图猜词。",
-          "prompt_en": "Look at the picture and choose the word.",
-          "data": {
-            "image_hint": "A real-life scene for television",
-            "options": [
-              "电视",
-              "椅子",
-              "书",
-              "朋友"
-            ],
-            "options_pinyin": [
-              "diànshì",
-              "yǐzi",
-              "shū",
-              "péngyou"
-            ],
-            "correct_index": 0
+          "media": {
+            "image": "images/vocab/hsk1-l09/v09_pengyou.png"
           },
-          "correct_answer": "电视",
-          "kp": "电视",
           "sourceType": "textbook"
         },
         {
-          "id": "v1_hsk1_09_10",
+          "id": "v1_hsk1_l09_10",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for dog",
+            "image_hint": "A real-life scene for 狗",
             "options": [
-              "椅子",
               "狗",
-              "书",
-              "朋友"
+              "前边",
+              "外边",
+              "椅子"
             ],
             "options_pinyin": [
-              "yǐzi",
               "gǒu",
-              "shū",
-              "péngyou"
-            ],
-            "correct_index": 1
+              "qiánbian",
+              "wàibian",
+              "yǐzi"
+            ]
           },
           "correct_answer": "狗",
           "kp": "狗",
+          "media": {
+            "image": "images/vocab/hsk1-l09/v12_gou_wan.png"
+          },
           "sourceType": "textbook"
         }
       ],

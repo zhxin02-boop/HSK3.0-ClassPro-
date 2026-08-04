@@ -36,7 +36,8 @@
           "间"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"room\", no text"
+      "imagePrompt": "A clear real-life photo representing \"room\", no text",
+      "image": "images/vocab/hsk1-l08/v01_fangjian.png"
     },
     {
       "id": "v_l08_02",
@@ -52,7 +53,8 @@
           "外"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"outside\", no text"
+      "imagePrompt": "A clear real-life photo representing \"outside\", no text",
+      "image": "images/vocab/hsk1-l08/v02_wai.png"
     },
     {
       "id": "v_l08_03",
@@ -84,7 +86,8 @@
           "小"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"small; little\", no text"
+      "imagePrompt": "A clear real-life photo representing \"small; little\", no text",
+      "image": "images/vocab/hsk1-l08/v03_mao.png"
     },
     {
       "id": "v_l08_05",
@@ -100,7 +103,8 @@
           "猫"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"cat\", no text"
+      "imagePrompt": "A clear real-life photo representing \"cat\", no text",
+      "image": "images/vocab/hsk1-l08/v03_mao.png"
     },
     {
       "id": "v_l08_06",
@@ -133,7 +137,8 @@
           "见"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"see\", no text"
+      "imagePrompt": "A clear real-life photo representing \"see\", no text",
+      "image": "images/vocab/hsk1-l08/v04_kanjian.png"
     },
     {
       "id": "v_l08_08",
@@ -150,7 +155,8 @@
           "子"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"table; desk\", no text"
+      "imagePrompt": "A clear real-life photo representing \"table; desk\", no text",
+      "image": "images/vocab/hsk1-l08/v05_zhuozi.png"
     },
     {
       "id": "v_l08_09",
@@ -166,7 +172,8 @@
           "下"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"under; below\", no text"
+      "imagePrompt": "A clear real-life photo representing \"under; below\", no text",
+      "image": "images/vocab/hsk1-l08/v06_zhuozi_xia.png"
     },
     {
       "id": "v_l08_10",
@@ -183,7 +190,8 @@
           "亮"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"beautiful\", no text"
+      "imagePrompt": "A clear real-life photo representing \"beautiful\", no text",
+      "image": "images/vocab/hsk1-l08/v07_piaoliang.png"
     },
     {
       "id": "v_l08_11",
@@ -216,7 +224,8 @@
           "校"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"school\", no text"
+      "imagePrompt": "A clear real-life photo representing \"school\", no text",
+      "image": "images/vocab/hsk1-l08/v08_xuexiao_qian.png"
     },
     {
       "id": "v_l08_13",
@@ -233,7 +242,8 @@
           "店"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"bookstore\", no text"
+      "imagePrompt": "A clear real-life photo representing \"bookstore\", no text",
+      "image": "images/vocab/hsk1-l08/v09_shudian.png"
     },
     {
       "id": "v_l08_14",
@@ -249,7 +259,8 @@
           "前"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"front\", no text"
+      "imagePrompt": "A clear real-life photo representing \"front\", no text",
+      "image": "images/vocab/hsk1-l08/v08_xuexiao_qian.png"
     },
     {
       "id": "v_l08_15",
@@ -281,7 +292,8 @@
           "到"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"arrive\", no text"
+      "imagePrompt": "A clear real-life photo representing \"arrive\", no text",
+      "image": "images/vocab/hsk1-l08/v10_dao.png"
     },
     {
       "id": "v_l08_17",
@@ -298,7 +310,8 @@
           "饭"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"lunch\", no text"
+      "imagePrompt": "A clear real-life photo representing \"lunch\", no text",
+      "image": "images/vocab/hsk1-l08/v11_wufan.png"
     },
     {
       "id": "v_l08_18",
@@ -314,7 +327,8 @@
           "饭"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"meal\", no text"
+      "imagePrompt": "A clear real-life photo representing \"meal\", no text",
+      "image": "images/vocab/hsk1-l08/v11_wufan.png"
     },
     {
       "id": "v_l08_19",
@@ -347,7 +361,8 @@
           "人"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"patient\", no text"
+      "imagePrompt": "A clear real-life photo representing \"patient\", no text",
+      "image": "images/vocab/hsk1-l08/v12_yisheng_bingren.png"
     },
     {
       "id": "v_l08_21",
@@ -380,7 +395,8 @@
           "生"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"doctor\", no text"
+      "imagePrompt": "A clear real-life photo representing \"doctor\", no text",
+      "image": "images/vocab/hsk1-l08/v12_yisheng_bingren.png"
     },
     {
       "id": "v_l08_23",
@@ -397,7 +413,8 @@
           "作"
         ]
       },
-      "imagePrompt": "A clear real-life photo representing \"work\", no text"
+      "imagePrompt": "A clear real-life photo representing \"work\", no text",
+      "image": "images/vocab/hsk1-l08/v12_yisheng_bingren.png"
     }
   ],
   "properNouns": [
@@ -2416,253 +2433,283 @@
     "questionGroups": {
       "v1_image_guess": [
         {
-          "id": "v1_hsk1_08_01",
+          "id": "v1_hsk1_l08_01",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for room",
+            "image_hint": "A real-life scene for 房间",
             "options": [
               "房间",
               "外",
-              "只",
-              "小"
+              "猫",
+              "看见"
             ],
             "options_pinyin": [
               "fángjiān",
               "wài",
-              "zhī",
-              "xiǎo"
+              "māo",
+              "kànjiàn"
             ]
           },
           "correct_answer": "房间",
           "kp": "房间",
+          "media": {
+            "image": "images/vocab/hsk1-l08/v01_fangjian.png"
+          },
           "sourceType": "textbook"
         },
         {
-          "id": "v1_hsk1_08_02",
+          "id": "v1_hsk1_l08_02",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for outside",
+            "image_hint": "A real-life scene for 外",
             "options": [
               "外",
-              "房间",
-              "只",
-              "小"
+              "猫",
+              "看见",
+              "桌子"
             ],
             "options_pinyin": [
               "wài",
-              "fángjiān",
-              "zhī",
-              "xiǎo"
+              "māo",
+              "kànjiàn",
+              "zhuōzi"
             ]
           },
           "correct_answer": "外",
           "kp": "外",
-          "sourceType": "textbook"
-        },
-        {
-          "id": "v1_hsk1_08_03",
-          "type": "image_guess",
-          "stage": "in_class",
-          "prompt_cn": "看图猜词。",
-          "prompt_en": "Look at the picture and choose the word.",
-          "data": {
-            "image_hint": "A real-life scene for measure word for animals",
-            "options": [
-              "只",
-              "房间",
-              "外",
-              "小"
-            ],
-            "options_pinyin": [
-              "zhī",
-              "fángjiān",
-              "wài",
-              "xiǎo"
-            ]
+          "media": {
+            "image": "images/vocab/hsk1-l08/v02_wai.png"
           },
-          "correct_answer": "只",
-          "kp": "只",
           "sourceType": "textbook"
         },
         {
-          "id": "v1_hsk1_08_04",
+          "id": "v1_hsk1_l08_03",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for small; little",
-            "options": [
-              "小",
-              "房间",
-              "外",
-              "只"
-            ],
-            "options_pinyin": [
-              "xiǎo",
-              "fángjiān",
-              "wài",
-              "zhī"
-            ]
-          },
-          "correct_answer": "小",
-          "kp": "小",
-          "sourceType": "textbook"
-        },
-        {
-          "id": "v1_hsk1_08_05",
-          "type": "image_guess",
-          "stage": "in_class",
-          "prompt_cn": "看图猜词。",
-          "prompt_en": "Look at the picture and choose the word.",
-          "data": {
-            "image_hint": "A real-life scene for cat",
+            "image_hint": "A real-life scene for 猫",
             "options": [
               "猫",
-              "房间",
-              "外",
-              "只"
+              "看见",
+              "桌子",
+              "下"
             ],
             "options_pinyin": [
               "māo",
-              "fángjiān",
-              "wài",
-              "zhī"
+              "kànjiàn",
+              "zhuōzi",
+              "xià"
             ]
           },
           "correct_answer": "猫",
           "kp": "猫",
-          "sourceType": "textbook"
-        },
-        {
-          "id": "v1_hsk1_08_06",
-          "type": "image_guess",
-          "stage": "in_class",
-          "prompt_cn": "看图猜词。",
-          "prompt_en": "Look at the picture and choose the word.",
-          "data": {
-            "image_hint": "A real-life scene for not; not yet",
-            "options": [
-              "没",
-              "房间",
-              "外",
-              "只"
-            ],
-            "options_pinyin": [
-              "méi",
-              "fángjiān",
-              "wài",
-              "zhī"
-            ]
+          "media": {
+            "image": "images/vocab/hsk1-l08/v03_mao.png"
           },
-          "correct_answer": "没",
-          "kp": "没",
           "sourceType": "textbook"
         },
         {
-          "id": "v1_hsk1_08_07",
+          "id": "v1_hsk1_l08_04",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for see",
+            "image_hint": "A real-life scene for 看见",
             "options": [
               "看见",
-              "房间",
-              "外",
-              "只"
+              "桌子",
+              "下",
+              "漂亮"
             ],
             "options_pinyin": [
               "kànjiàn",
-              "fángjiān",
-              "wài",
-              "zhī"
+              "zhuōzi",
+              "xià",
+              "piàoliang"
             ]
           },
           "correct_answer": "看见",
           "kp": "看见",
+          "media": {
+            "image": "images/vocab/hsk1-l08/v04_kanjian.png"
+          },
           "sourceType": "textbook"
         },
         {
-          "id": "v1_hsk1_08_08",
+          "id": "v1_hsk1_l08_05",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for table; desk",
+            "image_hint": "A real-life scene for 桌子",
             "options": [
               "桌子",
-              "房间",
-              "外",
-              "只"
+              "下",
+              "漂亮",
+              "学校"
             ],
             "options_pinyin": [
               "zhuōzi",
-              "fángjiān",
-              "wài",
-              "zhī"
+              "xià",
+              "piàoliang",
+              "xuéxiào"
             ]
           },
           "correct_answer": "桌子",
           "kp": "桌子",
+          "media": {
+            "image": "images/vocab/hsk1-l08/v05_zhuozi.png"
+          },
           "sourceType": "textbook"
         },
         {
-          "id": "v1_hsk1_08_09",
+          "id": "v1_hsk1_l08_06",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for under; below",
+            "image_hint": "A real-life scene for 下",
             "options": [
               "下",
-              "房间",
-              "外",
-              "只"
+              "漂亮",
+              "学校",
+              "书店"
             ],
             "options_pinyin": [
               "xià",
-              "fángjiān",
-              "wài",
-              "zhī"
+              "piàoliang",
+              "xuéxiào",
+              "shūdiàn"
             ]
           },
           "correct_answer": "下",
           "kp": "下",
+          "media": {
+            "image": "images/vocab/hsk1-l08/v06_zhuozi_xia.png"
+          },
           "sourceType": "textbook"
         },
         {
-          "id": "v1_hsk1_08_10",
+          "id": "v1_hsk1_l08_07",
           "type": "image_guess",
           "stage": "in_class",
           "prompt_cn": "看图猜词。",
           "prompt_en": "Look at the picture and choose the word.",
           "data": {
-            "image_hint": "A real-life scene for beautiful",
+            "image_hint": "A real-life scene for 漂亮",
             "options": [
               "漂亮",
-              "房间",
-              "外",
-              "只"
+              "学校",
+              "书店",
+              "午饭"
             ],
             "options_pinyin": [
               "piàoliang",
-              "fángjiān",
-              "wài",
-              "zhī"
+              "xuéxiào",
+              "shūdiàn",
+              "wǔfàn"
             ]
           },
           "correct_answer": "漂亮",
           "kp": "漂亮",
+          "media": {
+            "image": "images/vocab/hsk1-l08/v07_piaoliang.png"
+          },
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_l08_08",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for 学校",
+            "options": [
+              "学校",
+              "书店",
+              "午饭",
+              "房间"
+            ],
+            "options_pinyin": [
+              "xuéxiào",
+              "shūdiàn",
+              "wǔfàn",
+              "fángjiān"
+            ]
+          },
+          "correct_answer": "学校",
+          "kp": "学校",
+          "media": {
+            "image": "images/vocab/hsk1-l08/v08_xuexiao_qian.png"
+          },
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_l08_09",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for 书店",
+            "options": [
+              "书店",
+              "午饭",
+              "房间",
+              "外"
+            ],
+            "options_pinyin": [
+              "shūdiàn",
+              "wǔfàn",
+              "fángjiān",
+              "wài"
+            ]
+          },
+          "correct_answer": "书店",
+          "kp": "书店",
+          "media": {
+            "image": "images/vocab/hsk1-l08/v09_shudian.png"
+          },
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_hsk1_l08_10",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "看图猜词。",
+          "prompt_en": "Look at the picture and choose the word.",
+          "data": {
+            "image_hint": "A real-life scene for 午饭",
+            "options": [
+              "午饭",
+              "房间",
+              "外",
+              "猫"
+            ],
+            "options_pinyin": [
+              "wǔfàn",
+              "fángjiān",
+              "wài",
+              "māo"
+            ]
+          },
+          "correct_answer": "午饭",
+          "kp": "午饭",
+          "media": {
+            "image": "images/vocab/hsk1-l08/v11_wufan.png"
+          },
           "sourceType": "textbook"
         }
       ],

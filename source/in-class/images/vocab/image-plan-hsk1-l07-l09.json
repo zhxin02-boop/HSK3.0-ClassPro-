@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-08-04",
+  "strategy": "Three 4x3 generated sheets cropped into reusable vocabulary cards. Function words are not used for image guessing unless the image can clearly support the concept.",
+  "lessons": {
+    "HSK1-L07": {
+      "imageMap": {
+        "现在": "images/vocab/hsk1-l07/v01_xianzai_time.png",
+        "点": "images/vocab/hsk1-l07/v01_xianzai_time.png",
+        "分": "images/vocab/hsk1-l07/v01_xianzai_time.png",
+        "分钟": "images/vocab/hsk1-l07/v01_xianzai_time.png",
+        "半": "images/vocab/hsk1-l07/v01_xianzai_time.png",
+        "早上": "images/vocab/hsk1-l07/v02_zaoshang.png",
+        "上午": "images/vocab/hsk1-l07/v02_zaoshang.png",
+        "课": "images/vocab/hsk1-l07/v03_ke_class.png",
+        "上课": "images/vocab/hsk1-l07/v03_ke_class.png",
+        "下午": "images/vocab/hsk1-l07/v04_jian_meet.png",
+        "见": "images/vocab/hsk1-l07/v04_jian_meet.png",
+        "电影院": "images/vocab/hsk1-l07/v05_dianyingyuan.png",
+        "看": "images/vocab/hsk1-l07/v06_dianying.png",
+        "电影": "images/vocab/hsk1-l07/v06_dianying.png",
+        "家": "images/vocab/hsk1-l07/v07_jia_li.png",
+        "里": "images/vocab/hsk1-l07/v07_jia_li.png",
+        "晚上": "images/vocab/hsk1-l07/v08_wanshang.png",
+        "医院": "images/vocab/hsk1-l07/v09_yiyuan.png",
+        "上班": "images/vocab/hsk1-l07/v10_shangban.png",
+        "下班": "images/vocab/hsk1-l07/v11_xiaban.png",
+        "店": "images/vocab/hsk1-l07/v12_dian_cai.png",
+        "菜": "images/vocab/hsk1-l07/v12_dian_cai.png"
+      },
+      "imageGuessWords": [
+        "现在",
+        "早上",
+        "课",
+        "下午",
+        "电影院",
+        "电影",
+        "家",
+        "晚上",
+        "医院",
+        "店"
+      ]
+    },
+    "HSK1-L08": {
+      "imageMap": {
+        "房间": "images/vocab/hsk1-l08/v01_fangjian.png",
+        "外": "images/vocab/hsk1-l08/v02_wai.png",
+        "小": "images/vocab/hsk1-l08/v03_mao.png",
+        "猫": "images/vocab/hsk1-l08/v03_mao.png",
+        "看见": "images/vocab/hsk1-l08/v04_kanjian.png",
+        "桌子": "images/vocab/hsk1-l08/v05_zhuozi.png",
+        "下": "images/vocab/hsk1-l08/v06_zhuozi_xia.png",
+        "漂亮": "images/vocab/hsk1-l08/v07_piaoliang.png",
+        "学校": "images/vocab/hsk1-l08/v08_xuexiao_qian.png",
+        "前": "images/vocab/hsk1-l08/v08_xuexiao_qian.png",
+        "书店": "images/vocab/hsk1-l08/v09_shudian.png",
+        "到": "images/vocab/hsk1-l08/v10_dao.png",
+        "午饭": "images/vocab/hsk1-l08/v11_wufan.png",
+        "饭": "images/vocab/hsk1-l08/v11_wufan.png",
+        "病人": "images/vocab/hsk1-l08/v12_yisheng_bingren.png",
+        "医生": "images/vocab/hsk1-l08/v12_yisheng_bingren.png",
+        "工作": "images/vocab/hsk1-l08/v12_yisheng_bingren.png"
+      },
+      "imageGuessWords": [
+        "房间",
+        "外",
+        "猫",
+        "看见",
+        "桌子",
+        "下",
+        "漂亮",
+        "学校",
+        "书店",
+        "午饭"
+      ]
+    },
+    "HSK1-L09": {
+      "imageMap": {
+        "前边": "images/vocab/hsk1-l09/v01_qianbian.png",
+        "外边": "images/vocab/hsk1-l09/v02_waibian.png",
+        "椅子": "images/vocab/hsk1-l09/v03_yizi.png",
+        "上": "images/vocab/hsk1-l09/v04_shang.png",
+        "本": "images/vocab/hsk1-l09/v05_shu.png",
+        "书": "images/vocab/hsk1-l09/v05_shu.png",
+        "学习": "images/vocab/hsk1-l09/v06_xuexi.png",
+        "做": "images/vocab/hsk1-l09/v06_xuexi.png",
+        "白天": "images/vocab/hsk1-l09/v07_baitian.png",
+        "读书": "images/vocab/hsk1-l09/v08_dushu.png",
+        "朋友": "images/vocab/hsk1-l09/v09_pengyou.png",
+        "唱": "images/vocab/hsk1-l09/v10_changge.png",
+        "歌": "images/vocab/hsk1-l09/v10_changge.png",
+        "好听": "images/vocab/hsk1-l09/v10_changge.png",
+        "电视": "images/vocab/hsk1-l09/v11_dianshi.png",
+        "狗": "images/vocab/hsk1-l09/v12_gou_wan.png",
+        "玩": "images/vocab/hsk1-l09/v12_gou_wan.png"
+      },
+      "imageGuessWords": [
+        "前边",
+        "外边",
+        "椅子",
+        "上",
+        "书",
+        "学习",
+        "白天",
+        "读书",
+        "朋友",
+        "狗"
+      ]
+    }
+  }
+}
