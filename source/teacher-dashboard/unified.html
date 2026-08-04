@@ -220,5 +220,47 @@ loadLocal();render();
   render();
 })();
 </script>
+<script>
+/* Stage report v1: readable 5-lesson summaries for the teacher dashboard. */
+(function(){
+  function lessonIdOfRow(x){
+    var raw=String(dataVal(x,['lesson','lessonKey','课程','课程编号'],2)||'').toUpperCase();
+    var m=raw.match(/HSK1-L(\d+)/);
+    return m?'HSK1-L'+m[1].padStart(2,'0'):raw;
+  }
+  function lessonNoOf(id){var m=String(id||'').match(/L(\d+)/);return m?Number(m[1]):0}
+  function studentOfRow(x){return String(dataVal(x,['studentName','name','姓名','学生姓名'],1)||'').trim()}
+  function stageAdvice(done,rate,pending){
+    if(!done)return'阶段数据不足：先完成该阶段课程的课前、课中和课后记录。';
+    if(pending)return'有待批改记录：先完成主观题和汉字书写反馈，再判断阶段表现。';
+    if(rate>=85)return'阶段整体稳定：可增加跨课表达输出和复现练习。';
+    if(rate>=60)return'阶段基础已建立：建议围绕低分课程和错题题型做复习。';
+    return'阶段风险较高：建议回到核心生词、句型和汉字认读重新巩固。';
+  }
+  historyReports=function(){
+    var blocks=window.HSK1_REPORT_BLOCKS||[{from:1,to:5},{from:6,to:10},{from:11,to:15}],rows=analysisRows(),by={};
+    rows.forEach(function(x){
+      var id=lessonIdOfRow(x),no=lessonNoOf(id);if(!no)return;
+      var a=by[no]||(by[no]={score:0,total:0,records:0,students:{},pending:0});
+      a.score+=analysisScore(x);a.total+=analysisTotal(x);a.records++;
+      var stu=studentOfRow(x);if(stu)a.students[stu]=1;
+      if(analysisPending(x))a.pending++;
+    });
+    var lessonTrend=Object.keys(by).sort(function(a,b){return Number(a)-Number(b)}).map(function(no){
+      var a=by[no],rate=a.total?Math.round(a.score/a.total*100):0;
+      return'第'+Number(no)+'课：'+rate+'%（'+a.records+'条）';
+    }).join(' · ');
+    var h='<div class="panel"><h2>历史趋势与阶段报告</h2><p class="muted">'+(lessonTrend||'当前尚无跨课程数据；完成更多课程后将在这里显示每课趋势。')+'</p>';
+    h+=blocks.map(function(b){
+      var ids=[],s=0,t=0,records=0,students={},pending=0;
+      for(var i=b.from;i<=b.to;i++){ids.push(i);if(by[i]){s+=by[i].score;t+=by[i].total;records+=by[i].records;pending+=by[i].pending;Object.keys(by[i].students).forEach(function(n){students[n]=1})}}
+      var done=ids.filter(function(i){return by[i]}).length,rate=t?Math.round(s/t*100):0,label='第'+b.from+'-'+b.to+'课阶段小结';
+      return'<div class="card" style="margin-top:10px"><b>'+esc(label)+'</b><div class="grid" style="margin:10px 0"><div class="card"><div class="num">'+done+'/'+ids.length+'</div><div class="label">已有记录课程</div></div><div class="card"><div class="num">'+Object.keys(students).length+'</div><div class="label">参与学生</div></div><div class="card"><div class="num">'+rate+'%</div><div class="label">阶段准确率</div></div><div class="card"><div class="num">'+pending+'</div><div class="label">待批改/查看</div></div></div><div class="muted">阶段得分 '+s+'/'+t+' · 共 '+records+' 条记录。'+esc(stageAdvice(done,rate,pending))+'</div></div>';
+    }).join('');
+    return h+'</div>';
+  };
+  if(typeof render==='function')render();
+})();
+</script>
 </body>
 </html>
