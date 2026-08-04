@@ -1,5 +1,6 @@
 // HSK1 课程目录元数据。题库和学习记录仍由各课自己的数据文件提供。
-// openForUse 控制当前是否可进入；teacherVisible 保证教师端可查看完整课程目录。
+// openForUse 是显式开放标记；学生主页也会检测标准课程数据文件，存在数据时自动开放入口。
+// teacherVisible 保证教师端可查看完整课程目录。
 window.HSK1_CURRICULUM=[
   {id:"HSK1-L01",no:1,title:"AI小语，你好！",en:"Hello, AI Xiaoyu!",page:"001",block:1,openForUse:true,teacherVisible:true},
   {id:"HSK1-L02",no:2,title:"我叫李文",en:"My name is Li Wen",page:"005",block:1,openForUse:true,teacherVisible:true},

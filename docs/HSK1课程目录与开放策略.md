@@ -1,6 +1,6 @@
 # HSK1 课程目录与开放策略
 
-更新时间：2026-07-30
+更新时间：2026-08-04
 
 ## 一、课程范围
 
@@ -20,9 +20,9 @@ HSK1 共 15 课，课程编号统一使用：`HSK1-L01` 至 `HSK1-L15`。
 | HSK1-L04 | 我有两个孩子 | I have two children | 018 | 已开放 |
 | HSK1-L05 | 今天我休息 | I’m off today | 027 | 已开放 |
 | HSK1-L06 | 你的手机号是多少？ | What’s your cell phone number? | 035 | 已开放 |
-| HSK1-L07 | 我晚上六点半下班 | I’ll finish work at 6:30 in the evening | 045 | 准备中 |
-| HSK1-L08 | 我爸爸也在医院工作 | My father also works at a hospital | 054 | 准备中 |
-| HSK1-L09 | 我明天上午在学校学习 | I’ll be studying at school tomorrow morning | 061 | 数据初稿已生成，本地待人工审核 |
+| HSK1-L07 | 我晚上六点半下班 | I’ll finish work at 6:30 in the evening | 045 | 已开放 |
+| HSK1-L08 | 我爸爸也在医院工作 | My father also works at a hospital | 054 | 已开放 |
+| HSK1-L09 | 我明天上午在学校学习 | I’ll be studying at school tomorrow morning | 061 | 已开放，内容待人工复核 |
 | HSK1-L10 | 这儿的苹果真便宜！ | The apples here are really affordable! | 070 | 暂未开发 |
 | HSK1-L11 | 我读大学呢 | I’m studying at a university | 078 | 暂未开发 |
 | HSK1-L12 | 昨天下雪了 | It snowed yesterday | 086 | 暂未开发 |
@@ -36,8 +36,8 @@ HSK1 共 15 课，课程编号统一使用：`HSK1-L01` 至 `HSK1-L15`。
 
 - 教师端可以查看 HSK1 全部 15 课。
 - 未开发课程显示在目录中，但标记为“暂未开发”，不进入可用课堂流程。
-- 某课完成题库、学生端、教师端和数据链路后，将 `openForUse` 改为 `true`。
-- 当前主页和学生首页的入口状态由 `source/data-model/hsk1-curriculum.js` 中的 `openForUse` 控制；仅新增课程 JSON 不会自动点亮入口。
+- 某课完成题库、学生端、教师端和数据链路后，建议将 `openForUse` 改为 `true`，作为明确开放标记。
+- 学生主页已采用“显式开放 + 数据存在检测”的双保险：若标准课程数据文件存在，预习、课中、课后和复习入口会自动开放；无数据课程继续显示“准备中”。
 
 ### 学生端
 
