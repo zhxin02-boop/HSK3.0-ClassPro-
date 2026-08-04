@@ -113,7 +113,10 @@ var srv = http.createServer(function(req, res) {
     var name = query.get("name") || "";
     var source = query.get("source") || "";
     var allLocalRows = readLearningRecords();
-    var localRows = allLocalRows.filter(function(x){return !name || String(x.姓名||x.studentName||x.name||"")===String(name)});
+    var localRows = allLocalRows.map(function(x, i) {
+      x.__rowIndex = i + 1;
+      return x;
+    }).filter(function(x){return !name || String(x.姓名||x.studentName||x.name||"")===String(name)});
     var replied = false;
     function reply(status, payload) { if (replied) return; replied = true; json(res, status, payload); }
     function localFallback() { reply(200, {status:"ok", source:"local", data:localRows}); }
@@ -164,7 +167,23 @@ var srv = http.createServer(function(req, res) {
       var targetModule = String(body && body.module || "");
       var targetLesson = String(body && body.lesson || "");
       var found = false;
+      var directIndex = Number(body && (body.rowIndex || body.__rowIndex) || 0);
+      if (directIndex > 0 && directIndex <= rows.length) {
+        var direct = rows[directIndex - 1];
+        var directStudent = String(direct.studentName || direct.姓名 || direct.name || "");
+        if (directStudent === String(body.studentName || "")) {
+          direct.correction = body.correction || "已查看。";
+          direct.teacherFeedback = direct.correction;
+          if (body.score !== undefined) direct.score = Number(body.score);
+          if (body.total !== undefined) direct.total = Number(body.total);
+          if (body.result) direct.result = body.result;
+          direct.status = body.status || body.reviewStatus || "已归档";
+          direct.reviewStatus = body.reviewStatus || body.status || "已归档";
+          found = true;
+        }
+      }
       rows.forEach(function(x) {
+        if (found) return;
         var student = String(x.studentName || x.姓名 || x.name || "");
         var lesson = String(x.lesson || x.课程 || x.lessonKey || "");
         var question = String(x.questionId || x.题号 || "");
@@ -174,7 +193,7 @@ var srv = http.createServer(function(req, res) {
         var sameQuestion = !targetQuestion || question === targetQuestion;
         var sameModule = !targetModule || module === targetModule;
         var sameLesson = !targetLesson || lesson === targetLesson;
-        if (!found && student === String(body.studentName || "") && sameLesson && sameQuestion && sameModule && sameTime) {
+        if (student === String(body.studentName || "") && sameLesson && sameQuestion && sameModule && sameTime) {
           x.correction = body.correction || "已查看。";
           x.teacherFeedback = x.correction;
           if (body.score !== undefined) x.score = Number(body.score);
