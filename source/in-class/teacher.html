@@ -1060,7 +1060,7 @@ ap._ha=function(m){
     sb=this._speedBonus(rank);
   }
   totalPts=base+sb;
-  var rec={room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,studentName:n,mode:m.mode||this.st,questionId:m.questionId||(q&&q.id)||"",answer:tx,result:res,submittedAt:m.submittedAt||now.toISOString(),receivedAt:now.toISOString(),speedRank:rank||"",speedBonus:sb,basePoint:base,total:submittedTotal||1,pointsAwarded:totalPts,needsReview:false};
+  var rec={room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,studentName:n,mode:m.mode||this.st,questionId:m.questionId||(q&&q.id)||"",answer:tx,result:res,submittedAt:m.submittedAt||now.toISOString(),receivedAt:now.toISOString(),speedRank:rank||"",speedBonus:sb,basePoint:base,total:submittedTotal||1,pointsAwarded:totalPts,needsReview:!!m.needsReview||res==="review"};
   this.records.unshift(rec);
   this.la.unshift({n:n,x:tx+(sb?("  +速度奖励"+sb):""),t:now.toLocaleTimeString(),ar:res});
   if(totalPts>0)this._as(n,totalPts);else{this._saveClassData();this._pubBoard()}
@@ -2072,6 +2072,57 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     panel.parentNode.insertBefore(box.firstChild,panel.nextSibling);
     document.body.classList.add('cloud-wall-active');
   };
+})();
+</script>
+<script>
+/* Picture talk: data-driven open response practice for time and schedule prompts. */
+(function(){
+  if(typeof ap==='undefined')return;
+  function pictureTalkQuestions(){
+    return Q.r4_picture_talk||Q.picture_talk||Q.output_picture_talk||[];
+  }
+  function question(index){
+    var q=pictureTalkQuestions()[index||0]||null;
+    if(!q)return null;
+    var data=Object.assign({},q.data||{});
+    data.image=data.image||(q.media&&q.media.image)||'';
+    return Object.assign({},q,{type:q.type||'oral',openEnded:true,needsTeacherReview:true,cloudWall:true,data:data});
+  }
+  function renderPictureTalk(state){
+    var qs=pictureTalkQuestions(),i=state.opni||0,c=question(i);
+    if(!c)return'<div class="panel"><p>暂无图说题。</p></div>';
+    var d=c.data||{},img=d.image?'<img src="'+es(d.image)+'" alt="" style="width:100%;max-height:280px;object-fit:contain;border-radius:16px;background:#fff">':'<div style="font-size:24px;font-weight:900;color:#74806d">Picture prompt</div>';
+    var nav=state._navBtn(
+      'ap.qp="idle";ap.qsub={};ap.lastQuestionPayload=null;ap.currentQuestionId=null;ap.opni=Math.max(0,(ap.opni||0)-1);ap._r()',
+      'ap.qp="idle";ap.qsub={};ap.lastQuestionPayload=null;ap.currentQuestionId=null;ap.opni=Math.min('+(qs.length-1)+',(ap.opni||0)+1);ap._r()',
+      i,qs.length,'&larr; 上一题','下一题 &rarr;'
+    );
+    var h='<div class="panel" style="max-width:1080px;width:100%;text-align:left"><h3 style="margin-top:0;text-align:center;color:var(--practice)">图说时间 <span style="font-size:14px;color:#8b96a3">Picture Talk</span></h3>';
+    h+='<div style="text-align:center;color:#74806d;margin-bottom:12px">'+es(c.prompt_cn||'看图说话')+' <span style="color:#9aa3a0">'+es(c.prompt_en||'')+'</span></div>';
+    h+='<div style="display:grid;grid-template-columns:minmax(260px,420px) minmax(280px,1fr);gap:18px;align-items:stretch">';
+    h+='<div style="padding:16px;border:1px solid #dfeac8;border-radius:18px;background:#f8faf3;text-align:center">'+img+'</div>';
+    h+='<div style="padding:18px;border:1px solid #dfeac8;border-radius:18px;background:#fff;display:flex;flex-direction:column;justify-content:center;gap:14px">';
+    h+='<div style="font-size:22px;font-weight:900;color:var(--text);line-height:1.55">'+es(d.context||'')+'</div>';
+    h+='<div style="font-size:16px;color:#64748b;line-height:1.7">'+es(d.instructions||'请用中文说一到两句话。')+'</div>';
+    if(d.sampleAnswer)h+='<div style="padding:12px 14px;border-radius:14px;background:#edf6d9;color:#315b29;font-weight:900">参考表达：'+es(d.sampleAnswer)+'</div>';
+    h+='</div></div>'+nav+'</div>';
+    return h;
+  }
+  var oldSnav=ap._snav,oldCnt=ap._cnt,oldCq=ap._cq,oldCq2=ap._cq2,oldQw=ap._qw,oldStart=ap.qws,oldEnd=ap.qwe,oldNext=ap.qwr;
+  ap._snav=function(){
+    var h=oldSnav.call(this),qs=pictureTalkQuestions();
+    if(this.mt==='practice'&&qs.length&&h.indexOf("ap.st='opn'")<0){
+      h=h.replace('</span></div>','<button class="sub-btn'+(this.st==='opn'?' active':'')+'" onclick="ap.st=\'opn\';ap.opni=0;ap.qp=\'idle\';ap.qsub={};ap.lastQuestionPayload=null;ap.currentQuestionId=null;ap._r()">图说时间<br><small>Picture Talk</small></button></span></div>');
+    }
+    return h;
+  };
+  ap._cnt=function(){if(this.mt==='practice'&&this.st==='opn')return renderPictureTalk(this);return oldCnt.call(this)};
+  ap._cq=function(){if(this.st==='opn')return question(this.opni||0);return oldCq.call(this)};
+  ap._cq2=function(){if(this.st==='opn')return this._cq();return oldCq2.call(this)};
+  ap._qw=function(){if(this.st==='opn'){var s=this.st;this.st='v4';var h=oldQw.call(this);this.st=s;return h}return oldQw.call(this)};
+  ap.qws=function(){if(this.mt==='practice'&&this.st==='opn'){clearInterval(this.qtint);this.qp='answering';this.qt=0;this.qsub={};this._pubq();this._r();return}oldStart.call(this)};
+  ap.qwe=function(){if(this.mt==='practice'&&this.st==='opn'){clearInterval(this.qtint);this.qp='published';if(this.lastQuestionPayload){this.lastQuestionPayload.phase='published';this.lastQuestionPayload.answerKey='';this.lastQuestionPayload.publishedAt=new Date().toISOString();if(this.mq&&this.cs==='connected')this.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(this.lastQuestionPayload))}this._sendSessionSummary&&this._sendSessionSummary('picture_talk_end');this._r();return}oldEnd.call(this)};
+  ap.qwr=function(){if(this.mt==='practice'&&this.st==='opn'){var qs=pictureTalkQuestions();if(this.qp==='published'&&(this.opni||0)<qs.length-1){this.opni=(this.opni||0)+1;this.qp='idle';this.qsub={};this.lastQuestionPayload=null;this.currentQuestionId=null;this.qws();return}oldNext.call(this);return}oldNext.call(this)};
 })();
 </script>
 <script>

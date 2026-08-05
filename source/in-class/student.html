@@ -360,6 +360,8 @@ client.on("close",function(){setStatus("disconnected")});
       if(d.pinyin||d.context_pinyin||d.sentence_pinyin)h+='<div class="pinyin" style="text-align:left;margin-top:8px">'+es(d.pinyin||d.context_pinyin||d.sentence_pinyin)+'</div>';
       h+='</div>';
     }
+    var img=d.image||(q.media&&q.media.image)||'';
+    if(img)h+='<div class="hint" style="text-align:center"><img src="'+es(img)+'" alt="" style="width:100%;max-height:240px;object-fit:contain;border-radius:16px;background:#fff"></div>';
     h+='<div class="open-answer-box"><div class="open-answer-hint">'+es(d.instructions||q.instructions||'请用中文写下你的回答。')+'</div>';
     h+='<textarea id="openAnswerText" class="open-answer-textarea" placeholder="在这里输入中文回答"></textarea>';
     h+='<button style="width:100%" onclick="submitOpenAnswer()" '+(published?'disabled':'')+'>提交到云墙 Submit</button></div>';

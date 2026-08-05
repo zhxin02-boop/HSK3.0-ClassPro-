@@ -3109,6 +3109,113 @@
           "sourceType": "textbook"
         }
       ],
+      "r4_picture_talk": [
+        {
+          "id": "r4_l07_picture_talk_01",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "教学扩展：看图，说一组“问时间 + 回答”的句子。",
+          "prompt_en": "Teaching extension: Look at the picture. Ask and answer about the time.",
+          "data": {
+            "instructions": "请写/说两句话：1. 现在几点？ 2. 现在八点四十。",
+            "context": "目标句型：现在几点？现在八点四十。",
+            "image": "images/vocab/hsk1-l07/v01_xianzai_time.png",
+            "sampleAnswer": "现在几点？现在八点四十。"
+          },
+          "media": {
+            "image": "images/vocab/hsk1-l07/v01_xianzai_time.png"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：问时间",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l07_picture_talk_02",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "教学扩展：看图，问同学几点上课。",
+          "prompt_en": "Teaching extension: Look at the picture. Ask a classmate about class time.",
+          "data": {
+            "instructions": "请写/说两句话：1. 你几点上课？ 2. 我上午十点十分上课。",
+            "context": "目标句型：你几点上课？我上午十点十分上课。",
+            "image": "images/vocab/hsk1-l07/v03_ke_class.png",
+            "sampleAnswer": "你几点上课？我上午十点十分上课。"
+          },
+          "media": {
+            "image": "images/vocab/hsk1-l07/v03_ke_class.png"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：日程安排",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l07_picture_talk_03",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "教学扩展：看图，约一个见面的时间。",
+          "prompt_en": "Teaching extension: Look at the picture. Arrange a meeting time.",
+          "data": {
+            "instructions": "请用“几点见”和“吧”说两句话。",
+            "context": "目标句型：我们下午两点见吧。",
+            "image": "images/vocab/hsk1-l07/v04_jian_meet.png",
+            "sampleAnswer": "我们下午两点见吧。"
+          },
+          "media": {
+            "image": "images/vocab/hsk1-l07/v04_jian_meet.png"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：约见",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l07_picture_talk_04",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "教学扩展：看图，问下午想做什么。",
+          "prompt_en": "Teaching extension: Look at the picture. Ask about afternoon plans.",
+          "data": {
+            "instructions": "请写/说两句话：1. 你下午想做什么？ 2. 我下午想去电影院看电影。",
+            "context": "目标句型：你下午想做什么？我下午想去电影院看电影。",
+            "image": "images/vocab/hsk1-l07/v05_dianyingyuan.png",
+            "sampleAnswer": "你下午想做什么？我下午想去电影院看电影。"
+          },
+          "media": {
+            "image": "images/vocab/hsk1-l07/v05_dianyingyuan.png"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：下午安排",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l07_picture_talk_05",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "教学扩展：看图，说上班或下班时间。",
+          "prompt_en": "Teaching extension: Look at the picture. Say a work schedule.",
+          "data": {
+            "instructions": "请选择一个问题回答：你几点上班？你几点下班？",
+            "context": "目标句型：我八点上班。/ 我晚上六点半下班。",
+            "image": "images/vocab/hsk1-l07/v11_xiaban.png",
+            "sampleAnswer": "我晚上六点半下班。"
+          },
+          "media": {
+            "image": "images/vocab/hsk1-l07/v11_xiaban.png"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：工作时间",
+          "sourceType": "teaching_extension"
+        }
+      ],
       "v5_vocab_fill": [
         {
           "id": "v5_hsk1_07_01",
