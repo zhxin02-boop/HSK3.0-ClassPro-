@@ -1,0 +1,5601 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "level": "HSK1",
+    "lessonId": "L10",
+    "lessonKey": "HSK1-L10",
+    "title": "这儿的苹果真便宜！",
+    "titleEn": "The apples here are really affordable!",
+    "topic": "谈论商品价格、形容词谓语句、疑问代词“怎么样”、认识人民币",
+    "sourceTextPolicy": "保留教材原句；新增内容标记为教学扩展",
+    "dataQualityNotes": [
+      "根据 textbook data/L10.txt 生成；L10 课文原句完整保留。",
+      "图片资源暂未生成，图片猜词使用文字提示兜底。"
+    ]
+  },
+  "features": {
+    "pinyin": true,
+    "hanziWritingDemo": true,
+    "vocabExamples": true,
+    "competition": true,
+    "postClassHomework": true
+  },
+  "vocabulary": [
+    {
+      "id": "v_l10_01",
+      "hanzi": "杯子",
+      "word": "杯子",
+      "pinyin": "bēizi",
+      "pos": "名词",
+      "english": "cup; glass",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "object",
+      "image": "images/vocab/hsk1-l10/v01_beizi.png"
+    },
+    {
+      "id": "v_l10_02",
+      "hanzi": "售货员",
+      "word": "售货员",
+      "pinyin": "shòuhuòyuán",
+      "pos": "名词",
+      "english": "shop assistant; salesperson",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "person",
+      "image": "images/vocab/hsk1-l10/v02_shouhuoyuan.png"
+    },
+    {
+      "id": "v_l10_03",
+      "hanzi": "这边",
+      "word": "这边",
+      "pinyin": "zhèbiān",
+      "pos": "代词",
+      "english": "this side; here",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "place",
+      "image": "images/vocab/hsk1-l10/v11_zhebian.png"
+    },
+    {
+      "id": "v_l10_04",
+      "hanzi": "钱",
+      "word": "钱",
+      "pinyin": "qián",
+      "pos": "名词",
+      "english": "money",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "thing",
+      "image": "images/vocab/hsk1-l10/v03_qian.png"
+    },
+    {
+      "id": "v_l10_05",
+      "hanzi": "这些",
+      "word": "这些",
+      "pinyin": "zhèxiē",
+      "pos": "代词",
+      "english": "these",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "function",
+      "image": "images/vocab/hsk1-l10/v11_zhebian.png"
+    },
+    {
+      "id": "v_l10_06",
+      "hanzi": "块",
+      "word": "块",
+      "pinyin": "kuài",
+      "pos": "量词",
+      "english": "yuan; measure word for money",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "money"
+    },
+    {
+      "id": "v_l10_07",
+      "hanzi": "那些",
+      "word": "那些",
+      "pinyin": "nàxiē",
+      "pos": "代词",
+      "english": "those",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "function",
+      "image": "images/vocab/hsk1-l10/v12_nar.png"
+    },
+    {
+      "id": "v_l10_08",
+      "hanzi": "这儿",
+      "word": "这儿",
+      "pinyin": "zhèr",
+      "pos": "代词",
+      "english": "here",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "place",
+      "image": "images/vocab/hsk1-l10/v11_zhebian.png"
+    },
+    {
+      "id": "v_l10_09",
+      "hanzi": "水果",
+      "word": "水果",
+      "pinyin": "shuǐguǒ",
+      "pos": "名词",
+      "english": "fruit",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "food",
+      "image": "images/vocab/hsk1-l10/v04_shuiguo.png"
+    },
+    {
+      "id": "v_l10_10",
+      "hanzi": "少",
+      "word": "少",
+      "pinyin": "shǎo",
+      "pos": "形容词",
+      "english": "few; little",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "adjective"
+    },
+    {
+      "id": "v_l10_11",
+      "hanzi": "斤",
+      "word": "斤",
+      "pinyin": "jīn",
+      "pos": "量词",
+      "english": "jin; half a kilogram",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "measure"
+    },
+    {
+      "id": "v_l10_12",
+      "hanzi": "苹果",
+      "word": "苹果",
+      "pinyin": "píngguǒ",
+      "pos": "名词",
+      "english": "apple",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "food",
+      "image": "images/vocab/hsk1-l10/v05_pingguo.png"
+    },
+    {
+      "id": "v_l10_13",
+      "hanzi": "便宜",
+      "word": "便宜",
+      "pinyin": "piányi",
+      "pos": "形容词",
+      "english": "cheap; affordable",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "adjective",
+      "image": "images/vocab/hsk1-l10/v09_pianyi.png"
+    },
+    {
+      "id": "v_l10_14",
+      "hanzi": "商店",
+      "word": "商店",
+      "pinyin": "shāngdiàn",
+      "pos": "名词",
+      "english": "shop; store",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "place",
+      "image": "images/vocab/hsk1-l10/v06_shangdian.png"
+    },
+    {
+      "id": "v_l10_15",
+      "hanzi": "衣服",
+      "word": "衣服",
+      "pinyin": "yīfu",
+      "pos": "名词",
+      "english": "clothes",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "thing",
+      "image": "images/vocab/hsk1-l10/v07_yifu.png"
+    },
+    {
+      "id": "v_l10_16",
+      "hanzi": "件",
+      "word": "件",
+      "pinyin": "jiàn",
+      "pos": "量词",
+      "english": "measure word for clothes",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "measure"
+    },
+    {
+      "id": "v_l10_17",
+      "hanzi": "元",
+      "word": "元",
+      "pinyin": "yuán",
+      "pos": "量词",
+      "english": "yuan",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "money"
+    },
+    {
+      "id": "v_l10_18",
+      "hanzi": "怎么样",
+      "word": "怎么样",
+      "pinyin": "zěnmeyàng",
+      "pos": "代词",
+      "english": "how; what do you think",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "function"
+    },
+    {
+      "id": "v_l10_19",
+      "hanzi": "贵",
+      "word": "贵",
+      "pinyin": "guì",
+      "pos": "形容词",
+      "english": "expensive",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "adjective",
+      "image": "images/vocab/hsk1-l10/v08_gui.png"
+    },
+    {
+      "id": "v_l10_20",
+      "hanzi": "穿",
+      "word": "穿",
+      "pinyin": "chuān",
+      "pos": "动词",
+      "english": "wear; put on",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "action",
+      "image": "images/vocab/hsk1-l10/v10_chuan.png"
+    },
+    {
+      "id": "v_l10_21",
+      "hanzi": "女",
+      "word": "女",
+      "pinyin": "nǚ",
+      "pos": "形容词",
+      "english": "female",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "person"
+    },
+    {
+      "id": "v_l10_22",
+      "hanzi": "男",
+      "word": "男",
+      "pinyin": "nán",
+      "pos": "形容词",
+      "english": "male",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "person"
+    },
+    {
+      "id": "v_l10_23",
+      "hanzi": "那儿",
+      "word": "那儿",
+      "pinyin": "nàr",
+      "pos": "代词",
+      "english": "there",
+      "sourceType": "textbook",
+      "tags": [
+        "L10"
+      ],
+      "category": "place",
+      "image": "images/vocab/hsk1-l10/v12_nar.png"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g_l10_01",
+      "title": "钱数的表达",
+      "titleEn": "Expression of Amount of Money",
+      "structure": "数字 + 块/元 + 钱",
+      "explanation": "人民币单位由大到小是元、角、分；口语中常说块、毛、分。",
+      "examples": [
+        {
+          "hanzi": "三块",
+          "pinyin": "sān kuài",
+          "english": "three yuan",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "三块五",
+          "pinyin": "sān kuài wǔ",
+          "english": "three yuan fifty",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "七块钱",
+          "pinyin": "qī kuài qián",
+          "english": "seven yuan",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    {
+      "id": "g_l10_02",
+      "title": "形容词谓语句",
+      "titleEn": "Adjectival-Predicate Sentences",
+      "structure": "主语 + 程度副词/否定副词 + 形容词",
+      "explanation": "形容词可以直接作谓语，前面常用很、真、太、不、也不等。",
+      "examples": [
+        {
+          "hanzi": "这儿的水果真不少！",
+          "pinyin": "Zhèr de shuǐguǒ zhēn bù shǎo!",
+          "english": "There is really a lot of fruit here.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "好看，也不贵。",
+          "pinyin": "Hǎokàn, yě bú guì.",
+          "english": "It looks good and is not expensive.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "这儿的苹果真便宜！",
+          "pinyin": "Zhèr de píngguǒ zhēn piányi!",
+          "english": "The apples here are really cheap.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "g_l10_03",
+      "title": "疑问代词“怎么样”",
+      "titleEn": "Interrogative Pronoun 怎么样",
+      "structure": "……怎么样？",
+      "explanation": "“怎么样”用于征求意见或询问情况。",
+      "examples": [
+        {
+          "hanzi": "这个杯子怎么样？",
+          "pinyin": "Zhège bēizi zěnmeyàng?",
+          "english": "What do you think of this cup?",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这件衣服怎么样？",
+          "pinyin": "Zhè jiàn yīfu zěnmeyàng?",
+          "english": "What do you think of this clothing?",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这个苹果怎么样？",
+          "pinyin": "Zhège píngguǒ zěnmeyàng?",
+          "english": "How is this apple?",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "t_l10_01",
+      "title": "课文一：买杯子",
+      "setting": "在一家小店，王一雪在买杯子。",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "王一雪",
+          "hanzi": "请问，有杯子吗？",
+          "pinyin": "Qǐngwèn, yǒu bēizi ma?",
+          "english": "Excuse me, do you have any cups?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "售货员",
+          "hanzi": "有，杯子在这边。",
+          "pinyin": "Yǒu, bēizi zài zhèbiān.",
+          "english": "Yes, the cups are over here.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "王一雪",
+          "hanzi": "多少钱一个？",
+          "pinyin": "Duōshao qián yí gè?",
+          "english": "How much is one?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "售货员",
+          "hanzi": "这些五块钱一个，那些十块钱一个。",
+          "pinyin": "Zhèxiē wǔ kuài qián yí gè, nàxiē shí kuài qián yí gè.",
+          "english": "These are five yuan each, and those are ten yuan each.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 5,
+          "speaker": "王一雪",
+          "hanzi": "我买这个吧。",
+          "pinyin": "Wǒ mǎi zhège ba.",
+          "english": "I'll take this one, please.",
+          "sourceType": "textbook"
+        }
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "t_l10_02",
+      "title": "课文二：买苹果",
+      "setting": "在菜市场，王一雪在买水果。",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "王一雪",
+          "hanzi": "这儿的水果真不少！",
+          "pinyin": "Zhèr de shuǐguǒ zhēn bù shǎo!",
+          "english": "There's so much fruit here!",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "售货员",
+          "hanzi": "您想买什么？",
+          "pinyin": "Nín xiǎng mǎi shénme?",
+          "english": "What would you like to buy?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "王一雪",
+          "hanzi": "我想买两斤苹果。",
+          "pinyin": "Wǒ xiǎng mǎi liǎng jīn píngguǒ.",
+          "english": "I'd like two jin of apples, please.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "售货员",
+          "hanzi": "苹果三块五一斤。这些七块二，七块钱吧。",
+          "pinyin": "Píngguǒ sān kuài wǔ yì jīn. Zhèxiē qī kuài èr, qī kuài qián ba.",
+          "english": "The apples are 3.5 yuan per jin. That's 7.2 yuan in total; let's make it 7 yuan.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 5,
+          "speaker": "王一雪",
+          "hanzi": "好的，这儿的苹果真便宜！",
+          "pinyin": "Hǎo de, zhèr de píngguǒ zhēn piányi!",
+          "english": "Great! The apples here are really affordable!",
+          "sourceType": "textbook"
+        }
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "t_l10_03",
+      "title": "课文三：买衣服",
+      "setting": "在商场里，刘明和王一雪在给孩子买衣服。",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "王一雪",
+          "hanzi": "这家商店衣服真多！这件一百元，怎么样？",
+          "pinyin": "Zhè jiā shāngdiàn yīfu zhēn duō! Zhè jiàn yìbǎi yuán, zěnmeyàng?",
+          "english": "There are so many clothes in this store! This one is 100 yuan. What do you think?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "刘明",
+          "hanzi": "好看，也不贵。",
+          "pinyin": "Hǎokàn, yě bú guì.",
+          "english": "It looks good, and it is not expensive.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "王一雪",
+          "hanzi": "小雪能穿，买一件吧。",
+          "pinyin": "Xiǎoxuě néng chuān, mǎi yí jiàn ba.",
+          "english": "Xiaoxue can wear it. Let's buy one.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "刘明",
+          "hanzi": "好的。小明能穿吗？",
+          "pinyin": "Hǎo de. Xiǎomíng néng chuān ma?",
+          "english": "Okay. Can Xiaoming wear it?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 5,
+          "speaker": "王一雪",
+          "hanzi": "不能。这些是女孩子穿的衣服，男孩子的衣服在那儿。",
+          "pinyin": "Bù néng. Zhèxiē shì nǚ háizi chuān de yīfu, nán háizi de yīfu zài nàr.",
+          "english": "No. These are girls' clothes. Boys' clothes are over there.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 6,
+          "speaker": "刘明",
+          "hanzi": "好的。",
+          "pinyin": "Hǎo de.",
+          "english": "Alright.",
+          "sourceType": "textbook"
+        }
+      ],
+      "sourceType": "textbook"
+    }
+  ],
+  "vocabExtensions": {
+    "v_l10_01": {
+      "word": "杯子",
+      "examples": [
+        {
+          "hanzi": "一个杯子",
+          "pinyin": "yí gè bēizi",
+          "english": "a cup",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "买杯子",
+          "pinyin": "mǎi bēizi",
+          "english": "buy cups",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这个杯子",
+          "pinyin": "zhège bēizi",
+          "english": "this cup",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一个杯子",
+          "pinyin": "yí gè bēizi",
+          "english": "a cup",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "买杯子",
+          "pinyin": "mǎi bēizi",
+          "english": "buy cups",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这个杯子",
+          "pinyin": "zhège bēizi",
+          "english": "this cup",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_02": {
+      "word": "售货员",
+      "examples": [
+        {
+          "hanzi": "一个售货员",
+          "pinyin": "yí gè shòuhuòyuán",
+          "english": "a salesperson",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "问售货员",
+          "pinyin": "wèn shòuhuòyuán",
+          "english": "ask the salesperson",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "售货员说",
+          "pinyin": "shòuhuòyuán shuō",
+          "english": "the salesperson says",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一个售货员",
+          "pinyin": "yí gè shòuhuòyuán",
+          "english": "a salesperson",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "问售货员",
+          "pinyin": "wèn shòuhuòyuán",
+          "english": "ask the salesperson",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "售货员说",
+          "pinyin": "shòuhuòyuán shuō",
+          "english": "the salesperson says",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_03": {
+      "word": "这边",
+      "examples": [
+        {
+          "hanzi": "在这边",
+          "pinyin": "zài zhèbiān",
+          "english": "over here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "杯子在这边",
+          "pinyin": "bēizi zài zhèbiān",
+          "english": "the cups are here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "请来这边",
+          "pinyin": "qǐng lái zhèbiān",
+          "english": "please come here",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "在这边",
+          "pinyin": "zài zhèbiān",
+          "english": "over here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "杯子在这边",
+          "pinyin": "bēizi zài zhèbiān",
+          "english": "the cups are here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "请来这边",
+          "pinyin": "qǐng lái zhèbiān",
+          "english": "please come here",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_04": {
+      "word": "钱",
+      "examples": [
+        {
+          "hanzi": "多少钱",
+          "pinyin": "duōshao qián",
+          "english": "how much money",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "五块钱",
+          "pinyin": "wǔ kuài qián",
+          "english": "five yuan",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "七块钱",
+          "pinyin": "qī kuài qián",
+          "english": "seven yuan",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "多少钱",
+          "pinyin": "duōshao qián",
+          "english": "how much money",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "五块钱",
+          "pinyin": "wǔ kuài qián",
+          "english": "five yuan",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "七块钱",
+          "pinyin": "qī kuài qián",
+          "english": "seven yuan",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_05": {
+      "word": "这些",
+      "examples": [
+        {
+          "hanzi": "这些杯子",
+          "pinyin": "zhèxiē bēizi",
+          "english": "these cups",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这些苹果",
+          "pinyin": "zhèxiē píngguǒ",
+          "english": "these apples",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这些衣服",
+          "pinyin": "zhèxiē yīfu",
+          "english": "these clothes",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "这些杯子",
+          "pinyin": "zhèxiē bēizi",
+          "english": "these cups",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这些苹果",
+          "pinyin": "zhèxiē píngguǒ",
+          "english": "these apples",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这些衣服",
+          "pinyin": "zhèxiē yīfu",
+          "english": "these clothes",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_06": {
+      "word": "块",
+      "examples": [
+        {
+          "hanzi": "五块",
+          "pinyin": "wǔ kuài",
+          "english": "five yuan",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "十块",
+          "pinyin": "shí kuài",
+          "english": "ten yuan",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "三块五",
+          "pinyin": "sān kuài wǔ",
+          "english": "three yuan fifty",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "五块",
+          "pinyin": "wǔ kuài",
+          "english": "five yuan",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "十块",
+          "pinyin": "shí kuài",
+          "english": "ten yuan",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "三块五",
+          "pinyin": "sān kuài wǔ",
+          "english": "three yuan fifty",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_07": {
+      "word": "那些",
+      "examples": [
+        {
+          "hanzi": "那些杯子",
+          "pinyin": "nàxiē bēizi",
+          "english": "those cups",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那些衣服",
+          "pinyin": "nàxiē yīfu",
+          "english": "those clothes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那些苹果",
+          "pinyin": "nàxiē píngguǒ",
+          "english": "those apples",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "那些杯子",
+          "pinyin": "nàxiē bēizi",
+          "english": "those cups",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那些衣服",
+          "pinyin": "nàxiē yīfu",
+          "english": "those clothes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那些苹果",
+          "pinyin": "nàxiē píngguǒ",
+          "english": "those apples",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_08": {
+      "word": "这儿",
+      "examples": [
+        {
+          "hanzi": "这儿的水果",
+          "pinyin": "zhèr de shuǐguǒ",
+          "english": "the fruit here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这儿真好",
+          "pinyin": "zhèr zhēn hǎo",
+          "english": "it is really good here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我在这儿",
+          "pinyin": "wǒ zài zhèr",
+          "english": "I am here",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "这儿的水果",
+          "pinyin": "zhèr de shuǐguǒ",
+          "english": "the fruit here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这儿真好",
+          "pinyin": "zhèr zhēn hǎo",
+          "english": "it is really good here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我在这儿",
+          "pinyin": "wǒ zài zhèr",
+          "english": "I am here",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_09": {
+      "word": "水果",
+      "examples": [
+        {
+          "hanzi": "买水果",
+          "pinyin": "mǎi shuǐguǒ",
+          "english": "buy fruit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这儿的水果",
+          "pinyin": "zhèr de shuǐguǒ",
+          "english": "the fruit here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "水果不少",
+          "pinyin": "shuǐguǒ bù shǎo",
+          "english": "there is a lot of fruit",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "买水果",
+          "pinyin": "mǎi shuǐguǒ",
+          "english": "buy fruit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这儿的水果",
+          "pinyin": "zhèr de shuǐguǒ",
+          "english": "the fruit here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "水果不少",
+          "pinyin": "shuǐguǒ bù shǎo",
+          "english": "there is a lot of fruit",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_10": {
+      "word": "少",
+      "examples": [
+        {
+          "hanzi": "不少",
+          "pinyin": "bù shǎo",
+          "english": "not few; quite a lot",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "水果不少",
+          "pinyin": "shuǐguǒ bù shǎo",
+          "english": "there is a lot of fruit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "钱不少",
+          "pinyin": "qián bù shǎo",
+          "english": "not a small amount of money",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "不少",
+          "pinyin": "bù shǎo",
+          "english": "not few; quite a lot",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "水果不少",
+          "pinyin": "shuǐguǒ bù shǎo",
+          "english": "there is a lot of fruit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "钱不少",
+          "pinyin": "qián bù shǎo",
+          "english": "not a small amount of money",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_11": {
+      "word": "斤",
+      "examples": [
+        {
+          "hanzi": "一斤苹果",
+          "pinyin": "yì jīn píngguǒ",
+          "english": "one jin of apples",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两斤水果",
+          "pinyin": "liǎng jīn shuǐguǒ",
+          "english": "two jin of fruit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "三块五一斤",
+          "pinyin": "sān kuài wǔ yì jīn",
+          "english": "3.5 yuan per jin",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一斤苹果",
+          "pinyin": "yì jīn píngguǒ",
+          "english": "one jin of apples",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两斤水果",
+          "pinyin": "liǎng jīn shuǐguǒ",
+          "english": "two jin of fruit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "三块五一斤",
+          "pinyin": "sān kuài wǔ yì jīn",
+          "english": "3.5 yuan per jin",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_12": {
+      "word": "苹果",
+      "examples": [
+        {
+          "hanzi": "买苹果",
+          "pinyin": "mǎi píngguǒ",
+          "english": "buy apples",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两斤苹果",
+          "pinyin": "liǎng jīn píngguǒ",
+          "english": "two jin of apples",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "苹果真便宜",
+          "pinyin": "píngguǒ zhēn piányi",
+          "english": "the apples are really cheap",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "买苹果",
+          "pinyin": "mǎi píngguǒ",
+          "english": "buy apples",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两斤苹果",
+          "pinyin": "liǎng jīn píngguǒ",
+          "english": "two jin of apples",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "苹果真便宜",
+          "pinyin": "píngguǒ zhēn piányi",
+          "english": "the apples are really cheap",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_13": {
+      "word": "便宜",
+      "examples": [
+        {
+          "hanzi": "真便宜",
+          "pinyin": "zhēn piányi",
+          "english": "really cheap",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "苹果便宜",
+          "pinyin": "píngguǒ piányi",
+          "english": "apples are cheap",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这儿的水果便宜",
+          "pinyin": "zhèr de shuǐguǒ piányi",
+          "english": "the fruit here is cheap",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "真便宜",
+          "pinyin": "zhēn piányi",
+          "english": "really cheap",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "苹果便宜",
+          "pinyin": "píngguǒ piányi",
+          "english": "apples are cheap",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这儿的水果便宜",
+          "pinyin": "zhèr de shuǐguǒ piányi",
+          "english": "the fruit here is cheap",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_14": {
+      "word": "商店",
+      "examples": [
+        {
+          "hanzi": "一家商店",
+          "pinyin": "yì jiā shāngdiàn",
+          "english": "a store",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这家商店",
+          "pinyin": "zhè jiā shāngdiàn",
+          "english": "this store",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "商店里",
+          "pinyin": "shāngdiàn lǐ",
+          "english": "in the store",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一家商店",
+          "pinyin": "yì jiā shāngdiàn",
+          "english": "a store",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这家商店",
+          "pinyin": "zhè jiā shāngdiàn",
+          "english": "this store",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "商店里",
+          "pinyin": "shāngdiàn lǐ",
+          "english": "in the store",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_15": {
+      "word": "衣服",
+      "examples": [
+        {
+          "hanzi": "买衣服",
+          "pinyin": "mǎi yīfu",
+          "english": "buy clothes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "女孩子的衣服",
+          "pinyin": "nǚ háizi de yīfu",
+          "english": "girls' clothes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "男孩子的衣服",
+          "pinyin": "nán háizi de yīfu",
+          "english": "boys' clothes",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "买衣服",
+          "pinyin": "mǎi yīfu",
+          "english": "buy clothes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "女孩子的衣服",
+          "pinyin": "nǚ háizi de yīfu",
+          "english": "girls' clothes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "男孩子的衣服",
+          "pinyin": "nán háizi de yīfu",
+          "english": "boys' clothes",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_16": {
+      "word": "件",
+      "examples": [
+        {
+          "hanzi": "一件衣服",
+          "pinyin": "yí jiàn yīfu",
+          "english": "one piece of clothing",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "买一件",
+          "pinyin": "mǎi yí jiàn",
+          "english": "buy one",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这件衣服",
+          "pinyin": "zhè jiàn yīfu",
+          "english": "this piece of clothing",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一件衣服",
+          "pinyin": "yí jiàn yīfu",
+          "english": "one piece of clothing",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "买一件",
+          "pinyin": "mǎi yí jiàn",
+          "english": "buy one",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这件衣服",
+          "pinyin": "zhè jiàn yīfu",
+          "english": "this piece of clothing",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_17": {
+      "word": "元",
+      "examples": [
+        {
+          "hanzi": "一百元",
+          "pinyin": "yìbǎi yuán",
+          "english": "one hundred yuan",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "五元",
+          "pinyin": "wǔ yuán",
+          "english": "five yuan",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "十元",
+          "pinyin": "shí yuán",
+          "english": "ten yuan",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一百元",
+          "pinyin": "yìbǎi yuán",
+          "english": "one hundred yuan",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "五元",
+          "pinyin": "wǔ yuán",
+          "english": "five yuan",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "十元",
+          "pinyin": "shí yuán",
+          "english": "ten yuan",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_18": {
+      "word": "怎么样",
+      "examples": [
+        {
+          "hanzi": "怎么样",
+          "pinyin": "zěnmeyàng",
+          "english": "how is it",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这个杯子怎么样",
+          "pinyin": "zhège bēizi zěnmeyàng",
+          "english": "how is this cup",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这件衣服怎么样",
+          "pinyin": "zhè jiàn yīfu zěnmeyàng",
+          "english": "how is this clothing",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "怎么样",
+          "pinyin": "zěnmeyàng",
+          "english": "how is it",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这个杯子怎么样",
+          "pinyin": "zhège bēizi zěnmeyàng",
+          "english": "how is this cup",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这件衣服怎么样",
+          "pinyin": "zhè jiàn yīfu zěnmeyàng",
+          "english": "how is this clothing",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_19": {
+      "word": "贵",
+      "examples": [
+        {
+          "hanzi": "不贵",
+          "pinyin": "bú guì",
+          "english": "not expensive",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "太贵了",
+          "pinyin": "tài guì le",
+          "english": "too expensive",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "也不贵",
+          "pinyin": "yě bú guì",
+          "english": "also not expensive",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "不贵",
+          "pinyin": "bú guì",
+          "english": "not expensive",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "太贵了",
+          "pinyin": "tài guì le",
+          "english": "too expensive",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "也不贵",
+          "pinyin": "yě bú guì",
+          "english": "also not expensive",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_20": {
+      "word": "穿",
+      "examples": [
+        {
+          "hanzi": "能穿",
+          "pinyin": "néng chuān",
+          "english": "can wear",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "不能穿",
+          "pinyin": "bù néng chuān",
+          "english": "cannot wear",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "孩子穿的衣服",
+          "pinyin": "háizi chuān de yīfu",
+          "english": "clothes children wear",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "能穿",
+          "pinyin": "néng chuān",
+          "english": "can wear",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "不能穿",
+          "pinyin": "bù néng chuān",
+          "english": "cannot wear",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "孩子穿的衣服",
+          "pinyin": "háizi chuān de yīfu",
+          "english": "clothes children wear",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_21": {
+      "word": "女",
+      "examples": [
+        {
+          "hanzi": "女孩子",
+          "pinyin": "nǚ háizi",
+          "english": "girl",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "女学生",
+          "pinyin": "nǚ xuésheng",
+          "english": "female student",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "女孩子的衣服",
+          "pinyin": "nǚ háizi de yīfu",
+          "english": "girls' clothes",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "女孩子",
+          "pinyin": "nǚ háizi",
+          "english": "girl",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "女学生",
+          "pinyin": "nǚ xuésheng",
+          "english": "female student",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "女孩子的衣服",
+          "pinyin": "nǚ háizi de yīfu",
+          "english": "girls' clothes",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_22": {
+      "word": "男",
+      "examples": [
+        {
+          "hanzi": "男孩子",
+          "pinyin": "nán háizi",
+          "english": "boy",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "男学生",
+          "pinyin": "nán xuésheng",
+          "english": "male student",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "男孩子的衣服",
+          "pinyin": "nán háizi de yīfu",
+          "english": "boys' clothes",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "男孩子",
+          "pinyin": "nán háizi",
+          "english": "boy",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "男学生",
+          "pinyin": "nán xuésheng",
+          "english": "male student",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "男孩子的衣服",
+          "pinyin": "nán háizi de yīfu",
+          "english": "boys' clothes",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l10_23": {
+      "word": "那儿",
+      "examples": [
+        {
+          "hanzi": "在那儿",
+          "pinyin": "zài nàr",
+          "english": "over there",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "衣服在那儿",
+          "pinyin": "yīfu zài nàr",
+          "english": "the clothes are there",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "男孩子的衣服在那儿",
+          "pinyin": "nán háizi de yīfu zài nàr",
+          "english": "the boys' clothes are there",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "在那儿",
+          "pinyin": "zài nàr",
+          "english": "over there",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "衣服在那儿",
+          "pinyin": "yīfu zài nàr",
+          "english": "the clothes are there",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "男孩子的衣服在那儿",
+          "pinyin": "nán háizi de yīfu zài nàr",
+          "english": "the boys' clothes are there",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "grammarTeachingNotes": {
+    "g_l10_01": {
+      "structure": "数字 + 块/元 + 钱",
+      "structureEn": "number + kuai/yuan + qian",
+      "structureRu": "число + 块/元 + 钱",
+      "english": "Use 块 or 元 to talk about RMB amounts. In spoken Chinese, 块 is common; 钱 can be added after the amount. 三块五 means three yuan and five jiao.",
+      "russian": "Для цены в юанях используются 块 или 元. В разговорной речи чаще говорят 块; после суммы можно добавить 钱. 三块五 означает 3 юаня 5 цзяо.",
+      "title": "钱数的表达",
+      "titleEn": "Expression of Amount of Money",
+      "formula": {
+        "pattern": "数字 + 块/元 + 钱",
+        "patternEn": "number + kuai/yuan + qian",
+        "note": "人民币单位由大到小是元、角、分；口语中常说块、毛、分。",
+        "noteEn": "Use 块 or 元 to talk about RMB amounts. In spoken Chinese, 块 is common; 钱 can be added after the amount. 三块五 means three yuan and five jiao.",
+        "noteRu": "Для цены в юанях используются 块 или 元. В разговорной речи чаще говорят 块; после суммы можно добавить 钱. 三块五 означает 3 юаня 5 цзяо."
+      },
+      "explanation": "人民币单位由大到小是元、角、分；口语中常说块、毛、分。",
+      "examples": [
+        {
+          "hanzi": "三块",
+          "pinyin": "sān kuài",
+          "english": "three yuan",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "三块五",
+          "pinyin": "sān kuài wǔ",
+          "english": "three yuan fifty",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "七块钱",
+          "pinyin": "qī kuài qián",
+          "english": "seven yuan",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "teacherTips": [
+        "先用实物/图片引出语义，再练问价和评价。",
+        "钱数题要避免同时出现多个可接受答案。"
+      ]
+    },
+    "g_l10_02": {
+      "structure": "主语 + 程度副词/否定副词 + 形容词",
+      "structureEn": "subject + degree/negative adverb + adjective",
+      "structureRu": "подлежащее + наречие степени/отрицание + прилагательное",
+      "english": "In Chinese, an adjective can work as the predicate without 是. A degree word such as 很, 真, 太, or a negative word such as 不 often appears before the adjective.",
+      "russian": "В китайском языке прилагательное может быть сказуемым без 是. Перед прилагательным часто ставятся 很, 真, 太 или отрицание 不.",
+      "title": "形容词谓语句",
+      "titleEn": "Adjectival-Predicate Sentences",
+      "formula": {
+        "pattern": "主语 + 程度副词/否定副词 + 形容词",
+        "patternEn": "subject + degree/negative adverb + adjective",
+        "note": "形容词可以直接作谓语，前面常用很、真、太、不、也不等。",
+        "noteEn": "In Chinese, an adjective can work as the predicate without 是. A degree word such as 很, 真, 太, or a negative word such as 不 often appears before the adjective.",
+        "noteRu": "В китайском языке прилагательное может быть сказуемым без 是. Перед прилагательным часто ставятся 很, 真, 太 или отрицание 不."
+      },
+      "explanation": "形容词可以直接作谓语，前面常用很、真、太、不、也不等。",
+      "examples": [
+        {
+          "hanzi": "这儿的水果真不少！",
+          "pinyin": "Zhèr de shuǐguǒ zhēn bù shǎo!",
+          "english": "There is really a lot of fruit here.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "好看，也不贵。",
+          "pinyin": "Hǎokàn, yě bú guì.",
+          "english": "It looks good and is not expensive.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "这儿的苹果真便宜！",
+          "pinyin": "Zhèr de píngguǒ zhēn piányi!",
+          "english": "The apples here are really cheap.",
+          "sourceType": "textbook"
+        }
+      ],
+      "teacherTips": [
+        "先用实物/图片引出语义，再练问价和评价。",
+        "钱数题要避免同时出现多个可接受答案。"
+      ]
+    },
+    "g_l10_03": {
+      "structure": "……怎么样？",
+      "structureEn": "... zěnmeyàng?",
+      "structureRu": "... 怎么样?",
+      "english": "怎么样 asks for an opinion or evaluation. It is useful when asking what someone thinks about an item, a person, a place, or a plan.",
+      "russian": "怎么样 используется, чтобы спросить мнение или оценку. Эта структура подходит для вопроса о вещи, человеке, месте или плане.",
+      "title": "疑问代词“怎么样”",
+      "titleEn": "Interrogative Pronoun 怎么样",
+      "formula": {
+        "pattern": "……怎么样？",
+        "patternEn": "... zěnmeyàng?",
+        "note": "“怎么样”用于征求意见或询问情况。",
+        "noteEn": "怎么样 asks for an opinion or evaluation. It is useful when asking what someone thinks about an item, a person, a place, or a plan.",
+        "noteRu": "怎么样 используется, чтобы спросить мнение или оценку. Эта структура подходит для вопроса о вещи, человеке, месте или плане."
+      },
+      "explanation": "“怎么样”用于征求意见或询问情况。",
+      "examples": [
+        {
+          "hanzi": "这个杯子怎么样？",
+          "pinyin": "Zhège bēizi zěnmeyàng?",
+          "english": "What do you think of this cup?",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这件衣服怎么样？",
+          "pinyin": "Zhè jiàn yīfu zěnmeyàng?",
+          "english": "What do you think of this clothing?",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这个苹果怎么样？",
+          "pinyin": "Zhège píngguǒ zěnmeyàng?",
+          "english": "How is this apple?",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "teacherTips": [
+        "先用实物/图片引出语义，再练问价和评价。",
+        "钱数题要避免同时出现多个可接受答案。"
+      ]
+    }
+  },
+  "preClass": {
+    "warmup": {
+      "title": "买东西和问价格",
+      "prompt": "Think about shopping and prices.",
+      "intro": "这一课学完，你可以问商品价格，也可以说东西贵不贵、便宜不便宜。",
+      "question": "如果你想问价格，下面哪句话最合适？",
+      "questionEn": "Which sentence asks for the price?",
+      "options": [
+        {
+          "word": "多少钱一个？",
+          "pinyin": "Duōshao qián yí gè?"
+        },
+        {
+          "word": "你在哪儿？",
+          "pinyin": "Nǐ zài nǎr?"
+        },
+        {
+          "word": "现在几点？",
+          "pinyin": "Xiànzài jǐ diǎn?"
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": "pre_l10_01",
+        "type": "choice",
+        "module": "词汇预热",
+        "question": "Which word means apple?",
+        "options": [
+          "苹果",
+          "杯子",
+          "衣服",
+          "钱"
+        ],
+        "answer": "苹果",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l10_02",
+        "type": "choice",
+        "module": "交际预热",
+        "question": "Which sentence asks 'How much is one?'",
+        "options": [
+          "多少钱一个？",
+          "这个怎么样？",
+          "你买什么？",
+          "杯子在这边。"
+        ],
+        "answer": "多少钱一个？",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l10_03",
+        "type": "choice",
+        "module": "语法预热",
+        "question": "Which sentence uses an adjective predicate?",
+        "options": [
+          "这儿的苹果真便宜。",
+          "我买这个吧。",
+          "杯子在这边。",
+          "我想买苹果。"
+        ],
+        "answer": "这儿的苹果真便宜。",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l10_04",
+        "type": "choice",
+        "module": "钱数预热",
+        "question": "What does 三块五 mean?",
+        "options": [
+          "3.5 yuan",
+          "5 yuan",
+          "35 yuan",
+          "three apples"
+        ],
+        "answer": "3.5 yuan",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l10_05",
+        "type": "choice",
+        "module": "词汇预热",
+        "question": "Which word means salesperson?",
+        "options": [
+          "售货员",
+          "商店",
+          "水果",
+          "衣服"
+        ],
+        "answer": "售货员",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l10_06",
+        "type": "choice",
+        "module": "量词预热",
+        "question": "Which measure word is used with 衣服 in this lesson?",
+        "options": [
+          "件",
+          "斤",
+          "块",
+          "个"
+        ],
+        "answer": "件",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l10_07",
+        "type": "choice",
+        "module": "句意理解",
+        "question": "Which Chinese sentence means 'These cups are five yuan each'?",
+        "options": [
+          "这些五块钱一个。",
+          "那些十块钱一个。",
+          "这件一百元。",
+          "苹果三块五一斤。"
+        ],
+        "answer": "这些五块钱一个。",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l10_08",
+        "type": "choice",
+        "module": "交际预热",
+        "question": "Which sentence asks for an opinion?",
+        "options": [
+          "这件衣服怎么样？",
+          "你买什么？",
+          "你在哪儿？",
+          "现在几点？"
+        ],
+        "answer": "这件衣服怎么样？",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l10_09",
+        "type": "subjective",
+        "module": "生活经验开放题",
+        "question": "教学扩展：你常买什么水果？请写一个中文短句。 / Teaching extension: What fruit do you often buy? Write one short Chinese sentence.",
+        "openEnded": true,
+        "prompt": "例如：我常买苹果。 / Example: 我常买苹果。",
+        "answerPlaceholder": "例如：我常买苹果。",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l10_10",
+        "type": "subjective",
+        "module": "购物表达开放题",
+        "question": "教学扩展：请用“多少钱”写一个问价句。 / Teaching extension: Use 多少钱 to write one price question.",
+        "openEnded": true,
+        "prompt": "例如：这个杯子多少钱？ / Example: 这个杯子多少钱？",
+        "answerPlaceholder": "例如：这个杯子多少钱？",
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "inClass": {
+    "questionGroups": {
+      "v1_image_guess": [
+        {
+          "id": "v1_l10_1",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l10/v01_beizi.png",
+            "image_hint": "杯子",
+            "options": [
+              "杯子",
+              "钱",
+              "水果",
+              "苹果"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "杯子",
+          "kp": "杯子",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l10_2",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l10/v03_qian.png",
+            "image_hint": "钱",
+            "options": [
+              "钱",
+              "杯子",
+              "水果",
+              "苹果"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "钱",
+          "kp": "钱",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l10_3",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l10/v04_shuiguo.png",
+            "image_hint": "水果",
+            "options": [
+              "水果",
+              "杯子",
+              "钱",
+              "苹果"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "水果",
+          "kp": "水果",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l10_4",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l10/v05_pingguo.png",
+            "image_hint": "苹果",
+            "options": [
+              "苹果",
+              "杯子",
+              "钱",
+              "水果"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "苹果",
+          "kp": "苹果",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l10_5",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l10/v06_shangdian.png",
+            "image_hint": "商店",
+            "options": [
+              "商店",
+              "杯子",
+              "钱",
+              "水果"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "商店",
+          "kp": "商店",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l10_6",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l10/v07_yifu.png",
+            "image_hint": "衣服",
+            "options": [
+              "衣服",
+              "杯子",
+              "钱",
+              "水果"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "衣服",
+          "kp": "衣服",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l10_7",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l10/v02_shouhuoyuan.png",
+            "image_hint": "售货员",
+            "options": [
+              "售货员",
+              "杯子",
+              "钱",
+              "水果"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "售货员",
+          "kp": "售货员",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l10_8",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l10/v09_pianyi.png",
+            "image_hint": "便宜",
+            "options": [
+              "便宜",
+              "杯子",
+              "钱",
+              "水果"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "便宜",
+          "kp": "便宜",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l10_9",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l10/v08_gui.png",
+            "image_hint": "贵",
+            "options": [
+              "贵",
+              "杯子",
+              "钱",
+              "水果"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "贵",
+          "kp": "贵",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l10_10",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l10/v10_chuan.png",
+            "image_hint": "穿",
+            "options": [
+              "穿",
+              "杯子",
+              "钱",
+              "水果"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "穿",
+          "kp": "穿",
+          "sourceType": "textbook"
+        }
+      ],
+      "v5_vocab_fill": [
+        {
+          "id": "v5_l10_1",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "请问，有___吗？",
+            "sentence_pinyin": "Qǐngwèn, yǒu ___ ma?",
+            "options": [
+              "杯子",
+              "块",
+              "斤",
+              "件"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "杯子",
+          "kp": "杯子",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l10_2",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "这些五___钱一个。",
+            "sentence_pinyin": "Zhèxiē wǔ ___ qián yí gè.",
+            "options": [
+              "块",
+              "件",
+              "斤",
+              "本"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "块",
+          "kp": "块",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l10_3",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "我想买两斤___。",
+            "sentence_pinyin": "Wǒ xiǎng mǎi liǎng jīn ___.",
+            "options": [
+              "苹果",
+              "衣服",
+              "杯子",
+              "商店"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "苹果",
+          "kp": "苹果",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l10_4",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "这儿的苹果真___！",
+            "sentence_pinyin": "Zhèr de píngguǒ zhēn ___!",
+            "options": [
+              "便宜",
+              "女",
+              "男",
+              "少"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "便宜",
+          "kp": "便宜",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l10_5",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "这家商店___真多！",
+            "sentence_pinyin": "Zhè jiā shāngdiàn ___ zhēn duō!",
+            "options": [
+              "衣服",
+              "块",
+              "斤",
+              "元"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "衣服",
+          "kp": "衣服",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l10_6",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "这件一百元，___？",
+            "sentence_pinyin": "Zhè jiàn yìbǎi yuán, ___?",
+            "options": [
+              "怎么样",
+              "多少",
+              "哪儿",
+              "谁"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "怎么样",
+          "kp": "怎么样",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l10_7",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "好看，也不___。",
+            "sentence_pinyin": "Hǎokàn, yě bú ___.",
+            "options": [
+              "贵",
+              "少",
+              "男",
+              "女"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "贵",
+          "kp": "贵",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l10_8",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "小雪能___，买一件吧。",
+            "sentence_pinyin": "Xiǎoxuě néng ___, mǎi yí jiàn ba.",
+            "options": [
+              "穿",
+              "买",
+              "去",
+              "坐"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "穿",
+          "kp": "穿",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l10_9",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "男孩子的衣服在___。",
+            "sentence_pinyin": "Nán háizi de yīfu zài ___.",
+            "options": [
+              "那儿",
+              "这些",
+              "那些",
+              "块"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "那儿",
+          "kp": "那儿",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l10_10",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "杯子在___。",
+            "sentence_pinyin": "Bēizi zài ___.",
+            "options": [
+              "这边",
+              "几块",
+              "一斤",
+              "便宜"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这边",
+          "kp": "这边",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v7_word_match": [
+        {
+          "id": "v7_l10_1",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "多少钱一个？",
+                "right": "五块钱一个。"
+              },
+              {
+                "left": "您想买什么？",
+                "right": "我想买两斤苹果。"
+              },
+              {
+                "left": "这件衣服怎么样？",
+                "right": "好看，也不贵。"
+              },
+              {
+                "left": "杯子在哪儿？",
+                "right": "杯子在这边。"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l10_2",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "苹果多少钱一斤？",
+                "right": "三块五一斤。"
+              },
+              {
+                "left": "你买什么？",
+                "right": "我买这个吧。"
+              },
+              {
+                "left": "小明能穿吗？",
+                "right": "不能。"
+              },
+              {
+                "left": "男孩子的衣服在哪儿？",
+                "right": "在那儿。"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l10_3",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "这儿的水果多不多？",
+                "right": "这儿的水果真不少。"
+              },
+              {
+                "left": "这件多少钱？",
+                "right": "一百元。"
+              },
+              {
+                "left": "你喜欢这个杯子吗？",
+                "right": "我很喜欢，也不贵。"
+              },
+              {
+                "left": "你去哪儿买衣服？",
+                "right": "我去商店买衣服。"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l10_4",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "你想买几斤苹果？",
+                "right": "我想买两斤苹果。"
+              },
+              {
+                "left": "这些多少钱？",
+                "right": "七块钱。"
+              },
+              {
+                "left": "那些多少钱一个？",
+                "right": "十块钱一个。"
+              },
+              {
+                "left": "女孩子穿什么？",
+                "right": "女孩子穿这件衣服。"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l10_5",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "这个苹果怎么样？",
+                "right": "很好吃，也很便宜。"
+              },
+              {
+                "left": "这个菜怎么样？",
+                "right": "不太好吃。"
+              },
+              {
+                "left": "你有多少钱？",
+                "right": "我有十块钱。"
+              },
+              {
+                "left": "你在哪儿？",
+                "right": "我在这儿。"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v8_memory_match": [
+        {
+          "id": "v8_l10_1",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Matching game.",
+          "data": {
+            "pairs": [
+              {
+                "left": "多少钱一个？",
+                "right": "五块钱一个。"
+              },
+              {
+                "left": "您想买什么？",
+                "right": "我想买两斤苹果。"
+              },
+              {
+                "left": "这件衣服怎么样？",
+                "right": "好看，也不贵。"
+              },
+              {
+                "left": "杯子在哪儿？",
+                "right": "杯子在这边。"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l10_2",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Matching game.",
+          "data": {
+            "pairs": [
+              {
+                "left": "苹果多少钱一斤？",
+                "right": "三块五一斤。"
+              },
+              {
+                "left": "你买什么？",
+                "right": "我买这个吧。"
+              },
+              {
+                "left": "小明能穿吗？",
+                "right": "不能。"
+              },
+              {
+                "left": "男孩子的衣服在哪儿？",
+                "right": "在那儿。"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l10_3",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Matching game.",
+          "data": {
+            "pairs": [
+              {
+                "left": "这儿的水果多不多？",
+                "right": "这儿的水果真不少。"
+              },
+              {
+                "left": "这件多少钱？",
+                "right": "一百元。"
+              },
+              {
+                "left": "你喜欢这个杯子吗？",
+                "right": "我很喜欢，也不贵。"
+              },
+              {
+                "left": "你去哪儿买衣服？",
+                "right": "我去商店买衣服。"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l10_4",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Matching game.",
+          "data": {
+            "pairs": [
+              {
+                "left": "你想买几斤苹果？",
+                "right": "我想买两斤苹果。"
+              },
+              {
+                "left": "这些多少钱？",
+                "right": "七块钱。"
+              },
+              {
+                "left": "那些多少钱一个？",
+                "right": "十块钱一个。"
+              },
+              {
+                "left": "女孩子穿什么？",
+                "right": "女孩子穿这件衣服。"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l10_5",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Matching game.",
+          "data": {
+            "pairs": [
+              {
+                "left": "这个苹果怎么样？",
+                "right": "很好吃，也很便宜。"
+              },
+              {
+                "left": "这个菜怎么样？",
+                "right": "不太好吃。"
+              },
+              {
+                "left": "你有多少钱？",
+                "right": "我有十块钱。"
+              },
+              {
+                "left": "你在哪儿？",
+                "right": "我在这儿。"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v4_complete_sentence": [
+        {
+          "id": "v4_l10_1",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "五块钱一个。",
+            "source_pinyin": "Wǔ kuài qián yí gè.",
+            "options_pinyin": [
+              "Duōshao qián yí gè?",
+              "Nǐ zài nǎr?",
+              "Nǐ mǎi shénme?",
+              "Zhège zěnmeyàng?"
+            ],
+            "options": [
+              "多少钱一个？",
+              "你在哪儿？",
+              "你买什么？",
+              "这个怎么样？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "多少钱一个？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l10_2",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "我想买两斤苹果。",
+            "source_pinyin": "Wǒ xiǎng mǎi liǎng jīn píngguǒ.",
+            "options_pinyin": [
+              "Nǐ xiǎng mǎi shénme?",
+              "Duōshao qián yì jīn?",
+              "Nǐ zài nǎr mǎi?",
+              "Nǐ jǐ diǎn mǎi?"
+            ],
+            "options": [
+              "你想买什么？",
+              "多少钱一斤？",
+              "你在哪儿买？",
+              "你几点买？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你想买什么？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l10_3",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "杯子在这边。",
+            "source_pinyin": "Bēizi zài zhèbiān.",
+            "options_pinyin": [
+              "Bēizi zài nǎr?",
+              "Bēizi duōshao qián?",
+              "Bēizi zěnmeyàng?",
+              "Nǐ mǎi bēizi ma?"
+            ],
+            "options": [
+              "杯子在哪儿？",
+              "杯子多少钱？",
+              "杯子怎么样？",
+              "你买杯子吗？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "杯子在哪儿？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l10_4",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "好看，也不贵。",
+            "source_pinyin": "Hǎokàn, yě bú guì.",
+            "options_pinyin": [
+              "Zhè jiàn yīfu zěnmeyàng?",
+              "Zhè jiàn yīfu zài nǎr?",
+              "Shéi mǎi yīfu?",
+              "Nǐ mǎi jǐ jiàn?"
+            ],
+            "options": [
+              "这件衣服怎么样？",
+              "这件衣服在哪儿？",
+              "谁买衣服？",
+              "你买几件？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这件衣服怎么样？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l10_5",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "男孩子的衣服在那儿。",
+            "source_pinyin": "Nán háizi de yīfu zài nàr.",
+            "options_pinyin": [
+              "Nán háizi de yīfu zài nǎr?",
+              "Nǚ háizi shì shéi?",
+              "Nǐ mǎi shénme shuǐguǒ?",
+              "Duōshao qián yì jīn?"
+            ],
+            "options": [
+              "男孩子的衣服在哪儿？",
+              "女孩子是谁？",
+              "你买什么水果？",
+              "多少钱一斤？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "男孩子的衣服在哪儿？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l10_6",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "这儿的苹果真便宜。",
+            "source_pinyin": "Zhèr de píngguǒ zhēn piányi.",
+            "options_pinyin": [
+              "Zhèr de píngguǒ zěnmeyàng?",
+              "Nǐ yǒu jǐ gè píngguǒ?",
+              "Píngguǒ zài nǎr?",
+              "Shéi mǎi píngguǒ?"
+            ],
+            "options": [
+              "这儿的苹果怎么样？",
+              "你有几个苹果？",
+              "苹果在哪儿？",
+              "谁买苹果？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这儿的苹果怎么样？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l10_7",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "我买这个吧。",
+            "source_pinyin": "Wǒ mǎi zhège ba.",
+            "options_pinyin": [
+              "Nǐ mǎi nǎge?",
+              "Nǐ jiào shénme?",
+              "Xiànzài jǐ diǎn?",
+              "Nǐ zài nǎr gōngzuò?"
+            ],
+            "options": [
+              "你买哪个？",
+              "你叫什么？",
+              "现在几点？",
+              "你在哪儿工作？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你买哪个？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l10_8",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "这件一百元。",
+            "source_pinyin": "Zhè jiàn yìbǎi yuán.",
+            "options_pinyin": [
+              "Zhè jiàn duōshao qián?",
+              "Nǐ mǎi jǐ jīn?",
+              "Zhè shì shéi?",
+              "Nǐ jǐ suì?"
+            ],
+            "options": [
+              "这件多少钱？",
+              "你买几斤？",
+              "这是谁？",
+              "你几岁？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这件多少钱？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l10_9",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "小雪能穿。",
+            "source_pinyin": "Xiǎoxuě néng chuān.",
+            "options_pinyin": [
+              "Xiǎoxuě néng chuān ma?",
+              "Xiǎoxuě zài nǎr?",
+              "Xiǎoxuě mǎi shénme shuǐguǒ?",
+              "Xiǎoxuě jǐ diǎn xiàkè?"
+            ],
+            "options": [
+              "小雪能穿吗？",
+              "小雪在哪儿？",
+              "小雪买什么水果？",
+              "小雪几点下课？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "小雪能穿吗？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l10_10",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "我在这儿。",
+            "source_pinyin": "Wǒ zài zhèr.",
+            "options_pinyin": [
+              "Nǐ zài nǎr?",
+              "Nǐ mǎi shénme?",
+              "Zhèr de píngguǒ zěnmeyàng?",
+              "Nǐ xiǎng qù nǎr?"
+            ],
+            "options": [
+              "你在哪儿？",
+              "你买什么？",
+              "这儿的苹果怎么样？",
+              "你想去哪儿？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你在哪儿？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "g1_ordering": [
+        {
+          "id": "g1_l10_1",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "这儿",
+              "的",
+              "苹果",
+              "真",
+              "便宜"
+            ],
+            "chunks_pinyin": [
+              "zhèr",
+              "de",
+              "píngguǒ",
+              "zhēn",
+              "piányi"
+            ]
+          },
+          "correct_answer": "这儿的苹果真便宜",
+          "acceptable_answers": [
+            "这儿的苹果真便宜",
+            "这儿的苹果真便宜。",
+            "这儿的苹果真便宜？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l10_2",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "杯子",
+              "在",
+              "这边"
+            ],
+            "chunks_pinyin": [
+              "bēizi",
+              "zài",
+              "zhèbiān"
+            ]
+          },
+          "correct_answer": "杯子在这边",
+          "acceptable_answers": [
+            "杯子在这边",
+            "杯子在这边。",
+            "杯子在这边？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l10_3",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "我",
+              "想",
+              "买",
+              "两斤",
+              "苹果"
+            ],
+            "chunks_pinyin": [
+              "wǒ",
+              "xiǎng",
+              "mǎi",
+              "liǎng jīn",
+              "píngguǒ"
+            ]
+          },
+          "correct_answer": "我想买两斤苹果",
+          "acceptable_answers": [
+            "我想买两斤苹果",
+            "我想买两斤苹果。",
+            "我想买两斤苹果？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l10_4",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "这些",
+              "五块钱",
+              "一个"
+            ],
+            "chunks_pinyin": [
+              "zhèxiē",
+              "wǔ kuài qián",
+              "yí gè"
+            ]
+          },
+          "correct_answer": "这些五块钱一个",
+          "acceptable_answers": [
+            "这些五块钱一个",
+            "这些五块钱一个。",
+            "这些五块钱一个？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l10_5",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "男孩子",
+              "的",
+              "衣服",
+              "在",
+              "那儿"
+            ],
+            "chunks_pinyin": [
+              "nán háizi",
+              "de",
+              "yīfu",
+              "zài",
+              "nàr"
+            ]
+          },
+          "correct_answer": "男孩子的衣服在那儿",
+          "acceptable_answers": [
+            "男孩子的衣服在那儿",
+            "男孩子的衣服在那儿。",
+            "男孩子的衣服在那儿？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l10_6",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "这件",
+              "衣服",
+              "怎么样"
+            ],
+            "chunks_pinyin": [
+              "zhè jiàn",
+              "yīfu",
+              "zěnmeyàng"
+            ]
+          },
+          "correct_answer": "这件衣服怎么样",
+          "acceptable_answers": [
+            "这件衣服怎么样",
+            "这件衣服怎么样。",
+            "这件衣服怎么样？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l10_7",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "这家",
+              "商店",
+              "衣服",
+              "真",
+              "多"
+            ],
+            "chunks_pinyin": [
+              "zhè jiā",
+              "shāngdiàn",
+              "yīfu",
+              "zhēn",
+              "duō"
+            ]
+          },
+          "correct_answer": "这家商店衣服真多",
+          "acceptable_answers": [
+            "这家商店衣服真多",
+            "这家商店衣服真多。",
+            "这家商店衣服真多？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l10_8",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "我",
+              "买",
+              "这个",
+              "吧"
+            ],
+            "chunks_pinyin": [
+              "wǒ",
+              "mǎi",
+              "zhège",
+              "ba"
+            ]
+          },
+          "correct_answer": "我买这个吧",
+          "acceptable_answers": [
+            "我买这个吧",
+            "我买这个吧。",
+            "我买这个吧？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l10_9",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "小雪",
+              "能",
+              "穿"
+            ],
+            "chunks_pinyin": [
+              "Xiǎoxuě",
+              "néng",
+              "chuān"
+            ]
+          },
+          "correct_answer": "小雪能穿",
+          "acceptable_answers": [
+            "小雪能穿",
+            "小雪能穿。",
+            "小雪能穿？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l10_10",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "这儿",
+              "的",
+              "水果",
+              "真",
+              "不少"
+            ],
+            "chunks_pinyin": [
+              "zhèr",
+              "de",
+              "shuǐguǒ",
+              "zhēn",
+              "bù shǎo"
+            ]
+          },
+          "correct_answer": "这儿的水果真不少",
+          "acceptable_answers": [
+            "这儿的水果真不少",
+            "这儿的水果真不少。",
+            "这儿的水果真不少？"
+          ],
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "r3_translation_choice": [
+        {
+          "id": "trc_l10_1",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "The apples here are really cheap. / Яблоки здесь очень дешевые.",
+          "data": {
+            "question_en": "The apples here are really cheap.",
+            "question_ru": "Яблоки здесь очень дешевые.",
+            "options": [
+              "这儿的苹果真便宜。",
+              "这些五块钱一个。",
+              "杯子在这边。",
+              "我买这个吧。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这儿的苹果真便宜。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l10_2",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "How much is one? / Сколько стоит одна штука?",
+          "data": {
+            "question_en": "How much is one?",
+            "question_ru": "Сколько стоит одна штука?",
+            "options": [
+              "多少钱一个？",
+              "你在哪儿？",
+              "这件怎么样？",
+              "你买什么？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "多少钱一个？",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l10_3",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "I want to buy two jin of apples. / Я хочу купить два цзиня яблок.",
+          "data": {
+            "question_en": "I want to buy two jin of apples.",
+            "question_ru": "Я хочу купить два цзиня яблок.",
+            "options": [
+              "我想买两斤苹果。",
+              "我买一个杯子。",
+              "我去商店买衣服。",
+              "我在这儿学习。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我想买两斤苹果。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l10_4",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "These are clothes for girls. / Это одежда для девочек.",
+          "data": {
+            "question_en": "These are clothes for girls.",
+            "question_ru": "Это одежда для девочек.",
+            "options": [
+              "这些是女孩子穿的衣服。",
+              "男孩子的衣服在那儿。",
+              "这家商店衣服真多。",
+              "小雪能穿。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这些是女孩子穿的衣服。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l10_5",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "It looks good and is not expensive. / Красиво, и недорого.",
+          "data": {
+            "question_en": "It looks good and is not expensive.",
+            "question_ru": "Красиво, и недорого.",
+            "options": [
+              "好看，也不贵。",
+              "这个菜不好吃。",
+              "我很喜欢。",
+              "这儿的水果不少。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "好看，也不贵。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l10_6",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "I want to buy a cup for my younger sister. / Я хочу купить чашку для младшей сестры.",
+          "data": {
+            "question_en": "I want to buy a cup for my younger sister.",
+            "question_ru": "Я хочу купить чашку для младшей сестры.",
+            "options": [
+              "我想给妹妹买一个杯子。",
+              "我想买两斤苹果。",
+              "杯子在这边。",
+              "这些杯子很贵。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我想给妹妹买一个杯子。",
+          "kp": "译文选句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "trc_l10_7",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "This store has a lot of fruit. / В этом магазине много фруктов.",
+          "data": {
+            "question_en": "This store has a lot of fruit.",
+            "question_ru": "В этом магазине много фруктов.",
+            "options": [
+              "这家商店水果很多。",
+              "这儿的苹果真便宜。",
+              "售货员在这边。",
+              "那些衣服不贵。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这家商店水果很多。",
+          "kp": "译文选句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "trc_l10_8",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "The boys' clothes are over there. / Одежда для мальчиков там.",
+          "data": {
+            "question_en": "The boys' clothes are over there.",
+            "question_ru": "Одежда для мальчиков там.",
+            "options": [
+              "男孩子的衣服在那儿。",
+              "女孩子穿这件衣服。",
+              "这件衣服不贵。",
+              "这家商店真大。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "男孩子的衣服在那儿。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l10_9",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "These cups are not too expensive. / Эти чашки не слишком дорогие.",
+          "data": {
+            "question_en": "These cups are not too expensive.",
+            "question_ru": "Эти чашки не слишком дорогие.",
+            "options": [
+              "这些杯子不太贵。",
+              "这些杯子五块钱一个。",
+              "那些衣服在那儿。",
+              "这儿的水果不少。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这些杯子不太贵。",
+          "kp": "译文选句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "trc_l10_10",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "What do you think of this piece of clothing? / Как тебе эта одежда?",
+          "data": {
+            "question_en": "What do you think of this piece of clothing?",
+            "question_ru": "Как тебе эта одежда?",
+            "options": [
+              "这件衣服怎么样？",
+              "这个杯子多少钱？",
+              "这个杯子在哪儿？",
+              "这件衣服是谁的？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这件衣服怎么样？",
+          "kp": "译文选句",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "r2_passage_choice": [
+        {
+          "id": "ttq_l10_1",
+          "type": "text_qa_group",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：根据课文内容回答。",
+          "prompt_en": "Text Q&A: answer from the dialogue.",
+          "data": {
+            "title": "课文一：买杯子",
+            "passage": "请问，有杯子吗？有，杯子在这边。多少钱一个？这些五块钱一个，那些十块钱一个。我买这个吧。",
+            "passage_pinyin": "Qǐngwèn, yǒu bēizi ma? Yǒu, bēizi zài zhèbiān. Duōshao qián yí gè? Zhèxiē wǔ kuài qián yí gè, nàxiē shí kuài qián yí gè. Wǒ mǎi zhège ba.",
+            "questions": [
+              {
+                "question_cn": "王一雪买什么？",
+                "question_pinyin": "Wáng Yīxuě mǎi shénme?",
+                "answer": "杯子",
+                "answer_pinyin": "bēizi",
+                "options": [
+                  "杯子",
+                  "苹果",
+                  "衣服",
+                  "水果"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "杯子在哪儿？",
+                "question_pinyin": "Bēizi zài nǎr?",
+                "answer": "这边",
+                "answer_pinyin": "zhèbiān",
+                "options": [
+                  "这边",
+                  "那儿",
+                  "学校",
+                  "医院"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "这些杯子多少钱一个？",
+                "question_pinyin": "Zhèxiē bēizi duōshao qián yí gè?",
+                "answer": "五块钱一个",
+                "answer_pinyin": "wǔ kuài qián yí gè",
+                "options": [
+                  "五块钱一个",
+                  "十块钱一个",
+                  "三块五一斤",
+                  "一百元一件"
+                ],
+                "correct_index": 0
+              }
+            ]
+          },
+          "correct_answer": "见每题答案",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "ttq_l10_2",
+          "type": "text_qa_group",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：根据课文内容回答。",
+          "prompt_en": "Text Q&A: answer from the dialogue.",
+          "data": {
+            "title": "课文二：买苹果",
+            "passage": "这儿的水果真不少！您想买什么？我想买两斤苹果。苹果三块五一斤。这些七块二，七块钱吧。好的，这儿的苹果真便宜！",
+            "passage_pinyin": "Zhèr de shuǐguǒ zhēn bù shǎo! Nín xiǎng mǎi shénme? Wǒ xiǎng mǎi liǎng jīn píngguǒ. Píngguǒ sān kuài wǔ yì jīn. Zhèxiē qī kuài èr, qī kuài qián ba. Hǎo de, zhèr de píngguǒ zhēn piányi!",
+            "questions": [
+              {
+                "question_cn": "王一雪想买什么？",
+                "question_pinyin": "Wáng Yīxuě xiǎng mǎi shénme?",
+                "answer": "两斤苹果",
+                "answer_pinyin": "liǎng jīn píngguǒ",
+                "options": [
+                  "两斤苹果",
+                  "一个杯子",
+                  "一件衣服",
+                  "两个孩子"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "苹果多少钱一斤？",
+                "question_pinyin": "Píngguǒ duōshao qián yì jīn?",
+                "answer": "三块五一斤",
+                "answer_pinyin": "sān kuài wǔ yì jīn",
+                "options": [
+                  "三块五一斤",
+                  "五块钱一个",
+                  "七块钱一个",
+                  "一百元一件"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "这儿的苹果怎么样？",
+                "question_pinyin": "Zhèr de píngguǒ zěnmeyàng?",
+                "answer": "真便宜",
+                "answer_pinyin": "zhēn piányi",
+                "options": [
+                  "真便宜",
+                  "太贵了",
+                  "不好吃",
+                  "很少"
+                ],
+                "correct_index": 0
+              }
+            ]
+          },
+          "correct_answer": "见每题答案",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "ttq_l10_3",
+          "type": "text_qa_group",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：根据课文内容回答。",
+          "prompt_en": "Text Q&A: answer from the dialogue.",
+          "data": {
+            "title": "课文三：买衣服",
+            "passage": "这家商店衣服真多！这件一百元，怎么样？好看，也不贵。小雪能穿，买一件吧。好的。小明能穿吗？不能。这些是女孩子穿的衣服，男孩子的衣服在那儿。好的。",
+            "passage_pinyin": "Zhè jiā shāngdiàn yīfu zhēn duō! Zhè jiàn yìbǎi yuán, zěnmeyàng? Hǎokàn, yě bú guì. Xiǎoxuě néng chuān, mǎi yí jiàn ba. Hǎo de. Xiǎomíng néng chuān ma? Bù néng. Zhèxiē shì nǚ háizi chuān de yīfu, nán háizi de yīfu zài nàr. Hǎo de.",
+            "questions": [
+              {
+                "question_cn": "这件衣服多少钱？",
+                "question_pinyin": "Zhè jiàn yīfu duōshao qián?",
+                "answer": "一百元",
+                "answer_pinyin": "yìbǎi yuán",
+                "options": [
+                  "一百元",
+                  "十块钱",
+                  "五块钱",
+                  "七块钱"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "刘明觉得这件衣服怎么样？",
+                "question_pinyin": "Liú Míng juéde zhè jiàn yīfu zěnmeyàng?",
+                "answer": "好看，也不贵",
+                "answer_pinyin": "hǎokàn, yě bú guì",
+                "options": [
+                  "好看，也不贵",
+                  "不好看，也很贵",
+                  "很少，也便宜",
+                  "很好吃，也不贵"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "男孩子的衣服在哪儿？",
+                "question_pinyin": "Nán háizi de yīfu zài nǎr?",
+                "answer": "那儿",
+                "answer_pinyin": "nàr",
+                "options": [
+                  "那儿",
+                  "这边",
+                  "家里",
+                  "学校"
+                ],
+                "correct_index": 0
+              }
+            ]
+          },
+          "correct_answer": "见每题答案",
+          "sourceType": "textbook"
+        }
+      ],
+      "r4_picture_talk": [
+        {
+          "id": "r4_l10_pt_01",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "这个杯子多少钱？",
+          "prompt_en": "Ask the price and answer in Chinese.",
+          "data": {
+            "question": "这个杯子多少钱？",
+            "question_pinyin": "Zhe ge beizi duoshao qian?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l10/v01_beizi.png",
+            "sampleAnswer": "这个杯子五块钱一个。",
+            "sampleAnswerPinyin": "Zhe ge beizi wu kuai qian yi ge.",
+            "patternType": "多少钱？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：多少钱？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l10_pt_02",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "苹果多少钱一斤？",
+          "prompt_en": "Ask the price and answer in Chinese.",
+          "data": {
+            "question": "苹果多少钱一斤？",
+            "question_pinyin": "Pingguo duoshao qian yi jin?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l10/v05_pingguo.png",
+            "sampleAnswer": "苹果三块五一斤。",
+            "sampleAnswerPinyin": "Pingguo san kuai wu yi jin.",
+            "patternType": "多少钱？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：多少钱？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l10_pt_03",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "水果多少钱？",
+          "prompt_en": "Ask the price and answer in Chinese.",
+          "data": {
+            "question": "水果多少钱？",
+            "question_pinyin": "Shuiguo duoshao qian?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l10/v04_shuiguo.png",
+            "sampleAnswer": "水果二十块钱。",
+            "sampleAnswerPinyin": "Shuiguo ershi kuai qian.",
+            "patternType": "多少钱？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：多少钱？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l10_pt_04",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "这件衣服多少钱？",
+          "prompt_en": "Ask the price and answer in Chinese.",
+          "data": {
+            "question": "这件衣服多少钱？",
+            "question_pinyin": "Zhe jian yifu duoshao qian?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l10/v07_yifu.png",
+            "sampleAnswer": "这件衣服一百块钱。",
+            "sampleAnswerPinyin": "Zhe jian yifu yibai kuai qian.",
+            "patternType": "多少钱？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：多少钱？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l10_pt_05",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "这个杯子贵不贵？",
+          "prompt_en": "Ask if it is expensive and answer in Chinese.",
+          "data": {
+            "question": "这个杯子贵不贵？",
+            "question_pinyin": "Zhe ge beizi gui bu gui?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l10/v01_beizi.png",
+            "sampleAnswer": "这个杯子不贵。",
+            "sampleAnswerPinyin": "Zhe ge beizi bu gui.",
+            "patternType": "贵不贵？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：贵不贵？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l10_pt_06",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "这件衣服贵不贵？",
+          "prompt_en": "Ask if it is expensive and answer in Chinese.",
+          "data": {
+            "question": "这件衣服贵不贵？",
+            "question_pinyin": "Zhe jian yifu gui bu gui?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l10/v08_gui.png",
+            "sampleAnswer": "这件衣服很贵。",
+            "sampleAnswerPinyin": "Zhe jian yifu hen gui.",
+            "patternType": "贵不贵？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：贵不贵？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l10_pt_07",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "你买什么？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "你买什么？",
+            "question_pinyin": "Ni mai shenme?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l10/v05_pingguo.png",
+            "sampleAnswer": "我买苹果。",
+            "sampleAnswerPinyin": "Wo mai pingguo.",
+            "patternType": "买什么？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：买什么？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l10_pt_08",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "你在哪儿买东西？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "你在哪儿买东西？",
+            "question_pinyin": "Ni zai nar mai dongxi?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l10/v06_shangdian.png",
+            "sampleAnswer": "我在商店买东西。",
+            "sampleAnswerPinyin": "Wo zai shangdian mai dongxi.",
+            "patternType": "在哪儿买？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：在哪儿买？",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "classProQuestions": {
+    "pictureGuess": [
+      {
+        "id": "v1_l10_1",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l10/v01_beizi.png",
+          "image_hint": "杯子",
+          "options": [
+            "杯子",
+            "钱",
+            "水果",
+            "苹果"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "杯子",
+        "kp": "杯子",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l10_2",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l10/v03_qian.png",
+          "image_hint": "钱",
+          "options": [
+            "钱",
+            "杯子",
+            "水果",
+            "苹果"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "钱",
+        "kp": "钱",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l10_3",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l10/v04_shuiguo.png",
+          "image_hint": "水果",
+          "options": [
+            "水果",
+            "杯子",
+            "钱",
+            "苹果"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "水果",
+        "kp": "水果",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l10_4",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l10/v05_pingguo.png",
+          "image_hint": "苹果",
+          "options": [
+            "苹果",
+            "杯子",
+            "钱",
+            "水果"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "苹果",
+        "kp": "苹果",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l10_5",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l10/v06_shangdian.png",
+          "image_hint": "商店",
+          "options": [
+            "商店",
+            "杯子",
+            "钱",
+            "水果"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "商店",
+        "kp": "商店",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l10_6",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l10/v07_yifu.png",
+          "image_hint": "衣服",
+          "options": [
+            "衣服",
+            "杯子",
+            "钱",
+            "水果"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "衣服",
+        "kp": "衣服",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l10_7",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l10/v02_shouhuoyuan.png",
+          "image_hint": "售货员",
+          "options": [
+            "售货员",
+            "杯子",
+            "钱",
+            "水果"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "售货员",
+        "kp": "售货员",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l10_8",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l10/v09_pianyi.png",
+          "image_hint": "便宜",
+          "options": [
+            "便宜",
+            "杯子",
+            "钱",
+            "水果"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "便宜",
+        "kp": "便宜",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l10_9",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l10/v08_gui.png",
+          "image_hint": "贵",
+          "options": [
+            "贵",
+            "杯子",
+            "钱",
+            "水果"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "贵",
+        "kp": "贵",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l10_10",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l10/v10_chuan.png",
+          "image_hint": "穿",
+          "options": [
+            "穿",
+            "杯子",
+            "钱",
+            "水果"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "穿",
+        "kp": "穿",
+        "sourceType": "textbook"
+      }
+    ],
+    "vocabFill": [
+      {
+        "id": "v5_l10_1",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "请问，有___吗？",
+          "sentence_pinyin": "Qǐngwèn, yǒu ___ ma?",
+          "options": [
+            "杯子",
+            "块",
+            "斤",
+            "件"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "杯子",
+        "kp": "杯子",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l10_2",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "这些五___钱一个。",
+          "sentence_pinyin": "Zhèxiē wǔ ___ qián yí gè.",
+          "options": [
+            "块",
+            "件",
+            "斤",
+            "本"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "块",
+        "kp": "块",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l10_3",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "我想买两斤___。",
+          "sentence_pinyin": "Wǒ xiǎng mǎi liǎng jīn ___.",
+          "options": [
+            "苹果",
+            "衣服",
+            "杯子",
+            "商店"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "苹果",
+        "kp": "苹果",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l10_4",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "这儿的苹果真___！",
+          "sentence_pinyin": "Zhèr de píngguǒ zhēn ___!",
+          "options": [
+            "便宜",
+            "女",
+            "男",
+            "少"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "便宜",
+        "kp": "便宜",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l10_5",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "这家商店___真多！",
+          "sentence_pinyin": "Zhè jiā shāngdiàn ___ zhēn duō!",
+          "options": [
+            "衣服",
+            "块",
+            "斤",
+            "元"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "衣服",
+        "kp": "衣服",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l10_6",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "这件一百元，___？",
+          "sentence_pinyin": "Zhè jiàn yìbǎi yuán, ___?",
+          "options": [
+            "怎么样",
+            "多少",
+            "哪儿",
+            "谁"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "怎么样",
+        "kp": "怎么样",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l10_7",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "好看，也不___。",
+          "sentence_pinyin": "Hǎokàn, yě bú ___.",
+          "options": [
+            "贵",
+            "少",
+            "男",
+            "女"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "贵",
+        "kp": "贵",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l10_8",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "小雪能___，买一件吧。",
+          "sentence_pinyin": "Xiǎoxuě néng ___, mǎi yí jiàn ba.",
+          "options": [
+            "穿",
+            "买",
+            "去",
+            "坐"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "穿",
+        "kp": "穿",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l10_9",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "男孩子的衣服在___。",
+          "sentence_pinyin": "Nán háizi de yīfu zài ___.",
+          "options": [
+            "那儿",
+            "这些",
+            "那些",
+            "块"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "那儿",
+        "kp": "那儿",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l10_10",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "杯子在___。",
+          "sentence_pinyin": "Bēizi zài ___.",
+          "options": [
+            "这边",
+            "几块",
+            "一斤",
+            "便宜"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这边",
+        "kp": "这边",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "wordMatch": [
+      {
+        "id": "v7_l10_1",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "多少钱一个？",
+              "right": "五块钱一个。"
+            },
+            {
+              "left": "您想买什么？",
+              "right": "我想买两斤苹果。"
+            },
+            {
+              "left": "这件衣服怎么样？",
+              "right": "好看，也不贵。"
+            },
+            {
+              "left": "杯子在哪儿？",
+              "right": "杯子在这边。"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l10_2",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "苹果多少钱一斤？",
+              "right": "三块五一斤。"
+            },
+            {
+              "left": "你买什么？",
+              "right": "我买这个吧。"
+            },
+            {
+              "left": "小明能穿吗？",
+              "right": "不能。"
+            },
+            {
+              "left": "男孩子的衣服在哪儿？",
+              "right": "在那儿。"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l10_3",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "这儿的水果多不多？",
+              "right": "这儿的水果真不少。"
+            },
+            {
+              "left": "这件多少钱？",
+              "right": "一百元。"
+            },
+            {
+              "left": "你喜欢这个杯子吗？",
+              "right": "我很喜欢，也不贵。"
+            },
+            {
+              "left": "你去哪儿买衣服？",
+              "right": "我去商店买衣服。"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l10_4",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "你想买几斤苹果？",
+              "right": "我想买两斤苹果。"
+            },
+            {
+              "left": "这些多少钱？",
+              "right": "七块钱。"
+            },
+            {
+              "left": "那些多少钱一个？",
+              "right": "十块钱一个。"
+            },
+            {
+              "left": "女孩子穿什么？",
+              "right": "女孩子穿这件衣服。"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l10_5",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "这个苹果怎么样？",
+              "right": "很好吃，也很便宜。"
+            },
+            {
+              "left": "这个菜怎么样？",
+              "right": "不太好吃。"
+            },
+            {
+              "left": "你有多少钱？",
+              "right": "我有十块钱。"
+            },
+            {
+              "left": "你在哪儿？",
+              "right": "我在这儿。"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "matchingGame": [
+      {
+        "id": "v7_l10_1",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "多少钱一个？",
+              "right": "五块钱一个。"
+            },
+            {
+              "left": "您想买什么？",
+              "right": "我想买两斤苹果。"
+            },
+            {
+              "left": "这件衣服怎么样？",
+              "right": "好看，也不贵。"
+            },
+            {
+              "left": "杯子在哪儿？",
+              "right": "杯子在这边。"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l10_2",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "苹果多少钱一斤？",
+              "right": "三块五一斤。"
+            },
+            {
+              "left": "你买什么？",
+              "right": "我买这个吧。"
+            },
+            {
+              "left": "小明能穿吗？",
+              "right": "不能。"
+            },
+            {
+              "left": "男孩子的衣服在哪儿？",
+              "right": "在那儿。"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l10_3",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "这儿的水果多不多？",
+              "right": "这儿的水果真不少。"
+            },
+            {
+              "left": "这件多少钱？",
+              "right": "一百元。"
+            },
+            {
+              "left": "你喜欢这个杯子吗？",
+              "right": "我很喜欢，也不贵。"
+            },
+            {
+              "left": "你去哪儿买衣服？",
+              "right": "我去商店买衣服。"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l10_4",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "你想买几斤苹果？",
+              "right": "我想买两斤苹果。"
+            },
+            {
+              "left": "这些多少钱？",
+              "right": "七块钱。"
+            },
+            {
+              "left": "那些多少钱一个？",
+              "right": "十块钱一个。"
+            },
+            {
+              "left": "女孩子穿什么？",
+              "right": "女孩子穿这件衣服。"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l10_5",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "这个苹果怎么样？",
+              "right": "很好吃，也很便宜。"
+            },
+            {
+              "left": "这个菜怎么样？",
+              "right": "不太好吃。"
+            },
+            {
+              "left": "你有多少钱？",
+              "right": "我有十块钱。"
+            },
+            {
+              "left": "你在哪儿？",
+              "right": "我在这儿。"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "sentenceTransform": [
+      {
+        "id": "v4_l10_1",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "五块钱一个。",
+          "source_pinyin": "Wǔ kuài qián yí gè.",
+          "options_pinyin": [
+            "Duōshao qián yí gè?",
+            "Nǐ zài nǎr?",
+            "Nǐ mǎi shénme?",
+            "Zhège zěnmeyàng?"
+          ],
+          "options": [
+            "多少钱一个？",
+            "你在哪儿？",
+            "你买什么？",
+            "这个怎么样？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "多少钱一个？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l10_2",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "我想买两斤苹果。",
+          "source_pinyin": "Wǒ xiǎng mǎi liǎng jīn píngguǒ.",
+          "options_pinyin": [
+            "Nǐ xiǎng mǎi shénme?",
+            "Duōshao qián yì jīn?",
+            "Nǐ zài nǎr mǎi?",
+            "Nǐ jǐ diǎn mǎi?"
+          ],
+          "options": [
+            "你想买什么？",
+            "多少钱一斤？",
+            "你在哪儿买？",
+            "你几点买？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你想买什么？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l10_3",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "杯子在这边。",
+          "source_pinyin": "Bēizi zài zhèbiān.",
+          "options_pinyin": [
+            "Bēizi zài nǎr?",
+            "Bēizi duōshao qián?",
+            "Bēizi zěnmeyàng?",
+            "Nǐ mǎi bēizi ma?"
+          ],
+          "options": [
+            "杯子在哪儿？",
+            "杯子多少钱？",
+            "杯子怎么样？",
+            "你买杯子吗？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "杯子在哪儿？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l10_4",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "好看，也不贵。",
+          "source_pinyin": "Hǎokàn, yě bú guì.",
+          "options_pinyin": [
+            "Zhè jiàn yīfu zěnmeyàng?",
+            "Zhè jiàn yīfu zài nǎr?",
+            "Shéi mǎi yīfu?",
+            "Nǐ mǎi jǐ jiàn?"
+          ],
+          "options": [
+            "这件衣服怎么样？",
+            "这件衣服在哪儿？",
+            "谁买衣服？",
+            "你买几件？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这件衣服怎么样？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l10_5",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "男孩子的衣服在那儿。",
+          "source_pinyin": "Nán háizi de yīfu zài nàr.",
+          "options_pinyin": [
+            "Nán háizi de yīfu zài nǎr?",
+            "Nǚ háizi shì shéi?",
+            "Nǐ mǎi shénme shuǐguǒ?",
+            "Duōshao qián yì jīn?"
+          ],
+          "options": [
+            "男孩子的衣服在哪儿？",
+            "女孩子是谁？",
+            "你买什么水果？",
+            "多少钱一斤？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "男孩子的衣服在哪儿？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l10_6",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "这儿的苹果真便宜。",
+          "source_pinyin": "Zhèr de píngguǒ zhēn piányi.",
+          "options_pinyin": [
+            "Zhèr de píngguǒ zěnmeyàng?",
+            "Nǐ yǒu jǐ gè píngguǒ?",
+            "Píngguǒ zài nǎr?",
+            "Shéi mǎi píngguǒ?"
+          ],
+          "options": [
+            "这儿的苹果怎么样？",
+            "你有几个苹果？",
+            "苹果在哪儿？",
+            "谁买苹果？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这儿的苹果怎么样？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l10_7",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "我买这个吧。",
+          "source_pinyin": "Wǒ mǎi zhège ba.",
+          "options_pinyin": [
+            "Nǐ mǎi nǎge?",
+            "Nǐ jiào shénme?",
+            "Xiànzài jǐ diǎn?",
+            "Nǐ zài nǎr gōngzuò?"
+          ],
+          "options": [
+            "你买哪个？",
+            "你叫什么？",
+            "现在几点？",
+            "你在哪儿工作？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你买哪个？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l10_8",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "这件一百元。",
+          "source_pinyin": "Zhè jiàn yìbǎi yuán.",
+          "options_pinyin": [
+            "Zhè jiàn duōshao qián?",
+            "Nǐ mǎi jǐ jīn?",
+            "Zhè shì shéi?",
+            "Nǐ jǐ suì?"
+          ],
+          "options": [
+            "这件多少钱？",
+            "你买几斤？",
+            "这是谁？",
+            "你几岁？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这件多少钱？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l10_9",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "小雪能穿。",
+          "source_pinyin": "Xiǎoxuě néng chuān.",
+          "options_pinyin": [
+            "Xiǎoxuě néng chuān ma?",
+            "Xiǎoxuě zài nǎr?",
+            "Xiǎoxuě mǎi shénme shuǐguǒ?",
+            "Xiǎoxuě jǐ diǎn xiàkè?"
+          ],
+          "options": [
+            "小雪能穿吗？",
+            "小雪在哪儿？",
+            "小雪买什么水果？",
+            "小雪几点下课？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "小雪能穿吗？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l10_10",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "我在这儿。",
+          "source_pinyin": "Wǒ zài zhèr.",
+          "options_pinyin": [
+            "Nǐ zài nǎr?",
+            "Nǐ mǎi shénme?",
+            "Zhèr de píngguǒ zěnmeyàng?",
+            "Nǐ xiǎng qù nǎr?"
+          ],
+          "options": [
+            "你在哪儿？",
+            "你买什么？",
+            "这儿的苹果怎么样？",
+            "你想去哪儿？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你在哪儿？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "ordering": [
+      {
+        "id": "g1_l10_1",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "这儿",
+            "的",
+            "苹果",
+            "真",
+            "便宜"
+          ],
+          "chunks_pinyin": [
+            "zhèr",
+            "de",
+            "píngguǒ",
+            "zhēn",
+            "piányi"
+          ]
+        },
+        "correct_answer": "这儿的苹果真便宜",
+        "acceptable_answers": [
+          "这儿的苹果真便宜",
+          "这儿的苹果真便宜。",
+          "这儿的苹果真便宜？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l10_2",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "杯子",
+            "在",
+            "这边"
+          ],
+          "chunks_pinyin": [
+            "bēizi",
+            "zài",
+            "zhèbiān"
+          ]
+        },
+        "correct_answer": "杯子在这边",
+        "acceptable_answers": [
+          "杯子在这边",
+          "杯子在这边。",
+          "杯子在这边？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l10_3",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "我",
+            "想",
+            "买",
+            "两斤",
+            "苹果"
+          ],
+          "chunks_pinyin": [
+            "wǒ",
+            "xiǎng",
+            "mǎi",
+            "liǎng jīn",
+            "píngguǒ"
+          ]
+        },
+        "correct_answer": "我想买两斤苹果",
+        "acceptable_answers": [
+          "我想买两斤苹果",
+          "我想买两斤苹果。",
+          "我想买两斤苹果？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l10_4",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "这些",
+            "五块钱",
+            "一个"
+          ],
+          "chunks_pinyin": [
+            "zhèxiē",
+            "wǔ kuài qián",
+            "yí gè"
+          ]
+        },
+        "correct_answer": "这些五块钱一个",
+        "acceptable_answers": [
+          "这些五块钱一个",
+          "这些五块钱一个。",
+          "这些五块钱一个？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l10_5",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "男孩子",
+            "的",
+            "衣服",
+            "在",
+            "那儿"
+          ],
+          "chunks_pinyin": [
+            "nán háizi",
+            "de",
+            "yīfu",
+            "zài",
+            "nàr"
+          ]
+        },
+        "correct_answer": "男孩子的衣服在那儿",
+        "acceptable_answers": [
+          "男孩子的衣服在那儿",
+          "男孩子的衣服在那儿。",
+          "男孩子的衣服在那儿？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l10_6",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "这件",
+            "衣服",
+            "怎么样"
+          ],
+          "chunks_pinyin": [
+            "zhè jiàn",
+            "yīfu",
+            "zěnmeyàng"
+          ]
+        },
+        "correct_answer": "这件衣服怎么样",
+        "acceptable_answers": [
+          "这件衣服怎么样",
+          "这件衣服怎么样。",
+          "这件衣服怎么样？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l10_7",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "这家",
+            "商店",
+            "衣服",
+            "真",
+            "多"
+          ],
+          "chunks_pinyin": [
+            "zhè jiā",
+            "shāngdiàn",
+            "yīfu",
+            "zhēn",
+            "duō"
+          ]
+        },
+        "correct_answer": "这家商店衣服真多",
+        "acceptable_answers": [
+          "这家商店衣服真多",
+          "这家商店衣服真多。",
+          "这家商店衣服真多？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l10_8",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "我",
+            "买",
+            "这个",
+            "吧"
+          ],
+          "chunks_pinyin": [
+            "wǒ",
+            "mǎi",
+            "zhège",
+            "ba"
+          ]
+        },
+        "correct_answer": "我买这个吧",
+        "acceptable_answers": [
+          "我买这个吧",
+          "我买这个吧。",
+          "我买这个吧？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l10_9",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "小雪",
+            "能",
+            "穿"
+          ],
+          "chunks_pinyin": [
+            "Xiǎoxuě",
+            "néng",
+            "chuān"
+          ]
+        },
+        "correct_answer": "小雪能穿",
+        "acceptable_answers": [
+          "小雪能穿",
+          "小雪能穿。",
+          "小雪能穿？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l10_10",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "这儿",
+            "的",
+            "水果",
+            "真",
+            "不少"
+          ],
+          "chunks_pinyin": [
+            "zhèr",
+            "de",
+            "shuǐguǒ",
+            "zhēn",
+            "bù shǎo"
+          ]
+        },
+        "correct_answer": "这儿的水果真不少",
+        "acceptable_answers": [
+          "这儿的水果真不少",
+          "这儿的水果真不少。",
+          "这儿的水果真不少？"
+        ],
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "translationChoice": [
+      {
+        "id": "trc_l10_1",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "The apples here are really cheap. / Яблоки здесь очень дешевые.",
+        "data": {
+          "question_en": "The apples here are really cheap.",
+          "question_ru": "Яблоки здесь очень дешевые.",
+          "options": [
+            "这儿的苹果真便宜。",
+            "这些五块钱一个。",
+            "杯子在这边。",
+            "我买这个吧。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这儿的苹果真便宜。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l10_2",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "How much is one? / Сколько стоит одна штука?",
+        "data": {
+          "question_en": "How much is one?",
+          "question_ru": "Сколько стоит одна штука?",
+          "options": [
+            "多少钱一个？",
+            "你在哪儿？",
+            "这件怎么样？",
+            "你买什么？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "多少钱一个？",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l10_3",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "I want to buy two jin of apples. / Я хочу купить два цзиня яблок.",
+        "data": {
+          "question_en": "I want to buy two jin of apples.",
+          "question_ru": "Я хочу купить два цзиня яблок.",
+          "options": [
+            "我想买两斤苹果。",
+            "我买一个杯子。",
+            "我去商店买衣服。",
+            "我在这儿学习。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "我想买两斤苹果。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l10_4",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "These are clothes for girls. / Это одежда для девочек.",
+        "data": {
+          "question_en": "These are clothes for girls.",
+          "question_ru": "Это одежда для девочек.",
+          "options": [
+            "这些是女孩子穿的衣服。",
+            "男孩子的衣服在那儿。",
+            "这家商店衣服真多。",
+            "小雪能穿。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这些是女孩子穿的衣服。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l10_5",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "It looks good and is not expensive. / Красиво, и недорого.",
+        "data": {
+          "question_en": "It looks good and is not expensive.",
+          "question_ru": "Красиво, и недорого.",
+          "options": [
+            "好看，也不贵。",
+            "这个菜不好吃。",
+            "我很喜欢。",
+            "这儿的水果不少。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "好看，也不贵。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l10_6",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "I want to buy a cup for my younger sister. / Я хочу купить чашку для младшей сестры.",
+        "data": {
+          "question_en": "I want to buy a cup for my younger sister.",
+          "question_ru": "Я хочу купить чашку для младшей сестры.",
+          "options": [
+            "我想给妹妹买一个杯子。",
+            "我想买两斤苹果。",
+            "杯子在这边。",
+            "这些杯子很贵。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "我想给妹妹买一个杯子。",
+        "kp": "译文选句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "trc_l10_7",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "This store has a lot of fruit. / В этом магазине много фруктов.",
+        "data": {
+          "question_en": "This store has a lot of fruit.",
+          "question_ru": "В этом магазине много фруктов.",
+          "options": [
+            "这家商店水果很多。",
+            "这儿的苹果真便宜。",
+            "售货员在这边。",
+            "那些衣服不贵。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这家商店水果很多。",
+        "kp": "译文选句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "trc_l10_8",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "The boys' clothes are over there. / Одежда для мальчиков там.",
+        "data": {
+          "question_en": "The boys' clothes are over there.",
+          "question_ru": "Одежда для мальчиков там.",
+          "options": [
+            "男孩子的衣服在那儿。",
+            "女孩子穿这件衣服。",
+            "这件衣服不贵。",
+            "这家商店真大。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "男孩子的衣服在那儿。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l10_9",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "These cups are not too expensive. / Эти чашки не слишком дорогие.",
+        "data": {
+          "question_en": "These cups are not too expensive.",
+          "question_ru": "Эти чашки не слишком дорогие.",
+          "options": [
+            "这些杯子不太贵。",
+            "这些杯子五块钱一个。",
+            "那些衣服在那儿。",
+            "这儿的水果不少。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这些杯子不太贵。",
+        "kp": "译文选句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "trc_l10_10",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "What do you think of this piece of clothing? / Как тебе эта одежда?",
+        "data": {
+          "question_en": "What do you think of this piece of clothing?",
+          "question_ru": "Как тебе эта одежда?",
+          "options": [
+            "这件衣服怎么样？",
+            "这个杯子多少钱？",
+            "这个杯子在哪儿？",
+            "这件衣服是谁的？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这件衣服怎么样？",
+        "kp": "译文选句",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "textQa": [
+      {
+        "id": "ttq_l10_1",
+        "type": "text_qa_group",
+        "stage": "in_class",
+        "prompt_cn": "课文问答：根据课文内容回答。",
+        "prompt_en": "Text Q&A: answer from the dialogue.",
+        "data": {
+          "title": "课文一：买杯子",
+          "passage": "请问，有杯子吗？有，杯子在这边。多少钱一个？这些五块钱一个，那些十块钱一个。我买这个吧。",
+          "passage_pinyin": "Qǐngwèn, yǒu bēizi ma? Yǒu, bēizi zài zhèbiān. Duōshao qián yí gè? Zhèxiē wǔ kuài qián yí gè, nàxiē shí kuài qián yí gè. Wǒ mǎi zhège ba.",
+          "questions": [
+            {
+              "question_cn": "王一雪买什么？",
+              "question_pinyin": "Wáng Yīxuě mǎi shénme?",
+              "answer": "杯子",
+              "answer_pinyin": "bēizi",
+              "options": [
+                "杯子",
+                "苹果",
+                "衣服",
+                "水果"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "杯子在哪儿？",
+              "question_pinyin": "Bēizi zài nǎr?",
+              "answer": "这边",
+              "answer_pinyin": "zhèbiān",
+              "options": [
+                "这边",
+                "那儿",
+                "学校",
+                "医院"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "这些杯子多少钱一个？",
+              "question_pinyin": "Zhèxiē bēizi duōshao qián yí gè?",
+              "answer": "五块钱一个",
+              "answer_pinyin": "wǔ kuài qián yí gè",
+              "options": [
+                "五块钱一个",
+                "十块钱一个",
+                "三块五一斤",
+                "一百元一件"
+              ],
+              "correct_index": 0
+            }
+          ]
+        },
+        "correct_answer": "见每题答案",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "ttq_l10_2",
+        "type": "text_qa_group",
+        "stage": "in_class",
+        "prompt_cn": "课文问答：根据课文内容回答。",
+        "prompt_en": "Text Q&A: answer from the dialogue.",
+        "data": {
+          "title": "课文二：买苹果",
+          "passage": "这儿的水果真不少！您想买什么？我想买两斤苹果。苹果三块五一斤。这些七块二，七块钱吧。好的，这儿的苹果真便宜！",
+          "passage_pinyin": "Zhèr de shuǐguǒ zhēn bù shǎo! Nín xiǎng mǎi shénme? Wǒ xiǎng mǎi liǎng jīn píngguǒ. Píngguǒ sān kuài wǔ yì jīn. Zhèxiē qī kuài èr, qī kuài qián ba. Hǎo de, zhèr de píngguǒ zhēn piányi!",
+          "questions": [
+            {
+              "question_cn": "王一雪想买什么？",
+              "question_pinyin": "Wáng Yīxuě xiǎng mǎi shénme?",
+              "answer": "两斤苹果",
+              "answer_pinyin": "liǎng jīn píngguǒ",
+              "options": [
+                "两斤苹果",
+                "一个杯子",
+                "一件衣服",
+                "两个孩子"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "苹果多少钱一斤？",
+              "question_pinyin": "Píngguǒ duōshao qián yì jīn?",
+              "answer": "三块五一斤",
+              "answer_pinyin": "sān kuài wǔ yì jīn",
+              "options": [
+                "三块五一斤",
+                "五块钱一个",
+                "七块钱一个",
+                "一百元一件"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "这儿的苹果怎么样？",
+              "question_pinyin": "Zhèr de píngguǒ zěnmeyàng?",
+              "answer": "真便宜",
+              "answer_pinyin": "zhēn piányi",
+              "options": [
+                "真便宜",
+                "太贵了",
+                "不好吃",
+                "很少"
+              ],
+              "correct_index": 0
+            }
+          ]
+        },
+        "correct_answer": "见每题答案",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "ttq_l10_3",
+        "type": "text_qa_group",
+        "stage": "in_class",
+        "prompt_cn": "课文问答：根据课文内容回答。",
+        "prompt_en": "Text Q&A: answer from the dialogue.",
+        "data": {
+          "title": "课文三：买衣服",
+          "passage": "这家商店衣服真多！这件一百元，怎么样？好看，也不贵。小雪能穿，买一件吧。好的。小明能穿吗？不能。这些是女孩子穿的衣服，男孩子的衣服在那儿。好的。",
+          "passage_pinyin": "Zhè jiā shāngdiàn yīfu zhēn duō! Zhè jiàn yìbǎi yuán, zěnmeyàng? Hǎokàn, yě bú guì. Xiǎoxuě néng chuān, mǎi yí jiàn ba. Hǎo de. Xiǎomíng néng chuān ma? Bù néng. Zhèxiē shì nǚ háizi chuān de yīfu, nán háizi de yīfu zài nàr. Hǎo de.",
+          "questions": [
+            {
+              "question_cn": "这件衣服多少钱？",
+              "question_pinyin": "Zhè jiàn yīfu duōshao qián?",
+              "answer": "一百元",
+              "answer_pinyin": "yìbǎi yuán",
+              "options": [
+                "一百元",
+                "十块钱",
+                "五块钱",
+                "七块钱"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "刘明觉得这件衣服怎么样？",
+              "question_pinyin": "Liú Míng juéde zhè jiàn yīfu zěnmeyàng?",
+              "answer": "好看，也不贵",
+              "answer_pinyin": "hǎokàn, yě bú guì",
+              "options": [
+                "好看，也不贵",
+                "不好看，也很贵",
+                "很少，也便宜",
+                "很好吃，也不贵"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "男孩子的衣服在哪儿？",
+              "question_pinyin": "Nán háizi de yīfu zài nǎr?",
+              "answer": "那儿",
+              "answer_pinyin": "nàr",
+              "options": [
+                "那儿",
+                "这边",
+                "家里",
+                "学校"
+              ],
+              "correct_index": 0
+            }
+          ]
+        },
+        "correct_answer": "见每题答案",
+        "sourceType": "textbook"
+      }
+    ]
+  },
+  "hanziWriting": {
+    "characters": [
+      {
+        "char": "杯",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "售",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "货",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "员",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "这",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "边",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "钱",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "些",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "块",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "那",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "水",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "果",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "少",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "斤",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "苹",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "便",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "宜",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "商",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "店",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "衣",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "服",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "件",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "元",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "怎",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "么",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "样",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "贵",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "穿",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "女",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "男",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "儿",
+        "sourceType": "textbook"
+      }
+    ]
+  },
+  "hanziRecognition": {
+    "enabled": true,
+    "showPinyin": false,
+    "rounds": [
+      {
+        "id": "hanzi_to_pinyin",
+        "title": "看汉字选拼音",
+        "titleEn": "Choose pinyin"
+      },
+      {
+        "id": "hanzi_to_meaning",
+        "title": "看汉字选意思",
+        "titleEn": "Choose meaning"
+      },
+      {
+        "id": "meaning_to_hanzi",
+        "title": "看意思选汉字",
+        "titleEn": "Choose character"
+      }
+    ],
+    "groups": [
+      {
+        "id": "money_goods",
+        "title": "商品与钱",
+        "vocabularyIds": [
+          "v_l10_01",
+          "v_l10_04",
+          "v_l10_06",
+          "v_l10_17",
+          "v_l10_12",
+          "v_l10_15"
+        ]
+      },
+      {
+        "id": "shopping_place",
+        "title": "购物地点与人物",
+        "vocabularyIds": [
+          "v_l10_02",
+          "v_l10_03",
+          "v_l10_08",
+          "v_l10_14",
+          "v_l10_23",
+          "v_l10_07"
+        ]
+      },
+      {
+        "id": "description",
+        "title": "评价与数量",
+        "vocabularyIds": [
+          "v_l10_09",
+          "v_l10_10",
+          "v_l10_11",
+          "v_l10_13",
+          "v_l10_19",
+          "v_l10_18"
+        ]
+      }
+    ]
+  },
+  "postClassHomework": {
+    "mode": "required_optional",
+    "instructions": {
+      "required": "必选：完成汉字书写。",
+      "optional": "可选：选择一个输出任务完成。"
+    },
+    "required": [
+      {
+        "id": "post_l10_req_01",
+        "type": "handwriting",
+        "prompt_cn": "必选：书写本课汉字：杯、货、钱、些、块、水、果、少、斤、苹、便、宜、商、店、衣、服、件、元、贵、穿、女、男",
+        "characters": [
+          "杯",
+          "货",
+          "钱",
+          "些",
+          "块",
+          "水",
+          "果",
+          "少",
+          "斤",
+          "苹",
+          "便",
+          "宜",
+          "商",
+          "店",
+          "衣",
+          "服",
+          "件",
+          "元",
+          "贵",
+          "穿",
+          "女",
+          "男"
+        ],
+        "instructions": "每个字至少写 3 次。",
+        "sourceType": "textbook"
+      }
+    ],
+    "optional": [
+      {
+        "id": "post_l10_opt_01",
+        "type": "writing",
+        "prompt_cn": "教学扩展：随机选择今天所学生词 3-5 个，写一段购物小短文。",
+        "instructions": "建议使用：买、多少钱、块、苹果、便宜、贵、衣服、怎么样。",
+        "openEnded": true,
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "post_l10_opt_02",
+        "type": "oral_prepare",
+        "prompt_cn": "教学扩展：准备话题“买东西”。",
+        "instructions": "请准备一个 4-6 句对话：你想买什么？多少钱？贵不贵？你买不买？",
+        "sampleAnswer": "A：这个杯子多少钱？B：五块钱一个。A：不贵。我买这个吧。",
+        "openEnded": true,
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "post_l10_opt_03",
+        "type": "reflection",
+        "prompt_cn": "教学扩展：今天哪一个钱数或购物句子最难？",
+        "instructions": "请写中文或英文反思。",
+        "openEnded": true,
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "report": {
+    "focus": [
+      "购物问价",
+      "钱数表达",
+      "形容词谓语句",
+      "怎么样"
+    ]
+  }
+}

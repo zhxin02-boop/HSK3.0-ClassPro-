@@ -4692,6 +4692,272 @@
           "sourceType": "teaching_extension",
           "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
         }
+      ],
+      "r4_picture_talk": [
+        {
+          "id": "r4_l09_pt_01",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "手机在哪儿？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "手机在哪儿？",
+            "question_pinyin": "Shouji zai nar?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l08/v05_zhuozi.png",
+            "sampleAnswer": "手机在桌子上。",
+            "sampleAnswerPinyin": "Shouji zai zhuozi shang.",
+            "patternType": "S 在哪儿？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：S 在哪儿？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l09_pt_02",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "小猫在哪儿？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "小猫在哪儿？",
+            "question_pinyin": "Xiao mao zai nar?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l08/v06_zhuozi_xia.png",
+            "sampleAnswer": "小猫在桌子下。",
+            "sampleAnswerPinyin": "Xiao mao zai zhuozi xia.",
+            "patternType": "S 在哪儿？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：S 在哪儿？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l09_pt_03",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "椅子在哪儿？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "椅子在哪儿？",
+            "question_pinyin": "Yizi zai nar?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l09/v03_yizi.png",
+            "sampleAnswer": "椅子在桌子前。",
+            "sampleAnswerPinyin": "Yizi zai zhuozi qian.",
+            "patternType": "S 在哪儿？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：S 在哪儿？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l09_pt_04",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "书在哪儿？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "书在哪儿？",
+            "question_pinyin": "Shu zai nar?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l09/v05_shu.png",
+            "sampleAnswer": "书在椅子上。",
+            "sampleAnswerPinyin": "Shu zai yizi shang.",
+            "patternType": "S 在哪儿？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：S 在哪儿？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l09_pt_05",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "桌子上有什么？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "桌子上有什么？",
+            "question_pinyin": "Zhuozi shang you shenme?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l08/v05_zhuozi.png",
+            "sampleAnswer": "桌子上有一个电脑。",
+            "sampleAnswerPinyin": "Zhuozi shang you yi ge diannao.",
+            "patternType": "N 方位词有什么？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：N 方位词有什么？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l09_pt_06",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "超市里有什么？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "超市里有什么？",
+            "question_pinyin": "Chaoshi li you shenme?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l10/v06_shangdian.png",
+            "sampleAnswer": "超市里有牛奶和水果。",
+            "sampleAnswerPinyin": "Chaoshi li you niunai he shuiguo.",
+            "patternType": "N 方位词有什么？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：N 方位词有什么？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l09_pt_07",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "房间外有什么？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "房间外有什么？",
+            "question_pinyin": "Fangjian wai you shenme?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l08/v02_wai.png",
+            "sampleAnswer": "房间外有一只小猫。",
+            "sampleAnswerPinyin": "Fangjian wai you yi zhi xiao mao.",
+            "patternType": "N 方位词有什么？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：N 方位词有什么？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l09_pt_08",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "书店前有什么？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "书店前有什么？",
+            "question_pinyin": "Shudian qian you shenme?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l08/v08_xuexiao_qian.png",
+            "sampleAnswer": "书店前有很多学生。",
+            "sampleAnswerPinyin": "Shudian qian you hen duo xuesheng.",
+            "patternType": "N 方位词有什么？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：N 方位词有什么？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l09_pt_09",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "胡医生在哪儿工作？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "胡医生在哪儿工作？",
+            "question_pinyin": "Hu yisheng zai nar gongzuo?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l08/v12_yisheng_bingren.png",
+            "sampleAnswer": "胡医生在医院里工作。",
+            "sampleAnswerPinyin": "Hu yisheng zai yiyuan li gongzuo.",
+            "patternType": "S 在 N 方位词 VP"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：S 在 N 方位词 VP",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l09_pt_10",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "李文在哪儿看电影？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "李文在哪儿看电影？",
+            "question_pinyin": "Li Wen zai nar kan dianying?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l09/v11_dianshi.png",
+            "sampleAnswer": "李文在电影院里看电影。",
+            "sampleAnswerPinyin": "Li Wen zai dianyingyuan li kan dianying.",
+            "patternType": "S 在 N 方位词 VP"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：S 在 N 方位词 VP",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l09_pt_11",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "学生们去哪儿？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "学生们去哪儿？",
+            "question_pinyin": "Xueshengmen qu nar?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l08/v08_xuexiao_qian.png",
+            "sampleAnswer": "学生们去学校里。",
+            "sampleAnswerPinyin": "Xueshengmen qu xuexiao li.",
+            "patternType": "S 去 N 方位词"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：S 去 N 方位词",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l09_pt_12",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "安妮去哪儿？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "安妮去哪儿？",
+            "question_pinyin": "Anni qu nar?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l09/v01_qianbian.png",
+            "sampleAnswer": "安妮去电影院后。",
+            "sampleAnswerPinyin": "Anni qu dianyingyuan hou.",
+            "patternType": "S 去 N 方位词"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：S 去 N 方位词",
+          "sourceType": "teaching_extension"
+        }
       ]
     }
   },

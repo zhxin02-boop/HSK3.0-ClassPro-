@@ -11,7 +11,7 @@ window.HSK1_CURRICULUM=[
   {id:"HSK1-L07",no:7,title:"我晚上六点半下班",en:"I’ll finish work at 6:30 in the evening",page:"045",block:2,openForUse:true,teacherVisible:true},
   {id:"HSK1-L08",no:8,title:"我爸爸也在医院工作",en:"My father also works at a hospital",page:"054",block:2,openForUse:true,teacherVisible:true},
   {id:"HSK1-L09",no:9,title:"我明天上午在学校学习",en:"I’ll be studying at school tomorrow morning",page:"061",block:2,openForUse:true,teacherVisible:true},
-  {id:"HSK1-L10",no:10,title:"这儿的苹果真便宜！",en:"The apples here are really affordable!",page:"070",block:2,openForUse:false,teacherVisible:true},
+  {id:"HSK1-L10",no:10,title:"这儿的苹果真便宜！",en:"The apples here are really affordable!",page:"070",block:2,openForUse:true,teacherVisible:true},
   {id:"HSK1-L11",no:11,title:"我读大学呢",en:"I’m studying at a university",page:"078",block:3,openForUse:false,teacherVisible:true},
   {id:"HSK1-L12",no:12,title:"昨天下雪了",en:"It snowed yesterday",page:"086",block:3,openForUse:false,teacherVisible:true},
   {id:"HSK1-L13",no:13,title:"请给我一杯茶",en:"I’ll have a cup of tea, please",page:"095",block:3,openForUse:false,teacherVisible:true},

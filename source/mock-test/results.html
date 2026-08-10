@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mock Test Results</title>
+<script src="../shared/context.js"></script>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f7f8f3;color:#203421;padding:18px}.wrap{max-width:1050px;margin:auto}.hero,.panel{background:#fff;border:1px solid #dfeac8;border-radius:18px;box-shadow:0 14px 32px rgba(86,115,55,.10)}.hero{padding:24px;margin-bottom:16px;background:linear-gradient(135deg,#fff,#edf6d9)}h1{margin:0 0 8px;color:#203421}.muted{color:#74806d;font-size:14px;line-height:1.6}.panel{padding:18px;margin-bottom:14px}.btn{border:0;border-radius:999px;padding:10px 14px;background:#4f8f2d;color:#fff;font-weight:900;cursor:pointer;text-decoration:none;display:inline-flex;margin-right:8px}table{width:100%;border-collapse:collapse;margin-top:12px;background:#fff}th,td{padding:10px;border-bottom:1px solid #e7efd5;text-align:left;font-size:14px}th{background:#edf6d9;color:#3f7f32}.pill{display:inline-flex;border-radius:999px;padding:5px 10px;background:#edf6d9;color:#3f7f32;font-weight:900}.empty{padding:24px;text-align:center;color:#74806d}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <section class="hero">
+    <h1>测 / Mock Test Results</h1>
+    <div class="muted">只显示 `recordType=mock_test` 或 `stage=mock_test` 的记录。</div>
+  </section>
+  <section class="panel">
+    <button class="btn" onclick="loadData()">刷新记录 / Refresh</button>
+    <a class="btn" href="../teacher/index.html">教师主页 / Home</a>
+    <span id="status" class="muted"></span>
+  </section>
+  <section id="app" class="panel"><div class="empty">点击刷新记录。</div></section>
+</main>
+<script>
+var GAS="https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec";
+function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function val(x,keys){for(var i=0;i<keys.length;i++){if(x&&x[keys[i]]!=null&&x[keys[i]]!=="")return x[keys[i]]}var a=x&&x.__values||[];var idx={time:0,student:1,lesson:2,stage:3,module:4,score:6,total:7,answer:13,result:14,submittedAt:19};for(var j=0;j<keys.length;j++){if(idx[keys[j]]!=null&&a[idx[keys[j]]]!=null)return a[idx[keys[j]]]}return""}
+function flat(d){if(!d)return[];if(Array.isArray(d.data))return d.data;if(d.data){var out=[];for(var k in d.data)(d.data[k]||[]).forEach(function(x){out.push(x)});return out}return Array.isArray(d)?d:[]}
+function isMock(x){return String(val(x,["recordType"])).toLowerCase()==="mock_test"||String(val(x,["stage","环节"])).toLowerCase()==="mock_test"||String(val(x,["module","模块"])).toLowerCase()==="mock_test"||String(val(x,["lesson","课程"])).indexOf("MOCK")>=0}
+function sourceUrl(){return (location.hostname==="localhost"||location.hostname==="127.0.0.1")?"/api/reviews?source=local":GAS+"?action=get_all"}
+function loadData(){document.getElementById("status").textContent="正在读取...";fetch(sourceUrl()).then(function(r){return r.json()}).then(function(d){var rows=flat(d).filter(isMock);document.getElementById("status").textContent="记录 "+rows.length+" 条";render(rows)}).catch(function(){document.getElementById("status").textContent="读取失败";document.getElementById("app").innerHTML='<div class="empty">读取失败。</div>'})}
+function render(rows){if(!rows.length){document.getElementById("app").innerHTML='<div class="empty">暂无 mock test 记录。</div>';return}rows=rows.slice().sort(function(a,b){return String(val(b,["submittedAt","time"])).localeCompare(String(val(a,["submittedAt","time"])))});document.getElementById("app").innerHTML='<table><tr><th>时间</th><th>姓名</th><th>测试</th><th>得分</th><th>结果</th><th>错题/薄弱点</th></tr>'+rows.map(function(x){return'<tr><td>'+esc(val(x,["submittedAt","time"]))+'</td><td>'+esc(val(x,["studentName","name","姓名","student"]))+'</td><td>'+esc(val(x,["testId","lesson","课程"]))+'</td><td><span class="pill">'+esc(val(x,["score"]))+' / '+esc(val(x,["total"]))+'</span></td><td>'+esc(val(x,["result"]))+'</td><td>'+esc(val(x,["weakPoints"]))+'</td></tr>'}).join("")+'</table>'}
+</script>
+</body>
+</html>

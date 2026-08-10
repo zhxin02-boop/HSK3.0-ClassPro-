@@ -1988,6 +1988,43 @@
           "sourceType": "teaching_extension"
         }
       ]
+    },
+    "g_l08_04": {
+      "structure": "S 在哪儿？ / N 方位词有什么？ / S 在 N 方位词 VP / S 去 N 方位词",
+      "structureEn": "Four speaking patterns for location words.",
+      "structureRu": "Four speaking patterns for location words.",
+      "english": "Use location words after a noun or place in short oral answers.",
+      "russian": "Use location words after a noun or place in short oral answers.",
+      "title": "教学扩展：方位词口语句型",
+      "titleEn": "Teaching Extension: Location Speaking Patterns",
+      "explanation": "用四个句型练习方位词。",
+      "formula": {
+        "pattern": "S 在哪儿？ / N 方位词有什么？ / S 在 N 方位词 VP / S 去 N 方位词",
+        "patternEn": "Four speaking patterns for location words.",
+        "note": "用四个句型练习方位词。",
+        "noteEn": "Ask where, what is there, where an action happens, and where someone goes.",
+        "noteRu": "Ask where, what is there, where an action happens, and where someone goes."
+      },
+      "examples": [
+        {
+          "hanzi": "手机在桌子上。",
+          "pinyin": "Shouji zai zhuozi shang.",
+          "english": "The cell phone is on the table.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "桌子下有一只小猫。",
+          "pinyin": "Zhuozi xia you yi zhi xiao mao.",
+          "english": "There is a little cat under the table.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "胡医生在医院里工作。",
+          "pinyin": "Hu yisheng zai yiyuan li gongzuo.",
+          "english": "Doctor Hu works in the hospital.",
+          "sourceType": "teaching_extension"
+        }
+      ]
     }
   },
   "grammar": [
@@ -2068,6 +2105,44 @@
           "hanzi": "我不能去学校吃午饭。",
           "pinyin": "Wǒ bù néng qù xuéxiào chī wǔfàn.",
           "english": "I can't go to school for lunch.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    {
+      "id": "g_l08_04",
+      "structure": "S 在哪儿？ / N 方位词有什么？ / S 在 N 方位词 VP / S 去 N 方位词",
+      "structureEn": "Four speaking patterns for location words.",
+      "structureRu": "Four speaking patterns for location words.",
+      "english": "Use location words after a noun or place in short oral answers.",
+      "russian": "Use location words after a noun or place in short oral answers.",
+      "title": "教学扩展：方位词口语句型",
+      "titleEn": "Teaching Extension: Location Speaking Patterns",
+      "explanation": "用四个句型练习方位词。",
+      "formula": {
+        "pattern": "S 在哪儿？ / N 方位词有什么？ / S 在 N 方位词 VP / S 去 N 方位词",
+        "patternEn": "Four speaking patterns for location words.",
+        "note": "用四个句型练习方位词。",
+        "noteEn": "Ask where, what is there, where an action happens, and where someone goes.",
+        "noteRu": "Ask where, what is there, where an action happens, and where someone goes."
+      },
+      "examples": [
+        {
+          "hanzi": "手机在桌子上。",
+          "pinyin": "Shouji zai zhuozi shang.",
+          "english": "The cell phone is on the table.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "桌子下有一只小猫。",
+          "pinyin": "Zhuozi xia you yi zhi xiao mao.",
+          "english": "There is a little cat under the table.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "胡医生在医院里工作。",
+          "pinyin": "Hu yisheng zai yiyuan li gongzuo.",
+          "english": "Doctor Hu works in the hospital.",
           "sourceType": "teaching_extension"
         }
       ]
@@ -4935,6 +5010,140 @@
           "kp": "英/俄译中选句",
           "sourceType": "teaching_extension",
           "sourceTextPolicy": "教学扩展：用于复现本课和前课词汇、句型，不替代教材原句。"
+        }
+      ],
+      "r4_picture_talk": [
+        {
+          "id": "r4_l08_pt_01",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "手机在哪儿？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "手机在哪儿？",
+            "question_pinyin": "Shouji zai nar?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l08/v05_zhuozi.png",
+            "sampleAnswer": "手机在桌子上。",
+            "sampleAnswerPinyin": "Shouji zai zhuozi shang.",
+            "patternType": "S 在哪儿？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：S 在哪儿？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l08_pt_02",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "小猫在哪儿？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "小猫在哪儿？",
+            "question_pinyin": "Xiao mao zai nar?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l08/v06_zhuozi_xia.png",
+            "sampleAnswer": "小猫在桌子下。",
+            "sampleAnswerPinyin": "Xiao mao zai zhuozi xia.",
+            "patternType": "S 在哪儿？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：S 在哪儿？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l08_pt_03",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "胡医生在哪儿？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "胡医生在哪儿？",
+            "question_pinyin": "Hu yisheng zai nar?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l08/v12_yisheng_bingren.png",
+            "sampleAnswer": "胡医生在医院里。",
+            "sampleAnswerPinyin": "Hu yisheng zai yiyuan li.",
+            "patternType": "S 在哪儿？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：S 在哪儿？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l08_pt_04",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "书店前有什么？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "书店前有什么？",
+            "question_pinyin": "Shudian qian you shenme?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l08/v08_xuexiao_qian.png",
+            "sampleAnswer": "书店前有很多学生。",
+            "sampleAnswerPinyin": "Shudian qian you hen duo xuesheng.",
+            "patternType": "N 方位词有什么？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：N 方位词有什么？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l08_pt_05",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "房间外有什么？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "房间外有什么？",
+            "question_pinyin": "Fangjian wai you shenme?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l08/v02_wai.png",
+            "sampleAnswer": "房间外有一只小猫。",
+            "sampleAnswerPinyin": "Fangjian wai you yi zhi xiao mao.",
+            "patternType": "N 方位词有什么？"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：N 方位词有什么？",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l08_pt_06",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "胡医生在哪儿工作？",
+          "prompt_en": "Look at the picture and answer the question in Chinese.",
+          "data": {
+            "question": "胡医生在哪儿工作？",
+            "question_pinyin": "Hu yisheng zai nar gongzuo?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l08/v12_yisheng_bingren.png",
+            "sampleAnswer": "胡医生在医院里工作。",
+            "sampleAnswerPinyin": "Hu yisheng zai yiyuan li gongzuo.",
+            "patternType": "S 在 N 方位词 VP"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：S 在 N 方位词 VP",
+          "sourceType": "teaching_extension"
         }
       ]
     }

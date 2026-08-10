@@ -37,6 +37,7 @@ body{font-family:Nunito,Helvetica Neue,sans-serif;background:var(--bg);margin:0;
 .home-card.teach{background:#EDF3FF;color:#2D5DB8}
 .home-card.practice{background:#FFF0EE;color:#C74B3F}
 .home-card.battle{background:#E8F8EE;color:#1E6B3A}
+.home-card.mock{background:#F3F0FF;color:#4B35A6}
 .header{background:#fff;padding:8px 20px;border-bottom:0.5px solid var(--line);display:flex;justify-content:space-between;align-items:center}
 .header h1{margin:0;font-size:16px;color:var(--text);cursor:pointer;font-weight:700}
 .header-right{display:flex;gap:6px;align-items:center}
@@ -295,6 +296,7 @@ box-shadow:0 26px 70px rgba(0,0,0,.24);
 .home-card.teach{box-shadow:0 26px 70px rgba(37,99,216,.30)}
 .home-card.practice{box-shadow:0 26px 70px rgba(240,90,63,.30)}
 .home-card.battle{box-shadow:0 26px 70px rgba(38,162,105,.26)}
+.home-card.mock{box-shadow:0 26px 70px rgba(96,65,190,.22)}
 .home-card:hover{transform:translateY(-8px) scale(1.015)}
 .grammar-tab{font-size:14px;padding:9px 16px}
 .grammar-tab.active{background:linear-gradient(135deg,var(--stage-blue),var(--stage-cyan));border-color:transparent}
@@ -529,7 +531,7 @@ margin-bottom:8px;
 }
 .brand-lockup .home-title{margin-bottom:0!important}
 .home-lesson{color:var(--sun-muted)!important;font-size:22px!important;margin-bottom:36px!important}
-.home-cards{max-width:860px!important}
+.home-cards{grid-template-columns:repeat(4,minmax(0,1fr))!important;max-width:1180px!important}
 .home-card{
 background:rgba(255,253,248,.96)!important;
 border:1px solid rgba(220,232,192,.9)!important;
@@ -621,6 +623,10 @@ font-size:30px!important;
 .home-title{font-size:42px!important}
 .brand-lockup{padding-top:86px}
 .sunny-home{right:auto;left:50%;top:0;transform:translateX(-50%);width:88px;height:126px;margin:0}
+.home-cards{grid-template-columns:1fr!important}
+}
+@media(min-width:981px) and (max-width:1220px){
+.home-cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;max-width:760px!important}
 }
 </style>
 <style>
@@ -660,7 +666,7 @@ init(){this.as=(MT.characters||[]).filter(function(c){return c.role==="student"}
 _r(){document.getElementById("app").innerHTML=this._rm()},
 stb(t,s){this.mt=t;this.st=s||"";this._r()},
 _rm(){var h='<div class="cp-sidebar"><div class="cp-logo" onclick="ap.stb(\'home\')">C</div><button class="sb-btn'+(this.mt==="teach"?" active":"")+'" onclick="ap.stb(\'teach\',\'tv\')">讲</button><button class="sb-btn'+(this.mt==="practice"?" active":"")+'" onclick="ap.stb(\'practice\',\'v4\')">练</button><button class="sb-btn'+(this.mt==="battle"?" active":"")+'" onclick="ap.stb(\'battle\',\'pk\')">赛</button><div class="sb-spacer"></div><div class="sb-bottom" onclick="ap.scs=!ap.scs;ap._r()">榜</div><div class="sb-bottom" onclick="ap.lw=!ap.lw;ap._r()">墙</div><div class="sb-bottom" style="position:relative" onclick="ap.qr=!ap.qr;ap._r()">'+(this.cs==="connected"?'<div class="sb-dot"></div>':'')+'QR</div></div>';if(this.mt==="home")h+=this._hm();else h+=this._in();h+=this._qr()+this._tr()+this._ss()+(this._soShow?this._so():"")+this._pm();return h},
-_hm(){return '<div class="cp-body"><div class="home-screen"><div class="brand-lockup"><img class="sunny-home" src="../../references/UI/parrot.png" alt="小太阳"><div class="home-title">Chinese ClassPro</div></div><div class="home-lesson">'+es(MT.level||"")+" &middot; "+es(MT.title||"")+'</div><div class="home-cards"><div class="home-card teach" onclick="ap.stb(\'teach\',\'tv\')"><div class="emoji">📖</div><div class="label">讲授</div><div class="desc">生词 · 语法 · 课文</div></div><div class="home-card practice" onclick="ap.stb(\'practice\',\'v4\')"><div class="emoji">✍️</div><div class="label">练习</div><div class="desc">完成句子 · 判断 · 排序</div></div><div class="home-card battle" onclick="ap.stb(\'battle\',\'pk\')"><div class="emoji">🏆</div><div class="label">竞赛</div><div class="desc">PK对战 · 实时积分</div></div></div></div></div>'},
+_hm(){return '<div class="cp-body"><div class="home-screen"><div class="brand-lockup"><img class="sunny-home" src="../../references/UI/parrot.png" alt="小太阳"><div class="home-title">Chinese ClassPro</div></div><div class="home-lesson">'+es(MT.level||"")+" &middot; "+es(MT.title||"")+'</div><div class="home-cards"><div class="home-card teach" onclick="ap.stb(\'teach\',\'tv\')"><div class="emoji">📖</div><div class="label">讲授</div><div class="desc">生词 · 语法 · 课文</div></div><div class="home-card practice" onclick="ap.stb(\'practice\',\'v4\')"><div class="emoji">✍️</div><div class="label">练习</div><div class="desc">完成句子 · 判断 · 排序</div></div><div class="home-card battle" onclick="ap.stb(\'battle\',\'pk\')"><div class="emoji">🏆</div><div class="label">竞赛</div><div class="desc">PK对战 · 实时积分</div></div><div class="home-card mock" onclick="ap.mt=\'mock\';ap.st=\'mock\';ap._r()"><div class="emoji">📝</div><div class="label">测试</div><div class="desc">HSK模拟 · 听力阅读</div></div></div></div></div>'},
 _in(){var h='<div class="cp-body"><div class="header"><h1 onclick="ap.stb(\'home\')">Chinese ClassPro+ <span>'+es(MT.level||"")+" "+es(MT.lessonId||"")+" &middot; "+es(MT.title||"")+'</span></h1><div class="header-right"><div style="display:flex;align-items:center;gap:4px;font-size:12px;color:#aaa"><div style="width:6px;height:6px;border-radius:50%;background:'+(this.cs==="connected"?"var(--green)":"#ccc")+'"></div>'+(this.cs==="connected"?(this.oc||0)+" online":"&#31163;&#32447;&#28436;&#31034;")+'</div><button id="globalPinyinToggle" class="pinyin-toggle-btn" title="显示或隐藏课中拼音" onclick="window.toggleGlobalPinyin&&window.toggleGlobalPinyin()" type="button">隐藏拼音</button><button title="学生扫码进入" onclick="ap.qr=true;ap._r()" style="height:34px;border-radius:8px;border:0.5px solid var(--line);font-size:13px;font-weight:800;cursor:pointer;background:#edf6d9;color:#3f7f32;padding:0 12px">扫码入课</button><button title="打开三阶段数据面板" onclick="window.open(\'../teacher-dashboard/unified.html\',\'_blank\')" style="height:34px;border-radius:8px;border:0.5px solid var(--line);font-size:13px;font-weight:800;cursor:pointer;background:#edf3ff;color:#2563eb;padding:0 12px">数据面板</button><button title="&#38543;&#26426;&#28857;&#21517;" onclick="ap.psm=!ap.psm;ap._r()" style="width:34px;height:34px;border-radius:8px;border:0.5px solid var(--line);font-size:15px;cursor:pointer;background:#fff;color:#666">&#127922;</button><button title="&#35745;&#26102;&#22120;" onclick="ap.timerOn=!ap.timerOn;ap._r()" style="width:34px;height:34px;border-radius:8px;border:0.5px solid var(--line);font-size:15px;cursor:pointer;background:#fff;color:#666">&#9201;</button></div></div>'+this._snav()+this._qw()+'<div class="main-content"><div class="panel-area">'+this._cnt()+'</div>'+this._lw()+'</div></div>';return h},
 _snav(){var m=this.mt,s=this.st;if(m==="teach")return'<div class="sub-nav"><button class="sub-btn'+(s==="tv"?" active":"")+'" onclick="ap.st=\'tv\';ap.tvOpen=false;ap._r()">&#35789;&#27719;<br><small>Vocabulary</small></button><button class="sub-btn'+(s==="pyz"?" active":"")+'" onclick="ap.st=\'pyz\';ap.pyzStep=0;ap._r()">&#25340;&#38899;<br><small>Pinyin</small></button><button class="sub-btn'+(s==="tg"?" active":"")+'" onclick="ap.st=\'tg\';ap.sg=0;ap.sl=0;ap.gr=false;ap._r()">&#35821;&#27861;<br><small>Grammar</small></button><button class="sub-btn'+(s==="tt"||s==="ttq"?" active":"")+'" onclick="ap.st=\'tt\';ap.ti=0;ap.tl=0;ap.tmode=0;ap._r()">&#35838;&#25991;<br><small>Text</small></button></div>';if(m==="practice")return'<div class="sub-nav"><span class="sub-group"><span class="sub-group-label">Practice</span><button class="sub-btn'+(s==="v1"?" active":"")+'" onclick="ap.st=\'v1\';ap.v1i=0;ap.v1a=false;ap.v1p=-1;ap._r()">&#22270;&#29255;&#29468;&#35789;<br><small>Picture</small></button><button class="sub-btn'+(s==="v5"?" active":"")+'" onclick="ap.st=\'v5\';ap.v5i=0;ap.v5a=false;ap.v5p=-1;ap._r()">&#36873;&#35789;&#22635;&#31354;<br><small>Fill</small></button><button class="sub-btn'+(s==="v7"?" active":"")+'" onclick="ap.st=\'v7\';ap.v7i=0;ap.v7si=0;ap.v7a=false;ap.v7p=-1;ap._r()">&#35789;&#21477;&#21305;&#37197;<br><small>Word Match</small></button><button class="sub-btn'+(s==="v8"?" active":"")+'" onclick="ap.st=\'v8\';ap.v8L=-1;ap.v8R=-1;ap.v8m={};ap._r()">&#35789;&#20102;&#20010;&#35789;<br><small>Matching Game</small></button><button class="sub-btn'+(s==="w1"?" active":"")+'" onclick="ap.st=\'w1\';ap.w1i=0;ap.w1a=false;ap.w1p=-1;ap._r()">&#27721;&#23383;&#21306;&#36776;<br><small>Characters</small></button><button class="sub-btn'+(s==="v4"?" active":"")+'" onclick="ap.st=\'v4\';ap.v4i=0;ap.v4a=false;ap.v4p=-1;ap._r()">&#21477;&#23376;&#36716;&#25442;<br><small>Sentence</small></button><button class="sub-btn'+(s==="g1"?" active":"")+'" onclick="ap.st=\'g1\';ap.g1i=0;ap.g1s=[];ap.g1a=[];ap.g1sa=false;ap._r()">&#36830;&#35789;&#25104;&#21477;<br><small>Ordering</small></button></span></div>';if(m==="battle")return'<div class="sub-nav"><button class="sub-btn'+(s==="pk"?" active":"")+'" onclick="ap.st=\'pk\';ap._r()">&#127942; PK<br><small>Competition</small></button></div>';return""},
 _qw(){if(!["v1","v4","v5","v7","v8","ttq","g1","w1","pk"].includes(this.st))return"";var p=this.qp;var h='<div class="qw-bar"><div class="qw-phase">';if(p==="idle")h+="&#128229; &#28857;&#20987;&#24320;&#22987;&#31572;&#39064;&#25512;&#36865;&#39064;&#30446;&#21040;&#23398;&#29983;&#25163;&#26426;";if(p==="answering")h+='&#128215; &#31572;&#39064;&#20013;... <span style="font-size:22px;font-weight:900;color:#dc2626;font-family:Courier New,monospace">'+this.qt+"s</span>";if(p==="published")h+="&#9989; &#24050;&#20844;&#24067;&#31572;&#26696;";h+='</div>';if(p==="answering"||p==="locked")h+='<div class="qw-progress">'+this._qsc()+'/'+this.as.length+' &#24050;&#20132;</div>';h+='<div style="display:flex;gap:6px;align-items:center">';if(p==="idle")h+='<select onchange="ap.qtm=parseInt(this.value);ap.qt=ap.qtm" style="padding:6px 10px;border-radius:8px;border:2px solid #93c5fd;background:#fff;font-weight:600;font-size:13px;color:#1e40af"><option value="30">30s</option><option value="45">45s</option><option value="60" selected>60s</option><option value="90">90s</option><option value="120">120s</option></select><button class="qw-btn start" onclick="ap.qws()">&#128215; &#24320;&#22987;&#31572;&#39064;</button>';if(p==="answering")h+='<button class="qw-btn lock" onclick="ap.qwl()">&#128274; &#38145;&#23450;</button>';if(p==="answering"||p==="locked")h+='<button class="qw-btn publish" onclick="ap.qwe()" style="background:linear-gradient(135deg,#ef4444,#dc2626)">&#9209; &#32467;&#26463;</button>';if(p==="published")h+='<button class="qw-btn reset" onclick="ap.qwr()">&#8594; &#19979;&#19968;&#39064;</button>';h+="</div></div>";return h},
@@ -1139,6 +1145,7 @@ if (window.LESSON_DATA && LESSON_DATA.meta && LESSON_DATA.meta.lessonKey === 'HS
 }
 })();
 ap.init();
+window.ap=ap;
 </script>
 <script>
 (function(){
@@ -1561,6 +1568,7 @@ ap.init();
 <script>
 (function(){
   if(typeof HR==='undefined'||!HR.enabled||typeof window.buildHanziRecognitionQuestion!=='function')return;
+  HR.sentenceExamples=HR.sentenceExamples||{};
   var oldBuild=window.buildHanziRecognitionQuestion;
   var overrides={
     v_l03_13:{sentence:'我很忙。',pinyin:'Wǒ hěn máng。'},
@@ -1719,7 +1727,7 @@ ap.init();
     h+='<div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:16px;padding:20px;margin:14px 0"><div style="font-weight:900;color:var(--blue);margin-bottom:8px">'+es(d.title||'')+'</div><div class="text-hanzi" style="font-size:22px;line-height:1.75;color:var(--text);font-weight:700">'+es(d.passage||'')+'</div><div data-pinyin="1" style="font-size:14px;line-height:1.6;color:#74806d;margin-top:10px">'+es(d.passage_pinyin||'')+'</div></div>';
     h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0">';
     questions.forEach(function(qq,qi){
-      h+='<div style="background:#fff;border:1px solid #dfeac8;border-radius:16px;padding:16px"><div style="font-weight:900;color:var(--text);font-size:18px;line-height:1.5">'+(qi+1)+'. '+es(qq.question_cn||'')+'</div><div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">';
+      h+='<div style="background:#fff;border:1px solid #dfeac8;border-radius:16px;padding:16px"><div style="font-weight:900;color:var(--text);font-size:18px;line-height:1.5">'+(qi+1)+'. '+es(qq.question_cn||'')+'</div><div data-pinyin="1" style="font-size:13px;color:#74806d;line-height:1.5;margin-top:4px">'+es(qq.question_pinyin||'')+'</div><div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">';
       (qq.options||[]).forEach(function(o,oi){
         var published=ap.qp==='published',correct=oi===qq.correct_index;
         h+='<div style="padding:9px 12px;border-radius:12px;border:1px solid '+(published&&correct?'#86efac':'#e5e7eb')+';background:'+(published&&correct?'#dcfce7':'#fff')+';font-weight:800;color:'+(published&&correct?'#166534':'var(--text)')+'">'+es(o)+(published&&correct?' ✓':'')+'</div>';
@@ -2002,16 +2010,42 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
 })();
 </script>
 <style>
-.cloud-wall-active .live-panel{display:none!important}
-.cloud-wall-panel{margin:16px auto 0;max-width:980px;width:100%;padding:20px;border:1px solid #dfeac8;border-radius:18px;background:#fff;box-shadow:0 14px 34px rgba(86,115,55,.12)}
+.picture-talk-mode .live-panel,.cloud-wall-active .live-panel{display:none!important}
+.picture-talk-mode .main-content,.cloud-wall-active .main-content{max-width:none!important;width:100%!important;padding-left:28px!important;padding-right:28px!important;justify-content:center!important}
+.picture-talk-mode .panel-area,.cloud-wall-active .panel-area{flex:0 1 auto!important;width:min(1680px,calc(100vw - 128px))!important;max-width:calc(100vw - 128px)!important;margin:0 auto!important}
+.picture-talk-mode .qw-bar{margin-left:28px!important;margin-right:28px!important}
+.cloud-wall-panel{margin:12px auto 0;max-width:1680px;width:100%;box-sizing:border-box;min-height:420px;max-height:calc(100vh - 245px);overflow:auto;padding:18px;border:1px solid #dfeac8;border-radius:18px;background:#fff;box-shadow:0 14px 34px rgba(86,115,55,.12)}
 .cloud-wall-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:14px;color:#3f7f32}
 .cloud-wall-head h3{margin:0;font-size:24px;line-height:1.2}.cloud-wall-head small{display:block;color:#74806d;font-size:12px;margin-top:4px}
 .cloud-wall-count{padding:7px 12px;border-radius:999px;background:#edf6d9;color:#3f7f32;font-weight:900;font-size:13px;white-space:nowrap}
-.cloud-wall-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.cloud-wall-card{min-height:96px;padding:14px;border:1px solid #e2ebd1;border-radius:14px;background:#fbfcf7}
-.cloud-wall-name{font-weight:900;color:#2563eb;font-size:13px;margin-bottom:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.cloud-wall-answer{font-size:20px;line-height:1.55;color:#203421;font-family:KaiTi,STKaiti,"Kaiti SC","Microsoft YaHei",serif;font-weight:900;white-space:pre-wrap;overflow-wrap:anywhere}
+.cloud-wall-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,max-content));gap:14px;align-items:start;justify-content:start;padding-bottom:18px}
+.cloud-wall-card{width:fit-content;min-width:170px;max-width:380px;min-height:88px;padding:12px;border:1px solid #e2ebd1;border-radius:14px;background:#fbfcf7;cursor:pointer;box-shadow:0 10px 24px rgba(86,115,55,.08)}
+.cloud-wall-card:hover{border-color:#9ac45b;box-shadow:0 12px 24px rgba(86,115,55,.12)}
+.cloud-wall-name{display:flex;align-items:center;gap:8px;font-weight:900;color:#2563eb;font-size:13px;margin-bottom:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cloud-wall-avatar{width:28px;height:28px;border-radius:50%;background:#edf6d9;color:#3f7f32;display:inline-flex;align-items:center;justify-content:center;font-weight:1000}
+.cloud-wall-answer{font-size:18px;line-height:1.48;color:#203421;font-family:KaiTi,STKaiti,"Kaiti SC","Microsoft YaHei",serif;font-weight:900;white-space:pre-wrap;overflow-wrap:anywhere}
 .cloud-wall-empty{padding:24px;border:1px dashed #dfeac8;border-radius:14px;color:#74806d;text-align:center;font-weight:800}
+.cloud-review-modal{position:fixed;inset:0;z-index:9998;background:rgba(16,24,16,.45);display:flex;align-items:center;justify-content:center;padding:22px}
+.cloud-review-box{width:min(680px,100%);background:#fff;border-radius:18px;border:1px solid #dfeac8;padding:20px;box-shadow:0 24px 70px rgba(16,24,16,.25)}
+.cloud-review-box textarea{width:100%;min-height:110px;padding:12px;border:1px solid #dfeac8;border-radius:12px;font-size:22px;line-height:1.5;font-family:KaiTi,STKaiti,"Kaiti SC","Microsoft YaHei",serif}
+.cloud-score-buttons{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.cloud-score-buttons button{border:1px solid #dfeac8;border-radius:999px;background:#f8faf3;color:#3f7f32;padding:8px 12px;font-weight:900}
+.picture-talk-panel{max-width:1680px!important;width:100%!important;box-sizing:border-box;padding:24px!important}
+.picture-talk-panel.compact{padding:20px!important}
+.picture-talk-stage{display:grid;grid-template-columns:minmax(420px,640px) minmax(420px,1fr);gap:24px;align-items:stretch}
+.picture-talk-stage.compact{grid-template-columns:minmax(160px,240px) minmax(0,1fr)}
+.picture-talk-image{padding:14px;border:1px solid #dfeac8;border-radius:18px;background:#f8faf3;text-align:center;display:flex;align-items:center;justify-content:center}
+.picture-talk-image img{width:100%;max-height:300px;object-fit:contain;border-radius:14px;background:#fff}
+.picture-talk-stage.compact .picture-talk-image img{max-height:170px}
+.picture-talk-task{padding:20px;border:1px solid #dfeac8;border-radius:18px;background:#fff;display:flex;flex-direction:column;justify-content:center;gap:14px;min-width:0}
+.picture-talk-type{display:inline-flex;align-self:flex-start;padding:6px 11px;border-radius:999px;background:#edf6d9;color:#3f7f32;font-size:13px;font-weight:900}
+.picture-talk-context{font-size:24px;font-weight:1000;color:#203421;line-height:1.45;font-family:KaiTi,STKaiti,"Kaiti SC","Microsoft YaHei",serif;overflow-wrap:anywhere}
+.picture-talk-instructions{font-size:16px;color:#64748b;line-height:1.7}
+.picture-talk-sample{padding:12px 14px;border-radius:14px;background:#fff7de;color:#315b29;font-weight:900;line-height:1.6}
+.picture-talk-controls{margin-top:16px;padding:14px;border-radius:16px;background:#f8faf3;border:1px solid #dfeac8;text-align:center}
+.picture-talk-controls button{border:0;border-radius:999px;padding:10px 18px;background:#4f8f2d;color:#fff;font-weight:900;cursor:pointer}
+.picture-talk-mini{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding:10px 14px;border:1px solid #dfeac8;border-radius:999px;background:#f8faf3}
+.picture-talk-mini-question{font-size:24px;font-weight:1000;line-height:1.25;color:#203421;font-family:KaiTi,STKaiti,"Kaiti SC","Microsoft YaHei",serif}
+.cloud-wall-active .picture-talk-panel.compact{display:none!important}
 </style>
 <script>
 /* Cloud wall: show current-question open responses in the center panel. */
@@ -2030,6 +2064,20 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
   function isOpenQuestion(q,state){
     if(!q)return isOpenMode(state&&state.st);
     return isOpenMode(q.mode||q.type||q.kind||state.st)||q.openEnded===true||q.needsTeacherReview===true||q.cloudWall===true;
+  }
+  function pictureTalkPrompt(q){
+    var d=(q&&q.data)||{},parts=[d.question,d.question_cn,d.taskQuestion,d.displayQuestion,d.sampleAnswer,d.instructions,q&&q.prompt_cn].filter(Boolean);
+    for(var i=0;i<parts.length;i++){
+      var m=String(parts[i]).match(/[^。；;：:]*[？?]/);
+      if(m&&m[0])return m[0].replace(/^\s*\d+[\.、]\s*/,'').trim();
+    }
+    var p=String(q&&q.prompt_cn||'').replace(/^教学扩展：/,'');
+    if(p.indexOf('见面')>=0||p.indexOf('见')>=0)return'我们几点见？';
+    return p||'请看图回答问题。';
+  }
+  function pictureTalkMini(q){
+    var question=pictureTalkPrompt(q);
+    return '<div class="picture-talk-mini"><b style="color:#3f7f32;white-space:nowrap">看图回答 / Picture Talk</b><div class="picture-talk-mini-question">'+es(question)+'</div></div>';
   }
   function latestOpenRows(state,id){
     var latest={};
@@ -2050,27 +2098,62 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
   function renderCloudWall(state,q,rows){
     var title=(q&&q.prompt_cn)||'主观回答';
     var h='<div class="cloud-wall-panel"><div class="cloud-wall-head"><div><h3>云墙 / Cloud Wall</h3><small>当前题：'+es(title)+'</small></div><div class="cloud-wall-count">'+rows.length+' 份回答</div></div>';
+    if(state&&state.mt==='practice'&&state.st==='opn')h+=pictureTalkMini(q);
     if(!rows.length)return h+'<div class="cloud-wall-empty">等待学生提交当前题回答...</div></div>';
     h+='<div class="cloud-wall-grid">';
-    rows.forEach(function(r){
-      h+='<div class="cloud-wall-card"><div class="cloud-wall-name">'+es(r.studentName||r.name||'Student')+'</div><div class="cloud-wall-answer">'+es(r.answer||r.text||'')+'</div></div>';
+    rows.forEach(function(r,idx){
+      var nm=String(r.studentName||r.name||'Student');
+      var rot=[-2,1.5,-1,2,.5,-1.5,1,-.5][idx%8],dy=[0,12,-6,8,-10,4,14,-4][idx%8];
+      h+='<div class="cloud-wall-card" style="transform:translateY('+dy+'px) rotate('+rot+'deg)" onclick="ap.openCloudReview(\''+es(nm).replace(/'/g,"\\'")+'\',\''+es(r.questionId||'').replace(/'/g,"\\'")+'\')"><div class="cloud-wall-name"><span class="cloud-wall-avatar">'+es(nm.slice(0,1).toUpperCase())+'</span><span>'+es(nm)+'</span>'+(r.cloudScore?'<span style="margin-left:auto;color:#3f7f32">'+es(r.cloudScore)+'分</span>':'')+'</div><div class="cloud-wall-answer">'+es(r.teacherRevision||r.answer||r.text||'')+'</div></div>';
     });
     return h+'</div></div>';
+  }
+  ap.openCloudReview=function(name,qid){
+    var rec=null,n=this._rn?this._rn(name):name;
+    for(var i=0;i<(this.records||[]).length;i++){var r=this.records[i];if((this._rn?this._rn(r.studentName||r.name||''):String(r.studentName||r.name||''))===n&&String(r.questionId||'')===String(qid||'')){rec=r;break}}
+    if(!rec)return;
+    this.cloudReview={name:n,questionId:qid,answer:rec.teacherRevision||rec.answer||rec.text||'',score:rec.cloudScore||0,liked:!!rec.cloudLiked};
+    this._r();
+  };
+  ap.closeCloudReview=function(){var m=document.querySelector('.cloud-review-modal');if(m)m.remove();this.cloudReview=null;this._r()};
+  ap.saveCloudReview=function(){
+    var cr=this.cloudReview;if(!cr)return;
+    var txt=document.getElementById('cloudReviewText'),scoreEl=document.querySelector('input[name="cloudScore"]:checked'),liked=document.getElementById('cloudLiked');
+    var nextScore=scoreEl?parseInt(scoreEl.value,10):0,n=cr.name,delta=0;
+    for(var i=0;i<(this.records||[]).length;i++){
+      var r=this.records[i],rn=this._rn?this._rn(r.studentName||r.name||''):String(r.studentName||r.name||'');
+      if(rn===n&&String(r.questionId||'')===String(cr.questionId||'')){delta=nextScore-(r.cloudScore||0);r.teacherRevision=txt?txt.value:r.answer;r.cloudScore=nextScore;r.cloudLiked=liked?liked.checked:false;r.reviewStatus='reviewed';r.result='review';break}
+    }
+    if(delta&&this._as)this._as(n,delta);
+    this._saveClassData&&this._saveClassData();
+    this._pubBoard&&this._pubBoard();
+    var m=document.querySelector('.cloud-review-modal');if(m)m.remove();
+    this.cloudReview=null;this._r();
+  };
+  function renderCloudReview(state){
+    var cr=state.cloudReview;if(!cr)return'';
+    var h='<div class="cloud-review-modal"><div class="cloud-review-box"><h3 style="margin:0 0 10px;color:#3f7f32">处理回答 / Review Answer</h3><div style="font-weight:900;margin-bottom:8px">'+es(cr.name)+'</div><textarea id="cloudReviewText">'+es(cr.answer||'')+'</textarea><div class="cloud-score-buttons">';
+    for(var i=1;i<=5;i++)h+='<label><input type="radio" name="cloudScore" value="'+i+'" '+(cr.score===i?'checked':'')+'> '+i+'分</label> ';
+    h+='</div><label style="display:inline-flex;gap:6px;align-items:center;font-weight:900;color:#3f7f32"><input id="cloudLiked" type="checkbox" '+(cr.liked?'checked':'')+'> 点赞</label><div style="display:flex;justify-content:flex-end;gap:10px;margin-top:16px"><button class="next-btn" style="background:#9ca3af" onclick="ap.closeCloudReview()">取消</button><button class="next-btn" onclick="ap.saveCloudReview()">保存</button></div></div></div>';
+    return h;
   }
   var oldRender=ap._r;
   ap._r=function(){
     oldRender.call(this);
     var old=document.querySelector('.cloud-wall-panel');if(old)old.remove();
+    document.querySelectorAll('.cloud-review-modal').forEach(function(x){x.remove()});
     document.body.classList.remove('cloud-wall-active');
+    if(this.mt!=='practice'||this.st!=='opn'||(this.qp!=='answering'&&this.qp!=='published'))return;
     var q=currentQuestion(this),id=currentQuestionId(this);
     if(!id)return;
-    var rows=latestOpenRows(this,id),shouldShow=isOpenQuestion(q,this)||rows.length>0;
+    var rows=latestOpenRows(this,id),shouldShow=(this.qp==='answering'||this.qp==='published'||rows.length>0)&&(isOpenQuestion(q,this)||rows.length>0);
     if(!shouldShow)return;
     var panel=document.querySelector('.panel-area>.panel')||document.querySelector('.panel-area');
     if(!panel)return;
     var box=document.createElement('div');box.innerHTML=renderCloudWall(this,q,rows);
     panel.parentNode.insertBefore(box.firstChild,panel.nextSibling);
     document.body.classList.add('cloud-wall-active');
+    if(this.cloudReview){var m=document.createElement('div');m.innerHTML=renderCloudReview(this);document.body.appendChild(m.firstChild)}
   };
 })();
 </script>
@@ -2088,41 +2171,115 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     data.image=data.image||(q.media&&q.media.image)||'';
     return Object.assign({},q,{type:q.type||'oral',openEnded:true,needsTeacherReview:true,cloudWall:true,data:data});
   }
+  function simpleQuestion(q){
+    var d=(q&&q.data)||{},parts=[d.question,d.question_cn,d.taskQuestion,d.displayQuestion,d.sampleAnswer,d.instructions,q&&q.prompt_cn].filter(Boolean);
+    for(var i=0;i<parts.length;i++){
+      var m=String(parts[i]).match(/[^。；;：:]*[？?]/);
+      if(m&&m[0])return m[0].replace(/^\s*\d+[\.、]\s*/,'').trim();
+    }
+    var p=String(q&&q.prompt_cn||'').replace(/^教学扩展：/,'');
+    if(p.indexOf('见面')>=0||p.indexOf('见')>=0)return'我们几点见？';
+    return p||'请看图回答问题。';
+  }
+  function studentQuestion(index){
+    var q=question(index);
+    if(!q)return null;
+    var data=Object.assign({},q.data||{});
+    delete data.context;
+    delete data.sampleAnswer;
+    data.instructions='请用中文回答这个问题。';
+    return Object.assign({},q,{mode:'open_response',type:'open_response',prompt_cn:simpleQuestion(q),prompt_en:'Look at the picture and answer the question.',data:data});
+  }
   function renderPictureTalk(state){
     var qs=pictureTalkQuestions(),i=state.opni||0,c=question(i);
     if(!c)return'<div class="panel"><p>暂无图说题。</p></div>';
     var d=c.data||{},img=d.image?'<img src="'+es(d.image)+'" alt="" style="width:100%;max-height:280px;object-fit:contain;border-radius:16px;background:#fff">':'<div style="font-size:24px;font-weight:900;color:#74806d">Picture prompt</div>';
+    var compact=state.qp==='answering'||state.qp==='published';
+    var typeLabel=es(d.patternType||d.typeLabel||'图说输出');
     var nav=state._navBtn(
       'ap.qp="idle";ap.qsub={};ap.lastQuestionPayload=null;ap.currentQuestionId=null;ap.opni=Math.max(0,(ap.opni||0)-1);ap._r()',
       'ap.qp="idle";ap.qsub={};ap.lastQuestionPayload=null;ap.currentQuestionId=null;ap.opni=Math.min('+(qs.length-1)+',(ap.opni||0)+1);ap._r()',
       i,qs.length,'&larr; 上一题','下一题 &rarr;'
     );
-    var h='<div class="panel" style="max-width:1080px;width:100%;text-align:left"><h3 style="margin-top:0;text-align:center;color:var(--practice)">图说时间 <span style="font-size:14px;color:#8b96a3">Picture Talk</span></h3>';
-    h+='<div style="text-align:center;color:#74806d;margin-bottom:12px">'+es(c.prompt_cn||'看图说话')+' <span style="color:#9aa3a0">'+es(c.prompt_en||'')+'</span></div>';
-    h+='<div style="display:grid;grid-template-columns:minmax(260px,420px) minmax(280px,1fr);gap:18px;align-items:stretch">';
-    h+='<div style="padding:16px;border:1px solid #dfeac8;border-radius:18px;background:#f8faf3;text-align:center">'+img+'</div>';
-    h+='<div style="padding:18px;border:1px solid #dfeac8;border-radius:18px;background:#fff;display:flex;flex-direction:column;justify-content:center;gap:14px">';
-    h+='<div style="font-size:22px;font-weight:900;color:var(--text);line-height:1.55">'+es(d.context||'')+'</div>';
-    h+='<div style="font-size:16px;color:#64748b;line-height:1.7">'+es(d.instructions||'请用中文说一到两句话。')+'</div>';
-    if(d.sampleAnswer)h+='<div style="padding:12px 14px;border-radius:14px;background:#edf6d9;color:#315b29;font-weight:900">参考表达：'+es(d.sampleAnswer)+'</div>';
-    h+='</div></div>'+nav+'</div>';
+    var h='<div class="panel picture-talk-panel '+(compact?'compact':'')+'" style="text-align:left"><h3 style="margin-top:0;text-align:center;color:var(--practice)">看图表达 <span style="font-size:14px;color:#8b96a3">Picture Talk</span></h3>';
+    h+='<div style="text-align:center;color:#74806d;margin-bottom:12px">看图回答问题。 <span style="color:#9aa3a0">Look at the picture and answer.</span></div>';
+    h+='<div class="picture-talk-stage '+(compact?'compact':'')+'">';
+    h+='<div class="picture-talk-image">'+img+'</div>';
+    h+='<div class="picture-talk-task"><span class="picture-talk-type">'+typeLabel+'</span>';
+    h+='<div class="picture-talk-context">'+es(simpleQuestion(c))+'</div>';
+    h+='<div class="picture-talk-instructions">学生端将收到同一个问题并提交到云墙。</div>';
+    h+='</div></div>';
+    h+='<div class="picture-talk-controls">';
+    if(state.qp==='idle')h+='<button type="button" onclick="ap.qws()">开始答题 / Start</button>';
+    else if(state.qp==='answering')h+='<button type="button" style="background:#f05a3f" onclick="ap.qwe()">公布并结束 / Finish</button>';
+    else if(i<qs.length-1)h+='<button type="button" onclick="ap.qwr()">下一题 / Next</button>';
+    else h+='<span style="font-weight:900;color:#3f7f32">图说时间已完成。</span>';
+    if(state.pictureTalkSendStatus)h+='<div style="margin-top:8px;color:#64748b;font-weight:800">'+es(state.pictureTalkSendStatus)+'</div>';
+    h+='</div>'+nav+'</div>';
     return h;
   }
   var oldSnav=ap._snav,oldCnt=ap._cnt,oldCq=ap._cq,oldCq2=ap._cq2,oldQw=ap._qw,oldStart=ap.qws,oldEnd=ap.qwe,oldNext=ap.qwr;
   ap._snav=function(){
     var h=oldSnav.call(this),qs=pictureTalkQuestions();
     if(this.mt==='practice'&&qs.length&&h.indexOf("ap.st='opn'")<0){
-      h=h.replace('</span></div>','<button class="sub-btn'+(this.st==='opn'?' active':'')+'" onclick="ap.st=\'opn\';ap.opni=0;ap.qp=\'idle\';ap.qsub={};ap.lastQuestionPayload=null;ap.currentQuestionId=null;ap._r()">图说时间<br><small>Picture Talk</small></button></span></div>');
+      h=h.replace('</span></div>','<button class="sub-btn'+(this.st==='opn'?' active':'')+'" onclick="ap.st=\'opn\';ap.opni=0;ap.qp=\'idle\';ap.qsub={};ap.lastQuestionPayload=null;ap.currentQuestionId=null;ap._r()">看图表达<br><small>Picture Talk</small></button></span></div>');
     }
     return h;
   };
   ap._cnt=function(){if(this.mt==='practice'&&this.st==='opn')return renderPictureTalk(this);return oldCnt.call(this)};
   ap._cq=function(){if(this.st==='opn')return question(this.opni||0);return oldCq.call(this)};
-  ap._cq2=function(){if(this.st==='opn')return this._cq();return oldCq2.call(this)};
+  ap._cq2=function(){if(this.st==='opn')return studentQuestion(this.opni||0);return oldCq2.call(this)};
   ap._qw=function(){if(this.st==='opn'){var s=this.st;this.st='v4';var h=oldQw.call(this);this.st=s;return h}return oldQw.call(this)};
-  ap.qws=function(){if(this.mt==='practice'&&this.st==='opn'){clearInterval(this.qtint);this.qp='answering';this.qt=0;this.qsub={};this._pubq();this._r();return}oldStart.call(this)};
+  ap.qws=function(){if(this.mt==='practice'&&this.st==='opn'){clearInterval(this.qtint);this.qp='answering';this.qt=0;this.qsub={};var q=studentQuestion(this.opni||0);if(q&&this.mq&&this.cs==='connected'){var payload={room:RM,lesson:MT.lessonKey||'',mode:'open_response',duration:this.qtm,sentAt:new Date().toISOString(),phase:'answering',question:q};this.lastQuestionPayload=payload;this.currentQuestionId=q.id;this.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(payload));this.pictureTalkSendStatus='已发送到学生端'}else{this.pictureTalkSendStatus='未发送：MQTT 未连接或题目为空'}this._r();return}oldStart.call(this)};
   ap.qwe=function(){if(this.mt==='practice'&&this.st==='opn'){clearInterval(this.qtint);this.qp='published';if(this.lastQuestionPayload){this.lastQuestionPayload.phase='published';this.lastQuestionPayload.answerKey='';this.lastQuestionPayload.publishedAt=new Date().toISOString();if(this.mq&&this.cs==='connected')this.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(this.lastQuestionPayload))}this._sendSessionSummary&&this._sendSessionSummary('picture_talk_end');this._r();return}oldEnd.call(this)};
-  ap.qwr=function(){if(this.mt==='practice'&&this.st==='opn'){var qs=pictureTalkQuestions();if(this.qp==='published'&&(this.opni||0)<qs.length-1){this.opni=(this.opni||0)+1;this.qp='idle';this.qsub={};this.lastQuestionPayload=null;this.currentQuestionId=null;this.qws();return}oldNext.call(this);return}oldNext.call(this)};
+  ap.qwr=function(){if(this.mt==='practice'&&this.st==='opn'){var qs=pictureTalkQuestions();if(this.qp==='published'&&(this.opni||0)<qs.length-1){this.opni=(this.opni||0)+1;this.qp='idle';this.qsub={};this.lastQuestionPayload=null;this.currentQuestionId=null;this.pictureTalkSendStatus='';this._r();return}oldNext.call(this);return}oldNext.call(this)};
+  var oldRender=ap._r;
+  ap._r=function(){
+    oldRender.call(this);
+    document.body.classList.toggle('picture-talk-mode',this.mt==='practice'&&this.st==='opn');
+    if(this.mt!=='practice'||this.st!=='opn')return;
+    var side=document.querySelector('.cp-sidebar');if(!side)return;
+    var rail=side.querySelector('.practice-rail');
+    if(!rail){rail=document.createElement('div');rail.className='practice-rail';side.insertBefore(rail,side.querySelector('.sb-spacer')||null)}
+    var qs=pictureTalkQuestions(),idx=this.opni||0;
+    if(this.qp==='idle')rail.innerHTML='<button class="practice-rail-action" onclick="ap.qws()">答</button>';
+    else if(this.qp==='answering')rail.innerHTML='<button class="practice-rail-action announce" onclick="ap.qwe()">收</button>';
+    else if(idx<qs.length-1)rail.innerHTML='<button class="practice-rail-action next" onclick="ap.qwr()">下一题</button>';
+    else rail.innerHTML='<div class="practice-rail-done">完成</div>';
+  };
+})();
+</script>
+<script>
+/* Picture talk cleanup: leaving the module must remove cloud-wall state. */
+(function(){
+  if(typeof ap==='undefined')return;
+  function isPictureTalk(state){return state&&state.mt==='practice'&&state.st==='opn'}
+  function isPictureTalkPayload(state){
+    var p=state&&state.lastQuestionPayload;
+    return !!(p&&p.mode==='open_response'&&p.question&&p.question.cloudWall);
+  }
+  function clearPictureTalkUi(){
+    document.body.classList.remove('picture-talk-mode','cloud-wall-active');
+    document.querySelectorAll('.cloud-wall-panel,.cloud-review-modal').forEach(function(el){el.remove()});
+    var rail=document.querySelector('.cp-sidebar .practice-rail');
+    if(rail)rail.remove();
+  }
+  var previousRender=ap._r;
+  ap._r=function(){
+    if(!isPictureTalk(this)&&isPictureTalkPayload(this)){
+      clearInterval(this.qtint);
+      this.qp='idle';
+      this.qt=0;
+      this.qsub={};
+      this.lastQuestionPayload=null;
+      this.currentQuestionId=null;
+      this.pictureTalkSendStatus='';
+      this.cloudReview=null;
+      clearPictureTalkUi();
+    }
+    previousRender.call(this);
+    if(!isPictureTalk(this))clearPictureTalkUi();
+  };
 })();
 </script>
 <script>
@@ -2151,6 +2308,154 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     if(hasUnifiedHanzi()&&this.mt==='practice'&&this.st==='w1')this.st='hrec';
     oldRender.call(this);
     removeLegacyHanziButton();
+  };
+})();
+</script>
+<script>
+/* Mock test classroom control: teacher opens a test, students answer in class. */
+(function(){
+  if(typeof ap==='undefined')return;
+  ap.mockTestId=ap.mockTestId||'HSK1-mock-01';
+  ap.mockPhase=ap.mockPhase||'idle';
+  ap.mockLoaded=ap.mockLoaded||null;
+  ap.mockStartedAt=ap.mockStartedAt||'';
+  ap.mockRows=ap.mockRows||[];
+  function mockStateKey(){return 'ClassProMockTeacher_'+RM}
+  function saveMockState(){try{localStorage.setItem(mockStateKey(),JSON.stringify({testId:ap.mockTestId,phase:ap.mockPhase,startedAt:ap.mockStartedAt,rows:ap.mockRows||[]}))}catch(e){}}
+  function loadMockState(){try{var d=JSON.parse(localStorage.getItem(mockStateKey())||'null');if(!d)return;ap.mockTestId=d.testId||ap.mockTestId;ap.mockPhase=d.phase||ap.mockPhase;ap.mockStartedAt=d.startedAt||ap.mockStartedAt;ap.mockRows=Array.isArray(d.rows)?d.rows:ap.mockRows}catch(e){}}
+  loadMockState();
+  function loadMock(cb){
+    if(ap.mockLoaded&&ap.mockLoaded.testId===ap.mockTestId){cb&&cb(ap.mockLoaded);return}
+    fetch('../data-model/mock-tests/'+ap.mockTestId+'.json').then(function(r){return r.json()}).then(function(d){ap.mockLoaded=d;cb&&cb(d);ap._r()}).catch(function(){ap.mockLoadError='测试数据读取失败';ap._r()});
+  }
+  function mockSubmissions(){
+    var rows=[],seen={};
+    (ap.mockRows||[]).forEach(function(r){
+      if(!r)return;
+      var n=String(r.n||r.name||'Student');
+      if(seen[n])return;
+      seen[n]=1;rows.push(r);
+    });
+    return rows;
+  }
+  function mockItems(){
+    var out=[];
+    (ap.mockLoaded&&ap.mockLoaded.sections||[]).forEach(function(s){(s.items||[]).forEach(function(x){out.push(x)})});
+    return out;
+  }
+  function mockPartName(part){
+    return {L1_picture_choice:'听力1 图片',L2_answer_choice:'听力2 问答',L3_dialogue_picture_choice:'听力3 对话图片',L4_sentence_question_answer:'听力4 句问答',R1_sentence_picture_match:'阅读1 图文',R2_question_answer_match:'阅读2 问答',R3_fill_blank:'阅读3 填空',R4_reading_comprehension:'阅读4 理解'}[part]||part;
+  }
+  function mockDiagnosis(r){
+    var items=mockItems(),ans=r.answers||{},wrong=[],partWrong={},skillWrong={listening:0,reading:0},skillTotal={listening:0,reading:0};
+    items.forEach(function(x){
+      var ok=ans[x.id]===x.answer,skill=x.skill==='listening'?'listening':'reading';
+      skillTotal[skill]++;
+      if(!ok){
+        wrong.push(x);
+        partWrong[x.part]=(partWrong[x.part]||0)+1;
+        skillWrong[skill]++;
+      }
+    });
+    var weakParts=Object.keys(partWrong).sort(function(a,b){return partWrong[b]-partWrong[a]}).slice(0,2).map(function(k){return mockPartName(k)+' '+partWrong[k]+'题'});
+    var focus=skillWrong.listening>skillWrong.reading?'听力':skillWrong.reading>skillWrong.listening?'阅读':(wrong.length?'听力和阅读':'保持');
+    return {wrong:wrong,partWrong:partWrong,skillWrong:skillWrong,skillTotal:skillTotal,weakParts:weakParts,focus:focus};
+  }
+  function mockReport(rows){
+    var items=mockItems(),byId={},parts={},wrongByItem={},total=0,correct=0,listenTotal=0,listenCorrect=0,readTotal=0,readCorrect=0;
+    items.forEach(function(x){byId[x.id]=x;wrongByItem[x.id]={item:x,wrong:0,total:rows.length};parts[x.part]=parts[x.part]||{name:mockPartName(x.part),total:0,correct:0};parts[x.part].total+=rows.length});
+    rows.forEach(function(r){var ans=r.answers||{};items.forEach(function(x){var ok=ans[x.id]===x.answer;total++;if(ok)correct++;else if(wrongByItem[x.id])wrongByItem[x.id].wrong++;if(x.skill==='listening'){listenTotal++;if(ok)listenCorrect++}else{readTotal++;if(ok)readCorrect++}if(ok)parts[x.part].correct++})});
+    function pct(a,b){return b?Math.round(a/b*100):0}
+    var h='<div style="margin:18px 0;padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff"><h3 style="margin:0 0 12px;color:var(--blue)">测试报告 / Test Report</h3>';
+    h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px"><div class="formula-box">全班正确率<br><b>'+pct(correct,total)+'%</b></div><div class="formula-box">听力<br><b>'+pct(listenCorrect,listenTotal)+'%</b></div><div class="formula-box">阅读<br><b>'+pct(readCorrect,readTotal)+'%</b></div><div class="formula-box">提交人数<br><b>'+rows.length+'</b></div></div>';
+    if(rows.length){h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin-top:12px">';Object.keys(parts).forEach(function(k){var p=parts[k];h+='<div style="padding:10px;border:1px solid #dfeac8;border-radius:12px;background:#f8faf3"><b>'+es(p.name)+'</b><div style="font-size:24px;font-weight:900;color:#3f7f32;margin-top:4px">'+pct(p.correct,p.total)+'%</div></div>'});h+='</div>'}
+    if(rows.length){
+      var hard=Object.keys(wrongByItem).map(function(k){return wrongByItem[k]}).filter(function(x){return x.total&&x.wrong>0}).sort(function(a,b){return b.wrong/b.total-a.wrong/a.total}).slice(0,8);
+      h+='<div style="margin-top:14px;padding:12px;border:1px solid #fed7aa;border-radius:14px;background:#fff7ed"><b style="color:#b45309">共性问题 / High-error Items</b>';
+      if(!hard.length)h+='<div style="color:#64748b;margin-top:8px">暂无高错误率题。</div>';
+      else{h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px;margin-top:10px">';hard.forEach(function(x){h+='<div style="padding:9px;border-radius:12px;background:#fff;border:1px solid #fed7aa"><b>第 '+es(x.item.number)+' 题</b><div style="font-size:20px;font-weight:900;color:#dc2626">'+pct(x.wrong,x.total)+'%</div><div style="font-size:12px;color:#64748b">'+es(mockPartName(x.item.part))+' · 错 '+x.wrong+'/'+x.total+'</div></div>'});h+='</div>'}
+      h+='</div>';
+    }
+    return h+'</div>';
+  }
+  function publishMock(phase,test){
+    if(!ap.mq||ap.cs!=='connected'){ap.mockSendStatus='未发送：MQTT 未连接。请确认右上角 online 后再点开放答题。';saveMockState();return false}
+    if(!ap.mockStartedAt)ap.mockStartedAt=new Date().toISOString();
+    var payload={room:RM,lesson:MT.lessonKey||'HSK1-MOCK',mode:'mock_test',phase:phase,testId:ap.mockTestId,durationMinutes:(test&&test.durationMinutes)||35,sentAt:ap.mockStartedAt,question:{id:ap.mockTestId,type:'mock_test',prompt_cn:(test&&test.titleCn)||'HSK1 模拟测试',prompt_en:(test&&test.titleEn)||'HSK1 Mock Test',data:{}}};
+    ap.lastQuestionPayload=payload;
+    ap.currentQuestionId=ap.mockTestId;
+    ap.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(payload));
+    ap.mockSendStatus=(phase==='locked'?'已发送收卷锁定':'已发送开放答题')+'：'+new Date().toLocaleTimeString();
+    saveMockState();
+    return true;
+  }
+  ap.startMockTest=function(){
+    loadMock(function(test){ap.mockPhase='answering';ap.mockStartedAt=new Date().toISOString();ap.qsub={};publishMock('answering',test);saveMockState();ap._r()});
+  };
+  ap.endMockTest=function(){
+    ap.mockPhase='locked';
+    publishMock('locked',ap.mockLoaded);
+    saveMockState();
+    ap._r();
+  };
+  ap.resetMockTest=function(){
+    ap.mockPhase='idle';ap.mockStartedAt='';ap.mockRows=[];ap.qsub={};ap.lastQuestionPayload=null;ap.currentQuestionId=null;saveMockState();ap._r();
+  };
+  function mockItemsByPart(part){
+    var out=[];
+    (ap.mockLoaded&&ap.mockLoaded.sections||[]).forEach(function(s){(s.items||[]).forEach(function(x){if(x.part===part)out.push(x)})});
+    return out;
+  }
+  function mockVoice(){
+    var voices=window.speechSynthesis?window.speechSynthesis.getVoices():[];
+    return voices.filter(function(v){return /zh|cmn|Chinese/i.test(v.lang+' '+v.name)})[0]||voices[0]||null;
+  }
+  function mockSpeakQueue(items,idx){
+    if(!window.speechSynthesis||idx>=items.length)return;
+    var item=items[idx],text='第 '+item.number+' 题。'+String(item.audioText||'').replace(/男：/g,'男生：').replace(/女：/g,'女生：');
+    var u=new SpeechSynthesisUtterance(text);
+    u.lang='zh-CN';u.rate=(ap.mockLoaded&&ap.mockLoaded.audioPolicy&&ap.mockLoaded.audioPolicy.ttsRate)||0.62;u.pitch=1;u.volume=1;
+    var v=mockVoice();if(v)u.voice=v;
+    u.onend=function(){setTimeout(function(){mockSpeakQueue(items,idx+1)},900)};
+    window.speechSynthesis.speak(u);
+  }
+  function mockAudioFile(part){
+    var parts=ap.mockLoaded&&ap.mockLoaded.audioParts||[];
+    for(var i=0;i<parts.length;i++)if(parts[i].part===part)return parts[i].file||'';
+    return '';
+  }
+  ap.playMockPart=function(part){
+    loadMock(function(){
+      var file=mockAudioFile(part),fallback=function(){if(!window.speechSynthesis){alert('当前浏览器不支持语音合成。');return}window.speechSynthesis.cancel();mockSpeakQueue(mockItemsByPart(part),0)};
+      if(file){try{if(ap.mockAudio)ap.mockAudio.pause();ap.mockAudio=new Audio(file);ap.mockAudio.onerror=fallback;ap.mockAudio.play().catch(fallback);return}catch(e){}}
+      fallback();
+    });
+  };
+  ap.stopMockAudio=function(){if(ap.mockAudio)ap.mockAudio.pause();if(window.speechSynthesis)window.speechSynthesis.cancel()};
+  ap._mockPanel=function(){
+    var test=ap.mockLoaded,rows=mockSubmissions(),h='<div class="panel" style="max-width:1080px;width:100%;text-align:left"><h2 style="margin-top:0;color:var(--blue)">测 / HSK Mock Test</h2>';
+    h+='<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px"><select onchange="ap.mockTestId=this.value;ap.mockLoaded=null;loadMock(function(){})" style="padding:10px 14px;border-radius:999px;border:1px solid var(--line);font-weight:900"><option value="HSK1-mock-01">HSK1-mock-01</option></select><button class="next-btn" onclick="ap.startMockTest()" '+(ap.mockPhase==='answering'?'disabled':'')+'>开放答题 / Start</button><button class="next-btn" style="background:#f05a3f" onclick="ap.endMockTest()" '+(ap.mockPhase!=='answering'?'disabled':'')+'>收卷锁定 / Lock</button><button class="next-btn" style="background:#9ca3af" onclick="ap.resetMockTest()">重置 / Reset</button></div>';
+    if(!test){h+='<div style="padding:18px;border:1px dashed var(--line);border-radius:14px;color:#74806d">点击加载或开放测试。'+(ap.mockLoadError?' '+es(ap.mockLoadError):'')+'</div>';setTimeout(function(){loadMock(function(){})},0);return h+'</div>'}
+    var statusBg=ap.mockPhase==='answering'?'#dcfce7':ap.mockPhase==='locked'?'#fee2e2':'#f8faf3',statusColor=ap.mockPhase==='answering'?'#166534':ap.mockPhase==='locked'?'#991b1b':'#64748b';
+    h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:14px 0"><div class="formula-box">题量<br><b>'+((test.sections||[]).reduce(function(n,s){return n+(s.items||[]).length},0))+'</b></div><div class="formula-box">时长<br><b>'+es(test.durationMinutes||35)+' 分钟</b></div><div class="formula-box" style="background:'+statusBg+';color:'+statusColor+';border-color:'+statusColor+'">状态<br><b>'+es(ap.mockPhase==='answering'?'答题中':ap.mockPhase==='locked'?'已锁定':'未开放')+'</b></div><div class="formula-box">已提交<br><b>'+rows.length+' / '+ap.as.length+'</b></div></div>';
+    h+=mockReport(rows);
+    h+='<div style="background:#f8faf3;border:1px solid var(--line);border-radius:14px;padding:14px;line-height:1.7;color:#64748b">听力由教师端统一控制。当前为慢速浏览器 TTS 流程测试；正式音频仍需后续按大题生成、人工验收并替换。'+(ap.mockSendStatus?'<br><b>'+es(ap.mockSendStatus)+'</b>':'')+'</div>';
+    h+='<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0"><b style="color:var(--blue)">听力播放</b><button class="tab" onclick="ap.playMockPart(\'L1_picture_choice\')">播放 1-5</button><button class="tab" onclick="ap.playMockPart(\'L2_answer_choice\')">播放 6-10</button><button class="tab" onclick="ap.playMockPart(\'L3_dialogue_picture_choice\')">播放 11-15</button><button class="tab" onclick="ap.playMockPart(\'L4_sentence_question_answer\')">播放 16-20</button><button class="tab" style="border-color:#f05a3f;color:#f05a3f" onclick="ap.stopMockAudio()">停止</button></div>';
+    h+='<h3 style="color:var(--practice)">提交情况 / Submissions</h3>';
+    if(!rows.length)h+='<div style="padding:18px;border:1px dashed var(--line);border-radius:14px;color:#94a3b8;text-align:center">暂无学生提交。</div>';
+    else{h+='<table style="width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden"><tr style="background:#edf6d9"><th style="text-align:left;padding:10px">学生</th><th style="text-align:left;padding:10px">得分</th><th style="text-align:left;padding:10px">错题</th><th style="text-align:left;padding:10px">薄弱方向</th><th style="text-align:left;padding:10px">详情</th><th style="text-align:left;padding:10px">提交时间</th></tr>';rows.forEach(function(r){var dx=mockDiagnosis(r),wrong=dx.wrong.length?dx.wrong.map(function(x){return x.number}).join('、'):'无';var answers=r.answers||{},detail=dx.wrong.map(function(x){return '第'+x.number+'题 '+mockPartName(x.part)+'：学生选 '+(answers[x.id]||'未答')+'，正确 '+x.answer}).join('；');var weak=(dx.wrong.length?'需加强：'+dx.focus+(dx.weakParts.length?'；'+dx.weakParts.join('、'):''):'无明显薄弱项');h+='<tr><td style="padding:10px;border-top:1px solid var(--line)">'+es(r.n||'')+'</td><td style="padding:10px;border-top:1px solid var(--line);font-weight:900;color:var(--blue)">'+es(r.x||'')+'</td><td style="padding:10px;border-top:1px solid var(--line)">'+es(wrong)+'</td><td style="padding:10px;border-top:1px solid var(--line)">'+es(weak)+'</td><td style="padding:10px;border-top:1px solid var(--line)"><details><summary style="cursor:pointer;color:var(--blue);font-weight:900">查看</summary><div style="margin-top:8px;font-size:12px;line-height:1.7;color:#64748b">'+es(detail||'全部正确')+'</div></details></td><td style="padding:10px;border-top:1px solid var(--line)">'+es(r.t||'')+'</td></tr>'});h+='</table>'}
+    return h+'</div>';
+  };
+  var oldSnav=ap._snav,oldCnt=ap._cnt,oldRender=ap._r,oldHa=ap._ha,oldLw=ap._lw;
+  ap._snav=function(){if(this.mt==='mock')return'<div class="sub-nav"><button class="sub-btn active" onclick="ap.st=\'mock\';ap._r()">HSK 测试<br><small>Mock Test</small></button></div>';return oldSnav.call(this)};
+  ap._cnt=function(){if(this.mt==='mock')return this._mockPanel();return oldCnt.call(this)};
+  ap._lw=function(){if(this.mt==='mock')return'';return oldLw.call(this)};
+  ap._ha=function(m){oldHa.call(this,m);if(m&&m.mode==='mock_test'){var n=this._rn?this._rn(m.studentName||m.name||'Student'):(m.studentName||m.name||'Student');this.mockRows.unshift({n:n,x:(m.score!=null&&m.total!=null)?(m.score+'/'+m.total):(m.text||m.answer||''),score:m.score,total:m.total,t:new Date().toLocaleTimeString(),submittedAt:m.submittedAt||new Date().toISOString(),answers:m.answers||{},wrongNumbers:m.wrongNumbers||[],testId:m.testId||m.questionId||''});this.qsub[n]=true;saveMockState();this._r()}};
+  ap._r=function(){
+    oldRender.call(this);
+    var side=document.querySelector('.cp-sidebar');if(!side||side.querySelector('.mock-side-btn'))return;
+    var btn=document.createElement('button');btn.className='sb-btn mock-side-btn'+(ap.mt==='mock'?' active':'');btn.textContent='测';btn.onclick=function(){ap.mt='mock';ap.st='mock';ap._r()};
+    var spacer=side.querySelector('.sb-spacer');side.insertBefore(btn,spacer||null);
   };
 })();
 </script>

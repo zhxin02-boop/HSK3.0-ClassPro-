@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-08-08",
+  "strategy": "One 4x3 generated sheet cropped into reusable vocabulary cards. Function/location words are reused only where the image can clearly support the classroom prompt.",
+  "sourceSheet": "C:/Users/zhang'xin/.codex/generated_images/019fac88-4c62-7a72-bd7f-79d094839ffa/call_Jdy5acnAdz8T1zsNIsbQkog8.png",
+  "style": "friendly classroom-appropriate semi-realistic 3D educational illustration, simple light background, square flashcard composition",
+  "negative": "No text, no Chinese characters, no pinyin, no English words, no logos, no watermark.",
+  "lesson": "HSK1-L10",
+  "imageMap": {
+    "杯子": "images/vocab/hsk1-l10/v01_beizi.png",
+    "售货员": "images/vocab/hsk1-l10/v02_shouhuoyuan.png",
+    "钱": "images/vocab/hsk1-l10/v03_qian.png",
+    "水果": "images/vocab/hsk1-l10/v04_shuiguo.png",
+    "苹果": "images/vocab/hsk1-l10/v05_pingguo.png",
+    "商店": "images/vocab/hsk1-l10/v06_shangdian.png",
+    "衣服": "images/vocab/hsk1-l10/v07_yifu.png",
+    "贵": "images/vocab/hsk1-l10/v08_gui.png",
+    "便宜": "images/vocab/hsk1-l10/v09_pianyi.png",
+    "穿": "images/vocab/hsk1-l10/v10_chuan.png",
+    "这边": "images/vocab/hsk1-l10/v11_zhebian.png",
+    "那儿": "images/vocab/hsk1-l10/v12_nar.png"
+  },
+  "imageGuessWords": [
+    "杯子",
+    "钱",
+    "水果",
+    "苹果",
+    "商店",
+    "衣服",
+    "售货员",
+    "便宜",
+    "贵",
+    "穿"
+  ]
+}
