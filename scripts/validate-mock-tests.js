@@ -2,7 +2,8 @@ const fs = require("fs");
 const path = require("path");
 
 const root = path.resolve(__dirname, "..");
-const file = path.join(root, "source", "data-model", "mock-tests", "HSK1-mock-01.json");
+const input = process.argv[2] || path.join("source", "data-model", "mock-tests", "HSK1-mock-01.json");
+const file = path.isAbsolute(input) ? input : path.join(root, input);
 const test = JSON.parse(fs.readFileSync(file, "utf8"));
 
 function fail(message) {
@@ -19,7 +20,10 @@ let listening = 0;
 let reading = 0;
 const partCounts = {};
 const answers26to39 = [];
-const forbiddenTerms = ["杯子", "苹果", "衣服", "钱", "多少钱", "块", "元", "三块五", "一百"];
+const forbiddenTermsByTestId = {
+  "HSK1-mock-01": ["杯子", "苹果", "衣服", "钱", "多少钱", "块", "元", "三块五", "一百"]
+};
+const forbiddenTerms = forbiddenTermsByTestId[test.testId] || [];
 const expectedParts = {
   L1_picture_choice: 5,
   L2_answer_choice: 5,
@@ -30,6 +34,20 @@ const expectedParts = {
   R3_fill_blank: 5,
   R4_reading_comprehension: 5
 };
+const sharedOptionParts = new Set([
+  "L3_dialogue_picture_choice",
+  "R1_sentence_picture_match",
+  "R2_question_answer_match",
+  "R3_fill_blank"
+]);
+
+function optionSignature(options) {
+  return JSON.stringify(options.map((o) => ({
+    id: o.id,
+    text: o.text,
+    image: o.image || ""
+  })));
+}
 
 for (const section of test.sections) {
   if (!section.id || !Array.isArray(section.items)) fail(`section ${section.id || "(missing)"} has no items`);
@@ -68,6 +86,16 @@ for (const section of test.sections) {
         if (!fs.existsSync(img)) fail(`${item.id} image not found: ${option.image}`);
       }
     }
+  }
+}
+
+if (test.testId !== "HSK1-mock-01") {
+  for (const part of sharedOptionParts) {
+    const items = test.sections.flatMap((s) => s.items).filter((item) => item.part === part);
+    if (!items.length) continue;
+    if (!items.every((item) => item.options.length === 6)) fail(`${part} must use one shared A-F option group`);
+    const sig = optionSignature(items[0].options);
+    if (!items.every((item) => optionSignature(item.options) === sig)) fail(`${part} items must share the same A-F options`);
   }
 }
 

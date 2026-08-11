@@ -1,0 +1,5417 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "level": "HSK1",
+    "lessonId": "L12",
+    "lessonKey": "HSK1-L12",
+    "title": "昨天下雪了",
+    "titleEn": "It snowed yesterday",
+    "topic": "描述天气与病情、非主语句、语气助词“了”、太……了",
+    "sourceTextPolicy": "保留教材原句；新增内容标记为教学扩展",
+    "dataQualityNotes": [
+      "根据 textbook data/L12.txt 生成；L12 课文原句完整保留。",
+      "已按 L10 当前结构重制：课前 10 题、课中题型题量、汉字练习与英俄译文选句字段对齐。"
+    ]
+  },
+  "features": {
+    "pinyin": true,
+    "hanziWritingDemo": true,
+    "vocabExamples": true,
+    "competition": true,
+    "postClassHomework": true
+  },
+  "vocabulary": [
+    {
+      "id": "v_l12_01",
+      "hanzi": "天气",
+      "word": "天气",
+      "pinyin": "tiānqì",
+      "pos": "名词",
+      "english": "weather",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "weather",
+      "image": "images/vocab/hsk1-l12/v01_tianqi.png"
+    },
+    {
+      "id": "v_l12_02",
+      "hanzi": "这里",
+      "word": "这里",
+      "pinyin": "zhèlǐ",
+      "pos": "代词",
+      "english": "here",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "place",
+      "image": "images/vocab/hsk1-l12/v02_zheli.png"
+    },
+    {
+      "id": "v_l12_03",
+      "hanzi": "天",
+      "word": "天",
+      "pinyin": "tiān",
+      "pos": "名词",
+      "english": "weather; day",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "weather",
+      "image": "images/vocab/hsk1-l12/v03_tian.png"
+    },
+    {
+      "id": "v_l12_04",
+      "hanzi": "下雨",
+      "word": "下雨",
+      "pinyin": "xià yǔ",
+      "pos": "动词短语",
+      "english": "rain",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "weather",
+      "image": "images/vocab/hsk1-l12/v04_xiayu.png"
+    },
+    {
+      "id": "v_l12_05",
+      "hanzi": "了",
+      "word": "了",
+      "pinyin": "le",
+      "pos": "助词",
+      "english": "modal particle le",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "grammar",
+      "image": "images/vocab/hsk1-l12/v05_le.png"
+    },
+    {
+      "id": "v_l12_06",
+      "hanzi": "雨",
+      "word": "雨",
+      "pinyin": "yǔ",
+      "pos": "名词",
+      "english": "rain",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "weather",
+      "image": "images/vocab/hsk1-l12/v06_yu.png"
+    },
+    {
+      "id": "v_l12_07",
+      "hanzi": "有点儿",
+      "word": "有点儿",
+      "pinyin": "yǒudiǎnr",
+      "pos": "副词",
+      "english": "a bit",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "adverb",
+      "image": "images/vocab/hsk1-l12/v07_youdianr.png"
+    },
+    {
+      "id": "v_l12_08",
+      "hanzi": "觉得",
+      "word": "觉得",
+      "pinyin": "juéde",
+      "pos": "动词",
+      "english": "feel",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "action",
+      "image": "images/vocab/hsk1-l12/v08_juede.png"
+    },
+    {
+      "id": "v_l12_09",
+      "hanzi": "冷",
+      "word": "冷",
+      "pinyin": "lěng",
+      "pos": "形容词",
+      "english": "cold",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "adjective",
+      "image": "images/vocab/hsk1-l12/v09_leng.png"
+    },
+    {
+      "id": "v_l12_10",
+      "hanzi": "雪",
+      "word": "雪",
+      "pinyin": "xuě",
+      "pos": "名词",
+      "english": "snow",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "weather",
+      "image": "images/vocab/hsk1-l12/v10_xue.png"
+    },
+    {
+      "id": "v_l12_11",
+      "hanzi": "公司",
+      "word": "公司",
+      "pinyin": "gōngsī",
+      "pos": "名词",
+      "english": "company",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "place",
+      "image": "images/vocab/hsk1-l12/v11_gongsi.png"
+    },
+    {
+      "id": "v_l12_12",
+      "hanzi": "生病",
+      "word": "生病",
+      "pinyin": "shēngbìng",
+      "pos": "动词",
+      "english": "fall ill",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "health",
+      "image": "images/vocab/hsk1-l12/v12_shengbing.png"
+    },
+    {
+      "id": "v_l12_13",
+      "hanzi": "看病",
+      "word": "看病",
+      "pinyin": "kànbìng",
+      "pos": "动词",
+      "english": "see a doctor",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "health",
+      "image": "images/vocab/hsk1-l12/v13_kanbing.png"
+    },
+    {
+      "id": "v_l12_14",
+      "hanzi": "病",
+      "word": "病",
+      "pinyin": "bìng",
+      "pos": "名词/动词",
+      "english": "illness; be sick",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "health",
+      "image": "images/vocab/hsk1-l12/v14_bing.png"
+    },
+    {
+      "id": "v_l12_15",
+      "hanzi": "一点儿",
+      "word": "一点儿",
+      "pinyin": "yìdiǎnr",
+      "pos": "数词/量词",
+      "english": "a little",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "quantity",
+      "image": "images/vocab/hsk1-l12/v15_yidianr.png"
+    },
+    {
+      "id": "v_l12_16",
+      "hanzi": "药",
+      "word": "药",
+      "pinyin": "yào",
+      "pos": "名词",
+      "english": "medicine",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "health",
+      "image": "images/vocab/hsk1-l12/v16_yao.png"
+    },
+    {
+      "id": "v_l12_17",
+      "hanzi": "回",
+      "word": "回",
+      "pinyin": "huí",
+      "pos": "动词",
+      "english": "return",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "action",
+      "image": "images/vocab/hsk1-l12/v17_hui.png"
+    },
+    {
+      "id": "v_l12_18",
+      "hanzi": "再",
+      "word": "再",
+      "pinyin": "zài",
+      "pos": "副词",
+      "english": "then; again",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "adverb",
+      "image": "images/vocab/hsk1-l12/v18_zai_again.png"
+    },
+    {
+      "id": "v_l12_19",
+      "hanzi": "喝",
+      "word": "喝",
+      "pinyin": "hē",
+      "pos": "动词",
+      "english": "drink",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "action",
+      "image": "images/vocab/hsk1-l12/v19_he.png"
+    },
+    {
+      "id": "v_l12_20",
+      "hanzi": "热",
+      "word": "热",
+      "pinyin": "rè",
+      "pos": "形容词",
+      "english": "hot; warm",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "adjective",
+      "image": "images/vocab/hsk1-l12/v20_re.png"
+    },
+    {
+      "id": "v_l12_21",
+      "hanzi": "水",
+      "word": "水",
+      "pinyin": "shuǐ",
+      "pos": "名词",
+      "english": "water",
+      "sourceType": "textbook",
+      "tags": [
+        "L12"
+      ],
+      "category": "thing",
+      "image": "images/vocab/hsk1-l12/v21_shui.png"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g_l12_01",
+      "title": "非主语句",
+      "titleEn": "Non-Subject-Predicate Sentences",
+      "structure": "词/短语成句",
+      "explanation": "口语中可用词或短语直接成句。",
+      "examples": [
+        {
+          "hanzi": "下雨了。",
+          "pinyin": "Xià yǔ le.",
+          "english": "It is raining.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "下雪了。",
+          "pinyin": "Xià xuě le.",
+          "english": "It snowed.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "上课了。",
+          "pinyin": "Shàng kè le.",
+          "english": "Class begins.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    {
+      "id": "g_l12_02",
+      "title": "语气助词“了”",
+      "titleEn": "Modal Particle 了",
+      "structure": "句子 + 了",
+      "explanation": "句末“了”表示出现新情况或状态变化。",
+      "examples": [
+        {
+          "hanzi": "下雨了。",
+          "pinyin": "Xià yǔ le.",
+          "english": "It is raining.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "昨天下雪了。",
+          "pinyin": "Zuótiān xià xuě le.",
+          "english": "It snowed yesterday.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我病了。",
+          "pinyin": "Wǒ bìng le.",
+          "english": "I'm sick.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "g_l12_03",
+      "title": "“太……了”格式",
+      "titleEn": "太...了 Pattern",
+      "structure": "太 + 形容词 + 了",
+      "explanation": "“太……了”用于感叹程度很高。",
+      "examples": [
+        {
+          "hanzi": "太冷了。",
+          "pinyin": "Tài lěng le.",
+          "english": "It is too cold.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "这个杯子太小了。",
+          "pinyin": "Zhège bēizi tài xiǎo le.",
+          "english": "This cup is too small.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我们今天太高兴了！",
+          "pinyin": "Wǒmen jīntiān tài gāoxìng le!",
+          "english": "We are so happy today!",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "t_l12_01",
+      "title": "课文一：今天天气怎么样",
+      "setting": "王一雪给王一飞打电话，问天气。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "王一雪",
+          "hanzi": "今天天气怎么样？",
+          "pinyin": "Jīntiān tiānqì zěnmeyàng?",
+          "english": "How is the weather today?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "王一飞",
+          "hanzi": "这里的天不太好，下雨了。",
+          "pinyin": "Zhèlǐ de tiān bú tài hǎo, xià yǔ le.",
+          "english": "The weather here is not very good. It is raining.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "王一雪",
+          "hanzi": "雨大吗？",
+          "pinyin": "Yǔ dà ma?",
+          "english": "Is the rain heavy?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "王一飞",
+          "hanzi": "有点儿大，我觉得很冷。",
+          "pinyin": "Yǒudiǎnr dà, wǒ juéde hěn lěng.",
+          "english": "A bit heavy. I feel cold.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "t_l12_02",
+      "title": "课文二：生病了",
+      "setting": "王一雪和杨同乐在公司聊天儿。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "王一雪",
+          "hanzi": "昨天下雪了。",
+          "pinyin": "Zuótiān xià xuě le.",
+          "english": "It snowed yesterday.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "杨同乐",
+          "hanzi": "是的，太冷了。",
+          "pinyin": "Shì de, tài lěng le.",
+          "english": "Yes, it was too cold.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "王一雪",
+          "hanzi": "你昨天没来公司，生病了？",
+          "pinyin": "Nǐ zuótiān méi lái gōngsī, shēngbìng le?",
+          "english": "You didn't come to the company yesterday. Were you sick?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "杨同乐",
+          "hanzi": "对，我昨天去医院看病了。",
+          "pinyin": "Duì, wǒ zuótiān qù yīyuàn kànbìng le.",
+          "english": "Yes. I went to the hospital to see a doctor yesterday.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "t_l12_03",
+      "title": "课文三：看病",
+      "setting": "昨天在医院，医生给杨同乐看病。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "杨同乐",
+          "hanzi": "医生，我病了。",
+          "pinyin": "Yīshēng, wǒ bìng le.",
+          "english": "Doctor, I'm sick.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "胡医生",
+          "hanzi": "我看看。你觉得怎么样？",
+          "pinyin": "Wǒ kànkan. Nǐ juéde zěnmeyàng?",
+          "english": "Let me take a look. How do you feel?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "杨同乐",
+          "hanzi": "我很冷。",
+          "pinyin": "Wǒ hěn lěng.",
+          "english": "I feel very cold.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "胡医生",
+          "hanzi": "好的，吃一点儿药，今天休息半天吧。",
+          "pinyin": "Hǎo de, chī yìdiǎnr yào, jīntiān xiūxi bàn tiān ba.",
+          "english": "Okay. Take some medicine and rest for half a day today.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 5,
+          "speaker": "杨同乐",
+          "hanzi": "好的。",
+          "pinyin": "Hǎo de.",
+          "english": "Okay.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 6,
+          "speaker": "胡医生",
+          "hanzi": "回家后再喝些热水。",
+          "pinyin": "Huí jiā hòu zài hē xiē rè shuǐ.",
+          "english": "Drink some warm water after you get home.",
+          "sourceType": "textbook"
+        }
+      ]
+    }
+  ],
+  "vocabExtensions": {
+    "v_l12_01": {
+      "word": "天气",
+      "examples": [
+        {
+          "hanzi": "今天天气",
+          "pinyin": "jīntiān tiānqì",
+          "english": "today's weather",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "天气不好",
+          "pinyin": "tiānqì bù hǎo",
+          "english": "bad weather",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "今天天气怎么样？",
+          "pinyin": "Jīntiān tiānqì zěnmeyàng?",
+          "english": "How is the weather today?",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "今天天气",
+          "pinyin": "jīntiān tiānqì",
+          "english": "today's weather",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "天气不好",
+          "pinyin": "tiānqì bù hǎo",
+          "english": "bad weather",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "今天天气怎么样？",
+          "pinyin": "Jīntiān tiānqì zěnmeyàng?",
+          "english": "How is the weather today?",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_02": {
+      "word": "这里",
+      "examples": [
+        {
+          "hanzi": "这里的天",
+          "pinyin": "zhèlǐ de tiān",
+          "english": "the weather here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在这里",
+          "pinyin": "zài zhèlǐ",
+          "english": "be here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这里下雨了。",
+          "pinyin": "Zhèlǐ xià yǔ le.",
+          "english": "It is raining here.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "这里的天",
+          "pinyin": "zhèlǐ de tiān",
+          "english": "the weather here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在这里",
+          "pinyin": "zài zhèlǐ",
+          "english": "be here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这里下雨了。",
+          "pinyin": "Zhèlǐ xià yǔ le.",
+          "english": "It is raining here.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_03": {
+      "word": "天",
+      "examples": [
+        {
+          "hanzi": "这里的天",
+          "pinyin": "zhèlǐ de tiān",
+          "english": "the sky/weather here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "天不好",
+          "pinyin": "tiān bù hǎo",
+          "english": "the weather is not good",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这里的天不太好。",
+          "pinyin": "Zhèlǐ de tiān bú tài hǎo.",
+          "english": "The weather here is not very good.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "这里的天",
+          "pinyin": "zhèlǐ de tiān",
+          "english": "the sky/weather here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "天不好",
+          "pinyin": "tiān bù hǎo",
+          "english": "the weather is not good",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这里的天不太好。",
+          "pinyin": "Zhèlǐ de tiān bú tài hǎo.",
+          "english": "The weather here is not very good.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_04": {
+      "word": "下雨",
+      "examples": [
+        {
+          "hanzi": "下雨了",
+          "pinyin": "xià yǔ le",
+          "english": "it is raining",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这里下雨",
+          "pinyin": "zhèlǐ xià yǔ",
+          "english": "it rains here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这里下雨了。",
+          "pinyin": "Zhèlǐ xià yǔ le.",
+          "english": "It is raining here.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "下雨了",
+          "pinyin": "xià yǔ le",
+          "english": "it is raining",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这里下雨",
+          "pinyin": "zhèlǐ xià yǔ",
+          "english": "it rains here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这里下雨了。",
+          "pinyin": "Zhèlǐ xià yǔ le.",
+          "english": "It is raining here.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_05": {
+      "word": "了",
+      "examples": [
+        {
+          "hanzi": "下雨了",
+          "pinyin": "xià yǔ le",
+          "english": "it is raining",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "病了",
+          "pinyin": "bìng le",
+          "english": "got sick",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我病了。",
+          "pinyin": "Wǒ bìng le.",
+          "english": "I am sick.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "下雨了",
+          "pinyin": "xià yǔ le",
+          "english": "it is raining",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "病了",
+          "pinyin": "bìng le",
+          "english": "got sick",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我病了。",
+          "pinyin": "Wǒ bìng le.",
+          "english": "I am sick.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_06": {
+      "word": "雨",
+      "examples": [
+        {
+          "hanzi": "雨大",
+          "pinyin": "yǔ dà",
+          "english": "heavy rain",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下雨",
+          "pinyin": "xià yǔ",
+          "english": "rain",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "雨有点儿大。",
+          "pinyin": "Yǔ yǒudiǎnr dà.",
+          "english": "The rain is a bit heavy.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "雨大",
+          "pinyin": "yǔ dà",
+          "english": "heavy rain",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "下雨",
+          "pinyin": "xià yǔ",
+          "english": "rain",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "雨有点儿大。",
+          "pinyin": "Yǔ yǒudiǎnr dà.",
+          "english": "The rain is a bit heavy.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_07": {
+      "word": "有点儿",
+      "examples": [
+        {
+          "hanzi": "有点儿大",
+          "pinyin": "yǒudiǎnr dà",
+          "english": "a bit heavy",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "有点儿冷",
+          "pinyin": "yǒudiǎnr lěng",
+          "english": "a bit cold",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我觉得有点儿冷。",
+          "pinyin": "Wǒ juéde yǒudiǎnr lěng.",
+          "english": "I feel a bit cold.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "有点儿大",
+          "pinyin": "yǒudiǎnr dà",
+          "english": "a bit heavy",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "有点儿冷",
+          "pinyin": "yǒudiǎnr lěng",
+          "english": "a bit cold",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我觉得有点儿冷。",
+          "pinyin": "Wǒ juéde yǒudiǎnr lěng.",
+          "english": "I feel a bit cold.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_08": {
+      "word": "觉得",
+      "examples": [
+        {
+          "hanzi": "觉得冷",
+          "pinyin": "juéde lěng",
+          "english": "feel cold",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "觉得很好",
+          "pinyin": "juéde hěn hǎo",
+          "english": "feel it is good",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我觉得很冷。",
+          "pinyin": "Wǒ juéde hěn lěng.",
+          "english": "I feel very cold.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "觉得冷",
+          "pinyin": "juéde lěng",
+          "english": "feel cold",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "觉得很好",
+          "pinyin": "juéde hěn hǎo",
+          "english": "feel it is good",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我觉得很冷。",
+          "pinyin": "Wǒ juéde hěn lěng.",
+          "english": "I feel very cold.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_09": {
+      "word": "冷",
+      "examples": [
+        {
+          "hanzi": "很冷",
+          "pinyin": "hěn lěng",
+          "english": "very cold",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "太冷了",
+          "pinyin": "tài lěng le",
+          "english": "too cold",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我觉得很冷。",
+          "pinyin": "Wǒ juéde hěn lěng.",
+          "english": "I feel very cold.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "很冷",
+          "pinyin": "hěn lěng",
+          "english": "very cold",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "太冷了",
+          "pinyin": "tài lěng le",
+          "english": "too cold",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我觉得很冷。",
+          "pinyin": "Wǒ juéde hěn lěng.",
+          "english": "I feel very cold.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_10": {
+      "word": "雪",
+      "examples": [
+        {
+          "hanzi": "下雪",
+          "pinyin": "xià xuě",
+          "english": "snow",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "昨天下雪",
+          "pinyin": "zuótiān xià xuě",
+          "english": "it snowed yesterday",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "昨天下雪了。",
+          "pinyin": "Zuótiān xià xuě le.",
+          "english": "It snowed yesterday.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "下雪",
+          "pinyin": "xià xuě",
+          "english": "snow",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "昨天下雪",
+          "pinyin": "zuótiān xià xuě",
+          "english": "it snowed yesterday",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "昨天下雪了。",
+          "pinyin": "Zuótiān xià xuě le.",
+          "english": "It snowed yesterday.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_11": {
+      "word": "公司",
+      "examples": [
+        {
+          "hanzi": "来公司",
+          "pinyin": "lái gōngsī",
+          "english": "come to the company",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在公司",
+          "pinyin": "zài gōngsī",
+          "english": "at the company",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "你昨天没来公司。",
+          "pinyin": "Nǐ zuótiān méi lái gōngsī.",
+          "english": "You did not come to the company yesterday.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "来公司",
+          "pinyin": "lái gōngsī",
+          "english": "come to the company",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在公司",
+          "pinyin": "zài gōngsī",
+          "english": "at the company",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "你昨天没来公司。",
+          "pinyin": "Nǐ zuótiān méi lái gōngsī.",
+          "english": "You did not come to the company yesterday.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_12": {
+      "word": "生病",
+      "examples": [
+        {
+          "hanzi": "生病了",
+          "pinyin": "shēngbìng le",
+          "english": "got sick",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "没有生病",
+          "pinyin": "méiyǒu shēngbìng",
+          "english": "not sick",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "他生病了。",
+          "pinyin": "Tā shēngbìng le.",
+          "english": "He got sick.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "生病了",
+          "pinyin": "shēngbìng le",
+          "english": "got sick",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "没有生病",
+          "pinyin": "méiyǒu shēngbìng",
+          "english": "not sick",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "他生病了。",
+          "pinyin": "Tā shēngbìng le.",
+          "english": "He got sick.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_13": {
+      "word": "看病",
+      "examples": [
+        {
+          "hanzi": "去看病",
+          "pinyin": "qù kànbìng",
+          "english": "go to see a doctor",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去医院看病",
+          "pinyin": "qù yīyuàn kànbìng",
+          "english": "go to the hospital to see a doctor",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我昨天去医院看病了。",
+          "pinyin": "Wǒ zuótiān qù yīyuàn kànbìng le.",
+          "english": "I went to the hospital yesterday.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "去看病",
+          "pinyin": "qù kànbìng",
+          "english": "go to see a doctor",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去医院看病",
+          "pinyin": "qù yīyuàn kànbìng",
+          "english": "go to the hospital to see a doctor",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我昨天去医院看病了。",
+          "pinyin": "Wǒ zuótiān qù yīyuàn kànbìng le.",
+          "english": "I went to the hospital yesterday.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_14": {
+      "word": "病",
+      "examples": [
+        {
+          "hanzi": "病了",
+          "pinyin": "bìng le",
+          "english": "be sick",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "看病",
+          "pinyin": "kànbìng",
+          "english": "see a doctor",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "医生，我病了。",
+          "pinyin": "Yīshēng, wǒ bìng le.",
+          "english": "Doctor, I am sick.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "病了",
+          "pinyin": "bìng le",
+          "english": "be sick",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "看病",
+          "pinyin": "kànbìng",
+          "english": "see a doctor",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "医生，我病了。",
+          "pinyin": "Yīshēng, wǒ bìng le.",
+          "english": "Doctor, I am sick.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_15": {
+      "word": "一点儿",
+      "examples": [
+        {
+          "hanzi": "一点儿药",
+          "pinyin": "yìdiǎnr yào",
+          "english": "a little medicine",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "一点儿水",
+          "pinyin": "yìdiǎnr shuǐ",
+          "english": "a little water",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "吃一点儿药。",
+          "pinyin": "Chī yìdiǎnr yào.",
+          "english": "Take a little medicine.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一点儿药",
+          "pinyin": "yìdiǎnr yào",
+          "english": "a little medicine",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "一点儿水",
+          "pinyin": "yìdiǎnr shuǐ",
+          "english": "a little water",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "吃一点儿药。",
+          "pinyin": "Chī yìdiǎnr yào.",
+          "english": "Take a little medicine.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_16": {
+      "word": "药",
+      "examples": [
+        {
+          "hanzi": "吃药",
+          "pinyin": "chī yào",
+          "english": "take medicine",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "一点儿药",
+          "pinyin": "yìdiǎnr yào",
+          "english": "a little medicine",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "医生让他吃药。",
+          "pinyin": "Yīshēng ràng tā chī yào.",
+          "english": "The doctor told him to take medicine.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "吃药",
+          "pinyin": "chī yào",
+          "english": "take medicine",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "一点儿药",
+          "pinyin": "yìdiǎnr yào",
+          "english": "a little medicine",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "医生让他吃药。",
+          "pinyin": "Yīshēng ràng tā chī yào.",
+          "english": "The doctor told him to take medicine.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_17": {
+      "word": "回",
+      "examples": [
+        {
+          "hanzi": "回家",
+          "pinyin": "huí jiā",
+          "english": "go home",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "回来",
+          "pinyin": "huí lái",
+          "english": "come back",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "回家后再喝些热水。",
+          "pinyin": "Huí jiā hòu zài hē xiē rè shuǐ.",
+          "english": "Drink warm water after going home.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "回家",
+          "pinyin": "huí jiā",
+          "english": "go home",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "回来",
+          "pinyin": "huí lái",
+          "english": "come back",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "回家后再喝些热水。",
+          "pinyin": "Huí jiā hòu zài hē xiē rè shuǐ.",
+          "english": "Drink warm water after going home.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_18": {
+      "word": "再",
+      "examples": [
+        {
+          "hanzi": "再喝",
+          "pinyin": "zài hē",
+          "english": "then drink",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "再看",
+          "pinyin": "zài kàn",
+          "english": "then look",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "回家后再喝些热水。",
+          "pinyin": "Huí jiā hòu zài hē xiē rè shuǐ.",
+          "english": "Drink warm water after going home.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "再喝",
+          "pinyin": "zài hē",
+          "english": "then drink",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "再看",
+          "pinyin": "zài kàn",
+          "english": "then look",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "回家后再喝些热水。",
+          "pinyin": "Huí jiā hòu zài hē xiē rè shuǐ.",
+          "english": "Drink warm water after going home.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_19": {
+      "word": "喝",
+      "examples": [
+        {
+          "hanzi": "喝水",
+          "pinyin": "hē shuǐ",
+          "english": "drink water",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "喝热水",
+          "pinyin": "hē rè shuǐ",
+          "english": "drink warm water",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "回家后再喝些热水。",
+          "pinyin": "Huí jiā hòu zài hē xiē rè shuǐ.",
+          "english": "Drink warm water after going home.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "喝水",
+          "pinyin": "hē shuǐ",
+          "english": "drink water",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "喝热水",
+          "pinyin": "hē rè shuǐ",
+          "english": "drink warm water",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "回家后再喝些热水。",
+          "pinyin": "Huí jiā hòu zài hē xiē rè shuǐ.",
+          "english": "Drink warm water after going home.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_20": {
+      "word": "热",
+      "examples": [
+        {
+          "hanzi": "热水",
+          "pinyin": "rè shuǐ",
+          "english": "warm water",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "很热",
+          "pinyin": "hěn rè",
+          "english": "very hot",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "他喝热水。",
+          "pinyin": "Tā hē rè shuǐ.",
+          "english": "He drinks warm water.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "热水",
+          "pinyin": "rè shuǐ",
+          "english": "warm water",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "很热",
+          "pinyin": "hěn rè",
+          "english": "very hot",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "他喝热水。",
+          "pinyin": "Tā hē rè shuǐ.",
+          "english": "He drinks warm water.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l12_21": {
+      "word": "水",
+      "examples": [
+        {
+          "hanzi": "喝水",
+          "pinyin": "hē shuǐ",
+          "english": "drink water",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "热水",
+          "pinyin": "rè shuǐ",
+          "english": "warm water",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "回家后再喝些热水。",
+          "pinyin": "Huí jiā hòu zài hē xiē rè shuǐ.",
+          "english": "Drink warm water after going home.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "喝水",
+          "pinyin": "hē shuǐ",
+          "english": "drink water",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "热水",
+          "pinyin": "rè shuǐ",
+          "english": "warm water",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "回家后再喝些热水。",
+          "pinyin": "Huí jiā hòu zài hē xiē rè shuǐ.",
+          "english": "Drink warm water after going home.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "grammarTeachingNotes": {
+    "g_l12_01": {
+      "title": "非主语句",
+      "titleEn": "Non-Subject-Predicate Sentences",
+      "structure": "词/短语成句",
+      "structureEn": "word/phrase as a sentence",
+      "structureRu": "слово/фраза как предложение",
+      "english": "A word or phrase can stand as a sentence in spoken Chinese.",
+      "russian": "Слово или фраза могут быть предложением.",
+      "formula": {
+        "pattern": "词/短语成句",
+        "patternEn": "word/phrase as a sentence",
+        "patternRu": "слово/фраза как предложение"
+      },
+      "examples": [
+        {
+          "hanzi": "下雨了。",
+          "pinyin": "Xià yǔ le.",
+          "english": "It is raining.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "下雪了。",
+          "pinyin": "Xià xuě le.",
+          "english": "It snowed.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "上课了。",
+          "pinyin": "Shàng kè le.",
+          "english": "Class begins.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "g_l12_02": {
+      "title": "语气助词“了”",
+      "titleEn": "Modal Particle 了",
+      "structure": "句子 + 了",
+      "structureEn": "sentence + le",
+      "structureRu": "предложение + 了",
+      "english": "Sentence-final 了 marks a new situation or change of state.",
+      "russian": "了 в конце предложения показывает изменение.",
+      "formula": {
+        "pattern": "句子 + 了",
+        "patternEn": "sentence + le",
+        "patternRu": "предложение + 了"
+      },
+      "examples": [
+        {
+          "hanzi": "下雨了。",
+          "pinyin": "Xià yǔ le.",
+          "english": "It is raining.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "昨天下雪了。",
+          "pinyin": "Zuótiān xià xuě le.",
+          "english": "It snowed yesterday.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我病了。",
+          "pinyin": "Wǒ bìng le.",
+          "english": "I'm sick.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    "g_l12_03": {
+      "title": "“太……了”格式",
+      "titleEn": "太...了 Pattern",
+      "structure": "太 + 形容词 + 了",
+      "structureEn": "tai + adjective + le",
+      "structureRu": "太 + прилагательное + 了",
+      "english": "太...了 expresses a high degree.",
+      "russian": "太...了 выражает высокую степень.",
+      "formula": {
+        "pattern": "太 + 形容词 + 了",
+        "patternEn": "tai + adjective + le",
+        "patternRu": "太 + прилагательное + 了"
+      },
+      "examples": [
+        {
+          "hanzi": "太冷了。",
+          "pinyin": "Tài lěng le.",
+          "english": "It is too cold.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "这个杯子太小了。",
+          "pinyin": "Zhège bēizi tài xiǎo le.",
+          "english": "This cup is too small.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我们今天太高兴了！",
+          "pinyin": "Wǒmen jīntiān tài gāoxìng le!",
+          "english": "We are so happy today!",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "preClass": {
+    "warmup": {
+      "title": "天气和身体感觉",
+      "prompt": "Think about weather and health.",
+      "intro": "这一课学完，你可以说天气变化，也可以说自己生病了、觉得冷。",
+      "question": "如果你想说“下雨了”，下面哪句话最合适？",
+      "questionEn": "Which sentence means 'It is raining'?",
+      "options": [
+        {
+          "word": "下雨了。",
+          "pinyin": "Xià yǔ le."
+        },
+        {
+          "word": "我读大学。",
+          "pinyin": "Wǒ dú dàxué."
+        },
+        {
+          "word": "杯子在这边。",
+          "pinyin": "Bēizi zài zhèbiān."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": "pre_l12_01",
+        "type": "choice",
+        "module": "词汇预热",
+        "question": "Which word means weather?",
+        "options": [
+          "天气",
+          "公司",
+          "药",
+          "水"
+        ],
+        "answer": "天气",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l12_02",
+        "type": "choice",
+        "module": "词汇预热",
+        "question": "Which word means snow?",
+        "options": [
+          "雪",
+          "雨",
+          "水",
+          "药"
+        ],
+        "answer": "雪",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l12_03",
+        "type": "choice",
+        "module": "交际预热",
+        "question": "Which sentence asks 'How is the weather today?'",
+        "options": [
+          "今天天气怎么样？",
+          "你叫什么名字？",
+          "多少钱一个？",
+          "你去哪儿？"
+        ],
+        "answer": "今天天气怎么样？",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l12_04",
+        "type": "choice",
+        "module": "语法预热",
+        "question": "Which sentence uses 了 for a new situation?",
+        "options": [
+          "下雨了。",
+          "我叫李文。",
+          "他是学生。",
+          "她在学校。"
+        ],
+        "answer": "下雨了。",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l12_05",
+        "type": "choice",
+        "module": "语法预热",
+        "question": "Which sentence uses 太……了?",
+        "options": [
+          "太冷了。",
+          "我很冷。",
+          "天气不好。",
+          "我病了。"
+        ],
+        "answer": "太冷了。",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l12_06",
+        "type": "choice",
+        "module": "课文预判",
+        "question": "Why did Yang Tongle go to the hospital?",
+        "options": [
+          "生病了",
+          "买衣服",
+          "看电影",
+          "读大学"
+        ],
+        "answer": "生病了",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l12_07",
+        "type": "choice",
+        "module": "词汇预热",
+        "question": "Which word means medicine?",
+        "options": [
+          "药",
+          "水",
+          "雨",
+          "天"
+        ],
+        "answer": "药",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l12_08",
+        "type": "choice",
+        "module": "交际预热",
+        "question": "Which sentence means 'I feel cold'?",
+        "options": [
+          "我觉得很冷。",
+          "我很高兴。",
+          "我在学校。",
+          "我买苹果。"
+        ],
+        "answer": "我觉得很冷。",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l12_09",
+        "type": "subjective",
+        "module": "天气开放题",
+        "question": "教学扩展：请写一句今天的天气。 / Write one sentence about today's weather.",
+        "openEnded": true,
+        "prompt": "例如：今天天气很好。",
+        "answerPlaceholder": "今天天气____。",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l12_10",
+        "type": "subjective",
+        "module": "身体感觉开放题",
+        "question": "教学扩展：请用“觉得”写一个中文短句。 / Use 觉得 to write one short sentence.",
+        "openEnded": true,
+        "prompt": "例如：我觉得很冷。",
+        "answerPlaceholder": "我觉得____。",
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "inClass": {
+    "questionGroups": {
+      "v1_image_guess": [
+        {
+          "id": "v1_l12_1",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l12/v01_tianqi.png",
+            "image_hint": "天气",
+            "options": [
+              "天气",
+              "公司",
+              "饭店",
+              "学校"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "天气",
+          "kp": "天气",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l12_2",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l12/v04_xiayu.png",
+            "image_hint": "下雨",
+            "options": [
+              "下雨",
+              "下雪",
+              "喝水",
+              "看病"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "下雨",
+          "kp": "下雨",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l12_3",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l12/v06_yu.png",
+            "image_hint": "雨",
+            "options": [
+              "雨",
+              "雪",
+              "水",
+              "药"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "雨",
+          "kp": "雨",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l12_4",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l12/v09_leng.png",
+            "image_hint": "冷",
+            "options": [
+              "冷",
+              "热",
+              "贵",
+              "便宜"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "冷",
+          "kp": "冷",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l12_5",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l12/v10_xue.png",
+            "image_hint": "雪",
+            "options": [
+              "雪",
+              "雨",
+              "水",
+              "药"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "雪",
+          "kp": "雪",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l12_6",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l12/v11_gongsi.png",
+            "image_hint": "公司",
+            "options": [
+              "公司",
+              "医院",
+              "商店",
+              "大学"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "公司",
+          "kp": "公司",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l12_7",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l12/v12_shengbing.png",
+            "image_hint": "生病",
+            "options": [
+              "生病",
+              "起床",
+              "开车",
+              "唱歌"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "生病",
+          "kp": "生病",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l12_8",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l12/v13_kanbing.png",
+            "image_hint": "看病",
+            "options": [
+              "看病",
+              "买衣服",
+              "读书",
+              "看电视"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "看病",
+          "kp": "看病",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l12_9",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l12/v16_yao.png",
+            "image_hint": "药",
+            "options": [
+              "药",
+              "水",
+              "杯子",
+              "钱"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "药",
+          "kp": "药",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l12_10",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l12/v21_shui.png",
+            "image_hint": "热水",
+            "options": [
+              "热水",
+              "牛奶",
+              "茶",
+              "水果"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "热水",
+          "kp": "热水",
+          "sourceType": "textbook"
+        }
+      ],
+      "v5_vocab_fill": [
+        {
+          "id": "v5_l12_1",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "今天___怎么样？",
+            "sentence_pinyin": "Jīntiān ___ zěnmeyàng?",
+            "options": [
+              "天气",
+              "药",
+              "公司",
+              "水"
+            ],
+            "options_pinyin": [
+              "tiānqì",
+              "yào",
+              "gōngsī",
+              "shuǐ"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "天气",
+          "kp": "天气怎么样",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l12_2",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "这里___了。",
+            "sentence_pinyin": "Zhèlǐ ___ le.",
+            "options": [
+              "下雨",
+              "看病",
+              "回来",
+              "觉得"
+            ],
+            "options_pinyin": [
+              "xià yǔ",
+              "kànbìng",
+              "",
+              "juéde"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "下雨",
+          "kp": "下雨了",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l12_3",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "雨有点儿___。",
+            "sentence_pinyin": "Yǔ yǒudiǎnr ___.",
+            "options": [
+              "大",
+              "药",
+              "公司",
+              "水"
+            ],
+            "options_pinyin": [
+              "dà",
+              "yào",
+              "gōngsī",
+              "shuǐ"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "大",
+          "kp": "有点儿",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l12_4",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "我觉得很___。",
+            "sentence_pinyin": "Wǒ juéde hěn ___.",
+            "options": [
+              "冷",
+              "雪",
+              "药",
+              "天"
+            ],
+            "options_pinyin": [
+              "lěng",
+              "xuě",
+              "yào",
+              "tiān"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "冷",
+          "kp": "觉得",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l12_5",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "昨天___了。",
+            "sentence_pinyin": "Zuótiān ___ le.",
+            "options": [
+              "下雪",
+              "看病",
+              "喝水",
+              "回来"
+            ],
+            "options_pinyin": [
+              "",
+              "kànbìng",
+              "",
+              ""
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "下雪",
+          "kp": "下雪了",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l12_6",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "你昨天没来___。",
+            "sentence_pinyin": "Nǐ zuótiān méi lái ___.",
+            "options": [
+              "公司",
+              "天气",
+              "药",
+              "雨"
+            ],
+            "options_pinyin": [
+              "gōngsī",
+              "tiānqì",
+              "yào",
+              "yǔ"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "公司",
+          "kp": "公司",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l12_7",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "我昨天去医院___了。",
+            "sentence_pinyin": "Wǒ zuótiān qù yīyuàn ___ le.",
+            "options": [
+              "看病",
+              "下雨",
+              "喝",
+              "回"
+            ],
+            "options_pinyin": [
+              "kànbìng",
+              "xià yǔ",
+              "hē",
+              "huí"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "看病",
+          "kp": "看病了",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l12_8",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "吃一点儿___。",
+            "sentence_pinyin": "Chī yìdiǎnr ___.",
+            "options": [
+              "药",
+              "公司",
+              "天气",
+              "雪"
+            ],
+            "options_pinyin": [
+              "yào",
+              "gōngsī",
+              "tiānqì",
+              "xuě"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "药",
+          "kp": "一点儿药",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l12_9",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "回家后再___些热水。",
+            "sentence_pinyin": "Huí jiā hòu zài ___ xiē rè shuǐ.",
+            "options": [
+              "喝",
+              "来",
+              "下",
+              "看病"
+            ],
+            "options_pinyin": [
+              "hē",
+              "",
+              "",
+              "kànbìng"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "喝",
+          "kp": "喝热水",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l12_10",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "太___了。",
+            "sentence_pinyin": "Tài ___ le.",
+            "options": [
+              "冷",
+              "药",
+              "水",
+              "公司"
+            ],
+            "options_pinyin": [
+              "lěng",
+              "yào",
+              "shuǐ",
+              "gōngsī"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "冷",
+          "kp": "太……了",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v7_word_match": [
+        {
+          "id": "v7_l12_1",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "今天天气怎么样？",
+                "right": "这里下雨了。",
+                "left_pinyin": "jīntiān tiānqì zěnmeyàng",
+                "right_pinyin": "zhèlǐ xià yǔ le"
+              },
+              {
+                "left": "雨大吗？",
+                "right": "有点儿大。",
+                "left_pinyin": "yǔ dà ma",
+                "right_pinyin": "yǒudiǎnr dà"
+              },
+              {
+                "left": "你觉得怎么样？",
+                "right": "我觉得很冷。",
+                "left_pinyin": "nǐ juéde zěnmeyàng",
+                "right_pinyin": "wǒ juéde 很 lěng"
+              },
+              {
+                "left": "昨天下雪了吗？",
+                "right": "是的，下雪了。",
+                "left_pinyin": "zuótiān 下 xuě le ma",
+                "right_pinyin": "shì de 下 xuě le"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l12_2",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "你昨天来公司了吗？",
+                "right": "没有。",
+                "left_pinyin": "nǐ zuótiān lái gōngsī le ma",
+                "right_pinyin": "méiyǒu"
+              },
+              {
+                "left": "你生病了吗？",
+                "right": "对，我病了。",
+                "left_pinyin": "nǐ shēngbìng le ma",
+                "right_pinyin": "duì wǒ bìng le"
+              },
+              {
+                "left": "你去医院做什么？",
+                "right": "看病。",
+                "left_pinyin": "nǐ qù yīyuàn zuò shénme",
+                "right_pinyin": "kànbìng"
+              },
+              {
+                "left": "医生说什么？",
+                "right": "吃一点儿药。",
+                "left_pinyin": "yīshēng 说 shénme",
+                "right_pinyin": "吃 yìdiǎnr yào"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l12_3",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "下雨了",
+                "right": "天气不好",
+                "left_pinyin": "xià yǔ le",
+                "right_pinyin": "tiānqì bù hǎo"
+              },
+              {
+                "left": "下雪了",
+                "right": "太冷了",
+                "left_pinyin": "下 xuě le",
+                "right_pinyin": "tài lěng le"
+              },
+              {
+                "left": "病了",
+                "right": "去看病",
+                "left_pinyin": "bìng le",
+                "right_pinyin": "qù kànbìng"
+              },
+              {
+                "left": "回家后",
+                "right": "喝热水",
+                "left_pinyin": "huí 家 hòu",
+                "right_pinyin": "hē rè shuǐ"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l12_4",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "天气",
+                "right": "怎么样",
+                "left_pinyin": "tiānqì",
+                "right_pinyin": "zěnmeyàng"
+              },
+              {
+                "left": "有点儿",
+                "right": "大",
+                "left_pinyin": "yǒudiǎnr",
+                "right_pinyin": "dà"
+              },
+              {
+                "left": "觉得",
+                "right": "很冷",
+                "left_pinyin": "juéde",
+                "right_pinyin": "很 lěng"
+              },
+              {
+                "left": "一点儿",
+                "right": "药",
+                "left_pinyin": "yìdiǎnr",
+                "right_pinyin": "yào"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l12_5",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "公司",
+                "right": "上班",
+                "left_pinyin": "gōngsī",
+                "right_pinyin": "shàngbān"
+              },
+              {
+                "left": "医院",
+                "right": "看病",
+                "left_pinyin": "yīyuàn",
+                "right_pinyin": "kànbìng"
+              },
+              {
+                "left": "药",
+                "right": "吃",
+                "left_pinyin": "yào",
+                "right_pinyin": "吃"
+              },
+              {
+                "left": "热水",
+                "right": "喝",
+                "left_pinyin": "rè shuǐ",
+                "right_pinyin": "hē"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v8_memory_match": [
+        {
+          "id": "v8_l12_1",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "天气",
+                "right": "weather",
+                "left_pinyin": "tiānqì",
+                "right_pinyin": "weather"
+              },
+              {
+                "left": "下雨",
+                "right": "rain",
+                "left_pinyin": "xià yǔ",
+                "right_pinyin": "rain"
+              },
+              {
+                "left": "雨",
+                "right": "rain",
+                "left_pinyin": "yǔ",
+                "right_pinyin": "rain"
+              },
+              {
+                "left": "冷",
+                "right": "cold",
+                "left_pinyin": "lěng",
+                "right_pinyin": "cold"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l12_2",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "雪",
+                "right": "snow",
+                "left_pinyin": "xuě",
+                "right_pinyin": "snow"
+              },
+              {
+                "left": "公司",
+                "right": "company",
+                "left_pinyin": "gōngsī",
+                "right_pinyin": "company"
+              },
+              {
+                "left": "生病",
+                "right": "fall ill",
+                "left_pinyin": "shēngbìng",
+                "right_pinyin": "fall ill"
+              },
+              {
+                "left": "看病",
+                "right": "see a doctor",
+                "left_pinyin": "kànbìng",
+                "right_pinyin": "see a doctor"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l12_3",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "药",
+                "right": "medicine",
+                "left_pinyin": "yào",
+                "right_pinyin": "medicine"
+              },
+              {
+                "left": "喝",
+                "right": "drink",
+                "left_pinyin": "hē",
+                "right_pinyin": "drink"
+              },
+              {
+                "left": "热",
+                "right": "hot",
+                "left_pinyin": "rè",
+                "right_pinyin": "hot"
+              },
+              {
+                "left": "水",
+                "right": "water",
+                "left_pinyin": "shuǐ",
+                "right_pinyin": "water"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l12_4",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "有点儿",
+                "right": "a bit",
+                "left_pinyin": "yǒudiǎnr",
+                "right_pinyin": "a bit"
+              },
+              {
+                "left": "觉得",
+                "right": "feel",
+                "left_pinyin": "juéde",
+                "right_pinyin": "feel"
+              },
+              {
+                "left": "一点儿",
+                "right": "a little",
+                "left_pinyin": "yìdiǎnr",
+                "right_pinyin": "a little"
+              },
+              {
+                "left": "再",
+                "right": "then / again",
+                "left_pinyin": "zài",
+                "right_pinyin": "then / again"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l12_5",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "下雨了",
+                "right": "It is raining",
+                "left_pinyin": "xià yǔ le",
+                "right_pinyin": "It is raining"
+              },
+              {
+                "left": "太冷了",
+                "right": "too cold",
+                "left_pinyin": "tài lěng le",
+                "right_pinyin": "too cold"
+              },
+              {
+                "left": "我病了",
+                "right": "I am sick",
+                "left_pinyin": "wǒ bìng le",
+                "right_pinyin": "I am sick"
+              },
+              {
+                "left": "喝热水",
+                "right": "drink warm water",
+                "left_pinyin": "hē rè shuǐ",
+                "right_pinyin": "drink warm water"
+              }
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v4_complete_sentence": [
+        {
+          "id": "v4_l12_1",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "这里的天不太好，下雨了。",
+            "source_pinyin": "Zhèlǐ de tiān bú tài hǎo, xià yǔ le.",
+            "options_pinyin": [
+              "Jīntiān tiānqì zěnmeyàng?",
+              "Nǐ jiào shénme míngzi?",
+              "Nǐ qù nǎr?",
+              "Nǐ mǎi shénme?"
+            ],
+            "options": [
+              "今天天气怎么样？",
+              "你叫什么名字？",
+              "你去哪儿？",
+              "你买什么？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "今天天气怎么样？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l12_2",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "有点儿大。",
+            "source_pinyin": "Yǒudiǎnr dà.",
+            "options_pinyin": [
+              "Yǔ dà ma?",
+              "Nǐ bìng le ma?",
+              "Nǐ qù nǎr?",
+              "Nǐ xué shénme?"
+            ],
+            "options": [
+              "雨大吗？",
+              "你病了吗？",
+              "你去哪儿？",
+              "你学什么？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "雨大吗？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l12_3",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "我觉得很冷。",
+            "source_pinyin": "Wǒ juéde hěn lěng.",
+            "options_pinyin": [
+              "Nǐ juéde zěnmeyàng?",
+              "Nǐ jiào shénme?",
+              "Nǐ zài nǎr?",
+              "Nǐ mǎi shénme?"
+            ],
+            "options": [
+              "你觉得怎么样？",
+              "你叫什么？",
+              "你在哪儿？",
+              "你买什么？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你觉得怎么样？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l12_4",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "昨天下雪了。",
+            "source_pinyin": "Zuótiān xià xuě le.",
+            "options_pinyin": [
+              "Zuótiān tiānqì zěnmeyàng?",
+              "Nǐ zuótiān qù nǎr?",
+              "Nǐ zuótiān mǎi shénme?",
+              "Nǐ jǐ diǎn xiàbān?"
+            ],
+            "options": [
+              "昨天天气怎么样？",
+              "你昨天去哪儿？",
+              "你昨天买什么？",
+              "你几点下班？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "昨天天气怎么样？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l12_5",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "太冷了。",
+            "source_pinyin": "Tài lěng le.",
+            "options_pinyin": [
+              "Tiānqì zěnmeyàng?",
+              "Nǐ bìng le ma?",
+              "Nǐ kànbìng le ma?",
+              "Nǐ hē shuǐ ma?"
+            ],
+            "options": [
+              "天气怎么样？",
+              "你病了吗？",
+              "你看病了吗？",
+              "你喝水吗？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "天气怎么样？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l12_6",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "我昨天去医院看病了。",
+            "source_pinyin": "Wǒ zuótiān qù yīyuàn kànbìng le.",
+            "options_pinyin": [
+              "Nǐ zuótiān qù nǎr le?",
+              "Nǐ jīntiān qù nǎr?",
+              "Nǐ mǎi shénme yào?",
+              "Tiānqì zěnmeyàng?"
+            ],
+            "options": [
+              "你昨天去哪儿了？",
+              "你今天去哪儿？",
+              "你买什么药？",
+              "天气怎么样？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你昨天去哪儿了？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l12_7",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "医生，我病了。",
+            "source_pinyin": "Yīshēng, wǒ bìng le.",
+            "options_pinyin": [
+              "Nǐ zěnme le?",
+              "Nǐ jiào shénme?",
+              "Nǐ qù nǎr?",
+              "Nǐ mǎi shénme?"
+            ],
+            "options": [
+              "你怎么了？",
+              "你叫什么？",
+              "你去哪儿？",
+              "你买什么？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你怎么了？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l12_8",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "吃一点儿药。",
+            "source_pinyin": "Chī yìdiǎnr yào.",
+            "options_pinyin": [
+              "Yīshēng shuō chī shénme?",
+              "Yīshēng zài nǎr?",
+              "Nǐ hē shénme?",
+              "Nǐ kàn shénme?"
+            ],
+            "options": [
+              "医生说吃什么？",
+              "医生在哪儿？",
+              "你喝什么？",
+              "你看什么？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "医生说吃什么？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l12_9",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "回家后再喝些热水。",
+            "source_pinyin": "Huí jiā hòu zài hē xiē rè shuǐ.",
+            "options_pinyin": [
+              "Huí jiā hòu hē shénme?",
+              "Huí jiā hòu qù nǎr?",
+              "Huí jiā hòu mǎi shénme?",
+              "Huí jiā hòu xué shénme?"
+            ],
+            "options": [
+              "回家后喝什么？",
+              "回家后去哪儿？",
+              "回家后买什么？",
+              "回家后学什么？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "回家后喝什么？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l12_10",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问句。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "这里的天不太好。",
+            "source_pinyin": "Zhèlǐ de tiān bú tài hǎo.",
+            "options_pinyin": [
+              "Zhèlǐ de tiānqì hǎo ma?",
+              "Zhèlǐ yǒu fàndiàn ma?",
+              "Zhèlǐ yǒu dàxué ma?",
+              "Zhèlǐ yǒu yīyuàn ma?"
+            ],
+            "options": [
+              "这里的天气好吗？",
+              "这里有饭店吗？",
+              "这里有大学吗？",
+              "这里有医院吗？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这里的天气好吗？",
+          "kp": "句型转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "g1_ordering": [
+        {
+          "id": "g1_l12_1",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "今天",
+              "天气",
+              "怎么样"
+            ],
+            "chunks_pinyin": [
+              "jīntiān",
+              "tiānqì",
+              "zěnmeyàng"
+            ]
+          },
+          "correct_answer": "今天天气怎么样",
+          "acceptable_answers": [
+            "今天天气怎么样",
+            "今天天气怎么样。",
+            "今天天气怎么样？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l12_2",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "这里",
+              "下雨",
+              "了"
+            ],
+            "chunks_pinyin": [
+              "zhèlǐ",
+              "xià yǔ",
+              "le"
+            ]
+          },
+          "correct_answer": "这里下雨了",
+          "acceptable_answers": [
+            "这里下雨了",
+            "这里下雨了。",
+            "这里下雨了？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l12_3",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "我",
+              "觉得",
+              "很",
+              "冷"
+            ],
+            "chunks_pinyin": [
+              "wǒ",
+              "juéde",
+              "hěn",
+              "lěng"
+            ]
+          },
+          "correct_answer": "我觉得很冷",
+          "acceptable_answers": [
+            "我觉得很冷",
+            "我觉得很冷。",
+            "我觉得很冷？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l12_4",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "昨天",
+              "下雪",
+              "了"
+            ],
+            "chunks_pinyin": [
+              "zuótiān",
+              "xià xuě",
+              "le"
+            ]
+          },
+          "correct_answer": "昨天下雪了",
+          "acceptable_answers": [
+            "昨天下雪了",
+            "昨天下雪了。",
+            "昨天下雪了？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l12_5",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "回家后",
+              "再",
+              "喝",
+              "热水"
+            ],
+            "chunks_pinyin": [
+              "huí jiā hòu",
+              "zài",
+              "hē",
+              "rè shuǐ"
+            ]
+          },
+          "correct_answer": "回家后再喝热水",
+          "acceptable_answers": [
+            "回家后再喝热水",
+            "回家后再喝热水。",
+            "回家后再喝热水？"
+          ],
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "r3_translation_choice": [
+        {
+          "id": "trc_l12_1",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "How is the weather today? / Какая сегодня погода?",
+          "data": {
+            "question_en": "How is the weather today?",
+            "question_ru": "Какая сегодня погода?",
+            "options": [
+              "今天天气怎么样？",
+              "你今天去哪儿？",
+              "你今天买什么？",
+              "你今天上班吗？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "今天天气怎么样？",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l12_2",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "It is raining here. / Здесь идёт дождь.",
+          "data": {
+            "question_en": "It is raining here.",
+            "question_ru": "Здесь идёт дождь.",
+            "options": [
+              "这里下雨了。",
+              "这里下雪了。",
+              "这里很热。",
+              "这里有药。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这里下雨了。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l12_3",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "The rain is a bit heavy. / Дождь немного сильный.",
+          "data": {
+            "question_en": "The rain is a bit heavy.",
+            "question_ru": "Дождь немного сильный.",
+            "options": [
+              "雨有点儿大。",
+              "雪有点儿冷。",
+              "水有点儿热。",
+              "药有点儿少。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "雨有点儿大。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l12_4",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "I feel very cold. / Мне очень холодно.",
+          "data": {
+            "question_en": "I feel very cold.",
+            "question_ru": "Мне очень холодно.",
+            "options": [
+              "我觉得很冷。",
+              "我觉得很热。",
+              "我喝热水。",
+              "我吃药。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我觉得很冷。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l12_5",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "It snowed yesterday. / Вчера шёл снег.",
+          "data": {
+            "question_en": "It snowed yesterday.",
+            "question_ru": "Вчера шёл снег.",
+            "options": [
+              "昨天下雪了。",
+              "昨天下雨了。",
+              "昨天看病了。",
+              "昨天回家了。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "昨天下雪了。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l12_6",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "It is too cold. / Слишком холодно.",
+          "data": {
+            "question_en": "It is too cold.",
+            "question_ru": "Слишком холодно.",
+            "options": [
+              "太冷了。",
+              "太热了。",
+              "有点儿大。",
+              "天气不好。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "太冷了。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l12_7",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "I went to the hospital to see a doctor yesterday. / Вчера я ходил в больницу к врачу.",
+          "data": {
+            "question_en": "I went to the hospital to see a doctor yesterday.",
+            "question_ru": "Вчера я ходил в больницу к врачу.",
+            "options": [
+              "我昨天去医院看病了。",
+              "我昨天去公司了。",
+              "我昨天去商店了。",
+              "我昨天去大学了。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我昨天去医院看病了。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l12_8",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Doctor, I am sick. / Доктор, я заболел.",
+          "data": {
+            "question_en": "Doctor, I am sick.",
+            "question_ru": "Доктор, я заболел.",
+            "options": [
+              "医生，我病了。",
+              "老师，我来了。",
+              "医生，我回家了。",
+              "朋友，我很忙。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "医生，我病了。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l12_9",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Take a little medicine. / Прими немного лекарства.",
+          "data": {
+            "question_en": "Take a little medicine.",
+            "question_ru": "Прими немного лекарства.",
+            "options": [
+              "吃一点儿药。",
+              "喝一点儿水。",
+              "买一点儿水果。",
+              "看一点儿书。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "吃一点儿药。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l12_10",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Drink some warm water after going home. / После возвращения домой выпей тёплой воды.",
+          "data": {
+            "question_en": "Drink some warm water after going home.",
+            "question_ru": "После возвращения домой выпей тёплой воды.",
+            "options": [
+              "回家后再喝些热水。",
+              "回家后再吃些苹果。",
+              "回家后再看电影。",
+              "回家后再买衣服。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "回家后再喝些热水。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        }
+      ],
+      "r2_passage_choice": [
+        {
+          "id": "ttq_l12_1",
+          "type": "text_qa_group",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：根据课文内容回答。",
+          "prompt_en": "Text Q&A: answer from the dialogue.",
+          "data": {
+            "title": "课文一：今天天气怎么样",
+            "passage": "今天天气怎么样？这里的天不太好，下雨了。雨大吗？有点儿大，我觉得很冷。",
+            "passage_pinyin": "Jīntiān tiānqì zěnmeyàng? Zhèlǐ de tiān bú tài hǎo, xià yǔ le. Yǔ dà ma? Yǒudiǎnr dà, wǒ juéde hěn lěng.",
+            "questions": [
+              {
+                "question_cn": "今天天气怎么样？",
+                "question_pinyin": "Jīntiān tiānqì zěnmeyàng?",
+                "answer": "不太好",
+                "answer_pinyin": "bú tài hǎo",
+                "options": [
+                  "不太好",
+                  "很好",
+                  "很热",
+                  "不知道"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "下雨了吗？",
+                "question_pinyin": "Xià yǔ le ma?",
+                "answer": "下雨了",
+                "answer_pinyin": "xià yǔ le",
+                "options": [
+                  "下雨了",
+                  "下雪了",
+                  "没下雨",
+                  "不知道"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "王一飞觉得怎么样？",
+                "question_pinyin": "Wáng Yīfēi juéde zěnmeyàng?",
+                "answer": "很冷",
+                "answer_pinyin": "hěn lěng",
+                "options": [
+                  "很冷",
+                  "很热",
+                  "很忙",
+                  "很好"
+                ],
+                "correct_index": 0
+              }
+            ]
+          },
+          "correct_answer": "见每题答案",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "ttq_l12_2",
+          "type": "text_qa_group",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：根据课文内容回答。",
+          "prompt_en": "Text Q&A: answer from the dialogue.",
+          "data": {
+            "title": "课文二：生病了",
+            "passage": "昨天下雪了。是的，太冷了。你昨天没来公司，生病了？对，我昨天去医院看病了。",
+            "passage_pinyin": "Zuótiān xià xuě le. Shì de, tài lěng le. Nǐ zuótiān méi lái gōngsī, shēngbìng le? Duì, wǒ zuótiān qù yīyuàn kànbìng le.",
+            "questions": [
+              {
+                "question_cn": "昨天天气怎么样？",
+                "question_pinyin": "Zuótiān tiānqì zěnmeyàng?",
+                "answer": "下雪了",
+                "answer_pinyin": "xià xuě le",
+                "options": [
+                  "下雪了",
+                  "下雨了",
+                  "很热",
+                  "很好"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "杨同乐昨天来公司了吗？",
+                "question_pinyin": "Yáng Tónglè zuótiān lái gōngsī le ma?",
+                "answer": "没有",
+                "answer_pinyin": "méiyǒu",
+                "options": [
+                  "没有",
+                  "来了",
+                  "不知道",
+                  "是的"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "杨同乐昨天去哪儿了？",
+                "question_pinyin": "Yáng Tónglè zuótiān qù nǎr le?",
+                "answer": "医院",
+                "answer_pinyin": "yīyuàn",
+                "options": [
+                  "医院",
+                  "公司",
+                  "商店",
+                  "学校"
+                ],
+                "correct_index": 0
+              }
+            ]
+          },
+          "correct_answer": "见每题答案",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "ttq_l12_3",
+          "type": "text_qa_group",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：根据课文内容回答。",
+          "prompt_en": "Text Q&A: answer from the dialogue.",
+          "data": {
+            "title": "课文三：看病",
+            "passage": "医生，我病了。我看看。你觉得怎么样？我很冷。好的，吃一点儿药，今天休息半天吧。回家后再喝些热水。",
+            "passage_pinyin": "Yīshēng, wǒ bìng le. Wǒ kànkan. Nǐ juéde zěnmeyàng? Wǒ hěn lěng. Hǎo de, chī yìdiǎnr yào, jīntiān xiūxi bàn tiān ba. Huí jiā hòu zài hē xiē rè shuǐ.",
+            "questions": [
+              {
+                "question_cn": "杨同乐怎么了？",
+                "question_pinyin": "Yáng Tónglè zěnme le?",
+                "answer": "病了",
+                "answer_pinyin": "bìng le",
+                "options": [
+                  "病了",
+                  "下雪了",
+                  "回家了",
+                  "上班了"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "医生让他吃什么？",
+                "question_pinyin": "Yīshēng ràng tā chī shénme?",
+                "answer": "药",
+                "answer_pinyin": "yào",
+                "options": [
+                  "药",
+                  "苹果",
+                  "米饭",
+                  "牛奶"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "回家后喝什么？",
+                "question_pinyin": "Huí jiā hòu hē shénme?",
+                "answer": "热水",
+                "answer_pinyin": "rè shuǐ",
+                "options": [
+                  "热水",
+                  "茶",
+                  "牛奶",
+                  "冷水"
+                ],
+                "correct_index": 0
+              }
+            ]
+          },
+          "correct_answer": "见每题答案",
+          "sourceType": "textbook"
+        }
+      ],
+      "r4_picture_talk": [
+        {
+          "id": "r4_l12_pt_01",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "今天天气怎么样？",
+          "prompt_en": "Answer in Chinese.",
+          "data": {
+            "question": "今天天气怎么样？",
+            "question_pinyin": "Jīntiān tiānqì zěnmeyàng?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l12/v01_tianqi.png",
+            "sampleAnswer": "今天天气很好。",
+            "sampleAnswerPinyin": "Jīntiān tiānqì hěn hǎo.",
+            "patternType": "天气怎么样"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：天气怎么样",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l12_pt_02",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "这里怎么了？",
+          "prompt_en": "Answer in Chinese.",
+          "data": {
+            "question": "这里怎么了？",
+            "question_pinyin": "Zhèlǐ zěnme le?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l12/v04_xiayu.png",
+            "sampleAnswer": "这里下雨了。",
+            "sampleAnswerPinyin": "Zhèlǐ xià yǔ le.",
+            "patternType": "了"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：了",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l12_pt_03",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "他觉得怎么样？",
+          "prompt_en": "Answer in Chinese.",
+          "data": {
+            "question": "他觉得怎么样？",
+            "question_pinyin": "Tā juéde zěnmeyàng?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l12/v09_leng.png",
+            "sampleAnswer": "他觉得很冷。",
+            "sampleAnswerPinyin": "Tā juéde hěn lěng.",
+            "patternType": "觉得"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：觉得",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l12_pt_04",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "昨天天气怎么样？",
+          "prompt_en": "Answer in Chinese.",
+          "data": {
+            "question": "昨天天气怎么样？",
+            "question_pinyin": "Zuótiān tiānqì zěnmeyàng?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l12/v10_xue.png",
+            "sampleAnswer": "昨天下雪了。",
+            "sampleAnswerPinyin": "Zuótiān xià xuě le.",
+            "patternType": "下雪了"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：下雪了",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l12_pt_05",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "这是哪里？",
+          "prompt_en": "Answer in Chinese.",
+          "data": {
+            "question": "这是哪里？",
+            "question_pinyin": "Zhè shì nǎli?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l12/v11_gongsi.png",
+            "sampleAnswer": "这是公司。",
+            "sampleAnswerPinyin": "Zhè shì gōngsī.",
+            "patternType": "地点"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：地点",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l12_pt_06",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "他怎么了？",
+          "prompt_en": "Answer in Chinese.",
+          "data": {
+            "question": "他怎么了？",
+            "question_pinyin": "Tā zěnme le?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l12/v12_shengbing.png",
+            "sampleAnswer": "他生病了。",
+            "sampleAnswerPinyin": "Tā shēngbìng le.",
+            "patternType": "生病了"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：生病了",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l12_pt_07",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "他在做什么？",
+          "prompt_en": "Answer in Chinese.",
+          "data": {
+            "question": "他在做什么？",
+            "question_pinyin": "Tā zài zuò shénme?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l12/v13_kanbing.png",
+            "sampleAnswer": "他在看病。",
+            "sampleAnswerPinyin": "Tā zài kànbìng.",
+            "patternType": "看病"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：看病",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_l12_pt_08",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "医生让他喝什么？",
+          "prompt_en": "Answer in Chinese.",
+          "data": {
+            "question": "医生让他喝什么？",
+            "question_pinyin": "Yīshēng ràng tā hē shénme?",
+            "instructions": "请用中文回答这个问题。",
+            "context": "教学扩展",
+            "image": "images/vocab/hsk1-l12/v21_shui.png",
+            "sampleAnswer": "医生让他喝热水。",
+            "sampleAnswerPinyin": "Yīshēng ràng tā hē rè shuǐ.",
+            "patternType": "热水"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：热水",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "classProQuestions": {
+    "pictureGuess": [
+      {
+        "id": "v1_l12_1",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l12/v01_tianqi.png",
+          "image_hint": "天气",
+          "options": [
+            "天气",
+            "公司",
+            "饭店",
+            "学校"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "天气",
+        "kp": "天气",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l12_2",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l12/v04_xiayu.png",
+          "image_hint": "下雨",
+          "options": [
+            "下雨",
+            "下雪",
+            "喝水",
+            "看病"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "下雨",
+        "kp": "下雨",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l12_3",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l12/v06_yu.png",
+          "image_hint": "雨",
+          "options": [
+            "雨",
+            "雪",
+            "水",
+            "药"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "雨",
+        "kp": "雨",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l12_4",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l12/v09_leng.png",
+          "image_hint": "冷",
+          "options": [
+            "冷",
+            "热",
+            "贵",
+            "便宜"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "冷",
+        "kp": "冷",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l12_5",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l12/v10_xue.png",
+          "image_hint": "雪",
+          "options": [
+            "雪",
+            "雨",
+            "水",
+            "药"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "雪",
+        "kp": "雪",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l12_6",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l12/v11_gongsi.png",
+          "image_hint": "公司",
+          "options": [
+            "公司",
+            "医院",
+            "商店",
+            "大学"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "公司",
+        "kp": "公司",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l12_7",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l12/v12_shengbing.png",
+          "image_hint": "生病",
+          "options": [
+            "生病",
+            "起床",
+            "开车",
+            "唱歌"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "生病",
+        "kp": "生病",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l12_8",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l12/v13_kanbing.png",
+          "image_hint": "看病",
+          "options": [
+            "看病",
+            "买衣服",
+            "读书",
+            "看电视"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "看病",
+        "kp": "看病",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l12_9",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l12/v16_yao.png",
+          "image_hint": "药",
+          "options": [
+            "药",
+            "水",
+            "杯子",
+            "钱"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "药",
+        "kp": "药",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l12_10",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l12/v21_shui.png",
+          "image_hint": "热水",
+          "options": [
+            "热水",
+            "牛奶",
+            "茶",
+            "水果"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "热水",
+        "kp": "热水",
+        "sourceType": "textbook"
+      }
+    ],
+    "vocabFill": [
+      {
+        "id": "v5_l12_1",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "今天___怎么样？",
+          "sentence_pinyin": "Jīntiān ___ zěnmeyàng?",
+          "options": [
+            "天气",
+            "药",
+            "公司",
+            "水"
+          ],
+          "options_pinyin": [
+            "tiānqì",
+            "yào",
+            "gōngsī",
+            "shuǐ"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "天气",
+        "kp": "天气怎么样",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l12_2",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "这里___了。",
+          "sentence_pinyin": "Zhèlǐ ___ le.",
+          "options": [
+            "下雨",
+            "看病",
+            "回来",
+            "觉得"
+          ],
+          "options_pinyin": [
+            "xià yǔ",
+            "kànbìng",
+            "",
+            "juéde"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "下雨",
+        "kp": "下雨了",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l12_3",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "雨有点儿___。",
+          "sentence_pinyin": "Yǔ yǒudiǎnr ___.",
+          "options": [
+            "大",
+            "药",
+            "公司",
+            "水"
+          ],
+          "options_pinyin": [
+            "dà",
+            "yào",
+            "gōngsī",
+            "shuǐ"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "大",
+        "kp": "有点儿",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l12_4",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "我觉得很___。",
+          "sentence_pinyin": "Wǒ juéde hěn ___.",
+          "options": [
+            "冷",
+            "雪",
+            "药",
+            "天"
+          ],
+          "options_pinyin": [
+            "lěng",
+            "xuě",
+            "yào",
+            "tiān"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "冷",
+        "kp": "觉得",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l12_5",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "昨天___了。",
+          "sentence_pinyin": "Zuótiān ___ le.",
+          "options": [
+            "下雪",
+            "看病",
+            "喝水",
+            "回来"
+          ],
+          "options_pinyin": [
+            "",
+            "kànbìng",
+            "",
+            ""
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "下雪",
+        "kp": "下雪了",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l12_6",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "你昨天没来___。",
+          "sentence_pinyin": "Nǐ zuótiān méi lái ___.",
+          "options": [
+            "公司",
+            "天气",
+            "药",
+            "雨"
+          ],
+          "options_pinyin": [
+            "gōngsī",
+            "tiānqì",
+            "yào",
+            "yǔ"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "公司",
+        "kp": "公司",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l12_7",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "我昨天去医院___了。",
+          "sentence_pinyin": "Wǒ zuótiān qù yīyuàn ___ le.",
+          "options": [
+            "看病",
+            "下雨",
+            "喝",
+            "回"
+          ],
+          "options_pinyin": [
+            "kànbìng",
+            "xià yǔ",
+            "hē",
+            "huí"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "看病",
+        "kp": "看病了",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l12_8",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "吃一点儿___。",
+          "sentence_pinyin": "Chī yìdiǎnr ___.",
+          "options": [
+            "药",
+            "公司",
+            "天气",
+            "雪"
+          ],
+          "options_pinyin": [
+            "yào",
+            "gōngsī",
+            "tiānqì",
+            "xuě"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "药",
+        "kp": "一点儿药",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l12_9",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "回家后再___些热水。",
+          "sentence_pinyin": "Huí jiā hòu zài ___ xiē rè shuǐ.",
+          "options": [
+            "喝",
+            "来",
+            "下",
+            "看病"
+          ],
+          "options_pinyin": [
+            "hē",
+            "",
+            "",
+            "kànbìng"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "喝",
+        "kp": "喝热水",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l12_10",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "太___了。",
+          "sentence_pinyin": "Tài ___ le.",
+          "options": [
+            "冷",
+            "药",
+            "水",
+            "公司"
+          ],
+          "options_pinyin": [
+            "lěng",
+            "yào",
+            "shuǐ",
+            "gōngsī"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "冷",
+        "kp": "太……了",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "wordMatch": [
+      {
+        "id": "v7_l12_1",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "今天天气怎么样？",
+              "right": "这里下雨了。",
+              "left_pinyin": "jīntiān tiānqì zěnmeyàng",
+              "right_pinyin": "zhèlǐ xià yǔ le"
+            },
+            {
+              "left": "雨大吗？",
+              "right": "有点儿大。",
+              "left_pinyin": "yǔ dà ma",
+              "right_pinyin": "yǒudiǎnr dà"
+            },
+            {
+              "left": "你觉得怎么样？",
+              "right": "我觉得很冷。",
+              "left_pinyin": "nǐ juéde zěnmeyàng",
+              "right_pinyin": "wǒ juéde 很 lěng"
+            },
+            {
+              "left": "昨天下雪了吗？",
+              "right": "是的，下雪了。",
+              "left_pinyin": "zuótiān 下 xuě le ma",
+              "right_pinyin": "shì de 下 xuě le"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l12_2",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "你昨天来公司了吗？",
+              "right": "没有。",
+              "left_pinyin": "nǐ zuótiān lái gōngsī le ma",
+              "right_pinyin": "méiyǒu"
+            },
+            {
+              "left": "你生病了吗？",
+              "right": "对，我病了。",
+              "left_pinyin": "nǐ shēngbìng le ma",
+              "right_pinyin": "duì wǒ bìng le"
+            },
+            {
+              "left": "你去医院做什么？",
+              "right": "看病。",
+              "left_pinyin": "nǐ qù yīyuàn zuò shénme",
+              "right_pinyin": "kànbìng"
+            },
+            {
+              "left": "医生说什么？",
+              "right": "吃一点儿药。",
+              "left_pinyin": "yīshēng 说 shénme",
+              "right_pinyin": "吃 yìdiǎnr yào"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l12_3",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "下雨了",
+              "right": "天气不好",
+              "left_pinyin": "xià yǔ le",
+              "right_pinyin": "tiānqì bù hǎo"
+            },
+            {
+              "left": "下雪了",
+              "right": "太冷了",
+              "left_pinyin": "下 xuě le",
+              "right_pinyin": "tài lěng le"
+            },
+            {
+              "left": "病了",
+              "right": "去看病",
+              "left_pinyin": "bìng le",
+              "right_pinyin": "qù kànbìng"
+            },
+            {
+              "left": "回家后",
+              "right": "喝热水",
+              "left_pinyin": "huí 家 hòu",
+              "right_pinyin": "hē rè shuǐ"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l12_4",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "天气",
+              "right": "怎么样",
+              "left_pinyin": "tiānqì",
+              "right_pinyin": "zěnmeyàng"
+            },
+            {
+              "left": "有点儿",
+              "right": "大",
+              "left_pinyin": "yǒudiǎnr",
+              "right_pinyin": "dà"
+            },
+            {
+              "left": "觉得",
+              "right": "很冷",
+              "left_pinyin": "juéde",
+              "right_pinyin": "很 lěng"
+            },
+            {
+              "left": "一点儿",
+              "right": "药",
+              "left_pinyin": "yìdiǎnr",
+              "right_pinyin": "yào"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l12_5",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "公司",
+              "right": "上班",
+              "left_pinyin": "gōngsī",
+              "right_pinyin": "shàngbān"
+            },
+            {
+              "left": "医院",
+              "right": "看病",
+              "left_pinyin": "yīyuàn",
+              "right_pinyin": "kànbìng"
+            },
+            {
+              "left": "药",
+              "right": "吃",
+              "left_pinyin": "yào",
+              "right_pinyin": "吃"
+            },
+            {
+              "left": "热水",
+              "right": "喝",
+              "left_pinyin": "rè shuǐ",
+              "right_pinyin": "hē"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "matchingGame": [
+      {
+        "id": "v8_l12_1",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "天气",
+              "right": "weather",
+              "left_pinyin": "tiānqì",
+              "right_pinyin": "weather"
+            },
+            {
+              "left": "下雨",
+              "right": "rain",
+              "left_pinyin": "xià yǔ",
+              "right_pinyin": "rain"
+            },
+            {
+              "left": "雨",
+              "right": "rain",
+              "left_pinyin": "yǔ",
+              "right_pinyin": "rain"
+            },
+            {
+              "left": "冷",
+              "right": "cold",
+              "left_pinyin": "lěng",
+              "right_pinyin": "cold"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v8_l12_2",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "雪",
+              "right": "snow",
+              "left_pinyin": "xuě",
+              "right_pinyin": "snow"
+            },
+            {
+              "left": "公司",
+              "right": "company",
+              "left_pinyin": "gōngsī",
+              "right_pinyin": "company"
+            },
+            {
+              "left": "生病",
+              "right": "fall ill",
+              "left_pinyin": "shēngbìng",
+              "right_pinyin": "fall ill"
+            },
+            {
+              "left": "看病",
+              "right": "see a doctor",
+              "left_pinyin": "kànbìng",
+              "right_pinyin": "see a doctor"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v8_l12_3",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "药",
+              "right": "medicine",
+              "left_pinyin": "yào",
+              "right_pinyin": "medicine"
+            },
+            {
+              "left": "喝",
+              "right": "drink",
+              "left_pinyin": "hē",
+              "right_pinyin": "drink"
+            },
+            {
+              "left": "热",
+              "right": "hot",
+              "left_pinyin": "rè",
+              "right_pinyin": "hot"
+            },
+            {
+              "left": "水",
+              "right": "water",
+              "left_pinyin": "shuǐ",
+              "right_pinyin": "water"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v8_l12_4",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "有点儿",
+              "right": "a bit",
+              "left_pinyin": "yǒudiǎnr",
+              "right_pinyin": "a bit"
+            },
+            {
+              "left": "觉得",
+              "right": "feel",
+              "left_pinyin": "juéde",
+              "right_pinyin": "feel"
+            },
+            {
+              "left": "一点儿",
+              "right": "a little",
+              "left_pinyin": "yìdiǎnr",
+              "right_pinyin": "a little"
+            },
+            {
+              "left": "再",
+              "right": "then / again",
+              "left_pinyin": "zài",
+              "right_pinyin": "then / again"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v8_l12_5",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "下雨了",
+              "right": "It is raining",
+              "left_pinyin": "xià yǔ le",
+              "right_pinyin": "It is raining"
+            },
+            {
+              "left": "太冷了",
+              "right": "too cold",
+              "left_pinyin": "tài lěng le",
+              "right_pinyin": "too cold"
+            },
+            {
+              "left": "我病了",
+              "right": "I am sick",
+              "left_pinyin": "wǒ bìng le",
+              "right_pinyin": "I am sick"
+            },
+            {
+              "left": "喝热水",
+              "right": "drink warm water",
+              "left_pinyin": "hē rè shuǐ",
+              "right_pinyin": "drink warm water"
+            }
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "sentenceTransform": [
+      {
+        "id": "v4_l12_1",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "这里的天不太好，下雨了。",
+          "source_pinyin": "Zhèlǐ de tiān bú tài hǎo, xià yǔ le.",
+          "options_pinyin": [
+            "Jīntiān tiānqì zěnmeyàng?",
+            "Nǐ jiào shénme míngzi?",
+            "Nǐ qù nǎr?",
+            "Nǐ mǎi shénme?"
+          ],
+          "options": [
+            "今天天气怎么样？",
+            "你叫什么名字？",
+            "你去哪儿？",
+            "你买什么？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "今天天气怎么样？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l12_2",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "有点儿大。",
+          "source_pinyin": "Yǒudiǎnr dà.",
+          "options_pinyin": [
+            "Yǔ dà ma?",
+            "Nǐ bìng le ma?",
+            "Nǐ qù nǎr?",
+            "Nǐ xué shénme?"
+          ],
+          "options": [
+            "雨大吗？",
+            "你病了吗？",
+            "你去哪儿？",
+            "你学什么？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "雨大吗？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l12_3",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "我觉得很冷。",
+          "source_pinyin": "Wǒ juéde hěn lěng.",
+          "options_pinyin": [
+            "Nǐ juéde zěnmeyàng?",
+            "Nǐ jiào shénme?",
+            "Nǐ zài nǎr?",
+            "Nǐ mǎi shénme?"
+          ],
+          "options": [
+            "你觉得怎么样？",
+            "你叫什么？",
+            "你在哪儿？",
+            "你买什么？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你觉得怎么样？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l12_4",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "昨天下雪了。",
+          "source_pinyin": "Zuótiān xià xuě le.",
+          "options_pinyin": [
+            "Zuótiān tiānqì zěnmeyàng?",
+            "Nǐ zuótiān qù nǎr?",
+            "Nǐ zuótiān mǎi shénme?",
+            "Nǐ jǐ diǎn xiàbān?"
+          ],
+          "options": [
+            "昨天天气怎么样？",
+            "你昨天去哪儿？",
+            "你昨天买什么？",
+            "你几点下班？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "昨天天气怎么样？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l12_5",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "太冷了。",
+          "source_pinyin": "Tài lěng le.",
+          "options_pinyin": [
+            "Tiānqì zěnmeyàng?",
+            "Nǐ bìng le ma?",
+            "Nǐ kànbìng le ma?",
+            "Nǐ hē shuǐ ma?"
+          ],
+          "options": [
+            "天气怎么样？",
+            "你病了吗？",
+            "你看病了吗？",
+            "你喝水吗？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "天气怎么样？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l12_6",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "我昨天去医院看病了。",
+          "source_pinyin": "Wǒ zuótiān qù yīyuàn kànbìng le.",
+          "options_pinyin": [
+            "Nǐ zuótiān qù nǎr le?",
+            "Nǐ jīntiān qù nǎr?",
+            "Nǐ mǎi shénme yào?",
+            "Tiānqì zěnmeyàng?"
+          ],
+          "options": [
+            "你昨天去哪儿了？",
+            "你今天去哪儿？",
+            "你买什么药？",
+            "天气怎么样？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你昨天去哪儿了？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l12_7",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "医生，我病了。",
+          "source_pinyin": "Yīshēng, wǒ bìng le.",
+          "options_pinyin": [
+            "Nǐ zěnme le?",
+            "Nǐ jiào shénme?",
+            "Nǐ qù nǎr?",
+            "Nǐ mǎi shénme?"
+          ],
+          "options": [
+            "你怎么了？",
+            "你叫什么？",
+            "你去哪儿？",
+            "你买什么？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你怎么了？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l12_8",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "吃一点儿药。",
+          "source_pinyin": "Chī yìdiǎnr yào.",
+          "options_pinyin": [
+            "Yīshēng shuō chī shénme?",
+            "Yīshēng zài nǎr?",
+            "Nǐ hē shénme?",
+            "Nǐ kàn shénme?"
+          ],
+          "options": [
+            "医生说吃什么？",
+            "医生在哪儿？",
+            "你喝什么？",
+            "你看什么？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "医生说吃什么？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l12_9",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "回家后再喝些热水。",
+          "source_pinyin": "Huí jiā hòu zài hē xiē rè shuǐ.",
+          "options_pinyin": [
+            "Huí jiā hòu hē shénme?",
+            "Huí jiā hòu qù nǎr?",
+            "Huí jiā hòu mǎi shénme?",
+            "Huí jiā hòu xué shénme?"
+          ],
+          "options": [
+            "回家后喝什么？",
+            "回家后去哪儿？",
+            "回家后买什么？",
+            "回家后学什么？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "回家后喝什么？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l12_10",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问句。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "这里的天不太好。",
+          "source_pinyin": "Zhèlǐ de tiān bú tài hǎo.",
+          "options_pinyin": [
+            "Zhèlǐ de tiānqì hǎo ma?",
+            "Zhèlǐ yǒu fàndiàn ma?",
+            "Zhèlǐ yǒu dàxué ma?",
+            "Zhèlǐ yǒu yīyuàn ma?"
+          ],
+          "options": [
+            "这里的天气好吗？",
+            "这里有饭店吗？",
+            "这里有大学吗？",
+            "这里有医院吗？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这里的天气好吗？",
+        "kp": "句型转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "ordering": [
+      {
+        "id": "g1_l12_1",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "今天",
+            "天气",
+            "怎么样"
+          ],
+          "chunks_pinyin": [
+            "jīntiān",
+            "tiānqì",
+            "zěnmeyàng"
+          ]
+        },
+        "correct_answer": "今天天气怎么样",
+        "acceptable_answers": [
+          "今天天气怎么样",
+          "今天天气怎么样。",
+          "今天天气怎么样？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l12_2",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "这里",
+            "下雨",
+            "了"
+          ],
+          "chunks_pinyin": [
+            "zhèlǐ",
+            "xià yǔ",
+            "le"
+          ]
+        },
+        "correct_answer": "这里下雨了",
+        "acceptable_answers": [
+          "这里下雨了",
+          "这里下雨了。",
+          "这里下雨了？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l12_3",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "我",
+            "觉得",
+            "很",
+            "冷"
+          ],
+          "chunks_pinyin": [
+            "wǒ",
+            "juéde",
+            "hěn",
+            "lěng"
+          ]
+        },
+        "correct_answer": "我觉得很冷",
+        "acceptable_answers": [
+          "我觉得很冷",
+          "我觉得很冷。",
+          "我觉得很冷？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l12_4",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "昨天",
+            "下雪",
+            "了"
+          ],
+          "chunks_pinyin": [
+            "zuótiān",
+            "xià xuě",
+            "le"
+          ]
+        },
+        "correct_answer": "昨天下雪了",
+        "acceptable_answers": [
+          "昨天下雪了",
+          "昨天下雪了。",
+          "昨天下雪了？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l12_5",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "回家后",
+            "再",
+            "喝",
+            "热水"
+          ],
+          "chunks_pinyin": [
+            "huí jiā hòu",
+            "zài",
+            "hē",
+            "rè shuǐ"
+          ]
+        },
+        "correct_answer": "回家后再喝热水",
+        "acceptable_answers": [
+          "回家后再喝热水",
+          "回家后再喝热水。",
+          "回家后再喝热水？"
+        ],
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "translationChoice": [
+      {
+        "id": "trc_l12_1",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "How is the weather today? / Какая сегодня погода?",
+        "data": {
+          "question_en": "How is the weather today?",
+          "question_ru": "Какая сегодня погода?",
+          "options": [
+            "今天天气怎么样？",
+            "你今天去哪儿？",
+            "你今天买什么？",
+            "你今天上班吗？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "今天天气怎么样？",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l12_2",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "It is raining here. / Здесь идёт дождь.",
+        "data": {
+          "question_en": "It is raining here.",
+          "question_ru": "Здесь идёт дождь.",
+          "options": [
+            "这里下雨了。",
+            "这里下雪了。",
+            "这里很热。",
+            "这里有药。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这里下雨了。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l12_3",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "The rain is a bit heavy. / Дождь немного сильный.",
+        "data": {
+          "question_en": "The rain is a bit heavy.",
+          "question_ru": "Дождь немного сильный.",
+          "options": [
+            "雨有点儿大。",
+            "雪有点儿冷。",
+            "水有点儿热。",
+            "药有点儿少。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "雨有点儿大。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l12_4",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "I feel very cold. / Мне очень холодно.",
+        "data": {
+          "question_en": "I feel very cold.",
+          "question_ru": "Мне очень холодно.",
+          "options": [
+            "我觉得很冷。",
+            "我觉得很热。",
+            "我喝热水。",
+            "我吃药。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "我觉得很冷。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l12_5",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "It snowed yesterday. / Вчера шёл снег.",
+        "data": {
+          "question_en": "It snowed yesterday.",
+          "question_ru": "Вчера шёл снег.",
+          "options": [
+            "昨天下雪了。",
+            "昨天下雨了。",
+            "昨天看病了。",
+            "昨天回家了。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "昨天下雪了。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l12_6",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "It is too cold. / Слишком холодно.",
+        "data": {
+          "question_en": "It is too cold.",
+          "question_ru": "Слишком холодно.",
+          "options": [
+            "太冷了。",
+            "太热了。",
+            "有点儿大。",
+            "天气不好。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "太冷了。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l12_7",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "I went to the hospital to see a doctor yesterday. / Вчера я ходил в больницу к врачу.",
+        "data": {
+          "question_en": "I went to the hospital to see a doctor yesterday.",
+          "question_ru": "Вчера я ходил в больницу к врачу.",
+          "options": [
+            "我昨天去医院看病了。",
+            "我昨天去公司了。",
+            "我昨天去商店了。",
+            "我昨天去大学了。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "我昨天去医院看病了。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l12_8",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Doctor, I am sick. / Доктор, я заболел.",
+        "data": {
+          "question_en": "Doctor, I am sick.",
+          "question_ru": "Доктор, я заболел.",
+          "options": [
+            "医生，我病了。",
+            "老师，我来了。",
+            "医生，我回家了。",
+            "朋友，我很忙。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "医生，我病了。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l12_9",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Take a little medicine. / Прими немного лекарства.",
+        "data": {
+          "question_en": "Take a little medicine.",
+          "question_ru": "Прими немного лекарства.",
+          "options": [
+            "吃一点儿药。",
+            "喝一点儿水。",
+            "买一点儿水果。",
+            "看一点儿书。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "吃一点儿药。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l12_10",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Drink some warm water after going home. / После возвращения домой выпей тёплой воды.",
+        "data": {
+          "question_en": "Drink some warm water after going home.",
+          "question_ru": "После возвращения домой выпей тёплой воды.",
+          "options": [
+            "回家后再喝些热水。",
+            "回家后再吃些苹果。",
+            "回家后再看电影。",
+            "回家后再买衣服。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "回家后再喝些热水。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      }
+    ],
+    "textQa": [
+      {
+        "id": "ttq_l12_1",
+        "type": "text_qa_group",
+        "stage": "in_class",
+        "prompt_cn": "课文问答：根据课文内容回答。",
+        "prompt_en": "Text Q&A: answer from the dialogue.",
+        "data": {
+          "title": "课文一：今天天气怎么样",
+          "passage": "今天天气怎么样？这里的天不太好，下雨了。雨大吗？有点儿大，我觉得很冷。",
+          "passage_pinyin": "Jīntiān tiānqì zěnmeyàng? Zhèlǐ de tiān bú tài hǎo, xià yǔ le. Yǔ dà ma? Yǒudiǎnr dà, wǒ juéde hěn lěng.",
+          "questions": [
+            {
+              "question_cn": "今天天气怎么样？",
+              "question_pinyin": "Jīntiān tiānqì zěnmeyàng?",
+              "answer": "不太好",
+              "answer_pinyin": "bú tài hǎo",
+              "options": [
+                "不太好",
+                "很好",
+                "很热",
+                "不知道"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "下雨了吗？",
+              "question_pinyin": "Xià yǔ le ma?",
+              "answer": "下雨了",
+              "answer_pinyin": "xià yǔ le",
+              "options": [
+                "下雨了",
+                "下雪了",
+                "没下雨",
+                "不知道"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "王一飞觉得怎么样？",
+              "question_pinyin": "Wáng Yīfēi juéde zěnmeyàng?",
+              "answer": "很冷",
+              "answer_pinyin": "hěn lěng",
+              "options": [
+                "很冷",
+                "很热",
+                "很忙",
+                "很好"
+              ],
+              "correct_index": 0
+            }
+          ]
+        },
+        "correct_answer": "见每题答案",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "ttq_l12_2",
+        "type": "text_qa_group",
+        "stage": "in_class",
+        "prompt_cn": "课文问答：根据课文内容回答。",
+        "prompt_en": "Text Q&A: answer from the dialogue.",
+        "data": {
+          "title": "课文二：生病了",
+          "passage": "昨天下雪了。是的，太冷了。你昨天没来公司，生病了？对，我昨天去医院看病了。",
+          "passage_pinyin": "Zuótiān xià xuě le. Shì de, tài lěng le. Nǐ zuótiān méi lái gōngsī, shēngbìng le? Duì, wǒ zuótiān qù yīyuàn kànbìng le.",
+          "questions": [
+            {
+              "question_cn": "昨天天气怎么样？",
+              "question_pinyin": "Zuótiān tiānqì zěnmeyàng?",
+              "answer": "下雪了",
+              "answer_pinyin": "xià xuě le",
+              "options": [
+                "下雪了",
+                "下雨了",
+                "很热",
+                "很好"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "杨同乐昨天来公司了吗？",
+              "question_pinyin": "Yáng Tónglè zuótiān lái gōngsī le ma?",
+              "answer": "没有",
+              "answer_pinyin": "méiyǒu",
+              "options": [
+                "没有",
+                "来了",
+                "不知道",
+                "是的"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "杨同乐昨天去哪儿了？",
+              "question_pinyin": "Yáng Tónglè zuótiān qù nǎr le?",
+              "answer": "医院",
+              "answer_pinyin": "yīyuàn",
+              "options": [
+                "医院",
+                "公司",
+                "商店",
+                "学校"
+              ],
+              "correct_index": 0
+            }
+          ]
+        },
+        "correct_answer": "见每题答案",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "ttq_l12_3",
+        "type": "text_qa_group",
+        "stage": "in_class",
+        "prompt_cn": "课文问答：根据课文内容回答。",
+        "prompt_en": "Text Q&A: answer from the dialogue.",
+        "data": {
+          "title": "课文三：看病",
+          "passage": "医生，我病了。我看看。你觉得怎么样？我很冷。好的，吃一点儿药，今天休息半天吧。回家后再喝些热水。",
+          "passage_pinyin": "Yīshēng, wǒ bìng le. Wǒ kànkan. Nǐ juéde zěnmeyàng? Wǒ hěn lěng. Hǎo de, chī yìdiǎnr yào, jīntiān xiūxi bàn tiān ba. Huí jiā hòu zài hē xiē rè shuǐ.",
+          "questions": [
+            {
+              "question_cn": "杨同乐怎么了？",
+              "question_pinyin": "Yáng Tónglè zěnme le?",
+              "answer": "病了",
+              "answer_pinyin": "bìng le",
+              "options": [
+                "病了",
+                "下雪了",
+                "回家了",
+                "上班了"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "医生让他吃什么？",
+              "question_pinyin": "Yīshēng ràng tā chī shénme?",
+              "answer": "药",
+              "answer_pinyin": "yào",
+              "options": [
+                "药",
+                "苹果",
+                "米饭",
+                "牛奶"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "回家后喝什么？",
+              "question_pinyin": "Huí jiā hòu hē shénme?",
+              "answer": "热水",
+              "answer_pinyin": "rè shuǐ",
+              "options": [
+                "热水",
+                "茶",
+                "牛奶",
+                "冷水"
+              ],
+              "correct_index": 0
+            }
+          ]
+        },
+        "correct_answer": "见每题答案",
+        "sourceType": "textbook"
+      }
+    ]
+  },
+  "hanziWriting": {
+    "characters": [
+      {
+        "char": "天",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "气",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "这",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "里",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "天",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "下",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "雨",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "了",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "觉",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "得",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "冷",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "雪",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "公",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "司",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "生",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "病",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "看",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "病",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "一",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "点",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "儿",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "药",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "回",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "再",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "喝",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "热",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "水",
+        "sourceType": "textbook"
+      }
+    ]
+  },
+  "hanziRecognition": {
+    "enabled": true,
+    "showPinyin": false,
+    "rounds": [
+      {
+        "id": "hanzi_to_pinyin",
+        "title": "看汉字选拼音",
+        "titleEn": "Choose pinyin"
+      },
+      {
+        "id": "hanzi_to_meaning",
+        "title": "看汉字选意思",
+        "titleEn": "Choose meaning"
+      },
+      {
+        "id": "meaning_to_hanzi",
+        "title": "看意思选汉字",
+        "titleEn": "Choose character"
+      }
+    ],
+    "groups": [
+      {
+        "id": "weather",
+        "title": "天气",
+        "vocabularyIds": [
+          "v_l12_01",
+          "v_l12_02",
+          "v_l12_03",
+          "v_l12_04",
+          "v_l12_06",
+          "v_l12_09",
+          "v_l12_10"
+        ]
+      },
+      {
+        "id": "health",
+        "title": "身体与看病",
+        "vocabularyIds": [
+          "v_l12_12",
+          "v_l12_13",
+          "v_l12_14",
+          "v_l12_15",
+          "v_l12_16"
+        ]
+      },
+      {
+        "id": "actions",
+        "title": "动作与感觉",
+        "vocabularyIds": [
+          "v_l12_07",
+          "v_l12_08",
+          "v_l12_17",
+          "v_l12_18",
+          "v_l12_19",
+          "v_l12_20",
+          "v_l12_21"
+        ]
+      }
+    ]
+  },
+  "postClassHomework": {
+    "mode": "required_optional",
+    "instructions": {
+      "required": "必选：完成汉字书写。",
+      "optional": "可选：选择一个输出任务完成。"
+    },
+    "required": [
+      {
+        "id": "post_l12_req_01",
+        "type": "handwriting",
+        "prompt_cn": "必选：书写本课汉字。",
+        "characters": [
+          "天",
+          "气",
+          "这",
+          "里",
+          "下",
+          "雨",
+          "了",
+          "觉",
+          "得",
+          "冷",
+          "雪",
+          "公",
+          "司",
+          "生",
+          "病",
+          "看",
+          "病",
+          "药",
+          "回",
+          "再",
+          "喝",
+          "热",
+          "水"
+        ],
+        "instructions": "每个字至少写 3 次。",
+        "sourceType": "textbook"
+      }
+    ],
+    "optional": [
+      {
+        "id": "post_l12_opt_01",
+        "type": "writing",
+        "prompt_cn": "教学扩展：写 3 句天气或身体情况。",
+        "openEnded": true,
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "post_l12_opt_02",
+        "type": "oral_prepare",
+        "prompt_cn": "准备 4 句对话：问天气或问身体情况。",
+        "openEnded": true,
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "report": {
+    "focus": [
+      "天气表达",
+      "了",
+      "太……了",
+      "生病/看病"
+    ]
+  }
+}

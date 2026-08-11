@@ -72,7 +72,7 @@ function renderHanzi(){
   var chars=((DATA.hanziWriting||{}).characters||[]).slice();
   if(!chars.length){(DATA.vocabulary||[]).forEach(function(v){Array.from(v.hanzi||v.word||"").forEach(function(c){if(/[\u4e00-\u9fff]/.test(c)&&chars.indexOf(c)<0)chars.push(c)})})}
   var h="<h2>汉字范字 / Hanzi Writing</h2><div class=\"muted\" style=\"margin-bottom:12px\">灰色范字和米字格用于临摹；点击按钮查看静态笔顺步骤。</div><div class=\"hanzi-grid\">";
-  chars.forEach(function(c){h+='<div class="char-card"><div class="charbox">'+esc(c)+'</div><button class="stroke-btn" onclick="showStrokeOrder(\''+esc(c)+'\')">显示笔顺</button></div>'});
+  chars.forEach(function(c){var ch=typeof c==="string"?c:(c&&(c.char||c.hanzi||c.word||c.text))||"";if(!ch)return;h+='<div class="char-card"><div class="charbox">'+esc(ch)+'</div><button class="stroke-btn" onclick="showStrokeOrder(\''+esc(ch)+'\')">显示笔顺</button></div>'});
   return h+"</div>";
 }
 function gridSvg(paths,step){

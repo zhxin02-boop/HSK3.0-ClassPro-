@@ -814,7 +814,7 @@ ap._cq=function(){
     h+='<div style="display:flex;flex-direction:column;gap:12px">';
     for(var a=0;a<ps.length;a++){var lm=this.v7m[a]!=null,ls=this.v7L===a;h+='<button onclick="ap._v7pick(\'L\','+a+')" style="padding:14px;border-radius:16px;border:2px solid '+(lm?'#86efac':ls?'var(--blue)':'#dfeac8')+';background:'+(lm?'#f0fdf4':ls?'#edf3ff':'#fff')+';font-size:24px;font-weight:900;color:var(--text)"><div style="font-size:13px;color:#78836f">'+es(ps[a].left_pinyin||py(ps[a].left))+'</div>'+es(ps[a].left)+'</button>'}
     h+='</div><div style="display:flex;flex-direction:column;gap:12px">';
-    for(var b=0;b<order.length;b++){var idx=order[b],used=false;for(var k in this.v7m){if(this.v7m[k]===idx)used=true}var rs=this.v7R===idx;h+='<button onclick="ap._v7pick(\'R\','+idx+')" style="padding:15px 18px;border-radius:16px;border:2px solid '+(used?'#86efac':rs?'var(--blue)':'#dfeac8')+';background:'+(used?'#f0fdf4':rs?'#edf3ff':'#fff')+';font-size:20px;font-weight:800;color:var(--text);text-align:left">'+es(ps[idx].right)+'</button>'}
+    for(var b=0;b<order.length;b++){var idx=order[b],used=false;for(var k in this.v7m){if(this.v7m[k]===idx)used=true}var rs=this.v7R===idx,rp=ps[idx].right_pinyin||pys(ps[idx].right)||py(ps[idx].right);h+='<button onclick="ap._v7pick(\'R\','+idx+')" style="padding:15px 18px;border-radius:16px;border:2px solid '+(used?'#86efac':rs?'var(--blue)':'#dfeac8')+';background:'+(used?'#f0fdf4':rs?'#edf3ff':'#fff')+';font-size:20px;font-weight:800;color:var(--text);text-align:left">'+(rp?'<div data-pinyin="1" style="font-size:13px;color:#78836f;margin-bottom:5px;font-weight:700">'+es(rp)+'</div>':'')+es(ps[idx].right)+'</button>'}
     h+='</div></div><div class="teach-nav"><button class="prev" onclick="ap.v7i=Math.max(0,ap.v7i-1);ap.v7L=-1;ap.v7R=-1;ap.v7m={};ap._r()"'+(i===0?' disabled':'')+'>&larr; 上一组</button><span class="step-counter">'+(i+1)+' / '+qs.length+'</span><button class="next" onclick="ap.v7i=Math.min('+(qs.length-1)+',ap.v7i+1);ap.v7L=-1;ap.v7R=-1;ap.v7m={};ap._r()"'+(i>=qs.length-1?' disabled':'')+'>下一组 &rarr;</button></div></div>';
     return h;
   };
@@ -1963,6 +1963,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
 .practice-status-toggle{margin:0!important;background:#fff!important;border:1px solid #edf3df!important;color:#6f7e68!important;box-shadow:0 10px 22px rgba(65,96,42,.06)!important}
 .cp-sidebar .sb-btn.active,
 .practice-status-toggle.active{background:#edf6d9!important;border-color:#b8d99b!important;color:#2f7d28!important;box-shadow:0 12px 26px rgba(117,156,35,.16)!important}
+.cp-sidebar .mock-side-btn{margin-bottom:8px!important}
 .practice-rail{left:11px!important;right:11px!important;gap:8px!important;align-items:center!important}
 .practice-rail-action{border:0!important;color:#fff!important;font-size:16px!important;text-align:center!important}
 .practice-rail-action.next{font-size:13px!important;line-height:1.15!important}
@@ -2455,10 +2456,118 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     oldRender.call(this);
     var side=document.querySelector('.cp-sidebar');if(!side||side.querySelector('.mock-side-btn'))return;
     var btn=document.createElement('button');btn.className='sb-btn mock-side-btn'+(ap.mt==='mock'?' active':'');btn.textContent='测';btn.onclick=function(){ap.mt='mock';ap.st='mock';ap._r()};
-    var spacer=side.querySelector('.sb-spacer');side.insertBefore(btn,spacer||null);
+    var rail=side.querySelector('.practice-rail'),spacer=side.querySelector('.sb-spacer'),firstBottom=side.querySelector('.sb-bottom');
+    side.insertBefore(btn,rail||spacer||firstBottom||null);
   };
 })();
 </script>
+<style>
+.panel-teacher-answer-controls{margin:18px auto 0;padding:14px;border:1px solid #dfeac8;border-radius:16px;background:#f8faf3;text-align:center;max-width:760px}
+.panel-teacher-answer-controls button{border:0;border-radius:999px;padding:10px 20px;background:#4f8f2d;color:#fff;font-weight:900;cursor:pointer;box-shadow:0 10px 22px rgba(79,143,45,.16)}
+.panel-teacher-answer-controls button.finish{background:#f05a3f}.panel-teacher-answer-controls button.next{background:#2563d8}
+.panel-teacher-answer-controls .hint{margin-top:8px;font-size:13px;color:#64748b;font-weight:800}
+</style>
+<script>
+/* Keep answer controls visible inside each teacher practice panel. */
+(function(){
+  if(typeof ap==='undefined')return;
+  var visibleModes=['v1','v4','v5','v7','v8','g1','w1','hrec','ttq','trc','opn'];
+  function isOn(state){return state&&((state.mt==='practice'&&visibleModes.indexOf(state.st)>=0)||state.st==='ttq')}
+  function total(state){
+    if(state.st==='opn')return(Q.r4_picture_talk||Q.picture_talk||Q.output_picture_talk||[]).length;
+    if(state.st==='hrec')return(HR.enabled?((HR.groups||[]).length*(HR.rounds||[]).length):0);
+    if(state.st==='v1')return(Q.v1_image_guess||[]).length;
+    if(state.st==='v4')return(Q.v4_complete_sentence||[]).length;
+    if(state.st==='v5')return(Q.v5_vocab_fill||[]).length;
+    if(state.st==='v7')return(Q.v7_word_match||[]).length;
+    if(state.st==='v8')return(Q.v8_memory_match||[]).length;
+    if(state.st==='g1')return(Q.g1_ordering||[]).length;
+    if(state.st==='w1')return(Q.w1_component_char||[]).length;
+    if(state.st==='trc')return(Q.r3_translation_choice||Q.translation_choice||Q.translationSentenceChoice||[]).length;
+    if(state.st==='ttq')return(Q.r2_passage_choice||Q.tt_text_true_false||[]).length;
+    return 0;
+  }
+  function index(state){
+    if(state.st==='opn')return state.opni||0;
+    if(state.st==='hrec')return state.hri||0;
+    if(state.st==='v1')return state.v1i||0;
+    if(state.st==='v4')return state.v4i||0;
+    if(state.st==='v5')return state.v5i||0;
+    if(state.st==='v7')return state.v7i||0;
+    if(state.st==='v8')return state.v8i||0;
+    if(state.st==='g1')return state.g1i||0;
+    if(state.st==='w1')return state.w1i||0;
+    if(state.st==='trc')return state.trci||0;
+    return state.ttqi||0;
+  }
+  var oldRender=ap._r;
+  ap._r=function(){
+    oldRender.call(this);
+    document.querySelectorAll('.panel-teacher-answer-controls').forEach(function(el){el.remove()});
+    if(!isOn(this))return;
+    var panel=document.querySelector('.panel-area>.panel');if(!panel)return;
+    var box=document.createElement('div');box.className='panel-teacher-answer-controls';
+    var html='';
+    if(this.qp==='idle')html='<button type="button" onclick="ap.qws()">开始答题 / Start</button><div class="hint">点击后学生端收到当前题。</div>';
+    else if(this.qp==='answering')html='<button type="button" class="finish" onclick="ap.qwe()">公布/结束 / Finish</button><div class="hint">已提交 '+this._qsc()+'/'+this.as.length+'</div>';
+    else if(index(this)<total(this)-1)html='<button type="button" class="next" onclick="ap.qwr()">下一题 / Next</button><div class="hint">当前题答案已公布。</div>';
+    else html='<div class="hint">本组完成。</div>';
+    box.innerHTML=html;
+    panel.appendChild(box);
+  };
+})();
+</script>
+<script>
+/* Sidebar layout guard: keep 测 out of the answer rail and preserve 况. */
+(function(){
+  if(typeof ap==='undefined')return;
+  var oldRender=ap._r;
+  var modes=['v1','v4','v5','v7','v8','g1','w1','hrec','ttq','trc','opn'];
+  function on(state){return state&&((state.mt==='practice'&&modes.indexOf(state.st)>=0)||state.st==='ttq')}
+  function mainButton(state){
+    if(state.qp==='idle')return'<button class="practice-rail-action" onclick="ap.qws()">答</button>';
+    if(state.qp==='answering')return'<button class="practice-rail-action announce" onclick="ap.qwe()">'+(state.st==='opn'?'收':'Key')+'</button>';
+    return'<button class="practice-rail-action next" onclick="'+(state.st==='hrec'?'ap.hrecNext()':'ap.qwr()')+'">下一题</button>';
+  }
+  ap._r=function(){
+    oldRender.call(this);
+    var side=document.querySelector('.cp-sidebar');if(!side)return;
+    var mock=side.querySelector('.mock-side-btn'),rail=side.querySelector('.practice-rail'),spacer=side.querySelector('.sb-spacer'),firstBottom=side.querySelector('.sb-bottom');
+    if(mock){var target=rail||spacer||firstBottom;if(target&&mock.nextElementSibling!==target)side.insertBefore(mock,target)}
+    if(mock)mock.classList.toggle('active',this.mt==='mock');
+    if(!on(this))return;
+    rail=side.querySelector('.practice-rail');
+    if(!rail){rail=document.createElement('div');rail.className='practice-rail';side.insertBefore(rail,side.querySelector('.sb-spacer')||firstBottom||null)}
+    if(mock&&rail.previousElementSibling!==mock)side.insertBefore(rail,mock.nextSibling);
+    if(!rail.querySelector('.practice-status-toggle')){
+      rail.innerHTML=mainButton(this)+'<button class="practice-status-toggle '+(this.statusPanelOpen?'active':'')+'" title="答题完成情况" onclick="ap.statusPanelOpen=!ap.statusPanelOpen;ap._r()">况</button>';
+    }
+  };
+})();
+</script>
+<style>
+/* Compact left rail: all navigation and practice controls must fit on 768px screens. */
+.cp-sidebar{width:62px!important;padding:10px 0!important;gap:4px!important;overflow:hidden!important}
+.cp-body{margin-left:62px!important}
+.cp-sidebar .cp-logo,
+.cp-sidebar .sb-btn,
+.cp-sidebar .sb-bottom,
+.practice-rail-action,
+.practice-status-toggle{width:42px!important;height:42px!important;min-width:42px!important;border-radius:13px!important;font-size:16px!important}
+.cp-sidebar .cp-logo{margin-bottom:6px!important}
+.cp-sidebar .sb-btn,
+.cp-sidebar .sb-bottom,
+.practice-status-toggle{box-shadow:0 7px 16px rgba(65,96,42,.05)!important}
+.cp-sidebar .mock-side-btn{margin:0 0 6px!important}
+.cp-sidebar .sb-spacer{flex:1 1 auto!important;min-height:6px!important}
+.practice-rail{position:static!important;left:auto!important;right:auto!important;top:auto!important;width:42px!important;display:flex!important;flex-direction:column!important;gap:6px!important;margin:6px 0 8px!important;padding:0!important;align-items:center!important}
+.practice-rail-action{font-size:15px!important}.practice-rail-action.next{font-size:10px!important;line-height:1.08!important}
+.practice-rail-done{width:42px!important;min-height:42px!important;border-radius:13px!important;font-size:9px!important}
+@media(max-height:720px){
+  .cp-sidebar .cp-logo,.cp-sidebar .sb-btn,.cp-sidebar .sb-bottom,.practice-rail-action,.practice-status-toggle{width:38px!important;height:38px!important;min-width:38px!important;font-size:14px!important}
+  .practice-rail{width:38px!important;gap:4px!important;margin:4px 0 6px!important}
+}
+</style>
 </body>
 </html>
 
