@@ -1,0 +1,5488 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "level": "HSK1",
+    "lessonId": "L15",
+    "lessonKey": "HSK1-L15",
+    "title": "大兴机场见！",
+    "titleEn": "See you at Daxing Airport!",
+    "topic": "旅行计划、并列复句、北京与机场",
+    "sourceTextPolicy": "保留教材原句；新增内容标记为教学扩展",
+    "dataQualityNotes": [
+      "根据 textbook data/L15.txt 生成；L15 课文原句完整保留。",
+      "已按 L11-L12 当前结构制作：课前10题、课中题型题量、汉字练习与英俄译文选句字段对齐。"
+    ]
+  },
+  "features": {
+    "pinyin": true,
+    "hanziWritingDemo": true,
+    "vocabExamples": true,
+    "competition": true,
+    "postClassHomework": true
+  },
+  "vocabulary": [
+    {
+      "id": "v_l15_01",
+      "hanzi": "爱",
+      "word": "爱",
+      "pinyin": "ài",
+      "pos": "动词",
+      "english": "like; love",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "action",
+      "image": "images/vocab/hsk1-l15/01_ai.png"
+    },
+    {
+      "id": "v_l15_02",
+      "hanzi": "哪个",
+      "word": "哪个",
+      "pinyin": "nǎge",
+      "pos": "代词",
+      "english": "which",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "function",
+      "image": "images/vocab/hsk1-l15/02_nage.png"
+    },
+    {
+      "id": "v_l15_03",
+      "hanzi": "去年",
+      "word": "去年",
+      "pinyin": "qùnián",
+      "pos": "名词",
+      "english": "last year",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "time",
+      "image": "images/vocab/hsk1-l15/03_qunian.png"
+    },
+    {
+      "id": "v_l15_04",
+      "hanzi": "男朋友",
+      "word": "男朋友",
+      "pinyin": "nánpéngyou",
+      "pos": "名词",
+      "english": "boyfriend",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "person",
+      "image": "images/vocab/hsk1-l15/04_nanpengyou.png"
+    },
+    {
+      "id": "v_l15_05",
+      "hanzi": "几",
+      "word": "几",
+      "pinyin": "jǐ",
+      "pos": "数词",
+      "english": "a few; several",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "number",
+      "image": "images/vocab/hsk1-l15/05_ji.png"
+    },
+    {
+      "id": "v_l15_06",
+      "hanzi": "年",
+      "word": "年",
+      "pinyin": "nián",
+      "pos": "名词",
+      "english": "year",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "time",
+      "image": "images/vocab/hsk1-l15/06_nian.png"
+    },
+    {
+      "id": "v_l15_07",
+      "hanzi": "好玩儿",
+      "word": "好玩儿",
+      "pinyin": "hǎowánr",
+      "pos": "形容词",
+      "english": "fun; interesting",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "adjective",
+      "image": "images/vocab/hsk1-l15/07_haowanr.png"
+    },
+    {
+      "id": "v_l15_08",
+      "hanzi": "飞机",
+      "word": "飞机",
+      "pinyin": "fēijī",
+      "pos": "名词",
+      "english": "plane",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "transport",
+      "image": "images/vocab/hsk1-l15/08_feiji.png"
+    },
+    {
+      "id": "v_l15_09",
+      "hanzi": "要",
+      "word": "要",
+      "pinyin": "yào",
+      "pos": "动词",
+      "english": "need; take",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "action",
+      "image": "images/vocab/hsk1-l15/09_yao.png"
+    },
+    {
+      "id": "v_l15_10",
+      "hanzi": "小时",
+      "word": "小时",
+      "pinyin": "xiǎoshí",
+      "pos": "名词",
+      "english": "hour",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "time",
+      "image": "images/vocab/hsk1-l15/10_xiaoshi.png"
+    },
+    {
+      "id": "v_l15_11",
+      "hanzi": "家人",
+      "word": "家人",
+      "pinyin": "jiārén",
+      "pos": "名词",
+      "english": "family",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "person",
+      "image": "images/vocab/hsk1-l15/11_jiaren.png"
+    },
+    {
+      "id": "v_l15_12",
+      "hanzi": "时间",
+      "word": "时间",
+      "pinyin": "shíjiān",
+      "pos": "名词",
+      "english": "time",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "time",
+      "image": "images/vocab/hsk1-l15/12_shijian.png"
+    },
+    {
+      "id": "v_l15_13",
+      "hanzi": "机场",
+      "word": "机场",
+      "pinyin": "jīchǎng",
+      "pos": "名词",
+      "english": "airport",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "place",
+      "image": "images/vocab/hsk1-l15/13_jichang.png"
+    },
+    {
+      "id": "v_l15_14",
+      "hanzi": "接",
+      "word": "接",
+      "pinyin": "jiē",
+      "pos": "动词",
+      "english": "meet; pick up",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "action",
+      "image": "images/vocab/hsk1-l15/14_jie.png"
+    },
+    {
+      "id": "v_l15_15",
+      "hanzi": "住",
+      "word": "住",
+      "pinyin": "zhù",
+      "pos": "动词",
+      "english": "live; stay",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "action",
+      "image": "images/vocab/hsk1-l15/15_zhu.png"
+    },
+    {
+      "id": "v_l15_16",
+      "hanzi": "早",
+      "word": "早",
+      "pinyin": "zǎo",
+      "pos": "形容词",
+      "english": "early",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "adjective",
+      "image": "images/vocab/hsk1-l15/16_zao.png"
+    },
+    {
+      "id": "v_l15_17",
+      "hanzi": "那",
+      "word": "那",
+      "pinyin": "nà",
+      "pos": "连词",
+      "english": "then",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "function",
+      "image": "images/vocab/hsk1-l15/17_na.png"
+    },
+    {
+      "id": "v_l15_18",
+      "hanzi": "西安",
+      "word": "西安",
+      "pinyin": "Xī'ān",
+      "pos": "专有名词",
+      "english": "Xi'an",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "place",
+      "image": "images/vocab/hsk1-l15/18_xian.png"
+    },
+    {
+      "id": "v_l15_19",
+      "hanzi": "北京",
+      "word": "北京",
+      "pinyin": "Běijīng",
+      "pos": "专有名词",
+      "english": "Beijing",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "place",
+      "image": "images/vocab/hsk1-l15/19_beijing.png"
+    },
+    {
+      "id": "v_l15_20",
+      "hanzi": "大兴机场",
+      "word": "大兴机场",
+      "pinyin": "Dàxīng Jīchǎng",
+      "pos": "专有名词",
+      "english": "Daxing Airport",
+      "sourceType": "textbook",
+      "tags": [
+        "L15"
+      ],
+      "category": "place",
+      "image": "images/vocab/hsk1-l15/20_daxingjichang.png"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g_l15_01",
+      "title": "并列复句“还/也”",
+      "titleEn": "Coordinate Compound Sentences with 还/也",
+      "structure": "小句1，+ 还/也 + 小句2",
+      "explanation": "表示两个并列信息。",
+      "examples": [
+        {
+          "hanzi": "我喜欢这个，也喜欢那个。",
+          "pinyin": "Wǒ xǐhuan zhège, yě xǐhuan nàge.",
+          "english": "I like this one and also that one.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "这些菜都好吃，还很好看。",
+          "pinyin": "Zhèxiē cài dōu hǎochī, hái hěn hǎokàn.",
+          "english": "These dishes are delicious and also look good.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我喜欢喝中国茶，还喜欢吃中国菜。",
+          "pinyin": "Wǒ xǐhuan hē Zhōngguó chá, hái xǐhuan chī Zhōngguó cài.",
+          "english": "I like Chinese tea and also Chinese food.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "t_l15_01",
+      "title": "课文一：爱吃哪个菜",
+      "setting": "在李文家，朋友们品尝中餐。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "李文",
+          "hanzi": "你们爱吃哪个菜？",
+          "pinyin": "Nǐmen ài chī nǎge cài?",
+          "english": "Which dish do you like?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "白家月",
+          "hanzi": "我喜欢这个，也喜欢那个。",
+          "pinyin": "Wǒ xǐhuan zhège, yě xǐhuan nàge.",
+          "english": "I like this one, and I also like that one.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "陈天中",
+          "hanzi": "这些菜都好吃，还很好看。",
+          "pinyin": "Zhèxiē cài dōu hǎochī, hái hěn hǎokàn.",
+          "english": "All these dishes are delicious and look great.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "李文",
+          "hanzi": "我爱吃中国菜，也喜欢做。大家多吃点儿。",
+          "pinyin": "Wǒ ài chī Zhōngguó cài, yě xǐhuan zuò. Dàjiā duō chī diǎnr.",
+          "english": "I like eating Chinese food and also like cooking it. Please eat more.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "t_l15_02",
+      "title": "课文二：想去北京",
+      "setting": "大家边吃饭边谈论度假计划。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "李文",
+          "hanzi": "你们都想去哪儿？",
+          "pinyin": "Nǐmen dōu xiǎng qù nǎr?",
+          "english": "Where do you all want to go?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "安妮",
+          "hanzi": "去年我和男朋友去了西安，今年我想去北京。",
+          "pinyin": "Qùnián wǒ hé nánpéngyou qùle Xī'ān, jīnnián wǒ xiǎng qù Běijīng.",
+          "english": "Last year my boyfriend and I went to Xi'an. This year I want to go to Beijing.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "白家月",
+          "hanzi": "前几年去了西安，非常好玩儿。今年我也想去北京。",
+          "pinyin": "Qián jǐ nián wǒ qùle Xī'ān, fēicháng hǎowánr. Jīnnián wǒ yě xiǎng qù Běijīng.",
+          "english": "I went to Xi'an a few years ago. It was fun. This year I also want to go to Beijing.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "李文",
+          "hanzi": "我和王老师都是北京人，北京非常漂亮。",
+          "pinyin": "Wǒ hé Wáng lǎoshī dōu shì Běijīng rén, Běijīng fēicháng piàoliang.",
+          "english": "Ms. Wang and I are both from Beijing. Beijing is very beautiful.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "t_l15_03",
+      "title": "课文三：大兴机场见",
+      "setting": "白家月、安妮和王老师谈论去北京旅游。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "王一飞",
+          "hanzi": "你们的飞机到北京要几个小时？",
+          "pinyin": "Nǐmen de fēijī dào Běijīng yào jǐ gè xiǎoshí?",
+          "english": "How many hours will your flight take to Beijing?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "白家月",
+          "hanzi": "九个小时。",
+          "pinyin": "Jiǔ gè xiǎoshí.",
+          "english": "Nine hours.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "王一飞",
+          "hanzi": "我家人都在北京，星期天我姐姐也有时间，她可以去机场接你们，你们也可以住我家。",
+          "pinyin": "Wǒ jiārén dōu zài Běijīng, Xīngqītiān wǒ jiějie yě yǒu shíjiān, tā kěyǐ qù jīchǎng jiē nǐmen, nǐmen yě kěyǐ zhù wǒ jiā.",
+          "english": "My family is in Beijing. My sister can pick you up at the airport, and you can stay at my home.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "安妮",
+          "hanzi": "我们星期日早上八点到大兴机场，早不早？",
+          "pinyin": "Wǒmen Xīngqīrì zǎoshang bā diǎn dào Dàxīng Jīchǎng, zǎo bu zǎo?",
+          "english": "We arrive at Daxing Airport at 8 a.m. on Sunday. Is that early?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 5,
+          "speaker": "王一飞",
+          "hanzi": "不早。",
+          "pinyin": "Bù zǎo.",
+          "english": "Not early.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 6,
+          "speaker": "白家月",
+          "hanzi": "谢谢老师！那我和您姐姐在大兴机场见！",
+          "pinyin": "Xièxie lǎoshī! Nà wǒ hé nín jiějie zài Dàxīng Jīchǎng jiàn!",
+          "english": "Thank you! Then I will meet your sister at Daxing Airport.",
+          "sourceType": "textbook"
+        }
+      ]
+    }
+  ],
+  "vocabExtensions": {
+    "v_l15_01": {
+      "word": "爱",
+      "examples": [
+        {
+          "hanzi": "爱吃中国菜",
+          "pinyin": "ài chī Zhōngguó cài",
+          "english": "love eating Chinese food",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "爱坐飞机",
+          "pinyin": "ài zuò fēijī",
+          "english": "like taking planes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我爱吃这个菜，也爱喝茶。",
+          "pinyin": "Wǒ ài chī zhège cài, yě ài hē chá.",
+          "english": "I love this dish and also love drinking tea.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "爱吃中国菜",
+          "pinyin": "ài chī Zhōngguó cài",
+          "english": "love eating Chinese food",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "爱坐飞机",
+          "pinyin": "ài zuò fēijī",
+          "english": "like taking planes",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我爱吃这个菜，也爱喝茶。",
+          "pinyin": "Wǒ ài chī zhège cài, yě ài hē chá.",
+          "english": "I love this dish and also love drinking tea.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_02": {
+      "word": "哪个",
+      "examples": [
+        {
+          "hanzi": "哪个菜",
+          "pinyin": "nǎge cài",
+          "english": "which dish",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "哪个机场",
+          "pinyin": "nǎge jīchǎng",
+          "english": "which airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "你想去哪个城市？",
+          "pinyin": "Nǐ xiǎng qù nǎge chéngshì?",
+          "english": "Which city do you want to go to?",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "哪个菜",
+          "pinyin": "nǎge cài",
+          "english": "which dish",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "哪个机场",
+          "pinyin": "nǎge jīchǎng",
+          "english": "which airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "你想去哪个城市？",
+          "pinyin": "Nǐ xiǎng qù nǎge chéngshì?",
+          "english": "Which city do you want to go to?",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_03": {
+      "word": "去年",
+      "examples": [
+        {
+          "hanzi": "去年夏天",
+          "pinyin": "qùnián xiàtiān",
+          "english": "last summer",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去年去西安",
+          "pinyin": "qùnián qù Xī'ān",
+          "english": "went to Xi'an last year",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去年我跟朋友去了西安。",
+          "pinyin": "Qùnián wǒ gēn péngyou qù le Xī'ān.",
+          "english": "Last year I went to Xi'an with a friend.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "去年夏天",
+          "pinyin": "qùnián xiàtiān",
+          "english": "last summer",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去年去西安",
+          "pinyin": "qùnián qù Xī'ān",
+          "english": "went to Xi'an last year",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去年我跟朋友去了西安。",
+          "pinyin": "Qùnián wǒ gēn péngyou qù le Xī'ān.",
+          "english": "Last year I went to Xi'an with a friend.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_04": {
+      "word": "男朋友",
+      "examples": [
+        {
+          "hanzi": "我的男朋友",
+          "pinyin": "wǒ de nánpéngyou",
+          "english": "my boyfriend",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "男朋友的家人",
+          "pinyin": "nánpéngyou de jiārén",
+          "english": "boyfriend's family",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "她男朋友明年要来北京。",
+          "pinyin": "Tā nánpéngyou míngnián yào lái Běijīng.",
+          "english": "Her boyfriend will come to Beijing next year.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "我的男朋友",
+          "pinyin": "wǒ de nánpéngyou",
+          "english": "my boyfriend",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "男朋友的家人",
+          "pinyin": "nánpéngyou de jiārén",
+          "english": "boyfriend's family",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "她男朋友明年要来北京。",
+          "pinyin": "Tā nánpéngyou míngnián yào lái Běijīng.",
+          "english": "Her boyfriend will come to Beijing next year.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_05": {
+      "word": "几",
+      "examples": [
+        {
+          "hanzi": "几个人",
+          "pinyin": "jǐ gè rén",
+          "english": "how many people",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "几小时",
+          "pinyin": "jǐ xiǎoshí",
+          "english": "how many hours",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "飞机要飞几个小时？",
+          "pinyin": "Fēijī yào fēi jǐ gè xiǎoshí?",
+          "english": "How many hours will the plane fly?",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "几个人",
+          "pinyin": "jǐ gè rén",
+          "english": "how many people",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "几小时",
+          "pinyin": "jǐ xiǎoshí",
+          "english": "how many hours",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "飞机要飞几个小时？",
+          "pinyin": "Fēijī yào fēi jǐ gè xiǎoshí?",
+          "english": "How many hours will the plane fly?",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_06": {
+      "word": "年",
+      "examples": [
+        {
+          "hanzi": "今年",
+          "pinyin": "jīnnián",
+          "english": "this year",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "明年",
+          "pinyin": "míngnián",
+          "english": "next year",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我在中国住了一年。",
+          "pinyin": "Wǒ zài Zhōngguó zhù le yì nián.",
+          "english": "I lived in China for one year.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "今年",
+          "pinyin": "jīnnián",
+          "english": "this year",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "明年",
+          "pinyin": "míngnián",
+          "english": "next year",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我在中国住了一年。",
+          "pinyin": "Wǒ zài Zhōngguó zhù le yì nián.",
+          "english": "I lived in China for one year.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_07": {
+      "word": "好玩儿",
+      "examples": [
+        {
+          "hanzi": "很好玩儿",
+          "pinyin": "hěn hǎowánr",
+          "english": "very fun",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "西安好玩儿",
+          "pinyin": "Xī'ān hǎowánr",
+          "english": "Xi'an is fun",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这个地方好玩儿，也很漂亮。",
+          "pinyin": "Zhège dìfang hǎowánr, yě hěn piàoliang.",
+          "english": "This place is fun and also beautiful.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "很好玩儿",
+          "pinyin": "hěn hǎowánr",
+          "english": "very fun",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "西安好玩儿",
+          "pinyin": "Xī'ān hǎowánr",
+          "english": "Xi'an is fun",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这个地方好玩儿，也很漂亮。",
+          "pinyin": "Zhège dìfang hǎowánr, yě hěn piàoliang.",
+          "english": "This place is fun and also beautiful.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_08": {
+      "word": "飞机",
+      "examples": [
+        {
+          "hanzi": "坐飞机",
+          "pinyin": "zuò fēijī",
+          "english": "take a plane",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "飞机票",
+          "pinyin": "fēijī piào",
+          "english": "plane ticket",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我们明天坐飞机去北京。",
+          "pinyin": "Wǒmen míngtiān zuò fēijī qù Běijīng.",
+          "english": "Tomorrow we will fly to Beijing.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "坐飞机",
+          "pinyin": "zuò fēijī",
+          "english": "take a plane",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "飞机票",
+          "pinyin": "fēijī piào",
+          "english": "plane ticket",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我们明天坐飞机去北京。",
+          "pinyin": "Wǒmen míngtiān zuò fēijī qù Běijīng.",
+          "english": "Tomorrow we will fly to Beijing.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_09": {
+      "word": "要",
+      "examples": [
+        {
+          "hanzi": "要九个小时",
+          "pinyin": "yào jiǔ gè xiǎoshí",
+          "english": "take nine hours",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "要去机场",
+          "pinyin": "yào qù jīchǎng",
+          "english": "need to go to the airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "从这儿到机场要一个小时。",
+          "pinyin": "Cóng zhèr dào jīchǎng yào yí gè xiǎoshí.",
+          "english": "It takes one hour from here to the airport.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "要九个小时",
+          "pinyin": "yào jiǔ gè xiǎoshí",
+          "english": "take nine hours",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "要去机场",
+          "pinyin": "yào qù jīchǎng",
+          "english": "need to go to the airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "从这儿到机场要一个小时。",
+          "pinyin": "Cóng zhèr dào jīchǎng yào yí gè xiǎoshí.",
+          "english": "It takes one hour from here to the airport.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_10": {
+      "word": "小时",
+      "examples": [
+        {
+          "hanzi": "一个小时",
+          "pinyin": "yí gè xiǎoshí",
+          "english": "one hour",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "九个小时",
+          "pinyin": "jiǔ gè xiǎoshí",
+          "english": "nine hours",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "到北京要几个小时？",
+          "pinyin": "Dào Běijīng yào jǐ gè xiǎoshí?",
+          "english": "How many hours does it take to get to Beijing?",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一个小时",
+          "pinyin": "yí gè xiǎoshí",
+          "english": "one hour",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "九个小时",
+          "pinyin": "jiǔ gè xiǎoshí",
+          "english": "nine hours",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "到北京要几个小时？",
+          "pinyin": "Dào Běijīng yào jǐ gè xiǎoshí?",
+          "english": "How many hours does it take to get to Beijing?",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_11": {
+      "word": "家人",
+      "examples": [
+        {
+          "hanzi": "我的家人",
+          "pinyin": "wǒ de jiārén",
+          "english": "my family",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "家人在北京",
+          "pinyin": "jiārén zài Běijīng",
+          "english": "family are in Beijing",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "她的家人都住在北京。",
+          "pinyin": "Tā de jiārén dōu zhù zài Běijīng.",
+          "english": "Her family all live in Beijing.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "我的家人",
+          "pinyin": "wǒ de jiārén",
+          "english": "my family",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "家人在北京",
+          "pinyin": "jiārén zài Běijīng",
+          "english": "family are in Beijing",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "她的家人都住在北京。",
+          "pinyin": "Tā de jiārén dōu zhù zài Běijīng.",
+          "english": "Her family all live in Beijing.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_12": {
+      "word": "时间",
+      "examples": [
+        {
+          "hanzi": "有时间",
+          "pinyin": "yǒu shíjiān",
+          "english": "have time",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "没有时间",
+          "pinyin": "méiyǒu shíjiān",
+          "english": "have no time",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "你今天下午有时间吗？",
+          "pinyin": "Nǐ jīntiān xiàwǔ yǒu shíjiān ma?",
+          "english": "Do you have time this afternoon?",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "有时间",
+          "pinyin": "yǒu shíjiān",
+          "english": "have time",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "没有时间",
+          "pinyin": "méiyǒu shíjiān",
+          "english": "have no time",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "你今天下午有时间吗？",
+          "pinyin": "Nǐ jīntiān xiàwǔ yǒu shíjiān ma?",
+          "english": "Do you have time this afternoon?",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_13": {
+      "word": "机场",
+      "examples": [
+        {
+          "hanzi": "去机场",
+          "pinyin": "qù jīchǎng",
+          "english": "go to the airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在机场见",
+          "pinyin": "zài jīchǎng jiàn",
+          "english": "meet at the airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我们早上八点在机场见。",
+          "pinyin": "Wǒmen zǎoshang bā diǎn zài jīchǎng jiàn.",
+          "english": "We will meet at the airport at eight in the morning.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "去机场",
+          "pinyin": "qù jīchǎng",
+          "english": "go to the airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在机场见",
+          "pinyin": "zài jīchǎng jiàn",
+          "english": "meet at the airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我们早上八点在机场见。",
+          "pinyin": "Wǒmen zǎoshang bā diǎn zài jīchǎng jiàn.",
+          "english": "We will meet at the airport at eight in the morning.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_14": {
+      "word": "接",
+      "examples": [
+        {
+          "hanzi": "接朋友",
+          "pinyin": "jiē péngyou",
+          "english": "pick up a friend",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去机场接人",
+          "pinyin": "qù jīchǎng jiē rén",
+          "english": "go to the airport to pick someone up",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我姐姐会去机场接你。",
+          "pinyin": "Wǒ jiějie huì qù jīchǎng jiē nǐ.",
+          "english": "My older sister will pick you up at the airport.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "接朋友",
+          "pinyin": "jiē péngyou",
+          "english": "pick up a friend",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去机场接人",
+          "pinyin": "qù jīchǎng jiē rén",
+          "english": "go to the airport to pick someone up",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我姐姐会去机场接你。",
+          "pinyin": "Wǒ jiějie huì qù jīchǎng jiē nǐ.",
+          "english": "My older sister will pick you up at the airport.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_15": {
+      "word": "住",
+      "examples": [
+        {
+          "hanzi": "住在北京",
+          "pinyin": "zhù zài Běijīng",
+          "english": "live in Beijing",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "住我家",
+          "pinyin": "zhù wǒ jiā",
+          "english": "stay at my home",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "你们可以住在我家。",
+          "pinyin": "Nǐmen kěyǐ zhù zài wǒ jiā.",
+          "english": "You can stay at my home.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "住在北京",
+          "pinyin": "zhù zài Běijīng",
+          "english": "live in Beijing",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "住我家",
+          "pinyin": "zhù wǒ jiā",
+          "english": "stay at my home",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "你们可以住在我家。",
+          "pinyin": "Nǐmen kěyǐ zhù zài wǒ jiā.",
+          "english": "You can stay at my home.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_16": {
+      "word": "早",
+      "examples": [
+        {
+          "hanzi": "早上八点",
+          "pinyin": "zǎoshang bā diǎn",
+          "english": "eight in the morning",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "来得太早",
+          "pinyin": "lái de tài zǎo",
+          "english": "come too early",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "现在走不早了。",
+          "pinyin": "Xiànzài zǒu bù zǎo le.",
+          "english": "Leaving now is not early anymore.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "早上八点",
+          "pinyin": "zǎoshang bā diǎn",
+          "english": "eight in the morning",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "来得太早",
+          "pinyin": "lái de tài zǎo",
+          "english": "come too early",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "现在走不早了。",
+          "pinyin": "Xiànzài zǒu bù zǎo le.",
+          "english": "Leaving now is not early anymore.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_17": {
+      "word": "那",
+      "examples": [
+        {
+          "hanzi": "那我们走吧",
+          "pinyin": "nà wǒmen zǒu ba",
+          "english": "then let's go",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那就在机场见",
+          "pinyin": "nà jiù zài jīchǎng jiàn",
+          "english": "then let's meet at the airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那我们明天早上见。",
+          "pinyin": "Nà wǒmen míngtiān zǎoshang jiàn.",
+          "english": "Then we will meet tomorrow morning.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "那我们走吧",
+          "pinyin": "nà wǒmen zǒu ba",
+          "english": "then let's go",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那就在机场见",
+          "pinyin": "nà jiù zài jīchǎng jiàn",
+          "english": "then let's meet at the airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "那我们明天早上见。",
+          "pinyin": "Nà wǒmen míngtiān zǎoshang jiàn.",
+          "english": "Then we will meet tomorrow morning.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_18": {
+      "word": "西安",
+      "examples": [
+        {
+          "hanzi": "去西安",
+          "pinyin": "qù Xī'ān",
+          "english": "go to Xi'an",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "西安很漂亮",
+          "pinyin": "Xī'ān hěn piàoliang",
+          "english": "Xi'an is beautiful",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去年我去了西安，那里很好玩儿。",
+          "pinyin": "Qùnián wǒ qù le Xī'ān, nàlǐ hěn hǎowánr.",
+          "english": "Last year I went to Xi'an; it was very fun there.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "去西安",
+          "pinyin": "qù Xī'ān",
+          "english": "go to Xi'an",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "西安很漂亮",
+          "pinyin": "Xī'ān hěn piàoliang",
+          "english": "Xi'an is beautiful",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "去年我去了西安，那里很好玩儿。",
+          "pinyin": "Qùnián wǒ qù le Xī'ān, nàlǐ hěn hǎowánr.",
+          "english": "Last year I went to Xi'an; it was very fun there.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_19": {
+      "word": "北京",
+      "examples": [
+        {
+          "hanzi": "去北京",
+          "pinyin": "qù Běijīng",
+          "english": "go to Beijing",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "北京机场",
+          "pinyin": "Běijīng jīchǎng",
+          "english": "Beijing airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我家人都在北京。",
+          "pinyin": "Wǒ jiārén dōu zài Běijīng.",
+          "english": "My family are all in Beijing.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "去北京",
+          "pinyin": "qù Běijīng",
+          "english": "go to Beijing",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "北京机场",
+          "pinyin": "Běijīng jīchǎng",
+          "english": "Beijing airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我家人都在北京。",
+          "pinyin": "Wǒ jiārén dōu zài Běijīng.",
+          "english": "My family are all in Beijing.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l15_20": {
+      "word": "大兴机场",
+      "examples": [
+        {
+          "hanzi": "到大兴机场",
+          "pinyin": "dào Dàxīng Jīchǎng",
+          "english": "arrive at Daxing Airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在大兴机场见",
+          "pinyin": "zài Dàxīng Jīchǎng jiàn",
+          "english": "meet at Daxing Airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "飞机早上到大兴机场。",
+          "pinyin": "Fēijī zǎoshang dào Dàxīng Jīchǎng.",
+          "english": "The plane arrives at Daxing Airport in the morning.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "到大兴机场",
+          "pinyin": "dào Dàxīng Jīchǎng",
+          "english": "arrive at Daxing Airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "在大兴机场见",
+          "pinyin": "zài Dàxīng Jīchǎng jiàn",
+          "english": "meet at Daxing Airport",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "飞机早上到大兴机场。",
+          "pinyin": "Fēijī zǎoshang dào Dàxīng Jīchǎng.",
+          "english": "The plane arrives at Daxing Airport in the morning.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "grammarTeachingNotes": {
+    "g_l15_01": {
+      "title": "并列复句“还/也”",
+      "titleEn": "Coordinate Compound Sentences with 还/也",
+      "structure": "小句1，+ 还/也 + 小句2",
+      "structureEn": "clause 1, hai/ye + clause 2",
+      "structureRu": "часть 1, 还/也 + часть 2",
+      "english": "Use 还 or 也 to connect parallel information.",
+      "russian": "还/也 соединяет параллельные сообщения.",
+      "formula": {
+        "pattern": "小句1，+ 还/也 + 小句2",
+        "patternEn": "clause 1, hai/ye + clause 2",
+        "patternRu": "часть 1, 还/也 + часть 2"
+      },
+      "examples": [
+        {
+          "hanzi": "我喜欢这个，也喜欢那个。",
+          "pinyin": "Wǒ xǐhuan zhège, yě xǐhuan nàge.",
+          "english": "I like this one and also that one.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "这些菜都好吃，还很好看。",
+          "pinyin": "Zhèxiē cài dōu hǎochī, hái hěn hǎokàn.",
+          "english": "These dishes are delicious and also look good.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我喜欢喝中国茶，还喜欢吃中国菜。",
+          "pinyin": "Wǒ xǐhuan hē Zhōngguó chá, hái xǐhuan chī Zhōngguó cài.",
+          "english": "I like Chinese tea and also Chinese food.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "preClass": {
+    "warmup": {
+      "title": "旅行计划",
+      "prompt": "Think about places you want to visit.",
+      "intro": "这一课学习说旅行计划、时间和机场接人。",
+      "question": "哪句话说“今年我想去北京”？",
+      "questionEn": "Which sentence says 'This year I want to go to Beijing'?",
+      "options": [
+        {
+          "word": "今年我想去北京。",
+          "pinyin": "Jīnnián wǒ xiǎng qù Běijīng."
+        },
+        {
+          "word": "请给我一杯茶。",
+          "pinyin": "Qǐng gěi wǒ yì bēi chá."
+        },
+        {
+          "word": "我们都会写了。",
+          "pinyin": "Wǒmen dōu huì xiě le."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": "pre_l15_01",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which word means airport?",
+        "options": [
+          "机场",
+          "飞机",
+          "时间",
+          "家人"
+        ],
+        "answer": "机场",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l15_02",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which word means plane?",
+        "options": [
+          "飞机",
+          "火车",
+          "机场",
+          "小时"
+        ],
+        "answer": "飞机",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l15_03",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which word means last year?",
+        "options": [
+          "去年",
+          "明年",
+          "早",
+          "时间"
+        ],
+        "answer": "去年",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l15_04",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which word means early?",
+        "options": [
+          "早",
+          "晚",
+          "好玩儿",
+          "漂亮"
+        ],
+        "answer": "早",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l15_05",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which word means pick up/meet?",
+        "options": [
+          "接",
+          "住",
+          "爱",
+          "要"
+        ],
+        "answer": "接",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l15_06",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which city is 北京?",
+        "options": [
+          "Beijing",
+          "Xi'an",
+          "Dalian",
+          "Shanghai"
+        ],
+        "answer": "Beijing",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l15_07",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which sentence uses 也?",
+        "options": [
+          "我喜欢茶，也喜欢牛奶。",
+          "我请坐。",
+          "我看了电影。",
+          "我听不见。"
+        ],
+        "answer": "我喜欢茶，也喜欢牛奶。",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l15_08",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which sentence says a travel plan?",
+        "options": [
+          "我想去北京。",
+          "请给我一杯茶。",
+          "我都会写了。",
+          "不要说话。"
+        ],
+        "answer": "我想去北京。",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l15_09",
+        "type": "subjective",
+        "module": "开放题",
+        "question": "教学扩展：你想去哪儿旅行？",
+        "openEnded": true,
+        "prompt": "例如：我想去北京。",
+        "answerPlaceholder": "我想去____。",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l15_10",
+        "type": "subjective",
+        "module": "开放题",
+        "question": "教学扩展：请用“也/还”写一句话。",
+        "openEnded": true,
+        "prompt": "例如：我喜欢茶，也喜欢牛奶。",
+        "answerPlaceholder": "我____，也____。",
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "inClass": {
+    "questionGroups": {
+      "v1_image_guess": [
+        {
+          "id": "v1_l15_1",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l15/01_ai.png",
+            "image_hint": "爱",
+            "options": [
+              "爱",
+              "几",
+              "男朋友",
+              "去年"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "爱",
+          "kp": "爱",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l15_2",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l15/02_nage.png",
+            "image_hint": "哪个",
+            "options": [
+              "几",
+              "哪个",
+              "男朋友",
+              "年"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "哪个",
+          "kp": "哪个",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l15_3",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l15/03_qunian.png",
+            "image_hint": "去年",
+            "options": [
+              "好玩儿",
+              "几",
+              "年",
+              "去年"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "去年",
+          "kp": "去年",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l15_4",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l15/04_nanpengyou.png",
+            "image_hint": "男朋友",
+            "options": [
+              "飞机",
+              "好玩儿",
+              "男朋友",
+              "年"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "男朋友",
+          "kp": "男朋友",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l15_5",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l15/05_ji.png",
+            "image_hint": "几",
+            "options": [
+              "飞机",
+              "好玩儿",
+              "几",
+              "要"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "几",
+          "kp": "几",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l15_6",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l15/06_nian.png",
+            "image_hint": "年",
+            "options": [
+              "飞机",
+              "年",
+              "小时",
+              "要"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "年",
+          "kp": "年",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l15_7",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l15/07_haowanr.png",
+            "image_hint": "好玩儿",
+            "options": [
+              "好玩儿",
+              "家人",
+              "小时",
+              "要"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "好玩儿",
+          "kp": "好玩儿",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l15_8",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l15/08_feiji.png",
+            "image_hint": "飞机",
+            "options": [
+              "飞机",
+              "家人",
+              "时间",
+              "小时"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "飞机",
+          "kp": "飞机",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l15_9",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l15/09_yao.png",
+            "image_hint": "要",
+            "options": [
+              "机场",
+              "家人",
+              "时间",
+              "要"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "要",
+          "kp": "要",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l15_10",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l15/10_xiaoshi.png",
+            "image_hint": "小时",
+            "options": [
+              "机场",
+              "接",
+              "时间",
+              "小时"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "小时",
+          "kp": "小时",
+          "sourceType": "textbook"
+        }
+      ],
+      "v5_vocab_fill": [
+        {
+          "id": "v5_l15_1",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "你们爱吃___菜？",
+            "sentence_pinyin": "Nǐmen ài chī ___ cài?",
+            "options": [
+              "哪个",
+              "去年",
+              "机场",
+              "小时"
+            ],
+            "options_pinyin": [
+              "nǎge",
+              "qùnián",
+              "jīchǎng",
+              "xiǎoshí"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "哪个",
+          "kp": "哪个",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l15_2",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "我喜欢茶，___喜欢牛奶。",
+            "sentence_pinyin": "wǒ xǐhuan chá xǐhuan niúnǎi",
+            "options": [
+              "也",
+              "几",
+              "早",
+              "那"
+            ],
+            "options_pinyin": [
+              "yě",
+              "jǐ",
+              "zǎo",
+              "nà"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "也",
+          "kp": "也",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l15_3",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "去年我和___去了西安。",
+            "sentence_pinyin": "Qùnián wǒ hé ___ qùle Xī'ān.",
+            "options": [
+              "男朋友",
+              "家人",
+              "飞机",
+              "时间"
+            ],
+            "options_pinyin": [
+              "nánpéngyou",
+              "jiārén",
+              "fēijī",
+              "shíjiān"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "男朋友",
+          "kp": "男朋友",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l15_4",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "前___年去了西安。",
+            "sentence_pinyin": "Qián ___ nián qùle Xī'ān.",
+            "options": [
+              "几",
+              "早",
+              "那",
+              "爱"
+            ],
+            "options_pinyin": [
+              "jǐ",
+              "zǎo",
+              "nà",
+              "ài"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "几",
+          "kp": "几",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l15_5",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "西安非常___。",
+            "sentence_pinyin": "Xī'ān fēicháng ___.",
+            "options": [
+              "好玩儿",
+              "早",
+              "哪个",
+              "小时"
+            ],
+            "options_pinyin": [
+              "hǎowánr",
+              "zǎo",
+              "nǎge",
+              "xiǎoshí"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "好玩儿",
+          "kp": "好玩儿",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l15_6",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "飞机到北京要几个___？",
+            "sentence_pinyin": "Fēijī dào Běijīng yào jǐ gè ___?",
+            "options": [
+              "小时",
+              "年",
+              "家人",
+              "机场"
+            ],
+            "options_pinyin": [
+              "xiǎoshí",
+              "nián",
+              "jiārén",
+              "jīchǎng"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "小时",
+          "kp": "小时",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l15_7",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "我___都在北京。",
+            "sentence_pinyin": "Wǒ ___ dōu zài Běijīng.",
+            "options": [
+              "家人",
+              "飞机",
+              "时间",
+              "机场"
+            ],
+            "options_pinyin": [
+              "jiārén",
+              "fēijī",
+              "shíjiān",
+              "jīchǎng"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "家人",
+          "kp": "家人",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l15_8",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "她可以去___接你们。",
+            "sentence_pinyin": "Tā kěyǐ qù ___ jiē nǐmen.",
+            "options": [
+              "机场",
+              "去年",
+              "小时",
+              "哪个"
+            ],
+            "options_pinyin": [
+              "jīchǎng",
+              "qùnián",
+              "xiǎoshí",
+              "nǎge"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "机场",
+          "kp": "机场",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l15_9",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "你们也可以___在我家。",
+            "sentence_pinyin": "nǐmen yě kěyǐ zài wǒ jiā",
+            "options": [
+              "住",
+              "接",
+              "爱",
+              "早"
+            ],
+            "options_pinyin": [
+              "zhù",
+              "jiē",
+              "ài",
+              "zǎo"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "住",
+          "kp": "住",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l15_10",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "那我和您姐姐在___见！",
+            "sentence_pinyin": "Nà wǒ hé nín jiějie zài ___ jiàn!",
+            "options": [
+              "大兴机场",
+              "西安",
+              "飞机",
+              "家人"
+            ],
+            "options_pinyin": [
+              "Dàxīng Jīchǎng",
+              "Xī'ān",
+              "fēijī",
+              "jiārén"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "大兴机场",
+          "kp": "大兴机场",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v7_word_match": [
+        {
+          "id": "v7_l15_01",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "你爱吃哪个菜？",
+                "left_pinyin": "Nǐ ài chī nǎge cài?",
+                "right": "我爱吃这个菜。",
+                "right_pinyin": "Wǒ ài chī zhège cài."
+              },
+              {
+                "left": "这些菜都好吃吗？",
+                "left_pinyin": "Zhèxiē cài dōu hǎochī ma?",
+                "right": "有的好吃，有的不好吃。",
+                "right_pinyin": "Yǒude hǎochī, yǒude bù hǎochī."
+              },
+              {
+                "left": "去年你跟谁去了西安？",
+                "left_pinyin": "Qùnián nǐ gēn shéi qù le Xī'ān?",
+                "right": "我跟男朋友去了。",
+                "right_pinyin": "Wǒ gēn nánpéngyou qù le."
+              },
+              {
+                "left": "西安好玩儿吗？",
+                "left_pinyin": "Xī'ān hǎowánr ma?",
+                "right": "很好玩儿。",
+                "right_pinyin": "Hěn hǎowánr."
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l15_02",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "去北京要几个小时？",
+                "left_pinyin": "Qù Běijīng yào jǐ ge xiǎoshí?",
+                "right": "坐飞机要一个小时。",
+                "right_pinyin": "Zuò fēijī yào yí ge xiǎoshí."
+              },
+              {
+                "left": "你家人在北京吗？",
+                "left_pinyin": "Nǐ jiārén zài Běijīng ma?",
+                "right": "我姐姐在北京。",
+                "right_pinyin": "Wǒ jiějie zài Běijīng."
+              },
+              {
+                "left": "你有时间去机场吗？",
+                "left_pinyin": "Nǐ yǒu shíjiān qù jīchǎng ma?",
+                "right": "有，我可以去接你。",
+                "right_pinyin": "Yǒu, wǒ kěyǐ qù jiē nǐ."
+              },
+              {
+                "left": "你们住哪儿？",
+                "left_pinyin": "Nǐmen zhù nǎr?",
+                "right": "我们住朋友家。",
+                "right_pinyin": "Wǒmen zhù péngyou jiā."
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l15_03",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "你们在哪个机场见？",
+                "left_pinyin": "Nǐmen zài nǎge jīchǎng jiàn?",
+                "right": "在大兴机场见。",
+                "right_pinyin": "Zài Dàxīng Jīchǎng jiàn."
+              },
+              {
+                "left": "飞机几点到北京？",
+                "left_pinyin": "Fēijī jǐ diǎn dào Běijīng?",
+                "right": "早上八点到。",
+                "right_pinyin": "Zǎoshang bā diǎn dào."
+              },
+              {
+                "left": "那我们怎么去？",
+                "left_pinyin": "Nà wǒmen zěnme qù?",
+                "right": "先坐车，再走。",
+                "right_pinyin": "Xiān zuò chē, zài zǒu."
+              },
+              {
+                "left": "你想住几年？",
+                "left_pinyin": "Nǐ xiǎng zhù jǐ nián?",
+                "right": "我想住一年。",
+                "right_pinyin": "Wǒ xiǎng zhù yì nián."
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l15_04",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "谁去机场接你？",
+                "left_pinyin": "Shéi qù jīchǎng jiē nǐ?",
+                "right": "王老师的姐姐去接我。",
+                "right_pinyin": "Wáng lǎoshī de jiějie qù jiē wǒ."
+              },
+              {
+                "left": "你去年去哪儿了？",
+                "left_pinyin": "Nǐ qùnián qù nǎr le?",
+                "right": "去了西安，也去了北京。",
+                "right_pinyin": "Qù le Xī'ān, yě qù le Běijīng."
+              },
+              {
+                "left": "你的家人都住北京吗？",
+                "left_pinyin": "Nǐ de jiārén dōu zhù Běijīng ma?",
+                "right": "不都住北京。",
+                "right_pinyin": "Bù dōu zhù Běijīng."
+              },
+              {
+                "left": "今天早上走早不早？",
+                "left_pinyin": "Jīntiān zǎoshang zǒu zǎo bu zǎo?",
+                "right": "不早，正好。",
+                "right_pinyin": "Bù zǎo, zhènghǎo."
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l15_05",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "你爱坐飞机吗？",
+                "left_pinyin": "Nǐ ài zuò fēijī ma?",
+                "right": "不太爱。",
+                "right_pinyin": "Bù tài ài."
+              },
+              {
+                "left": "哪个地方好玩儿？",
+                "left_pinyin": "Nǎge dìfang hǎowánr?",
+                "right": "西安好玩儿，北京也好玩儿。",
+                "right_pinyin": "Xī'ān hǎowánr, Běijīng yě hǎowánr."
+              },
+              {
+                "left": "你还有时间看书吗？",
+                "left_pinyin": "Nǐ hái yǒu shíjiān kàn shū ma?",
+                "right": "没有时间。",
+                "right_pinyin": "Méiyǒu shíjiān."
+              },
+              {
+                "left": "大兴机场在哪儿？",
+                "left_pinyin": "Dàxīng Jīchǎng zài nǎr?",
+                "right": "在北京。",
+                "right_pinyin": "Zài Běijīng."
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v8_memory_match": [
+        {
+          "id": "v8_l15_1",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each item with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "爱",
+                "left_pinyin": "ài",
+                "right": "like",
+                "right_pinyin": ""
+              },
+              {
+                "left": "哪个",
+                "left_pinyin": "nǎge",
+                "right": "which",
+                "right_pinyin": ""
+              },
+              {
+                "left": "去年",
+                "left_pinyin": "qùnián",
+                "right": "last year",
+                "right_pinyin": ""
+              },
+              {
+                "left": "男朋友",
+                "left_pinyin": "nánpéngyou",
+                "right": "boyfriend",
+                "right_pinyin": ""
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l15_2",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each item with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "年",
+                "left_pinyin": "nián",
+                "right": "year",
+                "right_pinyin": ""
+              },
+              {
+                "left": "好玩儿",
+                "left_pinyin": "hǎowánr",
+                "right": "fun",
+                "right_pinyin": ""
+              },
+              {
+                "left": "飞机",
+                "left_pinyin": "fēijī",
+                "right": "plane",
+                "right_pinyin": ""
+              },
+              {
+                "left": "小时",
+                "left_pinyin": "xiǎoshí",
+                "right": "hour",
+                "right_pinyin": ""
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l15_3",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each item with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "家人",
+                "left_pinyin": "jiārén",
+                "right": "family",
+                "right_pinyin": ""
+              },
+              {
+                "left": "时间",
+                "left_pinyin": "shíjiān",
+                "right": "time",
+                "right_pinyin": ""
+              },
+              {
+                "left": "机场",
+                "left_pinyin": "jīchǎng",
+                "right": "airport",
+                "right_pinyin": ""
+              },
+              {
+                "left": "接",
+                "left_pinyin": "jiē",
+                "right": "pick up",
+                "right_pinyin": ""
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l15_4",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each item with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "住",
+                "left_pinyin": "zhù",
+                "right": "stay",
+                "right_pinyin": ""
+              },
+              {
+                "left": "早",
+                "left_pinyin": "zǎo",
+                "right": "early",
+                "right_pinyin": ""
+              },
+              {
+                "left": "那",
+                "left_pinyin": "nà",
+                "right": "then",
+                "right_pinyin": ""
+              },
+              {
+                "left": "几",
+                "left_pinyin": "jǐ",
+                "right": "several",
+                "right_pinyin": ""
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l15_5",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each item with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "西安",
+                "left_pinyin": "Xī'ān",
+                "right": "Xi'an",
+                "right_pinyin": ""
+              },
+              {
+                "left": "北京",
+                "left_pinyin": "Běijīng",
+                "right": "Beijing",
+                "right_pinyin": ""
+              },
+              {
+                "left": "大兴机场",
+                "left_pinyin": "Dàxīng Jīchǎng",
+                "right": "Daxing Airport",
+                "right_pinyin": ""
+              },
+              {
+                "left": "要",
+                "left_pinyin": "yào",
+                "right": "need; take",
+                "right_pinyin": ""
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v4_complete_sentence": [
+        {
+          "id": "v4_l15_01",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "根据答句，选择最合适的问题。",
+          "prompt_en": "Choose the question that best matches the answer.",
+          "data": {
+            "source_sentence": "我爱吃这个，也爱吃那个。",
+            "source_pinyin": "wǒ ài chī zhège yě ài chī nà gè",
+            "options": [
+              "你爱吃哪个中国菜？",
+              "你去年去哪儿？",
+              "你几点到机场？",
+              "谁去接你？"
+            ],
+            "options_pinyin": [
+              "nǐ ài chī nǎge Zhōngguó cài",
+              "nǐ qùnián qù nǎr",
+              "nǐ jǐ dào jīchǎng",
+              "shéi qù jiē nǐ"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你爱吃哪个中国菜？",
+          "kp": "句子转换：答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l15_02",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "根据答句，选择最合适的问题。",
+          "prompt_en": "Choose the question that best matches the answer.",
+          "data": {
+            "source_sentence": "不都好吃，左边这个有点儿贵。",
+            "source_pinyin": "bù dōu hǎochī zuǒbiān zhège yǒudiǎnr guì",
+            "options": [
+              "这些菜都好吃吗？",
+              "哪个机场更近？",
+              "你有时间吗？",
+              "你住哪儿？"
+            ],
+            "options_pinyin": [
+              "zhèxiē cài dōu hǎochī ma",
+              "nǎge jīchǎng jìn",
+              "nǐ yǒu shíjiān ma",
+              "nǐ zhù nǎr"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这些菜都好吃吗？",
+          "kp": "句子转换：答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l15_03",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "根据答句，选择最合适的问题。",
+          "prompt_en": "Choose the question that best matches the answer.",
+          "data": {
+            "source_sentence": "我跟男朋友一起去了。",
+            "source_pinyin": "wǒ gēn nánpéngyou yìqǐ qù le",
+            "options": [
+              "去年你跟谁去了西安？",
+              "你男朋友住北京吗？",
+              "谁接你们？",
+              "你们几点走？"
+            ],
+            "options_pinyin": [
+              "qùnián nǐ gēn shéi qù le Xī'ān",
+              "nǐ nánpéngyou zhù Běijīng ma",
+              "shéi jiē nǐmen",
+              "nǐmen jǐ zǒu"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "去年你跟谁去了西安？",
+          "kp": "句子转换：答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l15_04",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "根据答句，选择最合适的问题。",
+          "prompt_en": "Choose the question that best matches the answer.",
+          "data": {
+            "source_sentence": "很好玩儿，但是旅行时间有点儿短。",
+            "source_pinyin": "hěn hǎowánr dànshì lǚxíng shíjiān yǒudiǎnr duǎn",
+            "options": [
+              "西安好玩儿吗？",
+              "北京机场大不大？",
+              "你爱吃中国菜吗？",
+              "你家人在哪儿？"
+            ],
+            "options_pinyin": [
+              "Xī'ān hǎowánr ma",
+              "Běijīng jīchǎng dà bù dà",
+              "nǐ ài chī Zhōngguó cài ma",
+              "nǐ jiārén zài nǎr"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "西安好玩儿吗？",
+          "kp": "句子转换：答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l15_05",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "根据答句，选择最合适的问题。",
+          "prompt_en": "Choose the question that best matches the answer.",
+          "data": {
+            "source_sentence": "坐飞机大约要一个多小时。",
+            "source_pinyin": "zuò fēijī dàyuē yào yí gè duō xiǎoshí",
+            "options": [
+              "从大连到北京要多久？",
+              "飞机几点起飞？",
+              "你要去哪儿？",
+              "你住几年？"
+            ],
+            "options_pinyin": [
+              "cóng Dàlián dào Běijīng yào duō jiǔ",
+              "fēijī jǐ qǐfēi",
+              "nǐ yào qù nǎr",
+              "nǐ zhù jǐ nián"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "从大连到北京要多久？",
+          "kp": "句子转换：答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l15_06",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "根据答句，选择最合适的问题。",
+          "prompt_en": "Choose the question that best matches the answer.",
+          "data": {
+            "source_sentence": "有时间，我可以去接你。",
+            "source_pinyin": "yǒu shíjiān wǒ kěyǐ qù jiē nǐ",
+            "options": [
+              "明天你有时间去机场吗？",
+              "你爱坐飞机吗？",
+              "哪个地方好玩儿？",
+              "你家人去机场吗？"
+            ],
+            "options_pinyin": [
+              "míngtiān nǐ yǒu shíjiān qù jīchǎng ma",
+              "nǐ ài zuò fēijī ma",
+              "nǎge dìfang hǎowánr",
+              "nǐ jiārén qù jīchǎng ma"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "明天你有时间去机场吗？",
+          "kp": "句子转换：答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l15_07",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "根据答句，选择最合适的问题。",
+          "prompt_en": "Choose the question that best matches the answer.",
+          "data": {
+            "source_sentence": "我们在大兴机场见。",
+            "source_pinyin": "wǒmen zài Dàxīng Jīchǎng",
+            "options": [
+              "你们在哪个机场见？",
+              "你们住在哪儿？",
+              "你们去年去哪儿？",
+              "你们爱吃什么？"
+            ],
+            "options_pinyin": [
+              "nǐmen zài nǎge jīchǎng",
+              "nǐmen zhù zài nǎr",
+              "nǐmen qùnián qù nǎr",
+              "nǐmen ài chī shénme"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你们在哪个机场见？",
+          "kp": "句子转换：答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l15_08",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "根据答句，选择最合适的问题。",
+          "prompt_en": "Choose the question that best matches the answer.",
+          "data": {
+            "source_sentence": "早上八点到，但是可能会晚。",
+            "source_pinyin": "zǎoshang bā diǎn dào dànshì néng huì wǎn",
+            "options": [
+              "飞机几点到北京？",
+              "你几年去北京？",
+              "你喜欢哪个菜？",
+              "你家人都来吗？"
+            ],
+            "options_pinyin": [
+              "fēijī jǐ dào Běijīng",
+              "nǐ jǐ nián qù Běijīng",
+              "nǐ xǐhuan nǎge cài",
+              "nǐ jiārén dōu lái ma"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "飞机几点到北京？",
+          "kp": "句子转换：答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l15_09",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "根据答句，选择最合适的问题。",
+          "prompt_en": "Choose the question that best matches the answer.",
+          "data": {
+            "source_sentence": "先住朋友家，后天住饭店。",
+            "source_pinyin": "xiān zhù péngyou jiā hòutiān zhù fàndiàn",
+            "options": [
+              "你们晚上住哪儿？",
+              "谁接你们？",
+              "那我们怎么走？",
+              "大兴机场远吗？"
+            ],
+            "options_pinyin": [
+              "nǐmen wǎnshang zhù nǎr",
+              "shéi jiē nǐmen",
+              "nà wǒmen zǒu",
+              "Dàxīng Jīchǎng yuǎn ma"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你们晚上住哪儿？",
+          "kp": "句子转换：答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l15_10",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "根据答句，选择最合适的问题。",
+          "prompt_en": "Choose the question that best matches the answer.",
+          "data": {
+            "source_sentence": "没有时间，马上要去机场。",
+            "source_pinyin": "méiyǒu shíjiān mǎshàng yào qù jīchǎng",
+            "options": [
+              "你还有时间看书吗？",
+              "你要坐飞机吗？",
+              "你去过西安吗？",
+              "哪个菜好吃？"
+            ],
+            "options_pinyin": [
+              "nǐ hái yǒu shíjiān kàn shū ma",
+              "nǐ yào zuò fēijī ma",
+              "nǐ qù Xī'ān ma",
+              "nǎge cài hǎochī"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你还有时间看书吗？",
+          "kp": "句子转换：答句选问句",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "g1_ordering": [
+        {
+          "id": "g1_l15_1",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "我",
+              "喜欢",
+              "这个",
+              "也喜欢",
+              "那个"
+            ],
+            "chunks_pinyin": [
+              "wǒ",
+              "xǐhuan",
+              "zhège",
+              "yě xǐhuan",
+              "nàge"
+            ]
+          },
+          "correct_answer": "我喜欢这个也喜欢那个",
+          "acceptable_answers": [
+            "我喜欢这个也喜欢那个",
+            "我喜欢这个也喜欢那个。",
+            "我喜欢这个也喜欢那个？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l15_2",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "这些菜",
+              "都好吃",
+              "还",
+              "很好看"
+            ],
+            "chunks_pinyin": [
+              "zhèxiē cài",
+              "dōu hǎochī",
+              "hái",
+              "hěn hǎokàn"
+            ]
+          },
+          "correct_answer": "这些菜都好吃还很好看",
+          "acceptable_answers": [
+            "这些菜都好吃还很好看",
+            "这些菜都好吃还很好看。",
+            "这些菜都好吃还很好看？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l15_3",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "今年",
+              "我",
+              "想去",
+              "北京"
+            ],
+            "chunks_pinyin": [
+              "jīnnián",
+              "wǒ",
+              "xiǎng qù",
+              "Běijīng"
+            ]
+          },
+          "correct_answer": "今年我想去北京",
+          "acceptable_answers": [
+            "今年我想去北京",
+            "今年我想去北京。",
+            "今年我想去北京？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l15_4",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "飞机",
+              "到北京",
+              "要",
+              "几个小时"
+            ],
+            "chunks_pinyin": [
+              "fēijī",
+              "dào Běijīng",
+              "yào",
+              "jǐ gè xiǎoshí"
+            ]
+          },
+          "correct_answer": "飞机到北京要几个小时",
+          "acceptable_answers": [
+            "飞机到北京要几个小时",
+            "飞机到北京要几个小时。",
+            "飞机到北京要几个小时？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l15_5",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "那",
+              "我",
+              "在大兴机场",
+              "见"
+            ],
+            "chunks_pinyin": [
+              "nà",
+              "wǒ",
+              "zài Dàxīng Jīchǎng",
+              "jiàn"
+            ]
+          },
+          "correct_answer": "那我在大兴机场见",
+          "acceptable_answers": [
+            "那我在大兴机场见",
+            "那我在大兴机场见。",
+            "那我在大兴机场见？"
+          ],
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "r3_translation_choice": [
+        {
+          "id": "trc_l15_1",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "Which dish do you like?",
+            "question_ru": "Какое блюдо вам нравится?",
+            "options": [
+              "你们爱吃哪个菜？",
+              "你们想去哪儿？",
+              "你们几点到？",
+              "你们住哪儿？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你们爱吃哪个菜？",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l15_2",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "I like this one and also that one.",
+            "question_ru": "Мне нравится это, и то тоже.",
+            "options": [
+              "我喜欢这个，也喜欢那个。",
+              "我喜欢北京，也喜欢西安。",
+              "我喜欢飞机，也喜欢机场。",
+              "我喜欢早，也喜欢晚。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我喜欢这个，也喜欢那个。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l15_3",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "These dishes are all delicious and look good.",
+            "question_ru": "Эти блюда вкусные и красиво выглядят.",
+            "options": [
+              "这些菜都好吃，还很好看。",
+              "这些菜都便宜，还很多。",
+              "这些菜都不贵，还不早。",
+              "这些菜都在北京，还在西安。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这些菜都好吃，还很好看。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l15_4",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "Last year I went to Xi'an with my boyfriend.",
+            "question_ru": "В прошлом году я ездила в Сиань с парнем.",
+            "options": [
+              "去年我和男朋友去了西安。",
+              "今年我和家人去了北京。",
+              "去年我和老师去了机场。",
+              "今年我和朋友住我家。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "去年我和男朋友去了西安。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l15_5",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "This year I want to go to Beijing.",
+            "question_ru": "В этом году я хочу поехать в Пекин.",
+            "options": [
+              "今年我想去北京。",
+              "去年我想去西安。",
+              "今年我想住机场。",
+              "去年我想接家人。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "今年我想去北京。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l15_6",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "The flight to Beijing takes nine hours.",
+            "question_ru": "Самолет до Пекина летит девять часов.",
+            "options": [
+              "飞机到北京要九个小时。",
+              "飞机到西安要几年。",
+              "机场到北京要八点。",
+              "飞机到机场要家人。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "飞机到北京要九个小时。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l15_7",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "My family are all in Beijing.",
+            "question_ru": "Вся моя семья в Пекине.",
+            "options": [
+              "我家人都在北京。",
+              "我家人都在机场。",
+              "我家人都在飞机上。",
+              "我家人都在西安。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我家人都在北京。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l15_8",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "She can pick you up at the airport.",
+            "question_ru": "Она может встретить вас в аэропорту.",
+            "options": [
+              "她可以去机场接你们。",
+              "她可以住你们家。",
+              "她可以去北京吃菜。",
+              "她可以坐飞机去西安。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "她可以去机场接你们。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l15_9",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "You can also stay at my home.",
+            "question_ru": "Вы также можете жить у меня дома.",
+            "options": [
+              "你们也可以住我家。",
+              "你们也可以接我家人。",
+              "你们也可以去机场见。",
+              "你们也可以爱北京。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你们也可以住我家。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l15_10",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "See you at Daxing Airport.",
+            "question_ru": "Увидимся в аэропорту Дасин.",
+            "options": [
+              "大兴机场见！",
+              "北京机场住！",
+              "西安飞机见！",
+              "家人时间见！"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "大兴机场见！",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        }
+      ],
+      "r2_passage_choice": [
+        {
+          "id": "ttq_l15_1",
+          "type": "text_qa_group",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：根据课文内容回答。",
+          "prompt_en": "Text Q&A: answer from the dialogue.",
+          "data": {
+            "title": "课文一：菜",
+            "passage": "你们爱吃哪个菜？我喜欢这个，也喜欢那个。这些菜都好吃，还很好看。我爱吃中国菜，也喜欢做。大家多吃点儿。",
+            "passage_pinyin": "Nǐmen ài chī nǎge cài? Wǒ xǐhuan zhège, yě xǐhuan nàge. Zhèxiē cài dōu hǎochī, hái hěn hǎokàn. Wǒ ài chī Zhōngguó cài, yě xǐhuan zuò. Dàjiā duō chī diǎnr.",
+            "questions": [
+              {
+                "question_cn": "白家月喜欢哪个菜？",
+                "question_pinyin": "Bái Jiāyuè xǐhuan nǎge cài?",
+                "answer": "这个，也喜欢那个",
+                "answer_pinyin": "zhège, yě xǐhuan nàge",
+                "options": [
+                  "这个，也喜欢那个",
+                  "只喜欢这个",
+                  "只喜欢那个",
+                  "不喜欢菜"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "这些菜怎么样？",
+                "question_pinyin": "Zhèxiē cài zěnmeyàng?",
+                "answer": "都好吃，还很好看",
+                "answer_pinyin": "dōu hǎochī, hái hěn hǎokàn",
+                "options": [
+                  "都好吃，还很好看",
+                  "都不好吃",
+                  "都很贵",
+                  "都不多"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "李文喜欢做什么？",
+                "question_pinyin": "Lǐ Wén xǐhuan zuò shénme?",
+                "answer": "中国菜",
+                "answer_pinyin": "Zhōngguó cài",
+                "options": [
+                  "中国菜",
+                  "电影",
+                  "飞机",
+                  "汉字"
+                ],
+                "correct_index": 0
+              }
+            ]
+          },
+          "correct_answer": "见每题答案",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "ttq_l15_2",
+          "type": "text_qa_group",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：根据课文内容回答。",
+          "prompt_en": "Text Q&A: answer from the dialogue.",
+          "data": {
+            "title": "课文二：北京",
+            "passage": "你们都想去哪儿？去年我和男朋友去了西安，今年我想去北京。前几年去了西安，非常好玩儿。今年我也想去北京。我和王老师都是北京人，北京非常漂亮。",
+            "passage_pinyin": "Nǐmen dōu xiǎng qù nǎr? Qùnián wǒ hé nánpéngyou qùle Xī'ān, jīnnián wǒ xiǎng qù Běijīng. Qián jǐ nián wǒ qùle Xī'ān, fēicháng hǎowánr. Jīnnián wǒ yě xiǎng qù Běijīng. Wǒ hé Wáng lǎoshī dōu shì Běijīng rén, Běijīng fēicháng piàoliang.",
+            "questions": [
+              {
+                "question_cn": "安妮去年去哪儿了？",
+                "question_pinyin": "Ānnī qùnián qù nǎr le?",
+                "answer": "西安",
+                "answer_pinyin": "Xī'ān",
+                "options": [
+                  "西安",
+                  "北京",
+                  "机场",
+                  "大兴"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "白家月今年想去哪儿？",
+                "question_pinyin": "Bái Jiāyuè jīnnián xiǎng qù nǎr?",
+                "answer": "北京",
+                "answer_pinyin": "Běijīng",
+                "options": [
+                  "北京",
+                  "西安",
+                  "机场",
+                  "家"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "北京怎么样？",
+                "question_pinyin": "Běijīng zěnmeyàng?",
+                "answer": "非常漂亮",
+                "answer_pinyin": "fēicháng piàoliang",
+                "options": [
+                  "非常漂亮",
+                  "非常早",
+                  "非常贵",
+                  "非常晚"
+                ],
+                "correct_index": 0
+              }
+            ]
+          },
+          "correct_answer": "见每题答案",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "ttq_l15_3",
+          "type": "text_qa_group",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：根据课文内容回答。",
+          "prompt_en": "Text Q&A: answer from the dialogue.",
+          "data": {
+            "title": "课文三：机场",
+            "passage": "你们的飞机到北京要几个小时？九个小时。我家人都在北京，星期天我姐姐也有时间，她可以去机场接你们，你们也可以住我家。我们星期日早上八点到大兴机场，早不早？不早。谢谢老师！那我和您姐姐在大兴机场见！",
+            "passage_pinyin": "Nǐmen de fēijī dào Běijīng yào jǐ gè xiǎoshí? Jiǔ gè xiǎoshí. Wǒ jiārén dōu zài Běijīng, Xīngqītiān wǒ jiějie yě yǒu shíjiān, tā kěyǐ qù jīchǎng jiē nǐmen, nǐmen yě kěyǐ zhù wǒ jiā. Wǒmen Xīngqīrì zǎoshang bā diǎn dào Dàxīng Jīchǎng, zǎo bu zǎo? Bù zǎo. Xièxie lǎoshī! Nà wǒ hé nín jiějie zài Dàxīng Jīchǎng jiàn!",
+            "questions": [
+              {
+                "question_cn": "飞机到北京要几个小时？",
+                "question_pinyin": "Fēijī dào Běijīng yào jǐ gè xiǎoshí?",
+                "answer": "九个小时",
+                "answer_pinyin": "jiǔ gè xiǎoshí",
+                "options": [
+                  "九个小时",
+                  "八点",
+                  "几年",
+                  "一小时"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "谁可以去机场接他们？",
+                "question_pinyin": "Shéi kěyǐ qù jīchǎng jiē tāmen?",
+                "answer": "王老师的姐姐",
+                "answer_pinyin": "Wáng lǎoshī de jiějie",
+                "options": [
+                  "王老师的姐姐",
+                  "李文",
+                  "安妮",
+                  "白家月"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "他们几点到大兴机场？",
+                "question_pinyin": "Tāmen jǐ diǎn dào Dàxīng Jīchǎng?",
+                "answer": "早上八点",
+                "answer_pinyin": "zǎoshang bā diǎn",
+                "options": [
+                  "早上八点",
+                  "晚上八点",
+                  "中午十二点",
+                  "九个小时"
+                ],
+                "correct_index": 0
+              }
+            ]
+          },
+          "correct_answer": "见每题答案",
+          "sourceType": "textbook"
+        }
+      ],
+      "r4_picture_talk": [
+        {
+          "id": "r4_lundefined_pt_01",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "你看到了什么？",
+          "prompt_en": "Look at the picture and answer in Chinese.",
+          "data": {
+            "question": "你看到了什么？",
+            "question_pinyin": "Nǐ kàn dào le shénme?",
+            "instructions": "请用学过的词，说一句或两句中文。",
+            "image": "images/vocab/hsk1-l15/01_ai.png",
+            "sampleAnswer": "我看到一些菜。",
+            "sampleAnswerPinyin": "Wǒ kàn dào yìxiē cài.",
+            "patternType": "观察"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：观察",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_lundefined_pt_02",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "这是哪里？",
+          "prompt_en": "Look at the picture and answer in Chinese.",
+          "data": {
+            "question": "这是哪里？",
+            "question_pinyin": "Zhè shì nǎli?",
+            "instructions": "请用学过的词，说一句或两句中文。",
+            "image": "images/vocab/hsk1-l15/18_xian.png",
+            "sampleAnswer": "这是西安。",
+            "sampleAnswerPinyin": "Zhè shì Xī'ān.",
+            "patternType": "地点"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：地点",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_lundefined_pt_03",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "他是谁？",
+          "prompt_en": "Look at the picture and answer in Chinese.",
+          "data": {
+            "question": "他是谁？",
+            "question_pinyin": "Tā shì shéi?",
+            "instructions": "请用学过的词，说一句或两句中文。",
+            "image": "images/vocab/hsk1-l15/04_nanpengyou.png",
+            "sampleAnswer": "他是男朋友。",
+            "sampleAnswerPinyin": "Tā shì nánpéngyou.",
+            "patternType": "人物"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：人物",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_lundefined_pt_04",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "这个地方怎么样？",
+          "prompt_en": "Look at the picture and answer in Chinese.",
+          "data": {
+            "question": "这个地方怎么样？",
+            "question_pinyin": "Zhège dìfang zěnmeyàng?",
+            "instructions": "请用学过的词，说一句或两句中文。",
+            "image": "images/vocab/hsk1-l15/07_haowanr.png",
+            "sampleAnswer": "这个地方很好玩儿。",
+            "sampleAnswerPinyin": "Zhège dìfang hěn hǎowánr.",
+            "patternType": "评价"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：评价",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_lundefined_pt_05",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "这是什么？",
+          "prompt_en": "Look at the picture and answer in Chinese.",
+          "data": {
+            "question": "这是什么？",
+            "question_pinyin": "Zhè shì shénme?",
+            "instructions": "请用学过的词，说一句或两句中文。",
+            "image": "images/vocab/hsk1-l15/08_feiji.png",
+            "sampleAnswer": "这是飞机。",
+            "sampleAnswerPinyin": "Zhè shì fēijī.",
+            "patternType": "交通"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：交通",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_lundefined_pt_06",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "他们在哪儿见？",
+          "prompt_en": "Look at the picture and answer in Chinese.",
+          "data": {
+            "question": "他们在哪儿见？",
+            "question_pinyin": "Tāmen zài nǎr jiàn?",
+            "instructions": "请用学过的词，说一句或两句中文。",
+            "image": "images/vocab/hsk1-l15/20_daxingjichang.png",
+            "sampleAnswer": "他们在大兴机场见。",
+            "sampleAnswerPinyin": "Tāmen zài Dàxīng Jīchǎng jiàn.",
+            "patternType": "地点"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：地点",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "classProQuestions": {
+    "pictureGuess": [
+      {
+        "id": "v1_l15_1",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l15/01_ai.png",
+          "image_hint": "爱",
+          "options": [
+            "爱",
+            "几",
+            "男朋友",
+            "去年"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "爱",
+        "kp": "爱",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l15_2",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l15/02_nage.png",
+          "image_hint": "哪个",
+          "options": [
+            "几",
+            "哪个",
+            "男朋友",
+            "年"
+          ],
+          "correct_index": 1
+        },
+        "correct_answer": "哪个",
+        "kp": "哪个",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l15_3",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l15/03_qunian.png",
+          "image_hint": "去年",
+          "options": [
+            "好玩儿",
+            "几",
+            "年",
+            "去年"
+          ],
+          "correct_index": 3
+        },
+        "correct_answer": "去年",
+        "kp": "去年",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l15_4",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l15/04_nanpengyou.png",
+          "image_hint": "男朋友",
+          "options": [
+            "飞机",
+            "好玩儿",
+            "男朋友",
+            "年"
+          ],
+          "correct_index": 2
+        },
+        "correct_answer": "男朋友",
+        "kp": "男朋友",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l15_5",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l15/05_ji.png",
+          "image_hint": "几",
+          "options": [
+            "飞机",
+            "好玩儿",
+            "几",
+            "要"
+          ],
+          "correct_index": 2
+        },
+        "correct_answer": "几",
+        "kp": "几",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l15_6",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l15/06_nian.png",
+          "image_hint": "年",
+          "options": [
+            "飞机",
+            "年",
+            "小时",
+            "要"
+          ],
+          "correct_index": 1
+        },
+        "correct_answer": "年",
+        "kp": "年",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l15_7",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l15/07_haowanr.png",
+          "image_hint": "好玩儿",
+          "options": [
+            "好玩儿",
+            "家人",
+            "小时",
+            "要"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "好玩儿",
+        "kp": "好玩儿",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l15_8",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l15/08_feiji.png",
+          "image_hint": "飞机",
+          "options": [
+            "飞机",
+            "家人",
+            "时间",
+            "小时"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "飞机",
+        "kp": "飞机",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l15_9",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l15/09_yao.png",
+          "image_hint": "要",
+          "options": [
+            "机场",
+            "家人",
+            "时间",
+            "要"
+          ],
+          "correct_index": 3
+        },
+        "correct_answer": "要",
+        "kp": "要",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l15_10",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l15/10_xiaoshi.png",
+          "image_hint": "小时",
+          "options": [
+            "机场",
+            "接",
+            "时间",
+            "小时"
+          ],
+          "correct_index": 3
+        },
+        "correct_answer": "小时",
+        "kp": "小时",
+        "sourceType": "textbook"
+      }
+    ],
+    "vocabFill": [
+      {
+        "id": "v5_l15_1",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "你们爱吃___菜？",
+          "sentence_pinyin": "Nǐmen ài chī ___ cài?",
+          "options": [
+            "哪个",
+            "去年",
+            "机场",
+            "小时"
+          ],
+          "options_pinyin": [
+            "nǎge",
+            "qùnián",
+            "jīchǎng",
+            "xiǎoshí"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "哪个",
+        "kp": "哪个",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l15_2",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "我喜欢茶，___喜欢牛奶。",
+          "sentence_pinyin": "wǒ xǐhuan chá xǐhuan niúnǎi",
+          "options": [
+            "也",
+            "几",
+            "早",
+            "那"
+          ],
+          "options_pinyin": [
+            "yě",
+            "jǐ",
+            "zǎo",
+            "nà"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "也",
+        "kp": "也",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l15_3",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "去年我和___去了西安。",
+          "sentence_pinyin": "Qùnián wǒ hé ___ qùle Xī'ān.",
+          "options": [
+            "男朋友",
+            "家人",
+            "飞机",
+            "时间"
+          ],
+          "options_pinyin": [
+            "nánpéngyou",
+            "jiārén",
+            "fēijī",
+            "shíjiān"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "男朋友",
+        "kp": "男朋友",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l15_4",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "前___年去了西安。",
+          "sentence_pinyin": "Qián ___ nián qùle Xī'ān.",
+          "options": [
+            "几",
+            "早",
+            "那",
+            "爱"
+          ],
+          "options_pinyin": [
+            "jǐ",
+            "zǎo",
+            "nà",
+            "ài"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "几",
+        "kp": "几",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l15_5",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "西安非常___。",
+          "sentence_pinyin": "Xī'ān fēicháng ___.",
+          "options": [
+            "好玩儿",
+            "早",
+            "哪个",
+            "小时"
+          ],
+          "options_pinyin": [
+            "hǎowánr",
+            "zǎo",
+            "nǎge",
+            "xiǎoshí"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "好玩儿",
+        "kp": "好玩儿",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l15_6",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "飞机到北京要几个___？",
+          "sentence_pinyin": "Fēijī dào Běijīng yào jǐ gè ___?",
+          "options": [
+            "小时",
+            "年",
+            "家人",
+            "机场"
+          ],
+          "options_pinyin": [
+            "xiǎoshí",
+            "nián",
+            "jiārén",
+            "jīchǎng"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "小时",
+        "kp": "小时",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l15_7",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "我___都在北京。",
+          "sentence_pinyin": "Wǒ ___ dōu zài Běijīng.",
+          "options": [
+            "家人",
+            "飞机",
+            "时间",
+            "机场"
+          ],
+          "options_pinyin": [
+            "jiārén",
+            "fēijī",
+            "shíjiān",
+            "jīchǎng"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "家人",
+        "kp": "家人",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l15_8",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "她可以去___接你们。",
+          "sentence_pinyin": "Tā kěyǐ qù ___ jiē nǐmen.",
+          "options": [
+            "机场",
+            "去年",
+            "小时",
+            "哪个"
+          ],
+          "options_pinyin": [
+            "jīchǎng",
+            "qùnián",
+            "xiǎoshí",
+            "nǎge"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "机场",
+        "kp": "机场",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l15_9",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "你们也可以___在我家。",
+          "sentence_pinyin": "nǐmen yě kěyǐ zài wǒ jiā",
+          "options": [
+            "住",
+            "接",
+            "爱",
+            "早"
+          ],
+          "options_pinyin": [
+            "zhù",
+            "jiē",
+            "ài",
+            "zǎo"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "住",
+        "kp": "住",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l15_10",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "那我和您姐姐在___见！",
+          "sentence_pinyin": "Nà wǒ hé nín jiějie zài ___ jiàn!",
+          "options": [
+            "大兴机场",
+            "西安",
+            "飞机",
+            "家人"
+          ],
+          "options_pinyin": [
+            "Dàxīng Jīchǎng",
+            "Xī'ān",
+            "fēijī",
+            "jiārén"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "大兴机场",
+        "kp": "大兴机场",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "wordMatch": [
+      {
+        "id": "v7_l15_01",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "你爱吃哪个菜？",
+              "left_pinyin": "Nǐ ài chī nǎge cài?",
+              "right": "我爱吃这个菜。",
+              "right_pinyin": "Wǒ ài chī zhège cài."
+            },
+            {
+              "left": "这些菜都好吃吗？",
+              "left_pinyin": "Zhèxiē cài dōu hǎochī ma?",
+              "right": "有的好吃，有的不好吃。",
+              "right_pinyin": "Yǒude hǎochī, yǒude bù hǎochī."
+            },
+            {
+              "left": "去年你跟谁去了西安？",
+              "left_pinyin": "Qùnián nǐ gēn shéi qù le Xī'ān?",
+              "right": "我跟男朋友去了。",
+              "right_pinyin": "Wǒ gēn nánpéngyou qù le."
+            },
+            {
+              "left": "西安好玩儿吗？",
+              "left_pinyin": "Xī'ān hǎowánr ma?",
+              "right": "很好玩儿。",
+              "right_pinyin": "Hěn hǎowánr."
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l15_02",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "去北京要几个小时？",
+              "left_pinyin": "Qù Běijīng yào jǐ ge xiǎoshí?",
+              "right": "坐飞机要一个小时。",
+              "right_pinyin": "Zuò fēijī yào yí ge xiǎoshí."
+            },
+            {
+              "left": "你家人在北京吗？",
+              "left_pinyin": "Nǐ jiārén zài Běijīng ma?",
+              "right": "我姐姐在北京。",
+              "right_pinyin": "Wǒ jiějie zài Běijīng."
+            },
+            {
+              "left": "你有时间去机场吗？",
+              "left_pinyin": "Nǐ yǒu shíjiān qù jīchǎng ma?",
+              "right": "有，我可以去接你。",
+              "right_pinyin": "Yǒu, wǒ kěyǐ qù jiē nǐ."
+            },
+            {
+              "left": "你们住哪儿？",
+              "left_pinyin": "Nǐmen zhù nǎr?",
+              "right": "我们住朋友家。",
+              "right_pinyin": "Wǒmen zhù péngyou jiā."
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l15_03",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "你们在哪个机场见？",
+              "left_pinyin": "Nǐmen zài nǎge jīchǎng jiàn?",
+              "right": "在大兴机场见。",
+              "right_pinyin": "Zài Dàxīng Jīchǎng jiàn."
+            },
+            {
+              "left": "飞机几点到北京？",
+              "left_pinyin": "Fēijī jǐ diǎn dào Běijīng?",
+              "right": "早上八点到。",
+              "right_pinyin": "Zǎoshang bā diǎn dào."
+            },
+            {
+              "left": "那我们怎么去？",
+              "left_pinyin": "Nà wǒmen zěnme qù?",
+              "right": "先坐车，再走。",
+              "right_pinyin": "Xiān zuò chē, zài zǒu."
+            },
+            {
+              "left": "你想住几年？",
+              "left_pinyin": "Nǐ xiǎng zhù jǐ nián?",
+              "right": "我想住一年。",
+              "right_pinyin": "Wǒ xiǎng zhù yì nián."
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l15_04",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "谁去机场接你？",
+              "left_pinyin": "Shéi qù jīchǎng jiē nǐ?",
+              "right": "王老师的姐姐去接我。",
+              "right_pinyin": "Wáng lǎoshī de jiějie qù jiē wǒ."
+            },
+            {
+              "left": "你去年去哪儿了？",
+              "left_pinyin": "Nǐ qùnián qù nǎr le?",
+              "right": "去了西安，也去了北京。",
+              "right_pinyin": "Qù le Xī'ān, yě qù le Běijīng."
+            },
+            {
+              "left": "你的家人都住北京吗？",
+              "left_pinyin": "Nǐ de jiārén dōu zhù Běijīng ma?",
+              "right": "不都住北京。",
+              "right_pinyin": "Bù dōu zhù Běijīng."
+            },
+            {
+              "left": "今天早上走早不早？",
+              "left_pinyin": "Jīntiān zǎoshang zǒu zǎo bu zǎo?",
+              "right": "不早，正好。",
+              "right_pinyin": "Bù zǎo, zhènghǎo."
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l15_05",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "你爱坐飞机吗？",
+              "left_pinyin": "Nǐ ài zuò fēijī ma?",
+              "right": "不太爱。",
+              "right_pinyin": "Bù tài ài."
+            },
+            {
+              "left": "哪个地方好玩儿？",
+              "left_pinyin": "Nǎge dìfang hǎowánr?",
+              "right": "西安好玩儿，北京也好玩儿。",
+              "right_pinyin": "Xī'ān hǎowánr, Běijīng yě hǎowánr."
+            },
+            {
+              "left": "你还有时间看书吗？",
+              "left_pinyin": "Nǐ hái yǒu shíjiān kàn shū ma?",
+              "right": "没有时间。",
+              "right_pinyin": "Méiyǒu shíjiān."
+            },
+            {
+              "left": "大兴机场在哪儿？",
+              "left_pinyin": "Dàxīng Jīchǎng zài nǎr?",
+              "right": "在北京。",
+              "right_pinyin": "Zài Běijīng."
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "matchingGame": [
+      {
+        "id": "v8_l15_1",
+        "type": "memory_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each item with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "爱",
+              "left_pinyin": "ài",
+              "right": "like",
+              "right_pinyin": ""
+            },
+            {
+              "left": "哪个",
+              "left_pinyin": "nǎge",
+              "right": "which",
+              "right_pinyin": ""
+            },
+            {
+              "left": "去年",
+              "left_pinyin": "qùnián",
+              "right": "last year",
+              "right_pinyin": ""
+            },
+            {
+              "left": "男朋友",
+              "left_pinyin": "nánpéngyou",
+              "right": "boyfriend",
+              "right_pinyin": ""
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v8_l15_2",
+        "type": "memory_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each item with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "年",
+              "left_pinyin": "nián",
+              "right": "year",
+              "right_pinyin": ""
+            },
+            {
+              "left": "好玩儿",
+              "left_pinyin": "hǎowánr",
+              "right": "fun",
+              "right_pinyin": ""
+            },
+            {
+              "left": "飞机",
+              "left_pinyin": "fēijī",
+              "right": "plane",
+              "right_pinyin": ""
+            },
+            {
+              "left": "小时",
+              "left_pinyin": "xiǎoshí",
+              "right": "hour",
+              "right_pinyin": ""
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v8_l15_3",
+        "type": "memory_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each item with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "家人",
+              "left_pinyin": "jiārén",
+              "right": "family",
+              "right_pinyin": ""
+            },
+            {
+              "left": "时间",
+              "left_pinyin": "shíjiān",
+              "right": "time",
+              "right_pinyin": ""
+            },
+            {
+              "left": "机场",
+              "left_pinyin": "jīchǎng",
+              "right": "airport",
+              "right_pinyin": ""
+            },
+            {
+              "left": "接",
+              "left_pinyin": "jiē",
+              "right": "pick up",
+              "right_pinyin": ""
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v8_l15_4",
+        "type": "memory_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each item with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "住",
+              "left_pinyin": "zhù",
+              "right": "stay",
+              "right_pinyin": ""
+            },
+            {
+              "left": "早",
+              "left_pinyin": "zǎo",
+              "right": "early",
+              "right_pinyin": ""
+            },
+            {
+              "left": "那",
+              "left_pinyin": "nà",
+              "right": "then",
+              "right_pinyin": ""
+            },
+            {
+              "left": "几",
+              "left_pinyin": "jǐ",
+              "right": "several",
+              "right_pinyin": ""
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v8_l15_5",
+        "type": "memory_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each item with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "西安",
+              "left_pinyin": "Xī'ān",
+              "right": "Xi'an",
+              "right_pinyin": ""
+            },
+            {
+              "left": "北京",
+              "left_pinyin": "Běijīng",
+              "right": "Beijing",
+              "right_pinyin": ""
+            },
+            {
+              "left": "大兴机场",
+              "left_pinyin": "Dàxīng Jīchǎng",
+              "right": "Daxing Airport",
+              "right_pinyin": ""
+            },
+            {
+              "left": "要",
+              "left_pinyin": "yào",
+              "right": "need; take",
+              "right_pinyin": ""
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "sentenceTransform": [
+      {
+        "id": "v4_l15_01",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "根据答句，选择最合适的问题。",
+        "prompt_en": "Choose the question that best matches the answer.",
+        "data": {
+          "source_sentence": "我爱吃这个，也爱吃那个。",
+          "source_pinyin": "wǒ ài chī zhège yě ài chī nà gè",
+          "options": [
+            "你爱吃哪个中国菜？",
+            "你去年去哪儿？",
+            "你几点到机场？",
+            "谁去接你？"
+          ],
+          "options_pinyin": [
+            "nǐ ài chī nǎge Zhōngguó cài",
+            "nǐ qùnián qù nǎr",
+            "nǐ jǐ dào jīchǎng",
+            "shéi qù jiē nǐ"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你爱吃哪个中国菜？",
+        "kp": "句子转换：答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l15_02",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "根据答句，选择最合适的问题。",
+        "prompt_en": "Choose the question that best matches the answer.",
+        "data": {
+          "source_sentence": "不都好吃，左边这个有点儿贵。",
+          "source_pinyin": "bù dōu hǎochī zuǒbiān zhège yǒudiǎnr guì",
+          "options": [
+            "这些菜都好吃吗？",
+            "哪个机场更近？",
+            "你有时间吗？",
+            "你住哪儿？"
+          ],
+          "options_pinyin": [
+            "zhèxiē cài dōu hǎochī ma",
+            "nǎge jīchǎng jìn",
+            "nǐ yǒu shíjiān ma",
+            "nǐ zhù nǎr"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这些菜都好吃吗？",
+        "kp": "句子转换：答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l15_03",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "根据答句，选择最合适的问题。",
+        "prompt_en": "Choose the question that best matches the answer.",
+        "data": {
+          "source_sentence": "我跟男朋友一起去了。",
+          "source_pinyin": "wǒ gēn nánpéngyou yìqǐ qù le",
+          "options": [
+            "去年你跟谁去了西安？",
+            "你男朋友住北京吗？",
+            "谁接你们？",
+            "你们几点走？"
+          ],
+          "options_pinyin": [
+            "qùnián nǐ gēn shéi qù le Xī'ān",
+            "nǐ nánpéngyou zhù Běijīng ma",
+            "shéi jiē nǐmen",
+            "nǐmen jǐ zǒu"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "去年你跟谁去了西安？",
+        "kp": "句子转换：答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l15_04",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "根据答句，选择最合适的问题。",
+        "prompt_en": "Choose the question that best matches the answer.",
+        "data": {
+          "source_sentence": "很好玩儿，但是旅行时间有点儿短。",
+          "source_pinyin": "hěn hǎowánr dànshì lǚxíng shíjiān yǒudiǎnr duǎn",
+          "options": [
+            "西安好玩儿吗？",
+            "北京机场大不大？",
+            "你爱吃中国菜吗？",
+            "你家人在哪儿？"
+          ],
+          "options_pinyin": [
+            "Xī'ān hǎowánr ma",
+            "Běijīng jīchǎng dà bù dà",
+            "nǐ ài chī Zhōngguó cài ma",
+            "nǐ jiārén zài nǎr"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "西安好玩儿吗？",
+        "kp": "句子转换：答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l15_05",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "根据答句，选择最合适的问题。",
+        "prompt_en": "Choose the question that best matches the answer.",
+        "data": {
+          "source_sentence": "坐飞机大约要一个多小时。",
+          "source_pinyin": "zuò fēijī dàyuē yào yí gè duō xiǎoshí",
+          "options": [
+            "从大连到北京要多久？",
+            "飞机几点起飞？",
+            "你要去哪儿？",
+            "你住几年？"
+          ],
+          "options_pinyin": [
+            "cóng Dàlián dào Běijīng yào duō jiǔ",
+            "fēijī jǐ qǐfēi",
+            "nǐ yào qù nǎr",
+            "nǐ zhù jǐ nián"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "从大连到北京要多久？",
+        "kp": "句子转换：答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l15_06",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "根据答句，选择最合适的问题。",
+        "prompt_en": "Choose the question that best matches the answer.",
+        "data": {
+          "source_sentence": "有时间，我可以去接你。",
+          "source_pinyin": "yǒu shíjiān wǒ kěyǐ qù jiē nǐ",
+          "options": [
+            "明天你有时间去机场吗？",
+            "你爱坐飞机吗？",
+            "哪个地方好玩儿？",
+            "你家人去机场吗？"
+          ],
+          "options_pinyin": [
+            "míngtiān nǐ yǒu shíjiān qù jīchǎng ma",
+            "nǐ ài zuò fēijī ma",
+            "nǎge dìfang hǎowánr",
+            "nǐ jiārén qù jīchǎng ma"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "明天你有时间去机场吗？",
+        "kp": "句子转换：答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l15_07",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "根据答句，选择最合适的问题。",
+        "prompt_en": "Choose the question that best matches the answer.",
+        "data": {
+          "source_sentence": "我们在大兴机场见。",
+          "source_pinyin": "wǒmen zài Dàxīng Jīchǎng",
+          "options": [
+            "你们在哪个机场见？",
+            "你们住在哪儿？",
+            "你们去年去哪儿？",
+            "你们爱吃什么？"
+          ],
+          "options_pinyin": [
+            "nǐmen zài nǎge jīchǎng",
+            "nǐmen zhù zài nǎr",
+            "nǐmen qùnián qù nǎr",
+            "nǐmen ài chī shénme"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你们在哪个机场见？",
+        "kp": "句子转换：答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l15_08",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "根据答句，选择最合适的问题。",
+        "prompt_en": "Choose the question that best matches the answer.",
+        "data": {
+          "source_sentence": "早上八点到，但是可能会晚。",
+          "source_pinyin": "zǎoshang bā diǎn dào dànshì néng huì wǎn",
+          "options": [
+            "飞机几点到北京？",
+            "你几年去北京？",
+            "你喜欢哪个菜？",
+            "你家人都来吗？"
+          ],
+          "options_pinyin": [
+            "fēijī jǐ dào Běijīng",
+            "nǐ jǐ nián qù Běijīng",
+            "nǐ xǐhuan nǎge cài",
+            "nǐ jiārén dōu lái ma"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "飞机几点到北京？",
+        "kp": "句子转换：答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l15_09",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "根据答句，选择最合适的问题。",
+        "prompt_en": "Choose the question that best matches the answer.",
+        "data": {
+          "source_sentence": "先住朋友家，后天住饭店。",
+          "source_pinyin": "xiān zhù péngyou jiā hòutiān zhù fàndiàn",
+          "options": [
+            "你们晚上住哪儿？",
+            "谁接你们？",
+            "那我们怎么走？",
+            "大兴机场远吗？"
+          ],
+          "options_pinyin": [
+            "nǐmen wǎnshang zhù nǎr",
+            "shéi jiē nǐmen",
+            "nà wǒmen zǒu",
+            "Dàxīng Jīchǎng yuǎn ma"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你们晚上住哪儿？",
+        "kp": "句子转换：答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l15_10",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "根据答句，选择最合适的问题。",
+        "prompt_en": "Choose the question that best matches the answer.",
+        "data": {
+          "source_sentence": "没有时间，马上要去机场。",
+          "source_pinyin": "méiyǒu shíjiān mǎshàng yào qù jīchǎng",
+          "options": [
+            "你还有时间看书吗？",
+            "你要坐飞机吗？",
+            "你去过西安吗？",
+            "哪个菜好吃？"
+          ],
+          "options_pinyin": [
+            "nǐ hái yǒu shíjiān kàn shū ma",
+            "nǐ yào zuò fēijī ma",
+            "nǐ qù Xī'ān ma",
+            "nǎge cài hǎochī"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你还有时间看书吗？",
+        "kp": "句子转换：答句选问句",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "ordering": [
+      {
+        "id": "g1_l15_1",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "我",
+            "喜欢",
+            "这个",
+            "也喜欢",
+            "那个"
+          ],
+          "chunks_pinyin": [
+            "wǒ",
+            "xǐhuan",
+            "zhège",
+            "yě xǐhuan",
+            "nàge"
+          ]
+        },
+        "correct_answer": "我喜欢这个也喜欢那个",
+        "acceptable_answers": [
+          "我喜欢这个也喜欢那个",
+          "我喜欢这个也喜欢那个。",
+          "我喜欢这个也喜欢那个？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l15_2",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "这些菜",
+            "都好吃",
+            "还",
+            "很好看"
+          ],
+          "chunks_pinyin": [
+            "zhèxiē cài",
+            "dōu hǎochī",
+            "hái",
+            "hěn hǎokàn"
+          ]
+        },
+        "correct_answer": "这些菜都好吃还很好看",
+        "acceptable_answers": [
+          "这些菜都好吃还很好看",
+          "这些菜都好吃还很好看。",
+          "这些菜都好吃还很好看？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l15_3",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "今年",
+            "我",
+            "想去",
+            "北京"
+          ],
+          "chunks_pinyin": [
+            "jīnnián",
+            "wǒ",
+            "xiǎng qù",
+            "Běijīng"
+          ]
+        },
+        "correct_answer": "今年我想去北京",
+        "acceptable_answers": [
+          "今年我想去北京",
+          "今年我想去北京。",
+          "今年我想去北京？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l15_4",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "飞机",
+            "到北京",
+            "要",
+            "几个小时"
+          ],
+          "chunks_pinyin": [
+            "fēijī",
+            "dào Běijīng",
+            "yào",
+            "jǐ gè xiǎoshí"
+          ]
+        },
+        "correct_answer": "飞机到北京要几个小时",
+        "acceptable_answers": [
+          "飞机到北京要几个小时",
+          "飞机到北京要几个小时。",
+          "飞机到北京要几个小时？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l15_5",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "那",
+            "我",
+            "在大兴机场",
+            "见"
+          ],
+          "chunks_pinyin": [
+            "nà",
+            "wǒ",
+            "zài Dàxīng Jīchǎng",
+            "jiàn"
+          ]
+        },
+        "correct_answer": "那我在大兴机场见",
+        "acceptable_answers": [
+          "那我在大兴机场见",
+          "那我在大兴机场见。",
+          "那我在大兴机场见？"
+        ],
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "translationChoice": [
+      {
+        "id": "trc_l15_1",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "Which dish do you like?",
+          "question_ru": "Какое блюдо вам нравится?",
+          "options": [
+            "你们爱吃哪个菜？",
+            "你们想去哪儿？",
+            "你们几点到？",
+            "你们住哪儿？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你们爱吃哪个菜？",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l15_2",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "I like this one and also that one.",
+          "question_ru": "Мне нравится это, и то тоже.",
+          "options": [
+            "我喜欢这个，也喜欢那个。",
+            "我喜欢北京，也喜欢西安。",
+            "我喜欢飞机，也喜欢机场。",
+            "我喜欢早，也喜欢晚。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "我喜欢这个，也喜欢那个。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l15_3",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "These dishes are all delicious and look good.",
+          "question_ru": "Эти блюда вкусные и красиво выглядят.",
+          "options": [
+            "这些菜都好吃，还很好看。",
+            "这些菜都便宜，还很多。",
+            "这些菜都不贵，还不早。",
+            "这些菜都在北京，还在西安。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这些菜都好吃，还很好看。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l15_4",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "Last year I went to Xi'an with my boyfriend.",
+          "question_ru": "В прошлом году я ездила в Сиань с парнем.",
+          "options": [
+            "去年我和男朋友去了西安。",
+            "今年我和家人去了北京。",
+            "去年我和老师去了机场。",
+            "今年我和朋友住我家。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "去年我和男朋友去了西安。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l15_5",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "This year I want to go to Beijing.",
+          "question_ru": "В этом году я хочу поехать в Пекин.",
+          "options": [
+            "今年我想去北京。",
+            "去年我想去西安。",
+            "今年我想住机场。",
+            "去年我想接家人。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "今年我想去北京。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l15_6",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "The flight to Beijing takes nine hours.",
+          "question_ru": "Самолет до Пекина летит девять часов.",
+          "options": [
+            "飞机到北京要九个小时。",
+            "飞机到西安要几年。",
+            "机场到北京要八点。",
+            "飞机到机场要家人。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "飞机到北京要九个小时。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l15_7",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "My family are all in Beijing.",
+          "question_ru": "Вся моя семья в Пекине.",
+          "options": [
+            "我家人都在北京。",
+            "我家人都在机场。",
+            "我家人都在飞机上。",
+            "我家人都在西安。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "我家人都在北京。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l15_8",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "She can pick you up at the airport.",
+          "question_ru": "Она может встретить вас в аэропорту.",
+          "options": [
+            "她可以去机场接你们。",
+            "她可以住你们家。",
+            "她可以去北京吃菜。",
+            "她可以坐飞机去西安。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "她可以去机场接你们。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l15_9",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "You can also stay at my home.",
+          "question_ru": "Вы также можете жить у меня дома.",
+          "options": [
+            "你们也可以住我家。",
+            "你们也可以接我家人。",
+            "你们也可以去机场见。",
+            "你们也可以爱北京。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你们也可以住我家。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l15_10",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "See you at Daxing Airport.",
+          "question_ru": "Увидимся в аэропорту Дасин.",
+          "options": [
+            "大兴机场见！",
+            "北京机场住！",
+            "西安飞机见！",
+            "家人时间见！"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "大兴机场见！",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      }
+    ],
+    "textQa": [
+      {
+        "id": "ttq_l15_1",
+        "type": "text_qa_group",
+        "stage": "in_class",
+        "prompt_cn": "课文问答：根据课文内容回答。",
+        "prompt_en": "Text Q&A: answer from the dialogue.",
+        "data": {
+          "title": "课文一：菜",
+          "passage": "你们爱吃哪个菜？我喜欢这个，也喜欢那个。这些菜都好吃，还很好看。我爱吃中国菜，也喜欢做。大家多吃点儿。",
+          "passage_pinyin": "Nǐmen ài chī nǎge cài? Wǒ xǐhuan zhège, yě xǐhuan nàge. Zhèxiē cài dōu hǎochī, hái hěn hǎokàn. Wǒ ài chī Zhōngguó cài, yě xǐhuan zuò. Dàjiā duō chī diǎnr.",
+          "questions": [
+            {
+              "question_cn": "白家月喜欢哪个菜？",
+              "question_pinyin": "Bái Jiāyuè xǐhuan nǎge cài?",
+              "answer": "这个，也喜欢那个",
+              "answer_pinyin": "zhège, yě xǐhuan nàge",
+              "options": [
+                "这个，也喜欢那个",
+                "只喜欢这个",
+                "只喜欢那个",
+                "不喜欢菜"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "这些菜怎么样？",
+              "question_pinyin": "Zhèxiē cài zěnmeyàng?",
+              "answer": "都好吃，还很好看",
+              "answer_pinyin": "dōu hǎochī, hái hěn hǎokàn",
+              "options": [
+                "都好吃，还很好看",
+                "都不好吃",
+                "都很贵",
+                "都不多"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "李文喜欢做什么？",
+              "question_pinyin": "Lǐ Wén xǐhuan zuò shénme?",
+              "answer": "中国菜",
+              "answer_pinyin": "Zhōngguó cài",
+              "options": [
+                "中国菜",
+                "电影",
+                "飞机",
+                "汉字"
+              ],
+              "correct_index": 0
+            }
+          ]
+        },
+        "correct_answer": "见每题答案",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "ttq_l15_2",
+        "type": "text_qa_group",
+        "stage": "in_class",
+        "prompt_cn": "课文问答：根据课文内容回答。",
+        "prompt_en": "Text Q&A: answer from the dialogue.",
+        "data": {
+          "title": "课文二：北京",
+          "passage": "你们都想去哪儿？去年我和男朋友去了西安，今年我想去北京。前几年去了西安，非常好玩儿。今年我也想去北京。我和王老师都是北京人，北京非常漂亮。",
+          "passage_pinyin": "Nǐmen dōu xiǎng qù nǎr? Qùnián wǒ hé nánpéngyou qùle Xī'ān, jīnnián wǒ xiǎng qù Běijīng. Qián jǐ nián wǒ qùle Xī'ān, fēicháng hǎowánr. Jīnnián wǒ yě xiǎng qù Běijīng. Wǒ hé Wáng lǎoshī dōu shì Běijīng rén, Běijīng fēicháng piàoliang.",
+          "questions": [
+            {
+              "question_cn": "安妮去年去哪儿了？",
+              "question_pinyin": "Ānnī qùnián qù nǎr le?",
+              "answer": "西安",
+              "answer_pinyin": "Xī'ān",
+              "options": [
+                "西安",
+                "北京",
+                "机场",
+                "大兴"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "白家月今年想去哪儿？",
+              "question_pinyin": "Bái Jiāyuè jīnnián xiǎng qù nǎr?",
+              "answer": "北京",
+              "answer_pinyin": "Běijīng",
+              "options": [
+                "北京",
+                "西安",
+                "机场",
+                "家"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "北京怎么样？",
+              "question_pinyin": "Běijīng zěnmeyàng?",
+              "answer": "非常漂亮",
+              "answer_pinyin": "fēicháng piàoliang",
+              "options": [
+                "非常漂亮",
+                "非常早",
+                "非常贵",
+                "非常晚"
+              ],
+              "correct_index": 0
+            }
+          ]
+        },
+        "correct_answer": "见每题答案",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "ttq_l15_3",
+        "type": "text_qa_group",
+        "stage": "in_class",
+        "prompt_cn": "课文问答：根据课文内容回答。",
+        "prompt_en": "Text Q&A: answer from the dialogue.",
+        "data": {
+          "title": "课文三：机场",
+          "passage": "你们的飞机到北京要几个小时？九个小时。我家人都在北京，星期天我姐姐也有时间，她可以去机场接你们，你们也可以住我家。我们星期日早上八点到大兴机场，早不早？不早。谢谢老师！那我和您姐姐在大兴机场见！",
+          "passage_pinyin": "Nǐmen de fēijī dào Běijīng yào jǐ gè xiǎoshí? Jiǔ gè xiǎoshí. Wǒ jiārén dōu zài Běijīng, Xīngqītiān wǒ jiějie yě yǒu shíjiān, tā kěyǐ qù jīchǎng jiē nǐmen, nǐmen yě kěyǐ zhù wǒ jiā. Wǒmen Xīngqīrì zǎoshang bā diǎn dào Dàxīng Jīchǎng, zǎo bu zǎo? Bù zǎo. Xièxie lǎoshī! Nà wǒ hé nín jiějie zài Dàxīng Jīchǎng jiàn!",
+          "questions": [
+            {
+              "question_cn": "飞机到北京要几个小时？",
+              "question_pinyin": "Fēijī dào Běijīng yào jǐ gè xiǎoshí?",
+              "answer": "九个小时",
+              "answer_pinyin": "jiǔ gè xiǎoshí",
+              "options": [
+                "九个小时",
+                "八点",
+                "几年",
+                "一小时"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "谁可以去机场接他们？",
+              "question_pinyin": "Shéi kěyǐ qù jīchǎng jiē tāmen?",
+              "answer": "王老师的姐姐",
+              "answer_pinyin": "Wáng lǎoshī de jiějie",
+              "options": [
+                "王老师的姐姐",
+                "李文",
+                "安妮",
+                "白家月"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "他们几点到大兴机场？",
+              "question_pinyin": "Tāmen jǐ diǎn dào Dàxīng Jīchǎng?",
+              "answer": "早上八点",
+              "answer_pinyin": "zǎoshang bā diǎn",
+              "options": [
+                "早上八点",
+                "晚上八点",
+                "中午十二点",
+                "九个小时"
+              ],
+              "correct_index": 0
+            }
+          ]
+        },
+        "correct_answer": "见每题答案",
+        "sourceType": "textbook"
+      }
+    ],
+    "pictureTalk": [
+      {
+        "id": "r4_lundefined_pt_01",
+        "type": "oral",
+        "stage": "in_class",
+        "prompt_cn": "你看到了什么？",
+        "prompt_en": "Look at the picture and answer in Chinese.",
+        "data": {
+          "question": "你看到了什么？",
+          "question_pinyin": "Nǐ kàn dào le shénme?",
+          "instructions": "请用学过的词，说一句或两句中文。",
+          "image": "images/vocab/hsk1-l15/01_ai.png",
+          "sampleAnswer": "我看到一些菜。",
+          "sampleAnswerPinyin": "Wǒ kàn dào yìxiē cài.",
+          "patternType": "观察"
+        },
+        "openEnded": true,
+        "needsTeacherReview": true,
+        "cloudWall": true,
+        "weakPoints": "输出：观察",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "r4_lundefined_pt_02",
+        "type": "oral",
+        "stage": "in_class",
+        "prompt_cn": "这是哪里？",
+        "prompt_en": "Look at the picture and answer in Chinese.",
+        "data": {
+          "question": "这是哪里？",
+          "question_pinyin": "Zhè shì nǎli?",
+          "instructions": "请用学过的词，说一句或两句中文。",
+          "image": "images/vocab/hsk1-l15/18_xian.png",
+          "sampleAnswer": "这是西安。",
+          "sampleAnswerPinyin": "Zhè shì Xī'ān.",
+          "patternType": "地点"
+        },
+        "openEnded": true,
+        "needsTeacherReview": true,
+        "cloudWall": true,
+        "weakPoints": "输出：地点",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "r4_lundefined_pt_03",
+        "type": "oral",
+        "stage": "in_class",
+        "prompt_cn": "他是谁？",
+        "prompt_en": "Look at the picture and answer in Chinese.",
+        "data": {
+          "question": "他是谁？",
+          "question_pinyin": "Tā shì shéi?",
+          "instructions": "请用学过的词，说一句或两句中文。",
+          "image": "images/vocab/hsk1-l15/04_nanpengyou.png",
+          "sampleAnswer": "他是男朋友。",
+          "sampleAnswerPinyin": "Tā shì nánpéngyou.",
+          "patternType": "人物"
+        },
+        "openEnded": true,
+        "needsTeacherReview": true,
+        "cloudWall": true,
+        "weakPoints": "输出：人物",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "r4_lundefined_pt_04",
+        "type": "oral",
+        "stage": "in_class",
+        "prompt_cn": "这个地方怎么样？",
+        "prompt_en": "Look at the picture and answer in Chinese.",
+        "data": {
+          "question": "这个地方怎么样？",
+          "question_pinyin": "Zhège dìfang zěnmeyàng?",
+          "instructions": "请用学过的词，说一句或两句中文。",
+          "image": "images/vocab/hsk1-l15/07_haowanr.png",
+          "sampleAnswer": "这个地方很好玩儿。",
+          "sampleAnswerPinyin": "Zhège dìfang hěn hǎowánr.",
+          "patternType": "评价"
+        },
+        "openEnded": true,
+        "needsTeacherReview": true,
+        "cloudWall": true,
+        "weakPoints": "输出：评价",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "r4_lundefined_pt_05",
+        "type": "oral",
+        "stage": "in_class",
+        "prompt_cn": "这是什么？",
+        "prompt_en": "Look at the picture and answer in Chinese.",
+        "data": {
+          "question": "这是什么？",
+          "question_pinyin": "Zhè shì shénme?",
+          "instructions": "请用学过的词，说一句或两句中文。",
+          "image": "images/vocab/hsk1-l15/08_feiji.png",
+          "sampleAnswer": "这是飞机。",
+          "sampleAnswerPinyin": "Zhè shì fēijī.",
+          "patternType": "交通"
+        },
+        "openEnded": true,
+        "needsTeacherReview": true,
+        "cloudWall": true,
+        "weakPoints": "输出：交通",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "r4_lundefined_pt_06",
+        "type": "oral",
+        "stage": "in_class",
+        "prompt_cn": "他们在哪儿见？",
+        "prompt_en": "Look at the picture and answer in Chinese.",
+        "data": {
+          "question": "他们在哪儿见？",
+          "question_pinyin": "Tāmen zài nǎr jiàn?",
+          "instructions": "请用学过的词，说一句或两句中文。",
+          "image": "images/vocab/hsk1-l15/20_daxingjichang.png",
+          "sampleAnswer": "他们在大兴机场见。",
+          "sampleAnswerPinyin": "Tāmen zài Dàxīng Jīchǎng jiàn.",
+          "patternType": "地点"
+        },
+        "openEnded": true,
+        "needsTeacherReview": true,
+        "cloudWall": true,
+        "weakPoints": "输出：地点",
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "hanziWriting": {
+    "characters": [
+      {
+        "char": "爱",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "哪",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "个",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "去",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "年",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "男",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "朋",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "友",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "几",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "好",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "玩",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "儿",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "飞",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "机",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "要",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "小",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "时",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "家",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "人",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "间",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "场",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "接",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "住",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "早",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "那",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "西",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "安",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "北",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "京",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "大",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "兴",
+        "sourceType": "textbook"
+      }
+    ]
+  },
+  "hanziRecognition": {
+    "enabled": true,
+    "showPinyin": false,
+    "rounds": [
+      {
+        "id": "hanzi_to_pinyin",
+        "title": "看汉字选拼音",
+        "titleEn": "Choose pinyin"
+      },
+      {
+        "id": "hanzi_to_meaning",
+        "title": "看汉字选意思",
+        "titleEn": "Choose meaning"
+      },
+      {
+        "id": "meaning_to_hanzi",
+        "title": "看意思选汉字",
+        "titleEn": "Choose character"
+      }
+    ],
+    "groups": [
+      {
+        "id": "travel",
+        "title": "旅行地点",
+        "vocabularyIds": [
+          "v_l15_08",
+          "v_l15_13",
+          "v_l15_18",
+          "v_l15_19",
+          "v_l15_20"
+        ]
+      },
+      {
+        "id": "people_time",
+        "title": "人物时间",
+        "vocabularyIds": [
+          "v_l15_03",
+          "v_l15_04",
+          "v_l15_05",
+          "v_l15_06",
+          "v_l15_10",
+          "v_l15_11",
+          "v_l15_12"
+        ]
+      },
+      {
+        "id": "actions",
+        "title": "动作评价",
+        "vocabularyIds": [
+          "v_l15_01",
+          "v_l15_07",
+          "v_l15_09",
+          "v_l15_14",
+          "v_l15_15",
+          "v_l15_16"
+        ]
+      }
+    ]
+  },
+  "postClassHomework": {
+    "mode": "required_optional",
+    "instructions": {
+      "required": "必选：完成汉字书写。",
+      "optional": "可选：选择一个输出任务完成。"
+    },
+    "required": [
+      {
+        "id": "post_l15_req_01",
+        "type": "handwriting",
+        "prompt_cn": "必选：书写本课汉字。",
+        "characters": [
+          "爱",
+          "哪",
+          "个",
+          "去",
+          "年",
+          "男",
+          "朋",
+          "友",
+          "几",
+          "年",
+          "好",
+          "玩",
+          "儿",
+          "飞",
+          "机",
+          "要",
+          "小",
+          "时",
+          "家",
+          "人",
+          "时",
+          "间",
+          "机",
+          "场",
+          "接",
+          "住",
+          "早",
+          "那",
+          "西",
+          "安",
+          "北",
+          "京",
+          "大",
+          "兴",
+          "机",
+          "场"
+        ],
+        "instructions": "每个字至少写 3 次。",
+        "sourceType": "textbook"
+      }
+    ],
+    "optional": [
+      {
+        "id": "post_l15_opt_01",
+        "type": "writing",
+        "prompt_cn": "教学扩展：写 3 句旅行计划。",
+        "openEnded": true,
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "post_l15_opt_02",
+        "type": "oral_prepare",
+        "prompt_cn": "准备 4 句机场接人的对话。",
+        "openEnded": true,
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "report": {
+    "focus": [
+      "并列复句",
+      "旅行计划",
+      "机场接人",
+      "北京/西安"
+    ]
+  }
+}

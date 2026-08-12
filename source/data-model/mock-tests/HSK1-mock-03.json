@@ -1,0 +1,1740 @@
+{
+  "schemaVersion": "mock-test-1.0.0",
+  "testId": "HSK1-mock-03",
+  "recordLesson": "HSK1-MOCK-03",
+  "level": "HSK1",
+  "title": "HSK1 Mock Test 03",
+  "titleCn": "HSK1 模拟测试 03",
+  "mode": "mock_test",
+  "durationMinutes": 35,
+  "sourcePolicy": "自建题库；样题只作题型、题量和版式参考；词汇与语法范围为 HSK1-L01 至 HSK1-L15。",
+  "audioPolicy": {
+    "mode": "teacher_controlled_audio_with_edge_tts",
+    "studentAudioControls": false,
+    "teacherControlledFinal": true,
+    "ttsVoiceA": "zh-CN-YunyangNeural",
+    "ttsVoiceB": "zh-CN-XiaoyiNeural",
+    "ttsRate": "-35%",
+    "itemPauseSeconds": 4.5,
+    "repeat": 2,
+    "repeatGapSeconds": 1.5,
+    "turnGapSeconds": 0.8,
+    "note": "学生端不显示音频按钮；教师端按大题播放 MP3。Yunyang 男声 -35% 为用户确认的默认主声线。"
+  },
+  "audioParts": [
+    {
+      "part": "L1_picture_choice",
+      "title": "听力第一部分 1-5",
+      "file": "../data-model/mock-tests/audio/HSK1-mock-03-listening-01.wav",
+      "itemNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "part": "L2_answer_choice",
+      "title": "听力第二部分 6-10",
+      "file": "../data-model/mock-tests/audio/HSK1-mock-03-listening-02.wav",
+      "itemNumbers": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "part": "L3_dialogue_picture_choice",
+      "title": "听力第三部分 11-15",
+      "file": "../data-model/mock-tests/audio/HSK1-mock-03-listening-03.wav",
+      "itemNumbers": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "part": "L4_sentence_question_answer",
+      "title": "听力第四部分 16-20",
+      "file": "../data-model/mock-tests/audio/HSK1-mock-03-listening-04.wav",
+      "itemNumbers": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "listening",
+      "title": "听力",
+      "titleEn": "Listening",
+      "items": [
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择正确图片。",
+          "promptEn": "Listen and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L01",
+          "number": 1,
+          "part": "L1_picture_choice",
+          "audioText": "请给我一杯茶。",
+          "options": [
+            {
+              "id": "A",
+              "text": "茶",
+              "image": "../in-class/images/vocab/hsk1-l13/20_cha.png"
+            },
+            {
+              "id": "B",
+              "text": "面包",
+              "image": "../in-class/images/vocab/hsk1-l13/16_mianbao.png"
+            },
+            {
+              "id": "C",
+              "text": "鸡蛋",
+              "image": "../in-class/images/vocab/hsk1-l13/17_jidan.png"
+            }
+          ],
+          "answer": "A",
+          "knowledge": [
+            "请",
+            "给",
+            "茶"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择正确图片。",
+          "promptEn": "Listen and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L02",
+          "number": 2,
+          "part": "L1_picture_choice",
+          "audioText": "他在打电话。",
+          "options": [
+            {
+              "id": "A",
+              "text": "听",
+              "image": "../in-class/images/vocab/hsk1-l14/13_ting.png"
+            },
+            {
+              "id": "B",
+              "text": "打电话",
+              "image": "../in-class/images/vocab/hsk1-l13/05_dadianhua.png"
+            },
+            {
+              "id": "C",
+              "text": "写",
+              "image": "../in-class/images/vocab/hsk1-l14/08_xie.png"
+            }
+          ],
+          "answer": "B",
+          "knowledge": [
+            "打电话"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择正确图片。",
+          "promptEn": "Listen and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L03",
+          "number": 3,
+          "part": "L1_picture_choice",
+          "audioText": "他们上火车了。",
+          "options": [
+            {
+              "id": "A",
+              "text": "火车",
+              "image": "../in-class/images/vocab/hsk1-l14/02_huoche.png"
+            },
+            {
+              "id": "B",
+              "text": "飞机",
+              "image": "../in-class/images/vocab/hsk1-l15/08_feiji.png"
+            },
+            {
+              "id": "C",
+              "text": "机场",
+              "image": "../in-class/images/vocab/hsk1-l15/13_jichang.png"
+            }
+          ],
+          "answer": "A",
+          "knowledge": [
+            "上",
+            "火车",
+            "了"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择正确图片。",
+          "promptEn": "Listen and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L04",
+          "number": 4,
+          "part": "L1_picture_choice",
+          "audioText": "孩子去上学。",
+          "options": [
+            {
+              "id": "A",
+              "text": "睡觉",
+              "image": "../in-class/images/vocab/hsk1-l14/23_wan.png"
+            },
+            {
+              "id": "B",
+              "text": "上学",
+              "image": "../in-class/images/vocab/hsk1-l14/21_shangxue.png"
+            },
+            {
+              "id": "C",
+              "text": "中午",
+              "image": "../in-class/images/vocab/hsk1-l14/03_zhongwu.png"
+            }
+          ],
+          "answer": "B",
+          "knowledge": [
+            "孩子",
+            "上学"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择正确图片。",
+          "promptEn": "Listen and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L05",
+          "number": 5,
+          "part": "L1_picture_choice",
+          "audioText": "飞机到北京。",
+          "options": [
+            {
+              "id": "A",
+              "text": "西安",
+              "image": "../in-class/images/vocab/hsk1-l15/18_xian.png"
+            },
+            {
+              "id": "B",
+              "text": "火车",
+              "image": "../in-class/images/vocab/hsk1-l14/02_huoche.png"
+            },
+            {
+              "id": "C",
+              "text": "北京",
+              "image": "../in-class/images/vocab/hsk1-l15/19_beijing.png"
+            }
+          ],
+          "answer": "C",
+          "knowledge": [
+            "飞机",
+            "北京"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择合适的回答。",
+          "promptEn": "Listen and choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L06",
+          "number": 6,
+          "part": "L2_answer_choice",
+          "audioText": "我可以问一个问题吗？",
+          "options": [
+            {
+              "id": "A",
+              "text": "可以。"
+            },
+            {
+              "id": "B",
+              "text": "九个小时。"
+            },
+            {
+              "id": "C",
+              "text": "在北京。"
+            }
+          ],
+          "answer": "A",
+          "knowledge": [
+            "可以",
+            "问问题"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择合适的回答。",
+          "promptEn": "Listen and choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L07",
+          "number": 7,
+          "part": "L2_answer_choice",
+          "audioText": "您喝什么？",
+          "options": [
+            {
+              "id": "A",
+              "text": "我去机场。"
+            },
+            {
+              "id": "B",
+              "text": "我要一杯茶。"
+            },
+            {
+              "id": "C",
+              "text": "我会写字。"
+            }
+          ],
+          "answer": "B",
+          "knowledge": [
+            "喝什么",
+            "茶"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择合适的回答。",
+          "promptEn": "Listen and choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L08",
+          "number": 8,
+          "part": "L2_answer_choice",
+          "audioText": "你们都会写汉字了吗？",
+          "options": [
+            {
+              "id": "A",
+              "text": "我们都在机场。"
+            },
+            {
+              "id": "B",
+              "text": "这是面包。"
+            },
+            {
+              "id": "C",
+              "text": "都会写了。"
+            }
+          ],
+          "answer": "C",
+          "knowledge": [
+            "都",
+            "写汉字",
+            "了"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择合适的回答。",
+          "promptEn": "Listen and choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L09",
+          "number": 9,
+          "part": "L2_answer_choice",
+          "audioText": "飞机到北京要几个小时？",
+          "options": [
+            {
+              "id": "A",
+              "text": "九个小时。"
+            },
+            {
+              "id": "B",
+              "text": "去年去了西安。"
+            },
+            {
+              "id": "C",
+              "text": "我喜欢这个。"
+            }
+          ],
+          "answer": "A",
+          "knowledge": [
+            "飞机",
+            "北京",
+            "小时"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择合适的回答。",
+          "promptEn": "Listen and choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L10",
+          "number": 10,
+          "part": "L2_answer_choice",
+          "audioText": "今年你想去哪儿？",
+          "options": [
+            {
+              "id": "A",
+              "text": "我看了电影。"
+            },
+            {
+              "id": "B",
+              "text": "我想去北京。"
+            },
+            {
+              "id": "C",
+              "text": "请坐。"
+            }
+          ],
+          "answer": "B",
+          "knowledge": [
+            "今年",
+            "想去北京"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择正确图片。",
+          "promptEn": "Listen and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L11",
+          "number": 11,
+          "part": "L3_dialogue_picture_choice",
+          "audioText": "男：你吃早饭了吗？女：吃了面包和鸡蛋。",
+          "audioTurns": [
+            {
+              "voice": "A",
+              "text": "你吃早饭了吗？"
+            },
+            {
+              "voice": "B",
+              "text": "吃了面包和鸡蛋。"
+            }
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "早餐",
+              "image": "../in-class/images/vocab/hsk1-l13/14_zaofan.png"
+            },
+            {
+              "id": "B",
+              "text": "写字",
+              "image": "../in-class/images/vocab/hsk1-l14/08_xie.png"
+            },
+            {
+              "id": "C",
+              "text": "机场接人",
+              "image": "../in-class/images/vocab/hsk1-l15/14_jie.png"
+            },
+            {
+              "id": "D",
+              "text": "喝茶",
+              "image": "../in-class/images/vocab/hsk1-l13/20_cha.png"
+            },
+            {
+              "id": "E",
+              "text": "坐火车",
+              "image": "../in-class/images/vocab/hsk1-l14/02_huoche.png"
+            },
+            {
+              "id": "F",
+              "text": "飞机",
+              "image": "../in-class/images/vocab/hsk1-l15/08_feiji.png"
+            }
+          ],
+          "answer": "A",
+          "knowledge": [
+            "早饭",
+            "面包",
+            "鸡蛋"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择正确图片。",
+          "promptEn": "Listen and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L12",
+          "number": 12,
+          "part": "L3_dialogue_picture_choice",
+          "audioText": "女：你会写汉字了吗？男：我都会写了。",
+          "audioTurns": [
+            {
+              "voice": "B",
+              "text": "你会写汉字了吗？"
+            },
+            {
+              "voice": "A",
+              "text": "我都会写了。"
+            }
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "早餐",
+              "image": "../in-class/images/vocab/hsk1-l13/14_zaofan.png"
+            },
+            {
+              "id": "B",
+              "text": "写字",
+              "image": "../in-class/images/vocab/hsk1-l14/08_xie.png"
+            },
+            {
+              "id": "C",
+              "text": "机场接人",
+              "image": "../in-class/images/vocab/hsk1-l15/14_jie.png"
+            },
+            {
+              "id": "D",
+              "text": "喝茶",
+              "image": "../in-class/images/vocab/hsk1-l13/20_cha.png"
+            },
+            {
+              "id": "E",
+              "text": "坐火车",
+              "image": "../in-class/images/vocab/hsk1-l14/02_huoche.png"
+            },
+            {
+              "id": "F",
+              "text": "飞机",
+              "image": "../in-class/images/vocab/hsk1-l15/08_feiji.png"
+            }
+          ],
+          "answer": "B",
+          "knowledge": [
+            "写",
+            "汉字",
+            "都"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择正确图片。",
+          "promptEn": "Listen and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L13",
+          "number": 13,
+          "part": "L3_dialogue_picture_choice",
+          "audioText": "男：谁去机场接你们？女：王老师的姐姐。",
+          "audioTurns": [
+            {
+              "voice": "A",
+              "text": "谁去机场接你们？"
+            },
+            {
+              "voice": "B",
+              "text": "王老师的姐姐。"
+            }
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "早餐",
+              "image": "../in-class/images/vocab/hsk1-l13/14_zaofan.png"
+            },
+            {
+              "id": "B",
+              "text": "写字",
+              "image": "../in-class/images/vocab/hsk1-l14/08_xie.png"
+            },
+            {
+              "id": "C",
+              "text": "机场接人",
+              "image": "../in-class/images/vocab/hsk1-l15/14_jie.png"
+            },
+            {
+              "id": "D",
+              "text": "喝茶",
+              "image": "../in-class/images/vocab/hsk1-l13/20_cha.png"
+            },
+            {
+              "id": "E",
+              "text": "坐火车",
+              "image": "../in-class/images/vocab/hsk1-l14/02_huoche.png"
+            },
+            {
+              "id": "F",
+              "text": "飞机",
+              "image": "../in-class/images/vocab/hsk1-l15/08_feiji.png"
+            }
+          ],
+          "answer": "C",
+          "knowledge": [
+            "机场",
+            "接"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择正确图片。",
+          "promptEn": "Listen and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L14",
+          "number": 14,
+          "part": "L3_dialogue_picture_choice",
+          "audioText": "女：你想喝什么？男：请给我一杯茶。",
+          "audioTurns": [
+            {
+              "voice": "B",
+              "text": "你想喝什么？"
+            },
+            {
+              "voice": "A",
+              "text": "请给我一杯茶。"
+            }
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "早餐",
+              "image": "../in-class/images/vocab/hsk1-l13/14_zaofan.png"
+            },
+            {
+              "id": "B",
+              "text": "写字",
+              "image": "../in-class/images/vocab/hsk1-l14/08_xie.png"
+            },
+            {
+              "id": "C",
+              "text": "机场接人",
+              "image": "../in-class/images/vocab/hsk1-l15/14_jie.png"
+            },
+            {
+              "id": "D",
+              "text": "喝茶",
+              "image": "../in-class/images/vocab/hsk1-l13/20_cha.png"
+            },
+            {
+              "id": "E",
+              "text": "坐火车",
+              "image": "../in-class/images/vocab/hsk1-l14/02_huoche.png"
+            },
+            {
+              "id": "F",
+              "text": "飞机",
+              "image": "../in-class/images/vocab/hsk1-l15/08_feiji.png"
+            }
+          ],
+          "answer": "D",
+          "knowledge": [
+            "喝",
+            "茶"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择正确图片。",
+          "promptEn": "Listen and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L15",
+          "number": 15,
+          "part": "L3_dialogue_picture_choice",
+          "audioText": "男：你们上火车了吗？女：上了。",
+          "audioTurns": [
+            {
+              "voice": "A",
+              "text": "你们上火车了吗？"
+            },
+            {
+              "voice": "B",
+              "text": "上了。"
+            }
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "早餐",
+              "image": "../in-class/images/vocab/hsk1-l13/14_zaofan.png"
+            },
+            {
+              "id": "B",
+              "text": "写字",
+              "image": "../in-class/images/vocab/hsk1-l14/08_xie.png"
+            },
+            {
+              "id": "C",
+              "text": "机场接人",
+              "image": "../in-class/images/vocab/hsk1-l15/14_jie.png"
+            },
+            {
+              "id": "D",
+              "text": "喝茶",
+              "image": "../in-class/images/vocab/hsk1-l13/20_cha.png"
+            },
+            {
+              "id": "E",
+              "text": "坐火车",
+              "image": "../in-class/images/vocab/hsk1-l14/02_huoche.png"
+            },
+            {
+              "id": "F",
+              "text": "飞机",
+              "image": "../in-class/images/vocab/hsk1-l15/08_feiji.png"
+            }
+          ],
+          "answer": "E",
+          "knowledge": [
+            "上火车",
+            "了"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择合适的回答。",
+          "promptEn": "Listen and choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L16",
+          "number": 16,
+          "part": "L4_sentence_question_answer",
+          "audioText": "王一雪还没吃早饭。问题：王一雪吃早饭了吗？",
+          "audioTurns": [
+            {
+              "text": "王一雪还没吃早饭。"
+            },
+            {
+              "text": "王一雪吃早饭了吗？"
+            }
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "吃了。"
+            },
+            {
+              "id": "B",
+              "text": "还没吃。"
+            },
+            {
+              "id": "C",
+              "text": "不知道。"
+            }
+          ],
+          "answer": "B",
+          "knowledge": [
+            "还没",
+            "早饭"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择合适的回答。",
+          "promptEn": "Listen and choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L17",
+          "number": 17,
+          "part": "L4_sentence_question_answer",
+          "audioText": "陈天中看了一个电影。问题：陈天中做了什么？",
+          "audioTurns": [
+            {
+              "text": "陈天中看了一个电影。"
+            },
+            {
+              "text": "陈天中做了什么？"
+            }
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "看了电影。"
+            },
+            {
+              "id": "B",
+              "text": "打电话。"
+            },
+            {
+              "id": "C",
+              "text": "买面包。"
+            }
+          ],
+          "answer": "A",
+          "knowledge": [
+            "看了",
+            "电影"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择合适的回答。",
+          "promptEn": "Listen and choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L18",
+          "number": 18,
+          "part": "L4_sentence_question_answer",
+          "audioText": "明年女儿上中学。问题：女儿明年上什么学校？",
+          "audioTurns": [
+            {
+              "text": "明年女儿上中学。"
+            },
+            {
+              "text": "女儿明年上什么学校？"
+            }
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "小学。"
+            },
+            {
+              "id": "B",
+              "text": "大学。"
+            },
+            {
+              "id": "C",
+              "text": "中学。"
+            }
+          ],
+          "answer": "C",
+          "knowledge": [
+            "明年",
+            "中学"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择合适的回答。",
+          "promptEn": "Listen and choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L19",
+          "number": 19,
+          "part": "L4_sentence_question_answer",
+          "audioText": "去年安妮去了西安。问题：安妮去年去哪儿了？",
+          "audioTurns": [
+            {
+              "text": "去年安妮去了西安。"
+            },
+            {
+              "text": "安妮去年去哪儿了？"
+            }
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "西安。"
+            },
+            {
+              "id": "B",
+              "text": "北京。"
+            },
+            {
+              "id": "C",
+              "text": "机场。"
+            }
+          ],
+          "answer": "A",
+          "knowledge": [
+            "去年",
+            "西安"
+          ]
+        },
+        {
+          "skill": "listening",
+          "prompt": "听录音，选择合适的回答。",
+          "promptEn": "Listen and choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "L20",
+          "number": 20,
+          "part": "L4_sentence_question_answer",
+          "audioText": "他们早上八点到大兴机场。问题：他们几点到机场？",
+          "audioTurns": [
+            {
+              "text": "他们早上八点到大兴机场。"
+            },
+            {
+              "text": "他们几点到机场？"
+            }
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "九个小时。"
+            },
+            {
+              "id": "B",
+              "text": "早上八点。"
+            },
+            {
+              "id": "C",
+              "text": "中午。"
+            }
+          ],
+          "answer": "B",
+          "knowledge": [
+            "早上八点",
+            "机场"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "title": "阅读",
+      "titleEn": "Reading",
+      "items": [
+        {
+          "skill": "reading",
+          "prompt": "读句子，选择正确图片。",
+          "promptEn": "Read the sentence and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R21",
+          "number": 21,
+          "part": "R1_sentence_picture_match",
+          "question": "她正在打电话。",
+          "options": [
+            {
+              "id": "A",
+              "text": "打电话",
+              "image": "../in-class/images/vocab/hsk1-l13/05_dadianhua.png"
+            },
+            {
+              "id": "B",
+              "text": "中学生",
+              "image": "../in-class/images/vocab/hsk1-l14/19_zhongxuesheng.png"
+            },
+            {
+              "id": "C",
+              "text": "大兴机场",
+              "image": "../in-class/images/vocab/hsk1-l15/20_daxingjichang.png"
+            },
+            {
+              "id": "D",
+              "text": "一杯茶",
+              "image": "../in-class/images/vocab/hsk1-l13/20_cha.png"
+            },
+            {
+              "id": "E",
+              "text": "上学",
+              "image": "../in-class/images/vocab/hsk1-l14/21_shangxue.png"
+            },
+            {
+              "id": "F",
+              "text": "北京",
+              "image": "../in-class/images/vocab/hsk1-l15/19_beijing.png"
+            }
+          ],
+          "answer": "A",
+          "knowledge": [
+            "打电话"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "读句子，选择正确图片。",
+          "promptEn": "Read the sentence and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R22",
+          "number": 22,
+          "part": "R1_sentence_picture_match",
+          "question": "他是中学生。",
+          "options": [
+            {
+              "id": "A",
+              "text": "打电话",
+              "image": "../in-class/images/vocab/hsk1-l13/05_dadianhua.png"
+            },
+            {
+              "id": "B",
+              "text": "中学生",
+              "image": "../in-class/images/vocab/hsk1-l14/19_zhongxuesheng.png"
+            },
+            {
+              "id": "C",
+              "text": "大兴机场",
+              "image": "../in-class/images/vocab/hsk1-l15/20_daxingjichang.png"
+            },
+            {
+              "id": "D",
+              "text": "一杯茶",
+              "image": "../in-class/images/vocab/hsk1-l13/20_cha.png"
+            },
+            {
+              "id": "E",
+              "text": "上学",
+              "image": "../in-class/images/vocab/hsk1-l14/21_shangxue.png"
+            },
+            {
+              "id": "F",
+              "text": "北京",
+              "image": "../in-class/images/vocab/hsk1-l15/19_beijing.png"
+            }
+          ],
+          "answer": "B",
+          "knowledge": [
+            "中学生"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "读句子，选择正确图片。",
+          "promptEn": "Read the sentence and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R23",
+          "number": 23,
+          "part": "R1_sentence_picture_match",
+          "question": "我们在大兴机场见。",
+          "options": [
+            {
+              "id": "A",
+              "text": "打电话",
+              "image": "../in-class/images/vocab/hsk1-l13/05_dadianhua.png"
+            },
+            {
+              "id": "B",
+              "text": "中学生",
+              "image": "../in-class/images/vocab/hsk1-l14/19_zhongxuesheng.png"
+            },
+            {
+              "id": "C",
+              "text": "大兴机场",
+              "image": "../in-class/images/vocab/hsk1-l15/20_daxingjichang.png"
+            },
+            {
+              "id": "D",
+              "text": "一杯茶",
+              "image": "../in-class/images/vocab/hsk1-l13/20_cha.png"
+            },
+            {
+              "id": "E",
+              "text": "上学",
+              "image": "../in-class/images/vocab/hsk1-l14/21_shangxue.png"
+            },
+            {
+              "id": "F",
+              "text": "北京",
+              "image": "../in-class/images/vocab/hsk1-l15/19_beijing.png"
+            }
+          ],
+          "answer": "C",
+          "knowledge": [
+            "大兴机场"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "读句子，选择正确图片。",
+          "promptEn": "Read the sentence and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R24",
+          "number": 24,
+          "part": "R1_sentence_picture_match",
+          "question": "请给我一杯茶。",
+          "options": [
+            {
+              "id": "A",
+              "text": "打电话",
+              "image": "../in-class/images/vocab/hsk1-l13/05_dadianhua.png"
+            },
+            {
+              "id": "B",
+              "text": "中学生",
+              "image": "../in-class/images/vocab/hsk1-l14/19_zhongxuesheng.png"
+            },
+            {
+              "id": "C",
+              "text": "大兴机场",
+              "image": "../in-class/images/vocab/hsk1-l15/20_daxingjichang.png"
+            },
+            {
+              "id": "D",
+              "text": "一杯茶",
+              "image": "../in-class/images/vocab/hsk1-l13/20_cha.png"
+            },
+            {
+              "id": "E",
+              "text": "上学",
+              "image": "../in-class/images/vocab/hsk1-l14/21_shangxue.png"
+            },
+            {
+              "id": "F",
+              "text": "北京",
+              "image": "../in-class/images/vocab/hsk1-l15/19_beijing.png"
+            }
+          ],
+          "answer": "D",
+          "knowledge": [
+            "给",
+            "杯",
+            "茶"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "读句子，选择正确图片。",
+          "promptEn": "Read the sentence and choose the correct picture.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R25",
+          "number": 25,
+          "part": "R1_sentence_picture_match",
+          "question": "孩子们去上学。",
+          "options": [
+            {
+              "id": "A",
+              "text": "打电话",
+              "image": "../in-class/images/vocab/hsk1-l13/05_dadianhua.png"
+            },
+            {
+              "id": "B",
+              "text": "中学生",
+              "image": "../in-class/images/vocab/hsk1-l14/19_zhongxuesheng.png"
+            },
+            {
+              "id": "C",
+              "text": "大兴机场",
+              "image": "../in-class/images/vocab/hsk1-l15/20_daxingjichang.png"
+            },
+            {
+              "id": "D",
+              "text": "一杯茶",
+              "image": "../in-class/images/vocab/hsk1-l13/20_cha.png"
+            },
+            {
+              "id": "E",
+              "text": "上学",
+              "image": "../in-class/images/vocab/hsk1-l14/21_shangxue.png"
+            },
+            {
+              "id": "F",
+              "text": "北京",
+              "image": "../in-class/images/vocab/hsk1-l15/19_beijing.png"
+            }
+          ],
+          "answer": "E",
+          "knowledge": [
+            "上学"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "选择合适的回答。",
+          "promptEn": "Choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R26",
+          "number": 26,
+          "part": "R2_question_answer_match",
+          "question": "我可以问您一个问题吗？",
+          "options": [
+            {
+              "id": "A",
+              "text": "可以，请问吧。"
+            },
+            {
+              "id": "B",
+              "text": "我要一杯茶。"
+            },
+            {
+              "id": "C",
+              "text": "我看了一个电影。"
+            },
+            {
+              "id": "D",
+              "text": "九个小时。"
+            },
+            {
+              "id": "E",
+              "text": "在大兴机场见。"
+            },
+            {
+              "id": "F",
+              "text": "不客气。"
+            }
+          ],
+          "answer": "A",
+          "knowledge": [
+            "可以",
+            "问"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "选择合适的回答。",
+          "promptEn": "Choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R27",
+          "number": 27,
+          "part": "R2_question_answer_match",
+          "question": "您喝什么？",
+          "options": [
+            {
+              "id": "A",
+              "text": "可以，请问吧。"
+            },
+            {
+              "id": "B",
+              "text": "我要一杯茶。"
+            },
+            {
+              "id": "C",
+              "text": "我看了一个电影。"
+            },
+            {
+              "id": "D",
+              "text": "九个小时。"
+            },
+            {
+              "id": "E",
+              "text": "在大兴机场见。"
+            },
+            {
+              "id": "F",
+              "text": "不客气。"
+            }
+          ],
+          "answer": "B",
+          "knowledge": [
+            "喝什么"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "选择合适的回答。",
+          "promptEn": "Choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R28",
+          "number": 28,
+          "part": "R2_question_answer_match",
+          "question": "你看了什么？",
+          "options": [
+            {
+              "id": "A",
+              "text": "可以，请问吧。"
+            },
+            {
+              "id": "B",
+              "text": "我要一杯茶。"
+            },
+            {
+              "id": "C",
+              "text": "我看了一个电影。"
+            },
+            {
+              "id": "D",
+              "text": "九个小时。"
+            },
+            {
+              "id": "E",
+              "text": "在大兴机场见。"
+            },
+            {
+              "id": "F",
+              "text": "不客气。"
+            }
+          ],
+          "answer": "C",
+          "knowledge": [
+            "看了"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "选择合适的回答。",
+          "promptEn": "Choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R29",
+          "number": 29,
+          "part": "R2_question_answer_match",
+          "question": "飞机到北京要几个小时？",
+          "options": [
+            {
+              "id": "A",
+              "text": "可以，请问吧。"
+            },
+            {
+              "id": "B",
+              "text": "我要一杯茶。"
+            },
+            {
+              "id": "C",
+              "text": "我看了一个电影。"
+            },
+            {
+              "id": "D",
+              "text": "九个小时。"
+            },
+            {
+              "id": "E",
+              "text": "在大兴机场见。"
+            },
+            {
+              "id": "F",
+              "text": "不客气。"
+            }
+          ],
+          "answer": "D",
+          "knowledge": [
+            "飞机",
+            "小时"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "选择合适的回答。",
+          "promptEn": "Choose the best answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R30",
+          "number": 30,
+          "part": "R2_question_answer_match",
+          "question": "我们在哪儿见？",
+          "options": [
+            {
+              "id": "A",
+              "text": "可以，请问吧。"
+            },
+            {
+              "id": "B",
+              "text": "我要一杯茶。"
+            },
+            {
+              "id": "C",
+              "text": "我看了一个电影。"
+            },
+            {
+              "id": "D",
+              "text": "九个小时。"
+            },
+            {
+              "id": "E",
+              "text": "在大兴机场见。"
+            },
+            {
+              "id": "F",
+              "text": "不客气。"
+            }
+          ],
+          "answer": "E",
+          "knowledge": [
+            "在哪儿",
+            "见"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "选择合适的词语填空。",
+          "promptEn": "Choose the best word.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R31",
+          "number": 31,
+          "part": "R3_fill_blank",
+          "question": "我___再问您一个问题吗？",
+          "options": [
+            {
+              "id": "A",
+              "text": "可以"
+            },
+            {
+              "id": "B",
+              "text": "面包"
+            },
+            {
+              "id": "C",
+              "text": "写"
+            },
+            {
+              "id": "D",
+              "text": "去年"
+            },
+            {
+              "id": "E",
+              "text": "机场"
+            },
+            {
+              "id": "F",
+              "text": "茶"
+            }
+          ],
+          "answer": "A",
+          "knowledge": [
+            "可以"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "选择合适的词语填空。",
+          "promptEn": "Choose the best word.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R32",
+          "number": 32,
+          "part": "R3_fill_blank",
+          "question": "我还没吃早饭，再要这个___吧。",
+          "options": [
+            {
+              "id": "A",
+              "text": "可以"
+            },
+            {
+              "id": "B",
+              "text": "面包"
+            },
+            {
+              "id": "C",
+              "text": "写"
+            },
+            {
+              "id": "D",
+              "text": "去年"
+            },
+            {
+              "id": "E",
+              "text": "机场"
+            },
+            {
+              "id": "F",
+              "text": "茶"
+            }
+          ],
+          "answer": "B",
+          "knowledge": [
+            "面包"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "选择合适的词语填空。",
+          "promptEn": "Choose the best word.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R33",
+          "number": 33,
+          "part": "R3_fill_blank",
+          "question": "我们都会___汉字了。",
+          "options": [
+            {
+              "id": "A",
+              "text": "可以"
+            },
+            {
+              "id": "B",
+              "text": "面包"
+            },
+            {
+              "id": "C",
+              "text": "写"
+            },
+            {
+              "id": "D",
+              "text": "去年"
+            },
+            {
+              "id": "E",
+              "text": "机场"
+            },
+            {
+              "id": "F",
+              "text": "茶"
+            }
+          ],
+          "answer": "C",
+          "knowledge": [
+            "写"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "选择合适的词语填空。",
+          "promptEn": "Choose the best word.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R34",
+          "number": 34,
+          "part": "R3_fill_blank",
+          "question": "___我和男朋友去了西安。",
+          "options": [
+            {
+              "id": "A",
+              "text": "可以"
+            },
+            {
+              "id": "B",
+              "text": "面包"
+            },
+            {
+              "id": "C",
+              "text": "写"
+            },
+            {
+              "id": "D",
+              "text": "去年"
+            },
+            {
+              "id": "E",
+              "text": "机场"
+            },
+            {
+              "id": "F",
+              "text": "茶"
+            }
+          ],
+          "answer": "D",
+          "knowledge": [
+            "去年"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "选择合适的词语填空。",
+          "promptEn": "Choose the best word.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R35",
+          "number": 35,
+          "part": "R3_fill_blank",
+          "question": "她可以去___接你们。",
+          "options": [
+            {
+              "id": "A",
+              "text": "可以"
+            },
+            {
+              "id": "B",
+              "text": "面包"
+            },
+            {
+              "id": "C",
+              "text": "写"
+            },
+            {
+              "id": "D",
+              "text": "去年"
+            },
+            {
+              "id": "E",
+              "text": "机场"
+            },
+            {
+              "id": "F",
+              "text": "茶"
+            }
+          ],
+          "answer": "E",
+          "knowledge": [
+            "机场"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "读短文，选择正确答案。",
+          "promptEn": "Read and choose the correct answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R36",
+          "number": 36,
+          "part": "R4_reading_comprehension",
+          "question": "刘明想喝什么？",
+          "passage": "刘明在饭店。他要一斤饺子，还想喝茶。",
+          "options": [
+            {
+              "id": "A",
+              "text": "茶"
+            },
+            {
+              "id": "B",
+              "text": "牛奶"
+            },
+            {
+              "id": "C",
+              "text": "水"
+            }
+          ],
+          "answer": "A",
+          "knowledge": [
+            "饭店",
+            "饺子",
+            "茶"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "读短文，选择正确答案。",
+          "promptEn": "Read and choose the correct answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R37",
+          "number": 37,
+          "part": "R4_reading_comprehension",
+          "question": "陈天中做了什么？",
+          "passage": "中午车开后，有些人看书，有些人睡觉了。陈天中看了一个电影。",
+          "options": [
+            {
+              "id": "A",
+              "text": "看书"
+            },
+            {
+              "id": "B",
+              "text": "睡觉"
+            },
+            {
+              "id": "C",
+              "text": "看电影"
+            }
+          ],
+          "answer": "C",
+          "knowledge": [
+            "中午",
+            "看了",
+            "电影"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "读短文，选择正确答案。",
+          "promptEn": "Read and choose the correct answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R38",
+          "number": 38,
+          "part": "R4_reading_comprehension",
+          "question": "王老师让大家做什么？",
+          "passage": "王老师说：请大家不要说话，请听老师的问题。",
+          "options": [
+            {
+              "id": "A",
+              "text": "不要说话"
+            },
+            {
+              "id": "B",
+              "text": "去机场"
+            },
+            {
+              "id": "C",
+              "text": "买面包"
+            }
+          ],
+          "answer": "A",
+          "knowledge": [
+            "不要",
+            "说话",
+            "听"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "读短文，选择正确答案。",
+          "promptEn": "Read and choose the correct answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R39",
+          "number": 39,
+          "part": "R4_reading_comprehension",
+          "question": "安妮今年想去哪儿？",
+          "passage": "去年安妮去了西安。今年她想去北京。",
+          "options": [
+            {
+              "id": "A",
+              "text": "西安"
+            },
+            {
+              "id": "B",
+              "text": "北京"
+            },
+            {
+              "id": "C",
+              "text": "大连"
+            }
+          ],
+          "answer": "B",
+          "knowledge": [
+            "去年",
+            "今年",
+            "北京"
+          ]
+        },
+        {
+          "skill": "reading",
+          "prompt": "读短文，选择正确答案。",
+          "promptEn": "Read and choose the correct answer.",
+          "points": 1,
+          "sourceType": "mock_test",
+          "status": "draft",
+          "id": "R40",
+          "number": 40,
+          "part": "R4_reading_comprehension",
+          "question": "谁可以去机场接学生？",
+          "passage": "王老师的家人都在北京。星期天她姐姐有时间，可以去机场接学生。",
+          "options": [
+            {
+              "id": "A",
+              "text": "王老师的姐姐"
+            },
+            {
+              "id": "B",
+              "text": "安妮"
+            },
+            {
+              "id": "C",
+              "text": "刘明"
+            }
+          ],
+          "answer": "A",
+          "knowledge": [
+            "家人",
+            "时间",
+            "机场接人"
+          ]
+        }
+      ]
+    }
+  ]
+}

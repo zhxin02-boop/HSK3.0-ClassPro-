@@ -1816,7 +1816,7 @@ window.ap=ap;
     if(this.mt==='practice'&&this.st==='hrec'&&typeof HR!=='undefined'&&HR.enabled)return renderHanziCore(this);
     if(this.mt==='practice'&&this.st==='trc'){
       var qs=questions(),i=this.trci||0,c=qs[i];if(!c||!c.data)return'<div class="panel"><p>暂无题目</p></div>';
-      var d=c.data,body='<div style="text-align:center;background:#f8faf3;border:1px solid #dfeac8;border-radius:16px;padding:24px;margin:12px 0"><div style="font-size:16px;color:#74806d;margin-bottom:8px">'+es(d.prompt_ru||d.russian||'')+'</div><div style="font-size:22px;font-weight:900;color:var(--text);line-height:1.45">'+es(d.prompt_en||d.english||c.prompt_en||'')+'</div><div style="font-size:13px;color:#888;margin-top:8px">选择最合适的中文句子。Choose the best Chinese sentence.</div></div>';
+      var d=c.data,body='<div style="text-align:center;background:#f8faf3;border:1px solid #dfeac8;border-radius:16px;padding:24px;margin:12px 0"><div style="font-size:16px;color:#74806d;margin-bottom:8px">'+es(d.question_ru||d.prompt_ru||d.russian||'')+'</div><div style="font-size:22px;font-weight:900;color:var(--text);line-height:1.45">'+es(d.question_en||d.prompt_en||d.english||c.prompt_en||'')+'</div><div style="font-size:13px;color:#888;margin-top:8px">选择最合适的中文句子。Choose the best Chinese sentence.</div></div>';
       var nav=this._navBtn('ap.trci=Math.max(0,ap.trci-1);ap.trca=false;ap.trcp=-1;ap.qp=\'idle\';ap._r()','ap.trci=Math.min('+(qs.length-1)+',ap.trci+1);ap.trca=false;ap.trcp=-1;ap.qp=\'idle\';ap._r()',i,qs.length,'&larr; 上一题','下一题 &rarr;');
       return this._mc('译文选句 / Translation Choice',c,d.options||[],d.correct_index,this.trcp,this.trca,'ap.trcp=',body,nav);
     }
@@ -1898,7 +1898,8 @@ window.ap=ap;
   }
   function safeCallTts(text){return "ap._tts('"+es(text).replace(/'/g,"\\'")+"')"}
   function vocabButton(w,i,active){
-    return '<button onclick="ap.sl='+i+';ap.tvOpen=true;ap._r()" style="border:'+(active?'2px solid var(--primary)':'1px solid var(--line)')+';background:'+(active?'#fff6f1':'#fff')+';border-radius:16px;padding:14px 8px;cursor:pointer;box-shadow:'+(active?'0 12px 24px rgba(232,86,58,.12)':'0 6px 14px rgba(21,23,37,.04)')+'"><div class="wc-word" style="font-size:29px;font-weight:900;color:var(--text);line-height:1.15">'+es(wordText(w))+'</div><div data-pinyin="1" style="font-size:13px;color:#6f7e68;margin-top:5px;font-weight:800">'+es(w.pinyin||'')+'</div><div style="font-size:11px;color:#8d96a3;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+es(w.english||w.meaning_en||'')+'</div></button>';
+    w=w||{};
+    return '<button onclick="ap.sl='+i+';ap.tvOpen=true;ap._r()" style="border:'+(active?'2px solid var(--primary)':'1px solid var(--line)')+';background:'+(active?'#fff6f1':'#fff')+';border-radius:16px;padding:14px 8px;cursor:pointer;box-shadow:'+(active?'0 12px 24px rgba(232,86,58,.12)':'0 6px 14px rgba(21,23,37,.04)')+'"><div class="wc-word" style="font-size:29px;font-weight:900;color:var(--text);line-height:1.15">'+es(wordText(w)||'--')+'</div><div data-pinyin="1" style="font-size:13px;color:#6f7e68;margin-top:5px;font-weight:800">'+es(w.pinyin||'')+'</div><div style="font-size:11px;color:#8d96a3;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+es(w.english||w.meaning_en||'')+'</div></button>';
   }
   function writingBox(w){
     var word=wordText(w),chars=Array.from(word).filter(function(ch){return/[\u4e00-\u9fff]/.test(ch)});
@@ -1923,7 +1924,7 @@ window.ap=ap;
     }).catch(function(){host.innerHTML='<div class="hw-loading">笔顺数据加载失败，请检查网络后重试。</div>'});
   };
   ap._tv=function(){
-    var v=V||[],cats=categories(v),cat=cats.indexOf(this.tvCat)>=0?this.tvCat:'all',filtered=v.map(function(w,i){return{w:w,i:i}}).filter(function(x){return cat==='all'||categoryId(x.w)===cat});
+    var v=(V||[]).filter(function(w){return w&&wordText(w)}),cats=categories(v),cat=cats.indexOf(this.tvCat)>=0?this.tvCat:'all',filtered=v.map(function(w,i){return{w:w,i:i}}).filter(function(x){return cat==='all'||categoryId(x.w)===cat});
     if(!filtered.length)filtered=v.map(function(w,i){return{w:w,i:i}});
     var selected=v[this.sl]||filtered[0]&&filtered[0].w||v[0],selIndex=Math.max(0,v.indexOf(selected));
     var h='<div class="panel" style="text-align:left;padding:28px;max-width:1180px;width:100%"><div style="display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:16px;flex-wrap:wrap"><div><h2 style="margin:0;color:var(--blue);font-size:22px">词汇讲授 <span style="font-size:14px;color:#888">Vocabulary Cards</span></h2><div style="font-size:13px;color:#74806d;margin-top:4px">按类别浏览生词，点击生词后查看讲解、教学扩展和汉字书写。</div><div class="vocab-cat-tabs">';
@@ -2047,6 +2048,14 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
 .picture-talk-mini{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding:10px 14px;border:1px solid #dfeac8;border-radius:999px;background:#f8faf3}
 .picture-talk-mini-question{font-size:24px;font-weight:1000;line-height:1.25;color:#203421;font-family:KaiTi,STKaiti,"Kaiti SC","Microsoft YaHei",serif}
 .cloud-wall-active .picture-talk-panel.compact{display:none!important}
+.vocab-teach-detail-row{grid-template-columns:280px 210px minmax(280px,1fr)!important;gap:22px!important}
+.vocab-teach-media{width:280px!important;height:240px!important}
+.vocab-teach-media img{width:100%!important;height:100%!important;object-fit:cover!important}
+.picture-talk-image img{height:320px!important;max-height:320px!important;object-fit:contain!important}
+.picture-talk-stage.compact .picture-talk-image img{height:180px!important;max-height:180px!important;object-fit:contain!important}
+.panel img[src*="images/vocab/hsk1-l13"],
+.panel img[src*="images/vocab/hsk1-l14"],
+.panel img[src*="images/vocab/hsk1-l15"]{object-fit:contain!important;image-rendering:auto!important}
 </style>
 <script>
 /* Cloud wall: show current-question open responses in the center panel. */
@@ -2321,9 +2330,25 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
   ap.mockLoaded=ap.mockLoaded||null;
   ap.mockStartedAt=ap.mockStartedAt||'';
   ap.mockRows=ap.mockRows||[];
+  ap.mockSecurityRows=ap.mockSecurityRows||[];
   function mockStateKey(){return 'ClassProMockTeacher_'+RM}
-  function saveMockState(){try{localStorage.setItem(mockStateKey(),JSON.stringify({testId:ap.mockTestId,phase:ap.mockPhase,startedAt:ap.mockStartedAt,rows:ap.mockRows||[]}))}catch(e){}}
-  function loadMockState(){try{var d=JSON.parse(localStorage.getItem(mockStateKey())||'null');if(!d)return;ap.mockTestId=d.testId||ap.mockTestId;ap.mockPhase=d.phase||ap.mockPhase;ap.mockStartedAt=d.startedAt||ap.mockStartedAt;ap.mockRows=Array.isArray(d.rows)?d.rows:ap.mockRows}catch(e){}}
+  function saveMockState(){try{localStorage.setItem(mockStateKey(),JSON.stringify({testId:ap.mockTestId,phase:ap.mockPhase,startedAt:ap.mockStartedAt,rows:ap.mockRows||[],securityRows:ap.mockSecurityRows||[]}))}catch(e){}}
+  function loadMockState(){try{var d=JSON.parse(localStorage.getItem(mockStateKey())||'null');if(!d)return;ap.mockTestId=d.testId||ap.mockTestId;ap.mockPhase=d.phase||ap.mockPhase;ap.mockStartedAt=d.startedAt||ap.mockStartedAt;ap.mockRows=Array.isArray(d.rows)?d.rows:ap.mockRows;ap.mockSecurityRows=Array.isArray(d.securityRows)?d.securityRows:ap.mockSecurityRows}catch(e){}}
+  function mockSecurityQueueKey(){return 'ClassProMockSecurityQueue_'+RM}
+  function ingestLocalMockSecurity(){
+    try{
+      var key=mockSecurityQueueKey(),rows=JSON.parse(localStorage.getItem(key)||'[]');
+      if(!Array.isArray(rows)||!rows.length)return;
+      rows.forEach(function(m){if(m&&m.mode==='mock_test_security')recordMockSecurity(m)});
+      localStorage.removeItem(key);
+      saveMockState();
+    }catch(e){}
+  }
+  function recordMockSecurity(m){
+    var sn=ap._rn?ap._rn(m.studentName||m.name||'Student'):(m.studentName||m.name||'Student');
+    var exists=(ap.mockSecurityRows||[]).some(function(r){return r.n===sn&&r.reason===(m.reason||'')&&r.submittedAt===(m.submittedAt||'')});
+    if(!exists)ap.mockSecurityRows.unshift({n:sn,reason:m.reason||'',violations:m.violations||1,t:new Date().toLocaleTimeString(),submittedAt:m.submittedAt||new Date().toISOString(),testId:m.testId||m.questionId||''});
+  }
   loadMockState();
   function loadMock(cb){
     if(ap.mockLoaded&&ap.mockLoaded.testId===ap.mockTestId){cb&&cb(ap.mockLoaded);return}
@@ -2338,6 +2363,14 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
       seen[n]=1;rows.push(r);
     });
     return rows;
+  }
+  function mockSecuritySummary(){
+    var out={};
+    (ap.mockSecurityRows||[]).forEach(function(r){
+      var n=String(r.n||r.name||'Student');
+      if(!out[n]||Number(r.violations||0)>Number(out[n].violations||0))out[n]=r;
+    });
+    return out;
   }
   function mockItems(){
     var out=[];
@@ -2434,24 +2467,27 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
   };
   ap.stopMockAudio=function(){if(ap.mockAudio)ap.mockAudio.pause();if(window.speechSynthesis)window.speechSynthesis.cancel()};
   ap._mockPanel=function(){
+    ingestLocalMockSecurity();
     var test=ap.mockLoaded,rows=mockSubmissions(),h='<div class="panel" style="max-width:1080px;width:100%;text-align:left"><h2 style="margin-top:0;color:var(--blue)">测 / HSK Mock Test</h2>';
-    h+='<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px"><select onchange="ap.mockTestId=this.value;ap.mockLoaded=null;loadMock(function(){})" style="padding:10px 14px;border-radius:999px;border:1px solid var(--line);font-weight:900"><option value="HSK1-mock-01">HSK1-mock-01</option></select><button class="next-btn" onclick="ap.startMockTest()" '+(ap.mockPhase==='answering'?'disabled':'')+'>开放答题 / Start</button><button class="next-btn" style="background:#f05a3f" onclick="ap.endMockTest()" '+(ap.mockPhase!=='answering'?'disabled':'')+'>收卷锁定 / Lock</button><button class="next-btn" style="background:#9ca3af" onclick="ap.resetMockTest()">重置 / Reset</button></div>';
+    var mockOptions=['HSK1-mock-01','HSK1-mock-02','HSK1-mock-03'].map(function(id){return'<option value="'+id+'" '+(ap.mockTestId===id?'selected':'')+'>'+id+'</option>'}).join('');
+    h+='<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px"><select onchange="ap.mockTestId=this.value;ap.mockLoaded=null;saveMockState();loadMock(function(){})" style="padding:10px 14px;border-radius:999px;border:1px solid var(--line);font-weight:900">'+mockOptions+'</select><button class="next-btn" onclick="ap.startMockTest()" '+(ap.mockPhase==='answering'?'disabled':'')+'>开放答题 / Start</button><button class="next-btn" style="background:#f05a3f" onclick="ap.endMockTest()" '+(ap.mockPhase!=='answering'?'disabled':'')+'>收卷锁定 / Lock</button><button class="next-btn" style="background:#9ca3af" onclick="ap.resetMockTest()">重置 / Reset</button></div>';
     if(!test){h+='<div style="padding:18px;border:1px dashed var(--line);border-radius:14px;color:#74806d">点击加载或开放测试。'+(ap.mockLoadError?' '+es(ap.mockLoadError):'')+'</div>';setTimeout(function(){loadMock(function(){})},0);return h+'</div>'}
     var statusBg=ap.mockPhase==='answering'?'#dcfce7':ap.mockPhase==='locked'?'#fee2e2':'#f8faf3',statusColor=ap.mockPhase==='answering'?'#166534':ap.mockPhase==='locked'?'#991b1b':'#64748b';
-    h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:14px 0"><div class="formula-box">题量<br><b>'+((test.sections||[]).reduce(function(n,s){return n+(s.items||[]).length},0))+'</b></div><div class="formula-box">时长<br><b>'+es(test.durationMinutes||35)+' 分钟</b></div><div class="formula-box" style="background:'+statusBg+';color:'+statusColor+';border-color:'+statusColor+'">状态<br><b>'+es(ap.mockPhase==='answering'?'答题中':ap.mockPhase==='locked'?'已锁定':'未开放')+'</b></div><div class="formula-box">已提交<br><b>'+rows.length+' / '+ap.as.length+'</b></div></div>';
+    var secMap=mockSecuritySummary(),secCount=Object.keys(secMap).length;
+    h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:14px 0"><div class="formula-box">题量<br><b>'+((test.sections||[]).reduce(function(n,s){return n+(s.items||[]).length},0))+'</b></div><div class="formula-box">时长<br><b>'+es(test.durationMinutes||35)+' 分钟</b></div><div class="formula-box" style="background:'+statusBg+';color:'+statusColor+';border-color:'+statusColor+'">状态<br><b>'+es(ap.mockPhase==='answering'?'答题中':ap.mockPhase==='locked'?'已锁定':'未开放')+'</b></div><div class="formula-box">已提交<br><b>'+rows.length+' / '+ap.as.length+'</b></div><div class="formula-box" style="background:#fff7ed;color:#b45309;border-color:#fed7aa">异常记录<br><b>'+secCount+'</b></div></div>';
     h+=mockReport(rows);
     h+='<div style="background:#f8faf3;border:1px solid var(--line);border-radius:14px;padding:14px;line-height:1.7;color:#64748b">听力由教师端统一控制。当前为慢速浏览器 TTS 流程测试；正式音频仍需后续按大题生成、人工验收并替换。'+(ap.mockSendStatus?'<br><b>'+es(ap.mockSendStatus)+'</b>':'')+'</div>';
     h+='<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0"><b style="color:var(--blue)">听力播放</b><button class="tab" onclick="ap.playMockPart(\'L1_picture_choice\')">播放 1-5</button><button class="tab" onclick="ap.playMockPart(\'L2_answer_choice\')">播放 6-10</button><button class="tab" onclick="ap.playMockPart(\'L3_dialogue_picture_choice\')">播放 11-15</button><button class="tab" onclick="ap.playMockPart(\'L4_sentence_question_answer\')">播放 16-20</button><button class="tab" style="border-color:#f05a3f;color:#f05a3f" onclick="ap.stopMockAudio()">停止</button></div>';
     h+='<h3 style="color:var(--practice)">提交情况 / Submissions</h3>';
     if(!rows.length)h+='<div style="padding:18px;border:1px dashed var(--line);border-radius:14px;color:#94a3b8;text-align:center">暂无学生提交。</div>';
-    else{h+='<table style="width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden"><tr style="background:#edf6d9"><th style="text-align:left;padding:10px">学生</th><th style="text-align:left;padding:10px">得分</th><th style="text-align:left;padding:10px">错题</th><th style="text-align:left;padding:10px">薄弱方向</th><th style="text-align:left;padding:10px">详情</th><th style="text-align:left;padding:10px">提交时间</th></tr>';rows.forEach(function(r){var dx=mockDiagnosis(r),wrong=dx.wrong.length?dx.wrong.map(function(x){return x.number}).join('、'):'无';var answers=r.answers||{},detail=dx.wrong.map(function(x){return '第'+x.number+'题 '+mockPartName(x.part)+'：学生选 '+(answers[x.id]||'未答')+'，正确 '+x.answer}).join('；');var weak=(dx.wrong.length?'需加强：'+dx.focus+(dx.weakParts.length?'；'+dx.weakParts.join('、'):''):'无明显薄弱项');h+='<tr><td style="padding:10px;border-top:1px solid var(--line)">'+es(r.n||'')+'</td><td style="padding:10px;border-top:1px solid var(--line);font-weight:900;color:var(--blue)">'+es(r.x||'')+'</td><td style="padding:10px;border-top:1px solid var(--line)">'+es(wrong)+'</td><td style="padding:10px;border-top:1px solid var(--line)">'+es(weak)+'</td><td style="padding:10px;border-top:1px solid var(--line)"><details><summary style="cursor:pointer;color:var(--blue);font-weight:900">查看</summary><div style="margin-top:8px;font-size:12px;line-height:1.7;color:#64748b">'+es(detail||'全部正确')+'</div></details></td><td style="padding:10px;border-top:1px solid var(--line)">'+es(r.t||'')+'</td></tr>'});h+='</table>'}
+    else{h+='<table style="width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden"><tr style="background:#edf6d9"><th style="text-align:left;padding:10px">学生</th><th style="text-align:left;padding:10px">得分</th><th style="text-align:left;padding:10px">异常</th><th style="text-align:left;padding:10px">错题</th><th style="text-align:left;padding:10px">薄弱方向</th><th style="text-align:left;padding:10px">详情</th><th style="text-align:left;padding:10px">提交时间</th></tr>';rows.forEach(function(r){var dx=mockDiagnosis(r),wrong=dx.wrong.length?dx.wrong.map(function(x){return x.number}).join('、'):'无';var answers=r.answers||{},detail=dx.wrong.map(function(x){return '第'+x.number+'题 '+mockPartName(x.part)+'：学生选 '+(answers[x.id]||'未答')+'，正确 '+x.answer}).join('；');var weak=(dx.wrong.length?'需加强：'+dx.focus+(dx.weakParts.length?'；'+dx.weakParts.join('、'):''):'无明显薄弱项'),sec=secMap[String(r.n||'Student')];h+='<tr><td style="padding:10px;border-top:1px solid var(--line)">'+es(r.n||'')+'</td><td style="padding:10px;border-top:1px solid var(--line);font-weight:900;color:var(--blue)">'+es(r.x||'')+'</td><td style="padding:10px;border-top:1px solid var(--line);color:'+(sec?'#b45309':'#64748b')+'">'+(sec?es(sec.violations||0)+'次':'无')+'</td><td style="padding:10px;border-top:1px solid var(--line)">'+es(wrong)+'</td><td style="padding:10px;border-top:1px solid var(--line)">'+es(weak)+'</td><td style="padding:10px;border-top:1px solid var(--line)"><details><summary style="cursor:pointer;color:var(--blue);font-weight:900">查看</summary><div style="margin-top:8px;font-size:12px;line-height:1.7;color:#64748b">'+es(detail||'全部正确')+'</div></details></td><td style="padding:10px;border-top:1px solid var(--line)">'+es(r.t||'')+'</td></tr>'});h+='</table>'}
     return h+'</div>';
   };
   var oldSnav=ap._snav,oldCnt=ap._cnt,oldRender=ap._r,oldHa=ap._ha,oldLw=ap._lw;
   ap._snav=function(){if(this.mt==='mock')return'<div class="sub-nav"><button class="sub-btn active" onclick="ap.st=\'mock\';ap._r()">HSK 测试<br><small>Mock Test</small></button></div>';return oldSnav.call(this)};
   ap._cnt=function(){if(this.mt==='mock')return this._mockPanel();return oldCnt.call(this)};
   ap._lw=function(){if(this.mt==='mock')return'';return oldLw.call(this)};
-  ap._ha=function(m){oldHa.call(this,m);if(m&&m.mode==='mock_test'){var n=this._rn?this._rn(m.studentName||m.name||'Student'):(m.studentName||m.name||'Student');this.mockRows.unshift({n:n,x:(m.score!=null&&m.total!=null)?(m.score+'/'+m.total):(m.text||m.answer||''),score:m.score,total:m.total,t:new Date().toLocaleTimeString(),submittedAt:m.submittedAt||new Date().toISOString(),answers:m.answers||{},wrongNumbers:m.wrongNumbers||[],testId:m.testId||m.questionId||''});this.qsub[n]=true;saveMockState();this._r()}};
+  ap._ha=function(m){oldHa.call(this,m);if(m&&m.mode==='mock_test_security'){recordMockSecurity(m);saveMockState();this._r();return}if(m&&m.mode==='mock_test'){var n=this._rn?this._rn(m.studentName||m.name||'Student'):(m.studentName||m.name||'Student');if(m.securityViolations&&m.securityViolations.length)this.mockSecurityRows.unshift({n:n,reason:'submitted_with_violations',violations:m.violationCount||m.securityViolations.length,t:new Date().toLocaleTimeString(),submittedAt:m.submittedAt||new Date().toISOString(),testId:m.testId||m.questionId||''});this.mockRows.unshift({n:n,x:(m.score!=null&&m.total!=null)?(m.score+'/'+m.total):(m.text||m.answer||''),score:m.score,total:m.total,t:new Date().toLocaleTimeString(),submittedAt:m.submittedAt||new Date().toISOString(),answers:m.answers||{},wrongNumbers:m.wrongNumbers||[],testId:m.testId||m.questionId||'',violationCount:m.violationCount||0});this.qsub[n]=true;saveMockState();this._r()}};
   ap._r=function(){
     oldRender.call(this);
     var side=document.querySelector('.cp-sidebar');if(!side||side.querySelector('.mock-side-btn'))return;

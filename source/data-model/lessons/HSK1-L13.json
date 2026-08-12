@@ -1,0 +1,5614 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "level": "HSK1",
+    "lessonId": "L13",
+    "lessonKey": "HSK1-L13",
+    "title": "请给我一杯茶",
+    "titleEn": "I'll have a cup of tea, please",
+    "topic": "双宾语句、可以、动词+一下、点餐",
+    "sourceTextPolicy": "保留教材原句；新增内容标记为教学扩展",
+    "dataQualityNotes": [
+      "根据 textbook data/L13.txt 生成；L13 课文原句完整保留。",
+      "已按 L11-L12 当前结构制作：课前10题、课中题型题量、汉字练习与英俄译文选句字段对齐。"
+    ]
+  },
+  "features": {
+    "pinyin": true,
+    "hanziWritingDemo": true,
+    "vocabExamples": true,
+    "competition": true,
+    "postClassHomework": true
+  },
+  "vocabulary": [
+    {
+      "id": "v_l13_01",
+      "hanzi": "可以",
+      "word": "可以",
+      "pinyin": "kěyǐ",
+      "pos": "能愿动词",
+      "english": "can; may",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "grammar",
+      "image": "images/vocab/hsk1-l13/01_keyi.png"
+    },
+    {
+      "id": "v_l13_02",
+      "hanzi": "再",
+      "word": "再",
+      "pinyin": "zài",
+      "pos": "副词",
+      "english": "again",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "grammar",
+      "image": "images/vocab/hsk1-l13/02_zai.png"
+    },
+    {
+      "id": "v_l13_03",
+      "hanzi": "问题",
+      "word": "问题",
+      "pinyin": "wèntí",
+      "pos": "名词",
+      "english": "question; problem",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "thing",
+      "image": "images/vocab/hsk1-l13/03_wenti.png"
+    },
+    {
+      "id": "v_l13_04",
+      "hanzi": "卖",
+      "word": "卖",
+      "pinyin": "mài",
+      "pos": "动词",
+      "english": "sell",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "action",
+      "image": "images/vocab/hsk1-l13/04_mai.png"
+    },
+    {
+      "id": "v_l13_05",
+      "hanzi": "打电话",
+      "word": "打电话",
+      "pinyin": "dǎ diànhuà",
+      "pos": "动词短语",
+      "english": "make a phone call",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "action",
+      "image": "images/vocab/hsk1-l13/05_dadianhua.png"
+    },
+    {
+      "id": "v_l13_06",
+      "hanzi": "一下",
+      "word": "一下",
+      "pinyin": "yíxià",
+      "pos": "数量词",
+      "english": "one time; once",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "grammar",
+      "image": "images/vocab/hsk1-l13/06_yixia.png"
+    },
+    {
+      "id": "v_l13_07",
+      "hanzi": "服务员",
+      "word": "服务员",
+      "pinyin": "fúwùyuán",
+      "pos": "名词",
+      "english": "waiter; waitress",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "person",
+      "image": "images/vocab/hsk1-l13/07_fuwuyuan.png"
+    },
+    {
+      "id": "v_l13_08",
+      "hanzi": "女士",
+      "word": "女士",
+      "pinyin": "nǚshì",
+      "pos": "名词",
+      "english": "lady; madam",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "person",
+      "image": "images/vocab/hsk1-l13/08_nvshi.png"
+    },
+    {
+      "id": "v_l13_09",
+      "hanzi": "请",
+      "word": "请",
+      "pinyin": "qǐng",
+      "pos": "动词",
+      "english": "please",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "function",
+      "image": "images/vocab/hsk1-l13/09_qing.png"
+    },
+    {
+      "id": "v_l13_10",
+      "hanzi": "坐",
+      "word": "坐",
+      "pinyin": "zuò",
+      "pos": "动词",
+      "english": "sit",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "action",
+      "image": "images/vocab/hsk1-l13/10_zuo.png"
+    },
+    {
+      "id": "v_l13_11",
+      "hanzi": "给",
+      "word": "给",
+      "pinyin": "gěi",
+      "pos": "动词",
+      "english": "give",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "action",
+      "image": "images/vocab/hsk1-l13/11_gei.png"
+    },
+    {
+      "id": "v_l13_12",
+      "hanzi": "杯",
+      "word": "杯",
+      "pinyin": "bēi",
+      "pos": "量词",
+      "english": "cup; glass",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "measure",
+      "image": "images/vocab/hsk1-l13/12_bei.png"
+    },
+    {
+      "id": "v_l13_13",
+      "hanzi": "要",
+      "word": "要",
+      "pinyin": "yào",
+      "pos": "动词",
+      "english": "want; ask for",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "action",
+      "image": "images/vocab/hsk1-l13/13_yao.png"
+    },
+    {
+      "id": "v_l13_14",
+      "hanzi": "早饭",
+      "word": "早饭",
+      "pinyin": "zǎofàn",
+      "pos": "名词",
+      "english": "breakfast",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "food",
+      "image": "images/vocab/hsk1-l13/14_zaofan.png"
+    },
+    {
+      "id": "v_l13_15",
+      "hanzi": "这个",
+      "word": "这个",
+      "pinyin": "zhège",
+      "pos": "代词",
+      "english": "this",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "function",
+      "image": "images/vocab/hsk1-l13/15_zhege.png"
+    },
+    {
+      "id": "v_l13_16",
+      "hanzi": "面包",
+      "word": "面包",
+      "pinyin": "miànbāo",
+      "pos": "名词",
+      "english": "bread",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "food",
+      "image": "images/vocab/hsk1-l13/16_mianbao.png"
+    },
+    {
+      "id": "v_l13_17",
+      "hanzi": "鸡蛋",
+      "word": "鸡蛋",
+      "pinyin": "jīdàn",
+      "pos": "名词",
+      "english": "egg",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "food",
+      "image": "images/vocab/hsk1-l13/17_jidan.png"
+    },
+    {
+      "id": "v_l13_18",
+      "hanzi": "先生",
+      "word": "先生",
+      "pinyin": "xiānsheng",
+      "pos": "名词",
+      "english": "gentleman; sir",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "person",
+      "image": "images/vocab/hsk1-l13/18_xiansheng.png"
+    },
+    {
+      "id": "v_l13_19",
+      "hanzi": "一半",
+      "word": "一半",
+      "pinyin": "yíbàn",
+      "pos": "数词",
+      "english": "half",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "number",
+      "image": "images/vocab/hsk1-l13/19_yiban.png"
+    },
+    {
+      "id": "v_l13_20",
+      "hanzi": "茶",
+      "word": "茶",
+      "pinyin": "chá",
+      "pos": "名词",
+      "english": "tea",
+      "sourceType": "textbook",
+      "tags": [
+        "L13"
+      ],
+      "category": "drink",
+      "image": "images/vocab/hsk1-l13/20_cha.png"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g_l13_01",
+      "title": "能愿动词“可以”",
+      "titleEn": "Modal Verb 可以",
+      "structure": "可以 + 动词",
+      "explanation": "可以表示许可或能够。",
+      "examples": [
+        {
+          "hanzi": "我可以再问您一个问题吗？",
+          "pinyin": "Wáng lǎoshī, wǒ kěyǐ zài wèn nín yí gè wèntí ma?",
+          "english": "May I ask one more question?",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "你可以打电话问一下。",
+          "pinyin": "Nǐ kěyǐ dǎ diànhuà wèn yíxià.",
+          "english": "You can call to ask.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我可以坐吗？",
+          "pinyin": "Wǒ kěyǐ zuò ma?",
+          "english": "May I sit?",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    {
+      "id": "g_l13_02",
+      "title": "动词+一下",
+      "titleEn": "Verb + 一下",
+      "structure": "动词 + 一下",
+      "explanation": "表示动作时间短或试着做一次。",
+      "examples": [
+        {
+          "hanzi": "你可以打电话问一下。",
+          "pinyin": "Nǐ kěyǐ dǎ diànhuà wèn yíxià.",
+          "english": "You can call to ask.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我看一下。",
+          "pinyin": "Wǒ kàn yíxià.",
+          "english": "Let me have a look.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "请坐一下。",
+          "pinyin": "Qǐng zuò yíxià.",
+          "english": "Please sit for a moment.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    {
+      "id": "g_l13_03",
+      "title": "双宾语句",
+      "titleEn": "Double-Object Sentences",
+      "structure": "动词 + 人 + 物/问题",
+      "explanation": "给、问可以带两个宾语。",
+      "examples": [
+        {
+          "hanzi": "请给我一杯牛奶。",
+          "pinyin": "Qǐng gěi wǒ yì bēi niúnǎi.",
+          "english": "Please give me a glass of milk.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "请给我一杯茶吧。",
+          "pinyin": "Qǐng gěi wǒ yì bēi chá ba.",
+          "english": "Please give me a cup of tea.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我问老师两个问题。",
+          "pinyin": "Wǒ wèn lǎoshī liǎng gè wèntí.",
+          "english": "I ask the teacher two questions.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "t_l13_01",
+      "title": "课文一：问问题",
+      "setting": "在教室里，下课后，白家月问王老师问题。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "白家月",
+          "hanzi": "王老师，我可以再问您一个问题吗？",
+          "pinyin": "Wáng lǎoshī, wǒ kěyǐ zài wèn nín yí gè wèntí ma?",
+          "english": "Ms. Wang, may I ask you one more question?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "王一飞",
+          "hanzi": "可以。你有什么问题？",
+          "pinyin": "Kěyǐ. Nǐ yǒu shénme wèntí?",
+          "english": "Yes, of course. What's your question?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "白家月",
+          "hanzi": "那个小店卖不卖手机？",
+          "pinyin": "Nàge xiǎo diàn mài bu mài shǒujī?",
+          "english": "Does that small shop sell cell phones?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "王一飞",
+          "hanzi": "我不知道。你可以打电话问一下。",
+          "pinyin": "Wǒ bù zhīdào. Nǐ kěyǐ dǎ diànhuà wèn yíxià.",
+          "english": "I'm not sure. You can call to ask.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "t_l13_02",
+      "title": "课文二：吃早饭",
+      "setting": "在咖啡馆里，王一雪想吃早餐。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "服务员",
+          "hanzi": "女士，请坐！您喝什么？",
+          "pinyin": "Nǚshì, qǐng zuò! Nín hē shénme?",
+          "english": "Madam, have a seat, please! What would you like to drink?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "王一雪",
+          "hanzi": "我看一下。请给我一杯牛奶。",
+          "pinyin": "Wǒ kàn yíxià. Qǐng gěi wǒ yì bēi niúnǎi.",
+          "english": "Let me have a look. I'll have a glass of milk, please.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "服务员",
+          "hanzi": "好的。您还要什么？",
+          "pinyin": "Hǎo de. Nín hái yào shénme?",
+          "english": "Alright. Would you like anything else?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "王一雪",
+          "hanzi": "我还没吃早饭，再要这个面包和鸡蛋吧。",
+          "pinyin": "Wǒ hái méi chī zǎofàn, zài yào zhège miànbāo hé jīdàn ba.",
+          "english": "I haven't had breakfast yet, so I'll have bread and eggs.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "t_l13_03",
+      "title": "课文三：请给我一杯茶",
+      "setting": "在餐馆里，刘明在点餐。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "服务员",
+          "hanzi": "先生，请坐！您要什么？",
+          "pinyin": "Xiānsheng, qǐng zuò! Nín yào shénme?",
+          "english": "Sir, have a seat, please! What would you like to order?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "刘明",
+          "hanzi": "我要一斤饺子。",
+          "pinyin": "Wǒ yào yì jīn jiǎozi.",
+          "english": "I'd like one jin of jiaozi.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "服务员",
+          "hanzi": "好的。一斤饺子 40 个。",
+          "pinyin": "Hǎo de. Yì jīn jiǎozi sìshí gè.",
+          "english": "Alright. One jin of jiaozi has forty pieces.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "刘明",
+          "hanzi": "40 个太多了，我要一半吧。",
+          "pinyin": "Sìshí gè tài duō le, wǒ yào yíbàn ba.",
+          "english": "Forty is too many. I'll have half of that.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 5,
+          "speaker": "服务员",
+          "hanzi": "半斤 20 个。您想喝什么？",
+          "pinyin": "Bàn jīn èrshí gè. Nín xiǎng hē shénme?",
+          "english": "Half is twenty. What would you like to drink?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 6,
+          "speaker": "刘明",
+          "hanzi": "请给我一杯茶吧。",
+          "pinyin": "Qǐng gěi wǒ yì bēi chá ba.",
+          "english": "I'll have a cup of tea, please.",
+          "sourceType": "textbook"
+        }
+      ]
+    }
+  ],
+  "vocabExtensions": {
+    "v_l13_01": {
+      "word": "可以",
+      "examples": [
+        {
+          "hanzi": "可以坐",
+          "pinyin": "kěyǐ zuò",
+          "english": "may sit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "可以问",
+          "pinyin": "kěyǐ wèn",
+          "english": "may ask",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我可以喝茶吗？",
+          "pinyin": "Wǒ kěyǐ hē chá ma?",
+          "english": "May I drink tea?",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "可以坐",
+          "pinyin": "kěyǐ zuò",
+          "english": "may sit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "可以问",
+          "pinyin": "kěyǐ wèn",
+          "english": "may ask",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我可以喝茶吗？",
+          "pinyin": "Wǒ kěyǐ hē chá ma?",
+          "english": "May I drink tea?",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_02": {
+      "word": "再",
+      "examples": [
+        {
+          "hanzi": "再问",
+          "pinyin": "zài wèn",
+          "english": "ask again",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "再要一杯",
+          "pinyin": "zài yào yì bēi",
+          "english": "ask for one more cup",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我想再喝一杯茶。",
+          "pinyin": "Wǒ xiǎng zài hē yì bēi chá.",
+          "english": "I want to drink one more cup of tea.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "再问",
+          "pinyin": "zài wèn",
+          "english": "ask again",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "再要一杯",
+          "pinyin": "zài yào yì bēi",
+          "english": "ask for one more cup",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我想再喝一杯茶。",
+          "pinyin": "Wǒ xiǎng zài hē yì bēi chá.",
+          "english": "I want to drink one more cup of tea.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_03": {
+      "word": "问题",
+      "examples": [
+        {
+          "hanzi": "一个问题",
+          "pinyin": "yí gè wèntí",
+          "english": "one question",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "问问题",
+          "pinyin": "wèn wèntí",
+          "english": "ask a question",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我有一个问题。",
+          "pinyin": "Wǒ yǒu yí gè wèntí.",
+          "english": "I have a question.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一个问题",
+          "pinyin": "yí gè wèntí",
+          "english": "one question",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "问问题",
+          "pinyin": "wèn wèntí",
+          "english": "ask a question",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我有一个问题。",
+          "pinyin": "Wǒ yǒu yí gè wèntí.",
+          "english": "I have a question.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_04": {
+      "word": "卖",
+      "examples": [
+        {
+          "hanzi": "卖手机",
+          "pinyin": "mài shǒujī",
+          "english": "sell cell phones",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "卖面包",
+          "pinyin": "mài miànbāo",
+          "english": "sell bread",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这个小店卖茶。",
+          "pinyin": "Zhège xiǎo diàn mài chá.",
+          "english": "This shop sells tea.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "卖手机",
+          "pinyin": "mài shǒujī",
+          "english": "sell cell phones",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "卖面包",
+          "pinyin": "mài miànbāo",
+          "english": "sell bread",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这个小店卖茶。",
+          "pinyin": "Zhège xiǎo diàn mài chá.",
+          "english": "This shop sells tea.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_05": {
+      "word": "打电话",
+      "examples": [
+        {
+          "hanzi": "给老师打电话",
+          "pinyin": "gěi lǎoshī dǎ diànhuà",
+          "english": "call the teacher",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "打电话问一下",
+          "pinyin": "dǎ diànhuà wèn yíxià",
+          "english": "call to ask",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我给朋友打电话。",
+          "pinyin": "Wǒ gěi péngyou dǎ diànhuà.",
+          "english": "I call my friend.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "给老师打电话",
+          "pinyin": "gěi lǎoshī dǎ diànhuà",
+          "english": "call the teacher",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "打电话问一下",
+          "pinyin": "dǎ diànhuà wèn yíxià",
+          "english": "call to ask",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我给朋友打电话。",
+          "pinyin": "Wǒ gěi péngyou dǎ diànhuà.",
+          "english": "I call my friend.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_06": {
+      "word": "一下",
+      "examples": [
+        {
+          "hanzi": "看一下",
+          "pinyin": "kàn yíxià",
+          "english": "take a look",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "问一下",
+          "pinyin": "wèn yíxià",
+          "english": "ask briefly",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "请坐一下。",
+          "pinyin": "Qǐng zuò yíxià.",
+          "english": "Please sit for a moment.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "看一下",
+          "pinyin": "kàn yíxià",
+          "english": "take a look",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "问一下",
+          "pinyin": "wèn yíxià",
+          "english": "ask briefly",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "请坐一下。",
+          "pinyin": "Qǐng zuò yíxià.",
+          "english": "Please sit for a moment.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_07": {
+      "word": "服务员",
+      "examples": [
+        {
+          "hanzi": "饭店服务员",
+          "pinyin": "fàndiàn fúwùyuán",
+          "english": "restaurant waiter",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "叫服务员",
+          "pinyin": "jiào fúwùyuán",
+          "english": "call the waiter",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "服务员给我一杯茶。",
+          "pinyin": "Fúwùyuán gěi wǒ yì bēi chá.",
+          "english": "The waiter gives me a cup of tea.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "饭店服务员",
+          "pinyin": "fàndiàn fúwùyuán",
+          "english": "restaurant waiter",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "叫服务员",
+          "pinyin": "jiào fúwùyuán",
+          "english": "call the waiter",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "服务员给我一杯茶。",
+          "pinyin": "Fúwùyuán gěi wǒ yì bēi chá.",
+          "english": "The waiter gives me a cup of tea.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_08": {
+      "word": "女士",
+      "examples": [
+        {
+          "hanzi": "一位女士",
+          "pinyin": "yí wèi nǚshì",
+          "english": "a lady",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "女士，请坐",
+          "pinyin": "nǚshì, qǐng zuò",
+          "english": "madam, please sit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这位女士喝茶。",
+          "pinyin": "Zhè wèi nǚshì hē chá.",
+          "english": "This lady drinks tea.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一位女士",
+          "pinyin": "yí wèi nǚshì",
+          "english": "a lady",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "女士，请坐",
+          "pinyin": "nǚshì, qǐng zuò",
+          "english": "madam, please sit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这位女士喝茶。",
+          "pinyin": "Zhè wèi nǚshì hē chá.",
+          "english": "This lady drinks tea.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_09": {
+      "word": "请",
+      "examples": [
+        {
+          "hanzi": "请坐",
+          "pinyin": "qǐng zuò",
+          "english": "please sit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "请问",
+          "pinyin": "qǐng wèn",
+          "english": "excuse me; may I ask",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "请给我一杯茶。",
+          "pinyin": "Qǐng gěi wǒ yì bēi chá.",
+          "english": "Please give me a cup of tea.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "请坐",
+          "pinyin": "qǐng zuò",
+          "english": "please sit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "请问",
+          "pinyin": "qǐng wèn",
+          "english": "excuse me; may I ask",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "请给我一杯茶。",
+          "pinyin": "Qǐng gěi wǒ yì bēi chá.",
+          "english": "Please give me a cup of tea.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_10": {
+      "word": "坐",
+      "examples": [
+        {
+          "hanzi": "坐这儿",
+          "pinyin": "zuò zhèr",
+          "english": "sit here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "请坐",
+          "pinyin": "qǐng zuò",
+          "english": "please sit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "先生坐在这儿。",
+          "pinyin": "Xiānsheng zuò zài zhèr.",
+          "english": "The gentleman sits here.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "坐这儿",
+          "pinyin": "zuò zhèr",
+          "english": "sit here",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "请坐",
+          "pinyin": "qǐng zuò",
+          "english": "please sit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "先生坐在这儿。",
+          "pinyin": "Xiānsheng zuò zài zhèr.",
+          "english": "The gentleman sits here.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_11": {
+      "word": "给",
+      "examples": [
+        {
+          "hanzi": "给我",
+          "pinyin": "gěi wǒ",
+          "english": "give me",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "给老师",
+          "pinyin": "gěi lǎoshī",
+          "english": "give the teacher",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "请给我面包。",
+          "pinyin": "Qǐng gěi wǒ miànbāo.",
+          "english": "Please give me bread.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "给我",
+          "pinyin": "gěi wǒ",
+          "english": "give me",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "给老师",
+          "pinyin": "gěi lǎoshī",
+          "english": "give the teacher",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "请给我面包。",
+          "pinyin": "Qǐng gěi wǒ miànbāo.",
+          "english": "Please give me bread.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_12": {
+      "word": "杯",
+      "examples": [
+        {
+          "hanzi": "一杯茶",
+          "pinyin": "yì bēi chá",
+          "english": "a cup of tea",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两杯牛奶",
+          "pinyin": "liǎng bēi niúnǎi",
+          "english": "two glasses of milk",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "桌子上有一个杯子。",
+          "pinyin": "Zhuōzi shàng yǒu yí gè bēizi.",
+          "english": "There is a cup on the table.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一杯茶",
+          "pinyin": "yì bēi chá",
+          "english": "a cup of tea",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "两杯牛奶",
+          "pinyin": "liǎng bēi niúnǎi",
+          "english": "two glasses of milk",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "桌子上有一个杯子。",
+          "pinyin": "Zhuōzi shàng yǒu yí gè bēizi.",
+          "english": "There is a cup on the table.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_13": {
+      "word": "要",
+      "examples": [
+        {
+          "hanzi": "要面包",
+          "pinyin": "yào miànbāo",
+          "english": "want bread",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "要一半",
+          "pinyin": "yào yíbàn",
+          "english": "want half",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我要一斤饺子。",
+          "pinyin": "Wǒ yào yì jīn jiǎozi.",
+          "english": "I want one jin of dumplings.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "要面包",
+          "pinyin": "yào miànbāo",
+          "english": "want bread",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "要一半",
+          "pinyin": "yào yíbàn",
+          "english": "want half",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我要一斤饺子。",
+          "pinyin": "Wǒ yào yì jīn jiǎozi.",
+          "english": "I want one jin of dumplings.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_14": {
+      "word": "早饭",
+      "examples": [
+        {
+          "hanzi": "吃早饭",
+          "pinyin": "chī zǎofàn",
+          "english": "eat breakfast",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "没吃早饭",
+          "pinyin": "méi chī zǎofàn",
+          "english": "have not eaten breakfast",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我早饭吃鸡蛋。",
+          "pinyin": "Wǒ zǎofàn chī jīdàn.",
+          "english": "I eat eggs for breakfast.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "吃早饭",
+          "pinyin": "chī zǎofàn",
+          "english": "eat breakfast",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "没吃早饭",
+          "pinyin": "méi chī zǎofàn",
+          "english": "have not eaten breakfast",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我早饭吃鸡蛋。",
+          "pinyin": "Wǒ zǎofàn chī jīdàn.",
+          "english": "I eat eggs for breakfast.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_15": {
+      "word": "这个",
+      "examples": [
+        {
+          "hanzi": "要这个",
+          "pinyin": "yào zhège",
+          "english": "want this one",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "买这个",
+          "pinyin": "mǎi zhège",
+          "english": "buy this one",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我想买这个面包。",
+          "pinyin": "Wǒ xiǎng mǎi zhège miànbāo.",
+          "english": "I want to buy this bread.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "要这个",
+          "pinyin": "yào zhège",
+          "english": "want this one",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "买这个",
+          "pinyin": "mǎi zhège",
+          "english": "buy this one",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我想买这个面包。",
+          "pinyin": "Wǒ xiǎng mǎi zhège miànbāo.",
+          "english": "I want to buy this bread.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_16": {
+      "word": "面包",
+      "examples": [
+        {
+          "hanzi": "一个面包",
+          "pinyin": "yí gè miànbāo",
+          "english": "one piece of bread",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "买面包",
+          "pinyin": "mǎi miànbāo",
+          "english": "buy bread",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "早饭有面包。",
+          "pinyin": "Zǎofàn yǒu miànbāo.",
+          "english": "There is bread for breakfast.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一个面包",
+          "pinyin": "yí gè miànbāo",
+          "english": "one piece of bread",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "买面包",
+          "pinyin": "mǎi miànbāo",
+          "english": "buy bread",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "早饭有面包。",
+          "pinyin": "Zǎofàn yǒu miànbāo.",
+          "english": "There is bread for breakfast.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_17": {
+      "word": "鸡蛋",
+      "examples": [
+        {
+          "hanzi": "一个鸡蛋",
+          "pinyin": "yí gè jīdàn",
+          "english": "one egg",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "吃鸡蛋",
+          "pinyin": "chī jīdàn",
+          "english": "eat eggs",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我想吃鸡蛋。",
+          "pinyin": "Wǒ xiǎng chī jīdàn.",
+          "english": "I want to eat eggs.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一个鸡蛋",
+          "pinyin": "yí gè jīdàn",
+          "english": "one egg",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "吃鸡蛋",
+          "pinyin": "chī jīdàn",
+          "english": "eat eggs",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我想吃鸡蛋。",
+          "pinyin": "Wǒ xiǎng chī jīdàn.",
+          "english": "I want to eat eggs.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_18": {
+      "word": "先生",
+      "examples": [
+        {
+          "hanzi": "一位先生",
+          "pinyin": "yí wèi xiānsheng",
+          "english": "a gentleman",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "先生，请坐",
+          "pinyin": "xiānsheng, qǐng zuò",
+          "english": "sir, please sit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这位先生要茶。",
+          "pinyin": "Zhè wèi xiānsheng yào chá.",
+          "english": "This gentleman wants tea.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一位先生",
+          "pinyin": "yí wèi xiānsheng",
+          "english": "a gentleman",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "先生，请坐",
+          "pinyin": "xiānsheng, qǐng zuò",
+          "english": "sir, please sit",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这位先生要茶。",
+          "pinyin": "Zhè wèi xiānsheng yào chá.",
+          "english": "This gentleman wants tea.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_19": {
+      "word": "一半",
+      "examples": [
+        {
+          "hanzi": "一半面包",
+          "pinyin": "yíbàn miànbāo",
+          "english": "half the bread",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "要一半",
+          "pinyin": "yào yíbàn",
+          "english": "want half",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这个太多了，我要一半。",
+          "pinyin": "Zhège tài duō le, wǒ yào yíbàn.",
+          "english": "This is too much; I want half.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一半面包",
+          "pinyin": "yíbàn miànbāo",
+          "english": "half the bread",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "要一半",
+          "pinyin": "yào yíbàn",
+          "english": "want half",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这个太多了，我要一半。",
+          "pinyin": "Zhège tài duō le, wǒ yào yíbàn.",
+          "english": "This is too much; I want half.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "v_l13_20": {
+      "word": "茶",
+      "examples": [
+        {
+          "hanzi": "一杯茶",
+          "pinyin": "yì bēi chá",
+          "english": "a cup of tea",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "喝茶",
+          "pinyin": "hē chá",
+          "english": "drink tea",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我喜欢喝中国茶。",
+          "pinyin": "Wǒ xǐhuan hē Zhōngguó chá.",
+          "english": "I like drinking Chinese tea.",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "collocations": [
+        {
+          "hanzi": "一杯茶",
+          "pinyin": "yì bēi chá",
+          "english": "a cup of tea",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "喝茶",
+          "pinyin": "hē chá",
+          "english": "drink tea",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我喜欢喝中国茶。",
+          "pinyin": "Wǒ xǐhuan hē Zhōngguó chá.",
+          "english": "I like drinking Chinese tea.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "grammarTeachingNotes": {
+    "g_l13_01": {
+      "title": "能愿动词“可以”",
+      "titleEn": "Modal Verb 可以",
+      "structure": "可以 + 动词",
+      "structureEn": "keyi + verb",
+      "structureRu": "可以 + глагол",
+      "english": "可以 indicates permission or ability.",
+      "russian": "可以 выражает разрешение или возможность.",
+      "formula": {
+        "pattern": "可以 + 动词",
+        "patternEn": "keyi + verb",
+        "patternRu": "可以 + глагол"
+      },
+      "examples": [
+        {
+          "hanzi": "我可以再问您一个问题吗？",
+          "pinyin": "Wáng lǎoshī, wǒ kěyǐ zài wèn nín yí gè wèntí ma?",
+          "english": "May I ask one more question?",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "你可以打电话问一下。",
+          "pinyin": "Nǐ kěyǐ dǎ diànhuà wèn yíxià.",
+          "english": "You can call to ask.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我可以坐吗？",
+          "pinyin": "Wǒ kěyǐ zuò ma?",
+          "english": "May I sit?",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "g_l13_02": {
+      "title": "动词+一下",
+      "titleEn": "Verb + 一下",
+      "structure": "动词 + 一下",
+      "structureEn": "verb + yixia",
+      "structureRu": "глагол + 一下",
+      "english": "It softens an action as brief or tentative.",
+      "russian": "Обозначает короткое или пробное действие.",
+      "formula": {
+        "pattern": "动词 + 一下",
+        "patternEn": "verb + yixia",
+        "patternRu": "глагол + 一下"
+      },
+      "examples": [
+        {
+          "hanzi": "你可以打电话问一下。",
+          "pinyin": "Nǐ kěyǐ dǎ diànhuà wèn yíxià.",
+          "english": "You can call to ask.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我看一下。",
+          "pinyin": "Wǒ kàn yíxià.",
+          "english": "Let me have a look.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "请坐一下。",
+          "pinyin": "Qǐng zuò yíxià.",
+          "english": "Please sit for a moment.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    "g_l13_03": {
+      "title": "双宾语句",
+      "titleEn": "Double-Object Sentences",
+      "structure": "动词 + 人 + 物/问题",
+      "structureEn": "verb + person + thing/question",
+      "structureRu": "глагол + человек + предмет/вопрос",
+      "english": "Verbs like 给 and 问 can take two objects.",
+      "russian": "Глаголы 给 и 问 могут иметь два дополнения.",
+      "formula": {
+        "pattern": "动词 + 人 + 物/问题",
+        "patternEn": "verb + person + thing/question",
+        "patternRu": "глагол + человек + предмет/вопрос"
+      },
+      "examples": [
+        {
+          "hanzi": "请给我一杯牛奶。",
+          "pinyin": "Qǐng gěi wǒ yì bēi niúnǎi.",
+          "english": "Please give me a glass of milk.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "请给我一杯茶吧。",
+          "pinyin": "Qǐng gěi wǒ yì bēi chá ba.",
+          "english": "Please give me a cup of tea.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我问老师两个问题。",
+          "pinyin": "Wǒ wèn lǎoshī liǎng gè wèntí.",
+          "english": "I ask the teacher two questions.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "preClass": {
+    "warmup": {
+      "title": "点餐和提问",
+      "prompt": "Think about ordering and asking politely.",
+      "intro": "这一课学习如何请求许可、点餐、请别人给自己东西。",
+      "question": "哪句话最适合点一杯茶？",
+      "questionEn": "Which sentence orders a cup of tea?",
+      "options": [
+        {
+          "word": "请给我一杯茶。",
+          "pinyin": "Qǐng gěi wǒ yì bēi chá."
+        },
+        {
+          "word": "我看了一个电影。",
+          "pinyin": "Wǒ kànle yí gè diànyǐng."
+        },
+        {
+          "word": "飞机要几个小时？",
+          "pinyin": "Fēijī yào jǐ gè xiǎoshí?"
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": "pre_l13_01",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which word means can/may?",
+        "options": [
+          "可以",
+          "问题",
+          "先生",
+          "茶"
+        ],
+        "answer": "可以",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l13_02",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which word means breakfast?",
+        "options": [
+          "早饭",
+          "面包",
+          "鸡蛋",
+          "杯"
+        ],
+        "answer": "早饭",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l13_03",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which word means waiter/waitress?",
+        "options": [
+          "服务员",
+          "女士",
+          "先生",
+          "老师"
+        ],
+        "answer": "服务员",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l13_04",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which phrase means make a phone call?",
+        "options": [
+          "打电话",
+          "问问题",
+          "喝茶",
+          "坐下"
+        ],
+        "answer": "打电话",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l13_05",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which word is a measure word for tea?",
+        "options": [
+          "杯",
+          "个",
+          "斤",
+          "年"
+        ],
+        "answer": "杯",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l13_06",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which word means half?",
+        "options": [
+          "一半",
+          "一下",
+          "这个",
+          "再"
+        ],
+        "answer": "一半",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l13_07",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which sentence asks permission?",
+        "options": [
+          "我可以坐吗？",
+          "我喝茶。",
+          "这是面包。",
+          "他是先生。"
+        ],
+        "answer": "我可以坐吗？",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l13_08",
+        "type": "choice",
+        "module": "词汇语法预热",
+        "question": "Which sentence is polite ordering?",
+        "options": [
+          "请给我一杯茶。",
+          "他在写字。",
+          "我去了西安。",
+          "我们上火车。"
+        ],
+        "answer": "请给我一杯茶。",
+        "openEnded": false,
+        "sourceType": "textbook"
+      },
+      {
+        "id": "pre_l13_09",
+        "type": "subjective",
+        "module": "开放题",
+        "question": "教学扩展：请用“可以”写一句话。",
+        "openEnded": true,
+        "prompt": "例如：我可以坐吗？",
+        "answerPlaceholder": "我可以____吗？",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "pre_l13_10",
+        "type": "subjective",
+        "module": "开放题",
+        "question": "教学扩展：请写一句点餐句。",
+        "openEnded": true,
+        "prompt": "例如：请给我一杯茶。",
+        "answerPlaceholder": "请给我____。",
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "inClass": {
+    "questionGroups": {
+      "v1_image_guess": [
+        {
+          "id": "v1_l13_1",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l13/01_keyi.png",
+            "image_hint": "可以",
+            "options": [
+              "打电话",
+              "可以",
+              "卖",
+              "问题"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "可以",
+          "kp": "可以",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l13_2",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l13/02_zai.png",
+            "image_hint": "再",
+            "options": [
+              "打电话",
+              "卖",
+              "一下",
+              "再"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "再",
+          "kp": "再",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l13_3",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l13/03_wenti.png",
+            "image_hint": "问题",
+            "options": [
+              "打电话",
+              "服务员",
+              "问题",
+              "一下"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "问题",
+          "kp": "问题",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l13_4",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l13/04_mai.png",
+            "image_hint": "卖",
+            "options": [
+              "服务员",
+              "卖",
+              "女士",
+              "一下"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "卖",
+          "kp": "卖",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l13_5",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l13/05_dadianhua.png",
+            "image_hint": "打电话",
+            "options": [
+              "打电话",
+              "服务员",
+              "女士",
+              "请"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "打电话",
+          "kp": "打电话",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l13_6",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l13/06_yixia.png",
+            "image_hint": "一下",
+            "options": [
+              "女士",
+              "请",
+              "一下",
+              "坐"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "一下",
+          "kp": "一下",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l13_7",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l13/07_fuwuyuan.png",
+            "image_hint": "服务员",
+            "options": [
+              "服务员",
+              "给",
+              "请",
+              "坐"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "服务员",
+          "kp": "服务员",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l13_8",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l13/08_nvshi.png",
+            "image_hint": "女士",
+            "options": [
+              "杯",
+              "给",
+              "女士",
+              "坐"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "女士",
+          "kp": "女士",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l13_9",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l13/09_qing.png",
+            "image_hint": "请",
+            "options": [
+              "杯",
+              "给",
+              "请",
+              "要"
+            ],
+            "correct_index": 2
+          },
+          "correct_answer": "请",
+          "kp": "请",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v1_l13_10",
+          "type": "image_guess",
+          "stage": "in_class",
+          "prompt_cn": "图片猜词。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "image": "images/vocab/hsk1-l13/10_zuo.png",
+            "image_hint": "坐",
+            "options": [
+              "杯",
+              "要",
+              "早饭",
+              "坐"
+            ],
+            "correct_index": 3
+          },
+          "correct_answer": "坐",
+          "kp": "坐",
+          "sourceType": "textbook"
+        }
+      ],
+      "v5_vocab_fill": [
+        {
+          "id": "v5_l13_1",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "我___再问您一个问题吗？",
+            "sentence_pinyin": "Wǒ ___ zài wèn nín yí gè wèntí ma?",
+            "options": [
+              "可以",
+              "茶",
+              "先生",
+              "一半"
+            ],
+            "options_pinyin": [
+              "kěyǐ",
+              "chá",
+              "xiānsheng",
+              "yíbàn"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "可以",
+          "kp": "可以",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l13_2",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "你可以打电话___老师。",
+            "sentence_pinyin": "nǐ kěyǐ dǎ diànhuà lǎoshī",
+            "options": [
+              "问",
+              "坐",
+              "卖",
+              "给"
+            ],
+            "options_pinyin": [
+              "wèn",
+              "zuò",
+              "mài",
+              "gěi"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "问",
+          "kp": "一下",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l13_3",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "女士，请___！",
+            "sentence_pinyin": "Nǚshì, qǐng ___!",
+            "options": [
+              "坐",
+              "卖",
+              "问",
+              "给"
+            ],
+            "options_pinyin": [
+              "zuò",
+              "mài",
+              "wèn",
+              "gěi"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "坐",
+          "kp": "坐",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l13_4",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "请___我一杯牛奶。",
+            "sentence_pinyin": "Qǐng ___ wǒ yì bēi niúnǎi.",
+            "options": [
+              "给",
+              "再",
+              "卖",
+              "坐"
+            ],
+            "options_pinyin": [
+              "gěi",
+              "zài",
+              "mài",
+              "zuò"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "给",
+          "kp": "给",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l13_5",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "我还没吃___。",
+            "sentence_pinyin": "Wǒ hái méi chī ___.",
+            "options": [
+              "早饭",
+              "问题",
+              "先生",
+              "茶"
+            ],
+            "options_pinyin": [
+              "zǎofàn",
+              "wèntí",
+              "xiānsheng",
+              "chá"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "早饭",
+          "kp": "早饭",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l13_6",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "再要这个___和鸡蛋吧。",
+            "sentence_pinyin": "Zài yào zhège ___ hé jīdàn ba.",
+            "options": [
+              "面包",
+              "问题",
+              "服务员",
+              "杯"
+            ],
+            "options_pinyin": [
+              "miànbāo",
+              "wèntí",
+              "fúwùyuán",
+              "bēi"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "面包",
+          "kp": "面包",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "v5_l13_7",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "我要一斤___。",
+            "sentence_pinyin": "Wǒ yào yì jīn ___.",
+            "options": [
+              "饺子",
+              "茶",
+              "面包",
+              "问题"
+            ],
+            "options_pinyin": [
+              "jiǎozi",
+              "chá",
+              "miànbāo",
+              "wèntí"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "饺子",
+          "kp": "饺子",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l13_8",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "40个太多了，我要___吧。",
+            "sentence_pinyin": "Sìshí gè tài duō le, wǒ yào ___ ba.",
+            "options": [
+              "一半",
+              "一下",
+              "这个",
+              "再"
+            ],
+            "options_pinyin": [
+              "yíbàn",
+              "yíxià",
+              "zhège",
+              "zài"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "一半",
+          "kp": "一半",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l13_9",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "请给我一___茶吧。",
+            "sentence_pinyin": "qǐng gěi wǒ yī chá ba",
+            "options": [
+              "杯",
+              "斤",
+              "本",
+              "件"
+            ],
+            "options_pinyin": [
+              "bēi",
+              "jīn",
+              "běn",
+              "jiàn"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "杯",
+          "kp": "杯",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v5_l13_10",
+          "type": "vocab_fill",
+          "stage": "in_class",
+          "prompt_cn": "选词填空。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "sentence": "那个小店___不卖手机？",
+            "sentence_pinyin": "Nàge xiǎo diàn ___ bu mài shǒujī?",
+            "options": [
+              "卖",
+              "坐",
+              "给",
+              "喝"
+            ],
+            "options_pinyin": [
+              "mài",
+              "zuò",
+              "gěi",
+              "hē"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "卖",
+          "kp": "卖",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v7_word_match": [
+        {
+          "id": "v7_l13_1",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "我可以坐这儿吗？",
+                "left_pinyin": "wǒ kěyǐ zuò zhèr ma",
+                "right": "可以，请坐。",
+                "right_pinyin": "kěyǐ qǐng zuò"
+              },
+              {
+                "left": "你想喝什么？",
+                "left_pinyin": "nǐ xiǎng hē shénme",
+                "right": "我想喝茶。",
+                "right_pinyin": "wǒ xiǎng hē chá"
+              },
+              {
+                "left": "这个小店卖什么？",
+                "left_pinyin": "zhège xiǎodiàn mài shénme",
+                "right": "卖面包和鸡蛋。",
+                "right_pinyin": "mài miànbāo hé jīdàn"
+              },
+              {
+                "left": "您还要什么？",
+                "left_pinyin": "nín hái yào shénme",
+                "right": "再要一杯牛奶。",
+                "right_pinyin": "zài yào yī bēi niúnǎi"
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l13_2",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "请问，服务员在哪儿？",
+                "left_pinyin": "qǐng wèn fúwùyuán zài nǎr",
+                "right": "在那边。",
+                "right_pinyin": "zài nà"
+              },
+              {
+                "left": "先生，您要什么？",
+                "left_pinyin": "xiānsheng nín yào shénme",
+                "right": "我要半斤饺子。",
+                "right_pinyin": "wǒ yào bàn jīn jiǎozi"
+              },
+              {
+                "left": "这个杯子多少钱？",
+                "left_pinyin": "zhège bēi duōshao qián",
+                "right": "十块钱一个。",
+                "right_pinyin": "shí kuài qián yí gè"
+              },
+              {
+                "left": "你早饭吃什么？",
+                "left_pinyin": "nǐ zǎofàn chī shénme",
+                "right": "吃面包和鸡蛋。",
+                "right_pinyin": "chī miànbāo hé jīdàn"
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l13_3",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "你可以帮我一下吗？",
+                "left_pinyin": "nǐ kěyǐ wǒ yíxià ma",
+                "right": "可以，没问题。",
+                "right_pinyin": "kěyǐ méi wèntí"
+              },
+              {
+                "left": "我问谁？",
+                "left_pinyin": "wǒ wèn shéi",
+                "right": "问老师吧。",
+                "right_pinyin": "wèn lǎoshī ba"
+              },
+              {
+                "left": "你要一半吗？",
+                "left_pinyin": "nǐ yào yíbàn ma",
+                "right": "不要，我要一个。",
+                "right_pinyin": "búyào wǒ yào yí gè"
+              },
+              {
+                "left": "茶热不热？",
+                "left_pinyin": "chá rè bù rè",
+                "right": "不太热。",
+                "right_pinyin": "bú tài rè"
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l13_4",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "谁在打电话？",
+                "left_pinyin": "shéi zài dǎ diànhuà",
+                "right": "王老师在打电话。",
+                "right_pinyin": "lǎoshī zài dǎ diànhuà"
+              },
+              {
+                "left": "女士坐哪儿？",
+                "left_pinyin": "nǚshì zuò nǎr",
+                "right": "坐这儿。",
+                "right_pinyin": "zuò zhèr"
+              },
+              {
+                "left": "你买不买手机？",
+                "left_pinyin": "nǐ mǎi bù mǎi shǒujī",
+                "right": "不买手机。",
+                "right_pinyin": "bù mǎi shǒujī"
+              },
+              {
+                "left": "面包在哪儿？",
+                "left_pinyin": "miànbāo zài nǎr",
+                "right": "在这边。",
+                "right_pinyin": "zài zhèbiān"
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v7_l13_5",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "词句匹配。",
+          "prompt_en": "Match each question with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "他要几杯茶？",
+                "left_pinyin": "tā yào jǐ bēi chá",
+                "right": "要两杯茶。",
+                "right_pinyin": "yào liǎng bēi chá"
+              },
+              {
+                "left": "鸡蛋好吃吗？",
+                "left_pinyin": "jīdàn chī ma",
+                "right": "很好吃。",
+                "right_pinyin": "hěn chī"
+              },
+              {
+                "left": "你再问一个问题吗？",
+                "left_pinyin": "nǐ zài wèn yí gè wèntí ma",
+                "right": "不问了。",
+                "right_pinyin": "bù wèn le"
+              },
+              {
+                "left": "服务员忙不忙？",
+                "left_pinyin": "fúwùyuán máng bù máng",
+                "right": "有点儿忙。",
+                "right_pinyin": "yǒudiǎnr máng"
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v8_memory_match": [
+        {
+          "id": "v8_l13_1",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each item with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "可以",
+                "left_pinyin": "kěyǐ",
+                "right": "can; may",
+                "right_pinyin": ""
+              },
+              {
+                "left": "问题",
+                "left_pinyin": "wèntí",
+                "right": "question",
+                "right_pinyin": ""
+              },
+              {
+                "left": "卖",
+                "left_pinyin": "mài",
+                "right": "sell",
+                "right_pinyin": ""
+              },
+              {
+                "left": "打电话",
+                "left_pinyin": "dǎ diànhuà",
+                "right": "make a phone call",
+                "right_pinyin": ""
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l13_2",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each item with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "服务员",
+                "left_pinyin": "fúwùyuán",
+                "right": "waiter; waitress",
+                "right_pinyin": ""
+              },
+              {
+                "left": "女士",
+                "left_pinyin": "nǚshì",
+                "right": "madam",
+                "right_pinyin": ""
+              },
+              {
+                "left": "先生",
+                "left_pinyin": "xiānsheng",
+                "right": "sir",
+                "right_pinyin": ""
+              },
+              {
+                "left": "请",
+                "left_pinyin": "qǐng",
+                "right": "please",
+                "right_pinyin": ""
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l13_3",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each item with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "坐",
+                "left_pinyin": "zuò",
+                "right": "sit",
+                "right_pinyin": ""
+              },
+              {
+                "left": "给",
+                "left_pinyin": "gěi",
+                "right": "give",
+                "right_pinyin": ""
+              },
+              {
+                "left": "杯",
+                "left_pinyin": "bēi",
+                "right": "cup measure",
+                "right_pinyin": ""
+              },
+              {
+                "left": "要",
+                "left_pinyin": "yào",
+                "right": "want",
+                "right_pinyin": ""
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l13_4",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each item with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "早饭",
+                "left_pinyin": "zǎofàn",
+                "right": "breakfast",
+                "right_pinyin": ""
+              },
+              {
+                "left": "面包",
+                "left_pinyin": "miànbāo",
+                "right": "bread",
+                "right_pinyin": ""
+              },
+              {
+                "left": "鸡蛋",
+                "left_pinyin": "jīdàn",
+                "right": "egg",
+                "right_pinyin": ""
+              },
+              {
+                "left": "茶",
+                "left_pinyin": "chá",
+                "right": "tea",
+                "right_pinyin": ""
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v8_l13_5",
+          "type": "memory_match",
+          "stage": "in_class",
+          "prompt_cn": "词了个词。",
+          "prompt_en": "Match each item with the best answer.",
+          "data": {
+            "pairs": [
+              {
+                "left": "一下",
+                "left_pinyin": "yíxià",
+                "right": "one time",
+                "right_pinyin": ""
+              },
+              {
+                "left": "一半",
+                "left_pinyin": "yíbàn",
+                "right": "half",
+                "right_pinyin": ""
+              },
+              {
+                "left": "这个",
+                "left_pinyin": "zhège",
+                "right": "this",
+                "right_pinyin": ""
+              },
+              {
+                "left": "再",
+                "left_pinyin": "zài",
+                "right": "again",
+                "right_pinyin": ""
+              }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "correct_answer": "全部配对正确",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "v4_complete_sentence": [
+        {
+          "id": "v4_l13_1",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问题。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "可以，请坐。",
+            "source_pinyin": "kěyǐ qǐng zuò",
+            "options": [
+              "我可以坐吗？",
+              "您喝什么？",
+              "您要几杯？",
+              "这是什么？"
+            ],
+            "options_pinyin": [
+              "wǒ kěyǐ zuò ma",
+              "nín hē shénme",
+              "nín yào jǐ bēi",
+              "zhè shì shénme"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我可以坐吗？",
+          "kp": "句子转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l13_2",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问题。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "我要一杯茶。",
+            "source_pinyin": "wǒ yào yī bēi chá",
+            "options": [
+              "你想喝什么？",
+              "你去哪儿？",
+              "你会写吗？",
+              "你姓什么？"
+            ],
+            "options_pinyin": [
+              "nǐ xiǎng hē shénme",
+              "nǐ qù nǎr",
+              "nǐ huì xiě ma",
+              "nǐ shénme"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你想喝什么？",
+          "kp": "句子转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l13_3",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问题。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "卖面包和鸡蛋。",
+            "source_pinyin": "mài miànbāo hé jīdàn",
+            "options": [
+              "这个小店卖什么？",
+              "你早饭吃什么？",
+              "你买几个？",
+              "谁在打电话？"
+            ],
+            "options_pinyin": [
+              "zhège xiǎodiàn mài shénme",
+              "nǐ zǎofàn chī shénme",
+              "nǐ mǎi jǐ gè",
+              "shéi zài dǎ diànhuà"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这个小店卖什么？",
+          "kp": "句子转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l13_4",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问题。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "不买手机。",
+            "source_pinyin": "bù mǎi shǒujī",
+            "options": [
+              "你买不买手机？",
+              "你问不问老师？",
+              "你坐不坐？",
+              "你喝不喝茶？"
+            ],
+            "options_pinyin": [
+              "nǐ mǎi bù mǎi shǒujī",
+              "nǐ wèn bù wèn lǎoshī",
+              "nǐ zuò bù zuò",
+              "nǐ hē bù hē chá"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你买不买手机？",
+          "kp": "句子转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l13_5",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问题。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "问老师吧。",
+            "source_pinyin": "wèn lǎoshī ba",
+            "options": [
+              "我问谁？",
+              "我吃什么？",
+              "我去哪儿？",
+              "我买什么？"
+            ],
+            "options_pinyin": [
+              "wǒ wèn shéi",
+              "wǒ chī shénme",
+              "wǒ qù nǎr",
+              "wǒ mǎi shénme"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我问谁？",
+          "kp": "句子转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l13_6",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问题。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "要半斤饺子。",
+            "source_pinyin": "yào bàn jīn jiǎozi",
+            "options": [
+              "您要多少饺子？",
+              "您喝什么？",
+              "您在哪儿？",
+              "您叫什么？"
+            ],
+            "options_pinyin": [
+              "nín yào duōshao jiǎozi",
+              "nín hē shénme",
+              "nín zài nǎr",
+              "nín jiào shénme"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "您要多少饺子？",
+          "kp": "句子转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l13_7",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问题。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "在这边。",
+            "source_pinyin": "zài zhèbiān",
+            "options": [
+              "面包在哪儿？",
+              "谁是服务员？",
+              "他做什么？",
+              "这个贵不贵？"
+            ],
+            "options_pinyin": [
+              "miànbāo zài nǎr",
+              "shéi shì fúwùyuán",
+              "tā zuò shénme",
+              "zhège guì bù guì"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "面包在哪儿？",
+          "kp": "句子转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l13_8",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问题。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "十块钱一个。",
+            "source_pinyin": "shí kuài qián yí gè",
+            "options": [
+              "这个杯子多少钱？",
+              "这是谁？",
+              "你有几个？",
+              "你要什么？"
+            ],
+            "options_pinyin": [
+              "zhège bēi duōshao qián",
+              "zhè shì shéi",
+              "nǐ yǒu jǐ gè",
+              "nǐ yào shénme"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这个杯子多少钱？",
+          "kp": "句子转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l13_9",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问题。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "很好吃。",
+            "source_pinyin": "hěn chī",
+            "options": [
+              "鸡蛋好吃吗？",
+              "你吃了吗？",
+              "你买了吗？",
+              "现在几点？"
+            ],
+            "options_pinyin": [
+              "jīdàn chī ma",
+              "nǐ chī le ma",
+              "nǐ mǎi le ma",
+              "zài jǐ"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "鸡蛋好吃吗？",
+          "kp": "句子转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "v4_l13_10",
+          "type": "sentence_transform",
+          "stage": "in_class",
+          "prompt_cn": "选择正确的问题。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "source_sentence": "不要，我要一个。",
+            "source_pinyin": "búyào wǒ yào yí gè",
+            "options": [
+              "你要一半吗？",
+              "你想喝茶吗？",
+              "你可以坐吗？",
+              "你问问题吗？"
+            ],
+            "options_pinyin": [
+              "nǐ yào yíbàn ma",
+              "nǐ xiǎng hē chá ma",
+              "nǐ kěyǐ zuò ma",
+              "nǐ wèn wèntí ma"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你要一半吗？",
+          "kp": "句子转换：给答句选问句",
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "g1_ordering": [
+        {
+          "id": "g1_l13_1",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "请",
+              "给我",
+              "一杯",
+              "茶"
+            ],
+            "chunks_pinyin": [
+              "qǐng",
+              "gěi wǒ",
+              "yì bēi",
+              "chá"
+            ]
+          },
+          "correct_answer": "请给我一杯茶",
+          "acceptable_answers": [
+            "请给我一杯茶",
+            "请给我一杯茶。",
+            "请给我一杯茶？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l13_2",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "我",
+              "可以",
+              "再问您",
+              "一个问题",
+              "吗"
+            ],
+            "chunks_pinyin": [
+              "wǒ",
+              "kěyǐ",
+              "zài wèn nín",
+              "yí gè wèntí",
+              "ma"
+            ]
+          },
+          "correct_answer": "我可以再问您一个问题吗",
+          "acceptable_answers": [
+            "我可以再问您一个问题吗",
+            "我可以再问您一个问题吗。",
+            "我可以再问您一个问题吗？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l13_3",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "你",
+              "可以",
+              "打电话",
+              "问一下"
+            ],
+            "chunks_pinyin": [
+              "nǐ",
+              "kěyǐ",
+              "dǎ diànhuà",
+              "wèn yíxià"
+            ]
+          },
+          "correct_answer": "你可以打电话问一下",
+          "acceptable_answers": [
+            "你可以打电话问一下",
+            "你可以打电话问一下。",
+            "你可以打电话问一下？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l13_4",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "我",
+              "还没",
+              "吃",
+              "早饭"
+            ],
+            "chunks_pinyin": [
+              "wǒ",
+              "hái méi",
+              "chī",
+              "zǎofàn"
+            ]
+          },
+          "correct_answer": "我还没吃早饭",
+          "acceptable_answers": [
+            "我还没吃早饭",
+            "我还没吃早饭。",
+            "我还没吃早饭？"
+          ],
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "g1_l13_5",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "data": {
+            "chunks": [
+              "我",
+              "要",
+              "一斤",
+              "饺子"
+            ],
+            "chunks_pinyin": [
+              "wǒ",
+              "yào",
+              "yì jīn",
+              "jiǎozi"
+            ]
+          },
+          "correct_answer": "我要一斤饺子",
+          "acceptable_answers": [
+            "我要一斤饺子",
+            "我要一斤饺子。",
+            "我要一斤饺子？"
+          ],
+          "sourceType": "teaching_extension"
+        }
+      ],
+      "r3_translation_choice": [
+        {
+          "id": "trc_l13_1",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "May I ask one more question?",
+            "question_ru": "Можно задать ещё один вопрос?",
+            "options": [
+              "我可以再问您一个问题吗？",
+              "请给我一杯茶。",
+              "我要一斤饺子。",
+              "女士，请坐！"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我可以再问您一个问题吗？",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l13_2",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "You can call to ask.",
+            "question_ru": "Ты можешь позвонить и спросить.",
+            "options": [
+              "你可以打电话问一下。",
+              "我看一下。",
+              "请坐一下。",
+              "我吃早饭。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "你可以打电话问一下。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l13_3",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "Please give me a cup of tea.",
+            "question_ru": "Дайте мне чашку чая, пожалуйста.",
+            "options": [
+              "请给我一杯茶。",
+              "请给我一个问题。",
+              "请给我一斤苹果。",
+              "请给我一件衣服。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "请给我一杯茶。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l13_4",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "I have not eaten breakfast yet.",
+            "question_ru": "Я ещё не завтракал.",
+            "options": [
+              "我还没吃早饭。",
+              "我还没喝茶。",
+              "我还没买手机。",
+              "我还没上火车。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我还没吃早饭。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l13_5",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "I want half.",
+            "question_ru": "Я хочу половину.",
+            "options": [
+              "我要一半。",
+              "我要一下。",
+              "我要这个。",
+              "我要早饭。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我要一半。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l13_6",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "Madam, please sit.",
+            "question_ru": "Госпожа, садитесь, пожалуйста.",
+            "options": [
+              "女士，请坐！",
+              "先生，请问！",
+              "服务员，请喝茶！",
+              "老师，请给我！"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "女士，请坐！",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l13_7",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "What would you like to drink?",
+            "question_ru": "Что вы хотите пить?",
+            "options": [
+              "您喝什么？",
+              "您吃什么？",
+              "您卖什么？",
+              "您问什么？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "您喝什么？",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l13_8",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "Does that small shop sell cell phones?",
+            "question_ru": "В том маленьком магазине продают телефоны?",
+            "options": [
+              "那个小店卖不卖手机？",
+              "那个小店有没有茶？",
+              "那个小店大不大？",
+              "那个小店在哪儿？"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "那个小店卖不卖手机？",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l13_9",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "A jin of dumplings is forty pieces.",
+            "question_ru": "Цзинь пельменей - сорок штук.",
+            "options": [
+              "一斤饺子40个。",
+              "半斤饺子40个。",
+              "一斤茶40杯。",
+              "一个鸡蛋40元。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "一斤饺子40个。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "trc_l13_10",
+          "type": "translation_choice",
+          "stage": "in_class",
+          "prompt_cn": "根据英文和俄文选择中文句子。",
+          "prompt_en": "Choose the best answer.",
+          "data": {
+            "question_en": "Please give me a glass of milk.",
+            "question_ru": "Дайте мне стакан молока, пожалуйста.",
+            "options": [
+              "请给我一杯牛奶。",
+              "请给我一个鸡蛋。",
+              "请给我一半饺子。",
+              "请给我一杯茶。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "请给我一杯牛奶。",
+          "kp": "译文选句",
+          "sourceType": "textbook"
+        }
+      ],
+      "r2_passage_choice": [
+        {
+          "id": "ttq_l13_1",
+          "type": "text_qa_group",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：根据课文内容回答。",
+          "prompt_en": "Text Q&A: answer from the dialogue.",
+          "data": {
+            "title": "课文一：问问题",
+            "passage": "王老师，我可以再问您一个问题吗？可以。你有什么问题？那个小店卖不卖手机？我不知道。你可以打电话问一下。",
+            "passage_pinyin": "Wáng lǎoshī, wǒ kěyǐ zài wèn nín yí gè wèntí ma? Kěyǐ. Nǐ yǒu shénme wèntí? Nàge xiǎo diàn mài bu mài shǒujī? Wǒ bù zhīdào. Nǐ kěyǐ dǎ diànhuà wèn yíxià.",
+            "questions": [
+              {
+                "question_cn": "白家月想问几个问题？",
+                "question_pinyin": "Bái Jiāyuè xiǎng wèn jǐ gè wèntí?",
+                "answer": "一个问题",
+                "answer_pinyin": "yí gè wèntí",
+                "options": [
+                  "一个问题",
+                  "两个问题",
+                  "三个问题",
+                  "不知道"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "小店卖不卖手机？",
+                "question_pinyin": "Xiǎo diàn mài bu mài shǒujī?",
+                "answer": "不知道",
+                "answer_pinyin": "bù zhīdào",
+                "options": [
+                  "不知道",
+                  "卖",
+                  "不卖",
+                  "没有小店"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "王老师让她做什么？",
+                "question_pinyin": "Wáng lǎoshī ràng tā zuò shénme?",
+                "answer": "打电话问一下",
+                "answer_pinyin": "dǎ diànhuà wèn yíxià",
+                "options": [
+                  "打电话问一下",
+                  "去小店",
+                  "买手机",
+                  "坐一下"
+                ],
+                "correct_index": 0
+              }
+            ]
+          },
+          "correct_answer": "见每题答案",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "ttq_l13_2",
+          "type": "text_qa_group",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：根据课文内容回答。",
+          "prompt_en": "Text Q&A: answer from the dialogue.",
+          "data": {
+            "title": "课文二：吃早饭",
+            "passage": "女士，请坐！您喝什么？我看一下。请给我一杯牛奶。好的。您还要什么？我还没吃早饭，再要这个面包和鸡蛋吧。",
+            "passage_pinyin": "Nǚshì, qǐng zuò! Nín hē shénme? Wǒ kàn yíxià. Qǐng gěi wǒ yì bēi niúnǎi. Hǎo de. Nín hái yào shénme? Wǒ hái méi chī zǎofàn, zài yào zhège miànbāo hé jīdàn ba.",
+            "questions": [
+              {
+                "question_cn": "王一雪喝什么？",
+                "question_pinyin": "Wáng Yīxuě hē shénme?",
+                "answer": "牛奶",
+                "answer_pinyin": "niúnǎi",
+                "options": [
+                  "牛奶",
+                  "茶",
+                  "水",
+                  "咖啡"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "她吃早饭了吗？",
+                "question_pinyin": "Tā chī zǎofàn le ma?",
+                "answer": "还没吃",
+                "answer_pinyin": "hái méi chī",
+                "options": [
+                  "还没吃",
+                  "吃了",
+                  "不吃",
+                  "不知道"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "她还要什么？",
+                "question_pinyin": "Tā hái yào shénme?",
+                "answer": "面包和鸡蛋",
+                "answer_pinyin": "miànbāo hé jīdàn",
+                "options": [
+                  "面包和鸡蛋",
+                  "一斤饺子",
+                  "一杯茶",
+                  "手机"
+                ],
+                "correct_index": 0
+              }
+            ]
+          },
+          "correct_answer": "见每题答案",
+          "sourceType": "textbook"
+        },
+        {
+          "id": "ttq_l13_3",
+          "type": "text_qa_group",
+          "stage": "in_class",
+          "prompt_cn": "课文问答：根据课文内容回答。",
+          "prompt_en": "Text Q&A: answer from the dialogue.",
+          "data": {
+            "title": "课文三：一杯茶",
+            "passage": "先生，请坐！您要什么？我要一斤饺子。好的。一斤饺子40个。40个太多了，我要一半吧。半斤20个。您想喝什么？请给我一杯茶吧。",
+            "passage_pinyin": "Xiānsheng, qǐng zuò! Nín yào shénme? Wǒ yào yì jīn jiǎozi. Hǎo de. Yì jīn jiǎozi sìshí gè. Sìshí gè tài duō le, wǒ yào yíbàn ba. Bàn jīn èrshí gè. Nín xiǎng hē shénme? Qǐng gěi wǒ yì bēi chá ba.",
+            "questions": [
+              {
+                "question_cn": "刘明要多少饺子？",
+                "question_pinyin": "Liú Míng yào duōshao jiǎozi?",
+                "answer": "一半",
+                "answer_pinyin": "yíbàn",
+                "options": [
+                  "一半",
+                  "一斤",
+                  "40个",
+                  "一杯"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "半斤饺子几个？",
+                "question_pinyin": "Bàn jīn jiǎozi jǐ gè?",
+                "answer": "20个",
+                "answer_pinyin": "èrshí gè",
+                "options": [
+                  "20个",
+                  "40个",
+                  "10个",
+                  "一斤"
+                ],
+                "correct_index": 0
+              },
+              {
+                "question_cn": "刘明想喝什么？",
+                "question_pinyin": "Liú Míng xiǎng hē shénme?",
+                "answer": "茶",
+                "answer_pinyin": "chá",
+                "options": [
+                  "茶",
+                  "牛奶",
+                  "水",
+                  "咖啡"
+                ],
+                "correct_index": 0
+              }
+            ]
+          },
+          "correct_answer": "见每题答案",
+          "sourceType": "textbook"
+        }
+      ],
+      "r4_picture_talk": [
+        {
+          "id": "r4_lundefined_pt_01",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "你看到了什么？",
+          "prompt_en": "Look at the picture and answer in Chinese.",
+          "data": {
+            "question": "你看到了什么？",
+            "question_pinyin": "Nǐ kàn dào le shénme?",
+            "instructions": "请用学过的词，说一句或两句中文。",
+            "image": "images/vocab/hsk1-l13/05_dadianhua.png",
+            "sampleAnswer": "我看到一个人在打电话。",
+            "sampleAnswerPinyin": "Wǒ kàn dào yí ge rén zài dǎ diànhuà.",
+            "patternType": "观察"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：观察",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_lundefined_pt_02",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "她是谁？",
+          "prompt_en": "Look at the picture and answer in Chinese.",
+          "data": {
+            "question": "她是谁？",
+            "question_pinyin": "Tā shì shéi?",
+            "instructions": "请用学过的词，说一句或两句中文。",
+            "image": "images/vocab/hsk1-l13/07_fuwuyuan.png",
+            "sampleAnswer": "她是服务员。",
+            "sampleAnswerPinyin": "Tā shì fúwùyuán.",
+            "patternType": "人物"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：人物",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_lundefined_pt_03",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "她在做什么？",
+          "prompt_en": "Look at the picture and answer in Chinese.",
+          "data": {
+            "question": "她在做什么？",
+            "question_pinyin": "Tā zài zuò shénme?",
+            "instructions": "请用学过的词，说一句或两句中文。",
+            "image": "images/vocab/hsk1-l13/10_zuo.png",
+            "sampleAnswer": "她在坐着。",
+            "sampleAnswerPinyin": "Tā zài zuò zhe.",
+            "patternType": "动作"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：动作",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_lundefined_pt_04",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "桌子上有什么？",
+          "prompt_en": "Look at the picture and answer in Chinese.",
+          "data": {
+            "question": "桌子上有什么？",
+            "question_pinyin": "Zhuōzi shàng yǒu shénme?",
+            "instructions": "请用学过的词，说一句或两句中文。",
+            "image": "images/vocab/hsk1-l13/20_cha.png",
+            "sampleAnswer": "桌子上有一杯茶。",
+            "sampleAnswerPinyin": "Zhuōzi shàng yǒu yì bēi chá.",
+            "patternType": "物品"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：物品",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_lundefined_pt_05",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "早饭有什么？",
+          "prompt_en": "Look at the picture and answer in Chinese.",
+          "data": {
+            "question": "早饭有什么？",
+            "question_pinyin": "Zǎofàn yǒu shénme?",
+            "instructions": "请用学过的词，说一句或两句中文。",
+            "image": "images/vocab/hsk1-l13/14_zaofan.png",
+            "sampleAnswer": "早饭有面包和鸡蛋。",
+            "sampleAnswerPinyin": "Zǎofàn yǒu miànbāo hé jīdàn.",
+            "patternType": "食物"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：食物",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "id": "r4_lundefined_pt_06",
+          "type": "oral",
+          "stage": "in_class",
+          "prompt_cn": "你想要哪个？",
+          "prompt_en": "Look at the picture and answer in Chinese.",
+          "data": {
+            "question": "你想要哪个？",
+            "question_pinyin": "Nǐ xiǎng yào nǎge?",
+            "instructions": "请用学过的词，说一句或两句中文。",
+            "image": "images/vocab/hsk1-l13/15_zhege.png",
+            "sampleAnswer": "我想要这个。",
+            "sampleAnswerPinyin": "Wǒ xiǎng yào zhège.",
+            "patternType": "选择"
+          },
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "cloudWall": true,
+          "weakPoints": "输出：选择",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    }
+  },
+  "classProQuestions": {
+    "pictureGuess": [
+      {
+        "id": "v1_l13_1",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l13/01_keyi.png",
+          "image_hint": "可以",
+          "options": [
+            "打电话",
+            "可以",
+            "卖",
+            "问题"
+          ],
+          "correct_index": 1
+        },
+        "correct_answer": "可以",
+        "kp": "可以",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l13_2",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l13/02_zai.png",
+          "image_hint": "再",
+          "options": [
+            "打电话",
+            "卖",
+            "一下",
+            "再"
+          ],
+          "correct_index": 3
+        },
+        "correct_answer": "再",
+        "kp": "再",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l13_3",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l13/03_wenti.png",
+          "image_hint": "问题",
+          "options": [
+            "打电话",
+            "服务员",
+            "问题",
+            "一下"
+          ],
+          "correct_index": 2
+        },
+        "correct_answer": "问题",
+        "kp": "问题",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l13_4",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l13/04_mai.png",
+          "image_hint": "卖",
+          "options": [
+            "服务员",
+            "卖",
+            "女士",
+            "一下"
+          ],
+          "correct_index": 1
+        },
+        "correct_answer": "卖",
+        "kp": "卖",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l13_5",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l13/05_dadianhua.png",
+          "image_hint": "打电话",
+          "options": [
+            "打电话",
+            "服务员",
+            "女士",
+            "请"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "打电话",
+        "kp": "打电话",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l13_6",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l13/06_yixia.png",
+          "image_hint": "一下",
+          "options": [
+            "女士",
+            "请",
+            "一下",
+            "坐"
+          ],
+          "correct_index": 2
+        },
+        "correct_answer": "一下",
+        "kp": "一下",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l13_7",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l13/07_fuwuyuan.png",
+          "image_hint": "服务员",
+          "options": [
+            "服务员",
+            "给",
+            "请",
+            "坐"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "服务员",
+        "kp": "服务员",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l13_8",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l13/08_nvshi.png",
+          "image_hint": "女士",
+          "options": [
+            "杯",
+            "给",
+            "女士",
+            "坐"
+          ],
+          "correct_index": 2
+        },
+        "correct_answer": "女士",
+        "kp": "女士",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l13_9",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l13/09_qing.png",
+          "image_hint": "请",
+          "options": [
+            "杯",
+            "给",
+            "请",
+            "要"
+          ],
+          "correct_index": 2
+        },
+        "correct_answer": "请",
+        "kp": "请",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v1_l13_10",
+        "type": "image_guess",
+        "stage": "in_class",
+        "prompt_cn": "图片猜词。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "image": "images/vocab/hsk1-l13/10_zuo.png",
+          "image_hint": "坐",
+          "options": [
+            "杯",
+            "要",
+            "早饭",
+            "坐"
+          ],
+          "correct_index": 3
+        },
+        "correct_answer": "坐",
+        "kp": "坐",
+        "sourceType": "textbook"
+      }
+    ],
+    "vocabFill": [
+      {
+        "id": "v5_l13_1",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "我___再问您一个问题吗？",
+          "sentence_pinyin": "Wǒ ___ zài wèn nín yí gè wèntí ma?",
+          "options": [
+            "可以",
+            "茶",
+            "先生",
+            "一半"
+          ],
+          "options_pinyin": [
+            "kěyǐ",
+            "chá",
+            "xiānsheng",
+            "yíbàn"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "可以",
+        "kp": "可以",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l13_2",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "你可以打电话___老师。",
+          "sentence_pinyin": "nǐ kěyǐ dǎ diànhuà lǎoshī",
+          "options": [
+            "问",
+            "坐",
+            "卖",
+            "给"
+          ],
+          "options_pinyin": [
+            "wèn",
+            "zuò",
+            "mài",
+            "gěi"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "问",
+        "kp": "一下",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l13_3",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "女士，请___！",
+          "sentence_pinyin": "Nǚshì, qǐng ___!",
+          "options": [
+            "坐",
+            "卖",
+            "问",
+            "给"
+          ],
+          "options_pinyin": [
+            "zuò",
+            "mài",
+            "wèn",
+            "gěi"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "坐",
+        "kp": "坐",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l13_4",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "请___我一杯牛奶。",
+          "sentence_pinyin": "Qǐng ___ wǒ yì bēi niúnǎi.",
+          "options": [
+            "给",
+            "再",
+            "卖",
+            "坐"
+          ],
+          "options_pinyin": [
+            "gěi",
+            "zài",
+            "mài",
+            "zuò"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "给",
+        "kp": "给",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l13_5",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "我还没吃___。",
+          "sentence_pinyin": "Wǒ hái méi chī ___.",
+          "options": [
+            "早饭",
+            "问题",
+            "先生",
+            "茶"
+          ],
+          "options_pinyin": [
+            "zǎofàn",
+            "wèntí",
+            "xiānsheng",
+            "chá"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "早饭",
+        "kp": "早饭",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l13_6",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "再要这个___和鸡蛋吧。",
+          "sentence_pinyin": "Zài yào zhège ___ hé jīdàn ba.",
+          "options": [
+            "面包",
+            "问题",
+            "服务员",
+            "杯"
+          ],
+          "options_pinyin": [
+            "miànbāo",
+            "wèntí",
+            "fúwùyuán",
+            "bēi"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "面包",
+        "kp": "面包",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "v5_l13_7",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "我要一斤___。",
+          "sentence_pinyin": "Wǒ yào yì jīn ___.",
+          "options": [
+            "饺子",
+            "茶",
+            "面包",
+            "问题"
+          ],
+          "options_pinyin": [
+            "jiǎozi",
+            "chá",
+            "miànbāo",
+            "wèntí"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "饺子",
+        "kp": "饺子",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l13_8",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "40个太多了，我要___吧。",
+          "sentence_pinyin": "Sìshí gè tài duō le, wǒ yào ___ ba.",
+          "options": [
+            "一半",
+            "一下",
+            "这个",
+            "再"
+          ],
+          "options_pinyin": [
+            "yíbàn",
+            "yíxià",
+            "zhège",
+            "zài"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "一半",
+        "kp": "一半",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l13_9",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "请给我一___茶吧。",
+          "sentence_pinyin": "qǐng gěi wǒ yī chá ba",
+          "options": [
+            "杯",
+            "斤",
+            "本",
+            "件"
+          ],
+          "options_pinyin": [
+            "bēi",
+            "jīn",
+            "běn",
+            "jiàn"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "杯",
+        "kp": "杯",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v5_l13_10",
+        "type": "vocab_fill",
+        "stage": "in_class",
+        "prompt_cn": "选词填空。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "sentence": "那个小店___不卖手机？",
+          "sentence_pinyin": "Nàge xiǎo diàn ___ bu mài shǒujī?",
+          "options": [
+            "卖",
+            "坐",
+            "给",
+            "喝"
+          ],
+          "options_pinyin": [
+            "mài",
+            "zuò",
+            "gěi",
+            "hē"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "卖",
+        "kp": "卖",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "wordMatch": [
+      {
+        "id": "v7_l13_1",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "我可以坐这儿吗？",
+              "left_pinyin": "wǒ kěyǐ zuò zhèr ma",
+              "right": "可以，请坐。",
+              "right_pinyin": "kěyǐ qǐng zuò"
+            },
+            {
+              "left": "你想喝什么？",
+              "left_pinyin": "nǐ xiǎng hē shénme",
+              "right": "我想喝茶。",
+              "right_pinyin": "wǒ xiǎng hē chá"
+            },
+            {
+              "left": "这个小店卖什么？",
+              "left_pinyin": "zhège xiǎodiàn mài shénme",
+              "right": "卖面包和鸡蛋。",
+              "right_pinyin": "mài miànbāo hé jīdàn"
+            },
+            {
+              "left": "您还要什么？",
+              "left_pinyin": "nín hái yào shénme",
+              "right": "再要一杯牛奶。",
+              "right_pinyin": "zài yào yī bēi niúnǎi"
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l13_2",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "请问，服务员在哪儿？",
+              "left_pinyin": "qǐng wèn fúwùyuán zài nǎr",
+              "right": "在那边。",
+              "right_pinyin": "zài nà"
+            },
+            {
+              "left": "先生，您要什么？",
+              "left_pinyin": "xiānsheng nín yào shénme",
+              "right": "我要半斤饺子。",
+              "right_pinyin": "wǒ yào bàn jīn jiǎozi"
+            },
+            {
+              "left": "这个杯子多少钱？",
+              "left_pinyin": "zhège bēi duōshao qián",
+              "right": "十块钱一个。",
+              "right_pinyin": "shí kuài qián yí gè"
+            },
+            {
+              "left": "你早饭吃什么？",
+              "left_pinyin": "nǐ zǎofàn chī shénme",
+              "right": "吃面包和鸡蛋。",
+              "right_pinyin": "chī miànbāo hé jīdàn"
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l13_3",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "你可以帮我一下吗？",
+              "left_pinyin": "nǐ kěyǐ wǒ yíxià ma",
+              "right": "可以，没问题。",
+              "right_pinyin": "kěyǐ méi wèntí"
+            },
+            {
+              "left": "我问谁？",
+              "left_pinyin": "wǒ wèn shéi",
+              "right": "问老师吧。",
+              "right_pinyin": "wèn lǎoshī ba"
+            },
+            {
+              "left": "你要一半吗？",
+              "left_pinyin": "nǐ yào yíbàn ma",
+              "right": "不要，我要一个。",
+              "right_pinyin": "búyào wǒ yào yí gè"
+            },
+            {
+              "left": "茶热不热？",
+              "left_pinyin": "chá rè bù rè",
+              "right": "不太热。",
+              "right_pinyin": "bú tài rè"
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l13_4",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "谁在打电话？",
+              "left_pinyin": "shéi zài dǎ diànhuà",
+              "right": "王老师在打电话。",
+              "right_pinyin": "lǎoshī zài dǎ diànhuà"
+            },
+            {
+              "left": "女士坐哪儿？",
+              "left_pinyin": "nǚshì zuò nǎr",
+              "right": "坐这儿。",
+              "right_pinyin": "zuò zhèr"
+            },
+            {
+              "left": "你买不买手机？",
+              "left_pinyin": "nǐ mǎi bù mǎi shǒujī",
+              "right": "不买手机。",
+              "right_pinyin": "bù mǎi shǒujī"
+            },
+            {
+              "left": "面包在哪儿？",
+              "left_pinyin": "miànbāo zài nǎr",
+              "right": "在这边。",
+              "right_pinyin": "zài zhèbiān"
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v7_l13_5",
+        "type": "word_match",
+        "stage": "in_class",
+        "prompt_cn": "词句匹配。",
+        "prompt_en": "Match each question with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "他要几杯茶？",
+              "left_pinyin": "tā yào jǐ bēi chá",
+              "right": "要两杯茶。",
+              "right_pinyin": "yào liǎng bēi chá"
+            },
+            {
+              "left": "鸡蛋好吃吗？",
+              "left_pinyin": "jīdàn chī ma",
+              "right": "很好吃。",
+              "right_pinyin": "hěn chī"
+            },
+            {
+              "left": "你再问一个问题吗？",
+              "left_pinyin": "nǐ zài wèn yí gè wèntí ma",
+              "right": "不问了。",
+              "right_pinyin": "bù wèn le"
+            },
+            {
+              "left": "服务员忙不忙？",
+              "left_pinyin": "fúwùyuán máng bù máng",
+              "right": "有点儿忙。",
+              "right_pinyin": "yǒudiǎnr máng"
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "matchingGame": [
+      {
+        "id": "v8_l13_1",
+        "type": "memory_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each item with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "可以",
+              "left_pinyin": "kěyǐ",
+              "right": "can; may",
+              "right_pinyin": ""
+            },
+            {
+              "left": "问题",
+              "left_pinyin": "wèntí",
+              "right": "question",
+              "right_pinyin": ""
+            },
+            {
+              "left": "卖",
+              "left_pinyin": "mài",
+              "right": "sell",
+              "right_pinyin": ""
+            },
+            {
+              "left": "打电话",
+              "left_pinyin": "dǎ diànhuà",
+              "right": "make a phone call",
+              "right_pinyin": ""
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v8_l13_2",
+        "type": "memory_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each item with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "服务员",
+              "left_pinyin": "fúwùyuán",
+              "right": "waiter; waitress",
+              "right_pinyin": ""
+            },
+            {
+              "left": "女士",
+              "left_pinyin": "nǚshì",
+              "right": "madam",
+              "right_pinyin": ""
+            },
+            {
+              "left": "先生",
+              "left_pinyin": "xiānsheng",
+              "right": "sir",
+              "right_pinyin": ""
+            },
+            {
+              "left": "请",
+              "left_pinyin": "qǐng",
+              "right": "please",
+              "right_pinyin": ""
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v8_l13_3",
+        "type": "memory_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each item with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "坐",
+              "left_pinyin": "zuò",
+              "right": "sit",
+              "right_pinyin": ""
+            },
+            {
+              "left": "给",
+              "left_pinyin": "gěi",
+              "right": "give",
+              "right_pinyin": ""
+            },
+            {
+              "left": "杯",
+              "left_pinyin": "bēi",
+              "right": "cup measure",
+              "right_pinyin": ""
+            },
+            {
+              "left": "要",
+              "left_pinyin": "yào",
+              "right": "want",
+              "right_pinyin": ""
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v8_l13_4",
+        "type": "memory_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each item with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "早饭",
+              "left_pinyin": "zǎofàn",
+              "right": "breakfast",
+              "right_pinyin": ""
+            },
+            {
+              "left": "面包",
+              "left_pinyin": "miànbāo",
+              "right": "bread",
+              "right_pinyin": ""
+            },
+            {
+              "left": "鸡蛋",
+              "left_pinyin": "jīdàn",
+              "right": "egg",
+              "right_pinyin": ""
+            },
+            {
+              "left": "茶",
+              "left_pinyin": "chá",
+              "right": "tea",
+              "right_pinyin": ""
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v8_l13_5",
+        "type": "memory_match",
+        "stage": "in_class",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Match each item with the best answer.",
+        "data": {
+          "pairs": [
+            {
+              "left": "一下",
+              "left_pinyin": "yíxià",
+              "right": "one time",
+              "right_pinyin": ""
+            },
+            {
+              "left": "一半",
+              "left_pinyin": "yíbàn",
+              "right": "half",
+              "right_pinyin": ""
+            },
+            {
+              "left": "这个",
+              "left_pinyin": "zhège",
+              "right": "this",
+              "right_pinyin": ""
+            },
+            {
+              "left": "再",
+              "left_pinyin": "zài",
+              "right": "again",
+              "right_pinyin": ""
+            }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
+          ]
+        },
+        "correct_answer": "全部配对正确",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "sentenceTransform": [
+      {
+        "id": "v4_l13_1",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问题。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "可以，请坐。",
+          "source_pinyin": "kěyǐ qǐng zuò",
+          "options": [
+            "我可以坐吗？",
+            "您喝什么？",
+            "您要几杯？",
+            "这是什么？"
+          ],
+          "options_pinyin": [
+            "wǒ kěyǐ zuò ma",
+            "nín hē shénme",
+            "nín yào jǐ bēi",
+            "zhè shì shénme"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "我可以坐吗？",
+        "kp": "句子转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l13_2",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问题。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "我要一杯茶。",
+          "source_pinyin": "wǒ yào yī bēi chá",
+          "options": [
+            "你想喝什么？",
+            "你去哪儿？",
+            "你会写吗？",
+            "你姓什么？"
+          ],
+          "options_pinyin": [
+            "nǐ xiǎng hē shénme",
+            "nǐ qù nǎr",
+            "nǐ huì xiě ma",
+            "nǐ shénme"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你想喝什么？",
+        "kp": "句子转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l13_3",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问题。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "卖面包和鸡蛋。",
+          "source_pinyin": "mài miànbāo hé jīdàn",
+          "options": [
+            "这个小店卖什么？",
+            "你早饭吃什么？",
+            "你买几个？",
+            "谁在打电话？"
+          ],
+          "options_pinyin": [
+            "zhège xiǎodiàn mài shénme",
+            "nǐ zǎofàn chī shénme",
+            "nǐ mǎi jǐ gè",
+            "shéi zài dǎ diànhuà"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这个小店卖什么？",
+        "kp": "句子转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l13_4",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问题。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "不买手机。",
+          "source_pinyin": "bù mǎi shǒujī",
+          "options": [
+            "你买不买手机？",
+            "你问不问老师？",
+            "你坐不坐？",
+            "你喝不喝茶？"
+          ],
+          "options_pinyin": [
+            "nǐ mǎi bù mǎi shǒujī",
+            "nǐ wèn bù wèn lǎoshī",
+            "nǐ zuò bù zuò",
+            "nǐ hē bù hē chá"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你买不买手机？",
+        "kp": "句子转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l13_5",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问题。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "问老师吧。",
+          "source_pinyin": "wèn lǎoshī ba",
+          "options": [
+            "我问谁？",
+            "我吃什么？",
+            "我去哪儿？",
+            "我买什么？"
+          ],
+          "options_pinyin": [
+            "wǒ wèn shéi",
+            "wǒ chī shénme",
+            "wǒ qù nǎr",
+            "wǒ mǎi shénme"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "我问谁？",
+        "kp": "句子转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l13_6",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问题。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "要半斤饺子。",
+          "source_pinyin": "yào bàn jīn jiǎozi",
+          "options": [
+            "您要多少饺子？",
+            "您喝什么？",
+            "您在哪儿？",
+            "您叫什么？"
+          ],
+          "options_pinyin": [
+            "nín yào duōshao jiǎozi",
+            "nín hē shénme",
+            "nín zài nǎr",
+            "nín jiào shénme"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "您要多少饺子？",
+        "kp": "句子转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l13_7",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问题。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "在这边。",
+          "source_pinyin": "zài zhèbiān",
+          "options": [
+            "面包在哪儿？",
+            "谁是服务员？",
+            "他做什么？",
+            "这个贵不贵？"
+          ],
+          "options_pinyin": [
+            "miànbāo zài nǎr",
+            "shéi shì fúwùyuán",
+            "tā zuò shénme",
+            "zhège guì bù guì"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "面包在哪儿？",
+        "kp": "句子转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l13_8",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问题。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "十块钱一个。",
+          "source_pinyin": "shí kuài qián yí gè",
+          "options": [
+            "这个杯子多少钱？",
+            "这是谁？",
+            "你有几个？",
+            "你要什么？"
+          ],
+          "options_pinyin": [
+            "zhège bēi duōshao qián",
+            "zhè shì shéi",
+            "nǐ yǒu jǐ gè",
+            "nǐ yào shénme"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "这个杯子多少钱？",
+        "kp": "句子转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l13_9",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问题。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "很好吃。",
+          "source_pinyin": "hěn chī",
+          "options": [
+            "鸡蛋好吃吗？",
+            "你吃了吗？",
+            "你买了吗？",
+            "现在几点？"
+          ],
+          "options_pinyin": [
+            "jīdàn chī ma",
+            "nǐ chī le ma",
+            "nǐ mǎi le ma",
+            "zài jǐ"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "鸡蛋好吃吗？",
+        "kp": "句子转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "v4_l13_10",
+        "type": "sentence_transform",
+        "stage": "in_class",
+        "prompt_cn": "选择正确的问题。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "source_sentence": "不要，我要一个。",
+          "source_pinyin": "búyào wǒ yào yí gè",
+          "options": [
+            "你要一半吗？",
+            "你想喝茶吗？",
+            "你可以坐吗？",
+            "你问问题吗？"
+          ],
+          "options_pinyin": [
+            "nǐ yào yíbàn ma",
+            "nǐ xiǎng hē chá ma",
+            "nǐ kěyǐ zuò ma",
+            "nǐ wèn wèntí ma"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你要一半吗？",
+        "kp": "句子转换：给答句选问句",
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "ordering": [
+      {
+        "id": "g1_l13_1",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "请",
+            "给我",
+            "一杯",
+            "茶"
+          ],
+          "chunks_pinyin": [
+            "qǐng",
+            "gěi wǒ",
+            "yì bēi",
+            "chá"
+          ]
+        },
+        "correct_answer": "请给我一杯茶",
+        "acceptable_answers": [
+          "请给我一杯茶",
+          "请给我一杯茶。",
+          "请给我一杯茶？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l13_2",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "我",
+            "可以",
+            "再问您",
+            "一个问题",
+            "吗"
+          ],
+          "chunks_pinyin": [
+            "wǒ",
+            "kěyǐ",
+            "zài wèn nín",
+            "yí gè wèntí",
+            "ma"
+          ]
+        },
+        "correct_answer": "我可以再问您一个问题吗",
+        "acceptable_answers": [
+          "我可以再问您一个问题吗",
+          "我可以再问您一个问题吗。",
+          "我可以再问您一个问题吗？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l13_3",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "你",
+            "可以",
+            "打电话",
+            "问一下"
+          ],
+          "chunks_pinyin": [
+            "nǐ",
+            "kěyǐ",
+            "dǎ diànhuà",
+            "wèn yíxià"
+          ]
+        },
+        "correct_answer": "你可以打电话问一下",
+        "acceptable_answers": [
+          "你可以打电话问一下",
+          "你可以打电话问一下。",
+          "你可以打电话问一下？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l13_4",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "我",
+            "还没",
+            "吃",
+            "早饭"
+          ],
+          "chunks_pinyin": [
+            "wǒ",
+            "hái méi",
+            "chī",
+            "zǎofàn"
+          ]
+        },
+        "correct_answer": "我还没吃早饭",
+        "acceptable_answers": [
+          "我还没吃早饭",
+          "我还没吃早饭。",
+          "我还没吃早饭？"
+        ],
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "g1_l13_5",
+        "type": "ordering",
+        "stage": "in_class",
+        "prompt_cn": "连词成句。",
+        "prompt_en": "Put the chunks in order.",
+        "data": {
+          "chunks": [
+            "我",
+            "要",
+            "一斤",
+            "饺子"
+          ],
+          "chunks_pinyin": [
+            "wǒ",
+            "yào",
+            "yì jīn",
+            "jiǎozi"
+          ]
+        },
+        "correct_answer": "我要一斤饺子",
+        "acceptable_answers": [
+          "我要一斤饺子",
+          "我要一斤饺子。",
+          "我要一斤饺子？"
+        ],
+        "sourceType": "teaching_extension"
+      }
+    ],
+    "translationChoice": [
+      {
+        "id": "trc_l13_1",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "May I ask one more question?",
+          "question_ru": "Можно задать ещё один вопрос?",
+          "options": [
+            "我可以再问您一个问题吗？",
+            "请给我一杯茶。",
+            "我要一斤饺子。",
+            "女士，请坐！"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "我可以再问您一个问题吗？",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l13_2",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "You can call to ask.",
+          "question_ru": "Ты можешь позвонить и спросить.",
+          "options": [
+            "你可以打电话问一下。",
+            "我看一下。",
+            "请坐一下。",
+            "我吃早饭。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "你可以打电话问一下。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l13_3",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "Please give me a cup of tea.",
+          "question_ru": "Дайте мне чашку чая, пожалуйста.",
+          "options": [
+            "请给我一杯茶。",
+            "请给我一个问题。",
+            "请给我一斤苹果。",
+            "请给我一件衣服。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "请给我一杯茶。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l13_4",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "I have not eaten breakfast yet.",
+          "question_ru": "Я ещё не завтракал.",
+          "options": [
+            "我还没吃早饭。",
+            "我还没喝茶。",
+            "我还没买手机。",
+            "我还没上火车。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "我还没吃早饭。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l13_5",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "I want half.",
+          "question_ru": "Я хочу половину.",
+          "options": [
+            "我要一半。",
+            "我要一下。",
+            "我要这个。",
+            "我要早饭。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "我要一半。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l13_6",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "Madam, please sit.",
+          "question_ru": "Госпожа, садитесь, пожалуйста.",
+          "options": [
+            "女士，请坐！",
+            "先生，请问！",
+            "服务员，请喝茶！",
+            "老师，请给我！"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "女士，请坐！",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l13_7",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "What would you like to drink?",
+          "question_ru": "Что вы хотите пить?",
+          "options": [
+            "您喝什么？",
+            "您吃什么？",
+            "您卖什么？",
+            "您问什么？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "您喝什么？",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l13_8",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "Does that small shop sell cell phones?",
+          "question_ru": "В том маленьком магазине продают телефоны?",
+          "options": [
+            "那个小店卖不卖手机？",
+            "那个小店有没有茶？",
+            "那个小店大不大？",
+            "那个小店在哪儿？"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "那个小店卖不卖手机？",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l13_9",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "A jin of dumplings is forty pieces.",
+          "question_ru": "Цзинь пельменей - сорок штук.",
+          "options": [
+            "一斤饺子40个。",
+            "半斤饺子40个。",
+            "一斤茶40杯。",
+            "一个鸡蛋40元。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "一斤饺子40个。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "trc_l13_10",
+        "type": "translation_choice",
+        "stage": "in_class",
+        "prompt_cn": "根据英文和俄文选择中文句子。",
+        "prompt_en": "Choose the best answer.",
+        "data": {
+          "question_en": "Please give me a glass of milk.",
+          "question_ru": "Дайте мне стакан молока, пожалуйста.",
+          "options": [
+            "请给我一杯牛奶。",
+            "请给我一个鸡蛋。",
+            "请给我一半饺子。",
+            "请给我一杯茶。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "请给我一杯牛奶。",
+        "kp": "译文选句",
+        "sourceType": "textbook"
+      }
+    ],
+    "textQa": [
+      {
+        "id": "ttq_l13_1",
+        "type": "text_qa_group",
+        "stage": "in_class",
+        "prompt_cn": "课文问答：根据课文内容回答。",
+        "prompt_en": "Text Q&A: answer from the dialogue.",
+        "data": {
+          "title": "课文一：问问题",
+          "passage": "王老师，我可以再问您一个问题吗？可以。你有什么问题？那个小店卖不卖手机？我不知道。你可以打电话问一下。",
+          "passage_pinyin": "Wáng lǎoshī, wǒ kěyǐ zài wèn nín yí gè wèntí ma? Kěyǐ. Nǐ yǒu shénme wèntí? Nàge xiǎo diàn mài bu mài shǒujī? Wǒ bù zhīdào. Nǐ kěyǐ dǎ diànhuà wèn yíxià.",
+          "questions": [
+            {
+              "question_cn": "白家月想问几个问题？",
+              "question_pinyin": "Bái Jiāyuè xiǎng wèn jǐ gè wèntí?",
+              "answer": "一个问题",
+              "answer_pinyin": "yí gè wèntí",
+              "options": [
+                "一个问题",
+                "两个问题",
+                "三个问题",
+                "不知道"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "小店卖不卖手机？",
+              "question_pinyin": "Xiǎo diàn mài bu mài shǒujī?",
+              "answer": "不知道",
+              "answer_pinyin": "bù zhīdào",
+              "options": [
+                "不知道",
+                "卖",
+                "不卖",
+                "没有小店"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "王老师让她做什么？",
+              "question_pinyin": "Wáng lǎoshī ràng tā zuò shénme?",
+              "answer": "打电话问一下",
+              "answer_pinyin": "dǎ diànhuà wèn yíxià",
+              "options": [
+                "打电话问一下",
+                "去小店",
+                "买手机",
+                "坐一下"
+              ],
+              "correct_index": 0
+            }
+          ]
+        },
+        "correct_answer": "见每题答案",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "ttq_l13_2",
+        "type": "text_qa_group",
+        "stage": "in_class",
+        "prompt_cn": "课文问答：根据课文内容回答。",
+        "prompt_en": "Text Q&A: answer from the dialogue.",
+        "data": {
+          "title": "课文二：吃早饭",
+          "passage": "女士，请坐！您喝什么？我看一下。请给我一杯牛奶。好的。您还要什么？我还没吃早饭，再要这个面包和鸡蛋吧。",
+          "passage_pinyin": "Nǚshì, qǐng zuò! Nín hē shénme? Wǒ kàn yíxià. Qǐng gěi wǒ yì bēi niúnǎi. Hǎo de. Nín hái yào shénme? Wǒ hái méi chī zǎofàn, zài yào zhège miànbāo hé jīdàn ba.",
+          "questions": [
+            {
+              "question_cn": "王一雪喝什么？",
+              "question_pinyin": "Wáng Yīxuě hē shénme?",
+              "answer": "牛奶",
+              "answer_pinyin": "niúnǎi",
+              "options": [
+                "牛奶",
+                "茶",
+                "水",
+                "咖啡"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "她吃早饭了吗？",
+              "question_pinyin": "Tā chī zǎofàn le ma?",
+              "answer": "还没吃",
+              "answer_pinyin": "hái méi chī",
+              "options": [
+                "还没吃",
+                "吃了",
+                "不吃",
+                "不知道"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "她还要什么？",
+              "question_pinyin": "Tā hái yào shénme?",
+              "answer": "面包和鸡蛋",
+              "answer_pinyin": "miànbāo hé jīdàn",
+              "options": [
+                "面包和鸡蛋",
+                "一斤饺子",
+                "一杯茶",
+                "手机"
+              ],
+              "correct_index": 0
+            }
+          ]
+        },
+        "correct_answer": "见每题答案",
+        "sourceType": "textbook"
+      },
+      {
+        "id": "ttq_l13_3",
+        "type": "text_qa_group",
+        "stage": "in_class",
+        "prompt_cn": "课文问答：根据课文内容回答。",
+        "prompt_en": "Text Q&A: answer from the dialogue.",
+        "data": {
+          "title": "课文三：一杯茶",
+          "passage": "先生，请坐！您要什么？我要一斤饺子。好的。一斤饺子40个。40个太多了，我要一半吧。半斤20个。您想喝什么？请给我一杯茶吧。",
+          "passage_pinyin": "Xiānsheng, qǐng zuò! Nín yào shénme? Wǒ yào yì jīn jiǎozi. Hǎo de. Yì jīn jiǎozi sìshí gè. Sìshí gè tài duō le, wǒ yào yíbàn ba. Bàn jīn èrshí gè. Nín xiǎng hē shénme? Qǐng gěi wǒ yì bēi chá ba.",
+          "questions": [
+            {
+              "question_cn": "刘明要多少饺子？",
+              "question_pinyin": "Liú Míng yào duōshao jiǎozi?",
+              "answer": "一半",
+              "answer_pinyin": "yíbàn",
+              "options": [
+                "一半",
+                "一斤",
+                "40个",
+                "一杯"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "半斤饺子几个？",
+              "question_pinyin": "Bàn jīn jiǎozi jǐ gè?",
+              "answer": "20个",
+              "answer_pinyin": "èrshí gè",
+              "options": [
+                "20个",
+                "40个",
+                "10个",
+                "一斤"
+              ],
+              "correct_index": 0
+            },
+            {
+              "question_cn": "刘明想喝什么？",
+              "question_pinyin": "Liú Míng xiǎng hē shénme?",
+              "answer": "茶",
+              "answer_pinyin": "chá",
+              "options": [
+                "茶",
+                "牛奶",
+                "水",
+                "咖啡"
+              ],
+              "correct_index": 0
+            }
+          ]
+        },
+        "correct_answer": "见每题答案",
+        "sourceType": "textbook"
+      }
+    ],
+    "pictureTalk": [
+      {
+        "id": "r4_lundefined_pt_01",
+        "type": "oral",
+        "stage": "in_class",
+        "prompt_cn": "你看到了什么？",
+        "prompt_en": "Look at the picture and answer in Chinese.",
+        "data": {
+          "question": "你看到了什么？",
+          "question_pinyin": "Nǐ kàn dào le shénme?",
+          "instructions": "请用学过的词，说一句或两句中文。",
+          "image": "images/vocab/hsk1-l13/05_dadianhua.png",
+          "sampleAnswer": "我看到一个人在打电话。",
+          "sampleAnswerPinyin": "Wǒ kàn dào yí ge rén zài dǎ diànhuà.",
+          "patternType": "观察"
+        },
+        "openEnded": true,
+        "needsTeacherReview": true,
+        "cloudWall": true,
+        "weakPoints": "输出：观察",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "r4_lundefined_pt_02",
+        "type": "oral",
+        "stage": "in_class",
+        "prompt_cn": "她是谁？",
+        "prompt_en": "Look at the picture and answer in Chinese.",
+        "data": {
+          "question": "她是谁？",
+          "question_pinyin": "Tā shì shéi?",
+          "instructions": "请用学过的词，说一句或两句中文。",
+          "image": "images/vocab/hsk1-l13/07_fuwuyuan.png",
+          "sampleAnswer": "她是服务员。",
+          "sampleAnswerPinyin": "Tā shì fúwùyuán.",
+          "patternType": "人物"
+        },
+        "openEnded": true,
+        "needsTeacherReview": true,
+        "cloudWall": true,
+        "weakPoints": "输出：人物",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "r4_lundefined_pt_03",
+        "type": "oral",
+        "stage": "in_class",
+        "prompt_cn": "她在做什么？",
+        "prompt_en": "Look at the picture and answer in Chinese.",
+        "data": {
+          "question": "她在做什么？",
+          "question_pinyin": "Tā zài zuò shénme?",
+          "instructions": "请用学过的词，说一句或两句中文。",
+          "image": "images/vocab/hsk1-l13/10_zuo.png",
+          "sampleAnswer": "她在坐着。",
+          "sampleAnswerPinyin": "Tā zài zuò zhe.",
+          "patternType": "动作"
+        },
+        "openEnded": true,
+        "needsTeacherReview": true,
+        "cloudWall": true,
+        "weakPoints": "输出：动作",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "r4_lundefined_pt_04",
+        "type": "oral",
+        "stage": "in_class",
+        "prompt_cn": "桌子上有什么？",
+        "prompt_en": "Look at the picture and answer in Chinese.",
+        "data": {
+          "question": "桌子上有什么？",
+          "question_pinyin": "Zhuōzi shàng yǒu shénme?",
+          "instructions": "请用学过的词，说一句或两句中文。",
+          "image": "images/vocab/hsk1-l13/20_cha.png",
+          "sampleAnswer": "桌子上有一杯茶。",
+          "sampleAnswerPinyin": "Zhuōzi shàng yǒu yì bēi chá.",
+          "patternType": "物品"
+        },
+        "openEnded": true,
+        "needsTeacherReview": true,
+        "cloudWall": true,
+        "weakPoints": "输出：物品",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "r4_lundefined_pt_05",
+        "type": "oral",
+        "stage": "in_class",
+        "prompt_cn": "早饭有什么？",
+        "prompt_en": "Look at the picture and answer in Chinese.",
+        "data": {
+          "question": "早饭有什么？",
+          "question_pinyin": "Zǎofàn yǒu shénme?",
+          "instructions": "请用学过的词，说一句或两句中文。",
+          "image": "images/vocab/hsk1-l13/14_zaofan.png",
+          "sampleAnswer": "早饭有面包和鸡蛋。",
+          "sampleAnswerPinyin": "Zǎofàn yǒu miànbāo hé jīdàn.",
+          "patternType": "食物"
+        },
+        "openEnded": true,
+        "needsTeacherReview": true,
+        "cloudWall": true,
+        "weakPoints": "输出：食物",
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "r4_lundefined_pt_06",
+        "type": "oral",
+        "stage": "in_class",
+        "prompt_cn": "你想要哪个？",
+        "prompt_en": "Look at the picture and answer in Chinese.",
+        "data": {
+          "question": "你想要哪个？",
+          "question_pinyin": "Nǐ xiǎng yào nǎge?",
+          "instructions": "请用学过的词，说一句或两句中文。",
+          "image": "images/vocab/hsk1-l13/15_zhege.png",
+          "sampleAnswer": "我想要这个。",
+          "sampleAnswerPinyin": "Wǒ xiǎng yào zhège.",
+          "patternType": "选择"
+        },
+        "openEnded": true,
+        "needsTeacherReview": true,
+        "cloudWall": true,
+        "weakPoints": "输出：选择",
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "hanziWriting": {
+    "characters": [
+      {
+        "char": "可",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "以",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "再",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "问",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "题",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "卖",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "打",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "电",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "话",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "一",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "下",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "服",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "务",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "员",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "女",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "士",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "请",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "坐",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "给",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "杯",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "要",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "早",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "饭",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "这",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "个",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "面",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "包",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "鸡",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "蛋",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "先",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "生",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "半",
+        "sourceType": "textbook"
+      },
+      {
+        "char": "茶",
+        "sourceType": "textbook"
+      }
+    ]
+  },
+  "hanziRecognition": {
+    "enabled": true,
+    "showPinyin": false,
+    "rounds": [
+      {
+        "id": "hanzi_to_pinyin",
+        "title": "看汉字选拼音",
+        "titleEn": "Choose pinyin"
+      },
+      {
+        "id": "hanzi_to_meaning",
+        "title": "看汉字选意思",
+        "titleEn": "Choose meaning"
+      },
+      {
+        "id": "meaning_to_hanzi",
+        "title": "看意思选汉字",
+        "titleEn": "Choose character"
+      }
+    ],
+    "groups": [
+      {
+        "id": "service",
+        "title": "服务点餐",
+        "vocabularyIds": [
+          "v_l13_07",
+          "v_l13_08",
+          "v_l13_09",
+          "v_l13_10",
+          "v_l13_11",
+          "v_l13_12",
+          "v_l13_20"
+        ]
+      },
+      {
+        "id": "food",
+        "title": "食物饮品",
+        "vocabularyIds": [
+          "v_l13_14",
+          "v_l13_16",
+          "v_l13_17",
+          "v_l13_20"
+        ]
+      },
+      {
+        "id": "grammar",
+        "title": "功能词",
+        "vocabularyIds": [
+          "v_l13_01",
+          "v_l13_02",
+          "v_l13_06",
+          "v_l13_13",
+          "v_l13_19"
+        ]
+      }
+    ]
+  },
+  "postClassHomework": {
+    "mode": "required_optional",
+    "instructions": {
+      "required": "必选：完成汉字书写。",
+      "optional": "可选：选择一个输出任务完成。"
+    },
+    "required": [
+      {
+        "id": "post_l13_req_01",
+        "type": "handwriting",
+        "prompt_cn": "必选：书写本课汉字。",
+        "characters": [
+          "可",
+          "以",
+          "再",
+          "问",
+          "题",
+          "卖",
+          "打",
+          "电",
+          "话",
+          "一",
+          "下",
+          "服",
+          "务",
+          "员",
+          "女",
+          "士",
+          "请",
+          "坐",
+          "给",
+          "杯",
+          "要",
+          "早",
+          "饭",
+          "这",
+          "个",
+          "面",
+          "包",
+          "鸡",
+          "蛋",
+          "先",
+          "生",
+          "一",
+          "半",
+          "茶"
+        ],
+        "instructions": "每个字至少写 3 次。",
+        "sourceType": "textbook"
+      }
+    ],
+    "optional": [
+      {
+        "id": "post_l13_opt_01",
+        "type": "writing",
+        "prompt_cn": "教学扩展：写 3 句点餐句。",
+        "openEnded": true,
+        "sourceType": "teaching_extension"
+      },
+      {
+        "id": "post_l13_opt_02",
+        "type": "oral_prepare",
+        "prompt_cn": "准备 4 句餐馆点餐对话。",
+        "openEnded": true,
+        "sourceType": "teaching_extension"
+      }
+    ]
+  },
+  "report": {
+    "focus": [
+      "可以",
+      "动词+一下",
+      "双宾语句",
+      "点餐"
+    ]
+  }
+}

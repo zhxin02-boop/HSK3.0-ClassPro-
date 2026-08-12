@@ -42,6 +42,9 @@ button:disabled{opacity:.45;cursor:not-allowed}
 .leader-row{display:grid;grid-template-columns:34px 1fr 56px;align-items:center;gap:8px;padding:9px 10px;border-radius:13px;background:#f8faf3;margin:6px 0;border:1px solid #edf3dc}
 .leader-row.me{background:#edf6d9;border-color:#9ac45b;box-shadow:0 8px 18px rgba(127,170,50,.14)}.leader-rank{font-weight:900;color:var(--green);text-align:center}.leader-name{font-size:13px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.leader-pts{text-align:right;font-size:15px;font-weight:900}.leader-empty{padding:14px;border-radius:13px;background:#f8faf3;color:#74806d;text-align:center;font-size:13px}
 body.classpro-hide-pinyin .py,body.classpro-hide-pinyin .pinyin,body.classpro-hide-pinyin rt,body.classpro-hide-pinyin [data-pinyin="1"]{display:none!important}
+.hint img[src*="images/vocab/hsk1-l13"],
+.hint img[src*="images/vocab/hsk1-l14"],
+.hint img[src*="images/vocab/hsk1-l15"]{height:260px!important;max-height:260px!important;object-fit:contain!important}
 </style>
 </head>
 <body>
@@ -314,8 +317,8 @@ client.on("close",function(){setStatus("disconnected")});
     if(!current||current.mode!=='trc'){previousRender();return}
     var q=current.question||{},d=qdata(),h='<div class="prompt">'+es(q.prompt_cn||'译文选句')+'<br><span class="english">'+es(q.prompt_en||'Choose the matching Chinese sentence.')+'</span></div>';
     h+='<div class="hint" style="text-align:left"><div class="muted">Read the translation. Choose the best Chinese sentence.</div>';
-    if(d.prompt_ru||d.russian)h+='<div class="english" style="font-size:20px;line-height:1.45;margin-top:8px">'+es(d.prompt_ru||d.russian)+'</div>';
-    if(d.prompt_en||d.english)h+='<div class="english" style="font-size:20px;line-height:1.45;margin-top:8px">'+es(d.prompt_en||d.english)+'</div>';
+    if(d.question_ru||d.prompt_ru||d.russian)h+='<div class="english" style="font-size:20px;line-height:1.45;margin-top:8px">'+es(d.question_ru||d.prompt_ru||d.russian)+'</div>';
+    if(d.question_en||d.prompt_en||d.english)h+='<div class="english" style="font-size:20px;line-height:1.45;margin-top:8px">'+es(d.question_en||d.prompt_en||d.english)+'</div>';
     h+='</div>'+optionGrid(d.options||[],true);
     document.getElementById('app').innerHTML=h;
     publishedNote();
@@ -377,16 +380,45 @@ client.on("close",function(){setStatus("disconnected")});
 /* Mock test student runner: receives teacher-controlled mock_test payload. */
 (function(){
   var GAS_MOCK="https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec";
-  var mockTest=null,mockAnswers={},mockStorageKey='',mockTimer=null;
+  var mockTest=null,mockAnswers={},mockStorageKey='',mockTimer=null,mockViolations=[],mockSubmitted=false,mockShuffleCache={};
   function isMock(){return current&&current.mode==='mock_test'}
   function mockCurrentKey(){return 'ClassProMockCurrent_'+RM+'_'+LESSON}
   function saveMockCurrent(){try{if(isMock())localStorage.setItem(mockCurrentKey(),JSON.stringify(current))}catch(e){}}
   function restoreMockCurrent(){try{var m=JSON.parse(localStorage.getItem(mockCurrentKey())||'null');if(m&&m.mode==='mock_test'&&m.phase&&m.phase!=='idle')current=m}catch(e){}}
+  function shuffleSeed(){return ((mockTest&&mockTest.testId)||'mock')+'_'+name()}
+  function seededRand(seed){var h=2166136261;for(var i=0;i<seed.length;i++){h^=seed.charCodeAt(i);h=Math.imul(h,16777619)}return function(){h+=0x6D2B79F5;var t=h;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296}}
+  function shuffledOptions(item){if(!item||!Array.isArray(item.options))return[];var key=item.id;if(mockShuffleCache[key])return mockShuffleCache[key];var arr=item.options.slice(),rand=seededRand(shuffleSeed()+'_'+item.id);for(var i=arr.length-1;i>0;i--){var j=Math.floor(rand()*(i+1)),tmp=arr[i];arr[i]=arr[j];arr[j]=tmp}mockShuffleCache[key]=arr;return arr}
   function allMockItems(){var out=[];(mockTest&&mockTest.sections||[]).forEach(function(s){(s.items||[]).forEach(function(x){out.push(x)})});return out}
+  function mockSecurityKey(){return 'ClassProMockSecurity_'+(mockTest&&mockTest.testId||'mock')+'_'+name()}
+  function saveMockSecurity(){try{localStorage.setItem(mockSecurityKey(),JSON.stringify({violations:mockViolations,submitted:mockSubmitted}))}catch(e){}}
+  function restoreMockSecurity(){try{var d=JSON.parse(localStorage.getItem(mockSecurityKey())||'null');if(d){mockViolations=Array.isArray(d.violations)?d.violations:[];mockSubmitted=!!d.submitted}}catch(e){}}
+  function mockSecurityQueueKey(){return 'ClassProMockSecurityQueue_'+RM}
+  function queueMockSecurity(payload){
+    try{
+      var key=mockSecurityQueueKey(),rows=JSON.parse(localStorage.getItem(key)||'[]');
+      rows.push(payload);
+      localStorage.setItem(key,JSON.stringify(rows.slice(-100)));
+    }catch(e){}
+  }
+  function publishMockPayload(payload){
+    if(client&&client.connected)client.publish('classpro/room/'+RM+'/answers',JSON.stringify(payload));
+    else setTimeout(function(){if(client&&client.connected)client.publish('classpro/room/'+RM+'/answers',JSON.stringify(payload))},1200);
+  }
+  function reportMockSecurity(reason){
+    if(!isMock()||!mockTest||mockSubmitted)return;
+    var now=new Date().toISOString();
+    mockViolations.push({reason:reason,at:now});
+    saveMockSecurity();
+    var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),questionId:mockTest.testId,mode:'mock_test_security',testId:mockTest.testId,reason:reason,violations:mockViolations.length,submittedAt:now,autoResult:'security'};
+    queueMockSecurity(payload);
+    publishMockPayload(payload);
+    if(mockViolations.length>=3)submitMockTest(true);
+    else renderMock();
+  }
   function loadMock(cb){
     var id=(current&&current.testId)||'HSK1-mock-01';
     if(mockTest&&mockTest.testId===id){cb&&cb();return}
-    fetch('../data-model/mock-tests/'+id+'.json').then(function(r){return r.json()}).then(function(d){mockTest=d;restoreMock();cb&&cb();render()}).catch(function(){document.getElementById('app').innerHTML='<div class="bad">测试数据读取失败。</div>'});
+    fetch('../data-model/mock-tests/'+id+'.json').then(function(r){return r.json()}).then(function(d){mockTest=d;mockShuffleCache={};restoreMock();restoreMockSecurity();cb&&cb();render()}).catch(function(){document.getElementById('app').innerHTML='<div class="bad">测试数据读取失败。</div>'});
   }
   function restoreMock(){
     mockStorageKey='ClassProMockInClass_'+(mockTest&&mockTest.testId||'mock')+'_'+name();
@@ -400,7 +432,7 @@ client.on("close",function(){setStatus("disconnected")});
   }
   function mockLocked(){return current&&current.phase==='locked'||mockTimeLeft()<=0}
   function fmt(sec){var m=Math.floor(sec/60),s=sec%60;return m+':'+String(s).padStart(2,'0')}
-  function chooseMock(id,opt){if(mockLocked())return;mockAnswers[id]=opt;saveMock();renderMock()}
+  function chooseMock(id,opt){if(mockLocked()||mockSubmitted)return;mockAnswers[id]=opt;saveMock();renderMock()}
   function jumpMock(id){var el=document.getElementById('mock_'+id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})}
   function mockAnswerCard(items){var h='<div style="position:sticky;top:0;z-index:10;background:#fff;border:1px solid #dfeac8;border-radius:16px;padding:10px;margin:12px 0;box-shadow:0 10px 24px rgba(86,115,55,.12)"><div style="font-weight:900;color:#3f7f32;margin-bottom:8px">答题卡 / Answer Card</div><div style="display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px">';items.forEach(function(x){var done=mockAnswers[x.id]!=null;h+='<button type="button" onclick="jumpMock(\''+es(x.id)+'\')" style="padding:8px 0;border-radius:10px;font-size:13px;background:'+(done?'#6ea72d':'#eef2e6')+';color:'+(done?'#fff':'#526248')+'">'+x.number+'</button>'});return h+'</div></div>'}
   function mockOption(item,opt){var sel=mockAnswers[item.id]===opt.id,img=opt.image?'<img src="'+es(opt.image)+'" alt="" style="width:100%;height:100px;object-fit:contain;border-radius:10px;background:#f8faf3;margin-bottom:6px">':'';var label=opt.image?opt.id:opt.id+'. '+(opt.text||'');return'<button class="option '+(sel?'sel':'')+'" onclick="chooseMock(\''+es(item.id)+'\',\''+es(opt.id)+'\')" style="transform:none;min-height:70px;text-align:left">'+img+'<b>'+es(label)+'</b></button>'}
@@ -409,19 +441,21 @@ client.on("close",function(){setStatus("disconnected")});
     if(item.skill==='listening')h+='<div class="hint" style="text-align:left">听力由教师端统一播放。 / Audio is controlled by the teacher.</div>';
     if(item.passage)h+='<div class="hint" style="text-align:left;font-size:20px;line-height:1.6">'+es(item.passage)+'</div>';
     if(item.question)h+='<div class="hanzi" style="font-size:22px;line-height:1.5;margin:10px 0">'+es(item.question)+'</div>';
-    h+='<div class="options" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">'+(item.options||[]).map(function(o){return mockOption(item,o)}).join('')+'</div></div>';
+    h+='<div class="options" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">'+shuffledOptions(item).map(function(o){return mockOption(item,o)}).join('')+'</div></div>';
     return h;
   }
   function scoreMock(){var sc=0,total=0,wrong=[],listen=0,listenTotal=0,read=0,readTotal=0;allMockItems().forEach(function(x){var pts=x.points||1,ok=mockAnswers[x.id]===x.answer;total+=pts;if(x.skill==='listening')listenTotal+=pts;else readTotal+=pts;if(ok){sc+=pts;if(x.skill==='listening')listen+=pts;else read+=pts}else wrong.push(x.number)});return{score:sc,total:total,wrong:wrong,listen:listen,listenTotal:listenTotal,read:read,readTotal:readTotal}}
-  function mockStudentReport(s){return'<div class="ok">已提交 Mock Test：<b>'+s.score+' / '+s.total+'</b></div><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0"><div class="hint"><b>听力 Listening</b><br><span style="font-size:24px;font-weight:900;color:#3f7f32">'+s.listen+' / '+s.listenTotal+'</span></div><div class="hint"><b>阅读 Reading</b><br><span style="font-size:24px;font-weight:900;color:#3f7f32">'+s.read+' / '+s.readTotal+'</span></div></div><div class="hint">'+(s.wrong.length?'错题：'+s.wrong.join('、'):'全部正确。')+'</div>'}
+  function mockStudentReport(s){return'<div class="submitted-neutral" data-neutral-feedback="1">已提交 Mock Test。<br><span class="muted">成绩和答案由教师端统一查看。</span></div>'}
   function postMockRecord(record){var local=location.hostname==='localhost'||location.hostname==='127.0.0.1';var url=local?'/api/pre-class-record':GAS_MOCK;return fetch(url,{method:'POST',mode:local?'cors':'no-cors',headers:{'Content-Type':local?'application/json':'text/plain;charset=utf-8'},body:JSON.stringify(record)})}
   window.chooseMock=chooseMock;window.jumpMock=jumpMock;
-  window.submitMockTest=function(){
+  window.submitMockTest=function(autoSubmit){
     if(!mockTest)return;
+    if(mockSubmitted){document.getElementById('app').innerHTML='<div class="submitted-neutral" data-neutral-feedback="1">已提交，不能重复作答。</div>';return}
     var done=Object.keys(mockAnswers).length,total=allMockItems().length;
-    if(done<total&&!confirm('还有未答题，仍然提交吗？'))return;
-    var s=scoreMock(),now=new Date().toISOString(),record={action:'mock_test_submit',recordType:'mock_test',lesson:mockTest.recordLesson||mockTest.testId,testId:mockTest.testId,studentName:name(),name:name(),stage:'mock_test',module:'mock_test',questionId:mockTest.testId,score:s.score,total:s.total,points:s.score,answer:JSON.stringify(mockAnswers),result:'submitted',autoResult:'submitted',weakPoints:s.wrong.length?'错题：'+s.wrong.join('、'):'',submittedAt:now,questionText:mockTest.titleCn};
-    var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:s.score+'/'+s.total,text:s.score+'/'+s.total,questionId:mockTest.testId,mode:'mock_test',testId:mockTest.testId,score:s.score,total:s.total,answers:mockAnswers,wrongNumbers:s.wrong,autoResult:'submitted',submittedAt:now};
+    if(!autoSubmit&&done<total&&!confirm('还有未答题，仍然提交吗？'))return;
+    mockSubmitted=true;saveMockSecurity();
+    var s=scoreMock(),now=new Date().toISOString(),record={action:'mock_test_submit',recordType:'mock_test',lesson:mockTest.recordLesson||mockTest.testId,testId:mockTest.testId,studentName:name(),name:name(),stage:'mock_test',module:'mock_test',questionId:mockTest.testId,score:s.score,total:s.total,points:s.score,answer:JSON.stringify(mockAnswers),result:autoSubmit?'auto_submitted':'submitted',autoResult:autoSubmit?'security_auto_submit':'submitted',weakPoints:s.wrong.length?'错题：'+s.wrong.join('、'):'',submittedAt:now,questionText:mockTest.titleCn,securityViolations:mockViolations};
+    var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:s.score+'/'+s.total,text:s.score+'/'+s.total,questionId:mockTest.testId,mode:'mock_test',testId:mockTest.testId,score:s.score,total:s.total,answers:mockAnswers,wrongNumbers:s.wrong,autoResult:autoSubmit?'security_auto_submit':'submitted',securityViolations:mockViolations,violationCount:mockViolations.length,submittedAt:now};
     if(client&&client.connected)client.publish('classpro/room/'+RM+'/answers',JSON.stringify(payload));
     postMockRecord(record).then(function(){try{localStorage.removeItem(mockStorageKey)}catch(e){}document.getElementById('app').innerHTML=mockStudentReport(s)}).catch(function(){document.getElementById('app').innerHTML='<div class="bad">成绩已计算，但记录提交失败：'+s.score+' / '+s.total+'</div>'+mockStudentReport(s)});
   };
@@ -429,13 +463,14 @@ client.on("close",function(){setStatus("disconnected")});
     if(!mockTest){loadMock();return}
     saveMockCurrent();
     restoreMock();
-    var locked=current.phase==='locked',left=mockTimeLeft(),items=allMockItems(),done=Object.keys(mockAnswers).length;
+    var locked=current.phase==='locked'||mockSubmitted,left=mockTimeLeft(),items=allMockItems(),done=Object.keys(mockAnswers).length;
     if(!locked&&left<=0)locked=true;
     var h='<div class="prompt">HSK1 模拟测试 / Mock Test</div><div class="hint" style="display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap"><b>'+es(mockTest.titleCn||mockTest.title)+'</b><span>已答 '+done+' / '+items.length+'</span><span style="font-weight:900;color:'+(left<300?'#dc2626':'#3f7f32')+'">剩余 '+fmt(left)+'</span></div>';
-    if(locked)h+='<div class="bad">教师已锁定测试，不能继续作答。</div>';
+    if(mockViolations.length)h+='<div class="bad">异常操作记录 '+mockViolations.length+' / 3。超过 3 次将自动提交。</div>';
+    if(locked)h+='<div class="bad">'+(mockSubmitted?'试卷已提交，不能继续作答。':'教师已锁定测试，不能继续作答。')+'</div>';
     h+=mockAnswerCard(items);
     (mockTest.sections||[]).forEach(function(s){h+='<h3 style="color:#3f7f32;margin:20px 0 8px">'+es(s.title)+' / '+es(s.titleEn)+'</h3>';h+=(s.items||[]).map(mockItem).join('')});
-    h+='<button style="width:100%;margin-top:18px" onclick="submitMockTest()" '+(locked?'disabled':'')+'>提交测试 / Submit Mock Test</button>';
+    h+='<button style="width:100%;margin-top:18px" onclick="submitMockTest(false)" '+(locked?'disabled':'')+'>提交测试 / Submit Mock Test</button>';
     document.getElementById('app').innerHTML=h;
   }
   var oldRender=render;
@@ -444,6 +479,9 @@ client.on("close",function(){setStatus("disconnected")});
   if(isMock())renderMock();
   var oldMessageHandlerReady=true;
   setInterval(function(){if(isMock()&&mockTest)renderMock()},30000);
+  document.addEventListener('visibilitychange',function(){if(document.hidden)reportMockSecurity('tab_hidden')});
+  window.addEventListener('blur',function(){reportMockSecurity('window_blur')});
+  ['copy','cut','paste','contextmenu'].forEach(function(ev){document.addEventListener(ev,function(e){if(isMock()){e.preventDefault();reportMockSecurity(ev)}})});
 })();
 </script>
 </body>
