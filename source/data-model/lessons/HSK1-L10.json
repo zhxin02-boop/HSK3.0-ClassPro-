@@ -2283,19 +2283,27 @@
             "pairs": [
               {
                 "left": "多少钱一个？",
-                "right": "五块钱一个。"
+                "left_pinyin": "duōshao qián yí gè",
+                "right": "五块钱一个。",
+                "right_pinyin": "wǔ kuài qián yí gè"
               },
               {
                 "left": "您想买什么？",
-                "right": "我想买两斤苹果。"
+                "left_pinyin": "nín xiǎng mǎi shénme",
+                "right": "我想买两斤苹果。",
+                "right_pinyin": "wǒ xiǎng mǎi liǎng jīn píngguǒ"
               },
               {
                 "left": "这件衣服怎么样？",
-                "right": "好看，也不贵。"
+                "left_pinyin": "zhè jiàn yīfu zěnmeyàng",
+                "right": "好看，也不贵。",
+                "right_pinyin": "hǎokàn yě bù guì"
               },
               {
                 "left": "杯子在哪儿？",
-                "right": "杯子在这边。"
+                "left_pinyin": "bēizi zài nǎr",
+                "right": "杯子在这边。",
+                "right_pinyin": "bēizi zài zhèbiān"
               }
             ]
           },
@@ -2312,19 +2320,27 @@
             "pairs": [
               {
                 "left": "苹果多少钱一斤？",
-                "right": "三块五一斤。"
+                "left_pinyin": "píngguǒ duōshao qián yì jīn",
+                "right": "三块五一斤。",
+                "right_pinyin": "sān kuài wǔ yì jīn"
               },
               {
                 "left": "你买什么？",
-                "right": "我买这个吧。"
+                "left_pinyin": "nǐ mǎi shénme",
+                "right": "我买这个吧。",
+                "right_pinyin": "wǒ mǎi zhège ba"
               },
               {
                 "left": "小明能穿吗？",
-                "right": "不能。"
+                "left_pinyin": "Xiǎomíng néng chuān ma",
+                "right": "不能。",
+                "right_pinyin": "bù néng"
               },
               {
                 "left": "男孩子的衣服在哪儿？",
-                "right": "在那儿。"
+                "left_pinyin": "nán háizi de yīfu zài nǎr",
+                "right": "在那儿。",
+                "right_pinyin": "zài nàr"
               }
             ]
           },
@@ -2341,19 +2357,27 @@
             "pairs": [
               {
                 "left": "这儿的水果多不多？",
-                "right": "这儿的水果真不少。"
+                "left_pinyin": "zhèr de shuǐguǒ duō bu duō",
+                "right": "这儿的水果真不少。",
+                "right_pinyin": "zhèr de shuǐguǒ zhēn bù shǎo"
               },
               {
                 "left": "这件多少钱？",
-                "right": "一百元。"
+                "left_pinyin": "zhè jiàn duōshao qián",
+                "right": "一百元。",
+                "right_pinyin": "yìbǎi yuán"
               },
               {
                 "left": "你喜欢这个杯子吗？",
-                "right": "我很喜欢，也不贵。"
+                "left_pinyin": "nǐ xǐhuan zhège bēizi ma",
+                "right": "我很喜欢，也不贵。",
+                "right_pinyin": "wǒ hěn xǐhuan yě bù guì"
               },
               {
                 "left": "你去哪儿买衣服？",
-                "right": "我去商店买衣服。"
+                "left_pinyin": "nǐ qù nǎr mǎi yīfu",
+                "right": "我去商店买衣服。",
+                "right_pinyin": "wǒ qù shāngdiàn mǎi yīfu"
               }
             ]
           },
@@ -2370,19 +2394,27 @@
             "pairs": [
               {
                 "left": "你想买几斤苹果？",
-                "right": "我想买两斤苹果。"
+                "left_pinyin": "nǐ xiǎng mǎi jǐ jīn píngguǒ",
+                "right": "我想买两斤苹果。",
+                "right_pinyin": "wǒ xiǎng mǎi liǎng jīn píngguǒ"
               },
               {
                 "left": "这些多少钱？",
-                "right": "七块钱。"
+                "left_pinyin": "zhèxiē duōshao qián",
+                "right": "七块钱。",
+                "right_pinyin": "qī kuài qián"
               },
               {
                 "left": "那些多少钱一个？",
-                "right": "十块钱一个。"
+                "left_pinyin": "nàxiē duōshao qián yí gè",
+                "right": "十块钱一个。",
+                "right_pinyin": "shí kuài qián yí gè"
               },
               {
                 "left": "女孩子穿什么？",
-                "right": "女孩子穿这件衣服。"
+                "left_pinyin": "nǚ háizi chuān shénme",
+                "right": "女孩子穿这件衣服。",
+                "right_pinyin": "nǚ háizi chuān zhè jiàn yīfu"
               }
             ]
           },
@@ -2399,19 +2431,27 @@
             "pairs": [
               {
                 "left": "这个苹果怎么样？",
-                "right": "很好吃，也很便宜。"
+                "left_pinyin": "zhège píngguǒ zěnmeyàng",
+                "right": "很好吃，也很便宜。",
+                "right_pinyin": "hěn hǎochī yě hěn piányi"
               },
               {
                 "left": "这个菜怎么样？",
-                "right": "不太好吃。"
+                "left_pinyin": "zhège cài zěnmeyàng",
+                "right": "不太好吃。",
+                "right_pinyin": "bú tài hǎochī"
               },
               {
                 "left": "你有多少钱？",
-                "right": "我有十块钱。"
+                "left_pinyin": "nǐ yǒu duōshao qián",
+                "right": "我有十块钱。",
+                "right_pinyin": "wǒ yǒu shí kuài qián"
               },
               {
                 "left": "你在哪儿？",
-                "right": "我在这儿。"
+                "left_pinyin": "nǐ zài nǎr",
+                "right": "我在这儿。",
+                "right_pinyin": "wǒ zài zhèr"
               }
             ]
           },
@@ -2422,28 +2462,38 @@
       "v8_memory_match": [
         {
           "id": "v8_l10_1",
-          "type": "word_match",
+          "type": "memory_match",
           "stage": "in_class",
           "prompt_cn": "词了个词。",
           "prompt_en": "Matching game.",
           "data": {
             "pairs": [
               {
-                "left": "多少钱一个？",
-                "right": "五块钱一个。"
+                "left": "杯子",
+                "left_pinyin": "bēizi",
+                "right": "cup; glass"
               },
               {
-                "left": "您想买什么？",
-                "right": "我想买两斤苹果。"
+                "left": "售货员",
+                "left_pinyin": "shòuhuòyuán",
+                "right": "salesperson"
               },
               {
-                "left": "这件衣服怎么样？",
-                "right": "好看，也不贵。"
+                "left": "这边",
+                "left_pinyin": "zhèbiān",
+                "right": "this side; here"
               },
               {
-                "left": "杯子在哪儿？",
-                "right": "杯子在这边。"
+                "left": "钱",
+                "left_pinyin": "qián",
+                "right": "money"
               }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
             ]
           },
           "correct_answer": "全部配对正确",
@@ -2451,28 +2501,38 @@
         },
         {
           "id": "v8_l10_2",
-          "type": "word_match",
+          "type": "memory_match",
           "stage": "in_class",
           "prompt_cn": "词了个词。",
           "prompt_en": "Matching game.",
           "data": {
             "pairs": [
               {
-                "left": "苹果多少钱一斤？",
-                "right": "三块五一斤。"
+                "left": "五块钱",
+                "left_pinyin": "wǔ kuài qián",
+                "right": "five yuan"
               },
               {
-                "left": "你买什么？",
-                "right": "我买这个吧。"
+                "left": "十块钱",
+                "left_pinyin": "shí kuài qián",
+                "right": "ten yuan"
               },
               {
-                "left": "小明能穿吗？",
-                "right": "不能。"
+                "left": "三块五",
+                "left_pinyin": "sān kuài wǔ",
+                "right": "three yuan fifty"
               },
               {
-                "left": "男孩子的衣服在哪儿？",
-                "right": "在那儿。"
+                "left": "一百元",
+                "left_pinyin": "yìbǎi yuán",
+                "right": "one hundred yuan"
               }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
             ]
           },
           "correct_answer": "全部配对正确",
@@ -2480,28 +2540,38 @@
         },
         {
           "id": "v8_l10_3",
-          "type": "word_match",
+          "type": "memory_match",
           "stage": "in_class",
           "prompt_cn": "词了个词。",
           "prompt_en": "Matching game.",
           "data": {
             "pairs": [
               {
-                "left": "这儿的水果多不多？",
-                "right": "这儿的水果真不少。"
+                "left": "水果",
+                "left_pinyin": "shuǐguǒ",
+                "right": "fruit"
               },
               {
-                "left": "这件多少钱？",
-                "right": "一百元。"
+                "left": "苹果",
+                "left_pinyin": "píngguǒ",
+                "right": "apple"
               },
               {
-                "left": "你喜欢这个杯子吗？",
-                "right": "我很喜欢，也不贵。"
+                "left": "一斤苹果",
+                "left_pinyin": "yì jīn píngguǒ",
+                "right": "one jin of apples"
               },
               {
-                "left": "你去哪儿买衣服？",
-                "right": "我去商店买衣服。"
+                "left": "两斤苹果",
+                "left_pinyin": "liǎng jīn píngguǒ",
+                "right": "two jin of apples"
               }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
             ]
           },
           "correct_answer": "全部配对正确",
@@ -2509,28 +2579,38 @@
         },
         {
           "id": "v8_l10_4",
-          "type": "word_match",
+          "type": "memory_match",
           "stage": "in_class",
           "prompt_cn": "词了个词。",
           "prompt_en": "Matching game.",
           "data": {
             "pairs": [
               {
-                "left": "你想买几斤苹果？",
-                "right": "我想买两斤苹果。"
+                "left": "商店",
+                "left_pinyin": "shāngdiàn",
+                "right": "shop; store"
               },
               {
-                "left": "这些多少钱？",
-                "right": "七块钱。"
+                "left": "衣服",
+                "left_pinyin": "yīfu",
+                "right": "clothes"
               },
               {
-                "left": "那些多少钱一个？",
-                "right": "十块钱一个。"
+                "left": "一件衣服",
+                "left_pinyin": "yí jiàn yīfu",
+                "right": "one piece of clothing"
               },
               {
-                "left": "女孩子穿什么？",
-                "right": "女孩子穿这件衣服。"
+                "left": "男孩子的衣服",
+                "left_pinyin": "nán háizi de yīfu",
+                "right": "boys' clothes"
               }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
             ]
           },
           "correct_answer": "全部配对正确",
@@ -2538,28 +2618,38 @@
         },
         {
           "id": "v8_l10_5",
-          "type": "word_match",
+          "type": "memory_match",
           "stage": "in_class",
           "prompt_cn": "词了个词。",
           "prompt_en": "Matching game.",
           "data": {
             "pairs": [
               {
-                "left": "这个苹果怎么样？",
-                "right": "很好吃，也很便宜。"
+                "left": "便宜",
+                "left_pinyin": "piányi",
+                "right": "cheap"
               },
               {
-                "left": "这个菜怎么样？",
-                "right": "不太好吃。"
+                "left": "贵",
+                "left_pinyin": "guì",
+                "right": "expensive"
               },
               {
-                "left": "你有多少钱？",
-                "right": "我有十块钱。"
+                "left": "怎么样",
+                "left_pinyin": "zěnmeyàng",
+                "right": "how; what do you think"
               },
               {
-                "left": "你在哪儿？",
-                "right": "我在这儿。"
+                "left": "穿",
+                "left_pinyin": "chuān",
+                "right": "wear"
               }
+            ],
+            "order": [
+              2,
+              0,
+              3,
+              1
             ]
           },
           "correct_answer": "全部配对正确",
@@ -3500,184 +3590,6 @@
           "correct_answer": "见每题答案",
           "sourceType": "textbook"
         }
-      ],
-      "r4_picture_talk": [
-        {
-          "id": "r4_l10_pt_01",
-          "type": "oral",
-          "stage": "in_class",
-          "prompt_cn": "这个杯子多少钱？",
-          "prompt_en": "Ask the price and answer in Chinese.",
-          "data": {
-            "question": "这个杯子多少钱？",
-            "question_pinyin": "Zhe ge beizi duoshao qian?",
-            "instructions": "请用中文回答这个问题。",
-            "context": "教学扩展",
-            "image": "images/vocab/hsk1-l10/v01_beizi.png",
-            "sampleAnswer": "这个杯子五块钱一个。",
-            "sampleAnswerPinyin": "Zhe ge beizi wu kuai qian yi ge.",
-            "patternType": "多少钱？"
-          },
-          "openEnded": true,
-          "needsTeacherReview": true,
-          "cloudWall": true,
-          "weakPoints": "输出：多少钱？",
-          "sourceType": "teaching_extension"
-        },
-        {
-          "id": "r4_l10_pt_02",
-          "type": "oral",
-          "stage": "in_class",
-          "prompt_cn": "苹果多少钱一斤？",
-          "prompt_en": "Ask the price and answer in Chinese.",
-          "data": {
-            "question": "苹果多少钱一斤？",
-            "question_pinyin": "Pingguo duoshao qian yi jin?",
-            "instructions": "请用中文回答这个问题。",
-            "context": "教学扩展",
-            "image": "images/vocab/hsk1-l10/v05_pingguo.png",
-            "sampleAnswer": "苹果三块五一斤。",
-            "sampleAnswerPinyin": "Pingguo san kuai wu yi jin.",
-            "patternType": "多少钱？"
-          },
-          "openEnded": true,
-          "needsTeacherReview": true,
-          "cloudWall": true,
-          "weakPoints": "输出：多少钱？",
-          "sourceType": "teaching_extension"
-        },
-        {
-          "id": "r4_l10_pt_03",
-          "type": "oral",
-          "stage": "in_class",
-          "prompt_cn": "水果多少钱？",
-          "prompt_en": "Ask the price and answer in Chinese.",
-          "data": {
-            "question": "水果多少钱？",
-            "question_pinyin": "Shuiguo duoshao qian?",
-            "instructions": "请用中文回答这个问题。",
-            "context": "教学扩展",
-            "image": "images/vocab/hsk1-l10/v04_shuiguo.png",
-            "sampleAnswer": "水果二十块钱。",
-            "sampleAnswerPinyin": "Shuiguo ershi kuai qian.",
-            "patternType": "多少钱？"
-          },
-          "openEnded": true,
-          "needsTeacherReview": true,
-          "cloudWall": true,
-          "weakPoints": "输出：多少钱？",
-          "sourceType": "teaching_extension"
-        },
-        {
-          "id": "r4_l10_pt_04",
-          "type": "oral",
-          "stage": "in_class",
-          "prompt_cn": "这件衣服多少钱？",
-          "prompt_en": "Ask the price and answer in Chinese.",
-          "data": {
-            "question": "这件衣服多少钱？",
-            "question_pinyin": "Zhe jian yifu duoshao qian?",
-            "instructions": "请用中文回答这个问题。",
-            "context": "教学扩展",
-            "image": "images/vocab/hsk1-l10/v07_yifu.png",
-            "sampleAnswer": "这件衣服一百块钱。",
-            "sampleAnswerPinyin": "Zhe jian yifu yibai kuai qian.",
-            "patternType": "多少钱？"
-          },
-          "openEnded": true,
-          "needsTeacherReview": true,
-          "cloudWall": true,
-          "weakPoints": "输出：多少钱？",
-          "sourceType": "teaching_extension"
-        },
-        {
-          "id": "r4_l10_pt_05",
-          "type": "oral",
-          "stage": "in_class",
-          "prompt_cn": "这个杯子贵不贵？",
-          "prompt_en": "Ask if it is expensive and answer in Chinese.",
-          "data": {
-            "question": "这个杯子贵不贵？",
-            "question_pinyin": "Zhe ge beizi gui bu gui?",
-            "instructions": "请用中文回答这个问题。",
-            "context": "教学扩展",
-            "image": "images/vocab/hsk1-l10/v01_beizi.png",
-            "sampleAnswer": "这个杯子不贵。",
-            "sampleAnswerPinyin": "Zhe ge beizi bu gui.",
-            "patternType": "贵不贵？"
-          },
-          "openEnded": true,
-          "needsTeacherReview": true,
-          "cloudWall": true,
-          "weakPoints": "输出：贵不贵？",
-          "sourceType": "teaching_extension"
-        },
-        {
-          "id": "r4_l10_pt_06",
-          "type": "oral",
-          "stage": "in_class",
-          "prompt_cn": "这件衣服贵不贵？",
-          "prompt_en": "Ask if it is expensive and answer in Chinese.",
-          "data": {
-            "question": "这件衣服贵不贵？",
-            "question_pinyin": "Zhe jian yifu gui bu gui?",
-            "instructions": "请用中文回答这个问题。",
-            "context": "教学扩展",
-            "image": "images/vocab/hsk1-l10/v08_gui.png",
-            "sampleAnswer": "这件衣服很贵。",
-            "sampleAnswerPinyin": "Zhe jian yifu hen gui.",
-            "patternType": "贵不贵？"
-          },
-          "openEnded": true,
-          "needsTeacherReview": true,
-          "cloudWall": true,
-          "weakPoints": "输出：贵不贵？",
-          "sourceType": "teaching_extension"
-        },
-        {
-          "id": "r4_l10_pt_07",
-          "type": "oral",
-          "stage": "in_class",
-          "prompt_cn": "你买什么？",
-          "prompt_en": "Look at the picture and answer the question in Chinese.",
-          "data": {
-            "question": "你买什么？",
-            "question_pinyin": "Ni mai shenme?",
-            "instructions": "请用中文回答这个问题。",
-            "context": "教学扩展",
-            "image": "images/vocab/hsk1-l10/v05_pingguo.png",
-            "sampleAnswer": "我买苹果。",
-            "sampleAnswerPinyin": "Wo mai pingguo.",
-            "patternType": "买什么？"
-          },
-          "openEnded": true,
-          "needsTeacherReview": true,
-          "cloudWall": true,
-          "weakPoints": "输出：买什么？",
-          "sourceType": "teaching_extension"
-        },
-        {
-          "id": "r4_l10_pt_08",
-          "type": "oral",
-          "stage": "in_class",
-          "prompt_cn": "你在哪儿买东西？",
-          "prompt_en": "Look at the picture and answer the question in Chinese.",
-          "data": {
-            "question": "你在哪儿买东西？",
-            "question_pinyin": "Ni zai nar mai dongxi?",
-            "instructions": "请用中文回答这个问题。",
-            "context": "教学扩展",
-            "image": "images/vocab/hsk1-l10/v06_shangdian.png",
-            "sampleAnswer": "我在商店买东西。",
-            "sampleAnswerPinyin": "Wo zai shangdian mai dongxi.",
-            "patternType": "在哪儿买？"
-          },
-          "openEnded": true,
-          "needsTeacherReview": true,
-          "cloudWall": true,
-          "weakPoints": "输出：在哪儿买？",
-          "sourceType": "teaching_extension"
-        }
       ]
     }
   },
@@ -4117,19 +4029,27 @@
           "pairs": [
             {
               "left": "多少钱一个？",
-              "right": "五块钱一个。"
+              "left_pinyin": "duōshao qián yí gè",
+              "right": "五块钱一个。",
+              "right_pinyin": "wǔ kuài qián yí gè"
             },
             {
               "left": "您想买什么？",
-              "right": "我想买两斤苹果。"
+              "left_pinyin": "nín xiǎng mǎi shénme",
+              "right": "我想买两斤苹果。",
+              "right_pinyin": "wǒ xiǎng mǎi liǎng jīn píngguǒ"
             },
             {
               "left": "这件衣服怎么样？",
-              "right": "好看，也不贵。"
+              "left_pinyin": "zhè jiàn yīfu zěnmeyàng",
+              "right": "好看，也不贵。",
+              "right_pinyin": "hǎokàn yě bù guì"
             },
             {
               "left": "杯子在哪儿？",
-              "right": "杯子在这边。"
+              "left_pinyin": "bēizi zài nǎr",
+              "right": "杯子在这边。",
+              "right_pinyin": "bēizi zài zhèbiān"
             }
           ]
         },
@@ -4146,19 +4066,27 @@
           "pairs": [
             {
               "left": "苹果多少钱一斤？",
-              "right": "三块五一斤。"
+              "left_pinyin": "píngguǒ duōshao qián yì jīn",
+              "right": "三块五一斤。",
+              "right_pinyin": "sān kuài wǔ yì jīn"
             },
             {
               "left": "你买什么？",
-              "right": "我买这个吧。"
+              "left_pinyin": "nǐ mǎi shénme",
+              "right": "我买这个吧。",
+              "right_pinyin": "wǒ mǎi zhège ba"
             },
             {
               "left": "小明能穿吗？",
-              "right": "不能。"
+              "left_pinyin": "Xiǎomíng néng chuān ma",
+              "right": "不能。",
+              "right_pinyin": "bù néng"
             },
             {
               "left": "男孩子的衣服在哪儿？",
-              "right": "在那儿。"
+              "left_pinyin": "nán háizi de yīfu zài nǎr",
+              "right": "在那儿。",
+              "right_pinyin": "zài nàr"
             }
           ]
         },
@@ -4175,19 +4103,27 @@
           "pairs": [
             {
               "left": "这儿的水果多不多？",
-              "right": "这儿的水果真不少。"
+              "left_pinyin": "zhèr de shuǐguǒ duō bu duō",
+              "right": "这儿的水果真不少。",
+              "right_pinyin": "zhèr de shuǐguǒ zhēn bù shǎo"
             },
             {
               "left": "这件多少钱？",
-              "right": "一百元。"
+              "left_pinyin": "zhè jiàn duōshao qián",
+              "right": "一百元。",
+              "right_pinyin": "yìbǎi yuán"
             },
             {
               "left": "你喜欢这个杯子吗？",
-              "right": "我很喜欢，也不贵。"
+              "left_pinyin": "nǐ xǐhuan zhège bēizi ma",
+              "right": "我很喜欢，也不贵。",
+              "right_pinyin": "wǒ hěn xǐhuan yě bù guì"
             },
             {
               "left": "你去哪儿买衣服？",
-              "right": "我去商店买衣服。"
+              "left_pinyin": "nǐ qù nǎr mǎi yīfu",
+              "right": "我去商店买衣服。",
+              "right_pinyin": "wǒ qù shāngdiàn mǎi yīfu"
             }
           ]
         },
@@ -4204,19 +4140,27 @@
           "pairs": [
             {
               "left": "你想买几斤苹果？",
-              "right": "我想买两斤苹果。"
+              "left_pinyin": "nǐ xiǎng mǎi jǐ jīn píngguǒ",
+              "right": "我想买两斤苹果。",
+              "right_pinyin": "wǒ xiǎng mǎi liǎng jīn píngguǒ"
             },
             {
               "left": "这些多少钱？",
-              "right": "七块钱。"
+              "left_pinyin": "zhèxiē duōshao qián",
+              "right": "七块钱。",
+              "right_pinyin": "qī kuài qián"
             },
             {
               "left": "那些多少钱一个？",
-              "right": "十块钱一个。"
+              "left_pinyin": "nàxiē duōshao qián yí gè",
+              "right": "十块钱一个。",
+              "right_pinyin": "shí kuài qián yí gè"
             },
             {
               "left": "女孩子穿什么？",
-              "right": "女孩子穿这件衣服。"
+              "left_pinyin": "nǚ háizi chuān shénme",
+              "right": "女孩子穿这件衣服。",
+              "right_pinyin": "nǚ háizi chuān zhè jiàn yīfu"
             }
           ]
         },
@@ -4233,19 +4177,27 @@
           "pairs": [
             {
               "left": "这个苹果怎么样？",
-              "right": "很好吃，也很便宜。"
+              "left_pinyin": "zhège píngguǒ zěnmeyàng",
+              "right": "很好吃，也很便宜。",
+              "right_pinyin": "hěn hǎochī yě hěn piányi"
             },
             {
               "left": "这个菜怎么样？",
-              "right": "不太好吃。"
+              "left_pinyin": "zhège cài zěnmeyàng",
+              "right": "不太好吃。",
+              "right_pinyin": "bú tài hǎochī"
             },
             {
               "left": "你有多少钱？",
-              "right": "我有十块钱。"
+              "left_pinyin": "nǐ yǒu duōshao qián",
+              "right": "我有十块钱。",
+              "right_pinyin": "wǒ yǒu shí kuài qián"
             },
             {
               "left": "你在哪儿？",
-              "right": "我在这儿。"
+              "left_pinyin": "nǐ zài nǎr",
+              "right": "我在这儿。",
+              "right_pinyin": "wǒ zài zhèr"
             }
           ]
         },
@@ -4255,145 +4207,195 @@
     ],
     "matchingGame": [
       {
-        "id": "v7_l10_1",
-        "type": "word_match",
+        "id": "v8_l10_1",
+        "type": "memory_match",
         "stage": "in_class",
-        "prompt_cn": "词句匹配。",
-        "prompt_en": "Match each question with the best answer.",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Matching game.",
         "data": {
           "pairs": [
             {
-              "left": "多少钱一个？",
-              "right": "五块钱一个。"
+              "left": "杯子",
+              "left_pinyin": "bēizi",
+              "right": "cup; glass"
             },
             {
-              "left": "您想买什么？",
-              "right": "我想买两斤苹果。"
+              "left": "售货员",
+              "left_pinyin": "shòuhuòyuán",
+              "right": "salesperson"
             },
             {
-              "left": "这件衣服怎么样？",
-              "right": "好看，也不贵。"
+              "left": "这边",
+              "left_pinyin": "zhèbiān",
+              "right": "this side; here"
             },
             {
-              "left": "杯子在哪儿？",
-              "right": "杯子在这边。"
+              "left": "钱",
+              "left_pinyin": "qián",
+              "right": "money"
             }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
           ]
         },
         "correct_answer": "全部配对正确",
         "sourceType": "teaching_extension"
       },
       {
-        "id": "v7_l10_2",
-        "type": "word_match",
+        "id": "v8_l10_2",
+        "type": "memory_match",
         "stage": "in_class",
-        "prompt_cn": "词句匹配。",
-        "prompt_en": "Match each question with the best answer.",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Matching game.",
         "data": {
           "pairs": [
             {
-              "left": "苹果多少钱一斤？",
-              "right": "三块五一斤。"
+              "left": "五块钱",
+              "left_pinyin": "wǔ kuài qián",
+              "right": "five yuan"
             },
             {
-              "left": "你买什么？",
-              "right": "我买这个吧。"
+              "left": "十块钱",
+              "left_pinyin": "shí kuài qián",
+              "right": "ten yuan"
             },
             {
-              "left": "小明能穿吗？",
-              "right": "不能。"
+              "left": "三块五",
+              "left_pinyin": "sān kuài wǔ",
+              "right": "three yuan fifty"
             },
             {
-              "left": "男孩子的衣服在哪儿？",
-              "right": "在那儿。"
+              "left": "一百元",
+              "left_pinyin": "yìbǎi yuán",
+              "right": "one hundred yuan"
             }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
           ]
         },
         "correct_answer": "全部配对正确",
         "sourceType": "teaching_extension"
       },
       {
-        "id": "v7_l10_3",
-        "type": "word_match",
+        "id": "v8_l10_3",
+        "type": "memory_match",
         "stage": "in_class",
-        "prompt_cn": "词句匹配。",
-        "prompt_en": "Match each question with the best answer.",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Matching game.",
         "data": {
           "pairs": [
             {
-              "left": "这儿的水果多不多？",
-              "right": "这儿的水果真不少。"
+              "left": "水果",
+              "left_pinyin": "shuǐguǒ",
+              "right": "fruit"
             },
             {
-              "left": "这件多少钱？",
-              "right": "一百元。"
+              "left": "苹果",
+              "left_pinyin": "píngguǒ",
+              "right": "apple"
             },
             {
-              "left": "你喜欢这个杯子吗？",
-              "right": "我很喜欢，也不贵。"
+              "left": "一斤苹果",
+              "left_pinyin": "yì jīn píngguǒ",
+              "right": "one jin of apples"
             },
             {
-              "left": "你去哪儿买衣服？",
-              "right": "我去商店买衣服。"
+              "left": "两斤苹果",
+              "left_pinyin": "liǎng jīn píngguǒ",
+              "right": "two jin of apples"
             }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
           ]
         },
         "correct_answer": "全部配对正确",
         "sourceType": "teaching_extension"
       },
       {
-        "id": "v7_l10_4",
-        "type": "word_match",
+        "id": "v8_l10_4",
+        "type": "memory_match",
         "stage": "in_class",
-        "prompt_cn": "词句匹配。",
-        "prompt_en": "Match each question with the best answer.",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Matching game.",
         "data": {
           "pairs": [
             {
-              "left": "你想买几斤苹果？",
-              "right": "我想买两斤苹果。"
+              "left": "商店",
+              "left_pinyin": "shāngdiàn",
+              "right": "shop; store"
             },
             {
-              "left": "这些多少钱？",
-              "right": "七块钱。"
+              "left": "衣服",
+              "left_pinyin": "yīfu",
+              "right": "clothes"
             },
             {
-              "left": "那些多少钱一个？",
-              "right": "十块钱一个。"
+              "left": "一件衣服",
+              "left_pinyin": "yí jiàn yīfu",
+              "right": "one piece of clothing"
             },
             {
-              "left": "女孩子穿什么？",
-              "right": "女孩子穿这件衣服。"
+              "left": "男孩子的衣服",
+              "left_pinyin": "nán háizi de yīfu",
+              "right": "boys' clothes"
             }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
           ]
         },
         "correct_answer": "全部配对正确",
         "sourceType": "teaching_extension"
       },
       {
-        "id": "v7_l10_5",
-        "type": "word_match",
+        "id": "v8_l10_5",
+        "type": "memory_match",
         "stage": "in_class",
-        "prompt_cn": "词句匹配。",
-        "prompt_en": "Match each question with the best answer.",
+        "prompt_cn": "词了个词。",
+        "prompt_en": "Matching game.",
         "data": {
           "pairs": [
             {
-              "left": "这个苹果怎么样？",
-              "right": "很好吃，也很便宜。"
+              "left": "便宜",
+              "left_pinyin": "piányi",
+              "right": "cheap"
             },
             {
-              "left": "这个菜怎么样？",
-              "right": "不太好吃。"
+              "left": "贵",
+              "left_pinyin": "guì",
+              "right": "expensive"
             },
             {
-              "left": "你有多少钱？",
-              "right": "我有十块钱。"
+              "left": "怎么样",
+              "left_pinyin": "zěnmeyàng",
+              "right": "how; what do you think"
             },
             {
-              "left": "你在哪儿？",
-              "right": "我在这儿。"
+              "left": "穿",
+              "left_pinyin": "chuān",
+              "right": "wear"
             }
+          ],
+          "order": [
+            2,
+            0,
+            3,
+            1
           ]
         },
         "correct_answer": "全部配对正确",

@@ -250,13 +250,97 @@ const fillItems = [
   ["杯子在___。", "Bēizi zài ___.", ["这边", "几块", "一斤", "便宜"], "这边"]
 ].map((x, i) => choice(`v5_l10_${i + 1}`, "选词填空。", x[2], x[3], x[3], { type: "vocab_fill", data: { sentence: x[0], sentence_pinyin: x[1] }, sourceType: i < 5 ? "textbook" : "teaching_extension" }));
 
+const l10Pinyin = Object.assign({
+  "我": "wǒ",
+  "你": "nǐ",
+  "您": "nín",
+  "有": "yǒu",
+  "在": "zài",
+  "去": "qù",
+  "买": "mǎi",
+  "想": "xiǎng",
+  "吧": "ba",
+  "几": "jǐ",
+  "什么": "shénme",
+  "去哪儿": "qù nǎr",
+  "一个": "yí gè",
+  "一斤苹果": "yì jīn píngguǒ",
+  "一斤": "yì jīn",
+  "一件衣服": "yí jiàn yīfu",
+  "一件": "yí jiàn",
+  "两斤": "liǎng jīn",
+  "三块五": "sān kuài wǔ",
+  "五块钱": "wǔ kuài qián",
+  "七块钱": "qī kuài qián",
+  "十块钱": "shí kuài qián",
+  "一百元": "yìbǎi yuán",
+  "多少钱": "duōshao qián",
+  "多不多": "duō bu duō",
+  "在哪儿": "zài nǎr",
+  "在那儿": "zài nàr",
+  "在这边": "zài zhèbiān",
+  "这件": "zhè jiàn",
+  "这个": "zhège",
+  "这些": "zhèxiē",
+  "那些": "nàxiē",
+  "这儿": "zhèr",
+  "真": "zhēn",
+  "不": "bù",
+  "不太": "bú tài",
+  "也": "yě",
+  "能": "néng",
+  "不能": "bù néng",
+  "好看": "hǎokàn",
+  "好吃": "hǎochī",
+  "菜": "cài",
+  "很": "hěn",
+  "喜欢": "xǐhuan",
+  "小明": "Xiǎomíng",
+  "女孩子": "nǚ háizi",
+  "男孩子": "nán háizi",
+  "孩子": "háizi",
+  "的": "de",
+  "吗": "ma",
+  "？": "",
+  "。": "",
+  "，": ""
+}, Object.fromEntries(vocab.map((v) => [v.word, v.pinyin])));
+
+function pinyinText(text) {
+  let out = String(text || "");
+  Object.keys(l10Pinyin).sort((a, b) => b.length - a.length).forEach((k) => {
+    out = out.split(k).join(` ${l10Pinyin[k]} `);
+  });
+  return out.replace(/[，。？！,.?!：:；;]/g, " ").replace(/\s+/g, " ").trim();
+}
+
 const wordMatch = [
   [["多少钱一个？", "五块钱一个。"], ["您想买什么？", "我想买两斤苹果。"], ["这件衣服怎么样？", "好看，也不贵。"], ["杯子在哪儿？", "杯子在这边。"]],
   [["苹果多少钱一斤？", "三块五一斤。"], ["你买什么？", "我买这个吧。"], ["小明能穿吗？", "不能。"], ["男孩子的衣服在哪儿？", "在那儿。"]],
   [["这儿的水果多不多？", "这儿的水果真不少。"], ["这件多少钱？", "一百元。"], ["你喜欢这个杯子吗？", "我很喜欢，也不贵。"], ["你去哪儿买衣服？", "我去商店买衣服。"]],
   [["你想买几斤苹果？", "我想买两斤苹果。"], ["这些多少钱？", "七块钱。"], ["那些多少钱一个？", "十块钱一个。"], ["女孩子穿什么？", "女孩子穿这件衣服。"]],
   [["这个苹果怎么样？", "很好吃，也很便宜。"], ["这个菜怎么样？", "不太好吃。"], ["你有多少钱？", "我有十块钱。"], ["你在哪儿？", "我在这儿。"]]
-].map((pairs, i) => ({ id: `v7_l10_${i + 1}`, type: "word_match", stage: "in_class", prompt_cn: "词句匹配。", prompt_en: "Match each question with the best answer.", data: { pairs: pairs.map((p) => ({ left: p[0], right: p[1] })) }, correct_answer: "全部配对正确", sourceType: "teaching_extension" }));
+].map((pairs, i) => ({ id: `v7_l10_${i + 1}`, type: "word_match", stage: "in_class", prompt_cn: "词句匹配。", prompt_en: "Match each question with the best answer.", data: { pairs: pairs.map((p) => ({ left: p[0], left_pinyin: pinyinText(p[0]), right: p[1], right_pinyin: pinyinText(p[1]) })) }, correct_answer: "全部配对正确", sourceType: "teaching_extension" }));
+
+const memoryMatch = [
+  [["杯子", "cup; glass"], ["售货员", "salesperson"], ["这边", "this side; here"], ["钱", "money"]],
+  [["五块钱", "five yuan"], ["十块钱", "ten yuan"], ["三块五", "three yuan fifty"], ["一百元", "one hundred yuan"]],
+  [["水果", "fruit"], ["苹果", "apple"], ["一斤苹果", "one jin of apples"], ["两斤苹果", "two jin of apples"]],
+  [["商店", "shop; store"], ["衣服", "clothes"], ["一件衣服", "one piece of clothing"], ["男孩子的衣服", "boys' clothes"]],
+  [["便宜", "cheap"], ["贵", "expensive"], ["怎么样", "how; what do you think"], ["穿", "wear"]]
+].map((pairs, i) => ({
+  id: `v8_l10_${i + 1}`,
+  type: "memory_match",
+  stage: "in_class",
+  prompt_cn: "词了个词。",
+  prompt_en: "Matching game.",
+  data: {
+    pairs: pairs.map((p) => ({ left: p[0], left_pinyin: pinyinText(p[0]), right: p[1] })),
+    order: [2, 0, 3, 1]
+  },
+  correct_answer: "全部配对正确",
+  sourceType: "teaching_extension"
+}));
 
 const sentenceTransform = [
   ["五块钱一个。", "Wǔ kuài qián yí gè.", ["多少钱一个？", "你在哪儿？", "你买什么？", "这个怎么样？"], ["Duōshao qián yí gè?", "Nǐ zài nǎr?", "Nǐ mǎi shénme?", "Zhège zěnmeyàng?"], "多少钱一个？"],
@@ -401,7 +485,7 @@ const lesson = {
       v1_image_guess: imageGuess,
       v5_vocab_fill: fillItems,
       v7_word_match: wordMatch,
-      v8_memory_match: wordMatch.map((x, i) => ({ ...x, id: `v8_l10_${i + 1}`, prompt_cn: "词了个词。", prompt_en: "Matching game." })),
+      v8_memory_match: memoryMatch,
       v4_complete_sentence: sentenceTransform,
       g1_ordering: ordering,
       r3_translation_choice: translationChoice,
@@ -412,7 +496,7 @@ const lesson = {
     pictureGuess: imageGuess,
     vocabFill: fillItems,
     wordMatch,
-    matchingGame: wordMatch,
+    matchingGame: memoryMatch,
     sentenceTransform,
     ordering,
     translationChoice,

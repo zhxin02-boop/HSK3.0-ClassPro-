@@ -1498,7 +1498,7 @@ window.ap=ap;
   var basePyL03=py,l03Py={"人":"rén","的":"de","这":"zhè","谁":"shéi","朋友":"péngyou","女朋友":"nǚpéngyou","哪":"nǎ","国":"guó","她":"tā","喂":"wèi","姐姐":"jiějie","工作":"gōngzuò","还":"hái","忙":"máng","吗":"ma","对":"duì","太":"tài","我们":"wǒmen","想":"xiǎng"};
   py=function(s){var key=String(s||'');for(var pi=0;pi<V.length;pi++)if((V[pi].hanzi||V[pi].word)===key)return V[pi].pinyin||'';return l03Py[key]||basePyL03(s)};
   var l03SentencePy={"我是中国人。":"Wǒ shì Zhōngguó rén.","你是哪国人？":"Nǐ shì nǎ guó rén?","这是我女朋友。":"Zhè shì wǒ nǚpéngyou.","这是谁？":"Zhè shì shéi?","她是泰国人。":"Tā shì Tàiguó rén.","她是哪国人？":"Tā shì nǎ guó rén?","她也是学生。":"Tā yě shì xuésheng.","她是学生吗？":"Tā shì xuésheng ma?","喂，一飞！":"Wèi, Yīfēi!","你给谁打电话？":"Nǐ gěi shéi dǎ diànhuà?","对，还很忙。":"Duì, hái hěn máng.","你工作还忙吗？":"Nǐ gōngzuò hái máng ma?","我不太忙。":"Wǒ bú tài máng.","你也很忙吗？":"Nǐ yě hěn máng ma?","我们很想你。":"Wǒmen hěn xiǎng nǐ.","你们想我吗？":"Nǐmen xiǎng wǒ ma?","我叫李文。":"Wǒ jiào Lǐ Wén.","你叫什么？":"Nǐ jiào shénme?","很高兴认识你。":"Hěn gāoxìng rènshi nǐ.","认识你我也很高兴。":"Rènshi nǐ wǒ yě hěn gāoxìng.","我不是老师。":"Wǒ bú shì lǎoshī.","你是老师吗？":"Nǐ shì lǎoshī ma?"};
-  V7QA=V7QA.map(function(group){return group.map(function(p){return Object.assign({},p,{left_pinyin:l03SentencePy[p.left]||'',right_pinyin:l03SentencePy[p.right]||''})})});
+  V7QA=V7QA.map(function(group){return group.map(function(p){return Object.assign({},p,{left_pinyin:p.left_pinyin||l03SentencePy[p.left]||'',right_pinyin:p.right_pinyin||l03SentencePy[p.right]||''})})});
   var baseCqL03=ap._cq;
   ap._cq=function(){var q=baseCqL03.call(this);if(q&&this.st==='v1'&&q.data&&Array.isArray(q.data.options))q.data.options_pinyin=q.data.options.map(function(o){return py(o)});return q};
   var oldTg=ap._tg,oldRender=ap._r;
