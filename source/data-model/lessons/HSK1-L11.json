@@ -2316,25 +2316,25 @@
                 "left": "你什么时候能到饭店？",
                 "right": "还不知道，正在找呢。",
                 "left_pinyin": "nǐ shénme shíhou néng dào fàndiàn",
-                "right_pinyin": "hái bù zhīdào zhèngzài zhǎo ne"
+                "right_pinyin": "hái bù zhīdào, zhèngzài zhǎo ne"
               },
               {
                 "left": "你开车没开车？",
                 "right": "我没开车，坐车呢。",
                 "left_pinyin": "nǐ kāichē méi kāichē",
-                "right_pinyin": "wǒ méi kāichē zuò chē ne"
+                "right_pinyin": "wǒ méi kāichē, zuò chē ne"
               },
               {
                 "left": "它是不是在超市后边？",
                 "right": "是的。",
-                "left_pinyin": "它 shì bù shì zài chāoshì hòubian",
+                "left_pinyin": "tā shì bú shì zài chāoshì hòubian",
                 "right_pinyin": "shì de"
               },
               {
                 "left": "你还在读大学吗？",
                 "right": "对，我读大学呢。",
                 "left_pinyin": "nǐ hái zài dú dàxué ma",
-                "right_pinyin": "duì wǒ dú dàxué ne"
+                "right_pinyin": "duì, wǒ dú dàxué ne"
               }
             ]
           },
@@ -2352,7 +2352,7 @@
               {
                 "left": "你们学习忙不忙？",
                 "right": "非常忙。",
-                "left_pinyin": "nǐ 们 xué 习 máng bù máng",
+                "left_pinyin": "nǐmen xuéxí máng bù máng",
                 "right_pinyin": "fēicháng máng"
               },
               {
@@ -2370,8 +2370,8 @@
               {
                 "left": "他今天去不去那里？",
                 "right": "他不去。",
-                "left_pinyin": "tā jīntiān qù bù qù nàli",
-                "right_pinyin": "tā bù qù"
+                "left_pinyin": "tā jīntiān qù bú qù nàli",
+                "right_pinyin": "tā bú qù"
               }
             ]
           },
@@ -2461,28 +2461,27 @@
           "data": {
             "pairs": [
               {
-                "left": "正在找",
-                "right": "饭店",
-                "left_pinyin": "zhèngzài zhǎo",
-                "right_pinyin": "fàndiàn"
+                "left": "你正在找什么？",
+                "left_pinyin": "nǐ zhèngzài zhǎo shénme",
+                "right": "我正在找饭店。",
+                "right_pinyin": "wǒ zhèngzài zhǎo fàndiàn"
               },
               {
-                "left": "读",
-                "right": "大学",
-                "left_pinyin": "dú",
-                "right_pinyin": "dàxué"
+                "left": "谁在读大学？",
+                "left_pinyin": "shéi zài dú dàxué",
+                "right": "李文在读大学。",
+                "right_pinyin": "Lǐ Wén zài dú dàxué"
               },
               {
-                "left": "学",
-                "right": "医",
-                "left_pinyin": "xué",
-                "right_pinyin": "yī"
+                "left": "你正在学什么？",
+                "left_pinyin": "nǐ zhèngzài xué shénme",
+                "right": "我正在学医。"
               },
               {
-                "left": "要",
-                "right": "和小朋友玩",
-                "left_pinyin": "yào",
-                "right_pinyin": "hé xiǎopéngyǒu wán"
+                "left": "你要做什么？",
+                "left_pinyin": "nǐ yào zuò shénme",
+                "right": "我要和小朋友玩。",
+                "right_pinyin": "wǒ yào hé xiǎopéngyǒu wán"
               }
             ]
           },
@@ -4146,25 +4145,25 @@
               "left": "你什么时候能到饭店？",
               "right": "还不知道，正在找呢。",
               "left_pinyin": "nǐ shénme shíhou néng dào fàndiàn",
-              "right_pinyin": "hái bù zhīdào zhèngzài zhǎo ne"
+              "right_pinyin": "hái bù zhīdào, zhèngzài zhǎo ne"
             },
             {
               "left": "你开车没开车？",
               "right": "我没开车，坐车呢。",
               "left_pinyin": "nǐ kāichē méi kāichē",
-              "right_pinyin": "wǒ méi kāichē zuò chē ne"
+              "right_pinyin": "wǒ méi kāichē, zuò chē ne"
             },
             {
               "left": "它是不是在超市后边？",
               "right": "是的。",
-              "left_pinyin": "它 shì bù shì zài chāoshì hòubian",
+              "left_pinyin": "tā shì bú shì zài chāoshì hòubian",
               "right_pinyin": "shì de"
             },
             {
               "left": "你还在读大学吗？",
               "right": "对，我读大学呢。",
               "left_pinyin": "nǐ hái zài dú dàxué ma",
-              "right_pinyin": "duì wǒ dú dàxué ne"
+              "right_pinyin": "duì, wǒ dú dàxué ne"
             }
           ]
         },
@@ -4182,7 +4181,7 @@
             {
               "left": "你们学习忙不忙？",
               "right": "非常忙。",
-              "left_pinyin": "nǐ 们 xué 习 máng bù máng",
+              "left_pinyin": "nǐmen xuéxí máng bù máng",
               "right_pinyin": "fēicháng máng"
             },
             {
@@ -4200,8 +4199,8 @@
             {
               "left": "他今天去不去那里？",
               "right": "他不去。",
-              "left_pinyin": "tā jīntiān qù bù qù nàli",
-              "right_pinyin": "tā bù qù"
+              "left_pinyin": "tā jīntiān qù bú qù nàli",
+              "right_pinyin": "tā bú qù"
             }
           ]
         },
@@ -4291,28 +4290,27 @@
         "data": {
           "pairs": [
             {
-              "left": "正在找",
-              "right": "饭店",
-              "left_pinyin": "zhèngzài zhǎo",
-              "right_pinyin": "fàndiàn"
+              "left": "你正在找什么？",
+              "left_pinyin": "nǐ zhèngzài zhǎo shénme",
+              "right": "我正在找饭店。",
+              "right_pinyin": "wǒ zhèngzài zhǎo fàndiàn"
             },
             {
-              "left": "读",
-              "right": "大学",
-              "left_pinyin": "dú",
-              "right_pinyin": "dàxué"
+              "left": "谁在读大学？",
+              "left_pinyin": "shéi zài dú dàxué",
+              "right": "李文在读大学。",
+              "right_pinyin": "Lǐ Wén zài dú dàxué"
             },
             {
-              "left": "学",
-              "right": "医",
-              "left_pinyin": "xué",
-              "right_pinyin": "yī"
+              "left": "你正在学什么？",
+              "left_pinyin": "nǐ zhèngzài xué shénme",
+              "right": "我正在学医。"
             },
             {
-              "left": "要",
-              "right": "和小朋友玩",
-              "left_pinyin": "yào",
-              "right_pinyin": "hé xiǎopéngyǒu wán"
+              "left": "你要做什么？",
+              "left_pinyin": "nǐ yào zuò shénme",
+              "right": "我要和小朋友玩。",
+              "right_pinyin": "wǒ yào hé xiǎopéngyǒu wán"
             }
           ]
         },

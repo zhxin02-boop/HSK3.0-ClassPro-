@@ -210,7 +210,7 @@ client.on("close",function(){setStatus("disconnected")});
     oldStudentRender();
     if(!current||current.mode!=='v7'||!qdata().pairs)return;
     var cols=document.querySelectorAll('#app .match-col');if(cols.length<2)return;var board=document.querySelector('#app .match-board');if(board){board.style.gridTemplateColumns='repeat(2,minmax(0,1fr))';board.style.gap='24px';board.style.width='100%';board.style.overflow='hidden'}var d=qdata(),order=d.order||d.pairs.map(function(_,i){return i}),btns=cols[1].querySelectorAll('button');
-    for(var i=0;i<btns.length;i++){var p=d.pairs[order[i]]||{},pyEl=btns[i].querySelector('.l03-match-py');if(!pyEl){pyEl=document.createElement('span');pyEl.className='l03-match-py';pyEl.style.cssText='display:block;font-size:12px;color:#78836f;margin-bottom:4px';pyEl.textContent=p.right_pinyin||'';btns[i].insertBefore(pyEl,btns[i].firstChild)}btns[i].style.width='100%';btns[i].style.height='96px';btns[i].style.boxSizing='border-box';btns[i].style.textAlign='left';btns[i].style.whiteSpace='normal';btns[i].style.overflowWrap='anywhere'}
+    for(var i=0;i<btns.length;i++){var p=d.pairs[order[i]]||{},pyEl=btns[i].querySelector('.l03-match-py');if(!pyEl){pyEl=document.createElement('span');pyEl.className='l03-match-py';pyEl.setAttribute('data-pinyin','1');pyEl.style.cssText='display:block;font-size:12px;color:#78836f;margin-bottom:4px';pyEl.textContent=p.right_pinyin||'';btns[i].insertBefore(pyEl,btns[i].firstChild)}btns[i].style.width='100%';btns[i].style.height='96px';btns[i].style.boxSizing='border-box';btns[i].style.textAlign='left';btns[i].style.whiteSpace='normal';btns[i].style.overflowWrap='anywhere'}
   };
 })();
 </script>
