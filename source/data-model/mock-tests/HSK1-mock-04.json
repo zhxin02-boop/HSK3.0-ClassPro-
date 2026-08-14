@@ -1,13 +1,15 @@
 {
   "schemaVersion": "mock-test-1.0.0",
-  "testId": "HSK1-mock-02",
-  "recordLesson": "HSK1-MOCK-02-L01-L12",
+  "testId": "HSK1-mock-04",
+  "recordLesson": "HSK1-MOCK-04-L01-L13",
   "level": "HSK1",
-  "title": "HSK1 Mock Test 02 (1-12)",
-  "titleCn": "HSK1 模拟测试 02（1-12课）",
+  "scope": "HSK1-L01 至 HSK1-L13",
+  "lessonRange": "1-13课",
+  "title": "HSK1 Mock Test 04 (L1-L13)",
+  "titleCn": "HSK1 模拟测试 04（1-13课）",
   "mode": "mock_test",
   "durationMinutes": 35,
-  "sourcePolicy": "自建题库；样题只作题型、题量和版式参考；词汇与语法范围为 HSK1-L01 至 HSK1-L12。L11-L12 依据 textbook data/L11.txt 与 L12.txt 命题。",
+  "sourcePolicy": "自建题库；样题只作题型、题量和版式参考；词汇与语法范围为 HSK1-L01 至 HSK1-L13。",
   "audioPolicy": {
     "mode": "teacher_controlled_audio_with_edge_tts",
     "studentAudioControls": false,
@@ -19,14 +21,14 @@
     "repeat": 2,
     "repeatGapSeconds": 2,
     "turnGapSeconds": 0.8,
-    "note": "学生端不显示音频按钮；教师端按大题播放音频。Mock2 使用 Yunyang 男声 -40%；题号只读一遍，具体题目内容读两遍；两遍之间2秒，各题之间4秒。",
-    "leadInSeconds": 1.5
+    "leadInSeconds": 1.5,
+    "note": "学生端不显示音频按钮；教师端按大题播放音频。Mock4 使用 Yunyang 男声 -40%；题号只读一遍，具体题目内容读两遍；两遍之间2秒，各题之间4秒。"
   },
   "audioParts": [
     {
       "part": "L1_picture_choice",
       "title": "听力第一部分 1-5",
-      "file": "../data-model/mock-tests/audio/HSK1-mock-02-listening-01.mp3",
+      "file": "../data-model/mock-tests/audio/HSK1-mock-04-listening-01.mp3",
       "itemNumbers": [
         1,
         2,
@@ -38,7 +40,7 @@
     {
       "part": "L2_answer_choice",
       "title": "听力第二部分 6-10",
-      "file": "../data-model/mock-tests/audio/HSK1-mock-02-listening-02.mp3",
+      "file": "../data-model/mock-tests/audio/HSK1-mock-04-listening-02.mp3",
       "itemNumbers": [
         6,
         7,
@@ -50,7 +52,7 @@
     {
       "part": "L3_dialogue_picture_choice",
       "title": "听力第三部分 11-15",
-      "file": "../data-model/mock-tests/audio/HSK1-mock-02-listening-03.mp3",
+      "file": "../data-model/mock-tests/audio/HSK1-mock-04-listening-03.mp3",
       "itemNumbers": [
         11,
         12,
@@ -62,7 +64,7 @@
     {
       "part": "L4_sentence_question_answer",
       "title": "听力第四部分 16-20",
-      "file": "../data-model/mock-tests/audio/HSK1-mock-02-listening-04.mp3",
+      "file": "../data-model/mock-tests/audio/HSK1-mock-04-listening-04.mp3",
       "itemNumbers": [
         16,
         17,
@@ -88,28 +90,29 @@
           "id": "L01",
           "number": 1,
           "part": "L1_picture_choice",
-          "audioText": "外边下雨了。",
+          "audioText": "请给我一杯茶。",
           "options": [
             {
               "id": "A",
-              "text": "下雨",
-              "image": "../in-class/images/vocab/hsk1-l08/v02_wai.png"
+              "text": "面包",
+              "image": "../in-class/images/vocab/hsk1-l13/16_mianbao.png"
             },
             {
               "id": "B",
-              "text": "看电影",
-              "image": "../in-class/images/vocab/hsk1-l07/v06_dianying.png"
+              "text": "茶",
+              "image": "../in-class/images/vocab/hsk1-l13/20_cha.png"
             },
             {
               "id": "C",
-              "text": "买水果",
-              "image": "../in-class/images/vocab/hsk1-l10/v04_shuiguo.png"
+              "text": "手机",
+              "image": "../in-class/images/vocab/hsk1-l06/v01_shouji.png"
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "knowledge": [
-            "外边",
-            "下雨了"
+            "请",
+            "杯",
+            "茶"
           ]
         },
         {
@@ -122,28 +125,28 @@
           "id": "L02",
           "number": 2,
           "part": "L1_picture_choice",
-          "audioText": "他正在读书。",
+          "audioText": "小猫在桌子下。",
           "options": [
             {
               "id": "A",
-              "text": "看电视",
-              "image": "../in-class/images/vocab/hsk1-l09/v11_dianshi.png"
+              "text": "医生看病",
+              "image": "../in-class/images/vocab/hsk1-l08/v12_yisheng_bingren.png"
             },
             {
               "id": "B",
-              "text": "读书",
-              "image": "../in-class/images/vocab/hsk1-l09/v08_dushu.png"
+              "text": "狗",
+              "image": "../in-class/images/vocab/hsk1-l09/v12_gou_wan.png"
             },
             {
               "id": "C",
-              "text": "唱歌",
-              "image": "../in-class/images/vocab/hsk1-l09/v10_changge.png"
+              "text": "桌子下的小猫",
+              "image": "../in-class/images/vocab/hsk1-l08/v06_zhuozi_xia.png"
             }
           ],
-          "answer": "B",
+          "answer": "C",
           "knowledge": [
-            "正在",
-            "读书"
+            "小猫",
+            "桌子下"
           ]
         },
         {
@@ -156,28 +159,28 @@
           "id": "L03",
           "number": 3,
           "part": "L1_picture_choice",
-          "audioText": "妹妹在睡觉。",
+          "audioText": "他正在打电话。",
           "options": [
             {
               "id": "A",
-              "text": "妹妹",
-              "image": "../in-class/images/l04_pic_12_meimei.png"
+              "text": "打电话",
+              "image": "../in-class/images/vocab/hsk1-l13/05_dadianhua.png"
             },
             {
               "id": "B",
-              "text": "医生",
-              "image": "../in-class/images/vocab/hsk1-l08/v12_yisheng_bingren.png"
+              "text": "出租车",
+              "image": "../in-class/images/vocab/hsk1-l06/v22_chuzuche.png"
             },
             {
               "id": "C",
-              "text": "椅子",
-              "image": "../in-class/images/vocab/hsk1-l09/v03_yizi.png"
+              "text": "苹果",
+              "image": "../in-class/images/vocab/hsk1-l10/v05_pingguo.png"
             }
           ],
           "answer": "A",
           "knowledge": [
-            "妹妹",
-            "睡觉"
+            "正在",
+            "打电话"
           ]
         },
         {
@@ -190,29 +193,28 @@
           "id": "L04",
           "number": 4,
           "part": "L1_picture_choice",
-          "audioText": "她去商店买衣服。",
+          "audioText": "今天下雨了。",
           "options": [
             {
               "id": "A",
-              "text": "杯子",
-              "image": "../in-class/images/vocab/hsk1-l10/v01_beizi.png"
+              "text": "下雪",
+              "image": "../in-class/images/vocab/hsk1-l12/v10_xue.png"
             },
             {
               "id": "B",
-              "text": "商店",
-              "image": "../in-class/images/vocab/hsk1-l10/v06_shangdian.png"
+              "text": "下雨",
+              "image": "../in-class/images/vocab/hsk1-l12/v04_xiayu.png"
             },
             {
               "id": "C",
-              "text": "学校前边",
-              "image": "../in-class/images/vocab/hsk1-l08/v08_xuexiao_qian.png"
+              "text": "热",
+              "image": "../in-class/images/vocab/hsk1-l12/v20_re.png"
             }
           ],
           "answer": "B",
           "knowledge": [
-            "商店",
-            "买",
-            "衣服"
+            "今天",
+            "下雨"
           ]
         },
         {
@@ -225,33 +227,34 @@
           "id": "L05",
           "number": 5,
           "part": "L1_picture_choice",
-          "audioText": "医生给他看病。",
+          "audioText": "我想买这件衣服。",
           "options": [
             {
               "id": "A",
-              "text": "出租车",
-              "image": "../in-class/images/vocab/hsk1-l06/v22_chuzuche.png"
+              "text": "饺子",
+              "image": "../in-class/images/vocab/hsk1-l05/v13_jiaozi.png"
             },
             {
               "id": "B",
-              "text": "朋友",
-              "image": "../in-class/images/vocab/hsk1-l09/v09_pengyou.png"
+              "text": "电脑",
+              "image": "../in-class/images/vocab/hsk1-l05/v18_diannao.png"
             },
             {
               "id": "C",
-              "text": "医生看病",
-              "image": "../in-class/images/vocab/hsk1-l08/v12_yisheng_bingren.png"
+              "text": "衣服",
+              "image": "../in-class/images/vocab/hsk1-l10/v07_yifu.png"
             }
           ],
           "answer": "C",
           "knowledge": [
-            "医生",
-            "看病"
+            "想",
+            "买",
+            "衣服"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听问题，选择合适的回答。",
+          "prompt": "听录音，选择正确答案。",
           "promptEn": "Listen and choose the best answer.",
           "points": 1,
           "sourceType": "mock_test",
@@ -259,30 +262,30 @@
           "id": "L06",
           "number": 6,
           "part": "L2_answer_choice",
-          "audioText": "你觉得冷不冷？",
+          "audioText": "你明天去哪儿？",
           "options": [
             {
               "id": "A",
-              "text": "我觉得很冷。"
+              "text": "三口人"
             },
             {
               "id": "B",
-              "text": "我叫李文。"
+              "text": "去超市"
             },
             {
               "id": "C",
-              "text": "她在公司。"
+              "text": "很高兴"
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "knowledge": [
-            "觉得",
-            "冷不冷"
+            "明天",
+            "去哪儿"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听问题，选择合适的回答。",
+          "prompt": "听录音，选择正确答案。",
           "promptEn": "Listen and choose the best answer.",
           "points": 1,
           "sourceType": "mock_test",
@@ -290,30 +293,30 @@
           "id": "L07",
           "number": 7,
           "part": "L2_answer_choice",
-          "audioText": "你什么时候去饭店？",
+          "audioText": "这件衣服多少钱？",
           "options": [
             {
               "id": "A",
-              "text": "我有一本书。"
+              "text": "在那儿"
             },
             {
               "id": "B",
-              "text": "明天晚上。"
+              "text": "不知道"
             },
             {
               "id": "C",
-              "text": "天气很好。"
+              "text": "八十元"
             }
           ],
-          "answer": "B",
+          "answer": "C",
           "knowledge": [
-            "什么时候",
-            "饭店"
+            "衣服",
+            "多少钱"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听问题，选择合适的回答。",
+          "prompt": "听录音，选择正确答案。",
           "promptEn": "Listen and choose the best answer.",
           "points": 1,
           "sourceType": "mock_test",
@@ -321,30 +324,30 @@
           "id": "L08",
           "number": 8,
           "part": "L2_answer_choice",
-          "audioText": "他是不是大学生？",
+          "audioText": "你几点下课？",
           "options": [
             {
               "id": "A",
-              "text": "不客气。"
+              "text": "十点半"
             },
             {
               "id": "B",
-              "text": "我在找手机。"
+              "text": "一杯茶"
             },
             {
               "id": "C",
-              "text": "是，他是大学生。"
+              "text": "医生"
             }
           ],
-          "answer": "C",
+          "answer": "A",
           "knowledge": [
-            "是不是",
-            "大学生"
+            "几点",
+            "下课"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听问题，选择合适的回答。",
+          "prompt": "听录音，选择正确答案。",
           "promptEn": "Listen and choose the best answer.",
           "points": 1,
           "sourceType": "mock_test",
@@ -352,31 +355,30 @@
           "id": "L09",
           "number": 9,
           "part": "L2_answer_choice",
-          "audioText": "今天天气怎么样？",
+          "audioText": "你想吃什么？",
           "options": [
             {
               "id": "A",
-              "text": "下雨了，有点儿冷。"
+              "text": "下雨了"
             },
             {
               "id": "B",
-              "text": "我去学校。"
+              "text": "面条儿"
             },
             {
               "id": "C",
-              "text": "八块钱。"
+              "text": "在公司"
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "knowledge": [
-            "天气",
-            "怎么样",
-            "下雨"
+            "想吃",
+            "什么"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听问题，选择合适的回答。",
+          "prompt": "听录音，选择正确答案。",
           "promptEn": "Listen and choose the best answer.",
           "points": 1,
           "sourceType": "mock_test",
@@ -384,326 +386,325 @@
           "id": "L10",
           "number": 10,
           "part": "L2_answer_choice",
-          "audioText": "你开车没开车？",
+          "audioText": "他生病了吗？",
           "options": [
             {
               "id": "A",
-              "text": "我在睡觉。"
+              "text": "那是我的手机"
             },
             {
               "id": "B",
-              "text": "没开车，我坐车。"
+              "text": "没有，他很好"
             },
             {
               "id": "C",
-              "text": "这个杯子很贵。"
+              "text": "我去书店"
             }
           ],
           "answer": "B",
           "knowledge": [
-            "开车没开车",
-            "坐车"
+            "生病",
+            "吗"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听对话，选择正确图片。",
-          "promptEn": "Listen and choose the correct picture.",
+          "prompt": "听对话，选择对应图片。",
+          "promptEn": "Listen and choose the matching picture.",
           "points": 1,
           "sourceType": "mock_test",
           "status": "draft",
           "id": "L11",
           "number": 11,
           "part": "L3_dialogue_picture_choice",
-          "audioText": "男：你在做什么？女：我在看电视呢。",
           "audioTurns": [
             {
-              "voice": "A",
-              "text": "你在做什么？"
+              "speaker": "A",
+              "text": "这几天太热了！"
             },
             {
-              "voice": "B",
-              "text": "我在看电视呢。"
+              "speaker": "B",
+              "text": "我也觉得是。我们去商店买点儿水吧。"
             }
           ],
           "options": [
             {
               "id": "A",
-              "text": "看电视",
-              "image": "../in-class/images/vocab/hsk1-l09/v11_dianshi.png"
+              "text": "饭店",
+              "image": "../in-class/images/vocab/hsk1-l11/v02_fandian.png"
             },
             {
               "id": "B",
+              "text": "书店",
+              "image": "../in-class/images/vocab/hsk1-l08/v09_shudian.png"
+            },
+            {
+              "id": "C",
               "text": "医院",
               "image": "../in-class/images/vocab/hsk1-l07/v09_yiyuan.png"
             },
             {
-              "id": "C",
-              "text": "睡觉",
-              "image": "../in-class/images/vocab/hsk1-l08/v01_fangjian.png"
-            },
-            {
               "id": "D",
-              "text": "杯子",
-              "image": "../in-class/images/vocab/hsk1-l10/v01_beizi.png"
+              "text": "超市",
+              "image": "../in-class/images/vocab/hsk1-l06/v08_chaoshi.png"
             },
             {
               "id": "E",
-              "text": "桌子",
-              "image": "../in-class/images/vocab/hsk1-l08/v05_zhuozi.png"
+              "text": "家",
+              "image": "../in-class/images/vocab/hsk1-l07/v07_jia_li.png"
             },
             {
               "id": "F",
-              "text": "商店",
-              "image": "../in-class/images/vocab/hsk1-l10/v06_shangdian.png"
+              "text": "公司",
+              "image": "../in-class/images/vocab/hsk1-l12/v11_gongsi.png"
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "knowledge": [
-            "在做什么",
-            "看电视"
+            "热",
+            "商店",
+            "水"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听对话，选择正确图片。",
-          "promptEn": "Listen and choose the correct picture.",
+          "prompt": "听对话，选择对应图片。",
+          "promptEn": "Listen and choose the matching picture.",
           "points": 1,
           "sourceType": "mock_test",
           "status": "draft",
           "id": "L12",
           "number": 12,
           "part": "L3_dialogue_picture_choice",
-          "audioText": "女：你去哪儿？男：我去医院看病。",
           "audioTurns": [
             {
-              "voice": "B",
-              "text": "你去哪儿？"
+              "speaker": "A",
+              "text": "这本书真好看，是你的吗？"
             },
             {
-              "voice": "A",
-              "text": "我去医院看病。"
+              "speaker": "B",
+              "text": "不是，是我姐姐在那边买的。"
             }
           ],
           "options": [
             {
               "id": "A",
-              "text": "看电视",
-              "image": "../in-class/images/vocab/hsk1-l09/v11_dianshi.png"
+              "text": "饭店",
+              "image": "../in-class/images/vocab/hsk1-l11/v02_fandian.png"
             },
             {
               "id": "B",
+              "text": "书店",
+              "image": "../in-class/images/vocab/hsk1-l08/v09_shudian.png"
+            },
+            {
+              "id": "C",
               "text": "医院",
               "image": "../in-class/images/vocab/hsk1-l07/v09_yiyuan.png"
             },
             {
-              "id": "C",
-              "text": "睡觉",
-              "image": "../in-class/images/vocab/hsk1-l08/v01_fangjian.png"
-            },
-            {
               "id": "D",
-              "text": "杯子",
-              "image": "../in-class/images/vocab/hsk1-l10/v01_beizi.png"
+              "text": "超市",
+              "image": "../in-class/images/vocab/hsk1-l06/v08_chaoshi.png"
             },
             {
               "id": "E",
-              "text": "桌子",
-              "image": "../in-class/images/vocab/hsk1-l08/v05_zhuozi.png"
+              "text": "家",
+              "image": "../in-class/images/vocab/hsk1-l07/v07_jia_li.png"
             },
             {
               "id": "F",
-              "text": "商店",
-              "image": "../in-class/images/vocab/hsk1-l10/v06_shangdian.png"
+              "text": "公司",
+              "image": "../in-class/images/vocab/hsk1-l12/v11_gongsi.png"
             }
           ],
           "answer": "B",
           "knowledge": [
-            "去哪儿",
-            "医院",
-            "看病"
+            "书",
+            "姐姐",
+            "买"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听对话，选择正确图片。",
-          "promptEn": "Listen and choose the correct picture.",
+          "prompt": "听对话，选择对应图片。",
+          "promptEn": "Listen and choose the matching picture.",
           "points": 1,
           "sourceType": "mock_test",
           "status": "draft",
           "id": "L13",
           "number": 13,
           "part": "L3_dialogue_picture_choice",
-          "audioText": "男：弟弟起床了吗？女：没有，还在睡觉。",
           "audioTurns": [
             {
-              "voice": "A",
-              "text": "弟弟起床了吗？"
+              "speaker": "A",
+              "text": "你爸爸今天没去公司吗？"
             },
             {
-              "voice": "B",
-              "text": "没有，还在睡觉。"
+              "speaker": "B",
+              "text": "没有，他有点儿生病了，去看病了。"
             }
           ],
           "options": [
             {
               "id": "A",
-              "text": "看电视",
-              "image": "../in-class/images/vocab/hsk1-l09/v11_dianshi.png"
+              "text": "饭店",
+              "image": "../in-class/images/vocab/hsk1-l11/v02_fandian.png"
             },
             {
               "id": "B",
+              "text": "书店",
+              "image": "../in-class/images/vocab/hsk1-l08/v09_shudian.png"
+            },
+            {
+              "id": "C",
               "text": "医院",
               "image": "../in-class/images/vocab/hsk1-l07/v09_yiyuan.png"
             },
             {
-              "id": "C",
-              "text": "睡觉",
-              "image": "../in-class/images/vocab/hsk1-l08/v01_fangjian.png"
-            },
-            {
               "id": "D",
-              "text": "杯子",
-              "image": "../in-class/images/vocab/hsk1-l10/v01_beizi.png"
+              "text": "超市",
+              "image": "../in-class/images/vocab/hsk1-l06/v08_chaoshi.png"
             },
             {
               "id": "E",
-              "text": "桌子",
-              "image": "../in-class/images/vocab/hsk1-l08/v05_zhuozi.png"
+              "text": "家",
+              "image": "../in-class/images/vocab/hsk1-l07/v07_jia_li.png"
             },
             {
               "id": "F",
-              "text": "商店",
-              "image": "../in-class/images/vocab/hsk1-l10/v06_shangdian.png"
+              "text": "公司",
+              "image": "../in-class/images/vocab/hsk1-l12/v11_gongsi.png"
             }
           ],
           "answer": "C",
           "knowledge": [
-            "起床了",
-            "睡觉"
+            "公司",
+            "生病",
+            "看病"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听对话，选择正确图片。",
-          "promptEn": "Listen and choose the correct picture.",
+          "prompt": "听对话，选择对应图片。",
+          "promptEn": "Listen and choose the matching picture.",
           "points": 1,
           "sourceType": "mock_test",
           "status": "draft",
           "id": "L14",
           "number": 14,
           "part": "L3_dialogue_picture_choice",
-          "audioText": "女：你买什么？男：我买一个杯子。",
           "audioTurns": [
             {
-              "voice": "B",
-              "text": "你买什么？"
+              "speaker": "A",
+              "text": "你中午想吃什么？"
             },
             {
-              "voice": "A",
-              "text": "我买一个杯子。"
+              "speaker": "B",
+              "text": "我想吃米饭和菜，不想吃面条儿。"
             }
           ],
           "options": [
             {
               "id": "A",
-              "text": "看电视",
-              "image": "../in-class/images/vocab/hsk1-l09/v11_dianshi.png"
+              "text": "饭店",
+              "image": "../in-class/images/vocab/hsk1-l11/v02_fandian.png"
             },
             {
               "id": "B",
+              "text": "书店",
+              "image": "../in-class/images/vocab/hsk1-l08/v09_shudian.png"
+            },
+            {
+              "id": "C",
               "text": "医院",
               "image": "../in-class/images/vocab/hsk1-l07/v09_yiyuan.png"
             },
             {
-              "id": "C",
-              "text": "睡觉",
-              "image": "../in-class/images/vocab/hsk1-l08/v01_fangjian.png"
-            },
-            {
               "id": "D",
-              "text": "杯子",
-              "image": "../in-class/images/vocab/hsk1-l10/v01_beizi.png"
+              "text": "超市",
+              "image": "../in-class/images/vocab/hsk1-l06/v08_chaoshi.png"
             },
             {
               "id": "E",
-              "text": "桌子",
-              "image": "../in-class/images/vocab/hsk1-l08/v05_zhuozi.png"
+              "text": "家",
+              "image": "../in-class/images/vocab/hsk1-l07/v07_jia_li.png"
             },
             {
               "id": "F",
-              "text": "商店",
-              "image": "../in-class/images/vocab/hsk1-l10/v06_shangdian.png"
+              "text": "公司",
+              "image": "../in-class/images/vocab/hsk1-l12/v11_gongsi.png"
             }
           ],
-          "answer": "D",
+          "answer": "A",
           "knowledge": [
-            "买",
-            "杯子"
+            "中午",
+            "米饭",
+            "菜"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听对话，选择正确图片。",
-          "promptEn": "Listen and choose the correct picture.",
+          "prompt": "听对话，选择对应图片。",
+          "promptEn": "Listen and choose the matching picture.",
           "points": 1,
           "sourceType": "mock_test",
           "status": "draft",
           "id": "L15",
           "number": 15,
           "part": "L3_dialogue_picture_choice",
-          "audioText": "男：你的书在哪儿？女：在桌子上。",
           "audioTurns": [
             {
-              "voice": "A",
-              "text": "你的书在哪儿？"
+              "speaker": "A",
+              "text": "你弟弟现在在做什么？"
             },
             {
-              "voice": "B",
-              "text": "在桌子上。"
+              "speaker": "B",
+              "text": "他在房间里读书呢。"
             }
           ],
           "options": [
             {
               "id": "A",
-              "text": "看电视",
-              "image": "../in-class/images/vocab/hsk1-l09/v11_dianshi.png"
+              "text": "饭店",
+              "image": "../in-class/images/vocab/hsk1-l11/v02_fandian.png"
             },
             {
               "id": "B",
+              "text": "书店",
+              "image": "../in-class/images/vocab/hsk1-l08/v09_shudian.png"
+            },
+            {
+              "id": "C",
               "text": "医院",
               "image": "../in-class/images/vocab/hsk1-l07/v09_yiyuan.png"
             },
             {
-              "id": "C",
-              "text": "睡觉",
-              "image": "../in-class/images/vocab/hsk1-l08/v01_fangjian.png"
-            },
-            {
               "id": "D",
-              "text": "杯子",
-              "image": "../in-class/images/vocab/hsk1-l10/v01_beizi.png"
+              "text": "超市",
+              "image": "../in-class/images/vocab/hsk1-l06/v08_chaoshi.png"
             },
             {
               "id": "E",
-              "text": "桌子",
-              "image": "../in-class/images/vocab/hsk1-l08/v05_zhuozi.png"
+              "text": "家",
+              "image": "../in-class/images/vocab/hsk1-l07/v07_jia_li.png"
             },
             {
               "id": "F",
-              "text": "商店",
-              "image": "../in-class/images/vocab/hsk1-l10/v06_shangdian.png"
+              "text": "公司",
+              "image": "../in-class/images/vocab/hsk1-l12/v11_gongsi.png"
             }
           ],
           "answer": "E",
           "knowledge": [
-            "书",
-            "桌子上"
+            "弟弟",
+            "房间",
+            "读书"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听句子和问题，选择合适的回答。",
+          "prompt": "听录音，选择正确答案。",
           "promptEn": "Listen and choose the best answer.",
           "points": 1,
           "sourceType": "mock_test",
@@ -711,38 +712,31 @@
           "id": "L16",
           "number": 16,
           "part": "L4_sentence_question_answer",
-          "audioText": "王老师正在找手机。问题：王老师在找什么？",
-          "audioTurns": [
-            {
-              "text": "王老师正在找手机。"
-            },
-            {
-              "text": "王老师在找什么？"
-            }
-          ],
+          "audioText": "我姐姐在公司工作，今天她很忙。问：姐姐在哪儿工作？",
           "options": [
             {
               "id": "A",
-              "text": "找手机。"
+              "text": "公司"
             },
             {
               "id": "B",
-              "text": "找饭店。"
+              "text": "学校"
             },
             {
               "id": "C",
-              "text": "找医生。"
+              "text": "饭店"
             }
           ],
           "answer": "A",
           "knowledge": [
-            "正在",
-            "找手机"
+            "姐姐",
+            "公司",
+            "工作"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听句子和问题，选择合适的回答。",
+          "prompt": "听录音，选择正确答案。",
           "promptEn": "Listen and choose the best answer.",
           "points": 1,
           "sourceType": "mock_test",
@@ -750,38 +744,31 @@
           "id": "L17",
           "number": 17,
           "part": "L4_sentence_question_answer",
-          "audioText": "李文读大学呢。问题：李文是不是大学生？",
-          "audioTurns": [
-            {
-              "text": "李文读大学呢。"
-            },
-            {
-              "text": "李文是不是大学生？"
-            }
-          ],
+          "audioText": "桌子上有一个杯子，杯子里有热水。问：杯子在哪儿？",
           "options": [
             {
               "id": "A",
-              "text": "不是。"
+              "text": "房间外"
             },
             {
               "id": "B",
-              "text": "是。"
+              "text": "桌子上"
             },
             {
               "id": "C",
-              "text": "不知道。"
+              "text": "椅子下"
             }
           ],
           "answer": "B",
           "knowledge": [
-            "读大学",
-            "是不是"
+            "桌子上",
+            "杯子",
+            "热水"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听句子和问题，选择合适的回答。",
+          "prompt": "听录音，选择正确答案。",
           "promptEn": "Listen and choose the best answer.",
           "points": 1,
           "sourceType": "mock_test",
@@ -789,38 +776,31 @@
           "id": "L18",
           "number": 18,
           "part": "L4_sentence_question_answer",
-          "audioText": "昨天下雪了，太冷了。问题：昨天天气怎么样？",
-          "audioTurns": [
-            {
-              "text": "昨天下雪了，太冷了。"
-            },
-            {
-              "text": "昨天天气怎么样？"
-            }
-          ],
+          "audioText": "昨天很冷，今天有点儿热。问：今天的天气怎么样？",
           "options": [
             {
               "id": "A",
-              "text": "很热。"
+              "text": "下雪了"
             },
             {
               "id": "B",
-              "text": "下雨了。"
+              "text": "很冷"
             },
             {
               "id": "C",
-              "text": "下雪了，很冷。"
+              "text": "有点儿热"
             }
           ],
           "answer": "C",
           "knowledge": [
-            "下雪了",
-            "太冷了"
+            "昨天",
+            "冷",
+            "热"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听句子和问题，选择合适的回答。",
+          "prompt": "听录音，选择正确答案。",
           "promptEn": "Listen and choose the best answer.",
           "points": 1,
           "sourceType": "mock_test",
@@ -828,39 +808,30 @@
           "id": "L19",
           "number": 19,
           "part": "L4_sentence_question_answer",
-          "audioText": "妈妈要去超市买水果。问题：妈妈要去哪儿？",
-          "audioTurns": [
-            {
-              "text": "妈妈要去超市买水果。"
-            },
-            {
-              "text": "妈妈要去哪儿？"
-            }
-          ],
+          "audioText": "我弟弟今年十六岁，他在读大学。问：弟弟是：",
           "options": [
             {
               "id": "A",
-              "text": "去超市。"
+              "text": "医生"
             },
             {
               "id": "B",
-              "text": "去饭店。"
+              "text": "大学生"
             },
             {
               "id": "C",
-              "text": "去公司。"
+              "text": "服务员"
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "knowledge": [
-            "要",
-            "超市",
-            "水果"
+            "弟弟",
+            "大学生"
           ]
         },
         {
           "skill": "listening",
-          "prompt": "听句子和问题，选择合适的回答。",
+          "prompt": "听录音，选择正确答案。",
           "promptEn": "Listen and choose the best answer.",
           "points": 1,
           "sourceType": "mock_test",
@@ -868,33 +839,27 @@
           "id": "L20",
           "number": 20,
           "part": "L4_sentence_question_answer",
-          "audioText": "他生病了，要吃一点儿药。问题：他要吃什么？",
-          "audioTurns": [
-            {
-              "text": "他生病了，要吃一点儿药。"
-            },
-            {
-              "text": "他要吃什么？"
-            }
-          ],
+          "audioText": "这个苹果不贵，三块钱一斤。问：苹果怎么样？",
           "options": [
             {
               "id": "A",
-              "text": "热水。"
+              "text": "不好吃"
             },
             {
               "id": "B",
-              "text": "药。"
+              "text": "不贵"
             },
             {
               "id": "C",
-              "text": "米饭。"
+              "text": "很忙"
             }
           ],
           "answer": "B",
           "knowledge": [
-            "生病了",
-            "药"
+            "苹果",
+            "贵",
+            "块",
+            "斤"
           ]
         }
       ]
@@ -907,247 +872,250 @@
         {
           "skill": "reading",
           "prompt": "读句子，选择正确图片。",
-          "promptEn": "Read the sentence and choose the correct picture.",
+          "promptEn": "Read and choose the matching picture.",
           "points": 1,
           "sourceType": "mock_test",
           "status": "draft",
           "id": "R21",
           "number": 21,
           "part": "R1_sentence_picture_match",
-          "question": "我今天想在这家商店买衣服。",
+          "question": "今天下午妹妹正在给妈妈打电话。",
           "options": [
             {
               "id": "A",
+              "text": "打电话",
+              "image": "../in-class/images/vocab/hsk1-l13/05_dadianhua.png"
+            },
+            {
+              "id": "B",
+              "text": "下雨",
+              "image": "../in-class/images/vocab/hsk1-l12/v04_xiayu.png"
+            },
+            {
+              "id": "C",
+              "text": "早饭",
+              "image": "../in-class/images/vocab/hsk1-l13/14_zaofan.png"
+            },
+            {
+              "id": "D",
               "text": "衣服",
               "image": "../in-class/images/vocab/hsk1-l10/v07_yifu.png"
             },
             {
-              "id": "B",
-              "text": "看电视",
-              "image": "../in-class/images/vocab/hsk1-l09/v11_dianshi.png"
-            },
-            {
-              "id": "C",
-              "text": "商店",
-              "image": "../in-class/images/vocab/hsk1-l10/v06_shangdian.png"
-            },
-            {
-              "id": "D",
-              "text": "医生",
-              "image": "../in-class/images/vocab/hsk1-l08/v12_yisheng_bingren.png"
-            },
-            {
               "id": "E",
-              "text": "桌子下边",
+              "text": "桌子下的小猫",
               "image": "../in-class/images/vocab/hsk1-l08/v06_zhuozi_xia.png"
             },
             {
               "id": "F",
-              "text": "杯子",
-              "image": "../in-class/images/vocab/hsk1-l10/v01_beizi.png"
+              "text": "看病",
+              "image": "../in-class/images/vocab/hsk1-l08/v12_yisheng_bingren.png"
             }
           ],
           "answer": "A",
           "knowledge": [
-            "衣服",
-            "买"
+            "妹妹",
+            "打电话"
           ]
         },
         {
           "skill": "reading",
           "prompt": "读句子，选择正确图片。",
-          "promptEn": "Read the sentence and choose the correct picture.",
+          "promptEn": "Read and choose the matching picture.",
           "points": 1,
           "sourceType": "mock_test",
           "status": "draft",
           "id": "R22",
           "number": 22,
           "part": "R1_sentence_picture_match",
-          "question": "今天晚上他正在家里看电视呢。",
+          "question": "今天下午下雨，我们坐车回家吧。",
           "options": [
             {
               "id": "A",
+              "text": "打电话",
+              "image": "../in-class/images/vocab/hsk1-l13/05_dadianhua.png"
+            },
+            {
+              "id": "B",
+              "text": "下雨",
+              "image": "../in-class/images/vocab/hsk1-l12/v04_xiayu.png"
+            },
+            {
+              "id": "C",
+              "text": "早饭",
+              "image": "../in-class/images/vocab/hsk1-l13/14_zaofan.png"
+            },
+            {
+              "id": "D",
               "text": "衣服",
               "image": "../in-class/images/vocab/hsk1-l10/v07_yifu.png"
             },
             {
-              "id": "B",
-              "text": "看电视",
-              "image": "../in-class/images/vocab/hsk1-l09/v11_dianshi.png"
-            },
-            {
-              "id": "C",
-              "text": "商店",
-              "image": "../in-class/images/vocab/hsk1-l10/v06_shangdian.png"
-            },
-            {
-              "id": "D",
-              "text": "医生",
-              "image": "../in-class/images/vocab/hsk1-l08/v12_yisheng_bingren.png"
-            },
-            {
               "id": "E",
-              "text": "桌子下边",
+              "text": "桌子下的小猫",
               "image": "../in-class/images/vocab/hsk1-l08/v06_zhuozi_xia.png"
             },
             {
               "id": "F",
-              "text": "杯子",
-              "image": "../in-class/images/vocab/hsk1-l10/v01_beizi.png"
+              "text": "看病",
+              "image": "../in-class/images/vocab/hsk1-l08/v12_yisheng_bingren.png"
             }
           ],
           "answer": "B",
           "knowledge": [
-            "正在",
-            "看电视"
+            "下午",
+            "下雨",
+            "坐车"
           ]
         },
         {
           "skill": "reading",
           "prompt": "读句子，选择正确图片。",
-          "promptEn": "Read the sentence and choose the correct picture.",
+          "promptEn": "Read and choose the matching picture.",
           "points": 1,
           "sourceType": "mock_test",
           "status": "draft",
           "id": "R23",
           "number": 23,
           "part": "R1_sentence_picture_match",
-          "question": "学校前边有一家很大的商店呢。",
+          "question": "他今天早上吃了鸡蛋和面包。",
           "options": [
             {
               "id": "A",
+              "text": "打电话",
+              "image": "../in-class/images/vocab/hsk1-l13/05_dadianhua.png"
+            },
+            {
+              "id": "B",
+              "text": "下雨",
+              "image": "../in-class/images/vocab/hsk1-l12/v04_xiayu.png"
+            },
+            {
+              "id": "C",
+              "text": "早饭",
+              "image": "../in-class/images/vocab/hsk1-l13/14_zaofan.png"
+            },
+            {
+              "id": "D",
               "text": "衣服",
               "image": "../in-class/images/vocab/hsk1-l10/v07_yifu.png"
             },
             {
-              "id": "B",
-              "text": "看电视",
-              "image": "../in-class/images/vocab/hsk1-l09/v11_dianshi.png"
-            },
-            {
-              "id": "C",
-              "text": "商店",
-              "image": "../in-class/images/vocab/hsk1-l10/v06_shangdian.png"
-            },
-            {
-              "id": "D",
-              "text": "医生",
-              "image": "../in-class/images/vocab/hsk1-l08/v12_yisheng_bingren.png"
-            },
-            {
               "id": "E",
-              "text": "桌子下边",
+              "text": "桌子下的小猫",
               "image": "../in-class/images/vocab/hsk1-l08/v06_zhuozi_xia.png"
             },
             {
               "id": "F",
-              "text": "杯子",
-              "image": "../in-class/images/vocab/hsk1-l10/v01_beizi.png"
+              "text": "看病",
+              "image": "../in-class/images/vocab/hsk1-l08/v12_yisheng_bingren.png"
             }
           ],
           "answer": "C",
           "knowledge": [
-            "前边",
-            "商店"
+            "早上",
+            "鸡蛋",
+            "面包"
           ]
         },
         {
           "skill": "reading",
           "prompt": "读句子，选择正确图片。",
-          "promptEn": "Read the sentence and choose the correct picture.",
+          "promptEn": "Read and choose the matching picture.",
           "points": 1,
           "sourceType": "mock_test",
           "status": "draft",
           "id": "R24",
           "number": 24,
           "part": "R1_sentence_picture_match",
-          "question": "这个医生今天上午在医院工作。",
+          "question": "这些衣服很好看，也不太贵呢。",
           "options": [
             {
               "id": "A",
+              "text": "打电话",
+              "image": "../in-class/images/vocab/hsk1-l13/05_dadianhua.png"
+            },
+            {
+              "id": "B",
+              "text": "下雨",
+              "image": "../in-class/images/vocab/hsk1-l12/v04_xiayu.png"
+            },
+            {
+              "id": "C",
+              "text": "早饭",
+              "image": "../in-class/images/vocab/hsk1-l13/14_zaofan.png"
+            },
+            {
+              "id": "D",
               "text": "衣服",
               "image": "../in-class/images/vocab/hsk1-l10/v07_yifu.png"
             },
             {
-              "id": "B",
-              "text": "看电视",
-              "image": "../in-class/images/vocab/hsk1-l09/v11_dianshi.png"
-            },
-            {
-              "id": "C",
-              "text": "商店",
-              "image": "../in-class/images/vocab/hsk1-l10/v06_shangdian.png"
-            },
-            {
-              "id": "D",
-              "text": "医生",
-              "image": "../in-class/images/vocab/hsk1-l08/v12_yisheng_bingren.png"
-            },
-            {
               "id": "E",
-              "text": "桌子下边",
+              "text": "桌子下的小猫",
               "image": "../in-class/images/vocab/hsk1-l08/v06_zhuozi_xia.png"
             },
             {
               "id": "F",
-              "text": "杯子",
-              "image": "../in-class/images/vocab/hsk1-l10/v01_beizi.png"
+              "text": "看病",
+              "image": "../in-class/images/vocab/hsk1-l08/v12_yisheng_bingren.png"
             }
           ],
           "answer": "D",
           "knowledge": [
-            "医生",
-            "医院",
-            "工作"
+            "衣服",
+            "好看",
+            "贵"
           ]
         },
         {
           "skill": "reading",
           "prompt": "读句子，选择正确图片。",
-          "promptEn": "Read the sentence and choose the correct picture.",
+          "promptEn": "Read and choose the matching picture.",
           "points": 1,
           "sourceType": "mock_test",
           "status": "draft",
           "id": "R25",
           "number": 25,
           "part": "R1_sentence_picture_match",
-          "question": "桌子下边有一只漂亮的小猫呢。",
+          "question": "那只小猫正在桌子下面睡觉。",
           "options": [
             {
               "id": "A",
+              "text": "打电话",
+              "image": "../in-class/images/vocab/hsk1-l13/05_dadianhua.png"
+            },
+            {
+              "id": "B",
+              "text": "下雨",
+              "image": "../in-class/images/vocab/hsk1-l12/v04_xiayu.png"
+            },
+            {
+              "id": "C",
+              "text": "早饭",
+              "image": "../in-class/images/vocab/hsk1-l13/14_zaofan.png"
+            },
+            {
+              "id": "D",
               "text": "衣服",
               "image": "../in-class/images/vocab/hsk1-l10/v07_yifu.png"
             },
             {
-              "id": "B",
-              "text": "看电视",
-              "image": "../in-class/images/vocab/hsk1-l09/v11_dianshi.png"
-            },
-            {
-              "id": "C",
-              "text": "商店",
-              "image": "../in-class/images/vocab/hsk1-l10/v06_shangdian.png"
-            },
-            {
-              "id": "D",
-              "text": "医生",
-              "image": "../in-class/images/vocab/hsk1-l08/v12_yisheng_bingren.png"
-            },
-            {
               "id": "E",
-              "text": "桌子下边",
+              "text": "桌子下的小猫",
               "image": "../in-class/images/vocab/hsk1-l08/v06_zhuozi_xia.png"
             },
             {
               "id": "F",
-              "text": "杯子",
-              "image": "../in-class/images/vocab/hsk1-l10/v01_beizi.png"
+              "text": "看病",
+              "image": "../in-class/images/vocab/hsk1-l08/v12_yisheng_bingren.png"
             }
           ],
           "answer": "E",
           "knowledge": [
-            "桌子下边",
-            "小猫"
+            "小猫",
+            "桌子下",
+            "睡觉"
           ]
         },
         {
@@ -1160,23 +1128,23 @@
           "id": "R26",
           "number": 26,
           "part": "R2_question_answer_match",
-          "question": "你今天中午想去哪儿吃饭？",
+          "question": "你家有几口人？",
           "options": [
             {
               "id": "A",
-              "text": "我要去饭店。"
+              "text": "在书店，那儿有很多书。"
             },
             {
               "id": "B",
-              "text": "八十块，不太贵。"
+              "text": "三口人，爸爸、妈妈和我。"
             },
             {
               "id": "C",
-              "text": "没有，她很好。"
+              "text": "十块钱一斤，不太贵。"
             },
             {
               "id": "D",
-              "text": "没开车，我坐车。"
+              "text": "不，我想喝一杯热茶。"
             },
             {
               "id": "E",
@@ -1184,13 +1152,13 @@
             },
             {
               "id": "F",
-              "text": "谢谢。"
+              "text": "好的，请坐这儿吧。"
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "knowledge": [
-            "要",
-            "去哪儿"
+            "家",
+            "几口人"
           ]
         },
         {
@@ -1203,23 +1171,23 @@
           "id": "R27",
           "number": 27,
           "part": "R2_question_answer_match",
-          "question": "这件衣服怎么样？多少钱？",
+          "question": "这些苹果多少钱一斤？",
           "options": [
             {
               "id": "A",
-              "text": "我要去饭店。"
+              "text": "在书店，那儿有很多书。"
             },
             {
               "id": "B",
-              "text": "八十块，不太贵。"
+              "text": "三口人，爸爸、妈妈和我。"
             },
             {
               "id": "C",
-              "text": "没有，她很好。"
+              "text": "十块钱一斤，不太贵。"
             },
             {
               "id": "D",
-              "text": "没开车，我坐车。"
+              "text": "不，我想喝一杯热茶。"
             },
             {
               "id": "E",
@@ -1227,13 +1195,14 @@
             },
             {
               "id": "F",
-              "text": "谢谢。"
+              "text": "好的，请坐这儿吧。"
             }
           ],
-          "answer": "B",
+          "answer": "C",
           "knowledge": [
+            "苹果",
             "多少钱",
-            "块"
+            "斤"
           ]
         },
         {
@@ -1246,23 +1215,23 @@
           "id": "R28",
           "number": 28,
           "part": "R2_question_answer_match",
-          "question": "你妈妈生病了吗？",
+          "question": "昨天外边的天气怎么样？",
           "options": [
             {
               "id": "A",
-              "text": "我要去饭店。"
+              "text": "在书店，那儿有很多书。"
             },
             {
               "id": "B",
-              "text": "八十块，不太贵。"
+              "text": "三口人，爸爸、妈妈和我。"
             },
             {
               "id": "C",
-              "text": "没有，她很好。"
+              "text": "十块钱一斤，不太贵。"
             },
             {
               "id": "D",
-              "text": "没开车，我坐车。"
+              "text": "不，我想喝一杯热茶。"
             },
             {
               "id": "E",
@@ -1270,13 +1239,13 @@
             },
             {
               "id": "F",
-              "text": "谢谢。"
+              "text": "好的，请坐这儿吧。"
             }
           ],
-          "answer": "C",
+          "answer": "E",
           "knowledge": [
-            "生病了",
-            "没有"
+            "昨天",
+            "天气"
           ]
         },
         {
@@ -1289,23 +1258,23 @@
           "id": "R29",
           "number": 29,
           "part": "R2_question_answer_match",
-          "question": "你开车没开车？",
+          "question": "你在哪儿买的这本书？",
           "options": [
             {
               "id": "A",
-              "text": "我要去饭店。"
+              "text": "在书店，那儿有很多书。"
             },
             {
               "id": "B",
-              "text": "八十块，不太贵。"
+              "text": "三口人，爸爸、妈妈和我。"
             },
             {
               "id": "C",
-              "text": "没有，她很好。"
+              "text": "十块钱一斤，不太贵。"
             },
             {
               "id": "D",
-              "text": "没开车，我坐车。"
+              "text": "不，我想喝一杯热茶。"
             },
             {
               "id": "E",
@@ -1313,12 +1282,13 @@
             },
             {
               "id": "F",
-              "text": "谢谢。"
+              "text": "好的，请坐这儿吧。"
             }
           ],
-          "answer": "D",
+          "answer": "A",
           "knowledge": [
-            "开车没开车"
+            "哪儿",
+            "买书"
           ]
         },
         {
@@ -1331,23 +1301,23 @@
           "id": "R30",
           "number": 30,
           "part": "R2_question_answer_match",
-          "question": "今天天气怎么样？",
+          "question": "你现在想喝牛奶吗？",
           "options": [
             {
               "id": "A",
-              "text": "我要去饭店。"
+              "text": "在书店，那儿有很多书。"
             },
             {
               "id": "B",
-              "text": "八十块，不太贵。"
+              "text": "三口人，爸爸、妈妈和我。"
             },
             {
               "id": "C",
-              "text": "没有，她很好。"
+              "text": "十块钱一斤，不太贵。"
             },
             {
               "id": "D",
-              "text": "没开车，我坐车。"
+              "text": "不，我想喝一杯热茶。"
             },
             {
               "id": "E",
@@ -1355,13 +1325,13 @@
             },
             {
               "id": "F",
-              "text": "谢谢。"
+              "text": "好的，请坐这儿吧。"
             }
           ],
-          "answer": "E",
+          "answer": "D",
           "knowledge": [
-            "天气",
-            "怎么样"
+            "想喝",
+            "牛奶"
           ]
         },
         {
@@ -1374,37 +1344,37 @@
           "id": "R31",
           "number": 31,
           "part": "R3_fill_blank",
-          "question": "王老师在房间里正在___手机。",
+          "question": "请问，这件衣服___钱一件？",
           "options": [
             {
               "id": "A",
-              "text": "找"
+              "text": "可以"
             },
             {
               "id": "B",
-              "text": "下雪"
+              "text": "正在"
             },
             {
               "id": "C",
-              "text": "贵"
+              "text": "觉得"
             },
             {
               "id": "D",
-              "text": "睡觉"
+              "text": "知道"
             },
             {
               "id": "E",
-              "text": "热水"
+              "text": "一下"
             },
             {
               "id": "F",
-              "text": "药"
+              "text": "多少"
             }
           ],
-          "answer": "A",
+          "answer": "F",
           "knowledge": [
-            "正在",
-            "找"
+            "衣服",
+            "多少"
           ]
         },
         {
@@ -1417,36 +1387,37 @@
           "id": "R32",
           "number": 32,
           "part": "R3_fill_blank",
-          "question": "昨天外边___了，今天还是很冷。",
+          "question": "我不___那个女老师叫什么。",
           "options": [
             {
               "id": "A",
-              "text": "找"
+              "text": "可以"
             },
             {
               "id": "B",
-              "text": "下雪"
+              "text": "正在"
             },
             {
               "id": "C",
-              "text": "贵"
+              "text": "觉得"
             },
             {
               "id": "D",
-              "text": "睡觉"
+              "text": "知道"
             },
             {
               "id": "E",
-              "text": "热水"
+              "text": "一下"
             },
             {
               "id": "F",
-              "text": "药"
+              "text": "多少"
             }
           ],
-          "answer": "B",
+          "answer": "D",
           "knowledge": [
-            "下雪了"
+            "知道",
+            "老师"
           ]
         },
         {
@@ -1459,36 +1430,37 @@
           "id": "R33",
           "number": 33,
           "part": "R3_fill_blank",
-          "question": "这个苹果三块钱一斤，不___。",
+          "question": "这里没有人，你___坐这儿。",
           "options": [
             {
               "id": "A",
-              "text": "找"
+              "text": "可以"
             },
             {
               "id": "B",
-              "text": "下雪"
+              "text": "正在"
             },
             {
               "id": "C",
-              "text": "贵"
+              "text": "觉得"
             },
             {
               "id": "D",
-              "text": "睡觉"
+              "text": "知道"
             },
             {
               "id": "E",
-              "text": "热水"
+              "text": "一下"
             },
             {
               "id": "F",
-              "text": "药"
+              "text": "多少"
             }
           ],
-          "answer": "C",
+          "answer": "A",
           "knowledge": [
-            "贵"
+            "可以",
+            "坐"
           ]
         },
         {
@@ -1501,37 +1473,37 @@
           "id": "R34",
           "number": 34,
           "part": "R3_fill_blank",
-          "question": "现在上午十点，弟弟还在___呢。",
+          "question": "他不在房间里，___找手机呢。",
           "options": [
             {
               "id": "A",
-              "text": "找"
+              "text": "可以"
             },
             {
               "id": "B",
-              "text": "下雪"
+              "text": "正在"
             },
             {
               "id": "C",
-              "text": "贵"
+              "text": "觉得"
             },
             {
               "id": "D",
-              "text": "睡觉"
+              "text": "知道"
             },
             {
               "id": "E",
-              "text": "热水"
+              "text": "一下"
             },
             {
               "id": "F",
-              "text": "药"
+              "text": "多少"
             }
           ],
-          "answer": "D",
+          "answer": "B",
           "knowledge": [
-            "还在",
-            "睡觉"
+            "正在",
+            "找手机"
           ]
         },
         {
@@ -1544,36 +1516,37 @@
           "id": "R35",
           "number": 35,
           "part": "R3_fill_blank",
-          "question": "医生说，回家后再喝一点儿___。",
+          "question": "我___今天的天气有点儿冷。",
           "options": [
             {
               "id": "A",
-              "text": "找"
+              "text": "可以"
             },
             {
               "id": "B",
-              "text": "下雪"
+              "text": "正在"
             },
             {
               "id": "C",
-              "text": "贵"
+              "text": "觉得"
             },
             {
               "id": "D",
-              "text": "睡觉"
+              "text": "知道"
             },
             {
               "id": "E",
-              "text": "热水"
+              "text": "一下"
             },
             {
               "id": "F",
-              "text": "药"
+              "text": "多少"
             }
           ],
-          "answer": "E",
+          "answer": "C",
           "knowledge": [
-            "热水"
+            "觉得",
+            "天气"
           ]
         },
         {
@@ -1586,27 +1559,27 @@
           "id": "R36",
           "number": 36,
           "part": "R4_reading_comprehension",
-          "passage": "李文正在找饭店。他没开车，坐车去。",
-          "question": "李文怎么去饭店？",
+          "passage": "我上午去超市买东西。我买了苹果、牛奶和面包，没买鸡蛋。",
+          "question": "我没有买什么？",
           "options": [
             {
               "id": "A",
-              "text": "坐车"
+              "text": "牛奶"
             },
             {
               "id": "B",
-              "text": "开车"
+              "text": "鸡蛋"
             },
             {
               "id": "C",
-              "text": "坐飞机"
+              "text": "面包"
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "knowledge": [
-            "正在",
-            "找饭店",
-            "坐车"
+            "超市",
+            "买东西",
+            "鸡蛋"
           ]
         },
         {
@@ -1619,27 +1592,27 @@
           "id": "R37",
           "number": 37,
           "part": "R4_reading_comprehension",
-          "passage": "王一雪昨天没来公司。她生病了，去医院看病了。",
-          "question": "王一雪为什么去医院？",
+          "passage": "王老师有一个儿子和一个女儿。他儿子十岁，女儿六岁。",
+          "question": "王老师的女儿多大？",
           "options": [
             {
               "id": "A",
-              "text": "买衣服"
+              "text": "十岁"
             },
             {
               "id": "B",
-              "text": "看病"
+              "text": "十六岁"
             },
             {
               "id": "C",
-              "text": "上课"
+              "text": "六岁"
             }
           ],
-          "answer": "B",
+          "answer": "C",
           "knowledge": [
-            "公司",
-            "生病了",
-            "医院"
+            "儿子",
+            "女儿",
+            "岁"
           ]
         },
         {
@@ -1652,27 +1625,27 @@
           "id": "R38",
           "number": 38,
           "part": "R4_reading_comprehension",
-          "passage": "这里的天不太好，下雨了。我觉得有点儿冷。",
-          "question": "这里天气怎么样？",
+          "passage": "小李今天生病了。他没有上班，在医院看病，还买了一点儿药。",
+          "question": "小李今天怎么了？",
           "options": [
             {
               "id": "A",
-              "text": "很热"
+              "text": "上课了"
             },
             {
               "id": "B",
-              "text": "很好"
+              "text": "生病了"
             },
             {
               "id": "C",
-              "text": "下雨了，有点儿冷"
+              "text": "下班了"
             }
           ],
-          "answer": "C",
+          "answer": "B",
           "knowledge": [
-            "天气",
-            "下雨了",
-            "冷"
+            "生病",
+            "看病",
+            "药"
           ]
         },
         {
@@ -1685,26 +1658,26 @@
           "id": "R39",
           "number": 39,
           "part": "R4_reading_comprehension",
-          "passage": "白家月读大学呢。她学医，课很多。",
-          "question": "白家月是什么人？",
+          "passage": "桌子上有一本书和一个手机。手机不是我的，是我哥哥的。",
+          "question": "手机是谁的？",
           "options": [
             {
               "id": "A",
-              "text": "大学生"
+              "text": "哥哥的"
             },
             {
               "id": "B",
-              "text": "医生"
+              "text": "我的"
             },
             {
               "id": "C",
-              "text": "老师"
+              "text": "老师的"
             }
           ],
           "answer": "A",
           "knowledge": [
-            "读大学",
-            "学医"
+            "手机",
+            "哥哥"
           ]
         },
         {
@@ -1717,33 +1690,31 @@
           "id": "R40",
           "number": 40,
           "part": "R4_reading_comprehension",
-          "passage": "妈妈要去超市买水果。她想买苹果。",
-          "question": "妈妈想买什么？",
+          "passage": "今天晚上我和朋友去饭店吃饭。我们想吃米饭和菜，不想吃面条儿。",
+          "question": "他们想吃什么？",
           "options": [
             {
               "id": "A",
-              "text": "衣服"
+              "text": "面条儿和菜"
             },
             {
               "id": "B",
-              "text": "苹果"
+              "text": "米饭和菜"
             },
             {
               "id": "C",
-              "text": "杯子"
+              "text": "米饭和面包"
             }
           ],
           "answer": "B",
           "knowledge": [
-            "要",
-            "超市",
-            "水果",
-            "苹果"
+            "晚上",
+            "饭店",
+            "米饭",
+            "菜"
           ]
         }
       ]
     }
-  ],
-  "scope": "HSK1-L01 至 HSK1-L12",
-  "lessonRange": "1-12课"
+  ]
 }

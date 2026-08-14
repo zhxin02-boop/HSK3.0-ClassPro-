@@ -42,6 +42,7 @@ button:disabled{opacity:.45;cursor:not-allowed}
 .leader-row{display:grid;grid-template-columns:34px 1fr 56px;align-items:center;gap:8px;padding:9px 10px;border-radius:13px;background:#f8faf3;margin:6px 0;border:1px solid #edf3dc}
 .leader-row.me{background:#edf6d9;border-color:#9ac45b;box-shadow:0 8px 18px rgba(127,170,50,.14)}.leader-rank{font-weight:900;color:var(--green);text-align:center}.leader-name{font-size:13px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.leader-pts{text-align:right;font-size:15px;font-weight:900}.leader-empty{padding:14px;border-radius:13px;background:#f8faf3;color:#74806d;text-align:center;font-size:13px}
 body.classpro-hide-pinyin .py,body.classpro-hide-pinyin .pinyin,body.classpro-hide-pinyin rt,body.classpro-hide-pinyin [data-pinyin="1"]{display:none!important}
+body.classpro-mock-active #app,body.classpro-mock-active #app *{-webkit-user-select:none!important;user-select:none!important;-webkit-touch-callout:none!important}
 .hint img[src*="images/vocab/hsk1-l13"],
 .hint img[src*="images/vocab/hsk1-l14"],
 .hint img[src*="images/vocab/hsk1-l15"]{height:260px!important;max-height:260px!important;object-fit:contain!important}
@@ -476,11 +477,15 @@ client.on("close",function(){setStatus("disconnected")});
   var oldRender=render;
   restoreMockCurrent();
   render=function(){if(isMock()){renderMock();return}oldRender()};
-  if(isMock())renderMock();
+  var oldRenderWithMockClass=render;
+  render=function(){document.body.classList.toggle('classpro-mock-active',isMock());oldRenderWithMockClass()};
+  if(isMock())render();
   var oldMessageHandlerReady=true;
   setInterval(function(){if(isMock()&&mockTest)renderMock()},30000);
   document.addEventListener('visibilitychange',function(){if(document.hidden)reportMockSecurity('tab_hidden')});
   window.addEventListener('blur',function(){reportMockSecurity('window_blur')});
+  document.addEventListener('selectstart',function(e){if(isMock()){e.preventDefault();reportMockSecurity('selectstart')}});
+  document.addEventListener('selectionchange',function(){if(!isMock())return;var s=window.getSelection&&window.getSelection();if(s&&String(s).trim().length){s.removeAllRanges();reportMockSecurity('text_selection')}});
   ['copy','cut','paste','contextmenu'].forEach(function(ev){document.addEventListener(ev,function(e){if(isMock()){e.preventDefault();reportMockSecurity(ev)}})});
 })();
 </script>

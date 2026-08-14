@@ -2469,7 +2469,8 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
   ap._mockPanel=function(){
     ingestLocalMockSecurity();
     var test=ap.mockLoaded,rows=mockSubmissions(),h='<div class="panel" style="max-width:1080px;width:100%;text-align:left"><h2 style="margin-top:0;color:var(--blue)">测 / HSK Mock Test</h2>';
-    var mockOptions=['HSK1-mock-01','HSK1-mock-02','HSK1-mock-03'].map(function(id){return'<option value="'+id+'" '+(ap.mockTestId===id?'selected':'')+'>'+id+'</option>'}).join('');
+    var mockOptionData=[['HSK1-mock-01','HSK1-mock-01（1-10课）'],['HSK1-mock-02','HSK1-mock-02（1-12课）'],['HSK1-mock-03','HSK1-mock-03（1-15课）'],['HSK1-mock-04','HSK1-mock-04（1-13课）']];
+    var mockOptions=mockOptionData.map(function(x){return'<option value="'+x[0]+'" '+(ap.mockTestId===x[0]?'selected':'')+'>'+x[1]+'</option>'}).join('');
     h+='<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px"><select onchange="ap.mockTestId=this.value;ap.mockLoaded=null;saveMockState();loadMock(function(){})" style="padding:10px 14px;border-radius:999px;border:1px solid var(--line);font-weight:900">'+mockOptions+'</select><button class="next-btn" onclick="ap.startMockTest()" '+(ap.mockPhase==='answering'?'disabled':'')+'>开放答题 / Start</button><button class="next-btn" style="background:#f05a3f" onclick="ap.endMockTest()" '+(ap.mockPhase!=='answering'?'disabled':'')+'>收卷锁定 / Lock</button><button class="next-btn" style="background:#9ca3af" onclick="ap.resetMockTest()">重置 / Reset</button></div>';
     if(!test){h+='<div style="padding:18px;border:1px dashed var(--line);border-radius:14px;color:#74806d">点击加载或开放测试。'+(ap.mockLoadError?' '+es(ap.mockLoadError):'')+'</div>';setTimeout(function(){loadMock(function(){})},0);return h+'</div>'}
     var statusBg=ap.mockPhase==='answering'?'#dcfce7':ap.mockPhase==='locked'?'#fee2e2':'#f8faf3',statusColor=ap.mockPhase==='answering'?'#166534':ap.mockPhase==='locked'?'#991b1b':'#64748b';

@@ -1,10 +1,10 @@
 {
   "schemaVersion": "mock-test-1.0.0",
   "testId": "HSK1-mock-03",
-  "recordLesson": "HSK1-MOCK-03",
+  "recordLesson": "HSK1-MOCK-03-L01-L15",
   "level": "HSK1",
-  "title": "HSK1 Mock Test 03",
-  "titleCn": "HSK1 模拟测试 03",
+  "title": "HSK1 Mock Test 03 (1-15)",
+  "titleCn": "HSK1 模拟测试 03（1-15课）",
   "mode": "mock_test",
   "durationMinutes": 35,
   "sourcePolicy": "自建题库；样题只作题型、题量和版式参考；词汇与语法范围为 HSK1-L01 至 HSK1-L15。",
@@ -13,19 +13,20 @@
     "studentAudioControls": false,
     "teacherControlledFinal": true,
     "ttsVoiceA": "zh-CN-YunyangNeural",
-    "ttsVoiceB": "zh-CN-XiaoyiNeural",
-    "ttsRate": "-35%",
-    "itemPauseSeconds": 4.5,
+    "ttsVoiceB": "zh-CN-YunyangNeural",
+    "ttsRate": "-40%",
+    "itemPauseSeconds": 4,
     "repeat": 2,
-    "repeatGapSeconds": 1.5,
+    "repeatGapSeconds": 2,
     "turnGapSeconds": 0.8,
-    "note": "学生端不显示音频按钮；教师端按大题播放 MP3。Yunyang 男声 -35% 为用户确认的默认主声线。"
+    "note": "学生端不显示音频按钮；教师端按大题播放音频。Mock3 使用 Yunyang 男声 -40%；题号只读一遍，具体题目内容读两遍；两遍之间2秒，各题之间4秒。",
+    "leadInSeconds": 1.5
   },
   "audioParts": [
     {
       "part": "L1_picture_choice",
       "title": "听力第一部分 1-5",
-      "file": "../data-model/mock-tests/audio/HSK1-mock-03-listening-01.wav",
+      "file": "../data-model/mock-tests/audio/HSK1-mock-03-listening-01.mp3",
       "itemNumbers": [
         1,
         2,
@@ -37,7 +38,7 @@
     {
       "part": "L2_answer_choice",
       "title": "听力第二部分 6-10",
-      "file": "../data-model/mock-tests/audio/HSK1-mock-03-listening-02.wav",
+      "file": "../data-model/mock-tests/audio/HSK1-mock-03-listening-02.mp3",
       "itemNumbers": [
         6,
         7,
@@ -49,7 +50,7 @@
     {
       "part": "L3_dialogue_picture_choice",
       "title": "听力第三部分 11-15",
-      "file": "../data-model/mock-tests/audio/HSK1-mock-03-listening-03.wav",
+      "file": "../data-model/mock-tests/audio/HSK1-mock-03-listening-03.mp3",
       "itemNumbers": [
         11,
         12,
@@ -61,7 +62,7 @@
     {
       "part": "L4_sentence_question_answer",
       "title": "听力第四部分 16-20",
-      "file": "../data-model/mock-tests/audio/HSK1-mock-03-listening-04.wav",
+      "file": "../data-model/mock-tests/audio/HSK1-mock-03-listening-04.mp3",
       "itemNumbers": [
         16,
         17,
@@ -914,7 +915,7 @@
           "id": "R21",
           "number": 21,
           "part": "R1_sentence_picture_match",
-          "question": "她正在打电话。",
+          "question": "今天下午她正在给朋友打电话。",
           "options": [
             {
               "id": "A",
@@ -962,7 +963,7 @@
           "id": "R22",
           "number": 22,
           "part": "R1_sentence_picture_match",
-          "question": "他是中学生。",
+          "question": "这个孩子明年要去上中学了。",
           "options": [
             {
               "id": "A",
@@ -1010,7 +1011,7 @@
           "id": "R23",
           "number": 23,
           "part": "R1_sentence_picture_match",
-          "question": "我们在大兴机场见。",
+          "question": "我们明天早上八点在大兴机场见。",
           "options": [
             {
               "id": "A",
@@ -1058,7 +1059,7 @@
           "id": "R24",
           "number": 24,
           "part": "R1_sentence_picture_match",
-          "question": "请给我一杯茶。",
+          "question": "服务员，请给王老师一杯热茶。",
           "options": [
             {
               "id": "A",
@@ -1108,7 +1109,7 @@
           "id": "R25",
           "number": 25,
           "part": "R1_sentence_picture_match",
-          "question": "孩子们去上学。",
+          "question": "孩子们早上八点坐车去上学。",
           "options": [
             {
               "id": "A",
@@ -1156,7 +1157,7 @@
           "id": "R26",
           "number": 26,
           "part": "R2_question_answer_match",
-          "question": "我可以问您一个问题吗？",
+          "question": "老师，我可以问您一个问题吗？",
           "options": [
             {
               "id": "A",
@@ -1199,7 +1200,7 @@
           "id": "R27",
           "number": 27,
           "part": "R2_question_answer_match",
-          "question": "您喝什么？",
+          "question": "您早饭想喝点儿什么？",
           "options": [
             {
               "id": "A",
@@ -1241,7 +1242,7 @@
           "id": "R28",
           "number": 28,
           "part": "R2_question_answer_match",
-          "question": "你看了什么？",
+          "question": "你昨天晚上做了什么？",
           "options": [
             {
               "id": "A",
@@ -1369,7 +1370,7 @@
           "id": "R31",
           "number": 31,
           "part": "R3_fill_blank",
-          "question": "我___再问您一个问题吗？",
+          "question": "老师，我___再问您一个问题吗？",
           "options": [
             {
               "id": "A",
@@ -1453,7 +1454,7 @@
           "id": "R33",
           "number": 33,
           "part": "R3_fill_blank",
-          "question": "我们都会___汉字了。",
+          "question": "现在我们都会___这些汉字了。",
           "options": [
             {
               "id": "A",
@@ -1495,7 +1496,7 @@
           "id": "R34",
           "number": 34,
           "part": "R3_fill_blank",
-          "question": "___我和男朋友去了西安。",
+          "question": "___我和男朋友去了西安玩。",
           "options": [
             {
               "id": "A",
@@ -1537,7 +1538,7 @@
           "id": "R35",
           "number": 35,
           "part": "R3_fill_blank",
-          "question": "她可以去___接你们。",
+          "question": "王老师的姐姐可以去___接你们。",
           "options": [
             {
               "id": "A",
@@ -1579,7 +1580,7 @@
           "id": "R36",
           "number": 36,
           "part": "R4_reading_comprehension",
-          "question": "刘明想喝什么？",
+          "question": "刘明要喝什么？",
           "passage": "刘明在饭店。他要一斤饺子，还想喝茶。",
           "options": [
             {
@@ -1645,7 +1646,7 @@
           "id": "R38",
           "number": 38,
           "part": "R4_reading_comprehension",
-          "question": "王老师让大家做什么？",
+          "question": "王老师不要大家做什么？",
           "passage": "王老师说：请大家不要说话，请听老师的问题。",
           "options": [
             {
@@ -1711,7 +1712,7 @@
           "id": "R40",
           "number": 40,
           "part": "R4_reading_comprehension",
-          "question": "谁可以去机场接学生？",
+          "question": "谁去接学生？",
           "passage": "王老师的家人都在北京。星期天她姐姐有时间，可以去机场接学生。",
           "options": [
             {
@@ -1736,5 +1737,7 @@
         }
       ]
     }
-  ]
+  ],
+  "scope": "HSK1-L01 至 HSK1-L15",
+  "lessonRange": "1-15课"
 }
