@@ -442,7 +442,8 @@ client.on("close",function(){setStatus("disconnected")});
     if(item.skill==='listening')h+='<div class="hint" style="text-align:left">听力由教师端统一播放。 / Audio is controlled by the teacher.</div>';
     if(item.passage)h+='<div class="hint" style="text-align:left;font-size:20px;line-height:1.6">'+es(item.passage)+'</div>';
     if(item.question)h+='<div class="hanzi" style="font-size:22px;line-height:1.5;margin:10px 0">'+es(item.question)+'</div>';
-    h+='<div class="options" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">'+shuffledOptions(item).map(function(o){return mockOption(item,o)}).join('')+'</div></div>';
+    var opts=shuffledOptions(item),hasImages=opts.some(function(o){return !!o.image}),cols=(hasImages&&opts.length>=6)?2:3;
+    h+='<div class="options" style="grid-template-columns:repeat('+cols+',minmax(0,1fr));gap:8px">'+opts.map(function(o){return mockOption(item,o)}).join('')+'</div></div>';
     return h;
   }
   function scoreMock(){var sc=0,total=0,wrong=[],listen=0,listenTotal=0,read=0,readTotal=0;allMockItems().forEach(function(x){var pts=x.points||1,ok=mockAnswers[x.id]===x.answer;total+=pts;if(x.skill==='listening')listenTotal+=pts;else readTotal+=pts;if(ok){sc+=pts;if(x.skill==='listening')listen+=pts;else read+=pts}else wrong.push(x.number)});return{score:sc,total:total,wrong:wrong,listen:listen,listenTotal:listenTotal,read:read,readTotal:readTotal}}

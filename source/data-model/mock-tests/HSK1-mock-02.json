@@ -93,7 +93,7 @@
             {
               "id": "A",
               "text": "下雨",
-              "image": "../in-class/images/vocab/hsk1-l08/v02_wai.png"
+              "image": "../in-class/images/mock-tests/hsk1-mock-02/q01_rain.png"
             },
             {
               "id": "B",
@@ -161,7 +161,7 @@
             {
               "id": "A",
               "text": "妹妹",
-              "image": "../in-class/images/l04_pic_12_meimei.png"
+              "image": "../in-class/images/mock-tests/hsk1-mock-02/q03_meimei_sleeping.png"
             },
             {
               "id": "B",
@@ -200,7 +200,7 @@
             {
               "id": "B",
               "text": "商店",
-              "image": "../in-class/images/vocab/hsk1-l10/v06_shangdian.png"
+              "image": "../in-class/images/mock-tests/hsk1-mock-02/q04_buy_clothes.png"
             },
             {
               "id": "C",
@@ -559,7 +559,7 @@
             {
               "id": "C",
               "text": "睡觉",
-              "image": "../in-class/images/vocab/hsk1-l08/v01_fangjian.png"
+              "image": "../in-class/images/mock-tests/hsk1-mock-02/q13_didi_sleeping.png"
             },
             {
               "id": "D",
