@@ -2380,6 +2380,14 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
   function mockPartName(part){
     return {L1_picture_choice:'听力1 图片',L2_answer_choice:'听力2 问答',L3_dialogue_picture_choice:'听力3 对话图片',L4_sentence_question_answer:'听力4 句问答',R1_sentence_picture_match:'阅读1 图文',R2_question_answer_match:'阅读2 问答',R3_fill_blank:'阅读3 填空',R4_reading_comprehension:'阅读4 理解'}[part]||part;
   }
+  function mockPct(score,total){return total?Math.round(Number(score||0)/Number(total||0)*100):0}
+  function mockFmt(sec){sec=Math.max(0,Math.floor(sec||0));var m=Math.floor(sec/60),s=sec%60;return m+':'+String(s).padStart(2,'0')}
+  function mockClock(test){
+    var mins=(test&&test.durationMinutes)||35,started=ap.mockStartedAt?Date.parse(ap.mockStartedAt):0,total=mins*60;
+    if(!started)return{elapsed:0,left:total,finished:false};
+    var elapsed=Math.max(0,Math.floor((Date.now()-started)/1000)),left=Math.max(0,total-elapsed);
+    return{elapsed:elapsed,left:left,finished:left<=0};
+  }
   function mockDiagnosis(r){
     var items=mockItems(),ans=r.answers||{},wrong=[],partWrong={},skillWrong={listening:0,reading:0},skillTotal={listening:0,reading:0};
     items.forEach(function(x){
@@ -2458,6 +2466,9 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     for(var i=0;i<parts.length;i++)if(parts[i].part===part)return parts[i].file||'';
     return '';
   }
+  ap.loadMockAudioPart=function(part){
+    loadMock(function(){ap.mockAudioPart=part;ap._r()});
+  };
   ap.playMockPart=function(part){
     loadMock(function(){
       var file=mockAudioFile(part),fallback=function(){if(!window.speechSynthesis){alert('当前浏览器不支持语音合成。');return}window.speechSynthesis.cancel();mockSpeakQueue(mockItemsByPart(part),0)};
@@ -2465,7 +2476,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
       fallback();
     });
   };
-  ap.stopMockAudio=function(){if(ap.mockAudio)ap.mockAudio.pause();if(window.speechSynthesis)window.speechSynthesis.cancel()};
+  ap.stopMockAudio=function(){if(ap.mockAudio)ap.mockAudio.pause();var el=document.querySelector('#mockAudioPlayer');if(el)el.pause();if(window.speechSynthesis)window.speechSynthesis.cancel()};
   ap._mockPanel=function(){
     ingestLocalMockSecurity();
     var test=ap.mockLoaded,rows=mockSubmissions(),h='<div class="panel" style="max-width:1080px;width:100%;text-align:left"><h2 style="margin-top:0;color:var(--blue)">测 / HSK Mock Test</h2>';
@@ -2474,14 +2485,15 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     h+='<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px"><select onchange="ap.mockTestId=this.value;ap.mockLoaded=null;saveMockState();loadMock(function(){})" style="padding:10px 14px;border-radius:999px;border:1px solid var(--line);font-weight:900">'+mockOptions+'</select><button class="next-btn" onclick="ap.startMockTest()" '+(ap.mockPhase==='answering'?'disabled':'')+'>开放答题 / Start</button><button class="next-btn" style="background:#f05a3f" onclick="ap.endMockTest()" '+(ap.mockPhase!=='answering'?'disabled':'')+'>收卷锁定 / Lock</button><button class="next-btn" style="background:#9ca3af" onclick="ap.resetMockTest()">重置 / Reset</button></div>';
     if(!test){h+='<div style="padding:18px;border:1px dashed var(--line);border-radius:14px;color:#74806d">点击加载或开放测试。'+(ap.mockLoadError?' '+es(ap.mockLoadError):'')+'</div>';setTimeout(function(){loadMock(function(){})},0);return h+'</div>'}
     var statusBg=ap.mockPhase==='answering'?'#dcfce7':ap.mockPhase==='locked'?'#fee2e2':'#f8faf3',statusColor=ap.mockPhase==='answering'?'#166534':ap.mockPhase==='locked'?'#991b1b':'#64748b';
-    var secMap=mockSecuritySummary(),secCount=Object.keys(secMap).length;
-    h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:14px 0"><div class="formula-box">题量<br><b>'+((test.sections||[]).reduce(function(n,s){return n+(s.items||[]).length},0))+'</b></div><div class="formula-box">时长<br><b>'+es(test.durationMinutes||35)+' 分钟</b></div><div class="formula-box" style="background:'+statusBg+';color:'+statusColor+';border-color:'+statusColor+'">状态<br><b>'+es(ap.mockPhase==='answering'?'答题中':ap.mockPhase==='locked'?'已锁定':'未开放')+'</b></div><div class="formula-box">已提交<br><b>'+rows.length+' / '+ap.as.length+'</b></div><div class="formula-box" style="background:#fff7ed;color:#b45309;border-color:#fed7aa">异常记录<br><b>'+secCount+'</b></div></div>';
+    var secMap=mockSecuritySummary(),secCount=Object.keys(secMap).length,clock=mockClock(test);
+    h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:14px 0"><div class="formula-box">题量<br><b>'+((test.sections||[]).reduce(function(n,s){return n+(s.items||[]).length},0))+'</b></div><div class="formula-box">时长<br><b>'+es(test.durationMinutes||35)+' 分钟</b></div><div class="formula-box" style="background:'+statusBg+';color:'+statusColor+';border-color:'+statusColor+'">状态<br><b>'+es(ap.mockPhase==='answering'?'答题中':ap.mockPhase==='locked'?'已锁定':'未开放')+'</b></div><div id="mockClockCard" class="formula-box" style="background:'+(ap.mockPhase==='answering'&&clock.left<300?'#fee2e2':'#edf3ff')+'">计时<br><b id="mockClockText">'+es(ap.mockPhase==='idle'?'未开始':(mockFmt(clock.elapsed)+' / 剩 '+mockFmt(clock.left)))+'</b></div><div class="formula-box">已提交<br><b>'+rows.length+' / '+ap.as.length+'</b></div><div class="formula-box" style="background:#fff7ed;color:#b45309;border-color:#fed7aa">异常记录<br><b>'+secCount+'</b></div></div>';
     h+=mockReport(rows);
-    h+='<div style="background:#f8faf3;border:1px solid var(--line);border-radius:14px;padding:14px;line-height:1.7;color:#64748b">听力由教师端统一控制。当前为慢速浏览器 TTS 流程测试；正式音频仍需后续按大题生成、人工验收并替换。'+(ap.mockSendStatus?'<br><b>'+es(ap.mockSendStatus)+'</b>':'')+'</div>';
-    h+='<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0"><b style="color:var(--blue)">听力播放</b><button class="tab" onclick="ap.playMockPart(\'L1_picture_choice\')">播放 1-5</button><button class="tab" onclick="ap.playMockPart(\'L2_answer_choice\')">播放 6-10</button><button class="tab" onclick="ap.playMockPart(\'L3_dialogue_picture_choice\')">播放 11-15</button><button class="tab" onclick="ap.playMockPart(\'L4_sentence_question_answer\')">播放 16-20</button><button class="tab" style="border-color:#f05a3f;color:#f05a3f" onclick="ap.stopMockAudio()">停止</button></div>';
+    h+='<div style="background:#f8faf3;border:1px solid var(--line);border-radius:14px;padding:14px;line-height:1.7;color:#64748b">听力由教师端统一控制。可按大题加载音频，使用进度条拖动定位错题讲解。'+(ap.mockSendStatus?'<br><b>'+es(ap.mockSendStatus)+'</b>':'')+'</div>';
+    var audioPart=ap.mockAudioPart||'L1_picture_choice',audioFile=mockAudioFile(audioPart);
+    h+='<div style="margin:14px 0;padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff"><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px"><b style="color:var(--blue)">听力播放</b><button class="tab" onclick="ap.loadMockAudioPart(\'L1_picture_choice\')">1-5</button><button class="tab" onclick="ap.loadMockAudioPart(\'L2_answer_choice\')">6-10</button><button class="tab" onclick="ap.loadMockAudioPart(\'L3_dialogue_picture_choice\')">11-15</button><button class="tab" onclick="ap.loadMockAudioPart(\'L4_sentence_question_answer\')">16-20</button><button class="tab" style="border-color:#f05a3f;color:#f05a3f" onclick="ap.stopMockAudio()">停止</button></div>'+(audioFile?'<audio id="mockAudioPlayer" controls preload="metadata" src="'+es(audioFile)+'" style="width:100%"></audio><div style="font-size:12px;color:#64748b;margin-top:6px">'+es(mockPartName(audioPart))+'</div>':'<div style="color:#b45309">当前大题没有音频文件，将使用浏览器语音作为备用。</div>')+'</div>';
     h+='<h3 style="color:var(--practice)">提交情况 / Submissions</h3>';
     if(!rows.length)h+='<div style="padding:18px;border:1px dashed var(--line);border-radius:14px;color:#94a3b8;text-align:center">暂无学生提交。</div>';
-    else{h+='<table style="width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden"><tr style="background:#edf6d9"><th style="text-align:left;padding:10px">学生</th><th style="text-align:left;padding:10px">得分</th><th style="text-align:left;padding:10px">异常</th><th style="text-align:left;padding:10px">错题</th><th style="text-align:left;padding:10px">薄弱方向</th><th style="text-align:left;padding:10px">详情</th><th style="text-align:left;padding:10px">提交时间</th></tr>';rows.forEach(function(r){var dx=mockDiagnosis(r),wrong=dx.wrong.length?dx.wrong.map(function(x){return x.number}).join('、'):'无';var answers=r.answers||{},detail=dx.wrong.map(function(x){return '第'+x.number+'题 '+mockPartName(x.part)+'：学生选 '+(answers[x.id]||'未答')+'，正确 '+x.answer}).join('；');var weak=(dx.wrong.length?'需加强：'+dx.focus+(dx.weakParts.length?'；'+dx.weakParts.join('、'):''):'无明显薄弱项'),sec=secMap[String(r.n||'Student')];h+='<tr><td style="padding:10px;border-top:1px solid var(--line)">'+es(r.n||'')+'</td><td style="padding:10px;border-top:1px solid var(--line);font-weight:900;color:var(--blue)">'+es(r.x||'')+'</td><td style="padding:10px;border-top:1px solid var(--line);color:'+(sec?'#b45309':'#64748b')+'">'+(sec?es(sec.violations||0)+'次':'无')+'</td><td style="padding:10px;border-top:1px solid var(--line)">'+es(wrong)+'</td><td style="padding:10px;border-top:1px solid var(--line)">'+es(weak)+'</td><td style="padding:10px;border-top:1px solid var(--line)"><details><summary style="cursor:pointer;color:var(--blue);font-weight:900">查看</summary><div style="margin-top:8px;font-size:12px;line-height:1.7;color:#64748b">'+es(detail||'全部正确')+'</div></details></td><td style="padding:10px;border-top:1px solid var(--line)">'+es(r.t||'')+'</td></tr>'});h+='</table>'}
+    else{h+='<table style="width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden"><tr style="background:#edf6d9"><th style="text-align:left;padding:10px">学生</th><th style="text-align:left;padding:10px">得分</th><th style="text-align:left;padding:10px">异常</th><th style="text-align:left;padding:10px">错题</th><th style="text-align:left;padding:10px">薄弱方向</th><th style="text-align:left;padding:10px">详情</th><th style="text-align:left;padding:10px">提交时间</th></tr>';rows.forEach(function(r){var dx=mockDiagnosis(r),wrong=dx.wrong.length?dx.wrong.map(function(x){return x.number}).join('、'):'无';var answers=r.answers||{},detail=dx.wrong.map(function(x){return '第'+x.number+'题 '+mockPartName(x.part)+'：学生选 '+(answers[x.id]||'未答')+'，正确 '+x.answer}).join('；');var weak=(dx.wrong.length?'需加强：'+dx.focus+(dx.weakParts.length?'；'+dx.weakParts.join('、'):''):'无明显薄弱项'),sec=secMap[String(r.n||'Student')],pct=mockPct(r.score,r.total);h+='<tr><td style="padding:10px;border-top:1px solid var(--line)">'+es(r.n||'')+'</td><td style="padding:10px;border-top:1px solid var(--line);font-weight:900;color:var(--blue)">'+pct+' 分 <span style="font-size:12px;color:#64748b">('+es(r.x||'')+')</span></td><td style="padding:10px;border-top:1px solid var(--line);color:'+(sec?'#b45309':'#64748b')+'">'+(sec?es(sec.violations||0)+'次':'无')+'</td><td style="padding:10px;border-top:1px solid var(--line)">'+es(wrong)+'</td><td style="padding:10px;border-top:1px solid var(--line)">'+es(weak)+'</td><td style="padding:10px;border-top:1px solid var(--line)"><details><summary style="cursor:pointer;color:var(--blue);font-weight:900">查看</summary><div style="margin-top:8px;font-size:12px;line-height:1.7;color:#64748b">'+es(detail||'全部正确')+'</div></details></td><td style="padding:10px;border-top:1px solid var(--line)">'+es(r.t||'')+'</td></tr>'});h+='</table>'}
     return h+'</div>';
   };
   var oldSnav=ap._snav,oldCnt=ap._cnt,oldRender=ap._r,oldHa=ap._ha,oldLw=ap._lw;
@@ -2496,6 +2508,12 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     var rail=side.querySelector('.practice-rail'),spacer=side.querySelector('.sb-spacer'),firstBottom=side.querySelector('.sb-bottom');
     side.insertBefore(btn,rail||spacer||firstBottom||null);
   };
+  setInterval(function(){
+    if(ap.mt!=='mock'||ap.mockPhase==='idle'||!ap.mockLoaded)return;
+    var el=document.getElementById('mockClockText'),card=document.getElementById('mockClockCard');if(!el)return;
+    var clock=mockClock(ap.mockLoaded);el.textContent=mockFmt(clock.elapsed)+' / 剩 '+mockFmt(clock.left);
+    if(card)card.style.background=ap.mockPhase==='answering'&&clock.left<300?'#fee2e2':'#edf3ff';
+  },1000);
 })();
 </script>
 <style>
