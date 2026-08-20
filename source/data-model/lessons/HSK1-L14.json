@@ -377,62 +377,152 @@
       "id": "g_l14_01",
       "title": "动态助词“了”",
       "titleEn": "Aspect Particle 了",
-      "structure": "动词 + 了 + 宾语",
-      "explanation": "动词后“了”表示动作完成。",
+      "structure": "1. 动词 + 了 + 数量/限定语 + 宾语\n2. 动词 + 宾语 + 了",
+      "explanation": "“了”表示动作已经完成。宾语前面有数量词、指示词、形容词等限定成分时，常说“动词 + 了 + 限定语 + 宾语”；如果只是一个普通宾语，也可以把“了”放在句末。",
       "examples": [
         {
           "hanzi": "我看了一个电影。",
           "pinyin": "Wǒ kànle yí gè diànyǐng.",
-          "english": "I watched a movie.",
+          "english": "I watched a movie. / object has a measure word: 一个电影",
           "sourceType": "textbook"
         },
         {
           "hanzi": "有些人睡觉了。",
           "pinyin": "Yǒu xiē rén shuìjiào le.",
-          "english": "Some people fell asleep.",
+          "english": "Some people went to sleep. / sentence-final 了",
           "sourceType": "textbook"
         },
         {
           "hanzi": "我买了一个新电脑。",
           "pinyin": "Wǒ mǎile yí gè xīn diànnǎo.",
-          "english": "I bought a new computer.",
+          "english": "I bought a new computer. / object is specified: 一个新电脑",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我看电影了。",
+          "pinyin": "Wǒ kàn diànyǐng le.",
+          "english": "I watched a movie. / bare object: 电影, so 了 can be sentence-final",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我写了三个字。",
+          "pinyin": "Wǒ xiěle sān ge zì.",
+          "english": "I wrote three characters. / object is quantified: 三个字",
           "sourceType": "teaching_extension"
         }
-      ]
+      ],
+      "formula": {
+        "pattern": "动词 + 了 + 数量/限定语 + 宾语\n动词 + 宾语 + 了",
+        "patternEn": "verb + le + quantified/specified object\nverb + object + le",
+        "patternRu": "глагол + 了 + определенное дополнение\nглагол + дополнение + 了",
+        "note": "“了”表示动作已经完成。宾语前面有数量词、指示词、形容词等限定成分时，常说“动词 + 了 + 限定语 + 宾语”；如果只是一个普通宾语，也可以把“了”放在句末。",
+        "noteEn": "了 marks a completed action. If the object is quantified or specified, put 了 after the verb. If the object is bare, sentence-final 了 is also possible.",
+        "noteRu": "了 показывает завершенное действие. Если дополнение уточнено количеством или другим определителем, 了 ставится после глагола. Если дополнение простое, 了 может стоять в конце предложения."
+      }
     },
     {
       "id": "g_l14_02",
       "title": "离合词",
-      "titleEn": "Separable Words",
-      "structure": "离合词中间可插入成分",
-      "explanation": "说话、睡觉、上学等可以分开使用。",
+      "titleEn": "Separable Verb-Object Words",
+      "structure": "定义：离合词是可以“合在一起用”，也可以“分开使用”的词，多数是“动词 + 名词”结构。\n结构：动词部分 + 了/数量/时量 + 名词部分\n注意：离合词不能简单地当作一个整体再加宾语。",
+      "explanation": "用法：要加“了”、数量词、时量词等成分时，常常插在两部分中间。教材原句“不要说话”是词汇原句，不直接展示“离合”；“说了一会儿话”才体现离合用法。",
       "examples": [
-        {
-          "hanzi": "请大家不要说话！",
-          "pinyin": "Qǐng dàjiā búyào shuōhuà!",
-          "english": "Please do not talk.",
-          "sourceType": "textbook"
-        },
         {
           "hanzi": "太晚了，睡觉吧。",
           "pinyin": "Tài wǎn le, shuìjiào ba.",
-          "english": "It's late. Go to sleep.",
+          "english": "It is late. Go to sleep. / textbook sentence, word used together",
           "sourceType": "textbook"
         },
         {
           "hanzi": "他睡了一觉。",
           "pinyin": "Tā shuìle yí jiào.",
-          "english": "He slept.",
+          "english": "He slept. / 睡觉 separates: 睡 + 了 + 一觉",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我给妈妈打了一个电话。",
+          "pinyin": "Wǒ gěi māma dǎle yí ge diànhuà.",
+          "english": "I made a phone call to my mother. / 打电话 separates",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "请大家不要说话！",
+          "pinyin": "Qǐng dàjiā búyào shuōhuà!",
+          "english": "Please do not talk. / textbook sentence, not a separation example",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "他们说了一会儿话。",
+          "pinyin": "Tāmen shuōle yíhuìr huà.",
+          "english": "They talked for a while. / 说话 separates",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "已学离合词参考：做饭、上课、下课、睡觉、打电话、说话。",
+          "pinyin": "Yǐ xué líhécí cānkǎo: zuòfàn, shàngkè, xiàkè, shuìjiào, dǎ diànhuà, shuōhuà.",
+          "english": "Reference list: separable words learned so far.",
           "sourceType": "teaching_extension"
         }
-      ]
+      ],
+      "formula": {
+        "pattern": "定义：可合可分的词\n结构：V + 了/数量/时量 + O\n例：睡觉 → 睡了一觉；打电话 → 打了一个电话",
+        "patternEn": "Definition: a word that can be used together or separated\nStructure: V + le/quantity/duration + O",
+        "patternRu": "Определение: слово может употребляться вместе или раздельно\nСтруктура: V + 了/количество/длительность + O",
+        "note": "用法：要加“了”、数量词、时量词等成分时，常常插在两部分中间。教材原句“不要说话”是词汇原句，不直接展示“离合”；“说了一会儿话”才体现离合用法。",
+        "noteEn": "Usage: When adding 了, quantity words, or duration words, put the inserted element between the two parts. 不要说话 is a textbook vocabulary sentence; 说了一会儿话 shows the separable pattern.",
+        "noteRu": "Употребление: 了, количество или длительность обычно вставляются между двумя частями. 不要说话 — пример лексики; 说了一会儿话 показывает разделение."
+      },
+      "learnedSeparableWords": [
+        {
+          "word": "做饭",
+          "pinyin": "zuòfàn",
+          "example": "做了饭",
+          "sourceLesson": "HSK1-L05"
+        },
+        {
+          "word": "上课",
+          "pinyin": "shàngkè",
+          "example": "上了一节课",
+          "sourceLesson": "HSK1-L07"
+        },
+        {
+          "word": "下课",
+          "pinyin": "xiàkè",
+          "example": "下了课",
+          "sourceLesson": "HSK1-L07"
+        },
+        {
+          "word": "睡觉",
+          "pinyin": "shuìjiào",
+          "example": "睡了一觉",
+          "sourceLesson": "HSK1-L11"
+        },
+        {
+          "word": "打电话",
+          "pinyin": "dǎ diànhuà",
+          "example": "打了一个电话",
+          "sourceLesson": "HSK1-L13"
+        },
+        {
+          "word": "说话",
+          "pinyin": "shuōhuà",
+          "example": "说了一会儿话",
+          "sourceLesson": "HSK1-L14"
+        }
+      ],
+      "structureEn": "Definition: A separable word can be used together or separated. Many are verb-object combinations.\nStructure: verb part + le/quantity/duration + noun part.\nNote: Do not always treat it as one solid verb before another object.",
+      "structureRu": "Определение: разделяемое слово может употребляться вместе или раздельно. Многие такие слова имеют структуру глагол + существительное.\nСтруктура: глагольная часть + 了/количество/длительность + именная часть.\nВажно: его нельзя всегда использовать как один цельный глагол перед дополнением.",
+      "english": "Usage: When adding 了, quantity words, or duration words, put the inserted element between the two parts. 不要说话 is a textbook vocabulary sentence; 说了一会儿话 shows the separable pattern.",
+      "russian": "Употребление: 了, количество или длительность обычно вставляются между двумя частями. 不要说话 — пример лексики; 说了一会儿话 показывает разделение."
     },
     {
       "id": "g_l14_03",
       "title": "范围副词“都”",
       "titleEn": "Scope Adverb 都",
-      "structure": "总括对象 + 都 + 谓语",
-      "explanation": "都表示全部。",
+      "structure": "范围 + 都 + 动词/形容词\n先有一个范围，“都”说明这个范围里的每一个都一样，没有例外。",
+      "structureEn": "scope + dou + verb/adjective\nFirst name a scope. 都 shows that every member in that scope is included, with no exception.",
+      "structureRu": "сфера/группа + 都 + глагол/прилагательное\nСначала называется группа. 都 показывает, что это относится к каждому члену группы без исключения.",
+      "explanation": "“都”不是简单等于“all/все”，它的位置在中文里很固定：放在主语或范围后面、谓语前面。使用前先问“谁都？”“哪些东西都？”。如果前面没有范围，就不能随便用“都”。",
       "examples": [
         {
           "hanzi": "我们都会写了。",
@@ -450,6 +540,24 @@
           "hanzi": "同学们都没听见。",
           "pinyin": "Tóngxuémen dōu méi tīngjiàn.",
           "english": "The students all did not hear.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我们都是学生。",
+          "pinyin": "Wǒmen dōu shì xuésheng.",
+          "english": "All of us are students.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这些苹果都很贵。",
+          "pinyin": "Zhèxiē píngguǒ dōu hěn guì.",
+          "english": "These apples are all expensive.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我也是学生。我们都是学生。",
+          "pinyin": "Wǒ yě shì xuésheng. Wǒmen dōu shì xuésheng.",
+          "english": "也 adds one similar case; 都 covers every member in the group.",
           "sourceType": "teaching_extension"
         }
       ]
@@ -1682,83 +1790,161 @@
     "g_l14_01": {
       "title": "动态助词“了”",
       "titleEn": "Aspect Particle 了",
-      "structure": "动词 + 了 + 宾语",
-      "structureEn": "verb + le + object",
-      "structureRu": "глагол + 了 + объект",
-      "english": "了 after a verb marks completion.",
-      "russian": "了 после глагола обозначает завершенность.",
+      "structure": "1. 动词 + 了 + 数量/限定语 + 宾语\n2. 动词 + 宾语 + 了",
+      "structureEn": "1. verb + le + quantified/specified object\n2. verb + object + le",
+      "structureRu": "1. глагол + 了 + определенное/количественное дополнение\n2. глагол + дополнение + 了",
+      "english": "了 after a verb marks completion. When the object has a number, measure word, or other modifier, 了 usually follows the verb. With a bare object, 了 can also appear after the object/sentence.",
+      "russian": "了 после глагола обозначает завершенность действия. Если дополнение имеет количество, счетное слово или уточнение, 了 обычно ставится после глагола. Если дополнение простое, 了 может стоять в конце предложения.",
       "formula": {
-        "pattern": "动词 + 了 + 宾语",
-        "patternEn": "verb + le + object",
-        "patternRu": "глагол + 了 + объект"
+        "pattern": "动词 + 了 + 数量/限定语 + 宾语\n动词 + 宾语 + 了",
+        "patternEn": "verb + le + quantified/specified object\nverb + object + le",
+        "patternRu": "глагол + 了 + определенное дополнение\nглагол + дополнение + 了",
+        "note": "“了”表示动作已经完成。宾语前面有数量词、指示词、形容词等限定成分时，常说“动词 + 了 + 限定语 + 宾语”；如果只是一个普通宾语，也可以把“了”放在句末。",
+        "noteEn": "了 marks a completed action. If the object is quantified or specified, put 了 after the verb. If the object is bare, sentence-final 了 is also possible.",
+        "noteRu": "了 показывает завершенное действие. Если дополнение уточнено количеством или другим определителем, 了 ставится после глагола. Если дополнение простое, 了 может стоять в конце предложения."
       },
       "examples": [
         {
           "hanzi": "我看了一个电影。",
           "pinyin": "Wǒ kànle yí gè diànyǐng.",
-          "english": "I watched a movie.",
+          "english": "I watched a movie. / object has a measure word: 一个电影",
           "sourceType": "textbook"
         },
         {
           "hanzi": "有些人睡觉了。",
           "pinyin": "Yǒu xiē rén shuìjiào le.",
-          "english": "Some people fell asleep.",
+          "english": "Some people went to sleep. / sentence-final 了",
           "sourceType": "textbook"
         },
         {
           "hanzi": "我买了一个新电脑。",
           "pinyin": "Wǒ mǎile yí gè xīn diànnǎo.",
-          "english": "I bought a new computer.",
+          "english": "I bought a new computer. / object is specified: 一个新电脑",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我看电影了。",
+          "pinyin": "Wǒ kàn diànyǐng le.",
+          "english": "I watched a movie. / bare object: 电影, so 了 can be sentence-final",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我写了三个字。",
+          "pinyin": "Wǒ xiěle sān ge zì.",
+          "english": "I wrote three characters. / object is quantified: 三个字",
           "sourceType": "teaching_extension"
         }
       ]
     },
     "g_l14_02": {
       "title": "离合词",
-      "titleEn": "Separable Words",
-      "structure": "离合词中间可插入成分",
-      "structureEn": "separable verb-object word",
-      "structureRu": "разделяемые слова",
-      "english": "Some verb-object words can separate.",
-      "russian": "Некоторые слова могут разделяться.",
+      "titleEn": "Separable Verb-Object Words",
+      "structure": "定义：离合词是可以“合在一起用”，也可以“分开使用”的词，多数是“动词 + 名词”结构。\n结构：动词部分 + 了/数量/时量 + 名词部分\n注意：离合词不能简单地当作一个整体再加宾语。",
+      "structureEn": "Definition: A separable word can be used together or separated. Many are verb-object combinations.\nStructure: verb part + le/quantity/duration + noun part.\nNote: Do not always treat it as one solid verb before another object.",
+      "structureRu": "Определение: разделяемое слово может употребляться вместе или раздельно. Многие такие слова имеют структуру глагол + существительное.\nСтруктура: глагольная часть + 了/количество/длительность + именная часть.\nВажно: его нельзя всегда использовать как один цельный глагол перед дополнением.",
+      "english": "Usage: When adding 了, quantity words, or duration words, put the inserted element between the two parts. 不要说话 is a textbook vocabulary sentence; 说了一会儿话 shows the separable pattern.",
+      "russian": "Употребление: 了, количество или длительность обычно вставляются между двумя частями. 不要说话 — пример лексики; 说了一会儿话 показывает разделение.",
       "formula": {
-        "pattern": "离合词中间可插入成分",
-        "patternEn": "separable verb-object word",
-        "patternRu": "разделяемые слова"
+        "pattern": "定义：可合可分的词\n结构：V + 了/数量/时量 + O\n例：睡觉 → 睡了一觉；打电话 → 打了一个电话",
+        "patternEn": "Definition: a word that can be used together or separated\nStructure: V + le/quantity/duration + O",
+        "patternRu": "Определение: слово может употребляться вместе или раздельно\nСтруктура: V + 了/количество/длительность + O",
+        "note": "用法：要加“了”、数量词、时量词等成分时，常常插在两部分中间。教材原句“不要说话”是词汇原句，不直接展示“离合”；“说了一会儿话”才体现离合用法。",
+        "noteEn": "Usage: When adding 了, quantity words, or duration words, put the inserted element between the two parts. 不要说话 is a textbook vocabulary sentence; 说了一会儿话 shows the separable pattern.",
+        "noteRu": "Употребление: 了, количество или длительность обычно вставляются между двумя частями. 不要说话 — пример лексики; 说了一会儿话 показывает разделение."
       },
       "examples": [
         {
-          "hanzi": "请大家不要说话！",
-          "pinyin": "Qǐng dàjiā búyào shuōhuà!",
-          "english": "Please do not talk.",
-          "sourceType": "textbook"
-        },
-        {
           "hanzi": "太晚了，睡觉吧。",
           "pinyin": "Tài wǎn le, shuìjiào ba.",
-          "english": "It's late. Go to sleep.",
+          "english": "It is late. Go to sleep. / textbook sentence, word used together",
           "sourceType": "textbook"
         },
         {
           "hanzi": "他睡了一觉。",
           "pinyin": "Tā shuìle yí jiào.",
-          "english": "He slept.",
+          "english": "He slept. / 睡觉 separates: 睡 + 了 + 一觉",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我给妈妈打了一个电话。",
+          "pinyin": "Wǒ gěi māma dǎle yí ge diànhuà.",
+          "english": "I made a phone call to my mother. / 打电话 separates",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "请大家不要说话！",
+          "pinyin": "Qǐng dàjiā búyào shuōhuà!",
+          "english": "Please do not talk. / textbook sentence, not a separation example",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "他们说了一会儿话。",
+          "pinyin": "Tāmen shuōle yíhuìr huà.",
+          "english": "They talked for a while. / 说话 separates",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "已学离合词参考：做饭、上课、下课、睡觉、打电话、说话。",
+          "pinyin": "Yǐ xué líhécí cānkǎo: zuòfàn, shàngkè, xiàkè, shuìjiào, dǎ diànhuà, shuōhuà.",
+          "english": "Reference list: separable words learned so far.",
           "sourceType": "teaching_extension"
         }
-      ]
+      ],
+      "learnedSeparableWords": [
+        {
+          "word": "做饭",
+          "pinyin": "zuòfàn",
+          "example": "做了饭",
+          "sourceLesson": "HSK1-L05"
+        },
+        {
+          "word": "上课",
+          "pinyin": "shàngkè",
+          "example": "上了一节课",
+          "sourceLesson": "HSK1-L07"
+        },
+        {
+          "word": "下课",
+          "pinyin": "xiàkè",
+          "example": "下了课",
+          "sourceLesson": "HSK1-L07"
+        },
+        {
+          "word": "睡觉",
+          "pinyin": "shuìjiào",
+          "example": "睡了一觉",
+          "sourceLesson": "HSK1-L11"
+        },
+        {
+          "word": "打电话",
+          "pinyin": "dǎ diànhuà",
+          "example": "打了一个电话",
+          "sourceLesson": "HSK1-L13"
+        },
+        {
+          "word": "说话",
+          "pinyin": "shuōhuà",
+          "example": "说了一会儿话",
+          "sourceLesson": "HSK1-L14"
+        }
+      ],
+      "explanation": "用法：要加“了”、数量词、时量词等成分时，常常插在两部分中间。教材原句“不要说话”是词汇原句，不直接展示“离合”；“说了一会儿话”才体现离合用法。"
     },
     "g_l14_03": {
       "title": "范围副词“都”",
       "titleEn": "Scope Adverb 都",
-      "structure": "总括对象 + 都 + 谓语",
-      "structureEn": "scope + dou + predicate",
-      "structureRu": "обобщаемый объект + 都 + сказуемое",
-      "english": "都 summarizes all members before it.",
-      "russian": "都 обозначает всех или все.",
+      "structure": "范围 + 都 + 动词/形容词\n先有一个范围，“都”说明这个范围里的每一个都一样，没有例外。",
+      "structureEn": "scope + dou + verb/adjective\nFirst name a scope. 都 shows that every member in that scope is included, with no exception.",
+      "structureRu": "сфера/группа + 都 + глагол/прилагательное\nСначала называется группа. 都 показывает, что это относится к каждому члену группы без исключения.",
+      "english": "都 does not simply equal all. In Chinese it usually comes after the subject or scope and before the predicate. Ask: all of whom? all of which things?",
+      "russian": "都 не просто равно все. В китайском оно обычно стоит после подлежащего или группы и перед сказуемым. Нужно сначала понять: кто все? какие предметы все?",
       "formula": {
-        "pattern": "总括对象 + 都 + 谓语",
-        "patternEn": "scope + dou + predicate",
-        "patternRu": "обобщаемый объект + 都 + сказуемое"
+        "pattern": "范围 + 都 + 动词/形容词",
+        "patternEn": "scope + dou + verb/adjective",
+        "patternRu": "сфера/группа + 都 + глагол/прилагательное",
+        "note": "“都”表示范围内没有例外。先有范围，再用“都”。",
+        "noteEn": "都 means there is no exception inside the scope. Name the scope first, then use 都.",
+        "noteRu": "都 означает, что внутри группы нет исключений. Сначала называется группа, потом употребляется 都."
       },
       "examples": [
         {
@@ -1778,8 +1964,27 @@
           "pinyin": "Tóngxuémen dōu méi tīngjiàn.",
           "english": "The students all did not hear.",
           "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我们都是学生。",
+          "pinyin": "Wǒmen dōu shì xuésheng.",
+          "english": "All of us are students.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "这些苹果都很贵。",
+          "pinyin": "Zhèxiē píngguǒ dōu hěn guì.",
+          "english": "These apples are all expensive.",
+          "sourceType": "teaching_extension"
+        },
+        {
+          "hanzi": "我也是学生。我们都是学生。",
+          "pinyin": "Wǒ yě shì xuésheng. Wǒmen dōu shì xuésheng.",
+          "english": "也 adds one similar case; 都 covers every member in the group.",
+          "sourceType": "teaching_extension"
         }
-      ]
+      ],
+      "explanation": "讲解顺序建议：1. 先说“都”表示范围里的每一个，没有例外；2. 再强调位置：范围 + 都 + 谓语；3. 最后对比“也”和“都”：也表示一个人/一件事加入同类情况，都表示一组人/物全部符合。"
     }
   },
   "preClass": {
