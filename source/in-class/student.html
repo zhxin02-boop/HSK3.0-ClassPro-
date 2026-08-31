@@ -72,7 +72,7 @@ body.classpro-mock-active #app,body.classpro-mock-active #app *{-webkit-user-sel
 </div>
 <script>
 var query=new URLSearchParams(location.search),RM=query.get("room")||"8888",LESSON=query.get("lesson")||((window.ClassProContext&&ClassProContext.read().lesson)||"HSK1-L01");
-var current=null, selected=null, chunks=[], answerChunks=[], nameReady=false, matchLeft=null, matchRight=null, matchPairs={}, globalPinyinVisible=true;
+var current=null, selected=null, chunks=[], answerChunks=[], nameReady=false, matchLeft=null, matchRight=null, matchPairs={}, v5GroupAnswers={}, globalPinyinVisible=true;
 var CLASS_STUDENTS=window.CLASS_STUDENTS||[];
 var scoreboard={rows:CLASS_STUDENTS.map(function(n){return{name:n,points:0}}),updatedAt:null};
 function es(s){return String(s==null?"":s).replace(/</g,"&lt;").replace(/>/g,"&gt;")}
@@ -91,7 +91,7 @@ function optionGrid(opts,showPy){var d=qdata(),pys=d.options_pinyin||[],h='<div 
 function applyPinyinVisibility(){document.body.classList.toggle("classpro-hide-pinyin",!globalPinyinVisible)}
 function isOpenQuestion(q,mode){var t=String((q&&q.type)||mode||"").toLowerCase().replace(/-/g,"_");return !!(q&&(q.openEnded||q.cloudWall||q.needsTeacherReview||["oral","open","open_response","subjective","text_output","output","cloud"].indexOf(t)>=0))}
 function renderOpenQuestion(q,d){var img=d.image?'<img src="'+es(d.image)+'" alt="" style="width:100%;max-height:220px;object-fit:contain;border-radius:14px;background:#fff">':'';var h='<div class="prompt">'+es(q.prompt_cn||"看图说话")+'<br><span class="english">'+es(q.prompt_en||"Picture talk")+'</span></div>';if(img)h+='<div class="hint">'+img+'</div>';h+='<div class="hint" style="text-align:left"><div class="hanzi" style="font-size:24px;line-height:1.5">'+es(d.context||"")+'</div><div class="muted" style="margin-top:8px;line-height:1.6">'+es(d.instructions||"请写一句中文。")+'</div></div>';h+='<textarea id="openAnswer" rows="4" placeholder="'+es(d.answerPlaceholder||"请写你的答案 / Write your answer")+'" style="width:100%;padding:14px;border:2px solid #dfeac8;border-radius:14px;font-size:20px;line-height:1.5;font-family:KaiTi,STKaiti,&quot;Kaiti SC&quot;,&quot;Microsoft YaHei&quot;,serif"></textarea><button style="width:100%;margin-top:16px" onclick="submitOpenAnswer()">提交 Submit</button>';return h}
-function render(){if(!current){document.getElementById("app").innerHTML='<div class="muted">等待老师发送题目...</div>';applyPinyinVisibility();return}var q=current.question,d=qdata(),mode=current.mode,h='<div class="prompt">'+es(q.prompt_cn||"")+'</div>';if(isOpenQuestion(q,mode)){h=renderOpenQuestion(q,d)}else if(mode==="v1"){var pic=d.image?'<img src="'+es(d.image)+'" alt="" style="width:100%;max-height:220px;object-fit:contain;border-radius:14px;background:#fff">':'<div class="hanzi">'+es(d.image_hint||"")+'</div>';h+='<div class="hint"><div class="muted">Look at the picture. Choose the word.</div>'+pic+'</div>'+optionGrid(d.options||[],true)}else if(mode==="v4"){h+='<div class="pinyin">'+es(d.template_pinyin||"")+'</div><div class="hanzi">'+es(d.template||"")+'</div>'+optionGrid(d.options||[],true)}else if(mode==="v5"){h+='<div class="pinyin">'+es(d.sentence_pinyin||"")+'</div><div class="hanzi">'+es(d.sentence||"")+'</div>'+optionGrid(d.options||[],true)}else if(mode==="v7"){h+='<div class="hint"><div class="muted">Choose the word that fits the sentence.</div><div class="pinyin">'+es(d.sentence_pinyin||"")+'</div><div class="hanzi">'+es(d.sentence||"")+'</div></div>'+optionGrid(d.options||[],true)}else if(mode==="v8"){var pairs=d.pairs||[],order=d.order||pairs.map(function(_,i){return i}),done=Object.keys(matchPairs).length;h+='<div style="text-align:center;font-weight:900;color:#d16b35;margin-bottom:8px">词了个词 / Matching Game</div><div class="muted" style="text-align:center">先点中文，再点英文。'+done+' / '+pairs.length+'</div><div class="match-board"><div class="match-col">';pairs.forEach(function(p,i){var cls=matchPairs[i]!=null?' done':matchLeft===i?' sel':'';h+='<button class="match-card'+cls+'" onclick="pickMatch(\'L\','+i+')"><span class="py">'+es(p.left_pinyin||py(p.left))+'</span>'+es(p.left)+'</button>'});h+='</div><div class="match-col">';order.forEach(function(idx){var p=pairs[idx]||{},used=false;for(var k in matchPairs){if(matchPairs[k]===idx)used=true}var cls=used?' done':matchRight===idx?' sel':'';h+='<button class="match-card'+cls+'" onclick="pickMatch(\'R\','+idx+')">'+es(p.right||"")+'</button>'});h+='</div></div><button style="width:100%;margin-top:18px" onclick="submitMatching()" '+(done<pairs.length?'disabled':'')+'>提交 Submit</button>'}else if(mode==="w1"){h+='<div class="hint"><div class="muted">Choose the right character.</div><div class="pinyin">'+es(d.sentence_pinyin||"")+'</div><div class="hanzi">'+es(d.sentence||"")+'</div></div>'+optionGrid(d.options||[],false)}else if(mode==="ttq"&&d.options&&d.options.length){h+='<div class="hint"><div class="muted">Read and choose.</div><div class="hanzi" style="font-size:20px;line-height:1.6">'+es(d.passage||d.statement||"")+'</div><div class="pinyin">'+es(d.statement_pinyin||"")+'</div><div class="english">'+es(d.question_en||d.statement_en||"")+'</div><div class="hanzi">'+es(d.question_cn||"")+'</div></div>'+optionGrid(d.options||[],false)}else if(mode==="g1"){if(!chunks.length){var cps=d.chunks_pinyin||[];chunks=(d.chunks||[]).map(function(t,i){return{id:i,t:t,p:cps[i]||py(t),u:false}}).sort(function(){return Math.random()-.5});answerChunks=[]}h+='<div class="chunks">';chunks.forEach(function(c,i){if(!c.u)h+='<div class="chunk" onclick="moveChunk('+i+')"><span class="py">'+es(c.p||py(c.t))+'</span>'+es(c.t)+'</div>'});h+='</div><div class="chunks answer">';if(!answerChunks.length)h+='<span class="muted">点击上面的词块</span>';answerChunks.forEach(function(c,i){h+='<div class="chunk" onclick="backChunk('+i+')"><span class="py">'+es(c.p||py(c.t))+'</span>'+es(c.t)+'</div>'});h+='</div><button style="width:100%;margin-top:16px" onclick="submitOrdering()" '+(!answerChunks.length?'disabled':'')+'>提交 Submit</button>'}else{h+='<div class="muted">当前题型暂未接入学生端。</div>'}document.getElementById("app").innerHTML=h;applyPinyinVisibility()}
+function render(){if(!current){document.getElementById("app").innerHTML='<div class="muted">等待老师发送题目...</div>';applyPinyinVisibility();return}var q=current.question,d=qdata(),mode=current.mode,h='<div class="prompt">'+es(q.prompt_cn||"")+'</div>';if(isOpenQuestion(q,mode)){h=renderOpenQuestion(q,d)}else if(mode==="scn"){var sceneImg=d.image?'<img src="'+es(d.image)+'" alt="" style="width:100%;max-height:220px;object-fit:contain;border-radius:14px;background:#fff">':'';h='<div class="prompt"><span class="english">'+es(q.prompt_en||"Choose the most natural Chinese sentence for the situation.")+'</span></div><div class="hint" style="text-align:left"><div class="english" style="font-size:20px;text-align:left;font-weight:900;color:#253225">'+es(d.scene_en||"")+'</div>'+(d.clue_en?'<div class="muted" style="margin-top:10px;font-weight:900;color:#365f2a">'+es(d.clue_en)+'</div>':'')+(sceneImg?'<div style="margin-top:12px;text-align:center">'+sceneImg+'</div>':'')+'</div>'+optionGrid(d.options||[],true)}else if(mode==="v1"){var pic=d.image?'<img src="'+es(d.image)+'" alt="" style="width:100%;max-height:220px;object-fit:contain;border-radius:14px;background:#fff">':'<div class="hanzi">'+es(d.image_hint||"")+'</div>';h+='<div class="hint"><div class="muted">Look at the picture. Choose the word.</div>'+pic+'</div>'+optionGrid(d.options||[],true)}else if(mode==="v4"){h+='<div class="pinyin">'+es(d.template_pinyin||"")+'</div><div class="hanzi">'+es(d.template||"")+'</div>'+optionGrid(d.options||[],true)}else if(mode==="v5"){h+='<div class="pinyin">'+es(d.sentence_pinyin||"")+'</div><div class="hanzi">'+es(d.sentence||"")+'</div>'+optionGrid(d.options||[],true)}else if(mode==="v7"){h+='<div class="hint"><div class="muted">Choose the word that fits the sentence.</div><div class="pinyin">'+es(d.sentence_pinyin||"")+'</div><div class="hanzi">'+es(d.sentence||"")+'</div></div>'+optionGrid(d.options||[],true)}else if(mode==="v8"){var pairs=d.pairs||[],order=d.order||pairs.map(function(_,i){return i}),done=Object.keys(matchPairs).length;h+='<div style="text-align:center;font-weight:900;color:#d16b35;margin-bottom:8px">词了个词 / Matching Game</div><div class="muted" style="text-align:center">先点中文，再点英文。'+done+' / '+pairs.length+'</div><div class="match-board"><div class="match-col">';pairs.forEach(function(p,i){var cls=matchPairs[i]!=null?' done':matchLeft===i?' sel':'';h+='<button class="match-card'+cls+'" onclick="pickMatch(\'L\','+i+')"><span class="py">'+es(p.left_pinyin||py(p.left))+'</span>'+es(p.left)+'</button>'});h+='</div><div class="match-col">';order.forEach(function(idx){var p=pairs[idx]||{},used=false;for(var k in matchPairs){if(matchPairs[k]===idx)used=true}var cls=used?' done':matchRight===idx?' sel':'';h+='<button class="match-card'+cls+'" onclick="pickMatch(\'R\','+idx+')">'+es(p.right||"")+'</button>'});h+='</div></div><button style="width:100%;margin-top:18px" onclick="submitMatching()" '+(done<pairs.length?'disabled':'')+'>提交 Submit</button>'}else if(mode==="w1"){h+='<div class="hint"><div class="muted">Choose the right character.</div><div class="pinyin">'+es(d.sentence_pinyin||"")+'</div><div class="hanzi">'+es(d.sentence||"")+'</div></div>'+optionGrid(d.options||[],false)}else if(mode==="ttq"&&d.options&&d.options.length){h+='<div class="hint"><div class="muted">Read and choose.</div><div class="hanzi" style="font-size:20px;line-height:1.6">'+es(d.passage||d.statement||"")+'</div><div class="pinyin">'+es(d.statement_pinyin||"")+'</div><div class="english">'+es(d.question_en||d.statement_en||"")+'</div><div class="hanzi">'+es(d.question_cn||"")+'</div></div>'+optionGrid(d.options||[],false)}else if(mode==="g1"){if(!chunks.length){var cps=d.chunks_pinyin||[];chunks=(d.chunks||[]).map(function(t,i){return{id:i,t:t,p:cps[i]||py(t),u:false}}).sort(function(){return Math.random()-.5});answerChunks=[]}h+='<div class="chunks">';chunks.forEach(function(c,i){if(!c.u)h+='<div class="chunk" onclick="moveChunk('+i+')"><span class="py">'+es(c.p||py(c.t))+'</span>'+es(c.t)+'</div>'});h+='</div><div class="chunks answer">';if(!answerChunks.length)h+='<span class="muted">点击上面的词块</span>';answerChunks.forEach(function(c,i){h+='<div class="chunk" onclick="backChunk('+i+')"><span class="py">'+es(c.p||py(c.t))+'</span>'+es(c.t)+'</div>'});h+='</div><button style="width:100%;margin-top:16px" onclick="submitOrdering()" '+(!answerChunks.length?'disabled':'')+'>提交 Submit</button>'}else{h+='<div class="muted">当前题型暂未接入学生端。</div>'}document.getElementById("app").innerHTML=h;applyPinyinVisibility()}
 function pick(i){selected=i;render()}
 function matchRightUsed(idx){for(var k in matchPairs){if(matchPairs[k]===idx)return true}return false}
 function pickMatch(side,idx){if(side==="L"){if(matchPairs[idx]!=null)delete matchPairs[idx];matchLeft=idx;matchRight=null}else{if(matchLeft==null||matchRightUsed(idx))return;matchPairs[matchLeft]=idx;matchLeft=null;matchRight=null}render()}
@@ -186,7 +186,7 @@ client.on("close",function(){setStatus("disconnected")});
       h+='<div class="hint"><div class="muted">Transform the sentence.</div><div class="pinyin">'+es(d.source_pinyin||d.template_pinyin||'')+'</div><div class="hanzi">'+es(d.source_sentence||d.template||'')+'</div></div>'+optionGrid(d.options||[],true);
     }else if(mode==='v7'&&d.pairs){
       var pairs=d.pairs||[],order=d.order||pairs.map(function(_,i){return i}),done=Object.keys(matchPairs).length;
-      h+='<div style="text-align:center;font-weight:900;color:#3f7f32;margin-bottom:8px">词句匹配 / Word–Sentence Match</div><div class="muted" style="text-align:center">先点左侧回答，再点右侧问题。 '+done+' / '+pairs.length+'</div><div class="match-board"><div class="match-col">';
+      h+='<div style="text-align:center;font-weight:900;color:#3f7f32;margin-bottom:8px">问答匹配 / Q&A Match</div><div class="muted" style="text-align:center">先点左侧问题，再点右侧回答。 '+done+' / '+pairs.length+'</div><div class="match-board"><div class="match-col">';
       pairs.forEach(function(p,i){var cls=matchPairs[i]!=null?' done':matchLeft===i?' sel':'';h+='<button class="match-card'+cls+'" onclick="pickMatch(\'L\','+i+')"><span class="py">'+es(p.left_pinyin||py(p.left))+'</span>'+es(p.left)+'</button>'});
       h+='</div><div class="match-col">';
       order.forEach(function(idx){var p=pairs[idx]||{},used=false;for(var k in matchPairs){if(matchPairs[k]===idx)used=true}var cls=used?' done':matchRight===idx?' sel':'';h+='<button class="match-card'+cls+'" onclick="pickMatch(\'R\','+idx+')" style="font-size:17px;line-height:1.45">'+es(p.right||'')+'</button>'});
@@ -490,5 +490,177 @@ client.on("close",function(){setStatus("disconnected")});
   ['copy','cut','paste','contextmenu'].forEach(function(ev){document.addEventListener(ev,function(e){if(isMock()){e.preventDefault();reportMockSecurity(ev)}})});
 })();
 </script>
+<script>
+/* HSK3 HSK-style grouped fill-in. */
+(function(){
+  var oldRender=render,lastGroupId='';
+  function isGroupFill(){
+    var d=qdata();
+    return current&&current.mode==='v5'&&d&&Array.isArray(d.sentences)&&Array.isArray(d.wordBank);
+  }
+  function ensureAnswers(q){
+    var id=q&&q.id||'';
+    if(id!==lastGroupId){lastGroupId=id;v5GroupAnswers={}}
+  }
+  function wordButton(word,idx,slot){
+    var d=qdata(),pyText=(d.wordBank_pinyin||[])[idx]||py(word),sel=v5GroupAnswers[slot]===word;
+    return '<button class="option '+(sel?'sel':'')+'" onclick="chooseV5Group('+slot+','+idx+')" style="transform:none;min-width:92px"><span class="py">'+es(pyText)+'</span>'+es(word)+'</button>';
+  }
+  function bankChip(word,idx){
+    var d=qdata(),pyText=(d.wordBank_pinyin||[])[idx]||py(word);
+    return '<div class="option" style="transform:none;min-width:92px;cursor:default"><span class="py">'+es(pyText)+'</span>'+es(word)+'</div>';
+  }
+  window.chooseV5Group=function(slot,idx){
+    var d=qdata(),word=(d.wordBank||[])[idx]||'';
+    v5GroupAnswers[slot]=word;
+    render();
+  };
+  window.submitV5Group=function(){
+    if(!nameReady)confirmName();
+    var q=current.question,d=qdata(),items=d.sentences||[],answers=items.map(function(_,i){return v5GroupAnswers[i]||''});
+    var ok=items.length>0&&answers.every(function(a,i){return norm(a)===norm(items[i].answer)});
+    var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:answers.join('；'),text:answers.join('；'),questionId:q.id,mode:current.mode,autoResult:ok?'correct':'wrong',submittedAt:new Date().toISOString()};
+    client.publish("classpro/room/"+RM+"/answers",JSON.stringify(payload));
+    document.getElementById("app").innerHTML='<div class="'+(ok?'ok':'bad')+'">'+(ok?'提交成功：正确！':'提交成功：请看老师反馈')+'</div>';
+  };
+  render=function(){
+    if(!isGroupFill()){oldRender();return}
+    var q=current.question,d=qdata(),items=d.sentences||[],bank=d.wordBank||[];
+    ensureAnswers(q);
+    var h='<div class="prompt"><span class="english">'+es(q.prompt_en||'Choose from the word bank for each sentence.')+'</span></div>';
+    h+='<div class="hint" style="text-align:center"><div class="muted">Word Bank</div><div class="options" style="min-height:auto;margin-top:10px">'+bank.map(function(w,i){return bankChip(w,i)}).join('')+'</div></div>';
+    h+='<div style="display:grid;gap:14px">';
+    items.forEach(function(item,i){
+      h+='<div class="hint" style="text-align:left"><div class="muted">Sentence '+(i+1)+'</div><div class="pinyin" style="text-align:left">'+es(item.sentence_pinyin||'')+'</div><div class="hanzi" style="text-align:left;font-size:25px">'+es(item.sentence||'')+'</div><div class="options" style="min-height:auto;justify-content:flex-start">'+bank.map(function(w,k){return wordButton(w,k,i)}).join('')+'</div></div>';
+    });
+    var ready=items.every(function(_,i){return !!v5GroupAnswers[i]});
+    h+='</div><button style="width:100%;margin-top:16px" onclick="submitV5Group()" '+(!ready?'disabled':'')+'>提交 Submit</button>';
+    document.getElementById("app").innerHTML=h;
+    applyPinyinVisibility();
+  };
+})();
+</script>
+<script>
+/* HSK3 practice extensions: description guess and output-building tasks. */
+(function(){
+  var oldRender=render;
+  render=function(){
+    if(!current||['v6d','r3r'].indexOf(current.mode)<0){oldRender();return}
+    var q=current.question||{},d=qdata();
+    var h='<div class="prompt">'+es(q.prompt_cn||'读题，选择答案。')+'<br><span class="english">'+es(q.prompt_en||'Read and choose the best answer.')+'</span></div>';
+    if(current.mode==='r3r'){
+      h+='<div class="hint" style="text-align:left"><div class="muted" style="font-weight:900;color:#3f7f32">'+es(d.title||'Reading')+'</div><div class="hanzi" style="font-size:24px;line-height:1.7;text-align:left">'+es(d.passage||'')+'</div><div class="hanzi" style="font-size:24px;line-height:1.45;text-align:left;color:#8a2f26;margin-top:12px">'+es(d.question_cn||'')+'</div>'+(d.question_en?'<div class="english" style="margin-top:6px;text-align:left">'+es(d.question_en)+'</div>':'')+'</div>';
+    }else{
+      h+='<div class="hint" style="text-align:left"><div class="muted" style="font-weight:900;color:#3f7f32">'+es(d.level||'Clue')+'</div><div class="hanzi" style="font-size:28px;line-height:1.55;text-align:left">'+es(d.description||'')+'</div>'+(d.description_en?'<div class="english" style="margin-top:8px;text-align:left">'+es(d.description_en)+'</div>':'')+'</div>';
+    }
+    h+=optionGrid(d.options||[],true);
+    document.getElementById('app').innerHTML=h;
+    applyPinyinVisibility();
+  };
+  var oldRenderOpenQuestion=renderOpenQuestion;
+  renderOpenQuestion=function(q,d){
+    var mode=current&&current.mode;
+    if(['v2g','v3b','g2p','r4p','t3c','t2k'].indexOf(mode)<0)return oldRenderOpenQuestion(q,d);
+    var h='<div class="prompt">'+es(q.prompt_cn||'请用中文回答。')+'<br><span class="english">'+es(q.prompt_en||'Write in Chinese.')+'</span></div>';
+    if(mode==='v2g'){
+      h+='<div class="hint old-stu-card guess"><div class="old-stu-tag">🔍 你说我猜</div>';
+      h+='<div class="old-stu-desc">'+es((d.clues||[])[0]||d.instructions||'用中文描述，让同学猜。')+'</div>';
+      if((d.clues||[]).length>1)h+='<div style="display:grid;gap:8px;margin-top:10px">'+d.clues.slice(1).map(function(x,i){return'<div class="muted" style="background:#fff;border:1px solid #e6dccf;border-radius:12px;padding:9px 10px"><b>提示 '+(i+2)+':</b> '+es(x)+'</div>'}).join('')+'</div>';
+      h+='</div>';
+    }else if(mode==='v3b'){
+      h+='<div class="hint old-stu-card blind"><div class="old-stu-tag">🎁 盲盒造句</div><div class="old-stu-blind-grid">'+(d.words||[]).map(function(w,i){return'<button type="button" class="old-stu-box" onclick="this.classList.add(\'open\');this.querySelector(\'b\').textContent=\''+es(w).replace(/'/g,"\\'")+'\'"><span></span><b>?</b><small>BLIND BOX</small></button>'}).join('')+'</div><div class="muted" style="margin-top:10px">请用打开的词语造一个句子。</div></div>';
+    }else if(mode==='g2p'){
+      var img=d.image?'<img src="'+es(d.image)+'" alt="" style="width:100%;max-height:220px;object-fit:cover;border-radius:14px;background:#fff">':'';
+      var frame=es(d.sentenceFrame||'').replace(/____/g,'<span style="display:inline-block;min-width:70px;border-bottom:3px solid #6366f1;margin:0 4px"></span>');
+      h+='<div class="hint old-stu-card picture">'+(img?'<div style="text-align:center;margin-bottom:10px">'+img+'</div>':'')+'<div class="old-stu-tag blue">📝 完成句子</div><div class="hanzi" style="font-size:28px;line-height:1.45;text-align:left">'+frame+'</div>';
+      if((d.keywords||[]).length)h+='<div class="options" style="min-height:auto;justify-content:flex-start;margin-top:10px">'+d.keywords.map(function(w){return'<div class="option" style="transform:none;cursor:default;background:#dcfce7;color:#166534;border-color:#bbf7d0">'+es(w)+'</div>'}).join('')+'</div>';
+      if(d.context)h+='<div class="muted" style="margin-top:10px">'+es(d.context)+'</div>';
+      h+='</div>';
+    }else{
+      h+='<div class="hint old-stu-card task" style="text-align:left"><div class="old-stu-tag blue">'+es(d.title||'Task')+'</div>';
+      if(d.role)h+='<div class="english" style="font-weight:900;margin-bottom:8px">'+es(d.role)+'</div>';
+      if(d.task)h+='<div class="english" style="margin-bottom:10px">'+es(d.task)+'</div>';
+      if((d.passageParts||[]).length)h+='<div style="display:grid;gap:8px;margin:10px 0">'+d.passageParts.map(function(x){return'<div class="hanzi" style="font-size:22px;line-height:1.45;text-align:left;background:#fff;border:1px solid #e6dccf;border-radius:12px;padding:9px 10px">'+es(x)+'</div>'}).join('')+'</div>';
+      if((d.options||[]).length)h+='<div style="display:grid;gap:8px;margin:10px 0">'+d.options.map(function(x,i){return'<div style="background:#fff;border:1px solid #dfeac8;border-radius:12px;padding:9px 10px"><b>'+(i+1)+'.</b> '+es(x)+'</div>'}).join('')+'</div>';
+      if((d.steps||[]).length)h+='<div style="display:grid;gap:8px;margin:10px 0">'+d.steps.map(function(x,i){return'<div style="background:#fff;border:1px solid #dfeac8;border-radius:12px;padding:9px 10px"><b>'+(i+1)+'.</b> '+es(x)+'</div>'}).join('')+'</div>';
+      if(d.starter)h+='<div class="hanzi" style="font-size:26px;text-align:left;margin:10px 0">Start: '+es(d.starter)+'</div>';
+      if((d.keywords||[]).length)h+='<div class="options" style="min-height:auto;justify-content:flex-start;margin-top:10px">'+d.keywords.map(function(w){return'<div class="option" style="transform:none;cursor:default;background:#dcfce7;color:#166534;border-color:#bbf7d0">'+es(w)+'</div>'}).join('')+'</div>';
+      if(d.output||d.instructions)h+='<div class="muted" style="margin-top:10px;font-weight:900">'+es(d.output||d.instructions)+'</div>';
+      h+='</div>';
+    }
+    h+='<textarea id="openAnswer" rows="4" placeholder="'+es(d.answerPlaceholder||'请写你的答案 / Write your answer')+'" style="width:100%;padding:14px;border:2px solid #dfeac8;border-radius:14px;font-size:20px;line-height:1.5;font-family:KaiTi,STKaiti,&quot;Kaiti SC&quot;,&quot;Microsoft YaHei&quot;,serif"></textarea><button style="width:100%;margin-top:16px" onclick="submitOpenAnswer()">提交 Submit</button>';
+    return h;
+  };
+})();
+</script>
+<style>
+.old-stu-card{border-radius:14px!important;box-shadow:0 2px 8px rgba(0,0,0,.04)!important}
+.old-stu-card.guess,.old-stu-card.blind{background:#faf5ff!important;border-color:#d9c8ff!important}
+.old-stu-card.picture{background:#eff6ff!important;border-color:#bfdbfe!important}
+.old-stu-tag{font-size:13px;color:#9c27b0;font-weight:900;margin-bottom:8px}
+.old-stu-tag.blue{color:#6366f1}
+.old-stu-desc{font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:24px;line-height:1.5;font-weight:900;color:#14312b;background:#f3e8ff;border-radius:10px;padding:12px}
+.old-stu-blind-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:12px}
+.old-stu-box{width:104px;height:98px;border:2px solid #e9d5ff;border-radius:14px;background:#fff;color:#7c3aed;cursor:pointer;font-weight:900;box-shadow:0 10px 18px rgba(124,58,237,.10)}
+.old-stu-box span{display:none}
+.old-stu-box:before{content:"🎁";display:block;font-size:30px;line-height:1;margin:13px 0 6px}
+.old-stu-box b{display:block;font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:26px;line-height:1.05;color:#14312b}
+.old-stu-box small{display:block;margin-top:5px;font-size:8px;color:#8b5cf6;letter-spacing:.08em}
+.old-stu-box.open{background:#f8faf3;color:#14312b;border-color:#cfe2b5;box-shadow:0 12px 20px rgba(67,92,47,.10)}
+.old-stu-box.open:before{content:"✓";font-size:20px;color:#2f6b25;margin:10px 0 6px}
+</style>
+<script>
+/* HSK3 information matching: scene information -> best action. */
+(function(){
+  var oldRender=render;
+  render=function(){
+    if(!current||current.mode!=='inf'){oldRender();return}
+    var q=current.question||{},d=qdata(),pairs=d.pairs||[],order=d.order||pairs.map(function(_,i){return i}),done=Object.keys(matchPairs).length;
+    var img=d.image?'<img src="'+es(d.image)+'" alt="" style="width:100%;max-height:190px;object-fit:cover;border-radius:14px;background:#fff">':'';
+    var h='<div class="prompt">'+es(q.prompt_cn||'看一看，连一连。')+'<br><span class="english">'+es(q.prompt_en||'Match the information with the best action.')+'</span></div>';
+    h+='<div class="hint" style="text-align:left">'+img+'<div class="hanzi" style="font-size:22px;line-height:1.5;text-align:left;margin-top:10px">'+es(d.scene||'')+'</div><div class="muted" style="margin-top:6px;font-weight:900">'+es(d.instructions||'把左边的信息和右边的做法连起来。')+'</div></div>';
+    h+='<div style="text-align:center;font-weight:900;color:#3f7f32;margin-bottom:8px">信息匹配 / Info Match</div><div class="muted" style="text-align:center">先点左侧信息，再点右侧做法。 '+done+' / '+pairs.length+'</div><div class="match-board"><div class="match-col">';
+    pairs.forEach(function(p,i){var cls=matchPairs[i]!=null?' done':matchLeft===i?' sel':'';h+='<button class="match-card'+cls+'" onclick="pickMatch(\'L\','+i+')" style="font-size:17px;line-height:1.45;text-align:left;width:100%"><span class="py">'+es(p.left_pinyin||'')+'</span>'+es(p.left)+'</button>'});
+    h+='</div><div class="match-col">';
+    order.forEach(function(idx){var p=pairs[idx]||{},used=false;for(var k in matchPairs){if(matchPairs[k]===idx)used=true}var cls=used?' done':matchRight===idx?' sel':'';h+='<button class="match-card'+cls+'" onclick="pickMatch(\'R\','+idx+')" style="font-size:17px;line-height:1.45;text-align:left;width:100%"><span class="py">'+es(p.right_pinyin||'')+'</span>'+es(p.right||'')+'</button>'});
+    h+='</div></div><button style="width:100%;margin-top:18px" onclick="submitMatching()" '+(done<pairs.length?'disabled':'')+'>提交 Submit</button>';
+    document.getElementById('app').innerHTML=h;
+    applyPinyinVisibility();
+  };
+})();
+</script>
+<script>
+/* HSK3 open output scaffold: words -> phrases -> sentence frames. */
+(function(){
+  function scaffoldSection(title,items,cls){
+    if(!items||!items.length)return '';
+    return '<div style="border:1px solid #dfeac8;background:#fbfcf6;border-radius:14px;padding:12px;margin:10px 0"><div class="muted" style="font-weight:900;margin-bottom:8px">'+es(title)+'</div><div style="display:flex;flex-wrap:wrap;gap:8px">'+items.map(function(x){return'<span class="'+cls+'">'+es(x)+'</span>'}).join('')+'</div></div>';
+  }
+  function scaffoldHtml(d){
+    var s=d.scaffold||{};
+    return scaffoldSection('1. 先选词',s.words||[],'output-chip')+
+      scaffoldSection('2. 再用短语',s.phrases||[],'output-chip phrase')+
+      scaffoldSection('3. 可以套句框',s.frames||[],'output-frame');
+  }
+  var oldRenderOpenQuestion=renderOpenQuestion;
+  renderOpenQuestion=function(q,d){
+    if(['v2g','v3b','g2p','r4p','t3c','t2k'].indexOf(current&&current.mode)>=0||!d||!d.scaffold)return oldRenderOpenQuestion(q,d);
+    var img=d.image?'<img src="'+es(d.image)+'" alt="" style="width:100%;max-height:220px;object-fit:contain;border-radius:14px;background:#fff">':'';
+    var h='<div class="prompt">'+es(q.prompt_cn||"看图说话")+'<br><span class="english">'+es(q.prompt_en||"Picture talk")+'</span></div>';
+    if(img)h+='<div class="hint">'+img+'</div>';
+    h+='<div class="hint" style="text-align:left"><div class="hanzi" style="font-size:24px;line-height:1.5;text-align:left">'+es(d.question||d.context||"")+'</div>';
+    if(d.context)h+='<div class="muted" style="margin-top:8px;line-height:1.6">'+es(d.context)+'</div>';
+    if(d.instructions)h+='<div class="muted" style="margin-top:8px;line-height:1.6;font-weight:900">'+es(d.instructions)+'</div>';
+    h+=scaffoldHtml(d)+'</div>';
+    h+='<textarea id="openAnswer" rows="4" placeholder="'+es(d.answerPlaceholder||"可以写一句或两句中文。")+'" style="width:100%;padding:14px;border:2px solid #dfeac8;border-radius:14px;font-size:20px;line-height:1.5;font-family:KaiTi,STKaiti,&quot;Kaiti SC&quot;,&quot;Microsoft YaHei&quot;,serif"></textarea><button style="width:100%;margin-top:16px" onclick="submitOpenAnswer()">提交 Submit</button>';
+    return h;
+  };
+})();
+</script>
+<style>
+.output-chip,.output-frame{display:inline-flex;align-items:center;padding:8px 11px;border:1px solid #d8e6c5;border-radius:999px;background:#fff;color:#14312b;font-size:18px;font-weight:900}
+.output-chip.phrase{border-radius:12px;background:#fff7ed;border-color:#f3c7b8;color:#8a2f26}
+.output-frame{width:100%;border-radius:12px;font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:22px;line-height:1.45}
+</style>
 </body>
 </html>

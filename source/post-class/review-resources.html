@@ -32,9 +32,10 @@ h1{margin:12px 0 6px;font-size:28px;color:#3f7f32}.muted{color:var(--muted);font
   <section class="hero">
     <span class="badge" id="lessonBadge">Review</span>
     <h1>课后复习资源</h1>
-    <div class="muted">复习生词、例句、汉字范字和课文。这里只做复习，不提交作业记录。</div>
+    <div class="muted" id="reviewIntro">复习生词、例句、汉字范字和课文。这里只做复习，不提交作业记录。</div>
     <div class="tabs">
       <button class="active" data-view="vocab" onclick="showView('vocab')">生词</button>
+      <button data-view="grammar" onclick="showView('grammar')">语法</button>
       <button data-view="hanzi" onclick="showView('hanzi')">汉字</button>
       <button data-view="texts" onclick="showView('texts')">课文</button>
     </div>
@@ -48,11 +49,17 @@ function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"
 function getJson(path){var x=new XMLHttpRequest();x.open("GET",path,false);x.send(null);if(x.status<200||x.status>=300)throw new Error(path);return JSON.parse(x.responseText)}
 function loadLesson(){
   try{
-    var raw=lessonKey==="HSK1-L01"?getJson("../data-model/HSK1-L01_content_draft.json"):(/^HSK1-L\d{2}$/.test(lessonKey)?getJson("../data-model/lessons/"+lessonKey+".json"):null);
+    var raw=lessonKey==="HSK1-L01"?getJson("../data-model/HSK1-L01_content_draft.json"):(/^HSK[13]-L\d{2}$/.test(lessonKey)?getJson("../data-model/lessons/"+lessonKey+".json"):null);
     DATA=raw&&raw.schemaVersion&&window.ClassProCourseAdapter?window.ClassProCourseAdapter.normalizeStandard(raw):raw;
   }catch(e){DATA={meta:{lessonKey:lessonKey,title:"课程数据读取失败"},vocabulary:[],texts:[],vocabExtensions:{},hanziWriting:{characters:[]}}}
   document.title=lessonKey+" 课后复习资源";
   document.getElementById("lessonBadge").textContent=lessonKey+" · "+((DATA.meta&&DATA.meta.title)||"Review");
+  if(/^HSK3-/.test(lessonKey)){
+    document.getElementById("reviewIntro").textContent="复习本课生词、语言点、语法和课文。HSK3 复习页不再提供汉字范字专项。";
+    document.querySelectorAll('[data-view="hanzi"]').forEach(function(b){b.style.display="none"});
+  }else{
+    document.querySelectorAll('[data-view="grammar"]').forEach(function(b){b.style.display="none"});
+  }
 }
 function rowsFrom(x){if(Array.isArray(x))return x;if(!x)return[];return x.examples||x.collocations||x.phrases||x.shortPhrases||x.sentences||[]}
 function normalizeRows(rows){return (rows||[]).map(function(e){return typeof e==="string"?{hanzi:e}:e}).filter(function(e){return e&&((e.hanzi||e.word||"").trim())})}
@@ -75,6 +82,20 @@ function renderHanzi(){
   chars.forEach(function(c){var ch=typeof c==="string"?c:(c&&(c.char||c.hanzi||c.word||c.text))||"";if(!ch)return;h+='<div class="char-card"><div class="charbox">'+esc(ch)+'</div><button class="stroke-btn" onclick="showStrokeOrder(\''+esc(ch)+'\')">显示笔顺</button></div>'});
   return h+"</div>";
 }
+function renderGrammar(){
+  var gs=DATA.grammar||[],notes=DATA.grammarTeachingNotes||{},h="<h2>语法复习 / Grammar</h2><div class=\"grid\">";
+  if(!gs.length)return "<div class=\"empty\">暂无语法数据。</div>";
+  gs.forEach(function(g){
+    var n=notes[g.id]||{},examples=(g.examples||[]).slice(0,3);
+    h+='<article class="card"><div class="text-title">'+esc(g.title||"")+'</div><div class="en">'+esc(g.titleEn||"")+'</div>';
+    if(g.structure)h+='<div class="ex"><b>'+esc(g.structure)+'</b><div class="en">'+esc(g.english||g.explanation||"")+'</div></div>';
+    if(n.visualRule&&n.visualRule.core)h+='<div class="examples-title">语言点</div><div class="muted">'+esc(n.visualRule.core)+'</div>';
+    if(examples.length){h+='<div class="examples-title">例句</div><div class="examples">';examples.forEach(function(e){h+='<div class="ex"><b>'+esc(e.hanzi||"")+'</b><div class="py">'+esc(e.pinyin||"")+'</div><div class="en">'+esc(e.english||"")+'</div></div>'});h+='</div>'}
+    if(g.teacherTip)h+='<div class="tag">'+esc(g.teacherTip)+'</div>';
+    h+='</article>';
+  });
+  return h+"</div>";
+}
 function gridSvg(paths,step){
   var s='<svg class="stroke-svg" viewBox="0 0 1024 1024" aria-label="stroke '+(step+1)+'"><path class="grid-line" d="M512 0V1024M0 512H1024M0 0L1024 1024M1024 0L0 1024"/><g transform="translate(0 1024) scale(1 -1)">';
   for(var i=0;i<paths.length;i++)s+='<path d="'+paths[i]+'" class="'+(i<step?'done-stroke':i===step?'current-stroke':'next-stroke')+'"/>';
@@ -89,17 +110,20 @@ function showStrokeOrder(ch){
   }).catch(function(){panel.innerHTML='<div class="stroke-title">'+esc(ch)+' · 笔顺数据暂时无法加载</div><div class="muted">可以先按灰色范字临摹，稍后联网后再刷新查看。</div>'});
 }
 function renderTexts(){
-  var texts=DATA.texts||[],h="<h2>课文复习 / Texts</h2>";
+  var texts=DATA.texts||[],notes=DATA.textTeachingNotes||{},h="<h2>课文复习 / Texts</h2>";
   if(!texts.length)return "<div class=\"empty\">暂无课文数据。</div>";
   texts.forEach(function(t){
+    var note=notes[t.id]||{},links=note.languageLinks||[],qs=note.classQuestions||[];
     h+='<article class="text-card"><div class="text-title">'+esc(t.title||"课文")+'</div>';
     if(t.scene)h+='<div class="muted" style="margin-bottom:8px">'+esc(t.scene)+'</div>';
     (t.lines||t.dialogue||[]).forEach(function(l){h+='<div class="line"><div class="speaker">'+esc(l.speaker||"")+'</div><div><div class="hanzi">'+esc(l.hanzi||l.text||"")+'</div><div class="py">'+esc(l.pinyin||"")+'</div><div class="en">'+esc(l.english||"")+'</div></div></div>'});
+    if(links.length){h+='<div class="text-title" style="font-size:15px;margin-top:14px">语言点 / Language Points</div><div class="examples">';links.forEach(function(x){h+='<div class="ex"><b>'+esc(x.label||"")+'</b><div class="muted">'+esc(x.use||"")+'</div></div>'});h+='</div>'}
+    if(qs.length){h+='<div class="text-title" style="font-size:15px;margin-top:14px">课文 Q&A</div><div class="examples">';qs.slice(0,5).forEach(function(x){h+='<details class="ex"><summary><b>'+esc(x.question||"")+'</b></summary><div class="muted" style="margin-top:6px">'+esc(x.answer||"")+'</div></details>'});h+='</div>'}
     h+='<div class="text-title" style="font-size:15px;margin-top:14px">只汉字版</div><div class="hanzi-only">'+(t.lines||t.dialogue||[]).map(function(l){return esc(l.hanzi||l.text||"")}).join("<br>")+'</div></article>';
   });
   return h;
 }
-function showView(view){currentView=view;document.querySelectorAll(".tabs button").forEach(function(b){b.classList.toggle("active",b.dataset.view===view)});var html=view==="hanzi"?renderHanzi():view==="texts"?renderTexts():renderVocab();document.getElementById("content").innerHTML=html}
+function showView(view){if(/^HSK3-/.test(lessonKey)&&view==="hanzi")view="vocab";currentView=view;document.querySelectorAll(".tabs button").forEach(function(b){b.classList.toggle("active",b.dataset.view===view)});var html=view==="grammar"?renderGrammar():view==="hanzi"?renderHanzi():view==="texts"?renderTexts():renderVocab();document.getElementById("content").innerHTML=html}
 loadLesson();showView("vocab");
 </script>
 </body>

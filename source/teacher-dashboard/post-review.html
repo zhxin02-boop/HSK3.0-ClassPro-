@@ -24,6 +24,7 @@ textarea{width:100%;min-height:78px;border:1px solid #d8e4bf;border-radius:12px;
 </style>
 <script src="../shared/context.js"></script>
 <script src="../data-model/hsk1-curriculum.js"></script>
+<script src="../data-model/hsk3-curriculum.js"></script>
 <script>window.ClassProDefaultLesson='HSK1-L02';window.ClassProLegacyDataPath='../in-class/data_L02.js';</script>
 <script src="../data-model/course-data-adapter.js"></script>
 <script src="../in-class/lesson-data-loader.js"></script>
@@ -81,26 +82,26 @@ function statusOf(x){return pick(col(x,16),fuzzy(x,["批改状态","reviewStatus
 function qidOf(x){return pick(col(x,5),fuzzy(x,["题号","questionId","棰樺彿"],["题号","questionId"]))}
 function scoreOf(x){return Number(pick(col(x,6),fuzzy(x,["得分","score","寰楀垎"],["得分","score"])))||0}
 function totalOf(x){return Number(pick(col(x,7),fuzzy(x,["总分","total","鎬诲垎"],["总分","total"])))||0}
-function lessonNo(lesson){var m=String(lesson||"").toUpperCase().match(/HSK1-L0?(\d+)/);return m?Number(m[1]):0}
+function lessonNo(lesson){var m=String(lesson||"").toUpperCase().match(/HSK(\d)-L0?(\d+)/);return m?{level:Number(m[1]),no:Number(m[2])}:null}
 function lessonInScope(lesson){
   lesson=String(lesson||"").trim();
   if(!lesson)return true;
   if(LESSON_SCOPE==="all")return true;
-  if(LESSON_SCOPE==="HSK1-L01-L03"){var n=lessonNo(lesson);return n>=1&&n<=3}
+  if(LESSON_SCOPE==="HSK1-L01-L03"){var x=lessonNo(lesson);return x&&x.level===1&&x.no>=1&&x.no<=3}
   return lesson===LESSON_SCOPE;
 }
 function setLessonScope(scope){
   LESSON_SCOPE=scope||LESSON_SCOPE;
-  if(/^HSK1-L\d{2}$/.test(LESSON_SCOPE))LESSON=LESSON_SCOPE;
+  if(/^HSK[13]-L\d{2}$/.test(LESSON_SCOPE))LESSON=LESSON_SCOPE;
   var q=new URLSearchParams(location.search||"");
   q.set("scope",LESSON_SCOPE);
-  if(/^HSK1-L\d{2}$/.test(LESSON_SCOPE))q.set("lesson",LESSON_SCOPE);
+  if(/^HSK[13]-L\d{2}$/.test(LESSON_SCOPE))q.set("lesson",LESSON_SCOPE);
   history.replaceState({},'',location.pathname+'?'+q.toString());
   loadData();
 }
 function populateLessonScope(){
   var el=document.getElementById("lessonScope");if(!el)return;
-  var items=(window.HSK1_CURRICULUM||[]).filter(function(x){return x.teacherVisible!==false});
+  var items=(window.ClassProAllCurriculum?window.ClassProAllCurriculum():(window.HSK1_CURRICULUM||[])).filter(function(x){return x.teacherVisible!==false});
   el.innerHTML='<option value="HSK1-L01-L03">第1-3课 / L01-L03</option><option value="all">全部课程 / All</option>'+items.map(function(x){return'<option value="'+esc(x.id)+'">'+esc(x.id+' · '+x.title)+'</option>'}).join("");
   el.value=LESSON_SCOPE;
 }

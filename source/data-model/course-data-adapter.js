@@ -14,6 +14,10 @@
     return {
       mode: homework.mode || '',
       instructions: homework.instructions || {},
+      required: homework.required || [],
+      optional: homework.optional || [],
+      sessions: homework.sessions || {},
+      futureModules: homework.futureModules || {},
       tiers: tiers,
       shared_pool: homework.sharedPool || [],
       tier_pools: homework.tierPools || {},
@@ -32,6 +36,10 @@
     });
     var normalizedGroups = {};
     Object.keys(groups).forEach(function (groupId) {
+      if (!Array.isArray(groups[groupId])) {
+        normalizedGroups[groupId] = groups[groupId];
+        return;
+      }
       normalizedGroups[groupId] = (groups[groupId] || []).map(function (question) {
         if (!question || question.media || question.type !== 'image_guess') return question;
         var image = vocabImages[question.correct_answer];
@@ -58,8 +66,11 @@
       vocabExtensions: standard.vocabExtensions || {},
       v7QuestionAnswerPairs: standard.v7QuestionAnswerPairs || [],
       grammarTeachingNotes: standard.grammarTeachingNotes || {},
+      textTeachingNotes: standard.textTeachingNotes || {},
       hanziWriting: standard.hanziWriting || (standard.inClass && standard.inClass.hanziWriting) || {},
       hanziRecognition: standard.hanziRecognition || (standard.inClass && standard.inClass.hanziRecognition) || {},
+      sessions: standard.sessions || [],
+      previewMissions: standard.previewMissions || [],
       preClass: standard.preClass || {},
       classProQuestions: normalizedGroups,
       postClassHomework: normalizeHomework(standard.postClassHomework),
@@ -69,6 +80,25 @@
 
   function toPreClassData(standard) {
     var normalized = normalizeStandard(standard);
+    var preClass = normalized.preClass || {};
+    var preVocabIds = preClass.vocabularyIds || [];
+    var preGrammarIds = preClass.grammarIds || [];
+    var preVocab = normalized.vocabulary;
+    var preGrammar = normalized.grammar;
+    var preReading = normalized.texts;
+    if (preClass.mode === 'preview_mission') {
+      if (preVocabIds.length) {
+        preVocab = normalized.vocabulary.filter(function (v) {
+          return preVocabIds.indexOf(v.id) >= 0;
+        });
+      }
+      if (preGrammarIds.length) {
+        preGrammar = normalized.grammar.filter(function (g) {
+          return preGrammarIds.indexOf(g.id) >= 0;
+        });
+      }
+      preReading = preClass.readingData || [];
+    }
     return {
       lesson: normalized.meta.lesson || ('Lesson ' + String(normalized.meta.lessonKey || '').split('-L')[1] || normalized.meta.lessonKey || ''),
       lessonTitle: (function () {
@@ -77,17 +107,19 @@
         return id && base && base.indexOf('第' + id + '课') !== 0 ? '第' + Number(id) + '课：' + base : base;
       })(),
       lessonEnglishTitle: normalized.meta.lessonEnglishTitle || normalized.meta.titleEn || '',
-      grammarPoints: normalized.grammar.map(function (g) {
+      grammarPoints: preGrammar.map(function (g) {
         return typeof g === 'string' ? g : (g.title || '') + (g.explanation ? '：' + g.explanation : '');
       }),
-      vocabData: normalized.vocabulary.map(function (v) {
+      vocabData: preVocab.map(function (v) {
         return { word: v.word || v.hanzi, pinyin: v.pinyin || '', english: v.english || '' };
       }),
-      readingData: normalized.texts.map(function (t, i) {
+      readingData: preReading.map(function (t, i) {
         return { textId: t.textId || i + 1, title: t.title, context: t.context || t.scene || '', dialogue: t.dialogue || t.lines || [] };
       }),
-      preClass: normalized.preClass,
-      preQuestions: normalized.preClass.questions || []
+      sessions: normalized.sessions,
+      previewMissions: normalized.previewMissions,
+      preClass: preClass,
+      preQuestions: preClass.questions || []
     };
   }
 

@@ -11,12 +11,12 @@
 
   function dataUrl(lesson) {
     if (lesson === 'HSK1-L01') return '../data-model/HSK1-L01_content_draft.json';
-    if (/^HSK1-L\d{2}$/.test(lesson)) return '../data-model/lessons/' + lesson + '.json';
+    if (/^HSK[13]-L\d{2}$/.test(lesson)) return '../data-model/lessons/' + lesson + '.json';
     return '';
   }
 
   function curriculumItem(lesson) {
-    var list = window.HSK1_CURRICULUM || [];
+    var list = window.ClassProAllCurriculum ? window.ClassProAllCurriculum() : (window.HSK1_CURRICULUM || []);
     for (var i = 0; i < list.length; i++) if (list[i].id === lesson) return list[i];
     return null;
   }
@@ -71,6 +71,9 @@
       setCard('postLink', '../post-class/student-report.html?lesson=' + encodeURIComponent(lesson), ready, '进入作业 / Practice');
       setCard('reviewLink', '../post-class/review-resources.html?lesson=' + encodeURIComponent(lesson), ready, '进入复习 / Review');
       updateSelectedOption(lesson, ready);
+      if (typeof window.ClassProConfigureSessionCards === 'function') {
+        window.ClassProConfigureSessionCards(lesson, ready);
+      }
     });
   }
 

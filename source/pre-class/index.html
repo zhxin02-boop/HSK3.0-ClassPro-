@@ -90,6 +90,7 @@ body{font-family:KaiTi,STKaiti,"楷体",serif}
 </style>
 <style>
 .swipe-card{transition:transform .28s cubic-bezier(.2,.8,.2,1);will-change:transform}.read-row{display:flex;align-items:center;gap:8px;padding:8px 10px;margin:6px 0;border:1px solid #eadbd4;border-radius:12px;background:#fff}.read-main{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}.read-main small{color:#b34b3e;font-size:14px}.read-main b{font-size:20px;color:#5b4035}.read-main em{font-size:11px;color:#9b887f;font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.audio-btn,.read-check{border:0;border-radius:9px;padding:8px 9px;cursor:pointer;white-space:nowrap}.audio-btn{background:#fff0ec;color:#b4483b;font-size:17px}.read-check{background:#f4ebe7;color:#80675c;font-size:12px}.read-check.done{background:#eaf7ee;color:#287844}
+.mission-shell{position:relative;overflow:hidden;background:#fffdf9}.mission-shell:before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(255,255,255,.94),rgba(255,255,255,.82),rgba(255,255,255,.7)),var(--mission-bg);background-size:cover;background-position:center;z-index:0}.mission-shell>*{position:relative;z-index:1}.mission-kicker{font-size:12px;font-weight:900;color:#8b6b5d;text-transform:uppercase;letter-spacing:.04em}.mission-title{font-size:25px;color:#9f352b;margin:6px 0}.mission-hero{display:grid;grid-template-columns:minmax(0,1fr) 148px;gap:14px;align-items:stretch;margin:12px 0}.mission-intro{line-height:1.75;color:#3f332e;background:rgba(255,246,239,.92);border:1px solid #eadbd4;border-radius:14px;padding:14px}.mission-role{margin-top:10px;background:rgba(237,243,255,.95);border:1px solid #cfe0ff;border-radius:14px;padding:12px;color:#284062;line-height:1.6}.mission-role b{display:block;color:#2D5DB8;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.mission-photo{border-radius:16px;border:1px solid #eadbd4;overflow:hidden;background:#fff;box-shadow:0 10px 28px rgba(60,40,30,.12)}.mission-photo img{display:block;width:100%;height:300px;object-fit:cover;object-position:top center;background:#fff}.mission-photo span,.mission-stage-photo span{display:block;padding:8px 10px;font-size:12px;color:#6b5b53;font-weight:900;background:#fff}.mission-stage-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:12px 0}.mission-stage-photo{border-radius:16px;border:1px solid #eadbd4;overflow:hidden;background:#fff;box-shadow:0 8px 22px rgba(60,40,30,.10)}.mission-stage-photo img{width:100%;height:220px;object-fit:contain;background:#fff;display:block}.mission-progress{display:flex;align-items:center;gap:10px;color:#59473f;font-size:13px;margin:12px 0}.mission-progress i{height:8px;background:#f0e4df;border-radius:99px;flex:1;overflow:hidden}.mission-progress i b{display:block;height:100%;background:#c75543;border-radius:99px}.mission-stage-title{font-size:21px;color:#44332d;margin:12px 0 6px}.mission-prompt{line-height:1.65;color:#514038;margin-bottom:12px;font-weight:700}.mission-question{padding:12px;border:1px solid #eadbd4;border-radius:14px;background:rgba(255,255,255,.94);margin:10px 0}.mission-question b{display:block;margin-bottom:9px;color:#4a3831}.mission-options{display:flex;gap:8px;flex-wrap:wrap}.mission-option{border:2px solid #eadbd4;background:#fff;border-radius:12px;padding:9px 12px;cursor:pointer;font-weight:800;color:#5f453a}.mission-option.selected{border-color:#c75543;background:#fff0ec;color:#a33a30}.mission-chip-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.mission-chip{background:#f8faf3;border:1px solid #dfeac8;border-radius:999px;padding:9px 12px;color:#42543b;font-weight:800}.mission-keywords{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:9px;margin:14px 0}.mission-key{border:1px solid #eadbd4;background:#fff;border-radius:13px;padding:11px;text-align:left;cursor:pointer}.mission-key b{display:block;font-size:22px;color:#87342b}.mission-key small{display:block;color:#b34b3e;margin:3px 0}.mission-key em{display:block;color:#7b675e;font-style:normal;font-size:12px}.mission-key .example{margin-top:8px;padding-top:8px;border-top:1px solid #f0e4df;color:#4c3a32;line-height:1.55}.mission-key .example label{display:block;margin-top:6px;font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:#a79086;font-family:-apple-system,Microsoft YaHei,sans-serif}.mission-key .example strong{display:block;color:#b34b3e;font-weight:800}.mission-key .example span{display:block;color:#7b675e;font-size:12px}.mission-key .example .example-cn{font-size:15px;color:#4c3a32;font-weight:800}.mission-output{background:rgba(255,250,244,.95);border:1px solid #eadbd4;border-radius:16px;padding:16px}.mission-frames{display:grid;gap:7px;margin:12px 0}.mission-frame{background:#fff;border:1px dashed #d8c5bc;border-radius:10px;padding:9px;color:#5f4b43}.mission-textarea{width:100%;min-height:120px;border:1px solid #d8c5bc;border-radius:12px;padding:12px;font:16px/1.7 inherit;resize:vertical;background:#fff}.mission-done{text-align:center;padding:24px 6px;background:rgba(255,255,255,.88);border-radius:16px}.mission-done h3{color:#287844;margin:8px 0}.mission-done p{line-height:1.7;color:#6b5b53}@media(max-width:560px){.mission-hero{grid-template-columns:1fr}.mission-photo img{height:300px}.mission-stage-photo img{height:190px}}
 </style>
 </head><body>
 <nav class="product-nav"><a class="brand" href="../student/index.html">学生界面 / Student Home</a><a class="active" href="index.html">课前预习 / Preview</a><a href="../in-class/student.html">课中互动 / Class</a><a href="../post-class/student-report.html">课后作业 / Homework</a></nav>
@@ -141,7 +142,73 @@ body{font-family:KaiTi,STKaiti,"楷体",serif}
     </div>
   </div>
 </div>
-<div v-if="p>0 && !showReview" class="card">
+<div v-if="p>0 && !showReview && isMissionMode" class="card mission-shell" :style="missionBgStyle">
+  <div class="mission-kicker">Preview Mission</div>
+  <h2 class="mission-title">{{mission.titleEn || mission.title}}</h2>
+  <p class="sub english-font">Roleplay mission · Learn the key Chinese words and sentences as you play.</p>
+  <div class="mission-hero">
+    <div>
+      <p class="mission-intro english-font">{{mission.storyIntroEn || mission.storyIntro}}</p>
+      <div class="mission-role english-font"><b>Your role</b>{{mission.roleDescriptionEn || 'You are the person meeting a new friend at the airport.'}}</div>
+    </div>
+    <div v-if="missionFriendPhoto" class="mission-photo"><img :src="missionFriendPhoto" alt="Friend photo"><span>Friend Photo</span></div>
+  </div>
+  <div v-if="!missionFinished">
+    <div class="mission-progress"><span>Stage {{missionStageIndex+1}} / {{missionStages.length}}</span><i><b :style="{width:((missionStageIndex+1)/Math.max(1,missionStages.length)*100)+'%'}"></b></i></div>
+    <h3 class="mission-stage-title">{{missionStage.titleEn || missionStage.title}}</h3>
+    <p class="mission-prompt english-font">{{missionStage.screenPromptEn || missionStage.screenPrompt}}</p>
+    <div v-if="missionStagePhotos.length" class="mission-stage-photos">
+      <div v-for="photo in missionStagePhotos" class="mission-stage-photo"><img :src="photo.src" :alt="photo.label || 'mission photo'"><span>{{photo.label}}</span></div>
+    </div>
+    <div v-if="missionStage.interactionType==='choice_set'">
+      <div v-for="item in missionStage.items" class="mission-question">
+        <b class="english-font">{{item.questionEn || item.question}}</b>
+        <div class="mission-options">
+          <button v-for="opt in item.options" class="mission-option" :class="{selected:missionAnswers[missionAnswerKey(item)]===opt}" @click="setMissionAnswer(item,opt)">{{opt}}</button>
+        </div>
+      </div>
+    </div>
+    <div v-else-if="missionStage.interactionType==='ordering'">
+      <p class="sub english-font">Think about a useful order. There is no perfect answer here; this is preparation for the airport task.</p>
+      <div class="mission-chip-row"><span v-for="item in missionStage.items" class="mission-chip">{{item}}</span></div>
+    </div>
+    <div v-else-if="missionStage.interactionType==='multi_select'">
+      <div class="mission-options">
+        <button v-for="opt in missionStage.options" class="mission-option" :class="{selected:missionMultiAnswers.indexOf(opt)>=0}" @click="toggleMissionMulti(opt)">{{opt}}</button>
+      </div>
+    </div>
+    <div v-if="missionStageCards.length" class="mission-keywords">
+      <button v-for="card in missionStageCards" class="mission-key" @click="keywordOpen=keywordOpen===missionCardKey(card)?'':missionCardKey(card)">
+        <b>{{card.hanzi}}</b>
+        <small v-if="keywordOpen!==missionCardKey(card)" class="pinyin-font">{{card.pinyin}}</small>
+        <em v-if="keywordOpen!==missionCardKey(card)" class="english-font">{{card.english}}</em>
+        <div v-if="keywordOpen===missionCardKey(card)" class="example">
+          <label>Pinyin</label><strong class="pinyin-font">{{card.pinyin || ''}}</strong>
+          <label>Meaning</label><span class="english-font">{{card.english}}</span>
+          <label>Example</label><span class="example-cn">{{card.example || card.hanzi}}</span>
+          <label>Translation</label><span class="english-font">{{card.exampleEnglish || card.english}}</span>
+        </div>
+      </button>
+    </div>
+    <p v-if="missionStage.feedback || missionStage.feedbackEn" class="feedback english-font">{{missionStage.feedbackEn || missionStage.feedback}}</p>
+    <div class="nav-actions"><button v-if="missionStageIndex>0" class="btn btn-outline" @click="missionPrev">← Back</button><button class="btn" @click="missionNext">{{missionStageIndex>=missionStages.length-1?'Finish Mission':'Next Stage →'}}</button></div>
+  </div>
+  <div v-else-if="!missionSubmitted" class="mission-output">
+    <h3>Final Task</h3>
+    <p class="sub english-font">{{mission.outputTask.promptEn || mission.outputTask.prompt}}</p>
+    <div class="mission-frames"><div v-for="frame in mission.outputTask.sentenceFrames" class="mission-frame">{{frame}}</div></div>
+    <textarea v-model="missionOutput" class="mission-textarea" placeholder="Write 1-2 Chinese sentences to prepare for meeting your friend."></textarea>
+    <p class="sub english-font">Sample: {{mission.outputTask.sampleAnswer}}</p>
+    <button class="btn w-full" :disabled="!missionOutput.trim()" @click="submitMissionOutput">Submit Mission</button>
+  </div>
+  <div v-else class="mission-done">
+    <div class="done-icon">✓</div>
+    <h3>Mission Complete</h3>
+    <p class="english-font">You have warmed up the topic: identifying a new friend, describing appearance, and preparing to meet someone at the airport. In class, your teacher will take you into the real text.</p>
+    <button class="btn btn-outline" @click="restartMission">Try Again</button>
+  </div>
+</div>
+<div v-if="p>0 && !showReview && !isMissionMode" class="card">
   <p v-if="mi<6" class="step-title"><b>Step {{mi+1}}/6</b> <span>{{(stepTitles[mi]||stepTitles[0]).cn}}</span> / <span class="english-font">{{(stepTitles[mi]||stepTitles[0]).en}}</span></p>
   <div v-if="mi===0" class="module-step" data-step="0">
     <p class="sub">{{r0Warmup.intro}}</p>
@@ -183,6 +250,23 @@ var p=ref(0);var mi=ref(0);var w=ref("");var wd=ref(false);var r0Choice=ref("");
   var ctx=window.ClassProContext?ClassProContext.read():{};var params=new URLSearchParams(location.search);var lessonKey=params.get("lesson")||ctx.lesson||"HSK1-L01";var roomKey=params.get("room")||ctx.room||"8888";var savedStudent="";try{savedStudent=localStorage.getItem("classpro_student")||""}catch(e){};var studentName=ref(params.get("student")||ctx.student||savedStudent||"");
 var showReview=ref(false);var showReport=ref(false);var reviewName=ref("");var reviews=ref([]);var loading=ref(false);var reviewFetched=ref(false);var classStudents=window.CLASS_STUDENTS||[];
 var mods=["R0 话题预热","R1 词卡学习","R2 跟读练习","R1 生词闯关","R5 汉字书写","R6 预习小测"];var stepTitles=[{cn:"话题预热",en:"Topic Warm-up"},{cn:"词卡学习",en:"Word Cards"},{cn:"跟读练习",en:"Read Aloud"},{cn:"生词闯关",en:"Vocabulary Match"},{cn:"汉字书写",en:"Character Writing"},{cn:"预习小测",en:"Quick Check"}];
+var missionStageIndex=ref(0);var missionAnswers=ref({});var missionMultiAnswers=ref([]);var missionOutput=ref("");var missionFinished=ref(false);var missionSubmitted=ref(false);var keywordOpen=ref("");
+var isMissionMode=computed(function(){return !!(D.preClass&&D.preClass.mode==="preview_mission"&&(D.previewMissions||[]).length)});
+var mission=computed(function(){var id=(D.preClass||{}).missionId;var list=D.previewMissions||[];return list.find(function(x){return x.id===id})||list[0]||{title:"预习任务",titleEn:"Preview Mission",storyIntro:"",stages:[],outputTask:{prompt:"请完成任务输出。",sentenceFrames:[],sampleAnswer:""}}});
+var missionStages=computed(function(){return mission.value.stages||[]});
+var missionStage=computed(function(){return missionStages.value[missionStageIndex.value]||{}});
+var missionStageCards=computed(function(){var s=missionStage.value||{};return [].concat(s.keywordCards||[],s.sentenceCards||[])});
+var missionStagePhotos=computed(function(){return (missionStage.value&&missionStage.value.photos)||[]});
+var missionBgStyle=computed(function(){var bg=((mission.value.visuals||{}).backgroundImage)||"";return bg?{"--mission-bg":"url('"+bg+"')"}:{}});
+var missionFriendPhoto=computed(function(){return ((mission.value.visuals||{}).friendPhoto)||""});
+function missionAnswerKey(item){return (missionStage.value.id||"stage")+"_"+((item&&item.id)||"item")}
+function missionCardKey(card){return (card.targetId||"card")+"_"+(card.hanzi||card.english||"")}
+function setMissionAnswer(item,opt){var next=Object.assign({},missionAnswers.value);next[missionAnswerKey(item)]=opt;missionAnswers.value=next}
+function toggleMissionMulti(opt){var next=missionMultiAnswers.value.slice(),i=next.indexOf(opt);if(i>=0)next.splice(i,1);else next.push(opt);missionMultiAnswers.value=next}
+function missionPrev(){if(missionStageIndex.value>0)missionStageIndex.value--}
+function missionNext(){var s=missionStage.value||{};recordPre({module:"A段任务闯关",question:s.title||"任务关卡",weakPoints:"preview_mission"},JSON.stringify({stage:s.id||"",answers:missionAnswers.value,multi:missionMultiAnswers.value}),1,1,false).catch(function(){});if(missionStageIndex.value<missionStages.value.length-1){missionStageIndex.value++;keywordOpen.value=""}else{missionFinished.value=true}}
+function submitMissionOutput(){var ans=missionOutput.value.trim();if(!ans)return;recordPre({module:"A段最终输出",question:((mission.value.outputTask||{}).prompt)||"请完成任务输出。",weakPoints:"A段表达输出"},ans,0,0,true).catch(function(){}).then(function(){missionSubmitted.value=true})}
+function restartMission(){missionStageIndex.value=0;missionAnswers.value={};missionMultiAnswers.value=[];missionOutput.value="";missionFinished.value=false;missionSubmitted.value=false;keywordOpen.value=""}
 var chars=computed(function(){var r=[];var u={};(D.vocabData||[]).forEach(function(v){v.word.split("").forEach(function(ch){if(!u[ch]){u[ch]=1;r.push({h:ch,p:v.pinyin})}})});return r.slice(0,10)});
 var r0Default={intro:"这一课学完，你可以用中文问候别人、介绍自己。",question:"你第一次见到老师时，最合适的表达是什么？",questionEn:"What would you say when you meet your teacher for the first time?",knownQuestion:"下面哪些表达你已经听过？",knownQuestionEn:"Which expressions have you heard before?",options:[{word:"你好！",pinyin:"nǐ hǎo"},{word:"老师，您好！",pinyin:"lǎoshī, nín hǎo"},{word:"再见！",pinyin:"zàijiàn"}]};var r0Warmup=Object.assign({},r0Default,((D.preClass||{}).warmup||{}));var r0Options=(Array.isArray(r0Warmup.options)&&r0Warmup.options.length)?r0Warmup.options:r0Default.options;var r0KnownOptions=(D.vocabData||[]).slice(0,6);
 var masteredCards=ref({});var masteredCount=computed(function(){return Object.keys(masteredCards.value).length});var cardWord=computed(function(){return D.vocabData[cardIndex.value%D.vocabData.length]||{word:"",pinyin:"",english:""}});function revealCard(){cardRevealed.value=true}function masterCard(){masteredCards.value[cardWord.value.word]=true;cardMastered.value=true;cardRevealed.value=true;cardOffset.value=0;if(cardIndex.value<D.vocabData.length-1){setTimeout(function(){cardIndex.value++;cardRevealed.value=false;cardMastered.value=false},300)}}function cardPrev(){cardIndex.value=(cardIndex.value-1+D.vocabData.length)%D.vocabData.length;cardRevealed.value=false;cardMastered.value=!!masteredCards.value[cardWord.value.word];cardOffset.value=0}function cardNext(){cardIndex.value=(cardIndex.value+1)%D.vocabData.length;cardRevealed.value=false;cardMastered.value=!!masteredCards.value[cardWord.value.word];cardOffset.value=0}function cardClick(e){if(!cardWasSwipe&&e.pointerType==='mouse')revealCard();cardWasSwipe=false}
@@ -226,6 +310,6 @@ reviews.value=all.filter(function(x){var rowName=x.姓名||x.studentName||x.name
 loading.value=false;reviewFetched.value=true
 }).catch(function(){reviews.value=[];loading.value=false;reviewFetched.value=true})
 }
- return{D,p,mi,mods,stepTitles,w,wd,chars,next,speak,r0Warmup,r0Options,r0Choice,r0Known,r0KnownOptions,toggleKnown,cardIndex,cardWord,cardRevealed,cardMastered,masteredCount,cardOffset,cardTouchStart,cardTouchMove,cardTouchEnd,cardClick,cardPrev,cardNext,revealCard,masterCard,readSentences,markRead,readDone,matchCards,matchedPairs,matchMessage,matchMessageType,pickMatch,resetMatch,writingChar,writingCanvas,writingSaved,selectWriting,startStroke,moveStroke,endStroke,clearCanvas,saveWriting,studentName,classStudents,startLearning,quizQuestions,quizIndex,quizQuestion,quizAnswer,quizTextAnswer,subjectiveSubmitting,quizFinished,quizResults,quizScore,objectiveQuizCount,subjectiveQuizCount,completedSteps,selectQuizOption,submitSubjective,restartQuiz,showReview,showReport,reviewName,reviews,loading,reviewFetched,reviewedCount,formatDate,openReview,fetchReviews}
+ return{D,p,mi,mods,stepTitles,w,wd,chars,next,speak,isMissionMode,mission,missionStages,missionStage,missionStageIndex,missionStageCards,missionStagePhotos,missionBgStyle,missionFriendPhoto,missionAnswers,missionMultiAnswers,missionOutput,missionFinished,missionSubmitted,keywordOpen,missionAnswerKey,missionCardKey,setMissionAnswer,toggleMissionMulti,missionPrev,missionNext,submitMissionOutput,restartMission,r0Warmup,r0Options,r0Choice,r0Known,r0KnownOptions,toggleKnown,cardIndex,cardWord,cardRevealed,cardMastered,masteredCount,cardOffset,cardTouchStart,cardTouchMove,cardTouchEnd,cardClick,cardPrev,cardNext,revealCard,masterCard,readSentences,markRead,readDone,matchCards,matchedPairs,matchMessage,matchMessageType,pickMatch,resetMatch,writingChar,writingCanvas,writingSaved,selectWriting,startStroke,moveStroke,endStroke,clearCanvas,saveWriting,studentName,classStudents,startLearning,quizQuestions,quizIndex,quizQuestion,quizAnswer,quizTextAnswer,subjectiveSubmitting,quizFinished,quizResults,quizScore,objectiveQuizCount,subjectiveQuizCount,completedSteps,selectQuizOption,submitSubjective,restartQuiz,showReview,showReport,reviewName,reviews,loading,reviewFetched,reviewedCount,formatDate,openReview,fetchReviews}
 }}).mount("#a")
 </script></body></html>

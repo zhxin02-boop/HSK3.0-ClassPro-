@@ -4,6 +4,25 @@
   var lesson = params.get('lesson') || params.get('course') || window.ClassProDefaultLesson || shared.lesson || 'HSK1-L01';
   var legacyDataPath = window.ClassProLegacyDataPath || './data_L02.js';
   function loadLegacyL02() { document.write('<script src="' + legacyDataPath + '"><\\/script>'); }
+  if (location.protocol === 'file:') {
+    var serverLesson = lesson === 'HSK1-L01' ? 'HSK3-L01' : lesson;
+    window.LESSON_DATA = {
+      meta: {
+        lessonKey: serverLesson,
+        lessonId: serverLesson.split('-').pop(),
+        title: '请用本地服务器打开',
+        level: serverLesson.split('-')[0],
+        dataLoadError: 'file_protocol',
+        localServerUrl: 'http://localhost:18765/source/in-class/teacher.html?lesson=' + encodeURIComponent(serverLesson) + '&room=' + encodeURIComponent(params.get('room') || '8888')
+      },
+      vocabulary: [],
+      grammar: [],
+      texts: [],
+      classProQuestions: {},
+      postClassHomework: {}
+    };
+    return;
+  }
   function loadJson(path) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', path, false);
@@ -31,7 +50,7 @@
       review_policy: homework.reviewPolicy || {}
     };
   }
-  if (/^HSK1-L\d{2}$/.test(lesson) && lesson !== 'HSK1-L01') {
+  if (/^HSK[13]-L\d{2}$/.test(lesson) && lesson !== 'HSK1-L01') {
     try {
       var standard = loadJson('../data-model/lessons/' + lesson + '.json');
       if (!standard || !standard.schemaVersion || !standard.meta || standard.meta.lessonKey !== lesson) throw new Error('Invalid standard course data');

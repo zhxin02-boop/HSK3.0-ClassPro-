@@ -11,7 +11,7 @@
     });
     return { mode: homework.mode || '', instructions: homework.instructions || {}, tiers: tiers, shared_pool: homework.sharedPool || [], tier_pools: homework.tierPools || {}, assignment_selection: homework.assignmentSelection || {}, review_policy: homework.reviewPolicy || {} };
   }
-  if (/^HSK1-L\d{2}$/.test(lesson) && lesson !== 'HSK1-L01') {
+  if (/^HSK[13]-L\d{2}$/.test(lesson) && lesson !== 'HSK1-L01') {
     try {
       var standard = get('../data-model/lessons/' + lesson + '.json');
       if (!standard || !standard.schemaVersion || !standard.meta || standard.meta.lessonKey !== lesson) throw new Error('Invalid standard course data');
