@@ -79,7 +79,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-A"
+        "text-1"
       ],
       "category": "thinking"
     },
@@ -93,7 +93,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-A"
+        "text-1"
       ],
       "category": "description"
     },
@@ -107,7 +107,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-A"
+        "text-1"
       ],
       "category": "description"
     },
@@ -121,7 +121,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-A"
+        "text-1"
       ],
       "category": "description"
     },
@@ -135,7 +135,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-A"
+        "text-1"
       ],
       "category": "measure"
     },
@@ -149,7 +149,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-A"
+        "text-1"
       ],
       "category": "description"
     },
@@ -163,7 +163,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-A"
+        "text-1"
       ],
       "category": "action"
     },
@@ -177,7 +177,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-2"
       ],
       "category": "travel"
     },
@@ -191,7 +191,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-2"
       ],
       "category": "problem"
     },
@@ -205,7 +205,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-2"
       ],
       "category": "travel"
     },
@@ -219,7 +219,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-2"
       ],
       "category": "information"
     },
@@ -233,7 +233,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-2"
       ],
       "category": "thinking"
     },
@@ -247,7 +247,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-2"
       ],
       "category": "description"
     },
@@ -261,7 +261,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-2"
       ],
       "category": "feeling"
     },
@@ -275,7 +275,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-2"
       ],
       "category": "travel"
     },
@@ -289,7 +289,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-2"
       ],
       "category": "place"
     },
@@ -303,7 +303,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-3"
       ],
       "category": "grammar"
     },
@@ -317,7 +317,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-3"
       ],
       "category": "action"
     },
@@ -331,7 +331,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-3"
       ],
       "category": "place"
     },
@@ -345,7 +345,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-3"
       ],
       "category": "description"
     },
@@ -359,7 +359,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-3"
       ],
       "category": "description"
     },
@@ -373,7 +373,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-B"
+        "text-3"
       ],
       "category": "description"
     },
@@ -387,7 +387,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-C"
+        "text-4"
       ],
       "category": "action"
     },
@@ -401,7 +401,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-C"
+        "text-4"
       ],
       "category": "problem"
     },
@@ -415,7 +415,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-C"
+        "text-4"
       ],
       "category": "action"
     },
@@ -429,7 +429,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-C"
+        "text-4"
       ],
       "category": "action"
     },
@@ -443,7 +443,7 @@
       "sourceType": "textbook",
       "tags": [
         "L01",
-        "session-C"
+        "text-4"
       ],
       "category": "object"
     }
@@ -1598,7 +1598,7 @@
         }
       ],
       "teacherTip": "Use a similar-looking photo pair: first let students guess, then reveal the real identity and model 我还以为是...",
-      "session": "A"
+      "session": "1"
     },
     "v_hsk3_l01_02": {
       "word": "像",
@@ -1639,7 +1639,7 @@
         }
       ],
       "teacherTip": "Contrast 像 with 好像 later: 像 is about resemblance; 好像 is about uncertainty.",
-      "session": "A"
+      "session": "1"
     },
     "v_hsk3_l01_03": {
       "word": "长",
@@ -1680,7 +1680,7 @@
         }
       ],
       "teacherTip": "Make the pronunciation explicit: this is zhǎng, not cháng. Keep the focus on 长得 + adjective/像.",
-      "session": "A"
+      "session": "1"
     },
     "v_hsk3_l01_04": {
       "word": "身高",
@@ -1721,7 +1721,7 @@
         }
       ],
       "teacherTip": "Pair this with photos or role cards. Let students guess first, then give the actual height.",
-      "session": "A"
+      "session": "1"
     },
     "v_hsk3_l01_05": {
       "word": "米",
@@ -1762,7 +1762,7 @@
         }
       ],
       "teacherTip": "Explain that 一米八 means 1.8 meters when talking about height. Students do not need decimal notation here.",
-      "session": "A"
+      "session": "1"
     },
     "v_hsk3_l01_06": {
       "word": "瘦",
@@ -1803,7 +1803,7 @@
         }
       ],
       "teacherTip": "Avoid asking students to judge classmates' bodies. Use photos, characters, or fictional profiles.",
-      "session": "A"
+      "session": "1"
     },
     "v_hsk3_l01_07": {
       "word": "接",
@@ -1844,7 +1844,7 @@
         }
       ],
       "teacherTip": "Do not gloss 接 as only meet. It often includes going to a place, waiting, and taking the person away.",
-      "session": "A"
+      "session": "1"
     },
     "v_hsk3_l01_08": {
       "word": "行李",
@@ -1885,7 +1885,7 @@
         }
       ],
       "teacherTip": "Use the airport picture and ask: 行李在哪儿？谁的行李不见了？",
-      "session": "B"
+      "session": "2"
     },
     "v_hsk3_l01_09": {
       "word": "丢",
@@ -1926,7 +1926,7 @@
         }
       ],
       "teacherTip": "Contrast 丢了 and 不见了: 丢了 focuses on losing; 不见了 focuses on not being visible or missing.",
-      "session": "B"
+      "session": "2"
     },
     "v_hsk3_l01_10": {
       "word": "箱子",
@@ -1967,7 +1967,7 @@
         }
       ],
       "teacherTip": "Ask students to add one clue at a time: 颜色, 大小, 号码.",
-      "session": "B"
+      "session": "2"
     },
     "v_hsk3_l01_11": {
       "word": "号码",
@@ -2008,7 +2008,7 @@
         }
       ],
       "teacherTip": "Connect 号码 with concrete classroom objects: phone number, room number, luggage number.",
-      "session": "B"
+      "session": "2"
     },
     "v_hsk3_l01_12": {
       "word": "好像",
@@ -2049,7 +2049,7 @@
         }
       ],
       "teacherTip": "Use guessing scenes. Students should feel 好像 means uncertain, not confirmed.",
-      "session": "B"
+      "session": "2"
     },
     "v_hsk3_l01_13": {
       "word": "重要",
@@ -2090,7 +2090,7 @@
         }
       ],
       "teacherTip": "Ask students to sort airport information: 什么最重要？为什么？",
-      "session": "B"
+      "session": "2"
     },
     "v_hsk3_l01_14": {
       "word": "着急",
@@ -2131,7 +2131,7 @@
         }
       ],
       "teacherTip": "Pair this with problem scenes: lost luggage, cannot find a person, late pickup.",
-      "session": "B"
+      "session": "2"
     },
     "v_hsk3_l01_15": {
       "word": "护照",
@@ -2172,7 +2172,7 @@
         }
       ],
       "teacherTip": "Use simple travel-object cards. Avoid long administrative explanations.",
-      "session": "B"
+      "session": "2"
     },
     "v_hsk3_l01_16": {
       "word": "服务台",
@@ -2213,7 +2213,7 @@
         }
       ],
       "teacherTip": "This word is best taught through a mini role-play: problem -> service desk -> help.",
-      "session": "B"
+      "session": "2"
     },
     "v_hsk3_l01_17": {
       "word": "应该",
@@ -2254,7 +2254,7 @@
         }
       ],
       "teacherTip": "Keep 应该 as advice or likely guess. Do not expand into obligation-heavy grammar yet.",
-      "session": "B"
+      "session": "3"
     },
     "v_hsk3_l01_18": {
       "word": "站",
@@ -2295,7 +2295,7 @@
         }
       ],
       "teacherTip": "Use the classroom or airport picture to ask: 谁站在哪儿？",
-      "session": "B"
+      "session": "3"
     },
     "v_hsk3_l01_19": {
       "word": "中间",
@@ -2336,7 +2336,7 @@
         }
       ],
       "teacherTip": "Use visual pointing. 中间 is easier with a picture than with a definition.",
-      "session": "B"
+      "session": "3"
     },
     "v_hsk3_l01_20": {
       "word": "短",
@@ -2377,7 +2377,7 @@
         }
       ],
       "teacherTip": "Teach 短 together with 头发. Avoid opening unrelated meanings too early.",
-      "session": "B"
+      "session": "3"
     },
     "v_hsk3_l01_21": {
       "word": "头发",
@@ -2418,7 +2418,7 @@
         }
       ],
       "teacherTip": "Use person photos and build from word to phrase to sentence: 头发 -> 短头发 -> 他是短头发.",
-      "session": "B"
+      "session": "3"
     },
     "v_hsk3_l01_22": {
       "word": "年轻",
@@ -2459,7 +2459,7 @@
         }
       ],
       "teacherTip": "Use 看起来年轻 to keep the description as visual impression, not personal judgment.",
-      "session": "B"
+      "session": "3"
     },
     "v_hsk3_l01_23": {
       "word": "发现",
@@ -2500,7 +2500,7 @@
         }
       ],
       "teacherTip": "Put 发现 after an action: 看了照片 -> 发现; 到了机场 -> 发现.",
-      "session": "C"
+      "session": "4"
     },
     "v_hsk3_l01_24": {
       "word": "不见",
@@ -2541,7 +2541,7 @@
         }
       ],
       "teacherTip": "Teach 不见了 as a useful problem statement students can use immediately.",
-      "session": "C"
+      "session": "4"
     },
     "v_hsk3_l01_25": {
       "word": "带",
@@ -2582,7 +2582,7 @@
         }
       ],
       "teacherTip": "Contrast 带 and 接 through direction: 接 someone from a place; 带 someone to a place.",
-      "session": "C"
+      "session": "4"
     },
     "v_hsk3_l01_26": {
       "word": "帮助",
@@ -2623,7 +2623,7 @@
         }
       ],
       "teacherTip": "Make this a closing move in role-play: problem -> ask -> help -> thank.",
-      "session": "C"
+      "session": "4"
     },
     "v_hsk3_l01_27": {
       "word": "照片",
@@ -2664,7 +2664,7 @@
         }
       ],
       "teacherTip": "Use 照片 to connect preview mission, text misunderstanding, and follow-up speaking.",
-      "session": "C"
+      "session": "4"
     }
   },
   "previewMissions": [
