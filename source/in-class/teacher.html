@@ -2285,8 +2285,8 @@ window.ap=ap;
   ap._tv=function(){
     this.hsk3VocabSession=this.hsk3VocabSession||'1';
     var all=(V||[]).filter(function(w){return w&&wordText(w)}),v=all.filter(function(w){return wordSession(w)===ap.hsk3VocabSession}),selected=v[this.sl]||v[0];
-    var h='<div class="panel hsk3-vocab-panel"><div class="hsk3-vocab-head"><div><h2>Vocabulary Lab <span>词汇讲授</span></h2><p>Click a word card to teach pronunciation, meaning, phrases, and examples.</p></div>'+(this.tvOpen?'<button class="grammar-tab" onclick="ap.tvOpen=false;ap._r()">Back to Overview</button>':'')+'</div>';
-    h+='<div class="hsk3-vocab-session-tabs hsk3-vocab-session-top">'+['1','2','3','4'].map(function(s){return '<button class="'+(ap.hsk3VocabSession===s?'active':'')+'" onclick="ap.hsk3VocabSession=\''+s+'\';ap.sl=0;ap.tvOpen=false;ap._r()">课文 '+s+'</button>'}).join('')+'</div>';
+    var tabs='<div class="hsk3-vocab-session-tabs hsk3-vocab-session-top">'+['1','2','3','4'].map(function(s){return '<button class="'+(ap.hsk3VocabSession===s?'active':'')+'" onclick="ap.hsk3VocabSession=\''+s+'\';ap.sl=0;ap.tvOpen=false;ap._r()">课文 '+s+'</button>'}).join('')+'</div>';
+    var h='<div class="panel hsk3-vocab-panel"><div class="hsk3-vocab-head"><div><div class="hsk3-vocab-title-row"><h2>Vocabulary Lab <span>词汇讲授</span></h2>'+tabs+'</div><p>Click a word card to teach pronunciation, meaning, phrases, and examples.</p></div>'+(this.tvOpen?'<button class="grammar-tab" onclick="ap.tvOpen=false;ap._r()">Back to Overview</button>':'')+'</div>';
     if(!this.tvOpen)h+='<div class="hsk3-vocab-grid">'+v.map(function(w,i){return card(w,i,false)}).join('')+'</div>';
     if(this.tvOpen&&selected){
       var ext=vocabExt(selected),pic=visualFor(selected),examples=localExamples(ext.examples,ap.hsk3VocabSession);
@@ -2357,6 +2357,17 @@ body.hsk3-teach-mode .hsk3-vocab-detail.compact .hsk3-vocab-visual{height:150px!
 body.hsk3-teach-mode .hsk3-vocab-teach-blocks{min-width:0!important}
 body.hsk3-teach-mode .hsk3-example-card{grid-template-columns:minmax(140px,.8fr) minmax(120px,.65fr) minmax(260px,1.35fr)!important;gap:24px!important}
 body.hsk3-teach-mode .hsk3-example-card.no-pinyin{grid-template-columns:minmax(260px,1fr) minmax(360px,1.25fr)!important;gap:28px!important}
+body.hsk3-teach-mode .hsk3-vocab-title-row{display:flex!important;align-items:center!important;gap:18px!important;flex-wrap:wrap!important}
+body.hsk3-teach-mode .hsk3-vocab-title-row h2{flex:0 0 auto!important}
+body.hsk3-teach-mode .hsk3-vocab-title-row .hsk3-vocab-session-tabs{margin:0!important;width:auto!important;justify-content:flex-start!important}
+body.hsk3-teach-mode .hsk3-vocab-title-row .hsk3-vocab-session-tabs button{min-width:58px!important;height:26px!important;padding:2px 11px!important;font-size:12px!important}
+body.hsk3-teach-mode .hsk3-vocab-study-shell{position:relative!important;left:-18px!important;width:calc(100% + 18px)!important;grid-template-columns:126px minmax(0,1fr)!important;gap:12px!important}
+body.hsk3-teach-mode .hsk3-vocab-side-list{width:126px!important}
+body.hsk3-teach-mode .hsk3-vocab-side-list .hsk3-vocab-card{width:114px!important}
+body.hsk3-teach-mode .hsk3-vocab-detail.compact{grid-template-columns:minmax(200px,250px) minmax(0,1fr)!important;gap:14px!important}
+body.hsk3-teach-mode .hsk3-vocab-section{padding:14px 16px!important}
+body.hsk3-teach-mode .hsk3-example-card{grid-template-columns:minmax(132px,.75fr) minmax(116px,.62fr) minmax(300px,1.5fr)!important;gap:20px!important}
+body.hsk3-teach-mode .hsk3-example-card.no-pinyin{grid-template-columns:minmax(250px,.9fr) minmax(420px,1.35fr)!important;gap:24px!important}
 body.classpro-hide-pinyin rt,
 body.classpro-hide-pinyin .py,
 body.classpro-hide-pinyin .pinyin,
