@@ -13,7 +13,8 @@
       "根据 textbook data/HSK3/L1.txt 建立 HSK3-L01 首版数据骨架。",
       "A 段 preview mission 根据 docs/HSK3-L01课前预习A段设计草案.md 转成结构化数据。",
       "本文件先服务框架验证，B/C 段和练习池后续继续扩充。",
-      "2026-08-28 补齐三次课课前、课中、课后闭环内容；游戏暂不继续调整。"
+      "2026-08-28 补齐三次课课前、课中、课后闭环内容；游戏暂不继续调整。",
+      "2026-08-31 课后作业改为输出型任务：5词成段、课文叙述体改写、绘本口语准备；词汇扩展补充课次归属。"
     ]
   },
   "features": {
@@ -1596,7 +1597,8 @@
           "english": "He looked a lot like my friend, so I thought it was him."
         }
       ],
-      "teacherTip": "Use a similar-looking photo pair: first let students guess, then reveal the real identity and model 我还以为是..."
+      "teacherTip": "Use a similar-looking photo pair: first let students guess, then reveal the real identity and model 我还以为是...",
+      "session": "A"
     },
     "v_hsk3_l01_02": {
       "word": "像",
@@ -1636,7 +1638,8 @@
           "english": "This photo does not look like him."
         }
       ],
-      "teacherTip": "Contrast 像 with 好像 later: 像 is about resemblance; 好像 is about uncertainty."
+      "teacherTip": "Contrast 像 with 好像 later: 像 is about resemblance; 好像 is about uncertainty.",
+      "session": "A"
     },
     "v_hsk3_l01_03": {
       "word": "长",
@@ -1676,7 +1679,8 @@
           "english": "She does not look much like the photo."
         }
       ],
-      "teacherTip": "Make the pronunciation explicit: this is zhǎng, not cháng. Keep the focus on 长得 + adjective/像."
+      "teacherTip": "Make the pronunciation explicit: this is zhǎng, not cháng. Keep the focus on 长得 + adjective/像.",
+      "session": "A"
     },
     "v_hsk3_l01_04": {
       "word": "身高",
@@ -1716,7 +1720,8 @@
           "english": "This person is a little taller than me."
         }
       ],
-      "teacherTip": "Pair this with photos or role cards. Let students guess first, then give the actual height."
+      "teacherTip": "Pair this with photos or role cards. Let students guess first, then give the actual height.",
+      "session": "A"
     },
     "v_hsk3_l01_05": {
       "word": "米",
@@ -1756,7 +1761,8 @@
           "english": "That person is almost two meters tall."
         }
       ],
-      "teacherTip": "Explain that 一米八 means 1.8 meters when talking about height. Students do not need decimal notation here."
+      "teacherTip": "Explain that 一米八 means 1.8 meters when talking about height. Students do not need decimal notation here.",
+      "session": "A"
     },
     "v_hsk3_l01_06": {
       "word": "瘦",
@@ -1796,7 +1802,8 @@
           "english": "In this photo, he is not very thin."
         }
       ],
-      "teacherTip": "Avoid asking students to judge classmates' bodies. Use photos, characters, or fictional profiles."
+      "teacherTip": "Avoid asking students to judge classmates' bodies. Use photos, characters, or fictional profiles.",
+      "session": "A"
     },
     "v_hsk3_l01_07": {
       "word": "接",
@@ -1836,7 +1843,8 @@
           "english": "After class, Mom picks me up and takes me home."
         }
       ],
-      "teacherTip": "Do not gloss 接 as only meet. It often includes going to a place, waiting, and taking the person away."
+      "teacherTip": "Do not gloss 接 as only meet. It often includes going to a place, waiting, and taking the person away.",
+      "session": "A"
     },
     "v_hsk3_l01_08": {
       "word": "行李",
@@ -1876,7 +1884,8 @@
           "english": "We go to the service desk to look for the luggage."
         }
       ],
-      "teacherTip": "Use the airport picture and ask: 行李在哪儿？谁的行李不见了？"
+      "teacherTip": "Use the airport picture and ask: 行李在哪儿？谁的行李不见了？",
+      "session": "B"
     },
     "v_hsk3_l01_09": {
       "word": "丢",
@@ -1916,7 +1925,8 @@
           "english": "You must not lose your passport."
         }
       ],
-      "teacherTip": "Contrast 丢了 and 不见了: 丢了 focuses on losing; 不见了 focuses on not being visible or missing."
+      "teacherTip": "Contrast 丢了 and 不见了: 丢了 focuses on losing; 不见了 focuses on not being visible or missing.",
+      "session": "B"
     },
     "v_hsk3_l01_10": {
       "word": "箱子",
@@ -1956,7 +1966,8 @@
           "english": "Please check the suitcase number."
         }
       ],
-      "teacherTip": "Ask students to add one clue at a time: 颜色, 大小, 号码."
+      "teacherTip": "Ask students to add one clue at a time: 颜色, 大小, 号码.",
+      "session": "B"
     },
     "v_hsk3_l01_11": {
       "word": "号码",
@@ -1996,7 +2007,8 @@
           "english": "This number is important."
         }
       ],
-      "teacherTip": "Connect 号码 with concrete classroom objects: phone number, room number, luggage number."
+      "teacherTip": "Connect 号码 with concrete classroom objects: phone number, room number, luggage number.",
+      "session": "B"
     },
     "v_hsk3_l01_12": {
       "word": "好像",
@@ -2036,7 +2048,8 @@
           "english": "He seems a little worried."
         }
       ],
-      "teacherTip": "Use guessing scenes. Students should feel 好像 means uncertain, not confirmed."
+      "teacherTip": "Use guessing scenes. Students should feel 好像 means uncertain, not confirmed.",
+      "session": "B"
     },
     "v_hsk3_l01_13": {
       "word": "重要",
@@ -2076,7 +2089,8 @@
           "english": "At the airport, the luggage number is important."
         }
       ],
-      "teacherTip": "Ask students to sort airport information: 什么最重要？为什么？"
+      "teacherTip": "Ask students to sort airport information: 什么最重要？为什么？",
+      "session": "B"
     },
     "v_hsk3_l01_14": {
       "word": "着急",
@@ -2116,7 +2130,8 @@
           "english": "She looks a little worried."
         }
       ],
-      "teacherTip": "Pair this with problem scenes: lost luggage, cannot find a person, late pickup."
+      "teacherTip": "Pair this with problem scenes: lost luggage, cannot find a person, late pickup.",
+      "session": "B"
     },
     "v_hsk3_l01_15": {
       "word": "护照",
@@ -2156,7 +2171,8 @@
           "english": "The passport number must not be wrong."
         }
       ],
-      "teacherTip": "Use simple travel-object cards. Avoid long administrative explanations."
+      "teacherTip": "Use simple travel-object cards. Avoid long administrative explanations.",
+      "session": "B"
     },
     "v_hsk3_l01_16": {
       "word": "服务台",
@@ -2196,7 +2212,8 @@
           "english": "Where is the airport service desk?"
         }
       ],
-      "teacherTip": "This word is best taught through a mini role-play: problem -> service desk -> help."
+      "teacherTip": "This word is best taught through a mini role-play: problem -> service desk -> help.",
+      "session": "B"
     },
     "v_hsk3_l01_17": {
       "word": "应该",
@@ -2236,7 +2253,8 @@
           "english": "The suitcase should be at the airport."
         }
       ],
-      "teacherTip": "Keep 应该 as advice or likely guess. Do not expand into obligation-heavy grammar yet."
+      "teacherTip": "Keep 应该 as advice or likely guess. Do not expand into obligation-heavy grammar yet.",
+      "session": "B"
     },
     "v_hsk3_l01_18": {
       "word": "站",
@@ -2276,7 +2294,8 @@
           "english": "That young person is standing beside the service desk."
         }
       ],
-      "teacherTip": "Use the classroom or airport picture to ask: 谁站在哪儿？"
+      "teacherTip": "Use the classroom or airport picture to ask: 谁站在哪儿？",
+      "session": "B"
     },
     "v_hsk3_l01_19": {
       "word": "中间",
@@ -2316,7 +2335,8 @@
           "english": "The service desk is in the middle of the hall."
         }
       ],
-      "teacherTip": "Use visual pointing. 中间 is easier with a picture than with a definition."
+      "teacherTip": "Use visual pointing. 中间 is easier with a picture than with a definition.",
+      "session": "B"
     },
     "v_hsk3_l01_20": {
       "word": "短",
@@ -2356,7 +2376,8 @@
           "english": "Her hair is not short."
         }
       ],
-      "teacherTip": "Teach 短 together with 头发. Avoid opening unrelated meanings too early."
+      "teacherTip": "Teach 短 together with 头发. Avoid opening unrelated meanings too early.",
+      "session": "B"
     },
     "v_hsk3_l01_21": {
       "word": "头发",
@@ -2396,7 +2417,8 @@
           "english": "This person's hair is black."
         }
       ],
-      "teacherTip": "Use person photos and build from word to phrase to sentence: 头发 -> 短头发 -> 他是短头发."
+      "teacherTip": "Use person photos and build from word to phrase to sentence: 头发 -> 短头发 -> 他是短头发.",
+      "session": "B"
     },
     "v_hsk3_l01_22": {
       "word": "年轻",
@@ -2436,7 +2458,8 @@
           "english": "She is younger than in the photo."
         }
       ],
-      "teacherTip": "Use 看起来年轻 to keep the description as visual impression, not personal judgment."
+      "teacherTip": "Use 看起来年轻 to keep the description as visual impression, not personal judgment.",
+      "session": "B"
     },
     "v_hsk3_l01_23": {
       "word": "发现",
@@ -2476,7 +2499,8 @@
           "english": "We found that the service desk was in the middle."
         }
       ],
-      "teacherTip": "Put 发现 after an action: 看了照片 -> 发现; 到了机场 -> 发现."
+      "teacherTip": "Put 发现 after an action: 看了照片 -> 发现; 到了机场 -> 发现.",
+      "session": "C"
     },
     "v_hsk3_l01_24": {
       "word": "不见",
@@ -2516,7 +2540,8 @@
           "english": "We found that the luggage was missing."
         }
       ],
-      "teacherTip": "Teach 不见了 as a useful problem statement students can use immediately."
+      "teacherTip": "Teach 不见了 as a useful problem statement students can use immediately.",
+      "session": "C"
     },
     "v_hsk3_l01_25": {
       "word": "带",
@@ -2556,7 +2581,8 @@
           "english": "I take my friend to the service desk."
         }
       ],
-      "teacherTip": "Contrast 带 and 接 through direction: 接 someone from a place; 带 someone to a place."
+      "teacherTip": "Contrast 带 and 接 through direction: 接 someone from a place; 带 someone to a place.",
+      "session": "C"
     },
     "v_hsk3_l01_26": {
       "word": "帮助",
@@ -2596,7 +2622,8 @@
           "english": "The person at the service desk can help you."
         }
       ],
-      "teacherTip": "Make this a closing move in role-play: problem -> ask -> help -> thank."
+      "teacherTip": "Make this a closing move in role-play: problem -> ask -> help -> thank.",
+      "session": "C"
     },
     "v_hsk3_l01_27": {
       "word": "照片",
@@ -2636,7 +2663,8 @@
           "english": "This photo does not look like him."
         }
       ],
-      "teacherTip": "Use 照片 to connect preview mission, text misunderstanding, and follow-up speaking."
+      "teacherTip": "Use 照片 to connect preview mission, text misunderstanding, and follow-up speaking.",
+      "session": "C"
     }
   },
   "previewMissions": [
@@ -6276,168 +6304,194 @@
   "postClassHomework": {
     "mode": "hsk3_session_tasks",
     "instructions": {
-      "required": "完成本次课后的词汇、语法和表达任务。",
-      "optional": "可选：把你的表达修改后再录音或写一遍。"
+      "required": "完成本次课后的输出任务：词语成段、课文叙述体改写、绘本口语准备。",
+      "optional": "可以先写 3 句；能力较强的同学拓展到 5 句，并准备口语展示。",
+      "aiPolicy": "可以用工具查词，但最后必须改成自己能说出来的中文。"
     },
     "futureModules": {
       "pictureBookShowcase": {
-        "status": "marked",
+        "status": "active_homework_design",
         "placement": "post-class homework",
-        "purpose": "Students prepare a picture-book story after class and present it in class to show Chinese oral ability.",
-        "notes": "Design later as picture-book preparation, short oral presentation, peer listening question, and teacher feedback rubric."
+        "purpose": "Students prepare a picture-book style oral presentation after class and present in class.",
+        "notes": "Use a small sequence of topic-related pictures, keywords, and an oral rehearsal prompt."
       }
     },
     "sessions": {
       "A": [
         {
-          "id": "post_hsk3_l01_a_01",
-          "type": "review_note",
-          "prompt_cn": "复习整理：写下本次课 3 个最重要的词语或短语，并各写一个中文解释。",
-          "prompt_en": "Review notes: write 3 key words or phrases from this session and explain each one in simple Chinese.",
-          "bridgeToNext": "第二次课开场用学生解释回收“用中文解释中文”的能力。",
+          "id": "post_hsk3_l01_a_word_paragraph",
+          "type": "word_paragraph",
+          "prompt_cn": "词语成段：请从本次课中选 5 个词，写一小段话。先写 3 句，能多写的同学拓展到 5 句。",
+          "prompt_en": "Choose 5 words from this session and write a short paragraph. Start with 3 sentences; extend to 5 if you can.",
+          "answerPlaceholder": "可以用：以为、像、身高、瘦、接。例：我去机场接朋友。我以为照片里的人很高，可是他不太高。他看起来有点儿瘦。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "wordBank": [
+            "以为",
+            "像",
+            "身高",
+            "瘦",
+            "接"
+          ],
+          "minSentences": 3,
+          "stretchSentences": 5,
+          "targetIds": [
+            "v_hsk3_l01_01",
+            "v_hsk3_l01_02",
+            "v_hsk3_l01_04",
+            "v_hsk3_l01_06",
+            "v_hsk3_l01_07"
+          ]
+        },
+        {
+          "id": "post_hsk3_l01_a_narrative",
+          "type": "text_narrative",
+          "prompt_cn": "课文改写：把课文一改写成叙述体，说明谁去机场、接谁、为什么一开始认错了人。",
+          "prompt_en": "Rewrite Text 1 as a short narrative: who goes to the airport, who is being picked up, and why the person is mistaken at first.",
+          "answerPlaceholder": "支架：刘明和王一雪在____。他们要____。刘明以为____，但是____。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "sample": "刘明和王一雪在家里聊天。他们要去机场接白家月。刘明以为照片里的人是杨同乐，但是王一雪说那个人叫李文。",
+          "targetIds": [
+            "t_hsk3_l01_01"
+          ]
+        },
+        {
+          "id": "post_hsk3_l01_a_picturebook",
+          "type": "picturebook_oral",
+          "prompt_cn": "绘本口语准备：根据 4 张图准备一个 40 秒小故事。话题：去机场接一个没见过的朋友。",
+          "prompt_en": "Picture-book oral prep: use four pictures to prepare a 40-second story about picking up a friend you have never met.",
+          "answerPlaceholder": "支架：1. 我有一张照片。2. 我去机场接朋友。3. 我看见一个人，他/她看起来____。4. 最后我____。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "picturePrompts": [
+            "一张朋友照片",
+            "机场到达口",
+            "两个有点儿像的人",
+            "找到朋友并打招呼"
+          ],
           "targetIds": [
             "v_hsk3_l01_02",
             "v_hsk3_l01_07",
-            "g_hsk3_l01_01"
-          ]
-        },
-        {
-          "id": "post_hsk3_l01_a_02",
-          "type": "sentence_output",
-          "prompt_cn": "书面输出：请用“看起来、像、有点儿”写 2-3 句话描述一个人。",
-          "prompt_en": "Written output: write 2-3 Chinese sentences to describe one person with 看起来, 像, or 有点儿.",
-          "bridgeToNext": "第二次课开场可匿名展示并升级学生描述。",
-          "targetIds": [
-            "v_hsk3_l01_02",
-            "v_hsk3_l01_06",
-            "g_hsk3_l01_01"
-          ]
-        },
-        {
-          "id": "post_hsk3_l01_a_03",
-          "type": "oral_output",
-          "prompt_cn": "口语输出：看一张人物照片，用中文说 20-30 秒：他/她看起来怎么样？你怎么找到他/她？",
-          "prompt_en": "Oral output: look at a person photo and record 20-30 seconds in Chinese: What does the person look like? How will you find him or her?",
-          "bridgeToNext": "第二次课用 2-3 个录音做开场回收，转入机场找人与服务台求助。",
-          "targetIds": [
-            "v_hsk3_l01_04",
-            "v_hsk3_l01_20",
-            "v_hsk3_l01_21",
-            "v_hsk3_l01_22",
-            "g_hsk3_l01_03"
-          ]
-        },
-        {
-          "id": "post_hsk3_l01_a_04",
-          "type": "next_prepare",
-          "prompt_cn": "下次课准备：写下 2 个机场可能遇到的问题，并各准备一句中文求助句。",
-          "prompt_en": "Next-session prep: write 2 possible problems at the airport and prepare one Chinese help-seeking sentence for each.",
-          "bridgeToNext": "第二次课进入行李问题和服务台求助时使用。",
-          "targetIds": [
-            "v_hsk3_l01_08",
-            "v_hsk3_l01_16",
-            "t_hsk3_l01_02"
+            "t_hsk3_l01_01"
           ]
         }
       ],
       "B": [
         {
-          "id": "post_hsk3_l01_b_01",
-          "type": "review_note",
-          "prompt_cn": "复习整理：写下本次课 3 个最重要的词语或短语，并各写一个中文解释。",
-          "prompt_en": "Review notes: write 3 key words or phrases from this session and explain each one in simple Chinese.",
-          "bridgeToNext": "第三次课开场回收行李问题、服务台求助和找人表达。",
+          "id": "post_hsk3_l01_b_word_paragraph",
+          "type": "word_paragraph",
+          "prompt_cn": "词语成段：请从本次课中选 5 个词，写一小段机场求助的话。先写 3 句，能多写的同学拓展到 5 句。",
+          "prompt_en": "Choose 5 words from this session and write a short airport-help paragraph. Start with 3 sentences; extend to 5 if you can.",
+          "answerPlaceholder": "可以用：行李、箱子、号码、护照、服务台。例：我的行李箱不见了。我去服务台，请工作人员帮我。我给他看了护照和号码。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "wordBank": [
+            "行李",
+            "箱子",
+            "号码",
+            "护照",
+            "服务台"
+          ],
+          "minSentences": 3,
+          "stretchSentences": 5,
           "targetIds": [
             "v_hsk3_l01_08",
-            "v_hsk3_l01_16",
-            "g_hsk3_l01_03"
+            "v_hsk3_l01_10",
+            "v_hsk3_l01_11",
+            "v_hsk3_l01_14",
+            "v_hsk3_l01_16"
           ]
         },
         {
-          "id": "post_hsk3_l01_b_02",
-          "type": "sentence_output",
-          "prompt_cn": "书面输出：你的行李不见了。请写 3 句话说明问题并向服务台求助。",
-          "prompt_en": "Written output: your luggage is missing. Write 3 Chinese sentences to explain the problem and ask the service desk for help.",
-          "bridgeToNext": "第三次课先回收问题说明，再进入事件顺序和复述。",
+          "id": "post_hsk3_l01_b_narrative",
+          "type": "text_narrative",
+          "prompt_cn": "课文改写：把课文二、三改写成叙述体，说明行李出了什么问题，大家怎么找人。",
+          "prompt_en": "Rewrite Texts 2 and 3 as a short narrative: what happened to the luggage and how people found the right person.",
+          "answerPlaceholder": "支架：家月到机场以后，发现____。她们去____。后来她们看见____，最后____。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "targetIds": [
+            "t_hsk3_l01_02",
+            "t_hsk3_l01_03"
+          ]
+        },
+        {
+          "id": "post_hsk3_l01_b_picturebook",
+          "type": "picturebook_oral",
+          "prompt_cn": "绘本口语准备：根据 4 张图准备一个 40 秒小故事。话题：在机场行李不见了，去服务台求助。",
+          "prompt_en": "Picture-book oral prep: use four pictures to prepare a 40-second story about missing luggage and asking for help at the service desk.",
+          "answerPlaceholder": "支架：1. 我的行李不见了。2. 我去服务台。3. 我说____。4. 工作人员帮助我____。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "picturePrompts": [
+            "等行李",
+            "发现箱子不见了",
+            "去服务台",
+            "找到行李"
+          ],
           "targetIds": [
             "v_hsk3_l01_08",
             "v_hsk3_l01_10",
             "v_hsk3_l01_16"
           ]
-        },
-        {
-          "id": "post_hsk3_l01_b_03",
-          "type": "oral_output",
-          "prompt_cn": "口语输出：两人一组准备 4 句机场服务台对话：说明问题、给出信息、得到帮助。",
-          "prompt_en": "Oral output: in pairs, prepare a 4-line Chinese service-desk dialogue: explain the problem, give information, and get help.",
-          "bridgeToNext": "第三次课可抽一组做 1 分钟对话展示，作为复述前的语言回顾。",
-          "targetIds": [
-            "v_hsk3_l01_11",
-            "v_hsk3_l01_14",
-            "v_hsk3_l01_15",
-            "v_hsk3_l01_24"
-          ]
-        },
-        {
-          "id": "post_hsk3_l01_b_04",
-          "type": "next_prepare",
-          "prompt_cn": "下次课准备：用“先、然后、最后”写 3 个关键词，准备复述李文到北京后的经历。",
-          "prompt_en": "Next-session prep: use 先, 然后, and 最后 to write 3 keywords for retelling Li Wen's experience after arriving in Beijing.",
-          "bridgeToNext": "第三次课进入课文四和整课复述时使用。",
-          "targetIds": [
-            "t_hsk3_l01_04",
-            "v_hsk3_l01_23",
-            "v_hsk3_l01_26"
-          ]
         }
       ],
       "C": [
         {
-          "id": "post_hsk3_l01_c_01",
-          "type": "review_note",
-          "prompt_cn": "复习整理：写下本次课 3 个最重要的词语或短语，并各写一个中文解释。",
-          "prompt_en": "Review notes: write 3 key words or phrases from this session and explain each one in simple Chinese.",
-          "bridgeToNext": "作为 L01 总结复习，进入教师批改、数据报告和后续口语展示。",
+          "id": "post_hsk3_l01_c_word_paragraph",
+          "type": "word_paragraph",
+          "prompt_cn": "词语成段：请从本次课中选 5 个词，写一小段到北京第一天的经历。先写 3 句，能多写的同学拓展到 5 句。",
+          "prompt_en": "Choose 5 words from this session and write a short paragraph about the first day in Beijing. Start with 3 sentences; extend to 5 if you can.",
+          "answerPlaceholder": "可以用：发现、不见、带、照片、年轻。例：我到机场以后，发现朋友的箱子不见了。我带她去服务台。后来我们看见了照片里的人。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "wordBank": [
+            "发现",
+            "不见",
+            "带",
+            "照片",
+            "年轻"
+          ],
+          "minSentences": 3,
+          "stretchSentences": 5,
           "targetIds": [
+            "v_hsk3_l01_17",
+            "v_hsk3_l01_18",
             "v_hsk3_l01_23",
-            "v_hsk3_l01_25",
-            "v_hsk3_l01_26"
+            "v_hsk3_l01_26",
+            "v_hsk3_l01_27"
           ]
         },
         {
-          "id": "post_hsk3_l01_c_02",
-          "type": "sentence_output",
-          "prompt_cn": "书面输出：请用 40-60 字复述李文到北京后的经历。",
-          "prompt_en": "Written output: write 40-60 Chinese characters to retell Li Wen's experience after arriving in Beijing.",
-          "bridgeToNext": "作为 L01 总结性产出，进入教师批改和数据报告。",
+          "id": "post_hsk3_l01_c_narrative",
+          "type": "text_narrative",
+          "prompt_cn": "课文改写：把课文四改写成叙述体，按时间顺序复述李文到北京第一天的经历。",
+          "prompt_en": "Rewrite Text 4 as a narrative and retell Li Wen's first day in Beijing in time order.",
+          "answerPlaceholder": "支架：昨天李文____。到机场的时候，____。走出机场的时候，____。晚上，____。",
+          "needsTeacherReview": true,
+          "openEnded": true,
           "targetIds": [
-            "t_hsk3_l01_04",
-            "v_hsk3_l01_23",
-            "v_hsk3_l01_26"
-          ]
-        },
-        {
-          "id": "post_hsk3_l01_c_03",
-          "type": "oral_output",
-          "prompt_cn": "口语输出：根据本课故事线，准备 1 分钟中文复述：谁来北京？谁去接？发生了什么？",
-          "prompt_en": "Oral output: prepare a 1-minute Chinese retelling of the lesson story: Who comes to Beijing? Who picks the person up? What happens?",
-          "bridgeToNext": "作为 L01 口语展示和同伴听后提问的基础。",
-          "targetIds": [
-            "t_hsk3_l01_01",
-            "t_hsk3_l01_02",
-            "t_hsk3_l01_03",
             "t_hsk3_l01_04"
           ]
         },
         {
-          "id": "post_hsk3_l01_c_04",
-          "type": "next_prepare",
-          "prompt_cn": "下次课准备：绘本口语展示预留任务。根据教师发放的绘本内容，准备 1 分钟中文讲述。",
-          "prompt_en": "Next-session prep: picture-book speaking task placeholder. Prepare a 1-minute Chinese story based on the picture book provided by the teacher.",
-          "bridgeToNext": "后续放入课后作业模块，用于课上口语展示和同伴听后提问。",
+          "id": "post_hsk3_l01_c_picturebook",
+          "type": "picturebook_oral",
+          "prompt_cn": "绘本口语准备：根据 5 张图准备一个 1 分钟故事。话题：一个朋友到北京的第一天。",
+          "prompt_en": "Picture-book oral prep: use five pictures to prepare a one-minute story about a friend's first day in Beijing.",
+          "answerPlaceholder": "支架：到北京 → 找行李 → 见到朋友 → 吃中餐 → 说一说这一天怎么样。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "picturePrompts": [
+            "到北京",
+            "行李问题",
+            "走出机场",
+            "见到接机的人",
+            "一起吃饭"
+          ],
           "targetIds": [
-            "speaking_showcase",
-            "post_class_extension"
+            "t_hsk3_l01_04"
           ]
         }
       ]

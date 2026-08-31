@@ -30,6 +30,7 @@ input.name{min-width:240px;flex:1}textarea{width:100%;min-height:92px;resize:ver
 .task{display:grid;grid-template-columns:78px 1fr;gap:12px;padding:16px 0;border-top:1px dashed #dce7c8}.task:first-child{border-top:0}
 .tag{display:inline-flex;justify-content:center;border-radius:999px;background:#f2f8e4;color:#4f7d2e;font-size:12px;font-weight:900;padding:5px 9px;white-space:nowrap}.qtitle{font-size:16px;font-weight:900;line-height:1.45}.en{font-size:13px;color:#7d8577;margin-top:3px}
 .opt,.token{border:1px solid #dce7c8;border-radius:13px;background:#fff;padding:8px 11px;font-size:14px;color:#41513d}.opt.sel{border-color:var(--blue);background:#dbeafe;color:#1d4ed8}
+.homework-scaffold{margin-top:10px;display:grid;gap:8px}.homework-scaffold>div{border:1px solid #e5edcf;background:#fbfdf6;border-radius:14px;padding:10px 12px}.homework-scaffold b{display:block;color:#3f7f32;font-size:13px;margin-bottom:6px}.homework-scaffold span{display:inline-flex;margin:0 6px 6px 0;border-radius:999px;background:#fff;color:#41513d;border:1px solid #dce7c8;padding:6px 10px;font-weight:900}.homework-scaffold p{margin:0;color:#526248;line-height:1.55}
 .answer-input{width:100%;margin-top:8px}.hint{font-size:12px;color:#8a735a;margin-top:7px}.result{font-size:13px;font-weight:900;margin-top:8px}.ok{color:#2f7d32}.bad{color:#b42318}.wait{color:#b45309}
 .writing-sheet{margin-top:10px;display:grid;gap:10px}.writing-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:9px;border:1px solid #eef3df;border-radius:16px;background:#fbfdf6}.writing-label{width:42px;font-size:13px;color:#73806b;font-weight:900}
 .charbox,.write-canvas{width:58px;height:58px;border:1px solid #dce7c8;border-radius:10px;background:linear-gradient(90deg,transparent 49%,#edf2df 50%,transparent 51%),linear-gradient(0deg,transparent 49%,#edf2df 50%,transparent 51%),linear-gradient(45deg,transparent 49.4%,#f3eadb 50%,transparent 50.6%),linear-gradient(-45deg,transparent 49.4%,#f3eadb 50%,transparent 50.6%),#fff}
@@ -124,6 +125,13 @@ function renderTask(q,i){
   var h='<div class="task" id="task_'+esc(q.id)+'"><div><span class="tag">'+typeName(q.type)+'</span></div><div>';
   h+='<div class="qtitle">'+(i+1)+'. '+esc(q.prompt_cn)+'</div>'; if(q.prompt_en)h+='<div class="en">'+esc(q.prompt_en)+'</div>';
   if(q.instructions)h+='<div class="hint">'+esc(q.instructions)+'</div>';
+  if(q.wordBank||q.sample||q.picturePrompts){
+    h+='<div class="homework-scaffold">';
+    if(q.wordBank)h+='<div><b>词语支架 / Word Bank</b>'+q.wordBank.map(function(w){return'<span>'+esc(w)+'</span>'}).join('')+'</div>';
+    if(q.sample)h+='<div><b>样例 / Sample</b><p>'+esc(q.sample)+'</p></div>';
+    if(q.picturePrompts)h+='<div><b>绘本图序 / Picture Sequence</b>'+q.picturePrompts.map(function(w){return'<span>'+esc(w)+'</span>'}).join('')+'</div>';
+    h+='</div>';
+  }
   if(q.type==="choice"){
     h+='<div class="opts">'+(q.options||[]).map(function(o){return'<button type="button" class="opt" data-qid="'+esc(q.id)+'" onclick="chooseAnswer(\''+esc(q.id)+'\',this,\''+esc(o)+'\')">'+esc(o)+'</button>'}).join("")+'</div>';
   }else if(q.type==="fill_blank"){
