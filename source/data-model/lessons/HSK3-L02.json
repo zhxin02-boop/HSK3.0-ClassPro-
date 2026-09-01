@@ -1,0 +1,5092 @@
+{
+  "schemaVersion": "2.0",
+  "meta": {
+    "level": "HSK3",
+    "lessonId": "L02",
+    "lessonKey": "HSK3-L02",
+    "title": "你们想吃什么就点什么",
+    "titleEn": "You can order whatever you feel like",
+    "topic": "餐厅点菜、餐具服务、外卖与饮食习惯",
+    "courseModel": "HSK3 三次课样课",
+    "sourceTextPolicy": "保留教材原句；课前任务只预热主题，不剧透课文人物关系和情节",
+    "dataQualityNotes": [
+      "根据 textbook data/HSK3/L2.txt 建立 HSK3-L02 首版数据骨架。",
+      "复用 HSK3-L01 已确认的三次课闭环、课中讲授和练习题型结构。",
+      "配图字段暂缓，基础数据完成后统一处理真实场景图和绘本图。"
+    ]
+  },
+  "features": {
+    "pinyin": true,
+    "hanziWritingDemo": false,
+    "vocabExamples": true,
+    "competition": true,
+    "postClassHomework": true,
+    "previewMissions": true
+  },
+  "sessions": [
+    {
+      "id": "A",
+      "title": "第一次课",
+      "textIds": [
+        "t_hsk3_l02_01"
+      ],
+      "previewMissionId": "pm_hsk3_l02_a",
+      "focus": [
+        "餐厅点菜",
+        "又……又……",
+        "别客气"
+      ]
+    },
+    {
+      "id": "B",
+      "title": "第二次课",
+      "textIds": [
+        "t_hsk3_l02_02",
+        "t_hsk3_l02_03"
+      ],
+      "previewMissionId": "pm_hsk3_l02_b",
+      "focus": [
+        "餐具服务",
+        "任指表达",
+        "外卖点餐"
+      ]
+    },
+    {
+      "id": "C",
+      "title": "第三次课",
+      "textIds": [
+        "t_hsk3_l02_04"
+      ],
+      "previewMissionId": "pm_hsk3_l02_c",
+      "focus": [
+        "饮食习惯",
+        "叙述体复述",
+        "妈妈做的饭"
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "v_hsk3_l02_01",
+      "hanzi": "菜单",
+      "word": "菜单",
+      "pinyin": "càidān",
+      "pos": "名词",
+      "english": "menu",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-1"
+      ],
+      "category": "restaurant"
+    },
+    {
+      "id": "v_hsk3_l02_02",
+      "hanzi": "又",
+      "word": "又",
+      "pinyin": "yòu",
+      "pos": "副词",
+      "english": "and",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-1"
+      ],
+      "category": "grammar"
+    },
+    {
+      "id": "v_hsk3_l02_03",
+      "hanzi": "饿",
+      "word": "饿",
+      "pinyin": "è",
+      "pos": "形容词",
+      "english": "hungry",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-1"
+      ],
+      "category": "feeling"
+    },
+    {
+      "id": "v_hsk3_l02_04",
+      "hanzi": "渴",
+      "word": "渴",
+      "pinyin": "kě",
+      "pos": "形容词",
+      "english": "thirsty",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-1"
+      ],
+      "category": "feeling"
+    },
+    {
+      "id": "v_hsk3_l02_05",
+      "hanzi": "客气",
+      "word": "客气",
+      "pinyin": "kèqi",
+      "pos": "动词/形容词",
+      "english": "be polite; polite",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-1"
+      ],
+      "category": "communication"
+    },
+    {
+      "id": "v_hsk3_l02_06",
+      "hanzi": "饮料",
+      "word": "饮料",
+      "pinyin": "yǐnliào",
+      "pos": "名词",
+      "english": "drink",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-1"
+      ],
+      "category": "food"
+    },
+    {
+      "id": "v_hsk3_l02_07",
+      "hanzi": "好久",
+      "word": "好久",
+      "pinyin": "hǎojiǔ",
+      "pos": "形容词",
+      "english": "for a long time",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-1"
+      ],
+      "category": "time"
+    },
+    {
+      "id": "v_hsk3_l02_08",
+      "hanzi": "服务",
+      "word": "服务",
+      "pinyin": "fúwù",
+      "pos": "动词",
+      "english": "serve",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-2"
+      ],
+      "category": "restaurant"
+    },
+    {
+      "id": "v_hsk3_l02_09",
+      "hanzi": "员",
+      "word": "员",
+      "pinyin": "yuán",
+      "pos": "后缀",
+      "english": "person suffix",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-2"
+      ],
+      "category": "word_part"
+    },
+    {
+      "id": "v_hsk3_l02_10",
+      "hanzi": "双",
+      "word": "双",
+      "pinyin": "shuāng",
+      "pos": "量词",
+      "english": "pair",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-2"
+      ],
+      "category": "measure"
+    },
+    {
+      "id": "v_hsk3_l02_11",
+      "hanzi": "筷子",
+      "word": "筷子",
+      "pinyin": "kuàizi",
+      "pos": "名词",
+      "english": "chopsticks",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-2"
+      ],
+      "category": "tableware"
+    },
+    {
+      "id": "v_hsk3_l02_12",
+      "hanzi": "勺子",
+      "word": "勺子",
+      "pinyin": "sháozi",
+      "pos": "名词",
+      "english": "spoon",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-2"
+      ],
+      "category": "tableware"
+    },
+    {
+      "id": "v_hsk3_l02_13",
+      "hanzi": "碗",
+      "word": "碗",
+      "pinyin": "wǎn",
+      "pos": "名词",
+      "english": "bowl",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-2"
+      ],
+      "category": "tableware"
+    },
+    {
+      "id": "v_hsk3_l02_14",
+      "hanzi": "马上",
+      "word": "马上",
+      "pinyin": "mǎshàng",
+      "pos": "副词",
+      "english": "immediately",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-2"
+      ],
+      "category": "time"
+    },
+    {
+      "id": "v_hsk3_l02_15",
+      "hanzi": "热情",
+      "word": "热情",
+      "pinyin": "rèqíng",
+      "pos": "形容词",
+      "english": "warm; enthusiastic",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-2"
+      ],
+      "category": "service"
+    },
+    {
+      "id": "v_hsk3_l02_16",
+      "hanzi": "尝",
+      "word": "尝",
+      "pinyin": "cháng",
+      "pos": "动词",
+      "english": "taste",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-2"
+      ],
+      "category": "food"
+    },
+    {
+      "id": "v_hsk3_l02_17",
+      "hanzi": "记",
+      "word": "记",
+      "pinyin": "jì",
+      "pos": "动词",
+      "english": "remember",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-2"
+      ],
+      "category": "memory"
+    },
+    {
+      "id": "v_hsk3_l02_18",
+      "hanzi": "用",
+      "word": "用",
+      "pinyin": "yòng",
+      "pos": "动词",
+      "english": "eat; drink; use",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-3"
+      ],
+      "category": "food"
+    },
+    {
+      "id": "v_hsk3_l02_19",
+      "hanzi": "鸡",
+      "word": "鸡",
+      "pinyin": "jī",
+      "pos": "名词",
+      "english": "chicken",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-3"
+      ],
+      "category": "food"
+    },
+    {
+      "id": "v_hsk3_l02_20",
+      "hanzi": "张",
+      "word": "张",
+      "pinyin": "zhāng",
+      "pos": "量词",
+      "english": "measure word for flat objects",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-3"
+      ],
+      "category": "measure"
+    },
+    {
+      "id": "v_hsk3_l02_21",
+      "hanzi": "不用",
+      "word": "不用",
+      "pinyin": "búyòng",
+      "pos": "副词",
+      "english": "need not",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-3"
+      ],
+      "category": "function"
+    },
+    {
+      "id": "v_hsk3_l02_22",
+      "hanzi": "选",
+      "word": "选",
+      "pinyin": "xuǎn",
+      "pos": "动词",
+      "english": "choose",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-3"
+      ],
+      "category": "action"
+    },
+    {
+      "id": "v_hsk3_l02_23",
+      "hanzi": "外卖",
+      "word": "外卖",
+      "pinyin": "wàimài",
+      "pos": "名词/动词",
+      "english": "takeout; delivery",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-3"
+      ],
+      "category": "restaurant"
+    },
+    {
+      "id": "v_hsk3_l02_24",
+      "hanzi": "方便",
+      "word": "方便",
+      "pinyin": "fāngbiàn",
+      "pos": "形容词",
+      "english": "convenient",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-3"
+      ],
+      "category": "evaluation"
+    },
+    {
+      "id": "v_hsk3_l02_25",
+      "hanzi": "蛋糕",
+      "word": "蛋糕",
+      "pinyin": "dàngāo",
+      "pos": "名词",
+      "english": "cake",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-4"
+      ],
+      "category": "food"
+    },
+    {
+      "id": "v_hsk3_l02_26",
+      "hanzi": "只",
+      "word": "只",
+      "pinyin": "zhǐ",
+      "pos": "副词",
+      "english": "only",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-4"
+      ],
+      "category": "function"
+    },
+    {
+      "id": "v_hsk3_l02_27",
+      "hanzi": "方便面",
+      "word": "方便面",
+      "pinyin": "fāngbiànmiàn",
+      "pos": "名词",
+      "english": "instant noodles",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-4"
+      ],
+      "category": "food"
+    },
+    {
+      "id": "v_hsk3_l02_28",
+      "hanzi": "简单",
+      "word": "简单",
+      "pinyin": "jiǎndān",
+      "pos": "形容词",
+      "english": "simple",
+      "sourceType": "textbook",
+      "tags": [
+        "L02",
+        "text-4"
+      ],
+      "category": "evaluation"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g_hsk3_l02_01",
+      "title": "又……又……",
+      "titleEn": "Coordinate Complex Sentence 又...又...",
+      "scene": "一个人或事物同时有两个特点。",
+      "structure": "又 + 形容词1 + 又 + 形容词2",
+      "explanation": "“又……又……”常和形容词搭配，表示两个特点同时存在。",
+      "examples": [
+        {
+          "hanzi": "我现在还真是又饿又渴。",
+          "pinyin": "Wǒ xiànzài hái zhēnshì yòu è yòu kě.",
+          "english": "I really am both hungry and thirsty now.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "这家饭馆的菜又便宜又好吃。",
+          "pinyin": "Zhè jiā fànguǎn de cài yòu piányi yòu hǎochī.",
+          "english": "The dishes at this restaurant are both cheap and delicious.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "今天又忙又累。",
+          "pinyin": "Jīntiān yòu máng yòu lèi.",
+          "english": "Today is both busy and tiring.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    {
+      "id": "g_hsk3_l02_02",
+      "title": "疑问代词的非疑问用法（2）",
+      "titleEn": "Question Words for Any Choice",
+      "scene": "表示范围内每一个都一样，常和“都”一起用。",
+      "structure": "疑问代词 + 名词/动词 + 都 + 结果",
+      "explanation": "“哪个、什么、哪儿、什么时候”等不一定是在提问，也可以表示任意一个。",
+      "examples": [
+        {
+          "hanzi": "哪个菜都好吃。",
+          "pinyin": "Nǎge cài dōu hǎochī.",
+          "english": "Every dish is delicious.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "你想什么时候来都没问题。",
+          "pinyin": "Nǐ xiǎng shénme shíhou lái dōu méi wèntí.",
+          "english": "Whenever you want to come is fine.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "我去哪儿都可以。",
+          "pinyin": "Wǒ qù nǎr dōu kěyǐ.",
+          "english": "Anywhere is fine for me.",
+          "sourceType": "teaching_extension"
+        }
+      ]
+    },
+    {
+      "id": "g_hsk3_l02_03",
+      "title": "疑问代词的非疑问用法（3）",
+      "titleEn": "Question Words with 就",
+      "scene": "前后用同一个疑问代词，表示按前面的选择做后面的动作。",
+      "structure": "想/喜欢/觉得 + 什么/哪个/哪儿，就 + 动词 + 什么/哪个/哪儿",
+      "explanation": "两个相同的疑问代词前后呼应，意思是“任意选择都可以”。",
+      "examples": [
+        {
+          "hanzi": "你们想吃什么就点什么。",
+          "pinyin": "Nǐmen xiǎng chī shénme jiù diǎn shénme.",
+          "english": "Order whatever you want to eat.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "你觉得哪个好就买哪个。",
+          "pinyin": "Nǐ juéde nǎge hǎo jiù mǎi nǎge.",
+          "english": "Buy whichever one you think is good.",
+          "sourceType": "textbook"
+        },
+        {
+          "hanzi": "你想去哪儿，我们就去哪儿。",
+          "pinyin": "Nǐ xiǎng qù nǎr, wǒmen jiù qù nǎr.",
+          "english": "Wherever you want to go, we will go.",
+          "sourceType": "textbook"
+        }
+      ]
+    }
+  ],
+  "grammarTeachingNotes": {
+    "g_hsk3_l02_01": {
+      "scene": "学生点菜前说自己的状态：又饿又渴。",
+      "discovery": "先看两个状态“饿、渴”，再把它们放到一个人身上。",
+      "diagram": [
+        "我",
+        "又饿",
+        "又渴"
+      ],
+      "structure": "人/物 + 又 + 形容词1 + 又 + 形容词2",
+      "visualLearning": {
+        "sceneTitleEn": "Two qualities at the same time",
+        "scenePromptEn": "Put two feelings or qualities on one person or thing.",
+        "blocks": [
+          "人/物",
+          "又 + 特点1",
+          "又 + 特点2"
+        ],
+        "impressions": [
+          {
+            "hanzi": "又饿又渴",
+            "pinyin": "yòu è yòu kě",
+            "english": "hungry and thirsty"
+          },
+          {
+            "hanzi": "又便宜又好吃",
+            "pinyin": "yòu piányi yòu hǎochī",
+            "english": "cheap and tasty"
+          },
+          {
+            "hanzi": "又忙又累",
+            "pinyin": "yòu máng yòu lèi",
+            "english": "busy and tired"
+          }
+        ],
+        "buildSteps": [
+          {
+            "hanzi": "我饿。",
+            "pinyin": "Wǒ è.",
+            "english": "I am hungry."
+          },
+          {
+            "hanzi": "我渴。",
+            "pinyin": "Wǒ kě.",
+            "english": "I am thirsty."
+          },
+          {
+            "hanzi": "我又饿又渴。",
+            "pinyin": "Wǒ yòu è yòu kě.",
+            "english": "I am both hungry and thirsty."
+          }
+        ]
+      },
+      "teacherTip": "用两张状态卡合成一个句子，避免只讲文字规则。"
+    },
+    "g_hsk3_l02_02": {
+      "scene": "白家月尝了菜以后说“哪个菜都好吃”。",
+      "discovery": "对比“哪个菜好吃？”和“哪个菜都好吃”：前者是问题，后者表示每个菜都好吃。",
+      "diagram": [
+        "哪个/什么/哪儿",
+        "都",
+        "可以/好吃/没问题"
+      ],
+      "structure": "疑问代词 + 都 + 结果",
+      "visualLearning": {
+        "sceneTitleEn": "Every choice works",
+        "scenePromptEn": "All options in the group are acceptable.",
+        "blocks": [
+          "范围",
+          "都",
+          "同一个结果"
+        ],
+        "impressions": [
+          {
+            "hanzi": "哪个菜都好吃",
+            "pinyin": "nǎge cài dōu hǎochī",
+            "english": "every dish is good"
+          },
+          {
+            "hanzi": "什么时候都可以",
+            "pinyin": "shénme shíhou dōu kěyǐ",
+            "english": "any time is fine"
+          },
+          {
+            "hanzi": "去哪儿都可以",
+            "pinyin": "qù nǎr dōu kěyǐ",
+            "english": "any place is fine"
+          }
+        ],
+        "buildSteps": [
+          {
+            "hanzi": "这个菜好吃。",
+            "pinyin": "Zhège cài hǎochī.",
+            "english": "This dish is good."
+          },
+          {
+            "hanzi": "那个菜也好吃。",
+            "pinyin": "Nàge cài yě hǎochī.",
+            "english": "That dish is also good."
+          },
+          {
+            "hanzi": "哪个菜都好吃。",
+            "pinyin": "Nǎge cài dōu hǎochī.",
+            "english": "Every dish is good."
+          }
+        ]
+      },
+      "teacherTip": "让学生先圈出全部选项，再用“都”表达整体评价。"
+    },
+    "g_hsk3_l02_03": {
+      "scene": "朋友很随和，点菜时说想吃什么就点什么。",
+      "discovery": "前一个“什么”是选择，后一个“什么”是跟着这个选择做动作。",
+      "diagram": [
+        "想吃什么",
+        "就",
+        "点什么"
+      ],
+      "structure": "想/喜欢/觉得 + 疑问代词，就 + 动词 + 同一个疑问代词",
+      "visualLearning": {
+        "sceneTitleEn": "Choice leads to action",
+        "scenePromptEn": "The second part follows the choice in the first part.",
+        "blocks": [
+          "选择",
+          "就",
+          "行动"
+        ],
+        "impressions": [
+          {
+            "hanzi": "想吃什么就点什么",
+            "pinyin": "xiǎng chī shénme jiù diǎn shénme",
+            "english": "order whatever you want"
+          },
+          {
+            "hanzi": "喜欢哪个就选哪个",
+            "pinyin": "xǐhuan nǎge jiù xuǎn nǎge",
+            "english": "choose whichever you like"
+          },
+          {
+            "hanzi": "想去哪儿就去哪儿",
+            "pinyin": "xiǎng qù nǎr jiù qù nǎr",
+            "english": "go wherever you want"
+          }
+        ],
+        "buildSteps": [
+          {
+            "hanzi": "你想吃什么？",
+            "pinyin": "Nǐ xiǎng chī shénme?",
+            "english": "What do you want to eat?"
+          },
+          {
+            "hanzi": "你点什么。",
+            "pinyin": "Nǐ diǎn shénme.",
+            "english": "You order that thing."
+          },
+          {
+            "hanzi": "你想吃什么就点什么。",
+            "pinyin": "Nǐ xiǎng chī shénme jiù diǎn shénme.",
+            "english": "Order whatever you want to eat."
+          }
+        ]
+      },
+      "teacherTip": "用菜单选项做动作链：先选择，再点菜。"
+    }
+  },
+  "textTeachingNotes": {
+    "t_hsk3_l02_01": {
+      "scene": {
+        "place": "饭馆",
+        "placeEn": "饭馆",
+        "situation": "四个人一起看菜单、点菜。",
+        "situationEn": "四个人一起看菜单、点菜。",
+        "task": "说出谁想吃什么、喝什么。",
+        "taskEn": "说出谁想吃什么、喝什么。"
+      },
+      "characters": [
+        {
+          "name": "王一雪",
+          "nameEn": "王一雪",
+          "avatar": "",
+          "role": "请大家点菜的人",
+          "roleEn": "请大家点菜的人",
+          "goal": "照顾客人",
+          "goalEn": "照顾客人"
+        },
+        {
+          "name": "白家月",
+          "nameEn": "白家月",
+          "avatar": "",
+          "role": "从远处飞来的人",
+          "roleEn": "从远处飞来的人",
+          "goal": "想喝茶、吃饺子",
+          "goalEn": "想喝茶、吃饺子"
+        },
+        {
+          "name": "李文",
+          "nameEn": "李文",
+          "avatar": "",
+          "role": "客人",
+          "roleEn": "客人",
+          "goal": "让大家先点",
+          "goalEn": "让大家先点"
+        }
+      ],
+      "languageLinks": [
+        {
+          "label": "菜单",
+          "terms": [
+            "菜单"
+          ],
+          "targetId": "v_hsk3_l02_01",
+          "use": "饭馆里点菜时看的东西。"
+        },
+        {
+          "label": "又饿又渴",
+          "terms": [
+            "又饿又渴"
+          ],
+          "targetId": "g_hsk3_l02_01",
+          "use": "同时有两个感觉。"
+        },
+        {
+          "label": "别客气",
+          "terms": [
+            "别客气"
+          ],
+          "targetId": "v_hsk3_l02_05",
+          "use": "请别人自然一点，不用不好意思。"
+        }
+      ],
+      "classQuestions": [
+        {
+          "question": "王一雪让家月和李文看什么？",
+          "answer": "她让他们看菜单。"
+        },
+        {
+          "question": "李文想吃什么？",
+          "answer": "他都可以，让大家点。"
+        },
+        {
+          "question": "白家月现在怎么样？",
+          "answer": "她又饿又渴。"
+        },
+        {
+          "question": "白家月想喝什么、吃什么？",
+          "answer": "她想喝绿茶、吃饺子。"
+        },
+        {
+          "question": "王一雪让他们怎么样？",
+          "answer": "她让他们多点点儿，别客气。"
+        }
+      ],
+      "retellScaffold": {
+        "titleEn": "Retell the Text",
+        "promptEn": "Use the map to retell the text in Chinese.",
+        "nodes": [
+          {
+            "label": "看菜单",
+            "hint": "看看菜单"
+          },
+          {
+            "label": "问想吃什么",
+            "hint": "想吃点儿什么"
+          },
+          {
+            "label": "又饿又渴",
+            "hint": "飞了这么远"
+          },
+          {
+            "label": "点饮料",
+            "hint": "喝什么饮料"
+          },
+          {
+            "label": "想吃饺子",
+            "hint": "好久没吃饺子"
+          }
+        ],
+        "frame": "在饭馆，王一雪让……看菜单。李文说……。白家月因为……，所以想……。"
+      },
+      "teacherTip": "先建立场景和人物关系，再回到课文原句确认信息。"
+    },
+    "t_hsk3_l02_02": {
+      "scene": {
+        "place": "饭馆",
+        "placeEn": "饭馆",
+        "situation": "大家吃饭时需要餐具，也评价饭馆服务。",
+        "situationEn": "大家吃饭时需要餐具，也评价饭馆服务。",
+        "task": "说清楚要什么餐具、饭馆服务怎么样。",
+        "taskEn": "说清楚要什么餐具、饭馆服务怎么样。"
+      },
+      "characters": [
+        {
+          "name": "王一雪",
+          "nameEn": "王一雪",
+          "avatar": "",
+          "role": "常来的客人",
+          "roleEn": "常来的客人",
+          "goal": "请服务员拿餐具并介绍饭馆",
+          "goalEn": "请服务员拿餐具并介绍饭馆"
+        },
+        {
+          "name": "白家月",
+          "nameEn": "白家月",
+          "avatar": "",
+          "role": "第一次吃这些菜的人",
+          "roleEn": "第一次吃这些菜的人",
+          "goal": "评价菜好吃",
+          "goalEn": "评价菜好吃"
+        },
+        {
+          "name": "服务员",
+          "nameEn": "服务员",
+          "avatar": "",
+          "role": "饭馆工作人员",
+          "roleEn": "饭馆工作人员",
+          "goal": "提供服务并送水果",
+          "goalEn": "提供服务并送水果"
+        }
+      ],
+      "languageLinks": [
+        {
+          "label": "服务员",
+          "terms": [
+            "服务员"
+          ],
+          "targetId": "v_hsk3_l02_09",
+          "use": "饭馆里为客人服务的人。"
+        },
+        {
+          "label": "双",
+          "terms": [
+            "双筷子"
+          ],
+          "targetId": "v_hsk3_l02_10",
+          "use": "一双是两个配套使用的东西。"
+        },
+        {
+          "label": "热情",
+          "terms": [
+            "热情"
+          ],
+          "targetId": "v_hsk3_l02_15",
+          "use": "服务态度好，让人感觉舒服。"
+        }
+      ],
+      "classQuestions": [
+        {
+          "question": "王一雪请服务员拿什么？",
+          "answer": "她请服务员拿一双筷子、一个勺子和一个碗。"
+        },
+        {
+          "question": "服务员什么时候拿？",
+          "answer": "服务员说马上拿去。"
+        },
+        {
+          "question": "这家饭馆的服务怎么样？",
+          "answer": "服务很热情。"
+        },
+        {
+          "question": "白家月觉得哪个菜好吃？",
+          "answer": "她觉得哪个菜都好吃。"
+        },
+        {
+          "question": "服务员为什么送水果？",
+          "answer": "因为王一雪经常来吃饭。"
+        }
+      ],
+      "retellScaffold": {
+        "titleEn": "Retell the Text",
+        "promptEn": "Use the map to retell the text in Chinese.",
+        "nodes": [
+          {
+            "label": "要餐具",
+            "hint": "筷子、勺子、碗"
+          },
+          {
+            "label": "马上拿",
+            "hint": "请等一下"
+          },
+          {
+            "label": "服务热情",
+            "hint": "菜也好吃"
+          },
+          {
+            "label": "尝菜",
+            "hint": "喜不喜欢"
+          },
+          {
+            "label": "送水果",
+            "hint": "经常来"
+          }
+        ],
+        "frame": "王一雪请服务员……。服务员说……。这家饭馆……，白家月觉得……。"
+      },
+      "teacherTip": "先建立场景和人物关系，再回到课文原句确认信息。"
+    },
+    "t_hsk3_l02_03": {
+      "scene": {
+        "place": "饭馆",
+        "placeEn": "饭馆",
+        "situation": "吃完饭后，大家谈下次点菜和外卖。",
+        "situationEn": "吃完饭后，大家谈下次点菜和外卖。",
+        "task": "理解手机菜单、选菜和外卖的方便。",
+        "taskEn": "理解手机菜单、选菜和外卖的方便。"
+      },
+      "characters": [
+        {
+          "name": "白家月",
+          "nameEn": "白家月",
+          "avatar": "",
+          "role": "喜欢鸡肉饭的人",
+          "roleEn": "喜欢鸡肉饭的人",
+          "goal": "想下次再来吃",
+          "goalEn": "想下次再来吃"
+        },
+        {
+          "name": "李文",
+          "nameEn": "李文",
+          "avatar": "",
+          "role": "提出拿菜单的人",
+          "roleEn": "提出拿菜单的人",
+          "goal": "让家月下次参考",
+          "goalEn": "让家月下次参考"
+        },
+        {
+          "name": "王一雪",
+          "nameEn": "王一雪",
+          "avatar": "",
+          "role": "介绍外卖的人",
+          "roleEn": "介绍外卖的人",
+          "goal": "说明手机上可以点外卖",
+          "goalEn": "说明手机上可以点外卖"
+        }
+      ],
+      "languageLinks": [
+        {
+          "label": "不用",
+          "terms": [
+            "不用"
+          ],
+          "targetId": "v_hsk3_l02_21",
+          "use": "没有必要做某事。"
+        },
+        {
+          "label": "选好了",
+          "terms": [
+            "选好了"
+          ],
+          "targetId": "v_hsk3_l02_22",
+          "use": "已经决定要哪一个。"
+        },
+        {
+          "label": "外卖",
+          "terms": [
+            "外卖"
+          ],
+          "targetId": "v_hsk3_l02_23",
+          "use": "饭馆把饭送到家或学校。"
+        },
+        {
+          "label": "想吃什么就点什么",
+          "terms": [
+            "想吃什么就点什么"
+          ],
+          "targetId": "g_hsk3_l02_03",
+          "use": "按自己的选择点菜。"
+        }
+      ],
+      "classQuestions": [
+        {
+          "question": "白家月为什么想再来吃一次？",
+          "answer": "因为鸡肉饭太好吃了。"
+        },
+        {
+          "question": "李文让白家月拿走什么？",
+          "answer": "他让她拿走这张菜单。"
+        },
+        {
+          "question": "王一雪为什么说不用拿菜单？",
+          "answer": "因为手机上就能看到。"
+        },
+        {
+          "question": "现在很多饭馆都能做什么？",
+          "answer": "很多饭馆都能送外卖。"
+        },
+        {
+          "question": "白家月觉得外卖怎么样？",
+          "answer": "她觉得太方便了。"
+        }
+      ],
+      "retellScaffold": {
+        "titleEn": "Retell the Text",
+        "promptEn": "Use the map to retell the text in Chinese.",
+        "nodes": [
+          {
+            "label": "鸡肉饭好吃",
+            "hint": "再来吃一次"
+          },
+          {
+            "label": "拿菜单",
+            "hint": "下次吃什么"
+          },
+          {
+            "label": "手机上看到",
+            "hint": "不用拿菜单"
+          },
+          {
+            "label": "送外卖",
+            "hint": "选好了让他们送"
+          },
+          {
+            "label": "很方便",
+            "hint": "想吃什么就点什么"
+          }
+        ],
+        "frame": "白家月觉得……很好吃。李文让她……，但是王一雪说……。现在很多饭馆……，所以……。"
+      },
+      "teacherTip": "先建立场景和人物关系，再回到课文原句确认信息。"
+    },
+    "t_hsk3_l02_04": {
+      "scene": {
+        "place": "李文家",
+        "placeEn": "李文家",
+        "situation": "李文写自己在国外和回国后的吃饭情况。",
+        "situationEn": "李文写自己在国外和回国后的吃饭情况。",
+        "task": "比较在国外吃饭和在中国吃妈妈做的饭。",
+        "taskEn": "比较在国外吃饭和在中国吃妈妈做的饭。"
+      },
+      "characters": [
+        {
+          "name": "李文",
+          "nameEn": "李文",
+          "avatar": "",
+          "role": "写日记的人",
+          "roleEn": "写日记的人",
+          "goal": "回忆自己的饮食习惯",
+          "goalEn": "回忆自己的饮食习惯"
+        },
+        {
+          "name": "妈妈",
+          "nameEn": "妈妈",
+          "avatar": "",
+          "role": "做饭的人",
+          "roleEn": "做饭的人",
+          "goal": "给李文做家常饭",
+          "goalEn": "给李文做家常饭"
+        }
+      ],
+      "languageLinks": [
+        {
+          "label": "只吃方便面",
+          "terms": [
+            "只吃方便面"
+          ],
+          "targetId": "v_hsk3_l02_27",
+          "use": "没有别的吃的，只能吃方便面。"
+        },
+        {
+          "label": "简单的菜",
+          "terms": [
+            "简单的菜"
+          ],
+          "targetId": "v_hsk3_l02_28",
+          "use": "做法不复杂的家常菜。"
+        },
+        {
+          "label": "什么都没有妈妈做的饭好吃",
+          "terms": [
+            "什么都没有"
+          ],
+          "targetId": "g_hsk3_l02_02",
+          "use": "所有东西都比不上妈妈做的饭。"
+        }
+      ],
+      "classQuestions": [
+        {
+          "question": "李文在国外经常自己做饭吗？",
+          "answer": "不经常，他很少自己做饭。"
+        },
+        {
+          "question": "考试快到的时候，李文可能吃什么？",
+          "answer": "他可能好几天只吃方便面。"
+        },
+        {
+          "question": "回到中国以后，李文为什么高兴？",
+          "answer": "因为每天能吃到妈妈做的饭。"
+        },
+        {
+          "question": "妈妈做的菜一定复杂吗？",
+          "answer": "不一定，有时候只是几个简单的菜。"
+        },
+        {
+          "question": "李文觉得什么最好吃？",
+          "answer": "他觉得妈妈做的饭最好吃。"
+        }
+      ],
+      "retellScaffold": {
+        "titleEn": "Retell the Text",
+        "promptEn": "Use the map to retell the text in Chinese.",
+        "nodes": [
+          {
+            "label": "在国外",
+            "hint": "很少自己做饭"
+          },
+          {
+            "label": "早饭",
+            "hint": "面包、蛋糕、咖啡"
+          },
+          {
+            "label": "考试前",
+            "hint": "又忙又累"
+          },
+          {
+            "label": "只吃方便面",
+            "hint": "家里没有吃的"
+          },
+          {
+            "label": "回到中国",
+            "hint": "妈妈做的饭最好吃"
+          }
+        ],
+        "frame": "这些年在国外，李文……。快考试的时候，他……。现在回到中国，他每天……，所以……。"
+      },
+      "teacherTip": "先建立场景和人物关系，再回到课文原句确认信息。"
+    }
+  },
+  "texts": [
+    {
+      "id": "t_hsk3_l02_01",
+      "textId": 1,
+      "title": "课文一：你们想吃什么",
+      "setting": "在饭馆，王一雪、刘明、白家月和李文在点菜。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "王一雪",
+          "hanzi": "家月、李文，你们看看菜单，想吃点儿什么？",
+          "pinyin": "Jiāyuè, Lǐ Wén, nǐmen kànkan càidān, xiǎng chī diǎnr shénme?",
+          "english": "Jiayue, Li Wen, take a look at the menu. What would you like to eat?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "李文",
+          "hanzi": "谢谢一雪姐，我都可以，你们点吧。",
+          "pinyin": "Xièxie Yīxuě jiě, wǒ dōu kěyǐ, nǐmen diǎn ba.",
+          "english": "Thank you, Sister Yixue. Anything is fine with me; you go ahead and order.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "白家月",
+          "hanzi": "飞了这么远，现在还真是又饿又渴。",
+          "pinyin": "Fēile zhème yuǎn, xiànzài hái zhēnshì yòu è yòu kě.",
+          "english": "After flying such a long distance, I really am both hungry and thirsty now.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "王一雪",
+          "hanzi": "那多点点儿，别客气。你们喝什么饮料？",
+          "pinyin": "Nà duō diǎn diǎnr, bié kèqi. Nǐmen hē shénme yǐnliào?",
+          "english": "Then order a bit more. Make yourselves at home. What drinks would you like?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 5,
+          "speaker": "白家月",
+          "hanzi": "好久没喝中国茶，也好久没吃饺子了。我想喝绿茶、吃饺子，可以吗？",
+          "pinyin": "Hǎojiǔ méi hē Zhōngguó chá, yě hǎojiǔ méi chī jiǎozi le. Wǒ xiǎng hē lǜchá, chī jiǎozi, kěyǐ ma?",
+          "english": "I haven't had Chinese tea or dumplings for a long time. I want green tea and dumplings. Is that okay?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 6,
+          "speaker": "王一雪",
+          "hanzi": "没问题。你们看看还想吃什么。",
+          "pinyin": "Méi wèntí. Nǐmen kànkan hái xiǎng chī shénme.",
+          "english": "No problem. Take a look and see what else you want to eat.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "t_hsk3_l02_02",
+      "textId": 2,
+      "title": "课文二：饭馆服务",
+      "setting": "在饭馆，王一雪、刘明、白家月和李文一起吃饭。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "王一雪",
+          "hanzi": "服务员，再给我们拿双筷子、一个勺子和一个碗。",
+          "pinyin": "Fúwùyuán, zài gěi wǒmen ná shuāng kuàizi, yí gè sháozi hé yí gè wǎn.",
+          "english": "Waiter, please bring us another pair of chopsticks, a spoon, and a bowl.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "服务员",
+          "hanzi": "好的，请等一下，我马上拿去。",
+          "pinyin": "Hǎo de, qǐng děng yíxià, wǒ mǎshàng ná qu.",
+          "english": "Sure. Please wait a moment. I'll get them right away.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "王一雪",
+          "hanzi": "这家饭馆的服务很热情，菜也都做得很好吃。你们尝尝，看喜不喜欢这些菜。",
+          "pinyin": "Zhè jiā fànguǎn de fúwù hěn rèqíng, cài yě dōu zuò de hěn hǎochī. Nǐmen chángchang, kàn xǐ bu xǐhuan zhèxiē cài.",
+          "english": "The service here is warm, and the dishes are all delicious. Try them and see whether you like these dishes.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "白家月",
+          "hanzi": "哪个菜都好吃。您点的这些菜真不错。",
+          "pinyin": "Nǎge cài dōu hǎochī. Nín diǎn de zhèxiē cài zhēn búcuò.",
+          "english": "Every dish is delicious. The dishes you ordered are really good.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 5,
+          "speaker": "王一雪",
+          "hanzi": "这里的饭菜又便宜又好吃，我们经常来，服务员都记住我们爱吃的菜了。",
+          "pinyin": "Zhèlǐ de fàncài yòu piányi yòu hǎochī, wǒmen jīngcháng lái, fúwùyuán dōu jìzhù wǒmen ài chī de cài le.",
+          "english": "The food here is both cheap and delicious. We come often, and the servers already remember the dishes we like.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 6,
+          "speaker": "服务员",
+          "hanzi": "王姐，您经常来吃饭，今天送您一些水果，请慢用。",
+          "pinyin": "Wáng jiě, nín jīngcháng lái chī fàn, jīntiān sòng nín yìxiē shuǐguǒ, qǐng mànyòng.",
+          "english": "Sister Wang, you often come here to eat. Today we are giving you some fruit. Please enjoy your meal.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "t_hsk3_l02_03",
+      "textId": 3,
+      "title": "课文三：外卖很方便",
+      "setting": "在饭馆，王一雪、刘明、白家月和李文继续边吃边聊。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "白家月",
+          "hanzi": "这个鸡肉饭太好吃了，我要再来吃一次。",
+          "pinyin": "Zhège jīròufàn tài hǎochī le, wǒ yào zài lái chī yí cì.",
+          "english": "This chicken rice is so delicious. I want to come eat it again.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 2,
+          "speaker": "李文",
+          "hanzi": "你可以拿走这张菜单，看看下次还吃点儿什么。",
+          "pinyin": "Nǐ kěyǐ názǒu zhè zhāng càidān, kànkan xià cì hái chī diǎnr shénme.",
+          "english": "You can take this menu and see what else you want to eat next time.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 3,
+          "speaker": "王一雪",
+          "hanzi": "不用拿菜单，在手机上就能看到，也可以选好了让他们给你送。",
+          "pinyin": "Búyòng ná càidān, zài shǒujī shang jiù néng kàndào, yě kěyǐ xuǎnhǎo le ràng tāmen gěi nǐ sòng.",
+          "english": "No need to take the menu. You can see it on your phone, and you can choose what you want and have them deliver it.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 4,
+          "speaker": "白家月",
+          "hanzi": "他们家还能送外卖？",
+          "pinyin": "Tāmen jiā hái néng sòng wàimài?",
+          "english": "They can deliver takeout too?",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 5,
+          "speaker": "王一雪",
+          "hanzi": "对，现在很多饭馆都能送外卖，想吃什么就点什么。",
+          "pinyin": "Duì, xiànzài hěn duō fànguǎn dōu néng sòng wàimài, xiǎng chī shénme jiù diǎn shénme.",
+          "english": "Yes. Many restaurants deliver takeout now. You can order whatever you want to eat.",
+          "sourceType": "textbook"
+        },
+        {
+          "order": 6,
+          "speaker": "白家月",
+          "hanzi": "那真是太方便了！",
+          "pinyin": "Nà zhēnshì tài fāngbiàn le!",
+          "english": "That is really convenient.",
+          "sourceType": "textbook"
+        }
+      ]
+    },
+    {
+      "id": "t_hsk3_l02_04",
+      "textId": 4,
+      "title": "课文四：妈妈做的饭最好吃",
+      "setting": "在李文家，李文在写日记。",
+      "sourceType": "textbook",
+      "lines": [
+        {
+          "order": 1,
+          "speaker": "李文",
+          "hanzi": "这些年在国外，我很少自己做饭。早饭我吃一个面包，有时候吃一块蛋糕，再喝一杯咖啡。午饭和晚饭也都在外面吃。快要考试的时候又忙又累，没时间出去吃饭，家里又什么吃的都没有，我可能好几天只吃方便面。现在回到中国了，每天能吃到妈妈做的饭，我真是太高兴了！有时候妈妈只做几个简单的菜，我也非常爱吃，因为什么都没有妈妈做的饭好吃。",
+          "pinyin": "Zhèxiē nián zài guówài, wǒ hěn shǎo zìjǐ zuò fàn. Zǎofàn wǒ chī yí gè miànbāo, yǒushíhou chī yí kuài dàngāo, zài hē yì bēi kāfēi. Wǔfàn hé wǎnfàn yě dōu zài wàimiàn chī. Kuàiyào kǎoshì de shíhou yòu máng yòu lèi, méi shíjiān chūqu chī fàn, jiā li yòu shénme chī de dōu méiyǒu, wǒ kěnéng hǎo jǐ tiān zhǐ chī fāngbiànmiàn. Xiànzài huídào Zhōngguó le, měitiān néng chīdào māma zuò de fàn, wǒ zhēnshì tài gāoxìng le! Yǒushíhou māma zhǐ zuò jǐ gè jiǎndān de cài, wǒ yě fēicháng ài chī, yīnwèi shénme dōu méiyǒu māma zuò de fàn hǎochī.",
+          "english": "In recent years overseas, I rarely cooked for myself. For breakfast I ate bread, sometimes cake, and drank coffee. I also ate lunch and dinner outside. When exams were coming, I was busy and tired, had no time to go out to eat, and there was nothing to eat at home, so I might eat instant noodles for several days. Now that I am back in China, I can eat my mother's cooking every day, and I am very happy. Sometimes my mother only makes a few simple dishes, but I still love them very much, because nothing tastes better than my mother's food.",
+          "sourceType": "textbook"
+        }
+      ]
+    }
+  ],
+  "vocabExtensions": {
+    "v_hsk3_l02_01": {
+      "word": "菜单",
+      "coreMeaning": "menu",
+      "teachingFocus": "Use 菜单 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "看看菜单",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "拿菜单",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "这张菜单",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "你们看看菜单，想吃点儿什么？",
+          "pinyin": "",
+          "english": "menu"
+        },
+        {
+          "hanzi": "这家饭馆的菜单在手机上。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "1"
+    },
+    "v_hsk3_l02_02": {
+      "word": "又",
+      "coreMeaning": "and",
+      "teachingFocus": "Use 又 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "又饿又渴",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "又便宜又好吃",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "又忙又累",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "我现在又饿又渴。",
+          "pinyin": "",
+          "english": "and"
+        },
+        {
+          "hanzi": "这个菜又便宜又好吃。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "1"
+    },
+    "v_hsk3_l02_03": {
+      "word": "饿",
+      "coreMeaning": "hungry",
+      "teachingFocus": "Use 饿 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "很饿",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "有点儿饿",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "饿了",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "我有点儿饿，想吃饭。",
+          "pinyin": "",
+          "english": "hungry"
+        },
+        {
+          "hanzi": "下课以后我很饿。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "1"
+    },
+    "v_hsk3_l02_04": {
+      "word": "渴",
+      "coreMeaning": "thirsty",
+      "teachingFocus": "Use 渴 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "很渴",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "有点儿渴",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "又饿又渴",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "你渴不渴？喝点儿茶吧。",
+          "pinyin": "",
+          "english": "thirsty"
+        },
+        {
+          "hanzi": "运动以后我很渴。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "1"
+    },
+    "v_hsk3_l02_05": {
+      "word": "客气",
+      "coreMeaning": "be polite; polite",
+      "teachingFocus": "Use 客气 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "别客气",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "太客气了",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "不用客气",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "多点点儿，别客气。",
+          "pinyin": "",
+          "english": "be polite; polite"
+        },
+        {
+          "hanzi": "朋友来我家吃饭，我说别客气。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "1"
+    },
+    "v_hsk3_l02_06": {
+      "word": "饮料",
+      "coreMeaning": "drink",
+      "teachingFocus": "Use 饮料 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "喝饮料",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "什么饮料",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "一杯饮料",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "你想喝什么饮料？",
+          "pinyin": "",
+          "english": "drink"
+        },
+        {
+          "hanzi": "我不喝饮料，我喝茶。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "1"
+    },
+    "v_hsk3_l02_07": {
+      "word": "好久",
+      "coreMeaning": "for a long time",
+      "teachingFocus": "Use 好久 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "好久没吃",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "好久没喝",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "好久不见",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "我好久没吃饺子了。",
+          "pinyin": "",
+          "english": "for a long time"
+        },
+        {
+          "hanzi": "好久不见，你最近怎么样？",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "1"
+    },
+    "v_hsk3_l02_08": {
+      "word": "服务",
+      "coreMeaning": "serve",
+      "teachingFocus": "Use 服务 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "服务很好",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "服务很热情",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "服务员",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "这家饭馆的服务很好。",
+          "pinyin": "",
+          "english": "serve"
+        },
+        {
+          "hanzi": "这个饭馆服务很热情。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "2"
+    },
+    "v_hsk3_l02_09": {
+      "word": "员",
+      "coreMeaning": "person suffix",
+      "teachingFocus": "Use 员 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "服务员",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "工作人员",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "售货员",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "服务员马上拿筷子来。",
+          "pinyin": "",
+          "english": "person suffix"
+        },
+        {
+          "hanzi": "工作人员帮助了我们。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "2"
+    },
+    "v_hsk3_l02_10": {
+      "word": "双",
+      "coreMeaning": "pair",
+      "teachingFocus": "Use 双 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "一双筷子",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "一双鞋",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "拿双筷子",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "请给我拿一双筷子。",
+          "pinyin": "",
+          "english": "pair"
+        },
+        {
+          "hanzi": "我买了一双新鞋。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "2"
+    },
+    "v_hsk3_l02_11": {
+      "word": "筷子",
+      "coreMeaning": "chopsticks",
+      "teachingFocus": "Use 筷子 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "拿筷子",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "用筷子",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "一双筷子",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "中国人常用筷子吃饭。",
+          "pinyin": "",
+          "english": "chopsticks"
+        },
+        {
+          "hanzi": "我还不太会用筷子。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "2"
+    },
+    "v_hsk3_l02_12": {
+      "word": "勺子",
+      "coreMeaning": "spoon",
+      "teachingFocus": "Use 勺子 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "一个勺子",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "用勺子",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "拿勺子",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "请给我一个勺子。",
+          "pinyin": "",
+          "english": "spoon"
+        },
+        {
+          "hanzi": "喝汤的时候可以用勺子。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "2"
+    },
+    "v_hsk3_l02_13": {
+      "word": "碗",
+      "coreMeaning": "bowl",
+      "teachingFocus": "Use 碗 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "一个碗",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "拿碗",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "一碗饭",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "桌子上有一个碗。",
+          "pinyin": "",
+          "english": "bowl"
+        },
+        {
+          "hanzi": "请给我一碗米饭。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "2"
+    },
+    "v_hsk3_l02_14": {
+      "word": "马上",
+      "coreMeaning": "immediately",
+      "teachingFocus": "Use 马上 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "马上来",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "马上拿去",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "马上出发",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "请等一下，我马上来。",
+          "pinyin": "",
+          "english": "immediately"
+        },
+        {
+          "hanzi": "我马上去教室。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "2"
+    },
+    "v_hsk3_l02_15": {
+      "word": "热情",
+      "coreMeaning": "warm; enthusiastic",
+      "teachingFocus": "Use 热情 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "服务热情",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "很热情",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "热情地介绍",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "这里的服务员很热情。",
+          "pinyin": "",
+          "english": "warm; enthusiastic"
+        },
+        {
+          "hanzi": "我的中国朋友很热情。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "2"
+    },
+    "v_hsk3_l02_16": {
+      "word": "尝",
+      "coreMeaning": "taste",
+      "teachingFocus": "Use 尝 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "尝尝",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "尝这个菜",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "尝一口",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "你尝尝这个菜。",
+          "pinyin": "",
+          "english": "taste"
+        },
+        {
+          "hanzi": "你尝一口，看看好不好吃。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "2"
+    },
+    "v_hsk3_l02_17": {
+      "word": "记",
+      "coreMeaning": "remember",
+      "teachingFocus": "Use 记 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "记住",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "记得",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "记菜单",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "服务员记住了我们爱吃的菜。",
+          "pinyin": "",
+          "english": "remember"
+        },
+        {
+          "hanzi": "请记住今天的作业。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "2"
+    },
+    "v_hsk3_l02_18": {
+      "word": "用",
+      "coreMeaning": "eat; drink; use",
+      "teachingFocus": "Use 用 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "用筷子",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "用勺子",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "慢用",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "请慢用。",
+          "pinyin": "",
+          "english": "eat; drink; use"
+        },
+        {
+          "hanzi": "我用手机点外卖。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "3"
+    },
+    "v_hsk3_l02_19": {
+      "word": "鸡",
+      "coreMeaning": "chicken",
+      "teachingFocus": "Use 鸡 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "鸡肉饭",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "一只鸡",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "鸡蛋",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "这个鸡肉饭很好吃。",
+          "pinyin": "",
+          "english": "chicken"
+        },
+        {
+          "hanzi": "我不吃鸡肉。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "3"
+    },
+    "v_hsk3_l02_20": {
+      "word": "张",
+      "coreMeaning": "measure word for flat objects",
+      "teachingFocus": "Use 张 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "一张菜单",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "一张照片",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "这张纸",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "我想拿走这张菜单。",
+          "pinyin": "",
+          "english": "measure word for flat objects"
+        },
+        {
+          "hanzi": "老师给了我一张纸。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "3"
+    },
+    "v_hsk3_l02_21": {
+      "word": "不用",
+      "coreMeaning": "need not",
+      "teachingFocus": "Use 不用 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "不用拿",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "不用客气",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "不用去了",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "不用拿菜单，手机上能看到。",
+          "pinyin": "",
+          "english": "need not"
+        },
+        {
+          "hanzi": "不用担心，我可以自己去。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "3"
+    },
+    "v_hsk3_l02_22": {
+      "word": "选",
+      "coreMeaning": "choose",
+      "teachingFocus": "Use 选 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "选菜",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "选好了",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "选一个",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "你选好了再告诉我。",
+          "pinyin": "",
+          "english": "choose"
+        },
+        {
+          "hanzi": "你喜欢哪个就选哪个。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "3"
+    },
+    "v_hsk3_l02_23": {
+      "word": "外卖",
+      "coreMeaning": "takeout; delivery",
+      "teachingFocus": "Use 外卖 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "送外卖",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "点外卖",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "外卖很方便",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "很多饭馆都能送外卖。",
+          "pinyin": "",
+          "english": "takeout; delivery"
+        },
+        {
+          "hanzi": "今天太忙了，我想点外卖。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "3"
+    },
+    "v_hsk3_l02_24": {
+      "word": "方便",
+      "coreMeaning": "convenient",
+      "teachingFocus": "Use 方便 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "很方便",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "不方便",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "太方便了",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "点外卖很方便。",
+          "pinyin": "",
+          "english": "convenient"
+        },
+        {
+          "hanzi": "手机支付很方便。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "3"
+    },
+    "v_hsk3_l02_25": {
+      "word": "蛋糕",
+      "coreMeaning": "cake",
+      "teachingFocus": "Use 蛋糕 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "一块蛋糕",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "吃蛋糕",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "生日蛋糕",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "早饭我吃了一块蛋糕。",
+          "pinyin": "",
+          "english": "cake"
+        },
+        {
+          "hanzi": "生日的时候我们吃蛋糕。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "4"
+    },
+    "v_hsk3_l02_26": {
+      "word": "只",
+      "coreMeaning": "only",
+      "teachingFocus": "Use 只 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "只吃",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "只有",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "只做几个菜",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "我只吃方便面。",
+          "pinyin": "",
+          "english": "only"
+        },
+        {
+          "hanzi": "我今天只喝了一杯咖啡。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "4"
+    },
+    "v_hsk3_l02_27": {
+      "word": "方便面",
+      "coreMeaning": "instant noodles",
+      "teachingFocus": "Use 方便面 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "吃方便面",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "一包方便面",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "只吃方便面",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "考试前我常吃方便面。",
+          "pinyin": "",
+          "english": "instant noodles"
+        },
+        {
+          "hanzi": "方便面很方便，但是不能天天吃。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "4"
+    },
+    "v_hsk3_l02_28": {
+      "word": "简单",
+      "coreMeaning": "simple",
+      "teachingFocus": "Use 简单 in the restaurant or daily eating situation from this lesson.",
+      "collocations": [
+        {
+          "hanzi": "简单的菜",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "很简单",
+          "pinyin": "",
+          "english": ""
+        },
+        {
+          "hanzi": "简单介绍",
+          "pinyin": "",
+          "english": ""
+        }
+      ],
+      "examples": [
+        {
+          "hanzi": "妈妈只做了几个简单的菜。",
+          "pinyin": "",
+          "english": "simple"
+        },
+        {
+          "hanzi": "这个问题很简单。",
+          "pinyin": "",
+          "english": "Transfer sentence."
+        }
+      ],
+      "teacherTip": "先用真实餐厅场景建立意思，再回到课文原句。",
+      "session": "4"
+    }
+  },
+  "previewMissions": [
+    {
+      "id": "pm_hsk3_l02_a",
+      "session": "A",
+      "title": "第一次课课前任务",
+      "titleEn": "第一次课 preview mission",
+      "scenario": "你和朋友去饭馆，需要看菜单、点菜和说自己的感觉。",
+      "goals": [
+        "餐厅点菜",
+        "又……又……",
+        "别客气"
+      ],
+      "steps": [
+        {
+          "title": "看场景",
+          "titleEn": "Look at the scene",
+          "task": "饭馆点菜"
+        },
+        {
+          "title": "认关键词",
+          "titleEn": "Notice key words",
+          "task": "餐厅点菜 / 又……又…… / 别客气"
+        },
+        {
+          "title": "准备一句话",
+          "titleEn": "Prepare one sentence",
+          "task": "我现在又……又……。"
+        }
+      ],
+      "output": "用中文说 1-2 句话。",
+      "targetTextIds": [
+        "t_hsk3_l02_01"
+      ]
+    },
+    {
+      "id": "pm_hsk3_l02_b",
+      "session": "B",
+      "title": "第二次课课前任务",
+      "titleEn": "第二次课 preview mission",
+      "scenario": "你在饭馆吃饭，需要请服务员拿餐具，并了解手机点外卖。",
+      "goals": [
+        "餐具服务",
+        "任指表达",
+        "外卖点餐"
+      ],
+      "steps": [
+        {
+          "title": "看场景",
+          "titleEn": "Look at the scene",
+          "task": "饭馆服务和外卖"
+        },
+        {
+          "title": "认关键词",
+          "titleEn": "Notice key words",
+          "task": "餐具服务 / 任指表达 / 外卖点餐"
+        },
+        {
+          "title": "准备一句话",
+          "titleEn": "Prepare one sentence",
+          "task": "请给我拿……。"
+        }
+      ],
+      "output": "用中文说 1-2 句话。",
+      "targetTextIds": [
+        "t_hsk3_l02_02",
+        "t_hsk3_l02_03"
+      ]
+    },
+    {
+      "id": "pm_hsk3_l02_c",
+      "session": "C",
+      "title": "第三次课课前任务",
+      "titleEn": "第三次课 preview mission",
+      "scenario": "你要介绍自己在国外和回中国后的饮食变化。",
+      "goals": [
+        "饮食习惯",
+        "叙述体复述",
+        "妈妈做的饭"
+      ],
+      "steps": [
+        {
+          "title": "看场景",
+          "titleEn": "Look at the scene",
+          "task": "饮食习惯变化"
+        },
+        {
+          "title": "认关键词",
+          "titleEn": "Notice key words",
+          "task": "饮食习惯 / 叙述体复述 / 妈妈做的饭"
+        },
+        {
+          "title": "准备一句话",
+          "titleEn": "Prepare one sentence",
+          "task": "我觉得……做的饭最好吃。"
+        }
+      ],
+      "output": "用中文说 1-2 句话。",
+      "targetTextIds": [
+        "t_hsk3_l02_04"
+      ]
+    }
+  ],
+  "preClass": {
+    "mode": "preview_mission",
+    "missionId": "pm_hsk3_l02_a",
+    "vocabularyIds": [
+      "v_hsk3_l02_01",
+      "v_hsk3_l02_03",
+      "v_hsk3_l02_04",
+      "v_hsk3_l02_05",
+      "v_hsk3_l02_06",
+      "v_hsk3_l02_11",
+      "v_hsk3_l02_23",
+      "v_hsk3_l02_24",
+      "v_hsk3_l02_27"
+    ],
+    "grammarIds": [
+      "g_hsk3_l02_01",
+      "g_hsk3_l02_02",
+      "g_hsk3_l02_03"
+    ],
+    "readingData": [
+      {
+        "textId": "preview-a",
+        "title": "饭馆点菜预热",
+        "context": "预热点菜场景，不直接完成课文理解。",
+        "lines": [
+          {
+            "speaker": "任务",
+            "chinese": "我和朋友去饭馆吃饭。",
+            "hanzi": "我和朋友去饭馆吃饭。",
+            "pinyin": "Wǒ hé péngyou qù fànguǎn chī fàn.",
+            "english": "I go to a restaurant with friends."
+          },
+          {
+            "speaker": "任务",
+            "chinese": "我们先看菜单，再点菜。",
+            "hanzi": "我们先看菜单，再点菜。",
+            "pinyin": "Wǒmen xiān kàn càidān, zài diǎn cài.",
+            "english": "We look at the menu first, then order."
+          },
+          {
+            "speaker": "任务",
+            "chinese": "我现在又饿又渴。",
+            "hanzi": "我现在又饿又渴。",
+            "pinyin": "Wǒ xiànzài yòu è yòu kě.",
+            "english": "I am both hungry and thirsty now."
+          }
+        ]
+      }
+    ],
+    "warmup": {
+      "intro": "今天的主题是饭馆点菜和饮食习惯。先想一想：去饭馆吃饭时，你会先做什么？",
+      "question": "你去饭馆点菜时，最先看什么？",
+      "questionEn": "What do you look at first when ordering in a restaurant?",
+      "knownQuestion": "下面哪些表达你已经会说？",
+      "knownQuestionEn": "Which expressions can you already say?",
+      "options": [
+        {
+          "word": "看菜单",
+          "pinyin": "kàn càidān"
+        },
+        {
+          "word": "点菜",
+          "pinyin": "diǎn cài"
+        },
+        {
+          "word": "别客气",
+          "pinyin": "bié kèqi"
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": "pre_hsk3_l02_a_01",
+        "type": "choice",
+        "module": "A段任务：点菜",
+        "question": "“菜单”是什么？",
+        "options": [
+          {
+            "word": "饭馆里点菜时看的东西",
+            "pinyin": ""
+          },
+          {
+            "word": "一双筷子",
+            "pinyin": ""
+          },
+          {
+            "word": "一个人",
+            "pinyin": ""
+          },
+          {
+            "word": "机场出口",
+            "pinyin": ""
+          }
+        ],
+        "answer": "饭馆里点菜时看的东西",
+        "targetIds": [
+          "v_hsk3_l02_01"
+        ]
+      },
+      {
+        "id": "pre_hsk3_l02_a_02",
+        "type": "choice",
+        "module": "A段任务：感觉",
+        "question": "“又饿又渴”表示什么？",
+        "options": [
+          {
+            "word": "既想吃东西，也想喝东西",
+            "pinyin": ""
+          },
+          {
+            "word": "只想喝水",
+            "pinyin": ""
+          },
+          {
+            "word": "不想吃饭",
+            "pinyin": ""
+          },
+          {
+            "word": "很客气",
+            "pinyin": ""
+          }
+        ],
+        "answer": "既想吃东西，也想喝东西",
+        "targetIds": [
+          "v_hsk3_l02_03",
+          "v_hsk3_l02_04",
+          "g_hsk3_l02_01"
+        ]
+      },
+      {
+        "id": "pre_hsk3_l02_a_03",
+        "type": "choice",
+        "module": "A段任务：交际",
+        "question": "朋友请你多点菜，可以说：",
+        "options": [
+          {
+            "word": "别客气。",
+            "pinyin": "Bié kèqi."
+          },
+          {
+            "word": "马上拿去。",
+            "pinyin": "Mǎshàng ná qù."
+          },
+          {
+            "word": "好久不见。",
+            "pinyin": "Hǎojiǔ bú jiàn."
+          },
+          {
+            "word": "送外卖。",
+            "pinyin": "Sòng wàimài."
+          }
+        ],
+        "answer": "别客气。",
+        "targetIds": [
+          "v_hsk3_l02_05"
+        ]
+      },
+      {
+        "id": "pre_hsk3_l02_a_04",
+        "type": "subjective",
+        "module": "A段最终输出",
+        "question": "请用 1-2 句话说说你去饭馆想吃什么、喝什么。",
+        "prompt": "可以用：我想吃……，喝……。我现在又……又……。",
+        "targetIds": [
+          "v_hsk3_l02_06",
+          "g_hsk3_l02_01"
+        ],
+        "weakPoints": "A段表达输出"
+      }
+    ]
+  },
+  "inClass": {
+    "questionGroups": {
+      "scene_sentence_choice": [
+        {
+          "id": "hsk3_l02_scene_choice_01",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "Look at the scene and clues. Choose the best Chinese sentence.",
+          "data": {
+            "level": "text_sentence",
+            "image_hint": "Restaurant table: friends open a menu.",
+            "scene_en": "Restaurant table: friends open a menu.",
+            "clue_en": "Use: 看菜单 / 想吃什么",
+            "options": [
+              "你们看看菜单，想吃点儿什么？",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的箱子不见了。"
+            ],
+            "correct_index": 0,
+            "explain_en": "The sentence matches the restaurant scene."
+          },
+          "correct_answer": "你们看看菜单，想吃点儿什么？",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_scene_choice_02",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "Look at the scene and clues. Choose the best Chinese sentence.",
+          "data": {
+            "level": "text_sentence",
+            "image_hint": "Two guests just arrived after a long flight.",
+            "scene_en": "Two guests just arrived after a long flight.",
+            "clue_en": "Use: 又饿又渴",
+            "options": [
+              "我现在又饿又渴。",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的箱子不见了。"
+            ],
+            "correct_index": 0,
+            "explain_en": "The sentence matches the restaurant scene."
+          },
+          "correct_answer": "我现在又饿又渴。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_scene_choice_03",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "Look at the scene and clues. Choose the best Chinese sentence.",
+          "data": {
+            "level": "text_sentence",
+            "image_hint": "Host asks guests not to be shy.",
+            "scene_en": "Host asks guests not to be shy.",
+            "clue_en": "Use: 别客气",
+            "options": [
+              "多点点儿，别客气。",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的箱子不见了。"
+            ],
+            "correct_index": 0,
+            "explain_en": "The sentence matches the restaurant scene."
+          },
+          "correct_answer": "多点点儿，别客气。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_scene_choice_04",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "Look at the scene and clues. Choose the best Chinese sentence.",
+          "data": {
+            "level": "text_sentence",
+            "image_hint": "A customer asks a server for tableware.",
+            "scene_en": "A customer asks a server for tableware.",
+            "clue_en": "Use: 筷子 / 勺子 / 碗",
+            "options": [
+              "请给我们拿一双筷子、一个勺子和一个碗。",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的箱子不见了。"
+            ],
+            "correct_index": 0,
+            "explain_en": "The sentence matches the restaurant scene."
+          },
+          "correct_answer": "请给我们拿一双筷子、一个勺子和一个碗。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_scene_choice_05",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "Look at the scene and clues. Choose the best Chinese sentence.",
+          "data": {
+            "level": "transfer_basic",
+            "image_hint": "A server answers the request.",
+            "scene_en": "A server answers the request.",
+            "clue_en": "Use: 马上",
+            "options": [
+              "请等一下，我马上拿去。",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的箱子不见了。"
+            ],
+            "correct_index": 0,
+            "explain_en": "The sentence matches the restaurant scene."
+          },
+          "correct_answer": "请等一下，我马上拿去。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_scene_choice_06",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "Look at the scene and clues. Choose the best Chinese sentence.",
+          "data": {
+            "level": "transfer_basic",
+            "image_hint": "Friends taste the dishes.",
+            "scene_en": "Friends taste the dishes.",
+            "clue_en": "Use: 尝尝",
+            "options": [
+              "你们尝尝，看喜不喜欢这些菜。",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的箱子不见了。"
+            ],
+            "correct_index": 0,
+            "explain_en": "The sentence matches the restaurant scene."
+          },
+          "correct_answer": "你们尝尝，看喜不喜欢这些菜。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_scene_choice_07",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "Look at the scene and clues. Choose the best Chinese sentence.",
+          "data": {
+            "level": "transfer_basic",
+            "image_hint": "All dishes taste good.",
+            "scene_en": "All dishes taste good.",
+            "clue_en": "Use: 哪个 / 都",
+            "options": [
+              "哪个菜都好吃。",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的箱子不见了。"
+            ],
+            "correct_index": 0,
+            "explain_en": "The sentence matches the restaurant scene."
+          },
+          "correct_answer": "哪个菜都好吃。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_scene_choice_08",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "Look at the scene and clues. Choose the best Chinese sentence.",
+          "data": {
+            "level": "transfer_basic",
+            "image_hint": "Someone wants to keep a menu for next time.",
+            "scene_en": "Someone wants to keep a menu for next time.",
+            "clue_en": "Use: 这张菜单",
+            "options": [
+              "你可以拿走这张菜单。",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的箱子不见了。"
+            ],
+            "correct_index": 0,
+            "explain_en": "The sentence matches the restaurant scene."
+          },
+          "correct_answer": "你可以拿走这张菜单。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_scene_choice_09",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "Look at the scene and clues. Choose the best Chinese sentence.",
+          "data": {
+            "level": "transfer_intermediate",
+            "image_hint": "A phone shows delivery options.",
+            "scene_en": "A phone shows delivery options.",
+            "clue_en": "Use: 外卖",
+            "options": [
+              "现在很多饭馆都能送外卖。",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的箱子不见了。"
+            ],
+            "correct_index": 0,
+            "explain_en": "The sentence matches the restaurant scene."
+          },
+          "correct_answer": "现在很多饭馆都能送外卖。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_scene_choice_10",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "Look at the scene and clues. Choose the best Chinese sentence.",
+          "data": {
+            "level": "transfer_intermediate",
+            "image_hint": "Student says delivery is easy.",
+            "scene_en": "Student says delivery is easy.",
+            "clue_en": "Use: 方便",
+            "options": [
+              "点外卖真方便。",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的箱子不见了。"
+            ],
+            "correct_index": 0,
+            "explain_en": "The sentence matches the restaurant scene."
+          },
+          "correct_answer": "点外卖真方便。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        }
+      ],
+      "v5_vocab_fill": [
+        {
+          "id": "hsk3_l02_fill_group_01",
+          "type": "vocab_fill_group",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "HSK-style fill-in: choose from the word bank for each sentence.",
+          "data": {
+            "wordBank": [
+              "菜单",
+              "饮料",
+              "客气",
+              "饿",
+              "渴"
+            ],
+            "wordBank_pinyin": [
+              "càidān",
+              "yǐnliào",
+              "kèqi",
+              "è",
+              "kě"
+            ],
+            "sentences": [
+              {
+                "sentence": "你们看看____，想吃什么？",
+                "sentence_pinyin": "",
+                "answer": "菜单"
+              },
+              {
+                "sentence": "你想喝什么____？",
+                "sentence_pinyin": "",
+                "answer": "饮料"
+              },
+              {
+                "sentence": "多点点儿，别____。",
+                "sentence_pinyin": "",
+                "answer": "客气"
+              },
+              {
+                "sentence": "我现在很____，想吃饭。",
+                "sentence_pinyin": "",
+                "answer": "饿"
+              },
+              {
+                "sentence": "我有点儿____，想喝茶。",
+                "sentence_pinyin": "",
+                "answer": "渴"
+              }
+            ]
+          },
+          "correct_answer": "1. 菜单；2. 饮料；3. 客气；4. 饿；5. 渴",
+          "acceptable_answers": [
+            "1. 菜单；2. 饮料；3. 客气；4. 饿；5. 渴"
+          ],
+          "targetIds": [
+            "v_hsk3_l02_01",
+            "v_hsk3_l02_06",
+            "v_hsk3_l02_05",
+            "v_hsk3_l02_03",
+            "v_hsk3_l02_04"
+          ]
+        },
+        {
+          "id": "hsk3_l02_fill_group_02",
+          "type": "vocab_fill_group",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "HSK-style fill-in: choose from the word bank for each sentence.",
+          "data": {
+            "wordBank": [
+              "筷子",
+              "勺子",
+              "碗",
+              "马上",
+              "热情"
+            ],
+            "wordBank_pinyin": [
+              "kuàizi",
+              "sháozi",
+              "wǎn",
+              "mǎshàng",
+              "rèqíng"
+            ],
+            "sentences": [
+              {
+                "sentence": "请给我拿一双____。",
+                "sentence_pinyin": "",
+                "answer": "筷子"
+              },
+              {
+                "sentence": "我想要一个____。",
+                "sentence_pinyin": "",
+                "answer": "勺子"
+              },
+              {
+                "sentence": "桌子上有一个____。",
+                "sentence_pinyin": "",
+                "answer": "碗"
+              },
+              {
+                "sentence": "请等一下，我____来。",
+                "sentence_pinyin": "",
+                "answer": "马上"
+              },
+              {
+                "sentence": "这家饭馆的服务很____。",
+                "sentence_pinyin": "",
+                "answer": "热情"
+              }
+            ]
+          },
+          "correct_answer": "1. 筷子；2. 勺子；3. 碗；4. 马上；5. 热情",
+          "acceptable_answers": [
+            "1. 筷子；2. 勺子；3. 碗；4. 马上；5. 热情"
+          ],
+          "targetIds": [
+            "v_hsk3_l02_11",
+            "v_hsk3_l02_12",
+            "v_hsk3_l02_13",
+            "v_hsk3_l02_14",
+            "v_hsk3_l02_15"
+          ]
+        },
+        {
+          "id": "hsk3_l02_fill_group_03",
+          "type": "vocab_fill_group",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "HSK-style fill-in: choose from the word bank for each sentence.",
+          "data": {
+            "wordBank": [
+              "不用",
+              "选",
+              "外卖",
+              "方便",
+              "简单"
+            ],
+            "wordBank_pinyin": [
+              "búyòng",
+              "xuǎn",
+              "wàimài",
+              "fāngbiàn",
+              "jiǎndān"
+            ],
+            "sentences": [
+              {
+                "sentence": "____拿菜单，手机上能看到。",
+                "sentence_pinyin": "",
+                "answer": "不用"
+              },
+              {
+                "sentence": "你喜欢哪个就____哪个。",
+                "sentence_pinyin": "",
+                "answer": "选"
+              },
+              {
+                "sentence": "今天太忙了，我想点____。",
+                "sentence_pinyin": "",
+                "answer": "外卖"
+              },
+              {
+                "sentence": "手机点菜很____。",
+                "sentence_pinyin": "",
+                "answer": "方便"
+              },
+              {
+                "sentence": "妈妈做了几个____的菜。",
+                "sentence_pinyin": "",
+                "answer": "简单"
+              }
+            ]
+          },
+          "correct_answer": "1. 不用；2. 选；3. 外卖；4. 方便；5. 简单",
+          "acceptable_answers": [
+            "1. 不用；2. 选；3. 外卖；4. 方便；5. 简单"
+          ],
+          "targetIds": [
+            "v_hsk3_l02_21",
+            "v_hsk3_l02_22",
+            "v_hsk3_l02_23",
+            "v_hsk3_l02_24",
+            "v_hsk3_l02_28"
+          ]
+        }
+      ],
+      "v7_word_match": [
+        {
+          "id": "hsk3_l02_qa_match_01",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "Match each question with the best answer. Round 1.",
+          "data": {
+            "pairs": [
+              {
+                "left": "你们想吃什么？",
+                "left_pinyin": "",
+                "right": "我想吃饺子。",
+                "right_pinyin": ""
+              },
+              {
+                "left": "你喝什么饮料？",
+                "left_pinyin": "",
+                "right": "我喝绿茶。",
+                "right_pinyin": ""
+              },
+              {
+                "left": "你现在怎么样？",
+                "left_pinyin": "",
+                "right": "我又饿又渴。",
+                "right_pinyin": ""
+              },
+              {
+                "left": "可以多点点儿吗？",
+                "left_pinyin": "",
+                "right": "可以，别客气。",
+                "right_pinyin": ""
+              },
+              {
+                "left": "好久没吃什么了？",
+                "left_pinyin": "",
+                "right": "好久没吃饺子了。",
+                "right_pinyin": ""
+              }
+            ],
+            "order": [
+              2,
+              4,
+              1,
+              3,
+              0
+            ]
+          },
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_qa_match_02",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "Match each question with the best answer. Round 2.",
+          "data": {
+            "pairs": [
+              {
+                "left": "请给我们拿什么？",
+                "left_pinyin": "",
+                "right": "一双筷子、一个勺子和一个碗。",
+                "right_pinyin": ""
+              },
+              {
+                "left": "服务员什么时候拿？",
+                "left_pinyin": "",
+                "right": "他马上拿去。",
+                "right_pinyin": ""
+              },
+              {
+                "left": "这家饭馆的服务怎么样？",
+                "left_pinyin": "",
+                "right": "服务很热情。",
+                "right_pinyin": ""
+              },
+              {
+                "left": "这些菜怎么样？",
+                "left_pinyin": "",
+                "right": "哪个菜都好吃。",
+                "right_pinyin": ""
+              },
+              {
+                "left": "为什么送水果？",
+                "left_pinyin": "",
+                "right": "因为王一雪经常来。",
+                "right_pinyin": ""
+              }
+            ],
+            "order": [
+              2,
+              4,
+              1,
+              3,
+              0
+            ]
+          },
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_qa_match_03",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_cn": "",
+          "prompt_en": "Match each question with the best answer. Round 3.",
+          "data": {
+            "pairs": [
+              {
+                "left": "菜单在哪里能看到？",
+                "left_pinyin": "",
+                "right": "手机上就能看到。",
+                "right_pinyin": ""
+              },
+              {
+                "left": "他们家能送什么？",
+                "left_pinyin": "",
+                "right": "能送外卖。",
+                "right_pinyin": ""
+              },
+              {
+                "left": "想吃什么怎么办？",
+                "left_pinyin": "",
+                "right": "想吃什么就点什么。",
+                "right_pinyin": ""
+              },
+              {
+                "left": "考试前李文常吃什么？",
+                "left_pinyin": "",
+                "right": "方便面。",
+                "right_pinyin": ""
+              },
+              {
+                "left": "李文觉得什么最好吃？",
+                "left_pinyin": "",
+                "right": "妈妈做的饭最好吃。",
+                "right_pinyin": ""
+              }
+            ],
+            "order": [
+              2,
+              4,
+              1,
+              3,
+              0
+            ]
+          },
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        }
+      ],
+      "g1_ordering": [
+        {
+          "id": "hsk3_l02_order_01",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "data": {
+            "chunks": [
+              "我",
+              "现在",
+              "又饿",
+              "又渴"
+            ],
+            "chunks_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          "correct_answer": "我现在又饿又渴。",
+          "acceptable_answers": [
+            "我现在又饿又渴。"
+          ],
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_order_02",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "data": {
+            "chunks": [
+              "请",
+              "给我们",
+              "拿",
+              "一双筷子"
+            ],
+            "chunks_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          "correct_answer": "请给我们拿一双筷子。",
+          "acceptable_answers": [
+            "请给我们拿一双筷子。"
+          ],
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_order_03",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "data": {
+            "chunks": [
+              "哪个菜",
+              "都",
+              "很好吃"
+            ],
+            "chunks_pinyin": [
+              "",
+              "",
+              ""
+            ]
+          },
+          "correct_answer": "哪个菜都很好吃。",
+          "acceptable_answers": [
+            "哪个菜都很好吃。"
+          ],
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_order_04",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "data": {
+            "chunks": [
+              "不用",
+              "拿菜单",
+              "手机上",
+              "能看到"
+            ],
+            "chunks_pinyin": [
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          "correct_answer": "不用拿菜单手机上能看到。",
+          "acceptable_answers": [
+            "不用拿菜单手机上能看到。"
+          ],
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_order_05",
+          "type": "ordering",
+          "stage": "in_class",
+          "prompt_cn": "连词成句。",
+          "data": {
+            "chunks": [
+              "你",
+              "想吃什么",
+              "就点什么"
+            ],
+            "chunks_pinyin": [
+              "",
+              "",
+              ""
+            ]
+          },
+          "correct_answer": "你想吃什么就点什么。",
+          "acceptable_answers": [
+            "你想吃什么就点什么。"
+          ],
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        }
+      ],
+      "v6_description_guess": [
+        {
+          "id": "hsk3_l02_desc_01",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "level": "生词",
+            "description": "你们看看____，想吃点儿什么？",
+            "description_en": "Choose the word that fits this clue.",
+            "options": [
+              "菜单",
+              "又",
+              "饿",
+              "渴"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0
+          },
+          "correct_answer": "菜单",
+          "targetIds": [
+            "v_hsk3_l02_01"
+          ]
+        },
+        {
+          "id": "hsk3_l02_desc_02",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "level": "生词",
+            "description": "我有点儿____，想吃饭。",
+            "description_en": "Choose the word that fits this clue.",
+            "options": [
+              "饿",
+              "又",
+              "渴",
+              "客气"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0
+          },
+          "correct_answer": "饿",
+          "targetIds": [
+            "v_hsk3_l02_03"
+          ]
+        },
+        {
+          "id": "hsk3_l02_desc_03",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "level": "生词",
+            "description": "你____不渴？喝点儿茶吧。",
+            "description_en": "Choose the word that fits this clue.",
+            "options": [
+              "渴",
+              "饿",
+              "客气",
+              "饮料"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0
+          },
+          "correct_answer": "渴",
+          "targetIds": [
+            "v_hsk3_l02_04"
+          ]
+        },
+        {
+          "id": "hsk3_l02_desc_04",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "level": "生词",
+            "description": "多点点儿，别____。",
+            "description_en": "Choose the word that fits this clue.",
+            "options": [
+              "客气",
+              "渴",
+              "饮料",
+              "好久"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0
+          },
+          "correct_answer": "客气",
+          "targetIds": [
+            "v_hsk3_l02_05"
+          ]
+        },
+        {
+          "id": "hsk3_l02_desc_05",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "level": "短语",
+            "description": "你想喝什么____？",
+            "description_en": "Choose the word that fits this clue.",
+            "options": [
+              "饮料",
+              "客气",
+              "好久",
+              "服务"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0
+          },
+          "correct_answer": "饮料",
+          "targetIds": [
+            "v_hsk3_l02_06"
+          ]
+        },
+        {
+          "id": "hsk3_l02_desc_06",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "level": "短语",
+            "description": "中国人常用____吃饭。",
+            "description_en": "Choose the word that fits this clue.",
+            "options": [
+              "筷子",
+              "饮料",
+              "好久",
+              "服务"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0
+          },
+          "correct_answer": "筷子",
+          "targetIds": [
+            "v_hsk3_l02_11"
+          ]
+        },
+        {
+          "id": "hsk3_l02_desc_07",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "level": "短语",
+            "description": "请给我一个____。",
+            "description_en": "Choose the word that fits this clue.",
+            "options": [
+              "勺子",
+              "好久",
+              "服务",
+              "员"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0
+          },
+          "correct_answer": "勺子",
+          "targetIds": [
+            "v_hsk3_l02_12"
+          ]
+        },
+        {
+          "id": "hsk3_l02_desc_08",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "level": "短语",
+            "description": "桌子上有一个____。",
+            "description_en": "Choose the word that fits this clue.",
+            "options": [
+              "碗",
+              "服务",
+              "员",
+              "双"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0
+          },
+          "correct_answer": "碗",
+          "targetIds": [
+            "v_hsk3_l02_13"
+          ]
+        },
+        {
+          "id": "hsk3_l02_desc_09",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "level": "短语",
+            "description": "很多饭馆都能送____。",
+            "description_en": "Choose the word that fits this clue.",
+            "options": [
+              "外卖",
+              "员",
+              "双",
+              "筷子"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0
+          },
+          "correct_answer": "外卖",
+          "targetIds": [
+            "v_hsk3_l02_23"
+          ]
+        },
+        {
+          "id": "hsk3_l02_desc_10",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "level": "短语",
+            "description": "点外卖很____。",
+            "description_en": "Choose the word that fits this clue.",
+            "options": [
+              "方便",
+              "双",
+              "筷子",
+              "勺子"
+            ],
+            "options_pinyin": [],
+            "correct_index": 0
+          },
+          "correct_answer": "方便",
+          "targetIds": [
+            "v_hsk3_l02_24"
+          ]
+        }
+      ],
+      "v2_say_guess": [
+        {
+          "id": "hsk3_l02_say_guess_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "你说我猜。",
+          "prompt_en": "Describe it in Chinese. Let others guess.",
+          "data": {
+            "level": "生词",
+            "target": "菜单",
+            "target_pinyin": "càidān",
+            "instructions": "Do not say the target word directly. Use simple Chinese clues.",
+            "clues": [
+              "你们看看菜单，想吃点儿什么？",
+              "这家饭馆的菜单在手机上。"
+            ],
+            "scaffold": {
+              "words": [
+                "饭馆",
+                "吃饭",
+                "手机",
+                "朋友"
+              ],
+              "phrases": [
+                "看看菜单",
+                "拿菜单",
+                "这张菜单"
+              ],
+              "frames": [
+                "这是____。",
+                "我们在____用它。",
+                "我觉得它很____。"
+              ]
+            },
+            "answerPlaceholder": "写你的中文提示。"
+          },
+          "correct_answer": "写你的中文提示。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_01"
+          ]
+        },
+        {
+          "id": "hsk3_l02_say_guess_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "你说我猜。",
+          "prompt_en": "Describe it in Chinese. Let others guess.",
+          "data": {
+            "level": "生词",
+            "target": "筷子",
+            "target_pinyin": "kuàizi",
+            "instructions": "Do not say the target word directly. Use simple Chinese clues.",
+            "clues": [
+              "中国人常用筷子吃饭。",
+              "我还不太会用筷子。"
+            ],
+            "scaffold": {
+              "words": [
+                "饭馆",
+                "吃饭",
+                "手机",
+                "朋友"
+              ],
+              "phrases": [
+                "拿筷子",
+                "用筷子",
+                "一双筷子"
+              ],
+              "frames": [
+                "这是____。",
+                "我们在____用它。",
+                "我觉得它很____。"
+              ]
+            },
+            "answerPlaceholder": "写你的中文提示。"
+          },
+          "correct_answer": "写你的中文提示。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_11"
+          ]
+        },
+        {
+          "id": "hsk3_l02_say_guess_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "你说我猜。",
+          "prompt_en": "Describe it in Chinese. Let others guess.",
+          "data": {
+            "level": "短语",
+            "target": "外卖",
+            "target_pinyin": "wàimài",
+            "instructions": "Do not say the target word directly. Use simple Chinese clues.",
+            "clues": [
+              "很多饭馆都能送外卖。",
+              "今天太忙了，我想点外卖。"
+            ],
+            "scaffold": {
+              "words": [
+                "饭馆",
+                "吃饭",
+                "手机",
+                "朋友"
+              ],
+              "phrases": [
+                "送外卖",
+                "点外卖",
+                "外卖很方便"
+              ],
+              "frames": [
+                "这是____。",
+                "我们在____用它。",
+                "我觉得它很____。"
+              ]
+            },
+            "answerPlaceholder": "写你的中文提示。"
+          },
+          "correct_answer": "写你的中文提示。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_23"
+          ]
+        },
+        {
+          "id": "hsk3_l02_say_guess_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "你说我猜。",
+          "prompt_en": "Describe it in Chinese. Let others guess.",
+          "data": {
+            "level": "短语",
+            "target": "方便面",
+            "target_pinyin": "fāngbiànmiàn",
+            "instructions": "Do not say the target word directly. Use simple Chinese clues.",
+            "clues": [
+              "考试前我常吃方便面。",
+              "方便面很方便，但是不能天天吃。"
+            ],
+            "scaffold": {
+              "words": [
+                "饭馆",
+                "吃饭",
+                "手机",
+                "朋友"
+              ],
+              "phrases": [
+                "吃方便面",
+                "一包方便面",
+                "只吃方便面"
+              ],
+              "frames": [
+                "这是____。",
+                "我们在____用它。",
+                "我觉得它很____。"
+              ]
+            },
+            "answerPlaceholder": "写你的中文提示。"
+          },
+          "correct_answer": "写你的中文提示。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_27"
+          ]
+        },
+        {
+          "id": "hsk3_l02_say_guess_05",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "你说我猜。",
+          "prompt_en": "Describe it in Chinese. Let others guess.",
+          "data": {
+            "level": "短语",
+            "target": "热情",
+            "target_pinyin": "rèqíng",
+            "instructions": "Do not say the target word directly. Use simple Chinese clues.",
+            "clues": [
+              "这里的服务员很热情。",
+              "我的中国朋友很热情。"
+            ],
+            "scaffold": {
+              "words": [
+                "饭馆",
+                "吃饭",
+                "手机",
+                "朋友"
+              ],
+              "phrases": [
+                "服务热情",
+                "很热情",
+                "热情地介绍"
+              ],
+              "frames": [
+                "这是____。",
+                "我们在____用它。",
+                "我觉得它很____。"
+              ]
+            },
+            "answerPlaceholder": "写你的中文提示。"
+          },
+          "correct_answer": "写你的中文提示。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_15"
+          ]
+        }
+      ],
+      "v3_blind_box": [
+        {
+          "id": "hsk3_l02_blind_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "盲盒造句。",
+          "prompt_en": "Use the words to make one natural Chinese sentence.",
+          "data": {
+            "level": "2词",
+            "words": [
+              "菜单",
+              "点菜"
+            ],
+            "instructions": "Use the opened words in one natural Chinese sentence.",
+            "answerPlaceholder": "写一个中文句子。"
+          },
+          "correct_answer": "写一个中文句子。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_01"
+          ]
+        },
+        {
+          "id": "hsk3_l02_blind_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "盲盒造句。",
+          "prompt_en": "Use the words to make one natural Chinese sentence.",
+          "data": {
+            "level": "2词",
+            "words": [
+              "又",
+              "渴"
+            ],
+            "instructions": "Use the opened words in one natural Chinese sentence.",
+            "answerPlaceholder": "写一个中文句子。"
+          },
+          "correct_answer": "写一个中文句子。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_02",
+            "v_hsk3_l02_04"
+          ]
+        },
+        {
+          "id": "hsk3_l02_blind_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "盲盒造句。",
+          "prompt_en": "Use the words to make one natural Chinese sentence.",
+          "data": {
+            "level": "2词",
+            "words": [
+              "服务员",
+              "筷子"
+            ],
+            "instructions": "Use the opened words in one natural Chinese sentence.",
+            "answerPlaceholder": "写一个中文句子。"
+          },
+          "correct_answer": "写一个中文句子。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_11"
+          ]
+        },
+        {
+          "id": "hsk3_l02_blind_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "盲盒造句。",
+          "prompt_en": "Use the words to make one natural Chinese sentence.",
+          "data": {
+            "level": "2词",
+            "words": [
+              "外卖",
+              "方便"
+            ],
+            "instructions": "Use the opened words in one natural Chinese sentence.",
+            "answerPlaceholder": "写一个中文句子。"
+          },
+          "correct_answer": "写一个中文句子。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_23",
+            "v_hsk3_l02_24"
+          ]
+        }
+      ],
+      "g2_picture_complete": [
+        {
+          "id": "hsk3_l02_pic_complete_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "看图完成句子。",
+          "prompt_en": "Look at the picture cue and complete the sentence.",
+          "data": {
+            "image_hint": "饭馆菜单",
+            "context": "饭馆菜单",
+            "sentenceFrame": "我先看____。",
+            "keywords": [
+              "菜单",
+              "点菜"
+            ],
+            "instructions": "Use the key word to complete the sentence.",
+            "answerPlaceholder": "我先看____。"
+          },
+          "correct_answer": "我先看____。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_01"
+          ]
+        },
+        {
+          "id": "hsk3_l02_pic_complete_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "看图完成句子。",
+          "prompt_en": "Look at the picture cue and complete the sentence.",
+          "data": {
+            "image_hint": "口渴的人",
+            "context": "口渴的人",
+            "sentenceFrame": "我有点儿____，想喝茶。",
+            "keywords": [
+              "渴"
+            ],
+            "instructions": "Use the key word to complete the sentence.",
+            "answerPlaceholder": "我有点儿____，想喝茶。"
+          },
+          "correct_answer": "我有点儿____，想喝茶。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_04"
+          ]
+        },
+        {
+          "id": "hsk3_l02_pic_complete_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "看图完成句子。",
+          "prompt_en": "Look at the picture cue and complete the sentence.",
+          "data": {
+            "image_hint": "餐桌餐具",
+            "context": "餐桌餐具",
+            "sentenceFrame": "请给我拿____。",
+            "keywords": [
+              "筷子",
+              "勺子",
+              "碗"
+            ],
+            "instructions": "Use the key word to complete the sentence.",
+            "answerPlaceholder": "请给我拿____。"
+          },
+          "correct_answer": "请给我拿____。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_11",
+            "v_hsk3_l02_12",
+            "v_hsk3_l02_13"
+          ]
+        },
+        {
+          "id": "hsk3_l02_pic_complete_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "看图完成句子。",
+          "prompt_en": "Look at the picture cue and complete the sentence.",
+          "data": {
+            "image_hint": "服务员走过来",
+            "context": "服务员走过来",
+            "sentenceFrame": "服务员____来。",
+            "keywords": [
+              "马上"
+            ],
+            "instructions": "Use the key word to complete the sentence.",
+            "answerPlaceholder": "服务员____来。"
+          },
+          "correct_answer": "服务员____来。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_14"
+          ]
+        },
+        {
+          "id": "hsk3_l02_pic_complete_05",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "看图完成句子。",
+          "prompt_en": "Look at the picture cue and complete the sentence.",
+          "data": {
+            "image_hint": "朋友尝菜",
+            "context": "朋友尝菜",
+            "sentenceFrame": "你____这个菜。",
+            "keywords": [
+              "尝尝"
+            ],
+            "instructions": "Use the key word to complete the sentence.",
+            "answerPlaceholder": "你____这个菜。"
+          },
+          "correct_answer": "你____这个菜。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": []
+        },
+        {
+          "id": "hsk3_l02_pic_complete_06",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "看图完成句子。",
+          "prompt_en": "Look at the picture cue and complete the sentence.",
+          "data": {
+            "image_hint": "手机点外卖",
+            "context": "手机点外卖",
+            "sentenceFrame": "我想点____。",
+            "keywords": [
+              "外卖"
+            ],
+            "instructions": "Use the key word to complete the sentence.",
+            "answerPlaceholder": "我想点____。"
+          },
+          "correct_answer": "我想点____。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_23"
+          ]
+        },
+        {
+          "id": "hsk3_l02_pic_complete_07",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "看图完成句子。",
+          "prompt_en": "Look at the picture cue and complete the sentence.",
+          "data": {
+            "image_hint": "考试前很忙",
+            "context": "考试前很忙",
+            "sentenceFrame": "我只吃____。",
+            "keywords": [
+              "方便面"
+            ],
+            "instructions": "Use the key word to complete the sentence.",
+            "answerPlaceholder": "我只吃____。"
+          },
+          "correct_answer": "我只吃____。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_27"
+          ]
+        },
+        {
+          "id": "hsk3_l02_pic_complete_08",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "看图完成句子。",
+          "prompt_en": "Look at the picture cue and complete the sentence.",
+          "data": {
+            "image_hint": "家常菜",
+            "context": "家常菜",
+            "sentenceFrame": "妈妈做了几个____的菜。",
+            "keywords": [
+              "简单"
+            ],
+            "instructions": "Use the key word to complete the sentence.",
+            "answerPlaceholder": "妈妈做了几个____的菜。"
+          },
+          "correct_answer": "妈妈做了几个____的菜。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "v_hsk3_l02_28"
+          ]
+        }
+      ],
+      "r3_independent_reading": [
+        {
+          "id": "hsk3_l02_reading_01",
+          "type": "choice",
+          "stage": "in_class",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read the short passage and choose the best answer.",
+          "data": {
+            "title": "点菜",
+            "passage": "马可和朋友去饭馆吃饭。他们先看菜单。马可又饿又渴，想吃米饭，也想喝茶。朋友说：你想吃什么就点什么，别客气。",
+            "question_cn": "马可为什么想点饭和茶？",
+            "question_en": "",
+            "options": [
+              "因为他又饿又渴。",
+              "因为他要去机场。",
+              "因为菜单不见了。",
+              "因为他不认识服务员。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "因为他又饿又渴。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_reading_02",
+          "type": "choice",
+          "stage": "in_class",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read the short passage and choose the best answer.",
+          "data": {
+            "title": "拿餐具",
+            "passage": "丽丽不会用筷子。她请服务员拿一个勺子和一个碗。服务员说马上拿来。",
+            "question_cn": "丽丽请服务员拿什么？",
+            "question_en": "",
+            "options": [
+              "一个勺子和一个碗。",
+              "因为他要去机场。",
+              "因为菜单不见了。",
+              "因为他不认识服务员。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "一个勺子和一个碗。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_reading_03",
+          "type": "choice",
+          "stage": "in_class",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read the short passage and choose the best answer.",
+          "data": {
+            "title": "好吃的菜",
+            "passage": "这家小饭馆不大，但是服务很热情。这里的菜又便宜又好吃，所以王一雪经常来。",
+            "question_cn": "王一雪为什么经常来？",
+            "question_en": "",
+            "options": [
+              "因为饭菜又便宜又好吃，服务也热情。",
+              "因为他要去机场。",
+              "因为菜单不见了。",
+              "因为他不认识服务员。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "因为饭菜又便宜又好吃，服务也热情。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_reading_04",
+          "type": "choice",
+          "stage": "in_class",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read the short passage and choose the best answer.",
+          "data": {
+            "title": "点外卖",
+            "passage": "小安今天很忙，不想出去吃饭。她在手机上选好了饭菜，让饭馆送外卖。她觉得这样很方便。",
+            "question_cn": "小安为什么点外卖？",
+            "question_en": "",
+            "options": [
+              "因为她很忙，不想出去吃饭。",
+              "因为他要去机场。",
+              "因为菜单不见了。",
+              "因为他不认识服务员。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "因为她很忙，不想出去吃饭。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_reading_05",
+          "type": "choice",
+          "stage": "in_class",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read the short passage and choose the best answer.",
+          "data": {
+            "title": "妈妈的饭",
+            "passage": "李文在国外很少自己做饭，考试前常常只吃方便面。回到中国以后，他每天吃妈妈做的饭，觉得非常高兴。",
+            "question_cn": "李文回国以后为什么高兴？",
+            "question_en": "",
+            "options": [
+              "因为他每天能吃到妈妈做的饭。",
+              "因为他要去机场。",
+              "因为菜单不见了。",
+              "因为他不认识服务员。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "因为他每天能吃到妈妈做的饭。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        }
+      ],
+      "r4_paragraph_fill": [
+        {
+          "id": "hsk3_l02_para_fill_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "段落填空。",
+          "prompt_en": "Choose 3 sentences from 6 options to complete the paragraph.",
+          "data": {
+            "title": "点菜",
+            "passageParts": [
+              "今天我和朋友去饭馆吃饭。",
+              "____1____",
+              "服务员很热情。",
+              "____2____",
+              "吃完以后，我们觉得很方便。",
+              "____3____"
+            ],
+            "options": [
+              "我们先看菜单。",
+              "我请服务员拿筷子和碗。",
+              "下次我还想来。",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的护照不见了。"
+            ],
+            "answers": [
+              0,
+              1,
+              2
+            ],
+            "instructions": "Write the option numbers for blanks 1-3.",
+            "answerPlaceholder": "1-__ 2-__ 3-__"
+          },
+          "correct_answer": "1-__ 2-__ 3-__",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_para_fill_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "段落填空。",
+          "prompt_en": "Choose 3 sentences from 6 options to complete the paragraph.",
+          "data": {
+            "title": "拿餐具",
+            "passageParts": [
+              "今天我和朋友去饭馆吃饭。",
+              "____1____",
+              "服务员很热情。",
+              "____2____",
+              "吃完以后，我们觉得很方便。",
+              "____3____"
+            ],
+            "options": [
+              "我们先看菜单。",
+              "我请服务员拿筷子和碗。",
+              "下次我还想来。",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的护照不见了。"
+            ],
+            "answers": [
+              0,
+              1,
+              2
+            ],
+            "instructions": "Write the option numbers for blanks 1-3.",
+            "answerPlaceholder": "1-__ 2-__ 3-__"
+          },
+          "correct_answer": "1-__ 2-__ 3-__",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_para_fill_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "段落填空。",
+          "prompt_en": "Choose 3 sentences from 6 options to complete the paragraph.",
+          "data": {
+            "title": "外卖",
+            "passageParts": [
+              "今天我和朋友去饭馆吃饭。",
+              "____1____",
+              "服务员很热情。",
+              "____2____",
+              "吃完以后，我们觉得很方便。",
+              "____3____"
+            ],
+            "options": [
+              "我们先看菜单。",
+              "我请服务员拿筷子和碗。",
+              "下次我还想来。",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的护照不见了。"
+            ],
+            "answers": [
+              0,
+              1,
+              2
+            ],
+            "instructions": "Write the option numbers for blanks 1-3.",
+            "answerPlaceholder": "1-__ 2-__ 3-__"
+          },
+          "correct_answer": "1-__ 2-__ 3-__",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_para_fill_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "段落填空。",
+          "prompt_en": "Choose 3 sentences from 6 options to complete the paragraph.",
+          "data": {
+            "title": "考试前",
+            "passageParts": [
+              "今天我和朋友去饭馆吃饭。",
+              "____1____",
+              "服务员很热情。",
+              "____2____",
+              "吃完以后，我们觉得很方便。",
+              "____3____"
+            ],
+            "options": [
+              "我们先看菜单。",
+              "我请服务员拿筷子和碗。",
+              "下次我还想来。",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的护照不见了。"
+            ],
+            "answers": [
+              0,
+              1,
+              2
+            ],
+            "instructions": "Write the option numbers for blanks 1-3.",
+            "answerPlaceholder": "1-__ 2-__ 3-__"
+          },
+          "correct_answer": "1-__ 2-__ 3-__",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_para_fill_05",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "段落填空。",
+          "prompt_en": "Choose 3 sentences from 6 options to complete the paragraph.",
+          "data": {
+            "title": "家常饭",
+            "passageParts": [
+              "今天我和朋友去饭馆吃饭。",
+              "____1____",
+              "服务员很热情。",
+              "____2____",
+              "吃完以后，我们觉得很方便。",
+              "____3____"
+            ],
+            "options": [
+              "我们先看菜单。",
+              "我请服务员拿筷子和碗。",
+              "下次我还想来。",
+              "我去机场接朋友。",
+              "这个人看起来很年轻。",
+              "我的护照不见了。"
+            ],
+            "answers": [
+              0,
+              1,
+              2
+            ],
+            "instructions": "Write the option numbers for blanks 1-3.",
+            "answerPlaceholder": "1-__ 2-__ 3-__"
+          },
+          "correct_answer": "1-__ 2-__ 3-__",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        }
+      ],
+      "t3_chain_sentence": [
+        {
+          "id": "hsk3_l02_chain_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "接龙造句。",
+          "prompt_en": "Continue the sentence chain and make the meaning grow.",
+          "data": {
+            "title": "从“今天”开始",
+            "starter": "今天",
+            "steps": [
+              "S1: 今天",
+              "S2: 今天我想吃饭",
+              "S3: 今天我想和朋友去饭馆吃饭"
+            ],
+            "keywords": [
+              "菜单",
+              "点菜",
+              "外卖",
+              "方便"
+            ],
+            "instructions": "Each student adds one short part. Keep the sentence natural.",
+            "answerPlaceholder": "继续接一句中文。"
+          },
+          "correct_answer": "继续接一句中文。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_chain_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "接龙造句。",
+          "prompt_en": "Continue the sentence chain and make the meaning grow.",
+          "data": {
+            "title": "从“饭馆”开始",
+            "starter": "饭馆",
+            "steps": [
+              "S1: 饭馆",
+              "S2: 饭馆我想吃饭",
+              "S3: 饭馆我想和朋友去饭馆吃饭"
+            ],
+            "keywords": [
+              "菜单",
+              "点菜",
+              "外卖",
+              "方便"
+            ],
+            "instructions": "Each student adds one short part. Keep the sentence natural.",
+            "answerPlaceholder": "继续接一句中文。"
+          },
+          "correct_answer": "继续接一句中文。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_chain_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "接龙造句。",
+          "prompt_en": "Continue the sentence chain and make the meaning grow.",
+          "data": {
+            "title": "从“菜单”开始",
+            "starter": "菜单",
+            "steps": [
+              "S1: 菜单",
+              "S2: 菜单我想吃饭",
+              "S3: 菜单我想和朋友去饭馆吃饭"
+            ],
+            "keywords": [
+              "菜单",
+              "点菜",
+              "外卖",
+              "方便"
+            ],
+            "instructions": "Each student adds one short part. Keep the sentence natural.",
+            "answerPlaceholder": "继续接一句中文。"
+          },
+          "correct_answer": "继续接一句中文。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_chain_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "接龙造句。",
+          "prompt_en": "Continue the sentence chain and make the meaning grow.",
+          "data": {
+            "title": "从“手机”开始",
+            "starter": "手机",
+            "steps": [
+              "S1: 手机",
+              "S2: 手机我想吃饭",
+              "S3: 手机我想和朋友去饭馆吃饭"
+            ],
+            "keywords": [
+              "菜单",
+              "点菜",
+              "外卖",
+              "方便"
+            ],
+            "instructions": "Each student adds one short part. Keep the sentence natural.",
+            "answerPlaceholder": "继续接一句中文。"
+          },
+          "correct_answer": "继续接一句中文。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_chain_05",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "接龙造句。",
+          "prompt_en": "Continue the sentence chain and make the meaning grow.",
+          "data": {
+            "title": "从“妈妈”开始",
+            "starter": "妈妈",
+            "steps": [
+              "S1: 妈妈",
+              "S2: 妈妈我想吃饭",
+              "S3: 妈妈我想和朋友去饭馆吃饭"
+            ],
+            "keywords": [
+              "菜单",
+              "点菜",
+              "外卖",
+              "方便"
+            ],
+            "instructions": "Each student adds one short part. Keep the sentence natural.",
+            "answerPlaceholder": "继续接一句中文。"
+          },
+          "correct_answer": "继续接一句中文。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        }
+      ],
+      "t2_task_card": [
+        {
+          "id": "hsk3_l02_task_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "任务卡。",
+          "prompt_en": "Complete a real-life task with your group.",
+          "data": {
+            "title": "安排一次聚餐",
+            "role": "You organize a small dinner for classmates.",
+            "task": "You organize a small dinner for classmates.",
+            "steps": [
+              "Ask what each person wants to eat.",
+              "Choose a restaurant.",
+              "Order food and drinks."
+            ],
+            "keywords": [
+              "菜单",
+              "饮料",
+              "筷子",
+              "外卖",
+              "方便"
+            ],
+            "output": "Say your plan in 3-4 Chinese sentences.",
+            "answerPlaceholder": "我们先……然后……最后……"
+          },
+          "correct_answer": "我们先……然后……最后……",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_task_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "任务卡。",
+          "prompt_en": "Complete a real-life task with your group.",
+          "data": {
+            "title": "介绍一个饭馆",
+            "role": "You introduce a restaurant you like.",
+            "task": "You introduce a restaurant you like.",
+            "steps": [
+              "Say where it is.",
+              "Describe the food and service.",
+              "Recommend one dish."
+            ],
+            "keywords": [
+              "菜单",
+              "饮料",
+              "筷子",
+              "外卖",
+              "方便"
+            ],
+            "output": "Say your plan in 3-4 Chinese sentences.",
+            "answerPlaceholder": "我们先……然后……最后……"
+          },
+          "correct_answer": "我们先……然后……最后……",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_task_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "任务卡。",
+          "prompt_en": "Complete a real-life task with your group.",
+          "data": {
+            "title": "帮朋友点外卖",
+            "role": "Your friend is busy and wants takeout.",
+            "task": "Your friend is busy and wants takeout.",
+            "steps": [
+              "Ask what they want.",
+              "Choose on the phone.",
+              "Confirm the address."
+            ],
+            "keywords": [
+              "菜单",
+              "饮料",
+              "筷子",
+              "外卖",
+              "方便"
+            ],
+            "output": "Say your plan in 3-4 Chinese sentences.",
+            "answerPlaceholder": "我们先……然后……最后……"
+          },
+          "correct_answer": "我们先……然后……最后……",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_task_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "任务卡。",
+          "prompt_en": "Complete a real-life task with your group.",
+          "data": {
+            "title": "比较两种吃饭方式",
+            "role": "Compare eating out and eating at home.",
+            "task": "Compare eating out and eating at home.",
+            "steps": [
+              "Say what is convenient.",
+              "Say what is healthy.",
+              "Say what you prefer."
+            ],
+            "keywords": [
+              "菜单",
+              "饮料",
+              "筷子",
+              "外卖",
+              "方便"
+            ],
+            "output": "Say your plan in 3-4 Chinese sentences.",
+            "answerPlaceholder": "我们先……然后……最后……"
+          },
+          "correct_answer": "我们先……然后……最后……",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_task_05",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "任务卡。",
+          "prompt_en": "Complete a real-life task with your group.",
+          "data": {
+            "title": "准备绘本口语",
+            "role": "Prepare a picture-book oral story about food.",
+            "task": "Prepare a picture-book oral story about food.",
+            "steps": [
+              "Choose 4 pictures.",
+              "Use 5 lesson words.",
+              "Tell a 1-minute story."
+            ],
+            "keywords": [
+              "菜单",
+              "饮料",
+              "筷子",
+              "外卖",
+              "方便"
+            ],
+            "output": "Say your plan in 3-4 Chinese sentences.",
+            "answerPlaceholder": "我们先……然后……最后……"
+          },
+          "correct_answer": "我们先……然后……最后……",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        }
+      ],
+      "r2_passage_choice": [
+        {
+          "id": "hsk3_l02_textq_01",
+          "type": "passage_reading",
+          "stage": "in_class",
+          "prompt_cn": "阅读小篇章，回答问题。",
+          "prompt_en": "Read the short passage, then open each question to check the answer.",
+          "data": {
+            "title": "点菜",
+            "passage": "马可和朋友去饭馆吃饭。他们先看菜单。马可又饿又渴，想吃米饭，也想喝茶。朋友说：你想吃什么就点什么，别客气。",
+            "passage_pinyin": "",
+            "questions": [
+              {
+                "question_cn": "马可为什么想点饭和茶？",
+                "answer": "因为他又饿又渴。"
+              },
+              {
+                "question_cn": "这个小篇章和本课哪个话题有关？",
+                "answer": "和饭馆点菜、服务、外卖或饮食习惯有关。"
+              }
+            ]
+          },
+          "correct_answer": "因为他又饿又渴。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_textq_02",
+          "type": "passage_reading",
+          "stage": "in_class",
+          "prompt_cn": "阅读小篇章，回答问题。",
+          "prompt_en": "Read the short passage, then open each question to check the answer.",
+          "data": {
+            "title": "拿餐具",
+            "passage": "丽丽不会用筷子。她请服务员拿一个勺子和一个碗。服务员说马上拿来。",
+            "passage_pinyin": "",
+            "questions": [
+              {
+                "question_cn": "丽丽请服务员拿什么？",
+                "answer": "一个勺子和一个碗。"
+              },
+              {
+                "question_cn": "这个小篇章和本课哪个话题有关？",
+                "answer": "和饭馆点菜、服务、外卖或饮食习惯有关。"
+              }
+            ]
+          },
+          "correct_answer": "一个勺子和一个碗。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_textq_03",
+          "type": "passage_reading",
+          "stage": "in_class",
+          "prompt_cn": "阅读小篇章，回答问题。",
+          "prompt_en": "Read the short passage, then open each question to check the answer.",
+          "data": {
+            "title": "好吃的菜",
+            "passage": "这家小饭馆不大，但是服务很热情。这里的菜又便宜又好吃，所以王一雪经常来。",
+            "passage_pinyin": "",
+            "questions": [
+              {
+                "question_cn": "王一雪为什么经常来？",
+                "answer": "因为饭菜又便宜又好吃，服务也热情。"
+              },
+              {
+                "question_cn": "这个小篇章和本课哪个话题有关？",
+                "answer": "和饭馆点菜、服务、外卖或饮食习惯有关。"
+              }
+            ]
+          },
+          "correct_answer": "因为饭菜又便宜又好吃，服务也热情。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        },
+        {
+          "id": "hsk3_l02_textq_04",
+          "type": "passage_reading",
+          "stage": "in_class",
+          "prompt_cn": "阅读小篇章，回答问题。",
+          "prompt_en": "Read the short passage, then open each question to check the answer.",
+          "data": {
+            "title": "点外卖",
+            "passage": "小安今天很忙，不想出去吃饭。她在手机上选好了饭菜，让饭馆送外卖。她觉得这样很方便。",
+            "passage_pinyin": "",
+            "questions": [
+              {
+                "question_cn": "小安为什么点外卖？",
+                "answer": "因为她很忙，不想出去吃饭。"
+              },
+              {
+                "question_cn": "这个小篇章和本课哪个话题有关？",
+                "answer": "和饭馆点菜、服务、外卖或饮食习惯有关。"
+              }
+            ]
+          },
+          "correct_answer": "因为她很忙，不想出去吃饭。",
+          "targetIds": [
+            "topic_restaurant"
+          ]
+        }
+      ],
+      "info_match": [
+        {
+          "id": "hsk3_l02_info_match_01",
+          "type": "info_match",
+          "stage": "in_class",
+          "prompt_cn": "信息匹配。",
+          "prompt_en": "Match people with what they need.",
+          "data": {
+            "people": [
+              "白家月",
+              "李文",
+              "王一雪",
+              "服务员"
+            ],
+            "clues": [
+              "想喝绿茶、吃饺子",
+              "说都可以",
+              "请大家别客气",
+              "马上拿餐具"
+            ],
+            "answer": [
+              "白家月-想喝绿茶、吃饺子",
+              "李文-说都可以",
+              "王一雪-请大家别客气",
+              "服务员-马上拿餐具"
+            ]
+          },
+          "correct_answer": "白家月-想喝绿茶、吃饺子；李文-说都可以；王一雪-请大家别客气；服务员-马上拿餐具"
+        }
+      ],
+      "textQa": [],
+      "pictureTalk": [],
+      "battleGames": {
+        "games": [
+          {
+            "id": "spy",
+            "title": "谁是卧底"
+          },
+          {
+            "id": "drum",
+            "title": "击鼓传花"
+          },
+          {
+            "id": "relay",
+            "title": "接龙挑战"
+          }
+        ]
+      },
+      "pk_question": []
+    }
+  },
+  "postClassHomework": {
+    "mode": "hsk3_session_tasks",
+    "instructions": {
+      "required": "完成本次课后的输出任务：词语成段、课文叙述体改写、绘本口语准备。",
+      "optional": "可以先写 3 句；能力较强的同学拓展到 5 句，并准备口语展示。",
+      "aiPolicy": "可以用工具查词，但最后必须改成自己能说出来的中文。"
+    },
+    "futureModules": {
+      "pictureBookShowcase": {
+        "status": "active_homework_design",
+        "placement": "post-class homework",
+        "purpose": "Students prepare a picture-book style oral presentation after class and present in class.",
+        "notes": "Use a small sequence of topic-related pictures, keywords, and an oral rehearsal prompt."
+      }
+    },
+    "sessions": {
+      "A": [
+        {
+          "id": "post_hsk3_l02_a_word_paragraph",
+          "type": "word_paragraph",
+          "prompt_cn": "词语成段：请从本次课中选 5 个词，写一小段话。先写 3 句，能多写的同学拓展到 5 句。",
+          "prompt_en": "Choose 5 words from this session and write a short paragraph.",
+          "answerPlaceholder": "可以用：菜单、饿、渴、客气、饮料。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "wordBank": [
+            "菜单",
+            "饿",
+            "渴",
+            "客气",
+            "饮料"
+          ],
+          "minSentences": 3,
+          "stretchSentences": 5
+        },
+        {
+          "id": "post_hsk3_l02_a_narrative",
+          "type": "text_narrative",
+          "prompt_cn": "课文改写：把课文一改写成叙述体，说明大家在哪里、谁想吃什么、谁又饿又渴。",
+          "prompt_en": "Rewrite Text 1 as a short narrative.",
+          "answerPlaceholder": "支架：他们在____。王一雪让大家____。白家月____，想____。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "targetIds": [
+            "t_hsk3_l02_01"
+          ]
+        },
+        {
+          "id": "post_hsk3_l02_a_picturebook",
+          "type": "picturebook_oral",
+          "prompt_cn": "绘本口语准备：根据 4 张图准备一个 40 秒小故事。话题：和朋友去饭馆点菜。",
+          "prompt_en": "Picture-book oral prep: use four pictures to prepare a 40-second story about ordering food with friends.",
+          "displayOnly": true,
+          "submissionRequired": false,
+          "picturePrompts": [
+            "走进饭馆",
+            "看菜单",
+            "又饿又渴",
+            "点菜和饮料"
+          ],
+          "targetIds": [
+            "t_hsk3_l02_01"
+          ]
+        }
+      ],
+      "B": [
+        {
+          "id": "post_hsk3_l02_b_word_paragraph",
+          "type": "word_paragraph",
+          "prompt_cn": "词语成段：请从本次课中选 5 个词，写一小段饭馆服务或外卖的话。",
+          "prompt_en": "Choose 5 words from this session and write a short restaurant-service or delivery paragraph.",
+          "answerPlaceholder": "可以用：服务员、筷子、马上、外卖、方便。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "wordBank": [
+            "服务员",
+            "筷子",
+            "马上",
+            "外卖",
+            "方便"
+          ],
+          "minSentences": 3,
+          "stretchSentences": 5
+        },
+        {
+          "id": "post_hsk3_l02_b_narrative",
+          "type": "text_narrative",
+          "prompt_cn": "课文改写：把课文二、三改写成叙述体，说明服务员做了什么、大家怎么评价饭菜、为什么外卖方便。",
+          "prompt_en": "Rewrite Texts 2 and 3 as a short narrative.",
+          "answerPlaceholder": "支架：王一雪请服务员____。白家月觉得____。后来他们说手机上可以____。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "targetIds": [
+            "t_hsk3_l02_02",
+            "t_hsk3_l02_03"
+          ]
+        },
+        {
+          "id": "post_hsk3_l02_b_picturebook",
+          "type": "picturebook_oral",
+          "prompt_cn": "绘本口语准备：根据 4 张图准备一个 40 秒小故事。话题：在饭馆请服务员帮忙。",
+          "prompt_en": "Picture-book oral prep: use four pictures to prepare a 40-second story about asking a server for help.",
+          "displayOnly": true,
+          "submissionRequired": false,
+          "picturePrompts": [
+            "缺少餐具",
+            "叫服务员",
+            "马上拿来",
+            "大家继续吃饭"
+          ],
+          "targetIds": [
+            "t_hsk3_l02_02"
+          ]
+        }
+      ],
+      "C": [
+        {
+          "id": "post_hsk3_l02_c_word_paragraph",
+          "type": "word_paragraph",
+          "prompt_cn": "词语成段：请从本次课中选 5 个词，写一小段自己的饮食习惯。",
+          "prompt_en": "Choose 5 words from this session and write a short paragraph about eating habits.",
+          "answerPlaceholder": "可以用：蛋糕、只、方便面、简单、方便。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "wordBank": [
+            "蛋糕",
+            "只",
+            "方便面",
+            "简单",
+            "方便"
+          ],
+          "minSentences": 3,
+          "stretchSentences": 5
+        },
+        {
+          "id": "post_hsk3_l02_c_narrative",
+          "type": "text_narrative",
+          "prompt_cn": "课文改写：把课文四改写成叙述体，比较李文在国外和回中国后的吃饭情况。",
+          "prompt_en": "Rewrite Text 4 as a narrative comparing Li Wen's eating overseas and after returning to China.",
+          "answerPlaceholder": "支架：在国外，李文____。考试前，他____。回到中国以后，他____，因为____。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "targetIds": [
+            "t_hsk3_l02_04"
+          ]
+        },
+        {
+          "id": "post_hsk3_l02_c_picturebook",
+          "type": "picturebook_oral",
+          "prompt_cn": "绘本口语准备：根据 5 张图准备一个 1 分钟故事。话题：从方便面到妈妈做的饭。",
+          "prompt_en": "Picture-book oral prep: use five pictures to prepare a one-minute story about eating habits.",
+          "displayOnly": true,
+          "submissionRequired": false,
+          "picturePrompts": [
+            "国外学习",
+            "考试前很忙",
+            "只吃方便面",
+            "回到中国",
+            "吃妈妈做的饭"
+          ],
+          "targetIds": [
+            "t_hsk3_l02_04"
+          ]
+        }
+      ]
+    }
+  },
+  "report": {
+    "focus": [
+      "饭馆点菜",
+      "又……又……",
+      "任指表达",
+      "外卖",
+      "饮食习惯复述"
+    ],
+    "dimensions": [
+      "preview_completion",
+      "vocabulary",
+      "grammar",
+      "text_understanding",
+      "retelling",
+      "speaking"
+    ],
+    "recommendationRules": [
+      {
+        "if": "weak_target_g_hsk3_l02_01",
+        "suggestion": "复习“又……又……”，再用两个特点描述一个饭馆或一道菜。"
+      },
+      {
+        "if": "weak_text_retelling",
+        "suggestion": "先用思维导图复述课文，再完成叙述体改写。"
+      }
+    ]
+  }
+}

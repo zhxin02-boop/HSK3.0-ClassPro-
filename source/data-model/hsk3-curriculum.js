@@ -16,11 +16,11 @@ window.HSK3_CURRICULUM = [
     no: 2,
     title: "你们想吃什么就点什么",
     en: "You can order whatever you feel like",
-    page: "TBD",
+    page: "002",
     block: 1,
-    openForUse: false,
+    openForUse: true,
     teacherVisible: true,
-    status: "planning"
+    status: "ready"
   }
 ];
 
