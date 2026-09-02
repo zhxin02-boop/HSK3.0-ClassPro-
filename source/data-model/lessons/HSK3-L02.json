@@ -5074,19 +5074,17 @@
       "textQa": [],
       "pictureTalk": [],
       "battleGames": {
-        "games": [
-          {
-            "id": "spy",
-            "title": "谁是卧底"
-          },
-          {
-            "id": "drum",
-            "title": "击鼓传花"
-          },
-          {
-            "id": "relay",
-            "title": "接龙挑战"
-          }
+        "roulette": [
+          {"id":"hsk3_l02_roulette_01","challenge":"看图说一句：你在饭馆先做什么？","scene":"朋友刚走进饭馆，桌上有一张菜单。","keywords":["饭馆","菜单","先","点菜"],"sample":"我们先看菜单，再点菜。"},
+          {"id":"hsk3_l02_roulette_02","challenge":"说一句你想吃什么、喝什么。","scene":"朋友请你点菜，也请你选一种饮料。","keywords":["想吃","饺子","想喝","饮料"],"sample":"我想吃饺子，想喝绿茶。"},
+          {"id":"hsk3_l02_roulette_03","challenge":"向服务员提出一个请求。","scene":"桌上少了一双筷子和一个勺子。","keywords":["服务员","请","一双筷子","勺子"],"sample":"服务员，请给我拿一双筷子和一个勺子。"},
+          {"id":"hsk3_l02_roulette_04","challenge":"说说为什么手机点外卖方便。","scene":"你在家里，用手机选择晚饭。","keywords":["手机","外卖","想吃什么","方便"],"sample":"在手机上点外卖很方便，想吃什么就点什么。"}
+        ],
+        "relay": [
+          {"id":"hsk3_l02_relay_01","starter":"菜单","goal":"接一个和点菜有关的短语或短句。","mustUse":["看菜单","点菜","这张菜单"]},
+          {"id":"hsk3_l02_relay_02","starter":"服务员","goal":"接一个礼貌请求。","mustUse":["请给我拿","一双筷子","请等一下"]},
+          {"id":"hsk3_l02_relay_03","starter":"外卖","goal":"接一个说明方便的短语或短句。","mustUse":["点外卖","送外卖","很方便"]},
+          {"id":"hsk3_l02_relay_04","starter":"妈妈做的饭","goal":"接一个表达感受的短语或短句。","mustUse":["非常爱吃","真高兴","简单的菜"]}
         ]
       },
       "pk_question": []
