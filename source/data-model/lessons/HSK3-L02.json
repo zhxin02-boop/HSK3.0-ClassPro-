@@ -2514,7 +2514,56 @@
       "output": "用中文说 1-2 句话。",
       "targetTextIds": [
         "t_hsk3_l02_01"
-      ]
+      ],
+      "storyIntro": "你和朋友来到饭馆。先看菜单，再说说自己想吃什么、想喝什么。",
+      "storyIntroEn": "You and a friend are at a restaurant. Look at the menu, then say what you would like to eat and drink.",
+      "roleDescriptionEn": "You are ordering food for yourself and a friend.",
+      "stages": [
+        {
+          "id": "pm_hsk3_l02_a_01",
+          "title": "先看菜单",
+          "titleEn": "Look at the Menu",
+          "screenPrompt": "去饭馆点菜时，先看什么？",
+          "screenPromptEn": "What do you look at first when ordering at a restaurant?",
+          "interactionType": "choice_set",
+          "photos": [{"src": "../in-class/images/hsk3-l02/vocab-story/03-look-menu.png", "label": "菜单 / Menu"}],
+          "items": [{"id": "q1", "question": "你先看什么？", "questionEn": "Choose the best answer.", "options": ["菜单", "筷子", "机场"]}],
+          "keywordCards": [{"hanzi": "菜单", "pinyin": "càidān", "english": "menu", "example": "我们先看菜单，再点菜。", "exampleEnglish": "We look at the menu first, then order."}]
+        },
+        {
+          "id": "pm_hsk3_l02_a_02",
+          "title": "说说感觉和选择",
+          "titleEn": "Say How You Feel",
+          "screenPrompt": "现在又饿又渴，你会怎么说？",
+          "screenPromptEn": "You are hungry and thirsty. What can you say?",
+          "interactionType": "choice_set",
+          "photos": [{"src": "../in-class/images/hsk3-l02/vocab-story/01-hungry-thirsty.png", "label": "又饿又渴 / Hungry and thirsty"}],
+          "items": [{"id": "q1", "question": "选择合适的表达。", "questionEn": "Choose a useful expression.", "options": ["我现在又饿又渴。", "我不想吃饭。", "我马上拿去。"]}],
+          "keywordCards": [{"hanzi": "又……又……", "pinyin": "yòu...yòu...", "english": "both ... and ...", "example": "我现在又饿又渴。", "exampleEnglish": "I am both hungry and thirsty now."}, {"hanzi": "别客气", "pinyin": "bié kèqi", "english": "make yourself at home", "example": "想吃什么就点什么，别客气。", "exampleEnglish": "Order whatever you like; don't be polite."}]
+        },
+        {
+          "id": "pm_hsk3_l02_a_03",
+          "title": "点饮料",
+          "titleEn": "Order a Drink",
+          "screenPrompt": "看图选出你想喝的饮料。",
+          "screenPromptEn": "Look at the picture and choose a drink.",
+          "interactionType": "multi_select",
+          "photos": [{"src": "../in-class/images/hsk3-l02/vocab-story/04-order-drink.png", "label": "点饮料 / Order drinks"}],
+          "options": ["茶", "果汁", "饺子", "咖啡"],
+          "keywordCards": [{"hanzi": "饮料", "pinyin": "yǐnliào", "english": "drink", "example": "你想喝什么饮料？", "exampleEnglish": "What drink would you like?"}]
+        },
+        {
+          "id": "pm_hsk3_l02_a_04",
+          "title": "礼貌点菜",
+          "titleEn": "Order Politely",
+          "screenPrompt": "朋友请你多点一些菜，你会怎么回应？",
+          "screenPromptEn": "Your friend invites you to order more food. How do you respond?",
+          "interactionType": "choice_set",
+          "items": [{"id": "q1", "question": "选择最合适的回应。", "questionEn": "Choose the best response.", "options": ["好，谢谢，别客气。", "我去机场。", "一双筷子。"]}],
+          "keywordCards": [{"hanzi": "点菜", "pinyin": "diǎn cài", "english": "order dishes", "example": "你想吃什么就点什么。", "exampleEnglish": "Order whatever you want to eat."}]
+        }
+      ],
+      "outputTask": {"prompt": "请用 1-2 句话说说你想吃什么、喝什么。", "promptEn": "Write one or two Chinese sentences about what you would like to eat and drink.", "sentenceFrames": ["我想吃……，喝……。", "我现在又……又……。"], "sampleAnswer": "我想吃饺子，喝茶。我现在又饿又渴。"}
     },
     {
       "id": "pm_hsk3_l02_b",
@@ -2548,7 +2597,56 @@
       "targetTextIds": [
         "t_hsk3_l02_02",
         "t_hsk3_l02_03"
-      ]
+      ],
+      "storyIntro": "你在饭馆发现餐具不够，也想知道怎样用手机点外卖。",
+      "storyIntroEn": "You need more tableware at a restaurant and want to order delivery on your phone.",
+      "roleDescriptionEn": "You are asking politely for help and choosing food online.",
+      "stages": [
+        {
+          "id": "pm_hsk3_l02_b_01",
+          "title": "请服务员帮忙",
+          "titleEn": "Ask the Server for Help",
+          "screenPrompt": "餐桌上少了一双筷子，你会怎么说？",
+          "screenPromptEn": "A pair of chopsticks is missing. What can you say?",
+          "interactionType": "choice_set",
+          "photos": [{"src": "../in-class/images/hsk3-l02/vocab-story/07-need-tableware.png", "label": "餐具 / Tableware"}],
+          "items": [{"id": "q1", "question": "选择最合适的话。", "questionEn": "Choose the most useful sentence.", "options": ["请给我拿一双筷子。", "我又饿又渴。", "菜单很好吃。"]}],
+          "keywordCards": [{"hanzi": "一双筷子", "pinyin": "yì shuāng kuàizi", "english": "a pair of chopsticks", "example": "请给我拿一双筷子。", "exampleEnglish": "Please bring me a pair of chopsticks."}, {"hanzi": "马上", "pinyin": "mǎshàng", "english": "right away", "example": "好的，我马上拿去。", "exampleEnglish": "Okay, I will bring it right away."}]
+        },
+        {
+          "id": "pm_hsk3_l02_b_02",
+          "title": "手机点外卖",
+          "titleEn": "Order Delivery by Phone",
+          "screenPrompt": "不用纸菜单，在手机上也能选菜。",
+          "screenPromptEn": "You can choose food on your phone without a paper menu.",
+          "interactionType": "multi_select",
+          "photos": [{"src": "../in-class/images/hsk3-l02/vocab-story/12-phone-menu.png", "label": "手机点餐 / Phone ordering"}],
+          "options": ["看菜单", "选菜", "点外卖", "去机场"],
+          "keywordCards": [{"hanzi": "外卖", "pinyin": "wàimài", "english": "food delivery", "example": "现在很多饭馆都能送外卖。", "exampleEnglish": "Many restaurants can deliver food now."}, {"hanzi": "方便", "pinyin": "fāngbiàn", "english": "convenient", "example": "在手机上点餐很方便。", "exampleEnglish": "Ordering on a phone is convenient."}]
+        },
+        {
+          "id": "pm_hsk3_l02_b_03",
+          "title": "服务员怎么回答",
+          "titleEn": "The Server Responds",
+          "screenPrompt": "服务员听到请求后，会怎么回答？",
+          "screenPromptEn": "How does the server respond to the request?",
+          "interactionType": "choice_set",
+          "photos": [{"src": "../in-class/images/hsk3-l02/vocab-story/08-server-responds.png", "label": "马上拿去 / Right away"}],
+          "items": [{"id": "q1", "question": "选择服务员的合适回答。", "questionEn": "Choose the server's reply.", "options": ["好的，请等一下，我马上拿去。", "我想吃饺子。", "菜单在哪儿？"]}],
+          "keywordCards": [{"hanzi": "请等一下", "pinyin": "qǐng děng yíxià", "english": "please wait a moment", "example": "好的，请等一下。", "exampleEnglish": "Okay, please wait a moment."}]
+        },
+        {
+          "id": "pm_hsk3_l02_b_04",
+          "title": "完成点餐计划",
+          "titleEn": "Complete Your Order Plan",
+          "screenPrompt": "把在饭馆或手机上点餐时会做的事选出来。",
+          "screenPromptEn": "Select what you do when ordering at a restaurant or on your phone.",
+          "interactionType": "multi_select",
+          "options": ["看菜单", "选菜", "请服务员帮忙", "坐飞机"],
+          "keywordCards": [{"hanzi": "服务", "pinyin": "fúwù", "english": "service", "example": "这家饭馆的服务很热情。", "exampleEnglish": "This restaurant has warm service."}]
+        }
+      ],
+      "outputTask": {"prompt": "请写一句向服务员求助的话，或一句关于外卖的话。", "promptEn": "Write one Chinese sentence asking the server for help or about delivery.", "sentenceFrames": ["请给我拿……。", "在手机上点外卖很方便。"], "sampleAnswer": "服务员，请给我拿一双筷子。"}
     },
     {
       "id": "pm_hsk3_l02_c",
@@ -2581,7 +2679,56 @@
       "output": "用中文说 1-2 句话。",
       "targetTextIds": [
         "t_hsk3_l02_04"
-      ]
+      ],
+      "storyIntro": "你要介绍自己的饮食习惯，并说说谁做的饭最好吃。",
+      "storyIntroEn": "You will describe your eating habits and say whose cooking you like best.",
+      "roleDescriptionEn": "You are sharing a short food story with a classmate.",
+      "stages": [
+        {
+          "id": "pm_hsk3_l02_c_01",
+          "title": "忙的时候吃什么",
+          "titleEn": "Food on Busy Days",
+          "screenPrompt": "很忙、没有时间做饭时，有人会吃方便面。",
+          "screenPromptEn": "When people are busy and have no time to cook, they may eat instant noodles.",
+          "interactionType": "choice_set",
+          "photos": [{"src": "../in-class/images/hsk3-l02/vocab-story/15-instant-noodles.png", "label": "方便面 / Instant noodles"}],
+          "items": [{"id": "q1", "question": "忙的时候，他可能吃什么？", "questionEn": "What might he eat on busy days?", "options": ["方便面", "菜单", "筷子"]}],
+          "keywordCards": [{"hanzi": "方便面", "pinyin": "fāngbiànmiàn", "english": "instant noodles", "example": "考试前，我可能只吃方便面。", "exampleEnglish": "Before an exam, I may eat only instant noodles."}, {"hanzi": "只", "pinyin": "zhǐ", "english": "only", "example": "我只喝一杯咖啡。", "exampleEnglish": "I only drink a cup of coffee."}]
+        },
+        {
+          "id": "pm_hsk3_l02_c_02",
+          "title": "妈妈做的饭",
+          "titleEn": "Home Cooking",
+          "screenPrompt": "回到家，能吃到妈妈做的饭，心情会怎么样？",
+          "screenPromptEn": "How do you feel when you can eat your mother's cooking at home?",
+          "interactionType": "choice_set",
+          "photos": [{"src": "../in-class/images/hsk3-l02/vocab-story/16-home-cooking.png", "label": "妈妈做的饭 / Home cooking"}],
+          "items": [{"id": "q1", "question": "选择合适的表达。", "questionEn": "Choose a suitable expression.", "options": ["我真是太高兴了。", "请给我一双筷子。", "我去机场。"]}],
+          "keywordCards": [{"hanzi": "简单", "pinyin": "jiǎndān", "english": "simple", "example": "妈妈只做几个简单的菜。", "exampleEnglish": "My mother makes only a few simple dishes."}, {"hanzi": "高兴", "pinyin": "gāoxìng", "english": "happy", "example": "我能吃到妈妈做的饭，真高兴。", "exampleEnglish": "I am happy to eat my mother's cooking."}]
+        },
+        {
+          "id": "pm_hsk3_l02_c_03",
+          "title": "早餐怎么吃",
+          "titleEn": "Breakfast Habits",
+          "screenPrompt": "观察图片，说说早饭可以吃什么、喝什么。",
+          "screenPromptEn": "Look at the picture and think about what you can eat and drink for breakfast.",
+          "interactionType": "multi_select",
+          "photos": [{"src": "../in-class/images/hsk3-l02/vocab-story/14-overseas-breakfast.png", "label": "早饭 / Breakfast"}],
+          "options": ["面包", "蛋糕", "咖啡", "筷子"],
+          "keywordCards": [{"hanzi": "蛋糕", "pinyin": "dàngāo", "english": "cake", "example": "有时候我吃一块蛋糕。", "exampleEnglish": "Sometimes I eat a piece of cake."}]
+        },
+        {
+          "id": "pm_hsk3_l02_c_04",
+          "title": "说说自己的习惯",
+          "titleEn": "Talk About Your Habits",
+          "screenPrompt": "选择一句能介绍饮食习惯的话。",
+          "screenPromptEn": "Choose a sentence that describes an eating habit.",
+          "interactionType": "choice_set",
+          "items": [{"id": "q1", "question": "选择合适的表达。", "questionEn": "Choose a suitable sentence.", "options": ["我忙的时候常常吃方便面。", "请给我一双筷子。", "这张菜单很好。"]}],
+          "keywordCards": [{"hanzi": "常常", "pinyin": "chángcháng", "english": "often", "example": "我常常在家吃饭。", "exampleEnglish": "I often eat at home."}]
+        }
+      ],
+      "outputTask": {"prompt": "请用 1-2 句话介绍你的饮食习惯，或你喜欢谁做的饭。", "promptEn": "Write one or two Chinese sentences about your eating habits or whose cooking you like.", "sentenceFrames": ["我忙的时候常常吃……。", "我觉得……做的饭最好吃。"], "sampleAnswer": "我觉得妈妈做的饭最好吃。"}
     }
   ],
   "preClass": {
