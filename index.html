@@ -29,12 +29,14 @@ body{min-height:100vh;background:#f5f0ee;color:#3d2b1f;font-family:-apple-system
   <section id="levels" aria-label="HSK课程级别"></section>
 </main>
 <script src="source/data-model/hsk1-curriculum.js"></script>
+<script src="source/data-model/hsk3-curriculum.js"></script>
 <script>
 var hsk1Lessons=(window.HSK1_CURRICULUM||[]).map(function(x){return{id:x.id,name:x.title,en:x.en,open:!!x.openForUse}});
+var hsk3Lessons=(window.HSK3_CURRICULUM||[]).map(function(x){return{id:x.id,name:x.title,en:x.en,open:!!x.openForUse}});
 var levels=[
   {id:"1",name:"HSK 1级",desc:"入门级 · Beginner",lessons:hsk1Lessons},
   {id:"2",name:"HSK 2级",desc:"初级 · Elementary",lessons:[]},
-  {id:"3",name:"HSK 3级",desc:"中级 · Intermediate",lessons:[]},
+  {id:"3",name:"HSK 3级",desc:"中级 · Intermediate",lessons:hsk3Lessons},
   {id:"4",name:"HSK 4级",desc:"中高级 · Upper-Intermediate",lessons:[]},
   {id:"5",name:"HSK 5级",desc:"高级 · Advanced",lessons:[]}
 ];
