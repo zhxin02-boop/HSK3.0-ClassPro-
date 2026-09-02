@@ -76,6 +76,7 @@
         });
       }
       normalized.classProQuestions = groups;
+      normalized.vocabScenes = standard.vocabScenes || {};
       window.LESSON_DATA = normalized;
       window.LESSON_DATA.v5_vocab_fill = groups.v5_vocab_fill || [];
       window.LESSON_DATA.g1_ordering = groups.g1_ordering || [];

@@ -967,11 +967,13 @@ ap._mq=function(){
 ap._ha=function(m){
   var n=this._rn(m.name||m.studentName||"unknown"),tx=m.text||m.answer||"",res=m.autoResult||null,now=new Date();
   var q=this._cq2?this._cq2():null;
-  var rec={room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,studentName:n,mode:m.mode||this.st,questionId:m.questionId||(q&&q.id)||"",answer:tx,result:res,submittedAt:m.submittedAt||now.toISOString(),receivedAt:now.toISOString()};
+  var questionId=m.questionId||(q&&q.id)||"",submissionId=m.submissionId||"";
+  if(submissionId&&this.records.some(function(r){return r.submissionId===submissionId}))return;
+  var rec={room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,studentName:n,mode:m.mode||this.st,questionId:questionId,answer:tx,result:res,submittedAt:m.submittedAt||now.toISOString(),receivedAt:now.toISOString(),submissionId:submissionId};
   this.records.unshift(rec);
   this.la.unshift({n:n,x:tx,t:now.toLocaleTimeString(),ar:res});
   if(res==="correct")this._as(n,1);else{this._saveClassData();this._pubBoard()}
-  if(this.qp==="answering"||this.qp==="locked")this.qsub[n]=true;
+  if(String(questionId)===String(this.currentQuestionId||(q&&q.id)||""))this.qsub[n]=true;
   this._r();
 };
 ap._hp=function(m){if(m&&m.requestCurrent&&this.lastQuestionPayload&&this.mq&&this.cs==="connected"){this.mq.publish("classpro/room/"+RM+"/question",JSON.stringify(this.lastQuestionPayload))}this.oc=m.count||this.oc||0;this._pubBoard();this._r()};
@@ -1623,10 +1625,11 @@ window.ap=ap;
 .hsk3-grammar-section h3{margin:0 0 14px!important;color:#2f6b25!important;font-size:22px!important}
 .hsk3-visual-blocks{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
 .hsk3-visual-block{min-width:150px;text-align:center;border-radius:12px;padding:15px 18px;font-size:24px;font-weight:1000;color:#14312b;border:1px solid #dfeac8;background:#f8faf3}
+.hsk3-visual-block b,.hsk3-visual-block small{display:block}.hsk3-visual-block small{margin-top:7px;font-size:13px;line-height:1.35;color:#65715f;font-weight:800}
 .hsk3-visual-block.b1{background:#edf3ff;border-color:#bfdbfe;color:#2054b0}
 .hsk3-visual-block.b2{background:#fff7ed;border-color:#f3c7b8;color:#8a2f26}
 .hsk3-visual-arrow{font-size:26px;color:#bd4b45;font-weight:1000}
-.hsk3-rule-note{margin-top:14px;text-align:center;color:#65715f;font-weight:800;font-size:16px}
+.hsk3-rule-note{margin-top:14px;text-align:center;color:#65715f;font-weight:800;font-size:16px}.hsk3-rule-note small{display:block;margin-top:5px;color:#4f6d47;font-weight:800}
 .hsk3-impression-tags{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
 .hsk3-impression-tags>div{border:1px solid #ead8cc;background:#fffdf8;border-radius:10px;padding:14px;text-align:center}
 .hsk3-impression-tags b{display:block;color:#8a2f26;font-size:28px;margin-bottom:4px}
@@ -3404,7 +3407,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     window.hsk3RevealAllBlind=function(id,words){ap.hsk3BlindOpen[id]={};for(var x=0;x<words;x++)ap.hsk3BlindOpen[id][x]=true;ap._r()};
     window.hsk3ResetBlind=function(id){ap.hsk3BlindOpen[id]={};ap._r()};
     window.hsk3ToggleAnswer=function(id){ap.hsk3AnswerOpen[id]=!ap.hsk3AnswerOpen[id];ap._r()};
-    var h='<div class="panel hsk3-old-practice"><div class="hsk3-old-head"><div><div class="hsk3-kicker">'+kicker+'</div><h2>'+title+'</h2><p>'+es(c.prompt_en||d.instructions||'Use Chinese to complete the task.')+'</p></div><div class="hsk3-reading-count">'+(i+1)+' / '+list.length+'</div></div>';
+    var h='<div class="panel hsk3-old-practice">'+(state==='g2p'?'':'<div class="hsk3-old-head"><div><div class="hsk3-kicker">'+kicker+'</div><h2>'+title+'</h2><p>'+es(c.prompt_en||d.instructions||'Use Chinese to complete the task.')+'</p></div><div class="hsk3-reading-count">'+(i+1)+' / '+list.length+'</div></div>');
     if(state==='v2g'){
       var open=!!ap.hsk3AnswerOpen[c.id],clues=d.clues||[];
       h+='<div class="old-q-card old-q-guess"><div class="old-q-tag">🔍 你说我猜</div><div class="old-q-desc">'+es(clues[0]||d.instructions||'用中文描述，让同学猜。')+'</div>';
@@ -3419,9 +3422,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     }else if(state==='g2p'){
       var img=d.image?'<div class="hsk3-old-picture"><img src="'+es(d.image)+'" alt=""></div>':'';
       var frame=(d.sentenceFrame||'').replace(/____/g,'<span class="hsk3-old-blank"></span>');
-      h+='<div class="old-picture-card">'+img+'<div class="old-picture-task"><div class="old-q-tag">📝 完成句子</div><div class="old-sentence-frame">'+frame+'</div>';
-      if((d.keywords||[]).length)h+='<div class="old-keywords">'+(d.keywords||[]).map(function(w){return'<span>'+es(w)+'</span>'}).join('')+'</div>';
-      h+='<div class="old-q-tip">'+es(d.context||d.instructions||'看图完成句子。')+'</div></div></div>';
+      h+='<div class="old-picture-card">'+img+'<div class="old-picture-task"><div class="old-sentence-frame">'+frame+'</div></div></div>';
     }else{
       h+='<div class="hsk3-task-card"><div class="hsk3-task-title">'+es(d.title||c.prompt_cn||'课堂任务')+'</div>';
       if(d.role)h+='<div class="hsk3-task-role">'+es(d.role)+'</div>';
@@ -3743,6 +3744,71 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
   };
 })();
 </script>
+<script>
+/* HSK3 scene-led vocabulary, inductive grammar, and compact text delivery. */
+(function(){
+  if(typeof ap==='undefined'||!window.LESSON_DATA||!LESSON_DATA.meta||LESSON_DATA.meta.level!=='HSK3')return;
+  var VSC=window.LESSON_DATA.vocabScenes||{}, baseTv=ap._tv, baseTg=ap._tg, baseTt=ap._tt;
+  function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]})}
+  function findWord(word){return (V||[]).filter(function(x){return (x.hanzi||x.word)===word})[0]||{hanzi:word}}
+  function storyStep(step,key){
+    var words=(step.words||[]).map(findWord), h='<div class="hsk3-story-step">',revealed=!!(ap.vocabSceneReveal&&ap.vocabSceneReveal[key]),spot=step.hotspot||{};
+    h+='<div class="hsk3-story-image"><img src="'+esc(step.image)+'" alt=""><button class="hsk3-story-hotspot" style="left:'+(spot.x||50)+'%;top:'+(spot.y||50)+'%;width:'+(spot.size||78)+'px;height:'+(spot.size||78)+'px" onclick="ap.vocabSceneReveal=ap.vocabSceneReveal||{};ap.vocabSceneReveal[\''+esc(key)+'\']=true;ap._r()" aria-label="点击图中人物或物品"></button><span>'+esc(step.title)+'</span></div>';
+    h+='<div class="hsk3-story-language"><div class="hsk3-kicker">Look, say, then reveal</div><h3>'+esc(step.prompt)+'</h3>';
+    if(!revealed)return h+'<div class="hsk3-story-wait"><b>先观察图片</b><span>点击图中有提示的角色或物品，揭示本步语言。</span></div></div></div>';
+    h+='<div class="hsk3-story-words">';
+    words.forEach(function(w){h+='<div><b>'+esc(w.hanzi||w.word)+'</b><span data-pinyin="1">'+esc(w.pinyin||'')+'</span><em>'+esc(w.english||'')+'</em></div>'});
+    h+='</div><div class="hsk3-story-phrases">'+(step.phrases||[]).map(function(x){return'<span>'+esc(x)+'</span>'}).join('')+'</div><div class="hsk3-story-sentence text-hanzi">'+esc(step.sentence)+'</div></div></div>';
+    return h;
+  }
+  ap._tv=function(){
+    this.hsk3VocabSession=this.hsk3VocabSession||'1';
+    var scene=VSC[this.hsk3VocabSession];
+    if(!scene)return baseTv.call(this);
+    var steps=scene.steps||[],i=Math.max(0,Math.min(this.vsi||0,steps.length-1)),current=steps[i];
+    var tabs='<div class="hsk3-vocab-session-tabs hsk3-story-tabs">'+['1','2','3','4'].map(function(s){return '<button class="'+(ap.hsk3VocabSession===s?'active':'')+'" onclick="ap.hsk3VocabSession=\''+s+'\';ap.vsi=0;ap._r()">课文 '+s+'</button>'}).join('')+'</div>';
+    var h='<div class="panel hsk3-story-vocab-panel"><div class="hsk3-vocab-title-row"><div><h2>Vocabulary Story <span>情景串联词汇</span></h2><p>'+esc(scene.subtitle||'Look at the scene first, then use the vocabulary to continue the story.')+'</p></div>'+tabs+'</div>';
+    h+='<div class="hsk3-story-progress">'+steps.map(function(x,k){return'<button class="'+(k===i?'active':'')+'" onclick="ap.vsi='+k+';ap._r()"><b>'+(k+1)+'</b><span>'+esc(x.title)+'</span></button>'}).join('')+'</div>';
+    if(current)h+=storyStep(current,ap.hsk3VocabSession+'_'+i);
+    h+='<div class="teach-nav"><button class="prev" onclick="ap.vsi=Math.max(0,(ap.vsi||0)-1);ap._r()" '+(i===0?'disabled':'')+'>&larr; 上一步</button><span class="step-counter">'+(i+1)+' / '+steps.length+'</span><button class="next" onclick="ap.vsi=Math.min('+(steps.length-1)+',(ap.vsi||0)+1);ap._r()" '+(i===steps.length-1?'disabled':'')+'>下一步 &rarr;</button></div></div>';
+    return h;
+  };
+  function avatar(name){var m={'王一雪':'wang-yixue.png','白家月':'bai-jiayue.png','李文':'li-wen.png','刘明':'liu-ming.png','杨同乐':'yang-tongle.png'};return m[name]?'images/hsk3-characters/'+m[name]:''}
+  function textLine(line,english){var av=avatar(line.speaker),body=english?(line.english||''):(line.hanzi||'');return '<div class="hsk3-dialogue-line">'+(av?'<img src="'+esc(av)+'" alt="">':'<span class="hsk3-dialogue-avatar">'+esc((line.speaker||'?').slice(0,1))+'</span>')+'<div><b>'+esc(line.speaker||'')+'</b><p class="'+(english?'hsk3-text-en-only':'text-hanzi')+'">'+esc(body)+'</p></div></div>'}
+  window.playTextAudio=function(src){if(!src)return;var a=new Audio(src);a.play().catch(function(){});};
+  ap._tt=function(){
+    var tx=T||[],idx=Math.max(0,Math.min(this.ti||0,tx.length-1)),cur=tx[idx];
+    if(!cur)return baseTt.call(this);
+    var note=(typeof TT!=='undefined'&&TT[cur.id])||{},english=this.tmode===3;
+    var tabMode='<div class="hsk3-text-mode-tabs"><button class="grammar-tab '+(!english?'active':'')+'" onclick="ap.tmode=1;ap._r()">汉字</button><button class="grammar-tab '+(english?'active':'')+'" onclick="ap.tmode=3;ap._r()">English</button><button class="grammar-tab" onclick="ap.st=\'ttq\';ap.ttqi=0;ap._r()">问答 Q&amp;A</button></div>';
+    var textTabs='<div class="hsk3-text-tabs">'+tx.map(function(t,k){return'<button class="grammar-tab '+(k===idx?'active':'')+'" onclick="ap.ti='+k+';ap.tmode=1;ap._r()">'+esc(t.title||('课文 '+(k+1)))+'</button>'}).join('')+'</div>';
+    var lessonNumber=parseInt(String((LESSON_DATA.meta&&LESSON_DATA.meta.lessonId)||'').replace(/\D/g,''),10);
+    var audioPart=[1,3,5,7][idx]||1;
+    var audio=cur.audio||cur.audioUrl||(lessonNumber?'../../audio/HSK3/'+lessonNumber+'-'+audioPart+'.mp3':'');
+    var h='<div class="panel hsk3-text-panel final simple"><div class="hsk3-text-head"><div><div class="hsk3-kicker">Text Teaching</div><h2>课文讲授：'+esc(cur.title||'')+'</h2><p>'+esc(cur.setting||'')+'</p></div><button class="hsk3-text-audio" '+(audio?'onclick="playTextAudio(\''+esc(audio)+'\')"':'disabled')+'>'+ (audio?'▶ 播放课文音频':'♪ 原音频待导入')+'</button></div>'+tabMode+textTabs;
+    h+='<section class="hsk3-text-section"><h3>课文原貌 / Original Text</h3><div class="hsk3-generic-text original">'+(cur.lines||[]).map(function(x){return textLine(x,english)}).join('')+'</div></section>';
+    if((note.languageLinks||[]).length&&!english)h+='<section class="hsk3-text-section"><h3>语言回扣 / Language Notes</h3><div class="hsk3-inline-legend">'+note.languageLinks.map(function(x){return'<div><b>'+esc(x.label||'')+'</b><span>'+esc(x.use||'')+'</span></div>'}).join('')+'</div></section>';
+    if((note.classQuestions||[]).length)h+='<section class="hsk3-text-section"><h3>课文 Q&amp;A</h3><div class="hsk3-qa-grid">'+note.classQuestions.map(function(q,k){return'<details class="hsk3-qa"><summary>'+(k+1)+'. '+esc(q.question||'')+'</summary><div>'+esc(q.answer||'')+'</div></details>'}).join('')+'</div></section>';
+    var r=note.retellScaffold||{};if((r.nodes||[]).length)h+='<section class="hsk3-text-section"><h3>复述 / Retell</h3><div class="hsk3-retell-map">'+r.nodes.map(function(n,k){return'<div class="hsk3-retell-node"><b>'+esc(n.label||'')+'</b><span>'+esc(n.hint||'')+'</span></div>'+(k<r.nodes.length-1?'<div class="hsk3-retell-arrow">→</div>':'')}).join('')+'</div><div class="hsk3-retell-frame text-hanzi">'+esc(r.frame||'')+'</div></section>';
+    h+='<div class="teach-nav"><button class="prev" onclick="ap.ti=Math.max(0,ap.ti-1);ap.tmode=1;ap._r()" '+(idx===0?'disabled':'')+'>&larr; 上一篇</button><span class="step-counter">'+(idx+1)+' / '+tx.length+'</span><button class="next" onclick="ap.ti=Math.min('+(tx.length-1)+',ap.ti+1);ap.tmode=1;ap._r()" '+(idx===tx.length-1?'disabled':'')+'>下一篇 &rarr;</button></div></div>';
+    return h;
+  };
+  ap._tg=function(){
+    var gp=G||[],idx=Math.max(0,Math.min(this.sg||0,gp.length-1)),cur=gp[idx],note=(GT&&GT[cur&&cur.id])||{},v=note.visualLearning||{};
+    if(!cur||!v.blocks)return baseTg.call(this);
+    function ex(items){return '<div class="hsk3-visual-examples">'+items.map(function(x){return'<div><b class="text-hanzi">'+esc(x.hanzi||'')+'</b><em>'+esc(x.english||'')+'</em></div>'}).join('')+'</div>'}
+    var tabs='<div class="hsk3-grammar-tabs">'+gp.map(function(g,k){return'<button class="grammar-tab '+(k===idx?'active':'')+'" onclick="ap.sg='+k+';ap._r()">'+esc(g.title||'')+'</button>'}).join('')+'</div>';
+    var h='<div class="panel hsk3-grammar-visual-panel"><div class="hsk3-grammar-head"><div><div class="hsk3-kicker">Inductive Grammar</div><h2>'+esc(cur.title||'')+'</h2><p>Look at the scene, say several sentences, then discover the structure.</p></div></div>'+tabs;
+    h+='<section class="hsk3-grammar-section"><h3>1. 看图说句子 / Look and Say</h3><div class="hsk3-grammar-hero"><div class="hsk3-grammar-photo"><img src="'+esc(v.image||'../pre-class/images/hsk3-l01-friend-photo.png')+'" alt=""><div>'+esc(v.sceneTitleEn||'Scene')+'</div></div><div class="hsk3-grammar-notice"><b>Ask students</b><p>'+esc(note.scene||cur.scene||'')+'</p>'+ex((v.impressions||[]).slice(0,3))+'</div></div></section>';
+    h+='<section class="hsk3-grammar-section"><h3>2. 归纳结构 / Discover the Pattern</h3><div class="hsk3-visual-blocks">'+v.blocks.map(function(x,k){return'<div class="hsk3-visual-block b'+k+'"><b>'+esc(x)+'</b>'+((v.blockLabelsEn||[])[k]?'<small>'+esc(v.blockLabelsEn[k])+'</small>':'')+'</div>'+(k<v.blocks.length-1?'<div class="hsk3-visual-arrow">→</div>':'')}).join('')+'</div><div class="hsk3-rule-note">'+esc(note.structure||cur.structure||'')+(note.structureEn?'<small>'+esc(note.structureEn)+'</small>':'')+'</div></section>';
+    h+='<section class="hsk3-grammar-section"><h3>3. 经典场景例句 / Classic Examples</h3>'+ex((cur.examples||[]).slice(0,5))+'</section></div>';
+    return h;
+  };
+})();
+</script>
+<style>
+.hsk3-story-vocab-panel{max-width:1240px!important;padding:28px!important;text-align:left}.hsk3-story-vocab-panel h2{margin:0;color:#14312b;font-size:32px}.hsk3-story-vocab-panel h2 span{font-size:16px;color:#64748b}.hsk3-story-vocab-panel p{margin:7px 0 0;color:#65715f}.hsk3-vocab-title-row{display:flex;align-items:center;justify-content:space-between;gap:24px}.hsk3-story-tabs{width:auto!important;justify-content:flex-end!important;margin:0!important}.hsk3-story-tabs button{min-width:76px!important;padding:8px 14px!important}.hsk3-story-progress{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:24px 0 16px}.hsk3-story-progress button{border:1px solid #dfeac8;background:#fbfcf6;border-radius:12px;padding:10px 7px;color:#4b5d44;cursor:pointer;text-align:left}.hsk3-story-progress button.active{background:#4f8f2d;color:#fff;border-color:#4f8f2d}.hsk3-story-progress b{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#fff;color:#4f8f2d;margin-right:6px}.hsk3-story-progress span{font-weight:900;font-size:13px}.hsk3-story-step{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(330px,.85fr);min-height:440px;border:1px solid #dfeac8;border-radius:18px;overflow:hidden;background:#fff}.hsk3-story-image{position:relative;background:#eef4e4;min-height:440px}.hsk3-story-image img{width:100%;height:100%;object-fit:cover;display:block}.hsk3-story-image span{position:absolute;left:18px;bottom:18px;padding:9px 14px;border-radius:999px;background:rgba(20,49,43,.86);color:#fff;font-weight:900}.hsk3-story-hotspot{position:absolute;transform:translate(-50%,-50%);border:3px solid #fff;background:rgba(79,143,45,.22);border-radius:50%;cursor:pointer;box-shadow:0 0 0 8px rgba(79,143,45,.18),0 0 24px rgba(79,143,45,.7);animation:hsk3HotspotPulse 1.8s infinite}.hsk3-story-hotspot:hover{background:rgba(79,143,45,.42)}@keyframes hsk3HotspotPulse{50%{box-shadow:0 0 0 15px rgba(79,143,45,.08),0 0 28px rgba(79,143,45,.9)}}.hsk3-story-language{padding:34px 28px;display:flex;flex-direction:column;align-items:flex-start}.hsk3-story-language h3{font-size:26px;line-height:1.4;color:#14312b;margin:8px 0 22px}.hsk3-story-wait{width:100%;min-height:190px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border:1px dashed #b9d79d;border-radius:16px;background:#f8faf3;padding:22px;color:#65715f}.hsk3-story-wait b{font-size:24px;color:#3f7f32;margin-bottom:10px}.hsk3-story-wait span{max-width:260px;line-height:1.6}.hsk3-story-words{display:flex;gap:10px;flex-wrap:wrap;width:100%}.hsk3-story-words>div{flex:1;min-width:120px;border-left:5px solid #79ad38;background:#f8faf3;padding:12px 14px}.hsk3-story-words b{display:block;font-family:KaiTi,STKaiti,'Kaiti SC',serif;font-size:36px;color:#14312b}.hsk3-story-words span{display:block;color:#5f7655;font-weight:900;margin-top:3px}.hsk3-story-words em{display:block;color:#7b8492;font-style:normal;margin-top:4px}.hsk3-story-phrases{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.hsk3-story-phrases span{border:1px solid #f1c89e;background:#fff7ed;color:#914d24;border-radius:999px;padding:8px 12px;font-weight:900}.hsk3-story-sentence{width:100%;margin-top:auto;padding:17px 0 0;border-top:1px solid #eee6de;font-size:25px;font-weight:900;line-height:1.55;color:#14312b}.hsk3-dialogue-line{display:grid;grid-template-columns:52px 1fr;gap:14px;padding:16px 0;border-top:1px solid #eee6de;align-items:start}.hsk3-dialogue-line:first-child{border-top:0}.hsk3-dialogue-line img,.hsk3-dialogue-avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid #bd4b45;background:#fff;display:flex;align-items:center;justify-content:center;color:#8a2f26;font-weight:900}.hsk3-dialogue-line b{font-size:15px;color:#a15c10}.hsk3-dialogue-line p{margin:5px 0 0;font-size:26px;font-weight:900;line-height:1.55;color:#14312b}.hsk3-text-en-only{font-family:inherit!important;font-size:20px!important;color:#4b5563!important}.hsk3-text-audio{border:1px solid #c9deae;background:#f8faf3;color:#3f7f32;border-radius:999px;padding:11px 16px;font-weight:900;white-space:nowrap}.hsk3-text-audio:disabled{opacity:.55;cursor:not-allowed}@media(max-width:900px){.hsk3-vocab-title-row{display:block}.hsk3-story-tabs{justify-content:flex-start!important;margin-top:14px!important}.hsk3-story-progress{grid-template-columns:repeat(3,1fr)}.hsk3-story-step{grid-template-columns:1fr}.hsk3-story-image{min-height:260px}.hsk3-dialogue-line p{font-size:22px}}
+</style>
 </body>
 </html>
 

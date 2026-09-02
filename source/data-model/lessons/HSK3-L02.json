@@ -23,6 +23,97 @@
     "postClassHomework": true,
     "previewMissions": true
   },
+  "vocabScenes": {
+    "1": {
+      "title": "课文一：去饭馆点菜",
+      "subtitle": "Follow one restaurant visit. Look at the scene first, then use the new words to move the story forward.",
+      "steps": [
+        {
+          "id": "arrive_hungry",
+          "title": "到饭馆前",
+          "prompt": "他们现在怎么样？想做什么？",
+          "image": "images/hsk3-l02/vocab-story/01-hungry-thirsty.png",
+          "words": ["饿", "渴"],
+          "phrases": ["又饿又渴", "想去吃饭"],
+          "sentence": "飞了这么远，现在还真是又饿又渴。"
+        },
+        {
+          "id": "restaurant",
+          "title": "走进饭馆",
+          "prompt": "他们要去哪儿？进去以后先做什么？",
+          "image": "images/hsk3-l02/vocab-story/02-enter-restaurant.png",
+          "words": ["饭馆"],
+          "phrases": ["去饭馆", "在饭馆吃饭"],
+          "sentence": "他们到了饭馆，准备一起吃饭。"
+        },
+        {
+          "id": "menu",
+          "title": "先看菜单",
+          "prompt": "桌子上有什么？他们在看什么？",
+          "image": "images/hsk3-l02/vocab-story/03-look-menu.png",
+          "words": ["菜单"],
+          "phrases": ["看看菜单", "想吃点儿什么"],
+          "sentence": "家月、李文，你们看看菜单，想吃点儿什么？"
+        },
+        {
+          "id": "drink",
+          "title": "点饮料",
+          "prompt": "服务员来了吗？他们要喝什么？",
+          "image": "images/hsk3-l02/vocab-story/04-order-drink.png",
+          "words": ["饮料", "客气"],
+          "phrases": ["喝什么饮料", "别客气"],
+          "sentence": "那多点点儿，别客气。你们喝什么饮料？"
+        },
+        {
+          "id": "wait",
+          "title": "等了好久",
+          "prompt": "菜还没来。他们等了多长时间？",
+          "image": "images/hsk3-l02/vocab-story/05-wait-long.png",
+          "words": ["好久"],
+          "phrases": ["等了好久", "好久没吃"],
+          "sentence": "好久没喝中国茶，也好久没吃饺子了。"
+        },
+        {
+          "id": "food_arrives",
+          "title": "菜终于来了",
+          "prompt": "现在桌子上有什么？你想先尝哪一个菜？",
+          "image": "images/hsk3-l02/vocab-story/06-food-arrives.png",
+          "words": ["菜", "饺子"],
+          "phrases": ["尝尝这些菜", "点菜吃饭"],
+          "sentence": "没问题。你们看看还想吃什么。"
+        }
+      ]
+    },
+    "2": {
+      "title": "课文二：饭馆服务",
+      "subtitle": "Notice what people need, how the server responds, and how a good restaurant treats regular guests.",
+      "steps": [
+        {"id":"tableware","title":"少了餐具","prompt":"桌子上少了什么？王一雪要请谁帮忙？","image":"images/hsk3-l02/vocab-story/07-need-tableware.png","words":["服务员","双","筷子","勺子","碗"],"phrases":["再拿一双筷子","一个勺子","一个碗"],"sentence":"服务员，再给我们拿双筷子、一个勺子和一个碗。","hotspot":{"x":61,"y":39}},
+        {"id":"serve_now","title":"马上去拿","prompt":"服务员怎么回答？她会等很久吗？","image":"images/hsk3-l02/vocab-story/08-server-responds.png","words":["马上"],"phrases":["请等一下","马上拿去"],"sentence":"好的，请等一下，我马上拿去。","hotspot":{"x":52,"y":39}},
+        {"id":"taste_service","title":"尝尝这些菜","prompt":"这家饭馆的服务怎么样？大家在做什么？","image":"images/hsk3-l02/vocab-story/09-taste-dishes.png","words":["服务","热情","尝"],"phrases":["服务很热情","尝尝这些菜"],"sentence":"这家饭馆的服务很热情，菜也都做得很好吃。","hotspot":{"x":48,"y":51}},
+        {"id":"regular_guest","title":"熟客的礼物","prompt":"服务员为什么送水果？她记住了什么？","image":"images/hsk3-l02/vocab-story/10-regular-guests.png","words":["记"],"phrases":["记住爱吃的菜","经常来吃饭"],"sentence":"服务员都记住我们爱吃的菜了。","hotspot":{"x":58,"y":43}}
+      ]
+    },
+    "3": {
+      "title": "课文三：外卖很方便",
+      "subtitle": "Follow the conversation from liking a dish to using a phone to order delivery.",
+      "steps": [
+        {"id":"like_chicken","title":"想再来吃","prompt":"白家月喜欢什么？她下次还想做什么？","image":"images/hsk3-l02/vocab-story/11-chicken-rice.png","words":["鸡"],"phrases":["鸡肉饭","再来吃一次"],"sentence":"这个鸡肉饭太好吃了，我要再来吃一次。","hotspot":{"x":54,"y":58}},
+        {"id":"phone_menu","title":"手机上选菜","prompt":"不用拿纸菜单，还能在哪里看和选？","image":"images/hsk3-l02/vocab-story/12-phone-menu.png","words":["张","不用","选"],"phrases":["这张菜单","不用拿菜单","选好了"],"sentence":"不用拿菜单，在手机上就能看到。","hotspot":{"x":51,"y":50}},
+        {"id":"delivery","title":"送到家里","prompt":"饭馆做好以后，能把饭送到哪里？","image":"images/hsk3-l02/vocab-story/13-delivery-home.png","words":["外卖","方便"],"phrases":["送外卖","点外卖","真方便"],"sentence":"现在很多饭馆都能送外卖，想吃什么就点什么。","hotspot":{"x":51,"y":48}}
+      ]
+    },
+    "4": {
+      "title": "课文四：妈妈做的饭",
+      "subtitle": "Follow Li Wen's food story: life abroad, busy exam days, and returning to home cooking.",
+      "steps": [
+        {"id":"overseas_breakfast","title":"国外的早饭","prompt":"李文早饭吃什么、喝什么？","image":"images/hsk3-l02/vocab-story/14-overseas-breakfast.png","words":["蛋糕"],"phrases":["吃一块蛋糕","喝一杯咖啡"],"sentence":"早饭我吃一个面包，有时候吃一块蛋糕。","hotspot":{"x":49,"y":54}},
+        {"id":"instant_noodles","title":"又忙又累","prompt":"考试前他为什么只吃这种食物？","image":"images/hsk3-l02/vocab-story/15-instant-noodles.png","words":["方便面","只"],"phrases":["只吃方便面","没有时间"],"sentence":"我可能好几天只吃方便面。","hotspot":{"x":50,"y":51}},
+        {"id":"home_cooking","title":"回到中国","prompt":"现在李文每天能吃到谁做的饭？他的心情怎么样？","image":"images/hsk3-l02/vocab-story/16-home-cooking.png","words":["妈妈"],"phrases":["妈妈做的饭","每天能吃到"],"sentence":"现在回到中国了，每天能吃到妈妈做的饭，我真是太高兴了！","hotspot":{"x":52,"y":46}},
+        {"id":"simple_best","title":"简单的菜最好吃","prompt":"妈妈做的菜很复杂吗？李文喜欢吗？","image":"images/hsk3-l02/vocab-story/17-simple-dishes.png","words":["简单"],"phrases":["几个简单的菜","非常爱吃"],"sentence":"有时候妈妈只做几个简单的菜，我也非常爱吃。","hotspot":{"x":54,"y":49}}
+      ]
+    }
+  },
   "sessions": [
     {
       "id": "A",
@@ -555,13 +646,20 @@
         "又渴"
       ],
       "structure": "人/物 + 又 + 形容词1 + 又 + 形容词2",
+      "structureEn": "A person or thing + 又 + adjective 1 + 又 + adjective 2",
       "visualLearning": {
+        "image": "images/hsk3-l02/vocab-story/01-hungry-thirsty.png",
         "sceneTitleEn": "Two qualities at the same time",
         "scenePromptEn": "Put two feelings or qualities on one person or thing.",
         "blocks": [
           "人/物",
           "又 + 特点1",
           "又 + 特点2"
+        ],
+        "blockLabelsEn": [
+          "a person or thing",
+          "and quality 1",
+          "and quality 2"
         ],
         "impressions": [
           {
@@ -609,13 +707,20 @@
         "可以/好吃/没问题"
       ],
       "structure": "疑问代词 + 都 + 结果",
+      "structureEn": "Question word + 都 + the same result",
       "visualLearning": {
+        "image": "images/hsk3-l02/vocab-story/09-taste-dishes.png",
         "sceneTitleEn": "Every choice works",
         "scenePromptEn": "All options in the group are acceptable.",
         "blocks": [
           "范围",
           "都",
           "同一个结果"
+        ],
+        "blockLabelsEn": [
+          "question word",
+          "all / every",
+          "same result"
         ],
         "impressions": [
           {
@@ -663,13 +768,20 @@
         "点什么"
       ],
       "structure": "想/喜欢/觉得 + 疑问代词，就 + 动词 + 同一个疑问代词",
+      "structureEn": "Want, like, or think + question word, 就 + action + the same question word",
       "visualLearning": {
+        "image": "images/hsk3-l02/vocab-story/12-phone-menu.png",
         "sceneTitleEn": "Choice leads to action",
         "scenePromptEn": "The second part follows the choice in the first part.",
         "blocks": [
           "选择",
           "就",
           "行动"
+        ],
+        "blockLabelsEn": [
+          "choice",
+          "then",
+          "matching action"
         ],
         "impressions": [
           {
@@ -3625,8 +3737,9 @@
             "target_pinyin": "càidān",
             "instructions": "Do not say the target word directly. Use simple Chinese clues.",
             "clues": [
-              "你们看看菜单，想吃点儿什么？",
-              "这家饭馆的菜单在手机上。"
+              "在饭馆里，服务员先给大家这个东西。",
+              "上面有很多菜和饮料。",
+              "我们看完以后，才知道要点什么。"
             ],
             "scaffold": {
               "words": [
@@ -3667,8 +3780,9 @@
             "target_pinyin": "kuàizi",
             "instructions": "Do not say the target word directly. Use simple Chinese clues.",
             "clues": [
-              "中国人常用筷子吃饭。",
-              "我还不太会用筷子。"
+              "吃面条、饺子的时候，中国人常常用它。",
+              "它有两根，拿在一只手里。",
+              "在饭馆吃饭时，桌子上常常有一双。"
             ],
             "scaffold": {
               "words": [
@@ -3709,8 +3823,9 @@
             "target_pinyin": "wàimài",
             "instructions": "Do not say the target word directly. Use simple Chinese clues.",
             "clues": [
-              "很多饭馆都能送外卖。",
-              "今天太忙了，我想点外卖。"
+              "你不用去饭馆，在手机上也能点吃的。",
+              "饭馆做好饭以后，会送到你的家。",
+              "今天太忙，我想在家吃饭。"
             ],
             "scaffold": {
               "words": [
@@ -3751,8 +3866,9 @@
             "target_pinyin": "fāngbiànmiàn",
             "instructions": "Do not say the target word directly. Use simple Chinese clues.",
             "clues": [
-              "考试前我常吃方便面。",
-              "方便面很方便，但是不能天天吃。"
+              "它装在袋子或杯子里，加热水就能吃。",
+              "考试前很忙的时候，有人常常吃它。",
+              "做起来很快，但是不能天天吃。"
             ],
             "scaffold": {
               "words": [
@@ -3793,8 +3909,9 @@
             "target_pinyin": "rèqíng",
             "instructions": "Do not say the target word directly. Use simple Chinese clues.",
             "clues": [
-              "这里的服务员很热情。",
-              "我的中国朋友很热情。"
+              "这个人见到客人总是笑着说话。",
+              "他会主动帮助你，也会请你多吃一点儿。",
+              "大家跟他在一起，觉得很舒服。"
             ],
             "scaffold": {
               "words": [
@@ -3921,18 +4038,9 @@
           "id": "hsk3_l02_pic_complete_01",
           "type": "open_response",
           "stage": "in_class",
-          "prompt_cn": "看图完成句子。",
-          "prompt_en": "Look at the picture cue and complete the sentence.",
           "data": {
-            "image_hint": "饭馆菜单",
-            "context": "饭馆菜单",
-            "sentenceFrame": "我先看____。",
-            "keywords": [
-              "菜单",
-              "点菜"
-            ],
-            "instructions": "Use the key word to complete the sentence.",
-            "answerPlaceholder": "我先看____。"
+              "image": "images/hsk3-l02/vocab-story/03-look-menu.png",
+            "sentenceFrame": "我先看____。"
           },
           "correct_answer": "我先看____。",
           "openEnded": true,
@@ -3945,17 +4053,9 @@
           "id": "hsk3_l02_pic_complete_02",
           "type": "open_response",
           "stage": "in_class",
-          "prompt_cn": "看图完成句子。",
-          "prompt_en": "Look at the picture cue and complete the sentence.",
           "data": {
-            "image_hint": "口渴的人",
-            "context": "口渴的人",
-            "sentenceFrame": "我有点儿____，想喝茶。",
-            "keywords": [
-              "渴"
-            ],
-            "instructions": "Use the key word to complete the sentence.",
-            "answerPlaceholder": "我有点儿____，想喝茶。"
+              "image": "images/hsk3-l02/vocab-story/18-thirsty-tea.png",
+            "sentenceFrame": "我有点儿____，想喝茶。"
           },
           "correct_answer": "我有点儿____，想喝茶。",
           "openEnded": true,
@@ -3968,19 +4068,9 @@
           "id": "hsk3_l02_pic_complete_03",
           "type": "open_response",
           "stage": "in_class",
-          "prompt_cn": "看图完成句子。",
-          "prompt_en": "Look at the picture cue and complete the sentence.",
           "data": {
-            "image_hint": "餐桌餐具",
-            "context": "餐桌餐具",
-            "sentenceFrame": "请给我拿____。",
-            "keywords": [
-              "筷子",
-              "勺子",
-              "碗"
-            ],
-            "instructions": "Use the key word to complete the sentence.",
-            "answerPlaceholder": "请给我拿____。"
+              "image": "images/hsk3-l02/vocab-story/07-need-tableware.png",
+            "sentenceFrame": "请给我拿____。"
           },
           "correct_answer": "请给我拿____。",
           "openEnded": true,
@@ -3995,17 +4085,9 @@
           "id": "hsk3_l02_pic_complete_04",
           "type": "open_response",
           "stage": "in_class",
-          "prompt_cn": "看图完成句子。",
-          "prompt_en": "Look at the picture cue and complete the sentence.",
           "data": {
-            "image_hint": "服务员走过来",
-            "context": "服务员走过来",
-            "sentenceFrame": "服务员____来。",
-            "keywords": [
-              "马上"
-            ],
-            "instructions": "Use the key word to complete the sentence.",
-            "answerPlaceholder": "服务员____来。"
+              "image": "images/hsk3-l02/vocab-story/08-server-responds.png",
+            "sentenceFrame": "服务员____来。"
           },
           "correct_answer": "服务员____来。",
           "openEnded": true,
@@ -4018,17 +4100,9 @@
           "id": "hsk3_l02_pic_complete_05",
           "type": "open_response",
           "stage": "in_class",
-          "prompt_cn": "看图完成句子。",
-          "prompt_en": "Look at the picture cue and complete the sentence.",
           "data": {
-            "image_hint": "朋友尝菜",
-            "context": "朋友尝菜",
-            "sentenceFrame": "你____这个菜。",
-            "keywords": [
-              "尝尝"
-            ],
-            "instructions": "Use the key word to complete the sentence.",
-            "answerPlaceholder": "你____这个菜。"
+              "image": "images/hsk3-l02/vocab-story/09-taste-dishes.png",
+            "sentenceFrame": "你____这个菜。"
           },
           "correct_answer": "你____这个菜。",
           "openEnded": true,
@@ -4039,17 +4113,9 @@
           "id": "hsk3_l02_pic_complete_06",
           "type": "open_response",
           "stage": "in_class",
-          "prompt_cn": "看图完成句子。",
-          "prompt_en": "Look at the picture cue and complete the sentence.",
           "data": {
-            "image_hint": "手机点外卖",
-            "context": "手机点外卖",
-            "sentenceFrame": "我想点____。",
-            "keywords": [
-              "外卖"
-            ],
-            "instructions": "Use the key word to complete the sentence.",
-            "answerPlaceholder": "我想点____。"
+              "image": "images/hsk3-l02/vocab-story/12-phone-menu.png",
+            "sentenceFrame": "我想点____。"
           },
           "correct_answer": "我想点____。",
           "openEnded": true,
@@ -4062,17 +4128,9 @@
           "id": "hsk3_l02_pic_complete_07",
           "type": "open_response",
           "stage": "in_class",
-          "prompt_cn": "看图完成句子。",
-          "prompt_en": "Look at the picture cue and complete the sentence.",
           "data": {
-            "image_hint": "考试前很忙",
-            "context": "考试前很忙",
-            "sentenceFrame": "我只吃____。",
-            "keywords": [
-              "方便面"
-            ],
-            "instructions": "Use the key word to complete the sentence.",
-            "answerPlaceholder": "我只吃____。"
+              "image": "images/hsk3-l02/vocab-story/15-instant-noodles.png",
+            "sentenceFrame": "我只吃____。"
           },
           "correct_answer": "我只吃____。",
           "openEnded": true,
@@ -4085,17 +4143,9 @@
           "id": "hsk3_l02_pic_complete_08",
           "type": "open_response",
           "stage": "in_class",
-          "prompt_cn": "看图完成句子。",
-          "prompt_en": "Look at the picture cue and complete the sentence.",
           "data": {
-            "image_hint": "家常菜",
-            "context": "家常菜",
-            "sentenceFrame": "妈妈做了几个____的菜。",
-            "keywords": [
-              "简单"
-            ],
-            "instructions": "Use the key word to complete the sentence.",
-            "answerPlaceholder": "妈妈做了几个____的菜。"
+              "image": "images/hsk3-l02/vocab-story/17-simple-dishes.png",
+            "sentenceFrame": "妈妈做了几个____的菜。"
           },
           "correct_answer": "妈妈做了几个____的菜。",
           "openEnded": true,
