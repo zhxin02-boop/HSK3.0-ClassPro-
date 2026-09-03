@@ -22,7 +22,7 @@ window.HSK3_CURRICULUM = [
     teacherVisible: true,
     status: "ready"
   },
-  { id: "HSK3-L03", no: 3, title: "第3课", en: "Lesson 3", page: "003", block: 1, openForUse: false, teacherVisible: true, status: "preparing" },
+  { id: "HSK3-L03", no: 3, title: "这个小区挺好的", en: "This neighborhood is pretty nice", page: "003", block: 1, openForUse: true, teacherVisible: true, status: "ready" },
   { id: "HSK3-L04", no: 4, title: "第4课", en: "Lesson 4", page: "004", block: 1, openForUse: false, teacherVisible: true, status: "preparing" },
   { id: "HSK3-L05", no: 5, title: "第5课", en: "Lesson 5", page: "005", block: 1, openForUse: false, teacherVisible: true, status: "preparing" },
   { id: "HSK3-L06", no: 6, title: "第6课", en: "Lesson 6", page: "006", block: 1, openForUse: false, teacherVisible: true, status: "preparing" },

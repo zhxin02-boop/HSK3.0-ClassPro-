@@ -1,0 +1,3976 @@
+{
+  "schemaVersion": "2.0",
+  "meta": {
+    "level": "HSK3",
+    "lessonId": "L03",
+    "lessonKey": "HSK3-L03",
+    "title": "这个小区挺好的",
+    "titleEn": "This neighborhood is pretty nice",
+    "topic": "居住环境、搬家与生活安排",
+    "courseModel": "HSK3 三次课样课",
+    "sourceTextPolicy": "课文、生词和语法依据 textbook data/HSK3/L3.txt；仅校正课文一中明显的文本噪点。"
+  },
+  "features": {
+    "pinyin": true,
+    "hanziWritingDemo": false,
+    "vocabExamples": true,
+    "competition": true,
+    "postClassHomework": true,
+    "previewMissions": true
+  },
+  "sessions": [
+    {
+      "id": "A",
+      "title": "第一次课",
+      "textIds": [
+        "t_hsk3_l03_01"
+      ],
+      "previewMissionId": "pm_hsk3_l03_a",
+      "focus": [
+        "看房与小区环境",
+        "挺……的",
+        "房屋设施"
+      ]
+    },
+    {
+      "id": "B",
+      "title": "第二次课",
+      "textIds": [
+        "t_hsk3_l03_02"
+      ],
+      "previewMissionId": "pm_hsk3_l03_b",
+      "focus": [
+        "新家与家电",
+        "坏了",
+        "打扫与搬家"
+      ]
+    },
+    {
+      "id": "C",
+      "title": "第三次课",
+      "textIds": [
+        "t_hsk3_l03_03",
+        "t_hsk3_l03_04"
+      ],
+      "previewMissionId": "pm_hsk3_l03_c",
+      "focus": [
+        "办信用卡",
+        "就和才",
+        "搬家计划"
+      ]
+    }
+  ],
+  "vocabScenes": {
+    "1": {
+      "title": "课文一：看新房",
+      "subtitle": "先观察小区和房子，再说说你觉得怎么样。",
+      "steps": [
+        {
+          "id": "look_house",
+          "title": "看房子",
+          "prompt": "他们在看什么？这个小区怎么样？",
+          "image": "images/hsk3-l03/vocab-story/01-apartment-search.png",
+          "words": [
+            "房子",
+            "小区",
+            "环境",
+            "挺"
+          ],
+          "phrases": [
+            "换房子",
+            "小区环境",
+            "挺好的"
+          ],
+          "sentence": "这个小区环境挺好的，离地铁站还不远。",
+          "hotspot": {
+            "x": 51,
+            "y": 52
+          }
+        },
+        {
+          "id": "home_items",
+          "title": "房子里面",
+          "prompt": "房子里有什么？这些东西新不新？",
+          "image": "images/hsk3-l03/vocab-story/01-apartment-search.png",
+          "words": [
+            "空调",
+            "洗衣机",
+            "层",
+            "花园"
+          ],
+          "phrases": [
+            "一层",
+            "小花园",
+            "都是新的"
+          ],
+          "sentence": "房子里面也不错，空调和洗衣机都是新的。",
+          "hotspot": {
+            "x": 73,
+            "y": 26
+          }
+        }
+      ]
+    },
+    "2": {
+      "title": "课文二：新家还没收拾好",
+      "subtitle": "观察新家的问题：灯、冰箱、卫生间和洗衣机。",
+      "steps": [
+        {
+          "id": "new_home",
+          "title": "灯还开着",
+          "prompt": "什么东西还开着？谁可能忘了关？",
+          "image": "images/hsk3-l03/vocab-story/02-new-home.png",
+          "words": [
+            "灯",
+            "关",
+            "冰箱"
+          ],
+          "phrases": [
+            "灯开着",
+            "忘关了",
+            "冰箱不能用"
+          ],
+          "sentence": "我今天早上来的时候，灯还开着。",
+          "hotspot": {
+            "x": 50,
+            "y": 20
+          }
+        },
+        {
+          "id": "clean_home",
+          "title": "打扫卫生间",
+          "prompt": "为什么还不能洗衣服？",
+          "image": "images/hsk3-l03/vocab-story/02-new-home.png",
+          "words": [
+            "卫生间",
+            "打扫",
+            "坏了",
+            "搬家"
+          ],
+          "phrases": [
+            "忙坏了",
+            "没打扫好",
+            "星期天搬家"
+          ],
+          "sentence": "卫生间没打扫好，还不能洗衣服。",
+          "hotspot": {
+            "x": 79,
+            "y": 50
+          }
+        }
+      ]
+    },
+    "3": {
+      "title": "课文三：办信用卡",
+      "subtitle": "到银行办业务，认识信用卡、还钱和银行服务。",
+      "steps": [
+        {
+          "id": "bank_card",
+          "title": "银行办卡",
+          "prompt": "他们在银行办什么？为什么要办信用卡？",
+          "image": "images/hsk3-l03/vocab-story/04-bank-credit-card.png",
+          "words": [
+            "办",
+            "信用卡",
+            "还",
+            "银行"
+          ],
+          "phrases": [
+            "办张信用卡",
+            "慢慢还",
+            "银行服务"
+          ],
+          "sentence": "咱们办张信用卡吧，花的钱可以慢慢还。",
+          "hotspot": {
+            "x": 56,
+            "y": 54
+          }
+        },
+        {
+          "id": "arrive_early_late",
+          "title": "就和才",
+          "prompt": "银行很近，走路几分钟就能到；很晚才能回来。有什么不同？",
+          "image": "images/hsk3-l03/vocab-story/04-bank-credit-card.png",
+          "words": [
+            "听说",
+            "才"
+          ],
+          "phrases": [
+            "几分钟就能到",
+            "很晚才能回来"
+          ],
+          "sentence": "中国银行很近，走路几分钟就能到。",
+          "hotspot": {
+            "x": 40,
+            "y": 46
+          }
+        }
+      ]
+    },
+    "4": {
+      "title": "课文四：什么时候搬家",
+      "subtitle": "比较两种搬家计划：很快完成，还是需要更多时间。",
+      "steps": [
+        {
+          "id": "moving_plan",
+          "title": "准备搬家",
+          "prompt": "搬家前需要准备什么？",
+          "image": "images/hsk3-l03/vocab-story/03-moving-plan.png",
+          "words": [
+            "纸",
+            "搬",
+            "需要"
+          ],
+          "phrases": [
+            "买纸箱",
+            "准备好",
+            "请朋友帮忙"
+          ],
+          "sentence": "我明天去买一些纸箱，很快就能准备好。",
+          "hotspot": {
+            "x": 36,
+            "y": 55
+          }
+        },
+        {
+          "id": "move_time",
+          "title": "计划时间",
+          "prompt": "谁觉得这个星期就能搬？谁觉得下个月才能搬？",
+          "image": "images/hsk3-l03/vocab-story/03-moving-plan.png",
+          "words": [
+            "搬家"
+          ],
+          "phrases": [
+            "一天就能搬完",
+            "两个星期才能做完"
+          ],
+          "sentence": "这么多事情最少需要两个星期才能做完。",
+          "hotspot": {
+            "x": 51,
+            "y": 46
+          }
+        }
+      ]
+    }
+  },
+  "vocabulary": [
+    {
+      "id": "v03_01",
+      "hanzi": "初中",
+      "pinyin": "chūzhōng",
+      "pos": "名词",
+      "english": "middle school",
+      "tags": [
+        "text-1"
+      ]
+    },
+    {
+      "id": "v03_02",
+      "hanzi": "咱们",
+      "pinyin": "zánmen",
+      "pos": "代词",
+      "english": "we; us",
+      "tags": [
+        "text-1"
+      ]
+    },
+    {
+      "id": "v03_03",
+      "hanzi": "换",
+      "pinyin": "huàn",
+      "pos": "动词",
+      "english": "change",
+      "tags": [
+        "text-1"
+      ]
+    },
+    {
+      "id": "v03_04",
+      "hanzi": "房子",
+      "pinyin": "fángzi",
+      "pos": "名词",
+      "english": "house; apartment",
+      "tags": [
+        "text-1"
+      ]
+    },
+    {
+      "id": "v03_05",
+      "hanzi": "小区",
+      "pinyin": "xiǎoqū",
+      "pos": "名词",
+      "english": "residential complex",
+      "tags": [
+        "text-1"
+      ]
+    },
+    {
+      "id": "v03_06",
+      "hanzi": "环境",
+      "pinyin": "huánjìng",
+      "pos": "名词",
+      "english": "environment",
+      "tags": [
+        "text-1"
+      ]
+    },
+    {
+      "id": "v03_07",
+      "hanzi": "挺",
+      "pinyin": "tǐng",
+      "pos": "副词",
+      "english": "quite; very",
+      "tags": [
+        "text-1"
+      ]
+    },
+    {
+      "id": "v03_08",
+      "hanzi": "空调",
+      "pinyin": "kōngtiáo",
+      "pos": "名词",
+      "english": "air conditioner",
+      "tags": [
+        "text-1"
+      ]
+    },
+    {
+      "id": "v03_09",
+      "hanzi": "洗衣机",
+      "pinyin": "xǐyījī",
+      "pos": "名词",
+      "english": "washing machine",
+      "tags": [
+        "text-1",
+        "text-2"
+      ]
+    },
+    {
+      "id": "v03_10",
+      "hanzi": "层",
+      "pinyin": "céng",
+      "pos": "量词",
+      "english": "floor",
+      "tags": [
+        "text-1"
+      ]
+    },
+    {
+      "id": "v03_11",
+      "hanzi": "花园",
+      "pinyin": "huāyuán",
+      "pos": "名词",
+      "english": "garden",
+      "tags": [
+        "text-1"
+      ]
+    },
+    {
+      "id": "v03_12",
+      "hanzi": "灯",
+      "pinyin": "dēng",
+      "pos": "名词",
+      "english": "light",
+      "tags": [
+        "text-2"
+      ]
+    },
+    {
+      "id": "v03_13",
+      "hanzi": "关",
+      "pinyin": "guān",
+      "pos": "动词",
+      "english": "turn off",
+      "tags": [
+        "text-2"
+      ]
+    },
+    {
+      "id": "v03_14",
+      "hanzi": "冰箱",
+      "pinyin": "bīngxiāng",
+      "pos": "名词",
+      "english": "refrigerator",
+      "tags": [
+        "text-2"
+      ]
+    },
+    {
+      "id": "v03_15",
+      "hanzi": "卫生间",
+      "pinyin": "wèishēngjiān",
+      "pos": "名词",
+      "english": "bathroom",
+      "tags": [
+        "text-2"
+      ]
+    },
+    {
+      "id": "v03_16",
+      "hanzi": "打扫",
+      "pinyin": "dǎsǎo",
+      "pos": "动词",
+      "english": "clean",
+      "tags": [
+        "text-2"
+      ]
+    },
+    {
+      "id": "v03_17",
+      "hanzi": "搬家",
+      "pinyin": "bānjiā",
+      "pos": "动词",
+      "english": "move house",
+      "tags": [
+        "text-2",
+        "text-4"
+      ]
+    },
+    {
+      "id": "v03_18",
+      "hanzi": "办",
+      "pinyin": "bàn",
+      "pos": "动词",
+      "english": "do; handle",
+      "tags": [
+        "text-3"
+      ]
+    },
+    {
+      "id": "v03_19",
+      "hanzi": "信用卡",
+      "pinyin": "xìnyòngkǎ",
+      "pos": "名词",
+      "english": "credit card",
+      "tags": [
+        "text-3"
+      ]
+    },
+    {
+      "id": "v03_20",
+      "hanzi": "还",
+      "pinyin": "huán",
+      "pos": "动词",
+      "english": "return; repay",
+      "tags": [
+        "text-3"
+      ]
+    },
+    {
+      "id": "v03_21",
+      "hanzi": "听说",
+      "pinyin": "tīngshuō",
+      "pos": "动词",
+      "english": "hear about",
+      "tags": [
+        "text-3"
+      ]
+    },
+    {
+      "id": "v03_22",
+      "hanzi": "银行",
+      "pinyin": "yínháng",
+      "pos": "名词",
+      "english": "bank",
+      "tags": [
+        "text-3"
+      ]
+    },
+    {
+      "id": "v03_23",
+      "hanzi": "才",
+      "pinyin": "cái",
+      "pos": "副词",
+      "english": "not until",
+      "tags": [
+        "text-3",
+        "text-4"
+      ]
+    },
+    {
+      "id": "v03_24",
+      "hanzi": "纸",
+      "pinyin": "zhǐ",
+      "pos": "名词",
+      "english": "paper",
+      "tags": [
+        "text-4"
+      ]
+    },
+    {
+      "id": "v03_25",
+      "hanzi": "搬",
+      "pinyin": "bān",
+      "pos": "动词",
+      "english": "move; carry",
+      "tags": [
+        "text-4"
+      ]
+    },
+    {
+      "id": "v03_26",
+      "hanzi": "需要",
+      "pinyin": "xūyào",
+      "pos": "动词",
+      "english": "need",
+      "tags": [
+        "text-4"
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g03_01",
+      "title": "程度副词“挺”",
+      "titleEn": "Quite / Pretty 挺",
+      "scene": "先看两张小区图，说说你愿意住在哪一个，再用“挺”说优点或缺点。",
+      "structure": "挺 + 形容词 / 心理动词 + 的",
+      "explanation": "“挺”放在形容词或心理动词前，表示程度较高，常用于口语。先让学生说小区的优点和缺点，再归纳结构。",
+      "examples": [
+        {
+          "hanzi": "这个小区挺大的。",
+          "pinyin": "Zhège xiǎoqū tǐng dà de.",
+          "english": "This neighborhood is quite big."
+        },
+        {
+          "hanzi": "这个小区挺安静的。",
+          "pinyin": "Zhège xiǎoqū tǐng ānjìng de.",
+          "english": "This neighborhood is quite quiet."
+        },
+        {
+          "hanzi": "这个小区离地铁站挺近的。",
+          "pinyin": "Zhège xiǎoqū lí dìtiězhàn tǐng jìn de.",
+          "english": "This neighborhood is quite close to the metro station."
+        },
+        {
+          "hanzi": "这个小区环境挺好的。",
+          "pinyin": "Zhège xiǎoqū huánjìng tǐng hǎo de.",
+          "english": "This neighborhood is pretty nice."
+        },
+        {
+          "hanzi": "我挺喜欢这个小花园的。",
+          "pinyin": "Wǒ tǐng xǐhuan zhège xiǎo huāyuán de.",
+          "english": "I quite like this small garden."
+        }
+      ]
+    },
+    {
+      "id": "g03_02",
+      "title": "程度补语“坏了”",
+      "titleEn": "Extremely - 坏了",
+      "scene": "先看图，想一想搬家后的人可能是什么状态；点击后再展示例句。",
+      "structure": "形容词 / 动词 + 坏了",
+      "explanation": "“坏了”放在形容词或动词后，表示程度非常高，常带夸张的语气。",
+      "examples": [
+        {
+          "hanzi": "我这几天忙坏了。",
+          "pinyin": "Wǒ zhè jǐ tiān máng huài le.",
+          "english": "I have been extremely busy these days."
+        },
+        {
+          "hanzi": "搬了一天家，大家都累坏了。",
+          "pinyin": "Bān le yì tiān jiā, dàjiā dōu lèi huài le.",
+          "english": "After moving all day, everyone is exhausted."
+        },
+        {
+          "hanzi": "天气太热了，我渴坏了。",
+          "pinyin": "Tiānqì tài rè le, wǒ kě huài le.",
+          "english": "It is so hot that I am extremely thirsty."
+        },
+        {
+          "hanzi": "小朋友等妈妈等坏了。",
+          "pinyin": "Xiǎopéngyou děng māma děng huài le.",
+          "english": "The child has waited for their mother for far too long."
+        },
+        {
+          "hanzi": "今天事情太多，把我忙坏了。",
+          "pinyin": "Jīntiān shìqing tài duō, bǎ wǒ máng huài le.",
+          "english": "There is so much to do today that it has made me extremely busy."
+        }
+      ]
+    },
+    {
+      "id": "g03_03",
+      "title": "“就”和“才”",
+      "titleEn": "就 and 才",
+      "scene": "先比较两种时间安排：哪一种快、顺利？哪一种晚、需要更多时间？",
+      "structure": "时间 / 条件 + 就 + 动词；时间 / 条件 + 才 + 动词",
+      "explanation": "副词“就”和“才”用在动词前面作状语。“就”表示说话人认为动作发生得早、进行得快或顺利；“才”表示动作发生得晚、进行得慢或不顺利。注意“就 / 才”放在动词前。",
+      "examples": [
+        {
+          "hanzi": "中国银行很近，走路几分钟就能到。",
+          "pinyin": "Zhōngguó yínháng hěn jìn, zǒulù jǐ fēnzhōng jiù néng dào.",
+          "english": "The bank is close; you can get there in a few minutes on foot."
+        },
+        {
+          "hanzi": "我下午要去医院，很晚才能回来。",
+          "pinyin": "Wǒ xiàwǔ yào qù yīyuàn, hěn wǎn cái néng huílái.",
+          "english": "I have to go to the hospital, so I cannot return until late."
+        },
+        {
+          "hanzi": "我们明天买纸箱，很快就能准备好。",
+          "pinyin": "Wǒmen míngtiān mǎi zhǐxiāng, hěn kuài jiù néng zhǔnbèi hǎo.",
+          "english": "If we buy boxes tomorrow, we can prepare quickly."
+        },
+        {
+          "hanzi": "这么多事情，最少需要两个星期才能做完。",
+          "pinyin": "Zhème duō shìqing, zuìshǎo xūyào liǎng gè xīngqī cái néng zuò wán.",
+          "english": "With so much to do, it cannot be finished until at least two weeks later."
+        },
+        {
+          "hanzi": "朋友来帮忙，最多一天就能搬完。",
+          "pinyin": "Péngyou lái bāngmáng, zuìduō yì tiān jiù néng bān wán.",
+          "english": "If friends help, we can finish moving in one day at most."
+        }
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "t_hsk3_l03_01",
+      "textId": 1,
+      "title": "课文一：这个小区怎么样",
+      "setting": "在家里，刘明和王一雪看房子。",
+      "lines": [
+        {
+          "speaker": "王一雪",
+          "hanzi": "小雪的初中离家有点儿远，咱们换一个近点儿的房子吧。",
+          "pinyin": "Xiǎoxuě de chūzhōng lí jiā yǒudiǎnr yuǎn, zánmen huàn yí gè jìn diǎnr de fángzi ba.",
+          "english": "Xiaoxue's middle school is a little far from home. Let's change to a closer house."
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "好啊，我上网看看。你觉得这个小区怎么样？",
+          "pinyin": "Hǎo a, wǒ shàngwǎng kànkan. Nǐ juéde zhège xiǎoqū zěnmeyàng?",
+          "english": "Sure. Let me look online. What do you think of this neighborhood?"
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "环境挺好的，离地铁站还不远。",
+          "pinyin": "Huánjìng tǐng hǎo de, lí dìtiězhàn hái bù yuǎn.",
+          "english": "The environment is pretty good, and it is not far from the subway station."
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "房子里面也不错，空调和洗衣机都是新的。",
+          "pinyin": "Fángzi lǐmiàn yě búcuò, kōngtiáo hé xǐyījī dōu shì xīn de.",
+          "english": "The inside is nice too. The air conditioner and washing machine are both new."
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "是不错，但是我不喜欢住一层。",
+          "pinyin": "Shì búcuò, dànshì wǒ bù xǐhuan zhù yì céng.",
+          "english": "It is nice, but I do not like living on the first floor."
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "这个一层带一个小花园，我觉得咱们可以去看看。",
+          "pinyin": "Zhège yì céng dài yí gè xiǎo huāyuán, wǒ juéde zánmen kěyǐ qù kànkan.",
+          "english": "This first-floor unit has a small garden. I think we can go see it."
+        }
+      ]
+    },
+    {
+      "id": "t_hsk3_l03_02",
+      "textId": 2,
+      "title": "课文二：新家还没收拾好",
+      "setting": "在新家，王一雪收拾房间，刘明进来了。",
+      "lines": [
+        {
+          "speaker": "王一雪",
+          "hanzi": "我今天早上来的时候，灯还开着。",
+          "pinyin": "Wǒ jīntiān zǎoshang lái de shíhou, dēng hái kāizhe.",
+          "english": "When I came this morning, the light was still on."
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "我这几天忙坏了，可能走的时候忘关了。",
+          "pinyin": "Wǒ zhè jǐ tiān máng huài le, kěnéng zǒu de shíhou wàng guān le.",
+          "english": "I have been extremely busy these days; I may have forgotten to turn it off."
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "冰箱不能用，这些吃的东西放在哪儿？",
+          "pinyin": "Bīngxiāng bù néng yòng, zhèxiē chī de dōngxi fàng zài nǎr?",
+          "english": "The refrigerator cannot be used. Where do we put this food?"
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "不可能吧？冰箱是新买的，我来看看。",
+          "pinyin": "Bù kěnéng ba? Bīngxiāng shì xīn mǎi de, wǒ lái kànkan.",
+          "english": "That cannot be right. The refrigerator is newly bought. Let me check."
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "洗衣机也坏了吗？",
+          "pinyin": "Xǐyījī yě huài le ma?",
+          "english": "Is the washing machine broken too?"
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "没坏，但是卫生间没打扫好，还不能洗衣服。星期天我们真的能搬家吗？",
+          "pinyin": "Méi huài, dànshì wèishēngjiān méi dǎsǎo hǎo, hái bù néng xǐ yīfu. Xīngqītiān wǒmen zhēnde néng bānjiā ma?",
+          "english": "It is not broken, but the bathroom has not been cleaned, so we cannot do laundry yet. Can we really move on Sunday?"
+        }
+      ]
+    },
+    {
+      "id": "t_hsk3_l03_03",
+      "textId": 3,
+      "title": "课文三：办张信用卡吧",
+      "setting": "在家里，刘明和王一雪讨论搬家的花费。",
+      "lines": [
+        {
+          "speaker": "王一雪",
+          "hanzi": "这个月花了不少钱。",
+          "pinyin": "Zhège yuè huāle bù shǎo qián.",
+          "english": "We spent quite a lot of money this month."
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "是的，我们买了很多搬家时要用的东西。",
+          "pinyin": "Shì de, wǒmen mǎile hěn duō bānjiā shí yào yòng de dōngxi.",
+          "english": "Yes, we bought many things needed for moving."
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "咱们办张信用卡吧，花的钱可以慢慢还。听说中国银行的服务不错，办了信用卡买东西还能便宜。",
+          "pinyin": "Zánmen bàn zhāng xìnyòngkǎ ba, huā de qián kěyǐ mànmàn huán. Tīngshuō Zhōngguó Yínháng de fúwù búcuò, bànle xìnyòngkǎ mǎi dōngxi hái néng piányi.",
+          "english": "Let's apply for a credit card. We can repay the money slowly. I hear Bank of China has good service, and shopping can be cheaper with a credit card."
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "好啊！中国银行很近，走路几分钟就能到。咱们什么时候去？",
+          "pinyin": "Hǎo a! Zhōngguó Yínháng hěn jìn, zǒulù jǐ fēnzhōng jiù néng dào. Zánmen shénme shíhou qù?",
+          "english": "Great! The bank is close; we can get there in a few minutes on foot. When shall we go?"
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "今天下午？",
+          "pinyin": "Jīntiān xiàwǔ?",
+          "english": "This afternoon?"
+        },
+        {
+          "speaker": "刘明",
+          "hanzi": "我下午要去医院，很晚才能回来。",
+          "pinyin": "Wǒ xiàwǔ yào qù yīyuàn, hěn wǎn cái néng huílái.",
+          "english": "I need to go to the hospital this afternoon and cannot return until very late."
+        }
+      ]
+    },
+    {
+      "id": "t_hsk3_l03_04",
+      "textId": 4,
+      "title": "课文四：什么时候搬家",
+      "setting": "在家里，刘明和王一雪讨论搬家计划。",
+      "lines": [
+        {
+          "speaker": "刘明",
+          "hanzi": "我觉得这个星期就能搬家。我明天去买一些纸箱，很快就能准备好。搬家那天，我想请几位朋友来帮忙，最多一天就能搬完。",
+          "pinyin": "Wǒ juéde zhège xīngqī jiù néng bānjiā. Wǒ míngtiān qù mǎi yìxiē zhǐxiāng, hěn kuài jiù néng zhǔnbèi hǎo. Bānjiā nà tiān, wǒ xiǎng qǐng jǐ wèi péngyou lái bāngmáng, zuìduō yì tiān jiù néng bān wán.",
+          "english": "I think we can move this week. I will buy some boxes tomorrow and prepare quickly. On moving day, I will ask friends to help; we can finish in one day at most."
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "我觉得下个月才能搬家。这周开始准备，下周去打扫新家，这么多事情最少需要两个星期才能做完。搬家那天，我们应该找一家搬家公司。",
+          "pinyin": "Wǒ juéde xià gè yuè cái néng bānjiā. Zhè zhōu kāishǐ zhǔnbèi, xià zhōu qù dǎsǎo xīn jiā, zhème duō shìqing zuìshǎo xūyào liǎng gè xīngqī cái néng zuò wán. Bānjiā nà tiān, wǒmen yīnggāi zhǎo yì jiā bānjiā gōngsī.",
+          "english": "I think we cannot move until next month. We start preparing this week and clean the new home next week; so many things need at least two weeks. We should hire a moving company."
+        }
+      ]
+    }
+  ],
+  "grammarTeachingNotes": {
+    "g03_01": {
+      "scene": "看两张小区图：先说你愿意住在哪一个，再说它有哪些优点或缺点。",
+      "structureEn": "挺 + adjective / feeling verb + 的",
+      "visualLearning": {
+        "image": "images/hsk3-l03/grammar/neighborhood-good.png",
+        "sceneTitleEn": "Which neighborhood would you choose?",
+        "compareImages": [
+          {
+            "src": "images/hsk3-l03/grammar/neighborhood-good.png",
+            "label": "小区 A"
+          },
+          {
+            "src": "images/hsk3-l03/grammar/neighborhood-needs-work.png",
+            "label": "小区 B"
+          }
+        ],
+        "blocks": [
+          "这个小区",
+          "挺安静的"
+        ],
+        "blockLabelsEn": [
+          "topic",
+          "pretty quiet"
+        ],
+        "impressions": [
+          {
+            "hanzi": "挺大",
+            "english": "quite big"
+          },
+          {
+            "hanzi": "挺安静",
+            "english": "quite quiet"
+          },
+          {
+            "hanzi": "离地铁站挺近",
+            "english": "quite close to the metro"
+          }
+        ]
+      }
+    },
+    "g03_02": {
+      "scene": "先看图并思考：搬进新家后，图中的人可能怎么样？点击后再展示例句。",
+      "structureEn": "verb / adjective + 坏了",
+      "visualLearning": {
+        "image": "images/hsk3-l03/vocab-story/02-new-home.png",
+        "sceneTitleEn": "What happened after moving?",
+        "blocks": [
+          "我这几天",
+          "忙",
+          "坏了"
+        ],
+        "blockLabelsEn": [
+          "time",
+          "state",
+          "extremely"
+        ]
+      }
+    },
+    "g03_03": {
+      "scene": "先看“就”和“才”的两列例句，再比较：哪一列表示快、早、顺利？哪一列表示晚、慢、不顺利？",
+      "structureEn": "就 / 才 + 动词",
+      "visualLearning": {
+        "image": "images/hsk3-l03/vocab-story/03-moving-plan.png",
+        "sceneTitleEn": "Compare the two schedules",
+        "blocks": [
+          "几分钟",
+          "就",
+          "能到"
+        ],
+        "blockLabelsEn": [
+          "short time",
+          "adverb before verb",
+          "result"
+        ],
+        "impressions": [
+          {
+            "hanzi": "就：早、快、顺利",
+            "english": "speaker sees it as early, quick, or smooth"
+          },
+          {
+            "hanzi": "才：晚、慢、不顺利",
+            "english": "speaker sees it as late, slow, or difficult"
+          }
+        ]
+      }
+    }
+  },
+  "textTeachingNotes": {
+    "t_hsk3_l03_01": {
+      "languageLinks": [
+        {
+          "label": "挺……的",
+          "terms": [
+            "挺好的"
+          ],
+          "use": "用来评价程度较高的优点。"
+        },
+        {
+          "label": "一层",
+          "terms": [
+            "一层"
+          ],
+          "use": "量词“层”表示楼层。"
+        }
+      ],
+      "classQuestions": [
+        {
+          "question": "小雪为什么要换房子？",
+          "answer": "因为她的初中离家有点儿远。"
+        },
+        {
+          "question": "王一雪觉得小区和房子怎么样？",
+          "answer": "她觉得环境挺好，空调和洗衣机都是新的。"
+        },
+        {
+          "question": "小雪为什么不喜欢一层？",
+          "answer": "她不喜欢住一层。"
+        },
+        {
+          "question": "这个一层有什么特别的地方？",
+          "answer": "它带一个小花园。"
+        }
+      ],
+      "retellScaffold": {
+        "nodes": [
+          {
+            "label": "原因",
+            "hint": "学校离家远"
+          },
+          {
+            "label": "小区",
+            "hint": "环境挺好"
+          },
+          {
+            "label": "房子",
+            "hint": "家电新、有花园"
+          }
+        ],
+        "frame": "王一雪想换房子，因为……。她觉得这个小区……，房子里面……。"
+      }
+    },
+    "t_hsk3_l03_02": {
+      "languageLinks": [
+        {
+          "label": "忙坏了",
+          "terms": [
+            "忙坏了"
+          ],
+          "use": "表示非常忙。"
+        },
+        {
+          "label": "还不能",
+          "terms": [
+            "还不能洗衣服"
+          ],
+          "use": "表示事情暂时不能做。"
+        }
+      ],
+      "classQuestions": [
+        {
+          "question": "灯为什么还开着？",
+          "answer": "刘明可能走的时候忘关了。"
+        },
+        {
+          "question": "为什么还不能洗衣服？",
+          "answer": "因为卫生间没打扫好。"
+        },
+        {
+          "question": "刘明为什么说自己忙坏了？",
+          "answer": "因为这几天搬家和收拾新家，事情很多。"
+        },
+        {
+          "question": "洗衣机坏了吗？为什么还不能洗衣服？",
+          "answer": "洗衣机没有坏；卫生间没有打扫好。"
+        }
+      ],
+      "retellScaffold": {
+        "nodes": [
+          {
+            "label": "发现",
+            "hint": "灯还开着"
+          },
+          {
+            "label": "问题",
+            "hint": "冰箱、卫生间"
+          },
+          {
+            "label": "计划",
+            "hint": "星期天搬家"
+          }
+        ],
+        "frame": "王一雪来到新家，发现……。刘明说……。他们还要……。"
+      }
+    },
+    "t_hsk3_l03_03": {
+      "languageLinks": [
+        {
+          "label": "就",
+          "terms": [
+            "就能到"
+          ],
+          "use": "表示动作快、早或顺利。"
+        },
+        {
+          "label": "才",
+          "terms": [
+            "才能回来"
+          ],
+          "use": "表示动作晚、慢或不容易。"
+        }
+      ],
+      "classQuestions": [
+        {
+          "question": "他们为什么想办信用卡？",
+          "answer": "因为搬家花了不少钱，可以慢慢还。"
+        },
+        {
+          "question": "刘明下午为什么不能去银行？",
+          "answer": "因为他要去医院，很晚才能回来。"
+        },
+        {
+          "question": "听说哪一家银行的服务不错？",
+          "answer": "听说中国银行的服务不错。"
+        },
+        {
+          "question": "办了信用卡买东西有什么好处？",
+          "answer": "买东西还能便宜。"
+        }
+      ],
+      "retellScaffold": {
+        "nodes": [
+          {
+            "label": "花费",
+            "hint": "买了很多东西"
+          },
+          {
+            "label": "办卡",
+            "hint": "慢慢还、买东西便宜"
+          },
+          {
+            "label": "时间",
+            "hint": "就能到 / 才能回来"
+          }
+        ],
+        "frame": "他们搬家花了……，所以想……。银行很近，……。但是刘明……。"
+      }
+    },
+    "t_hsk3_l03_04": {
+      "languageLinks": [
+        {
+          "label": "就能",
+          "terms": [
+            "就能搬家",
+            "就能准备好",
+            "就能搬完"
+          ],
+          "use": "表示很快可以完成。"
+        },
+        {
+          "label": "才能",
+          "terms": [
+            "才能搬家",
+            "才能做完"
+          ],
+          "use": "表示需要较长时间才完成。"
+        }
+      ],
+      "classQuestions": [
+        {
+          "question": "刘明的搬家计划是什么？",
+          "answer": "买纸箱、请朋友帮忙，觉得一天就能搬完。"
+        },
+        {
+          "question": "王一雪为什么觉得要下个月才能搬？",
+          "answer": "因为准备、打扫和搬家需要至少两个星期。"
+        },
+        {
+          "question": "刘明准备怎么搬家？",
+          "answer": "他买纸箱，请朋友帮忙，觉得一天就能搬完。"
+        },
+        {
+          "question": "王一雪建议搬家那天做什么？",
+          "answer": "她建议找一家搬家公司。"
+        }
+      ],
+      "retellScaffold": {
+        "nodes": [
+          {
+            "label": "刘明",
+            "hint": "这个星期、朋友帮忙"
+          },
+          {
+            "label": "王一雪",
+            "hint": "下个月、打扫新家"
+          },
+          {
+            "label": "比较",
+            "hint": "就 / 才"
+          }
+        ],
+        "frame": "刘明觉得……就能……；王一雪觉得……才能……，因为……。"
+      }
+    }
+  },
+  "vocabExtensions": {
+    "v03_04": {
+      "session": "1",
+      "phrases": [
+        "换一个房子",
+        "近一点儿的房子"
+      ]
+    },
+    "v03_05": {
+      "session": "1",
+      "phrases": [
+        "这个小区",
+        "小区环境"
+      ]
+    },
+    "v03_06": {
+      "session": "1",
+      "phrases": [
+        "环境挺好的",
+        "生活环境"
+      ]
+    },
+    "v03_08": {
+      "session": "1",
+      "phrases": [
+        "空调是新的",
+        "开空调"
+      ]
+    },
+    "v03_09": {
+      "session": "2",
+      "phrases": [
+        "洗衣机坏了吗",
+        "用洗衣机洗衣服"
+      ]
+    },
+    "v03_12": {
+      "session": "2",
+      "phrases": [
+        "灯还开着",
+        "关灯"
+      ]
+    },
+    "v03_14": {
+      "session": "2",
+      "phrases": [
+        "冰箱不能用",
+        "新买的冰箱"
+      ]
+    },
+    "v03_16": {
+      "session": "2",
+      "phrases": [
+        "打扫卫生间",
+        "没打扫好"
+      ]
+    },
+    "v03_17": {
+      "session": "3",
+      "phrases": [
+        "星期天搬家",
+        "准备搬家"
+      ]
+    },
+    "v03_19": {
+      "session": "3",
+      "phrases": [
+        "办张信用卡",
+        "用信用卡买东西"
+      ]
+    },
+    "v03_22": {
+      "session": "3",
+      "phrases": [
+        "中国银行",
+        "银行服务"
+      ]
+    },
+    "v03_23": {
+      "session": "4",
+      "phrases": [
+        "几分钟就能到",
+        "两个星期才能做完"
+      ]
+    },
+    "v03_24": {
+      "session": "4",
+      "phrases": [
+        "买一些纸箱",
+        "一张纸"
+      ]
+    },
+    "v03_26": {
+      "session": "4",
+      "phrases": [
+        "需要两个星期",
+        "需要朋友帮忙"
+      ]
+    }
+  },
+  "previewMissions": [
+    {
+      "id": "pm_hsk3_l03_a",
+      "session": "A",
+      "title": "第一次课课前任务",
+      "titleEn": "Preview A",
+      "subtitleEn": "Preview key words for describing an apartment and its neighborhood.",
+      "scenario": "你要帮朋友选择一个小区。",
+      "goals": [
+        "房子和小区",
+        "生活设施",
+        "挺……的"
+      ],
+      "steps": [
+        {
+          "title": "看小区",
+          "titleEn": "Explore the Neighborhood",
+          "task": "认识房子、小区和环境"
+        },
+        {
+          "title": "找设施",
+          "titleEn": "Find the Facilities",
+          "task": "认识空调、洗衣机、花园和地铁站"
+        },
+        {
+          "title": "学短语",
+          "titleEn": "Learn Useful Phrases",
+          "task": "看房、住一层、离地铁站近"
+        },
+        {
+          "title": "作比较",
+          "titleEn": "Compare Two Places",
+          "task": "用“挺……的”评价小区"
+        },
+        {
+          "title": "准备表达",
+          "titleEn": "Prepare to Speak",
+          "task": "选择关键词，准备介绍一个小区"
+        }
+      ],
+      "storyIntro": "朋友想选一套房子。请先认识关键词，再比较两个小区，准备给他建议。",
+      "storyIntroEn": "Your friend wants to choose an apartment. Learn the key words, compare two neighborhoods, and prepare a short recommendation.",
+      "stages": [
+        {
+          "id": "a1",
+          "title": "看小区",
+          "titleEn": "Explore the Neighborhood",
+          "screenPrompt": "看图：这是什么地方？",
+          "screenPromptEn": "Look at the picture. What place is this?",
+          "interactionType": "choice_set",
+          "photos": [
+            {
+              "src": "../in-class/images/hsk3-l03/vocab-story/01-apartment-search.png",
+              "label": "看房 / Apartment viewing"
+            }
+          ],
+          "items": [
+            {
+              "id": "place",
+              "question": "选择合适的答案。",
+              "questionEn": "Choose the best answer.",
+              "options": [
+                "小区",
+                "银行",
+                "饭馆"
+              ]
+            }
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "房子",
+              "pinyin": "fángzi",
+              "english": "apartment; house",
+              "example": "我们去看看房子吧。",
+              "exampleEnglish": "Let's go and look at the apartment."
+            },
+            {
+              "hanzi": "小区",
+              "pinyin": "xiǎoqū",
+              "english": "residential complex",
+              "example": "这个小区环境挺好的。",
+              "exampleEnglish": "This neighborhood is pretty nice."
+            },
+            {
+              "hanzi": "环境",
+              "pinyin": "huánjìng",
+              "english": "environment",
+              "example": "我喜欢安静的环境。",
+              "exampleEnglish": "I like a quiet environment."
+            }
+          ]
+        },
+        {
+          "id": "a2",
+          "title": "找生活设施",
+          "titleEn": "Find the Facilities",
+          "screenPrompt": "选出看房时可能看到或问到的设施。",
+          "screenPromptEn": "Select the facilities you may see or ask about when viewing an apartment.",
+          "interactionType": "multi_select",
+          "options": [
+            "空调",
+            "洗衣机",
+            "花园",
+            "地铁站",
+            "信用卡"
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "空调",
+              "pinyin": "kōngtiáo",
+              "english": "air conditioner",
+              "example": "房间里有空调。",
+              "exampleEnglish": "There is an air conditioner in the room."
+            },
+            {
+              "hanzi": "洗衣机",
+              "pinyin": "xǐyījī",
+              "english": "washing machine",
+              "example": "洗衣机是新的。",
+              "exampleEnglish": "The washing machine is new."
+            },
+            {
+              "hanzi": "花园",
+              "pinyin": "huāyuán",
+              "english": "garden",
+              "example": "一层带一个小花园。",
+              "exampleEnglish": "The first-floor apartment has a small garden."
+            }
+          ]
+        },
+        {
+          "id": "a3",
+          "title": "学看房短语",
+          "titleEn": "Learn Apartment Phrases",
+          "screenPrompt": "哪些短语可以用来谈论房子？",
+          "screenPromptEn": "Which phrases can you use to talk about an apartment?",
+          "interactionType": "multi_select",
+          "options": [
+            "去看房",
+            "住一层",
+            "离地铁站近",
+            "办信用卡",
+            "点两个菜"
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "看房",
+              "pinyin": "kàn fáng",
+              "english": "view an apartment",
+              "example": "下午我们一起去看房。",
+              "exampleEnglish": "We will view the apartment together this afternoon."
+            },
+            {
+              "hanzi": "一层",
+              "pinyin": "yì céng",
+              "english": "first floor",
+              "example": "我不太想住一层。",
+              "exampleEnglish": "I don't really want to live on the first floor."
+            },
+            {
+              "hanzi": "地铁站",
+              "pinyin": "dìtiězhàn",
+              "english": "subway station",
+              "example": "小区离地铁站很近。",
+              "exampleEnglish": "The neighborhood is close to the subway station."
+            }
+          ]
+        },
+        {
+          "id": "a4",
+          "title": "比较两个小区",
+          "titleEn": "Compare Two Neighborhoods",
+          "screenPrompt": "看图并选择自然的评价。",
+          "screenPromptEn": "Compare the pictures and choose a natural comment.",
+          "interactionType": "choice_set",
+          "photos": [
+            {
+              "src": "../in-class/images/hsk3-l03/grammar/neighborhood-good.png",
+              "label": "小区 A / Neighborhood A"
+            },
+            {
+              "src": "../in-class/images/hsk3-l03/grammar/neighborhood-needs-work.png",
+              "label": "小区 B / Neighborhood B"
+            }
+          ],
+          "items": [
+            {
+              "id": "good",
+              "question": "小区 A 怎么样？",
+              "questionEn": "How is Neighborhood A?",
+              "options": [
+                "环境挺好的。",
+                "冰箱不能用。",
+                "两个星期才能做完。"
+              ]
+            },
+            {
+              "id": "quiet",
+              "question": "小区 B 的问题是什么？",
+              "questionEn": "What is a possible problem with Neighborhood B?",
+              "options": [
+                "环境不太安静。",
+                "房间有洗衣机。",
+                "银行九点开门。"
+              ]
+            }
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "挺……的",
+              "pinyin": "tǐng ... de",
+              "english": "quite; pretty",
+              "example": "这个小区挺大，也挺安静的。",
+              "exampleEnglish": "This neighborhood is quite large and quiet."
+            }
+          ]
+        },
+        {
+          "id": "a5",
+          "title": "准备介绍",
+          "titleEn": "Prepare Your Recommendation",
+          "screenPrompt": "选择你准备在课上使用的表达。",
+          "screenPromptEn": "Choose the expressions you are ready to use in class.",
+          "interactionType": "multi_select",
+          "options": [
+            "环境挺好的",
+            "离地铁站很近",
+            "一层带花园",
+            "房子里有空调",
+            "我喜欢这个小区"
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "离……近",
+              "pinyin": "lí ... jìn",
+              "english": "be close to",
+              "example": "学校离地铁站很近。",
+              "exampleEnglish": "The school is close to the subway station."
+            },
+            {
+              "hanzi": "带",
+              "pinyin": "dài",
+              "english": "include; come with",
+              "example": "这个房子带一个小花园。",
+              "exampleEnglish": "This apartment comes with a small garden."
+            }
+          ]
+        }
+      ],
+      "outputTask": {
+        "prompt": "请用 2-3 句话介绍你选择的小区。",
+        "promptEn": "Write two or three Chinese sentences to recommend one neighborhood.",
+        "sentenceFrames": [
+          "我觉得这个小区……。",
+          "它离……，而且……。",
+          "我喜欢 / 不喜欢……，因为……。"
+        ],
+        "sampleAnswer": "我觉得小区 A 环境挺好的。它离地铁站很近，而且房子里有空调。"
+      }
+    },
+    {
+      "id": "pm_hsk3_l03_b",
+      "session": "B",
+      "title": "第二次课课前任务",
+      "titleEn": "Preview B",
+      "subtitleEn": "Preview key words for moving into a new home and describing an extreme state.",
+      "scenario": "朋友刚搬进新家，需要整理房间。",
+      "goals": [
+        "新家物品",
+        "整理和打扫",
+        "……坏了"
+      ],
+      "steps": [
+        {
+          "title": "看新家",
+          "titleEn": "Look at the New Home",
+          "task": "观察灯、冰箱和洗衣机"
+        },
+        {
+          "title": "找问题",
+          "titleEn": "Find the Problems",
+          "task": "理解开着、不能用、没打扫好"
+        },
+        {
+          "title": "学动作",
+          "titleEn": "Learn the Actions",
+          "task": "关灯、打扫、收拾"
+        },
+        {
+          "title": "说状态",
+          "titleEn": "Describe the State",
+          "task": "忙坏了、累坏了、渴坏了"
+        },
+        {
+          "title": "准备建议",
+          "titleEn": "Prepare a Plan",
+          "task": "说说新家还需要做什么"
+        }
+      ],
+      "storyIntro": "朋友刚搬进新家，房间里还有一些问题。请认识关键词，帮他安排要做的事情。",
+      "storyIntroEn": "Your friend has just moved into a new home. Learn the key words, find the problems, and help make a simple plan.",
+      "stages": [
+        {
+          "id": "b1",
+          "title": "观察新家",
+          "titleEn": "Look at the New Home",
+          "screenPrompt": "看图：你能找到哪些东西？",
+          "screenPromptEn": "Look at the picture. What can you find?",
+          "interactionType": "multi_select",
+          "photos": [
+            {
+              "src": "../in-class/images/hsk3-l03/vocab-story/02-new-home.png",
+              "label": "新家 / New home"
+            }
+          ],
+          "options": [
+            "灯",
+            "冰箱",
+            "洗衣机",
+            "卫生间",
+            "信用卡"
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "灯",
+              "pinyin": "dēng",
+              "english": "light",
+              "example": "客厅的灯还开着。",
+              "exampleEnglish": "The living-room light is still on."
+            },
+            {
+              "hanzi": "冰箱",
+              "pinyin": "bīngxiāng",
+              "english": "refrigerator",
+              "example": "冰箱还不能用。",
+              "exampleEnglish": "The refrigerator still cannot be used."
+            },
+            {
+              "hanzi": "卫生间",
+              "pinyin": "wèishēngjiān",
+              "english": "bathroom",
+              "example": "卫生间还没打扫好。",
+              "exampleEnglish": "The bathroom has not been cleaned yet."
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "title": "找到问题",
+          "titleEn": "Find the Problems",
+          "screenPrompt": "选择新家里还没有完成的事情。",
+          "screenPromptEn": "Select the things that are not finished in the new home.",
+          "interactionType": "multi_select",
+          "options": [
+            "灯还开着",
+            "冰箱不能用",
+            "卫生间没打扫好",
+            "花园很漂亮",
+            "地铁站很近"
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "开着",
+              "pinyin": "kāizhe",
+              "english": "be left on",
+              "example": "灯怎么还开着？",
+              "exampleEnglish": "Why is the light still on?"
+            },
+            {
+              "hanzi": "不能用",
+              "pinyin": "bù néng yòng",
+              "english": "cannot be used",
+              "example": "洗衣机现在还不能用。",
+              "exampleEnglish": "The washing machine cannot be used yet."
+            },
+            {
+              "hanzi": "打扫",
+              "pinyin": "dǎsǎo",
+              "english": "clean",
+              "example": "我先打扫卫生间。",
+              "exampleEnglish": "I will clean the bathroom first."
+            }
+          ]
+        },
+        {
+          "id": "b3",
+          "title": "选择要做的事",
+          "titleEn": "Choose What to Do",
+          "screenPrompt": "问题和办法应该怎样对应？",
+          "screenPromptEn": "Choose the best action for each problem.",
+          "interactionType": "choice_set",
+          "items": [
+            {
+              "id": "light",
+              "question": "灯还开着。",
+              "questionEn": "The light is still on.",
+              "options": [
+                "去关灯",
+                "去看房",
+                "去办卡"
+              ]
+            },
+            {
+              "id": "bathroom",
+              "question": "卫生间还没打扫好。",
+              "questionEn": "The bathroom has not been cleaned.",
+              "options": [
+                "打扫卫生间",
+                "打开冰箱",
+                "介绍小区"
+              ]
+            }
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "关",
+              "pinyin": "guān",
+              "english": "turn off; close",
+              "example": "走的时候别忘了关灯。",
+              "exampleEnglish": "Don't forget to turn off the light when you leave."
+            },
+            {
+              "hanzi": "收拾",
+              "pinyin": "shōushi",
+              "english": "tidy up",
+              "example": "我们一起收拾新家。",
+              "exampleEnglish": "Let's tidy up the new home together."
+            }
+          ]
+        },
+        {
+          "id": "b4",
+          "title": "说一说状态",
+          "titleEn": "Describe How Someone Feels",
+          "screenPrompt": "根据情况选择合适的表达。",
+          "screenPromptEn": "Choose the expression that fits each situation.",
+          "interactionType": "choice_set",
+          "items": [
+            {
+              "id": "busy",
+              "question": "这几天要搬家，也要上课。",
+              "questionEn": "You are moving and attending classes this week.",
+              "options": [
+                "忙坏了",
+                "饿坏了",
+                "高兴坏了"
+              ]
+            },
+            {
+              "id": "tired",
+              "question": "搬了一天的东西。",
+              "questionEn": "You carried things all day.",
+              "options": [
+                "累坏了",
+                "渴坏了",
+                "安静坏了"
+              ]
+            },
+            {
+              "id": "thirsty",
+              "question": "忙了很久，一直没有喝水。",
+              "questionEn": "You worked for a long time without water.",
+              "options": [
+                "渴坏了",
+                "忙坏了",
+                "近坏了"
+              ]
+            }
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "忙坏了",
+              "pinyin": "máng huài le",
+              "english": "extremely busy",
+              "example": "我这几天忙坏了。",
+              "exampleEnglish": "I have been extremely busy these days."
+            },
+            {
+              "hanzi": "累坏了",
+              "pinyin": "lèi huài le",
+              "english": "extremely tired",
+              "example": "搬完家，我累坏了。",
+              "exampleEnglish": "After moving, I was exhausted."
+            },
+            {
+              "hanzi": "渴坏了",
+              "pinyin": "kě huài le",
+              "english": "extremely thirsty",
+              "example": "我忙了一上午，渴坏了。",
+              "exampleEnglish": "I worked all morning and became extremely thirsty."
+            }
+          ]
+        },
+        {
+          "id": "b5",
+          "title": "准备新家计划",
+          "titleEn": "Prepare a New-home Plan",
+          "screenPrompt": "选择你准备先做的事情。",
+          "screenPromptEn": "Choose what you would do first in the new home.",
+          "interactionType": "multi_select",
+          "options": [
+            "先关灯",
+            "检查冰箱",
+            "打扫卫生间",
+            "收拾房间",
+            "请朋友帮忙"
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "先……再……",
+              "pinyin": "xiān ... zài ...",
+              "english": "first ... then ...",
+              "example": "我先关灯，再打扫卫生间。",
+              "exampleEnglish": "I will turn off the light first, then clean the bathroom."
+            },
+            {
+              "hanzi": "帮忙",
+              "pinyin": "bāngmáng",
+              "english": "help",
+              "example": "搬家时我请朋友帮忙。",
+              "exampleEnglish": "I ask my friends for help when moving."
+            }
+          ]
+        }
+      ],
+      "outputTask": {
+        "prompt": "请用 2-3 句话说说新家里的问题和你的安排。",
+        "promptEn": "Write two or three Chinese sentences about the problems and your plan.",
+        "sentenceFrames": [
+          "……还……。",
+          "我先……，再……。",
+          "做完这些事，我……坏了。"
+        ],
+        "sampleAnswer": "卫生间还没打扫好，灯也还开着。我先关灯，再打扫卫生间。"
+      }
+    },
+    {
+      "id": "pm_hsk3_l03_c",
+      "session": "C",
+      "title": "第三次课课前任务",
+      "titleEn": "Preview C",
+      "subtitleEn": "Preview key words for a bank visit and a moving schedule.",
+      "scenario": "朋友要先办信用卡，再安排搬家。",
+      "goals": [
+        "银行业务",
+        "搬家准备",
+        "就和才"
+      ],
+      "steps": [
+        {
+          "title": "去银行",
+          "titleEn": "Visit the Bank",
+          "task": "认识银行和信用卡"
+        },
+        {
+          "title": "办业务",
+          "titleEn": "Handle a Bank Task",
+          "task": "办信用卡、带证件、填写信息"
+        },
+        {
+          "title": "学“就”",
+          "titleEn": "Notice 就",
+          "task": "时间词 + 就 + 动词"
+        },
+        {
+          "title": "学“才”",
+          "titleEn": "Notice 才",
+          "task": "时间词 + 才 + 动词"
+        },
+        {
+          "title": "排计划",
+          "titleEn": "Make a Schedule",
+          "task": "比较快和慢、早和晚"
+        }
+      ],
+      "storyIntro": "朋友要办信用卡，也要准备搬家。请认识关键词，并用“就”和“才”比较时间安排。",
+      "storyIntroEn": "Your friend needs a credit card before moving. Learn the key words and use 就 and 才 to compare two schedules.",
+      "stages": [
+        {
+          "id": "c1",
+          "title": "去银行",
+          "titleEn": "Visit the Bank",
+          "screenPrompt": "看图：他在哪里？要办什么业务？",
+          "screenPromptEn": "Look at the picture. Where is he, and what does he need?",
+          "interactionType": "choice_set",
+          "photos": [
+            {
+              "src": "../in-class/images/hsk3-l03/vocab-story/04-bank-credit-card.png",
+              "label": "在银行办业务 / At the bank"
+            }
+          ],
+          "items": [
+            {
+              "id": "place",
+              "question": "他在哪里？",
+              "questionEn": "Where is he?",
+              "options": [
+                "银行",
+                "小区",
+                "饭馆"
+              ]
+            },
+            {
+              "id": "task",
+              "question": "他想办什么？",
+              "questionEn": "What does he want to apply for?",
+              "options": [
+                "信用卡",
+                "护照",
+                "菜单"
+              ]
+            }
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "银行",
+              "pinyin": "yínháng",
+              "english": "bank",
+              "example": "我明天去银行。",
+              "exampleEnglish": "I will go to the bank tomorrow."
+            },
+            {
+              "hanzi": "信用卡",
+              "pinyin": "xìnyòngkǎ",
+              "english": "credit card",
+              "example": "我想办一张信用卡。",
+              "exampleEnglish": "I want to apply for a credit card."
+            },
+            {
+              "hanzi": "办",
+              "pinyin": "bàn",
+              "english": "apply for; handle",
+              "example": "办信用卡需要什么？",
+              "exampleEnglish": "What is needed to apply for a credit card?"
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "title": "准备银行业务",
+          "titleEn": "Prepare for the Bank",
+          "screenPrompt": "选出去银行办业务可能需要做的事。",
+          "screenPromptEn": "Select what you may need to do at the bank.",
+          "interactionType": "multi_select",
+          "options": [
+            "带证件",
+            "填写信息",
+            "排队等候",
+            "办信用卡",
+            "打扫花园"
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "需要",
+              "pinyin": "xūyào",
+              "english": "need",
+              "example": "办信用卡需要带证件。",
+              "exampleEnglish": "You need to bring identification to apply for a credit card."
+            },
+            {
+              "hanzi": "等",
+              "pinyin": "děng",
+              "english": "wait",
+              "example": "请在这里等一下。",
+              "exampleEnglish": "Please wait here for a moment."
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "title": "发现“就”",
+          "titleEn": "Notice 就",
+          "screenPrompt": "说话人觉得哪件事发生得早或进行得快？",
+          "screenPromptEn": "Which action does the speaker think happens early or quickly?",
+          "interactionType": "choice_set",
+          "items": [
+            {
+              "id": "jiu",
+              "question": "选择合适的句子。",
+              "questionEn": "Choose the suitable sentence.",
+              "options": [
+                "银行九点开门，我八点半就到了。",
+                "银行九点开门，我十点才到。",
+                "这个小区挺安静的。"
+              ]
+            }
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "就",
+              "pinyin": "jiù",
+              "english": "earlier or faster than expected",
+              "example": "我八点就到银行了。",
+              "exampleEnglish": "I arrived at the bank as early as eight."
+            }
+          ]
+        },
+        {
+          "id": "c4",
+          "title": "发现“才”",
+          "titleEn": "Notice 才",
+          "screenPrompt": "说话人觉得哪件事发生得晚或进行得慢？",
+          "screenPromptEn": "Which action does the speaker think happens late or slowly?",
+          "interactionType": "choice_set",
+          "items": [
+            {
+              "id": "cai",
+              "question": "选择合适的句子。",
+              "questionEn": "Choose the suitable sentence.",
+              "options": [
+                "等了一个小时才办好。",
+                "走路五分钟就到了。",
+                "房间里有一台洗衣机。"
+              ]
+            }
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "才",
+              "pinyin": "cái",
+              "english": "later or slower than expected",
+              "example": "我等了一个小时才办好。",
+              "exampleEnglish": "It took an hour before I finished it."
+            }
+          ]
+        },
+        {
+          "id": "c5",
+          "title": "安排搬家时间",
+          "titleEn": "Plan the Moving Schedule",
+          "screenPrompt": "看图并选择合适的时间表达。",
+          "screenPromptEn": "Look at the moving scene and choose the suitable time expressions.",
+          "interactionType": "choice_set",
+          "photos": [
+            {
+              "src": "../in-class/images/hsk3-l03/vocab-story/03-moving-plan.png",
+              "label": "搬家计划 / Moving plan"
+            }
+          ],
+          "items": [
+            {
+              "id": "fast",
+              "question": "朋友很多，事情进行得很快。",
+              "questionEn": "Many friends help, so the work goes quickly.",
+              "options": [
+                "一个上午就能搬完。",
+                "两个星期才能搬完。",
+                "小区挺安静的。"
+              ]
+            },
+            {
+              "id": "slow",
+              "question": "事情很多，进行得很慢。",
+              "questionEn": "There is a lot to do, so the work goes slowly.",
+              "options": [
+                "两个星期才能做完。",
+                "十分钟就做完了。",
+                "银行就在学校旁边。"
+              ]
+            }
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "时间词 + 就 + 动词",
+              "pinyin": "",
+              "english": "early or fast",
+              "example": "我明天就去银行。",
+              "exampleEnglish": "I will go to the bank as early as tomorrow."
+            },
+            {
+              "hanzi": "时间词 + 才 + 动词",
+              "pinyin": "",
+              "english": "late or slow",
+              "example": "我下个月才搬家。",
+              "exampleEnglish": "I will not move until next month."
+            }
+          ]
+        }
+      ],
+      "outputTask": {
+        "prompt": "请用 2-3 句话介绍你的银行和搬家计划，至少使用一次“就”或“才”。",
+        "promptEn": "Write two or three Chinese sentences about the bank visit and moving plan. Use 就 or 才 at least once.",
+        "sentenceFrames": [
+          "我……就去银行办……。",
+          "……就能……。",
+          "……才……。"
+        ],
+        "sampleAnswer": "我明天就去银行办信用卡。朋友周末来帮忙，我们一个上午就能搬完。"
+      }
+    }
+  ],
+  "preClass": {
+    "mode": "preview_mission",
+    "missionId": "pm_hsk3_l03_a",
+    "vocabularyIds": [
+      "v03_04",
+      "v03_05",
+      "v03_06",
+      "v03_07",
+      "v03_08",
+      "v03_09",
+      "v03_17",
+      "v03_19",
+      "v03_23"
+    ],
+    "grammarIds": [
+      "g03_01",
+      "g03_02",
+      "g03_03"
+    ],
+    "readingData": [
+      {
+        "textId": "preview-a",
+        "title": "看房预热",
+        "context": "不直接剧透课文。",
+        "lines": [
+          {
+            "speaker": "任务",
+            "hanzi": "我想找一个离学校近的房子。",
+            "pinyin": "Wǒ xiǎng zhǎo yí gè lí xuéxiào jìn de fángzi.",
+            "english": "I want to find an apartment close to school."
+          },
+          {
+            "speaker": "任务",
+            "hanzi": "这个小区环境挺好的。",
+            "pinyin": "Zhège xiǎoqū huánjìng tǐng hǎo de.",
+            "english": "This neighborhood is pretty nice."
+          }
+        ]
+      }
+    ]
+  },
+  "inClass": {
+    "questionGroups": {
+      "v5_vocab_fill": [
+        {
+          "id": "l03_fill_group_01",
+          "type": "vocab_fill_group",
+          "stage": "in_class",
+          "prompt_en": "Choose from the word bank for each sentence.",
+          "data": {
+            "wordBank": [
+              "房子",
+              "小区",
+              "环境",
+              "挺",
+              "空调"
+            ],
+            "wordBank_pinyin": [
+              "fángzi",
+              "xiǎoqū",
+              "huánjìng",
+              "tǐng",
+              "kōngtiáo"
+            ],
+            "sentences": [
+              {
+                "sentence": "咱们换一个近一点儿的____。",
+                "answer": "房子"
+              },
+              {
+                "sentence": "你觉得这个____怎么样？",
+                "answer": "小区"
+              },
+              {
+                "sentence": "这个小区____很好。",
+                "answer": "环境"
+              },
+              {
+                "sentence": "我____喜欢这个花园。",
+                "answer": "挺"
+              },
+              {
+                "sentence": "房子里有新的____。",
+                "answer": "空调"
+              }
+            ]
+          }
+        },
+        {
+          "id": "l03_fill_group_02",
+          "type": "vocab_fill_group",
+          "stage": "in_class",
+          "prompt_en": "Choose from the word bank for each sentence.",
+          "data": {
+            "wordBank": [
+              "灯",
+              "关",
+              "冰箱",
+              "卫生间",
+              "打扫"
+            ],
+            "wordBank_pinyin": [
+              "dēng",
+              "guān",
+              "bīngxiāng",
+              "wèishēngjiān",
+              "dǎsǎo"
+            ],
+            "sentences": [
+              {
+                "sentence": "早上来的时候，____还开着。",
+                "answer": "灯"
+              },
+              {
+                "sentence": "走的时候别忘了____灯。",
+                "answer": "关"
+              },
+              {
+                "sentence": "这些吃的东西先放进____。",
+                "answer": "冰箱"
+              },
+              {
+                "sentence": "____还没有收拾好。",
+                "answer": "卫生间"
+              },
+              {
+                "sentence": "周末我们去____新家。",
+                "answer": "打扫"
+              }
+            ]
+          }
+        },
+        {
+          "id": "l03_fill_group_03",
+          "type": "vocab_fill_group",
+          "stage": "in_class",
+          "prompt_en": "Choose from the word bank for each sentence.",
+          "data": {
+            "wordBank": [
+              "信用卡",
+              "银行",
+              "纸",
+              "就",
+              "才"
+            ],
+            "wordBank_pinyin": [
+              "xìnyòngkǎ",
+              "yínháng",
+              "zhǐ",
+              "jiù",
+              "cái"
+            ],
+            "sentences": [
+              {
+                "sentence": "咱们办张____吧。",
+                "answer": "信用卡"
+              },
+              {
+                "sentence": "中国____离家很近。",
+                "answer": "银行"
+              },
+              {
+                "sentence": "明天去买一些____箱。",
+                "answer": "纸"
+              },
+              {
+                "sentence": "走路几分钟____能到。",
+                "answer": "就"
+              },
+              {
+                "sentence": "两个星期____能做完。",
+                "answer": "才"
+              }
+            ]
+          }
+        }
+      ],
+      "g1_ordering": [
+        {
+          "id": "l03_order_01",
+          "type": "ordering",
+          "prompt_cn": "把词语排成句子。",
+          "prompt_en": "Put the words in order.",
+          "correct_answer": "这个小区环境挺好的。",
+          "data": {
+            "chunks": [
+              "这个小区",
+              "环境",
+              "挺好的"
+            ],
+            "chunks_pinyin": [
+              "zhège xiǎoqū",
+              "huánjìng",
+              "tǐng hǎo de"
+            ]
+          }
+        },
+        {
+          "id": "l03_order_02",
+          "type": "ordering",
+          "prompt_cn": "把词语排成句子。",
+          "prompt_en": "Put the words in order.",
+          "correct_answer": "走路几分钟就能到。",
+          "data": {
+            "chunks": [
+              "走路",
+              "几分钟",
+              "就能到"
+            ],
+            "chunks_pinyin": [
+              "zǒulù",
+              "jǐ fēnzhōng",
+              "jiù néng dào"
+            ]
+          }
+        },
+        {
+          "id": "l03_order_03",
+          "type": "ordering",
+          "prompt_cn": "把词语排成句子。",
+          "correct_answer": "我这几天忙坏了。",
+          "data": {
+            "chunks": [
+              "我",
+              "这几天",
+              "忙坏了"
+            ]
+          }
+        },
+        {
+          "id": "l03_order_04",
+          "type": "ordering",
+          "prompt_cn": "把词语排成句子。",
+          "correct_answer": "冰箱不能用。",
+          "data": {
+            "chunks": [
+              "冰箱",
+              "不能用"
+            ]
+          }
+        },
+        {
+          "id": "l03_order_05",
+          "type": "ordering",
+          "prompt_cn": "把词语排成句子。",
+          "correct_answer": "两个星期才能做完。",
+          "data": {
+            "chunks": [
+              "两个星期",
+              "才能",
+              "做完"
+            ]
+          }
+        }
+      ],
+      "r2_passage_choice": [
+        {
+          "id": "l03_read_01",
+          "type": "passage_reading",
+          "prompt_cn": "阅读小篇章，回答问题。",
+          "prompt_en": "Read and answer.",
+          "data": {
+            "title": "看新房",
+            "passage": "小安想换房子。她觉得这个小区环境挺好的，房子里还有空调和洗衣机。",
+            "questions": [
+              {
+                "question_cn": "小安为什么喜欢这个房子？",
+                "answer": "因为小区环境挺好，房子里有空调和洗衣机。"
+              }
+            ]
+          }
+        },
+        {
+          "id": "l03_read_02",
+          "type": "passage_reading",
+          "prompt_cn": "阅读小篇章，回答问题。",
+          "prompt_en": "Read and answer.",
+          "data": {
+            "title": "搬家计划",
+            "passage": "明天小马买纸箱，朋友来帮忙。他觉得一天就能搬完。",
+            "questions": [
+              {
+                "question_cn": "小马觉得多久能搬完？",
+                "answer": "一天就能搬完。"
+              }
+            ]
+          }
+        },
+        {
+          "id": "l03_read_03",
+          "type": "passage_reading",
+          "prompt_cn": "阅读小篇章，回答问题。",
+          "data": {
+            "title": "宿舍区",
+            "passage": "新同学想了解学校宿舍区。老师说宿舍区挺大，也挺安静，离地铁站不远。",
+            "questions": [
+              {
+                "question_cn": "老师怎样介绍宿舍区？",
+                "answer": "宿舍区挺大、挺安静，离地铁站不远。"
+              }
+            ]
+          }
+        },
+        {
+          "id": "l03_read_04",
+          "type": "passage_reading",
+          "prompt_cn": "阅读小篇章，回答问题。",
+          "data": {
+            "title": "办卡和搬家",
+            "passage": "小马搬家花了很多钱。他想去银行办信用卡，花的钱可以慢慢还。朋友星期天来帮忙，他觉得一天就能搬完。",
+            "questions": [
+              {
+                "question_cn": "小马为什么去银行？",
+                "answer": "他想办信用卡，花的钱可以慢慢还。"
+              }
+            ]
+          }
+        }
+      ],
+      "t2_task_card": [
+        {
+          "id": "l03_task_01",
+          "type": "open_response",
+          "prompt_cn": "任务卡：介绍一套房子。",
+          "prompt_en": "Introduce an apartment.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "找房子",
+            "role": "你帮朋友介绍一套房子。",
+            "steps": [
+              "说小区环境",
+              "说房子里的设施",
+              "说你喜不喜欢一层"
+            ],
+            "keywords": [
+              "小区",
+              "环境",
+              "挺",
+              "空调",
+              "花园"
+            ],
+            "output": "用 3-4 句话介绍。",
+            "answerPlaceholder": "这个小区……。房子里面……。"
+          }
+        },
+        {
+          "id": "l03_task_02",
+          "type": "open_response",
+          "prompt_cn": "任务卡：安排搬家。",
+          "prompt_en": "Make a moving plan.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "搬家计划",
+            "role": "你和同学一起安排搬家。",
+            "steps": [
+              "准备纸箱",
+              "安排打扫",
+              "决定需要几天"
+            ],
+            "keywords": [
+              "搬家",
+              "纸",
+              "打扫",
+              "就",
+              "才"
+            ],
+            "output": "用 3-4 句话说计划。",
+            "answerPlaceholder": "我们先……，然后……，最后……。"
+          }
+        },
+        {
+          "id": "l03_task_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "任务卡：介绍学校宿舍区。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "介绍学校宿舍区",
+            "role": "你向一位新同学介绍学校宿舍区。",
+            "steps": [
+              "说宿舍区大不大",
+              "说安静不安静",
+              "说离地铁站远不远"
+            ],
+            "keywords": [
+              "宿舍区",
+              "挺",
+              "安静",
+              "地铁站"
+            ],
+            "output": "用 3-4 句话介绍。",
+            "answerPlaceholder": "学校宿舍区……。"
+          }
+        },
+        {
+          "id": "l03_task_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "任务卡：解决新家问题。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "解决新家问题",
+            "role": "你和同学一起检查新家。",
+            "steps": [
+              "发现一个问题",
+              "说可能的原因",
+              "说先做什么"
+            ],
+            "keywords": [
+              "灯",
+              "关",
+              "冰箱",
+              "卫生间",
+              "打扫"
+            ],
+            "output": "用 3-4 句话说明。",
+            "answerPlaceholder": "灯还……，可能……。我们先……。"
+          }
+        },
+        {
+          "id": "l03_task_05",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "任务卡：办卡和搬家。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "办卡和搬家",
+            "role": "你要办信用卡，也要安排搬家。",
+            "steps": [
+              "说为什么办卡",
+              "说去银行的时间",
+              "说多久能搬完"
+            ],
+            "keywords": [
+              "银行",
+              "信用卡",
+              "就",
+              "才",
+              "搬家"
+            ],
+            "output": "用 3-4 句话安排。",
+            "answerPlaceholder": "我想……，银行……。搬家……。"
+          }
+        }
+      ],
+      "battleGames": {
+        "roulette": [
+          {
+            "id": "l03_r_01",
+            "challenge": "介绍这个小区。",
+            "scene": "你正在向朋友推荐一个新小区。",
+            "keywords": [
+              "小区",
+              "环境",
+              "挺好的"
+            ],
+            "sample": "这个小区环境挺好的。"
+          },
+          {
+            "id": "l03_r_02",
+            "challenge": "说说新家还有什么问题。",
+            "scene": "灯还开着，卫生间还没有打扫好。",
+            "keywords": [
+              "灯",
+              "关",
+              "卫生间",
+              "打扫"
+            ],
+            "sample": "灯还开着，卫生间还没打扫好。"
+          },
+          {
+            "id": "l03_r_03",
+            "challenge": "用“就”说一句话。",
+            "scene": "银行很近，走路几分钟可以到。",
+            "keywords": [
+              "走路",
+              "几分钟",
+              "就能到"
+            ],
+            "sample": "走路几分钟就能到。"
+          },
+          {
+            "id": "l03_r_04",
+            "challenge": "说一个搬家计划。",
+            "scene": "你有纸箱，也有朋友可以帮忙。",
+            "keywords": [
+              "搬家",
+              "纸箱",
+              "朋友",
+              "一天"
+            ],
+            "sample": "我明天买纸箱，朋友来帮忙，一天就能搬完。"
+          }
+        ],
+        "relay": [
+          {
+            "id": "l03_relay_01",
+            "starter": "小区",
+            "goal": "接一个介绍环境的短语或短句。",
+            "mustUse": [
+              "环境",
+              "挺好的"
+            ]
+          },
+          {
+            "id": "l03_relay_02",
+            "starter": "冰箱",
+            "goal": "接一个描述新家问题的短语或短句。",
+            "mustUse": [
+              "不能用",
+              "新买的"
+            ]
+          },
+          {
+            "id": "l03_relay_03",
+            "starter": "信用卡",
+            "goal": "接一个说明用途的短语或短句。",
+            "mustUse": [
+              "办卡",
+              "慢慢还"
+            ]
+          },
+          {
+            "id": "l03_relay_04",
+            "starter": "搬家",
+            "goal": "接一个时间计划的短语或短句。",
+            "mustUse": [
+              "就能",
+              "才能"
+            ]
+          }
+        ]
+      },
+      "scene_sentence_choice": [
+        {
+          "id": "l03_scene_01",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_en": "Choose the best sentence for the apartment scene.",
+          "data": {
+            "scene_en": "A family is viewing an apartment with a small garden.",
+            "clue_en": "Use: 小区 / 环境 / 挺好的",
+            "options": [
+              "这个小区环境挺好的。",
+              "冰箱不能用。",
+              "我下午去医院。",
+              "请给我一双筷子。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这个小区环境挺好的。"
+        },
+        {
+          "id": "l03_scene_02",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_en": "Choose the best sentence for the new-home scene.",
+          "data": {
+            "scene_en": "The light is still on in the new home.",
+            "clue_en": "Use: 灯 / 开着 / 关",
+            "options": [
+              "灯还开着，可能忘关了。",
+              "这个小区有花园。",
+              "我们办张信用卡吧。",
+              "我想吃饺子。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "灯还开着，可能忘关了。"
+        },
+        {
+          "id": "l03_scene_03",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_en": "Choose the best sentence for the moving plan.",
+          "data": {
+            "scene_en": "Friends are packing boxes for a move.",
+            "clue_en": "Use: 纸箱 / 就能 / 搬完",
+            "options": [
+              "买了纸箱，一天就能搬完。",
+              "卫生间不能用。",
+              "环境挺好的。",
+              "我很晚才回来。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "买了纸箱，一天就能搬完。"
+        },
+        {
+          "id": "l03_scene_04",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_en": "Choose the best sentence for the scene.",
+          "data": {
+            "scene_en": "You are applying for a card at a bank counter.",
+            "clue_en": "Use: 银行 / 办 / 信用卡",
+            "options": [
+              "我想在银行办张信用卡。",
+              "冰箱不能用。",
+              "我不喜欢住一层。",
+              "灯还开着。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我想在银行办张信用卡。"
+        },
+        {
+          "id": "l03_scene_05",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_en": "Choose the best sentence for the scene.",
+          "data": {
+            "scene_en": "The dormitory neighborhood is quiet and near the metro.",
+            "clue_en": "Use: 挺 / 安静 / 近",
+            "options": [
+              "宿舍区挺安静的，离地铁站也挺近。",
+              "大家都累坏了。",
+              "银行不能用。",
+              "我要买纸箱。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "宿舍区挺安静的，离地铁站也挺近。"
+        },
+        {
+          "id": "l03_scene_06",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_en": "Choose the best sentence for the scene.",
+          "data": {
+            "scene_en": "The refrigerator in the new home does not work.",
+            "clue_en": "Use: 冰箱 / 不能用",
+            "options": [
+              "新买的冰箱不能用。",
+              "这个小区挺大的。",
+              "我去银行办卡。",
+              "朋友来帮忙。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "新买的冰箱不能用。"
+        },
+        {
+          "id": "l03_scene_07",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_en": "Choose the best sentence for the scene.",
+          "data": {
+            "scene_en": "Everyone moved all day and is exhausted.",
+            "clue_en": "Use: 累 / 坏了",
+            "options": [
+              "搬了一天家，大家都累坏了。",
+              "灯还开着。",
+              "银行离家很近。",
+              "花园挺大的。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "搬了一天家，大家都累坏了。"
+        },
+        {
+          "id": "l03_scene_08",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_en": "Choose the best sentence for the scene.",
+          "data": {
+            "scene_en": "Friends help, so the move can finish in one day.",
+            "clue_en": "Use: 一天 / 就 / 搬完",
+            "options": [
+              "朋友来帮忙，一天就能搬完。",
+              "两个星期才能做完。",
+              "冰箱是新买的。",
+              "我很晚才能回来。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "朋友来帮忙，一天就能搬完。"
+        },
+        {
+          "id": "l03_scene_09",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_en": "Choose the best sentence for the scene.",
+          "data": {
+            "scene_en": "There is a lot to prepare, so it takes two weeks.",
+            "clue_en": "Use: 两个星期 / 才 / 做完",
+            "options": [
+              "这么多事情，两个星期才能做完。",
+              "走路几分钟就能到。",
+              "这个小区挺安静的。",
+              "灯可能忘关了。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这么多事情，两个星期才能做完。"
+        },
+        {
+          "id": "l03_scene_10",
+          "type": "scene_sentence_choice",
+          "stage": "in_class",
+          "prompt_en": "Choose the best sentence for the scene.",
+          "data": {
+            "scene_en": "The first-floor apartment has a small garden.",
+            "clue_en": "Use: 一层 / 小花园",
+            "options": [
+              "这个一层带一个小花园。",
+              "卫生间没打扫好。",
+              "信用卡可以慢慢还。",
+              "我下午去医院。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "这个一层带一个小花园。"
+        }
+      ],
+      "v7_word_match": [
+        {
+          "id": "l03_match_01",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_en": "Match questions and answers about looking for an apartment.",
+          "data": {
+            "pairs": [
+              {
+                "left": "这个小区怎么样？",
+                "right": "环境挺好的。"
+              },
+              {
+                "left": "房子里有什么？",
+                "right": "有空调和洗衣机。"
+              },
+              {
+                "left": "你喜欢住一层吗？",
+                "right": "我不太喜欢。"
+              },
+              {
+                "left": "这个小区大吗？",
+                "right": "挺大的。"
+              },
+              {
+                "left": "离地铁站远吗？",
+                "right": "不远，挺近的。"
+              }
+            ]
+          }
+        },
+        {
+          "id": "l03_match_02",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_en": "Match questions and answers about the new home.",
+          "data": {
+            "pairs": [
+              {
+                "left": "灯为什么开着？",
+                "right": "可能忘关了。"
+              },
+              {
+                "left": "冰箱能用吗？",
+                "right": "现在不能用。"
+              },
+              {
+                "left": "为什么不能洗衣服？",
+                "right": "卫生间没打扫好。"
+              },
+              {
+                "left": "刘明这几天怎么样？",
+                "right": "他忙坏了。"
+              },
+              {
+                "left": "洗衣机坏了吗？",
+                "right": "没坏。"
+              }
+            ]
+          }
+        },
+        {
+          "id": "l03_match_03",
+          "type": "word_match",
+          "stage": "in_class",
+          "prompt_en": "Match questions and answers about moving.",
+          "data": {
+            "pairs": [
+              {
+                "left": "为什么办信用卡？",
+                "right": "花的钱可以慢慢还。"
+              },
+              {
+                "left": "银行远吗？",
+                "right": "走路几分钟就能到。"
+              },
+              {
+                "left": "什么时候能搬完？",
+                "right": "最少两个星期才能做完。"
+              },
+              {
+                "left": "在哪里办信用卡？",
+                "right": "在银行办。"
+              },
+              {
+                "left": "信用卡的钱怎么办？",
+                "right": "可以慢慢还。"
+              }
+            ]
+          }
+        }
+      ],
+      "v6_description_guess": [
+        {
+          "id": "l03_desc_01",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "description": "很多人住在这里，里面有楼、路和花园。",
+            "options": [
+              "小区",
+              "银行",
+              "冰箱",
+              "信用卡"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "小区"
+        },
+        {
+          "id": "l03_desc_02",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "description": "夏天很热时，房间里可以用它。",
+            "options": [
+              "空调",
+              "纸箱",
+              "花园",
+              "层"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "空调"
+        },
+        {
+          "id": "l03_desc_03",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "description": "搬家时把衣服、书和杯子放进去。",
+            "options": [
+              "纸箱",
+              "洗衣机",
+              "灯",
+              "信用卡"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "纸箱"
+        },
+        {
+          "id": "l03_desc_04",
+          "type": "description_guess",
+          "prompt_cn": "读提示，猜词。",
+          "data": {
+            "description": "可以在银行办，买东西时可以用，花的钱可以慢慢还。",
+            "options": [
+              "信用卡",
+              "空调",
+              "纸箱",
+              "花园"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "信用卡"
+        },
+        {
+          "id": "l03_desc_05",
+          "type": "description_guess",
+          "prompt_cn": "读提示，猜词。",
+          "data": {
+            "description": "房间里的东西，晚上打开会亮。",
+            "options": [
+              "灯",
+              "纸",
+              "银行",
+              "花园"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "灯"
+        },
+        {
+          "id": "l03_desc_06",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "description": "新家里的一个地方，没打扫好时还不能洗衣服。",
+            "options": [
+              "卫生间",
+              "小区",
+              "银行",
+              "花园"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "卫生间"
+        },
+        {
+          "id": "l03_desc_07",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "description": "离开房间时，要把灯做这个动作。",
+            "options": [
+              "关",
+              "搬",
+              "办",
+              "还"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "关"
+        },
+        {
+          "id": "l03_desc_08",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "description": "从一个房子住到另一个房子，需要纸箱和朋友帮忙。",
+            "options": [
+              "搬家",
+              "打扫",
+              "听说",
+              "换"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "搬家"
+        },
+        {
+          "id": "l03_desc_09",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "description": "表示事情发生得晚或需要较长时间，放在动词前。",
+            "options": [
+              "才",
+              "挺",
+              "就",
+              "关"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "才"
+        },
+        {
+          "id": "l03_desc_10",
+          "type": "description_guess",
+          "stage": "in_class",
+          "prompt_cn": "读提示，猜词。",
+          "prompt_en": "Read the clue and choose the word.",
+          "data": {
+            "description": "很多人住在这里，里面有楼、路和花园。",
+            "options": [
+              "小区",
+              "银行",
+              "冰箱",
+              "纸箱"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "小区"
+        }
+      ],
+      "v2_say_guess": [
+        {
+          "id": "l03_say_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "你说我猜：描述“小区”。",
+          "prompt_en": "Describe the target without saying it.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "target": "小区",
+            "clues": [
+              "很多人住在这里。",
+              "里面有很多楼。",
+              "我们可以说它的环境好不好。"
+            ],
+            "scaffold": {
+              "words": [
+                "房子",
+                "环境",
+                "花园"
+              ],
+              "frames": [
+                "这是一个……。",
+                "里面有很多……。"
+              ]
+            },
+            "answerPlaceholder": "写你的中文提示。"
+          }
+        },
+        {
+          "id": "l03_say_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "你说我猜：描述“信用卡”。",
+          "prompt_en": "Describe the target without saying it.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "target": "信用卡",
+            "clues": [
+              "可以去银行办。",
+              "买东西时可以用。",
+              "花的钱可以慢慢还。"
+            ],
+            "scaffold": {
+              "words": [
+                "银行",
+                "买东西",
+                "还"
+              ],
+              "frames": [
+                "我们在……办它。",
+                "可以用它……。"
+              ]
+            },
+            "answerPlaceholder": "写你的中文提示。"
+          }
+        },
+        {
+          "id": "l03_say_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "你说我猜：描述“搬家”。",
+          "prompt_en": "Describe the target without saying it.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "target": "搬家",
+            "clues": [
+              "从一个房子到另一个房子。",
+              "需要纸箱。",
+              "朋友可以来帮忙。"
+            ],
+            "scaffold": {
+              "words": [
+                "房子",
+                "纸箱",
+                "朋友"
+              ],
+              "frames": [
+                "我们从……到……。",
+                "需要……。"
+              ]
+            },
+            "answerPlaceholder": "写你的中文提示。"
+          }
+        },
+        {
+          "id": "l03_say_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "你说我猜：描述“冰箱”。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "target": "冰箱",
+            "clues": [
+              "可以放吃的东西。",
+              "新家里有一个。",
+              "不能用时很麻烦。"
+            ],
+            "scaffold": {
+              "words": [
+                "吃的东西",
+                "新家",
+                "不能用"
+              ],
+              "frames": [
+                "里面可以放……。",
+                "它现在……。"
+              ]
+            },
+            "answerPlaceholder": "写你的中文提示。"
+          }
+        },
+        {
+          "id": "l03_say_05",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "你说我猜：描述“卫生间”。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "target": "卫生间",
+            "clues": [
+              "新家里有这个地方。",
+              "可以在里面洗衣服。",
+              "需要打扫。"
+            ],
+            "scaffold": {
+              "words": [
+                "新家",
+                "打扫",
+                "洗衣服"
+              ],
+              "frames": [
+                "这是……。",
+                "这里可以……。"
+              ]
+            },
+            "answerPlaceholder": "写你的中文提示。"
+          }
+        }
+      ],
+      "v3_blind_box": [
+        {
+          "id": "l03_blind_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "盲盒造句。",
+          "prompt_en": "Make one natural sentence with both words.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "words": [
+              "小区",
+              "挺"
+            ],
+            "instructions": "Use both words in one sentence.",
+            "answerPlaceholder": "写一个中文句子。"
+          }
+        },
+        {
+          "id": "l03_blind_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "盲盒造句。",
+          "prompt_en": "Make one natural sentence with both words.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "words": [
+              "卫生间",
+              "打扫"
+            ],
+            "instructions": "Use both words in one sentence.",
+            "answerPlaceholder": "写一个中文句子。"
+          }
+        },
+        {
+          "id": "l03_blind_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "盲盒造句。",
+          "prompt_en": "Make one natural sentence with both words.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "words": [
+              "银行",
+              "信用卡"
+            ],
+            "instructions": "Use both words in one sentence.",
+            "answerPlaceholder": "写一个中文句子。"
+          }
+        },
+        {
+          "id": "l03_blind_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "盲盒造句。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "words": [
+              "纸箱",
+              "搬家"
+            ],
+            "instructions": "Use both words in one sentence.",
+            "answerPlaceholder": "写一个中文句子。"
+          }
+        }
+      ],
+      "g2_picture_complete": [
+        {
+          "id": "l03_pic_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "image": "images/hsk3-l03/vocab-story/01-apartment-search.png",
+            "sentenceFrame": "这个小区环境挺____的。",
+            "answerPlaceholder": "补全句子。"
+          }
+        },
+        {
+          "id": "l03_pic_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "image": "images/hsk3-l03/vocab-story/02-new-home.png",
+            "sentenceFrame": "我这几天忙____了。",
+            "answerPlaceholder": "补全句子。"
+          }
+        },
+        {
+          "id": "l03_pic_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "image": "images/hsk3-l03/vocab-story/03-moving-plan.png",
+            "sentenceFrame": "买了纸箱，一天____能搬完。",
+            "answerPlaceholder": "补全句子。"
+          }
+        },
+        {
+          "id": "l03_pic_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "看图完成句子。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "image": "images/hsk3-l03/grammar/neighborhood-good.png",
+            "sentenceFrame": "这个小区挺____的。",
+            "answerPlaceholder": "补全句子。"
+          }
+        },
+        {
+          "id": "l03_pic_05",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "看图完成句子。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "image": "images/hsk3-l03/grammar/neighborhood-needs-work.png",
+            "sentenceFrame": "这个小区不太____。",
+            "answerPlaceholder": "补全句子。"
+          }
+        },
+        {
+          "id": "l03_pic_06",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "看图完成句子。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "image": "images/hsk3-l03/vocab-story/04-bank-credit-card.png",
+            "sentenceFrame": "我想在银行办张____。",
+            "answerPlaceholder": "补全句子。"
+          }
+        },
+        {
+          "id": "l03_pic_07",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "看图完成句子。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "image": "images/hsk3-l03/vocab-story/02-new-home.png",
+            "sentenceFrame": "搬了一天家，大家都____坏了。",
+            "answerPlaceholder": "补全句子。"
+          }
+        },
+        {
+          "id": "l03_pic_08",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "看图完成句子。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "image": "images/hsk3-l03/vocab-story/03-moving-plan.png",
+            "sentenceFrame": "两个星期____能做完。",
+            "answerPlaceholder": "补全句子。"
+          }
+        }
+      ],
+      "r3_independent_reading": [
+        {
+          "id": "l03_ind_read_01",
+          "type": "choice",
+          "stage": "in_class",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read and choose.",
+          "data": {
+            "title": "找房子",
+            "passage": "小丽想换一个离学校近的房子。她看到一个小区，环境挺好，房子里还有空调和洗衣机。",
+            "question_cn": "小丽为什么喜欢这个房子？",
+            "options": [
+              "环境好，设施也新。",
+              "她想去银行。",
+              "她要买信用卡。",
+              "她不喜欢小区。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "环境好，设施也新。"
+        },
+        {
+          "id": "l03_ind_read_02",
+          "type": "choice",
+          "stage": "in_class",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read and choose.",
+          "data": {
+            "title": "新家的问题",
+            "passage": "王老师刚搬家。她发现灯还开着，冰箱也不能用。后来她去打扫卫生间。",
+            "question_cn": "王老师先发现了什么？",
+            "options": [
+              "灯开着和冰箱不能用。",
+              "朋友来帮忙。",
+              "银行很远。",
+              "花园很大。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "灯开着和冰箱不能用。"
+        },
+        {
+          "id": "l03_ind_read_03",
+          "type": "choice",
+          "stage": "in_class",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read and choose.",
+          "data": {
+            "title": "搬家时间",
+            "passage": "小马明天买纸箱，朋友星期天来帮忙。他觉得一天就能搬完。小安觉得事情很多，要两个星期才能做完。",
+            "question_cn": "小安觉得需要多长时间？",
+            "options": [
+              "两个星期。",
+              "一天。",
+              "几分钟。",
+              "今天下午。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "两个星期。"
+        },
+        {
+          "id": "l03_ind_read_04",
+          "type": "choice",
+          "stage": "in_class",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read and choose.",
+          "data": {
+            "title": "办信用卡",
+            "passage": "小周搬家花了很多钱。他去银行办了一张信用卡，花的钱可以慢慢还。银行离家很近，走路几分钟就能到。",
+            "question_cn": "小周为什么办信用卡？",
+            "options": [
+              "花的钱可以慢慢还。",
+              "他要买空调。",
+              "他不喜欢小区。",
+              "他要去医院。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "花的钱可以慢慢还。"
+        },
+        {
+          "id": "l03_ind_read_05",
+          "type": "choice",
+          "stage": "in_class",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read and choose.",
+          "data": {
+            "title": "学校宿舍区",
+            "passage": "学校宿舍区挺大，也挺安静。离地铁站不远，走路十分钟就能到。",
+            "question_cn": "宿舍区有什么优点？",
+            "options": [
+              "大、安静、离地铁站近。",
+              "冰箱不能用。",
+              "需要两个星期。",
+              "没有房子。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "大、安静、离地铁站近。"
+        }
+      ],
+      "r4_paragraph_fill": [
+        {
+          "id": "l03_para_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "段落填空。",
+          "prompt_en": "Choose three sentences to complete the paragraph.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "看房子",
+            "passageParts": [
+              "小安想换房子。",
+              "____1____",
+              "她觉得环境挺好的。",
+              "____2____",
+              "最后，她想去看看一层的花园。",
+              "____3____"
+            ],
+            "options": [
+              "她上网看了一个小区。",
+              "房子里有空调和洗衣机。",
+              "她觉得可以去看看。",
+              "她下午去医院。",
+              "她想吃饺子。",
+              "银行不能用。"
+            ],
+            "answers": [
+              0,
+              1,
+              2
+            ],
+            "instructions": "Write the option numbers for blanks 1-3.",
+            "answerPlaceholder": "1-__ 2-__ 3-__"
+          }
+        },
+        {
+          "id": "l03_para_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "段落填空。",
+          "prompt_en": "Choose three sentences to complete the paragraph.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "搬家计划",
+            "passageParts": [
+              "明天我们买纸箱。",
+              "____1____",
+              "下周去打扫新家。",
+              "____2____",
+              "朋友来帮忙。",
+              "____3____"
+            ],
+            "options": [
+              "很快就能准备好。",
+              "两个星期才能做完。",
+              "一天就能搬完。",
+              "小区环境挺好的。",
+              "冰箱不能用。",
+              "我去银行办卡。"
+            ],
+            "answers": [
+              0,
+              1,
+              2
+            ],
+            "instructions": "Write the option numbers for blanks 1-3.",
+            "answerPlaceholder": "1-__ 2-__ 3-__"
+          }
+        },
+        {
+          "id": "l03_para_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "段落填空。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "新家",
+            "passageParts": [
+              "王一雪来到新家。",
+              "____1____",
+              "刘明说自己忙坏了。",
+              "____2____",
+              "最后他们去打扫卫生间。",
+              "____3____"
+            ],
+            "options": [
+              "灯还开着。",
+              "他可能忘关了。",
+              "卫生间没打扫好。",
+              "银行很近。",
+              "小区挺大。",
+              "买纸箱。"
+            ],
+            "answers": [
+              0,
+              1,
+              2
+            ],
+            "instructions": "Write the option numbers for blanks 1-3.",
+            "answerPlaceholder": "1-__ 2-__ 3-__"
+          }
+        },
+        {
+          "id": "l03_para_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "段落填空。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "办卡",
+            "passageParts": [
+              "他们搬家花了不少钱。",
+              "____1____",
+              "听说银行服务不错。",
+              "____2____",
+              "银行离家很近。",
+              "____3____"
+            ],
+            "options": [
+              "他们想办张信用卡。",
+              "花的钱可以慢慢还。",
+              "走路几分钟就能到。",
+              "卫生间没打扫好。",
+              "小区挺安静。",
+              "买洗衣机。"
+            ],
+            "answers": [
+              0,
+              1,
+              2
+            ],
+            "instructions": "Write the option numbers for blanks 1-3.",
+            "answerPlaceholder": "1-__ 2-__ 3-__"
+          }
+        },
+        {
+          "id": "l03_para_05",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "段落填空。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "两个计划",
+            "passageParts": [
+              "刘明觉得这个星期就能搬家。",
+              "____1____",
+              "王一雪觉得下个月才能搬。",
+              "____2____",
+              "他们都要先准备。",
+              "____3____"
+            ],
+            "options": [
+              "朋友来帮忙，一天就能搬完。",
+              "这么多事情需要两个星期。",
+              "明天先买纸箱。",
+              "冰箱不能用。",
+              "银行很远。",
+              "小区不大。"
+            ],
+            "answers": [
+              0,
+              1,
+              2
+            ],
+            "instructions": "Write the option numbers for blanks 1-3.",
+            "answerPlaceholder": "1-__ 2-__ 3-__"
+          }
+        }
+      ],
+      "t3_chain_sentence": [
+        {
+          "id": "l03_chain_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "接龙造句。",
+          "prompt_en": "Continue the sentence chain.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "从“这个小区”开始",
+            "starter": "这个小区",
+            "steps": [
+              "S1: 这个小区",
+              "S2: 这个小区环境",
+              "S3: 这个小区环境挺好的"
+            ],
+            "keywords": [
+              "环境",
+              "挺",
+              "房子",
+              "花园"
+            ],
+            "instructions": "Each student adds a short natural part.",
+            "answerPlaceholder": "继续接一句中文。"
+          }
+        },
+        {
+          "id": "l03_chain_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "接龙造句。",
+          "prompt_en": "Continue the sentence chain.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "从“搬家”开始",
+            "starter": "搬家",
+            "steps": [
+              "S1: 搬家",
+              "S2: 搬家需要纸箱",
+              "S3: 搬家需要纸箱和朋友帮忙"
+            ],
+            "keywords": [
+              "需要",
+              "纸箱",
+              "朋友",
+              "就能"
+            ],
+            "instructions": "Each student adds a short natural part.",
+            "answerPlaceholder": "继续接一句中文。"
+          }
+        },
+        {
+          "id": "l03_chain_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "接龙造句。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "从“新家”开始",
+            "starter": "新家",
+            "steps": [
+              "新家",
+              "新家的灯",
+              "新家的灯还开着"
+            ],
+            "keywords": [
+              "灯",
+              "还开着",
+              "忘关"
+            ],
+            "instructions": "Each student adds a short natural part.",
+            "answerPlaceholder": "继续接一句中文。"
+          }
+        },
+        {
+          "id": "l03_chain_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "接龙造句。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "从“信用卡”开始",
+            "starter": "信用卡",
+            "steps": [
+              "信用卡",
+              "办张信用卡",
+              "办张信用卡慢慢还"
+            ],
+            "keywords": [
+              "办",
+              "慢慢还",
+              "银行"
+            ],
+            "instructions": "Each student adds a short natural part.",
+            "answerPlaceholder": "继续接一句中文。"
+          }
+        },
+        {
+          "id": "l03_chain_05",
+          "type": "open_response",
+          "stage": "in_class",
+          "prompt_cn": "接龙造句。",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "从“宿舍区”开始",
+            "starter": "宿舍区",
+            "steps": [
+              "宿舍区",
+              "宿舍区挺大",
+              "宿舍区挺大也挺安静"
+            ],
+            "keywords": [
+              "挺大",
+              "挺安静",
+              "地铁站"
+            ],
+            "instructions": "Each student adds a short natural part.",
+            "answerPlaceholder": "继续接一句中文。"
+          }
+        }
+      ],
+      "info_match": [
+        {
+          "id": "l03_info_01",
+          "type": "info_match",
+          "stage": "in_class",
+          "prompt_cn": "信息匹配。",
+          "prompt_en": "Match people with their plans.",
+          "data": {
+            "people": [
+              "王一雪",
+              "刘明",
+              "小雪",
+              "朋友"
+            ],
+            "clues": [
+              "觉得小区环境挺好",
+              "下午去医院",
+              "学校离家有点儿远",
+              "搬家那天来帮忙"
+            ],
+            "answer": [
+              "王一雪-觉得小区环境挺好",
+              "刘明-下午去医院",
+              "小雪-学校离家有点儿远",
+              "朋友-搬家那天来帮忙"
+            ]
+          }
+        },
+        {
+          "id": "l03_info_02",
+          "type": "info_match",
+          "stage": "in_class",
+          "prompt_cn": "信息匹配。",
+          "prompt_en": "Match things with their states.",
+          "data": {
+            "people": [
+              "灯",
+              "冰箱",
+              "卫生间",
+              "洗衣机"
+            ],
+            "clues": [
+              "还开着",
+              "不能用",
+              "没打扫好",
+              "没有坏"
+            ],
+            "answer": [
+              "灯-还开着",
+              "冰箱-不能用",
+              "卫生间-没打扫好",
+              "洗衣机-没有坏"
+            ]
+          }
+        }
+      ],
+      "pk_question": [
+        {
+          "id": "l03_pk_01",
+          "type": "choice",
+          "prompt_cn": "这个小区环境挺____的。",
+          "prompt_en": "Choose the word.",
+          "correct_answer": "好",
+          "data": {
+            "question_cn": "这个小区环境挺____的。",
+            "options": [
+              "好",
+              "才",
+              "纸",
+              "关"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "id": "l03_pk_02",
+          "type": "choice",
+          "prompt_cn": "我这几天忙____了。",
+          "prompt_en": "Choose the word.",
+          "correct_answer": "坏",
+          "data": {
+            "question_cn": "我这几天忙____了。",
+            "options": [
+              "坏",
+              "层",
+              "还",
+              "听说"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "id": "l03_pk_03",
+          "type": "choice",
+          "prompt_cn": "两个星期____能做完。",
+          "prompt_en": "Choose the word.",
+          "correct_answer": "才",
+          "data": {
+            "question_cn": "两个星期____能做完。",
+            "options": [
+              "才",
+              "就",
+              "挺",
+              "都"
+            ],
+            "correct_index": 0
+          }
+        }
+      ],
+      "textQa": [],
+      "pictureTalk": []
+    }
+  },
+  "postClassHomework": {
+    "mode": "hsk3_session_tasks",
+    "instructions": {
+      "required": "完成本次课的词语成段和课文叙述体改写。",
+      "optional": "准备绘本口语展示；可以先写 3 句，能力较强同学扩展到 5 句。",
+      "aiPolicy": "可以查词，但最后必须改成自己能说出来的中文。"
+    },
+    "sessions": {
+      "A": [
+        {
+          "id": "post_l03_a_words",
+          "type": "word_paragraph",
+          "prompt_cn": "词语成段：用“小区、环境、挺、房子、花园”写 3-5 句话。",
+          "prompt_en": "Write a short paragraph using the words.",
+          "answerPlaceholder": "我觉得这个小区……",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "wordBank": [
+            "小区",
+            "环境",
+            "挺",
+            "房子",
+            "花园"
+          ],
+          "minSentences": 3,
+          "stretchSentences": 5
+        },
+        {
+          "id": "post_l03_a_text",
+          "type": "text_narrative",
+          "prompt_cn": "把课文一改写成叙述体：谁想换房子？房子和小区怎么样？",
+          "prompt_en": "Rewrite Text 1 as a narrative.",
+          "answerPlaceholder": "王一雪觉得……",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "targetIds": [
+            "t_hsk3_l03_01"
+          ]
+        },
+        {
+          "id": "post_l03_a_oral",
+          "type": "picturebook_oral",
+          "prompt_cn": "绘本口语：用看房、空调、洗衣机、花园四个画面讲一个 40 秒故事。",
+          "prompt_en": "Prepare a 40-second picture story.",
+          "displayOnly": true,
+          "submissionRequired": false,
+          "picturePrompts": [
+            "看房",
+            "小区",
+            "空调和洗衣机",
+            "小花园"
+          ]
+        }
+      ],
+      "B": [
+        {
+          "id": "post_l03_b_words",
+          "type": "word_paragraph",
+          "prompt_cn": "词语成段：用“灯、冰箱、卫生间、打扫、搬家”写 3-5 句话。",
+          "prompt_en": "Write a short paragraph using the words.",
+          "answerPlaceholder": "今天早上……",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "wordBank": [
+            "灯",
+            "冰箱",
+            "卫生间",
+            "打扫",
+            "搬家"
+          ],
+          "minSentences": 3,
+          "stretchSentences": 5
+        },
+        {
+          "id": "post_l03_b_text",
+          "type": "text_narrative",
+          "prompt_cn": "把课文二改写成叙述体：新家有什么问题？谁来解决？",
+          "prompt_en": "Rewrite Text 2 as a narrative.",
+          "answerPlaceholder": "王一雪来到新家……",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "targetIds": [
+            "t_hsk3_l03_02"
+          ]
+        },
+        {
+          "id": "post_l03_b_oral",
+          "type": "picturebook_oral",
+          "prompt_cn": "绘本口语：用灯、冰箱、洗衣机、卫生间四个画面讲新家的故事。",
+          "prompt_en": "Prepare a 40-second picture story.",
+          "displayOnly": true,
+          "submissionRequired": false,
+          "picturePrompts": [
+            "灯还开着",
+            "冰箱",
+            "洗衣机",
+            "打扫卫生间"
+          ]
+        }
+      ],
+      "C": [
+        {
+          "id": "post_l03_c_words",
+          "type": "word_paragraph",
+          "prompt_cn": "词语成段：用“信用卡、银行、纸、搬家、需要”写 3-5 句话。",
+          "prompt_en": "Write a short paragraph using the words.",
+          "answerPlaceholder": "搬家前，我们需要……",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "wordBank": [
+            "信用卡",
+            "银行",
+            "纸",
+            "搬家",
+            "需要"
+          ],
+          "minSentences": 3,
+          "stretchSentences": 5
+        },
+        {
+          "id": "post_l03_c_text",
+          "type": "text_narrative",
+          "prompt_cn": "把课文三、四改写成叙述体，并至少用一次“就”和“才”。",
+          "prompt_en": "Rewrite Texts 3 and 4 as a narrative using 就 and 才.",
+          "answerPlaceholder": "他们想办信用卡，因为……",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "targetIds": [
+            "t_hsk3_l03_03",
+            "t_hsk3_l03_04"
+          ]
+        },
+        {
+          "id": "post_l03_c_oral",
+          "type": "picturebook_oral",
+          "prompt_cn": "绘本口语：用 5 张图讲一次搬家计划，至少使用“就”或“才”。",
+          "prompt_en": "Prepare a one-minute moving-plan story.",
+          "displayOnly": true,
+          "submissionRequired": false,
+          "picturePrompts": [
+            "买纸箱",
+            "打扫新家",
+            "找朋友",
+            "搬家公司",
+            "搬完"
+          ]
+        }
+      ]
+    }
+  },
+  "report": {
+    "focus": [
+      "居住环境",
+      "程度表达",
+      "就和才",
+      "搬家计划"
+    ],
+    "dimensions": [
+      "preview_completion",
+      "vocabulary",
+      "grammar",
+      "text_understanding",
+      "retelling",
+      "speaking"
+    ],
+    "recommendationRules": [
+      {
+        "if": "weak_target_g03_01",
+        "suggestion": "用“挺……的”描述一个小区、房子或自己的感受。"
+      },
+      {
+        "if": "weak_target_g03_03",
+        "suggestion": "用两组时间表达对比“就”和“才”。"
+      }
+    ]
+  }
+}
