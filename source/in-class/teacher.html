@@ -2321,8 +2321,9 @@ window.ap=ap;
         b.onclick=function(){window.toggleGlobalEnglish&&window.toggleGlobalEnglish()};
       }
       var py=document.getElementById('globalPinyinToggle');
-      if(b.parentNode!==right)right.insertBefore(b,py?py.nextSibling:right.firstChild);
-      else if(py&&b.previousSibling!==py)right.insertBefore(b,py.nextSibling);
+      var ref=py&&py.parentNode===right?py.nextSibling:right.firstChild;
+      if(b.parentNode!==right)right.insertBefore(b,ref);
+      else if(py&&py.parentNode===right&&b.previousSibling!==py)right.insertBefore(b,py.nextSibling);
     }
     var eb=document.getElementById('globalEnglishToggle');
     if(eb)eb.textContent=document.body.classList.contains('classpro-hide-english')?'显示英文':'隐藏英文';
@@ -2447,6 +2448,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
 .picture-talk-mode .live-panel,.cloud-wall-active .live-panel{display:none!important}
 .picture-talk-mode .main-content,.cloud-wall-active .main-content{max-width:none!important;width:100%!important;padding-left:28px!important;padding-right:28px!important;justify-content:center!important}
 .picture-talk-mode .panel-area,.cloud-wall-active .panel-area{flex:0 1 auto!important;width:min(1680px,calc(100vw - 128px))!important;max-width:calc(100vw - 128px)!important;margin:0 auto!important}
+.cloud-wall-active .panel-area>.panel{display:none!important}
 .picture-talk-mode .qw-bar{margin-left:28px!important;margin-right:28px!important}
 .cloud-wall-panel{margin:12px auto 0;max-width:1680px;width:100%;box-sizing:border-box;min-height:420px;max-height:calc(100vh - 245px);overflow:auto;padding:18px;border:1px solid #dfeac8;border-radius:18px;background:#fff;box-shadow:0 14px 34px rgba(86,115,55,.12)}
 .cloud-wall-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:14px;color:#3f7f32}
@@ -2585,7 +2587,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     var old=document.querySelector('.cloud-wall-panel');if(old)old.remove();
     document.querySelectorAll('.cloud-review-modal').forEach(function(x){x.remove()});
     document.body.classList.remove('cloud-wall-active');
-    if(this.mt!=='practice'||this.st!=='opn'||(this.qp!=='answering'&&this.qp!=='published'))return;
+    if(this.mt!=='practice'||['opn','v2g','v3b','g2p','t3c','t2k'].indexOf(this.st)<0||(this.qp!=='answering'&&this.qp!=='published'))return;
     var q=currentQuestion(this),id=currentQuestionId(this);
     if(!id)return;
     var rows=latestOpenRows(this,id),shouldShow=(this.qp==='answering'||this.qp==='published'||rows.length>0)&&(isOpenQuestion(q,this)||rows.length>0);
@@ -2709,6 +2711,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
 (function(){
   if(typeof ap==='undefined')return;
   function isPictureTalk(state){return state&&state.mt==='practice'&&state.st==='opn'}
+  function isCloudPractice(state){return state&&state.mt==='practice'&&['v2g','v3b','g2p','t3c','t2k'].indexOf(state.st)>=0}
   function isPictureTalkPayload(state){
     var p=state&&state.lastQuestionPayload;
     return !!(p&&p.mode==='open_response'&&p.question&&p.question.cloudWall);
@@ -2733,7 +2736,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
       clearPictureTalkUi();
     }
     previousRender.call(this);
-    if(!isPictureTalk(this))clearPictureTalkUi();
+    if(!isPictureTalk(this)&&!isCloudPractice(this))clearPictureTalkUi();
   };
 })();
 </script>
@@ -3847,6 +3850,46 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     if(cur.id==='g03_02')html=html.replace('hsk3-grammar-visual-panel','hsk3-grammar-visual-panel g03-bad');
     if(Array.isArray(v.compareImages)&&v.compareImages.length){var cards='<section class="hsk3-grammar-section hsk3-compare-section"><h3>小区对比 / Compare and Speak</h3><p>先选一个小区，再说一个优点和一个缺点。</p><div class="hsk3-compare-images">'+v.compareImages.map(function(x){return'<figure><img src="'+safe(x.src)+'" alt=""><figcaption>'+safe(x.label)+'</figcaption></figure>'}).join('')+'</div><div class="hsk3-compare-prompt">你愿意住在哪一个小区？为什么？</div></section>';html=html.replace('<section class="hsk3-grammar-section"><h3>2. 归纳结构',cards+'<section class="hsk3-grammar-section"><h3>2. 归纳结构');}
     return html;
+  };
+})();
+</script>
+<style>
+/* Editorial green classroom skin and dandelion brand. */
+:root{--cp-primary:#176b50;--cp-primary-soft:#edf5ef;--cp-blue:#176b50;--cp-blue-soft:#edf5ef;--cp-green:#176b50;--cp-green-soft:#edf5ef;--cp-ink:#17231d;--cp-muted:#728078;--cp-soft:#f7f6f1;--cp-card:#fff;--cp-line:#dfe7df;--primary:#176b50;--blue:#176b50;--green:#176b50;--bg:#f7f6f1;--text:#17231d;--line:#dfe7df;--sidebar-bg:#fff}body{background:radial-gradient(circle at 12% 0,#edf6ef 0,transparent 28%),#f7f6f1!important;color:#17231d!important}.cp-sidebar{background:rgba(255,255,255,.96)!important;border-right:1px solid #e2e9e3!important}.cp-sidebar .cp-logo{position:relative!important;background:#176b50!important;color:#fff!important;font-size:0!important;border-radius:50%!important;box-shadow:none!important}.cp-sidebar .cp-logo:before{content:"✺";font-size:24px;line-height:1}.cp-sidebar .cp-logo:after{content:"· ·";position:absolute;right:-11px;top:-9px;color:#bd6653;font-size:12px;letter-spacing:2px}.header{background:rgba(255,255,255,.96)!important;border-bottom:1px solid #e2e9e3!important}.header h1{color:#17231d!important}.panel,.home-card,.live-panel{border:1px solid #dfe7df!important;box-shadow:0 14px 34px rgba(24,66,47,.06)!important}.home-title{color:#176b50!important;letter-spacing:-.03em}.home-card{background:#fff!important;color:#17231d!important}.home-card:before{content:"";display:block;width:40px;height:3px;border-radius:99px;background:#176b50;margin:0 auto 18px}.home-card .desc{color:#728078!important}.sub-nav{background:rgba(255,255,255,.9)!important}.sub-group{background:#edf5ef!important}.sub-btn.active,.grammar-tab.active{background:#176b50!important;color:#fff!important;border-color:#176b50!important}.qw-bar{background:#f0f6f2!important;border-color:#b9d0c0!important}.qw-btn.start,.next-btn,.teach-nav .next{background:#176b50!important}.cloud-wall-panel{border-color:#cfddd3!important;box-shadow:0 20px 54px rgba(24,66,47,.11)!important}.cloud-wall-head,.cloud-wall-count{color:#176b50!important}.cloud-wall-count{background:#edf5ef!important}.cloud-wall-card{border-color:#d8e3da!important;background:#fff!important}.cloud-wall-avatar{background:#edf5ef!important;color:#176b50!important}
+</style>
+<script>
+/* Normalize HSK3 practice payloads and guarantee delivery for interactive modes. */
+(function(){
+  if(typeof ap==='undefined')return;
+  var cloudModes=['v2g','v3b','g2p','t3c','t2k'],interactiveModes=cloudModes.concat(['r4p']);
+  var previousQuestion=ap._cq2,previousStart=ap.qws,previousEnd=ap.qwe;
+  ap._cq2=function(){
+    var source=previousQuestion.call(this);if(!source)return source;
+    var out=JSON.parse(JSON.stringify(source));
+    if(cloudModes.indexOf(this.st)>=0){out.type='open_response';out.openEnded=true;out.needsTeacherReview=true;out.cloudWall=true;out.data=out.data||{}}
+    if(this.st==='v2g'){
+      out.prompt_cn='你说我猜。';out.prompt_en='Listen to the teacher. Describe without saying the target word.';
+      delete out.data.target;delete out.data.target_pinyin;delete out.data.clues;delete out.data.scaffold;
+      out.data.instructions='听老师说明目标词后，用中文描述，不要直接说出目标词。';
+    }
+    if(this.st==='r4p'){out.type='paragraph_choice';out.openEnded=false;out.needsTeacherReview=false;out.cloudWall=false}
+    return out;
+  };
+  ap.qws=function(){
+    if(this.mt==='practice'&&interactiveModes.indexOf(this.st)>=0){clearInterval(this.qtint);this.qp='answering';this.qt=0;this.qsub={};this._pubq();this._r();return}
+    previousStart.call(this);
+  };
+  ap.qwe=function(){
+    if(this.mt==='practice'&&interactiveModes.indexOf(this.st)>=0){
+      clearInterval(this.qtint);this.qp='published';
+      if(this.lastQuestionPayload){
+        var payload=this.lastQuestionPayload,d=payload.question&&payload.question.data||{};payload.phase='published';payload.publishedAt=new Date().toISOString();
+        payload.answerKey=this.st==='r4p'?(d.answers||[]).map(function(index,i){return(i+1)+'-'+((d.options||[])[index]||'')}):'';
+        if(this.mq&&this.cs==='connected')this.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(payload));
+      }
+      this._r();return;
+    }
+    previousEnd.call(this);
   };
 })();
 </script>
