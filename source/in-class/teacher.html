@@ -978,7 +978,7 @@ ap._ha=function(m){
 };
 ap._hp=function(m){if(m&&m.requestCurrent&&this.lastQuestionPayload&&this.mq&&this.cs==="connected"){this.mq.publish("classpro/room/"+RM+"/question",JSON.stringify(this.lastQuestionPayload))}this.oc=m.count||this.oc||0;this._pubBoard();this._r()};
 ap._as=function(n,p){n=this._rn(n);if(!this.sc[n])this.sc[n]={t:0,f:false};this.sc[n].t+=p;this.sc[n].f=true;this._saveClassData();this._pubBoard();var t=this;setTimeout(function(){if(t.sc[n])t.sc[n].f=false;t._r()},600);this._r()};
-ap._sss=function(){var a=this.roster.map(function(n){return{n:n,t:(ap.sc[n]&&ap.sc[n].t)||0}});for(var k in this.sc){if(this.sc.hasOwnProperty(k)&&this.roster.indexOf(k)<0)a.push({n:k,t:this.sc[k].t||0})}return a.sort(function(a,b){return b.t-a.t||ap.roster.indexOf(a.n)-ap.roster.indexOf(b.n)})};
+ap._sss=function(){return this.roster.map(function(n){return{n:n,t:(ap.sc[n]&&ap.sc[n].t)||0}}).sort(function(a,b){return b.t-a.t||ap.roster.indexOf(a.n)-ap.roster.indexOf(b.n)})};
 ap._pcnt=function(){var c=0;for(var i=0;i<this.roster.length;i++){var n=this.roster[i];if(this.sc[n]&&this.sc[n].t>0)c++}return c};
 ap._avg=function(){var s=0;for(var i=0;i<this.roster.length;i++){var n=this.roster[i];s+=(this.sc[n]&&this.sc[n].t)||0}return this.roster.length?Math.round(s/this.roster.length):0};
 ap._ec=function(){
