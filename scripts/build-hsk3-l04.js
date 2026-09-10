@@ -49,7 +49,7 @@ const texts = [
     ['杨同乐','我们住的宾馆离机场远吗？','Wǒmen zhù de bīnguǎn lí jīchǎng yuǎn ma?','Is our hotel far from the airport?'],
     ['小李','不远，三十分钟就能到。两位到了可以先休息休息，晚饭的时候我叫你们。','Bù yuǎn, sānshí fēnzhōng jiù néng dào. Liǎng wèi dào le kěyǐ xiān xiūxi xiuxi, wǎnfàn de shíhou wǒ jiào nǐmen.','Not far. It takes thirty minutes. Rest first and I will call you at dinner.']
   ]},
-  {id:'t_hsk3_l04_04',textId:4,title:'旅游第一天',setting:'在宾馆房间，王一飞在写日记。',lines:[
+  {id:'t_hsk3_l04_04',textId:4,title:'旅游第一天',format:'diary',genre:'日记',author:'王一飞',dateLabel:'旅游第一天',setting:'王一飞的旅行日记。',lines:[
     ['王一飞','今天是我们旅游的第一天。','Jīntiān shì wǒmen lǚyóu de dì-yī tiān.','Today is the first day of our trip.'],
     ['王一飞','我们很早就起床去机场了，没想到飞机晚点了。','Wǒmen hěn zǎo jiù qǐchuáng qù jīchǎng le, méi xiǎngdào fēijī wǎndiǎn le.','We got up early, but the flight was delayed.'],
     ['王一飞','我们到的时候，天已经黑了，但是司机小李一直在机场等我们，一点儿也没着急。','Wǒmen dào de shíhou, tiān yǐjīng hēi le, dànshì sījī Xiǎo Lǐ yìzhí zài jīchǎng děng wǒmen, yìdiǎnr yě méi zháojí.','It was dark when we arrived, but Xiao Li had waited without getting anxious.'],
@@ -213,9 +213,9 @@ function mission(spec,index){
 }
 
 const fills = [
-  [['假期','海','草原','主意','骑'],['这个____我们去哪儿玩？','我喜欢____，想住在海边。','我们去____骑马吧。','这是一个好____。','我好久没____马了。']],
-  [['刻','起飞','宾馆','特别','相机'],['现在是十点一____。','飞机上午十点____。','我们已经选好____了。','这家宾馆很____。','别忘了带____。']],
-  [['欢迎','司机','晚点','除了','满意'],['____你们来这里旅游。','小李是我们的____。','飞机____了。','____行李箱以外，还有一个包。','我对房间很____。']]
+  [['假期','海','草原','主意','骑'],['十一____快到了，我们还没决定要去哪儿旅行。','妹妹从小就喜欢____，所以这次特别想住在离海边近的宾馆。','听说____上白天可以骑马，晚上还能和朋友一起看月亮。','大家讨论了半天以后，王一飞终于想出了一个大家都喜欢的好____。','我小时候学过____马，所以一到草原就想再试一试。']],
+  [['刻','起飞','宾馆','特别','相机'],['现在已经十点一____了，离飞机起飞只剩半个小时。','我们坐的飞机星期六上午十点____，大家最好提前两个小时到机场。','为了方便第二天早起出发，我们已经选好一家离机场很近的____。','虽然这家宾馆不大，但是房间能直接看见草原，感觉很____。','旅行前妈妈提醒我，别忘了带上新买的____，把草原的风景拍下来。']],
+  [['欢迎','司机','晚点','除了','满意'],['____你们来草原旅行，希望接下来的几天都玩得开心。','负责来机场接我们的____已经等了很久，但是他一点儿也没着急。','因为昨晚天气不好，飞机____了一个多小时，我们到的时候天已经黑了。','____这个行李箱以外，我们还带了一个装相机和衣服的背包。','房间跟照片里一样宽敞、干净，我和朋友都非常____。']]
 ].map((g,gi)=>({id:`l04_fill_group_0${gi+1}`,type:'vocab_fill_group',stage:'in_class',contentRole:gi===0?'lesson':gi===1?'transfer':'review',prompt_en:'Choose from the word bank for each sentence.',data:{wordBank:g[0],wordBank_pinyin:g[0].map(x=>(word(x)||{}).pinyin||''),sentences:g[1].map((s,i)=>({sentence:s,answer:g[0][i]})),speakingOutput:{support:'任选 2 个词，按句框说一句：这个假期我想……。',core:'任选 3 个词，用 2 句话介绍一次旅行。',stretch:'任选 4 个词，完成 30 秒旅行故事。'}}}));
 const orders = [
   ['草原一点儿也不冷。',['草原','一点儿','也','不冷']],
@@ -253,9 +253,9 @@ const sceneChoices = [
 ].map((x,i,a)=>({id:`l04_scene_${String(i+1).padStart(2,'0')}`,type:'scene_sentence_choice',stage:'in_class',contentRole:roleFor(i,a.length),prompt_en:'Choose the best sentence for the scene.',data:{scene_en:x[0],clue_en:x[1],options:[x[2],'虽然天气不错，但是我还没决定去哪儿。','除了今天以外，我们这个星期都有汉语课。','他每天练习以后才回宿舍休息。'],correct_index:0},correct_answer:x[2]}));
 
 const matchGroups = [
-  [['这个假期去哪儿？','去草原吧。'],['草原冷不冷？','一点儿也不冷。'],['在草原上做什么？','骑马、看月亮。'],['你喜欢海吗？','喜欢，但是现在有点儿冷。'],['这个主意怎么样？','这个主意很好。']],
-  [['新宿舍区怎么样？','挺安静的。'],['离地铁站远吗？','走路十分钟就到。'],['办理银行卡要带什么？','要带护照和手机。'],['信用卡今天能办吗？','下个月才可以申请。'],['参观学校先去哪儿？','先去图书馆。']],
-  [['你们想点什么？','两盘饺子和一份鱼。'],['还要饮料吗？','请给我们两杯茶。'],['一共多少钱？','一共一百二十元。'],['服务员来了吗？','还没有，请等一下。'],['为什么十点才回来？','因为公共汽车来得太晚了。']]
+  [['十一假期快到了，你们最后商量好去哪里旅行了吗？','商量好了，我们决定去草原骑马，晚上还想一起看月亮。'],['现在去草原会不会很冷，需要带很多厚衣服吗？','白天一点儿也不冷，不过晚上温度低，最好带一件外套。'],['你以前学过骑马吗？到了草原以后敢不敢自己骑？','我小时候学过，所以这次特别想再骑一次。'],['你不是一直很喜欢海吗，为什么这次不去海边了？','因为现在海边有点儿冷，而且我们都没去过草原。'],['杨同乐提出去草原以后，王一飞觉得这个主意怎么样？','他觉得这个主意很好，还说自己已经好久没骑马了。']],
+  [['你参观完新宿舍区以后，觉得那里的生活环境怎么样？','那里挺大也挺安静，公共活动空间跟照片里一样明亮。'],['新宿舍区离地铁站远不远，平时去市中心方便吗？','不太远，从宿舍走十分钟就到，坐地铁去市中心很方便。'],['国际学生第一次去银行办理银行卡，需要提前准备什么？','除了护照以外，还要带手机，并提前填写个人信息。'],['我今天能不能同时申请银行卡和信用卡？','银行卡今天就能办好，但是信用卡要到下个月才可以申请。'],['如果只有四十分钟带新生参观学校，你打算先去哪里？','我们先去图书馆了解学习资源，再带他们参观宿舍区。']],
+  [['大家讨论了半天以后，最后决定点哪些菜？','我们点了两盘饺子、一份鱼和一个凉菜，应该够四个人吃。'],['菜已经点好了，你们还需要什么饮料吗？','请给我们两杯热茶，再给不喝茶的同学一杯果汁。'],['服务员，我们点的菜和饮料一共多少钱？','一共一百二十元，可以使用银行卡或者手机付款。'],['我们还没有决定最后一道菜，服务员已经来了吗？','还没有，她正在招呼别的客人，我们可以再等一下。'],['你平时九点就回宿舍，昨天为什么十点才回来？','因为公共汽车来得太晚了，我在车站等了四十多分钟。']]
 ].map((pairs,i)=>({id:`l04_match_0${i+1}`,type:'word_match',stage:'in_class',contentRole:i===0?'lesson':i===1?'transfer':'review',prompt_en:'Match each question with the best answer.',data:{pairs:pairs.map(x=>({left:x[0],right:x[1]}))}}));
 const guesses = [
   ['不上课或不上班、可以旅行休息的一段时间。',['假期','司机','宾馆','月亮'],'假期'],
@@ -269,8 +269,11 @@ const guesses = [
   ['在餐厅帮助客人点菜、上菜的人。',['服务员','司机','老师','经理'],'服务员'],
   ['在餐厅里写着菜名和价格、点菜时要看的东西。',['菜单','护照','地图','课本'],'菜单']
 ].map((x,i,a)=>({id:`l04_desc_${String(i+1).padStart(2,'0')}`,type:'description_guess',stage:'in_class',contentRole:roleFor(i,a.length),prompt_cn:'读完整提示，联系语境猜词。',prompt_en:'Read the contextual clue and choose the best word.',data:{description:x[0],options:x[1],correct_index:0},correct_answer:x[2]}));
-const sayWords=['草原','宾馆','信用卡','宿舍区','服务员'];
-const sayGuess=sayWords.map((w,i,a)=>({id:`l04_say_0${i+1}`,type:'open_response',stage:'in_class',contentRole:roleFor(i,a.length),prompt_cn:'你说我猜。',prompt_en:'Describe the target without saying it.',openEnded:true,needsTeacherReview:true,data:{target:w,clues:[],scaffold:{words:i===0?['草','马','羊']:i===1?['房间','旅行','住']:i===2?['银行','买东西','还钱']:i===3?['学生','住','学校']:['餐厅','点菜','客人'],frames:['这是一个……。','人们用它 / 在这里……。']},answerPlaceholder:'写你的中文提示。'}}));
+const sayWords=[
+  ['假期',['不上课','旅行','休息']],['草原',['草','骑马','牛和羊']],['骑马',['运动','动物','草原']],['十点一刻',['时间','十点以后','十五分钟']],
+  ['跟别的不一样',['比较','特别','不同']],['飞机晚点',['机场','没有按时','等']],['一直在等',['从开始到现在','没有离开','等人']],['非常满意',['觉得很好','喜欢','没有问题']]
+];
+const sayGuess=sayWords.map((item,i,a)=>({id:`l04_say_0${i+1}`,type:'open_response',stage:'in_class',contentRole:roleFor(i,a.length),prompt_cn:'你说我猜。',prompt_en:'Describe the target without saying it.',openEnded:true,needsTeacherReview:true,data:{target:item[0],boardIndex:i+1,clues:[],scaffold:{words:item[1],frames:['这是一个……。','人们用它 / 在这里……。','它跟……有关系。']},answerPlaceholder:'写你的中文提示。'}}));
 const blind=[['假期','草原'],['起飞','刻'],['信用卡','办理'],['服务员','菜单']].map((w,i,a)=>({id:`l04_blind_0${i+1}`,type:'open_response',stage:'in_class',contentRole:roleFor(i,a.length),prompt_cn:'盲盒造句。',prompt_en:'Make one natural sentence with both words.',openEnded:true,needsTeacherReview:true,data:{words:w,instructions:'Use both words in one complete, natural sentence.',answerPlaceholder:'写一个完整的中文句子。'}}));
 const picturePrompts=[
   ['photo-text-1-trip-plan','假期'],['photo-text-1-grassland','一点儿也不'],['photo-text-2-booking','十点一刻'],['photo-text-2-booking','跟……不一样'],

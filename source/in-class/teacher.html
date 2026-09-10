@@ -3414,17 +3414,18 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     if(!c)return'<div class="panel"><p>No HSK3 practice items yet.</p></div>';
     ap.hsk3BlindOpen=ap.hsk3BlindOpen||{};
     ap.hsk3AnswerOpen=ap.hsk3AnswerOpen||{};
+    ap.hsk3GuessOpen=ap.hsk3GuessOpen||{};
     window.hsk3RevealBlind=function(id,k){ap.hsk3BlindOpen[id]=ap.hsk3BlindOpen[id]||{};ap.hsk3BlindOpen[id][k]=true;ap._r()};
     window.hsk3RevealAllBlind=function(id,words){ap.hsk3BlindOpen[id]={};for(var x=0;x<words;x++)ap.hsk3BlindOpen[id][x]=true;ap._r()};
     window.hsk3ResetBlind=function(id){ap.hsk3BlindOpen[id]={};ap._r()};
     window.hsk3ToggleAnswer=function(id){ap.hsk3AnswerOpen[id]=!ap.hsk3AnswerOpen[id];ap._r()};
+    window.hsk3ToggleGuess=function(id){ap.hsk3GuessOpen[id]=!ap.hsk3GuessOpen[id];ap._r()};
+    window.hsk3CoverAllGuess=function(){ap.hsk3GuessOpen={};ap._r()};
     var h='<div class="panel hsk3-old-practice">'+(state==='g2p'?'':'<div class="hsk3-old-head"><div><div class="hsk3-kicker">'+kicker+'</div><h2>'+title+'</h2><p>'+es(c.prompt_en||d.instructions||'Use Chinese to complete the task.')+'</p></div><div class="hsk3-reading-count">'+(i+1)+' / '+list.length+'</div></div>');
     if(state==='v2g'){
-      var open=!!ap.hsk3AnswerOpen[c.id],clues=d.clues||[];
-      h+='<div class="old-q-card old-q-guess"><div class="old-q-tag">🔍 你说我猜</div><div class="old-q-desc">'+es(clues[0]||d.instructions||'用中文描述，让同学猜。')+'</div>';
-      if(clues.length>1)h+='<div class="old-q-mini">'+clues.slice(1).map(function(x,k){return'<span>提示 '+(k+2)+'：'+es(x)+'</span>'}).join('')+'</div>';
-      h+='<button class="old-q-reveal" onclick="hsk3ToggleAnswer(\''+es(c.id)+'\')">'+(open?'隐藏答案':'查看答案')+'</button>';
-      h+='<div class="old-q-answer '+(open?'show':'')+'">✅ '+es(d.target||'')+(d.target_pinyin?' <small data-pinyin="1">'+es(d.target_pinyin)+'</small>':'')+'</div></div>';
+      var cards=list.slice(0,8);
+      h='<div class="panel hsk3-old-practice hsk3-guess-game"><div class="hsk3-old-head"><div><div class="hsk3-kicker">Whole-class Speaking Game · 8 Cards</div><h2>你说我猜 / Say and Guess</h2><p>请一位学生到前面，短暂查看一张词卡后立即盖住；描述时不能直接说出词卡中的汉字，其他同学猜。</p></div></div><div class="hsk3-guess-board">'+cards.map(function(item,k){var itemData=item.data||{},opened=!!ap.hsk3GuessOpen[item.id];return '<button type="button" class="hsk3-guess-tile '+(opened?'open':'')+'" onclick="hsk3ToggleGuess(\''+es(item.id)+'\')" aria-pressed="'+opened+'"><span class="hsk3-guess-cover"><b>'+(k+1)+'</b><em>点击查看</em></span><span class="hsk3-guess-word">'+es(itemData.target||'')+'</span></button>'}).join('')+'</div><div class="hsk3-guess-actions"><button onclick="hsk3CoverAllGuess()">全部盖住 / Cover All</button><span>建议：描述者看词 3 秒后盖住，再开始计时描述。</span></div></div>';
+      return h;
     }else if(state==='v3b'){
       var words=d.words||[],opened=ap.hsk3BlindOpen[c.id]||{};
       h+='<div class="old-q-card old-q-blind"><div class="old-q-tag">🎁 盲盒造句</div><div class="old-blind-grid">';
@@ -3833,8 +3834,9 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     h+='<div class="teach-nav"><button class="prev" onclick="ap.vsi=Math.max(0,(ap.vsi||0)-1);ap._r()" '+(i===0?'disabled':'')+'>&larr; 上一步</button><span class="step-counter">'+(i+1)+' / '+steps.length+'</span><button class="next" onclick="ap.vsi=Math.min('+(steps.length-1)+',(ap.vsi||0)+1);ap._r()" '+(i===steps.length-1?'disabled':'')+'>下一步 &rarr;</button></div></div>';
     return h;
   };
-  function avatar(name){var m={'王一雪':'wang-yixue.png','白家月':'bai-jiayue.png','李文':'li-wen.png','刘明':'liu-ming.png','杨同乐':'yang-tongle.png'};return m[name]?'images/hsk3-characters/'+m[name]:''}
+  function avatar(name){var m={'王一雪':'wang-yixue.png','白家月':'bai-jiayue.png','李文':'li-wen.png','刘明':'liu-ming.png','杨同乐':'yang-tongle.png','王一飞':'wang-yifei.svg','小李':'xiao-li.svg'};return m[name]?'images/hsk3-characters/'+m[name]:''}
   function textLine(line,english){var av=avatar(line.speaker),body=english?(line.english||''):(line.hanzi||'');return '<div class="hsk3-dialogue-line">'+(av?'<img src="'+esc(av)+'" alt="">':'<span class="hsk3-dialogue-avatar">'+esc((line.speaker||'?').slice(0,1))+'</span>')+'<div><b>'+esc(line.speaker||'')+'</b><p class="'+(english?'hsk3-text-en-only':'text-hanzi')+'">'+esc(body)+'</p></div></div>'}
+  function diaryText(cur,english){var av=avatar(cur.author||'王一飞');return '<article class="hsk3-diary"><header>'+(av?'<img src="'+esc(av)+'" alt="">':'')+'<div><b>'+esc(english?'Travel Diary':(cur.genre||'日记'))+'</b><span>'+esc(cur.dateLabel||cur.title||'')+' · '+esc(cur.author||'')+'</span></div></header><div class="hsk3-diary-paper">'+(cur.lines||[]).map(function(line){return '<p class="'+(english?'hsk3-text-en-only':'text-hanzi')+'">'+esc(english?(line.english||''):(line.hanzi||''))+'</p>'}).join('')+'</div></article>'}
   window.playTextAudio=function(src){if(!src)return;var a=new Audio(src);a.play().catch(function(){});};
   ap._tt=function(){
     var tx=T||[],idx=Math.max(0,Math.min(this.ti||0,tx.length-1)),cur=tx[idx];
@@ -3847,7 +3849,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     var audio=cur.audio||cur.audioUrl||(lessonNumber?'../../audio/HSK3/'+lessonNumber+'-'+audioPart+'.mp3':'');
     var h='<div class="panel hsk3-text-panel final simple"><div class="hsk3-text-head"><div><div class="hsk3-kicker">Text Teaching</div><h2>课文讲授：'+esc(cur.title||'')+'</h2><p>'+esc(cur.setting||'')+'</p></div><button class="hsk3-text-audio" '+(audio?'onclick="playTextAudio(\''+esc(audio)+'\')"':'disabled')+'>'+ (audio?'▶ 播放课文音频':'♪ 原音频待导入')+'</button></div>'+tabMode+textTabs;
     if((note.classQuestions||[]).length)h+='<section class="hsk3-text-section hsk3-text-questions-first"><h3>1. 先看问题 / Questions Before Reading</h3><p>先读问题，不展开答案；带着问题听课文、找信息。</p><div class="hsk3-qa-grid">'+note.classQuestions.map(function(q,k){return'<details class="hsk3-qa"><summary>'+(k+1)+'. '+esc(q.question||'')+'</summary><div>'+esc(q.answer||'')+'</div></details>'}).join('')+'</div></section>';
-    h+='<section class="hsk3-text-section"><h3>2. 理解课文 / Read and Understand</h3><div class="hsk3-generic-text original">'+(cur.lines||[]).map(function(x){return textLine(x,english)}).join('')+'</div></section>';
+    h+='<section class="hsk3-text-section"><h3>2. 理解课文 / Read and Understand</h3>'+(cur.format==='diary'||cur.genre==='日记'?diaryText(cur,english):'<div class="hsk3-generic-text original">'+(cur.lines||[]).map(function(x){return textLine(x,english)}).join('')+'</div>')+'</section>';
     var r=note.retellScaffold||{};if((r.nodes||[]).length)h+='<section class="hsk3-text-section"><h3>3. 复述 / Retell</h3><div class="hsk3-retell-map">'+r.nodes.map(function(n,k){return'<div class="hsk3-retell-node"><b>'+esc(n.label||'')+'</b><span>'+esc(n.hint||'')+'</span></div>'+(k<r.nodes.length-1?'<div class="hsk3-retell-arrow">→</div>':'')}).join('')+'</div><div class="hsk3-retell-frame text-hanzi">'+esc(r.frame||'')+'</div></section>';
     h+='<div class="teach-nav"><button class="prev" onclick="ap.ti=Math.max(0,ap.ti-1);ap.tmode=1;ap._r()" '+(idx===0?'disabled':'')+'>&larr; 上一篇</button><span class="step-counter">'+(idx+1)+' / '+tx.length+'</span><button class="next" onclick="ap.ti=Math.min('+(tx.length-1)+',ap.ti+1);ap.tmode=1;ap._r()" '+(idx===tx.length-1?'disabled':'')+'>下一篇 &rarr;</button></div></div>';
     return h;

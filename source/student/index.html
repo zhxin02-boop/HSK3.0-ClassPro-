@@ -44,7 +44,7 @@
     </section>
 
     <section class="adventure-map" id="adventureMap" aria-label="课程探险路径">
-      <svg class="trail-svg" id="trailSvg" preserveAspectRatio="none" aria-hidden="true"><path id="trailShadow"></path><path id="trailLine"></path></svg>
+      <svg class="trail-svg" id="trailSvg" preserveAspectRatio="none" aria-hidden="true"><path id="trailShadow"></path><path id="trailLine"></path><path id="trailMarks"></path></svg>
       <div id="lessonNodes"></div>
     </section>
 
@@ -133,26 +133,35 @@
     }
 
     function mapPositions(count) {
-      var positions = [], columns = [18, 50, 82];
+      var compact = !window.matchMedia('(max-width: 620px)').matches;
+      var positions = [], columns = compact ? [9, 25.4, 41.8, 58.2, 74.6, 91] : [18, 50, 82];
+      var perRow = columns.length, rowGap = compact ? 142 : 132;
       for (var i = 0; i < count; i++) {
-        var row = Math.floor(i / 3), offset = i % 3;
-        positions.push([row % 2 ? columns[2 - offset] : columns[offset], 72 + row * 126]);
+        var row = Math.floor(i / perRow), offset = i % perRow;
+        positions.push([row % 2 ? columns[perRow - 1 - offset] : columns[offset], 82 + row * rowGap]);
       }
       return positions;
     }
 
+    function lessonMarker(index, state, number) {
+      var icons = ['✈','💡','🏡','🏨','📷','🥡','💍','🏔','🤝','📦','🧩','🌦','🗽','📖','🎤','🧭','🎁','🏆'];
+      return '<span class="node-icon">' + (state === 'done' ? '🌱' : icons[index % icons.length]) + '</span><b>' + number + '</b>';
+    }
+
     function renderMap() {
       var lessons = window.ClassProCourseCatalog.lessons(selectedLevel), positions = mapPositions(lessons.length);
-      var rows = Math.ceil(lessons.length / 3), height = Math.max(250, 110 + rows * 126);
+      var perRow = window.matchMedia('(max-width: 620px)').matches ? 3 : 6;
+      var rows = Math.ceil(lessons.length / perRow), height = Math.max(300, 76 + rows * (perRow === 6 ? 142 : 132));
       var map = document.getElementById('adventureMap'), svg = document.getElementById('trailSvg');
       map.style.height = height + 'px';
       svg.setAttribute('viewBox', '0 0 1000 ' + height);
       var path = positions.map(function (point, index) { return (index ? 'L ' : 'M ') + (point[0] * 10) + ' ' + point[1]; }).join(' ');
       document.getElementById('trailShadow').setAttribute('d', path);
       document.getElementById('trailLine').setAttribute('d', path);
+      document.getElementById('trailMarks').setAttribute('d', path);
       document.getElementById('lessonNodes').innerHTML = lessons.map(function (lesson, index) {
-        var state = nodeState(lesson), marker = state === 'done' ? '<span class="sprout">🌱</span><small>' + lesson.no + '</small>' : String(lesson.no);
-        return '<button type="button" class="lesson-node ' + state + '" style="left:' + positions[index][0] + '%;top:' + positions[index][1] + 'px" onclick="selectLesson(window.ClassProCourseCatalog.get(\'' + lesson.id + '\'))" aria-label="第' + lesson.no + '课 ' + esc(lesson.title) + '"><span class="node-orb">' + marker + '</span><span class="node-label">第' + lesson.no + '课<br>' + esc(lesson.title) + '</span></button>';
+        var state = nodeState(lesson), hue = (index * 47 + 32) % 360;
+        return '<button type="button" class="lesson-node ' + state + ' tile-shape-' + (index % 4) + '" style="left:' + positions[index][0] + '%;top:' + positions[index][1] + 'px;--tile-bg:hsl(' + hue + ' 78% 76%);--tile-ink:hsl(' + hue + ' 58% 25%)" onclick="selectLesson(window.ClassProCourseCatalog.get(\'' + lesson.id + '\'))" aria-label="第' + lesson.no + '课 ' + esc(lesson.title) + '"><span class="node-orb">' + lessonMarker(index,state,lesson.no) + '</span><span class="node-label">' + esc(lesson.title) + '</span></button>';
       }).join('');
       var completed = lessons.filter(function (lesson) { return lessonEvaluation(lesson.id).complete; }).length;
       document.getElementById('progressCount').textContent = completed + ' / ' + lessons.length + ' 已完成';
@@ -241,6 +250,8 @@
     readProgressCache();
     render();
     syncProgress();
+    var mapResizeTimer = 0;
+    window.addEventListener('resize', function () { clearTimeout(mapResizeTimer); mapResizeTimer = setTimeout(renderMap, 120); });
   </script>
 </body>
 </html>
