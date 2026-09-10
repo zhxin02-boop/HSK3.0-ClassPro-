@@ -17,6 +17,7 @@
       required: homework.required || [],
       optional: homework.optional || [],
       sessions: homework.sessions || {},
+      sessionMeta: homework.sessionMeta || {},
       futureModules: homework.futureModules || {},
       tiers: tiers,
       shared_pool: homework.sharedPool || [],

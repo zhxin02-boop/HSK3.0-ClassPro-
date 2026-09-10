@@ -1,5 +1,4 @@
 (function () {
-  var cache = {};
   var lastApplyToken = 0;
 
   function selectedLesson() {
@@ -9,34 +8,20 @@
     return q.get('lesson') || (select && select.value) || window.currentLesson || ctx.lesson || 'HSK1-L01';
   }
 
-  function dataUrl(lesson) {
-    if (lesson === 'HSK1-L01') return '../data-model/HSK1-L01_content_draft.json';
-    if (/^HSK[13]-L\d{2}$/.test(lesson)) return '../data-model/lessons/' + lesson + '.json';
-    return '';
+  function lessonUrl(path, lesson, session) {
+    if (window.ClassProContext && ClassProContext.buildQuery) {
+      return path + '?' + ClassProContext.buildQuery({ lesson: lesson, session: session || '' });
+    }
+    return path + '?lesson=' + encodeURIComponent(lesson) + (session ? '&session=' + encodeURIComponent(session) : '');
   }
 
   function curriculumItem(lesson) {
-    var list = window.ClassProAllCurriculum ? window.ClassProAllCurriculum() : (window.HSK1_CURRICULUM || []);
-    for (var i = 0; i < list.length; i++) if (list[i].id === lesson) return list[i];
-    return null;
+    return window.ClassProCourseCatalog ? ClassProCourseCatalog.get(lesson) : null;
   }
 
   function hasLessonData(lesson) {
     var item = curriculumItem(lesson);
-    if (item && item.openForUse) return Promise.resolve(true);
-    if (cache[lesson] != null) return Promise.resolve(cache[lesson]);
-    var url = dataUrl(lesson);
-    if (!url || !window.fetch) {
-      cache[lesson] = !!(item && item.openForUse);
-      return Promise.resolve(cache[lesson]);
-    }
-    return fetch(url, { cache: 'no-store' }).then(function (r) {
-      cache[lesson] = !!r.ok;
-      return cache[lesson];
-    }).catch(function () {
-      cache[lesson] = !!(item && item.openForUse);
-      return cache[lesson];
-    });
+    return Promise.resolve(!!(item && item.openForUse));
   }
 
   function setCard(id, href, ready, text) {
@@ -66,10 +51,10 @@
     if (!item) return;
     hasLessonData(lesson).then(function (ready) {
       if (token !== lastApplyToken) return;
-      setCard('preLink', '../pre-class/index.html?lesson=' + encodeURIComponent(lesson), ready, '进入预习 / Start');
-      setCard('inLink', '../in-class/student.html?room=8888&lesson=' + encodeURIComponent(lesson), ready, '进入课堂 / Join');
-      setCard('postLink', '../post-class/student-report.html?lesson=' + encodeURIComponent(lesson), ready, '进入作业 / Practice');
-      setCard('reviewLink', '../post-class/review-resources.html?lesson=' + encodeURIComponent(lesson), ready, '进入复习 / Review');
+      setCard('preLink', lessonUrl('../pre-class/index.html', lesson), ready, '进入预习 / Start');
+      setCard('inLink', lessonUrl('../in-class/student.html', lesson), ready, '进入课堂 / Join');
+      setCard('postLink', lessonUrl('../post-class/student-report.html', lesson), ready, '进入作业 / Practice');
+      setCard('reviewLink', lessonUrl('../post-class/review-resources.html', lesson), ready, '进入复习 / Review');
       updateSelectedOption(lesson, ready);
       if (typeof window.ClassProConfigureSessionCards === 'function') {
         window.ClassProConfigureSessionCards(lesson, ready);
@@ -123,7 +108,7 @@
       title.textContent = settings[0];
       intro.textContent = 'HSK3-L03 分为 A/B/C 三次课。' + settings[1];
       rows.innerHTML = l03Sessions.map(function (item) {
-        var href = settings[2] + '?lesson=HSK3-L03&session=' + item[0];
+        var href = lessonUrl(settings[2], 'HSK3-L03', item[0]);
         return '<div class="session-row"><div class="session-id"><b>' + item[0] + '</b>' + item[1] + '</div><div><div class="title">' + item[2] + '</div><div class="session-links"><a class="' + settings[4] + '" href="' + href + '">' + settings[3] + '</a></div></div></div>';
       }).join('');
       panel.classList.add('show');

@@ -29,6 +29,8 @@ function doGet(e) {
     var a = (e.parameter && e.parameter.action) || "get_all";
     if (a === "list_sheets") return json_({ status: "ok", sheets: ss.getSheets().map(function (s) { return s.getName(); }) });
     if (a === "get_data") return json_({ status: "ok", data: readSheet_(ss, e.parameter.lesson || "") });
+    if (a === "get_progress") return getProgress_(ss, e.parameter || {});
+    if (a === "get_review_queue") return getReviewQueue_(ss, e.parameter || {});
     if (a === "save_score") return saveScore_(ss, e.parameter);
     if (a === "mark_reviewed") return markReviewed_(ss, e.parameter);
     if (a === "get_all") {
@@ -44,6 +46,144 @@ function doGet(e) {
   } catch (err) {
     return json_({ status: "error", message: String(err) });
   }
+}
+
+function getReviewQueue_(ss, params) {
+  var requested = String(params.lessons || params.lesson || "").split(",").map(function (x) { return x.trim(); }).filter(String);
+  if (!requested.length || requested.length > 40) return json_({ status: "error", message: "1-40 lessons are required" });
+  var records = [];
+  requested.forEach(function (lesson) {
+    var sheet = ss.getSheetByName(lesson);
+    if (!sheet || sheet.getLastRow() < 2) return;
+    var values = sheet.getDataRange().getValues();
+    rowsToObjects_(values).forEach(function (row) {
+      var raw = row.__values || [];
+      if (reviewPending_(raw)) records.push(row);
+    });
+  });
+  return json_({ status: "ok", data: records, lessons: requested.length, generatedAt: new Date().toISOString() });
+}
+
+function reviewPending_(row) {
+  var stage = progressStage_(row[3]), moduleName = String(row[4] || "").toLowerCase();
+  var feedback = String(row[15] || "").trim(), status = String(row[16] || "").toLowerCase();
+  if (feedback || status === "reviewed" || status.indexOf("已批改") >= 0 || status.indexOf("已归档") >= 0) return false;
+  if (status.indexOf("待") >= 0 || status.indexOf("pending") >= 0) return true;
+  if (stage !== "pre_class" && stage !== "post_class") return false;
+  return /output|subjective|handwriting|开放|造句|云墙|接龙|任务卡|盲盒|猜词|看图/.test(moduleName);
+}
+
+function getProgress_(ss, params) {
+  var student = String(params.student || params.name || "").trim();
+  var requested = String(params.lessons || params.lesson || "").split(",").map(function (x) { return x.trim(); }).filter(String);
+  if (!student) return json_({ status: "error", message: "student is required" });
+  if (!requested.length || requested.length > 24) return json_({ status: "error", message: "1-24 lessons are required" });
+  var result = {};
+  requested.forEach(function (lesson) {
+    var sheet = ss.getSheetByName(lesson);
+    var rows = sheet && sheet.getLastRow() > 1 ? sheet.getRange(2, 1, sheet.getLastRow() - 1, HEADERS.length).getValues() : [];
+    result[lesson] = lessonProgress_(rows, student, lesson);
+  });
+  return json_({ status: "ok", student: student, lessons: result, generatedAt: new Date().toISOString() });
+}
+
+function lessonProgress_(rows, student, lesson) {
+  var expectedSessions = /^HSK3-/i.test(lesson) ? ["A", "B", "C"] : [];
+  var studentRows = rows.filter(function (row) { return String(row[1] || "") === student; });
+  var pre = studentRows.filter(function (row) { return progressStage_(row[3]) === "pre_class"; });
+  var preSummaries = pre.filter(function (row) { return String(row[4] || "") === "pre_progress_summary"; });
+  var preRate = 0;
+  if (preSummaries.length) {
+    var preBySession = latestProgressBySession_(preSummaries);
+    var preSessions = Object.keys(preBySession);
+    if (expectedSessions.length && preSessions.length) {
+      preRate = expectedSessions.reduce(function (sum, session) { return sum + (preBySession[session] ? progressSummaryRate_(preBySession[session]) : 0); }, 0) / expectedSessions.length;
+    } else {
+      preSummaries.sort(function (a, b) { return progressTime_(b) - progressTime_(a); });
+      preRate = progressSummaryRate_(preSummaries[0]);
+    }
+  } else {
+    var steps = {}, missionSessions = {};
+    pre.forEach(function (row) {
+      var moduleName = String(row[4] || ""), match = moduleName.match(/^pre_step_R(\d+)$/i);
+      if (match) steps[match[1]] = true;
+      if (/最终输出|mission_complete/i.test(moduleName)) {
+        var session = progressSession_(row);
+        if (session) missionSessions[session] = true;
+      }
+    });
+    var missionRate = expectedSessions.length && Object.keys(missionSessions).length ? Object.keys(missionSessions).length / expectedSessions.length : (pre.some(function (row) { return /最终输出|mission_complete/i.test(String(row[4] || "")); }) ? 1 : 0);
+    preRate = Math.max(missionRate, Object.keys(steps).length / 6);
+  }
+
+  var issued = {}, answered = {};
+  rows.forEach(function (row) {
+    if (progressStage_(row[3]) !== "in_class") return;
+    var question = String(row[5] || ""), moduleName = String(row[4] || "");
+    if (question && moduleName !== "session_summary") issued[question] = true;
+    if (moduleName === "session_summary") {
+      var summary = progressJson_(row[13]);
+      (summary.publishedQuestionIds || []).forEach(function (id) { if (id) issued[String(id)] = true; });
+    }
+  });
+  studentRows.forEach(function (row) {
+    if (progressStage_(row[3]) === "in_class" && row[5] && String(row[4] || "") !== "session_summary") answered[String(row[5])] = true;
+  });
+  var issuedIds = Object.keys(issued);
+  var inRate = issuedIds.length ? Object.keys(answered).filter(function (id) { return issued[id]; }).length / issuedIds.length : 0;
+
+  var postSummaries = studentRows.filter(function (row) { return progressStage_(row[3]) === "post_class" && String(row[4] || "") === "homework_summary"; });
+  var postRate = 0;
+  if (postSummaries.length) {
+    if (!expectedSessions.length) postRate = 1;
+    else {
+      var postBySession = latestProgressBySession_(postSummaries);
+      var completedSessions = Object.keys(postBySession).filter(function (session) { return expectedSessions.indexOf(session) >= 0; });
+      postRate = completedSessions.length ? completedSessions.length / expectedSessions.length : 1;
+    }
+  }
+
+  var rates = { pre_class: progressClamp_(preRate), in_class: progressClamp_(inRate), post_class: progressClamp_(postRate) };
+  return { rates: rates, complete: rates.pre_class >= 0.7 && rates.in_class >= 0.7 && rates.post_class >= 0.7, records: studentRows.length, issuedQuestions: issuedIds.length };
+}
+
+function progressStage_(value) {
+  var stage = String(value || "").trim().toLowerCase().replace(/[\s-]/g, "");
+  if (stage === "预习" || stage === "课前" || stage === "pre" || stage === "preclass" || stage === "pre_class") return "pre_class";
+  if (stage === "课中" || stage === "inclass" || stage === "in_class") return "in_class";
+  if (stage === "课后" || stage === "post" || stage === "postclass" || stage === "post_class") return "post_class";
+  return stage;
+}
+
+function progressJson_(value) {
+  if (value && typeof value === "object") return value;
+  try { return JSON.parse(String(value || "")); } catch (err) { return {}; }
+}
+
+function progressSession_(row) {
+  var direct = String(row[17] || "").toUpperCase();
+  if (/^[ABC]$/.test(direct)) return direct;
+  var match = String(row[5] || "").toUpperCase().match(/(?:HOMEWORK|PREVIEW|SESSION)[_-]([ABC])(?:$|[_-])/);
+  if (match) return match[1];
+  var data = progressJson_(row[13]), embedded = String(data.session || data.tier || "").toUpperCase();
+  return /^[ABC]$/.test(embedded) ? embedded : "";
+}
+
+function progressTime_(row) { var time = new Date(row[19] || row[0] || 0).getTime(); return isNaN(time) ? 0 : time; }
+function progressClamp_(value) { var n = Number(value); return isNaN(n) ? 0 : Math.max(0, Math.min(1, n > 1 ? n / 100 : n)); }
+function progressSummaryRate_(row) {
+  var data = progressJson_(row[13]);
+  if (data.rate != null) return progressClamp_(data.rate);
+  if (data.completed != null && Number(data.required) > 0) return progressClamp_(Number(data.completed) / Number(data.required));
+  return Number(row[7]) > 0 ? progressClamp_(Number(row[6]) / Number(row[7])) : 0;
+}
+function latestProgressBySession_(rows) {
+  var out = {};
+  rows.slice().sort(function (a, b) { return progressTime_(a) - progressTime_(b); }).forEach(function (row) {
+    var session = progressSession_(row);
+    if (session) out[session] = row;
+  });
+  return out;
 }
 
 function appendRecord_(ss, d) {

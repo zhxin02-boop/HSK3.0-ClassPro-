@@ -1,41 +1,246 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ClassReady+ 学生界面 / Student Home</title>
-<script src="../data-model/hsk1-curriculum.js"></script>
-<script src="../data-model/hsk3-curriculum.js"></script>
-<script src="../shared/context.js"></script>
-<script src="./lesson-links.js" defer></script>
-<style>
-*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Arial,"Microsoft YaHei",sans-serif;background:#fbf7f3;color:#30261f;padding:18px}.wrap{max-width:980px;margin:auto}.hero,.card,.report-link,.session-panel{background:#fff;border:1px solid #eadfd8;border-radius:24px;box-shadow:0 14px 32px rgba(100,70,50,.08)}.hero{padding:28px 24px;margin-bottom:16px;background:linear-gradient(135deg,#fff,#fff3ec)}.brand{font-size:13px;font-weight:900;color:#b94332;letter-spacing:.4px}.hero h1{margin:10px 0 5px;font-size:30px;color:#8f3428}.muted{color:#88776d;font-size:14px;line-height:1.55}.current{padding:18px;margin-bottom:16px;border-left:6px solid #c0392b;background:#fff8f4}.current h2{margin:0 0 5px;color:#8f3428}.current .en{font-size:13px;color:#9b8479}.course-bar{display:grid;grid-template-columns:160px 1fr;gap:10px;align-items:end;margin-top:14px}.selector-field{display:flex;flex-direction:column;gap:6px}.selector-field label{font-weight:900;color:#8f3428;font-size:13px}.selector-field select{width:100%;padding:10px 12px;border:1px solid #e3c9bd;border-radius:12px;background:#fff;color:#30261f;font-weight:800}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.card{padding:18px;text-decoration:none;color:inherit;transition:.18s}.card:hover,.report-link:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(100,70,50,.13)}.card.pre{border-top:5px solid #c0392b}.card.in{border-top:5px solid #6ea72d}.card.post{border-top:5px solid #6c5ce7}.card.review{border-top:5px solid #2563eb}.card.mock{border-top:5px solid #111827}.card.disabled{opacity:.55;pointer-events:none}.icon{font-size:32px;margin-bottom:10px}.title{font-size:18px;font-weight:900}.en{font-size:12px;color:#8c7f78;margin-top:3px}.desc{font-size:13px;color:#88776d;line-height:1.5;margin:10px 0 16px}.go{display:inline-block;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:900;background:#f6eee9;color:#8f3428}.in .go{background:#edf6d9;color:#3f7f32}.post .go{background:#efedff;color:#5847bc}.review .go{background:#edf3ff;color:#2563eb}.mock .go{background:#111827;color:#fff}.reports{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}.report-link{display:block;padding:16px;text-decoration:none;color:#5847bc;background:#f7f5ff;border-color:#ddd6ff}.report-link h3{margin:0 0 4px}.session-panel{display:none;margin:14px 0;padding:18px;background:#fffdf9}.session-panel.show{display:block}.session-panel h2{margin:0 0 4px;color:#8f3428;font-size:21px}.session-row{display:grid;grid-template-columns:105px 1fr;gap:12px;align-items:center;padding:12px 0;border-top:1px dashed #eadfd8}.session-row:first-of-type{border-top:0}.session-id{border-radius:18px;background:#fff3ec;color:#8f3428;font-weight:1000;text-align:center;padding:12px}.session-id b{display:block;font-size:22px}.session-links{display:flex;gap:8px;flex-wrap:wrap}.session-links a{border-radius:999px;padding:9px 12px;text-decoration:none;font-size:13px;font-weight:900;border:1px solid #eadfd8;color:#6b332a;background:#fff}.session-links a.pre{background:#fff0ec;color:#a4382c}.session-links a.post{background:#f2f0ff;color:#5847bc}.session-links a.review{background:#edf3ff;color:#2563eb}.tip{margin-top:16px;padding:14px 16px;border-radius:16px;background:#fffaf5;color:#88776d;font-size:13px;line-height:1.6}@media(max-width:760px){body{padding:12px}.grid,.reports,.course-bar{grid-template-columns:1fr}.session-row{grid-template-columns:1fr}.hero{padding:22px 18px}.hero h1{font-size:26px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ClassPro+ HSK学习探索之旅</title>
+  <link rel="stylesheet" href="../shared/classpro-theme.css">
+  <link rel="stylesheet" href="./home.css">
+  <script src="../data-model/hsk1-curriculum.js"></script>
+  <script src="../data-model/hsk3-curriculum.js"></script>
+  <script src="../shared/course-catalog.js"></script>
+  <script src="../shared/context.js"></script>
+  <script src="../shared/progress-rules.js"></script>
+  <script src="../shared/progress-data.js"></script>
 </head>
-<body><main class="wrap">
-<section class="hero"><div class="brand">ClassReady+ / ClassPro+</div><h1>学生界面 / Student Home</h1><div class="muted">当前课程、历史趋势和阶段报告都从这里进入。Choose your learning view.</div></section>
-<section class="current"><h2 id="lessonTitle">HSK1-L02 · 我叫李文</h2><div class="en" id="lessonEn">My name is Li Wen · 当前课程 / Current lesson</div><div class="course-bar"><div class="selector-field"><label for="levelSelect">选择级别 / Level</label><select id="levelSelect" onchange="selectLevel(this.value)"></select></div><div class="selector-field"><label for="courseSelect">选择课程 / Select Lesson</label><select id="courseSelect" onchange="selectLesson(this.value)"></select></div></div></section>
-<section class="grid">
-<a id="preLink" class="card pre" href="../pre-class/index.html"><div class="icon">📖</div><div class="title">课前预习</div><div class="en">Pre-class Preview</div><div class="desc">词汇、拼音、课文和课前准备。</div><span class="go">进入预习 / Start</span></a>
-<a id="inLink" class="card in" href="../in-class/student.html?room=8888"><div class="icon">🎯</div><div class="title">课中互动</div><div class="en">In-class Interaction</div><div class="desc">跟随老师答题，查看实时积分和排行榜。</div><span class="go">进入课堂 / Join</span></a>
-<a id="postLink" class="card post" href="../post-class/student-report.html"><div class="icon">📝</div><div class="title">课后作业</div><div class="en">Post-class Homework</div><div class="desc">完成分层作业，查看客观题结果和课堂报告。</div><span class="go">进入作业 / Practice</span></a>
-<a id="reviewLink" class="card review" href="../post-class/review-resources.html"><div class="icon">复</div><div class="title">课后复习</div><div class="en">Review Resources</div><div class="desc">复习生词、语言点、语法和课文。</div><span class="go">进入复习 / Review</span></a>
-</section>
-<section id="sessionPanel" class="session-panel">
-  <h2 id="sessionPanelTitle">选择课次</h2>
-  <div class="muted" id="sessionPanelIntro">HSK3 课程分为 A/B/C 三次课。请先选择学习模块，再进入对应课次。</div>
-  <div id="sessionRows"></div>
-</section>
-<section class="reports"><a id="currentReportLink" class="report-link" href="../post-class/student-report.html"><h3>当前课报告</h3><div class="muted">Current Lesson Report</div></a><a id="historyReportLink" class="report-link" href="history.html"><h3>历史趋势与阶段报告</h3><div class="muted">History & 5-Lesson Reports</div></a></section>
-<div class="tip">提示 / Tip：进入学习页面后，请使用老师提供的姓名选项。Use the name option provided by your teacher so your records stay consistent.</div>
-</main><script>
-var currentLesson=new URLSearchParams(location.search).get('lesson')||'HSK1-L02';
-function courseList(){return window.ClassProAllCurriculum?window.ClassProAllCurriculum():(window.HSK1_CURRICULUM||[])}
-function lessonLevel(id){var m=String(id||'').match(/^HSK\d+/);return m?m[0]:'HSK1'}
-function levelList(){var seen={},levels=[];courseList().forEach(function(x){var lv=lessonLevel(x.id);if(!seen[lv]){seen[lv]=1;levels.push(lv)}});return levels}
-function filteredCourses(){var lv=document.getElementById('levelSelect').value||lessonLevel(currentLesson);return courseList().filter(function(x){return lessonLevel(x.id)===lv})}
-function fillCourseSelect(){var select=document.getElementById('courseSelect'),list=filteredCourses();select.innerHTML=list.map(function(x){return'<option value="'+x.id+'">'+x.id+' · '+x.title+(x.openForUse?'':'（准备中）')+'</option>'}).join('');if(!list.some(function(x){return x.id===currentLesson})&&list[0])currentLesson=list[0].id;select.value=currentLesson}
-function selectLevel(level){var list=courseList().filter(function(x){return lessonLevel(x.id)===level});if(list[0])currentLesson=list[0].id;try{localStorage.setItem('ClassProCurrentLevel',level);localStorage.setItem('ClassProCurrentLesson',currentLesson)}catch(e){}fillCourseSelect();renderCourse()}
-function selectLesson(id){currentLesson=id;try{localStorage.setItem('ClassProCurrentLesson',id);localStorage.setItem('ClassProCurrentLevel',lessonLevel(id))}catch(e){}renderCourse()}
-function renderCourse(){var list=courseList(),x=list.filter(function(a){return a.id===currentLesson})[0]||filteredCourses()[0]||list[1]||list[0],ready=!!(x&&x.openForUse);if(!x)return;currentLesson=x.id;document.getElementById('levelSelect').value=lessonLevel(x.id);fillCourseSelect();document.getElementById('courseSelect').value=x.id;document.getElementById('lessonTitle').textContent=x.id+' · '+x.title;document.getElementById('lessonEn').textContent=x.en+' · 当前课程 / Current lesson';var currentReport=document.getElementById('currentReportLink'),historyReport=document.getElementById('historyReportLink');if(currentReport)currentReport.href='../post-class/student-report.html?lesson='+encodeURIComponent(x.id);if(historyReport)historyReport.href='history.html?lesson='+encodeURIComponent(x.id);['preLink','inLink','postLink'].forEach(function(id){var el=document.getElementById(id),go=el.querySelector('.go');el.classList.toggle('disabled',!ready);if(ready){el.href=id==='preLink'?'../pre-class/index.html?lesson='+x.id:id==='inLink'?'../in-class/student.html?room=8888&lesson='+x.id:'../post-class/student-report.html?lesson='+x.id;if(go)go.textContent=id==='preLink'?'进入预习 / Start':id==='inLink'?'进入课堂 / Join':'进入作业 / Practice'}else{el.href='#';if(go)go.textContent='内容准备中 / Preparing'}});var review=document.getElementById('reviewLink');if(review){review.classList.toggle('disabled',!ready);review.href=ready?'../post-class/review-resources.html?lesson='+x.id:'#';var rgo=review.querySelector('.go');if(rgo)rgo.textContent=ready?'进入复习 / Review':'内容准备中 / Preparing'}}
-function init(){var list=courseList(),saved='',savedLevel='';try{saved=localStorage.getItem('ClassProCurrentLesson')||'';savedLevel=localStorage.getItem('ClassProCurrentLevel')||''}catch(e){}if(new URLSearchParams(location.search).get('lesson'))saved=new URLSearchParams(location.search).get('lesson');if(saved&&list.some(function(x){return x.id===saved}))currentLesson=saved;savedLevel=lessonLevel(currentLesson)||savedLevel;document.getElementById('levelSelect').innerHTML=levelList().map(function(lv){return'<option value="'+lv+'">'+lv+'</option>'}).join('');document.getElementById('levelSelect').value=savedLevel;fillCourseSelect();renderCourse()}init();
-</script><script>(function(){var activeMode='';var modes={pre:{title:'选择预习课次',intro:'Choose A, B, or C to start the matching pre-class preview.',path:'../pre-class/index.html',label:'进入预习 / Preview',className:'pre'},post:{title:'选择作业课次',intro:'Choose the same A, B, or C session after class to finish the homework task.',path:'../post-class/student-report.html',label:'进入作业 / Homework',className:'post'},review:{title:'选择复习课次',intro:'Choose A, B, or C to review vocabulary, grammar points, and text content for that session.',path:'../post-class/review-resources.html',label:'进入复习 / Review',className:'review'}};var sessionLabels={"HSK3-L01":[['A','第一次课','课文一：接机与人物描述'],['B','第二次课','课文二、三：行李问题与机场找人'],['C','第三次课','课文四：第一天经历复述']],"HSK3-L02":[['A','第一次课','课文一：餐厅点菜'],['B','第二次课','课文二、三：餐具服务与外卖'],['C','第三次课','课文四：饮食习惯复述']]};function isHsk3Lesson(lesson){return /^HSK3-L\d{2}$/.test(String(lesson||''))}function sessionData(lesson){return sessionLabels[lesson]||[['A','第一次课','课文一'],['B','第二次课','课文二、三'],['C','第三次课','课文四']]}function sessionUrl(path,lesson,s){return path+'?lesson='+encodeURIComponent(lesson)+'&session='+encodeURIComponent(s)}function current(){var select=document.getElementById('courseSelect');return window.currentLesson||(select&&select.value)||'HSK1-L01'}function hidePanel(){var panel=document.getElementById('sessionPanel'),rows=document.getElementById('sessionRows');if(panel)panel.classList.remove('show');if(rows)rows.innerHTML='';activeMode=''}function showPanel(mode){var lesson=current(),cfg=modes[mode],panel=document.getElementById('sessionPanel'),rows=document.getElementById('sessionRows'),title=document.getElementById('sessionPanelTitle'),intro=document.getElementById('sessionPanelIntro');if(!cfg||!isHsk3Lesson(lesson)||!panel||!rows)return;activeMode=mode;if(title)title.textContent=cfg.title;if(intro)intro.textContent=lesson+' 分为 A/B/C 三次课。'+cfg.intro;rows.innerHTML=sessionData(lesson).map(function(x){return'<div class="session-row"><div class="session-id"><b>'+x[0]+'</b>'+x[1]+'</div><div><div class="title">'+x[2]+'</div><div class="session-links"><a class="'+cfg.className+'" href="'+sessionUrl(cfg.path,lesson,x[0])+'">'+cfg.label+'</a></div></div></div>'}).join('');panel.classList.add('show');panel.scrollIntoView({behavior:'smooth',block:'nearest'})}function bindCard(id,mode){var el=document.getElementById(id);if(!el)return;el.onclick=function(e){if(isHsk3Lesson(current())&&!el.classList.contains('disabled')){e.preventDefault();showPanel(mode)}}}function configure(lesson,ready){if(!isHsk3Lesson(lesson)||!ready){hidePanel();return}var map={preLink:['pre','选择课次 / Choose'],postLink:['post','选择课次 / Choose'],reviewLink:['review','选择课次 / Choose']};Object.keys(map).forEach(function(id){var el=document.getElementById(id),go=el&&el.querySelector('.go');if(!el)return;el.href='#sessionPanel';if(go)go.textContent=map[id][1]});if(activeMode)showPanel(activeMode)}window.ClassProConfigureSessionCards=configure;bindCard('preLink','pre');bindCard('postLink','post');bindCard('reviewLink','review');var oldRender=window.renderCourse;window.renderCourse=function(){var r=oldRender.apply(this,arguments),lesson=current();if(window.ClassProApplyLessonLinks)window.ClassProApplyLessonLinks();configure(lesson,isHsk3Lesson(lesson));return r};var oldSelect=window.selectLesson;window.selectLesson=function(id){var r=oldSelect.apply(this,arguments);hidePanel();return r};var c=window.ClassProContext?ClassProContext.read():{};currentLesson=new URLSearchParams(location.search).get('lesson')||c.lesson||currentLesson||'HSK1-L01';renderCourse();})();</script></body></html>
+<body>
+  <main class="student-shell">
+    <header class="student-topbar">
+      <div class="cp-brand">
+        <svg class="cp-brand-mark" viewBox="0 0 96 96" role="img" aria-label="ClassPro 蒲公英"><g fill="none" stroke="#0d5b43" stroke-linecap="round"><path d="M47 45c-2 18-4 31-13 43" stroke-width="3"/><path d="M45 69c10-3 16-8 20-15" stroke-width="2"/><path d="M45 48 24 29M47 46 47 18M50 47 71 27M43 46 18 48M51 50 77 49M45 43 34 21M50 44 62 18" stroke-width="2"/></g><g fill="#0d5b43"><circle cx="47" cy="46" r="5"/><circle cx="19" cy="48" r="3"/><circle cx="24" cy="29" r="3"/><circle cx="34" cy="20" r="3"/><circle cx="47" cy="17" r="3"/><circle cx="62" cy="17" r="3"/><circle cx="72" cy="26" r="3"/><circle cx="78" cy="49" r="3"/></g><g fill="#ef8d45"><circle cx="81" cy="19" r="2.5"/><circle cx="88" cy="27" r="2"/><circle cx="84" cy="38" r="1.8"/></g></svg>
+        <div><div class="cp-brand-name">CHINESE CLASSPRO+</div><div class="cp-brand-note">我的中文旅程 / My Journey</div></div>
+      </div>
+      <span class="cp-pill" id="studentBadge">Student</span>
+    </header>
+
+    <section class="journey-hero">
+      <div class="cp-eyebrow">Light adventure</div>
+      <h1>HSK学习探索之旅</h1>
+      <p>完成每一站的学习任务，让蒲公英种子落地发芽。</p>
+      <div class="hero-meta"><span id="currentLessonBadge">当前课程</span><span id="roomBadge">房间 8888</span></div>
+    </section>
+
+    <section class="journey-toolbar cp-panel">
+      <div class="level-tabs" id="levelTabs" aria-label="选择课程级别"></div>
+      <div class="progress-summary">
+        <div class="progress-copy"><strong id="progressCount">0 / 0 已完成</strong><span id="progressStatus">三项分别达到 70%，这一课才会发芽</span></div>
+        <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+      </div>
+    </section>
+
+    <section class="map-head">
+      <div><div class="cp-eyebrow">Course trail</div><h2 id="mapTitle">课程探险路径</h2></div>
+      <div class="map-key"><span class="sprouted">已发芽</span><span class="lit">已点亮</span><span class="preparing">准备中</span></div>
+    </section>
+
+    <section class="adventure-map" id="adventureMap" aria-label="课程探险路径">
+      <svg class="trail-svg" id="trailSvg" preserveAspectRatio="none" aria-hidden="true"><path id="trailShadow"></path><path id="trailLine"></path></svg>
+      <div id="lessonNodes"></div>
+    </section>
+
+    <nav class="student-shortcuts cp-panel" aria-label="学习记录">
+      <a id="currentReportLink" href="../post-class/student-report.html">本课学习报告</a>
+      <a id="historyReportLink" href="history.html">历史趋势与阶段报告</a>
+    </nav>
+  </main>
+
+  <dialog class="lesson-dialog" id="lessonDialog">
+    <button class="dialog-close" type="button" aria-label="关闭" onclick="closeLessonDialog()">×</button>
+    <header class="dialog-head"><div class="cp-eyebrow" id="dialogLessonId"></div><h2 id="dialogLessonTitle"></h2><p id="dialogLessonEnglish"></p></header>
+    <div class="completion-rule"><b>完成规则</b><span>预习、课中、课后作业三项都达到 70% 以上。</span></div>
+    <div class="stage-list" id="stageList"></div>
+    <p class="dialog-note" id="dialogNote"></p>
+  </dialog>
+
+  <script>
+    var context = window.ClassProContext.read();
+    var currentLesson = window.ClassProCourseCatalog.get(context.lesson) || window.ClassProCourseCatalog.all()[0];
+    var selectedLevel = currentLesson ? window.ClassProCourseCatalog.levelOf(currentLesson.id) : 'HSK1';
+    var syncedProgress = {};
+    var GAS_URL = 'https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec';
+
+    function esc(value) { return String(value == null ? '' : value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+    function lessonUrl(path, lessonId, session) { return path + '?' + window.ClassProContext.buildQuery({ lesson: lessonId, session: session || '' }); }
+    function readLocal(key) { try { return localStorage.getItem(key) || ''; } catch (error) { return ''; } }
+    function studentName() { return context.student || readLocal('classpro_student') || readLocal('ClassProStudentName') || 'Student'; }
+    function availableLevels() { return window.ClassProCourseCatalog.levels().filter(function (level) { return level.lessons.length; }); }
+
+    function progressCacheKey() { return 'ClassProProgressCache:' + studentName(); }
+    function readProgressCache() {
+      try { syncedProgress = JSON.parse(localStorage.getItem(progressCacheKey()) || '{}') || {}; } catch (error) { syncedProgress = {}; }
+    }
+    function saveProgressCache() { try { localStorage.setItem(progressCacheKey(), JSON.stringify(syncedProgress)); } catch (error) {} }
+
+    function stageRates(lessonId) {
+      var synced = syncedProgress[lessonId];
+      if (synced) return synced.rates || synced;
+      var name = studentName();
+      var keys = ['ClassProLessonProgress:' + name + ':' + lessonId, 'ClassProLessonProgress:' + lessonId];
+      var data = {};
+      for (var i = 0; i < keys.length; i++) {
+        try { data = JSON.parse(localStorage.getItem(keys[i]) || '{}'); } catch (error) { data = {}; }
+        if (data && Object.keys(data).length) break;
+      }
+      return {
+        pre_class: data.pre_class != null ? data.pre_class : data.pre,
+        in_class: data.in_class != null ? data.in_class : data.in,
+        post_class: data.post_class != null ? data.post_class : data.post
+      };
+    }
+
+    function lessonEvaluation(lessonId) { return window.ClassProProgressRules.evaluate(stageRates(lessonId)); }
+    function rateText(rate) { return Math.round(rate * 100) + '%'; }
+
+    function selectLevel(levelId) {
+      selectedLevel = levelId;
+      var lessons = window.ClassProCourseCatalog.lessons(levelId);
+      if (!lessons.some(function (lesson) { return currentLesson && lesson.id === currentLesson.id; })) currentLesson = lessons.filter(function (lesson) { return lesson.openForUse; })[0] || lessons[0] || null;
+      if (currentLesson) context = window.ClassProContext.save({ lesson: currentLesson.id, session: '' });
+      render();
+      syncProgress();
+    }
+
+    function selectLesson(lesson) {
+      if (!lesson) return;
+      currentLesson = lesson;
+      context = window.ClassProContext.save({ lesson: lesson.id, session: '' });
+      history.replaceState({}, '', '?' + window.ClassProContext.buildQuery(context));
+      render();
+      openLessonDialog(lesson);
+    }
+
+    function nodeState(lesson) {
+      if (lessonEvaluation(lesson.id).complete) return 'done';
+      if (!lesson.openForUse) return 'future';
+      if (currentLesson && lesson.id === currentLesson.id) return 'current';
+      return 'ready';
+    }
+
+    function renderLevels() {
+      document.getElementById('levelTabs').innerHTML = availableLevels().map(function (level) {
+        return '<button type="button" class="level-tab' + (level.id === selectedLevel ? ' active' : '') + '" onclick="selectLevel(\'' + level.id + '\')">' + esc(level.name) + '<small>' + level.lessons.length + '课</small></button>';
+      }).join('');
+    }
+
+    function mapPositions(count) {
+      var positions = [], columns = [18, 50, 82];
+      for (var i = 0; i < count; i++) {
+        var row = Math.floor(i / 3), offset = i % 3;
+        positions.push([row % 2 ? columns[2 - offset] : columns[offset], 72 + row * 126]);
+      }
+      return positions;
+    }
+
+    function renderMap() {
+      var lessons = window.ClassProCourseCatalog.lessons(selectedLevel), positions = mapPositions(lessons.length);
+      var rows = Math.ceil(lessons.length / 3), height = Math.max(250, 110 + rows * 126);
+      var map = document.getElementById('adventureMap'), svg = document.getElementById('trailSvg');
+      map.style.height = height + 'px';
+      svg.setAttribute('viewBox', '0 0 1000 ' + height);
+      var path = positions.map(function (point, index) { return (index ? 'L ' : 'M ') + (point[0] * 10) + ' ' + point[1]; }).join(' ');
+      document.getElementById('trailShadow').setAttribute('d', path);
+      document.getElementById('trailLine').setAttribute('d', path);
+      document.getElementById('lessonNodes').innerHTML = lessons.map(function (lesson, index) {
+        var state = nodeState(lesson), marker = state === 'done' ? '<span class="sprout">🌱</span><small>' + lesson.no + '</small>' : String(lesson.no);
+        return '<button type="button" class="lesson-node ' + state + '" style="left:' + positions[index][0] + '%;top:' + positions[index][1] + 'px" onclick="selectLesson(window.ClassProCourseCatalog.get(\'' + lesson.id + '\'))" aria-label="第' + lesson.no + '课 ' + esc(lesson.title) + '"><span class="node-orb">' + marker + '</span><span class="node-label">第' + lesson.no + '课<br>' + esc(lesson.title) + '</span></button>';
+      }).join('');
+      var completed = lessons.filter(function (lesson) { return lessonEvaluation(lesson.id).complete; }).length;
+      document.getElementById('progressCount').textContent = completed + ' / ' + lessons.length + ' 已完成';
+      document.getElementById('progressBar').style.width = (lessons.length ? completed / lessons.length * 100 : 0) + '%';
+      document.getElementById('mapTitle').textContent = selectedLevel + ' 探险路径';
+    }
+
+    function stageLinks(lesson, stage) {
+      var paths = { pre_class: '../pre-class/index.html', in_class: '../in-class/student.html', post_class: '../post-class/student-report.html', review: '../post-class/review-resources.html' };
+      if (!lesson.openForUse) return '<span class="stage-unavailable">内容准备中</span>';
+      if (stage === 'in_class' || window.ClassProCourseCatalog.levelOf(lesson.id) !== 'HSK3') return '<a class="stage-action" href="' + lessonUrl(paths[stage], lesson.id, '') + '">进入</a>';
+      return ['A', 'B', 'C'].map(function (session) { return '<a class="session-action" href="' + lessonUrl(paths[stage], lesson.id, session) + '">' + session + '</a>'; }).join('');
+    }
+
+    function openLessonDialog(lesson) {
+      if (!lesson) return;
+      var evaluation = lessonEvaluation(lesson.id);
+      document.getElementById('dialogLessonId').textContent = lesson.id + (evaluation.complete ? ' · 种子已发芽' : lesson.openForUse ? ' · 课程已点亮' : ' · 内容准备中');
+      document.getElementById('dialogLessonTitle').textContent = lesson.title;
+      document.getElementById('dialogLessonEnglish').textContent = lesson.en || '';
+      var stages = [['pre_class', '🌱', '课前预习', 'Pre-class'], ['in_class', '🎯', '课中学习', 'In-class'], ['post_class', '✺', '课后作业', 'Post-class']];
+      document.getElementById('stageList').innerHTML = stages.map(function (stage) {
+        var rate = evaluation.rates[stage[0]];
+        return '<div class="stage-item"><span class="stage-icon">' + stage[1] + '</span><div class="stage-copy"><b>' + stage[2] + '</b><small>' + stage[3] + ' · ' + rateText(rate) + '</small><i><span style="width:' + (rate * 100) + '%"></span></i></div><div class="stage-links">' + stageLinks(lesson, stage[0]) + '</div></div>';
+      }).join('') + '<div class="review-row"><span>复习资源不计入完成率，可随时进入。</span><div class="stage-links">' + stageLinks(lesson, 'review') + '</div></div>';
+      document.getElementById('dialogNote').textContent = evaluation.complete ? '三项均已达到 70%，本课种子已经发芽。' : '尚未达到完成标准；继续完成三阶段任务即可。';
+      var dialog = document.getElementById('lessonDialog');
+      if (dialog.showModal) dialog.showModal(); else dialog.setAttribute('open', '');
+    }
+
+    function closeLessonDialog() { var dialog = document.getElementById('lessonDialog'); if (dialog.close) dialog.close(); else dialog.removeAttribute('open'); }
+
+    function render() {
+      if (!currentLesson) return;
+      document.getElementById('studentBadge').textContent = studentName();
+      document.getElementById('currentLessonBadge').textContent = currentLesson.id + ' · ' + currentLesson.title;
+      document.getElementById('roomBadge').textContent = '房间 ' + context.room;
+      document.getElementById('currentReportLink').href = lessonUrl('../post-class/student-report.html', currentLesson.id, '');
+      document.getElementById('historyReportLink').href = lessonUrl('history.html', currentLesson.id, '');
+      renderLevels();
+      renderMap();
+    }
+
+    function fetchJson(url, timeout) {
+      var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+      var timer = controller ? setTimeout(function () { controller.abort(); }, timeout || 12000) : null;
+      return fetch(url, controller ? { signal: controller.signal } : {}).then(function (response) {
+        if (!response.ok) throw new Error('Progress API ' + response.status);
+        return response.json();
+      }).then(function (data) { if (timer) clearTimeout(timer); return data; }, function (error) { if (timer) clearTimeout(timer); throw error; });
+    }
+
+    function fetchLegacyLessonProgress(lessons) {
+      var queue = lessons.slice(), workers = [];
+      function next() {
+        var lesson = queue.shift();
+        if (!lesson) return Promise.resolve();
+        return fetchJson(GAS_URL + '?action=get_data&lesson=' + encodeURIComponent(lesson.id), 15000).then(function (data) {
+          syncedProgress[lesson.id] = window.ClassProProgressData.fromRows((data && data.data) || [], { student: studentName(), lesson: lesson.id });
+        }).catch(function () {}).then(next);
+      }
+      for (var i = 0; i < Math.min(3, lessons.length); i++) workers.push(next());
+      return Promise.all(workers);
+    }
+
+    function syncProgress() {
+      var lessons = window.ClassProCourseCatalog.lessons(selectedLevel);
+      if (!lessons.length) return;
+      document.getElementById('progressStatus').textContent = '正在同步 Google Sheets 学习记录…';
+      var ids = lessons.map(function (lesson) { return lesson.id; });
+      var url = GAS_URL + '?action=get_progress&student=' + encodeURIComponent(studentName()) + '&lessons=' + encodeURIComponent(ids.join(','));
+      fetchJson(url, 18000).then(function (data) {
+        if (!data || data.status !== 'ok' || !data.lessons) throw new Error('compact progress unavailable');
+        Object.keys(data.lessons).forEach(function (lessonId) { syncedProgress[lessonId] = data.lessons[lessonId]; });
+      }).catch(function () {
+        return selectedLevel === 'HSK3' ? fetchLegacyLessonProgress(lessons) : Promise.reject(new Error('legacy sync skipped'));
+      }).then(function () {
+        saveProgressCache();
+        renderMap();
+        document.getElementById('progressStatus').textContent = '已同步学习记录 · 三项分别达到 70% 才会发芽';
+      }).catch(function () {
+        document.getElementById('progressStatus').textContent = '暂时无法同步，当前显示上次缓存记录';
+      });
+    }
+
+    readProgressCache();
+    render();
+    syncProgress();
+  </script>
+</body>
+</html>

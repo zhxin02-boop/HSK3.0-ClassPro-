@@ -8,7 +8,7 @@
 <script src="../data-model/course-data-adapter.js"></script>
 <script src="./lesson-data-loader.js"></script>
 <script src="../shared/storage.js"></script>
-<script src="../shared/students.js?v=20260908-2"></script>
+<script src="../shared/students.js?v=20260909-1"></script>
 <style>
 *{box-sizing:border-box}
 :root{--green:#4f8f2f;--line:#dfe9c8;--dark:#24351f;--blue:#2563eb;--red:#c0392b;--orange:#b45309}
@@ -31,6 +31,7 @@ input.name{min-width:240px;flex:1}textarea{width:100%;min-height:92px;resize:ver
 .tag{display:inline-flex;justify-content:center;border-radius:999px;background:#f2f8e4;color:#4f7d2e;font-size:12px;font-weight:900;padding:5px 9px;white-space:nowrap}.qtitle{font-size:16px;font-weight:900;line-height:1.45}.en{font-size:13px;color:#7d8577;margin-top:3px}
 .opt,.token{border:1px solid #dce7c8;border-radius:13px;background:#fff;padding:8px 11px;font-size:14px;color:#41513d}.opt.sel{border-color:var(--blue);background:#dbeafe;color:#1d4ed8}
 .homework-scaffold{margin-top:10px;display:grid;gap:8px}.homework-scaffold>div{border:1px solid #e5edcf;background:#fbfdf6;border-radius:14px;padding:10px 12px}.homework-scaffold b{display:block;color:#3f7f32;font-size:13px;margin-bottom:6px}.homework-scaffold span{display:inline-flex;margin:0 6px 6px 0;border-radius:999px;background:#fff;color:#41513d;border:1px solid #dce7c8;padding:6px 10px;font-weight:900}.homework-scaffold p{margin:0;color:#526248;line-height:1.55}
+.project-stage{display:inline-flex;margin-bottom:7px;border-radius:999px;background:#e8f4ef;color:#176b50;padding:5px 9px;font-size:11px;font-weight:900}.scaffold-levels{display:grid;gap:8px;margin-top:10px}.scaffold-level{border:1px solid #dce7c8;border-left:5px solid #77aa68;border-radius:13px;background:#fffef9;padding:10px 12px}.scaffold-level:nth-child(2){border-left-color:#e5a63b}.scaffold-level:nth-child(3){border-left-color:#6a82d2}.scaffold-level b{display:block;color:#284338;margin-bottom:4px}.scaffold-level p{margin:0;color:#526248;line-height:1.55}.carry-forward{margin-top:10px;border:1px dashed #9bc5ad;border-radius:14px;background:#f1f8f3;padding:11px}.carry-forward b{display:block;color:#176b50;margin-bottom:6px}.carry-item{margin-top:7px;padding:8px 10px;border-radius:10px;background:#fff;color:#405448;white-space:pre-wrap;line-height:1.55}.carry-empty{color:#7a887f;font-size:12px}.presentation-plan{margin-top:10px;padding:11px;border-radius:14px;background:#fff7e4;border:1px solid #efd69b}.presentation-plan b{color:#765216}.presentation-plan ol{margin:7px 0 0;padding-left:22px;color:#5f563f;line-height:1.65}
 .answer-input{width:100%;margin-top:8px}.hint{font-size:12px;color:#8a735a;margin-top:7px}.result{font-size:13px;font-weight:900;margin-top:8px}.ok{color:#2f7d32}.bad{color:#b42318}.wait{color:#b45309}
 .writing-sheet{margin-top:10px;display:grid;gap:10px}.writing-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:9px;border:1px solid #eef3df;border-radius:16px;background:#fbfdf6}.writing-label{width:42px;font-size:13px;color:#73806b;font-weight:900}
 .charbox,.write-canvas{width:58px;height:58px;border:1px solid #dce7c8;border-radius:10px;background:linear-gradient(90deg,transparent 49%,#edf2df 50%,transparent 51%),linear-gradient(0deg,transparent 49%,#edf2df 50%,transparent 51%),linear-gradient(45deg,transparent 49.4%,#f3eadb 50%,transparent 50.6%),linear-gradient(-45deg,transparent 49.4%,#f3eadb 50%,transparent 50.6%),#fff}
@@ -43,8 +44,11 @@ input.name{min-width:240px;flex:1}textarea{width:100%;min-height:92px;resize:ver
 .writing-modal-canvas{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair}.writing-modal-guide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:min(48vw,260px);color:rgba(79,143,47,.12);pointer-events:none}
 .writing-modal-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px}.writing-modal-actions button{min-width:120px}.writing-modal-count{font-size:13px;color:#68765e;font-weight:900}
 .locked{opacity:.55;pointer-events:none}
+.mistake-details{margin-top:12px;border:1px solid #ead8cf;border-radius:15px;background:#fffaf7;overflow:hidden}.mistake-details summary{cursor:pointer;padding:12px 14px;color:#8d3f32;font-weight:900;list-style:none}.mistake-details summary::-webkit-details-marker{display:none}.mistake-details summary:after{content:"＋";float:right}.mistake-details[open] summary:after{content:"－"}.mistake-details-body{padding:0 12px 12px}
 .report-card{background:linear-gradient(135deg,#f3f0ff,#fff);border-color:#d9d1ff}.report-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.report-title{font-size:18px;font-weight:900;color:#5847bc}.report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.report-kpi{padding:11px;border-radius:14px;background:rgba(255,255,255,.8);text-align:center}.report-kpi b{display:block;font-size:22px;color:#5847bc}.report-kpi span{font-size:11px;color:#887da8}@media(max-width:620px){.report-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
+<link rel="stylesheet" href="../shared/classpro-theme.css">
+<link rel="stylesheet" href="../shared/student-flow.css">
 </head>
 <body>
 <nav class="product-nav"><a class="brand" href="../student/index.html">学生界面 / Student Home</a><a href="../pre-class/index.html">课前预习 / Preview</a><a href="../in-class/student.html">课中互动 / Class</a><a class="active" href="student-report.html">课后作业 / Homework</a></nav>
@@ -88,7 +92,7 @@ input.name{min-width:240px;flex:1}textarea{width:100%;min-height:92px;resize:ver
   <div class="card locked" id="tasks"></div>
   <div class="card submitbar">
     <div>
-      <div class="summary" id="submitSummary">完成后统一提交。提交后会显示客观题结果和错题答案。</div>
+      <div class="summary" id="submitSummary">完成后统一提交。提交后可按需展开查看自己的错误与薄弱点。</div>
       <div class="result wait" id="submitStatus"></div>
     </div>
     <button class="submit-main" onclick="submitAllHomework()">一次性提交作业</button>
@@ -111,18 +115,19 @@ function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"
 function norm(s){return String(s||"").replace(/[\s\u3000]/g,"").replace(/[。！？!?，,、；;：:（）()]/g,"").toLowerCase()}
 function getStudentName(){return (document.getElementById("studentName").value||"").trim()}
 function parseMaybeJson(s){try{return JSON.parse(s||"")}catch(e){return null}}
-function renderStudentOptions(){var el=document.getElementById("studentName"),saved="";try{saved=localStorage.getItem("ClassProStudentName")||""}catch(e){}el.innerHTML='<option value="">Select your name / 选择姓名</option>'+(window.CLASS_STUDENTS||[]).map(function(n){return'<option value="'+esc(n)+'">'+esc(n)+'</option>'}).join("");if(saved&&(window.CLASS_STUDENTS||[]).indexOf(saved)>=0)el.value=saved}
+function renderStudentOptions(){var el=document.getElementById("studentName"),saved=new URLSearchParams(location.search).get("student")||"";try{saved=saved||localStorage.getItem("ClassProStudentName")||""}catch(e){}el.innerHTML='<option value="">Select your name / 选择姓名</option>'+(window.CLASS_STUDENTS||[]).map(function(n){return'<option value="'+esc(n)+'">'+esc(n)+'</option>'}).join("");if(saved&&(window.CLASS_STUDENTS||[]).indexOf(saved)>=0)el.value=saved}
 function saveStudentName(){try{localStorage.setItem("ClassProStudentName",getStudentName())}catch(e){}}
 function progressParts(){return[window.ClassProContext.read().lesson,"post_class",currentTier,getStudentName()||"anonymous"]}
 function shuffleArray(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),x=a[i];a[i]=a[j];a[j]=x}return a}
 function needsTeacherReviewQuestion(q){if(!q)return false;var flag=q.needs_teacher_review!=null?q.needs_teacher_review:q.needsTeacherReview;return flag===true||flag==="true"||flag==="yes"||q.type==="output"||q.type==="subjective"||q.type==="handwriting"}
 function isRequiredOptionalHomework(){var hw=window.LESSON_DATA&&window.LESSON_DATA.postClassHomework||{};return hw.mode==="required_optional"}
 function isSessionHomework(){var hw=window.LESSON_DATA&&window.LESSON_DATA.postClassHomework||{};return hw.mode==="hsk3_session_tasks"}
-function sessionTaskToQuestion(task){var x=Object.assign({},task),displayOnly=task.type==="picturebook_oral"||task.displayOnly===true||task.submissionRequired===false;x.type=displayOnly?"display_task":((task.type==="choice"||task.type==="fill_blank"||task.type==="ordering")?task.type:"output");x.prompt_cn=task.prompt_cn||task.prompt||task.title||"";x.prompt_en=task.prompt_en||"";x.answerPlaceholder=task.answerPlaceholder||task.answer_placeholder||"请在这里完成本次课后任务。";x.displayOnly=displayOnly;x.submissionRequired=!displayOnly;x.needsTeacherReview=displayOnly?false:true;x.openEnded=!displayOnly;return x}
+function sessionTaskToQuestion(task){var x=Object.assign({},task),displayOnly=task.type==="picturebook_oral"||task.displayOnly===true||task.submissionRequired===false,objective=task.type==="choice"||task.type==="fill_blank"||task.type==="ordering";x.type=displayOnly?"display_task":(objective?task.type:"output");x.prompt_cn=task.prompt_cn||task.prompt||task.title||"";x.prompt=x.prompt||x.prompt_cn;x.prompt_en=task.prompt_en||"";x.answerPlaceholder=task.answerPlaceholder||task.answer_placeholder||"请在这里完成本次课后任务。";x.displayOnly=displayOnly;x.submissionRequired=!displayOnly;x.needsTeacherReview=displayOnly||objective?false:true;x.openEnded=!displayOnly&&!objective;return x}
 function taskPool(tier){var hw=window.LESSON_DATA&&window.LESSON_DATA.postClassHomework;if(!hw)return[];if(isSessionHomework())return ((hw.sessions&&hw.sessions[tier])||[]).map(sessionTaskToQuestion);tier=isRequiredOptionalHomework()?"default":tier;var s=(hw.shared_pool||[]).slice(),t=(hw.tier_pools&&hw.tier_pools[tier]||[]).slice(),all=s.concat(t),selected=hw.assignment_selection&&hw.assignment_selection[tier],items=all;if(Array.isArray(selected)&&selected.length){var byId={};all.forEach(function(q){byId[q.id]=q});items=selected.map(function(id){return byId[id]}).filter(Boolean)}return items.map(function(q){var x=Object.assign({},q);if(x.options)x.options=shuffleArray(x.options.slice());return x})}
 function typeName(t){return{choice:"选择",fill_blank:"填空",ordering:"排序",output:"输出",display_task:"任务展示",subjective:"主观题",handwriting:"书写"}[t]||t}
 function renderTask(q,i){
-  var h='<div class="task" id="task_'+esc(q.id)+'"><div><span class="tag">'+typeName(q.type)+'</span></div><div>';
+  var h='<div class="task" id="task_'+esc(q.id)+'"><div><span class="tag">'+esc(q.taskLabel||typeName(q.type))+'</span></div><div>';
+  if(q.projectStage)h+='<div class="project-stage">'+esc(q.projectStage)+'</div>';
   h+='<div class="qtitle">'+(i+1)+'. '+esc(q.prompt_cn)+'</div>'; if(q.prompt_en)h+='<div class="en">'+esc(q.prompt_en)+'</div>';
   if(q.instructions)h+='<div class="hint">'+esc(q.instructions)+'</div>';
   if(q.wordBank||q.sample||q.picturePrompts){
@@ -132,6 +137,9 @@ function renderTask(q,i){
     if(q.picturePrompts)h+='<div><b>绘本图序 / Picture Sequence</b>'+q.picturePrompts.map(function(w){return'<span>'+esc(w)+'</span>'}).join('')+'</div>';
     h+='</div>';
   }
+  if(q.scaffoldLevels&&q.scaffoldLevels.length){h+='<div class="scaffold-levels">'+q.scaffoldLevels.map(function(s){return'<div class="scaffold-level"><b>'+esc(s.label)+'</b><p>'+esc(s.instruction)+'</p></div>'}).join('')+'</div>'}
+  if(q.carryFrom&&q.carryFrom.length)h+='<div class="carry-forward" id="carry_'+esc(q.id)+'"><b>旅行档案回顾 / Travel File</b><div class="carry-empty">确认姓名后，将自动显示前面课次保存的内容。</div></div>';
+  if(q.presentationPlan&&q.presentationPlan.length)h+='<div class="presentation-plan"><b>'+esc(q.presentationTitle||'展示方式 / Sharing Plan')+'</b><ol>'+q.presentationPlan.map(function(s){return'<li>'+esc(s)+'</li>'}).join('')+'</ol></div>';
   if(q.type==="choice"){
     h+='<div class="opts">'+(q.options||[]).map(function(o){return'<button type="button" class="opt" data-qid="'+esc(q.id)+'" onclick="chooseAnswer(\''+esc(q.id)+'\',this,\''+esc(o)+'\')">'+esc(o)+'</button>'}).join("")+'</div>';
   }else if(q.type==="fill_blank"){
@@ -141,7 +149,7 @@ function renderTask(q,i){
     if(q.tokens)h+='<div class="tokenbar">'+q.tokens.map(function(o){return'<span class="token">'+esc(o)+'</span>'}).join("")+'</div>';
     h+='<input class="answer-input" id="ans_'+esc(q.id)+'" placeholder="请写出完整句子">';
   }else if(q.displayOnly||q.type==="display_task"){
-    h+='<div class="hint">本题为课堂展示准备任务，不需要在线提交。请按上面的支架准备口语展示。</div>';
+    h+='<div class="hint">'+esc(q.classroomNote||(q.classroomOnly?'本任务在课堂完成，不需要上传录音。请带着旅行档案参加小组展示。':'本题为课堂展示准备任务，不需要在线提交。请按上面的支架准备口语展示。'))+'</div>';
   }else if(q.type==="output"||q.type==="subjective"){
     h+='<textarea id="ans_'+esc(q.id)+'" placeholder="'+esc(q.answer_placeholder||q.answerPlaceholder||'请在这里写你的答案')+'"></textarea>';
   }else if(q.type==="handwriting"){
@@ -156,9 +164,9 @@ function setTier(tier,manual){
   currentTier=tier;if(manual){tierLocked=true;document.getElementById("tierRecommendation").textContent="当前档位 / Current: "+tier+"（已手动调整 / Manual）"}selectedAnswers={};writingStrokes={};submitted=false;
   var hw=window.LESSON_DATA&&window.LESSON_DATA.postClassHomework;if(!hw){document.getElementById("tasks").innerHTML='<div class="hint">没有读取到作业池。</div>';return}
   if(isRequiredOptionalHomework()){var toolbar=document.querySelector(".hero>.toolbar");if(toolbar)toolbar.style.display="none"}else{["A","B","C"].forEach(function(t){document.getElementById("btn"+t).classList.toggle("active",t===tier)});if(isSessionHomework()){document.querySelector(".tier-switch summary").textContent="切换课次 / Change session";document.getElementById("btnA").textContent="A 第一次课";document.getElementById("btnB").textContent="B 第二次课";document.getElementById("btnC").textContent="C 第三次课";document.getElementById("tierRecommendation").textContent="当前课次 / Current Session: "+tier}}
-  currentItems=taskPool(tier);var meta=isSessionHomework()?{label:"第"+({A:"一",B:"二",C:"三"}[tier]||"")+"次课课后任务",goal:"完成本次课后输出，下次课开场回收。",suggested_minutes:"15-20分钟"}:hw.tiers[tier],review=currentItems.filter(needsTeacherReviewQuestion).length,auto=currentItems.length-review;
+  currentItems=taskPool(tier);var defaultMeta={label:"第"+({A:"一",B:"二",C:"三"}[tier]||"")+"次课课后任务",goal:"完成本次课后输出，下次课开场回收。",suggested_minutes:"15-20分钟"},meta=isSessionHomework()?Object.assign(defaultMeta,(hw.sessionMeta&&hw.sessionMeta[tier])||{}):hw.tiers[tier],review=currentItems.filter(needsTeacherReviewQuestion).length,auto=currentItems.filter(function(q){return !q.displayOnly&&q.type!=="display_task"&&!needsTeacherReviewQuestion(q)}).length;
   document.getElementById("taskCount").textContent=currentItems.length;document.getElementById("autoCount").textContent=auto;document.getElementById("reviewCount").textContent=review;document.getElementById("minutes").textContent=(meta.suggested_minutes||"").replace("分钟左右","").replace("分钟","");
-  var b=document.getElementById("tierBadge");b.textContent=isRequiredOptionalHomework()?"作业":tier;b.className="tier "+(isRequiredOptionalHomework()?"":tier.toLowerCase());b.style.fontSize=isRequiredOptionalHomework()?"28px":"";document.getElementById("tierTitle").textContent=meta.label;document.getElementById("tierGoal").textContent=meta.goal;document.getElementById("tierMix").innerHTML=(hw.instructions?('<b>'+esc(hw.instructions.required||'')+'</b><br>'+esc(hw.instructions.optional||'')+(hw.instructions.aiPolicy?'<br>'+esc(hw.instructions.aiPolicy):'')):esc(meta.suggested_mix));
+  var b=document.getElementById("tierBadge");b.textContent=isRequiredOptionalHomework()?"作业":tier;b.className="tier "+(isRequiredOptionalHomework()?"":tier.toLowerCase());b.style.fontSize=isRequiredOptionalHomework()?"28px":"";document.getElementById("tierTitle").textContent=meta.label;document.getElementById("tierGoal").textContent=meta.goal;document.getElementById("tierMix").innerHTML=meta.suggested_mix?esc(meta.suggested_mix):(hw.instructions?('<b>'+esc(hw.instructions.required||'')+'</b><br>'+esc(hw.instructions.optional||'')+(hw.instructions.aiPolicy?'<br>'+esc(hw.instructions.aiPolicy):'')):'');
   document.getElementById("tasks").innerHTML=currentItems.map(renderTask).join("");setTimeout(function(){initWritingCanvases();bindProgressEvents();if(studentConfirmed)restoreProgress()},0);
   document.getElementById("tasks").classList.toggle("locked",!studentConfirmed);
 }
@@ -166,7 +174,8 @@ function confirmName(){
   if(!getStudentName()){alert("请先填写姓名");return}
   studentConfirmed=true;saveStudentName();document.getElementById("nameStatus").textContent="已确认："+getStudentName();document.getElementById("tasks").classList.remove("locked");restoreProgress();saveProgressSoon();loadClassReport();
 }
-function reportVal(x,keys){for(var i=0;i<keys.length;i++){if(x&&x[keys[i]]!=null&&x[keys[i]]!=="")return x[keys[i]]}if(x&&x.__values){var map={studentName:1,姓名:1,学生姓名:1,lesson:2,课程:2,课程编号:2,lessonKey:2,stage:3,环节:3,阶段:3,module:4,模块:4,answer:13,学生作答:13,result:14,结果:14};for(var j=0;j<keys.length;j++){if(map[keys[j]]!=null&&x.__values[map[keys[j]]]!=="")return x.__values[map[keys[j]]]}}return""}
+function reportVal(x,keys){for(var i=0;i<keys.length;i++){if(x&&x[keys[i]]!=null&&x[keys[i]]!=="")return x[keys[i]]}if(x&&x.__values){var map={studentName:1,姓名:1,学生姓名:1,lesson:2,课程:2,课程编号:2,lessonKey:2,stage:3,环节:3,阶段:3,module:4,模块:4,answer:13,学生作答:13,result:14,结果:14,sessionId:17,session:17,课堂session:17};for(var j=0;j<keys.length;j++){if(map[keys[j]]!=null&&x.__values[map[keys[j]]]!=="")return x.__values[map[keys[j]]]}}return""}
+function homeworkRecordSession(x){var direct=String(reportVal(x,["sessionId","session","课堂session"])||"").toUpperCase();if(direct)return direct;var payload=parseMaybeJson(reportVal(x,["answer","学生作答"]));return String(payload&&(payload.session||payload.tier)||"").toUpperCase()}
 function tierFromReport(pre,mid){var accuracy=mid.length?mid.filter(function(x){return String(reportVal(x,["result","autoResult","结果"])).toLowerCase()==="correct"}).length/mid.length:0;if(!mid.length&&pre.length){var scored=pre.filter(function(x){return Number(reportVal(x,["total","总分"]))>0}),got=scored.reduce(function(s,x){return s+Number(reportVal(x,["score","得分"]));},0),tot=scored.reduce(function(s,x){return s+Number(reportVal(x,["total","总分"]));},0);accuracy=tot?got/tot:0}return accuracy>=.85?"C":accuracy>=.6?"B":"A"}
 function sameLesson(value){var v=String(value||"").toUpperCase().replace(/第|课/g,"").replace(/HSK1-L0?/,'');var t=String(lessonKey||"").toUpperCase().replace(/HSK1-L0?/,'');return String(value||"")===String(lessonKey)||v===t}
 function loadClassReport(){var name=getStudentName();if(!name){document.getElementById("reportBody").textContent="请先选择姓名 / Select your name first.";return}document.getElementById("reportBody").textContent="正在读取报告 / Loading...";fetch((location.hostname==="localhost"||location.hostname==="127.0.0.1")?"/api/reviews?name="+encodeURIComponent(name):GAS_URL+"?action=get_all").then(function(r){if(!r.ok)throw new Error("Report API "+r.status);return r.json()}).then(function(d){var all=[];if(d&&d.data){if(Array.isArray(d.data))all=d.data.slice();else for(var k in d.data)(d.data[k]||[]).forEach(function(x){all.push(x)})}var rows=all.filter(function(x){return String(reportVal(x,["studentName","姓名","学生姓名","name"]))===name&&sameLesson(reportVal(x,["lesson","课程","课程编号","lessonKey"]))}),pre=rows.filter(function(x){return ["pre_class","课前","预习"].indexOf(String(reportVal(x,["stage","环节","阶段"])))>=0}),mid=rows.filter(function(x){return ["in_class","课中"].indexOf(String(reportVal(x,["stage","环节","阶段"])))>=0}),post=rows.filter(function(x){return ["post_class","课后"].indexOf(String(reportVal(x,["stage","环节","阶段"])))>=0}),correct=mid.filter(function(x){return String(reportVal(x,["result","autoResult","结果"])).toLowerCase()==="correct"}).length,summary=post.filter(function(x){return reportVal(x,["module","模块"])==="homework_summary"})[0],report=summary?parseMaybeJson(reportVal(summary,["answer","学生作答"])):null;if(!isRequiredOptionalHomework()&&!isSessionHomework()){recommendedTier=tierFromReport(pre,mid);if(!tierLocked){document.getElementById("tierRecommendation").textContent="推荐档位 / Recommended: "+recommendedTier;if(recommendedTier!==currentTier){setTier(recommendedTier,false);if(studentConfirmed)restoreProgress()}}}if(!rows.length){document.getElementById("reportBody").textContent=(isRequiredOptionalHomework()||isSessionHomework())?"暂无报告数据。完成课前、课中或课后任务后，这里会生成学习摘要。":"暂无报告数据。完成课前或课中活动后，这里会生成推荐档位。";return}document.getElementById("reportHint").textContent=(isRequiredOptionalHomework()||isSessionHomework())?("已生成："+name+" 的学习摘要。"):("已生成："+name+" 的学习摘要；系统推荐 "+recommendedTier+" 档");document.getElementById("reportBody").innerHTML='<div class="report-grid"><div class="report-kpi"><b>'+pre.length+'</b><span>课前记录 / Pre</span></div><div class="report-kpi"><b>'+mid.length+'</b><span>课中答题 / Class</span></div><div class="report-kpi"><b>'+ (mid.length?Math.round(correct/mid.length*100):0)+'%</b><span>课中正确率 / Accuracy</span></div><div class="report-kpi"><b>'+ (report?report.objectiveCorrect+'/'+report.objectiveTotal:'--')+'</b><span>课后客观题 / Homework</span></div></div>'}).catch(function(){document.getElementById("reportBody").textContent="报告暂时无法读取，请稍后刷新 / Try again later."})}
@@ -177,6 +186,7 @@ function pos(e,c){var r=c.getBoundingClientRect(),p=e.touches?e.touches[0]:e;ret
 function initWritingCanvases(){document.querySelectorAll(".write-canvas").forEach(function(c){if(c.dataset.ready)return;c.dataset.ready="1";gridCanvas(c);var key=c.dataset.qid+"|"+c.dataset.char+"|"+c.dataset.cell;writingStrokes[key]=writingStrokes[key]||[];var ctx=c.getContext("2d"),drawing=false,stroke=null;function st(e){if(!studentConfirmed)return;e.preventDefault();drawing=true;stroke=[];var p=pos(e,c);stroke.push(p);ctx.beginPath();ctx.moveTo(p.x*c.width,p.y*c.height)}function mv(e){if(!drawing)return;e.preventDefault();var p=pos(e,c);stroke.push(p);ctx.lineTo(p.x*c.width,p.y*c.height);ctx.strokeStyle="#c0392b";ctx.lineWidth=7;ctx.lineCap="round";ctx.lineJoin="round";ctx.stroke()}function ed(){if(!drawing)return;drawing=false;if(stroke&&stroke.length)writingStrokes[key].push(stroke);stroke=null;saveProgressSoon()}c.addEventListener("mousedown",st);c.addEventListener("mousemove",mv);c.addEventListener("mouseup",ed);c.addEventListener("mouseleave",ed);c.addEventListener("touchstart",st,{passive:false});c.addEventListener("touchmove",mv,{passive:false});c.addEventListener("touchend",ed)})}
 function clearHandwriting(qid){document.querySelectorAll('.write-canvas[data-qid="'+qid+'"]').forEach(function(c){writingStrokes[c.dataset.qid+"|"+c.dataset.char+"|"+c.dataset.cell]=[];gridCanvas(c)});saveProgressSoon()}
 function answerOf(q){if(q.displayOnly||q.type==="display_task")return"";if(q.type==="choice")return selectedAnswers[q.id]||"";var el=document.getElementById("ans_"+q.id);return el?el.value.trim():""}
+function renderCarryForward(){currentItems.forEach(function(q){if(!q.carryFrom||!q.carryFrom.length)return;var el=document.getElementById("carry_"+q.id);if(!el)return;var parts=[];q.carryFrom.forEach(function(ref){var saved=window.ClassProShared&&ClassProShared.loadProgress?ClassProShared.loadProgress([window.ClassProContext.read().lesson,"post_class",ref.session,getStudentName()]):null,ans=saved&&saved.textAnswers&&saved.textAnswers[ref.taskId];if(ans)parts.push('<div class="carry-item"><b>'+esc(ref.label||ref.session)+'</b>'+esc(ans)+'</div>')});el.innerHTML='<b>旅行档案回顾 / Travel File</b>'+(parts.length?parts.join(''):'<div class="carry-empty">还没有找到前面课次保存的内容，可以先完成 A、B 作业，或在课堂上补充。</div>')})}
 function handwritingAnswer(q){var cells=[].slice.call(document.querySelectorAll('.write-canvas[data-qid="'+q.id+'"]')).map(function(c){var key=c.dataset.qid+"|"+c.dataset.char+"|"+c.dataset.cell;return{char:c.dataset.char,cell:Number(c.dataset.cell),strokes:writingStrokes[key]||[]}});return JSON.stringify({type:"handwriting",questionId:q.id,tier:currentTier,submittedAt:new Date().toISOString(),cells:cells})}
 function grade(q,ans){if(needsTeacherReviewQuestion(q))return{score:0,total:0,result:"submitted"};var ok=(q.acceptable_answers||[q.correct_answer]).some(function(a){return norm(a)===norm(ans)});return{score:ok?1:0,total:1,result:ok?"correct":"wrong"}}
 function correctText(q){return (q.acceptable_answers||[q.correct_answer]).filter(Boolean).join(" / ")}
@@ -185,26 +195,27 @@ function saveProgressSoon(){if(restoring||!studentConfirmed)return;clearTimeout(
 function bindProgressEvents(){document.querySelectorAll("input.answer-input, textarea").forEach(function(el){el.addEventListener("input",saveProgressSoon)})}
 function restoreProgress(){
   if(!studentConfirmed||!window.ClassProShared||!ClassProShared.loadProgress)return;
-  var saved=ClassProShared.loadProgress(progressParts());if(!saved){document.getElementById("submitStatus").textContent="未找到本机保存进度，可以开始作业。";return}
+  var saved=ClassProShared.loadProgress(progressParts());if(!saved){document.getElementById("submitStatus").textContent="未找到本机保存进度，可以开始作业。";renderCarryForward();return}
   restoring=true;selectedAnswers=saved.selectedAnswers||{};submitted=!!saved.submitted;
   Object.keys(selectedAnswers).forEach(function(qid){document.querySelectorAll('.opt[data-qid="'+qid+'"]').forEach(function(btn){btn.classList.toggle("sel",btn.textContent===selectedAnswers[qid])})});
   var ta=saved.textAnswers||{};Object.keys(ta).forEach(function(qid){var el=document.getElementById("ans_"+qid);if(el)el.value=ta[qid]});
   writingStrokes=saved.writingStrokes||writingStrokes||{};document.querySelectorAll(".write-canvas").forEach(function(c){var key=c.dataset.qid+"|"+c.dataset.char+"|"+c.dataset.cell;drawSavedCanvas(c,writingStrokes[key]||[])});
-  document.getElementById("submitStatus").textContent=submitted?"已恢复本机提交记录，可以修改后重新提交。":"已恢复上次未完成的作业。";restoring=false;
+  document.getElementById("submitStatus").textContent=submitted?"已恢复本机提交记录，可以修改后重新提交。":"已恢复上次未完成的作业。";renderCarryForward();restoring=false;
 }
 function postRecord(payload){var local=location.hostname==="localhost"||location.hostname==="127.0.0.1";return fetch(local?"/api/pre-class-record":GAS_URL,{method:"POST",mode:local?"cors":"no-cors",headers:{"Content-Type":local?"application/json":"text/plain;charset=utf-8"},body:JSON.stringify(payload)})}
 function submitAllHomework(){
   if(!studentConfirmed){alert("请先确认姓名");return}
   var name=getStudentName();if(!name){alert("请先填写姓名");return}
+  var missing=currentItems.filter(function(q){return q.required===true&&!q.displayOnly&&q.type!=="display_task"&&!answerOf(q)});if(missing.length){alert("请先完成所有必填任务，再统一提交。 / Complete all required tasks first.");var first=document.getElementById("task_"+missing[0].id);if(first)first.scrollIntoView({behavior:"smooth",block:"center"});return}
   var now=new Date().toISOString(),correct=0,total=0,pending=0,records=[];
   currentItems.forEach(function(q){
     if(q.displayOnly||q.type==="display_task")return;
     var ans=q.type==="handwriting"?handwritingAnswer(q):answerOf(q),g=grade(q,ans),needs=needsTeacherReviewQuestion(q);
     if(g.total){total+=g.total;correct+=g.score} if(needs)pending++;
     var res=document.getElementById("res_"+q.id);if(res){res.className="result "+(g.result==="correct"?"ok":g.result==="wrong"?"bad":"wait");res.textContent=g.result==="correct"?"正确":g.result==="wrong"?"错误。正确答案："+correctText(q):"已提交，等待老师查看/批改"}
-    records.push({lesson:window.ClassProContext.read().lesson,room:window.ClassProContext.read().room,stage:"post_class",module:q.type,mode:q.type,questionId:q.id,studentName:name,score:g.score,total:g.total,points:g.score,result:g.result,needsReview:needs,openEnded:needs?"yes":"no",weakPoints:q.tags?(q.tags.join(",")):"",answer:ans,questionText:q.question||q.prompt||q.task||q.instruction||q.type,submittedAt:now});
+    records.push({lesson:window.ClassProContext.read().lesson,room:window.ClassProContext.read().room,sessionId:currentTier,stage:"post_class",module:q.type,mode:q.type,questionId:q.id,studentName:name,score:g.score,total:g.total,points:g.score,result:g.result,needsReview:needs,openEnded:needs?"yes":"no",weakPoints:q.tags?(q.tags.join(",")):"",answer:ans,questionText:q.question||q.prompt||q.task||q.instruction||q.type,submittedAt:now});
   });
-  records.push({lesson:window.ClassProContext.read().lesson,room:window.ClassProContext.read().room,stage:"post_class",module:"homework_summary",mode:"homework_summary",questionId:"homework_"+currentTier,studentName:name,score:correct,total:total,points:correct,result:"submitted",needsReview:pending>0,weakPoints:"",answer:JSON.stringify({tier:currentTier,taskCount:currentItems.length,objectiveCorrect:correct,objectiveTotal:total,pendingReview:pending}),submittedAt:now});
+  records.push({lesson:window.ClassProContext.read().lesson,room:window.ClassProContext.read().room,sessionId:currentTier,stage:"post_class",module:"homework_summary",mode:"homework_summary",questionId:"homework_"+currentTier,studentName:name,score:correct,total:total,points:correct,result:"submitted",needsReview:pending>0,weakPoints:"",answer:JSON.stringify({session:currentTier,tier:currentTier,taskCount:currentItems.length,objectiveCorrect:correct,objectiveTotal:total,pendingReview:pending}),submittedAt:now});
   document.getElementById("submitStatus").textContent="正在提交 "+records.length+" 条记录...";
   var important=records.filter(function(r){return r.needsReview||r.module==="homework_summary"});
   var normal=records.filter(function(r){return !r.needsReview&&r.module!=="homework_summary"});
@@ -243,7 +254,7 @@ setTier(currentTier);
     var url=(location.hostname==='localhost'||location.hostname==='127.0.0.1')?'/api/reviews?name='+encodeURIComponent(name):GAS_URL+'?action=get_all';
     fetch(url).then(function(r){return r.json()}).then(function(d){
       var all=[];if(d&&d.data){if(Array.isArray(d.data))all=d.data.slice();else for(var k in d.data)(d.data[k]||[]).forEach(function(x){all.push(x)})}
-      attemptCount=all.filter(function(x){return String(reportVal(x,['studentName','姓名','学生姓名','name']))===name&&sameLesson(reportVal(x,['lesson','课程','课程编号','lessonKey']))&&String(reportVal(x,['module','模块','mode'])).toLowerCase()==='homework_summary'}).length;
+      attemptCount=all.filter(function(x){return String(reportVal(x,['studentName','姓名','学生姓名','name']))===name&&sameLesson(reportVal(x,['lesson','课程','课程编号','lessonKey']))&&String(reportVal(x,['module','模块','mode'])).toLowerCase()==='homework_summary'&&(!isSessionHomework()||homeworkRecordSession(x)===String(currentTier).toUpperCase())}).length;
     }).catch(function(){attemptCount=0}).then(function(){attemptCheckPending=false;setSubmitGate()});
   }
   var oldConfirmName=confirmName;
@@ -288,9 +299,9 @@ setTier(currentTier);
   function wrongHtml(rows){
     var wrong=rows.filter(function(x){var t=totalOf(x),s=scoreOf(x),r=resultOf(x);return r==="wrong"||(t>0&&s<t)}).slice(0,8);
     if(!wrong.length)return'<div class="muted" style="margin-top:12px">暂无错题记录。可以进入复习资源继续巩固。</div>';
-    return'<div style="margin-top:12px"><div class="report-title" style="font-size:16px">错题与薄弱点 / Mistakes</div>'+wrong.map(function(x){
+    return'<details class="mistake-details"><summary>错题与薄弱点 / Mistakes（'+wrong.length+'）</summary><div class="mistake-details-body">'+wrong.map(function(x){
       return'<div class="report-kpi" style="text-align:left;margin-top:8px"><b style="font-size:14px;color:#b42318">'+escHtml(rv(x,["questionId","题号"],IDX.qid)||rv(x,["module","模块","mode"],IDX.module)||"题目")+'</b><span>'+escHtml(rv(x,["module","模块","mode"],IDX.module)||"")+'</span><div class="muted" style="margin-top:6px"><strong>作答：</strong>'+escHtml(String(rv(x,["answer","学生作答"],IDX.answer)).slice(0,180))+'</div></div>'
-    }).join("")+'</div>';
+    }).join("")+'</div></details>';
   }
   function reviewLinkHtml(){
     return'<div style="margin-top:12px"><a href="review-resources.html?lesson='+encodeURIComponent(lessonKey)+'" style="display:inline-flex;border-radius:999px;padding:9px 14px;background:#edf3ff;color:#2563eb;font-weight:900;text-decoration:none">进入本课复习资源 / Review Resources</a></div>';
@@ -312,14 +323,16 @@ setTier(currentTier);
       var pre=rows.filter(function(x){return stageKey(x)==="pre"}),mid=rows.filter(function(x){return stageKey(x)==="mid"}),post=latestPostRows(rows.filter(function(x){return stageKey(x)==="post"}));
       var correct=mid.filter(function(x){return String(rv(x,["result","autoResult","结果"],IDX.result)).toLowerCase()==="correct"}).length;
       var summary=post.filter(function(x){return rv(x,["module","模块","mode"],IDX.module)==="homework_summary"})[0],report=summary?parseMaybeJson(rv(summary,["answer","学生作答"],IDX.answer)):null;
-      if(isRequiredOptionalHomework()){
+      if(isSessionHomework()){
+        document.getElementById("tierRecommendation").textContent="当前课次 / Current Session: "+currentTier;
+      }else if(isRequiredOptionalHomework()){
         document.getElementById("tierRecommendation").textContent="作业要求 / Homework Instructions";
       }else{
         recommendedTier=tierFromReport(pre,mid);
         if(!tierLocked){document.getElementById("tierRecommendation").textContent="推荐档位 / Recommended: "+recommendedTier;if(recommendedTier!==currentTier){setTier(recommendedTier,false);if(studentConfirmed)restoreProgress()}}
       }
       if(!rows.length){document.getElementById("reportBody").textContent="暂无报告数据。完成课前、课中或课后活动后，这里会生成报告。";return}
-      document.getElementById("reportHint").textContent=isRequiredOptionalHomework()?("已生成："+name+" 的学习摘要。"):("已生成："+name+" 的学习摘要；系统推荐 "+recommendedTier+" 档");
+      document.getElementById("reportHint").textContent=(isRequiredOptionalHomework()||isSessionHomework())?("已生成："+name+" 的学习摘要。"):("已生成："+name+" 的学习摘要；系统推荐 "+recommendedTier+" 档");
       document.getElementById("reportBody").innerHTML='<div class="report-grid"><div class="report-kpi"><b>'+pre.length+'</b><span>课前记录 / Pre</span></div><div class="report-kpi"><b>'+mid.length+'</b><span>课中答题 / Class</span></div><div class="report-kpi"><b>'+ (mid.length?Math.round(correct/mid.length*100):0)+'%</b><span>课中正确率 / Accuracy</span></div><div class="report-kpi"><b>'+ (report?report.objectiveCorrect+'/'+report.objectiveTotal:'--')+'</b><span>最近一次课后客观题 / Latest Homework</span></div>'+rankHtml(lessonRows,name)+'</div>'+wrongHtml(rows)+feedbackHtml(post)+reviewLinkHtml();
     }).catch(function(){document.getElementById("reportBody").textContent="报告暂时无法读取，请稍后刷新 / Try again later."});
   };

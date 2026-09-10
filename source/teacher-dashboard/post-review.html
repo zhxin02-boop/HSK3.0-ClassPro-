@@ -22,7 +22,10 @@ textarea{width:100%;min-height:78px;border:1px solid #d8e4bf;border-radius:12px;
 .review-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}.review-summary>div{background:#edf6d9;border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center}.review-summary b{display:block;font-size:26px;color:#3f7f32}.review-summary span{font-size:12px;color:#526248}
 .batch-tools{display:flex;justify-content:flex-end;align-items:center;gap:10px;margin-top:14px;padding-top:12px;border-top:1px solid #f1d399}.batch-tools button{background:#2563eb}.batch-status{font-size:12px;color:#74806d}
 </style>
+<link rel="stylesheet" href="../shared/classpro-theme.css">
+<link rel="stylesheet" href="dashboard.css">
 <script src="../shared/context.js"></script>
+<script src="../shared/records-api.js"></script>
 <script src="../data-model/hsk1-curriculum.js"></script>
 <script src="../data-model/hsk3-curriculum.js"></script>
 <script>window.ClassProDefaultLesson='HSK1-L02';window.ClassProLegacyDataPath='../in-class/data_L02.js';</script>
@@ -32,8 +35,10 @@ textarea{width:100%;min-height:78px;border:1px solid #d8e4bf;border-radius:12px;
 <body>
 <div class="wrap">
   <div class="hero">
-    <h1>ClassPro+ 待批改工作台 / Review Desk</h1>
-    <div class="muted">统一查看课前主观题、课后输出题和汉字书写。按学生分组，汉字书写直接显示在对应待批改记录中。</div>
+    <div class="dashboard-brand">
+      <svg class="cp-brand-mark" viewBox="0 0 96 96" role="img" aria-label="ClassPro 蒲公英"><g fill="none" stroke="#0d5b43" stroke-linecap="round"><path d="M47 45c-2 18-4 31-13 43" stroke-width="3"/><path d="M45 69c10-3 16-8 20-15" stroke-width="2"/><path d="M45 48 24 29M47 46 47 18M50 47 71 27M43 46 18 48M51 50 77 49M45 43 34 21M50 44 62 18" stroke-width="2"/></g><g fill="#0d5b43"><circle cx="47" cy="46" r="5"/><circle cx="19" cy="48" r="3"/><circle cx="24" cy="29" r="3"/><circle cx="34" cy="20" r="3"/><circle cx="47" cy="17" r="3"/><circle cx="62" cy="17" r="3"/><circle cx="72" cy="26" r="3"/><circle cx="78" cy="49" r="3"/></g><g fill="#ef8d45"><circle cx="81" cy="19" r="2.5"/><circle cx="88" cy="27" r="2"/><circle cx="84" cy="38" r="1.8"/></g></svg>
+      <div class="dashboard-brand-copy"><div class="cp-eyebrow">Teacher review</div><h1>ClassPro+ 待批改工作台 / Review Desk</h1><div class="muted">统一查看课前主观题、课后输出题和汉字书写。按题目或学生集中批改。</div></div>
+    </div>
     <div class="tools">
       <button onclick="loadData()">刷新待批改数据 / Refresh</button>
       <select id="lessonScope" onchange="setLessonScope(this.value)" style="border:1px solid #cfe2a5;border-radius:999px;padding:9px 12px;background:#fff;color:#24351f;font-weight:900">
@@ -49,7 +54,7 @@ textarea{width:100%;min-height:78px;border:1px solid #d8e4bf;border-radius:12px;
 
 <script>
 var GAS="https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec";
-var params=new URLSearchParams(location.search||""),ctx=window.ClassProContext.read(),LESSON=params.get("lesson")||ctx.lesson,RM=params.get("room")||ctx.room||"8888",LESSON_SCOPE=(params.get("scope")||"all"),records=[],reviewQueue={},reviewRowsById={},hiddenReviewRows=0;
+var params=new URLSearchParams(location.search||""),ctx=window.ClassProContext.read(),LESSON=params.get("lesson")||ctx.lesson,RM=params.get("room")||ctx.room||"8888",LESSON_SCOPE=(params.get("scope")||LESSON),records=[],reviewQueue={},reviewRowsById={},hiddenReviewRows=0;
 function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 function val(o,keys){for(var i=0;i<keys.length;i++){if(o&&o[keys[i]]!=null&&o[keys[i]]!=="")return o[keys[i]]}return""}
 function fuzzy(o,keys,contains){var v=val(o,keys);if(v!=="")return v;var ks=Object.keys(o||{});for(var i=0;i<ks.length;i++){for(var j=0;j<contains.length;j++){if(ks[i].indexOf(contains[j])>=0&&o[ks[i]]!=null&&o[ks[i]]!=="")return o[ks[i]]}}return""}
@@ -104,6 +109,12 @@ function populateLessonScope(){
   var items=(window.ClassProAllCurriculum?window.ClassProAllCurriculum():(window.HSK1_CURRICULUM||[])).filter(function(x){return x.teacherVisible!==false});
   el.innerHTML='<option value="HSK1-L01-L03">第1-3课 / L01-L03</option><option value="all">全部课程 / All</option>'+items.map(function(x){return'<option value="'+esc(x.id)+'">'+esc(x.id+' · '+x.title)+'</option>'}).join("");
   el.value=LESSON_SCOPE;
+}
+function lessonIdsInScope(){
+  var items=(window.ClassProAllCurriculum?window.ClassProAllCurriculum():(window.HSK1_CURRICULUM||[])).filter(function(x){return x.teacherVisible!==false});
+  if(/^HSK[13]-L\d{2}$/.test(LESSON_SCOPE))return[LESSON_SCOPE];
+  if(LESSON_SCOPE==="HSK1-L01-L03")return["HSK1-L01","HSK1-L02","HSK1-L03"];
+  return items.map(function(x){return x.id});
 }
 function parseMaybeJson(s){
   if(s==null)return null;
@@ -172,8 +183,9 @@ function needsReview(x){
 })();
 function loadData(){
   document.getElementById("status").textContent="正在读取...";
-  var local=location.hostname==='localhost'||location.hostname==='127.0.0.1';var dataUrl=local?"/api/reviews?source=local":GAS+"?action=get_all";
-  fetch(dataUrl).then(function(r){return r.json()}).then(function(d){
+  var local=location.hostname==='localhost'||location.hostname==='127.0.0.1';
+  var request=local?fetch("/api/reviews?source=local").then(function(r){return r.json()}):window.ClassProRecordsApi.loadReviewQueue(GAS,lessonIdsInScope(),{timeoutMs:18000,concurrency:4}).then(function(rows){return{status:"ok",data:rows}});
+  request.then(function(d){
     var rows=[];if(d&&Array.isArray(d.data)){rows=d.data.slice()}else if(d&&d.data){for(var k in d.data){(d.data[k]||[]).forEach(function(x){rows.push(x)})}}
     records=rows.filter(function(x){var lesson=lessonOf(x),key=stageKey(x);return lessonInScope(lesson)&&(key==="pre"||key==="post"||needsReview(x))});
     var preCount=records.filter(function(x){return stageKey(x)==="pre"}).length,postCount=records.filter(function(x){return stageKey(x)==="post"}).length;
@@ -388,6 +400,7 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
     appNode().innerHTML=summary+names.map(function(n){return renderStudent(n,g[n])}).join("");setTimeout(drawAllHandwriting,0);
   }
   loadData=function(){
+    populateLessonScope();
     setStatusText("正在读取...");
     if(location.protocol==="file:"){
       setStatusText("本地 file:// 无法读取云端数据，请使用本地服务或线上页面。");
@@ -396,22 +409,21 @@ function saveStudentReviews(name){var rows=reviewQueue[name]||[],status=document
     }
     var q=new URLSearchParams(location.search||"");
     if(!q.get("scope")){q.set("scope",LESSON_SCOPE||"all");history.replaceState({},'',location.pathname+'?'+q.toString())}
-    var local=location.hostname==='localhost'||location.hostname==='127.0.0.1',dataUrl=local?"/api/reviews?source=local":GAS+"?action=get_all";
-    fetch(dataUrl).then(function(r){return r.text()}).then(function(txt){
-      if(/^\s*</.test(txt)){
-        setStatusText("当前 8787 静态服务不支持批改台 API。");
-        appNode().innerHTML='<div class="empty">批改台需要本地 API 服务才能读取测试数据。请打开 <code>http://localhost:18765/source/teacher-dashboard/post-review.html?lesson='+esc(LESSON)+'&room='+esc(RM)+'&scope=all</code>，或在线上页面读取 GAS 数据。</div>';
-        return null;
-      }
-      return JSON.parse(txt);
-    }).then(function(d){
-      if(!d)return;
-      var rows=flattenPayload(d);
+    var local=location.hostname==='localhost'||location.hostname==='127.0.0.1',ids=lessonIdsInScope(),source;
+    if(local){
+      source=fetch("/api/reviews?source=local").then(function(r){return r.text()}).then(function(txt){
+        if(/^\s*</.test(txt))throw new Error("当前静态服务不支持批改台 API，请使用 18765 本地服务");
+        return flattenPayload(JSON.parse(txt));
+      });
+    }else{
+      source=window.ClassProRecordsApi.loadReviewQueue(GAS,ids,{timeoutMs:18000,concurrency:4,onProgress:function(done,total){setStatusText("正在读取课程 "+done+" / "+total+"...")}});
+    }
+    source.then(function(rows){
       records=latestHomeworkRows(rows.filter(function(x){var lesson=lessonOf(x),key=stageKey(x);return lessonInScope(lesson)&&(key==="pre"||key==="post"||needsReview(x))}));
       var preCount=records.filter(function(x){return stageKey(x)==="pre"}).length,postCount=records.filter(function(x){return stageKey(x)==="post"}).length;
       setStatusText("已读取 "+records.length+" 条记录：课前 "+preCount+"，课后 "+postCount);
       render();
-    }).catch(function(err){setStatusText("读取失败："+(err.message||err))});
+    }).catch(function(err){setStatusText("读取失败："+(err.message||err));appNode().innerHTML='<div class="empty">无法读取待批改数据。线上页面请刷新重试；本地测试请使用 <code>http://localhost:18765/source/teacher-dashboard/post-review.html?lesson='+esc(LESSON)+'&room='+esc(RM)+'&scope='+esc(LESSON_SCOPE)+'</code>。</div>'});
   }
   function autoLoad(){setTimeout(function(){loadData()},0)}
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",autoLoad);else autoLoad();

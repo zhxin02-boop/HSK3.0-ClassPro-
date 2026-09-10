@@ -1,0 +1,47 @@
+/* Shared ClassPro classroom shell. Content-specific teaching layouts remain unchanged. */
+:root{--primary:var(--cp-forest);--teach:var(--cp-forest);--practice:var(--cp-orange);--battle:var(--cp-orange);--blue:var(--cp-forest);--green:var(--cp-leaf);--bg:var(--cp-mist);--text:var(--cp-ink);--line:var(--cp-line);--sidebar-bg:rgba(255,254,249,.96)}
+body{background:linear-gradient(180deg,#e9f6e7 0,#f8f7ee 34rem,#eef6e9 100%);font-family:Inter,"Microsoft YaHei","PingFang SC",Arial,sans-serif}
+.cp-sidebar{width:70px;padding:14px 0;border-right:1px solid var(--cp-line);background:rgba(255,254,249,.94);box-shadow:8px 0 28px rgba(30,91,60,.05);backdrop-filter:blur(16px)}
+.cp-sidebar .cp-logo{width:43px;height:43px;border-radius:50%;background:var(--cp-forest);color:#fff;box-shadow:0 10px 24px rgba(13,91,67,.22)}
+.cp-sidebar .sb-btn{width:46px;height:46px;margin:3px 0;border:1px solid transparent;border-radius:15px;background:transparent;color:#718077;font-weight:900}
+.cp-sidebar .sb-btn:hover,.cp-sidebar .sb-bottom:hover{background:var(--cp-mint);color:var(--cp-forest)}
+.cp-sidebar .sb-btn.active{border-color:#b8d9bc;background:var(--cp-mint);color:var(--cp-forest);box-shadow:0 7px 18px rgba(13,91,67,.1)}
+.cp-sidebar .sb-bottom{width:44px;height:40px;border-radius:13px;color:#718077;font-weight:800}
+.cp-body{margin-left:70px}
+.header{position:sticky;top:0;z-index:50;min-height:66px;padding:12px 24px;border-bottom:1px solid rgba(215,231,216,.9);background:rgba(255,254,249,.94);box-shadow:0 8px 24px rgba(30,91,60,.05);backdrop-filter:blur(16px)}
+.header h1{color:var(--cp-forest-deep);font-size:18px;font-weight:1000}
+.header h1 span{margin-left:9px;padding:5px 10px;border-radius:999px;background:var(--cp-mint);color:var(--cp-forest);font-size:12px}
+.header-right{gap:8px}
+.header-right>button,.teacher-home-btn{min-height:38px;padding:0 12px!important;border:1px solid var(--cp-line)!important;border-radius:12px!important;background:#fff!important;color:var(--cp-forest)!important;box-shadow:0 5px 14px rgba(30,91,60,.07)!important;font-weight:900!important}
+.header-right>button:hover,.teacher-home-btn:hover{border-color:#a9cfad!important;background:var(--cp-mint)!important;transform:translateY(-1px)}
+.sub-nav{position:sticky;top:66px;z-index:45;gap:7px;justify-content:center;padding:10px 18px;border-bottom:1px solid rgba(215,231,216,.72);background:rgba(244,248,239,.93);backdrop-filter:blur(16px)}
+.sub-group{gap:3px;padding:4px;border:1px solid var(--cp-line);border-radius:16px;background:#fff}
+.sub-group-label{padding:0 7px;color:var(--cp-muted)}
+.sub-btn{min-height:42px;padding:7px 14px;border:1px solid transparent;border-radius:13px;background:#fff;color:#66766c;font-size:13px;font-weight:850;line-height:1.1}
+.sub-btn small{color:inherit;font-size:10px;opacity:.72}
+.sub-btn:hover{border-color:#c9dfcb;background:#f7fbef;color:var(--cp-forest)}
+.sub-btn.active{border-color:var(--cp-forest);background:var(--cp-forest);color:#fff;box-shadow:0 9px 20px rgba(13,91,67,.17)}
+.home-screen{min-height:100vh;padding:46px 24px;background:linear-gradient(180deg,#e9f6e7 0,#f8f7ee 72%)}
+.home-title{color:var(--cp-forest-deep)!important}
+.home-title::after{color:var(--cp-orange)}
+.home-lesson{color:var(--cp-muted)}
+.home-cards{max-width:920px!important;gap:15px!important}
+.home-card{min-height:190px;padding:30px 18px!important;border:1px solid var(--cp-line)!important;border-radius:22px!important;background:rgba(255,254,249,.96)!important;color:var(--cp-ink)!important;box-shadow:var(--cp-soft-shadow)!important}
+.home-card:hover{border-color:#afd3b2!important;box-shadow:var(--cp-shadow)!important;transform:translateY(-3px)}
+.home-card .emoji{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 13px;border-radius:20px;background:var(--cp-mint);font-size:32px}
+.home-card.practice .emoji,.home-card.battle .emoji{background:#fff2e8}
+.home-card.mock .emoji{background:#fff8dd}
+.home-card .label{color:var(--cp-forest-deep)}
+.home-card .desc{color:var(--cp-muted)}
+.main-content{max-width:1320px;padding:24px 28px 34px;gap:18px}
+.panel{border:1px solid var(--cp-line);border-radius:20px;background:rgba(255,254,249,.97);box-shadow:var(--cp-soft-shadow)}
+.grammar-tab,.next-btn,.teach-nav button,.qw-btn{min-height:40px;border-radius:12px!important;font-weight:900!important}
+.grammar-tab{border-color:#bad7bd;color:var(--cp-forest)}
+.grammar-tab.active{border-color:var(--cp-forest);background:var(--cp-forest);color:#fff}
+.next-btn,.teach-nav .next,.qw-btn.start{background:var(--cp-forest)!important;color:#fff!important;box-shadow:0 8px 18px rgba(13,91,67,.16)!important}
+.teach-nav .prev,.qw-btn.reset{border:1px solid var(--cp-line)!important;background:#f1f4ef!important;color:#58675e!important}
+.qw-bar{border:1px solid #c9dfcb;border-radius:17px;background:linear-gradient(135deg,#f7fbef,var(--cp-mint));box-shadow:0 8px 22px rgba(13,91,67,.07)}
+.qw-btn.lock{background:var(--cp-orange)!important}
+.score-sidebar-header,.live-header{background:linear-gradient(135deg,var(--cp-forest),#15905a)!important}
+button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:4px solid rgba(243,196,73,.52)!important;outline-offset:3px}
+@media(max-width:820px){.cp-sidebar{width:56px}.cp-body{margin-left:56px}.header{padding:10px 12px}.header h1 span{display:none}.header-right{overflow-x:auto}.sub-nav{top:59px;justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}.main-content{padding:16px 10px 26px}.home-cards{grid-template-columns:1fr!important}.panel{padding:20px}}

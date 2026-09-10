@@ -1,6 +1,7 @@
 var http = require("http");
 var fs = require("fs");
 var path = require("path");
+var progressData = require("./source/shared/progress-data.js");
 var root = __dirname;
 var port = 18765;
 var studentsDir = path.join(root, "data", "students");
@@ -32,6 +33,26 @@ function parseBody(req, cb) {
 function json(res, code, data) {
   res.writeHead(code, {"Content-Type": "application/json; charset=UTF-8", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "Content-Type"});
   res.end(JSON.stringify(data));
+}
+
+function readJsonUrl(target, cb, redirects) {
+  redirects = redirects || 0;
+  var https = require("https"), finished = false;
+  function done(error, data) { if (finished) return; finished = true; cb(error, data); }
+  var request = https.get(target, function(response) {
+    if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location && redirects < 4) {
+      response.resume();
+      readJsonUrl(new URL(response.headers.location, target).toString(), cb, redirects + 1);
+      return;
+    }
+    var body = "";
+    response.on("data", function(chunk) { body += chunk; });
+    response.on("end", function() {
+      try { done(null, JSON.parse(body)); } catch (error) { done(error); }
+    });
+  });
+  request.on("error", function(error) { done(error); });
+  request.setTimeout(15000, function() { request.destroy(new Error("progress request timeout")); });
 }
 
 function readStudent(name, cb) {
@@ -110,12 +131,39 @@ var srv = http.createServer(function(req, res) {
     return;
   }
 
+  if (method === "GET" && url === "/api/progress") {
+    var progressQuery = new URL(req.url, "http://localhost").searchParams;
+    var progressName = progressQuery.get("name") || progressQuery.get("student") || "";
+    var progressLessons = String(progressQuery.get("lessons") || progressQuery.get("lesson") || "").split(",").map(function(x) { return x.trim(); }).filter(Boolean).slice(0, 24);
+    if (!progressName || !progressLessons.length) { json(res, 400, {status:"error", message:"name and lessons are required"}); return; }
+    var progressGasUrl = "https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec";
+    var localProgressRows = readLearningRecords(), lessonResults = {}, queue = progressLessons.slice(), pendingWorkers = Math.min(4, queue.length);
+    function finishProgressWorker() {
+      pendingWorkers--;
+      if (pendingWorkers > 0) return;
+      json(res, 200, {status:"ok", source:"google_sheets_with_local_fallback", student:progressName, lessons:lessonResults});
+    }
+    function progressWorker() {
+      var lesson = queue.shift();
+      if (!lesson) { finishProgressWorker(); return; }
+      var localRows = localProgressRows.filter(function(row) { return String(row.lesson || row.课程 || row.lessonKey || "") === lesson; });
+      readJsonUrl(progressGasUrl + "?action=get_data&lesson=" + encodeURIComponent(lesson), function(error, data) {
+        var remoteRows = !error && data && Array.isArray(data.data) ? data.data : [];
+        lessonResults[lesson] = progressData.fromRows(remoteRows.concat(localRows), {student:progressName, lesson:lesson});
+        progressWorker();
+      });
+    }
+    for (var progressWorkerIndex = 0; progressWorkerIndex < pendingWorkers; progressWorkerIndex++) progressWorker();
+    return;
+  }
+
   // Proxy: fetch reviews from GAS
   if (method === "GET" && url === "/api/reviews") {
     var gasUrl = 'https://script.google.com/macros/s/AKfycbxrCd6f6cQ3wocXYQZyLKY0JutolEmOWWzTGOABnnHHJOm697OfyBlkLw-SQ-u-9ZAO/exec';
     var query = new URL(req.url, "http://localhost").searchParams;
     var name = query.get("name") || "";
     var source = query.get("source") || "";
+    var requestedLesson = query.get("lesson") || "";
     var allLocalRows = readLearningRecords();
     var localRows = allLocalRows.map(function(x, i) {
       x.__rowIndex = i + 1;
@@ -124,9 +172,9 @@ var srv = http.createServer(function(req, res) {
     var replied = false;
     function reply(status, payload) { if (replied) return; replied = true; json(res, status, payload); }
     function localFallback() { reply(200, {status:"ok", source:"local", data:localRows}); }
-    if (source === "local") { localFallback(); return; }
+    if (source === "local" || !requestedLesson) { localFallback(); return; }
     var https = require("https");
-    https.get(gasUrl + "?action=get_all", function(gres) {
+    https.get(gasUrl + "?action=get_data&lesson=" + encodeURIComponent(requestedLesson), function(gres) {
       var d = "";
       gres.on("data", function(c) { d += c; });
       gres.on("end", function() {

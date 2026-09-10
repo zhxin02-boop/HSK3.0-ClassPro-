@@ -1,0 +1,91 @@
+:root {
+  --green: var(--cp-forest, #0d5b43);
+  --dark: var(--cp-ink, #173329);
+  --line: var(--cp-line, #d7e7d8);
+}
+
+body {
+  color: var(--cp-ink, #173329) !important;
+  background: linear-gradient(180deg, #e9f6e7 0, #f8f7ee 34rem, #eef6e9 100%) !important;
+  font-family: Inter, "Microsoft YaHei", "PingFang SC", Arial, sans-serif !important;
+  font-size: 16px;
+}
+
+.product-nav {
+  border-bottom-color: var(--cp-line, #d7e7d8) !important;
+  background: rgba(255, 254, 249, .92) !important;
+  scrollbar-width: thin;
+}
+.product-nav a {
+  min-height: 34px;
+  padding: 8px 11px !important;
+  color: var(--cp-muted, #687b70) !important;
+  font-size: 13px !important;
+}
+.product-nav a.active, .product-nav a:hover, .product-nav .brand {
+  color: var(--cp-forest, #0d5b43) !important;
+}
+.product-nav a.active { background: var(--cp-mint, #e9f7e9) !important; }
+
+.card, .hero, .lesson-panel, .quiz-panel, .quiz-report, .swipe-card,
+.subjective-panel, .rv-card, .namebar, .hint, .leader-row {
+  border-color: var(--cp-line, #d7e7d8) !important;
+  background-color: rgba(255, 254, 249, .96) !important;
+  box-shadow: var(--cp-soft-shadow, 0 10px 28px rgba(30, 91, 60, .08)) !important;
+}
+
+h1, h2, .lesson-panel h3, .word-card-hanzi, .report-score,
+.leader-title, .report-title, .num, .tier-title {
+  color: var(--cp-forest, #0d5b43) !important;
+}
+
+button, .btn {
+  border-color: var(--cp-forest, #0d5b43) !important;
+  border-radius: 14px !important;
+  background: var(--cp-forest, #0d5b43) !important;
+  color: #fff !important;
+}
+.btn-outline, button.secondary {
+  background: var(--cp-mint, #e9f7e9) !important;
+  color: var(--cp-forest, #0d5b43) !important;
+}
+button:focus-visible, .btn:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 4px solid rgba(243, 196, 73, .52) !important;
+  outline-offset: 2px;
+}
+
+.choice.selected, .match-card.selected, .quiz-option.selected, .opt.sel,
+.option.sel, .chunk.answer {
+  border-color: var(--cp-forest, #0d5b43) !important;
+  background: var(--cp-mint, #e9f7e9) !important;
+  color: var(--cp-forest, #0d5b43) !important;
+}
+.quiz-progress i b { background: var(--cp-forest, #0d5b43) !important; }
+.tag-done, .feedback.success, .status, .badge, .tag {
+  background: var(--cp-mint, #e9f7e9) !important;
+  color: var(--cp-forest, #0d5b43) !important;
+}
+
+/* Preview vocabulary cards must stay legible even when the shared green theme is active. */
+.mission-key {
+  border-color: var(--cp-line, #d7e7d8) !important;
+  background: #fffef9 !important;
+  color: var(--cp-ink, #173329) !important;
+}
+.mission-key b, .mission-key .example strong {
+  color: var(--cp-forest, #0d5b43) !important;
+}
+.mission-key small {
+  color: #226f58 !important;
+}
+.mission-key em, .mission-key .example span {
+  color: #617269 !important;
+}
+.mission-key .example, .mission-key .example .example-cn {
+  color: var(--cp-ink, #173329) !important;
+}
+
+@media (max-width: 620px) {
+  .product-nav { margin-bottom: 10px !important; }
+  .card, .hero { border-radius: 20px !important; }
+}

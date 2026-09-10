@@ -18,17 +18,24 @@ h1{margin:0 0 6px;color:#3f7f32;font-size:26px}.sub,.muted{color:#74806d;font-si
 .pill,.tag{display:inline-block;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:900}.ok{background:#e8f6ee;color:#2f7d32}.bad{background:#fef2f2;color:#b42318}.wait{background:#fff7ed;color:#b45309}.tag{background:#edf6d9;color:#3f7f32}.empty{padding:22px;border:1px dashed var(--line);border-radius:16px;text-align:center;color:#74806d;background:#fbfdf6}
 input[type=file]{max-width:230px}.toolbar-card{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;background:#f8fbf0;border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin:14px 0}.toolbar-card label{font-size:13px;font-weight:900;color:#526248}.toolbar-card select{border:1px solid #cfe2a5;border-radius:10px;padding:8px 12px;background:#fff;color:var(--dark);min-width:180px}.quick-links{display:flex;gap:8px;flex-wrap:wrap}.quick-links a{color:#3f7f32;text-decoration:none;font-size:12px;font-weight:900;background:#edf6d9;border-radius:999px;padding:8px 11px}.student-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.student-card{border:1px solid var(--line);border-radius:16px;padding:14px;background:#fbfdf6}.student-card h3{margin:0 0 10px;color:#315b29;font-size:16px}.student-card .line{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed #e7efd8;font-size:13px}.student-card .line:last-child{border-bottom:0}.student-card a{display:inline-block;margin-top:10px;color:#2563eb;font-size:12px;font-weight:900}
 </style>
+<link rel="stylesheet" href="../shared/classpro-theme.css">
+<link rel="stylesheet" href="dashboard.css">
 <script src="../data-model/hsk1-curriculum.js"></script>
 <script src="../data-model/hsk3-curriculum.js"></script>
 <script src="../shared/context.js"></script>
+<script src="../shared/records-api.js"></script>
 </head>
 <body>
 <div class="wrap">
   <div class="hero">
-    <div>
-      <h1>ClassPro+ 三阶段数据面板</h1>
-      <div class="sub">HSK1-L02 · 课前预习 / 课中互动 / 课后巩固统一查看</div>
-      <div class="muted" id="status">数据源：本地缓存 + Google Sheets</div>
+    <div class="dashboard-brand">
+      <svg class="cp-brand-mark" viewBox="0 0 96 96" role="img" aria-label="ClassPro 蒲公英"><g fill="none" stroke="#0d5b43" stroke-linecap="round"><path d="M47 45c-2 18-4 31-13 43" stroke-width="3"/><path d="M45 69c10-3 16-8 20-15" stroke-width="2"/><path d="M45 48 24 29M47 46 47 18M50 47 71 27M43 46 18 48M51 50 77 49M45 43 34 21M50 44 62 18" stroke-width="2"/></g><g fill="#0d5b43"><circle cx="47" cy="46" r="5"/><circle cx="19" cy="48" r="3"/><circle cx="24" cy="29" r="3"/><circle cx="34" cy="20" r="3"/><circle cx="47" cy="17" r="3"/><circle cx="62" cy="17" r="3"/><circle cx="72" cy="26" r="3"/><circle cx="78" cy="49" r="3"/></g><g fill="#ef8d45"><circle cx="81" cy="19" r="2.5"/><circle cx="88" cy="27" r="2"/><circle cx="84" cy="38" r="1.8"/></g></svg>
+      <div class="dashboard-brand-copy">
+        <div class="cp-eyebrow">Teacher analytics</div>
+        <h1>ClassPro+ 三阶段数据面板</h1>
+        <div class="sub">课前预习 / 课中互动 / 课后巩固统一查看</div>
+        <div class="muted" id="status">数据源：本地缓存 + Google Sheets</div>
+      </div>
     </div>
     <div class="tools">
       <button class="btn secondary" onclick="location.href='../teacher/index.html'">教师主页 / Teacher Home</button>
@@ -69,7 +76,7 @@ function normResult(r){r=String(r||'').toLowerCase();if(r==='correct'||r==='true
 function showTab(t,btn){tab=t;document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active')});if(btn)btn.classList.add('active');render()}
 function scoped(rows){var n=state.student||new URLSearchParams(location.search).get('student')||'';return n?rows.filter(function(x){return String(val(x,['姓名','studentName','name','濮撳悕']))===n}):rows}
 function splitRows(rows){var pre=[],mid=[],post=[],summary=[];rows.forEach(function(x){var lesson=val(x,['课程','lesson','璇剧▼']);if(lesson&&lesson!==LESSON)return;var stage=val(x,['环节','stage','鐜妭']);var mod=val(x,['模块','module','妯″潡']);if(stage==='预习'||stage==='课前'||stage==='pre_class')pre.push(x);else if(stage==='课后'||stage==='post_class')post.push(x);else if(mod==='session_summary')summary.push(x);else if(stage==='课中'||stage==='in_class'||mod)mid.push(x)});return{pre:pre,mid:mid,post:post,summary:summary}}
-function loadCloud(){document.getElementById('app').innerHTML='<div class="empty">正在读取 Google Sheets...</div>';fetch(GAS+'?action=get_all').then(function(r){return r.json()}).then(function(d){var rows=[];if(d&&d.data){for(var k in d.data){(d.data[k]||[]).forEach(function(x){rows.push(x)})}}state.cloudRows=rows;state.lastCloud=new Date().toLocaleString();document.getElementById('status').textContent='云端已刷新：'+state.lastCloud+'；记录 '+rows.length+' 条';render()}).catch(function(){document.getElementById('status').textContent='云端读取失败，可先查看本地缓存。';render()})}
+function loadCloud(){document.getElementById('app').innerHTML='<div class="empty">正在读取 '+esc(LESSON)+' 的 Google Sheets 数据...</div>';window.ClassProRecordsApi.fetchJson(GAS+'?action=get_data&lesson='+encodeURIComponent(LESSON),18000).then(function(d){var rows=window.ClassProRecordsApi.rowsFromPayload(d);state.cloudRows=rows;state.lastCloud=new Date().toLocaleString();document.getElementById('status').textContent='云端已刷新：'+state.lastCloud+'；'+LESSON+' 共 '+rows.length+' 条';render()}).catch(function(){document.getElementById('status').textContent='云端读取失败，可先查看本地缓存。';render()})}
 function loadLocal(){try{var raw=localStorage.getItem('ClassProData_'+ROOM);state.localData=raw?JSON.parse(raw):null}catch(e){state.localData=null}render()}
 function importJson(input){var f=input.files&&input.files[0];if(!f)return;var rd=new FileReader();rd.onload=function(){try{state.importedData=JSON.parse(rd.result);render()}catch(e){alert('JSON 文件无法读取')}};rd.readAsText(f,'utf-8')}
 function cloud(){var c=splitRows(state.cloudRows),n=state.student||new URLSearchParams(location.search).get('student')||'';if(!n)return c;function f(a){return a.filter(function(x){return String(val(x,['姓名','studentName','name','濮撳悕']))===n})}return{pre:f(c.pre),mid:f(c.mid),post:f(c.post),summary:f(c.summary)}}
@@ -103,7 +110,7 @@ function renderPost2(){var s=postStats(),rows=postRows(),pending=rows.filter(isR
 function allRows(){var c=splitRows(state.cloudRows);return c.pre.concat(c.mid).concat(c.post)}
 function setStudentFilter(n){state.student=n;state.pendingStudent=n;render()}
 function applyStudentFilter(){state.student=state.pendingStudent||'';render()}
-function applyLessonFilter(){LESSON=state.pendingLesson||LESSON;state.student='';state.pendingStudent='';tab='overview';render()}
+function applyLessonFilter(){LESSON=state.pendingLesson||LESSON;state.student='';state.pendingStudent='';tab='overview';render();loadCloud()}
 function studentRows(n){return allRows().filter(function(x){return !n||String(val(x,['姓名','studentName','name','濮撳悕']))===n})}
 function dataVal(x,keys,index){var v=val(x,keys);if(v!==''&&v!=null)return v;if(x&&x.__values&&index!=null&&x.__values[index]!=null)return x.__values[index];return''}
 function numberVal(x,keys,indices){var v=val(x,keys);if(v!==''&&v!=null&&!isNaN(Number(v)))return Number(v);if(x&&x.__values){for(var i=0;i<indices.length;i++){var n=Number(x.__values[indices[i]]);if(!isNaN(n))return n}}return 0}
@@ -168,7 +175,7 @@ loadLocal();render();
   };
   function reviewUrl(){
     var q=window.ClassProContext&&ClassProContext.query?ClassProContext.query({lesson:LESSON,room:ROOM,student:state.student||''}):('lesson='+encodeURIComponent(LESSON)+'&room='+encodeURIComponent(ROOM));
-    q+=(q?'&':'')+'scope=all';
+    q+=(q?'&':'')+'scope='+encodeURIComponent(LESSON);
     return 'post-review.html?'+q;
   }
   window.openReview=function(){location.href=reviewUrl()};
@@ -177,7 +184,7 @@ loadLocal();render();
     var localHost=location.hostname==='localhost'||location.hostname==='127.0.0.1';
     if(!localHost){oldLoadCloud();return}
     document.getElementById('app').innerHTML='<div class="empty">正在读取本地测试记录...</div>';
-    fetch('/api/reviews').then(function(r){return r.json()}).then(function(d){
+    fetch('/api/reviews?source=local').then(function(r){return r.json()}).then(function(d){
       var rows=[];
       if(d&&Array.isArray(d.data))rows=d.data.slice();
       else if(d&&d.data)for(var k in d.data)(d.data[k]||[]).forEach(function(x){rows.push(x)});

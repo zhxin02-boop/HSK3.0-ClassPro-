@@ -1,0 +1,72 @@
+body {
+  padding: 22px;
+  background:
+    radial-gradient(circle at 10% 0, rgba(255,255,255,.9) 0 7rem, transparent 7.1rem),
+    linear-gradient(180deg, #e9f6e7 0, #f8f7ee 34rem, #eef6e9 100%);
+  color: var(--cp-ink);
+}
+
+.wrap { max-width: 1220px; }
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-color: var(--cp-line) !important;
+  border-radius: 28px !important;
+  background: rgba(255,254,249,.96) !important;
+  box-shadow: var(--cp-shadow) !important;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  right: -62px;
+  bottom: -82px;
+  border-radius: 50%;
+  background: rgba(38,168,102,.10);
+  pointer-events: none;
+}
+.dashboard-brand { display: flex; align-items: center; gap: 14px; }
+.dashboard-brand .cp-brand-mark { width: 58px; height: 58px; }
+.dashboard-brand h1 { margin: 2px 0 6px; color: var(--cp-ink); letter-spacing: -.035em; }
+.dashboard-brand-copy { min-width: 0; }
+.hero .tools { position: relative; z-index: 1; }
+
+.btn, button {
+  min-height: 42px;
+  border-radius: 13px !important;
+  background: var(--cp-forest) !important;
+  box-shadow: none;
+}
+.btn.secondary, button.secondary { background: var(--cp-mint) !important; color: var(--cp-forest) !important; }
+.btn.blue { background: var(--cp-forest) !important; }
+.btn:hover, button:hover { transform: translateY(-1px); }
+.btn:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 4px solid rgba(243,196,73,.5);
+  outline-offset: 2px;
+}
+.tabs { padding: 5px; border-radius: 17px; background: rgba(255,255,255,.68); }
+.tab { border-radius: 12px; }
+.tab.active { background: var(--cp-forest); border-color: var(--cp-forest); }
+.panel, .card, .student, .toolbar-card {
+  border-color: var(--cp-line) !important;
+  background: rgba(255,254,249,.96) !important;
+  box-shadow: var(--cp-soft-shadow) !important;
+}
+.panel h2, .student h2, .num, h1 { color: var(--cp-forest) !important; }
+.toolbar-card select, #lessonScope {
+  min-height: 42px;
+  border-color: var(--cp-line) !important;
+  border-radius: 12px !important;
+}
+.quick-links a, .tag, th, .review-summary > div { background: var(--cp-mint) !important; color: var(--cp-forest) !important; }
+.review-box { border-color: #ead9ad; background: #fffaf0; }
+
+@media (max-width: 720px) {
+  body { padding: 12px; }
+  .hero { padding: 16px !important; }
+  .dashboard-brand { align-items: flex-start; }
+  .dashboard-brand .cp-brand-mark { width: 46px; height: 46px; }
+  .hero .tools, .hero .tools button { width: 100%; }
+  .review-summary { grid-template-columns: 1fr; }
+}

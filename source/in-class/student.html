@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>ClassPro+ Student</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.3.0/mqtt.min.js"></script>
-<script src="../shared/students.js?v=20260908-2"></script>
+<script src="../shared/students.js?v=20260909-1"></script>
 <style>
 *{box-sizing:border-box}
 :root{--green:#6ea72d;--dark:#203421;--soft:#f7f9ef;--line:#dfeac8;--blue:#2563eb;--red:#c0392b}
@@ -47,6 +47,8 @@ body.classpro-mock-active #app,body.classpro-mock-active #app *{-webkit-user-sel
 .hint img[src*="images/vocab/hsk1-l14"],
 .hint img[src*="images/vocab/hsk1-l15"]{height:260px!important;max-height:260px!important;object-fit:contain!important}
 </style>
+<link rel="stylesheet" href="../shared/classpro-theme.css">
+<link rel="stylesheet" href="../shared/student-flow.css">
 </head>
 <body>
 <nav class="product-nav"><a class="brand" href="../student/index.html">学生界面 / Student Home</a><a href="../pre-class/index.html">课前预习 / Preview</a><a class="active" href="student.html">课中互动 / Class</a><a href="../post-class/student-report.html">课后作业 / Homework</a></nav>
@@ -542,7 +544,9 @@ client.on("close",function(){setStatus("disconnected")});
       h+='<div class="student-fill-row"><span class="student-fill-no">'+(i+1)+'</span><div><div class="student-fill-sentence">'+sentence+'</div>'+(item.sentence_pinyin?'<div class="py">'+es(item.sentence_pinyin)+'</div>':'')+'</div><button type="button" class="student-fill-slot '+(answer?'filled':'')+'" onclick="placeV5Word('+i+')">'+(answer?es(answer):'选择')+'</button></div>';
     });
     var ready=items.every(function(_,i){return v5GroupAnswers[i]!=null});
-    h+='</div><button style="width:100%;margin-top:16px" onclick="submitV5Group()" '+(!ready?'disabled':'')+'>提交 Submit</button>';
+    h+='</div>';
+    var output=d.speakingOutput||{};if(output.support)h+='<div class="student-speaking-ladder"><b>完成后开口说 / Speak after filling</b><span>支持：'+es(output.support)+'</span><span>基础：'+es(output.core||'')+'</span><span>挑战：'+es(output.stretch||'')+'</span></div>';
+    h+='<button style="width:100%;margin-top:16px" onclick="submitV5Group()" '+(!ready?'disabled':'')+'>提交 Submit</button>';
     document.getElementById("app").innerHTML=h;
     applyPinyinVisibility();
   };
@@ -580,8 +584,7 @@ client.on("close",function(){setStatus("disconnected")});
       h+='<div class="hint old-stu-card blind"><div class="old-stu-tag">🎁 盲盒造句</div><div class="old-stu-blind-grid">'+(d.words||[]).map(function(w,i){return'<button type="button" class="old-stu-box" onclick="this.classList.add(\'open\');this.querySelector(\'b\').textContent=\''+es(w).replace(/'/g,"\\'")+'\'"><span></span><b>?</b><small>BLIND BOX</small></button>'}).join('')+'</div><div class="muted" style="margin-top:10px">请用打开的词语造一个句子。</div></div>';
     }else if(mode==='g2p'){
       var img=d.image?'<img src="'+es(d.image)+'" alt="" style="width:100%;max-height:220px;object-fit:cover;border-radius:14px;background:#fff">':'';
-      var frame=es(d.sentenceFrame||'').replace(/____/g,'<span style="display:inline-block;min-width:70px;border-bottom:3px solid #6366f1;margin:0 4px"></span>');
-      h+='<div class="hint old-stu-card picture">'+(img?'<div style="text-align:center;margin-bottom:10px">'+img+'</div>':'')+'<div class="hanzi" style="font-size:28px;line-height:1.45;text-align:left">'+frame+'</div></div>';
+      h+='<div class="hint old-stu-card picture">'+(img?'<div style="text-align:center;margin-bottom:10px">'+img+'</div>':'')+'<div class="old-stu-tag blue">看图造句</div><div class="hanzi" style="font-size:24px;line-height:1.45;text-align:left">关键词：<b>'+es(d.keyword||'')+'</b></div><div class="muted" style="margin-top:8px;text-align:left">'+es(d.task||'观察图片，用关键词写一个完整、自然的句子。')+'</div></div>';
     }else{
       h+='<div class="hint old-stu-card task" style="text-align:left"><div class="old-stu-tag blue">'+es(d.title||'Task')+'</div>';
       if(d.role)h+='<div class="english" style="font-weight:900;margin-bottom:8px">'+es(d.role)+'</div>';
@@ -594,7 +597,7 @@ client.on("close",function(){setStatus("disconnected")});
       if(d.output||d.instructions)h+='<div class="muted" style="margin-top:10px;font-weight:900">'+es(d.output||d.instructions)+'</div>';
       h+='</div>';
     }
-    h+='<textarea id="openAnswer" rows="4" placeholder="'+es(mode==='g2p'?'':(d.answerPlaceholder||'请写你的答案 / Write your answer'))+'" style="width:100%;padding:14px;border:2px solid #dfeac8;border-radius:14px;font-size:20px;line-height:1.5;font-family:KaiTi,STKaiti,&quot;Kaiti SC&quot;,&quot;Microsoft YaHei&quot;,serif"></textarea><button style="width:100%;margin-top:16px" onclick="submitOpenAnswer()">提交到云墙 / Submit to Cloud Wall</button>';
+    h+='<textarea id="openAnswer" rows="4" placeholder="'+es(mode==='g2p'?'写一个完整的中文句子。':(d.answerPlaceholder||'请写你的答案 / Write your answer'))+'" style="width:100%;padding:14px;border:2px solid #dfeac8;border-radius:14px;font-size:20px;line-height:1.5;font-family:KaiTi,STKaiti,&quot;Kaiti SC&quot;,&quot;Microsoft YaHei&quot;,serif"></textarea><button style="width:100%;margin-top:16px" onclick="submitOpenAnswer()">提交到云墙 / Submit to Cloud Wall</button>';
     return h;
   };
 })();
@@ -700,5 +703,8 @@ client.on("close",function(){setStatus("disconnected")});
   };
 })();
 </script>
+<style>
+.student-speaking-ladder{display:grid;gap:8px;margin:14px 0;padding:14px;border:1px solid #d7e7d8;border-radius:15px;background:#f4faf5;text-align:left}.student-speaking-ladder>b{color:#0d5b43}.student-speaking-ladder span{display:block;padding:8px 10px;border-radius:10px;background:#fff;color:#42554b;line-height:1.45}.old-stu-card.picture .old-stu-tag{color:#0d5b43!important}.old-stu-card.picture .hanzi{color:#173329!important}
+</style>
 </body>
 </html>
