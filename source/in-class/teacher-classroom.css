@@ -49,6 +49,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{ou
 .hsk3-guess-tile{position:relative;min-height:145px;overflow:hidden;border:4px solid #fff;border-radius:22px;background:#176b50;box-shadow:0 11px 22px rgba(25,82,58,.16);cursor:pointer;color:#fff}
 .hsk3-guess-tile:nth-child(4n+2){background:#e29a42}.hsk3-guess-tile:nth-child(4n+3){background:#6586c7}.hsk3-guess-tile:nth-child(4n){background:#bd6653}
 .hsk3-guess-cover,.hsk3-guess-word{position:absolute;inset:0;display:grid;place-content:center;gap:7px;text-align:center;transition:transform .25s ease,opacity .2s ease}
+.hsk3-guess-word{display:flex;align-items:center;justify-content:center;flex-wrap:nowrap;white-space:nowrap}
 .hsk3-guess-cover b{font-size:42px}.hsk3-guess-cover em{font-size:12px;font-style:normal;letter-spacing:.08em;opacity:.76}
 .hsk3-guess-word{padding:14px;background:#fff8df;color:#173d31;font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:34px;font-weight:1000;line-height:1.25;transform:rotateY(90deg);opacity:0}
 .hsk3-guess-tile.open .hsk3-guess-cover{transform:rotateY(90deg);opacity:0}.hsk3-guess-tile.open .hsk3-guess-word{transform:rotateY(0);opacity:1}

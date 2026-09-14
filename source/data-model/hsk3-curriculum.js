@@ -24,7 +24,7 @@ window.HSK3_CURRICULUM = [
   },
   { id: "HSK3-L03", no: 3, title: "这个小区挺好的", en: "This neighborhood is pretty nice", page: "003", block: 1, openForUse: true, teacherVisible: true, status: "ready" },
   { id: "HSK3-L04", no: 4, title: "这家宾馆跟别的都不一样", en: "This hotel is unlike any other", page: "004", block: 1, openForUse: true, teacherVisible: true, status: "ready" },
-  { id: "HSK3-L05", no: 5, title: "这样的照片才好看", en: "Photos like these are the best", page: "005", block: 1, openForUse: false, teacherVisible: true, status: "preparing" },
+  { id: "HSK3-L05", no: 5, title: "这样的照片才好看", en: "Photos like these are the best", page: "005", block: 1, openForUse: true, teacherVisible: true, status: "ready" },
   { id: "HSK3-L06", no: 6, title: "高铁上还可以点外卖", en: "You can order takeout on a high-speed train", page: "006", block: 1, openForUse: false, teacherVisible: true, status: "preparing" },
   { id: "HSK3-L07", no: 7, title: "那条裙子比短裤更好看", en: "That skirt looks better than the shorts", page: "007", block: 2, openForUse: false, teacherVisible: true, status: "preparing" },
   { id: "HSK3-L08", no: 8, title: "今天我出院了", en: "Today I was discharged from the hospital", page: "008", block: 2, openForUse: false, teacherVisible: true, status: "preparing" },
