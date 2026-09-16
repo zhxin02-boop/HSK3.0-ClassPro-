@@ -261,33 +261,33 @@
       "steps": [
         {
           "title": "收到邮件",
-          "prompt": "桌上哪些东西跟消息有关？",
-          "image": "images/hsk3-l05/photo-text-4-message.png",
+          "prompt": "你看到了哪些表情和邮件信息？",
+          "image": "images/hsk3-l05/photo-text-4-email-laugh.webp",
           "labels": [
             {
               "word": "收到",
-              "x": 54,
-              "y": 45
+              "x": 52,
+              "y": 22
             },
             {
               "word": "封",
-              "x": 69,
-              "y": 81
+              "x": 61,
+              "y": 64
             },
             {
               "word": "邮件",
-              "x": 56,
-              "y": 56
+              "x": 76,
+              "y": 29
             },
             {
               "word": "难过",
-              "x": 31,
-              "y": 33
+              "x": 90,
+              "y": 76
             },
             {
               "word": "哈哈",
-              "x": 37,
-              "y": 24
+              "x": 18,
+              "y": 18
             }
           ],
           "words": [
@@ -297,32 +297,32 @@
             "难过",
             "哈哈"
           ],
-          "sentence": "她收到一封邮件，看完照片以后哈哈大笑。"
+          "sentence": "她收到一封邮件，看见朋友难过的表情以后哈哈大笑。"
         },
         {
           "title": "音乐会邀请",
-          "prompt": "她准备邀请朋友做什么？",
-          "image": "images/hsk3-l05/photo-text-4-message.png",
+          "prompt": "她收到门票后想做什么？音乐会结束后去哪里？",
+          "image": "images/hsk3-l05/photo-text-4-concert-dinner.webp",
           "labels": [
             {
               "word": "音乐",
-              "x": 86,
-              "y": 78
+              "x": 29,
+              "y": 10
             },
             {
               "word": "兴趣",
-              "x": 78,
-              "y": 57
+              "x": 22,
+              "y": 43
             },
             {
               "word": "会",
-              "x": 64,
-              "y": 85
+              "x": 72,
+              "y": 12
             },
             {
               "word": "结束",
-              "x": 76,
-              "y": 14
+              "x": 61,
+              "y": 72
             }
           ],
           "words": [
@@ -331,7 +331,7 @@
             "会",
             "结束"
           ],
-          "sentence": "音乐会结束了就来我家吃饭。"
+          "sentence": "她收到一张音乐会门票，听完了音乐会就来朋友家吃中国菜。"
         }
       ]
     }
@@ -4274,7 +4274,7 @@
           "prompt_cn": "看图造句。",
           "prompt_en": "Use the keyword to write one complete sentence about the photo.",
           "data": {
-            "image": "images/hsk3-l05/photo-text-4-message.png",
+            "image": "images/hsk3-l05/photo-text-4-email-laugh.webp",
             "keyword": "收到",
             "task": "观察人物、物品和场景，用关键词写一个完整、自然的句子。",
             "answerPlaceholder": ""
@@ -4290,7 +4290,7 @@
           "prompt_cn": "看图造句。",
           "prompt_en": "Use the keyword to write one complete sentence about the photo.",
           "data": {
-            "image": "images/hsk3-l05/photo-text-4-message.png",
+            "image": "images/hsk3-l05/photo-text-4-concert-dinner.webp",
             "keyword": "……了就……",
             "task": "观察人物、物品和场景，用关键词写一个完整、自然的句子。",
             "answerPlaceholder": ""

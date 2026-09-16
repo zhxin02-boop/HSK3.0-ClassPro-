@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const out = path.join(__dirname, '..', 'source', 'data-model', 'lessons', 'HSK3-L05.json');
-const img = name => `images/hsk3-l05/${name}.png`;
+const img = (name, extension = 'png') => `images/hsk3-l05/${name}.${extension}`;
 const roleFor = (index, total) => index < Math.floor(total * .5) ? 'lesson' : index < Math.floor(total * .8) ? 'transfer' : 'review';
 
 const vocabRows = [
@@ -112,8 +112,8 @@ const sceneData = {
     {title:'自然动作',prompt:'照片还没拍成，发生了什么？',image:img('photo-text-3-mountain'),labels:[{word:'干',x:67,y:60},{word:'电',x:27,y:48}],words:['干','电'],sentence:'想干什么都可以，可是手机突然没电了。'}
   ]},
   4:{title:'收到照片和邀请',subtitle:'从邮件、照片聊到音乐会安排。',steps:[
-    {title:'收到邮件',prompt:'桌上哪些东西跟消息有关？',image:img('photo-text-4-message'),labels:[{word:'收到',x:54,y:45},{word:'封',x:69,y:81},{word:'邮件',x:56,y:56},{word:'难过',x:31,y:33},{word:'哈哈',x:37,y:24}],words:['收到','封','邮件','难过','哈哈'],sentence:'她收到一封邮件，看完照片以后哈哈大笑。'},
-    {title:'音乐会邀请',prompt:'她准备邀请朋友做什么？',image:img('photo-text-4-message'),labels:[{word:'音乐',x:86,y:78},{word:'兴趣',x:78,y:57},{word:'会',x:64,y:85},{word:'结束',x:76,y:14}],words:['音乐','兴趣','会','结束'],sentence:'音乐会结束了就来我家吃饭。'}
+    {title:'收到邮件',prompt:'你看到了哪些表情和邮件信息？',image:img('photo-text-4-email-laugh','webp'),labels:[{word:'收到',x:52,y:22},{word:'封',x:61,y:64},{word:'邮件',x:76,y:29},{word:'难过',x:90,y:76},{word:'哈哈',x:18,y:18}],words:['收到','封','邮件','难过','哈哈'],sentence:'她收到一封邮件，看见朋友难过的表情以后哈哈大笑。'},
+    {title:'音乐会邀请',prompt:'她收到门票后想做什么？音乐会结束后去哪里？',image:img('photo-text-4-concert-dinner','webp'),labels:[{word:'音乐',x:29,y:10},{word:'兴趣',x:22,y:43},{word:'会',x:72,y:12},{word:'结束',x:61,y:72}],words:['音乐','兴趣','会','结束'],sentence:'她收到一张音乐会门票，听完了音乐会就来朋友家吃中国菜。'}
   ]}
 };
 
@@ -201,8 +201,8 @@ const sayGuess = sayRows.map((x,i,a)=>({id:`l05_say_${String(i+1).padStart(2,'0'
 const blindRows = [[['终于','晴'],['我们等了几天，今天终于晴了。']],[['张张','好看'],['她拍的照片张张都很好看。']],[['结束','就'],['音乐会结束了我们就回家。']],[['宾馆','满意'],['我们对这家宾馆很满意。']]];
 const blind = blindRows.map((x,i,a)=>({id:`l05_blind_0${i+1}`,type:'open_response',stage:'in_class',contentRole:roleFor(i,a.length),prompt_cn:'盲盒造句。',prompt_en:'Make one natural sentence with both expressions.',openEnded:true,needsTeacherReview:true,data:{words:x[0],instructions:'Use both expressions in one complete, natural sentence.',answerPlaceholder:'写一个完整的中文句子。',sample:x[1][0]}}));
 
-const pictureKeywords = [['photo-text-1-hiking','终于'],['photo-text-1-hiking','得很'],['photo-text-2-photo-review','张张都'],['photo-text-3-mountain','飞来了'],['photo-text-4-message','收到'],['photo-text-4-message','……了就……'],['photo-text-1-hiking','又……又……'],['photo-text-2-photo-review','跟……一样']];
-const pictureComplete = pictureKeywords.map((x,i,a)=>({id:`l05_pic_0${i+1}`,type:'open_response',stage:'in_class',contentRole:roleFor(i,a.length),openEnded:true,needsTeacherReview:true,prompt_cn:'看图造句。',prompt_en:'Use the keyword to write one complete sentence about the photo.',data:{image:img(x[0]),keyword:x[1],task:'观察人物、物品和场景，用关键词写一个完整、自然的句子。',answerPlaceholder:''}}));
+const pictureKeywords = [['photo-text-1-hiking','终于'],['photo-text-1-hiking','得很'],['photo-text-2-photo-review','张张都'],['photo-text-3-mountain','飞来了'],['photo-text-4-email-laugh','收到','webp'],['photo-text-4-concert-dinner','……了就……','webp'],['photo-text-1-hiking','又……又……'],['photo-text-2-photo-review','跟……一样']];
+const pictureComplete = pictureKeywords.map((x,i,a)=>({id:`l05_pic_0${i+1}`,type:'open_response',stage:'in_class',contentRole:roleFor(i,a.length),openEnded:true,needsTeacherReview:true,prompt_cn:'看图造句。',prompt_en:'Use the keyword to write one complete sentence about the photo.',data:{image:img(x[0],x[2]),keyword:x[1],task:'观察人物、物品和场景，用关键词写一个完整、自然的句子。',answerPlaceholder:''}}));
 
 const independent = readPassages.map((x,i)=>{const q0=x.data.questions[0],opts=[q0.answer,'因为他要去银行。','因为今天没有课。','因为他们想点菜。'];return{id:`l05_ind_read_0${i+1}`,type:'choice',stage:'in_class',contentRole:x.contentRole,prompt_cn:'读短文，选择正确答案。',prompt_en:'Read and choose.',data:{title:x.data.title,passage:x.data.passage,question_cn:q0.question_cn,options:opts,correct_index:0},correct_answer:q0.answer}});
 
