@@ -13,8 +13,7 @@
     "JAIPONG MISS SIRIWAN",
     "CHERYL GRACIA WIJAYA",
     "NI PUTU LUNA CAHYA DEWI",
-    "Ali Altphan",
-    "Student"
+    "Ali Altphan"
   ];
   var ROSTERS = {};
 
