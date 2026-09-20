@@ -46,8 +46,17 @@ body {
   outline-offset: 2px;
 }
 .tabs { padding: 5px; border-radius: 17px; background: rgba(255,255,255,.68); }
-.tab { border-radius: 12px; }
-.tab.active { background: var(--cp-forest); border-color: var(--cp-forest); }
+.tabs .tab {
+  border: 1px solid var(--cp-line) !important;
+  border-radius: 12px;
+  background: #fff !important;
+  color: var(--cp-forest) !important;
+}
+.tabs .tab.active {
+  background: var(--cp-forest) !important;
+  border-color: var(--cp-forest) !important;
+  color: #fff !important;
+}
 .panel, .card, .student, .toolbar-card {
   border-color: var(--cp-line) !important;
   background: rgba(255,254,249,.96) !important;

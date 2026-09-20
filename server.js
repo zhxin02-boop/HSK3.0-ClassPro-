@@ -168,23 +168,21 @@ var srv = http.createServer(function(req, res) {
     var localRows = allLocalRows.map(function(x, i) {
       x.__rowIndex = i + 1;
       return x;
-    }).filter(function(x){return !name || String(x.姓名||x.studentName||x.name||"")===String(name)});
+    }).filter(function(x){
+      var rowName = String(x.姓名||x.studentName||x.name||"");
+      var rowLesson = String(x.lesson||x.课程||x.lessonKey||"");
+      return (!name || rowName === String(name)) && (!requestedLesson || rowLesson === requestedLesson);
+    });
     var replied = false;
     function reply(status, payload) { if (replied) return; replied = true; json(res, status, payload); }
     function localFallback() { reply(200, {status:"ok", source:"local", data:localRows}); }
     if (source === "local" || !requestedLesson) { localFallback(); return; }
-    var https = require("https");
-    https.get(gasUrl + "?action=get_data&lesson=" + encodeURIComponent(requestedLesson), function(gres) {
-      var d = "";
-      gres.on("data", function(c) { d += c; });
-      gres.on("end", function() {
+    readJsonUrl(gasUrl + "?action=get_data&lesson=" + encodeURIComponent(requestedLesson), function(error, data) {
+        if (error || !data || data.status !== "ok") { localFallback(); return; }
         try {
-          var data = JSON.parse(d);
           var remoteRows = [];
-          if (data && data.status === "ok") {
-            if (Array.isArray(data.data)) remoteRows = data.data.slice();
-            else for (var group in data.data) (data.data[group]||[]).forEach(function(x) { remoteRows.push(x); });
-          }
+          if (Array.isArray(data.data)) remoteRows = data.data.slice();
+          else for (var group in data.data) (data.data[group]||[]).forEach(function(x) { remoteRows.push(x); });
           function reviewName(x) { return String(x.studentName || x.name || x['\u59d3\u540d'] || ""); }
           function reviewKey(x) {
             return [reviewName(x), x.lesson || x.lessonKey || x['\u8bfe\u7a0b'] || "", x.module || x.mode || x['\u6a21\u5757'] || "", x.questionId || x['\u9898\u76eeID'] || "", x.submittedAt || x.timestamp || x['\u63d0\u4ea4\u65f6\u95f4'] || ""].join("|");
@@ -195,18 +193,9 @@ var srv = http.createServer(function(req, res) {
             var key = reviewKey(x);
             if (!seen[key]) { seen[key] = true; merged.push(x); }
           });
-          reply(200, {status:"ok", data:merged});
-          return;
-          if (data.status === "ok" && name) {
-            var all = [];
-            if (Array.isArray(data.data)) all = data.data.slice();
-            else for (var k in data.data) (data.data[k]||[]).forEach(function(x) { all.push(x); });
-            data = {status:"ok", data:all.filter(function(x){return String(x.姓名||x.studentName||x.name||"")===String(name)})};
-          }
-          reply(200, data);
+          reply(200, {status:"ok", source:"google_sheets_and_local", remoteRecords:remoteRows.length, localRecords:localRows.length, data:merged});
         } catch(e) { localFallback(); }
-      });
-    }).on("error", function() { localFallback(); }).setTimeout(8000, function(){ this.destroy(new Error("GAS request timeout")); });
+    });
     return;
   }
 
