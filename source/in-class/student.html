@@ -113,7 +113,7 @@ function resultFor(ans,idx){var q=current.question,d=qdata(),mode=current.mode,a
 function publish(ans,idx){if(!nameReady)confirmName();var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:ans,text:ans,questionId:current.question.id,mode:current.mode,autoResult:resultFor(ans,idx),submittedAt:new Date().toISOString()};sendAnswer(payload);document.getElementById("app").innerHTML='<div class="'+(payload.autoResult==="correct"?'ok':'bad')+'">'+(payload.autoResult==="correct"?'已保存并提交：正确！':'已保存并提交：请看老师反馈')+'</div>'}
 function submitChoice(){var d=qdata();publish((d.options||[])[selected]||"",selected)}
 function submitOrdering(){publish(answerChunks.map(function(c){return c.t}).join(""),-1)}
-function submitMatching(){if(!nameReady)confirmName();var pairs=qdata().pairs||[],correct=0;for(var i=0;i<pairs.length;i++){if(matchPairs[i]===i)correct++}var ok=correct===pairs.length,ans=pairs.map(function(p,i){return(p.left||"")+"="+((pairs[matchPairs[i]]||{}).right||"")}).join("; ");var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:ans,text:ans,questionId:current.question.id,mode:current.mode,autoResult:ok?"correct":"wrong",score:correct,total:pairs.length,submittedAt:new Date().toISOString()};sendAnswer(payload);document.getElementById("app").innerHTML='<div class="submitted-neutral" data-neutral-feedback="1">已保存并提交，老师会统一公布结果。 / Submitted.</div>'}
+function submitMatching(){if(!nameReady)confirmName();var pairs=qdata().pairs||[],correct=0,itemResults=[];for(var i=0;i<pairs.length;i++){var isCorrect=matchPairs[i]===i;if(isCorrect)correct++;itemResults.push({index:i+1,prompt:pairs[i].left||('第 '+(i+1)+' 小题'),answer:(pairs[matchPairs[i]]||{}).right||'',correctAnswer:pairs[i].right||'',result:isCorrect?'correct':'wrong'})}var ok=correct===pairs.length,ans=pairs.map(function(p,i){return(p.left||"")+"="+((pairs[matchPairs[i]]||{}).right||"")}).join("; ");var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:ans,text:ans,questionId:current.question.id,mode:current.mode,autoResult:ok?"correct":"wrong",score:correct,total:pairs.length,itemResults:itemResults,submittedAt:new Date().toISOString()};sendAnswer(payload);document.getElementById("app").innerHTML='<div class="submitted-neutral" data-neutral-feedback="1">已保存并提交，老师会统一公布结果。 / Submitted.</div>'}
 document.getElementById("studentName").addEventListener("keydown",function(e){if(e.key==="Enter")confirmName()});
 renderRosterOptions();restoreDraft();renderBoard();
 var client=mqtt.connect("wss://05d1d5baec9d4cb3a21f5517b430cff1.s1.eu.hivemq.cloud:8884/mqtt",{username:"classpro",password:"Classpro2026",clientId:"st_"+Math.random().toString(36).slice(2,10),reconnectPeriod:3000,connectTimeout:8000});
@@ -237,7 +237,7 @@ client.on("close",function(){setStatus("disconnected")});
   function hrecReady(items){for(var i=0;i<items.length;i++)if(typeof hrecAnswers[i]!=='number')return false;return items.length>0}
   function renderHrec(){var q=hrecQuestion();if(!q)return;var d=q.data||{},items=d.items||[];if(lastHrecId!==q.id){lastHrecId=q.id;hrecAnswers=[]}var h='<div class="prompt">'+es(q.prompt_cn||'汉字认读循环')+'<br><span class="english">'+es(q.prompt_en||'Character Recognition Cycle')+'</span></div><div class="hint" style="text-align:center"><b>一次完成这一组6个词，再提交答案。</b><br><span class="muted">Complete all six items, then submit.</span></div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">';for(var i=0;i<items.length;i++){var x=items[i],round=d.roundId||'',stim='';if(round==='picture_to_hanzi')stim=x.image?'<img src="'+es(x.image)+'" alt="" style="width:100%;height:120px;object-fit:contain;border-radius:12px;background:#fff">':'<div style="font-size:18px;color:#74806d">'+es(x.meaning||'')+'</div>';else if(round==='hanzi_to_picture')stim='<div class="hanzi" style="font-size:42px">'+es(x.stimulus||x.word)+'</div>';else stim='<div class="hanzi" style="font-size:34px">'+es(x.stimulus||x.word)+'</div>'+((round==='sentence_to_word')?'<div class="pinyin" style="font-size:14px">'+es(x.pinyin||'')+'</div>':'');h+='<div style="padding:14px;border:1px solid #dfeac8;border-radius:16px;background:#fff"><div style="min-height:126px;display:flex;align-items:center;justify-content:center">'+stim+'</div><div class="options" style="grid-template-columns:repeat(2,minmax(0,1fr));gap:8px">';for(var j=0;j<(x.options||[]).length;j++){var sel=hrecAnswers[i]===j;h+='<button class="option '+(sel?'sel':'')+'" onclick="chooseHrec('+i+','+j+')" style="min-height:62px;transform:none">'+hrecOption(x,j)+'</button>'}h+='</div></div>'}h+='</div><button style="width:100%;margin-top:18px" onclick="submitHrec()" '+(!hrecReady(items)?'disabled':'')+'>提交本组 Submit Group</button>';if(current.phase==='published'){var key=current.answerKey||q.correct_answer||'';h='<div class="ok" style="margin-bottom:14px">本轮答案 / Key：<b>'+es(key)+'</b></div>'+h}document.getElementById('app').innerHTML=h;if(current.phase==='published')document.querySelectorAll('#app button').forEach(function(b){b.disabled=true;b.style.pointerEvents='none';b.style.opacity='.72'})}
   window.chooseHrec=function(i,j){hrecAnswers[i]=j;render()};
-  window.submitHrec=function(){var q=hrecQuestion(),items=(q.data||{}).items||[],answers=hrecAnswers.map(function(j,i){return(items[i].options||[])[j]||''}),ok=answers.length===items.length&&answers.every(function(a,i){return a===items[i].answer}),payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:answers.join('；'),text:answers.join('；'),questionId:q.id,mode:'hrec',autoResult:ok?'correct':'wrong',submittedAt:new Date().toISOString()};client.publish('classpro/room/'+RM+'/answers',JSON.stringify(payload));document.getElementById('app').innerHTML='<div class="'+(ok?'ok':'bad')+'">'+(ok?'提交成功：本组全部正确！':'已提交，请看教师公布答案。')+'</div>'};
+  window.submitHrec=function(){var q=hrecQuestion(),items=(q.data||{}).items||[],answers=hrecAnswers.map(function(j,i){return(items[i].options||[])[j]||''}),itemResults=items.map(function(item,i){var ok=answers[i]===item.answer;return{index:i+1,prompt:item.stimulus||item.word||item.meaning||('第 '+(i+1)+' 小题'),answer:answers[i]||'',correctAnswer:item.answer||'',result:ok?'correct':'wrong'}}),ok=answers.length===items.length&&itemResults.every(function(x){return x.result==='correct'}),payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:answers.join('；'),text:answers.join('；'),questionId:q.id,mode:'hrec',autoResult:ok?'correct':'wrong',score:itemResults.filter(function(x){return x.result==='correct'}).length,total:items.length,itemResults:itemResults,submittedAt:new Date().toISOString()};sendAnswer(payload);document.getElementById('app').innerHTML='<div class="'+(ok?'ok':'bad')+'">'+(ok?'提交成功：本组全部正确！':'已提交，请看教师公布答案。')+'</div>'};
   var oldRender=render;render=function(){if(current&&current.mode==='hrec'){renderHrec();return}oldRender()};
 })();
 </script>
@@ -290,7 +290,8 @@ client.on("close",function(){setStatus("disconnected")});
     var answers=qs.map(function(qq,i){return(qq.options||[])[groupedAnswers[i]]||''});
     var ok=answers.length===qs.length&&answers.every(function(a,i){return a===((qs[i].options||[])[qs[i].correct_index]||qs[i].answer)});
     var text=qs.map(function(qq,i){return(qq.question_cn||('Q'+(i+1)))+'='+answers[i]}).join('; ');
-    var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:text,text:text,questionId:q.id,mode:'ttq',autoResult:ok?'correct':'wrong',submittedAt:new Date().toISOString()};
+    var itemResults=qs.map(function(qq,i){var correctAnswer=(qq.options||[])[qq.correct_index]||qq.answer||'';return{index:i+1,prompt:qq.question_cn||('第 '+(i+1)+' 小题'),answer:answers[i]||'',correctAnswer:correctAnswer,result:answers[i]===correctAnswer?'correct':'wrong'}});
+    var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:text,text:text,questionId:q.id,mode:'ttq',autoResult:ok?'correct':'wrong',score:itemResults.filter(function(x){return x.result==='correct'}).length,total:qs.length,itemResults:itemResults,submittedAt:new Date().toISOString()};
     sendAnswer(payload);
     document.getElementById('app').innerHTML='<div class="'+(ok?'ok':'bad')+'">'+(ok?'\u63d0\u4ea4\u6210\u529f\uff1a\u4e09\u9898\u90fd\u6b63\u786e\uff01':'\u5df2\u63d0\u4ea4\uff0c\u8bf7\u770b\u8001\u5e08\u53cd\u9988')+'</div>';
   };
@@ -350,7 +351,12 @@ client.on("close",function(){setStatus("disconnected")});
   window.submitOpenAnswer=function(){
     if(!current||!current.question)return;
     var ans=textValue();
-    if(!ans)return;
+    if(!ans){
+      var input=document.getElementById('openAnswerText')||document.getElementById('openAnswer'),old=document.querySelector('#app .student-submit-warning');
+      if(!old&&input){old=document.createElement('div');old.className='student-submit-warning';old.textContent='请先写下答案，再点击提交。 / Write your answer before submitting.';input.parentNode.insertBefore(old,input.nextSibling)}
+      if(input){input.focus();input.setAttribute('aria-invalid','true')}
+      return;
+    }
     if(!nameReady)confirmName();
     var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:ans,text:ans,questionId:current.question.id,mode:current.mode||'open_response',autoResult:'review',result:'review',needsReview:true,cloudWall:true,submittedAt:new Date().toISOString()};
     sendAnswer(payload);
@@ -518,7 +524,8 @@ client.on("close",function(){setStatus("disconnected")});
     if(!nameReady)confirmName();
     var q=current.question,d=qdata(),items=d.sentences||[],bank=d.wordBank||[],answers=items.map(function(_,i){return bank[v5GroupAnswers[i]]||''});
     var ok=items.length>0&&answers.every(function(a,i){return norm(a)===norm(items[i].answer)});
-    var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:answers.join('；'),text:answers.join('；'),questionId:q.id,mode:current.mode,autoResult:ok?'correct':'wrong',submittedAt:new Date().toISOString()};
+    var itemResults=items.map(function(item,i){return{index:i+1,prompt:item.sentence||('第 '+(i+1)+' 小题'),answer:answers[i]||'',correctAnswer:item.answer||'',result:norm(answers[i])===norm(item.answer)?'correct':'wrong'}});
+    var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:answers.join('；'),text:answers.join('；'),questionId:q.id,mode:current.mode,autoResult:ok?'correct':'wrong',score:itemResults.filter(function(x){return x.result==='correct'}).length,total:items.length,itemResults:itemResults,submittedAt:new Date().toISOString()};
     sendAnswer(payload);
     document.getElementById("app").innerHTML='<div class="'+(ok?'ok':'bad')+'">'+(ok?'提交成功：正确！':'提交成功：请看老师反馈')+'</div>';
   };
@@ -546,6 +553,7 @@ client.on("close",function(){setStatus("disconnected")});
 /* HSK3 practice extensions: description guess and output-building tasks. */
 (function(){
   var oldRender=render;
+  window.revealBlindWord=function(button){if(!button)return;button.classList.add('open');button.setAttribute('aria-pressed','true')};
   render=function(){
     if(!current||['v6d','r3r'].indexOf(current.mode)<0){oldRender();return}
     var q=current.question||{},d=qdata();
@@ -571,7 +579,7 @@ client.on("close",function(){setStatus("disconnected")});
       h+='<div class="old-stu-desc">听老师说明目标词后，用中文描述，让同学猜。不要直接说出目标词。</div>';
       h+='</div>';
     }else if(mode==='v3b'){
-      h+='<div class="hint old-stu-card blind"><div class="old-stu-tag">🎁 盲盒造句</div><div class="old-stu-blind-grid">'+(d.words||[]).map(function(w,i){var p=(d.words_pinyin||[])[i]||py(w);return'<button type="button" class="old-stu-box" onclick="this.classList.add(\'open\');this.querySelector(\'b\').innerHTML=rubyLine(decodeURIComponent(\''+encodeURIComponent(w)+'\'),decodeURIComponent(\''+encodeURIComponent(p)+'\'),20)"><span></span><b>?</b><small>BLIND BOX</small></button>'}).join('')+'</div><div class="muted" style="margin-top:10px">请用打开的词语造一个句子。</div></div>';
+      h+='<div class="hint old-stu-card blind"><div class="old-stu-tag">🎁 盲盒造句</div><div class="old-stu-blind-grid">'+(d.words||[]).map(function(w,i){var p=(d.words_pinyin||[])[i]||py(w);return'<button type="button" class="old-stu-box" onclick="revealBlindWord(this)"><b><span class="blind-question">?</span><span class="blind-answer">'+rubyLine(w,p,20)+'</span></b><small>BLIND BOX</small></button>'}).join('')+'</div><div class="muted" style="margin-top:10px">请用打开的词语造一个句子。</div></div>';
     }else if(mode==='g2p'){
       var img=d.image?'<img src="'+es(d.image)+'" alt="" style="width:100%;max-height:220px;object-fit:cover;border-radius:14px;background:#fff">':'';
       h+='<div class="hint old-stu-card picture">'+(img?'<div style="text-align:center;margin-bottom:10px">'+img+'</div>':'')+'<div class="old-stu-tag blue">看图造句</div><div class="hanzi" style="font-size:24px;line-height:1.45;text-align:left">关键词：<b>'+rubyLine(d.keyword||'',d.pinyin||'',22)+'</b></div><div class="muted" style="margin-top:8px;text-align:left">'+rubyLine(d.task||'观察图片，用关键词写一个完整、自然的句子。',d.task_pinyin||'',16)+'</div></div>';
@@ -601,7 +609,9 @@ client.on("close",function(){setStatus("disconnected")});
 .old-stu-desc{font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:24px;line-height:1.5;font-weight:900;color:#14312b;background:#f3e8ff;border-radius:10px;padding:12px}
 .old-stu-blind-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:12px}
 .old-stu-box{width:104px;height:98px;border:2px solid #e9d5ff;border-radius:14px;background:#fff;color:#7c3aed;cursor:pointer;font-weight:900;box-shadow:0 10px 18px rgba(124,58,237,.10)}
-.old-stu-box span{display:none}
+.old-stu-box .blind-answer{display:none}
+.old-stu-box.open .blind-question{display:none}
+.old-stu-box.open .blind-answer{display:block}
 .old-stu-box:before{content:"🎁";display:block;font-size:30px;line-height:1;margin:13px 0 6px}
 .old-stu-box b{display:block;font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:26px;line-height:1.05;color:#14312b}
 .old-stu-box small{display:block;margin-top:5px;font-size:8px;color:#8b5cf6;letter-spacing:.08em}
@@ -679,7 +689,8 @@ client.on("close",function(){setStatus("disconnected")});
     var q=current.question,d=qdata(),count=blankCount(d),indices=[];for(var i=0;i<count;i++)indices.push(state.answers[i]);
     if(indices.some(function(x){return x==null}))return;
     var key=d.answers||[],correct=indices.reduce(function(n,x,i){return n+(x===key[i]?1:0)},0),answers=indices.map(function(x,i){return(i+1)+'-'+(d.options[x]||'')});
-    sendAnswer({room:RM,lesson:LESSON,studentName:name(),name:name(),answer:answers.join('；'),text:answers.join('；'),questionId:q.id,mode:'r4p',score:correct,total:count,autoResult:correct===count?'correct':'wrong',result:correct===count?'correct':'wrong',submittedAt:new Date().toISOString()});
+    var itemResults=indices.map(function(x,i){var answer=(d.options||[])[x]||'',correctAnswer=(d.options||[])[key[i]]||'';return{index:i+1,prompt:'空 '+(i+1),answer:answer,correctAnswer:correctAnswer,result:x===key[i]?'correct':'wrong'}});
+    sendAnswer({room:RM,lesson:LESSON,studentName:name(),name:name(),answer:answers.join('；'),text:answers.join('；'),questionId:q.id,mode:'r4p',score:correct,total:count,itemResults:itemResults,autoResult:correct===count?'correct':'wrong',result:correct===count?'correct':'wrong',submittedAt:new Date().toISOString()});
     document.getElementById('app').innerHTML='<div class="'+(correct===count?'ok':'bad')+'">'+(correct===count?'提交成功：全部正确！':'已提交，请查看老师公布的答案。')+'</div>';
   };
   render=function(){
@@ -696,5 +707,46 @@ client.on("close",function(){setStatus("disconnected")});
 <style>
 .student-speaking-ladder{display:grid;gap:8px;margin:14px 0;padding:14px;border:1px solid #d7e7d8;border-radius:15px;background:#f4faf5;text-align:left}.student-speaking-ladder>b{color:#0d5b43}.student-speaking-ladder span{display:block;padding:8px 10px;border-radius:10px;background:#fff;color:#42554b;line-height:1.45}.old-stu-card.picture .old-stu-tag{color:#0d5b43!important}.old-stu-card.picture .hanzi{color:#173329!important}
 </style>
+<style>
+/* Stable mobile answering controls and a student-visible classroom countdown. */
+#app{position:relative}
+#app button{touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease,transform .08s ease}
+#app button:active:not(:disabled){transform:scale(.98)!important}
+#app .option.sel,#app .match-card.sel,#app .student-bank-word.selected,#app .paragraph-option:active{border-color:#1d4ed8!important;background:#dbeafe!important;color:#153e75!important;box-shadow:0 0 0 4px rgba(37,99,235,.2)!important}
+#app .option.sel:after,#app .match-card.sel:after{content:" ✓";color:#1d4ed8;font-family:Arial,"Microsoft YaHei",sans-serif;font-weight:1000}
+#app .student-submit-action{min-height:54px;background:#176b50!important;color:#fff!important;box-shadow:0 9px 20px rgba(23,107,80,.2)}
+#app .student-submit-action:disabled{background:#d7ddd9!important;color:#77827c!important;box-shadow:none!important;opacity:1!important}
+.student-submit-warning{margin:8px 0;padding:9px 11px;border:1px solid #f6b9af;border-radius:10px;background:#fff0ed;color:#a6382b;font-size:13px;font-weight:900}
+.student-answer-timer{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 14px;padding:9px 12px;border:1px solid #bcd1e8;border-radius:13px;background:#eef6ff;color:#1d4f91;font-weight:900;box-shadow:0 5px 14px rgba(29,79,145,.08)}
+.student-answer-timer b{font:1000 24px/1 "Courier New",monospace}.student-answer-timer small{font-size:12px}.student-answer-timer.urgent{border-color:#f3a7a7;background:#fee2e2;color:#b91c1c;animation:studentTimerPulse .8s infinite alternate}.student-answer-timer.ended{border-color:#efc26a;background:#fff2d8;color:#8a4a13;animation:none}
+@keyframes studentTimerPulse{to{transform:scale(1.015)}}
+</style>
+<script>
+/* Keep classroom timing, pinyin state and touch feedback consistent on phones. */
+(function(){
+  var previousRender=render;
+  function isSubmitted(){return submittedAnswer&&current&&current.question&&submittedAnswer.questionId===current.question.id}
+  function remaining(){
+    if(!current||!current.question||current.phase==='published'||isSubmitted())return null;
+    var seconds=Math.max(0,Number(current.duration)||0),started=Date.parse(current.sentAt||'');
+    if(!seconds||!isFinite(started))return null;
+    return Math.max(0,Math.ceil((started+seconds*1000-Date.now())/1000));
+  }
+  function updateTimer(){
+    var app=document.getElementById('app'),left=remaining(),box=document.getElementById('studentAnswerTimer');
+    if(!app||left==null){if(box)box.remove();return}
+    if(!box){box=document.createElement('div');box.id='studentAnswerTimer';box.className='student-answer-timer';app.insertBefore(box,app.firstChild)}
+    box.className='student-answer-timer '+(left<=0?'ended':left<=10?'urgent':'');
+    box.innerHTML=left<=0?'<b>0</b><small>答题时间结束，请尽快提交 / Time is up</small>':'<b>'+left+'</b><small>秒 / seconds</small>';
+  }
+  function enhanceControls(){
+    var app=document.getElementById('app');if(!app)return;
+    app.querySelectorAll('button').forEach(function(button){button.type='button';button.setAttribute('aria-pressed',button.classList.contains('sel')||button.classList.contains('selected')?'true':'false');var action=String(button.getAttribute('onclick')||'');if(/^submit/i.test(action)||action.indexOf('submit')>=0)button.classList.add('student-submit-action')});
+  }
+  render=function(){previousRender();enhanceControls();updateTimer()};
+  setInterval(updateTimer,500);
+  enhanceControls();updateTimer();
+})();
+</script>
 </body>
 </html>

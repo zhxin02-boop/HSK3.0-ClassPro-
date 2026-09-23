@@ -50,7 +50,8 @@
       "focus": [
         "服装款式与大小",
         "价格和促销",
-        "比……更……与不比"
+        "比……更……与不比",
+        "适合与合适"
       ]
     },
     {
@@ -75,7 +76,8 @@
       "steps": [
         {
           "title": "车已经太矮了",
-          "prompt": "为什么需要换一辆自行车？",
+          "talkHint": "先聊聊，不着急给答案。",
+          "prompt": "看看这张图，你发现了什么？",
           "image": "images/hsk3-l07/photo-text-1-old-bike.png",
           "labels": [
             {
@@ -84,6 +86,13 @@
               "y": 12,
               "targetX": 48,
               "targetY": 69
+            },
+            {
+              "word": "自行车",
+              "x": 35,
+              "y": 12,
+              "targetX": 48,
+              "targetY": 70
             },
             {
               "word": "旧",
@@ -102,23 +111,28 @@
           ],
           "words": [
             "辆",
+            "自行车",
             "旧",
             "矮"
           ],
-          "sentence": "这辆自行车有点儿旧，而且对小雪来说太矮了。"
+          "sentence": "这辆自行车有点儿旧，而且对小雪来说太矮了。",
+          "sampleAnswers": [
+            {
+              "hanzi": "这是一辆自行车。",
+              "pinyin": "Zhè shì yí liàng zìxíngchē."
+            },
+            {
+              "hanzi": "它有点儿旧，而且对小雪来说太矮了。",
+              "pinyin": "Tā yǒudiǎnr jiù, érqiě duì Xiǎoxuě lái shuō tài ǎi le."
+            }
+          ]
         },
         {
           "title": "去店里试新车",
-          "prompt": "买新自行车以前要做什么？",
+          "talkHint": "先聊聊，不着急给答案。",
+          "prompt": "你觉得这辆车适合小雪吗？",
           "image": "images/hsk3-l07/photo-text-1-bike-shop.png",
           "labels": [
-            {
-              "word": "自行车",
-              "x": 10,
-              "y": 84,
-              "targetX": 55,
-              "targetY": 67
-            },
             {
               "word": "试",
               "x": 90,
@@ -128,10 +142,19 @@
             }
           ],
           "words": [
-            "自行车",
             "试"
           ],
-          "sentence": "买自行车以前，让小雪先试一下。"
+          "sentence": "买自行车以前，让小雪先试一下。",
+          "sampleAnswers": [
+            {
+              "hanzi": "我觉得可能合适，但是小雪应该先试一下。",
+              "pinyin": "Wǒ juéde kěnéng héshì, dànshì Xiǎoxuě yīnggāi xiān shì yíxià."
+            },
+            {
+              "hanzi": "试了以后，才知道大小合不合适。",
+              "pinyin": "Shì le yǐhòu, cái zhīdào dàxiǎo hé bù héshì."
+            }
+          ]
         }
       ]
     },
@@ -141,6 +164,7 @@
       "steps": [
         {
           "title": "试穿黄色短裤",
+          "talkHint": "先聊聊，不着急给答案。",
           "prompt": "短裤的颜色和大小怎么样？",
           "image": "images/hsk3-l07/photo-text-2-fitting.png",
           "labels": [
@@ -179,10 +203,21 @@
             "大小",
             "合适"
           ],
-          "sentence": "这条黄色短裤的大小很合适。"
+          "sentence": "这条黄色短裤的大小很合适。",
+          "sampleAnswers": [
+            {
+              "hanzi": "这是一条黄色的短裤。",
+              "pinyin": "Zhè shì yì tiáo huángsè de duǎnkù."
+            },
+            {
+              "hanzi": "这条短裤的大小很合适。",
+              "pinyin": "Zhè tiáo duǎnkù de dàxiǎo hěn héshì."
+            }
+          ]
         },
         {
           "title": "比较以后再决定",
+          "talkHint": "先聊聊，不着急给答案。",
           "prompt": "她应该买裙子还是短裤？",
           "image": "images/hsk3-l07/photo-text-2-comparison.png",
           "labels": [
@@ -201,6 +236,13 @@
               "targetY": 42
             },
             {
+              "word": "适合",
+              "x": 56,
+              "y": 84,
+              "targetX": 29,
+              "targetY": 38
+            },
+            {
               "word": "决定",
               "x": 90,
               "y": 84,
@@ -211,9 +253,20 @@
           "words": [
             "裙子",
             "更",
+            "适合",
             "决定"
           ],
-          "sentence": "裙子更好看，但她想多看看再决定。"
+          "sentence": "裙子更好看，也很适合她，但她想多看看再决定。",
+          "sampleAnswers": [
+            {
+              "hanzi": "我觉得裙子比短裤更好看，也更适合她。",
+              "pinyin": "Wǒ juéde qúnzi bǐ duǎnkù gèng hǎokàn, yě gèng shìhé tā."
+            },
+            {
+              "hanzi": "她可以多看看、比较价格以后再决定。",
+              "pinyin": "Tā kěyǐ duō kànkan, bǐjiào jiàgé yǐhòu zài juédìng."
+            }
+          ]
         }
       ]
     },
@@ -223,7 +276,8 @@
       "steps": [
         {
           "title": "先尝一块冰西瓜",
-          "prompt": "店员怎样介绍西瓜？",
+          "talkHint": "先聊聊，不着急给答案。",
+          "prompt": "如果你是店员，你会怎么介绍西瓜？",
           "image": "images/hsk3-l07/photo-text-3-watermelon.png",
           "labels": [
             {
@@ -269,11 +323,23 @@
             "冰",
             "极"
           ],
-          "sentence": "这块冰西瓜又新鲜又甜，吃起来甜极了。"
+          "sentence": "这块冰西瓜又新鲜又甜，吃起来甜极了。",
+          "sampleAnswers": [
+            {
+              "hanzi": "我们的西瓜又大又新鲜。",
+              "pinyin": "Wǒmen de xīguā yòu dà yòu xīnxiān."
+            },
+            {
+              "hanzi": "您先尝尝这块冰西瓜，甜极了！",
+              "pinyin": "Nín xiān chángchang zhè kuài bīng xīguā, tián jí le!"
+            }
+          ]
         },
         {
-          "title": "称重并计算总价",
-          "prompt": "香蕉和西瓜一共多少钱？",
+          "title": "称重、询价和讲价",
+          "talkHint": "先聊聊，不着急给答案。",
+          "prompt": "买菜可以讲价吗？",
+          "promptEn": "Can you bargain when buying groceries?",
           "image": "images/hsk3-l07/photo-text-3-weighing.png",
           "labels": [
             {
@@ -319,7 +385,44 @@
             "一共",
             "毛"
           ],
-          "sentence": "西瓜按公斤卖，香蕉买两斤，一共五十八块五毛。"
+          "sentence": "西瓜按公斤卖，香蕉买两斤，一共五十八块五毛。",
+          "sampleAnswers": [
+            {
+              "hanzi": "买得多，便宜点儿怎么样？",
+              "pinyin": "Mǎi de duō, piányi diǎnr zěnmeyàng?"
+            },
+            {
+              "hanzi": "十五块，行不行？",
+              "pinyin": "Shíwǔ kuài, xíng bu xíng?"
+            },
+            {
+              "hanzi": "一共十五块三毛，十五块行不行？",
+              "pinyin": "Yígòng shíwǔ kuài sān máo, shíwǔ kuài xíng bu xíng?"
+            }
+          ],
+          "tips": [
+            {
+              "label": "礼貌提出价格",
+              "pinyin": "lǐmào tíchū jiàgé",
+              "english": "Politely suggest a price instead of demanding a discount.",
+              "example": "十五块，行不行？",
+              "examplePinyin": "Shíwǔ kuài, xíng bu xíng?"
+            },
+            {
+              "label": "说明数量",
+              "pinyin": "shuōmíng shùliàng",
+              "english": "Explain how much you are buying; a larger quantity can support your request.",
+              "example": "买得多，便宜点儿怎么样？",
+              "examplePinyin": "Mǎi de duō, piányi diǎnr zěnmeyàng?"
+            },
+            {
+              "label": "抹零",
+              "pinyin": "mǒ líng",
+              "english": "Ask to round the total down by removing the small change.",
+              "example": "一共十五块三毛，十五块行不行？",
+              "examplePinyin": "Yígòng shíwǔ kuài sān máo, shíwǔ kuài xíng bu xíng?"
+            }
+          ]
         }
       ]
     },
@@ -329,7 +432,8 @@
       "steps": [
         {
           "title": "旧电视显得太小",
-          "prompt": "为什么是时候换电视了？",
+          "talkHint": "先聊聊，不着急给答案。",
+          "prompt": "你们觉得这个电视大小合适吗？",
           "image": "images/hsk3-l07/photo-text-4-small-tv.png",
           "labels": [
             {
@@ -345,17 +449,36 @@
               "y": 84,
               "targetX": 58,
               "targetY": 45
+            },
+            {
+              "word": "换",
+              "x": 47,
+              "y": 12,
+              "targetX": 58,
+              "targetY": 45
             }
           ],
           "words": [
             "结婚",
+            "换",
             "决定"
           ],
-          "sentence": "这个电视是他们结婚时买的，现在让一雪决定换哪一台。"
+          "sentence": "这个电视是他们结婚时买的，现在让一雪决定换哪一台。",
+          "sampleAnswers": [
+            {
+              "hanzi": "我觉得不太合适，房子大了，电视看起来太小了。",
+              "pinyin": "Wǒ juéde bú tài héshì, fángzi dà le, diànshì kàn qǐlai tài xiǎo le."
+            },
+            {
+              "hanzi": "这个电视已经用了很久，是时候换一个新的了。",
+              "pinyin": "Zhège diànshì yǐjīng yòngle hěn jiǔ, shì shíhou huàn yí ge xīn de le."
+            }
+          ]
         },
         {
           "title": "语音让电视开机",
-          "prompt": "现在的智能电视有哪些优点？",
+          "talkHint": "先聊聊，不着急给答案。",
+          "prompt": "智能电视有什么优点？",
           "image": "images/hsk3-l07/photo-text-4-smart-tv.png",
           "labels": [
             {
@@ -385,15 +508,33 @@
               "y": 12,
               "targetX": 72,
               "targetY": 25
+            },
+            {
+              "word": "智能电视",
+              "x": 88,
+              "y": 84,
+              "targetX": 72,
+              "targetY": 25
             }
           ],
           "words": [
+            "智能电视",
             "不但",
             "而且",
             "声",
             "开机"
           ],
-          "sentence": "智能电视不但便宜，而且方便，叫它一声就能开机。"
+          "sentence": "智能电视不但便宜，而且方便，叫它一声就能开机。",
+          "sampleAnswers": [
+            {
+              "hanzi": "叫它一声就能开机。",
+              "pinyin": "Jiào tā yì shēng jiù néng kāijī."
+            },
+            {
+              "hanzi": "智能电视不但用着方便，而且还可以上网。",
+              "pinyin": "Zhìnéng diànshì búdàn yòngzhe fāngbiàn, érqiě hái kěyǐ shàngwǎng."
+            }
+          ]
         }
       ]
     }
@@ -803,6 +944,54 @@
         "自动开机",
         "开机以后"
       ]
+    },
+    {
+      "id": "v07_28",
+      "hanzi": "换",
+      "pinyin": "huàn",
+      "pos": "动词",
+      "english": "replace; change",
+      "tags": [
+        "C"
+      ],
+      "example": "这个电视太小了，是时候换一个新的了。",
+      "phrases": [
+        "换电视",
+        "换一个新的"
+      ],
+      "teachingExtension": true
+    },
+    {
+      "id": "v07_29",
+      "hanzi": "智能电视",
+      "pinyin": "zhìnéng diànshì",
+      "pos": "名词",
+      "english": "smart television; smart TV",
+      "tags": [
+        "C"
+      ],
+      "example": "智能电视可以上网，也可以听声音开机。",
+      "phrases": [
+        "一台智能电视",
+        "选择智能电视"
+      ],
+      "teachingExtension": true
+    },
+    {
+      "id": "v07_30",
+      "hanzi": "适合",
+      "pinyin": "shìhé",
+      "pos": "动词",
+      "english": "suit; be suitable for",
+      "tags": [
+        "B"
+      ],
+      "example": "这件黄色的裙子很适合你。",
+      "phrases": [
+        "适合你",
+        "适合学生"
+      ],
+      "teachingExtension": true
     }
   ],
   "grammar": [
@@ -816,23 +1005,28 @@
       "examples": [
         {
           "hanzi": "弟弟吃着苹果写作业。",
-          "english": "The younger brother does homework while eating an apple."
+          "english": "The younger brother does homework while eating an apple.",
+          "pinyin": "Dìdi chīzhe píngguǒ xiě zuòyè."
         },
         {
           "hanzi": "他们坐着看电视。",
-          "english": "They watch television while sitting."
+          "english": "They watch television while sitting.",
+          "pinyin": "Tāmen zuòzhe kàn diànshì."
         },
         {
           "hanzi": "老师拿着书走进教室。",
-          "english": "The teacher walks into the classroom holding a book."
+          "english": "The teacher walks into the classroom holding a book.",
+          "pinyin": "Lǎoshī názhe shū zǒujìn jiàoshì."
         },
         {
           "hanzi": "她笑着跟大家说再见。",
-          "english": "She says goodbye to everyone with a smile."
+          "english": "She says goodbye to everyone with a smile.",
+          "pinyin": "Tā xiàozhe gēn dàjiā shuō zàijiàn."
         },
         {
           "hanzi": "我喜欢听着音乐做饭。",
-          "english": "I like cooking while listening to music."
+          "english": "I like cooking while listening to music.",
+          "pinyin": "Wǒ xǐhuan tīngzhe yīnyuè zuòfàn."
         }
       ]
     },
@@ -846,23 +1040,28 @@
       "examples": [
         {
           "hanzi": "这辆自行车比那辆更轻。",
-          "english": "This bicycle is lighter than that one."
+          "english": "This bicycle is lighter than that one.",
+          "pinyin": "Zhè liàng zìxíngchē bǐ nà liàng gèng qīng."
         },
         {
           "hanzi": "今天比昨天还热。",
-          "english": "Today is even hotter than yesterday."
+          "english": "Today is even hotter than yesterday.",
+          "pinyin": "Jīntiān bǐ zuótiān hái rè."
         },
         {
           "hanzi": "这家店不比那家贵。",
-          "english": "This shop is not more expensive than that one."
+          "english": "This shop is not more expensive than that one.",
+          "pinyin": "Zhè jiā diàn bù bǐ nà jiā guì."
         },
         {
           "hanzi": "坐地铁不比骑自行车慢多少。",
-          "english": "Taking the subway is not much slower than cycling."
+          "english": "Taking the subway is not much slower than cycling.",
+          "pinyin": "Zuò dìtiě bù bǐ qí zìxíngchē màn duōshao."
         },
         {
           "hanzi": "这台电视比旧电视更方便。",
-          "english": "This television is more convenient than the old one."
+          "english": "This television is more convenient than the old one.",
+          "pinyin": "Zhè tái diànshì bǐ jiù diànshì gèng fāngbiàn."
         }
       ]
     },
@@ -876,23 +1075,28 @@
       "examples": [
         {
           "hanzi": "今天买的香蕉新鲜极了。",
-          "english": "The bananas bought today are extremely fresh."
+          "english": "The bananas bought today are extremely fresh.",
+          "pinyin": "Jīntiān mǎi de xiāngjiāo xīnxiān jí le."
         },
         {
           "hanzi": "这个故事有意思极了。",
-          "english": "This story is extremely interesting."
+          "english": "This story is extremely interesting.",
+          "pinyin": "Zhège gùshi yǒuyìsi jí le."
         },
         {
           "hanzi": "下雨以后，草原漂亮极了。",
-          "english": "The grassland is extremely beautiful after the rain."
+          "english": "The grassland is extremely beautiful after the rain.",
+          "pinyin": "Xiàyǔ yǐhòu, cǎoyuán piàoliang jí le."
         },
         {
           "hanzi": "收到这个礼物，她高兴极了。",
-          "english": "She was extremely happy to receive this gift."
+          "english": "She was extremely happy to receive this gift.",
+          "pinyin": "Shōudào zhège lǐwù, tā gāoxìng jí le."
         },
         {
           "hanzi": "这件黄色的衣服我喜欢极了。",
-          "english": "I like this yellow item of clothing very much."
+          "english": "I like this yellow item of clothing very much.",
+          "pinyin": "Zhè jiàn huángsè de yīfu wǒ xǐhuan jí le."
         }
       ]
     },
@@ -906,23 +1110,63 @@
       "examples": [
         {
           "hanzi": "这家店不但东西多，而且服务也很好。",
-          "english": "This shop not only has many products, but also provides good service."
+          "english": "This shop not only has many products, but also provides good service.",
+          "pinyin": "Zhè jiā diàn búdàn dōngxi duō, érqiě fúwù yě hěn hǎo."
         },
         {
           "hanzi": "小雪不但会骑自行车，而且骑得很快。",
-          "english": "Xiaoxue can not only ride a bicycle, but also rides very fast."
+          "english": "Xiaoxue can not only ride a bicycle, but also rides very fast.",
+          "pinyin": "Xiǎoxuě búdàn huì qí zìxíngchē, érqiě qí de hěn kuài."
         },
         {
           "hanzi": "这个水果不但新鲜，而且很甜。",
-          "english": "This fruit is not only fresh, but also sweet."
+          "english": "This fruit is not only fresh, but also sweet.",
+          "pinyin": "Zhège shuǐguǒ búdàn xīnxiān, érqiě hěn tián."
         },
         {
           "hanzi": "不但哥哥喜欢这台电视，而且妹妹也喜欢。",
-          "english": "Not only the older brother likes this television; the younger sister likes it too."
+          "english": "Not only the older brother likes this television; the younger sister likes it too.",
+          "pinyin": "Búdàn gēge xǐhuan zhè tái diànshì, érqiě mèimei yě xǐhuan."
         },
         {
           "hanzi": "网上买东西不但方便，而且常常更便宜。",
-          "english": "Online shopping is not only convenient, but also often cheaper."
+          "english": "Online shopping is not only convenient, but also often cheaper.",
+          "pinyin": "Wǎngshang mǎi dōngxi búdàn fāngbiàn, érqiě chángcháng gèng piányi."
+        }
+      ]
+    },
+    {
+      "id": "g07_05",
+      "title": "词义辨析“适合”与“合适”",
+      "titleEn": "Word choice: 适合 vs. 合适",
+      "scene": "Both words can mean “suitable,” but where do they go in a sentence?",
+      "structure": "适合：事物 / 活动 + 适合 + 人 / 用途；合适：主语 + 很 / 不 + 合适",
+      "explanation": "“适合”是动词，后面常带对象，说明什么适合谁或适合做什么；“合适”是形容词，说明大小、时间、价格或安排恰当，后面一般不直接带对象。",
+      "examples": [
+        {
+          "hanzi": "这件黄色的裙子很适合你。",
+          "english": "This yellow skirt suits you well.",
+          "pinyin": "Zhè jiàn huángsè de qúnzi hěn shìhé nǐ."
+        },
+        {
+          "hanzi": "这双鞋的大小很合适。",
+          "english": "The size of these shoes is just right.",
+          "pinyin": "Zhè shuāng xié de dàxiǎo hěn héshì."
+        },
+        {
+          "hanzi": "这辆自行车不适合小雪。",
+          "english": "This bicycle is not suitable for Xiaoxue.",
+          "pinyin": "Zhè liàng zìxíngchē bù shìhé Xiǎoxuě."
+        },
+        {
+          "hanzi": "明天下午三点开会合适吗？",
+          "english": "Is 3 p.m. tomorrow a suitable time for the meeting?",
+          "pinyin": "Míngtiān xiàwǔ sān diǎn kāihuì héshì ma?"
+        },
+        {
+          "hanzi": "我觉得这份工作很适合他。",
+          "english": "I think this job suits him well.",
+          "pinyin": "Wǒ juéde zhè fèn gōngzuò hěn shìhé tā."
         }
       ]
     }
@@ -1107,11 +1351,11 @@
             "hanzi": "咱们可以走着去。"
           },
           {
-            "english": "She reads while standing.",
-            "hanzi": "她站着看书。"
+            "english": "She reads while lying down.",
+            "hanzi": "她躺着看书。"
           },
           {
-            "english": "He talks while looking at the product.",
+            "english": "He looks at the product while talking.",
             "hanzi": "他看着商品说话。"
           }
         ],
@@ -1127,9 +1371,39 @@
         ]
       },
       "oralQuestions": [
-        "你喜欢坐着看书还是站着看书？",
-        "你可以走着去学校吗？",
+        "你喜欢坐着看书还是躺着看书？",
+        "为什么你们喜欢戴着耳机上课？",
         "你常常听着音乐做什么？"
+      ],
+      "presentationMode": "progressive_grammar",
+      "structureVariants": [
+        {
+          "label": "基本结构",
+          "formula": "主语 + 动词1 + 着 +（宾语1）+ 动词2 +（宾语2）",
+          "formulaEn": "Subject + Verb 1 + 着 + (Object 1) + Verb 2 + (Object 2)",
+          "explanation": "“着”放在第一个动词后，说明做第二个动作时保持的状态或方式。",
+          "example": "他们坐着看电视。"
+        }
+      ],
+      "followUp": [
+        {
+          "image": "images/hsk3-l07/photo-text-1-bike-shop.png",
+          "promptEn": "The girl smiles while trying the bicycle.",
+          "target": "用“V1着V2”说一句话。",
+          "sampleAnswer": {
+            "hanzi": "小雪笑着试自行车。",
+            "pinyin": "Xiǎoxuě xiàozhe shì zìxíngchē."
+          }
+        },
+        {
+          "image": "images/hsk3-l07/photo-text-4-small-tv.png",
+          "promptEn": "They sit and watch television in the living room.",
+          "target": "用“V1着V2”说一句话。",
+          "sampleAnswer": {
+            "hanzi": "他们坐着看电视。",
+            "pinyin": "Tāmen zuòzhe kàn diànshì."
+          }
+        }
       ]
     },
     "g07_02": {
@@ -1165,9 +1439,46 @@
         ]
       },
       "oralQuestions": [
-        "自行车和公共汽车，哪个更方便？",
-        "你觉得网上买东西比去商店便宜吗？",
-        "你的手机不比同学的手机贵多少吗？"
+        "这条裙子和这条短裤，哪一件更适合你？",
+        "你觉得网上买东西比去商店更方便吗？为什么？",
+        "你的家乡什么东西不比大连的贵多少？"
+      ],
+      "presentationMode": "progressive_grammar",
+      "structureVariants": [
+        {
+          "label": "程度更强",
+          "formula": "A + 比 + B + 更 / 还 + 形容词",
+          "formulaEn": "A + is even more + adjective + than + B",
+          "explanation": "“更 / 还”放在形容词前，突出A的程度更高。",
+          "example": "裙子比短裤更好看。"
+        },
+        {
+          "label": "差别不大",
+          "formula": "A + 不比 + B + 形容词 + 多少",
+          "formulaEn": "A + is not much more + adjective + than + B",
+          "explanation": "说明A没有明显超过B，两者比较接近。",
+          "example": "裙子不比短裤贵多少。"
+        }
+      ],
+      "followUp": [
+        {
+          "image": "images/hsk3-l07/photo-text-2-comparison.png",
+          "promptEn": "Compare the skirt and the shorts. Which looks better?",
+          "target": "用“比……更……”说一句话。",
+          "sampleAnswer": {
+            "hanzi": "裙子比短裤更好看。",
+            "pinyin": "Qúnzi bǐ duǎnkù gèng hǎokàn."
+          }
+        },
+        {
+          "image": "images/hsk3-l07/photo-text-4-smart-tv.png",
+          "promptEn": "Compare the smart TV with the old TV. Which is more convenient?",
+          "target": "用“比……更……”说一句话。",
+          "sampleAnswer": {
+            "hanzi": "智能电视比旧电视更方便。",
+            "pinyin": "Zhìnéng diànshì bǐ jiù diànshì gèng fāngbiàn."
+          }
+        }
       ]
     },
     "g07_03": {
@@ -1199,9 +1510,46 @@
         ]
       },
       "oralQuestions": [
-        "你吃过什么甜极了？",
-        "什么地方的风景漂亮极了？",
+        "你最近吃过什么好吃极了？",
+        "你去过的哪个地方漂亮极了？",
         "最近什么事情让你高兴极了？"
+      ],
+      "presentationMode": "progressive_grammar",
+      "structureVariants": [
+        {
+          "label": "形容词",
+          "formula": "形容词 + 极了",
+          "formulaEn": "Adjective + 极了 = extremely + adjective",
+          "explanation": "表示某种性质达到很高的程度。",
+          "example": "这块西瓜甜极了。"
+        },
+        {
+          "label": "心理动词",
+          "formula": "心理动词 + 极了",
+          "formulaEn": "Mental verb + 极了 = feel / like something very much",
+          "explanation": "表示喜欢、高兴、满意等感觉非常强。",
+          "example": "这台电视我喜欢极了。"
+        }
+      ],
+      "followUp": [
+        {
+          "image": "images/hsk3-l07/photo-text-3-watermelon.png",
+          "promptEn": "The watermelon is extremely sweet.",
+          "target": "用“极了”说一句话。",
+          "sampleAnswer": {
+            "hanzi": "这块西瓜甜极了。",
+            "pinyin": "Zhè kuài xīguā tián jí le."
+          }
+        },
+        {
+          "image": "images/hsk3-l07/photo-text-2-fitting.png",
+          "promptEn": "She likes the yellow shorts very much.",
+          "target": "用“极了”说一句话。",
+          "sampleAnswer": {
+            "hanzi": "这条黄色短裤她喜欢极了。",
+            "pinyin": "Zhè tiáo huángsè duǎnkù tā xǐhuan jí le."
+          }
+        }
       ]
     },
     "g07_04": {
@@ -1235,15 +1583,174 @@
         ]
       },
       "oralQuestions": [
-        "你喜欢的商店不但便宜，而且怎么样？",
-        "你的家乡不但有美食，而且有什么？",
+        "你常去的商店不但便宜，而且怎么样？",
+        "你的家乡不但有美食，而且还有什么？",
         "班里谁不但汉语说得好，而且汉字也写得好？"
+      ],
+      "presentationMode": "progressive_grammar",
+      "structureVariants": [
+        {
+          "label": "基本结构",
+          "formula": "不但……，而且……",
+          "formulaEn": "not only ..., but also ...",
+          "explanation": "后一个分句在意思上进一步补充或加强前一个分句。",
+          "example": "这个电视不但便宜，而且方便。"
+        },
+        {
+          "label": "主语相同",
+          "formula": "主语 + 不但 + 谓语1，而且 + 谓语2",
+          "formulaEn": "Same subject: Subject + not only + Predicate 1, but also + Predicate 2",
+          "explanation": "两个分句的主语相同，主语只说一次，放在“不但”前面。",
+          "example": "小雪不但会骑自行车，而且骑得很快。"
+        },
+        {
+          "label": "主语不同",
+          "formula": "不但 + 主语1 + 谓语1，而且 + 主语2 + 也 + 谓语2",
+          "formulaEn": "Different subjects: Not only + Subject 1 + Predicate 1, but Subject 2 + also + Predicate 2",
+          "explanation": "两个分句的主语不同，“不但”放在主语1前，“而且”放在主语2前；常用“也”加强递进。",
+          "example": "不但哥哥喜欢这台电视，而且妹妹也喜欢。"
+        }
+      ],
+      "followUp": [
+        {
+          "image": "images/hsk3-l07/photo-text-4-smart-tv.png",
+          "promptEn": "The smart TV is affordable and convenient. It can also go online.",
+          "target": "用“不但……而且……”推荐智能电视。",
+          "sampleAnswer": {
+            "hanzi": "智能电视不但便宜，而且方便，还可以上网。",
+            "pinyin": "Zhìnéng diànshì búdàn piányi, érqiě fāngbiàn, hái kěyǐ shàngwǎng."
+          }
+        },
+        {
+          "image": "images/hsk3-l07/photo-text-1-old-bike.png",
+          "promptEn": "The parents notice the bicycle is old. Xiaoxue also thinks it is too short.",
+          "target": "用“主语不同”的结构说一句话。",
+          "sampleAnswer": {
+            "hanzi": "不但爸爸妈妈觉得车旧了，而且小雪也觉得车太矮了。",
+            "pinyin": "Búdàn bàba māma juéde chē jiù le, érqiě Xiǎoxuě yě juéde chē tài ǎi le."
+          }
+        }
+      ]
+    },
+    "g07_05": {
+      "scene": "Both words can mean “suitable,” but where do they go in a sentence?",
+      "structure": "适合：事物 / 活动 + 适合 + 人 / 用途；合适：主语 + 很 / 不 + 合适",
+      "structureEn": "Word choice: 适合 vs. 合适",
+      "visualLearning": {
+        "leadExamples": [
+          {
+            "english": "This yellow skirt suits you well.",
+            "hanzi": "这件黄色的裙子很适合你。"
+          },
+          {
+            "english": "The size of these shoes is just right.",
+            "hanzi": "这双鞋的大小很合适。"
+          },
+          {
+            "english": "Is 8 p.m. a suitable time?",
+            "hanzi": "晚上八点合适吗？"
+          }
+        ],
+        "blocks": [
+          "适合",
+          "对象",
+          "合适",
+          "状态"
+        ],
+        "blockLabelsEn": [
+          "verb: suit",
+          "person or purpose",
+          "adjective: suitable",
+          "right or appropriate"
+        ]
+      },
+      "oralQuestions": [
+        "你觉得几点上课比较合适？",
+        "什么颜色的衣服适合你？",
+        "这辆自行车适合小雪吗？为什么？"
+      ],
+      "presentationMode": "progressive_grammar",
+      "grammarKind": "word_contrast",
+      "structureVariants": [
+        {
+          "label": "适合 · 动词",
+          "formula": "事物 / 活动 + 适合 + 人 / 用途",
+          "formulaEn": "Thing / activity + suits + person / purpose",
+          "explanation": "“适合”后面常带对象，回答“适合谁”或“适合做什么”。",
+          "example": "这件黄色的裙子很适合你。"
+        },
+        {
+          "label": "合适 · 形容词",
+          "formula": "大小 / 时间 / 价格 / 安排 + 很 / 不 + 合适",
+          "formulaEn": "Size / time / price / arrangement + is + suitable / right",
+          "explanation": "“合适”描述某个条件恰当，后面一般不直接带人或用途。",
+          "example": "这双鞋的大小很合适。"
+        }
+      ],
+      "followUp": [
+        {
+          "image": "images/hsk3-l07/photo-text-2-fitting.png",
+          "promptEn": "The yellow shorts are the right size for her.",
+          "target": "选择“适合”或“合适”，说一个完整句子。",
+          "sampleAnswer": {
+            "hanzi": "这条黄色短裤的大小很合适。",
+            "pinyin": "Zhè tiáo huángsè duǎnkù de dàxiǎo hěn héshì."
+          }
+        },
+        {
+          "image": "images/hsk3-l07/photo-text-1-old-bike.png",
+          "promptEn": "The bicycle is too short for Xiaoxue.",
+          "target": "选择“适合”或“合适”，说一个完整句子。",
+          "sampleAnswer": {
+            "hanzi": "这辆自行车不适合小雪。",
+            "pinyin": "Zhè liàng zìxíngchē bù shìhé Xiǎoxuě."
+          }
+        }
+      ],
+      "practiceItems": [
+        {
+          "id": "g07_05_p01",
+          "prompt": "这件衣服的大小很____。",
+          "answer": "合适",
+          "reason": "描述“大小”恰当，用形容词“合适”。"
+        },
+        {
+          "id": "g07_05_p02",
+          "prompt": "这件黄色的裙子很____你。",
+          "answer": "适合",
+          "reason": "后面直接带对象“你”，用动词“适合”。"
+        },
+        {
+          "id": "g07_05_p03",
+          "prompt": "晚上八点开会，你觉得时间____吗？",
+          "answer": "合适",
+          "reason": "描述“时间”是否恰当，用“合适”。"
+        },
+        {
+          "id": "g07_05_p04",
+          "prompt": "这辆自行车太矮了，不____小雪。",
+          "answer": "适合",
+          "reason": "后面带对象“小雪”，用“适合”。"
+        },
+        {
+          "id": "g07_05_p05",
+          "prompt": "我觉得这份工作很____他。",
+          "answer": "适合",
+          "reason": "后面带对象“他”，用“适合”。"
+        },
+        {
+          "id": "g07_05_p06",
+          "prompt": "在教室里大声讲电话不____。",
+          "answer": "合适",
+          "reason": "评价行为是否恰当，用“合适”。"
+        }
       ]
     }
   },
   "textTeachingNotes": {
     "t_hsk3_l07_01": {
-      "listenPrompt": "小雪为什么需要一辆新自行车？他们准备怎么去商场？",
+      "presentationMode": "listen_first_progressive",
+      "listenPrompt": "先完整听一遍，不看课文。听完后，说说你听到了哪些人物、物品和动作。",
       "classQuestions": [
         {
           "question": "这辆自行车是什么时候买的？",
@@ -1266,23 +1773,53 @@
           "answer": "走着去。"
         }
       ],
-      "teachingPoints": [
-        {
-          "expression": "看起来",
-          "meaning": "说明观察后得到的感觉。",
-          "example": "看起来有点儿旧了。"
-        },
-        {
-          "expression": "让 + 人 + 动词",
-          "meaning": "安排或允许某人做某事。",
-          "example": "让她试一下。"
-        },
-        {
-          "expression": "走着去",
-          "meaning": "用“着”说明去商场的方式。",
-          "example": "咱们可以走着去。"
-        }
-      ],
+      "cultureDiscussion": {
+        "title": "旧车没坏，怎么处理？",
+        "titleEn": "What can we do with an old bike that still works?",
+        "questions": [
+          {
+            "hanzi": "小雪的自行车旧了，但是没有坏。她可以怎么处理这辆车？",
+            "pinyin": "Xiǎoxuě de zìxíngchē jiù le, dànshì méiyǒu huài. Tā kěyǐ zěnme chǔlǐ zhè liàng chē?"
+          },
+          {
+            "hanzi": "你买过或卖过二手物品吗？",
+            "pinyin": "Nǐ mǎiguo huò màiguo èrshǒu wùpǐn ma?"
+          }
+        ],
+        "wordCards": [
+          {
+            "hanzi": "二手车",
+            "pinyin": "èrshǒu chē",
+            "english": "second-hand vehicle"
+          },
+          {
+            "hanzi": "送给别人",
+            "pinyin": "sòng gěi biérén",
+            "english": "give it to someone"
+          },
+          {
+            "hanzi": "修理",
+            "pinyin": "xiūlǐ",
+            "english": "repair"
+          },
+          {
+            "hanzi": "回收",
+            "pinyin": "huíshōu",
+            "english": "recycle"
+          }
+        ],
+        "background": "“二手车”就是别人用过、还可以继续使用的车。",
+        "sampleAnswers": [
+          {
+            "hanzi": "可以把它当二手车卖给别人。",
+            "pinyin": "Kěyǐ bǎ tā dàng èrshǒu chē mài gěi biérén."
+          },
+          {
+            "hanzi": "也可以送给需要的人，或者修理以后继续用。",
+            "pinyin": "Yě kěyǐ sòng gěi xūyào de rén, huòzhě xiūlǐ yǐhòu jìxù yòng."
+          }
+        ]
+      },
       "retellScaffold": {
         "nodes": [
           {
@@ -1306,7 +1843,8 @@
       }
     },
     "t_hsk3_l07_02": {
-      "listenPrompt": "王一雪比较了哪两件衣服？她最后马上决定了吗？",
+      "presentationMode": "listen_first_progressive",
+      "listenPrompt": "先完整听一遍，不看课文。听完后，说说他们比较了哪些商品。",
       "classQuestions": [
         {
           "question": "王一雪试穿了什么？",
@@ -1329,23 +1867,57 @@
           "answer": "她想多看看，而且看到了买二送一。"
         }
       ],
-      "teachingPoints": [
-        {
-          "expression": "比……更……",
-          "meaning": "加强两件商品的比较。",
-          "example": "裙子比短裤更好看。"
-        },
-        {
-          "expression": "不比……多少",
-          "meaning": "说明两者差别不大。",
-          "example": "裙子不比短裤贵多少。"
-        },
-        {
-          "expression": "买二送一",
-          "meaning": "促销：买两个商品，免费得到一个。",
-          "example": "那边有买二送一！"
-        }
-      ],
+      "cultureDiscussion": {
+        "title": "这些优惠，你看得懂吗？",
+        "titleEn": "Can you read these sale offers?",
+        "questions": [
+          {
+            "hanzi": "这些优惠分别是什么意思？",
+            "pinyin": "Zhèxiē yōuhuì fēnbié shì shénme yìsi?"
+          },
+          {
+            "hanzi": "买东西时，你最喜欢哪一种优惠？为什么？",
+            "pinyin": "Mǎi dōngxi shí, nǐ zuì xǐhuan nǎ yì zhǒng yōuhuì? Wèishénme?"
+          }
+        ],
+        "promoCards": [
+          {
+            "label": "买二送一",
+            "pinyin": "mǎi èr sòng yī",
+            "meaning": "Buy 2, get 1 free"
+          },
+          {
+            "label": "满100减20",
+            "pinyin": "mǎn yìbǎi jiǎn èrshí",
+            "meaning": "Spend ¥100, save ¥20"
+          },
+          {
+            "label": "打八五折",
+            "pinyin": "dǎ bāwǔ zhé",
+            "meaning": "Pay 85% of the original price"
+          },
+          {
+            "label": "第二杯半价",
+            "pinyin": "dì-èr bēi bànjià",
+            "meaning": "Second drink half price"
+          },
+          {
+            "label": "满200返20",
+            "pinyin": "mǎn liǎngbǎi fǎn èrshí",
+            "meaning": "Spend ¥200, receive ¥20 back"
+          }
+        ],
+        "sampleAnswers": [
+          {
+            "hanzi": "“满100减20”是买满一百块，可以少付二十块。",
+            "pinyin": "“Mǎn yìbǎi jiǎn èrshí” shì mǎi mǎn yìbǎi kuài, kěyǐ shǎo fù èrshí kuài."
+          },
+          {
+            "hanzi": "我喜欢打八五折，因为每件商品都可以便宜一点儿。",
+            "pinyin": "Wǒ xǐhuan dǎ bāwǔ zhé, yīnwèi měi jiàn shāngpǐn dōu kěyǐ piányi yìdiǎnr."
+          }
+        ]
+      },
       "retellScaffold": {
         "nodes": [
           {
@@ -1369,7 +1941,8 @@
       }
     },
     "t_hsk3_l07_03": {
-      "listenPrompt": "西瓜怎么卖？最后店员同意多少钱？",
+      "presentationMode": "listen_first_progressive",
+      "listenPrompt": "先完整听一遍，不看课文。听完后，记住商品、价格和最后付款的钱数。",
       "classQuestions": [
         {
           "question": "店员怎样介绍西瓜？",
@@ -1392,23 +1965,84 @@
           "answer": "五十五块。"
         }
       ],
-      "teachingPoints": [
-        {
-          "expression": "怎么卖",
-          "meaning": "询问商品的计价方式和价格。",
-          "example": "西瓜怎么卖？"
-        },
-        {
-          "expression": "甜极了",
-          "meaning": "说明甜的程度非常高。",
-          "example": "这块冰西瓜甜极了。"
-        },
-        {
-          "expression": "块、毛、斤、公斤",
-          "meaning": "人民币和重量单位。",
-          "example": "一共五十八块五毛。"
-        }
-      ],
+      "cultureDiscussion": {
+        "title": "买菜可以讲价吗？",
+        "titleEn": "Can you bargain when buying groceries?",
+        "questions": [
+          {
+            "hanzi": "哪些地方可能可以讲价？哪些地方一般不讲价？",
+            "pinyin": "Nǎxiē dìfang kěnéng kěyǐ jiǎngjià? Nǎxiē dìfang yìbān bù jiǎngjià?"
+          },
+          {
+            "hanzi": "如果你想请店员便宜一点儿，你会怎么说？",
+            "pinyin": "Rúguǒ nǐ xiǎng qǐng diànyuán piányi yìdiǎnr, nǐ huì zěnme shuō?"
+          }
+        ],
+        "wordCards": [
+          {
+            "hanzi": "讲价",
+            "pinyin": "jiǎngjià",
+            "english": "bargain"
+          },
+          {
+            "hanzi": "便宜点儿",
+            "pinyin": "piányi diǎnr",
+            "english": "a little cheaper"
+          },
+          {
+            "hanzi": "卖不卖",
+            "pinyin": "mài bu mài",
+            "english": "will you sell it?"
+          },
+          {
+            "hanzi": "抹零",
+            "pinyin": "mǒ líng",
+            "english": "round down the total"
+          }
+        ],
+        "background": "菜市场和小店有时可以讲价；超市和明码标价的商店一般不能讲价。",
+        "tips": [
+          {
+            "label": "礼貌提出价格",
+            "pinyin": "lǐmào tíchū jiàgé",
+            "english": "Politely suggest a price instead of demanding a discount.",
+            "example": "十五块，行不行？",
+            "examplePinyin": "Shíwǔ kuài, xíng bu xíng?"
+          },
+          {
+            "label": "说明数量",
+            "pinyin": "shuōmíng shùliàng",
+            "english": "Explain how much you are buying; a larger quantity can support your request.",
+            "example": "买得多，便宜点儿怎么样？",
+            "examplePinyin": "Mǎi de duō, piányi diǎnr zěnmeyàng?"
+          },
+          {
+            "label": "抹零",
+            "pinyin": "mǒ líng",
+            "english": "Ask to round the total down by removing the small change.",
+            "example": "一共十五块三毛，十五块行不行？",
+            "examplePinyin": "Yígòng shíwǔ kuài sān máo, shíwǔ kuài xíng bu xíng?"
+          }
+        ],
+        "sampleAnswers": [
+          {
+            "hanzi": "买得多，便宜点儿怎么样？",
+            "pinyin": "Mǎi de duō, piányi diǎnr zěnmeyàng?"
+          },
+          {
+            "hanzi": "十五块，行不行？",
+            "pinyin": "Shíwǔ kuài, xíng bu xíng?"
+          },
+          {
+            "hanzi": "八块一斤，十五块两斤卖不卖？",
+            "pinyin": "Bā kuài yì jīn, shíwǔ kuài liǎng jīn mài bu mài?"
+          },
+          {
+            "hanzi": "一共十五块三毛，十五块行不行？",
+            "pinyin": "Yígòng shíwǔ kuài sān máo, shíwǔ kuài xíng bu xíng?"
+          }
+        ]
+      },
       "retellScaffold": {
         "nodes": [
           {
@@ -1432,7 +2066,8 @@
       }
     },
     "t_hsk3_l07_04": {
-      "listenPrompt": "刘明为什么想换电视？新电视有哪些优点？",
+      "presentationMode": "listen_first_progressive",
+      "listenPrompt": "先完整听一遍，不看课文。听完后，说说刘明为什么想换电视。",
       "classQuestions": [
         {
           "question": "新家里出现了什么问题？",
@@ -1455,23 +2090,57 @@
           "answer": "叫它一声就能开机。"
         }
       ],
-      "teachingPoints": [
-        {
-          "expression": "是时候……了",
-          "meaning": "到了应该做某事的时候。",
-          "example": "是时候换个新电视了。"
-        },
-        {
-          "expression": "不但……而且……",
-          "meaning": "递进说明两个优点。",
-          "example": "不但便宜，而且用着非常方便。"
-        },
-        {
-          "expression": "叫它一声就……",
-          "meaning": "说明语音控制和结果。",
-          "example": "叫它一声就能开机。"
-        }
-      ],
+      "cultureDiscussion": {
+        "title": "智能家电真的更方便吗？",
+        "titleEn": "Do smart appliances really make life easier?",
+        "questions": [
+          {
+            "hanzi": "智能电视除了语音开机，还可以做什么？",
+            "pinyin": "Zhìnéng diànshì chúle yǔyīn kāijī, hái kěyǐ zuò shénme?"
+          },
+          {
+            "hanzi": "网上买电视时，你会先比较什么？",
+            "pinyin": "Wǎngshang mǎi diànshì shí, nǐ huì xiān bǐjiào shénme?"
+          }
+        ],
+        "wordCards": [
+          {
+            "hanzi": "智能电视",
+            "pinyin": "zhìnéng diànshì",
+            "english": "smart TV"
+          },
+          {
+            "hanzi": "语音开机",
+            "pinyin": "yǔyīn kāijī",
+            "english": "voice power-on"
+          },
+          {
+            "hanzi": "上网",
+            "pinyin": "shàngwǎng",
+            "english": "go online"
+          },
+          {
+            "hanzi": "大小",
+            "pinyin": "dàxiǎo",
+            "english": "size"
+          },
+          {
+            "hanzi": "售后服务",
+            "pinyin": "shòuhòu fúwù",
+            "english": "after-sales service"
+          }
+        ],
+        "sampleAnswers": [
+          {
+            "hanzi": "智能电视不但可以听声音开机，而且还可以上网。",
+            "pinyin": "Zhìnéng diànshì búdàn kěyǐ tīng shēngyīn kāijī, érqiě hái kěyǐ shàngwǎng."
+          },
+          {
+            "hanzi": "我会先比较大小、价格和功能，还会看看售后服务。",
+            "pinyin": "Wǒ huì xiān bǐjiào dàxiǎo, jiàgé hé gōngnéng, hái huì kànkan shòuhòu fúwù."
+          }
+        ]
+      },
       "retellScaffold": {
         "nodes": [
           {
@@ -1683,6 +2352,27 @@
       "phrases": [
         "自动开机",
         "开机以后"
+      ]
+    },
+    "v07_28": {
+      "session": "C",
+      "phrases": [
+        "换电视",
+        "换一个新的"
+      ]
+    },
+    "v07_29": {
+      "session": "C",
+      "phrases": [
+        "一台智能电视",
+        "选择智能电视"
+      ]
+    },
+    "v07_30": {
+      "session": "B",
+      "phrases": [
+        "适合你",
+        "适合学生"
       ]
     }
   },
@@ -2051,14 +2741,14 @@
         "为课堂购物任务做准备"
       ],
       "storyIntro": "比较商品并做决定",
-      "storyIntroEn": "Compare style, size and price before buying. 买二送一 means “buy two, get one free,” a common retail promotion.",
+      "storyIntroEn": "Compare style, size and price before buying. 适合 is a verb that normally takes an object; 合适 is an adjective. 买二送一 means “buy two, get one free.”",
       "stages": [
         {
           "id": "b1",
           "title": "今日词表",
           "titleEn": "Meet the Words",
           "screenPrompt": "先看图片、背景提示和本次生词。",
-          "screenPromptEn": "Compare style, size and price before buying. 买二送一 means “buy two, get one free,” a common retail promotion.",
+          "screenPromptEn": "Compare style, size and price before buying. 适合 is a verb that normally takes an object; 合适 is an adjective. 买二送一 means “buy two, get one free.”",
           "interactionType": "study_list",
           "photos": [
             {
@@ -2093,6 +2783,13 @@
               "pinyin": "héshì",
               "english": "suitable; fit",
               "example": "这条裙子的大小很合适。",
+              "exampleEnglish": ""
+            },
+            {
+              "hanzi": "适合",
+              "pinyin": "shìhé",
+              "english": "suit; be suitable for",
+              "example": "这件黄色的裙子很适合你。",
               "exampleEnglish": ""
             },
             {
@@ -2155,7 +2852,7 @@
               "options": [
                 "大小",
                 "合适",
-                "裙子"
+                "适合"
               ],
               "answer": "大小"
             },
@@ -2165,21 +2862,21 @@
               "questionEn": "Which Chinese expression means “suitable; fit”?",
               "options": [
                 "合适",
-                "裙子",
-                "更"
+                "适合",
+                "裙子"
               ],
               "answer": "合适"
             },
             {
               "id": "b2q5",
               "question": "",
-              "questionEn": "Which Chinese expression means “skirt”?",
+              "questionEn": "Which Chinese expression means “suit; be suitable for”?",
               "options": [
+                "适合",
                 "裙子",
-                "更",
-                "决定"
+                "更"
               ],
-              "answer": "裙子"
+              "answer": "适合"
             }
           ]
         },
@@ -2208,12 +2905,12 @@
               "meaning": "suitable; fit"
             },
             {
-              "word": "裙子",
-              "meaning": "skirt"
+              "word": "适合",
+              "meaning": "suit; be suitable for"
             },
             {
-              "word": "更",
-              "meaning": "more; even more"
+              "word": "裙子",
+              "meaning": "skirt"
             }
           ]
         },
@@ -2265,20 +2962,20 @@
               "options": [
                 "决定",
                 "合适",
-                "裙子"
+                "适合"
               ],
               "answer": "决定"
             },
             {
               "id": "b4q5",
-              "question": "这双鞋太小了，不太____。",
+              "question": "这件黄色的裙子很____你。",
               "questionEn": "Choose the word that completes the sentence.",
               "options": [
-                "合适",
-                "更",
-                "决定"
+                "适合",
+                "裙子",
+                "更"
               ],
-              "answer": "合适"
+              "answer": "适合"
             }
           ]
         },
@@ -2319,7 +3016,7 @@
               "options": [
                 "大小",
                 "合适",
-                "裙子"
+                "适合"
               ],
               "answer": "大小"
             },
@@ -2329,13 +3026,24 @@
               "questionEn": "Choose “suitable; fit”.",
               "options": [
                 "合适",
-                "裙子",
-                "更"
+                "适合",
+                "裙子"
               ],
               "answer": "合适"
             },
             {
               "id": "b5q5",
+              "question": "",
+              "questionEn": "Choose “suit; be suitable for”.",
+              "options": [
+                "适合",
+                "裙子",
+                "更"
+              ],
+              "answer": "适合"
+            },
+            {
+              "id": "b5q6",
               "question": "",
               "questionEn": "Choose “skirt”.",
               "options": [
@@ -2346,7 +3054,7 @@
               "answer": "裙子"
             },
             {
-              "id": "b5q6",
+              "id": "b5q7",
               "question": "",
               "questionEn": "Choose “more; even more”.",
               "options": [
@@ -2355,17 +3063,6 @@
                 "短裤"
               ],
               "answer": "更"
-            },
-            {
-              "id": "b5q7",
-              "question": "",
-              "questionEn": "Choose “decide; decision”.",
-              "options": [
-                "决定",
-                "短裤",
-                "大小"
-              ],
-              "answer": "决定"
             },
             {
               "id": "b5q8",
@@ -2385,7 +3082,7 @@
               "options": [
                 "大小",
                 "合适",
-                "裙子"
+                "适合"
               ],
               "answer": "大小"
             },
@@ -2396,7 +3093,7 @@
               "options": [
                 "更",
                 "合适",
-                "裙子"
+                "适合"
               ],
               "answer": "更"
             }
@@ -2860,13 +3557,17 @@
       "v07_24",
       "v07_25",
       "v07_26",
-      "v07_27"
+      "v07_27",
+      "v07_28",
+      "v07_29",
+      "v07_30"
     ],
     "grammarIds": [
       "g07_01",
       "g07_02",
       "g07_03",
-      "g07_04"
+      "g07_04",
+      "g07_05"
     ],
     "readingData": [
       {
@@ -5114,14 +5815,15 @@
           "required": true,
           "prompt_cn": "比较两个商品的价格、大小、颜色或特点，至少写三个比较句并做决定。",
           "prompt_en": "Compare two products by price, size, color or features. Write at least three comparison sentences and make a decision.",
-          "answerPlaceholder": "A比B更……。A不比B……多少。A的……，B的……。我决定……，因为……。",
+          "answerPlaceholder": "A比B更……。A不比B……多少。A的大小很合适，也更适合我。我决定……，因为……。",
           "needsTeacherReview": true,
           "openEnded": true,
           "wordBank": [
             "比……更……",
             "比……还……",
             "不比……多少",
-            "大小合适",
+            "适合",
+            "合适",
             "决定"
           ],
           "picturePrompts": [
@@ -5143,7 +5845,7 @@
             },
             {
               "label": "标准层 / Core",
-              "instruction": "写三个不同维度的比较句，并说明决定。"
+              "instruction": "写三个不同维度的比较句，并正确使用“适合”或“合适”。"
             },
             {
               "label": "挑战层 / Challenge",
@@ -5192,12 +5894,13 @@
           "required": true,
           "prompt_cn": "整合需要、两项商品比较和最后决定，准备1—2分钟“我的购物建议”。",
           "prompt_en": "Combine the need, two product choices, comparison and final decision into a 1–2 minute Smart Shopper Recommendation.",
-          "answerPlaceholder": "我的……已经……，所以需要……。A比B更……，但A不比B……多少。A不但……，而且……。我决定……，因为……。",
+          "answerPlaceholder": "我的……已经……，所以需要……。A比B更……，但A不比B……多少。A很适合我，大小也很合适。A不但……，而且……。我决定……，因为……。",
           "needsTeacherReview": true,
           "openEnded": true,
           "wordBank": [
             "旧",
             "太……",
+            "适合",
             "合适",
             "比……更……",
             "不比……多少",
@@ -5266,6 +5969,7 @@
       "购物词汇",
       "V1着V2",
       "商品比较句",
+      "适合与合适",
       "极了",
       "不但……而且……",
       "询价和购物建议"
