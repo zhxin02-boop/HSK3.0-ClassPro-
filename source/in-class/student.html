@@ -682,7 +682,7 @@ client.on("close",function(){setStatus("disconnected")});
   function isParagraph(){var d=qdata();return current&&current.mode==='r4p'&&Array.isArray(d.passageParts)&&Array.isArray(d.options)}
   function ensure(q,d){if(state.id!==(q&&q.id||'')){state={id:q&&q.id||'',answers:{},active:0}}var count=(d.answers||[]).length||3;if(state.active>=count)state.active=0}
   function blankCount(d){var found=0;(d.passageParts||[]).forEach(function(x){var m=String(x||'').match(/_{2,}\s*(\d+)\s*_{2,}/g);found+=m?m.length:0});return found||((d.answers||[]).length||3)}
-  function blankButton(index,d,disabled){var answerIndex=state.answers[index],answer=answerIndex==null?'':(d.options||[])[answerIndex]||'';return '<button type="button" class="paragraph-blank '+(state.active===index?'active ':'')+(answer?'filled':'')+'" onclick="selectParagraphBlank('+index+')" '+(disabled?'disabled':'')+'><b>空 '+(index+1)+'</b> · '+(answer?es(answer):'点这里，再从下方选择句子')+'</button>'}
+  function blankButton(index,d,disabled){var answerIndex=state.answers[index],answer=answerIndex==null?'':(d.options||[])[answerIndex]||'';return '<button type="button" class="paragraph-blank slot-'+(index+1)+' '+(state.active===index?'active ':'')+(answer?'filled':'')+'" onclick="selectParagraphBlank('+index+')" '+(disabled?'disabled':'')+'><b>空 '+(index+1)+'</b> · '+(answer?es(answer):'点这里，再从下方选择句子')+'</button>'}
   window.selectParagraphBlank=function(index){state.active=index;render()};
   window.placeParagraphOption=function(index){Object.keys(state.answers).forEach(function(k){if(state.answers[k]===index)delete state.answers[k]});state.answers[state.active]=index;var d=qdata(),count=blankCount(d);for(var step=1;step<=count;step++){var next=(state.active+step)%count;if(state.answers[next]==null){state.active=next;break}}render()};
   window.submitParagraphFill=function(){
@@ -700,7 +700,7 @@ client.on("close",function(){setStatus("disconnected")});
     if(submittedAnswer&&submittedAnswer.questionId===q.id){document.getElementById('app').innerHTML='<div class="ok">已保存并提交。网络恢复后如有需要会自动补发。 / Saved and submitted.</div>';return}
     ensure(q,d);var blankIndex=0,h='<div class="paragraph-task"><div class="paragraph-head"><div class="student-kicker">段落填空 / PARAGRAPH</div><h2>'+es(d.title||'选句完成段落')+'</h2><div class="muted">先点空位，再选择下方最合适的句子。每个句子只能使用一次。</div></div><div class="paragraph-passage">';
     (d.passageParts||[]).forEach(function(part,partIndex){var raw=String(part||''),matches=raw.match(/_{2,}\s*\d+\s*_{2,}/g);if(matches&&matches.length){var cursor=0,html='';raw.replace(/_{2,}\s*\d+\s*_{2,}/g,function(token,offset){var segment=raw.slice(cursor,offset);html+=rubyLine(segment,py(segment),20)+blankButton(blankIndex++,d,disabled);cursor=offset+token.length;return token});var tail=raw.slice(cursor);html+=rubyLine(tail,py(tail),20);h+='<div class="paragraph-line">'+html+'</div>'}else h+='<p class="paragraph-line">'+rubyLine(raw,(d.passageParts_pinyin||[])[partIndex]||'',20)+'</p>'});
-    h+='</div><div class="paragraph-options">';(d.options||[]).forEach(function(option,i){var usedBy=-1;Object.keys(state.answers).forEach(function(k){if(state.answers[k]===i)usedBy=parseInt(k,10)});h+='<button type="button" class="paragraph-option '+(usedBy>=0?'used':'')+'" onclick="placeParagraphOption('+i+')" '+(disabled?'disabled':'')+'><span>'+String.fromCharCode(65+i)+'</span><b>'+rubyLine(option,(d.options_pinyin||[])[i]||'',17)+(usedBy>=0?' · 已放入空 '+(usedBy+1):'')+'</b></button>'});
+    h+='</div><div class="paragraph-options">';(d.options||[]).forEach(function(option,i){var usedBy=-1;Object.keys(state.answers).forEach(function(k){if(state.answers[k]===i)usedBy=parseInt(k,10)});h+='<button type="button" class="paragraph-option '+(usedBy>=0?'used placed-'+(usedBy+1):'')+'" onclick="placeParagraphOption('+i+')" '+(disabled?'disabled':'')+'><span class="paragraph-option-label">'+String.fromCharCode(65+i)+'</span><b class="paragraph-option-text">'+rubyLine(option,(d.options_pinyin||[])[i]||'',17)+(usedBy>=0?' · 已放入空 '+(usedBy+1):'')+'</b></button>'});
     var ready=Object.keys(state.answers).length>=blankCount(d);h+='</div><button type="button" onclick="submitParagraphFill()" '+(!ready||disabled?'disabled':'')+'>提交答案 / Submit</button></div>';document.getElementById('app').innerHTML=h;applyPinyinVisibility();
   };
 })();
@@ -839,5 +839,17 @@ rt{font-size:.42em;line-height:1.1;padding-bottom:3px}.py,[data-pinyin="1"]{font
   lastRenderSignature=renderSignature();render();
 })();
 </script>
+<style>
+/* Clear blind-box words and paragraph choices from the classroom feedback pass. */
+.old-stu-box.open:before{content:none!important}
+.old-stu-box.open b{margin-top:18px}
+.old-stu-box b .classpro-pinyin-ruby,.old-stu-box b .classpro-pinyin-ruby>span{font-size:22px!important}
+.paragraph-option{grid-template-columns:24px minmax(0,1fr)!important;align-items:start!important}
+.paragraph-option>span.paragraph-option-label{display:block!important;width:auto!important;height:auto!important;border-radius:0!important;background:transparent!important;color:#607168!important;font-size:13px!important;font-weight:1000!important;line-height:1.55!important}
+.paragraph-option .classpro-pinyin-ruby>span,.paragraph-option .classpro-ruby-punctuation{display:inline-block!important;width:auto!important;height:auto!important;border-radius:0!important;background:transparent!important;color:inherit!important;font-size:17px!important;line-height:1.2!important}
+.paragraph-option.used.placed-1,.paragraph-blank.filled.slot-1{border-color:#68a67d!important;background:#e5f4e9!important;color:#164e36!important}
+.paragraph-option.used.placed-2,.paragraph-blank.filled.slot-2{border-color:#6c9ed1!important;background:#e7f1fb!important;color:#1d4f7a!important}
+.paragraph-option.used.placed-3,.paragraph-blank.filled.slot-3{border-color:#d99a56!important;background:#fff0df!important;color:#7c4617!important}
+</style>
 </body>
 </html>

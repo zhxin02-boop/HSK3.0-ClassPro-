@@ -27,7 +27,7 @@ window.HSK3_CURRICULUM = [
   { id: "HSK3-L05", no: 5, title: "这样的照片才好看", en: "Photos like these are the best", page: "005", block: 1, openForUse: true, teacherVisible: true, status: "ready" },
   { id: "HSK3-L06", no: 6, title: "高铁上还可以点外卖", en: "You can even order takeout on a high-speed train", page: "006", block: 1, openForUse: true, teacherVisible: true, status: "ready" },
   { id: "HSK3-L07", no: 7, title: "那条裙子比短裤更好看", en: "That skirt looks better than the shorts", page: "007", block: 2, openForUse: true, teacherVisible: true, status: "ready" },
-  { id: "HSK3-L08", no: 8, title: "今天我出院了", en: "Today I was discharged from the hospital", page: "008", block: 2, openForUse: false, teacherVisible: true, status: "preparing" },
+  { id: "HSK3-L08", no: 8, title: "今天我出院了", en: "Today I was discharged from the hospital", page: "008", block: 2, openForUse: true, teacherVisible: true, status: "ready" },
   { id: "HSK3-L09", no: 9, title: "打不好没关系", en: "It doesn't matter if you don't play well", page: "009", block: 2, openForUse: false, teacherVisible: true, status: "preparing" },
   { id: "HSK3-L10", no: 10, title: "你明天再把书还给我", en: "Return the book to me tomorrow", page: "010", block: 2, openForUse: false, teacherVisible: true, status: "preparing" },
   { id: "HSK3-L11", no: 11, title: "看来我没办法解决这个问题", en: "It seems I can't solve this problem", page: "011", block: 2, openForUse: false, teacherVisible: true, status: "preparing" },
