@@ -433,8 +433,14 @@ const paragraphRows = [
 ];
 const paragraphs = paragraphRows.map((x,i,a)=>({id:`l07_para_0${i+1}`,type:'open_response',stage:'in_class',contentRole:roleFor(i,a.length),prompt_cn:'段落填空。',prompt_en:'Choose three sentences to complete the paragraph.',openEnded:true,needsTeacherReview:true,data:{title:x[0],passageParts:x[1],options:x[2].concat(['我下午去银行。','大家比较了几张照片。','服务员先拿来了菜单。']),answers:[0,1,2],instructions:'点击句子，再点击对应空格。',answerPlaceholder:''}}));
 
-const chainRows = [['从“这件东西太旧了”开始','这件东西太旧了',['需要','换','试一下']],['从“这条裙子”开始','这条裙子',['比','更','决定']],['从“水果店的西瓜”开始','水果店的西瓜',['新鲜','甜极了','一共']],['从“这台智能电视”开始','这台智能电视',['不但','而且','开机']],['从“到了商场”开始','到了商场',['先','再','最后']]];
-const chains = chainRows.map((x,i,a)=>({id:`l07_chain_0${i+1}`,type:'open_response',stage:'in_class',contentRole:roleFor(i,a.length),prompt_cn:'接龙造句。',prompt_en:'Continue the sentence chain.',openEnded:true,needsTeacherReview:true,data:{title:x[0],starter:x[1],steps:[`S1: ${x[1]}`,`S2: ${x[1]}……`,`S3: ${x[1]}…………`],keywords:x[2],instructions:'每位学生增加一个自然的部分，最后形成完整表达。',answerPlaceholder:'继续接一句中文。'}}));
+const chainRows = [
+  ['旧自行车的新故事','小雪发现自行车太旧了',['旧','需要','换','试一下','合适'],['jiù','xūyào','huàn','shì yíxià','héshì']],
+  ['服装店里的决定','王一雪在服装店试衣服',['短裤','裙子','比……更……','不比……多少','决定'],['duǎnkù','qúnzi','bǐ……gèng……','bù bǐ……duōshao','juédìng']],
+  ['水果店里的讲价','王一雪来到水果店',['新鲜','甜极了','一共','便宜点儿','不能再……了'],['xīnxiān','tián jí le','yígòng','piányi diǎnr','bù néng zài……le']],
+  ['选择一台智能电视','刘明想换一台新电视',['旧电视','不但','而且','开机','决定'],['jiù diànshì','búdàn','érqiě','kāijī','juédìng']],
+  ['周末去商场','周末我们一起去商场',['先','走着去','再','买二送一','最后'],['xiān','zǒuzhe qù','zài','mǎi èr sòng yī','zuìhòu']]
+];
+const chains = chainRows.map((x,i,a)=>({id:`l07_chain_0${i+1}`,type:'open_response',stage:'in_class',contentRole:roleFor(i,a.length),prompt_cn:'五词故事接龙。',prompt_en:'Build one story with five covered words.',openEnded:true,needsTeacherReview:true,data:{title:x[0],starter:x[1],steps:x[2].map((_,k)=>`第${k+1}句：使用“${x[2][k]}”继续故事。`),keywords:x[2],keywords_pinyin:x[3],chainModes:['teacher','race','team'],instructions:'五个词先全部盖住，每次打开一个词并接一句，最后形成完整故事。',answerPlaceholder:'用当前打开的词继续故事。'}}));
 
 const battleGames = {
   roulette:[

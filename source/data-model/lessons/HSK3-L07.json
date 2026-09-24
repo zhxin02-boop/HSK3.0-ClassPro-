@@ -5456,25 +5456,41 @@
           "type": "open_response",
           "stage": "in_class",
           "contentRole": "lesson",
-          "prompt_cn": "接龙造句。",
-          "prompt_en": "Continue the sentence chain.",
+          "prompt_cn": "五词故事接龙。",
+          "prompt_en": "Build one story with five covered words.",
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "title": "从“这件东西太旧了”开始",
-            "starter": "这件东西太旧了",
+            "title": "旧自行车的新故事",
+            "starter": "小雪发现自行车太旧了",
             "steps": [
-              "S1: 这件东西太旧了",
-              "S2: 这件东西太旧了……",
-              "S3: 这件东西太旧了…………"
+              "第1句：使用“旧”继续故事。",
+              "第2句：使用“需要”继续故事。",
+              "第3句：使用“换”继续故事。",
+              "第4句：使用“试一下”继续故事。",
+              "第5句：使用“合适”继续故事。"
             ],
             "keywords": [
+              "旧",
               "需要",
               "换",
-              "试一下"
+              "试一下",
+              "合适"
             ],
-            "instructions": "每位学生增加一个自然的部分，最后形成完整表达。",
-            "answerPlaceholder": "继续接一句中文。"
+            "keywords_pinyin": [
+              "jiù",
+              "xūyào",
+              "huàn",
+              "shì yíxià",
+              "héshì"
+            ],
+            "chainModes": [
+              "teacher",
+              "race",
+              "team"
+            ],
+            "instructions": "五个词先全部盖住，每次打开一个词并接一句，最后形成完整故事。",
+            "answerPlaceholder": "用当前打开的词继续故事。"
           }
         },
         {
@@ -5482,25 +5498,41 @@
           "type": "open_response",
           "stage": "in_class",
           "contentRole": "lesson",
-          "prompt_cn": "接龙造句。",
-          "prompt_en": "Continue the sentence chain.",
+          "prompt_cn": "五词故事接龙。",
+          "prompt_en": "Build one story with five covered words.",
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "title": "从“这条裙子”开始",
-            "starter": "这条裙子",
+            "title": "服装店里的决定",
+            "starter": "王一雪在服装店试衣服",
             "steps": [
-              "S1: 这条裙子",
-              "S2: 这条裙子……",
-              "S3: 这条裙子…………"
+              "第1句：使用“短裤”继续故事。",
+              "第2句：使用“裙子”继续故事。",
+              "第3句：使用“比……更……”继续故事。",
+              "第4句：使用“不比……多少”继续故事。",
+              "第5句：使用“决定”继续故事。"
             ],
             "keywords": [
-              "比",
-              "更",
+              "短裤",
+              "裙子",
+              "比……更……",
+              "不比……多少",
               "决定"
             ],
-            "instructions": "每位学生增加一个自然的部分，最后形成完整表达。",
-            "answerPlaceholder": "继续接一句中文。"
+            "keywords_pinyin": [
+              "duǎnkù",
+              "qúnzi",
+              "bǐ……gèng……",
+              "bù bǐ……duōshao",
+              "juédìng"
+            ],
+            "chainModes": [
+              "teacher",
+              "race",
+              "team"
+            ],
+            "instructions": "五个词先全部盖住，每次打开一个词并接一句，最后形成完整故事。",
+            "answerPlaceholder": "用当前打开的词继续故事。"
           }
         },
         {
@@ -5508,25 +5540,41 @@
           "type": "open_response",
           "stage": "in_class",
           "contentRole": "transfer",
-          "prompt_cn": "接龙造句。",
-          "prompt_en": "Continue the sentence chain.",
+          "prompt_cn": "五词故事接龙。",
+          "prompt_en": "Build one story with five covered words.",
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "title": "从“水果店的西瓜”开始",
-            "starter": "水果店的西瓜",
+            "title": "水果店里的讲价",
+            "starter": "王一雪来到水果店",
             "steps": [
-              "S1: 水果店的西瓜",
-              "S2: 水果店的西瓜……",
-              "S3: 水果店的西瓜…………"
+              "第1句：使用“新鲜”继续故事。",
+              "第2句：使用“甜极了”继续故事。",
+              "第3句：使用“一共”继续故事。",
+              "第4句：使用“便宜点儿”继续故事。",
+              "第5句：使用“不能再……了”继续故事。"
             ],
             "keywords": [
               "新鲜",
               "甜极了",
-              "一共"
+              "一共",
+              "便宜点儿",
+              "不能再……了"
             ],
-            "instructions": "每位学生增加一个自然的部分，最后形成完整表达。",
-            "answerPlaceholder": "继续接一句中文。"
+            "keywords_pinyin": [
+              "xīnxiān",
+              "tián jí le",
+              "yígòng",
+              "piányi diǎnr",
+              "bù néng zài……le"
+            ],
+            "chainModes": [
+              "teacher",
+              "race",
+              "team"
+            ],
+            "instructions": "五个词先全部盖住，每次打开一个词并接一句，最后形成完整故事。",
+            "answerPlaceholder": "用当前打开的词继续故事。"
           }
         },
         {
@@ -5534,25 +5582,41 @@
           "type": "open_response",
           "stage": "in_class",
           "contentRole": "transfer",
-          "prompt_cn": "接龙造句。",
-          "prompt_en": "Continue the sentence chain.",
+          "prompt_cn": "五词故事接龙。",
+          "prompt_en": "Build one story with five covered words.",
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "title": "从“这台智能电视”开始",
-            "starter": "这台智能电视",
+            "title": "选择一台智能电视",
+            "starter": "刘明想换一台新电视",
             "steps": [
-              "S1: 这台智能电视",
-              "S2: 这台智能电视……",
-              "S3: 这台智能电视…………"
+              "第1句：使用“旧电视”继续故事。",
+              "第2句：使用“不但”继续故事。",
+              "第3句：使用“而且”继续故事。",
+              "第4句：使用“开机”继续故事。",
+              "第5句：使用“决定”继续故事。"
             ],
             "keywords": [
+              "旧电视",
               "不但",
               "而且",
-              "开机"
+              "开机",
+              "决定"
             ],
-            "instructions": "每位学生增加一个自然的部分，最后形成完整表达。",
-            "answerPlaceholder": "继续接一句中文。"
+            "keywords_pinyin": [
+              "jiù diànshì",
+              "búdàn",
+              "érqiě",
+              "kāijī",
+              "juédìng"
+            ],
+            "chainModes": [
+              "teacher",
+              "race",
+              "team"
+            ],
+            "instructions": "五个词先全部盖住，每次打开一个词并接一句，最后形成完整故事。",
+            "answerPlaceholder": "用当前打开的词继续故事。"
           }
         },
         {
@@ -5560,25 +5624,41 @@
           "type": "open_response",
           "stage": "in_class",
           "contentRole": "review",
-          "prompt_cn": "接龙造句。",
-          "prompt_en": "Continue the sentence chain.",
+          "prompt_cn": "五词故事接龙。",
+          "prompt_en": "Build one story with five covered words.",
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "title": "从“到了商场”开始",
-            "starter": "到了商场",
+            "title": "周末去商场",
+            "starter": "周末我们一起去商场",
             "steps": [
-              "S1: 到了商场",
-              "S2: 到了商场……",
-              "S3: 到了商场…………"
+              "第1句：使用“先”继续故事。",
+              "第2句：使用“走着去”继续故事。",
+              "第3句：使用“再”继续故事。",
+              "第4句：使用“买二送一”继续故事。",
+              "第5句：使用“最后”继续故事。"
             ],
             "keywords": [
               "先",
+              "走着去",
               "再",
+              "买二送一",
               "最后"
             ],
-            "instructions": "每位学生增加一个自然的部分，最后形成完整表达。",
-            "answerPlaceholder": "继续接一句中文。"
+            "keywords_pinyin": [
+              "xiān",
+              "zǒuzhe qù",
+              "zài",
+              "mǎi èr sòng yī",
+              "zuìhòu"
+            ],
+            "chainModes": [
+              "teacher",
+              "race",
+              "team"
+            ],
+            "instructions": "五个词先全部盖住，每次打开一个词并接一句，最后形成完整故事。",
+            "answerPlaceholder": "用当前打开的词继续故事。"
           }
         }
       ],

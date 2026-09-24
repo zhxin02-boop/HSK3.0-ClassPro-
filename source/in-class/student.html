@@ -76,7 +76,8 @@ body.classpro-mock-active #app,body.classpro-mock-active #app *{-webkit-user-sel
 </div>
 <script>
 var query=new URLSearchParams(location.search),RM=query.get("room")||"8888",LESSON=query.get("lesson")||((window.ClassProContext&&ClassProContext.read().lesson)||"HSK1-L01");
-var current=null, selected=null, chunks=[], answerChunks=[], nameReady=false, matchLeft=null, matchRight=null, matchPairs={}, v5GroupAnswers={}, globalPinyinVisible=true;
+var current=null, selected=null, chunks=[], answerChunks=[], nameReady=false, matchLeft=null, matchRight=null, matchPairs={}, v5GroupAnswers={}, globalPinyinVisible=false, classproChainState=null;
+var STUDENT_CLIENT_ID="st_"+Math.random().toString(36).slice(2,10);
 var CLASS_STUDENTS=window.CLASS_STUDENTS||[];
 var scoreboard={rows:CLASS_STUDENTS.map(function(n){return{name:n,points:0}}),updatedAt:null};
 var draftKey="ClassProStudentDraft_"+RM+"_"+LESSON, outboxKey="ClassProStudentOutbox_"+RM+"_"+LESSON, submittedAnswer=null;
@@ -95,7 +96,7 @@ function flushPendingAnswers(){if(!window.client||!client.connected)return;pendi
 function name(){return rosterName(document.getElementById("studentName").value)||"Student"}
 function confirmName(){var el=document.getElementById("studentName");el.value=name();nameReady=true;document.getElementById("nameHint").innerHTML='已确认：<b>'+es(name())+'</b>';el.disabled=true;publishPresence();renderBoard()}
 function setStatus(t){document.getElementById("status").textContent=t}
-function publishPresence(){if(window.client&&client.connected)client.publish("classpro/room/"+RM+"/presence",JSON.stringify({count:1,studentName:name(),name:name(),seenAt:new Date().toISOString(),requestCurrent:true}))}
+function publishPresence(){if(window.client&&client.connected)client.publish("classpro/room/"+RM+"/presence",JSON.stringify({count:1,studentName:name(),name:name(),clientId:STUDENT_CLIENT_ID,seenAt:new Date().toISOString(),requestCurrent:true}))}
 function renderRosterOptions(){document.getElementById("studentName").innerHTML='<option value="">Select your name / 选择姓名</option>'+CLASS_STUDENTS.map(function(n){return'<option value="'+es(n)+'">'+es(n)+'</option>'}).join("")}
 function renderBoard(){var rows=(scoreboard.rows&&scoreboard.rows.length?scoreboard.rows:CLASS_STUDENTS.map(function(n){return{name:n,points:0}})).slice();rows.sort(function(a,b){return (b.points||0)-(a.points||0)||CLASS_STUDENTS.indexOf(a.name)-CLASS_STUDENTS.indexOf(b.name)});var me=normName(name()),myIdx=-1,h="";for(var i=0;i<Math.min(rows.length,10);i++){var r=rows[i],mine=normName(r.name)===me;if(mine)myIdx=i;h+='<div class="leader-row '+(mine?'me':'')+'"><div class="leader-rank">'+(i+1)+'</div><div class="leader-name">'+es(r.name)+'</div><div class="leader-pts">'+(r.points||0)+' pts</div></div>'}if(myIdx<0){for(var j=0;j<rows.length;j++){if(normName(rows[j].name)===me){myIdx=j;break}}}document.getElementById("leaderRows").innerHTML=h||'<div class="leader-empty">等待课堂积分...</div>';document.getElementById("myRank").textContent=myIdx>=0?"#"+(myIdx+1):"--"}
 function qdata(){if(current&&current.question&&window.ClassProPinyin)ClassProPinyin.enrichQuestion(current.question);return current&&current.question?current.question.data||{}:{}}
@@ -116,9 +117,9 @@ function submitOrdering(){publish(answerChunks.map(function(c){return c.t}).join
 function submitMatching(){if(!nameReady)confirmName();var pairs=qdata().pairs||[],correct=0,itemResults=[];for(var i=0;i<pairs.length;i++){var isCorrect=matchPairs[i]===i;if(isCorrect)correct++;itemResults.push({index:i+1,prompt:pairs[i].left||('第 '+(i+1)+' 小题'),answer:(pairs[matchPairs[i]]||{}).right||'',correctAnswer:pairs[i].right||'',result:isCorrect?'correct':'wrong'})}var ok=correct===pairs.length,ans=pairs.map(function(p,i){return(p.left||"")+"="+((pairs[matchPairs[i]]||{}).right||"")}).join("; ");var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:ans,text:ans,questionId:current.question.id,mode:current.mode,autoResult:ok?"correct":"wrong",score:correct,total:pairs.length,itemResults:itemResults,submittedAt:new Date().toISOString()};sendAnswer(payload);document.getElementById("app").innerHTML='<div class="submitted-neutral" data-neutral-feedback="1">已保存并提交，老师会统一公布结果。 / Submitted.</div>'}
 document.getElementById("studentName").addEventListener("keydown",function(e){if(e.key==="Enter")confirmName()});
 renderRosterOptions();restoreDraft();renderBoard();
-var client=mqtt.connect("wss://05d1d5baec9d4cb3a21f5517b430cff1.s1.eu.hivemq.cloud:8884/mqtt",{username:"classpro",password:"Classpro2026",clientId:"st_"+Math.random().toString(36).slice(2,10),reconnectPeriod:3000,connectTimeout:8000});
+var client=mqtt.connect("wss://05d1d5baec9d4cb3a21f5517b430cff1.s1.eu.hivemq.cloud:8884/mqtt",{username:"classpro",password:"Classpro2026",clientId:STUDENT_CLIENT_ID,reconnectPeriod:3000,connectTimeout:8000});
 client.on("connect",function(){setStatus("connected room "+RM);client.subscribe("classpro/room/"+RM+"/question");client.subscribe("classpro/room/"+RM+"/scoreboard");client.subscribe("classpro/room/"+RM+"/display");publishPresence();flushPendingAnswers()});
-client.on("message",function(topic,payload){try{var msg=JSON.parse(payload.toString());if(topic.indexOf("/scoreboard")>=0){scoreboard=msg;renderBoard();return}if(topic.indexOf("/display")>=0){if(!msg.lesson||msg.lesson===LESSON){if(msg.type==="pinyinVisibility"){globalPinyinVisible=msg.show!==false;applyPinyinVisibility()}}return}if(msg.lesson&&msg.lesson!==LESSON&&msg.mode!=='mock_test')return;if(typeof msg.pinyinVisible==="boolean")globalPinyinVisible=msg.pinyinVisible;var same=current&&current.question&&msg.question&&current.question.id===msg.question.id;if(!same){current=msg;selected=null;chunks=[];answerChunks=[];matchLeft=null;matchRight=null;matchPairs={};submittedAnswer=null}else current=msg;saveDraft();if(msg.mode==='mock_test')setStatus('received mock test '+(msg.phase||''));else setStatus('received question '+(msg.mode||''));render()}catch(e){console.log(e);setStatus('message parse error')}});
+client.on("message",function(topic,payload){try{var msg=JSON.parse(payload.toString());if(msg.targetClientId&&msg.targetClientId!==STUDENT_CLIENT_ID)return;if(topic.indexOf("/scoreboard")>=0){scoreboard=msg;renderBoard();return}if(topic.indexOf("/display")>=0){if(!msg.lesson||msg.lesson===LESSON){if(msg.type==="pinyinVisibility"){globalPinyinVisible=msg.show===true;applyPinyinVisibility()}}return}if(msg.lesson&&msg.lesson!==LESSON&&msg.mode!=='mock_test')return;if(typeof msg.pinyinVisible==="boolean")globalPinyinVisible=msg.pinyinVisible===true;var same=current&&current.question&&msg.question&&current.question.id===msg.question.id;if(!same){current=msg;selected=null;chunks=[];answerChunks=[];matchLeft=null;matchRight=null;matchPairs={};submittedAnswer=null}else current=msg;saveDraft();if(msg.mode==='mock_test')setStatus('received mock test '+(msg.phase||''));else setStatus('received question '+(msg.mode||''));render()}catch(e){console.log(e);setStatus('message parse error')}});
 client.on("error",function(e){setStatus("connection error");console.log(e)});
 client.on("close",function(){setStatus("disconnected")});
 </script>
@@ -746,6 +747,96 @@ client.on("close",function(){setStatus("disconnected")});
   render=function(){previousRender();enhanceControls();updateTimer()};
   setInterval(updateTimer,500);
   enhanceControls();updateTimer();
+})();
+</script>
+<style>
+/* Stable pinyin typography and the shared five-word story chain. */
+rt,.py,[data-pinyin="1"]{font-family:"Segoe UI","Microsoft YaHei",Arial,sans-serif;font-weight:600;letter-spacing:.035em;color:#6f7d76}
+rt{font-size:.42em;line-height:1.1;padding-bottom:3px}.py,[data-pinyin="1"]{font-size:12px;line-height:1.35}
+.student-chain{display:grid;gap:14px;text-align:left}.student-chain-head{padding:15px;border:1px solid #dbe7dd;border-radius:16px;background:#f8fbf8}.student-chain-head small{display:block;color:#176b50;font-weight:1000;letter-spacing:.08em}.student-chain-head h2{margin:5px 0 6px;color:#173e31;font-size:25px}.student-chain-starter{padding:12px 14px;border-left:5px solid #ef9b55;border-radius:10px;background:#fff7ed;font:900 22px/1.5 KaiTi,STKaiti,"Kaiti SC","Microsoft YaHei",serif;color:#56351d}.student-chain-words{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.student-chain-word{min-height:78px;display:grid;place-items:center;padding:8px;border:1px solid #d9e5dc;border-radius:14px;background:#fff;color:#1f4938;text-align:center;font-weight:1000}.student-chain-word.covered{background:linear-gradient(145deg,#176b50,#0f513c);color:#fff}.student-chain-word.covered b,.student-chain-word.covered small{display:none}.student-chain-word.covered:after{content:"?";font-size:30px}.student-chain-word.active{border-color:#ef9b55;box-shadow:0 0 0 4px rgba(239,155,85,.18)}.student-chain-word b{font:900 21px/1.25 KaiTi,STKaiti,"Kaiti SC","Microsoft YaHei",serif}.student-chain-word small{display:block;margin-top:4px;font-size:10px}.student-chain-story{display:grid;gap:8px}.student-chain-line{display:grid;grid-template-columns:30px 1fr;gap:9px;padding:11px 12px;border:1px solid #e0e8e2;border-radius:13px;background:#fff}.student-chain-line>span{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:#e8f3eb;color:#176b50;font-weight:1000}.student-chain-line p{margin:0;font:900 20px/1.5 KaiTi,STKaiti,"Kaiti SC","Microsoft YaHei",serif;color:#20372c}.student-chain-line small{display:block;margin-top:3px;color:#718078}.student-chain-submit{padding:14px;border:1px solid #d7e4da;border-radius:16px;background:#f7faf7}.student-chain-submit h3{margin:0 0 7px;color:#176b50}.student-chain-submit textarea{width:100%;min-height:130px;box-sizing:border-box;padding:13px 14px;border:2px solid #cadcca;border-radius:13px;font:900 20px/1.55 KaiTi,STKaiti,"Kaiti SC","Microsoft YaHei",serif;resize:vertical}.student-chain-wait{padding:18px;border:1px dashed #b9cdbd;border-radius:14px;background:#fafcf9;color:#607168;text-align:center;font-weight:900}.student-chain-team{display:inline-flex;margin-top:7px;padding:5px 9px;border-radius:999px;background:#edf6d9;color:#326d2b;font-size:12px;font-weight:1000}@media(max-width:620px){.student-chain-words{grid-template-columns:repeat(5,1fr);gap:5px}.student-chain-word{min-height:62px;padding:5px}.student-chain-word b{font-size:17px}.student-chain-word small{font-size:8px}}
+</style>
+<script>
+/* Shared student story-chain client plus resilient open-response drafts. */
+(function(){
+  var chainPending=null,composing=false,lastRenderSignature='';
+  function chainQuestionId(){return current&&current.question?String(current.question.id||''):''}
+  function chainData(){return current&&current.question&&current.question.data||{}}
+  function chainWords(){return chainData().keywords||[]}
+  function chainPinyin(){return chainData().keywords_pinyin||[]}
+  function chainLane(){
+    var state=classproChainState||{},student=normName(name()),teams=state.teams||{};
+    if((teams.dandelion||[]).some(function(n){return normName(n)===student}))return'dandelion';
+    if((teams.sprout||[]).some(function(n){return normName(n)===student}))return'sprout';
+    return'';
+  }
+  function laneState(state,lane){return state.mode==='team'?((state.lanes||{})[lane]||{revealed:0,sentences:[],authors:[]}):(state.single||{revealed:0,sentences:[],authors:[]})}
+  function storyHtml(lane){
+    var sentences=lane.sentences||[],authors=lane.authors||[];
+    if(!sentences.length)return'<div class="student-chain-wait">故事还没有开始，请等待第一个词打开。</div>';
+    return'<div class="student-chain-story">'+sentences.map(function(sentence,i){return'<div class="student-chain-line"><span>'+(i+1)+'</span><div><p>'+es(sentence)+'</p>'+(authors[i]?'<small>'+es(authors[i])+'</small>':'')+'</div></div>'}).join('')+'</div>';
+  }
+  function wordHtml(words,pys,lane){
+    var active=(lane.sentences||[]).length,revealed=Number(lane.revealed)||0;
+    return'<div class="student-chain-words">'+words.map(function(word,i){var open=i<revealed,now=open&&i===active&&i<words.length;return'<div class="student-chain-word '+(!open?'covered':'')+(now?' active':'')+'"><div><b>'+es(word)+'</b><small data-pinyin="1">'+es(pys[i]||py(word))+'</small></div></div>'}).join('')+'</div>';
+  }
+  function chainDraftKey(step,lane){return'ClassProChainDraft_v1_'+RM+'_'+LESSON+'_'+chainQuestionId()+'_'+(lane||'class')+'_'+step+'_'+normName(name())}
+  function renderChainStudent(){
+    var q=current&&current.question,d=chainData(),state=classproChainState,words=chainWords(),pys=chainPinyin();
+    if(!q)return'<div class="muted">等待老师发送接龙任务...</div>';
+    var h='<div class="student-chain"><div class="student-chain-head"><small>FIVE-WORD STORY CHAIN</small><h2>'+es(d.title||'五词故事接龙')+'</h2><div class="student-chain-starter">开头：'+rubyLine(d.starter||'',d.starter_pinyin||'',21)+'</div></div>';
+    if(!state||String(state.questionId||'')!==String(q.id||''))return h+'<div class="student-chain-wait">教师正在准备接龙，请稍候。</div></div>';
+    var laneName=state.mode==='team'?chainLane():'class',lane=laneState(state,laneName),modeLabel=state.mode==='teacher'?'教师接龙':state.mode==='team'?'双队PK':'全班抢接';
+    h+='<div><b>'+modeLabel+'</b>'+(state.mode==='team'?'<span class="student-chain-team">'+(laneName==='dandelion'?'蒲公英队':laneName==='sprout'?'新芽队':'等待分组')+'</span>':'')+'</div>'+wordHtml(words,pys,lane)+storyHtml(lane);
+    var step=(lane.sentences||[]).length,canAnswer=state.mode!=='teacher'&&step<(Number(lane.revealed)||0)&&step<words.length&&current.phase!=='published';
+    if(state.mode==='teacher')h+='<div class="student-chain-wait">请听老师点名，在课堂上口头接句。</div>';
+    else if(!laneName&&state.mode==='team')h+='<div class="student-chain-wait">请先确认姓名，等待教师完成分组。</div>';
+    else if(canAnswer){var pending=chainPending&&chainPending.questionId===q.id&&chainPending.step===step;h+='<div class="student-chain-submit"><h3>用“'+es(words[step])+'”接下一句</h3><div class="muted">句子要接得上前面的故事，并自然使用当前词。</div><textarea id="chainAnswer" placeholder="写下你要接的句子。"></textarea><button type="button" class="student-submit-action" style="width:100%;margin-top:10px" onclick="submitChainAnswer()" '+(pending?'disabled':'')+'>'+(pending?'已提交，等待判定…':'抢先接上 / Submit')+'</button></div>'}
+    else if(step>=words.length)h+='<div class="student-chain-wait">五个词已经全部完成！</div>';
+    else h+='<div class="student-chain-wait">等待上一句完成并打开新词。</div>';
+    return h+'</div>';
+  }
+  window.submitChainAnswer=function(){
+    var state=classproChainState||{},lane=state.mode==='team'?chainLane():'class',part=laneState(state,lane),step=(part.sentences||[]).length,input=document.getElementById('chainAnswer'),answer=String(input&&input.value||'').trim();
+    if(!answer){if(input){input.focus();input.setAttribute('aria-invalid','true')}return}
+    if(!nameReady)confirmName();
+    var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:answer,text:answer,questionId:chainQuestionId(),mode:'t3c',autoResult:'review',result:'review',needsReview:true,cloudWall:true,chainSubmission:true,chainMode:state.mode,chainLane:lane,chainStep:step,chainRevision:Number(state.revision)||0,submittedAt:new Date().toISOString()};
+    chainPending={questionId:chainQuestionId(),step:step};sendAnswer(payload);render();
+  };
+  client.on('message',function(topic,payload){
+    if(topic.indexOf('/display')<0)return;
+    try{var msg=JSON.parse(payload.toString());if(msg.type!=='chainState'||(msg.lesson&&msg.lesson!==LESSON)||(msg.targetClientId&&msg.targetClientId!==STUDENT_CLIENT_ID))return;var previous=classproChainState&&Number(classproChainState.revision)||-1;classproChainState=msg.state||null;if(classproChainState&&Number(classproChainState.revision)>previous)chainPending=null;if(current&&current.mode==='t3c')render()}catch(e){console.log('chain state',e)}
+  });
+  var renderBeforeChain=render;
+  render=function(){
+    if(current&&current.mode==='t3c'&&current.question){document.getElementById('app').innerHTML=renderChainStudent();applyPinyinVisibility();return}
+    renderBeforeChain();
+  };
+  function activeEditor(){var el=document.activeElement;return el&&el.matches&&el.matches('#app textarea,#app input[type="text"]')?el:null}
+  function draftKey(el){var qid=current&&current.question&&current.question.id||'none',step=classproChainState&&current&&current.mode==='t3c'?(laneState(classproChainState,classproChainState.mode==='team'?chainLane():'class').sentences||[]).length:'open';return'ClassProTextDraft_v2_'+RM+'_'+LESSON+'_'+normName(name())+'_'+qid+'_'+step+'_'+(el&&el.id||'answer')}
+  function saveEditor(el){if(!el||!current||!current.question)return;try{localStorage.setItem(draftKey(el),JSON.stringify({value:String(el.value||''),savedAt:new Date().toISOString()}))}catch(e){console.log('text draft',e)}}
+  function restoreEditor(el){if(!el)return;try{var row=JSON.parse(localStorage.getItem(draftKey(el))||'null');if(row&&row.value&&!el.value)el.value=row.value}catch(e){console.log('restore text draft',e)}}
+  function renderSignature(){return(current&&current.question?current.question.id:'none')+'|'+(current&&current.phase||'answering')+'|'+(current&&current.mode||'')+'|'+(classproChainState&&classproChainState.revision||0)}
+  var stableRender=render;
+  render=function(){
+    var before=activeEditor(),wasFocused=!!before,start=before&&before.selectionStart,end=before&&before.selectionEnd,sig=renderSignature();
+    if(before)saveEditor(before);
+    if((composing||wasFocused)&&sig===lastRenderSignature){updateStableExtras();return}
+    stableRender();lastRenderSignature=sig;
+    var after=document.querySelector('#app textarea,#app input[type="text"]');restoreEditor(after);
+    if(wasFocused&&after)requestAnimationFrame(function(){try{after.focus({preventScroll:true});var n=after.value.length;after.setSelectionRange(Math.min(start==null?n:start,n),Math.min(end==null?n:end,n))}catch(e){}});
+    updateStableExtras();
+  };
+  function updateStableExtras(){applyPinyinVisibility();var buttons=document.querySelectorAll('#app button');buttons.forEach(function(button){button.type='button'})}
+  document.addEventListener('input',function(e){if(e.target&&e.target.matches('#app textarea,#app input[type="text"]'))saveEditor(e.target)},true);
+  document.addEventListener('compositionstart',function(e){if(e.target&&e.target.matches('#app textarea,#app input[type="text"]'))composing=true},true);
+  document.addEventListener('compositionend',function(e){if(e.target&&e.target.matches('#app textarea,#app input[type="text"]')){composing=false;saveEditor(e.target)}},true);
+  window.addEventListener('pagehide',function(){saveEditor(activeEditor()||document.querySelector('#app textarea,#app input[type="text"]'))});
+  document.addEventListener('visibilitychange',function(){if(document.hidden)saveEditor(activeEditor()||document.querySelector('#app textarea,#app input[type="text"]'))});
+  var previousOpenSubmit=window.submitOpenAnswer;
+  window.submitOpenAnswer=function(){var el=document.querySelector('#app textarea');if(el)saveEditor(el);previousOpenSubmit();if(submittedAnswer&&current&&current.question&&submittedAnswer.questionId===current.question.id){try{if(el)localStorage.removeItem(draftKey(el))}catch(e){}}};
+  var previousConfirmName=confirmName;
+  confirmName=function(){previousConfirmName();if(current&&current.mode==='t3c')render()};
+  lastRenderSignature=renderSignature();render();
 })();
 </script>
 </body>
