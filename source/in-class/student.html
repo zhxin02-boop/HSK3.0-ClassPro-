@@ -199,7 +199,7 @@ client.on("close",function(){setStatus("disconnected")});
       h+='<div class="hint"><div class="muted">Transform the sentence.</div><div class="pinyin">'+es(d.source_pinyin||d.template_pinyin||'')+'</div><div class="hanzi">'+es(d.source_sentence||d.template||'')+'</div></div>'+optionGrid(d.options||[],true);
     }else if(mode==='v7'&&d.pairs){
       var pairs=d.pairs||[],order=d.order||pairs.map(function(_,i){return i}),done=Object.keys(matchPairs).length;
-      h+='<div style="text-align:center;font-weight:900;color:#3f7f32;margin-bottom:8px">问答匹配 / Q&A Match</div><div class="muted" style="text-align:center">先点左侧问题，再点右侧回答。 '+done+' / '+pairs.length+'</div><div class="match-board"><div class="match-col">';
+      h+='<div style="text-align:center;font-weight:900;color:#3f7f32;margin-bottom:8px">问答匹配 / Q&A Match</div><div class="muted" style="text-align:center">先点左侧问题，再点右侧回答。系统不会马上判断；全部配完后提交一次。 '+done+' / '+pairs.length+'</div><div class="match-board"><div class="match-col">';
       pairs.forEach(function(p,i){var cls=matchPairs[i]!=null?' done':matchLeft===i?' sel':'';h+='<button class="match-card'+cls+'" onclick="pickMatch(\'L\','+i+')"><span class="py">'+es(p.left_pinyin||py(p.left))+'</span>'+es(p.left)+'</button>'});
       h+='</div><div class="match-col">';
       order.forEach(function(idx){var p=pairs[idx]||{},used=false;for(var k in matchPairs){if(matchPairs[k]===idx)used=true}var cls=used?' done':matchRight===idx?' sel':'';h+='<button class="match-card'+cls+'" onclick="pickMatch(\'R\','+idx+')" style="font-size:17px;line-height:1.45">'+es(p.right||'')+'</button>'});
