@@ -1,0 +1,1033 @@
+{
+  "schemaVersion": "mock-test-1.1.0",
+  "testId": "HSK3-mock1",
+  "recordLesson": "HSK3-MOCK1-L01-L07",
+  "level": "HSK3",
+  "scope": "HSK3-L01 至 HSK3-L07；允许使用已学 HSK1-2 基础词汇",
+  "lessonRange": "1-7课",
+  "title": "HSK3 Mock Test 1 (L1-L7)",
+  "titleCn": "HSK3 1-7课阶段测试",
+  "titleEn": "HSK3 Mock Test 1 (Lessons 1-7)",
+  "mode": "mock_test",
+  "durationMinutes": 40,
+  "sourcePolicy": "自建题库；题型参考用户提供的 HSK3 阅读与书写截图；考查 HSK3 第1-7课词汇和语法，语境允许使用已学 HSK1-2 基础词汇。",
+  "scoringPolicy": {
+    "readingPointsPerItem": 3,
+    "writingPointsPerItem": 4,
+    "objectiveItems": 25,
+    "objectivePoints": 80,
+    "manualItems": 5,
+    "manualPoints": 20,
+    "totalPoints": 100
+  },
+  "sections": [
+    {
+      "id": "reading-match",
+      "title": "阅读 第一部分：匹配句子",
+      "titleEn": "Reading Part I: Match the sentences",
+      "instructions": "第1-5题：选择最合适的回答。每个选项只使用一次，多一个选项。",
+      "items": [
+        {
+          "id": "R01",
+          "number": 1,
+          "skill": "reading",
+          "part": "R1_sentence_match",
+          "prompt": "你的护照不见了，怎么办？",
+          "question": "你的护照不见了，怎么办？",
+          "options": [
+            {
+              "id": "A",
+              "text": "行，坐高铁又快又方便。"
+            },
+            {
+              "id": "B",
+              "text": "别着急，我们去服务台问问。"
+            },
+            {
+              "id": "C",
+              "text": "我觉得黄色的更合适。"
+            },
+            {
+              "id": "D",
+              "text": "一共二十六块五毛。"
+            },
+            {
+              "id": "E",
+              "text": "当然，我对爬山很感兴趣。"
+            },
+            {
+              "id": "F",
+              "text": "我家在十二层，环境挺安静的。"
+            }
+          ],
+          "shuffleOptions": false,
+          "answer": "B",
+          "points": 3,
+          "knowledge": [
+            "护照",
+            "不见",
+            "服务台",
+            "着急"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R02",
+          "number": 2,
+          "skill": "reading",
+          "part": "R1_sentence_match",
+          "prompt": "这两条裙子，你喜欢哪一条？",
+          "question": "这两条裙子，你喜欢哪一条？",
+          "options": [
+            {
+              "id": "A",
+              "text": "行，坐高铁又快又方便。"
+            },
+            {
+              "id": "B",
+              "text": "别着急，我们去服务台问问。"
+            },
+            {
+              "id": "C",
+              "text": "我觉得黄色的更合适。"
+            },
+            {
+              "id": "D",
+              "text": "一共二十六块五毛。"
+            },
+            {
+              "id": "E",
+              "text": "当然，我对爬山很感兴趣。"
+            },
+            {
+              "id": "F",
+              "text": "我家在十二层，环境挺安静的。"
+            }
+          ],
+          "shuffleOptions": false,
+          "answer": "C",
+          "points": 3,
+          "knowledge": [
+            "裙子",
+            "黄色",
+            "更",
+            "合适"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R03",
+          "number": 3,
+          "skill": "reading",
+          "part": "R1_sentence_match",
+          "prompt": "周末我们去爬山，你想去吗？",
+          "question": "周末我们去爬山，你想去吗？",
+          "options": [
+            {
+              "id": "A",
+              "text": "行，坐高铁又快又方便。"
+            },
+            {
+              "id": "B",
+              "text": "别着急，我们去服务台问问。"
+            },
+            {
+              "id": "C",
+              "text": "我觉得黄色的更合适。"
+            },
+            {
+              "id": "D",
+              "text": "一共二十六块五毛。"
+            },
+            {
+              "id": "E",
+              "text": "当然，我对爬山很感兴趣。"
+            },
+            {
+              "id": "F",
+              "text": "我家在十二层，环境挺安静的。"
+            }
+          ],
+          "shuffleOptions": false,
+          "answer": "E",
+          "points": 3,
+          "knowledge": [
+            "爬山",
+            "感兴趣"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R04",
+          "number": 4,
+          "skill": "reading",
+          "part": "R1_sentence_match",
+          "prompt": "这些香蕉和西瓜多少钱？",
+          "question": "这些香蕉和西瓜多少钱？",
+          "options": [
+            {
+              "id": "A",
+              "text": "行，坐高铁又快又方便。"
+            },
+            {
+              "id": "B",
+              "text": "别着急，我们去服务台问问。"
+            },
+            {
+              "id": "C",
+              "text": "我觉得黄色的更合适。"
+            },
+            {
+              "id": "D",
+              "text": "一共二十六块五毛。"
+            },
+            {
+              "id": "E",
+              "text": "当然，我对爬山很感兴趣。"
+            },
+            {
+              "id": "F",
+              "text": "我家在十二层，环境挺安静的。"
+            }
+          ],
+          "shuffleOptions": false,
+          "answer": "D",
+          "points": 3,
+          "knowledge": [
+            "香蕉",
+            "西瓜",
+            "一共",
+            "毛"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R05",
+          "number": 5,
+          "skill": "reading",
+          "part": "R1_sentence_match",
+          "prompt": "放假以后，咱们坐高铁去北京吧。",
+          "question": "放假以后，咱们坐高铁去北京吧。",
+          "options": [
+            {
+              "id": "A",
+              "text": "行，坐高铁又快又方便。"
+            },
+            {
+              "id": "B",
+              "text": "别着急，我们去服务台问问。"
+            },
+            {
+              "id": "C",
+              "text": "我觉得黄色的更合适。"
+            },
+            {
+              "id": "D",
+              "text": "一共二十六块五毛。"
+            },
+            {
+              "id": "E",
+              "text": "当然，我对爬山很感兴趣。"
+            },
+            {
+              "id": "F",
+              "text": "我家在十二层，环境挺安静的。"
+            }
+          ],
+          "shuffleOptions": false,
+          "answer": "A",
+          "points": 3,
+          "knowledge": [
+            "放假",
+            "高铁",
+            "方便"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "reading-fill",
+      "title": "阅读 第二部分：选词填空",
+      "titleEn": "Reading Part II: Choose the correct word",
+      "instructions": "第6-10题：从A-F中选择合适的词语填空。每个词语只使用一次，多一个词语。",
+      "items": [
+        {
+          "id": "R06",
+          "number": 6,
+          "skill": "reading",
+          "part": "R2_fill_blank",
+          "prompt": "上车以前，请先____护照和车票。",
+          "question": "上车以前，请先____护照和车票。",
+          "options": [
+            {
+              "id": "A",
+              "text": "检查"
+            },
+            {
+              "id": "B",
+              "text": "终于"
+            },
+            {
+              "id": "C",
+              "text": "新鲜"
+            },
+            {
+              "id": "D",
+              "text": "方便"
+            },
+            {
+              "id": "E",
+              "text": "重要"
+            },
+            {
+              "id": "F",
+              "text": "干净"
+            }
+          ],
+          "shuffleOptions": false,
+          "answer": "A",
+          "points": 3,
+          "knowledge": [
+            "检查",
+            "护照"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R07",
+          "number": 7,
+          "skill": "reading",
+          "part": "R2_fill_blank",
+          "prompt": "我等了一个小时，朋友____来了。",
+          "question": "我等了一个小时，朋友____来了。",
+          "options": [
+            {
+              "id": "A",
+              "text": "检查"
+            },
+            {
+              "id": "B",
+              "text": "终于"
+            },
+            {
+              "id": "C",
+              "text": "新鲜"
+            },
+            {
+              "id": "D",
+              "text": "方便"
+            },
+            {
+              "id": "E",
+              "text": "重要"
+            },
+            {
+              "id": "F",
+              "text": "干净"
+            }
+          ],
+          "shuffleOptions": false,
+          "answer": "B",
+          "points": 3,
+          "knowledge": [
+            "终于"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R08",
+          "number": 8,
+          "skill": "reading",
+          "part": "R2_fill_blank",
+          "prompt": "这家水果店的西瓜又大又____。",
+          "question": "这家水果店的西瓜又大又____。",
+          "options": [
+            {
+              "id": "A",
+              "text": "检查"
+            },
+            {
+              "id": "B",
+              "text": "终于"
+            },
+            {
+              "id": "C",
+              "text": "新鲜"
+            },
+            {
+              "id": "D",
+              "text": "方便"
+            },
+            {
+              "id": "E",
+              "text": "重要"
+            },
+            {
+              "id": "F",
+              "text": "干净"
+            }
+          ],
+          "shuffleOptions": false,
+          "answer": "C",
+          "points": 3,
+          "knowledge": [
+            "西瓜",
+            "又……又……",
+            "新鲜"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R09",
+          "number": 9,
+          "skill": "reading",
+          "part": "R2_fill_blank",
+          "prompt": "从学校坐地铁去高铁站很____。",
+          "question": "从学校坐地铁去高铁站很____。",
+          "options": [
+            {
+              "id": "A",
+              "text": "检查"
+            },
+            {
+              "id": "B",
+              "text": "终于"
+            },
+            {
+              "id": "C",
+              "text": "新鲜"
+            },
+            {
+              "id": "D",
+              "text": "方便"
+            },
+            {
+              "id": "E",
+              "text": "重要"
+            },
+            {
+              "id": "F",
+              "text": "干净"
+            }
+          ],
+          "shuffleOptions": false,
+          "answer": "D",
+          "points": 3,
+          "knowledge": [
+            "高铁",
+            "方便"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R10",
+          "number": 10,
+          "skill": "reading",
+          "part": "R2_fill_blank",
+          "prompt": "搬家以后，他把房间打扫得很____。",
+          "question": "搬家以后，他把房间打扫得很____。",
+          "options": [
+            {
+              "id": "A",
+              "text": "检查"
+            },
+            {
+              "id": "B",
+              "text": "终于"
+            },
+            {
+              "id": "C",
+              "text": "新鲜"
+            },
+            {
+              "id": "D",
+              "text": "方便"
+            },
+            {
+              "id": "E",
+              "text": "重要"
+            },
+            {
+              "id": "F",
+              "text": "干净"
+            }
+          ],
+          "shuffleOptions": false,
+          "answer": "F",
+          "points": 3,
+          "knowledge": [
+            "搬家",
+            "打扫",
+            "程度补语",
+            "干净"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "reading-comprehension",
+      "title": "阅读 第三部分：选择正确答案",
+      "titleEn": "Reading Part III: Choose the correct answer",
+      "instructions": "第11-20题：阅读短文，选择正确答案。",
+      "items": [
+        {
+          "id": "R11",
+          "number": 11,
+          "skill": "reading",
+          "part": "R3_reading_comprehension",
+          "prompt": "阅读短文，选择正确答案。",
+          "passage": "李文来机场接朋友。他说朋友个子很高、短头发，穿着黑色衣服。服务台旁边有一个年轻人，看上去很像他朋友。",
+          "question": "李文找的人有什么特点？",
+          "options": [
+            {
+              "id": "A",
+              "text": "高个子、短头发"
+            },
+            {
+              "id": "B",
+              "text": "矮个子、长头发"
+            },
+            {
+              "id": "C",
+              "text": "年纪大、穿黄衣服"
+            }
+          ],
+          "answer": "A",
+          "points": 3,
+          "knowledge": [
+            "看上去",
+            "多项定语",
+            "服务台",
+            "年轻"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R12",
+          "number": 12,
+          "skill": "reading",
+          "part": "R3_reading_comprehension",
+          "prompt": "阅读短文，选择正确答案。",
+          "passage": "马丁又饿又渴，进饭馆以后先看菜单。他点了一碗鸡肉饭和一杯茶，服务员马上拿来了筷子。",
+          "question": "马丁点了什么？",
+          "options": [
+            {
+              "id": "A",
+              "text": "面条和水"
+            },
+            {
+              "id": "B",
+              "text": "鸡肉饭和茶"
+            },
+            {
+              "id": "C",
+              "text": "蛋糕和咖啡"
+            }
+          ],
+          "answer": "B",
+          "points": 3,
+          "knowledge": [
+            "又……又……",
+            "菜单",
+            "碗",
+            "筷子"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R13",
+          "number": 13,
+          "skill": "reading",
+          "part": "R3_reading_comprehension",
+          "prompt": "阅读短文，选择正确答案。",
+          "passage": "小周的新房子在六层，小区环境挺好，房间里有空调和洗衣机。但是卫生间还没有打扫。",
+          "question": "小周还需要打扫哪儿？",
+          "options": [
+            {
+              "id": "A",
+              "text": "卫生间"
+            },
+            {
+              "id": "B",
+              "text": "花园"
+            },
+            {
+              "id": "C",
+              "text": "小区"
+            }
+          ],
+          "answer": "A",
+          "points": 3,
+          "knowledge": [
+            "房子",
+            "层",
+            "环境",
+            "卫生间",
+            "打扫"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R14",
+          "number": 14,
+          "skill": "reading",
+          "part": "R3_reading_comprehension",
+          "prompt": "阅读短文，选择正确答案。",
+          "passage": "假期我们打算去草原骑马，飞机星期六上午十点一刻起飞。爸爸说我们九点以前必须到机场。",
+          "question": "飞机几点起飞？",
+          "options": [
+            {
+              "id": "A",
+              "text": "九点"
+            },
+            {
+              "id": "B",
+              "text": "十点"
+            },
+            {
+              "id": "C",
+              "text": "十点一刻"
+            }
+          ],
+          "answer": "C",
+          "points": 3,
+          "knowledge": [
+            "假期",
+            "草原",
+            "骑马",
+            "刻",
+            "起飞"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R15",
+          "number": 15,
+          "skill": "reading",
+          "part": "R3_reading_comprehension",
+          "prompt": "阅读短文，选择正确答案。",
+          "passage": "白家月对爬山很感兴趣。她周末和朋友去爬山，拍了很多照片。回来以后，她马上把照片发给妈妈。",
+          "question": "白家月回来以后做了什么？",
+          "options": [
+            {
+              "id": "A",
+              "text": "去听音乐会"
+            },
+            {
+              "id": "B",
+              "text": "把照片发给妈妈"
+            },
+            {
+              "id": "C",
+              "text": "买了一双鞋"
+            }
+          ],
+          "answer": "B",
+          "points": 3,
+          "knowledge": [
+            "爬山",
+            "感兴趣",
+            "拍照",
+            "……了……就……"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R16",
+          "number": 16,
+          "skill": "reading",
+          "part": "R3_reading_comprehension",
+          "prompt": "阅读短文，选择正确答案。",
+          "passage": "安东打算坐高铁去上海。他到车站以后先检票，然后坐电梯到二层。火车还没来，他就在安静的地方坐了一会儿。",
+          "question": "安东检票以后做了什么？",
+          "options": [
+            {
+              "id": "A",
+              "text": "坐电梯到二层"
+            },
+            {
+              "id": "B",
+              "text": "去路口等人"
+            },
+            {
+              "id": "C",
+              "text": "回家拿护照"
+            }
+          ],
+          "answer": "A",
+          "points": 3,
+          "knowledge": [
+            "打算",
+            "高铁",
+            "检票",
+            "电梯",
+            "安静"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R17",
+          "number": 17,
+          "skill": "reading",
+          "part": "R3_reading_comprehension",
+          "prompt": "阅读短文，选择正确答案。",
+          "passage": "这辆自行车有点儿旧，五百块。那辆黄色的更新、更轻，但是贵两百块。小林每天都要骑车上学，最后决定买黄色的。",
+          "question": "小林为什么决定买黄色的自行车？",
+          "options": [
+            {
+              "id": "A",
+              "text": "因为它更便宜"
+            },
+            {
+              "id": "B",
+              "text": "因为它更新、更轻"
+            },
+            {
+              "id": "C",
+              "text": "因为它很旧"
+            }
+          ],
+          "answer": "B",
+          "points": 3,
+          "knowledge": [
+            "辆",
+            "自行车",
+            "旧",
+            "更",
+            "决定"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R18",
+          "number": 18,
+          "skill": "reading",
+          "part": "R3_reading_comprehension",
+          "prompt": "阅读短文，选择正确答案。",
+          "passage": "如果明天天气好，我们就去花园拍照；如果下雨，我们就在家听音乐。",
+          "question": "如果明天下雨，他们打算做什么？",
+          "options": [
+            {
+              "id": "A",
+              "text": "去花园拍照"
+            },
+            {
+              "id": "B",
+              "text": "在家听音乐"
+            },
+            {
+              "id": "C",
+              "text": "去草原骑马"
+            }
+          ],
+          "answer": "B",
+          "points": 3,
+          "knowledge": [
+            "如果……就……",
+            "花园",
+            "拍照",
+            "音乐"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R19",
+          "number": 19,
+          "skill": "reading",
+          "part": "R3_reading_comprehension",
+          "prompt": "阅读短文，选择正确答案。",
+          "passage": "这家宾馆的房间不大，但是又干净又安静，窗外还有一个花园。服务员也很热情，我们都很满意。",
+          "question": "他们为什么对宾馆满意？",
+          "options": [
+            {
+              "id": "A",
+              "text": "房间特别大"
+            },
+            {
+              "id": "B",
+              "text": "宾馆离机场很远"
+            },
+            {
+              "id": "C",
+              "text": "房间干净安静，服务也好"
+            }
+          ],
+          "answer": "C",
+          "points": 3,
+          "knowledge": [
+            "宾馆",
+            "干净",
+            "安静",
+            "服务",
+            "满意"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "R20",
+          "number": 20,
+          "skill": "reading",
+          "part": "R3_reading_comprehension",
+          "prompt": "阅读短文，选择正确答案。",
+          "passage": "妈妈买了两公斤西瓜和一公斤香蕉。西瓜每公斤六块，香蕉每公斤八块。",
+          "question": "这些水果一共多少钱？",
+          "options": [
+            {
+              "id": "A",
+              "text": "十四块"
+            },
+            {
+              "id": "B",
+              "text": "二十块"
+            },
+            {
+              "id": "C",
+              "text": "二十六块"
+            }
+          ],
+          "answer": "B",
+          "points": 3,
+          "knowledge": [
+            "公斤",
+            "西瓜",
+            "香蕉",
+            "一共"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "writing-hanzi",
+      "title": "书写 第一部分：根据拼音写汉字",
+      "titleEn": "Writing Part I: Write the Chinese word for each Pinyin",
+      "instructions": "第21-25题：根据句子和拼音写出正确词语。",
+      "items": [
+        {
+          "id": "W01",
+          "number": 21,
+          "skill": "writing",
+          "part": "W1_pinyin_hanzi",
+          "responseType": "text",
+          "prompt": "出门旅行一定要带____。",
+          "question": "出门旅行一定要带____。",
+          "pinyin": "hù zhào",
+          "answer": "护照",
+          "points": 4,
+          "knowledge": [
+            "护照"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "W02",
+          "number": 22,
+          "skill": "writing",
+          "part": "W1_pinyin_hanzi",
+          "responseType": "text",
+          "prompt": "请先看看____，再决定吃什么。",
+          "question": "请先看看____，再决定吃什么。",
+          "pinyin": "cài dān",
+          "answer": "菜单",
+          "points": 4,
+          "knowledge": [
+            "菜单",
+            "决定"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "W03",
+          "number": 23,
+          "skill": "writing",
+          "part": "W1_pinyin_hanzi",
+          "responseType": "text",
+          "prompt": "这个小区的____很好，也很安静。",
+          "question": "这个小区的____很好，也很安静。",
+          "pinyin": "huán jìng",
+          "answer": "环境",
+          "points": 4,
+          "knowledge": [
+            "小区",
+            "环境",
+            "安静"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "W04",
+          "number": 24,
+          "skill": "writing",
+          "part": "W1_pinyin_hanzi",
+          "responseType": "text",
+          "prompt": "他每天早上都去公园____身体。",
+          "question": "他每天早上都去公园____身体。",
+          "pinyin": "duàn liàn",
+          "answer": "锻炼",
+          "points": 4,
+          "knowledge": [
+            "锻炼"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "W05",
+          "number": 25,
+          "skill": "writing",
+          "part": "W1_pinyin_hanzi",
+          "responseType": "text",
+          "prompt": "上车以前，工作人员要先____。",
+          "question": "上车以前，工作人员要先____。",
+          "pinyin": "jiǎn piào",
+          "answer": "检票",
+          "points": 4,
+          "knowledge": [
+            "检票"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "writing-picture",
+      "title": "书写 第二部分：看图，用词造句",
+      "titleEn": "Writing Part II: Look at each picture and make a sentence",
+      "instructions": "第26-30题：观察图片，必须使用给出的词语写一个完整句子。由教师批改。",
+      "items": [
+        {
+          "id": "W06",
+          "number": 26,
+          "skill": "writing",
+          "part": "W2_picture_sentence",
+          "responseType": "textarea",
+          "manualReview": true,
+          "prompt": "看图，用“菜单”写一个完整句子。",
+          "question": "看图，用“菜单”写一个完整句子。",
+          "givenWord": "菜单",
+          "image": "../in-class/images/hsk3-l02/vocab-story/03-look-menu.png",
+          "sampleAnswer": "他们正在看菜单。",
+          "rubric": "句意符合图片，正确使用“菜单”，句子完整、基本无影响理解的错误。",
+          "points": 4,
+          "knowledge": [
+            "菜单"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "W07",
+          "number": 27,
+          "skill": "writing",
+          "part": "W2_picture_sentence",
+          "responseType": "textarea",
+          "manualReview": true,
+          "prompt": "看图，用“骑”写一个完整句子。",
+          "question": "看图，用“骑”写一个完整句子。",
+          "givenWord": "骑",
+          "image": "../in-class/images/hsk3-l04/photo-text-1-grassland.png",
+          "sampleAnswer": "他们在草原上骑马。",
+          "rubric": "句意符合图片，正确使用“骑”，句子完整、基本无影响理解的错误。",
+          "points": 4,
+          "knowledge": [
+            "草原",
+            "骑",
+            "马"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "W08",
+          "number": 28,
+          "skill": "writing",
+          "part": "W2_picture_sentence",
+          "responseType": "textarea",
+          "manualReview": true,
+          "prompt": "看图，用“爬山”写一个完整句子。",
+          "question": "看图，用“爬山”写一个完整句子。",
+          "givenWord": "爬山",
+          "image": "../in-class/images/hsk3-l05/photo-text-1-hiking.png",
+          "sampleAnswer": "周末她们一起去爬山。",
+          "rubric": "句意符合图片，正确使用“爬山”，句子完整、基本无影响理解的错误。",
+          "points": 4,
+          "knowledge": [
+            "爬山",
+            "山"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "W09",
+          "number": 29,
+          "skill": "writing",
+          "part": "W2_picture_sentence",
+          "responseType": "textarea",
+          "manualReview": true,
+          "prompt": "看图，用“检票”写一个完整句子。",
+          "question": "看图，用“检票”写一个完整句子。",
+          "givenWord": "检票",
+          "image": "../in-class/images/hsk3-l06/photo-text-3-ticket-check.png",
+          "sampleAnswer": "上车以前要先检票。",
+          "rubric": "句意符合图片，正确使用“检票”，句子完整、基本无影响理解的错误。",
+          "points": 4,
+          "knowledge": [
+            "检票",
+            "高铁"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        },
+        {
+          "id": "W10",
+          "number": 30,
+          "skill": "writing",
+          "part": "W2_picture_sentence",
+          "responseType": "textarea",
+          "manualReview": true,
+          "prompt": "看图，用“公斤”写一个完整句子。",
+          "question": "看图，用“公斤”写一个完整句子。",
+          "givenWord": "公斤",
+          "image": "../in-class/images/hsk3-l07/photo-text-3-weighing.png",
+          "sampleAnswer": "他买了两公斤香蕉。",
+          "rubric": "句意符合图片，正确使用“公斤”，句子完整、基本无影响理解的错误。",
+          "points": 4,
+          "knowledge": [
+            "公斤",
+            "香蕉",
+            "西瓜"
+          ],
+          "sourceType": "mock_test",
+          "status": "ready"
+        }
+      ]
+    }
+  ]
+}
