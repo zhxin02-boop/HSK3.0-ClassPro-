@@ -3098,7 +3098,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     oldRender.call(this);
     var side=document.querySelector('.cp-sidebar');if(!side)return;
     var mock=side.querySelector('.mock-side-btn'),rail=side.querySelector('.practice-rail'),spacer=side.querySelector('.sb-spacer'),firstBottom=side.querySelector('.sb-bottom');
-    if(mock){var target=rail||spacer||firstBottom;if(target&&mock.nextElementSibling!==target)side.insertBefore(mock,target)}
+    if(mock){var target=rail||spacer||firstBottom;if(target&&mock.nextElementSibling!==target)side.insertBefore(mock,target);mock.onclick=function(){ap.mt='mock';ap.st='mock';ap._r()}}
     if(mock)mock.classList.toggle('active',this.mt==='mock');
     if(!on(this))return;
     rail=side.querySelector('.practice-rail');
