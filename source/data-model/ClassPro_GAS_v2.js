@@ -8,12 +8,20 @@ var HEADERS = [
   "基础分","速度名次","速度奖励","薄弱点","学生作答","结果",
   "教师批改","批改状态","课堂session","房间","原始提交时间","题目说明"
 ];
+var MOCK_ARCHIVE_SHEET = "模拟测试归档";
+var MOCK_ARCHIVE_HEADERS = [
+  "存档时间","测试","姓名","测试批次","提交时间","客观题","客观题满分",
+  "主观题","主观题满分","总分","满分","异常次数","状态","存档版本","数据来源"
+];
 
 function doPost(e) {
   try {
     JSONP_CALLBACK = "";
     var ss = SpreadsheetApp.openById(SHEET_ID);
     var d = parsePayload_(e);
+    if (d.action === "mock_test_submit_bundle") return appendMockBundle_(ss, d, false);
+    if (d.action === "repair_mock_attempt") return appendMockBundle_(ss, d, true);
+    if (d.action === "archive_mock_results") return archiveMockResults_(ss, d);
     if (d.action === "save_score") return saveScore_(ss, d);
     if (d.action === "mark_reviewed") return markReviewed_(ss, d);
     return appendRecord_(ss, d);
@@ -31,6 +39,8 @@ function doGet(e) {
     if (a === "get_data") return json_({ status: "ok", data: readSheet_(ss, e.parameter.lesson || "") });
     if (a === "get_progress") return getProgress_(ss, e.parameter || {});
     if (a === "get_review_queue") return getReviewQueue_(ss, e.parameter || {});
+    if (a === "get_mock_attempt") return getMockAttempt_(ss, e.parameter || {});
+    if (a === "get_mock_archive") return getMockArchive_(ss, e.parameter || {});
     if (a === "save_score") return saveScore_(ss, e.parameter);
     if (a === "mark_reviewed") return markReviewed_(ss, e.parameter);
     if (a === "get_all") {
@@ -189,12 +199,17 @@ function latestProgressBySession_(rows) {
 function appendRecord_(ss, d) {
   var lesson = d.lesson || "HSK1-L02";
   var sheet = ensureSheet_(ss, lesson);
+  sheet.appendRow(recordValues_(d));
+  return json_({ status: "ok" });
+}
+
+function recordValues_(d) {
   var isOpen = d.openEnded === "yes" || d.needsReview === true || d.needsReview === "true";
   var moduleName = d.action === "session_summary" ? "session_summary" : (d.module || d.mode || "");
-  sheet.appendRow([
+  return [
     new Date(),
     d.studentName || d.name || "",
-    lesson,
+    d.lesson || "HSK1-L02",
     d.stage || "课中",
     moduleName,
     d.questionId || "",
@@ -209,12 +224,102 @@ function appendRecord_(ss, d) {
     d.result || d.autoResult || "",
     d.correction || "",
     isOpen ? "待批改" : "无需批改",
-    d.sessionId || "",
+    d.attemptId || d.sessionId || "",
     d.room || "",
     d.submittedAt || "",
     d.questionText || d.prompt || d.question || ""
-  ]);
-  return json_({ status: "ok" });
+  ];
+}
+
+function appendMockBundle_(ss, d, repair) {
+  var lesson = String(d.lesson || "").trim(), student = String(d.studentName || d.name || "").trim();
+  var attemptId = String(d.attemptId || d.sessionId || "").trim(), records = d.records;
+  if (!lesson || !student || !attemptId || !Array.isArray(records) || records.length < 1 || records.length > 20) {
+    return json_({ status: "error", message: "invalid mock bundle" });
+  }
+  var lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+  try {
+    var sheet = ensureSheet_(ss, lesson), values = sheet.getDataRange().getValues(), existing = {}, matched = 0;
+    for (var i = 1; i < values.length; i++) {
+      if (String(values[i][1] || "") !== student) continue;
+      var key = String(values[i][4] || "") + "|" + String(values[i][5] || "");
+      if (String(values[i][17] || "") === attemptId) existing[key] = i + 1;
+    }
+    var anchor = new Date(d.submittedAt || (records[0] && records[0].submittedAt) || "").getTime();
+    var additions = [];
+    records.forEach(function (source) {
+      var record = {};
+      for (var k in source) record[k] = source[k];
+      record.lesson = lesson; record.studentName = student; record.attemptId = attemptId; record.sessionId = attemptId;
+      var recordKey = String(record.module || record.mode || "") + "|" + String(record.questionId || "");
+      var rowIndex = existing[recordKey] || 0;
+      if (!rowIndex && repair && !isNaN(anchor)) {
+        var bestDistance = Infinity;
+        for (var j = 1; j < values.length; j++) {
+          if (String(values[j][1] || "") !== student) continue;
+          if (String(values[j][4] || "") !== String(record.module || record.mode || "")) continue;
+          if (String(values[j][5] || "") !== String(record.questionId || "")) continue;
+          var rowTime = new Date(values[j][19] || values[j][0] || "").getTime(), distance = Math.abs(rowTime - anchor);
+          if (!isNaN(rowTime) && distance <= 10000 && distance < bestDistance) { rowIndex = j + 1; bestDistance = distance; }
+        }
+        if (rowIndex) sheet.getRange(rowIndex, 18).setValue(attemptId);
+      }
+      if (rowIndex) { matched++; return; }
+      additions.push(recordValues_(record));
+    });
+    if (additions.length) sheet.getRange(sheet.getLastRow() + 1, 1, additions.length, HEADERS.length).setValues(additions);
+    return json_({ status: "ok", attemptId: attemptId, matched: matched, appended: additions.length, count: matched + additions.length });
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function getMockAttempt_(ss, params) {
+  var lesson = String(params.lesson || ""), student = String(params.student || params.studentName || ""), attemptId = String(params.attemptId || "");
+  if (!lesson || !student || !attemptId) return json_({ status: "error", message: "lesson, student and attemptId are required" });
+  var sheet = ss.getSheetByName(lesson), rows = sheet && sheet.getLastRow() > 1 ? sheet.getDataRange().getValues() : [], found = [];
+  for (var i = 1; i < rows.length; i++) if (String(rows[i][1] || "") === student && String(rows[i][17] || "") === attemptId) found.push(rows[i]);
+  var main = found.filter(function (row) { return String(row[4] || "") === "mock_test"; }).length;
+  var manual = found.filter(function (row) { return String(row[4] || "") === "subjective"; }).length;
+  return json_({ status: "ok", attemptId: attemptId, count: found.length, main: main, manual: manual, complete: main === 1 && manual === 5 });
+}
+
+function archiveMockResults_(ss, d) {
+  var testId = String(d.testId || d.lesson || "").trim(), version = String(d.archiveId || d.version || "").trim(), records = d.records;
+  if (!testId || !version || !Array.isArray(records) || !records.length) return json_({ status: "error", message: "invalid archive payload" });
+  if (records.some(function (r) { return r.status !== "complete" || Number(r.total) !== 100; })) return json_({ status: "error", message: "only complete /100 results can be archived" });
+  var lock = LockService.getScriptLock(); lock.waitLock(10000);
+  try {
+    var sheet = ensureNamedSheet_(ss, MOCK_ARCHIVE_SHEET, MOCK_ARCHIVE_HEADERS), values = sheet.getDataRange().getValues(), seen = {};
+    for (var i = 1; i < values.length; i++) seen[String(values[i][1] || "") + "|" + String(values[i][2] || "") + "|" + String(values[i][13] || "")] = true;
+    var additions = [];
+    records.forEach(function (r) {
+      var key = testId + "|" + String(r.studentName || "") + "|" + version;
+      if (seen[key]) return;
+      additions.push([new Date(),testId,r.studentName || "",r.attemptId || "",r.submittedAt || "",number_(r.objectiveScore),80,number_(r.manualScore),20,number_(r.score),100,number_(r.violationCount),"已归档",version,r.source || "teacher_mock_panel"]);
+    });
+    if (additions.length) sheet.getRange(sheet.getLastRow() + 1, 1, additions.length, MOCK_ARCHIVE_HEADERS.length).setValues(additions);
+    return json_({ status: "ok", archiveId: version, appended: additions.length, total: records.length });
+  } finally { lock.releaseLock(); }
+}
+
+function getMockArchive_(ss, params) {
+  var testId = String(params.testId || params.lesson || ""), student = String(params.student || "");
+  var sheet = ss.getSheetByName(MOCK_ARCHIVE_SHEET), objects = sheet ? rowsToObjects_(sheet.getDataRange().getValues()) : [];
+  objects = objects.filter(function (row) { return (!testId || String(row["测试"] || "") === testId) && (!student || String(row["姓名"] || "") === student); });
+  return json_({ status: "ok", data: objects });
+}
+
+function ensureNamedSheet_(ss, name, headers) {
+  var sheet = ss.getSheetByName(name);
+  if (!sheet) sheet = ss.insertSheet(name);
+  if (sheet.getLastRow() < 1) sheet.appendRow(headers);
+  else {
+    var current = sheet.getRange(1, 1, 1, headers.length).getValues()[0];
+    for (var i = 0; i < headers.length; i++) if (current[i] !== headers[i]) sheet.getRange(1, i + 1).setValue(headers[i]);
+  }
+  return sheet;
 }
 
 function saveScore_(ss, d) {
