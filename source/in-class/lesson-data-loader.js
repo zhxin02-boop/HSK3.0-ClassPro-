@@ -2,6 +2,7 @@
   var params = new URLSearchParams(location.search);
   var shared = window.ClassProContext ? ClassProContext.read() : {};
   var lesson = params.get('lesson') || params.get('course') || window.ClassProDefaultLesson || shared.lesson || 'HSK1-L01';
+  var dataVersion = params.get('dataVersion');
   var legacyDataPath = window.ClassProLegacyDataPath || './data_L02.js';
   function loadLegacyL02() { document.write('<script src="' + legacyDataPath + '"><\\/script>'); }
   if (location.protocol === 'file:') {
@@ -30,6 +31,10 @@
     if (xhr.status < 200 || xhr.status >= 300) throw new Error('Cannot load ' + path);
     return JSON.parse(xhr.responseText);
   }
+  function withDataVersion(path) {
+    if (!dataVersion) return path;
+    return path + (path.indexOf('?') >= 0 ? '&' : '?') + 'dataVersion=' + encodeURIComponent(dataVersion);
+  }
   function legacyHomework(homework) {
     homework = homework || {};
     var tiers = {};
@@ -52,7 +57,7 @@
   }
   if (/^HSK[13]-L\d{2}$/.test(lesson) && lesson !== 'HSK1-L01') {
     try {
-      var standard = loadJson('../data-model/lessons/' + lesson + '.json');
+      var standard = loadJson(withDataVersion('../data-model/lessons/' + lesson + '.json'));
       if (!standard || !standard.schemaVersion || !standard.meta || standard.meta.lessonKey !== lesson) throw new Error('Invalid standard course data');
       var normalized = window.ClassProCourseAdapter ? window.ClassProCourseAdapter.normalizeStandard(standard) : null;
       if (!normalized) throw new Error('Course data adapter unavailable');

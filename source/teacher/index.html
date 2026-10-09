@@ -138,8 +138,11 @@
 
     function updateWorkspaceLinks(ctx) {
       var ready = !!(selectedLesson && selectedLesson.openForUse && ctx);
+      var classroomPath = selectedLesson && selectedLesson.id === 'HSK3-L08'
+        ? '../in-class/l08-use-pilot.html'
+        : '../in-class/teacher.html';
       var links = {
-        classroomLink: '../in-class/teacher.html',
+        classroomLink: classroomPath,
         studentLink: '../student/index.html',
         dashboardLink: '../teacher-dashboard/unified.html',
         reviewLink: '../teacher-dashboard/post-review.html'

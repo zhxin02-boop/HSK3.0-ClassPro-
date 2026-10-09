@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>L8 · 以用为主线实验</title>
+  <link rel="stylesheet" href="../shared/classpro-theme.css">
+  <link rel="stylesheet" href="l08-use-pilot.css?v=11">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.3.0/mqtt.min.js"></script>
+  <script src="../shared/students.js?v=20260916-1"></script>
+</head>
+<body>
+  <iframe id="classproFrame" title="ClassPro原课堂"></iframe>
+
+  <section id="useLayer" class="use-layer hidden">
+    <header class="use-header">
+      <div class="use-brand"><span class="use-logo">用</span><div><b>ClassPro · 以用为主线</b><small>第8课 · 四个表达 MINI 循环</small></div></div>
+      <div class="use-header-actions">
+        <span id="connection" class="status">● 正在连接</span>
+        <span id="roomLabel" class="room-label">房间 8808</span>
+        <button onclick="openStudent()">打开学生端</button>
+        <button onclick="exportTrail()">导出课堂路径</button>
+        <button onclick="returnTeacherHome()">返回教师主界面</button>
+      </div>
+    </header>
+
+    <div class="goal-strip">
+      <div><button class="all-loops-button" onclick="openUseHome()">四个任务</button><span>当前目标</span><b id="goalTitle">选择一个表达任务</b></div>
+      <div class="route-dots"><button class="active" onclick="selectUseNode('entry')">起点</button><i></i><button onclick="selectUseNode('journey')">学习路径</button><i></i><button onclick="selectUseNode('exit')">终点</button></div>
+    </div>
+
+    <main class="use-grid">
+      <aside class="use-nav surface">
+        <button class="back-loops" onclick="openUseHome()">← 四个表达任务</button>
+        <span class="eyebrow">本轮 MINI 循环</span>
+        <button data-node="entry" class="use-node active" onclick="selectUseNode('entry')"><span>1</span><div><b>起点表达</b><small>Starting expression</small></div></button>
+        <button data-node="journey" class="use-node" onclick="selectUseNode('journey')"><span>→</span><div><b>课堂实际路径</b><small>Actual learning path</small></div></button>
+        <button data-node="exit" class="use-node" onclick="selectUseNode('exit')"><span>2</span><div><b>终点表达</b><small>Upgraded expression</small></div></button>
+        <div class="native-links">
+          <p>根据学生证据调用原课堂：</p>
+          <button onclick="goResource('vocabulary')">词汇</button><button onclick="goResource('grammar')">语法</button><button onclick="goResource('text')">课文</button><button onclick="goResource('practice')">练习</button>
+        </div>
+      </aside>
+
+      <section id="useStage" class="surface use-stage"></section>
+
+      <aside class="evidence-column">
+        <section id="evidence" class="surface evidence"></section>
+        <section id="teacherDecision" class="surface decision"></section>
+      </aside>
+    </main>
+  </section>
+
+  <script src="l08-use-pilot.js?v=12"></script>
+</body>
+</html>
