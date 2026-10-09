@@ -1,0 +1,1484 @@
+{
+  "schemaVersion": "classpro-use-pilot/v2",
+  "experiment": {
+    "id": "l08-use-pilot-v1",
+    "title": "第8课·以用为主线实验版",
+    "sourceLesson": "HSK3-L08",
+    "scope": "验证四篇课文的独立MINI循环与教师确认后的词形巩固；不将路径固定为全局流程。"
+  },
+  "sources": {
+    "lesson": {
+      "path": "../lessons/HSK3-L08.json",
+      "sha256": "69BD49407B2C11212026F1FA6FE7F572523022BD929D106554880D357F9A3C94"
+    },
+    "teacher": {
+      "path": "../../in-class/teacher.html"
+    },
+    "student": {
+      "path": "../../in-class/student.html"
+    }
+  },
+  "useGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "icon": "🌱",
+      "label": "课文 1",
+      "title": "生活习惯：一个好习惯和一个坏习惯",
+      "goal": "分享一个好习惯和一个坏习惯，并在学习后补充频率、影响和以后的打算。",
+      "goalEn": "Share one good habit and one bad habit, then add frequency, effects, and a future plan.",
+      "entry": {
+        "id": "l08_t1_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "和大家分享你的生活习惯：一个好习惯，一个坏习惯。",
+        "promptEn": "Share two habits with the class: one good habit and one bad habit."
+      },
+      "exit": {
+        "id": "l08_t1_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "再分享一次你的两个习惯。说清楚你常做什么、有什么影响、以后想怎样做。",
+        "promptEn": "Share the two habits again. Explain what you often do, its effect, and what you plan to do."
+      },
+      "supportCards": [
+        {
+          "id": "t1_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "最近、常、习惯、健康、以后",
+          "contentEn": "Choose only the words you need."
+        },
+        {
+          "id": "t1_structure",
+          "labelCn": "表达结构",
+          "labelEn": "Expression frame",
+          "contentCn": "我最近常……。这个习惯……。以后我想……。",
+          "contentEn": "Use the frame with your own content."
+        },
+        {
+          "id": "t1_grammar",
+          "labelCn": "“下去”提示",
+          "labelEn": "Using 下去",
+          "contentCn": "动词 / 形容词 + 下去：已经开始，以后还会继续。",
+          "contentEn": "An action or state has started and will continue."
+        }
+      ],
+      "textId": "t_hsk3_l08_01",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文1词汇",
+          "vocabSession": "1"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "课文1语法",
+          "grammarIndex": 0
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文1",
+          "textIndex": 0
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "v5",
+          "label": "教师选题练习"
+        }
+      }
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "icon": "💬",
+      "label": "课文 2",
+      "title": "朋友圈回复：朋友有点儿不舒服",
+      "goal": "自然地关心朋友、询问情况，并根据已经知道的信息给出合适回应。",
+      "goalEn": "Show concern, ask what happened, and respond appropriately to what you know.",
+      "entry": {
+        "id": "l08_t2_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "你今天刷微信的时候，看到好朋友的朋友圈写着：“我今天有点儿不舒服。”你会怎么回复他？",
+        "promptEn": "Your friend posts, “I feel a little unwell today.” What would you reply?"
+      },
+      "exit": {
+        "id": "l08_t2_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "再写一条微信回复：先表示关心，再问一个问题，最后说说你建议他怎样做。",
+        "promptEn": "Write the reply again: show concern, ask one question, and suggest what your friend can do."
+      },
+      "supportCards": [
+        {
+          "id": "t2_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "不舒服、发烧、关心、注意、休息",
+          "contentEn": "Choose only the words you need."
+        },
+        {
+          "id": "t2_questions",
+          "labelCn": "追问提示",
+          "labelEn": "Follow-up questions",
+          "contentCn": "你哪里不舒服？什么时候开始的？现在发烧吗？",
+          "contentEn": "Ask before giving advice."
+        },
+        {
+          "id": "t2_reply",
+          "labelCn": "回复结构",
+          "labelEn": "Reply frame",
+          "contentCn": "听说你……，我很……。你……吗？如果……，就……。",
+          "contentEn": "Keep the reply natural and personal."
+        }
+      ],
+      "textId": "t_hsk3_l08_02",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文2词汇",
+          "vocabSession": "2"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "课文2语法",
+          "grammarIndex": 1
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文2",
+          "textIndex": 1
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "v5",
+          "label": "教师选题练习"
+        }
+      }
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "icon": "🏥",
+      "label": "课文 3",
+      "title": "住院消息：怎样安慰并行动",
+      "goal": "回应朋友突然住院的消息，表达意外、担心、安慰和准备采取的行动。",
+      "goalEn": "Respond to a friend’s hospital news with surprise, concern, comfort, and an action.",
+      "entry": {
+        "id": "l08_t3_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "朋友突然发朋友圈说：“我住院了，别担心。”你会怎样回复？除了安慰，你还准备做什么？",
+        "promptEn": "A friend posts, “I’m in hospital. Don’t worry.” How would you reply, and what would you do?"
+      },
+      "exit": {
+        "id": "l08_t3_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "再回复一次：说出你的第一反应、你的担心或安慰，以及你准备做的一件事。",
+        "promptEn": "Reply again with your first reaction, concern or comfort, and one thing you plan to do."
+      },
+      "supportCards": [
+        {
+          "id": "t3_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "突然、住院、担心、得、检查",
+          "contentEn": "Choose only the words you need."
+        },
+        {
+          "id": "t3_reply",
+          "labelCn": "回应结构",
+          "labelEn": "Response frame",
+          "contentCn": "怎么突然……了？你现在……吗？别担心，我会……。",
+          "contentEn": "Use the frame without copying a model answer."
+        },
+        {
+          "id": "t3_action",
+          "labelCn": "行动提示",
+          "labelEn": "Action ideas",
+          "contentCn": "去看他、打电话、问清情况、帮他带东西",
+          "contentEn": "Choose an action that fits your relationship."
+        }
+      ],
+      "textId": "t_hsk3_l08_03",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文3词汇",
+          "vocabSession": "3"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "课文3语法",
+          "grammarIndex": 2
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文3",
+          "textIndex": 2
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "v5",
+          "label": "教师选题练习"
+        }
+      }
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "icon": "📱",
+      "label": "课文 4",
+      "title": "出院提醒：把医嘱说清楚",
+      "goal": "从医生的话中选择并重组重要信息，写成一条适合发给家人的清楚提醒。",
+      "goalEn": "Select and reorganize the doctor’s information into a clear message for a family member.",
+      "contextCn": "医生说：“回家以后要注意休息。这里有三种药：这种每天睡前吃一次，其他两种每天吃三次，饭后吃。最近不要运动太多。如果腿还疼，就回来检查。”",
+      "contextEn": "The doctor explains when to take three medicines, to rest, avoid too much exercise, and return if the leg still hurts.",
+      "entry": {
+        "id": "l08_t4_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "爷爷或奶奶出院了。请把医生的话变成一条清楚的微信提醒，让他知道什么时候吃药，还要注意什么。",
+        "promptEn": "Turn the doctor’s words into a clear WeChat reminder for your grandparent."
+      },
+      "exit": {
+        "id": "l08_t4_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "再写一次提醒：分清一种药和其他两种药的时间、次数，再补充休息、运动和复查提醒。",
+        "promptEn": "Rewrite the reminder with medicine times and frequency, plus rest, exercise, and follow-up information."
+      },
+      "supportCards": [
+        {
+          "id": "t4_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "出院、种、方法、其他、睡前、饭后、检查",
+          "contentEn": "Choose only the words you need."
+        },
+        {
+          "id": "t4_order",
+          "labelCn": "信息顺序",
+          "labelEn": "Information order",
+          "contentCn": "先说一种药 → 再说其他两种药 → 最后说休息、运动和复查。",
+          "contentEn": "Organize the information before writing."
+        },
+        {
+          "id": "t4_message",
+          "labelCn": "家人提醒",
+          "labelEn": "Family reminder",
+          "contentCn": "别忘了……。还要注意……。如果……，就……。",
+          "contentEn": "Write naturally to a family member."
+        }
+      ],
+      "textId": "t_hsk3_l08_04",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文4词汇",
+          "vocabSession": "4"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "课文4语法",
+          "grammarIndex": 3
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文4",
+          "textIndex": 3
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "v5",
+          "label": "教师选题练习"
+        }
+      }
+    }
+  ],
+  "textLearning": [
+    {
+      "textId": "t_hsk3_l08_01",
+      "useGroupId": "T1",
+      "title": "最近常看见你来体育馆",
+      "overviewChoices": [
+        {
+          "id": "l08_t1_overview_01",
+          "focus": "main_idea",
+          "questionCn": "这段对话主要说什么？",
+          "options": [
+            "运动",
+            "生病",
+            "吃药"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l08_t1_overview_02",
+          "focus": "development",
+          "questionCn": "陈天中现在怎么样？",
+          "options": [
+            "开始运动了",
+            "已经住院了",
+            "正在吃药"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l08_t1_overview_03",
+          "focus": "purpose",
+          "questionCn": "李文愿意帮陈天中吗？",
+          "options": [
+            "愿意",
+            "不愿意",
+            "不知道"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailQuestions": [
+        {
+          "id": "l08_t1_detail_01",
+          "questionCn": "李文最近常在哪里看见陈天中？",
+          "questionPinyin": "Lǐ Wén zuìjìn cháng zài nǎli kànjiàn Chén Tiānzhōng?",
+          "answer": "在体育馆。",
+          "answerPinyin": "Zài tǐyùguǎn."
+        },
+        {
+          "id": "l08_t1_detail_02",
+          "questionCn": "陈天中每天下午做什么？",
+          "questionPinyin": "Chén Tiānzhōng měitiān xiàwǔ zuò shénme?",
+          "answer": "跑一个小时步。",
+          "answerPinyin": "Pǎo yí gè xiǎoshí bù."
+        },
+        {
+          "id": "l08_t1_detail_03",
+          "questionCn": "他为什么开始运动？",
+          "questionPinyin": "Tā wèishénme kāishǐ yùndòng?",
+          "answer": "因为他胖了十多斤，觉得不健康。",
+          "answerPinyin": "Yīnwèi tā pàngle shí duō jīn, juéde bù jiànkāng."
+        },
+        {
+          "id": "l08_t1_detail_04",
+          "questionCn": "李文下课以后常做什么？",
+          "questionPinyin": "Lǐ Wén xiàkè yǐhòu cháng zuò shénme?",
+          "answer": "去打羽毛球。",
+          "answerPinyin": "Qù dǎ yǔmáoqiú."
+        },
+        {
+          "id": "l08_t1_detail_05",
+          "questionCn": "陈天中为什么有点儿不想参加？",
+          "questionPinyin": "Chén Tiānzhōng wèishénme yǒudiǎnr bù xiǎng cānjiā?",
+          "answer": "因为他觉得自己打得不怎么样。",
+          "answerPinyin": "Yīnwèi tā juéde zìjǐ dǎ de bù zěnmeyàng."
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "不能再胖下去了。",
+        "focus": "动词 / 形容词 + 下去：已经开始的动作或状态继续。",
+        "actionLabel": "进入“下去”语法",
+        "grammarIndex": 0
+      },
+      "paragraphPractice": {
+        "label": "调用“新的运动习惯”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 0
+      },
+      "lifeTransfer": {
+        "promptCn": "你生活中有什么好习惯和坏习惯？请选择一个说说它的影响。",
+        "promptEn": "What good and bad habits do you have? Choose one and explain its effect."
+      }
+    },
+    {
+      "textId": "t_hsk3_l08_02",
+      "useGroupId": "T2",
+      "title": "看上去有点儿不舒服",
+      "overviewChoices": [
+        {
+          "id": "l08_t2_overview_01",
+          "focus": "main_idea",
+          "questionCn": "这段对话主要说什么？",
+          "options": [
+            "朋友不舒服",
+            "一起运动",
+            "出院吃药"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l08_t2_overview_02",
+          "focus": "development",
+          "questionCn": "安妮先做什么？",
+          "options": [
+            "问他怎么了",
+            "请他打球",
+            "给他吃药"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l08_t2_overview_03",
+          "focus": "purpose",
+          "questionCn": "最后他们怎么做？",
+          "options": [
+            "先休息，有问题再看医生",
+            "马上去运动",
+            "马上出院"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailQuestions": [
+        {
+          "id": "l08_t2_detail_01",
+          "questionCn": "陈天中哪里不舒服？",
+          "questionPinyin": "Chén Tiānzhōng nǎli bù shūfu?",
+          "answer": "耳朵一直有点儿疼。",
+          "answerPinyin": "Ěrduo yìzhí yǒudiǎnr téng."
+        },
+        {
+          "id": "l08_t2_detail_02",
+          "questionCn": "什么时候开始不舒服的？",
+          "questionPinyin": "Shénme shíhou kāishǐ bù shūfu de?",
+          "answer": "昨天游泳以后。",
+          "answerPinyin": "Zuótiān yóuyǒng yǐhòu."
+        },
+        {
+          "id": "l08_t2_detail_03",
+          "questionCn": "他还有什么情况？",
+          "questionPinyin": "Tā hái yǒu shénme qíngkuàng?",
+          "answer": "好像发低烧了。",
+          "answerPinyin": "Hǎoxiàng fā dīshāo le."
+        },
+        {
+          "id": "l08_t2_detail_04",
+          "questionCn": "安妮先建议做什么？",
+          "questionPinyin": "Ānnī xiān jiànyì zuò shénme?",
+          "answer": "去医院让医生检查一下。",
+          "answerPinyin": "Qù yīyuàn ràng yīshēng jiǎnchá yíxià."
+        },
+        {
+          "id": "l08_t2_detail_05",
+          "questionCn": "什么情况下陈天中一定要看医生？",
+          "questionPinyin": "Shénme qíngkuàng xià Chén Tiānzhōng yídìng yào kàn yīshēng?",
+          "answer": "如果下午还发烧。",
+          "answerPinyin": "Rúguǒ xiàwǔ hái fāshāo."
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "游完泳以后，耳朵一直有点儿疼。",
+        "focus": "离合词加补语：补语通常放在两个语素之间。",
+        "actionLabel": "进入离合词语法",
+        "grammarIndex": 1
+      },
+      "paragraphPractice": {
+        "label": "调用“身体不舒服”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 1
+      },
+      "lifeTransfer": {
+        "promptCn": "朋友说不舒服时，你会先问什么，再怎样表示关心？",
+        "promptEn": "When a friend feels unwell, what would you ask before responding?"
+      }
+    },
+    {
+      "textId": "t_hsk3_l08_03",
+      "useGroupId": "T3",
+      "title": "你怎么突然住院了",
+      "overviewChoices": [
+        {
+          "id": "l08_t3_overview_01",
+          "focus": "main_idea",
+          "questionCn": "这段对话主要说什么？",
+          "options": [
+            "朋友住院了",
+            "朋友开始运动",
+            "朋友出院了"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l08_t3_overview_02",
+          "focus": "development",
+          "questionCn": "安妮知道以后怎么样？",
+          "options": [
+            "很担心",
+            "很高兴",
+            "不想管"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l08_t3_overview_03",
+          "focus": "purpose",
+          "questionCn": "安妮对朋友说什么？",
+          "options": [
+            "好好休息",
+            "多运动",
+            "少吃药"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailQuestions": [
+        {
+          "id": "l08_t3_detail_01",
+          "questionCn": "陈天中为什么住院？",
+          "questionPinyin": "Chén Tiānzhōng wèishénme zhùyuàn?",
+          "answer": "因为腿疼了几个星期，需要做检查。",
+          "answerPinyin": "Yīnwèi tuǐ téngle jǐ gè xīngqī, xūyào zuò jiǎnchá."
+        },
+        {
+          "id": "l08_t3_detail_02",
+          "questionCn": "大家知道以后怎么样？",
+          "questionPinyin": "Dàjiā zhīdào yǐhòu zěnmeyàng?",
+          "answer": "大家都很担心他。",
+          "answerPinyin": "Dàjiā dōu hěn dānxīn tā."
+        },
+        {
+          "id": "l08_t3_detail_03",
+          "questionCn": "他上次来医院到现在多久了？",
+          "questionPinyin": "Tā shàng cì lái yīyuàn dào xiànzài duōjiǔ le?",
+          "answer": "差不多两年了。",
+          "answerPinyin": "Chàbuduō liǎng nián le."
+        },
+        {
+          "id": "l08_t3_detail_04",
+          "questionCn": "安妮觉得可能是什么原因？",
+          "questionPinyin": "Ānnī juéde kěnéng shì shénme yuányīn?",
+          "answer": "可能运动太多了。",
+          "answerPinyin": "Kěnéng yùndòng tài duō le."
+        },
+        {
+          "id": "l08_t3_detail_05",
+          "questionCn": "陈天中为什么还不能确定？",
+          "questionPinyin": "Chén Tiānzhōng wèishénme hái bù néng quèdìng?",
+          "answer": "因为还得做完检查。",
+          "answerPinyin": "Yīnwèi hái děi zuòwán jiǎnchá."
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "他上次来医院到现在差不多两年了。",
+        "focus": "时量补语：说明动作完成以后到现在经过的时间。",
+        "actionLabel": "进入时量补语语法",
+        "grammarIndex": 2
+      },
+      "paragraphPractice": {
+        "label": "调用“住院以后”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 2
+      },
+      "lifeTransfer": {
+        "promptCn": "朋友突然住院时，怎样安慰才自然？你会采取什么行动？",
+        "promptEn": "How can you comfort a hospitalized friend naturally, and what would you do?"
+      }
+    },
+    {
+      "textId": "t_hsk3_l08_04",
+      "useGroupId": "T4",
+      "title": "今天我出院了",
+      "overviewChoices": [
+        {
+          "id": "l08_t4_overview_01",
+          "focus": "main_idea",
+          "questionCn": "这篇短文主要说什么？",
+          "options": [
+            "出院后的安排",
+            "一次运动",
+            "朋友住院"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l08_t4_overview_02",
+          "focus": "development",
+          "questionCn": "陈天中回家以后要做什么？",
+          "options": [
+            "按医生说的做",
+            "去打球",
+            "去看朋友"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l08_t4_overview_03",
+          "focus": "purpose",
+          "questionCn": "陈天中写这段话，主要是为了什么？",
+          "options": [
+            "记住出院后的事",
+            "邀请朋友来医院",
+            "介绍体育馆"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailQuestions": [
+        {
+          "id": "l08_t4_detail_01",
+          "questionCn": "陈天中什么时候出院？",
+          "questionPinyin": "Chén Tiānzhōng shénme shíhou chūyuàn?",
+          "answer": "今天。",
+          "answerPinyin": "Jīntiān."
+        },
+        {
+          "id": "l08_t4_detail_02",
+          "questionCn": "出院前医生做了什么？",
+          "questionPinyin": "Chūyuàn qián yīshēng zuòle shénme?",
+          "answer": "开了几种药，并告诉他吃药的方法。",
+          "answerPinyin": "Kāile jǐ zhǒng yào, bìng gàosu tā chī yào de fāngfǎ."
+        },
+        {
+          "id": "l08_t4_detail_03",
+          "questionCn": "哪一种药要睡前吃？",
+          "questionPinyin": "Nǎ yì zhǒng yào yào shuì qián chī?",
+          "answer": "其中一种药，每天睡前吃一次。",
+          "answerPinyin": "Qízhōng yì zhǒng yào, měitiān shuì qián chī yí cì."
+        },
+        {
+          "id": "l08_t4_detail_04",
+          "questionCn": "其他几种药什么时候吃？",
+          "questionPinyin": "Qítā jǐ zhǒng yào shénme shíhou chī?",
+          "answer": "每天三次，饭后吃。",
+          "answerPinyin": "Měitiān sān cì, fàn hòu chī."
+        },
+        {
+          "id": "l08_t4_detail_05",
+          "questionCn": "医生说最重要的是什么？",
+          "questionPinyin": "Yīshēng shuō zuì zhòngyào de shì shénme?",
+          "answer": "多休息。",
+          "answerPinyin": "Duō xiūxi."
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "一种药每天睡前吃一次，其他几种每天饭后吃三次。",
+        "focus": "“以前／以后”和“前／后”：组织时间与安排。",
+        "actionLabel": "进入时间表达语法",
+        "grammarIndex": 3
+      },
+      "paragraphPractice": {
+        "label": "调用“出院安排”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 3
+      },
+      "lifeTransfer": {
+        "promptCn": "怎样把复杂的安排变成家人容易看懂的微信提醒？",
+        "promptEn": "How can you turn complex instructions into a clear family message?"
+      }
+    }
+  ],
+  "vocabularyTaskTypes": [
+    {
+      "id": "recognition",
+      "labelCn": "认读",
+      "labelEn": "Recognition"
+    },
+    {
+      "id": "shape",
+      "labelCn": "辨形",
+      "labelEn": "Character form"
+    },
+    {
+      "id": "input",
+      "labelCn": "输入",
+      "labelEn": "Type the word"
+    },
+    {
+      "id": "collocation",
+      "labelCn": "搭配",
+      "labelEn": "Collocation"
+    }
+  ],
+  "vocabularyGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "title": "生活习惯：一个好习惯和一个坏习惯",
+      "words": [
+        {
+          "id": "v08_01",
+          "hanzi": "最近",
+          "pinyin": "zuìjìn",
+          "english": "lately; recently",
+          "phrases": [
+            "最近几天",
+            "最近怎么样"
+          ],
+          "example": "我最近常去体育馆跑步。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "最近",
+            "最进",
+            "取近",
+            "最斤"
+          ],
+          "collocationOptions": [
+            "最近几天",
+            "最近羽毛球",
+            "最近一种",
+            "最近耳朵"
+          ]
+        },
+        {
+          "id": "v08_02",
+          "hanzi": "常",
+          "pinyin": "cháng",
+          "english": "often",
+          "phrases": [
+            "常去",
+            "常练习"
+          ],
+          "example": "他常在下课以后打羽毛球。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "常",
+            "长",
+            "尝",
+            "裳"
+          ],
+          "collocationOptions": [
+            "常去体育馆",
+            "常一个小时",
+            "常三种药",
+            "常的方法"
+          ]
+        },
+        {
+          "id": "v08_03",
+          "hanzi": "体育馆",
+          "pinyin": "tǐyùguǎn",
+          "english": "gymnasium",
+          "phrases": [
+            "学校体育馆",
+            "去体育馆"
+          ],
+          "example": "学校的体育馆下午很热闹。",
+          "tier": "understanding",
+          "allowedTypes": [
+            "recognition"
+          ],
+          "shapeOptions": [],
+          "collocationOptions": []
+        },
+        {
+          "id": "v08_04",
+          "hanzi": "习惯",
+          "pinyin": "xíguàn",
+          "english": "habit; be used to",
+          "phrases": [
+            "运动习惯",
+            "习惯早起"
+          ],
+          "example": "每天运动是一个好习惯。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "习惯",
+            "习贯",
+            "夕惯",
+            "习观"
+          ],
+          "collocationOptions": [
+            "养成习惯",
+            "打开习惯",
+            "一种习惯地",
+            "习惯三次"
+          ]
+        },
+        {
+          "id": "v08_05",
+          "hanzi": "胖",
+          "pinyin": "pàng",
+          "english": "fat; gain weight",
+          "phrases": [
+            "胖一点儿",
+            "不能再胖"
+          ],
+          "example": "我今年胖了十多斤。",
+          "tier": "understanding",
+          "allowedTypes": [
+            "recognition"
+          ],
+          "shapeOptions": [],
+          "collocationOptions": []
+        },
+        {
+          "id": "v08_06",
+          "hanzi": "健康",
+          "pinyin": "jiànkāng",
+          "english": "healthy",
+          "phrases": [
+            "保持健康",
+            "健康习惯"
+          ],
+          "example": "运动和休息都对健康很重要。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "健康",
+            "建康",
+            "健慷",
+            "建抗"
+          ],
+          "collocationOptions": [
+            "健康习惯",
+            "健康一种",
+            "健康耳朵地",
+            "健康三次"
+          ]
+        },
+        {
+          "id": "v08_07",
+          "hanzi": "以后",
+          "pinyin": "yǐhòu",
+          "english": "after; afterward",
+          "phrases": [
+            "下课以后",
+            "以后注意"
+          ],
+          "example": "我下课以后去打羽毛球。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "以后",
+            "已后",
+            "以候",
+            "己后"
+          ],
+          "collocationOptions": [
+            "下课以后",
+            "以后体育馆地",
+            "以后一次药",
+            "以后突然地"
+          ]
+        },
+        {
+          "id": "v08_08",
+          "hanzi": "羽毛球",
+          "pinyin": "yǔmáoqiú",
+          "english": "badminton",
+          "phrases": [
+            "打羽毛球",
+            "羽毛球场"
+          ],
+          "example": "周末我们一起打羽毛球吧。",
+          "tier": "context",
+          "allowedTypes": [
+            "recognition"
+          ],
+          "shapeOptions": [],
+          "collocationOptions": []
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "title": "朋友圈回复：朋友有点儿不舒服",
+      "words": [
+        {
+          "id": "v08_09",
+          "hanzi": "耳朵",
+          "pinyin": "ěrduo",
+          "english": "ear",
+          "phrases": [
+            "耳朵疼",
+            "保护耳朵"
+          ],
+          "example": "游泳以后，我的耳朵有点儿疼。",
+          "tier": "understanding",
+          "allowedTypes": [
+            "recognition"
+          ],
+          "shapeOptions": [],
+          "collocationOptions": []
+        },
+        {
+          "id": "v08_10",
+          "hanzi": "感冒",
+          "pinyin": "gǎnmào",
+          "english": "catch a cold; cold",
+          "phrases": [
+            "得了感冒",
+            "预防感冒"
+          ],
+          "example": "他好像感冒了，今天没有来上课。",
+          "tier": "understanding",
+          "allowedTypes": [
+            "recognition"
+          ],
+          "shapeOptions": [],
+          "collocationOptions": []
+        },
+        {
+          "id": "v08_11",
+          "hanzi": "发烧",
+          "pinyin": "fāshāo",
+          "english": "have a fever",
+          "phrases": [
+            "有点儿发烧",
+            "发低烧"
+          ],
+          "example": "如果下午还发烧，就去看医生。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "发烧",
+            "发浇",
+            "法烧",
+            "发绕"
+          ],
+          "collocationOptions": [
+            "发低烧",
+            "做发烧",
+            "一种发烧",
+            "发烧方法"
+          ]
+        },
+        {
+          "id": "v08_12",
+          "hanzi": "低",
+          "pinyin": "dī",
+          "english": "low",
+          "phrases": [
+            "温度低",
+            "低一点儿"
+          ],
+          "example": "他的体温不太高，只是发低烧。",
+          "tier": "context",
+          "allowedTypes": [
+            "recognition"
+          ],
+          "shapeOptions": [],
+          "collocationOptions": []
+        },
+        {
+          "id": "v08_13",
+          "hanzi": "关心",
+          "pinyin": "guānxīn",
+          "english": "be concerned about",
+          "phrases": [
+            "关心同学",
+            "表示关心"
+          ],
+          "example": "谢谢你关心我。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "关心",
+            "观心",
+            "关新",
+            "官心"
+          ],
+          "collocationOptions": [
+            "关心朋友",
+            "吃关心",
+            "关心三次",
+            "一种关心"
+          ]
+        },
+        {
+          "id": "v08_14",
+          "hanzi": "注意",
+          "pinyin": "zhùyì",
+          "english": "pay attention to",
+          "phrases": [
+            "注意休息",
+            "多注意"
+          ],
+          "example": "医生让他多休息，也要注意身体。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "注意",
+            "住意",
+            "注义",
+            "主意"
+          ],
+          "collocationOptions": [
+            "注意休息",
+            "做注意",
+            "注意一种",
+            "三次注意"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "title": "住院消息：怎样安慰并行动",
+      "words": [
+        {
+          "id": "v08_15",
+          "hanzi": "突然",
+          "pinyin": "tūrán",
+          "english": "sudden; suddenly",
+          "phrases": [
+            "突然生病",
+            "突然下雨"
+          ],
+          "example": "他昨天突然住院了。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "突然",
+            "突燃",
+            "图然",
+            "突如"
+          ],
+          "collocationOptions": [
+            "突然住院",
+            "一种突然",
+            "吃突然",
+            "突然方法"
+          ]
+        },
+        {
+          "id": "v08_16",
+          "hanzi": "住院",
+          "pinyin": "zhùyuàn",
+          "english": "be in hospital",
+          "phrases": [
+            "住院检查",
+            "住了几天院"
+          ],
+          "example": "医生说他需要住院做检查。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "住院",
+            "注院",
+            "往院",
+            "祝院"
+          ],
+          "collocationOptions": [
+            "住院检查",
+            "吃住院",
+            "住院一种",
+            "三次住院"
+          ]
+        },
+        {
+          "id": "v08_17",
+          "hanzi": "担心",
+          "pinyin": "dānxīn",
+          "english": "worry",
+          "phrases": [
+            "别担心",
+            "让人担心"
+          ],
+          "example": "大家都很担心他的身体。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "担心",
+            "但心",
+            "胆心",
+            "单心"
+          ],
+          "collocationOptions": [
+            "担心朋友",
+            "吃担心",
+            "担心一种",
+            "三次担心"
+          ]
+        },
+        {
+          "id": "v08_18",
+          "hanzi": "腿",
+          "pinyin": "tuǐ",
+          "english": "leg",
+          "phrases": [
+            "腿疼",
+            "检查腿"
+          ],
+          "example": "他的腿疼了几个星期。",
+          "tier": "understanding",
+          "allowedTypes": [
+            "recognition"
+          ],
+          "shapeOptions": [],
+          "collocationOptions": []
+        },
+        {
+          "id": "v08_19",
+          "hanzi": "病人",
+          "pinyin": "bìngrén",
+          "english": "patient",
+          "phrases": [
+            "照顾病人",
+            "不像病人"
+          ],
+          "example": "护士正在帮助病人。",
+          "tier": "context",
+          "allowedTypes": [
+            "recognition"
+          ],
+          "shapeOptions": [],
+          "collocationOptions": []
+        },
+        {
+          "id": "v08_20",
+          "hanzi": "差不多",
+          "pinyin": "chàbuduō",
+          "english": "almost; about",
+          "phrases": [
+            "差不多两年",
+            "时间差不多"
+          ],
+          "example": "我上次来医院已经是差不多两年前了。",
+          "tier": "understanding",
+          "allowedTypes": [
+            "recognition"
+          ],
+          "shapeOptions": [],
+          "collocationOptions": []
+        },
+        {
+          "id": "v08_21",
+          "hanzi": "得",
+          "pinyin": "děi",
+          "english": "need; have to",
+          "phrases": [
+            "还得检查",
+            "得休息"
+          ],
+          "example": "还得做完检查才能知道。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "得",
+            "的",
+            "地",
+            "德"
+          ],
+          "collocationOptions": [
+            "得休息",
+            "一种得",
+            "得三次药",
+            "很得方法"
+          ]
+        },
+        {
+          "id": "v08_22",
+          "hanzi": "开心",
+          "pinyin": "kāixīn",
+          "english": "happy",
+          "phrases": [
+            "很开心",
+            "开心多了"
+          ],
+          "example": "朋友来看我，我就开心多了。",
+          "tier": "understanding",
+          "allowedTypes": [
+            "recognition"
+          ],
+          "shapeOptions": [],
+          "collocationOptions": []
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "title": "出院提醒：把医嘱说清楚",
+      "words": [
+        {
+          "id": "v08_23",
+          "hanzi": "出院",
+          "pinyin": "chūyuàn",
+          "english": "leave hospital",
+          "phrases": [
+            "办理出院",
+            "出院以后"
+          ],
+          "example": "今天我终于可以出院了。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "出院",
+            "初院",
+            "除院",
+            "出原"
+          ],
+          "collocationOptions": [
+            "出院以后",
+            "吃出院",
+            "出院一种",
+            "三次出院"
+          ]
+        },
+        {
+          "id": "v08_24",
+          "hanzi": "开",
+          "pinyin": "kāi",
+          "english": "prescribe",
+          "phrases": [
+            "开药",
+            "医生开的药"
+          ],
+          "example": "医生给我开了几种药。",
+          "tier": "understanding",
+          "allowedTypes": [
+            "recognition"
+          ],
+          "shapeOptions": [],
+          "collocationOptions": []
+        },
+        {
+          "id": "v08_25",
+          "hanzi": "种",
+          "pinyin": "zhǒng",
+          "english": "kind; type",
+          "phrases": [
+            "一种方法",
+            "几种药"
+          ],
+          "example": "这三种药的吃法不一样。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "种",
+            "中",
+            "钟",
+            "重"
+          ],
+          "collocationOptions": [
+            "三种药",
+            "三种休息",
+            "种三次地",
+            "一种以后"
+          ]
+        },
+        {
+          "id": "v08_26",
+          "hanzi": "方法",
+          "pinyin": "fāngfǎ",
+          "english": "method",
+          "phrases": [
+            "学习方法",
+            "使用方法"
+          ],
+          "example": "医生告诉了我吃药的方法。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "方法",
+            "方发",
+            "放法",
+            "仿法"
+          ],
+          "collocationOptions": [
+            "吃药的方法",
+            "方法三次地",
+            "一种方法药",
+            "方法出院了"
+          ]
+        },
+        {
+          "id": "v08_27",
+          "hanzi": "其他",
+          "pinyin": "qítā",
+          "english": "other",
+          "phrases": [
+            "其他人",
+            "其他方法"
+          ],
+          "example": "其他几种药要饭后吃。",
+          "tier": "expression",
+          "allowedTypes": [
+            "recognition",
+            "shape",
+            "input",
+            "collocation"
+          ],
+          "shapeOptions": [
+            "其他",
+            "其地",
+            "期他",
+            "其也"
+          ],
+          "collocationOptions": [
+            "其他两种药",
+            "其他睡前地",
+            "其他三次吃",
+            "其他出院了"
+          ]
+        },
+        {
+          "id": "v08_28",
+          "hanzi": "心里",
+          "pinyin": "xīnlǐ",
+          "english": "mind; heart",
+          "phrases": [
+            "记在心里",
+            "心里开心"
+          ],
+          "example": "医生的话我都记在心里了。",
+          "tier": "context",
+          "allowedTypes": [
+            "recognition"
+          ],
+          "shapeOptions": [],
+          "collocationOptions": []
+        }
+      ]
+    }
+  ],
+  "supportOptions": [
+    {
+      "id": "vocabulary",
+      "labelCn": "我缺少合适的词",
+      "labelEn": "I need the right words"
+    },
+    {
+      "id": "organization",
+      "labelCn": "我不知道怎样组织信息",
+      "labelEn": "I need help organizing my ideas"
+    },
+    {
+      "id": "structure",
+      "labelCn": "我需要一个句子结构",
+      "labelEn": "I need a sentence frame"
+    },
+    {
+      "id": "teacher",
+      "labelCn": "我想获得老师的帮助",
+      "labelEn": "I want help from the teacher"
+    }
+  ],
+  "feelingOptions": [
+    {
+      "id": "clearer",
+      "labelCn": "我说得更清楚了",
+      "labelEn": "My expression is clearer"
+    },
+    {
+      "id": "more_complete",
+      "labelCn": "我说得更完整了",
+      "labelEn": "My expression is more complete"
+    },
+    {
+      "id": "more_natural",
+      "labelCn": "我说得更自然了",
+      "labelEn": "My expression is more natural"
+    },
+    {
+      "id": "still_need_help",
+      "labelCn": "我还需要帮助",
+      "labelEn": "I still need help"
+    }
+  ],
+  "coreEvidence": [
+    "entry_expression",
+    "actual_learning_path",
+    "exit_expression"
+  ],
+  "capabilities": [
+    "select_text_mini_loop",
+    "launch_interaction",
+    "independent_answer",
+    "support_request",
+    "anonymous_return",
+    "open_support",
+    "reanswer",
+    "record_teacher_decision",
+    "compare_entry_exit",
+    "teacher_selected_vocabulary_focus"
+  ]
+}
