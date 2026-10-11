@@ -44,6 +44,7 @@
         </div>
         <nav class="workspace-actions" aria-label="教师工作区">
           <a class="cp-action primary" id="classroomLink" data-workspace href="#">🎯 进入课堂</a>
+          <a class="cp-action" id="legacyClassroomLink" data-workspace href="#" hidden>↗ 进入原版课堂</a>
           <a class="cp-action" id="studentLink" data-workspace href="#">◉ 打开学生入口</a>
           <a class="cp-action" id="dashboardLink" data-workspace href="#">▦ 查看数据</a>
           <a class="cp-action" id="reviewLink" data-workspace href="#">✎ 进入批改</a>
@@ -138,20 +139,23 @@
 
     function updateWorkspaceLinks(ctx) {
       var ready = !!(selectedLesson && selectedLesson.openForUse && ctx);
-      var classroomPath = selectedLesson && selectedLesson.id === 'HSK3-L08'
-        ? '../in-class/l08-use-pilot.html'
-        : '../in-class/teacher.html';
+      var useProfile = selectedLesson && selectedLesson.useProfile;
+      var classroomPath = useProfile ? '../in-class/l08-use-pilot.html' : '../in-class/teacher.html';
       var links = {
         classroomLink: classroomPath,
+        legacyClassroomLink: '../in-class/teacher.html',
         studentLink: '../student/index.html',
         dashboardLink: '../teacher-dashboard/unified.html',
         reviewLink: '../teacher-dashboard/post-review.html'
       };
       Object.keys(links).forEach(function (id) {
         var anchor = byId(id);
-        anchor.href = ready ? links[id] + '?' + window.ClassProContext.buildQuery(ctx) : '#';
+        var query = ready ? window.ClassProContext.buildQuery(ctx) : '';
+        if (ready && id === 'classroomLink' && useProfile) query += '&profile=' + encodeURIComponent(useProfile);
+        anchor.href = ready ? links[id] + '?' + query : '#';
         anchor.setAttribute('aria-disabled', ready ? 'false' : 'true');
       });
+      byId('legacyClassroomLink').hidden = !useProfile;
     }
 
     function commitContext() {

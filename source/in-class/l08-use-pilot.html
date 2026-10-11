@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>L8 · 以用为主线实验</title>
+  <title>ClassPro · 以用为主线</title>
   <link rel="stylesheet" href="../shared/classpro-theme.css">
   <link rel="stylesheet" href="l08-use-pilot.css?v=11">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.3.0/mqtt.min.js"></script>
@@ -14,12 +14,13 @@
 
   <section id="useLayer" class="use-layer hidden">
     <header class="use-header">
-      <div class="use-brand"><span class="use-logo">用</span><div><b>ClassPro · 以用为主线</b><small>第8课 · 四个表达 MINI 循环</small></div></div>
+      <div class="use-brand"><span class="use-logo">用</span><div><b>ClassPro · 以用为主线</b><small id="useSubtitle">四个表达 MINI 循环</small></div></div>
       <div class="use-header-actions">
         <span id="connection" class="status">● 正在连接</span>
         <span id="roomLabel" class="room-label">房间 8808</span>
         <button onclick="openStudent()">打开学生端</button>
-        <button onclick="exportTrail()">导出课堂路径</button>
+        <button onclick="exportVisualReport()">导出可视化报告</button>
+        <button onclick="exportTrail()">导出原始 JSON</button>
         <button onclick="returnTeacherHome()">返回教师主界面</button>
       </div>
     </header>
@@ -51,6 +52,6 @@
     </main>
   </section>
 
-  <script src="l08-use-pilot.js?v=12"></script>
+  <script src="l08-use-pilot.js?v=20"></script>
 </body>
 </html>

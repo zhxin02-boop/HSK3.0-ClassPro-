@@ -71,7 +71,9 @@ assert(teacherJs.includes('repeat(5,minmax(0,1fr))'), 'Formal home must display 
 assert(teacherJs.includes('oldRibbon.remove()') && !teacherJs.includes('ribbon.innerHTML'), 'The green goal ribbon must remain removed');
 assert(teacherJs.includes('openUseGroup') && teacherJs.includes('renderUseHome'), 'Use home must expose four independent MINI loops');
 assert(teacherJs.includes('groupRecords') && teacherJs.includes('THREE CORE EVIDENCE'), 'Teacher evidence must be grouped by MINI loop and limited to the three core evidence types');
-assert(teacherJs.includes("goResource('vocabulary')") && teacherJs.includes("goResource('grammar')") && teacherJs.includes("goResource('text')") && teacherJs.includes("goResource('practice')"), 'Each MINI loop must route to native resources');
+assert(teacherJs.includes('exportVisualReport') && teacherJs.includes('-class-report.html'), 'Shared Use runtime must provide a standalone visual classroom report');
+assert(teacherHtml.includes('导出原始 JSON') && teacherHtml.includes('导出可视化报告'), 'Shared Use page must retain JSON alongside the visual report');
+assert(teacherJs.includes('resources.vocabulary') && teacherJs.includes('resources.grammar') && teacherJs.includes('resources.text') && teacherJs.includes('resources.practice'), 'Each MINI loop must route to native resources');
 assert(teacherJs.includes('vocabSession') && teacherJs.includes('grammarIndex') && teacherJs.includes('textIndex'), 'Resource routes must target the current text instead of using random content');
 assert(teacherJs.includes('installVocabularyFocus') && teacherJs.includes('publishVocabularyFocus'), 'Vocabulary story must add a teacher-selected focus task');
 assert(teacherJs.includes('一次最多选择4个词'), 'Vocabulary focus must remain a small teacher-selected batch');
@@ -88,7 +90,7 @@ assert(!teacherJs.includes('resourceCatalog'), 'Interaction must not be attached
 assert(teacherJs.includes('installUnifiedStudentEntry') && teacherJs.includes('unifiedStudentUrl'), 'Teacher QR and student button must open the unified student page');
 assert(teacherJs.includes('experiment=${encodeURIComponent(EXPERIMENT)}'), 'Unified student entry must activate the Use bridge');
 assert(read(formalStudentPath).includes('l08-use-student-bridge.js'), 'Formal student page must load the optional Use bridge');
-assert(studentBridge.includes("EXPERIMENT !== 'l08-use-pilot-v1'"), 'Use bridge must stay inactive for ordinary student links');
+assert(studentBridge.includes('EXPECTED_EXPERIMENT') && studentBridge.includes('EXPERIMENT !== EXPECTED_EXPERIMENT'), 'Use bridge must stay inactive for ordinary student links');
 assert(studentBridge.includes('classpro/use/${EXPERIMENT}/${ROOM}'), 'Use bridge must use the isolated experiment topic');
 assert(studentBridge.includes('groupId: control.interaction.groupId'), 'Student evidence must retain its MINI-loop identity');
 assert(studentBridge.includes('entryAnswers'), 'Student must preserve a separate starting expression for every MINI loop');
@@ -101,11 +103,12 @@ assert(studentBridge.includes("interaction.currentAction === 'waiting'") && stud
 assert(teacherJs.includes('classpro/use/${EXPERIMENT}/${ROOM}'), 'Use protocol must use an isolated topic');
 assert(!teacherJs.includes('classpro/room/'), 'Use protocol must not write to the formal classroom topic');
 assert(lessonLoader.includes("params.get('dataVersion')") && lessonLoader.includes("withDataVersion('../data-model/lessons/' + lesson + '.json')"), 'Shared lesson loader must honor the pilot data version');
-assert(teacherHome.includes("selectedLesson.id === 'HSK3-L08'") && teacherHome.includes("'../in-class/l08-use-pilot.html'"), 'Teacher home must route L8 to the Use pilot');
+assert(teacherHome.includes('selectedLesson.useProfile') && teacherHome.includes("'../in-class/l08-use-pilot.html'"), 'Teacher home must route configured lessons to the shared Use pilot');
 
 assert(hashJson(formalLessonPath) === '69BD49407B2C11212026F1FA6FE7F572523022BD929D106554880D357F9A3C94', 'Formal L8 lesson changed during the pilot upgrade');
 
 console.log('Validated: four independent Text 1–4 MINI loops share exactly three core evidence types.');
 console.log('Validated: each loop routes to its matching vocabulary, grammar, text, and paragraph practice.');
 console.log('Validated: vocabulary focus is teacher-selected and supports recognition, form, input, and collocation.');
-console.log('Validated: formal L8 lesson data remains unchanged; shared teacher/student pages stay reusable.');
+console.log('Validated: generated L8 config matches the formal lesson source; shared teacher/student pages stay reusable.');
+console.log('Validated: shared classroom export provides both visual HTML and raw JSON.');
