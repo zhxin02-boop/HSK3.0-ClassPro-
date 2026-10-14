@@ -92,6 +92,7 @@
       .use-bridge-kicker{font-size:12px;font-weight:900;letter-spacing:.08em;color:#dd7138}
       .use-bridge-prompt{margin:14px 0;padding:16px 18px;border-radius:14px;background:#f2f7f3;font-size:23px;font-weight:900;line-height:1.55;color:#173f34}
       .use-bridge-context{margin:12px 0;padding:13px 16px;border:1px solid #f0d8bd;border-radius:13px;background:#fff7ed;line-height:1.6}
+      .use-bridge-context img{display:block;width:100%;max-height:320px;margin:10px 0;border-radius:12px;object-fit:contain;background:#fff}
       .use-bridge-muted{color:#64756d;line-height:1.55}.use-bridge-muted small{display:block;margin-top:3px}
       .use-bridge-card textarea,.use-bridge-card input[type=text]{box-sizing:border-box;width:100%;margin:14px 0;padding:14px;border:2px solid #dfeac8;border-radius:14px;background:#fff;font:20px/1.5 KaiTi,STKaiti,"Kaiti SC","Microsoft YaHei",serif}
       .use-bridge-submit{width:100%;margin-top:12px;padding:13px 18px;border:0;border-radius:13px;background:#176b50;color:#fff;font-size:17px;font-weight:900;cursor:pointer}
@@ -185,7 +186,12 @@
   }
   function card(title, en, content) { return `<section class="use-bridge-card"><div class="use-bridge-kicker">${esc(en)}</div><h1>${esc(title)}</h1>${content}</section>`; }
   function prompt(interaction) {
-    const context = interaction.contextCn ? `<div class="use-bridge-context"><b>情境 / Context</b><br>${esc(interaction.contextCn)}${interaction.contextEn ? `<small>${esc(interaction.contextEn)}</small>` : ''}</div>` : '';
+    const stimulus = interaction.stimulus || null;
+    const contextCn = stimulus && stimulus.instructionCn ? stimulus.instructionCn : (interaction.contextCn || '');
+    const contextEn = stimulus && stimulus.instructionEn ? stimulus.instructionEn : (interaction.contextEn || '');
+    const contextLabel = stimulus && stimulus.labelCn ? stimulus.labelCn : '情境';
+    const contextImage = stimulus && stimulus.type === 'image' && stimulus.image ? `<img src="${esc(stimulus.image)}" alt="${esc(stimulus.altCn || contextLabel)}">` : '';
+    const context = contextCn || contextImage ? `<div class="use-bridge-context"><b>${esc(contextLabel)} / Context</b>${contextImage}${contextCn ? `<br>${esc(contextCn)}` : ''}${contextEn ? `<small>${esc(contextEn)}</small>` : ''}</div>` : '';
     const requirements = (interaction.requirements || []).length ? `<div class="use-bridge-note"><b>这次表达需要包括：</b><div class="use-bridge-list">${interaction.requirements.map(item => `<div>${esc(item.label)}</div>`).join('')}</div></div>` : '';
     return `${countdownMarkup(interaction)}${context}<div class="use-bridge-prompt">${esc(interaction.prompt.cn)}</div>${interaction.prompt.en ? `<div class="use-bridge-muted"><small>${esc(interaction.prompt.en)}</small></div>` : ''}${requirements}`;
   }

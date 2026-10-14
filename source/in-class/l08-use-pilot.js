@@ -828,6 +828,7 @@
     createInteraction(stage, task.promptCn, task.promptEn, {
       contextCn: group().contextCn || '',
       contextEn: group().contextEn || '',
+      stimulus: task.stimulus || null,
       requirements: stage === 'exit' ? (group().exitRequirements || []) : [],
       responseMode: stage === 'exit' ? (group().responseMode || 'text') : 'text',
       timerSeconds: chosenTimerSeconds('miniLoop', 'useMiniMinutes', document)
@@ -961,7 +962,12 @@
     const visual = stage === 'entry'
       ? `<div class="cycle-hero"><span>${esc(group().icon)}</span><div><small>${esc(group().label)}</small><b>${esc(group().title)}</b><em>从自己的第一句话开始</em></div></div>`
       : '<div class="progress-hero"><div><span>课堂开始</span><b>我原来能怎么说？</b><small>START</small></div><strong>→</strong><div class="after"><span>现在</span><b>我的表达升级了吗？</b><small>NOW</small></div></div>';
-    const context = group().contextCn ? `<div class="task-context"><b>医生的话</b><p>${esc(group().contextCn)}</p><small>${esc(group().contextEn || '')}</small></div>` : '';
+    const stimulus = task.stimulus || null;
+    const contextCn = stimulus && stimulus.instructionCn ? stimulus.instructionCn : (group().contextCn || '');
+    const contextEn = stimulus && stimulus.instructionEn ? stimulus.instructionEn : (group().contextEn || '');
+    const contextLabel = stimulus && stimulus.labelCn ? stimulus.labelCn : '情境';
+    const contextImage = stimulus && stimulus.type === 'image' && stimulus.image ? `<img class="task-context-image" src="${esc(stimulus.image)}" alt="${esc(stimulus.altCn || contextLabel)}">` : '';
+    const context = contextCn || contextImage ? `<div class="task-context"><b>${esc(contextLabel)}</b>${contextImage}${contextCn ? `<p>${esc(contextCn)}</p>` : ''}${contextEn ? `<small>${esc(contextEn)}</small>` : ''}</div>` : '';
     const requirements = stage === 'exit' && (group().exitRequirements || []).length ? `<div class="support-tags">${group().exitRequirements.map(item => `<span class="tag">${esc(item.label)}</span>`).join('')}</div>` : '';
     host.innerHTML = `<span class="eyebrow">${esc(task.labelEn)}</span><h1>${esc(stage === 'entry' ? '先说出你现在的想法' : '回到同一个任务，看见进步')}</h1><div class="lesson-goal-line"><span>共同目标</span><b>${esc(group().goal)}</b><small>${esc(group().goalEn)}</small></div>${visual}${context}<div class="task-card focus-task"><h2>${esc(stage === 'entry' ? '起点表达' : '终点表达')}</h2><div class="prompt">${esc(task.promptCn)}</div><p class="en">${esc(task.promptEn)}</p>${requirements}${interaction ? renderInteraction(interaction) : `${timerPicker('miniLoop', 'useMiniMinutes')}<button class="primary start-button" onclick="startUseTask('${stage}')">▶ 开始 / START</button>`}</div>`;
   }
