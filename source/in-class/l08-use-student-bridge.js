@@ -114,10 +114,11 @@
       username: 'classpro', password: 'Classpro2026', clientId, reconnectPeriod: 3000, connectTimeout: 8000
     });
     client.on('connect', () => {
-      client.subscribe(TOPICS.control);
-      client.subscribe(TOPICS.ack);
-      sendPresence(true);
-      flushOutbox();
+      client.subscribe([TOPICS.control, TOPICS.ack], { qos: 1 }, error => {
+        if (error) return;
+        sendPresence(true);
+        flushOutbox();
+      });
     });
     client.on('message', (topic, buffer) => {
       try {

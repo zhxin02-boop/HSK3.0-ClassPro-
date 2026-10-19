@@ -845,7 +845,7 @@
   window.startTextOverview = function () {
     const learning = activeTextLearning();
     state.selectedGroupId = learning.useGroupId;
-    createInteraction('text_overview', '先独立判断课文的主题、发展和交际目的，不必回忆每个细节。', 'Identify the main idea, development, and communicative purpose. Do not focus on details yet.', {
+    createInteraction('text_overview', '先判断课文主要说什么、先说什么后来怎样、最后想做什么，不必回忆每个细节。', 'Identify the main idea, sequence, and final intention. Do not focus on details yet.', {
       groupId: learning.useGroupId,
       responseType: 'choice_set',
       items: learning.overviewChoices,

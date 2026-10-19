@@ -1,0 +1,6539 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "level": "HSK3",
+    "lessonId": "L11",
+    "lessonKey": "HSK3-L11",
+    "title": "看来我没办法解决这个问题",
+    "titleEn": "It seems I can't solve this problem",
+    "topic": "会议安排、设备问题、团队分工与重要选择",
+    "courseModel": "三次课：确认会议与设备 → 根据现象推测并求助 → 完成团队任务并表达个人选择",
+    "sourceTextPolicy": "四篇教材中文和拼音逐行保留；“笔记本（电脑）”按 laptop 教学；课文四使用日记布局；英文译文、生活讨论、练习和任务属于教学扩展。"
+  },
+  "pedagogy": {
+    "exerciseMix": {
+      "lessonMaxPercent": 50,
+      "transferTargetPercent": 30,
+      "reviewTargetPercent": 20
+    },
+    "speakingParticipation": "职场情境可迁移到班级、小组、社团和课程展示；每位组员都要表达，不要求已有工作经历。",
+    "cultureFactPolicy": "个人学习、工作、城市和家庭选择允许不同答案，不设置唯一正确立场。"
+  },
+  "features": {
+    "pinyin": true,
+    "hanziWritingDemo": true,
+    "vocabExamples": true,
+    "competition": true,
+    "postClassHomework": true,
+    "previewMissions": true
+  },
+  "sessions": [
+    {
+      "id": "A",
+      "title": "第一次课：确认会议与设备选择",
+      "textIds": [
+        "t_hsk3_l11_01"
+      ],
+      "previewMissionId": "pm_hsk3_l11_a",
+      "focus": [
+        "会议时间和地点",
+        "还是/或者",
+        "设备准备",
+        "会议或活动信息卡"
+      ]
+    },
+    {
+      "id": "B",
+      "title": "第二次课：描述设备问题并决定求助",
+      "textIds": [
+        "t_hsk3_l11_02"
+      ],
+      "previewMissionId": "pm_hsk3_l11_b",
+      "focus": [
+        "视听问题",
+        "看来",
+        "可能补语复习",
+        "问题与求助卡"
+      ]
+    },
+    {
+      "id": "C",
+      "title": "第三次课：完成任务并表达重要选择",
+      "textIds": [
+        "t_hsk3_l11_03",
+        "t_hsk3_l11_04"
+      ],
+      "previewMissionId": "pm_hsk3_l11_c",
+      "focus": [
+        "把字句动作结果",
+        "对……来说",
+        "团队分工与个人选择",
+        "1—2分钟课堂分享"
+      ]
+    }
+  ],
+  "vocabScenes": {
+    "1": {
+      "title": "确认会议与设备选择",
+      "subtitle": "先确认变更，再比较电脑并完成会前准备。",
+      "steps": [
+        {
+          "title": "经理不在，会议改期",
+          "talkHint": "找经理办公室、日历和正在确认时间的两位同事。",
+          "prompt": "会议信息发生了哪些变化？",
+          "promptPinyin": "Huìyì xìnxī fāshēng le nǎxiē biànhuà?",
+          "promptEn": "What meeting information has changed?",
+          "image": "images/hsk3-l11/photo-text-1-meeting-change.png",
+          "labels": [
+            {
+              "word": "会议",
+              "x": 12,
+              "y": 16,
+              "targetX": 43,
+              "targetY": 45
+            },
+            {
+              "word": "经理",
+              "x": 88,
+              "y": 16,
+              "targetX": 83,
+              "targetY": 45
+            },
+            {
+              "word": "后天",
+              "x": 12,
+              "y": 82,
+              "targetX": 39,
+              "targetY": 52
+            },
+            {
+              "word": "地点",
+              "x": 88,
+              "y": 82,
+              "targetX": 63,
+              "targetY": 56
+            }
+          ],
+          "words": [
+            "会议",
+            "经理",
+            "后天",
+            "地点"
+          ],
+          "sentence": "经理今天下午不在，会议改到后天上午十点。",
+          "sampleAnswers": [
+            {
+              "hanzi": "今天下午不开会了。",
+              "pinyin": "Jīntiān xiàwǔ bù kāihuì le."
+            },
+            {
+              "hanzi": "会议改到后天上午十点。",
+              "pinyin": "Huìyì gǎi dào hòutiān shàngwǔ shí diǎn."
+            },
+            {
+              "hanzi": "杨同乐要给大家发邮件。",
+              "pinyin": "Yáng Tónglè yào gěi dàjiā fā yóujiàn."
+            }
+          ]
+        },
+        {
+          "title": "选择电脑并接好设备",
+          "talkHint": "比较会议室电脑、笔记本电脑和连接线。",
+          "prompt": "开会时用哪台电脑？还要做什么准备？",
+          "promptPinyin": "Kāihuì shí yòng nǎ tái diànnǎo? Hái yào zuò shénme zhǔnbèi?",
+          "promptEn": "Which computer will they use, and what must they prepare?",
+          "image": "images/hsk3-l11/photo-text-1-computer-choice.png",
+          "labels": [
+            {
+              "word": "笔记本（电脑）",
+              "x": 12,
+              "y": 18,
+              "targetX": 61,
+              "targetY": 69
+            },
+            {
+              "word": "或者",
+              "x": 88,
+              "y": 18,
+              "targetX": 49,
+              "targetY": 49
+            },
+            {
+              "word": "室",
+              "x": 12,
+              "y": 82,
+              "targetX": 51,
+              "targetY": 35
+            },
+            {
+              "word": "发",
+              "x": 88,
+              "y": 82,
+              "targetX": 76,
+              "targetY": 50
+            }
+          ],
+          "words": [
+            "笔记本（电脑）",
+            "或者",
+            "室",
+            "发",
+            {
+              "hanzi": "接好",
+              "pinyin": "jiēhǎo",
+              "english": "connect and ready",
+              "phrases": [
+                "把电脑接好",
+                "提前接好"
+              ],
+              "example": "开会前，我们把电脑接好。",
+              "examplePinyin": "Kāihuì qián, wǒmen bǎ diànnǎo jiēhǎo.",
+              "sourceType": "teaching_extension"
+            }
+          ],
+          "sentence": "会议室的电脑或者自己的电脑都可以，开会前要把电脑接好。",
+          "sampleAnswers": [
+            {
+              "hanzi": "可以用会议室的电脑。",
+              "pinyin": "Kěyǐ yòng huìyìshì de diànnǎo."
+            },
+            {
+              "hanzi": "也可以用自己的笔记本电脑。",
+              "pinyin": "Yě kěyǐ yòng zìjǐ de bǐjìběn diànnǎo."
+            },
+            {
+              "hanzi": "他们要早点儿去把电脑接好。",
+              "pinyin": "Tāmen yào zǎodiǎnr qù bǎ diànnǎo jiēhǎo."
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "title": "观察设备问题并决定求助",
+      "subtitle": "先说看见和听见的现象，再用“看来”得出结论。",
+      "steps": [
+        {
+          "title": "屏幕没有画面",
+          "talkHint": "找黑色屏幕、连接线和正在检查的动作。",
+          "prompt": "电脑接好以后，哪里还可能有问题？",
+          "promptPinyin": "Diànnǎo jiēhǎo yǐhòu, nǎli hái kěnéng yǒu wèntí?",
+          "promptEn": "What may still be wrong after the computer is connected?",
+          "image": "images/hsk3-l11/photo-text-2-no-picture.png",
+          "labels": [
+            {
+              "word": "看来",
+              "x": 12,
+              "y": 16,
+              "targetX": 46,
+              "targetY": 42
+            },
+            {
+              "word": "解决",
+              "x": 88,
+              "y": 16,
+              "targetX": 78,
+              "targetY": 53
+            },
+            {
+              "word": "办法",
+              "x": 12,
+              "y": 82,
+              "targetX": 63,
+              "targetY": 59
+            },
+            {
+              "word": "屏幕",
+              "x": 88,
+              "y": 82,
+              "targetX": 54,
+              "targetY": 31
+            }
+          ],
+          "words": [
+            "看来",
+            "解决",
+            "办法",
+            {
+              "hanzi": "屏幕",
+              "pinyin": "píngmù",
+              "english": "screen",
+              "phrases": [
+                "电脑屏幕",
+                "屏幕没有画面"
+              ],
+              "example": "屏幕上什么都看不见。",
+              "examplePinyin": "Píngmù shang shénme dōu kàn bu jiàn.",
+              "sourceType": "teaching_extension"
+            }
+          ],
+          "sentence": "电脑已经接好，但是屏幕上什么都看不见。",
+          "sampleAnswers": [
+            {
+              "hanzi": "屏幕上没有画面。",
+              "pinyin": "Píngmù shang méiyǒu huàmiàn."
+            },
+            {
+              "hanzi": "杨同乐正在检查连接线。",
+              "pinyin": "Yáng Tónglè zhèngzài jiǎnchá liánjiēxiàn."
+            },
+            {
+              "hanzi": "看来连接还有问题。",
+              "pinyin": "Kànlái liánjiē hái yǒu wèntí."
+            }
+          ]
+        },
+        {
+          "title": "声音太小，准备求助",
+          "talkHint": "找扬声器、手机和正在听声音的动作。",
+          "prompt": "画面恢复以后，为什么还要找别人帮忙？",
+          "promptPinyin": "Huàmiàn huīfù yǐhòu, wèishénme hái yào zhǎo biérén bāngmáng?",
+          "promptEn": "Why do they still need help after the picture returns?",
+          "image": "images/hsk3-l11/photo-text-2-low-sound.png",
+          "labels": [
+            {
+              "word": "声音",
+              "x": 12,
+              "y": 16,
+              "targetX": 51,
+              "targetY": 75
+            },
+            {
+              "word": "只能",
+              "x": 88,
+              "y": 16,
+              "targetX": 80,
+              "targetY": 42
+            },
+            {
+              "word": "别人",
+              "x": 12,
+              "y": 82,
+              "targetX": 77,
+              "targetY": 40
+            },
+            {
+              "word": "看来",
+              "x": 88,
+              "y": 82,
+              "targetX": 35,
+              "targetY": 44
+            }
+          ],
+          "words": [
+            "声音",
+            "只能",
+            "别人",
+            "看来",
+            {
+              "hanzi": "音量",
+              "pinyin": "yīnliàng",
+              "english": "volume",
+              "phrases": [
+                "调音量",
+                "音量太小"
+              ],
+              "example": "音量太小，所以听不清楚。",
+              "examplePinyin": "Yīnliàng tài xiǎo, suǒyǐ tīng bu qīngchu.",
+              "sourceType": "teaching_extension"
+            }
+          ],
+          "sentence": "画面恢复了，但声音太小，看来只能找别人帮忙。",
+          "sampleAnswers": [
+            {
+              "hanzi": "现在看得见画面了。",
+              "pinyin": "Xiànzài kàn de jiàn huàmiàn le."
+            },
+            {
+              "hanzi": "声音有点儿小，听不清楚。",
+              "pinyin": "Shēngyīn yǒudiǎnr xiǎo, tīng bu qīngchu."
+            },
+            {
+              "hanzi": "看来他们只能找别人帮忙。",
+              "pinyin": "Kànlái tāmen zhǐ néng zhǎo biérén bāngmáng."
+            }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "title": "分担工作并关注新消息",
+      "subtitle": "有人请假时重新分工，确认时间后把任务做完。",
+      "steps": [
+        {
+          "title": "同事休假，工作很多",
+          "talkHint": "找空座位、工作文件和正在担心的王一雪。",
+          "prompt": "同事不在时，团队怎样把工作做完？",
+          "promptPinyin": "Tóngshì bú zài shí, tuánduì zěnyàng bǎ gōngzuò zuò wán?",
+          "promptEn": "How can the team finish the work when colleagues are away?",
+          "image": "images/hsk3-l11/photo-text-3-workload.png",
+          "labels": [
+            {
+              "word": "同事",
+              "x": 12,
+              "y": 16,
+              "targetX": 63,
+              "targetY": 31
+            },
+            {
+              "word": "休假",
+              "x": 88,
+              "y": 16,
+              "targetX": 80,
+              "targetY": 42
+            },
+            {
+              "word": "怕",
+              "x": 12,
+              "y": 82,
+              "targetX": 37,
+              "targetY": 48
+            },
+            {
+              "word": "请假",
+              "x": 88,
+              "y": 82,
+              "targetX": 72,
+              "targetY": 52
+            }
+          ],
+          "words": [
+            "同事",
+            "休假",
+            "怕",
+            "请假"
+          ],
+          "sentence": "好几个同事休假了，王一雪怕开会前干不完工作。",
+          "sampleAnswers": [
+            {
+              "hanzi": "老张家里有事，所以请假了。",
+              "pinyin": "Lǎo Zhāng jiā li yǒu shì, suǒyǐ qǐngjià le."
+            },
+            {
+              "hanzi": "桌上还有很多工作。",
+              "pinyin": "Zhuō shang hái yǒu hěn duō gōngzuò."
+            },
+            {
+              "hanzi": "杨同乐愿意一起把工作做完。",
+              "pinyin": "Yáng Tónglè yuànyì yìqǐ bǎ gōngzuò zuò wán."
+            }
+          ]
+        },
+        {
+          "title": "会议延期，先去吃饭",
+          "talkHint": "找邮箱消息、时钟和两个人放下的工作。",
+          "prompt": "看到新邮件以后，他们为什么不着急了？",
+          "promptPinyin": "Kàndào xīn yóujiàn yǐhòu, tāmen wèishénme bù zháojí le?",
+          "promptEn": "Why are they no longer in a hurry after seeing the new email?",
+          "image": "images/hsk3-l11/photo-text-3-meeting-delay.png",
+          "labels": [
+            {
+              "word": "邮箱",
+              "x": 12,
+              "y": 16,
+              "targetX": 65,
+              "targetY": 61
+            },
+            {
+              "word": "发",
+              "x": 88,
+              "y": 16,
+              "targetX": 62,
+              "targetY": 61
+            },
+            {
+              "word": "会议",
+              "x": 12,
+              "y": 82,
+              "targetX": 54,
+              "targetY": 45
+            },
+            {
+              "word": "后天",
+              "x": 88,
+              "y": 82,
+              "targetX": 85,
+              "targetY": 20
+            }
+          ],
+          "words": [
+            "邮箱",
+            "发",
+            "会议",
+            "后天",
+            {
+              "hanzi": "午饭",
+              "pinyin": "wǔfàn",
+              "english": "lunch",
+              "phrases": [
+                "吃午饭",
+                "午饭时间"
+              ],
+              "example": "会议延期了，他们先去吃午饭。",
+              "examplePinyin": "Huìyì yánqī le, tāmen xiān qù chī wǔfàn.",
+              "sourceType": "teaching_extension"
+            }
+          ],
+          "sentence": "邮件说经理还没回来，会议下周才能开，他们决定先去吃饭。",
+          "sampleAnswers": [
+            {
+              "hanzi": "王一雪原来想把工作发到公司邮箱。",
+              "pinyin": "Wáng Yīxuě yuánlái xiǎng bǎ gōngzuò fā dào gōngsī yóuxiāng."
+            },
+            {
+              "hanzi": "经理还没回来。",
+              "pinyin": "Jīnglǐ hái méi huílái."
+            },
+            {
+              "hanzi": "会议下周才能开，所以他们先去吃饭。",
+              "pinyin": "Huìyì xià zhōu cái néng kāi, suǒyǐ tāmen xiān qù chī fàn."
+            }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "title": "比较机会、城市与生活",
+      "subtitle": "听见新的工作机会，再从个人角度说明重要选择。",
+      "steps": [
+        {
+          "title": "上海同事提出机会",
+          "talkHint": "找正在交流的同事、城市背景和思考中的王一雪。",
+          "prompt": "面对新的城市和工作机会，可以先问哪些问题？",
+          "promptPinyin": "Miànduì xīn de chéngshì hé gōngzuò jīhuì, kěyǐ xiān wèn nǎxiē wèntí?",
+          "promptEn": "What questions can you ask about a new city and opportunity?",
+          "image": "images/hsk3-l11/photo-text-4-opportunity.png",
+          "labels": [
+            {
+              "word": "同事",
+              "x": 88,
+              "y": 16,
+              "targetX": 66,
+              "targetY": 41
+            },
+            {
+              "word": "愿意",
+              "x": 12,
+              "y": 16,
+              "targetX": 34,
+              "targetY": 44
+            },
+            {
+              "word": "城市",
+              "x": 88,
+              "y": 82,
+              "targetX": 64,
+              "targetY": 17
+            },
+            {
+              "word": "机会",
+              "x": 12,
+              "y": 82,
+              "targetX": 54,
+              "targetY": 46
+            }
+          ],
+          "words": [
+            "同事",
+            "愿意",
+            "城市",
+            "机会"
+          ],
+          "sentence": "上海同事问王一雪愿不愿意去上海工作。",
+          "sampleAnswers": [
+            {
+              "hanzi": "他们提出了一个新的工作机会。",
+              "pinyin": "Tāmen tíchū le yí gè xīn de gōngzuò jīhuì."
+            },
+            {
+              "hanzi": "王一雪在认真听，也在思考。",
+              "pinyin": "Wáng Yīxuě zài rènzhēn tīng, yě zài sīkǎo."
+            },
+            {
+              "hanzi": "她可以问工作内容和城市生活。",
+              "pinyin": "Tā kěyǐ wèn gōngzuò nèiróng hé chéngshì shēnghuó."
+            }
+          ]
+        },
+        {
+          "title": "写日记思考重要选择",
+          "talkHint": "找日记、笔记本电脑、家人照片和城市窗景。",
+          "prompt": "对王一雪来说，哪些因素都很重要？",
+          "promptPinyin": "Duì Wáng Yīxuě lái shuō, nǎxiē yīnsù dōu hěn zhòngyào?",
+          "promptEn": "Which factors matter to Wang Yixue?",
+          "image": "images/hsk3-l11/photo-text-4-diary-choice.png",
+          "labels": [
+            {
+              "word": "生活",
+              "x": 12,
+              "y": 16,
+              "targetX": 53,
+              "targetY": 57
+            },
+            {
+              "word": "离开",
+              "x": 88,
+              "y": 16,
+              "targetX": 24,
+              "targetY": 28
+            },
+            {
+              "word": "为",
+              "x": 12,
+              "y": 82,
+              "targetX": 51,
+              "targetY": 62
+            },
+            {
+              "word": "或",
+              "x": 88,
+              "y": 82,
+              "targetX": 72,
+              "targetY": 46
+            }
+          ],
+          "words": [
+            "生活",
+            "离开",
+            "为",
+            "或",
+            {
+              "hanzi": "日记",
+              "pinyin": "rìjì",
+              "english": "diary",
+              "phrases": [
+                "写日记",
+                "日记本"
+              ],
+              "example": "王一雪在家里写日记。",
+              "examplePinyin": "Wáng Yīxuě zài jiā li xiě rìjì.",
+              "sourceType": "teaching_extension"
+            }
+          ],
+          "sentence": "虽然上海可能有更好的机会，但是对王一雪来说，生活和家人也很重要。",
+          "sampleAnswers": [
+            {
+              "hanzi": "她在日记里比较工作机会和生活。",
+              "pinyin": "Tā zài rìjì li bǐjiào gōngzuò jīhuì hé shēnghuó."
+            },
+            {
+              "hanzi": "对她来说，家人也很重要。",
+              "pinyin": "Duì tā lái shuō, jiārén yě hěn zhòngyào."
+            },
+            {
+              "hanzi": "她不愿意为工作或学习离开家人。",
+              "pinyin": "Tā bú yuànyì wèi gōngzuò huò xuéxí líkāi jiārén."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "vocabulary": [
+    {
+      "id": "v11_01",
+      "hanzi": "会议",
+      "pinyin": "huìyì",
+      "pos": "名词",
+      "english": "meeting; conference",
+      "tags": [
+        "A"
+      ],
+      "example": "后天上午十点有一个会议。",
+      "examplePinyin": "Hòutiān shàngwǔ shí diǎn yǒu yí gè huìyì.",
+      "phrases": [
+        "参加会议",
+        "会议时间"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_02",
+      "hanzi": "经理",
+      "pinyin": "jīnglǐ",
+      "pos": "名词",
+      "english": "manager",
+      "tags": [
+        "A"
+      ],
+      "example": "经理今天下午不在办公室。",
+      "examplePinyin": "Jīnglǐ jīntiān xiàwǔ bú zài bàngōngshì.",
+      "phrases": [
+        "公司经理",
+        "问经理"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_03",
+      "hanzi": "开会",
+      "pinyin": "kāihuì",
+      "pos": "动词",
+      "english": "have a meeting",
+      "tags": [
+        "A"
+      ],
+      "example": "我们后天上午十点开会。",
+      "examplePinyin": "Wǒmen hòutiān shàngwǔ shí diǎn kāihuì.",
+      "phrases": [
+        "去开会",
+        "开会时间"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_04",
+      "hanzi": "后天",
+      "pinyin": "hòutiān",
+      "pos": "名词",
+      "english": "the day after tomorrow",
+      "tags": [
+        "A"
+      ],
+      "example": "后天我们在第一会议室见。",
+      "examplePinyin": "Hòutiān wǒmen zài dì-yī huìyìshì jiàn.",
+      "phrases": [
+        "后天上午",
+        "后天见"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_05",
+      "hanzi": "地点",
+      "pinyin": "dìdiǎn",
+      "pos": "名词",
+      "english": "place; location",
+      "tags": [
+        "A"
+      ],
+      "example": "请告诉大家新的会议地点。",
+      "examplePinyin": "Qǐng gàosu dàjiā xīn de huìyì dìdiǎn.",
+      "phrases": [
+        "会议地点",
+        "活动地点"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_06",
+      "hanzi": "室",
+      "pinyin": "shì",
+      "pos": "名词",
+      "english": "room",
+      "tags": [
+        "A"
+      ],
+      "example": "我们在第一会议室开会。",
+      "examplePinyin": "Wǒmen zài dì-yī huìyìshì kāihuì.",
+      "phrases": [
+        "会议室",
+        "办公室"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_07",
+      "hanzi": "发",
+      "pinyin": "fā",
+      "pos": "动词",
+      "english": "send",
+      "tags": [
+        "A"
+      ],
+      "example": "我正要给大家发邮件。",
+      "examplePinyin": "Wǒ zhèng yào gěi dàjiā fā yóujiàn.",
+      "phrases": [
+        "发邮件",
+        "发信息"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_08",
+      "hanzi": "笔记本（电脑）",
+      "pinyin": "bǐjìběn (diànnǎo)",
+      "pos": "名词",
+      "english": "laptop",
+      "tags": [
+        "A"
+      ],
+      "example": "请把笔记本电脑接好。",
+      "examplePinyin": "Qǐng bǎ bǐjìběn diànnǎo jiēhǎo.",
+      "phrases": [
+        "笔记本电脑",
+        "自己的电脑"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_09",
+      "hanzi": "或者",
+      "pinyin": "huòzhě",
+      "pos": "连词",
+      "english": "or; alternatively",
+      "tags": [
+        "A"
+      ],
+      "example": "你可以用会议室的电脑或者自己的电脑。",
+      "examplePinyin": "Nǐ kěyǐ yòng huìyìshì de diànnǎo huòzhě zìjǐ de diànnǎo.",
+      "phrases": [
+        "或者……",
+        "A或者B"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_10",
+      "hanzi": "声音",
+      "pinyin": "shēngyīn",
+      "pos": "名词",
+      "english": "sound; voice",
+      "tags": [
+        "B"
+      ],
+      "example": "现在听得见声音了。",
+      "examplePinyin": "Xiànzài tīng de jiàn shēngyīn le.",
+      "phrases": [
+        "声音太小",
+        "听见声音"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_11",
+      "hanzi": "看来",
+      "pinyin": "kànlái",
+      "pos": "固定短语",
+      "english": "it seems; apparently",
+      "tags": [
+        "B"
+      ],
+      "example": "灯都关了，看来他们已经走了。",
+      "examplePinyin": "Dēng dōu guān le, kànlái tāmen yǐjīng zǒu le.",
+      "phrases": [
+        "看来……",
+        "在我看来"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_12",
+      "hanzi": "办法",
+      "pinyin": "bànfǎ",
+      "pos": "名词",
+      "english": "way; approach",
+      "tags": [
+        "B"
+      ],
+      "example": "我们一起想个办法吧。",
+      "examplePinyin": "Wǒmen yìqǐ xiǎng ge bànfǎ ba.",
+      "phrases": [
+        "想办法",
+        "没有办法"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_13",
+      "hanzi": "解决",
+      "pinyin": "jiějué",
+      "pos": "动词",
+      "english": "solve; resolve",
+      "tags": [
+        "B"
+      ],
+      "example": "他正在解决电脑的问题。",
+      "examplePinyin": "Tā zhèngzài jiějué diànnǎo de wèntí.",
+      "phrases": [
+        "解决问题",
+        "自己解决"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_14",
+      "hanzi": "只能",
+      "pinyin": "zhǐ néng",
+      "pos": "动词短语",
+      "english": "can only; have no choice but to",
+      "tags": [
+        "B"
+      ],
+      "example": "我不会修，只能找别人帮忙。",
+      "examplePinyin": "Wǒ bú huì xiū, zhǐ néng zhǎo biérén bāngmáng.",
+      "phrases": [
+        "只能这样",
+        "只能请人"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_15",
+      "hanzi": "别人",
+      "pinyin": "biérén",
+      "pos": "代词",
+      "english": "someone else; other people",
+      "tags": [
+        "B"
+      ],
+      "example": "这个问题可以请别人帮忙。",
+      "examplePinyin": "Zhège wèntí kěyǐ qǐng biérén bāngmáng.",
+      "phrases": [
+        "帮助别人",
+        "找别人"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_16",
+      "hanzi": "请假",
+      "pinyin": "qǐngjià",
+      "pos": "动词",
+      "english": "ask for leave",
+      "tags": [
+        "C"
+      ],
+      "example": "老张家里有事，所以请假了。",
+      "examplePinyin": "Lǎo Zhāng jiā li yǒu shì, suǒyǐ qǐngjià le.",
+      "phrases": [
+        "向经理请假",
+        "请一天假"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_17",
+      "hanzi": "同事",
+      "pinyin": "tóngshì",
+      "pos": "名词",
+      "english": "colleague",
+      "tags": [
+        "C"
+      ],
+      "example": "好几个同事今天都不在。",
+      "examplePinyin": "Hǎo jǐ gè tóngshì jīntiān dōu bú zài.",
+      "phrases": [
+        "公司同事",
+        "帮助同事"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_18",
+      "hanzi": "休假",
+      "pinyin": "xiūjià",
+      "pos": "动词",
+      "english": "take a vacation; be on leave",
+      "tags": [
+        "C"
+      ],
+      "example": "这个星期有两个同事休假。",
+      "examplePinyin": "Zhège xīngqī yǒu liǎng gè tóngshì xiūjià.",
+      "phrases": [
+        "出去休假",
+        "休假回来"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_19",
+      "hanzi": "怕",
+      "pinyin": "pà",
+      "pos": "动词",
+      "english": "fear; be afraid that",
+      "tags": [
+        "C"
+      ],
+      "example": "工作太多，我怕今天做不完。",
+      "examplePinyin": "Gōngzuò tài duō, wǒ pà jīntiān zuò bu wán.",
+      "phrases": [
+        "害怕",
+        "怕来不及"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_20",
+      "hanzi": "邮箱",
+      "pinyin": "yóuxiāng",
+      "pos": "名词",
+      "english": "email address; mailbox",
+      "tags": [
+        "C"
+      ],
+      "example": "请把材料发到公司的邮箱里。",
+      "examplePinyin": "Qǐng bǎ cáiliào fā dào gōngsī de yóuxiāng li.",
+      "phrases": [
+        "公司邮箱",
+        "发到邮箱"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_21",
+      "hanzi": "愿意",
+      "pinyin": "yuànyì",
+      "pos": "能愿动词",
+      "english": "be willing to",
+      "tags": [
+        "C"
+      ],
+      "example": "你愿意参加这个小组吗？",
+      "examplePinyin": "Nǐ yuànyì cānjiā zhège xiǎozǔ ma?",
+      "phrases": [
+        "愿意帮忙",
+        "愿不愿意"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_22",
+      "hanzi": "城市",
+      "pinyin": "chéngshì",
+      "pos": "名词",
+      "english": "city",
+      "tags": [
+        "C"
+      ],
+      "example": "你最想在哪个城市生活？",
+      "examplePinyin": "Nǐ zuì xiǎng zài nǎge chéngshì shēnghuó?",
+      "phrases": [
+        "大城市",
+        "别的城市"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_23",
+      "hanzi": "离开",
+      "pinyin": "líkāi",
+      "pos": "动词",
+      "english": "leave",
+      "tags": [
+        "C"
+      ],
+      "example": "她不愿意离开家人。",
+      "examplePinyin": "Tā bú yuànyì líkāi jiārén.",
+      "phrases": [
+        "离开北京",
+        "离开家人"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_24",
+      "hanzi": "机会",
+      "pinyin": "jīhuì",
+      "pos": "名词",
+      "english": "opportunity; chance",
+      "tags": [
+        "C"
+      ],
+      "example": "这是一个学习汉语的好机会。",
+      "examplePinyin": "Zhè shì yí gè xuéxí Hànyǔ de hǎo jīhuì.",
+      "phrases": [
+        "工作机会",
+        "好机会"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_25",
+      "hanzi": "生活",
+      "pinyin": "shēnghuó",
+      "pos": "名词/动词",
+      "english": "life; live",
+      "tags": [
+        "C"
+      ],
+      "example": "对我来说，生活也很重要。",
+      "examplePinyin": "Duì wǒ lái shuō, shēnghuó yě hěn zhòngyào.",
+      "phrases": [
+        "城市生活",
+        "生活习惯"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_26",
+      "hanzi": "为",
+      "pinyin": "wèi",
+      "pos": "介词",
+      "english": "for; for the sake of",
+      "tags": [
+        "C"
+      ],
+      "example": "她不愿意为工作离开家人。",
+      "examplePinyin": "Tā bú yuànyì wèi gōngzuò líkāi jiārén.",
+      "phrases": [
+        "为了工作",
+        "为家人"
+      ],
+      "sourceType": "textbook"
+    },
+    {
+      "id": "v11_27",
+      "hanzi": "或",
+      "pinyin": "huò",
+      "pos": "连词",
+      "english": "or",
+      "tags": [
+        "C"
+      ],
+      "example": "你可以选择工作、学习或休息。",
+      "examplePinyin": "Nǐ kěyǐ xuǎnzé gōngzuò, xuéxí huò xiūxi.",
+      "phrases": [
+        "A或B",
+        "工作或学习"
+      ],
+      "sourceType": "textbook"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g11_01",
+      "title": "“还是”和“或者”",
+      "titleEn": "还是 and 或者",
+      "scene": "Compare a choice question with a statement that offers acceptable alternatives.",
+      "structure": "选择疑问句：A 还是 B？　陈述句：A 或者 B 都可以。",
+      "explanation": "“还是”常用于请对方选择；“或者”常用于陈述可选办法。本课只学习这两个常用功能。",
+      "examples": [
+        {
+          "hanzi": "我们用会议室的电脑还是自己的笔记本电脑？",
+          "pinyin": "Wǒmen yòng huìyìshì de diànnǎo háishì zìjǐ de bǐjìběn diànnǎo?",
+          "english": "Will we use the conference-room computer or our own laptops?"
+        },
+        {
+          "hanzi": "会议室的电脑或者自己的电脑都可以。",
+          "pinyin": "Huìyìshì de diànnǎo huòzhě zìjǐ de diànnǎo dōu kěyǐ.",
+          "english": "Either computer is fine."
+        },
+        {
+          "hanzi": "我们今天、明天还是后天开会？",
+          "pinyin": "Wǒmen jīntiān, míngtiān háishì hòutiān kāihuì?",
+          "english": "Will we meet today, tomorrow or the day after tomorrow?"
+        },
+        {
+          "hanzi": "你可以坐地铁或者坐公共汽车来。",
+          "pinyin": "Nǐ kěyǐ zuò dìtiě huòzhě zuò gōnggòng qìchē lái.",
+          "english": "You can come by subway or bus."
+        },
+        {
+          "hanzi": "你想先准备图片还是先练习介绍？两个都可以。",
+          "pinyin": "Nǐ xiǎng xiān zhǔnbèi túpiàn háishì xiān liànxí jièshào? Liǎng ge dōu kěyǐ.",
+          "english": "Would you like to prepare pictures or practise the introduction first? Either is fine."
+        }
+      ]
+    },
+    {
+      "id": "g11_02",
+      "title": "固定短语“看来”",
+      "titleEn": "The set phrase 看来",
+      "scene": "Observe visible evidence first, then draw a reasonable conclusion.",
+      "structure": "可观察的事实，看来 + 结论。",
+      "explanation": "“看来”表示说话人根据已经看到、听到或想到的情况作出推测，不只是表达个人喜好。",
+      "examples": [
+        {
+          "hanzi": "屏幕没有画面，声音也听不清楚，看来这个问题我解决不了。",
+          "pinyin": "Píngmù méiyǒu huàmiàn, shēngyīn yě tīng bu qīngchu, kànlái zhège wèntí wǒ jiějué bu liǎo.",
+          "english": "The screen has no picture and the sound is unclear; it seems I cannot solve this problem."
+        },
+        {
+          "hanzi": "经理今天不在，看来下午不开会了。",
+          "pinyin": "Jīnglǐ jīntiān bú zài, kànlái xiàwǔ bù kāihuì le.",
+          "english": "The manager is away, so it seems there will be no meeting this afternoon."
+        },
+        {
+          "hanzi": "教室的灯都关了，看来同学们已经走了。",
+          "pinyin": "Jiàoshì de dēng dōu guān le, kànlái tóngxuémen yǐjīng zǒu le.",
+          "english": "The classroom lights are off; apparently the students have left."
+        },
+        {
+          "hanzi": "他一直看时间，看来他有点儿着急。",
+          "pinyin": "Tā yìzhí kàn shíjiān, kànlái tā yǒudiǎnr zháojí.",
+          "english": "He keeps checking the time; he seems a little anxious."
+        },
+        {
+          "hanzi": "外面的人都带着伞，看来正在下雨。",
+          "pinyin": "Wàimian de rén dōu dàizhe sǎn, kànlái zhèngzài xiàyǔ.",
+          "english": "Everyone outside has an umbrella; it seems to be raining."
+        }
+      ]
+    },
+    {
+      "id": "g11_03",
+      "title": "“把”字句（3）：动作产生结果",
+      "titleEn": "把 sentences (3): result of an action",
+      "scene": "Continue from L10: focus on the result achieved after handling a specific object.",
+      "structure": "主语 + 把 + 确定宾语 + 动词 + 结果补语",
+      "explanation": "动词后必须说明动作产生的结果；本课的“接”表示连接设备，“接好”表示连接并准备好。",
+      "examples": [
+        {
+          "hanzi": "会议开始前，我们得把笔记本电脑接好。",
+          "pinyin": "Huìyì kāishǐ qián, wǒmen děi bǎ bǐjìběn diànnǎo jiēhǎo.",
+          "english": "Before the meeting, we need to connect and ready the laptop."
+        },
+        {
+          "hanzi": "吃完饭，我跟您一起把这些工作做完。",
+          "pinyin": "Chīwán fàn, wǒ gēn nín yìqǐ bǎ zhèxiē gōngzuò zuò wán.",
+          "english": "After lunch, I will finish this work with you."
+        },
+        {
+          "hanzi": "妈妈已经把衣服洗干净了。",
+          "pinyin": "Māma yǐjīng bǎ yīfu xǐ gānjìng le.",
+          "english": "Mum has washed the clothes clean."
+        },
+        {
+          "hanzi": "请先把这个问题说清楚。",
+          "pinyin": "Qǐng xiān bǎ zhège wèntí shuō qīngchu.",
+          "english": "Please explain this problem clearly first."
+        },
+        {
+          "hanzi": "我们今天把展示材料准备好。",
+          "pinyin": "Wǒmen jīntiān bǎ zhǎnshì cáiliào zhǔnbèi hǎo.",
+          "english": "Let us get the presentation materials ready today."
+        }
+      ]
+    },
+    {
+      "id": "g11_04",
+      "title": "固定格式“对……来说”",
+      "titleEn": "The pattern 对……来说",
+      "scene": "Compare what matters to different people without choosing one correct value.",
+      "structure": "对 + 人 / 对象 + 来说，观点、感受或重要性。",
+      "explanation": "“对……来说”先说明观点属于谁；不同的人可以有不同而且合理的答案。",
+      "examples": [
+        {
+          "hanzi": "对我来说，生活也很重要。",
+          "pinyin": "Duì wǒ lái shuō, shēnghuó yě hěn zhòngyào.",
+          "english": "For me, life is also important."
+        },
+        {
+          "hanzi": "对她来说，新的工作机会很重要。",
+          "pinyin": "Duì tā lái shuō, xīn de gōngzuò jīhuì hěn zhòngyào.",
+          "english": "For her, the new work opportunity is important."
+        },
+        {
+          "hanzi": "对学生来说，和同学一起学习很有帮助。",
+          "pinyin": "Duì xuésheng lái shuō, hé tóngxué yìqǐ xuéxí hěn yǒu bāngzhù.",
+          "english": "For students, studying with classmates is helpful."
+        },
+        {
+          "hanzi": "对我们小组来说，把任务做完最重要。",
+          "pinyin": "Duì wǒmen xiǎozǔ lái shuō, bǎ rènwu zuò wán zuì zhòngyào.",
+          "english": "For our group, finishing the task matters most."
+        },
+        {
+          "hanzi": "对孩子来说，玩也是一种学习。",
+          "pinyin": "Duì háizi lái shuō, wán yě shì yì zhǒng xuéxí.",
+          "english": "For children, play is also a kind of learning."
+        }
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "t_hsk3_l11_01",
+      "textId": 1,
+      "title": "会议改时间和地点",
+      "setting": "在办公室里，王一雪跟杨同乐在讨论工作。",
+      "audio": "../../audio/HSK3/11-1.mp3",
+      "lines": [
+        {
+          "speaker": "王一雪",
+          "hanzi": "会议下午几点开始？",
+          "pinyin": "Huìyì xiàwǔ jǐ diǎn kāishǐ?",
+          "english": "What time does the meeting start this afternoon?"
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "今天下午经理不在，不开会了。",
+          "pinyin": "Jīntiān xiàwǔ jīnglǐ bú zài, bù kāihuì le.",
+          "english": "The manager isn't here this afternoon, so there won't be a meeting."
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "那什么时候开会？",
+          "pinyin": "Nà shénme shíhou kāihuì?",
+          "english": "Then when will the meeting be held?"
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "后天上午十点，会议地点换到第一会议室。我正要给大家发邮件。",
+          "pinyin": "Hòutiān shàngwǔ shí diǎn, huìyì dìdiǎn huàn dào dì-yī huìyìshì. Wǒ zhèng yào gěi dàjiā fā yóujiàn.",
+          "english": "At 10:00 the morning after tomorrow. The location has been moved to Conference Room 1. I'm just about to send an email to everyone."
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "开会的时候，我们用会议室的电脑还是自己的笔记本电脑？",
+          "pinyin": "Kāihuì de shíhou, wǒmen yòng huìyìshì de diànnǎo háishì zìjǐ de bǐjìběn diànnǎo?",
+          "english": "During the meeting, will we use the conference room computer or our own laptops?"
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "会议室的电脑或者自己的电脑都可以。",
+          "pinyin": "Huìyìshì de diànnǎo huòzhě zìjǐ de diànnǎo dōu kěyǐ.",
+          "english": "Either the conference room computer or your own laptop is fine."
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "那到时候咱们早点儿过去，你帮我把电脑接好吧。",
+          "pinyin": "Nà dào shíhou zánmen zǎo diǎnr guòqu, nǐ bāng wǒ bǎ diànnǎo jiēhǎo ba.",
+          "english": "Then let's go there a bit earlier then, and you can help me connect the computer."
+        }
+      ]
+    },
+    {
+      "id": "t_hsk3_l11_02",
+      "textId": 2,
+      "title": "会议室设备问题",
+      "setting": "在会议室，王一雪跟杨同乐在做会前准备。",
+      "audio": "../../audio/HSK3/11-3.mp3",
+      "lines": [
+        {
+          "speaker": "王一雪",
+          "hanzi": "电脑接好了吗？",
+          "pinyin": "Diànnǎo jiēhǎo le ma?",
+          "english": "Is the computer connected?"
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "已经接好了，您开机看看有没有问题。",
+          "pinyin": "Yǐjīng jiēhǎo le, nín kāijī kànkan yǒu méiyǒu wèntí.",
+          "english": "It's already connected. Please turn it on to see if there are any issues."
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "现在什么都看不见。",
+          "pinyin": "Xiànzài shénme dōu kàn bu jiàn.",
+          "english": "I can't see anything right now."
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "我检查一下哪里出问题了……您再试一下。",
+          "pinyin": "Wǒ jiǎnchá yíxià nǎli chū wèntí le... Nín zài shì yíxià.",
+          "english": "Let me check where the problem is... Please try again."
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "看见了，但是听不见声音。",
+          "pinyin": "Kànjiàn le, dànshì tīng bu jiàn shēngyīn.",
+          "english": "I can see it, but I can't hear any sound."
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "现在呢？",
+          "pinyin": "Xiànzài ne?",
+          "english": "How about now?"
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "听得见声音，但是声音有点儿小，听不清楚。",
+          "pinyin": "Tīng de jiàn shēngyīn, dànshì shēngyīn yǒudiǎnr xiǎo, tīng bu qīngchu.",
+          "english": "I can hear the sound, but it's a bit low and unclear."
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "看来我没办法解决这个问题，只能找别人来帮帮忙了。",
+          "pinyin": "Kànlái wǒ méi bànfǎ jiějué zhège wèntí, zhǐ néng zhǎo biérén lái bāngbangmáng le.",
+          "english": "It seems I can't solve this problem; I'll have to ask someone else for help."
+        }
+      ]
+    },
+    {
+      "id": "t_hsk3_l11_03",
+      "textId": 3,
+      "title": "一起把工作做完",
+      "setting": "在办公室里，王一雪跟杨同乐在聊天儿。",
+      "audio": "../../audio/HSK3/11-5.mp3",
+      "lines": [
+        {
+          "speaker": "王一雪",
+          "hanzi": "同乐，你看见老张了吗？",
+          "pinyin": "Tónglè, nǐ kànjiàn Lǎo Zhāng le ma?",
+          "english": "Tongle, have you seen Lao Zhang?"
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "老张没来。他说家里有点儿事，所以请假了。",
+          "pinyin": "Lǎo Zhāng méi lái. Tā shuō jiā li yǒudiǎnr shì, suǒyǐ qǐngjià le.",
+          "english": "Lao Zhang did not come. He said he had some family matters, so he asked for leave."
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "好几个同事都休假了，开会前这么多工作我怕干不完。",
+          "pinyin": "Hǎo jǐ gè tóngshì dōu xiūjià le, kāihuì qián zhème duō gōngzuò wǒ pà gàn bu wán.",
+          "english": "Several colleagues are on vacation. With so much work before the meeting, I'm afraid I won't finish it."
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "十二点多了，咱们先去吃饭吧。吃完饭，我跟您一起把这些工作做完。",
+          "pinyin": "Shí'èr diǎn duō le, zánmen xiān qù chī fàn ba. Chīwán fàn, wǒ gēn nín yìqǐ bǎ zhèxiē gōngzuò zuò wán.",
+          "english": "It's past 12:00. Let's go eat first. After eating, I'll finish up all this work together with you."
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "你先去吃，我想再干一会儿。明天开会前要发到公司的邮箱里。",
+          "pinyin": "Nǐ xiān qù chī, wǒ xiǎng zài gàn yíhuìr. Míngtiān kāihuì qián yào fā dào gōngsī de yóuxiāng li.",
+          "english": "You go ahead and eat first; I would like to work a bit longer. It needs to be sent to the company mailbox before tomorrow’s meeting."
+        },
+        {
+          "speaker": "杨同乐",
+          "hanzi": "您没看到邮件吗？经理还没回来呢，下周才能开会。",
+          "pinyin": "Nín méi kàndào yóujiàn ma? Jīnglǐ hái méi huílái ne, xià zhōu cái néng kāihuì.",
+          "english": "Didn't you see the email? The manager hasn't returned yet; the meeting won't happen until next week."
+        },
+        {
+          "speaker": "王一雪",
+          "hanzi": "那不着急了。走，吃饭去。",
+          "pinyin": "Nà bù zháojí le. Zǒu, chī fàn qu.",
+          "english": "Then there's no rush. Let's go eat."
+        }
+      ]
+    },
+    {
+      "id": "t_hsk3_l11_04",
+      "textId": 4,
+      "title": "工作机会与重要选择",
+      "format": "diary",
+      "genre": "日记",
+      "genreEn": "Diary",
+      "author": "王一雪",
+      "dateLabel": "前几天之后 · 晚上",
+      "setting": "在家里，王一雪在写日记。",
+      "audio": "../../audio/HSK3/11-7.mp3",
+      "translationPolicy": "中文和拼音为教材原文；英文译文、日记标题和生活讨论为教学辅助。",
+      "lines": [
+        {
+          "speaker": "王一雪",
+          "hanzi": "前几天，上海的同事来北京了。一起吃饭时，他们跟我说最近有不少同事去上海工作了，问我愿不愿意也去上海。我是这样想的：现在丈夫和孩子都在北京，刘明的工作很忙，小雪和小明也都还小，我去别的城市工作就要离开他们。虽然去上海可能会有更好的机会，但是对我来说，生活也很重要，我不愿意为工作或学习离开家人。",
+          "pinyin": "Qián jǐ tiān, Shànghǎi de tóngshì lái Běijīng le. Yìqǐ chī fàn shí, tāmen gēn wǒ shuō zuìjìn yǒu bù shǎo tóngshì qù Shànghǎi gōngzuò le, wèn wǒ yuàn bu yuànyì yě qù Shànghǎi. Wǒ shì zhèyàng xiǎng de: Xiànzài zhàngfu hé háizi dōu zài Běijīng, Liú Míng de gōngzuò hěn máng, Xiǎoxuě hé Xiǎomíng yě dōu hái xiǎo, wǒ qù biéde chéngshì gōngzuò jiù yào líkāi tāmen. Suīrán qù Shànghǎi kěnéng huì yǒu gèng hǎo de jīhuì, dànshì duì wǒ lái shuō, shēnghuó yě hěn zhòngyào, wǒ bú yuànyì wèi gōngzuò huò xuéxí líkāi jiārén.",
+          "english": "A few days ago, colleagues from Shanghai came to Beijing. While we were eating together, they told me that quite a few colleagues had recently gone to work in Shanghai and asked whether I would also be willing to go. This is how I think about it: my husband and children are in Beijing now. Liu Ming is very busy with work, and Xiaoxue and Xiaoming are still young. Working in another city would mean leaving them. Although Shanghai might offer better opportunities, life is also important to me, and I am not willing to leave my family for work or study."
+        }
+      ]
+    }
+  ],
+  "grammarTeachingNotes": {
+    "g11_01": {
+      "scene": "先比较完整问题和完整陈述：说话人是在请别人选择，还是在说明两种办法都可以？",
+      "structure": "选择疑问句：A 还是 B？　陈述句：A 或者 B 都可以。",
+      "structureEn": "choice question with 还是; alternative statement with 或者",
+      "presentationMode": "progressive_grammar",
+      "mergeNoticeObserve": true,
+      "observeMode": "structure_rows",
+      "observePrompt": "每行先判断是问题还是陈述，再找“还是”或“或者”。",
+      "observeHighlights": [
+        [
+          "还是"
+        ],
+        [
+          "或者",
+          "都可以"
+        ],
+        [
+          "还是"
+        ],
+        [
+          "或者"
+        ],
+        [
+          "还是",
+          "都可以"
+        ]
+      ],
+      "visualLearning": {
+        "leadExamples": [
+          {
+            "english": "Ask the listener to choose.",
+            "hanzi": "电脑还是笔记本电脑？",
+            "pinyin": "diànnǎo háishì bǐjìběn diànnǎo?"
+          },
+          {
+            "english": "State acceptable alternatives.",
+            "hanzi": "电脑或者笔记本电脑都可以。",
+            "pinyin": "diànnǎo huòzhě bǐjìběn diànnǎo dōu kěyǐ."
+          }
+        ],
+        "blocks": [
+          "A 还是 B？",
+          "A 或者 B",
+          "都可以"
+        ],
+        "blockLabelsEn": [
+          "choice question",
+          "alternatives in a statement",
+          "either is acceptable"
+        ]
+      },
+      "oralQuestions": [
+        {
+          "question": "你想上午还是下午开会？",
+          "pinyin": "Nǐ xiǎng shàngwǔ háishì xiàwǔ kāihuì?"
+        },
+        {
+          "question": "小组展示用电脑还是用手机？",
+          "pinyin": "Xiǎozǔ zhǎnshì yòng diànnǎo háishì yòng shǒujī?"
+        },
+        {
+          "question": "课后你可以去图书馆或者去哪儿学习？",
+          "pinyin": "Kèhòu nǐ kěyǐ qù túshūguǎn huòzhě qù nǎr xuéxí?"
+        },
+        {
+          "question": "今天准备图片、材料还是问题？",
+          "pinyin": "Jīntiān zhǔnbèi túpiàn, cáiliào háishì wèntí?"
+        }
+      ],
+      "structureVariants": [
+        {
+          "label": "选择问题",
+          "formula": "A 还是 B？",
+          "formulaEn": "Ask for a choice",
+          "explanation": "希望对方从两个或多个选项中选择。",
+          "example": "你喝茶还是喝咖啡？",
+          "examplePinyin": "Nǐ hē chá háishì hē kāfēi?"
+        },
+        {
+          "label": "陈述办法",
+          "formula": "A 或者 B（都可以）",
+          "formulaEn": "State alternatives",
+          "explanation": "说明可以采用的选择。",
+          "example": "坐地铁或者坐公共汽车都可以。",
+          "examplePinyin": "Zuò dìtiě huòzhě zuò gōnggòng qìchē dōu kěyǐ."
+        }
+      ],
+      "followUp": [
+        {
+          "image": "images/hsk3-l11/photo-text-1-computer-choice.png",
+          "promptEn": "Your group has two usable devices.",
+          "target": "先用“还是”提问，再用“或者”回答。",
+          "sampleAnswer": "我们用电脑还是手机？电脑或者手机都可以。"
+        }
+      ]
+    },
+    "g11_02": {
+      "scene": "先看证据，再说结论：屏幕没有画面，声音也听不清楚。",
+      "structure": "可观察的事实，看来 + 结论。",
+      "structureEn": "observable evidence + 看来 + conclusion",
+      "presentationMode": "progressive_grammar",
+      "mergeNoticeObserve": true,
+      "observeMode": "structure_rows",
+      "observePrompt": "每行找出“证据”和“看来”后面的结论。",
+      "observeHighlights": [
+        [
+          "没有画面",
+          "听不清楚",
+          "看来"
+        ],
+        [
+          "不在",
+          "看来"
+        ],
+        [
+          "都关了",
+          "看来"
+        ],
+        [
+          "一直看时间",
+          "看来"
+        ],
+        [
+          "都带着伞",
+          "看来"
+        ]
+      ],
+      "visualLearning": {
+        "leadExamples": [
+          {
+            "english": "Evidence you can observe",
+            "hanzi": "屏幕没有画面，声音听不清楚",
+            "pinyin": "píngmù méiyǒu huàmiàn, shēngyīn tīng bu qīngchu"
+          },
+          {
+            "english": "Conclusion from that evidence",
+            "hanzi": "看来这个问题我解决不了",
+            "pinyin": "kànlái zhège wèntí wǒ jiějué bu liǎo"
+          }
+        ],
+        "blocks": [
+          "可观察的事实",
+          "看来",
+          "合理结论"
+        ],
+        "blockLabelsEn": [
+          "evidence",
+          "it seems",
+          "conclusion"
+        ]
+      },
+      "oralQuestions": [
+        {
+          "question": "教室里没有人，看来怎么了？",
+          "pinyin": "Jiàoshì li méiyǒu rén, kànlái zěnme le?"
+        },
+        {
+          "question": "电脑开不了机，看来下一步怎么办？",
+          "pinyin": "Diànnǎo kāi bu liǎo jī, kànlái xià yí bù zěnme bàn?"
+        },
+        {
+          "question": "同学一直打哈欠，看来他怎么样？",
+          "pinyin": "Tóngxué yìzhí dǎ hāqian, kànlái tā zěnmeyàng?"
+        },
+        {
+          "question": "天很黑，大家都带着伞，看来天气怎么样？",
+          "pinyin": "Tiān hěn hēi, dàjiā dōu dàizhe sǎn, kànlái tiānqì zěnmeyàng?"
+        }
+      ],
+      "structureVariants": [
+        {
+          "label": "先证据",
+          "formula": "事实，看来 + 结论",
+          "formulaEn": "Evidence before inference",
+          "explanation": "结论必须能从当前事实中推出来。",
+          "example": "门关着，看来他不在。",
+          "examplePinyin": "Mén guānzhe, kànlái tā bú zài."
+        },
+        {
+          "label": "不是喜好",
+          "formula": "我喜欢…… ≠ 看来……",
+          "formulaEn": "Preference is not evidence",
+          "explanation": "“我喜欢”表达个人喜好，不等于根据事实推测。",
+          "example": "我喜欢上海。",
+          "examplePinyin": "Wǒ xǐhuan Shànghǎi."
+        }
+      ],
+      "followUp": [
+        {
+          "image": "images/hsk3-l11/photo-text-2-no-picture.png",
+          "promptEn": "The screen is blank after the cable is connected.",
+          "target": "说出一个观察事实，再用“看来”得出结论。",
+          "sampleAnswer": "电脑接好了，但是屏幕没有画面，看来连接还有问题。"
+        }
+      ]
+    },
+    "g11_03": {
+      "scene": "继续复习L10的“把”字句：这一次不说位置或接收者，而是说动作后的结果。",
+      "structure": "主语 + 把 + 确定宾语 + 动词 + 结果补语",
+      "structureEn": "subject + 把 + specific object + verb + result complement",
+      "presentationMode": "progressive_grammar",
+      "mergeNoticeObserve": true,
+      "observeMode": "structure_rows",
+      "observePrompt": "每行找“把”后的确定宾语，再找“好、完、干净、清楚”等结果。",
+      "observeHighlights": [
+        [
+          "把",
+          "接好"
+        ],
+        [
+          "把",
+          "做完"
+        ],
+        [
+          "把",
+          "洗干净"
+        ],
+        [
+          "把",
+          "说清楚"
+        ],
+        [
+          "把",
+          "准备好"
+        ]
+      ],
+      "visualLearning": {
+        "leadExamples": [
+          {
+            "english": "Specific object",
+            "hanzi": "笔记本电脑",
+            "pinyin": "bǐjìběn diànnǎo"
+          },
+          {
+            "english": "Action and achieved result",
+            "hanzi": "接好",
+            "pinyin": "jiēhǎo"
+          },
+          {
+            "english": "Complete result sentence",
+            "hanzi": "把笔记本电脑接好",
+            "pinyin": "bǎ bǐjìběn diànnǎo jiēhǎo"
+          }
+        ],
+        "blocks": [
+          "主语",
+          "把 + 确定宾语",
+          "动词 + 结果补语"
+        ],
+        "blockLabelsEn": [
+          "subject",
+          "specific handled object",
+          "action and result"
+        ]
+      },
+      "oralQuestions": [
+        {
+          "question": "开会前要把什么准备好？",
+          "pinyin": "Kāihuì qián yào bǎ shénme zhǔnbèi hǎo?"
+        },
+        {
+          "question": "今天你想把什么作业做完？",
+          "pinyin": "Jīntiān nǐ xiǎng bǎ shénme zuòyè zuò wán?"
+        },
+        {
+          "question": "小组展示前，谁把电脑接好？",
+          "pinyin": "Xiǎozǔ zhǎnshì qián, shéi bǎ diànnǎo jiēhǎo?"
+        },
+        {
+          "question": "怎样把一个问题说清楚？",
+          "pinyin": "Zěnyàng bǎ yí gè wèntí shuō qīngchu?"
+        }
+      ],
+      "structureVariants": [
+        {
+          "label": "动作结果",
+          "formula": "把 + 宾语 + 做完 / 接好 / 说清楚",
+          "formulaEn": "Achieved result",
+          "explanation": "说明动作以后达到了什么结果。",
+          "example": "我把任务做完了。",
+          "examplePinyin": "Wǒ bǎ rènwu zuò wán le."
+        },
+        {
+          "label": "与L10连接",
+          "formula": "位置改变 / 给接收者 / 动作结果",
+          "formulaEn": "location / recipient / result",
+          "explanation": "三个“把”字句都处理确定宾语，但后面的信息不同。",
+          "example": "我把材料放在桌上，再把任务做完。",
+          "examplePinyin": "Wǒ bǎ cáiliào fàng zài zhuō shang, zài bǎ rènwu zuò wán."
+        }
+      ],
+      "followUp": [
+        {
+          "image": "images/hsk3-l11/photo-text-3-workload.png",
+          "promptEn": "Several folders still need work before the group meeting.",
+          "target": "用结果类“把”字句说明团队怎样完成任务。",
+          "sampleAnswer": "我们先分工，再一起把这些工作做完。"
+        }
+      ]
+    },
+    "g11_04": {
+      "scene": "同一个选择对不同人可能有不同意义，先说明观点属于谁。",
+      "structure": "对 + 人 / 对象 + 来说，观点、感受或重要性。",
+      "structureEn": "对 + person/group + 来说 + viewpoint or importance",
+      "presentationMode": "progressive_grammar",
+      "mergeNoticeObserve": true,
+      "observeMode": "structure_rows",
+      "observePrompt": "每行找出观点属于谁，再找这个人重视或感受到什么。",
+      "observeHighlights": [
+        [
+          "对我来说",
+          "重要"
+        ],
+        [
+          "对她来说",
+          "重要"
+        ],
+        [
+          "对学生来说",
+          "有帮助"
+        ],
+        [
+          "对我们小组来说",
+          "最重要"
+        ],
+        [
+          "对孩子来说",
+          "学习"
+        ]
+      ],
+      "visualLearning": {
+        "leadExamples": [
+          {
+            "english": "Whose perspective?",
+            "hanzi": "对我来说",
+            "pinyin": "duì wǒ lái shuō"
+          },
+          {
+            "english": "The viewpoint",
+            "hanzi": "生活也很重要",
+            "pinyin": "shēnghuó yě hěn zhòngyào"
+          }
+        ],
+        "blocks": [
+          "对 + 对象",
+          "来说",
+          "观点 / 感受 / 重要性"
+        ],
+        "blockLabelsEn": [
+          "perspective holder",
+          "for",
+          "view or importance"
+        ]
+      },
+      "oralQuestions": [
+        {
+          "question": "对你来说，学习汉语什么最重要？",
+          "pinyin": "Duì nǐ lái shuō, xuéxí Hànyǔ shénme zuì zhòngyào?"
+        },
+        {
+          "question": "对学生来说，小组合作有什么好处？",
+          "pinyin": "Duì xuésheng lái shuō, xiǎozǔ hézuò yǒu shénme hǎochu?"
+        },
+        {
+          "question": "对你的家人来说，周末什么最重要？",
+          "pinyin": "Duì nǐ de jiārén lái shuō, zhōumò shénme zuì zhòngyào?"
+        },
+        {
+          "question": "对我们班来说，怎样的展示最有意思？",
+          "pinyin": "Duì wǒmen bān lái shuō, zěnyàng de zhǎnshì zuì yǒuyìsi?"
+        }
+      ],
+      "structureVariants": [
+        {
+          "label": "个人观点",
+          "formula": "对我来说，……",
+          "formulaEn": "From my perspective",
+          "explanation": "说明自己的感受或重要性。",
+          "example": "对我来说，家人很重要。",
+          "examplePinyin": "Duì wǒ lái shuō, jiārén hěn zhòngyào."
+        },
+        {
+          "label": "比较对象",
+          "formula": "对A来说……；对B来说……",
+          "formulaEn": "Compare perspectives",
+          "explanation": "不同对象可以有不同答案，不判断谁唯一正确。",
+          "example": "对学生来说，时间重要；对老师来说，准备也重要。",
+          "examplePinyin": "Duì xuésheng lái shuō, shíjiān zhòngyào; duì lǎoshī lái shuō, zhǔnbèi yě zhòngyào."
+        }
+      ],
+      "followUp": [
+        {
+          "image": "images/hsk3-l11/photo-text-4-diary-choice.png",
+          "promptEn": "Yixue weighs work, city life and family.",
+          "target": "选择一个对象，用“对……来说”表达一个真实观点。",
+          "sampleAnswer": "对王一雪来说，生活和家人都很重要。"
+        }
+      ]
+    }
+  },
+  "textTeachingNotes": {
+    "t_hsk3_l11_01": {
+      "presentationMode": "listen_first_progressive",
+      "listenPrompt": "先听会议为什么取消、新时间地点是什么，以及电脑怎样选择和准备。",
+      "preReadingQuestions": [
+        {
+          "question": "开会前要确认哪些信息？",
+          "pinyin": "Kāihuì qián yào quèrèn nǎxiē xìnxī?"
+        },
+        {
+          "question": "小组展示可以用公共电脑还是自己的电脑？",
+          "pinyin": "Xiǎozǔ zhǎnshì kěyǐ yòng gōnggòng diànnǎo háishì zìjǐ de diànnǎo?"
+        }
+      ],
+      "classQuestions": [
+        {
+          "question": "今天下午为什么不开会？",
+          "question_pinyin": "Jīntiān xiàwǔ wèishénme bù kāihuì?",
+          "answer": "因为经理不在。",
+          "answer_pinyin": "Yīnwèi jīnglǐ bú zài."
+        },
+        {
+          "question": "会议改到什么时候？",
+          "question_pinyin": "Huìyì gǎi dào shénme shíhou?",
+          "answer": "后天上午十点。",
+          "answer_pinyin": "Hòutiān shàngwǔ shí diǎn."
+        },
+        {
+          "question": "新地点在哪里？",
+          "question_pinyin": "Xīn dìdiǎn zài nǎli?",
+          "answer": "在第一会议室。",
+          "answer_pinyin": "Zài dì-yī huìyìshì."
+        },
+        {
+          "question": "杨同乐正要做什么？",
+          "question_pinyin": "Yáng Tónglè zhèng yào zuò shénme?",
+          "answer": "给大家发邮件。",
+          "answer_pinyin": "Gěi dàjiā fā yóujiàn."
+        },
+        {
+          "question": "他们决定怎样准备电脑？",
+          "question_pinyin": "Tāmen juédìng zěnyàng zhǔnbèi diànnǎo?",
+          "answer": "早点儿过去，把电脑接好。",
+          "answer_pinyin": "Zǎodiǎnr guòqu, bǎ diànnǎo jiēhǎo."
+        }
+      ],
+      "keyPoints": [
+        {
+          "hanzi": "用会议室的电脑还是自己的笔记本电脑？",
+          "pinyin": "Yòng huìyìshì de diànnǎo háishì zìjǐ de bǐjìběn diànnǎo?",
+          "note": "“还是”提出选择。"
+        },
+        {
+          "hanzi": "会议室的电脑或者自己的电脑都可以。",
+          "pinyin": "Huìyìshì de diànnǎo huòzhě zìjǐ de diànnǎo dōu kěyǐ.",
+          "note": "“或者”说明两种办法都可行；“笔记本电脑”指 laptop。"
+        },
+        {
+          "hanzi": "把电脑接好",
+          "pinyin": "Bǎ diànnǎo jiēhǎo.",
+          "note": "“接”在这里表示连接设备，“接好”表示连接并准备好。"
+        }
+      ],
+      "cultureDiscussion": {
+        "title": "清楚的会议信息",
+        "titleEn": "Clear Meeting Information",
+        "questions": [
+          {
+            "hanzi": "改时间或地点时，应该告诉大家什么？",
+            "pinyin": "Gǎi shíjiān huò dìdiǎn shí, yīnggāi gàosu dàjiā shénme?"
+          },
+          {
+            "hanzi": "班级活动前，谁负责检查设备？",
+            "pinyin": "Bānjí huódòng qián, shéi fùzé jiǎnchá shèbèi?"
+          }
+        ],
+        "wordCards": [
+          {
+            "hanzi": "时间",
+            "pinyin": "shíjiān",
+            "english": "time"
+          },
+          {
+            "hanzi": "地点",
+            "pinyin": "dìdiǎn",
+            "english": "place"
+          },
+          {
+            "hanzi": "设备",
+            "pinyin": "shèbèi",
+            "english": "equipment"
+          }
+        ],
+        "background": "会议、班级活动和社团展示都需要清楚说明时间、地点、参加者和设备准备。",
+        "sampleAnswers": [
+          {
+            "hanzi": "应该告诉大家新的时间、地点和准备事项。",
+            "pinyin": "Yīnggāi gàosu dàjiā xīn de shíjiān, dìdiǎn hé zhǔnbèi shìxiàng."
+          },
+          {
+            "hanzi": "我们可以请一位组员提前检查电脑。",
+            "pinyin": "Wǒmen kěyǐ qǐng yí wèi zǔyuán tíqián jiǎnchá diànnǎo."
+          }
+        ]
+      },
+      "retellScaffold": {
+        "nodes": [
+          {
+            "label": "原因",
+            "hint": "经理不在"
+          },
+          {
+            "label": "时间",
+            "hint": "后天上午十点"
+          },
+          {
+            "label": "地点",
+            "hint": "第一会议室"
+          },
+          {
+            "label": "选择",
+            "hint": "会议室电脑还是笔记本电脑"
+          },
+          {
+            "label": "准备",
+            "hint": "早点儿去、接好电脑"
+          }
+        ],
+        "frame": "今天下午因为……，所以……。会议改到……，地点在……。他们可以用……或者……，最后决定……。"
+      }
+    },
+    "t_hsk3_l11_02": {
+      "presentationMode": "listen_first_progressive",
+      "listenPrompt": "先听电脑画面和声音先后有什么问题，以及杨同乐为什么决定找别人。",
+      "preReadingQuestions": [
+        {
+          "question": "电脑连接以后，你会先检查什么？",
+          "pinyin": "Diànnǎo liánjiē yǐhòu, nǐ huì xiān jiǎnchá shénme?"
+        },
+        {
+          "question": "自己解决不了设备问题时，你会怎么办？",
+          "pinyin": "Zìjǐ jiějué bu liǎo shèbèi wèntí shí, nǐ huì zěnme bàn?"
+        }
+      ],
+      "classQuestions": [
+        {
+          "question": "电脑接好以后，王一雪先看见什么？",
+          "question_pinyin": "Diànnǎo jiēhǎo yǐhòu, Wáng Yīxuě xiān kànjiàn shénme?",
+          "answer": "她什么都看不见。",
+          "answer_pinyin": "Tā shénme dōu kàn bu jiàn."
+        },
+        {
+          "question": "杨同乐检查以后，画面怎么样了？",
+          "question_pinyin": "Yáng Tónglè jiǎnchá yǐhòu, huàmiàn zěnmeyàng le?",
+          "answer": "王一雪看见画面了。",
+          "answer_pinyin": "Wáng Yīxuě kànjiàn huàmiàn le."
+        },
+        {
+          "question": "声音先有什么问题？",
+          "question_pinyin": "Shēngyīn xiān yǒu shénme wèntí?",
+          "answer": "先听不见声音。",
+          "answer_pinyin": "Xiān tīng bu jiàn shēngyīn."
+        },
+        {
+          "question": "后来为什么还是听不清楚？",
+          "question_pinyin": "Hòulái wèishénme háishi tīng bu qīngchu?",
+          "answer": "因为声音有点儿小。",
+          "answer_pinyin": "Yīnwèi shēngyīn yǒudiǎnr xiǎo."
+        },
+        {
+          "question": "杨同乐根据什么得出结论？",
+          "question_pinyin": "Yáng Tónglè gēnjù shénme déchū jiélùn?",
+          "answer": "多次检查后画面和声音还有问题。",
+          "answer_pinyin": "Duō cì jiǎnchá hòu huàmiàn hé shēngyīn hái yǒu wèntí."
+        }
+      ],
+      "keyPoints": [
+        {
+          "hanzi": "什么都看不见",
+          "pinyin": "Shénme dōu kàn bu jiàn.",
+          "note": "复习可能补语：没有能力或条件看到。"
+        },
+        {
+          "hanzi": "听得见……听不清楚",
+          "pinyin": "Tīng de jiàn... tīng bu qīngchu.",
+          "note": "“听见”和“听清楚”说明不同结果。"
+        },
+        {
+          "hanzi": "看来我没办法解决这个问题",
+          "pinyin": "Kànlái wǒ méi bànfǎ jiějué zhège wèntí.",
+          "note": "先有可观察的设备问题，再作出结论。"
+        }
+      ],
+      "cultureDiscussion": {
+        "title": "什么时候应该求助？",
+        "titleEn": "When Should We Ask for Help?",
+        "questions": [
+          {
+            "hanzi": "遇到技术问题时，可以先检查什么？",
+            "pinyin": "Yùdào jìshù wèntí shí, kěyǐ xiān jiǎnchá shénme?"
+          },
+          {
+            "hanzi": "什么时候继续自己检查，什么时候找别人？",
+            "pinyin": "Shénme shíhou jìxù zìjǐ jiǎnchá, shénme shíhou zhǎo biérén?"
+          }
+        ],
+        "wordCards": [
+          {
+            "hanzi": "现象",
+            "pinyin": "xiànxiàng",
+            "english": "what you can observe"
+          },
+          {
+            "hanzi": "检查",
+            "pinyin": "jiǎnchá",
+            "english": "check"
+          },
+          {
+            "hanzi": "求助",
+            "pinyin": "qiúzhù",
+            "english": "ask for help"
+          }
+        ],
+        "background": "在课堂或工作中，先说明看见和听见的现象，再说试过的办法，能让求助更清楚。",
+        "sampleAnswers": [
+          {
+            "hanzi": "我先检查电源和连接线。",
+            "pinyin": "Wǒ xiān jiǎnchá diànyuán hé liánjiēxiàn."
+          },
+          {
+            "hanzi": "试了几次还不行，就找会修的人帮忙。",
+            "pinyin": "Shì le jǐ cì hái bù xíng, jiù zhǎo huì xiū de rén bāngmáng."
+          }
+        ]
+      },
+      "retellScaffold": {
+        "nodes": [
+          {
+            "label": "连接",
+            "hint": "电脑已经接好"
+          },
+          {
+            "label": "画面",
+            "hint": "看不见→看见"
+          },
+          {
+            "label": "声音",
+            "hint": "听不见→听得见但不清楚"
+          },
+          {
+            "label": "依据",
+            "hint": "多次检查还有问题"
+          },
+          {
+            "label": "决定",
+            "hint": "找别人帮忙"
+          }
+        ],
+        "frame": "电脑接好以后，先……。杨同乐……，画面……。但是声音……。因为……，看来……，所以……。"
+      }
+    },
+    "t_hsk3_l11_03": {
+      "presentationMode": "listen_first_progressive",
+      "listenPrompt": "先听谁请假了、王一雪担心什么、杨同乐怎样帮助，以及会议最后什么时候开。",
+      "preReadingQuestions": [
+        {
+          "question": "小组里有人请假时，其他人可以怎样分工？",
+          "pinyin": "Xiǎozǔ li yǒu rén qǐngjià shí, qítā rén kěyǐ zěnyàng fēngōng?"
+        },
+        {
+          "question": "工作很多但时间改变了，你会先做什么？",
+          "pinyin": "Gōngzuò hěn duō dàn shíjiān gǎibiàn le, nǐ huì xiān zuò shénme?"
+        }
+      ],
+      "classQuestions": [
+        {
+          "question": "老张为什么没来？",
+          "question_pinyin": "Lǎo Zhāng wèishénme méi lái?",
+          "answer": "因为家里有事，所以请假了。",
+          "answer_pinyin": "Yīnwèi jiā li yǒu shì, suǒyǐ qǐngjià le."
+        },
+        {
+          "question": "王一雪为什么担心？",
+          "question_pinyin": "Wáng Yīxuě wèishénme dānxīn?",
+          "answer": "好几个同事休假，工作很多，她怕干不完。",
+          "answer_pinyin": "Hǎo jǐ gè tóngshì xiūjià, gōngzuò hěn duō, tā pà gàn bu wán."
+        },
+        {
+          "question": "杨同乐准备怎样帮助？",
+          "question_pinyin": "Yáng Tónglè zhǔnbèi zěnyàng bāngzhù?",
+          "answer": "吃完饭一起把工作做完。",
+          "answer_pinyin": "Chīwán fàn yìqǐ bǎ gōngzuò zuò wán."
+        },
+        {
+          "question": "王一雪原来为什么想继续工作？",
+          "question_pinyin": "Wáng Yīxuě yuánlái wèishénme xiǎng jìxù gōngzuò?",
+          "answer": "她以为明天开会前要发到公司邮箱。",
+          "answer_pinyin": "Tā yǐwéi míngtiān kāihuì qián yào fā dào gōngsī yóuxiāng."
+        },
+        {
+          "question": "会议最后什么时候开？",
+          "question_pinyin": "Huìyì zuìhòu shénme shíhou kāi?",
+          "answer": "下周。",
+          "answer_pinyin": "Xià zhōu."
+        }
+      ],
+      "keyPoints": [
+        {
+          "hanzi": "怕干不完",
+          "pinyin": "Pà gàn bu wán.",
+          "note": "说明担心无法完成。"
+        },
+        {
+          "hanzi": "把这些工作做完",
+          "pinyin": "Bǎ zhèxiē gōngzuò zuò wán.",
+          "note": "结果类“把”字句突出工作完成。"
+        },
+        {
+          "hanzi": "明天……下周",
+          "pinyin": "Míngtiān... xià zhōu.",
+          "note": "本对话自身的时间线保持不变，不与课文一强行合并。"
+        }
+      ],
+      "cultureDiscussion": {
+        "title": "团队怎样分担任务？",
+        "titleEn": "How Can a Team Share Work?",
+        "questions": [
+          {
+            "hanzi": "有人请假时，怎样重新分工？",
+            "pinyin": "Yǒu rén qǐngjià shí, zěnyàng chóngxīn fēngōng?"
+          },
+          {
+            "hanzi": "收到时间改变的消息后，应该先确认什么？",
+            "pinyin": "Shōudào shíjiān gǎibiàn de xiāoxi hòu, yīnggāi xiān quèrèn shénme?"
+          }
+        ],
+        "wordCards": [
+          {
+            "hanzi": "分工",
+            "pinyin": "fēngōng",
+            "english": "divide work"
+          },
+          {
+            "hanzi": "完成",
+            "pinyin": "wánchéng",
+            "english": "finish"
+          },
+          {
+            "hanzi": "更新",
+            "pinyin": "gēngxīn",
+            "english": "update"
+          }
+        ],
+        "background": "工作、班级项目和社团活动都可能临时有人缺席。团队可以重新分工，并及时确认新的时间。",
+        "sampleAnswers": [
+          {
+            "hanzi": "我们先列出所有工作，再请每个人选一项。",
+            "pinyin": "Wǒmen xiān lièchū suǒyǒu gōngzuò, zài qǐng měi ge rén xuǎn yí xiàng."
+          },
+          {
+            "hanzi": "收到新消息以后，先确认时间和任务。",
+            "pinyin": "Shōudào xīn xiāoxi yǐhòu, xiān quèrèn shíjiān hé rènwu."
+          }
+        ]
+      },
+      "retellScaffold": {
+        "nodes": [
+          {
+            "label": "缺席",
+            "hint": "老张请假、同事休假"
+          },
+          {
+            "label": "担心",
+            "hint": "工作多、怕干不完"
+          },
+          {
+            "label": "帮助",
+            "hint": "一起把工作做完"
+          },
+          {
+            "label": "误会",
+            "hint": "以为明天开会"
+          },
+          {
+            "label": "新消息",
+            "hint": "下周开会、先吃饭"
+          }
+        ],
+        "frame": "老张因为……，所以……。好几个同事……，王一雪怕……。杨同乐说……。后来他们发现……，所以……。"
+      }
+    },
+    "t_hsk3_l11_04": {
+      "presentationMode": "listen_first_progressive",
+      "listenPrompt": "先读上海同事提出什么机会、王一雪考虑哪些因素，以及她最后作出什么个人选择。",
+      "preReadingQuestions": [
+        {
+          "question": "选择学习或工作机会时，你会考虑哪些因素？",
+          "pinyin": "Xuǎnzé xuéxí huò gōngzuò jīhuì shí, nǐ huì kǎolǜ nǎxiē yīnsù?"
+        },
+        {
+          "question": "对你来说，城市、机会和家人哪个更重要？为什么？",
+          "pinyin": "Duì nǐ lái shuō, chéngshì, jīhuì hé jiārén nǎge gèng zhòngyào? Wèishénme?"
+        }
+      ],
+      "classQuestions": [
+        {
+          "question": "上海同事来哪里了？",
+          "question_pinyin": "Shànghǎi tóngshì lái nǎli le?",
+          "answer": "来北京了。",
+          "answer_pinyin": "Lái Běijīng le."
+        },
+        {
+          "question": "他们问王一雪什么？",
+          "question_pinyin": "Tāmen wèn Wáng Yīxuě shénme?",
+          "answer": "问她愿不愿意也去上海工作。",
+          "answer_pinyin": "Wèn tā yuàn bu yuànyì yě qù Shànghǎi gōngzuò."
+        },
+        {
+          "question": "去上海可能有什么好处？",
+          "question_pinyin": "Qù Shànghǎi kěnéng yǒu shénme hǎochu?",
+          "answer": "可能有更好的机会。",
+          "answer_pinyin": "Kěnéng yǒu gèng hǎo de jīhuì."
+        },
+        {
+          "question": "王一雪考虑了哪些家人？",
+          "question_pinyin": "Wáng Yīxuě kǎolǜ le nǎxiē jiārén?",
+          "answer": "丈夫刘明和两个孩子。",
+          "answer_pinyin": "Zhàngfu Liú Míng hé liǎng ge háizi."
+        },
+        {
+          "question": "她为什么不愿意去？",
+          "question_pinyin": "Tā wèishénme bú yuànyì qù?",
+          "answer": "对她来说生活也很重要，她不愿意离开家人。",
+          "answer_pinyin": "Duì tā lái shuō shēnghuó yě hěn zhòngyào, tā bú yuànyì líkāi jiārén."
+        }
+      ],
+      "keyPoints": [
+        {
+          "hanzi": "愿不愿意也去上海",
+          "pinyin": "Yuàn bu yuànyì yě qù Shànghǎi.",
+          "note": "正反问句询问个人意愿。"
+        },
+        {
+          "hanzi": "虽然……但是……",
+          "pinyin": "Suīrán... dànshì...",
+          "note": "比较机会和生活两个方面。"
+        },
+        {
+          "hanzi": "对我来说",
+          "pinyin": "Duì wǒ lái shuō.",
+          "note": "说明后面的观点属于王一雪，不是所有人的唯一答案。"
+        }
+      ],
+      "cultureDiscussion": {
+        "title": "每个人的重要选择",
+        "titleEn": "Different People, Different Priorities",
+        "questions": [
+          {
+            "hanzi": "换一个城市学习或工作，有什么好处和困难？",
+            "pinyin": "Huàn yí gè chéngshì xuéxí huò gōngzuò, yǒu shénme hǎochu hé kùnnan?"
+          },
+          {
+            "hanzi": "怎样尊重别人不同的选择？",
+            "pinyin": "Zěnyàng zūnzhòng biérén bùtóng de xuǎnzé?"
+          }
+        ],
+        "wordCards": [
+          {
+            "hanzi": "机会",
+            "pinyin": "jīhuì",
+            "english": "opportunity"
+          },
+          {
+            "hanzi": "生活",
+            "pinyin": "shēnghuó",
+            "english": "life"
+          },
+          {
+            "hanzi": "选择",
+            "pinyin": "xuǎnzé",
+            "english": "choice"
+          }
+        ],
+        "background": "有人重视新机会，有人重视熟悉的城市、学习计划或家人。课堂只要求说明理由，不设置唯一正确立场。",
+        "sampleAnswers": [
+          {
+            "hanzi": "对我来说，学习机会和生活时间都很重要。",
+            "pinyin": "Duì wǒ lái shuō, xuéxí jīhuì hé shēnghuó shíjiān dōu hěn zhòngyào."
+          },
+          {
+            "hanzi": "我们可以先听别人的理由，再表达自己的看法。",
+            "pinyin": "Wǒmen kěyǐ xiān tīng biérén de lǐyóu, zài biǎodá zìjǐ de kànfǎ."
+          }
+        ]
+      },
+      "retellScaffold": {
+        "nodes": [
+          {
+            "label": "来访",
+            "hint": "上海同事来北京"
+          },
+          {
+            "label": "机会",
+            "hint": "问她愿不愿意去上海"
+          },
+          {
+            "label": "家庭",
+            "hint": "丈夫忙、孩子小"
+          },
+          {
+            "label": "比较",
+            "hint": "更好机会 vs 生活"
+          },
+          {
+            "label": "选择",
+            "hint": "不愿意离开家人"
+          }
+        ],
+        "frame": "前几天，……。同事问王一雪……。去上海可能……，但是她考虑到……。对她来说……，所以她……。"
+      }
+    }
+  },
+  "vocabExtensions": {
+    "v11_01": {
+      "session": "A",
+      "phrases": [
+        "参加会议",
+        "会议时间"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_02": {
+      "session": "A",
+      "phrases": [
+        "公司经理",
+        "问经理"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_03": {
+      "session": "A",
+      "phrases": [
+        "去开会",
+        "开会时间"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_04": {
+      "session": "A",
+      "phrases": [
+        "后天上午",
+        "后天见"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_05": {
+      "session": "A",
+      "phrases": [
+        "会议地点",
+        "活动地点"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_06": {
+      "session": "A",
+      "phrases": [
+        "会议室",
+        "办公室"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_07": {
+      "session": "A",
+      "phrases": [
+        "发邮件",
+        "发信息"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_08": {
+      "session": "A",
+      "phrases": [
+        "笔记本电脑",
+        "自己的电脑"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_09": {
+      "session": "A",
+      "phrases": [
+        "或者……",
+        "A或者B"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_10": {
+      "session": "B",
+      "phrases": [
+        "声音太小",
+        "听见声音"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_11": {
+      "session": "B",
+      "phrases": [
+        "看来……",
+        "在我看来"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_12": {
+      "session": "B",
+      "phrases": [
+        "想办法",
+        "没有办法"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_13": {
+      "session": "B",
+      "phrases": [
+        "解决问题",
+        "自己解决"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_14": {
+      "session": "B",
+      "phrases": [
+        "只能这样",
+        "只能请人"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_15": {
+      "session": "B",
+      "phrases": [
+        "帮助别人",
+        "找别人"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_16": {
+      "session": "C",
+      "phrases": [
+        "向经理请假",
+        "请一天假"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_17": {
+      "session": "C",
+      "phrases": [
+        "公司同事",
+        "帮助同事"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_18": {
+      "session": "C",
+      "phrases": [
+        "出去休假",
+        "休假回来"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_19": {
+      "session": "C",
+      "phrases": [
+        "害怕",
+        "怕来不及"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_20": {
+      "session": "C",
+      "phrases": [
+        "公司邮箱",
+        "发到邮箱"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_21": {
+      "session": "C",
+      "phrases": [
+        "愿意帮忙",
+        "愿不愿意"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_22": {
+      "session": "C",
+      "phrases": [
+        "大城市",
+        "别的城市"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_23": {
+      "session": "C",
+      "phrases": [
+        "离开北京",
+        "离开家人"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_24": {
+      "session": "C",
+      "phrases": [
+        "工作机会",
+        "好机会"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_25": {
+      "session": "C",
+      "phrases": [
+        "城市生活",
+        "生活习惯"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_26": {
+      "session": "C",
+      "phrases": [
+        "为了工作",
+        "为家人"
+      ],
+      "sourceType": "textbook"
+    },
+    "v11_27": {
+      "session": "C",
+      "phrases": [
+        "A或B",
+        "工作或学习"
+      ],
+      "sourceType": "textbook"
+    }
+  },
+  "previewMissions": [
+    {
+      "id": "pm_hsk3_l11_a",
+      "session": "A",
+      "pilotMode": "ranked_vocab_preview_v1",
+      "title": "第1次课课前热身赛",
+      "titleEn": "确认会议与设备选择",
+      "subtitleEn": "Five stages prepare you for the next classroom task.",
+      "scenario": "确认会议与设备选择",
+      "goals": [
+        "确认会议与设备选择",
+        "Recognize and match the key expressions.",
+        "Complete a 10-question scored challenge."
+      ],
+      "storyIntro": "完成五个Stage，准备在课堂上用完整句子表达。",
+      "storyIntroEn": "Learn to confirm a meeting time and place, compare equipment choices and prepare one information card. The full textbook dialogue stays for class.",
+      "stages": [
+        {
+          "id": "a1",
+          "title": "今日词表",
+          "titleEn": "Meet the Words",
+          "screenPrompt": "先听、读并理解本次课的词语和必要背景。",
+          "screenPromptEn": "Learn to confirm a meeting time and place, compare equipment choices and prepare one information card. The full textbook dialogue stays for class.",
+          "interactionType": "study_list",
+          "photos": [
+            "images/hsk3-l11/photo-text-1-meeting-change.png"
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "会议",
+              "pinyin": "huìyì",
+              "english": "meeting; conference",
+              "example": "后天上午十点有一个会议。",
+              "examplePinyin": "Hòutiān shàngwǔ shí diǎn yǒu yí gè huìyì."
+            },
+            {
+              "hanzi": "经理",
+              "pinyin": "jīnglǐ",
+              "english": "manager",
+              "example": "经理今天下午不在办公室。",
+              "examplePinyin": "Jīnglǐ jīntiān xiàwǔ bú zài bàngōngshì."
+            },
+            {
+              "hanzi": "开会",
+              "pinyin": "kāihuì",
+              "english": "have a meeting",
+              "example": "我们后天上午十点开会。",
+              "examplePinyin": "Wǒmen hòutiān shàngwǔ shí diǎn kāihuì."
+            },
+            {
+              "hanzi": "后天",
+              "pinyin": "hòutiān",
+              "english": "the day after tomorrow",
+              "example": "后天我们在第一会议室见。",
+              "examplePinyin": "Hòutiān wǒmen zài dì-yī huìyìshì jiàn."
+            },
+            {
+              "hanzi": "地点",
+              "pinyin": "dìdiǎn",
+              "english": "place; location",
+              "example": "请告诉大家新的会议地点。",
+              "examplePinyin": "Qǐng gàosu dàjiā xīn de huìyì dìdiǎn."
+            },
+            {
+              "hanzi": "室",
+              "pinyin": "shì",
+              "english": "room",
+              "example": "我们在第一会议室开会。",
+              "examplePinyin": "Wǒmen zài dì-yī huìyìshì kāihuì."
+            },
+            {
+              "hanzi": "发",
+              "pinyin": "fā",
+              "english": "send",
+              "example": "我正要给大家发邮件。",
+              "examplePinyin": "Wǒ zhèng yào gěi dàjiā fā yóujiàn."
+            },
+            {
+              "hanzi": "笔记本（电脑）",
+              "pinyin": "bǐjìběn (diànnǎo)",
+              "english": "laptop",
+              "example": "请把笔记本电脑接好。",
+              "examplePinyin": "Qǐng bǎ bǐjìběn diànnǎo jiēhǎo."
+            },
+            {
+              "hanzi": "或者",
+              "pinyin": "huòzhě",
+              "english": "or; alternatively",
+              "example": "你可以用会议室的电脑或者自己的电脑。",
+              "examplePinyin": "Nǐ kěyǐ yòng huìyìshì de diànnǎo huòzhě zìjǐ de diànnǎo."
+            }
+          ]
+        },
+        {
+          "id": "a2",
+          "title": "快速认词",
+          "titleEn": "Recognition",
+          "screenPrompt": "根据词义或情境选择答案。",
+          "screenPromptEn": "Choose the word or meaning that fits.",
+          "interactionType": "practice_quiz",
+          "questions": [
+            {
+              "id": "a_rec_01",
+              "question": "哪个词表示“meeting”？",
+              "questionEn": "Choose the word.",
+              "options": [
+                "会议",
+                "地点",
+                "声音",
+                "生活"
+              ],
+              "answer": "会议"
+            },
+            {
+              "id": "a_rec_02",
+              "question": "“后天”是什么时候？",
+              "questionEn": "Choose the meaning.",
+              "options": [
+                "the day after tomorrow",
+                "tomorrow afternoon",
+                "next week",
+                "yesterday"
+              ],
+              "answer": "the day after tomorrow"
+            },
+            {
+              "id": "a_rec_03",
+              "question": "哪个词表示“send”？",
+              "questionEn": "Choose the word.",
+              "options": [
+                "发",
+                "接",
+                "怕",
+                "离开"
+              ],
+              "answer": "发"
+            },
+            {
+              "id": "a_rec_04",
+              "question": "“笔记本电脑”是什么？",
+              "questionEn": "Choose the meaning.",
+              "options": [
+                "laptop",
+                "paper notebook",
+                "meeting room",
+                "speaker"
+              ],
+              "answer": "laptop"
+            },
+            {
+              "id": "a_rec_05",
+              "question": "“会议地点”表示什么？",
+              "questionEn": "Choose the meaning.",
+              "options": [
+                "meeting location",
+                "meeting sound",
+                "work opportunity",
+                "city life"
+              ],
+              "answer": "meeting location"
+            }
+          ]
+        },
+        {
+          "id": "a3",
+          "title": "汉英配对",
+          "titleEn": "Chinese-English Match",
+          "screenPrompt": "把中文词语和英文意思配对。",
+          "screenPromptEn": "Match each Chinese card with its English meaning.",
+          "interactionType": "timed_match",
+          "pairs": [
+            {
+              "id": "a_pair_01",
+              "word": "会议",
+              "meaning": "meeting; conference"
+            },
+            {
+              "id": "a_pair_02",
+              "word": "后天",
+              "meaning": "the day after tomorrow"
+            },
+            {
+              "id": "a_pair_03",
+              "word": "地点",
+              "meaning": "place; location"
+            },
+            {
+              "id": "a_pair_04",
+              "word": "发",
+              "meaning": "send"
+            },
+            {
+              "id": "a_pair_05",
+              "word": "或者",
+              "meaning": "or; alternatively"
+            }
+          ]
+        },
+        {
+          "id": "a4",
+          "title": "语境判断",
+          "titleEn": "Context Check",
+          "screenPrompt": "把词语放回完整语境。",
+          "screenPromptEn": "Choose the expression that completes each context.",
+          "interactionType": "practice_quiz",
+          "questions": [
+            {
+              "id": "a_ctx_01",
+              "question": "经理今天下午不在，所以不____了。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "开会",
+                "休假",
+                "生活",
+                "解决"
+              ],
+              "answer": "开会"
+            },
+            {
+              "id": "a_ctx_02",
+              "question": "会议改到____上午十点。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "后天",
+                "下周",
+                "今天",
+                "昨天"
+              ],
+              "answer": "后天"
+            },
+            {
+              "id": "a_ctx_03",
+              "question": "新的会议____在第一会议室。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "地点",
+                "声音",
+                "机会",
+                "办法"
+              ],
+              "answer": "地点"
+            },
+            {
+              "id": "a_ctx_04",
+              "question": "我正要给大家____邮件。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "发",
+                "怕",
+                "为",
+                "离开"
+              ],
+              "answer": "发"
+            },
+            {
+              "id": "a_ctx_05",
+              "question": "会议室的电脑____自己的电脑都可以。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "或者",
+                "还是",
+                "只能",
+                "看来"
+              ],
+              "answer": "或者"
+            }
+          ]
+        },
+        {
+          "id": "a5",
+          "title": "正式挑战",
+          "titleEn": "Scored Challenge",
+          "screenPrompt": "独立完成10题正式挑战。",
+          "screenPromptEn": "Complete the 10-question scored challenge.",
+          "interactionType": "ranked_quiz",
+          "questions": [
+            {
+              "id": "a_ch_01",
+              "question": "会议信息卡首先要写清什么？",
+              "questionEn": "Choose the useful information.",
+              "options": [
+                "时间、地点和参加者",
+                "个人考试分数",
+                "城市大小",
+                "家人照片"
+              ],
+              "answer": "时间、地点和参加者"
+            },
+            {
+              "id": "a_ch_02",
+              "question": "哪一句是在请对方选择？",
+              "questionEn": "Choose the choice question.",
+              "options": [
+                "我们用电脑还是笔记本电脑？",
+                "电脑或者笔记本电脑都可以。",
+                "会议后天开。",
+                "我给大家发邮件。"
+              ],
+              "answer": "我们用电脑还是笔记本电脑？"
+            },
+            {
+              "id": "a_ch_03",
+              "question": "哪一句是在说明两种办法？",
+              "questionEn": "Choose the statement.",
+              "options": [
+                "电脑或者手机都可以。",
+                "电脑还是手机？",
+                "你在哪儿？",
+                "经理不在。"
+              ],
+              "answer": "电脑或者手机都可以。"
+            },
+            {
+              "id": "a_ch_04",
+              "question": "“笔记本（电脑）”在本课指什么？",
+              "questionEn": "Choose the correct object.",
+              "options": [
+                "laptop",
+                "paper notebook",
+                "calendar",
+                "email"
+              ],
+              "answer": "laptop"
+            },
+            {
+              "id": "a_ch_05",
+              "question": "会议改到什么时候？",
+              "questionEn": "Choose the time.",
+              "options": [
+                "后天上午十点",
+                "今天下午两点",
+                "明天晚上",
+                "下周五点"
+              ],
+              "answer": "后天上午十点"
+            },
+            {
+              "id": "a_ch_06",
+              "question": "新地点在哪里？",
+              "questionEn": "Choose the place.",
+              "options": [
+                "第一会议室",
+                "经理家里",
+                "上海餐厅",
+                "学校门口"
+              ],
+              "answer": "第一会议室"
+            },
+            {
+              "id": "a_ch_07",
+              "question": "杨同乐正要做什么？",
+              "questionEn": "Choose the action.",
+              "options": [
+                "给大家发邮件",
+                "离开家人",
+                "请假休息",
+                "找别人修电脑"
+              ],
+              "answer": "给大家发邮件"
+            },
+            {
+              "id": "a_ch_08",
+              "question": "开会前怎样准备电脑？",
+              "questionEn": "Choose the action.",
+              "options": [
+                "提前把电脑接好",
+                "只带纸质本子",
+                "关掉所有设备",
+                "不检查声音"
+              ],
+              "answer": "提前把电脑接好"
+            },
+            {
+              "id": "a_ch_09",
+              "question": "哪一句自然回答“用A还是B”？",
+              "questionEn": "Choose the answer.",
+              "options": [
+                "A或者B都可以。",
+                "A还是B。",
+                "看来A。",
+                "只能地点。"
+              ],
+              "answer": "A或者B都可以。"
+            },
+            {
+              "id": "a_ch_10",
+              "question": "课堂前要准备什么？",
+              "questionEn": "Choose the project item.",
+              "options": [
+                "一张会议或小组活动信息卡",
+                "一段强制录音",
+                "所有课文答案",
+                "公司的真实邮箱密码"
+              ],
+              "answer": "一张会议或小组活动信息卡"
+            }
+          ]
+        }
+      ],
+      "reportFields": [
+        "lesson",
+        "session",
+        "student",
+        "score",
+        "total",
+        "accuracy",
+        "elapsedTime",
+        "wrongItems",
+        "submittedAt"
+      ],
+      "persistenceKeyPattern": "ClassReadyPreview_HSK3-L11_A_{student}_v1",
+      "completionMessageEn": "Preview complete. Bring one useful sentence to class."
+    },
+    {
+      "id": "pm_hsk3_l11_b",
+      "session": "B",
+      "pilotMode": "ranked_vocab_preview_v1",
+      "title": "第2次课课前热身赛",
+      "titleEn": "描述设备问题并决定求助",
+      "subtitleEn": "Five stages prepare you for the next classroom task.",
+      "scenario": "描述设备问题并决定求助",
+      "goals": [
+        "描述设备问题并决定求助",
+        "Recognize and match the key expressions.",
+        "Complete a 10-question scored challenge."
+      ],
+      "storyIntro": "完成五个Stage，准备在课堂上用完整句子表达。",
+      "storyIntroEn": "Learn to describe visible and audible problems, draw a conclusion from evidence with 看来, and choose a realistic next step.",
+      "stages": [
+        {
+          "id": "b1",
+          "title": "今日词表",
+          "titleEn": "Meet the Words",
+          "screenPrompt": "先听、读并理解本次课的词语和必要背景。",
+          "screenPromptEn": "Learn to describe visible and audible problems, draw a conclusion from evidence with 看来, and choose a realistic next step.",
+          "interactionType": "study_list",
+          "photos": [
+            "images/hsk3-l11/photo-text-2-no-picture.png"
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "声音",
+              "pinyin": "shēngyīn",
+              "english": "sound; voice",
+              "example": "现在听得见声音了。",
+              "examplePinyin": "Xiànzài tīng de jiàn shēngyīn le."
+            },
+            {
+              "hanzi": "看来",
+              "pinyin": "kànlái",
+              "english": "it seems; apparently",
+              "example": "灯都关了，看来他们已经走了。",
+              "examplePinyin": "Dēng dōu guān le, kànlái tāmen yǐjīng zǒu le."
+            },
+            {
+              "hanzi": "办法",
+              "pinyin": "bànfǎ",
+              "english": "way; approach",
+              "example": "我们一起想个办法吧。",
+              "examplePinyin": "Wǒmen yìqǐ xiǎng ge bànfǎ ba."
+            },
+            {
+              "hanzi": "解决",
+              "pinyin": "jiějué",
+              "english": "solve; resolve",
+              "example": "他正在解决电脑的问题。",
+              "examplePinyin": "Tā zhèngzài jiějué diànnǎo de wèntí."
+            },
+            {
+              "hanzi": "只能",
+              "pinyin": "zhǐ néng",
+              "english": "can only; have no choice but to",
+              "example": "我不会修，只能找别人帮忙。",
+              "examplePinyin": "Wǒ bú huì xiū, zhǐ néng zhǎo biérén bāngmáng."
+            },
+            {
+              "hanzi": "别人",
+              "pinyin": "biérén",
+              "english": "someone else; other people",
+              "example": "这个问题可以请别人帮忙。",
+              "examplePinyin": "Zhège wèntí kěyǐ qǐng biérén bāngmáng."
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "title": "快速认词",
+          "titleEn": "Recognition",
+          "screenPrompt": "根据词义或情境选择答案。",
+          "screenPromptEn": "Choose the word or meaning that fits.",
+          "interactionType": "practice_quiz",
+          "questions": [
+            {
+              "id": "b_rec_01",
+              "question": "哪个词表示“sound”？",
+              "questionEn": "Choose the word.",
+              "options": [
+                "声音",
+                "办法",
+                "会议",
+                "城市"
+              ],
+              "answer": "声音"
+            },
+            {
+              "id": "b_rec_02",
+              "question": "“解决问题”最接近哪个英文？",
+              "questionEn": "Choose the meaning.",
+              "options": [
+                "solve a problem",
+                "send an email",
+                "leave a city",
+                "hold a meeting"
+              ],
+              "answer": "solve a problem"
+            },
+            {
+              "id": "b_rec_03",
+              "question": "“只能”表示什么？",
+              "questionEn": "Choose the meaning.",
+              "options": [
+                "can only",
+                "would like to",
+                "both are fine",
+                "the day after tomorrow"
+              ],
+              "answer": "can only"
+            },
+            {
+              "id": "b_rec_04",
+              "question": "“找别人帮忙”是什么意思？",
+              "questionEn": "Choose the meaning.",
+              "options": [
+                "ask someone else for help",
+                "help the manager leave",
+                "send another meeting",
+                "choose a city"
+              ],
+              "answer": "ask someone else for help"
+            },
+            {
+              "id": "b_rec_05",
+              "question": "“看来”前面通常需要什么？",
+              "questionEn": "Choose the support.",
+              "options": [
+                "observable evidence",
+                "a favourite colour only",
+                "a random answer",
+                "a person’s name only"
+              ],
+              "answer": "observable evidence"
+            }
+          ]
+        },
+        {
+          "id": "b3",
+          "title": "汉英配对",
+          "titleEn": "Chinese-English Match",
+          "screenPrompt": "把中文词语和英文意思配对。",
+          "screenPromptEn": "Match each Chinese card with its English meaning.",
+          "interactionType": "timed_match",
+          "pairs": [
+            {
+              "id": "b_pair_01",
+              "word": "声音",
+              "meaning": "sound; voice"
+            },
+            {
+              "id": "b_pair_02",
+              "word": "看来",
+              "meaning": "it seems; apparently"
+            },
+            {
+              "id": "b_pair_03",
+              "word": "办法",
+              "meaning": "way; approach"
+            },
+            {
+              "id": "b_pair_04",
+              "word": "解决",
+              "meaning": "solve; resolve"
+            },
+            {
+              "id": "b_pair_05",
+              "word": "只能",
+              "meaning": "can only; have no choice but to"
+            }
+          ]
+        },
+        {
+          "id": "b4",
+          "title": "语境判断",
+          "titleEn": "Context Check",
+          "screenPrompt": "把词语放回完整语境。",
+          "screenPromptEn": "Choose the expression that completes each context.",
+          "interactionType": "practice_quiz",
+          "questions": [
+            {
+              "id": "b_ctx_01",
+              "question": "现在看得见画面，但是听不见____。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "声音",
+                "地点",
+                "会议",
+                "机会"
+              ],
+              "answer": "声音"
+            },
+            {
+              "id": "b_ctx_02",
+              "question": "我检查了连接线，还是不能____问题。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "解决",
+                "离开",
+                "发",
+                "休假"
+              ],
+              "answer": "解决"
+            },
+            {
+              "id": "b_ctx_03",
+              "question": "我们再想一个____吧。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "办法",
+                "城市",
+                "同事",
+                "邮箱"
+              ],
+              "answer": "办法"
+            },
+            {
+              "id": "b_ctx_04",
+              "question": "试了几次还不行，____要找别人帮忙。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "看来",
+                "或者",
+                "后天",
+                "愿意"
+              ],
+              "answer": "看来"
+            },
+            {
+              "id": "b_ctx_05",
+              "question": "我不会修，____请老师来看看。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "只能",
+                "或者",
+                "还是",
+                "为"
+              ],
+              "answer": "只能"
+            }
+          ]
+        },
+        {
+          "id": "b5",
+          "title": "正式挑战",
+          "titleEn": "Scored Challenge",
+          "screenPrompt": "独立完成10题正式挑战。",
+          "screenPromptEn": "Complete the 10-question scored challenge.",
+          "interactionType": "ranked_quiz",
+          "questions": [
+            {
+              "id": "b_ch_01",
+              "question": "电脑接好后，王一雪先遇到什么问题？",
+              "questionEn": "Choose the first problem.",
+              "options": [
+                "什么都看不见",
+                "邮件发不出去",
+                "会议时间不清楚",
+                "同事都请假"
+              ],
+              "answer": "什么都看不见"
+            },
+            {
+              "id": "b_ch_02",
+              "question": "后来画面怎么样了？",
+              "questionEn": "Choose the result.",
+              "options": [
+                "看得见了",
+                "还是完全看不见",
+                "变成邮件",
+                "换了地点"
+              ],
+              "answer": "看得见了"
+            },
+            {
+              "id": "b_ch_03",
+              "question": "声音最后有什么问题？",
+              "questionEn": "Choose the problem.",
+              "options": [
+                "太小，听不清楚",
+                "太大，听得很清楚",
+                "完全没有电脑",
+                "经理在说话"
+              ],
+              "answer": "太小，听不清楚"
+            },
+            {
+              "id": "b_ch_04",
+              "question": "哪一句有“证据→结论”？",
+              "questionEn": "Choose the inference.",
+              "options": [
+                "屏幕没有画面，看来连接有问题。",
+                "我喜欢这个电脑。",
+                "会议地点在一楼。",
+                "他愿意去上海。"
+              ],
+              "answer": "屏幕没有画面，看来连接有问题。"
+            },
+            {
+              "id": "b_ch_05",
+              "question": "哪一句只是个人喜好，不是“看来”的推测？",
+              "questionEn": "Choose the preference.",
+              "options": [
+                "我喜欢用自己的电脑。",
+                "灯都关了，看来没人。",
+                "大家带伞，看来下雨了。",
+                "经理不在，看来不开会。"
+              ],
+              "answer": "我喜欢用自己的电脑。"
+            },
+            {
+              "id": "b_ch_06",
+              "question": "“听得见”和“听不清楚”可以同时出现吗？",
+              "questionEn": "Choose the explanation.",
+              "options": [
+                "可以：有声音但内容不清楚",
+                "不可以：两个意思完全相反",
+                "只能用于看画面",
+                "只能用于会议时间"
+              ],
+              "answer": "可以：有声音但内容不清楚"
+            },
+            {
+              "id": "b_ch_07",
+              "question": "自己检查几次还不行，下一步可以怎样做？",
+              "questionEn": "Choose the next step.",
+              "options": [
+                "清楚说明现象并找人帮忙",
+                "关掉信息不告诉别人",
+                "随便换一个答案",
+                "离开所有同事"
+              ],
+              "answer": "清楚说明现象并找人帮忙"
+            },
+            {
+              "id": "b_ch_08",
+              "question": "求助卡需要先写什么？",
+              "questionEn": "Choose the evidence.",
+              "options": [
+                "看得见或听得见的现象",
+                "别人的私人信息",
+                "一个没有依据的结论",
+                "所有课程答案"
+              ],
+              "answer": "看得见或听得见的现象"
+            },
+            {
+              "id": "b_ch_09",
+              "question": "哪一句正确使用“看来”？",
+              "questionEn": "Choose the sentence.",
+              "options": [
+                "声音还是很小，看来音量设置有问题。",
+                "看来我喜欢蓝色。",
+                "我看来或者电脑。",
+                "声音看来地点。"
+              ],
+              "answer": "声音还是很小，看来音量设置有问题。"
+            },
+            {
+              "id": "b_ch_10",
+              "question": "课堂前要准备什么？",
+              "questionEn": "Choose the project item.",
+              "options": [
+                "问题、观察依据、结论和下一步办法",
+                "强制上传一段录音",
+                "背出所有电脑零件",
+                "写公司的真实密码"
+              ],
+              "answer": "问题、观察依据、结论和下一步办法"
+            }
+          ]
+        }
+      ],
+      "reportFields": [
+        "lesson",
+        "session",
+        "student",
+        "score",
+        "total",
+        "accuracy",
+        "elapsedTime",
+        "wrongItems",
+        "submittedAt"
+      ],
+      "persistenceKeyPattern": "ClassReadyPreview_HSK3-L11_B_{student}_v1",
+      "completionMessageEn": "Preview complete. Bring one useful sentence to class."
+    },
+    {
+      "id": "pm_hsk3_l11_c",
+      "session": "C",
+      "pilotMode": "ranked_vocab_preview_v1",
+      "title": "第3次课课前热身赛",
+      "titleEn": "完成团队任务并表达重要选择",
+      "subtitleEn": "Five stages prepare you for the next classroom task.",
+      "scenario": "完成团队任务并表达重要选择",
+      "goals": [
+        "完成团队任务并表达重要选择",
+        "Recognize and match the key expressions.",
+        "Complete a 10-question scored challenge."
+      ],
+      "storyIntro": "完成五个Stage，准备在课堂上用完整句子表达。",
+      "storyIntroEn": "Learn to say how a team achieves a result, then explain what matters from one person’s perspective. Different personal choices are welcome.",
+      "stages": [
+        {
+          "id": "c1",
+          "title": "今日词表",
+          "titleEn": "Meet the Words",
+          "screenPrompt": "先听、读并理解本次课的词语和必要背景。",
+          "screenPromptEn": "Learn to say how a team achieves a result, then explain what matters from one person’s perspective. Different personal choices are welcome.",
+          "interactionType": "study_list",
+          "photos": [
+            "images/hsk3-l11/photo-text-4-diary-choice.png"
+          ],
+          "keywordCards": [
+            {
+              "hanzi": "请假",
+              "pinyin": "qǐngjià",
+              "english": "ask for leave",
+              "example": "老张家里有事，所以请假了。",
+              "examplePinyin": "Lǎo Zhāng jiā li yǒu shì, suǒyǐ qǐngjià le."
+            },
+            {
+              "hanzi": "同事",
+              "pinyin": "tóngshì",
+              "english": "colleague",
+              "example": "好几个同事今天都不在。",
+              "examplePinyin": "Hǎo jǐ gè tóngshì jīntiān dōu bú zài."
+            },
+            {
+              "hanzi": "休假",
+              "pinyin": "xiūjià",
+              "english": "take a vacation; be on leave",
+              "example": "这个星期有两个同事休假。",
+              "examplePinyin": "Zhège xīngqī yǒu liǎng gè tóngshì xiūjià."
+            },
+            {
+              "hanzi": "怕",
+              "pinyin": "pà",
+              "english": "fear; be afraid that",
+              "example": "工作太多，我怕今天做不完。",
+              "examplePinyin": "Gōngzuò tài duō, wǒ pà jīntiān zuò bu wán."
+            },
+            {
+              "hanzi": "邮箱",
+              "pinyin": "yóuxiāng",
+              "english": "email address; mailbox",
+              "example": "请把材料发到公司的邮箱里。",
+              "examplePinyin": "Qǐng bǎ cáiliào fā dào gōngsī de yóuxiāng li."
+            },
+            {
+              "hanzi": "愿意",
+              "pinyin": "yuànyì",
+              "english": "be willing to",
+              "example": "你愿意参加这个小组吗？",
+              "examplePinyin": "Nǐ yuànyì cānjiā zhège xiǎozǔ ma?"
+            },
+            {
+              "hanzi": "城市",
+              "pinyin": "chéngshì",
+              "english": "city",
+              "example": "你最想在哪个城市生活？",
+              "examplePinyin": "Nǐ zuì xiǎng zài nǎge chéngshì shēnghuó?"
+            },
+            {
+              "hanzi": "离开",
+              "pinyin": "líkāi",
+              "english": "leave",
+              "example": "她不愿意离开家人。",
+              "examplePinyin": "Tā bú yuànyì líkāi jiārén."
+            },
+            {
+              "hanzi": "机会",
+              "pinyin": "jīhuì",
+              "english": "opportunity; chance",
+              "example": "这是一个学习汉语的好机会。",
+              "examplePinyin": "Zhè shì yí gè xuéxí Hànyǔ de hǎo jīhuì."
+            },
+            {
+              "hanzi": "生活",
+              "pinyin": "shēnghuó",
+              "english": "life; live",
+              "example": "对我来说，生活也很重要。",
+              "examplePinyin": "Duì wǒ lái shuō, shēnghuó yě hěn zhòngyào."
+            },
+            {
+              "hanzi": "为",
+              "pinyin": "wèi",
+              "english": "for; for the sake of",
+              "example": "她不愿意为工作离开家人。",
+              "examplePinyin": "Tā bú yuànyì wèi gōngzuò líkāi jiārén."
+            },
+            {
+              "hanzi": "或",
+              "pinyin": "huò",
+              "english": "or",
+              "example": "你可以选择工作、学习或休息。",
+              "examplePinyin": "Nǐ kěyǐ xuǎnzé gōngzuò, xuéxí huò xiūxi."
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "title": "快速认词",
+          "titleEn": "Recognition",
+          "screenPrompt": "根据词义或情境选择答案。",
+          "screenPromptEn": "Choose the word or meaning that fits.",
+          "interactionType": "practice_quiz",
+          "questions": [
+            {
+              "id": "c_rec_01",
+              "question": "哪个词表示“colleague”？",
+              "questionEn": "Choose the word.",
+              "options": [
+                "同事",
+                "经理",
+                "别人",
+                "家人"
+              ],
+              "answer": "同事"
+            },
+            {
+              "id": "c_rec_02",
+              "question": "“休假”是什么意思？",
+              "questionEn": "Choose the meaning.",
+              "options": [
+                "take a vacation or leave",
+                "solve a problem",
+                "send an email",
+                "connect a laptop"
+              ],
+              "answer": "take a vacation or leave"
+            },
+            {
+              "id": "c_rec_03",
+              "question": "哪个词表示“opportunity”？",
+              "questionEn": "Choose the word.",
+              "options": [
+                "机会",
+                "生活",
+                "城市",
+                "办法"
+              ],
+              "answer": "机会"
+            },
+            {
+              "id": "c_rec_04",
+              "question": "“离开家人”最接近哪个英文？",
+              "questionEn": "Choose the meaning.",
+              "options": [
+                "leave one’s family",
+                "invite one’s family",
+                "email one’s family",
+                "meet one’s family"
+              ],
+              "answer": "leave one’s family"
+            },
+            {
+              "id": "c_rec_05",
+              "question": "“对我来说”在说明什么？",
+              "questionEn": "Choose the function.",
+              "options": [
+                "whose viewpoint follows",
+                "where the meeting is",
+                "how loud the sound is",
+                "who sent an email"
+              ],
+              "answer": "whose viewpoint follows"
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "title": "汉英配对",
+          "titleEn": "Chinese-English Match",
+          "screenPrompt": "把中文词语和英文意思配对。",
+          "screenPromptEn": "Match each Chinese card with its English meaning.",
+          "interactionType": "timed_match",
+          "pairs": [
+            {
+              "id": "c_pair_01",
+              "word": "同事",
+              "meaning": "colleague"
+            },
+            {
+              "id": "c_pair_02",
+              "word": "休假",
+              "meaning": "take a vacation; be on leave"
+            },
+            {
+              "id": "c_pair_03",
+              "word": "邮箱",
+              "meaning": "email address; mailbox"
+            },
+            {
+              "id": "c_pair_04",
+              "word": "机会",
+              "meaning": "opportunity; chance"
+            },
+            {
+              "id": "c_pair_05",
+              "word": "生活",
+              "meaning": "life; live"
+            }
+          ]
+        },
+        {
+          "id": "c4",
+          "title": "语境判断",
+          "titleEn": "Context Check",
+          "screenPrompt": "把词语放回完整语境。",
+          "screenPromptEn": "Choose the expression that completes each context.",
+          "interactionType": "practice_quiz",
+          "questions": [
+            {
+              "id": "c_ctx_01",
+              "question": "老张家里有事，所以____了。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "请假",
+                "开会",
+                "解决",
+                "发"
+              ],
+              "answer": "请假"
+            },
+            {
+              "id": "c_ctx_02",
+              "question": "好几个____都休假了。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "同事",
+                "城市",
+                "机会",
+                "声音"
+              ],
+              "answer": "同事"
+            },
+            {
+              "id": "c_ctx_03",
+              "question": "我怕今天不能把工作____。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "做完",
+                "或者",
+                "看来",
+                "离开"
+              ],
+              "answer": "做完"
+            },
+            {
+              "id": "c_ctx_04",
+              "question": "请把材料发到公司的____里。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "邮箱",
+                "地点",
+                "会议",
+                "办法"
+              ],
+              "answer": "邮箱"
+            },
+            {
+              "id": "c_ctx_05",
+              "question": "对我来说，____和家人也很重要。",
+              "questionEn": "Choose the expression that completes the full context.",
+              "options": [
+                "生活",
+                "声音",
+                "会议",
+                "电脑"
+              ],
+              "answer": "生活"
+            }
+          ]
+        },
+        {
+          "id": "c5",
+          "title": "正式挑战",
+          "titleEn": "Scored Challenge",
+          "screenPrompt": "独立完成10题正式挑战。",
+          "screenPromptEn": "Complete the 10-question scored challenge.",
+          "interactionType": "ranked_quiz",
+          "questions": [
+            {
+              "id": "c_ch_01",
+              "question": "王一雪为什么怕干不完？",
+              "questionEn": "Choose the reason.",
+              "options": [
+                "好几个同事休假，工作很多",
+                "电脑声音太大",
+                "她要去上海旅行",
+                "经理已经回来"
+              ],
+              "answer": "好几个同事休假，工作很多"
+            },
+            {
+              "id": "c_ch_02",
+              "question": "哪一句突出动作后的结果？",
+              "questionEn": "Choose the result 把 sentence.",
+              "options": [
+                "我们把这些工作做完。",
+                "我们把工作。",
+                "工作把我们做。",
+                "我们工作在邮箱。"
+              ],
+              "answer": "我们把这些工作做完。"
+            },
+            {
+              "id": "c_ch_03",
+              "question": "“把电脑接好”中的“接”是什么意思？",
+              "questionEn": "Choose the meaning.",
+              "options": [
+                "connect the equipment",
+                "meet a person",
+                "receive a parcel",
+                "answer a phone"
+              ],
+              "answer": "connect the equipment"
+            },
+            {
+              "id": "c_ch_04",
+              "question": "会议最后什么时候开？",
+              "questionEn": "Choose the time in Text 3.",
+              "options": [
+                "下周",
+                "明天上午",
+                "后天下午",
+                "今天中午"
+              ],
+              "answer": "下周"
+            },
+            {
+              "id": "c_ch_05",
+              "question": "上海同事提出什么？",
+              "questionEn": "Choose the opportunity.",
+              "options": [
+                "去上海工作的机会",
+                "修会议室电脑",
+                "请假去旅行",
+                "发公司邮件"
+              ],
+              "answer": "去上海工作的机会"
+            },
+            {
+              "id": "c_ch_06",
+              "question": "哪一句正确使用“对……来说”？",
+              "questionEn": "Choose the sentence.",
+              "options": [
+                "对我来说，生活很重要。",
+                "我对来说生活。",
+                "来说对我城市。",
+                "生活对重要。"
+              ],
+              "answer": "对我来说，生活很重要。"
+            },
+            {
+              "id": "c_ch_07",
+              "question": "王一雪为什么不愿意离开北京？",
+              "questionEn": "Choose her reason.",
+              "options": [
+                "她重视生活和家人",
+                "她不喜欢所有工作",
+                "她听不见声音",
+                "她不知道会议地点"
+              ],
+              "answer": "她重视生活和家人"
+            },
+            {
+              "id": "c_ch_08",
+              "question": "讨论个人选择时应该怎样做？",
+              "questionEn": "Choose the respectful approach.",
+              "options": [
+                "听理由并允许不同答案",
+                "规定只有一个正确选择",
+                "假设每个人都有工作",
+                "要求所有人离开家人"
+              ],
+              "answer": "听理由并允许不同答案"
+            },
+            {
+              "id": "c_ch_09",
+              "question": "最终展示至少需要哪两个结构？",
+              "questionEn": "Choose the required pair.",
+              "options": [
+                "结果类“把”字句和“对……来说”",
+                "只有“还是”一个词",
+                "只有可能补语",
+                "两个没有上下文的生词"
+              ],
+              "answer": "结果类“把”字句和“对……来说”"
+            },
+            {
+              "id": "c_ch_10",
+              "question": "最终展示怎样完成？",
+              "questionEn": "Choose the plan.",
+              "options": [
+                "整合A/B并在课堂说1—2分钟",
+                "只上传录音不进课堂",
+                "抄写课文不表达自己",
+                "只带一张无关旧图"
+              ],
+              "answer": "整合A/B并在课堂说1—2分钟"
+            }
+          ]
+        }
+      ],
+      "reportFields": [
+        "lesson",
+        "session",
+        "student",
+        "score",
+        "total",
+        "accuracy",
+        "elapsedTime",
+        "wrongItems",
+        "submittedAt"
+      ],
+      "persistenceKeyPattern": "ClassReadyPreview_HSK3-L11_C_{student}_v1",
+      "completionMessageEn": "Preview complete. Bring one useful sentence to class."
+    }
+  ],
+  "preClass": {
+    "mode": "preview_mission",
+    "missionId": "pm_hsk3_l11_a",
+    "vocabularyIds": [
+      "v11_01",
+      "v11_02",
+      "v11_03",
+      "v11_04",
+      "v11_05",
+      "v11_06",
+      "v11_07",
+      "v11_08",
+      "v11_09",
+      "v11_10",
+      "v11_11",
+      "v11_12",
+      "v11_13",
+      "v11_14",
+      "v11_15",
+      "v11_16",
+      "v11_17",
+      "v11_18",
+      "v11_19",
+      "v11_20",
+      "v11_21",
+      "v11_22",
+      "v11_23",
+      "v11_24",
+      "v11_25",
+      "v11_26",
+      "v11_27"
+    ],
+    "grammarIds": [
+      "g11_01",
+      "g11_02",
+      "g11_03",
+      "g11_04"
+    ],
+    "progressIsolation": {
+      "keyFields": [
+        "lesson",
+        "session",
+        "student",
+        "contentVersion"
+      ],
+      "contentVersion": "HSK3-L11-v1"
+    },
+    "reportFields": [
+      "lesson",
+      "session",
+      "student",
+      "score",
+      "total",
+      "accuracy",
+      "elapsedTime",
+      "wrongItems",
+      "submittedAt"
+    ],
+    "readingData": [
+      {
+        "id": "pre_l11_read",
+        "title": "我的团队任务与重要选择",
+        "text": "我先准备活动信息卡，再增加问题与求助卡。最后，我会把两张卡合在一起，完成1—2分钟课堂分享。"
+      }
+    ]
+  },
+  "inClass": {
+    "questionGroups": {
+      "v5_vocab_fill": [
+        {
+          "id": "l11_fill_a",
+          "type": "vocab_fill_group",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "会议安排与设备",
+          "prompt_en": "Choose from the word bank for each complete sentence.",
+          "data": {
+            "wordBank": [
+              "会议",
+              "后天",
+              "地点",
+              "发",
+              "或者"
+            ],
+            "wordBank_pinyin": [
+              "huìyì",
+              "hòutiān",
+              "dìdiǎn",
+              "fā",
+              "huòzhě"
+            ],
+            "sentences": [
+              {
+                "sentence": "后天上午十点有一个____。",
+                "answer": "会议"
+              },
+              {
+                "sentence": "我们____上午在第一会议室见。",
+                "answer": "后天"
+              },
+              {
+                "sentence": "新的会议____已经发给大家了。",
+                "answer": "地点"
+              },
+              {
+                "sentence": "我现在给同学们____一封邮件。",
+                "answer": "发"
+              },
+              {
+                "sentence": "电脑____手机都可以用来展示。",
+                "answer": "或者"
+              }
+            ],
+            "speakingOutput": {
+              "support": "任选两个词完成一句话。",
+              "core": "用三个词说明一个完整情境。",
+              "stretch": "用五个词完成30秒口头说明。"
+            }
+          }
+        },
+        {
+          "id": "l11_fill_b",
+          "type": "vocab_fill_group",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "设备问题与求助",
+          "prompt_en": "Choose from the word bank for each complete sentence.",
+          "data": {
+            "wordBank": [
+              "声音",
+              "看来",
+              "办法",
+              "解决",
+              "只能"
+            ],
+            "wordBank_pinyin": [
+              "shēngyīn",
+              "kànlái",
+              "bànfǎ",
+              "jiějué",
+              "zhǐ néng"
+            ],
+            "sentences": [
+              {
+                "sentence": "画面有了，但是听不见____。",
+                "answer": "声音"
+              },
+              {
+                "sentence": "屏幕还是黑的，____连接有问题。",
+                "answer": "看来"
+              },
+              {
+                "sentence": "我们再想一个解决____。",
+                "answer": "办法"
+              },
+              {
+                "sentence": "这个问题我自己不能____。",
+                "answer": "解决"
+              },
+              {
+                "sentence": "时间不多了，我们____找老师帮忙。",
+                "answer": "只能"
+              }
+            ],
+            "speakingOutput": {
+              "support": "任选两个词完成一句话。",
+              "core": "用三个词说明一个完整情境。",
+              "stretch": "用五个词完成30秒口头说明。"
+            }
+          }
+        },
+        {
+          "id": "l11_fill_c",
+          "type": "vocab_fill_group",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "团队任务与个人选择",
+          "prompt_en": "Choose from the word bank for each complete sentence.",
+          "data": {
+            "wordBank": [
+              "请假",
+              "同事",
+              "邮箱",
+              "机会",
+              "生活"
+            ],
+            "wordBank_pinyin": [
+              "qǐngjià",
+              "tóngshì",
+              "yóuxiāng",
+              "jīhuì",
+              "shēnghuó"
+            ],
+            "sentences": [
+              {
+                "sentence": "老张家里有事，所以今天____了。",
+                "answer": "请假"
+              },
+              {
+                "sentence": "好几个____都休假了，我们要重新分工。",
+                "answer": "同事"
+              },
+              {
+                "sentence": "请把材料发到小组的____里。",
+                "answer": "邮箱"
+              },
+              {
+                "sentence": "参加城市交流活动是一个好____。",
+                "answer": "机会"
+              },
+              {
+                "sentence": "对我来说，学习和____都很重要。",
+                "answer": "生活"
+              }
+            ],
+            "speakingOutput": {
+              "support": "任选两个词完成一句话。",
+              "core": "用三个词说明一个完整情境。",
+              "stretch": "用五个词完成30秒口头说明。"
+            }
+          }
+        }
+      ],
+      "g1_ordering": [
+        {
+          "id": "l11_order_01",
+          "type": "sentence_order",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "correct_answer": "会议室的电脑或者自己的电脑都可以。",
+          "data": {
+            "chunks": [
+              "会议室的电脑",
+              "或者",
+              "自己的电脑",
+              "都可以"
+            ],
+            "answer": "会议室的电脑或者自己的电脑都可以。"
+          }
+        },
+        {
+          "id": "l11_order_02",
+          "type": "sentence_order",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "correct_answer": "屏幕还是没有画面，看来连接有问题。",
+          "data": {
+            "chunks": [
+              "屏幕还是没有画面",
+              "看来",
+              "连接",
+              "有问题"
+            ],
+            "answer": "屏幕还是没有画面，看来连接有问题。"
+          }
+        },
+        {
+          "id": "l11_order_03",
+          "type": "sentence_order",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "correct_answer": "我们一起把这些工作做完。",
+          "data": {
+            "chunks": [
+              "我们",
+              "一起",
+              "把这些工作",
+              "做完"
+            ],
+            "answer": "我们一起把这些工作做完。"
+          }
+        },
+        {
+          "id": "l11_order_04",
+          "type": "sentence_order",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "correct_answer": "请先把设备问题说清楚。",
+          "data": {
+            "chunks": [
+              "请",
+              "先",
+              "把设备问题",
+              "说清楚"
+            ],
+            "answer": "请先把设备问题说清楚。"
+          }
+        },
+        {
+          "id": "l11_order_05",
+          "type": "sentence_order",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "连词成句。",
+          "prompt_en": "Put the chunks in order.",
+          "correct_answer": "对我来说，生活和家人都很重要。",
+          "data": {
+            "chunks": [
+              "对我来说",
+              "生活和家人",
+              "都",
+              "很重要"
+            ],
+            "answer": "对我来说，生活和家人都很重要。"
+          }
+        }
+      ],
+      "r2_passage_choice": [
+        {
+          "id": "l11_read_01",
+          "type": "passage_reading",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "阅读短文，完成三道理解题。",
+          "prompt_en": "Read the passage and answer three comprehension questions.",
+          "correct_answer": "老师临时有事；后天上午十点；画面和声音",
+          "data": {
+            "title": "班级展示改时间",
+            "passage": "我们班原来今天下午做小组展示，但是老师临时有事。展示改到后天上午十点，地点还是三号教室。班长已经给大家发了信息。我们可以用教室电脑或者自己的笔记本电脑，不过要提前检查画面和声音。",
+            "passage_pinyin": "Wǒmen bān yuánlái jīntiān xiàwǔ zuò xiǎozǔ zhǎnshì, dànshì lǎoshī línshí yǒu shì. Zhǎnshì gǎi dào hòutiān shàngwǔ shí diǎn, dìdiǎn háishi sān hào jiàoshì. Bānzhǎng yǐjīng gěi dàjiā fā le xìnxī. Wǒmen kěyǐ yòng jiàoshì diànnǎo huòzhě zìjǐ de bǐjìběn diànnǎo, búguò yào tíqián jiǎnchá huàmiàn hé shēngyīn.",
+            "questions": [
+              {
+                "question_cn": "展示为什么改时间？",
+                "question_pinyin": "Zhǎnshì wèishénme gǎi shíjiān?",
+                "options": [
+                  "老师临时有事",
+                  "电脑坏了",
+                  "同学去上海",
+                  "地点太远"
+                ],
+                "correct_index": 0,
+                "answer": "老师临时有事",
+                "focus": "原因"
+              },
+              {
+                "question_cn": "展示改到什么时候？",
+                "question_pinyin": "Zhǎnshì gǎi dào shénme shíhou?",
+                "options": [
+                  "今天下午",
+                  "后天上午十点",
+                  "明天晚上",
+                  "下周"
+                ],
+                "correct_index": 1,
+                "answer": "后天上午十点",
+                "focus": "时间"
+              },
+              {
+                "question_cn": "提前要检查什么？",
+                "question_pinyin": "Tíqián yào jiǎnchá shénme?",
+                "options": [
+                  "画面和声音",
+                  "工作机会",
+                  "城市生活",
+                  "考试成绩"
+                ],
+                "correct_index": 0,
+                "answer": "画面和声音",
+                "focus": "准备"
+              }
+            ]
+          }
+        },
+        {
+          "id": "l11_read_02",
+          "type": "passage_reading",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "阅读短文，完成三道理解题。",
+          "prompt_en": "Read the passage and answer three comprehension questions.",
+          "correct_answer": "连接线；听得见但听不清楚；扬声器有问题",
+          "data": {
+            "title": "设备检查记录",
+            "passage": "小林把电脑接好以后，屏幕上什么都看不见。他先检查连接线，画面出现了；再试声音，听得见但是听不清楚。他调了几次音量还是不行。看来扬声器有问题，他把观察到的情况告诉老师，请老师找管理员帮忙。",
+            "passage_pinyin": "Xiǎo Lín bǎ diànnǎo jiēhǎo yǐhòu, píngmù shang shénme dōu kàn bu jiàn. Tā xiān jiǎnchá liánjiēxiàn, huàmiàn chūxiàn le; zài shì shēngyīn, tīng de jiàn dànshì tīng bu qīngchu. Tā tiáo le jǐ cì yīnliàng háishi bù xíng. Kànlái yángshēngqì yǒu wèntí, tā bǎ guānchá dào de qíngkuàng gàosu lǎoshī, qǐng lǎoshī zhǎo guǎnlǐyuán bāngmáng.",
+            "questions": [
+              {
+                "question_cn": "小林先检查什么？",
+                "question_pinyin": "Xiǎo Lín xiān jiǎnchá shénme?",
+                "options": [
+                  "连接线",
+                  "邮箱",
+                  "会议地点",
+                  "家人"
+                ],
+                "correct_index": 0,
+                "answer": "连接线",
+                "focus": "步骤"
+              },
+              {
+                "question_cn": "声音最后怎么样？",
+                "question_pinyin": "Shēngyīn zuìhòu zěnmeyàng?",
+                "options": [
+                  "完全没有",
+                  "听得见但听不清楚",
+                  "非常大",
+                  "没有检查"
+                ],
+                "correct_index": 1,
+                "answer": "听得见但听不清楚",
+                "focus": "现象"
+              },
+              {
+                "question_cn": "他根据现象得出什么结论？",
+                "question_pinyin": "Tā gēnjù xiànxiàng déchū shénme jiélùn?",
+                "options": [
+                  "扬声器有问题",
+                  "会议取消",
+                  "老师请假",
+                  "城市太远"
+                ],
+                "correct_index": 0,
+                "answer": "扬声器有问题",
+                "focus": "推测"
+              }
+            ]
+          }
+        },
+        {
+          "id": "l11_read_03",
+          "type": "passage_reading",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "阅读短文，完成三道理解题。",
+          "prompt_en": "Read the passage and answer three comprehension questions.",
+          "correct_answer": "两个同学请假了；其中一位组员；先做完重要准备，再一起练习",
+          "data": {
+            "title": "社团任务分工",
+            "passage": "周五社团要介绍新活动，可是两个同学请假了。小组先把工作重新分成四部分：一人准备图片，一人把电脑接好，一人把活动办法说清楚，最后一人检查材料。大家决定先把最重要的准备做完，再一起练习。",
+            "passage_pinyin": "Zhōuwǔ shètuán yào jièshào xīn huódòng, kěshì liǎng ge tóngxué qǐngjià le. Xiǎozǔ xiān bǎ gōngzuò chóngxīn fēn chéng sì bùfen: yì rén zhǔnbèi túpiàn, yì rén bǎ diànnǎo jiēhǎo, yì rén bǎ huódòng bànfǎ shuō qīngchu, zuìhòu yì rén jiǎnchá cáiliào. Dàjiā juédìng xiān bǎ zuì zhòngyào de zhǔnbèi zuò wán, zài yìqǐ liànxí.",
+            "questions": [
+              {
+                "question_cn": "为什么要重新分工？",
+                "question_pinyin": "Wèishénme yào chóngxīn fēngōng?",
+                "options": [
+                  "两个同学请假了",
+                  "电脑声音大",
+                  "活动取消了",
+                  "经理去上海"
+                ],
+                "correct_index": 0,
+                "answer": "两个同学请假了",
+                "focus": "原因"
+              },
+              {
+                "question_cn": "谁负责连接电脑？",
+                "question_pinyin": "Shéi fùzé liánjiē diànnǎo?",
+                "options": [
+                  "其中一位组员",
+                  "老师一个人",
+                  "请假的同学",
+                  "没有人"
+                ],
+                "correct_index": 0,
+                "answer": "其中一位组员",
+                "focus": "分工"
+              },
+              {
+                "question_cn": "大家最后怎样练习？",
+                "question_pinyin": "Dàjiā zuìhòu zěnyàng liànxí?",
+                "options": [
+                  "先做完重要准备，再一起练习",
+                  "不准备直接开始",
+                  "只让一个人说",
+                  "只发邮件"
+                ],
+                "correct_index": 0,
+                "answer": "先做完重要准备，再一起练习",
+                "focus": "顺序"
+              }
+            ]
+          }
+        },
+        {
+          "id": "l11_read_04",
+          "type": "passage_reading",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "阅读短文，完成三道理解题。",
+          "prompt_en": "Read the passage and answer three comprehension questions.",
+          "correct_answer": "两个；可以照顾家人；向两个学校问清楚",
+          "data": {
+            "title": "两个城市的学习机会",
+            "passage": "安娜得到两个暑期学习机会，一个在大城市，一个在家附近。大城市的课程多，但是费用也高；家附近的课程少一点儿，不过她可以照顾家人。对安娜来说，课程内容、生活时间和家人都重要。她先向两个学校问清楚，再决定。",
+            "passage_pinyin": "Ānnà dédào liǎng ge shǔqī xuéxí jīhuì, yí ge zài dà chéngshì, yí ge zài jiā fùjìn. Dà chéngshì de kèchéng duō, dànshì fèiyòng yě gāo; jiā fùjìn de kèchéng shǎo yìdiǎnr, búguò tā kěyǐ zhàogù jiārén. Duì Ānnà lái shuō, kèchéng nèiróng, shēnghuó shíjiān hé jiārén dōu zhòngyào. Tā xiān xiàng liǎng ge xuéxiào wèn qīngchu, zài juédìng.",
+            "questions": [
+              {
+                "question_cn": "安娜有几个机会？",
+                "question_pinyin": "Ānnà yǒu jǐ ge jīhuì?",
+                "options": [
+                  "一个",
+                  "两个",
+                  "三个",
+                  "四个"
+                ],
+                "correct_index": 1,
+                "answer": "两个",
+                "focus": "数量"
+              },
+              {
+                "question_cn": "家附近的课程有什么好处？",
+                "question_pinyin": "Jiā fùjìn de kèchéng yǒu shénme hǎochu?",
+                "options": [
+                  "可以照顾家人",
+                  "课程更多",
+                  "费用最高",
+                  "城市更远"
+                ],
+                "correct_index": 0,
+                "answer": "可以照顾家人",
+                "focus": "比较"
+              },
+              {
+                "question_cn": "她决定以前先做什么？",
+                "question_pinyin": "Tā juédìng yǐqián xiān zuò shénme?",
+                "options": [
+                  "向两个学校问清楚",
+                  "马上离开家人",
+                  "取消两个机会",
+                  "只听一个人的话"
+                ],
+                "correct_index": 0,
+                "answer": "向两个学校问清楚",
+                "focus": "方法"
+              }
+            ]
+          }
+        },
+        {
+          "id": "l11_read_05",
+          "type": "passage_reading",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "阅读短文，完成三道理解题。",
+          "prompt_en": "Read the passage and answer three comprehension questions.",
+          "correct_answer": "声音；老师；检查画面和声音",
+          "data": {
+            "title": "小组展示复盘",
+            "passage": "上次小组展示时，我们把材料放在教室电脑里，但是没有提前试声音。开始以后，后面的同学听不清楚。后来老师帮助我们调好了音量。为了下次做得更好，我们写了一张准备表：先确认时间地点，再把材料准备好，最后检查画面和声音。",
+            "passage_pinyin": "Shàng cì xiǎozǔ zhǎnshì shí, wǒmen bǎ cáiliào fàng zài jiàoshì diànnǎo li, dànshì méiyǒu tíqián shì shēngyīn. Kāishǐ yǐhòu, hòumian de tóngxué tīng bu qīngchu. Hòulái lǎoshī bāngzhù wǒmen tiáo hǎo le yīnliàng. Wèile xià cì zuò de gèng hǎo, wǒmen xiě le yì zhāng zhǔnbèi biǎo: xiān quèrèn shíjiān dìdiǎn, zài bǎ cáiliào zhǔnbèi hǎo, zuìhòu jiǎnchá huàmiàn hé shēngyīn.",
+            "questions": [
+              {
+                "question_cn": "上次忘了检查什么？",
+                "question_pinyin": "Shàng cì wàng le jiǎnchá shénme?",
+                "options": [
+                  "声音",
+                  "地点",
+                  "邮箱",
+                  "城市"
+                ],
+                "correct_index": 0,
+                "answer": "声音",
+                "focus": "问题"
+              },
+              {
+                "question_cn": "谁帮助他们调好音量？",
+                "question_pinyin": "Shéi bāngzhù tāmen tiáo hǎo yīnliàng?",
+                "options": [
+                  "老师",
+                  "经理",
+                  "上海同事",
+                  "家人"
+                ],
+                "correct_index": 0,
+                "answer": "老师",
+                "focus": "人物"
+              },
+              {
+                "question_cn": "新准备表最后一步是什么？",
+                "question_pinyin": "Xīn zhǔnbèi biǎo zuìhòu yí bù shì shénme?",
+                "options": [
+                  "检查画面和声音",
+                  "选择城市",
+                  "请假",
+                  "写日记"
+                ],
+                "correct_index": 0,
+                "answer": "检查画面和声音",
+                "focus": "步骤"
+              }
+            ]
+          }
+        }
+      ],
+      "t2_task_card": [
+        {
+          "id": "l11_task_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "任务卡：更新活动通知。",
+          "prompt_en": "更新活动通知",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "更新活动通知",
+            "titleEn": "更新活动通知",
+            "role": "班长",
+            "steps": [
+              "确认旧信息",
+              "说清新时间地点",
+              "说明要带的设备",
+              "发布给全班"
+            ],
+            "keywords": [
+              "会议",
+              "后天",
+              "地点",
+              "发"
+            ],
+            "output": "完成一条清楚的活动通知。",
+            "answerPlaceholder": "请写下课堂表达。"
+          }
+        },
+        {
+          "id": "l11_task_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "任务卡：设备问题求助。",
+          "prompt_en": "设备问题求助",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "设备问题求助",
+            "titleEn": "设备问题求助",
+            "role": "设备检查员",
+            "steps": [
+              "说观察到的现象",
+              "说已经检查的地方",
+              "用“看来”得出结论",
+              "提出具体求助"
+            ],
+            "keywords": [
+              "看不见",
+              "声音",
+              "看来",
+              "别人"
+            ],
+            "output": "完成一张问题与求助卡。",
+            "answerPlaceholder": "请写下课堂表达。"
+          }
+        },
+        {
+          "id": "l11_task_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "任务卡：重新分工。",
+          "prompt_en": "重新分工",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "重新分工",
+            "titleEn": "重新分工",
+            "role": "小组负责人",
+            "steps": [
+              "列出缺席情况",
+              "列出剩余任务",
+              "重新分给组员",
+              "确认完成结果"
+            ],
+            "keywords": [
+              "请假",
+              "同事",
+              "把……做完"
+            ],
+            "output": "用四句话说明新的分工。",
+            "answerPlaceholder": "请写下课堂表达。"
+          }
+        },
+        {
+          "id": "l11_task_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "任务卡：比较两个机会。",
+          "prompt_en": "比较两个机会",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "比较两个机会",
+            "titleEn": "比较两个机会",
+            "role": "学生",
+            "steps": [
+              "说明两个选项",
+              "各说一个好处",
+              "说自己的重要因素",
+              "尊重不同选择"
+            ],
+            "keywords": [
+              "城市",
+              "机会",
+              "生活",
+              "对……来说"
+            ],
+            "output": "完成45秒个人选择说明。",
+            "answerPlaceholder": "请写下课堂表达。"
+          }
+        },
+        {
+          "id": "l11_task_05",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "任务卡：团队项目展示。",
+          "prompt_en": "团队项目展示",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "团队项目展示",
+            "titleEn": "团队项目展示",
+            "role": "全组",
+            "steps": [
+              "整合A信息卡",
+              "整合B问题卡",
+              "说明任务结果",
+              "表达重要选择"
+            ],
+            "keywords": [
+              "还是/或者",
+              "看来",
+              "把……做完",
+              "对……来说"
+            ],
+            "output": "每位组员都完成一部分1—2分钟展示。",
+            "answerPlaceholder": "请写下课堂表达。"
+          }
+        }
+      ],
+      "battleGames": {
+        "roulette": [
+          {
+            "id": "l11_r_01",
+            "challenge": "用“还是”提出一个真实选择问题。",
+            "scene": "班级要选择展示设备。",
+            "keywords": [
+              "电脑",
+              "手机",
+              "还是"
+            ],
+            "sample": "我们用电脑还是手机展示？"
+          },
+          {
+            "id": "l11_r_02",
+            "challenge": "先说现象，再用“看来”推测。",
+            "scene": "屏幕没有画面。",
+            "keywords": [
+              "看不见",
+              "看来",
+              "问题"
+            ],
+            "sample": "屏幕上什么都看不见，看来连接有问题。"
+          },
+          {
+            "id": "l11_r_03",
+            "challenge": "用结果类“把”字句说明任务完成。",
+            "scene": "小组材料还没有准备好。",
+            "keywords": [
+              "把",
+              "材料",
+              "准备好"
+            ],
+            "sample": "我们今天把所有材料准备好。"
+          },
+          {
+            "id": "l11_r_04",
+            "challenge": "用“对……来说”表达一个个人观点。",
+            "scene": "比较学习、活动和休息。",
+            "keywords": [
+              "对我来说",
+              "重要",
+              "因为"
+            ],
+            "sample": "对我来说，学习和休息都很重要。"
+          }
+        ],
+        "relay": [
+          {
+            "id": "l11_relay_01",
+            "starter": "新的会议通知",
+            "goal": "接一句完整的时间地点信息。",
+            "mustUse": [
+              "后天",
+              "地点"
+            ]
+          },
+          {
+            "id": "l11_relay_02",
+            "starter": "设备出现问题",
+            "goal": "接“证据 + 看来 + 结论”。",
+            "mustUse": [
+              "看来",
+              "解决"
+            ]
+          },
+          {
+            "id": "l11_relay_03",
+            "starter": "两位组员请假",
+            "goal": "接一个结果类“把”字句。",
+            "mustUse": [
+              "把",
+              "做完"
+            ]
+          },
+          {
+            "id": "l11_relay_04",
+            "starter": "一个新的学习机会",
+            "goal": "接一个个人观点。",
+            "mustUse": [
+              "对我来说",
+              "生活"
+            ]
+          }
+        ],
+        "monopoly": {
+          "tasks": [
+            {
+              "kind": "yellow",
+              "title": "拼音写汉字 / Pinyin → Hanzi",
+              "prompt": "请根据拼音写出：huìyì",
+              "answer": "会议"
+            },
+            {
+              "kind": "yellow",
+              "title": "拼音写汉字 / Pinyin → Hanzi",
+              "prompt": "请根据拼音写出：bànfǎ",
+              "answer": "办法"
+            },
+            {
+              "kind": "yellow",
+              "title": "拼音写汉字 / Pinyin → Hanzi",
+              "prompt": "请根据拼音写出：jīhuì",
+              "answer": "机会"
+            },
+            {
+              "kind": "green",
+              "title": "组词 / Make a phrase",
+              "prompt": "请用“发”说一个短语。",
+              "answer": "发邮件 / 发信息"
+            },
+            {
+              "kind": "green",
+              "title": "组词 / Make a phrase",
+              "prompt": "请用“解决”说一个短语。",
+              "answer": "解决问题"
+            },
+            {
+              "kind": "green",
+              "title": "组词 / Make a phrase",
+              "prompt": "请用“生活”说一个短语。",
+              "answer": "城市生活 / 生活习惯"
+            },
+            {
+              "kind": "blue",
+              "title": "选择 / Multiple Choice",
+              "prompt": "选择疑问句常用哪个词？",
+              "options": [
+                "还是",
+                "或者",
+                "看来"
+              ],
+              "answer": "还是"
+            },
+            {
+              "kind": "blue",
+              "title": "选择 / Multiple Choice",
+              "prompt": "哪一项是动作结果？",
+              "options": [
+                "做完",
+                "在桌上",
+                "给老师"
+              ],
+              "answer": "做完"
+            },
+            {
+              "kind": "red",
+              "title": "造句 / Make a sentence",
+              "prompt": "用“或者”说一个陈述句。",
+              "answer": "电脑或者手机都可以。"
+            },
+            {
+              "kind": "red",
+              "title": "造句 / Make a sentence",
+              "prompt": "用“看来”说一句有依据的话。",
+              "answer": "灯都关了，看来他们已经走了。"
+            },
+            {
+              "kind": "red",
+              "title": "造句 / Make a sentence",
+              "prompt": "用“对我来说”说一句话。",
+              "answer": "对我来说，家人很重要。"
+            }
+          ]
+        }
+      },
+      "scene_sentence_choice": [
+        {
+          "id": "l11_scene_01",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "经理今天下午不在，你要告诉同事会议变化。",
+          "prompt_en": "Choose the sentence that fits the situation.",
+          "correct_answer": "今天下午不开会，新的时间和地点会发给大家。",
+          "data": {
+            "question_cn": "经理今天下午不在，你要告诉同事会议变化。",
+            "options": [
+              "会议取消了，不用再说明。",
+              "今天下午不开会，新的时间和地点会发给大家。",
+              "经理不在，所以大家自己决定。",
+              "只要准备电脑，不用说时间。"
+            ],
+            "correct_index": 1
+          }
+        },
+        {
+          "id": "l11_scene_02",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "你想让同学在电脑和手机中选择一个。",
+          "prompt_en": "Choose the sentence that fits the situation.",
+          "correct_answer": "你用电脑还是手机？",
+          "data": {
+            "question_cn": "你想让同学在电脑和手机中选择一个。",
+            "options": [
+              "你用电脑还是手机？",
+              "电脑或者手机都可以。",
+              "看来电脑有问题。",
+              "你只能用电脑。"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "id": "l11_scene_03",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "同学问“用哪一个都可以吗？”",
+          "prompt_en": "Choose the sentence that fits the situation.",
+          "correct_answer": "电脑或者手机都可以。",
+          "data": {
+            "question_cn": "同学问“用哪一个都可以吗？”",
+            "options": [
+              "电脑还是手机？",
+              "电脑或者手机都可以。",
+              "我把电脑接好。",
+              "会议地点在一楼。"
+            ],
+            "correct_index": 1
+          }
+        },
+        {
+          "id": "l11_scene_04",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "电脑接好了，但屏幕仍然没有画面。",
+          "prompt_en": "Choose the sentence that fits the situation.",
+          "correct_answer": "看来连接还有问题。",
+          "data": {
+            "question_cn": "电脑接好了，但屏幕仍然没有画面。",
+            "options": [
+              "看来连接还有问题。",
+              "我喜欢这个屏幕。",
+              "会议改到后天。",
+              "同事去休假。"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "id": "l11_scene_05",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "画面有了，可声音很小。",
+          "prompt_en": "Choose the sentence that fits the situation.",
+          "correct_answer": "听得见，但是听不清楚。",
+          "data": {
+            "question_cn": "画面有了，可声音很小。",
+            "options": [
+              "听得见，但是听不清楚。",
+              "什么都看不见。",
+              "地点换到会议室。",
+              "生活很重要。"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "id": "l11_scene_06",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "你试了几次还是不能解决设备问题。",
+          "prompt_en": "Choose the sentence that fits the situation.",
+          "correct_answer": "只能清楚说明现象，再找别人帮忙。",
+          "data": {
+            "question_cn": "你试了几次还是不能解决设备问题。",
+            "options": [
+              "只能清楚说明现象，再找别人帮忙。",
+              "把问题放在桌上。",
+              "不告诉任何人。",
+              "马上离开城市。"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "id": "l11_scene_07",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "三位组员中有一位请假，任务还很多。",
+          "prompt_en": "Choose the sentence that fits the situation.",
+          "correct_answer": "大家重新分工，把任务做完。",
+          "data": {
+            "question_cn": "三位组员中有一位请假，任务还很多。",
+            "options": [
+              "大家重新分工，把任务做完。",
+              "会议没有声音。",
+              "选择电脑还是手机。",
+              "不再做任何准备。"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "id": "l11_scene_08",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "展示材料还没有完成。",
+          "prompt_en": "Choose the sentence that fits the situation.",
+          "correct_answer": "今天把材料准备好。",
+          "data": {
+            "question_cn": "展示材料还没有完成。",
+            "options": [
+              "今天把材料准备好。",
+              "今天把材料。",
+              "材料或者今天。",
+              "看来我喜欢材料。"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "id": "l11_scene_09",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "朋友问你选择城市时最看重什么。",
+          "prompt_en": "Choose the sentence that fits the situation.",
+          "correct_answer": "对我来说，学习机会和生活都重要。",
+          "data": {
+            "question_cn": "朋友问你选择城市时最看重什么。",
+            "options": [
+              "对我来说，学习机会和生活都重要。",
+              "城市把我离开。",
+              "我看来上海。",
+              "或者对生活。"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "id": "l11_scene_10",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "同学的个人选择和你不同。",
+          "prompt_en": "Choose the sentence that fits the situation.",
+          "correct_answer": "先听他的理由，再表达自己的看法。",
+          "data": {
+            "question_cn": "同学的个人选择和你不同。",
+            "options": [
+              "先听他的理由，再表达自己的看法。",
+              "告诉他只有你的答案正确。",
+              "假设他已经有正式工作。",
+              "不允许他重视家人。"
+            ],
+            "correct_index": 0
+          }
+        }
+      ],
+      "v7_word_match": [
+        {
+          "id": "l11_match_a",
+          "type": "question_answer_match",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "会议和设备：把问题和回答配对。",
+          "prompt_en": "Match each complete question with its answer. You may revise pairs before one final submission.",
+          "data": {
+            "pairs": [
+              {
+                "id": "l11_match_a_1",
+                "left": "会议为什么改时间了？",
+                "right": "因为经理今天下午不在，所以不开会了。"
+              },
+              {
+                "id": "l11_match_a_2",
+                "left": "新的会议什么时候开始？",
+                "right": "后天上午十点开始。"
+              },
+              {
+                "id": "l11_match_a_3",
+                "left": "会议地点换到哪里了？",
+                "right": "换到第一会议室了。"
+              },
+              {
+                "id": "l11_match_a_4",
+                "left": "开会时用会议室电脑还是自己的电脑？",
+                "right": "会议室电脑或者自己的电脑都可以。"
+              },
+              {
+                "id": "l11_match_a_5",
+                "left": "开会前还要准备什么？",
+                "right": "我们要早点儿过去，把电脑接好。"
+              }
+            ]
+          }
+        },
+        {
+          "id": "l11_match_b",
+          "type": "question_answer_match",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "问题和求助：把问题和回答配对。",
+          "prompt_en": "Match each complete question with its answer. You may revise pairs before one final submission.",
+          "data": {
+            "pairs": [
+              {
+                "id": "l11_match_b_1",
+                "left": "屏幕上现在看得见画面吗？",
+                "right": "刚才什么都看不见，现在已经看得见了。"
+              },
+              {
+                "id": "l11_match_b_2",
+                "left": "为什么声音还是听不清楚？",
+                "right": "因为声音虽然听得见，但是有点儿小。"
+              },
+              {
+                "id": "l11_match_b_3",
+                "left": "你已经检查过哪些地方了？",
+                "right": "我检查了电源、连接线和声音设置。"
+              },
+              {
+                "id": "l11_match_b_4",
+                "left": "根据这些现象，你觉得问题在哪里？",
+                "right": "看来声音设置还有问题。"
+              },
+              {
+                "id": "l11_match_b_5",
+                "left": "自己解决不了时，下一步怎么办？",
+                "right": "清楚说明现象，再找会修的人帮忙。"
+              }
+            ]
+          }
+        },
+        {
+          "id": "l11_match_c",
+          "type": "question_answer_match",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "团队与选择：把问题和回答配对。",
+          "prompt_en": "Match each complete question with its answer. You may revise pairs before one final submission.",
+          "data": {
+            "pairs": [
+              {
+                "id": "l11_match_c_1",
+                "left": "老张今天为什么没来公司？",
+                "right": "他家里有点儿事，所以请假了。"
+              },
+              {
+                "id": "l11_match_c_2",
+                "left": "同事休假时，团队怎样完成任务？",
+                "right": "大家重新分工，一起把工作做完。"
+              },
+              {
+                "id": "l11_match_c_3",
+                "left": "王一雪原来为什么很着急？",
+                "right": "她以为材料明天开会前就要发到公司邮箱。"
+              },
+              {
+                "id": "l11_match_c_4",
+                "left": "上海同事给了她什么新机会？",
+                "right": "他们问她愿不愿意去上海工作。"
+              },
+              {
+                "id": "l11_match_c_5",
+                "left": "对王一雪来说，为什么生活也很重要？",
+                "right": "因为她重视家人，不愿意为了工作离开他们。"
+              }
+            ]
+          }
+        }
+      ],
+      "v6_description_guess": [
+        {
+          "id": "l11_guess_01",
+          "type": "description_guess",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "大家在一个时间和地点一起讨论事情。",
+          "prompt_en": "Guess the one word that matches the clue.",
+          "correct_answer": "会议",
+          "data": {
+            "description": "大家在一个时间和地点一起讨论事情。",
+            "options": [
+              "会议",
+              "地点",
+              "笔记本（电脑）",
+              "声音"
+            ]
+          }
+        },
+        {
+          "id": "l11_guess_02",
+          "type": "description_guess",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "回答“在哪儿”的信息。",
+          "prompt_en": "Guess the one word that matches the clue.",
+          "correct_answer": "地点",
+          "data": {
+            "description": "回答“在哪儿”的信息。",
+            "options": [
+              "地点",
+              "笔记本（电脑）",
+              "声音",
+              "办法"
+            ]
+          }
+        },
+        {
+          "id": "l11_guess_03",
+          "type": "description_guess",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "可以带走、打开并连接屏幕的电脑。",
+          "prompt_en": "Guess the one word that matches the clue.",
+          "correct_answer": "笔记本（电脑）",
+          "data": {
+            "description": "可以带走、打开并连接屏幕的电脑。",
+            "options": [
+              "笔记本（电脑）",
+              "声音",
+              "办法",
+              "解决"
+            ]
+          }
+        },
+        {
+          "id": "l11_guess_04",
+          "type": "description_guess",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "用耳朵可以听见，太小就可能听不清楚。",
+          "prompt_en": "Guess the one word that matches the clue.",
+          "correct_answer": "声音",
+          "data": {
+            "description": "用耳朵可以听见，太小就可能听不清楚。",
+            "options": [
+              "声音",
+              "办法",
+              "解决",
+              "请假"
+            ]
+          }
+        },
+        {
+          "id": "l11_guess_05",
+          "type": "description_guess",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "遇到问题时可以采用的做法。",
+          "prompt_en": "Guess the one word that matches the clue.",
+          "correct_answer": "办法",
+          "data": {
+            "description": "遇到问题时可以采用的做法。",
+            "options": [
+              "办法",
+              "解决",
+              "请假",
+              "同事"
+            ]
+          }
+        },
+        {
+          "id": "l11_guess_06",
+          "type": "description_guess",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "让一个问题不再存在。",
+          "prompt_en": "Guess the one word that matches the clue.",
+          "correct_answer": "解决",
+          "data": {
+            "description": "让一个问题不再存在。",
+            "options": [
+              "解决",
+              "请假",
+              "同事",
+              "邮箱"
+            ]
+          }
+        },
+        {
+          "id": "l11_guess_07",
+          "type": "description_guess",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "因为有事不能来，先向老师或经理说明。",
+          "prompt_en": "Guess the one word that matches the clue.",
+          "correct_answer": "请假",
+          "data": {
+            "description": "因为有事不能来，先向老师或经理说明。",
+            "options": [
+              "请假",
+              "会议",
+              "地点",
+              "笔记本（电脑）"
+            ]
+          }
+        },
+        {
+          "id": "l11_guess_08",
+          "type": "description_guess",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "在同一个单位一起工作的人。",
+          "prompt_en": "Guess the one word that matches the clue.",
+          "correct_answer": "同事",
+          "data": {
+            "description": "在同一个单位一起工作的人。",
+            "options": [
+              "同事",
+              "地点",
+              "笔记本（电脑）",
+              "声音"
+            ]
+          }
+        },
+        {
+          "id": "l11_guess_09",
+          "type": "description_guess",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "收发电子邮件的地方。",
+          "prompt_en": "Guess the one word that matches the clue.",
+          "correct_answer": "邮箱",
+          "data": {
+            "description": "收发电子邮件的地方。",
+            "options": [
+              "邮箱",
+              "笔记本（电脑）",
+              "声音",
+              "办法"
+            ]
+          }
+        },
+        {
+          "id": "l11_guess_10",
+          "type": "description_guess",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "可以尝试学习、工作或参加活动的好条件。",
+          "prompt_en": "Guess the one word that matches the clue.",
+          "correct_answer": "机会",
+          "data": {
+            "description": "可以尝试学习、工作或参加活动的好条件。",
+            "options": [
+              "机会",
+              "声音",
+              "办法",
+              "解决"
+            ]
+          }
+        }
+      ],
+      "v2_say_guess": [
+        {
+          "id": "l11_say_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "你说我猜。",
+          "prompt_en": "Describe the covered word without saying it.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "target": "会议",
+            "boardIndex": 1,
+            "clues": [],
+            "scaffold": {
+              "words": [
+                "时间",
+                "地点",
+                "讨论"
+              ],
+              "frames": [
+                "这是一个……。",
+                "人们会在……的时候用到它。",
+                "它跟……有关系。"
+              ]
+            },
+            "answerPlaceholder": "写下你的中文提示。"
+          }
+        },
+        {
+          "id": "l11_say_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "你说我猜。",
+          "prompt_en": "Describe the covered word without saying it.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "target": "后天",
+            "boardIndex": 2,
+            "clues": [],
+            "scaffold": {
+              "words": [
+                "今天以后",
+                "两天",
+                "时间"
+              ],
+              "frames": [
+                "这是一个……。",
+                "人们会在……的时候用到它。",
+                "它跟……有关系。"
+              ]
+            },
+            "answerPlaceholder": "写下你的中文提示。"
+          }
+        },
+        {
+          "id": "l11_say_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "你说我猜。",
+          "prompt_en": "Describe the covered word without saying it.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "target": "笔记本（电脑）",
+            "boardIndex": 3,
+            "clues": [],
+            "scaffold": {
+              "words": [
+                "可以带走",
+                "屏幕",
+                "键盘"
+              ],
+              "frames": [
+                "这是一个……。",
+                "人们会在……的时候用到它。",
+                "它跟……有关系。"
+              ]
+            },
+            "answerPlaceholder": "写下你的中文提示。"
+          }
+        },
+        {
+          "id": "l11_say_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "你说我猜。",
+          "prompt_en": "Describe the covered word without saying it.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "target": "声音",
+            "boardIndex": 4,
+            "clues": [],
+            "scaffold": {
+              "words": [
+                "听见",
+                "大小",
+                "清楚"
+              ],
+              "frames": [
+                "这是一个……。",
+                "人们会在……的时候用到它。",
+                "它跟……有关系。"
+              ]
+            },
+            "answerPlaceholder": "写下你的中文提示。"
+          }
+        },
+        {
+          "id": "l11_say_05",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "你说我猜。",
+          "prompt_en": "Describe the covered word without saying it.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "target": "解决",
+            "boardIndex": 5,
+            "clues": [],
+            "scaffold": {
+              "words": [
+                "问题",
+                "办法",
+                "完成"
+              ],
+              "frames": [
+                "这是一个……。",
+                "人们会在……的时候用到它。",
+                "它跟……有关系。"
+              ]
+            },
+            "answerPlaceholder": "写下你的中文提示。"
+          }
+        },
+        {
+          "id": "l11_say_06",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "你说我猜。",
+          "prompt_en": "Describe the covered word without saying it.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "target": "请假",
+            "boardIndex": 6,
+            "clues": [],
+            "scaffold": {
+              "words": [
+                "不能来",
+                "先说明",
+                "老师或经理"
+              ],
+              "frames": [
+                "这是一个……。",
+                "人们会在……的时候用到它。",
+                "它跟……有关系。"
+              ]
+            },
+            "answerPlaceholder": "写下你的中文提示。"
+          }
+        },
+        {
+          "id": "l11_say_07",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "你说我猜。",
+          "prompt_en": "Describe the covered word without saying it.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "target": "机会",
+            "boardIndex": 7,
+            "clues": [],
+            "scaffold": {
+              "words": [
+                "可以尝试",
+                "学习或工作",
+                "好条件"
+              ],
+              "frames": [
+                "这是一个……。",
+                "人们会在……的时候用到它。",
+                "它跟……有关系。"
+              ]
+            },
+            "answerPlaceholder": "写下你的中文提示。"
+          }
+        },
+        {
+          "id": "l11_say_08",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "你说我猜。",
+          "prompt_en": "Describe the covered word without saying it.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "target": "生活",
+            "boardIndex": 8,
+            "clues": [],
+            "scaffold": {
+              "words": [
+                "每天",
+                "家人",
+                "重要"
+              ],
+              "frames": [
+                "这是一个……。",
+                "人们会在……的时候用到它。",
+                "它跟……有关系。"
+              ]
+            },
+            "answerPlaceholder": "写下你的中文提示。"
+          }
+        }
+      ],
+      "v3_blind_box": [
+        {
+          "id": "l11_blind_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "盲盒造句。",
+          "prompt_en": "Make one natural sentence with both expressions.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "words": [
+              "会议",
+              "后天"
+            ],
+            "instructions": "Use both expressions in one complete, natural sentence.",
+            "answerPlaceholder": "写一个完整的中文句子。",
+            "sample": "后天上午十点有一个小组会议。",
+            "revealDecoration": "none",
+            "uniformWordSize": true
+          }
+        },
+        {
+          "id": "l11_blind_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "盲盒造句。",
+          "prompt_en": "Make one natural sentence with both expressions.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "words": [
+              "声音",
+              "看来"
+            ],
+            "instructions": "Use both expressions in one complete, natural sentence.",
+            "answerPlaceholder": "写一个完整的中文句子。",
+            "sample": "声音还是很小，看来设置有问题。",
+            "revealDecoration": "none",
+            "uniformWordSize": true
+          }
+        },
+        {
+          "id": "l11_blind_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "盲盒造句。",
+          "prompt_en": "Make one natural sentence with both expressions.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "words": [
+              "同事",
+              "做完"
+            ],
+            "instructions": "Use both expressions in one complete, natural sentence.",
+            "answerPlaceholder": "写一个完整的中文句子。",
+            "sample": "同事们重新分工，一起把任务做完。",
+            "revealDecoration": "none",
+            "uniformWordSize": true
+          }
+        },
+        {
+          "id": "l11_blind_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "盲盒造句。",
+          "prompt_en": "Make one natural sentence with both expressions.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "words": [
+              "机会",
+              "对我来说"
+            ],
+            "instructions": "Use both expressions in one complete, natural sentence.",
+            "answerPlaceholder": "写一个完整的中文句子。",
+            "sample": "这是一个好机会，但是对我来说生活也很重要。",
+            "revealDecoration": "none",
+            "uniformWordSize": true
+          }
+        }
+      ],
+      "g2_picture_complete": [
+        {
+          "id": "l11_pic_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "prompt_cn": "看图造句。",
+          "prompt_en": "Use the keywords to write one complete sentence about the photo.",
+          "data": {
+            "image": "images/hsk3-l11/photo-text-1-meeting-change.png",
+            "keyword": "会议、后天、地点",
+            "task": "观察图片，用关键词写一个完整、自然的句子。",
+            "answerPlaceholder": "写一个完整的中文句子。"
+          }
+        },
+        {
+          "id": "l11_pic_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "prompt_cn": "看图造句。",
+          "prompt_en": "Use the keywords to write one complete sentence about the photo.",
+          "data": {
+            "image": "images/hsk3-l11/photo-text-1-computer-choice.png",
+            "keyword": "还是、或者、把电脑接好",
+            "task": "观察图片，用关键词写一个完整、自然的句子。",
+            "answerPlaceholder": "写一个完整的中文句子。"
+          }
+        },
+        {
+          "id": "l11_pic_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "prompt_cn": "看图造句。",
+          "prompt_en": "Use the keywords to write one complete sentence about the photo.",
+          "data": {
+            "image": "images/hsk3-l11/photo-text-2-no-picture.png",
+            "keyword": "看不见、看来、解决",
+            "task": "观察图片，用关键词写一个完整、自然的句子。",
+            "answerPlaceholder": "写一个完整的中文句子。"
+          }
+        },
+        {
+          "id": "l11_pic_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "prompt_cn": "看图造句。",
+          "prompt_en": "Use the keywords to write one complete sentence about the photo.",
+          "data": {
+            "image": "images/hsk3-l11/photo-text-2-low-sound.png",
+            "keyword": "声音、听不清楚、只能",
+            "task": "观察图片，用关键词写一个完整、自然的句子。",
+            "answerPlaceholder": "写一个完整的中文句子。"
+          }
+        },
+        {
+          "id": "l11_pic_05",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "prompt_cn": "看图造句。",
+          "prompt_en": "Use the keywords to write one complete sentence about the photo.",
+          "data": {
+            "image": "images/hsk3-l11/photo-text-3-workload.png",
+            "keyword": "同事、休假、怕",
+            "task": "观察图片，用关键词写一个完整、自然的句子。",
+            "answerPlaceholder": "写一个完整的中文句子。"
+          }
+        },
+        {
+          "id": "l11_pic_06",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "prompt_cn": "看图造句。",
+          "prompt_en": "Use the keywords to write one complete sentence about the photo.",
+          "data": {
+            "image": "images/hsk3-l11/photo-text-3-meeting-delay.png",
+            "keyword": "邮箱、下周、把工作放下",
+            "task": "观察图片，用关键词写一个完整、自然的句子。",
+            "answerPlaceholder": "写一个完整的中文句子。"
+          }
+        },
+        {
+          "id": "l11_pic_07",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "review",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "prompt_cn": "看图造句。",
+          "prompt_en": "Use the keywords to write one complete sentence about the photo.",
+          "data": {
+            "image": "images/hsk3-l11/photo-text-4-opportunity.png",
+            "keyword": "城市、愿意、机会",
+            "task": "观察图片，用关键词写一个完整、自然的句子。",
+            "answerPlaceholder": "写一个完整的中文句子。"
+          }
+        },
+        {
+          "id": "l11_pic_08",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "review",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "prompt_cn": "看图造句。",
+          "prompt_en": "Use the keywords to write one complete sentence about the photo.",
+          "data": {
+            "image": "images/hsk3-l11/photo-text-4-diary-choice.png",
+            "keyword": "对……来说、生活、离开",
+            "task": "观察图片，用关键词写一个完整、自然的句子。",
+            "answerPlaceholder": "写一个完整的中文句子。"
+          }
+        }
+      ],
+      "r3_independent_reading": [
+        {
+          "id": "l11_ind_read_01",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read and choose.",
+          "data": {
+            "title": "信息更新",
+            "passage": "活动从周二改到周四，地点也换到图书馆。班长应该怎样通知大家？",
+            "question_cn": "哪条信息最完整？",
+            "options": [
+              "活动改了。",
+              "周四在图书馆活动，请带材料。",
+              "地点很好。",
+              "或者都可以。"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "周四在图书馆活动，请带材料。"
+        },
+        {
+          "id": "l11_ind_read_02",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read and choose.",
+          "data": {
+            "title": "观察与推测",
+            "passage": "教室门锁着，里面没有灯，同学们也都在楼下等。",
+            "question_cn": "哪一句推测有依据？",
+            "options": [
+              "我喜欢这间教室。",
+              "看来老师还没有来。",
+              "老师或者同学。",
+              "对我来说门。"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "看来老师还没有来。"
+        },
+        {
+          "id": "l11_ind_read_03",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read and choose.",
+          "data": {
+            "title": "任务结果",
+            "passage": "小组已经找好图片，但介绍稿还没有完成。",
+            "question_cn": "下一步最清楚的表达是什么？",
+            "options": [
+              "我们今天把介绍稿写完。",
+              "我们把介绍稿。",
+              "介绍稿还是图片？",
+              "看来我喜欢稿子。"
+            ],
+            "correct_index": 0
+          },
+          "correct_answer": "我们今天把介绍稿写完。"
+        },
+        {
+          "id": "l11_ind_read_04",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read and choose.",
+          "data": {
+            "title": "个人选择",
+            "passage": "小李可以参加周末比赛，也可以陪家人。他先想了自己的时间和家人的计划。",
+            "question_cn": "哪一句尊重个人选择？",
+            "options": [
+              "只有参加比赛才正确。",
+              "对小李来说，比赛和家人都有自己的重要性。",
+              "每个人都必须选家人。",
+              "不用听他的理由。"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "对小李来说，比赛和家人都有自己的重要性。"
+        },
+        {
+          "id": "l11_ind_read_05",
+          "type": "choice",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "读短文，选择正确答案。",
+          "prompt_en": "Read and choose.",
+          "data": {
+            "title": "旧课复习",
+            "passage": "老师把材料放到桌上，又把一份练习书给了学生。",
+            "question_cn": "这两句分别复习什么？",
+            "options": [
+              "两个结果补语",
+              "位置改变和转移给接收者。",
+              "还是和或者",
+              "看来和生活。"
+            ],
+            "correct_index": 1
+          },
+          "correct_answer": "位置改变和转移给接收者。"
+        }
+      ],
+      "r4_paragraph_fill": [
+        {
+          "id": "l11_para_01",
+          "type": "paragraph_fill",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "会议通知",
+          "prompt_en": "Choose three expressions to complete the paragraph.",
+          "data": {
+            "title": "会议通知",
+            "passageParts": [
+              "班长收到老师的信息，马上给大家____1____邮件。活动改到____2____上午，新的____3____在三号教室。"
+            ],
+            "options": [
+              "声音",
+              "发",
+              "地点",
+              "开会",
+              "机会",
+              "后天"
+            ],
+            "answers": [
+              1,
+              5,
+              2
+            ],
+            "optionDisplay": "plain_continuous_hanzi",
+            "slotColors": [
+              "green",
+              "blue",
+              "orange"
+            ]
+          }
+        },
+        {
+          "id": "l11_para_02",
+          "type": "paragraph_fill",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "设备检查",
+          "prompt_en": "Choose three expressions to complete the paragraph.",
+          "data": {
+            "title": "设备检查",
+            "passageParts": [
+              "电脑接好后，屏幕上什么都____1____。检查连接线后有画面了，可是____2____太小。试了几次还不行，____3____只能找老师帮忙。"
+            ],
+            "options": [
+              "离开",
+              "会议",
+              "或者",
+              "看不见",
+              "看来",
+              "声音"
+            ],
+            "answers": [
+              3,
+              5,
+              4
+            ],
+            "optionDisplay": "plain_continuous_hanzi",
+            "slotColors": [
+              "green",
+              "blue",
+              "orange"
+            ]
+          }
+        },
+        {
+          "id": "l11_para_03",
+          "type": "paragraph_fill",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "团队分工",
+          "prompt_en": "Choose three expressions to complete the paragraph.",
+          "data": {
+            "title": "团队分工",
+            "passageParts": [
+              "两个同学今天____1____了，剩下的____2____重新分工。大家先把最重要的材料准备好，再一起把任务____3____。"
+            ],
+            "options": [
+              "做完",
+              "同事",
+              "请假",
+              "离开",
+              "开会",
+              "城市"
+            ],
+            "answers": [
+              2,
+              1,
+              0
+            ],
+            "optionDisplay": "plain_continuous_hanzi",
+            "slotColors": [
+              "green",
+              "blue",
+              "orange"
+            ]
+          }
+        },
+        {
+          "id": "l11_para_04",
+          "type": "paragraph_fill",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "城市机会",
+          "prompt_en": "Choose three expressions to complete the paragraph.",
+          "data": {
+            "title": "城市机会",
+            "passageParts": [
+              "朋友问我愿不愿意去别的____1____学习。那里有很好的____2____，但是对我来说，____3____和家人也很重要。"
+            ],
+            "options": [
+              "机会",
+              "生活",
+              "城市",
+              "声音",
+              "邮箱",
+              "会议"
+            ],
+            "answers": [
+              2,
+              0,
+              1
+            ],
+            "optionDisplay": "plain_continuous_hanzi",
+            "slotColors": [
+              "green",
+              "blue",
+              "orange"
+            ]
+          }
+        },
+        {
+          "id": "l11_para_05",
+          "type": "paragraph_fill",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "展示准备",
+          "prompt_en": "Choose three expressions to complete the paragraph.",
+          "data": {
+            "title": "展示准备",
+            "passageParts": [
+              "上次我们把图片放____1____电脑里，却忘了试声音。这次为了做____2____，我们先列准备表，再把所有设备检查____3____。"
+            ],
+            "options": [
+              "完",
+              "给",
+              "快",
+              "好",
+              "在",
+              "清楚"
+            ],
+            "answers": [
+              4,
+              3,
+              5
+            ],
+            "optionDisplay": "plain_continuous_hanzi",
+            "slotColors": [
+              "green",
+              "blue",
+              "orange"
+            ]
+          }
+        }
+      ],
+      "t3_chain_sentence": [
+        {
+          "id": "l11_chain_01",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "五词故事接龙。",
+          "prompt_en": "Build one story with five covered words.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "会议改期",
+            "starter": "班长刚收到老师的信息。",
+            "steps": [
+              "第1句：使用“经理”继续故事。",
+              "第2句：使用“后天”继续故事。",
+              "第3句：使用“地点”继续故事。",
+              "第4句：使用“发”继续故事。",
+              "第5句：使用“会议”继续故事。"
+            ],
+            "keywords": [
+              "经理",
+              "后天",
+              "地点",
+              "发",
+              "会议"
+            ],
+            "keywords_pinyin": [
+              "jīnglǐ",
+              "hòutiān",
+              "dìdiǎn",
+              "fā",
+              "huìyì"
+            ],
+            "chainModes": [
+              "teacher",
+              "race",
+              "team"
+            ],
+            "instructions": "五个词先全部盖住，每次打开一个词并接一句，最后形成完整故事。",
+            "answerPlaceholder": "用当前打开的词继续故事。"
+          }
+        },
+        {
+          "id": "l11_chain_02",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "lesson",
+          "prompt_cn": "五词故事接龙。",
+          "prompt_en": "Build one story with five covered words.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "设备问题",
+            "starter": "电脑已经接好，大家开始检查。",
+            "steps": [
+              "第1句：使用“看不见”继续故事。",
+              "第2句：使用“声音”继续故事。",
+              "第3句：使用“看来”继续故事。",
+              "第4句：使用“办法”继续故事。",
+              "第5句：使用“别人”继续故事。"
+            ],
+            "keywords": [
+              "看不见",
+              "声音",
+              "看来",
+              "办法",
+              "别人"
+            ],
+            "keywords_pinyin": [
+              "kàn bu jiàn",
+              "shēngyīn",
+              "kànlái",
+              "bànfǎ",
+              "biérén"
+            ],
+            "chainModes": [
+              "teacher",
+              "race",
+              "team"
+            ],
+            "instructions": "五个词先全部盖住，每次打开一个词并接一句，最后形成完整故事。",
+            "answerPlaceholder": "用当前打开的词继续故事。"
+          }
+        },
+        {
+          "id": "l11_chain_03",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "五词故事接龙。",
+          "prompt_en": "Build one story with five covered words.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "完成任务",
+            "starter": "小组里有两位同学今天不来。",
+            "steps": [
+              "第1句：使用“请假”继续故事。",
+              "第2句：使用“同事”继续故事。",
+              "第3句：使用“怕”继续故事。",
+              "第4句：使用“分工”继续故事。",
+              "第5句：使用“做完”继续故事。"
+            ],
+            "keywords": [
+              "请假",
+              "同事",
+              "怕",
+              "分工",
+              "做完"
+            ],
+            "keywords_pinyin": [
+              "qǐngjià",
+              "tóngshì",
+              "pà",
+              "fēngōng",
+              "zuò wán"
+            ],
+            "chainModes": [
+              "teacher",
+              "race",
+              "team"
+            ],
+            "instructions": "五个词先全部盖住，每次打开一个词并接一句，最后形成完整故事。",
+            "answerPlaceholder": "用当前打开的词继续故事。"
+          }
+        },
+        {
+          "id": "l11_chain_04",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "transfer",
+          "prompt_cn": "五词故事接龙。",
+          "prompt_en": "Build one story with five covered words.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "新的机会",
+            "starter": "朋友告诉我一个新消息。",
+            "steps": [
+              "第1句：使用“城市”继续故事。",
+              "第2句：使用“机会”继续故事。",
+              "第3句：使用“愿意”继续故事。",
+              "第4句：使用“生活”继续故事。",
+              "第5句：使用“选择”继续故事。"
+            ],
+            "keywords": [
+              "城市",
+              "机会",
+              "愿意",
+              "生活",
+              "选择"
+            ],
+            "keywords_pinyin": [
+              "chéngshì",
+              "jīhuì",
+              "yuànyì",
+              "shēnghuó",
+              "xuǎnzé"
+            ],
+            "chainModes": [
+              "teacher",
+              "race",
+              "team"
+            ],
+            "instructions": "五个词先全部盖住，每次打开一个词并接一句，最后形成完整故事。",
+            "answerPlaceholder": "用当前打开的词继续故事。"
+          }
+        },
+        {
+          "id": "l11_chain_05",
+          "type": "open_response",
+          "stage": "in_class",
+          "contentRole": "review",
+          "prompt_cn": "五词故事接龙。",
+          "prompt_en": "Build one story with five covered words.",
+          "openEnded": true,
+          "needsTeacherReview": true,
+          "data": {
+            "title": "课堂展示",
+            "starter": "我们准备介绍一个真实小组任务。",
+            "steps": [
+              "第1句：使用“材料”继续故事。",
+              "第2句：使用“把”继续故事。",
+              "第3句：使用“清楚”继续故事。",
+              "第4句：使用“对我来说”继续故事。",
+              "第5句：使用“完成”继续故事。"
+            ],
+            "keywords": [
+              "材料",
+              "把",
+              "清楚",
+              "对我来说",
+              "完成"
+            ],
+            "keywords_pinyin": [
+              "cáiliào",
+              "bǎ",
+              "qīngchu",
+              "duì wǒ lái shuō",
+              "wánchéng"
+            ],
+            "chainModes": [
+              "teacher",
+              "race",
+              "team"
+            ],
+            "instructions": "五个词先全部盖住，每次打开一个词并接一句，最后形成完整故事。",
+            "answerPlaceholder": "用当前打开的词继续故事。"
+          }
+        }
+      ],
+      "info_match": [
+        {
+          "id": "l11_info_01",
+          "type": "info_match",
+          "stage": "in_class",
+          "prompt_cn": "人物与信息匹配。",
+          "prompt_en": "Match each person with the information.",
+          "data": {
+            "people": [
+              "王一雪",
+              "杨同乐",
+              "老张",
+              "上海同事"
+            ],
+            "clues": [
+              "比较工作机会、生活和家人",
+              "检查设备并决定求助",
+              "家里有事所以请假",
+              "提出去上海工作的机会"
+            ],
+            "answer": [
+              "王一雪-比较工作机会、生活和家人",
+              "杨同乐-检查设备并决定求助",
+              "老张-家里有事所以请假",
+              "上海同事-提出去上海工作的机会"
+            ]
+          }
+        },
+        {
+          "id": "l11_info_02",
+          "type": "info_match",
+          "stage": "in_class",
+          "prompt_cn": "结构与功能匹配。",
+          "prompt_en": "Match each structure with its communicative job.",
+          "data": {
+            "people": [
+              "A还是B？",
+              "A或者B都可以",
+              "事实，看来……",
+              "把……做完",
+              "对……来说"
+            ],
+            "clues": [
+              "请对方选择",
+              "说明可选办法",
+              "根据证据推测",
+              "说明动作结果",
+              "说明观点所属对象"
+            ],
+            "answer": [
+              "A还是B？-请对方选择",
+              "A或者B都可以-说明可选办法",
+              "事实，看来……-根据证据推测",
+              "把……做完-说明动作结果",
+              "对……来说-说明观点所属对象"
+            ]
+          }
+        }
+      ],
+      "pk_question": [
+        {
+          "id": "l11_pk_01",
+          "type": "choice",
+          "prompt_cn": "我们用电脑____手机？",
+          "prompt_en": "Choose the expression that completes the sentence.",
+          "correct_answer": "还是",
+          "kp": "还是/或者",
+          "data": {
+            "question_cn": "我们用电脑____手机？",
+            "question_en": "Choose the expression that completes the sentence.",
+            "options": [
+              "还是",
+              "或者",
+              "看来",
+              "只能"
+            ],
+            "correct_index": 0
+          }
+        },
+        {
+          "id": "l11_pk_02",
+          "type": "choice",
+          "prompt_cn": "屏幕没有画面，____连接有问题。",
+          "prompt_en": "Choose the expression that completes the sentence.",
+          "correct_answer": "看来",
+          "kp": "看来",
+          "data": {
+            "question_cn": "屏幕没有画面，____连接有问题。",
+            "question_en": "Choose the expression that completes the sentence.",
+            "options": [
+              "或者",
+              "看来",
+              "为",
+              "后天"
+            ],
+            "correct_index": 1
+          }
+        },
+        {
+          "id": "l11_pk_03",
+          "type": "choice",
+          "prompt_cn": "请把展示材料准备____。",
+          "prompt_en": "Choose the expression that completes the sentence.",
+          "correct_answer": "好",
+          "kp": "结果类“把”字句",
+          "data": {
+            "question_cn": "请把展示材料准备____。",
+            "question_en": "Choose the expression that completes the sentence.",
+            "options": [
+              "给",
+              "在",
+              "好",
+              "还是"
+            ],
+            "correct_index": 2
+          }
+        }
+      ],
+      "textQa": [],
+      "pictureTalk": []
+    }
+  },
+  "postClassHomework": {
+    "mode": "hsk3_session_tasks",
+    "instructions": {
+      "required": "完成“我的团队任务与重要选择”的当次准备卡；A和B保存的材料必须用于C。",
+      "optional": "不需要上传录音；可带自制信息卡、问题示意图或不含隐私的活动图片。",
+      "aiPolicy": "先独立记录真实活动、问题和选择，再使用工具检查语言。"
+    },
+    "sessionMeta": {
+      "A": {
+        "label": "团队任务 · 第1步",
+        "goal": "制作会议或小组活动信息卡，说明时间、地点、参加者、设备和选择。",
+        "suggested_minutes": "10-15分钟",
+        "suggested_mix": "保存信息卡和一张自制或隐私安全图片，供B、C继续使用。"
+      },
+      "B": {
+        "label": "团队任务 · 第2步",
+        "goal": "制作问题与求助卡，写清现象、检查过程、看来结论和下一步办法。",
+        "suggested_minutes": "10-15分钟",
+        "suggested_mix": "在A的活动上增加一个真实或合理的问题情境。"
+      },
+      "C": {
+        "label": "课堂最终项目 · 我的团队任务与重要选择",
+        "goal": "整合A/B，完成1—2分钟课堂分享。",
+        "suggested_minutes": "15-20分钟",
+        "suggested_mix": "不强制上传录音；可小组彩排，但每位学生都要说。"
+      }
+    },
+    "sessions": {
+      "A": [
+        {
+          "id": "post_l11_a_context",
+          "type": "reflection_prompt",
+          "taskLabel": "任务起点",
+          "projectStage": "团队任务 1/3 · 选择活动",
+          "required": true,
+          "prompt_cn": "你要安排什么会议、小组项目、社团活动或课程展示？",
+          "prompt_en": "What meeting, group project, club activity or class presentation will you organize?",
+          "answerPlaceholder": "我要安排……。参加的人有……。",
+          "needsTeacherReview": true,
+          "openEnded": true
+        },
+        {
+          "id": "post_l11_a_plan",
+          "type": "project_card",
+          "taskLabel": "会议或活动信息卡",
+          "projectStage": "团队任务 1/3 · 保存到最终展示",
+          "required": true,
+          "prompt_cn": "写清时间、地点、参加者、设备和准备事项；提出一个“还是”问题，并用“或者”写一个可选办法。",
+          "prompt_en": "Create one meeting or activity information card. State the time, place, participants, equipment and preparation. Ask one choice question with 还是 and write one alternative statement with 或者.",
+          "answerPlaceholder": "活动：……。时间：……。地点：……。我们用……还是……？……或者……都可以。开会前要把……接好 / 准备好。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "wordBank": [
+            "会议",
+            "后天",
+            "地点",
+            "室",
+            "发",
+            "笔记本（电脑）",
+            "或者"
+          ],
+          "picturePrompts": [
+            "一张自制会议或活动信息卡",
+            "不含姓名隐私的教室或活动地点图片",
+            "需要准备的电脑、手机或材料"
+          ],
+          "scaffoldLevels": [
+            {
+              "label": "基础层 / Support",
+              "instruction": "按句框完成5句话，写时间、地点、设备和一个选择。"
+            },
+            {
+              "label": "标准层 / Core",
+              "instruction": "独立写完整信息，并自然区分“还是”和“或者”。"
+            },
+            {
+              "label": "挑战层 / Challenge",
+              "instruction": "增加变更通知和备用设备办法，说明谁负责准备。"
+            }
+          ]
+        },
+        {
+          "id": "post_l11_a_share",
+          "type": "showcase_plan",
+          "taskLabel": "课堂准备",
+          "projectStage": "下一次课 · Meeting or Activity Card",
+          "displayOnly": true,
+          "submissionRequired": false,
+          "classroomOnly": true,
+          "prompt_cn": "Classroom Preparation: Meeting or Activity Card",
+          "prompt_en": "Bring your information card and one useful visual.",
+          "presentationTitle": "What You Need to Prepare",
+          "presentationPlan": [
+            "Bring one self-made information card and one privacy-safe photo or simple diagram of the place or equipment.",
+            "Be ready to answer: What is the activity? When and where is it? Who will join? What equipment is needed?",
+            "Use at least four lesson words and ask one complete question with 还是; answer with an 或者 statement.",
+            "State who will connect or prepare the equipment. Partners may check information together; no audio upload is required."
+          ],
+          "classroomNote": "Keep this card. You will add a problem-and-help card in Homework B."
+        }
+      ],
+      "B": [
+        {
+          "id": "post_l11_b_context",
+          "type": "reflection_prompt",
+          "taskLabel": "任务起点",
+          "projectStage": "团队任务 2/3 · 观察问题",
+          "required": true,
+          "prompt_cn": "活动准备中可能出现什么设备、学习或小组问题？你能观察到什么？",
+          "prompt_en": "What equipment, study or group-task problem might occur? What can you directly observe?",
+          "answerPlaceholder": "我看见 / 听见……。我已经检查……。",
+          "needsTeacherReview": true,
+          "openEnded": true
+        },
+        {
+          "id": "post_l11_b_plan",
+          "type": "project_card",
+          "taskLabel": "问题与求助卡",
+          "projectStage": "团队任务 2/3 · 保存依据和下一步",
+          "required": true,
+          "prompt_cn": "在A的信息卡上增加一个问题：写出看得见/看不见、听得见/听不清楚等现象，说明检查过程，用“看来”得出结论，再决定继续处理还是找谁帮忙。",
+          "prompt_en": "Add one problem to your Homework A activity. Record visible or audible evidence, what you checked, a conclusion with 看来, and whether you will continue or ask someone for help.",
+          "answerPlaceholder": "现在……看得见 / 看不见，……听得见 / 听不清楚。我检查了……。看来……。我只能 / 决定……。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "wordBank": [
+            "声音",
+            "看来",
+            "办法",
+            "解决",
+            "只能",
+            "别人"
+          ],
+          "picturePrompts": [
+            "一个设备问题的自制示意图",
+            "检查过的连接、屏幕或声音设置",
+            "下一步求助对象"
+          ],
+          "carryFrom": [
+            {
+              "session": "A",
+              "taskId": "post_l11_a_plan",
+              "label": "A · 会议或活动信息卡"
+            }
+          ],
+          "scaffoldLevels": [
+            {
+              "label": "基础层 / Support",
+              "instruction": "按句框写4—5句话：现象、检查、看来结论和求助。"
+            },
+            {
+              "label": "标准层 / Core",
+              "instruction": "至少使用两组可能补语，并清楚说明自己试过什么。"
+            },
+            {
+              "label": "挑战层 / Challenge",
+              "instruction": "比较继续自己处理和找别人帮助两种办法，解释选择。"
+            }
+          ]
+        },
+        {
+          "id": "post_l11_b_share",
+          "type": "showcase_plan",
+          "taskLabel": "课堂准备",
+          "projectStage": "下一次课 · Problem and Help Card",
+          "displayOnly": true,
+          "submissionRequired": false,
+          "classroomOnly": true,
+          "prompt_cn": "Classroom Preparation: Problem and Help Card",
+          "prompt_en": "Bring your evidence, conclusion and next-step card.",
+          "presentationTitle": "What You Need to Prepare",
+          "presentationPlan": [
+            "Bring your Homework A card plus one self-made, privacy-safe problem diagram or selected image.",
+            "Be ready to answer: What can or cannot be seen or heard? What did you check? What does the evidence suggest?",
+            "Use 看来 only after observable evidence. Include one of 看得见/看不见, 听得见/听不见 or 听得清楚/听不清楚.",
+            "Decide whether to continue or ask a specific person for help. Partners may role-play the request; no audio upload is required."
+          ],
+          "classroomNote": "Save the evidence, conclusion and next step. You will combine them with Homework A in the final presentation."
+        }
+      ],
+      "C": [
+        {
+          "id": "post_l11_c_context",
+          "type": "reflection_prompt",
+          "taskLabel": "任务起点",
+          "projectStage": "团队任务 3/3 · 组织展示",
+          "required": true,
+          "prompt_cn": "听众需要知道哪些信息，才能理解你的活动安排、问题、解决过程和重要选择？",
+          "prompt_en": "What must your audience know to understand your plan, problem, solution process and important choice?",
+          "answerPlaceholder": "听众需要知道时间、地点、设备、问题、依据、分工、结果和我的选择。",
+          "needsTeacherReview": true,
+          "openEnded": true
+        },
+        {
+          "id": "post_l11_c_final",
+          "type": "portfolio_final",
+          "taskLabel": "最终展示稿",
+          "projectStage": "课堂大作业 · 我的团队任务与重要选择",
+          "required": true,
+          "prompt_cn": "整合A的信息卡和B的问题求助卡，准备1—2分钟课堂分享。说明怎样把一项任务做完，再用“对……来说”表达自己重视的学习、工作或生活因素。",
+          "prompt_en": "Combine your information card from A and problem-and-help card from B. Prepare a 1–2 minute class presentation. Explain how the team completes one task and use 对……来说 to state what matters in study, work or life.",
+          "answerPlaceholder": "我们的活动是……。时间和地点是……。我们用……还是……？……或者……都可以。后来……，看来……。我们先……，再把……做完。对我来说，……很重要，因为……。",
+          "needsTeacherReview": true,
+          "openEnded": true,
+          "wordBank": [
+            "会议",
+            "地点",
+            "发",
+            "笔记本（电脑）",
+            "或者",
+            "声音",
+            "看来",
+            "办法",
+            "解决",
+            "同事",
+            "机会",
+            "生活"
+          ],
+          "picturePrompts": [
+            "A的会议或活动信息卡",
+            "B的问题与求助卡",
+            "团队分工和完成结果",
+            "个人重要选择"
+          ],
+          "carryFrom": [
+            {
+              "session": "A",
+              "taskId": "post_l11_a_plan",
+              "label": "A · 会议或活动信息卡"
+            },
+            {
+              "session": "B",
+              "taskId": "post_l11_b_plan",
+              "label": "B · 问题与求助卡"
+            }
+          ],
+          "scaffoldLevels": [
+            {
+              "label": "基础层 / Support",
+              "instruction": "按句框完成7—8句话；必须有一个结果类“把”字句和一个“对……来说”。"
+            },
+            {
+              "label": "标准层 / Core",
+              "instruction": "独立组织1—2分钟分享，至少使用6个本课词和3个本课语法结构。"
+            },
+            {
+              "label": "挑战层 / Challenge",
+              "instruction": "比较两个办法或选择，说明证据、团队结果和个人理由，并回应一个同学问题。"
+            }
+          ]
+        },
+        {
+          "id": "post_l11_c_show",
+          "type": "classroom_showcase",
+          "taskLabel": "课堂展示",
+          "projectStage": "最终回收 · My Team Task and Important Choice",
+          "displayOnly": true,
+          "submissionRequired": false,
+          "classroomOnly": true,
+          "prompt_cn": "Classroom Presentation: My Team Task and Important Choice",
+          "prompt_en": "Present your project mainly in class.",
+          "presentationTitle": "What You Need to Prepare",
+          "presentationPlan": [
+            "Bring one to three self-made or privacy-safe images plus your information card from A and problem-and-help card from B.",
+            "Answer: What is the activity? When and where? What equipment? What went wrong? What evidence did you observe? Who did what? What was completed? What matters to you?",
+            "Use at least six lesson words and at least three lesson structures. You must include one result 把 sentence and one 对……来说 sentence.",
+            "Speak for 1–2 minutes. Rehearse in pairs or small groups, but every student must speak. Listen respectfully to different choices. Audio upload is not required."
+          ],
+          "classroomNote": "Use the saved work from A and B. Mistakes and weak points stay collapsed until you choose to review them."
+        }
+      ]
+    }
+  },
+  "report": {
+    "focus": [
+      "会议安排与设备词汇",
+      "还是/或者",
+      "有依据的“看来”",
+      "可能补语复习",
+      "结果类“把”字句",
+      "对……来说",
+      "我的团队任务与重要选择"
+    ],
+    "dimensions": [
+      "词汇",
+      "语法",
+      "课文理解",
+      "口语输出",
+      "阅读",
+      "课后任务"
+    ],
+    "recommendationRules": [
+      {
+        "if": "preClass<0.7",
+        "then": "重做对应A/B/C五阶段预习并复习错词。"
+      },
+      {
+        "if": "inClass<0.7||postClass<0.7",
+        "then": "用A的信息卡和B的问题求助卡重新完成一次1分钟团队任务分享。"
+      }
+    ]
+  }
+}
