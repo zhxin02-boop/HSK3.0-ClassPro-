@@ -1,0 +1,2979 @@
+{
+  "schemaVersion": "classpro-use-profile/v3",
+  "experiment": {
+    "id": "l10-use-pilot-v1",
+    "title": "第10课·以用为主线升级版",
+    "lessonLabel": "第10课",
+    "sourceLesson": "HSK3-L10",
+    "scope": "四个课文MINI循环；保留L10原有词汇、语法、课文和练习教学样式。"
+  },
+  "sources": {
+    "lesson": {
+      "path": "../lessons/HSK3-L10.json",
+      "sha256": "60B1D0D3ED6C02109B97EE6D6D80F16AB00D1E7BA7DE53AFB4198B77861D3BFD"
+    },
+    "teacher": {
+      "path": "../../in-class/teacher.html"
+    },
+    "student": {
+      "path": "../../in-class/student.html"
+    }
+  },
+  "nativeTeaching": {
+    "preserveCourseStyles": true,
+    "grammar": {
+      "source": "formal_lesson",
+      "preserveExamples": true,
+      "preserveHighlights": true,
+      "preserveOralQuestions": true,
+      "preserveFollowUp": true
+    },
+    "text": {
+      "source": "formal_lesson",
+      "preservePresentation": true
+    }
+  },
+  "useGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "icon": "📝",
+      "label": "课文 1",
+      "title": "说明一个能执行的学习方法",
+      "goal": "说明一门想提高的学科、课堂行动、记录位置、笔记用途和希望得到的结果。",
+      "goalEn": "Explain an actionable study method from classroom action to the hoped-for result.",
+      "entry": {
+        "id": "l10_t1_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "你的什么学科学得最好？为什么学得好？请先写2至3句。",
+        "promptEn": "Which subject do you learn best, and why? Write 2–3 sentences."
+      },
+      "exit": {
+        "id": "l10_t1_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "请用30至40秒口头说明，并提交4至5句文字稿：想提高的学科、一个课堂行动、把什么记在哪里、写作业前怎样用笔记，以及希望得到的结果。",
+        "promptEn": "Give a 30–40 second response and a 4–5 sentence outline."
+      },
+      "exitRequirements": [
+        {
+          "id": "subject",
+          "label": "想提高的学科"
+        },
+        {
+          "id": "action",
+          "label": "一个课堂行动"
+        },
+        {
+          "id": "location",
+          "label": "“把”字句与记录位置"
+        },
+        {
+          "id": "notes",
+          "label": "笔记的用途"
+        },
+        {
+          "id": "result",
+          "label": "希望的结果"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t1_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "认真、笔记、清楚、把、遍、提高",
+          "contentEn": ""
+        },
+        {
+          "id": "t1_frame",
+          "labelCn": "表达顺序",
+          "labelEn": "Support",
+          "contentCn": "学科 → 课堂行动 → 记录位置 → 复习办法 → 结果",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l10_01",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文1词汇",
+          "vocabSession": "1"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“把”字句（位置改变）",
+          "grammarIndex": 0
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文1",
+          "textIndex": 0
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "g1",
+          "label": "连词成句 1",
+          "routeState": {
+            "g1i": 0,
+            "g1s": [],
+            "g1a": [],
+            "g1sa": false
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l10_order_01",
+          "status": "ready",
+          "purpose": "连词成句"
+        },
+        {
+          "id": "l10_pic_01",
+          "status": "ready",
+          "purpose": "看图产出"
+        },
+        {
+          "id": "l10_pic_02",
+          "status": "ready",
+          "purpose": "看图产出"
+        },
+        {
+          "id": "l10_pk_01",
+          "status": "ready",
+          "purpose": "课文问答"
+        },
+        {
+          "id": "l10_scene_01",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l10_scene_02",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l10_fill_a",
+          "status": "needs_revision",
+          "purpose": "词汇填空"
+        },
+        {
+          "id": "l10_para_01",
+          "status": "needs_revision",
+          "purpose": "段落填空"
+        },
+        {
+          "id": "l10_task_01",
+          "status": "needs_revision",
+          "purpose": "表达任务"
+        },
+        {
+          "id": "l10_blind_01",
+          "status": "optional",
+          "purpose": "盲盒"
+        },
+        {
+          "id": "l10_guess_03",
+          "status": "optional",
+          "purpose": "猜词"
+        },
+        {
+          "id": "l10_match_a",
+          "status": "optional",
+          "purpose": "词语匹配"
+        },
+        {
+          "id": "l10_r_01",
+          "status": "optional",
+          "purpose": "竞赛"
+        },
+        {
+          "id": "l10_relay_01",
+          "status": "optional",
+          "purpose": "接力"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "icon": "📊",
+      "label": "课文 2",
+      "title": "复盘一次考试并决定怎样求助",
+      "goal": "说明考试结果、原因、下一步复习安排和遇到困难后的求助决定。",
+      "goalEn": "Review an exam and decide how to seek help.",
+      "entry": {
+        "id": "l10_t2_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图后写2至3句：什么考试、结果怎样、为什么、下一步做什么。不需要写真实分数。",
+        "promptEn": "Write 2–3 sentences about the exam, result, reason and next step. No real score is required.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l10/photo-text-2-exam-review.png",
+          "labelCn": "看图复盘",
+          "altCn": "学生查看试卷并复盘考试",
+          "instructionCn": "先看图，再根据图中的考试情境表达。"
+        }
+      },
+      "exit": {
+        "id": "l10_t2_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "请用35至45秒说明：什么考试、结果或感受、原因、下一场考试前怎样复习，以及两个人都不会时找谁求助。表达中请使用“在学习上”。",
+        "promptEn": "Give a 35–45 second exam review and use 在学习上."
+      },
+      "exitRequirements": [
+        {
+          "id": "exam",
+          "label": "考试"
+        },
+        {
+          "id": "result",
+          "label": "结果或感受"
+        },
+        {
+          "id": "reason",
+          "label": "原因"
+        },
+        {
+          "id": "review",
+          "label": "下一步复习"
+        },
+        {
+          "id": "help",
+          "label": "求助对象"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t2_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "要求、复习、遇到、办公室",
+          "contentEn": ""
+        },
+        {
+          "id": "t2_frame",
+          "labelCn": "表达结构",
+          "labelEn": "Support",
+          "contentCn": "在学习上遇到问题时……",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l10_02",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文2词汇",
+          "vocabSession": "2"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“在……上／中／下”",
+          "grammarIndex": 1
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文2",
+          "textIndex": 1
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "g1",
+          "label": "连词成句 2",
+          "routeState": {
+            "g1i": 1,
+            "g1s": [],
+            "g1a": [],
+            "g1sa": false
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l10_fill_b",
+          "status": "ready",
+          "purpose": "词汇填空"
+        },
+        {
+          "id": "l10_order_02",
+          "status": "ready",
+          "purpose": "连词成句"
+        },
+        {
+          "id": "l10_para_02",
+          "status": "ready",
+          "purpose": "段落填空"
+        },
+        {
+          "id": "l10_pic_03",
+          "status": "ready",
+          "purpose": "看图产出"
+        },
+        {
+          "id": "l10_pic_04",
+          "status": "ready",
+          "purpose": "看图产出"
+        },
+        {
+          "id": "l10_pk_02",
+          "status": "ready",
+          "purpose": "课文问答"
+        },
+        {
+          "id": "l10_scene_03",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l10_scene_04",
+          "status": "needs_revision",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l10_task_02",
+          "status": "needs_revision",
+          "purpose": "表达任务"
+        },
+        {
+          "id": "l10_blind_02",
+          "status": "optional",
+          "purpose": "盲盒"
+        },
+        {
+          "id": "l10_guess_05",
+          "status": "optional",
+          "purpose": "猜词"
+        },
+        {
+          "id": "l10_match_b",
+          "status": "optional",
+          "purpose": "词语匹配"
+        },
+        {
+          "id": "l10_relay_02",
+          "status": "optional",
+          "purpose": "接力"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "icon": "🙋",
+      "label": "课文 3",
+      "title": "向老师说清问题并约定归还资料",
+      "goal": "说清问题位置和困难，提出具体请求，并说明什么时候把什么还给谁。",
+      "goalEn": "State a problem precisely, ask for help, and arrange to return material.",
+      "contextCn": "书上第五页的对话看不懂。",
+      "entry": {
+        "id": "l10_t3_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "你会怎样向老师求助？请先自己写1至2句。",
+        "promptEn": "How would you ask the teacher for help? Write 1–2 sentences."
+      },
+      "exit": {
+        "id": "l10_t3_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "角色练习后，请用约40秒表达，并提交4句个人文字：问题在哪里、哪里不明白、希望老师怎样帮助、什么时候把什么还给谁。",
+        "promptEn": "After the role-play, give a 40-second response and a four-sentence personal outline."
+      },
+      "exitRequirements": [
+        {
+          "id": "location",
+          "label": "问题位置"
+        },
+        {
+          "id": "difficulty",
+          "label": "不明白的部分"
+        },
+        {
+          "id": "request",
+          "label": "请求的帮助"
+        },
+        {
+          "id": "return",
+          "label": "归还时间、物品和对象"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t3_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "页、对话、明白、讲、句子",
+          "contentEn": ""
+        },
+        {
+          "id": "t3_request",
+          "labelCn": "请求结构",
+          "labelEn": "Support",
+          "contentCn": "请您再讲一遍。",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l10_03",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文3词汇",
+          "vocabSession": "3"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“把”字句（关系转移）",
+          "grammarIndex": 2
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文3",
+          "textIndex": 2
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "g1",
+          "label": "连词成句 3",
+          "routeState": {
+            "g1i": 2,
+            "g1s": [],
+            "g1a": [],
+            "g1sa": false
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l10_order_03",
+          "status": "ready",
+          "purpose": "连词成句"
+        },
+        {
+          "id": "l10_para_03",
+          "status": "ready",
+          "purpose": "段落填空"
+        },
+        {
+          "id": "l10_pic_05",
+          "status": "ready",
+          "purpose": "看图产出"
+        },
+        {
+          "id": "l10_pic_06",
+          "status": "ready",
+          "purpose": "看图产出"
+        },
+        {
+          "id": "l10_pk_03",
+          "status": "ready",
+          "purpose": "课文问答"
+        },
+        {
+          "id": "l10_scene_05",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l10_scene_06",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l10_scene_07",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l10_fill_c",
+          "status": "needs_revision",
+          "purpose": "词汇填空"
+        },
+        {
+          "id": "l10_para_04",
+          "status": "needs_revision",
+          "purpose": "段落填空"
+        },
+        {
+          "id": "l10_task_03",
+          "status": "needs_revision",
+          "purpose": "表达任务"
+        },
+        {
+          "id": "l10_blind_03",
+          "status": "optional",
+          "purpose": "盲盒"
+        },
+        {
+          "id": "l10_r_03",
+          "status": "optional",
+          "purpose": "竞赛"
+        },
+        {
+          "id": "l10_r_04",
+          "status": "optional",
+          "purpose": "竞赛"
+        },
+        {
+          "id": "l10_relay_03",
+          "status": "optional",
+          "purpose": "接力"
+        },
+        {
+          "id": "l10_task_04",
+          "status": "optional",
+          "purpose": "备用任务"
+        },
+        {
+          "id": "l10_match_c",
+          "status": "optional",
+          "purpose": "词语匹配"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "icon": "✉️",
+      "label": "课文 4",
+      "title": "给朋友介绍学习阶段和最近的变化",
+      "goal": "用邮件介绍年级、升学目标、努力原因、教育阶段和兴趣变化。",
+      "goalEn": "Introduce one’s school stage, goal and recent change in a short email.",
+      "entry": {
+        "id": "l10_t4_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "请先写3句：你现在上几年级、最近忙不忙、最近对什么感兴趣。",
+        "promptEn": "Write three sentences about your grade, workload and recent interest."
+      },
+      "exit": {
+        "id": "l10_t4_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "请写6至8句个人短邮件，并用45至60秒口头分享：问候、年级、目标、努力原因、一般教育阶段、在谁的影响下发生了什么变化，以及下次想分享什么。",
+        "promptEn": "Write a 6–8 sentence email and give a 45–60 second oral version."
+      },
+      "exitRequirements": [
+        {
+          "id": "greeting",
+          "label": "问候"
+        },
+        {
+          "id": "grade",
+          "label": "当前年级"
+        },
+        {
+          "id": "goal",
+          "label": "目标与努力原因"
+        },
+        {
+          "id": "stages",
+          "label": "教育阶段"
+        },
+        {
+          "id": "change",
+          "label": "影响与变化"
+        },
+        {
+          "id": "share",
+          "label": "下次分享"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t4_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "年级、一般、努力",
+          "contentEn": ""
+        },
+        {
+          "id": "t4_frame",
+          "labelCn": "变化结构",
+          "labelEn": "Support",
+          "contentCn": "在……影响下，我开始……。",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l10_04",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文4词汇",
+          "vocabSession": "4"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“在……影响下”",
+          "grammarIndex": 1
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文4",
+          "textIndex": 3
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "g2p",
+          "label": "学习近况看图表达",
+          "routeState": {
+            "g2pi": 6
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l10_pic_07",
+          "status": "ready",
+          "purpose": "看图产出"
+        },
+        {
+          "id": "l10_pic_08",
+          "status": "ready",
+          "purpose": "看图产出"
+        },
+        {
+          "id": "l10_scene_08",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l10_scene_09",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l10_scene_10",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l10_para_05",
+          "status": "needs_revision",
+          "purpose": "段落填空"
+        },
+        {
+          "id": "l10_task_05",
+          "status": "needs_revision",
+          "purpose": "表达任务"
+        },
+        {
+          "id": "l10_guess_08",
+          "status": "optional",
+          "purpose": "猜词"
+        },
+        {
+          "id": "l10_guess_10",
+          "status": "optional",
+          "purpose": "猜词"
+        },
+        {
+          "id": "l10_order_04",
+          "status": "optional",
+          "purpose": "连词成句"
+        },
+        {
+          "id": "l10_info_01",
+          "status": "optional",
+          "purpose": "信息匹配"
+        },
+        {
+          "id": "l10_info_02",
+          "status": "optional",
+          "purpose": "信息匹配"
+        }
+      ]
+    }
+  ],
+  "textLearning": [
+    {
+      "textId": "t_hsk3_l10_01",
+      "useGroupId": "T1",
+      "title": "认真记笔记",
+      "overviewChoices": [
+        {
+          "id": "l10_t1_overall_01",
+          "focus": "main_idea",
+          "questionCn": "这段对话主要谈什么？",
+          "options": [
+            "朋友和比赛",
+            "数学学习方法",
+            "学校年级"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l10_t1_overall_02",
+          "focus": "development",
+          "questionCn": "刘小雪平时怎样学习？",
+          "options": [
+            "认真听课、记笔记",
+            "只看考试分数",
+            "不写作业"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l10_t1_overall_03",
+          "focus": "purpose",
+          "questionCn": "同学听完以后有什么打算？",
+          "options": [
+            "换学校",
+            "不学数学",
+            "试试这个方法"
+          ],
+          "correctIndex": 2
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l10_t1_detail_01",
+          "questionCn": "同学为什么请刘小雪介绍学习方法？",
+          "questionPinyin": "Tóngxué wèishénme qǐng Liú Xiǎoxuě jièshào xuéxí fāngfǎ?",
+          "answer": "因为刘小雪的数学越来越好。",
+          "answerPinyin": "Yīnwèi Liú Xiǎoxuě de shùxué yuèláiyuè hǎo.",
+          "acceptedAnswers": [
+            "数学越来越好",
+            "数学进步了"
+          ],
+          "informationPoint": "人物提问的原因"
+        },
+        {
+          "id": "l10_t1_detail_02",
+          "questionCn": "刘小雪把哪些题记在本子上？她为什么这样做？",
+          "questionPinyin": "Liú Xiǎoxuě bǎ nǎxiē tí jì zài běnzi shang? Tā wèishénme zhèyàng zuò?",
+          "answer": "老师写在黑板上的重要题，因为这些题很重要。",
+          "answerPinyin": "Lǎoshī xiě zài hēibǎn shang de zhòngyào tí, yīnwèi zhèxiē tí hěn zhòngyào.",
+          "acceptedAnswers": [
+            "黑板上的题＋很重要"
+          ],
+          "informationPoint": "记录内容和理由"
+        },
+        {
+          "id": "l10_t1_detail_03",
+          "questionCn": "课文中哪句话说明她每天都会用笔记复习？",
+          "questionPinyin": "Kèwén zhōng nǎ jù huà shuōmíng tā měitiān dōu huì yòng bǐjì fùxí?",
+          "answer": "我每天写作业以前，都要看一遍。",
+          "answerPinyin": "Wǒ měitiān xiě zuòyè yǐqián, dōu yào kàn yí biàn.",
+          "acceptedAnswers": [
+            "每天＋写作业以前＋看一遍"
+          ],
+          "informationPoint": "支持“形成习惯”的课文证据"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "我会把这些题都记在本子上。",
+        "focus": "把 + 确定宾语 + 动词 + 在 / 到 + 地点",
+        "actionLabel": "进入“把”字句（位置改变）",
+        "grammarIndex": 0
+      },
+      "paragraphPractice": {
+        "label": "调用“整理课堂笔记”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 0
+      },
+      "lifeTransfer": {
+        "promptCn": "请用30至40秒口头说明，并提交4至5句文字稿：想提高的学科、一个课堂行动、把什么记在哪里、写作业前怎样用笔记，以及希望得到的结果。",
+        "promptEn": "Give a 30–40 second response and a 4–5 sentence outline."
+      }
+    },
+    {
+      "textId": "t_hsk3_l10_02",
+      "useGroupId": "T2",
+      "title": "先复习外语吧",
+      "overviewChoices": [
+        {
+          "id": "l10_t2_overall_01",
+          "focus": "main_idea",
+          "questionCn": "这段对话主要谈什么？",
+          "options": [
+            "学校年级",
+            "借书还书",
+            "考试情况和下一步学习"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "l10_t2_overall_02",
+          "focus": "development",
+          "questionCn": "说完数学考试以后，他们先做什么？",
+          "options": [
+            "去拍照",
+            "复习外语",
+            "不再学习"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l10_t2_overall_03",
+          "focus": "purpose",
+          "questionCn": "两个人都不会做题，最后怎么办？",
+          "options": [
+            "一起去问李老师",
+            "不做了",
+            "抄答案"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l10_t2_detail_01",
+          "questionCn": "同学的数学为什么考得挺差？",
+          "questionPinyin": "Tóngxué de shùxué wèishénme kǎo de tǐng chà?",
+          "answer": "因为没看清楚要求，做错了好几个题。",
+          "answerPinyin": "Yīnwèi méi kàn qīngchu yāoqiú, zuòcuòle hǎo jǐ gè tí.",
+          "acceptedAnswers": [
+            "没看清楚要求",
+            "做错几个题"
+          ],
+          "informationPoint": "考试结果的具体原因"
+        },
+        {
+          "id": "l10_t2_detail_02",
+          "questionCn": "刘小雪为什么说先复习外语？",
+          "questionPinyin": "Liú Xiǎoxuě wèishénme shuō xiān fùxí wàiyǔ?",
+          "answer": "因为明天还有外语考试。",
+          "answerPinyin": "Yīnwèi míngtiān hái yǒu wàiyǔ kǎoshì.",
+          "acceptedAnswers": [
+            "明天还有考试",
+            "外语"
+          ],
+          "informationPoint": "下一步安排的原因"
+        },
+        {
+          "id": "l10_t2_detail_03",
+          "questionCn": "发现两个人都不会以后，他们怎样改变了求助办法？",
+          "questionPinyin": "Fāxiàn liǎng gè rén dōu bú huì yǐhòu, tāmen zěnyàng gǎibiànle qiúzhù bànfǎ?",
+          "answer": "原来同学想问刘小雪，后来两个人决定一起去办公室问李老师。",
+          "answerPinyin": "Yuánlái tóngxué xiǎng wèn Liú Xiǎoxuě, hòulái liǎng gè rén juédìng yìqǐ qù bàngōngshì wèn Lǐ lǎoshī.",
+          "acceptedAnswers": [
+            "先问同学",
+            "两人都不会",
+            "一起问老师"
+          ],
+          "informationPoint": "求助路径的变化和决定"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "在学习上遇到问题，你可以来问我。",
+        "focus": "在……上 / 中 / 下",
+        "actionLabel": "进入固定格式语法",
+        "grammarIndex": 1
+      },
+      "paragraphPractice": {
+        "label": "调用“考试复盘”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 1
+      },
+      "lifeTransfer": {
+        "promptCn": "请用35至45秒说明：什么考试、结果或感受、原因、下一场考试前怎样复习，以及两个人都不会时找谁求助。表达中请使用“在学习上”。",
+        "promptEn": "Give a 35–45 second exam review and use 在学习上."
+      }
+    },
+    {
+      "textId": "t_hsk3_l10_03",
+      "useGroupId": "T3",
+      "title": "明天再把书还给我",
+      "overviewChoices": [
+        {
+          "id": "l10_t3_overall_01",
+          "focus": "main_idea",
+          "questionCn": "学生为什么去李老师办公室？",
+          "options": [
+            "想问书上的问题",
+            "想参加考试",
+            "想看照片"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l10_t3_overall_02",
+          "focus": "development",
+          "questionCn": "李老师讲完以后，学生怎么样？",
+          "options": [
+            "觉得更难",
+            "还是不懂",
+            "明白了"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "l10_t3_overall_03",
+          "focus": "purpose",
+          "questionCn": "最后老师怎样安排？",
+          "options": [
+            "今天马上还书",
+            "回家做练习，明天还书",
+            "不用做练习"
+          ],
+          "correctIndex": 1
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l10_t3_detail_01",
+          "questionCn": "学生怎样让李老师知道问题在哪里？",
+          "questionPinyin": "Xuésheng zěnyàng ràng Lǐ lǎoshī zhīdào wèntí zài nǎli?",
+          "answer": "他们说书上第五页的对话看不懂。",
+          "answerPinyin": "Tāmen shuō shū shang dì-wǔ yè de duìhuà kàn bu dǒng.",
+          "acceptedAnswers": [
+            "第五页",
+            "对话",
+            "看不懂"
+          ],
+          "informationPoint": "问题位置和困难点"
+        },
+        {
+          "id": "l10_t3_detail_02",
+          "questionCn": "李老师用什么办法帮助他们？",
+          "questionPinyin": "Lǐ lǎoshī yòng shénme bànfǎ bāngzhù tāmen?",
+          "answer": "把课上讲过的几句话再讲一遍。",
+          "answerPinyin": "Bǎ kè shang jiǎngguo de jǐ jù huà zài jiǎng yí biàn.",
+          "acceptedAnswers": [
+            "再讲一遍",
+            "几句话"
+          ],
+          "informationPoint": "教师提供的帮助"
+        },
+        {
+          "id": "l10_t3_detail_03",
+          "questionCn": "哪些话说明李老师讲完以后学生真的听懂了？",
+          "questionPinyin": "Nǎxiē huà shuōmíng Lǐ lǎoshī jiǎngwán yǐhòu xuésheng zhēnde tīngdǒng le?",
+          "answer": "同学说“我终于懂了，这些句子一点儿也不难”，刘小雪说“我也明白了”。",
+          "answerPinyin": "Tóngxué shuō “Wǒ zhōngyú dǒng le, zhèxiē jùzi yìdiǎnr yě bù nán”, Liú Xiǎoxuě shuō “Wǒ yě míngbai le”.",
+          "acceptedAnswers": [
+            "终于懂了",
+            "一点儿也不难",
+            "也明白了"
+          ],
+          "informationPoint": "理解状态变化的课文证据"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "你明天再把书还给我。",
+        "focus": "把 + 物品 + 动词 + 给 + 接收者",
+        "actionLabel": "进入“把”字句（关系转移）",
+        "grammarIndex": 2
+      },
+      "paragraphPractice": {
+        "label": "调用“做练习再还书”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 3
+      },
+      "lifeTransfer": {
+        "promptCn": "角色练习后，请用约40秒表达，并提交4句个人文字：问题在哪里、哪里不明白、希望老师怎样帮助、什么时候把什么还给谁。",
+        "promptEn": "After the role-play, give a 40-second response and a four-sentence personal outline."
+      }
+    },
+    {
+      "textId": "t_hsk3_l10_04",
+      "useGroupId": "T4",
+      "title": "学习越来越忙",
+      "overviewChoices": [
+        {
+          "id": "l10_t4_overall_01",
+          "focus": "main_idea",
+          "questionCn": "这封邮件主要写什么？",
+          "options": [
+            "体育比赛",
+            "学习近况和新的兴趣",
+            "一本书的价格"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l10_t4_overall_02",
+          "focus": "development",
+          "questionCn": "刘小雪先写学习，再写什么？",
+          "options": [
+            "拍照的兴趣",
+            "数学答案",
+            "老师的办公室"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l10_t4_overall_03",
+          "focus": "purpose",
+          "questionCn": "刘小雪写邮件想做什么？",
+          "options": [
+            "请家月姐姐做作业",
+            "借一本书",
+            "告诉家月姐姐自己的近况"
+          ],
+          "correctIndex": 2
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l10_t4_detail_01",
+          "questionCn": "刘小雪为什么现在非常努力？",
+          "questionPinyin": "Liú Xiǎoxuě wèishénme xiànzài fēicháng nǔlì?",
+          "answer": "因为她想考上好高中，以后再考上好大学。",
+          "answerPinyin": "Yīnwèi tā xiǎng kǎoshang hǎo gāozhōng, yǐhòu zài kǎoshang hǎo dàxué.",
+          "acceptedAnswers": [
+            "好高中",
+            "好大学",
+            "现在努力"
+          ],
+          "informationPoint": "努力与升学目标的原因链"
+        },
+        {
+          "id": "l10_t4_detail_02",
+          "questionCn": "邮件怎样介绍中国学校的三个阶段？",
+          "questionPinyin": "Yóujiàn zěnyàng jièshào Zhōngguó xuéxiào de sān gè jiēduàn?",
+          "answer": "一般是小学六年、初中三年、高中三年。",
+          "answerPinyin": "Yìbān shì xiǎoxué liù nián, chūzhōng sān nián, gāozhōng sān nián.",
+          "acceptedAnswers": [
+            "一般",
+            "小学六年",
+            "初中三年",
+            "高中三年"
+          ],
+          "informationPoint": "教育阶段的具体信息"
+        },
+        {
+          "id": "l10_t4_detail_03",
+          "questionCn": "刘小雪的兴趣怎样发生了变化？她下次想怎样跟家月姐姐分享？",
+          "questionPinyin": "Liú Xiǎoxuě de xìngqù zěnyàng fāshēngle biànhuà? Tā xià cì xiǎng zěnyàng gēn Jiāyuè jiějie fēnxiǎng?",
+          "answer": "在家月姐姐的影响下，她开始喜欢拍照；下次家月来北京时，她想给家月看自己照的照片。",
+          "answerPinyin": "Zài Jiāyuè jiějie de yǐngxiǎng xià, tā kāishǐ xǐhuan pāizhào; xià cì Jiāyuè lái Běijīng shí, tā xiǎng gěi Jiāyuè kàn zìjǐ zhào de zhàopiàn.",
+          "acceptedAnswers": [
+            "家月姐姐的影响",
+            "开始拍照",
+            "下次看照片"
+          ],
+          "informationPoint": "兴趣变化、原因和后续行动"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "在家月姐姐的影响下，我开始喜欢拍照了。",
+        "focus": "在……影响下",
+        "actionLabel": "进入固定格式语法",
+        "grammarIndex": 1
+      },
+      "paragraphPractice": {
+        "label": "调用“我的学习近况”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 4
+      },
+      "lifeTransfer": {
+        "promptCn": "请写6至8句个人短邮件，并用45至60秒口头分享：问候、年级、目标、努力原因、一般教育阶段、在谁的影响下发生了什么变化，以及下次想分享什么。",
+        "promptEn": "Write a 6–8 sentence email and give a 45–60 second oral version."
+      }
+    }
+  ],
+  "vocabularyTaskTypes": [
+    {
+      "id": "recognition",
+      "labelCn": "认读",
+      "labelEn": "Recognition"
+    },
+    {
+      "id": "shape",
+      "labelCn": "辨形",
+      "labelEn": "Character form"
+    },
+    {
+      "id": "input",
+      "labelCn": "输入",
+      "labelEn": "Type the word"
+    },
+    {
+      "id": "collocation",
+      "labelCn": "搭配与使用",
+      "labelEn": "Collocation and use"
+    }
+  ],
+  "timerPolicy": {
+    "miniLoop": {
+      "optionsMinutes": [
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 3
+    },
+    "vocabularyFocus": {
+      "optionsMinutes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 2
+    },
+    "autoClose": false
+  },
+  "vocabularyCatalog": [
+    {
+      "id": "v10_01",
+      "hanzi": "数学",
+      "pinyin": "shùxué",
+      "english": "mathematics; maths",
+      "meaningCn": "学习数字和计算的学科",
+      "phrases": [
+        "数学课",
+        "数学考试"
+      ],
+      "example": "我每天认真复习数学。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v10_02",
+      "hanzi": "认真",
+      "pinyin": "rènzhēn",
+      "english": "conscientious; serious",
+      "meaningCn": "做事用心，不随便",
+      "phrases": [
+        "认真听课",
+        "认真复习"
+      ],
+      "example": "上课要认真听老师讲。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_03",
+      "hanzi": "笔记",
+      "pinyin": "bǐjì",
+      "english": "notes",
+      "meaningCn": "把重要内容写下来以后留下的记录",
+      "phrases": [
+        "记笔记",
+        "复习笔记"
+      ],
+      "example": "我把重点记在笔记里。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_04",
+      "hanzi": "清楚",
+      "pinyin": "qīngchu",
+      "english": "clear; know clearly",
+      "meaningCn": "容易看懂、听懂或说明白",
+      "phrases": [
+        "看清楚",
+        "记得清楚"
+      ],
+      "example": "她的笔记写得很清楚。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_05",
+      "hanzi": "黑板",
+      "pinyin": "hēibǎn",
+      "english": "blackboard",
+      "meaningCn": "教室前面老师写字的板",
+      "phrases": [
+        "擦黑板",
+        "黑板上的题"
+      ],
+      "example": "老师把例句写在黑板上。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_06",
+      "hanzi": "把",
+      "pinyin": "bǎ",
+      "english": "marks a handled object",
+      "meaningCn": "把要处理的东西放在动作前面",
+      "phrases": [
+        "把书放在桌上",
+        "把笔记给同学"
+      ],
+      "example": "请把名字写在本子上。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_07",
+      "hanzi": "作业",
+      "pinyin": "zuòyè",
+      "english": "homework",
+      "meaningCn": "老师让学生课后完成的学习任务",
+      "phrases": [
+        "写作业",
+        "外语作业"
+      ],
+      "example": "写作业以前，我先看一遍笔记。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_08",
+      "hanzi": "遍",
+      "pinyin": "biàn",
+      "english": "once through; time",
+      "meaningCn": "从头到尾完成一次",
+      "phrases": [
+        "看一遍",
+        "再讲一遍"
+      ],
+      "example": "这篇课文我读了两遍。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_09",
+      "hanzi": "提高",
+      "pinyin": "tígāo",
+      "english": "improve; raise",
+      "meaningCn": "让水平或成绩变得更好",
+      "phrases": [
+        "提高成绩",
+        "提高水平"
+      ],
+      "example": "好习惯能帮助我提高成绩。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_10",
+      "hanzi": "历史",
+      "pinyin": "lìshǐ",
+      "english": "history",
+      "meaningCn": "学习过去的人和事情的学科",
+      "phrases": [
+        "历史课",
+        "中国历史"
+      ],
+      "example": "我觉得这次历史考试有点儿难。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_11",
+      "hanzi": "难",
+      "pinyin": "nán",
+      "english": "hard; difficult",
+      "meaningCn": "不容易做或不容易懂",
+      "phrases": [
+        "有点儿难",
+        "一点儿也不难"
+      ],
+      "example": "这道题不太难。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v10_12",
+      "hanzi": "要求",
+      "pinyin": "yāoqiú",
+      "english": "requirement; require",
+      "meaningCn": "应该做到的内容或标准",
+      "phrases": [
+        "考试要求",
+        "按要求完成"
+      ],
+      "example": "考试以前要先看清楚要求。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v10_13",
+      "hanzi": "差",
+      "pinyin": "chà",
+      "english": "poor; be short of",
+      "meaningCn": "结果不太好",
+      "phrases": [
+        "成绩差",
+        "差一点儿"
+      ],
+      "example": "他这次考得比较差。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v10_14",
+      "hanzi": "复习",
+      "pinyin": "fùxí",
+      "english": "review",
+      "meaningCn": "再学习已经学过的内容",
+      "phrases": [
+        "复习功课",
+        "认真复习"
+      ],
+      "example": "明天考试，我们先复习外语吧。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_15",
+      "hanzi": "外语",
+      "pinyin": "wàiyǔ",
+      "english": "foreign language",
+      "meaningCn": "本国语言以外的语言",
+      "phrases": [
+        "外语课",
+        "学习外语"
+      ],
+      "example": "外语作业里有两个问题。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v10_16",
+      "hanzi": "当然",
+      "pinyin": "dāngrán",
+      "english": "certainly; of course",
+      "meaningCn": "表示事情本来就是这样",
+      "phrases": [
+        "当然可以",
+        "当然知道"
+      ],
+      "example": "你有问题当然可以问我。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v10_17",
+      "hanzi": "遇到",
+      "pinyin": "yùdào",
+      "english": "encounter; meet",
+      "meaningCn": "碰到一件事或一个问题",
+      "phrases": [
+        "遇到问题",
+        "遇到老师"
+      ],
+      "example": "学习上遇到问题要及时问。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_18",
+      "hanzi": "办公室",
+      "pinyin": "bàngōngshì",
+      "english": "office",
+      "meaningCn": "老师或工作人员工作的房间",
+      "phrases": [
+        "老师办公室",
+        "去办公室"
+      ],
+      "example": "我们去办公室问李老师。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_19",
+      "hanzi": "页",
+      "pinyin": "yè",
+      "english": "page",
+      "meaningCn": "书本的一面",
+      "phrases": [
+        "第五页",
+        "一页书"
+      ],
+      "example": "请打开书上第五页。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_20",
+      "hanzi": "对话",
+      "pinyin": "duìhuà",
+      "english": "dialogue; converse",
+      "meaningCn": "两个人或几个人互相说的话",
+      "phrases": [
+        "读对话",
+        "完成对话"
+      ],
+      "example": "这个对话我看不懂。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_21",
+      "hanzi": "明白",
+      "pinyin": "míngbai",
+      "english": "understand; clear",
+      "meaningCn": "知道意思，听懂或看懂",
+      "phrases": [
+        "听明白",
+        "说明白"
+      ],
+      "example": "老师再讲一遍，我就明白了。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_22",
+      "hanzi": "讲",
+      "pinyin": "jiǎng",
+      "english": "explain; speak",
+      "meaningCn": "把内容说给别人听并说明",
+      "phrases": [
+        "讲一遍",
+        "讲问题"
+      ],
+      "example": "老师给我们讲这几个句子。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_23",
+      "hanzi": "句",
+      "pinyin": "jù",
+      "english": "measure word for sentences",
+      "meaningCn": "计算话语或句子的量词",
+      "phrases": [
+        "一句话",
+        "几句话"
+      ],
+      "example": "请用这个词说一句话。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v10_24",
+      "hanzi": "句子",
+      "pinyin": "jùzi",
+      "english": "sentence",
+      "meaningCn": "用词组成的一段完整的话",
+      "phrases": [
+        "写句子",
+        "三个句子"
+      ],
+      "example": "这些句子一点儿也不难。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v10_25",
+      "hanzi": "年级",
+      "pinyin": "niánjí",
+      "english": "grade; year level",
+      "meaningCn": "学生在学校学习的阶段",
+      "phrases": [
+        "二年级",
+        "高年级"
+      ],
+      "example": "刘小雪现在上初中二年级。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_26",
+      "hanzi": "后年",
+      "pinyin": "hòunián",
+      "english": "the year after next",
+      "meaningCn": "明年以后的那一年",
+      "phrases": [
+        "后年毕业",
+        "明年和后年"
+      ],
+      "example": "她后年要考高中。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_27",
+      "hanzi": "一般",
+      "pinyin": "yìbān",
+      "english": "general; generally",
+      "meaningCn": "说明大多数常见情况",
+      "phrases": [
+        "一般来说",
+        "一般情况"
+      ],
+      "example": "中国的小学一般是六年。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v10_28",
+      "hanzi": "努力",
+      "pinyin": "nǔlì",
+      "english": "hard-working; make an effort",
+      "meaningCn": "认真花力气去实现目标",
+      "phrases": [
+        "努力学习",
+        "非常努力"
+      ],
+      "example": "为了实现目标，她现在非常努力。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    }
+  ],
+  "vocabularyGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "title": "说明一个能执行的学习方法",
+      "wordIds": [
+        "v10_01",
+        "v10_02",
+        "v10_03",
+        "v10_04",
+        "v10_05",
+        "v10_06",
+        "v10_07",
+        "v10_08",
+        "v10_09"
+      ],
+      "recognitionWordIds": [
+        "v10_01",
+        "v10_02",
+        "v10_03",
+        "v10_04",
+        "v10_05",
+        "v10_06",
+        "v10_07",
+        "v10_08",
+        "v10_09"
+      ],
+      "activities": [
+        {
+          "id": "l10_m1_v02_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_02"
+          ],
+          "promptCn": "看上课图，选“她怎样听课？”",
+          "promptEn": "",
+          "stimulus": "她怎样听课？",
+          "answer": "认真听课",
+          "options": [
+            "认真听课",
+            "随便听",
+            "不听课"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m1_v02_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_02"
+          ],
+          "promptCn": "补全学习安排。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "上课要____听，考试前要认真____。",
+          "answer": "认真；复习",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m1_v03_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_03"
+          ],
+          "promptCn": "指出图中记录课堂内容的本子内容。",
+          "promptEn": "",
+          "stimulus": "记录课堂内容",
+          "answer": "笔记",
+          "options": [
+            "笔记",
+            "作业",
+            "黑板"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m1_v03_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_03"
+          ],
+          "promptCn": "说出写作业以前怎样使用笔记。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "写作业以前……",
+          "answer": "看一遍笔记／复习笔记",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m1_v04_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_04"
+          ],
+          "promptCn": "比较两个短语中“清楚”的意思。",
+          "promptEn": "",
+          "stimulus": "记得清楚／没看清楚要求",
+          "answer": "清楚可以说明记录明白或看得明白",
+          "options": [
+            "清楚可以说明记录明白或看得明白",
+            "糊涂",
+            "看不见"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m1_v04_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_04"
+          ],
+          "promptCn": "任选一个短语完成句子。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "记得清楚／看清楚要求",
+          "answer": "说清楚问题",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m1_v06_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_06"
+          ],
+          "promptCn": "找出句中被处理的内容。",
+          "promptEn": "",
+          "stimulus": "我会把这些题记在本子上。",
+          "answer": "这些题",
+          "options": [
+            "这些题",
+            "我",
+            "本子"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m1_v06_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_06"
+          ],
+          "promptCn": "用“把”说明一项课堂内容记在哪里。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "把……记在……",
+          "answer": "我把重要的题记在本子上。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m1_v08_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_08"
+          ],
+          "promptCn": "选择表示“从头到尾看一次”的说法。",
+          "promptEn": "",
+          "stimulus": "从头到尾看一次",
+          "answer": "看一遍",
+          "options": [
+            "看一遍",
+            "看一页",
+            "看一句"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m1_v08_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_08"
+          ],
+          "promptCn": "用“看／讲／做＋一遍”说一句学习安排。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "看／讲／做＋一遍",
+          "answer": "写作业以前，我看一遍笔记。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m1_v09_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_09"
+          ],
+          "promptCn": "数学越来越好，可以说成绩怎么样？",
+          "promptEn": "",
+          "stimulus": "数学越来越好",
+          "answer": "提高了／提高成绩",
+          "options": [
+            "提高了／提高成绩",
+            "降低",
+            "忘记"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m1_v09_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_09"
+          ],
+          "promptCn": "补全句子。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "我希望____成绩。",
+          "answer": "提高",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m1_v02_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_02"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "rèn",
+          "answer": "认",
+          "options": [
+            "认",
+            "让"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m1_v03_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_03"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "jì",
+          "answer": "记",
+          "options": [
+            "记",
+            "纪"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m1_v04_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_04"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "qīng",
+          "answer": "清",
+          "options": [
+            "清",
+            "情",
+            "晴"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m1_v05_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_05"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "bǎn",
+          "answer": "板",
+          "options": [
+            "板",
+            "饭"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m1_v06_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_06"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "bǎ",
+          "answer": "把",
+          "options": [
+            "把",
+            "吧"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m1_v07_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_07"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "zuò",
+          "answer": "作",
+          "options": [
+            "作",
+            "做"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m1_v08_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_08"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "biàn",
+          "answer": "遍",
+          "options": [
+            "遍",
+            "篇"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m1_v09_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_09"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "tí",
+          "answer": "提",
+          "options": [
+            "提",
+            "题"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m1_v02_shape_zhen",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_02"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "zhēn",
+          "answer": "真",
+          "options": [
+            "真",
+            "直"
+          ],
+          "promptMode": "form"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "title": "复盘一次考试并决定怎样求助",
+      "wordIds": [
+        "v10_10",
+        "v10_11",
+        "v10_12",
+        "v10_13",
+        "v10_14",
+        "v10_15",
+        "v10_16",
+        "v10_17",
+        "v10_18"
+      ],
+      "recognitionWordIds": [
+        "v10_10",
+        "v10_11",
+        "v10_12",
+        "v10_13",
+        "v10_14",
+        "v10_15",
+        "v10_16",
+        "v10_17",
+        "v10_18"
+      ],
+      "activities": [
+        {
+          "id": "l10_m2_v12_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_12"
+          ],
+          "promptCn": "考试做题以前要先看清楚什么？",
+          "promptEn": "",
+          "stimulus": "考试做题以前",
+          "answer": "要求",
+          "options": [
+            "要求",
+            "年级",
+            "照片"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m2_v12_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_12"
+          ],
+          "promptCn": "说明做错题的原因。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "没看清楚要求",
+          "answer": "因为没看清楚要求，所以我做错了题。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m2_v14_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_14"
+          ],
+          "promptCn": "重新学习已经学过的内容叫什么？",
+          "promptEn": "",
+          "stimulus": "重新学习已经学过的内容",
+          "answer": "复习",
+          "options": [
+            "复习",
+            "预习",
+            "休息"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m2_v14_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_14"
+          ],
+          "promptCn": "说明明天考试前先复习什么。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "明天考试以前……",
+          "answer": "我先复习外语。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m2_v17_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_17"
+          ],
+          "promptCn": "选出“学习时有问题”的自然表达。",
+          "promptEn": "",
+          "stimulus": "学习时有问题",
+          "answer": "遇到问题",
+          "options": [
+            "遇到问题",
+            "遇到作业",
+            "遇到复习"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m2_v17_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_17"
+          ],
+          "promptCn": "补全句子。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "在学习上遇到问题，我会____。",
+          "answer": "问同学／问老师",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m2_v18_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_18"
+          ],
+          "promptCn": "在学校图片中选择老师工作的地方。",
+          "promptEn": "",
+          "stimulus": "老师工作的地方",
+          "answer": "办公室",
+          "options": [
+            "办公室",
+            "黑板",
+            "教室后面"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m2_v18_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_18"
+          ],
+          "promptCn": "说出两人最后的决定。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "去办公室",
+          "answer": "我们一起去办公室问李老师。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m2_v10_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_10"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "lì",
+          "answer": "历",
+          "options": [
+            "历",
+            "厉"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m2_v14_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_14"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "fù",
+          "answer": "复",
+          "options": [
+            "复",
+            "夏"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m2_v17_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_17"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "yù",
+          "answer": "遇",
+          "options": [
+            "遇",
+            "偶"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m2_v18_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_18"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "shì",
+          "answer": "室",
+          "options": [
+            "室",
+            "屋"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m2_v14_shape_xi",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_14"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "xí",
+          "answer": "习",
+          "options": [
+            "习",
+            "羽"
+          ],
+          "promptMode": "form"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "title": "向老师说清问题并约定归还资料",
+      "wordIds": [
+        "v10_06",
+        "v10_08",
+        "v10_19",
+        "v10_20",
+        "v10_21",
+        "v10_22",
+        "v10_23",
+        "v10_24"
+      ],
+      "recognitionWordIds": [
+        "v10_06",
+        "v10_08",
+        "v10_19",
+        "v10_20",
+        "v10_21",
+        "v10_22",
+        "v10_23",
+        "v10_24"
+      ],
+      "activities": [
+        {
+          "id": "l10_m3_v19_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_19"
+          ],
+          "promptCn": "指出句中缺少的词。",
+          "promptEn": "",
+          "stimulus": "书上第五____",
+          "answer": "页",
+          "options": [
+            "页",
+            "句",
+            "遍"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m3_v19_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_19"
+          ],
+          "promptCn": "说清问题在书的哪一页。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "问题的位置",
+          "answer": "第五页。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m3_v20_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_20"
+          ],
+          "promptCn": "两个人互相说话的内容是什么？",
+          "promptEn": "",
+          "stimulus": "两个人互相说话的内容",
+          "answer": "对话",
+          "options": [
+            "对话",
+            "句",
+            "年级"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m3_v20_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_20"
+          ],
+          "promptCn": "说明问题位置。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "第五页的对话",
+          "answer": "第五页的对话我看不懂。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m3_v21_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_21"
+          ],
+          "promptCn": "老师讲以前“不明白”，讲以后怎样？",
+          "promptEn": "",
+          "stimulus": "老师讲完以后",
+          "answer": "明白了",
+          "options": [
+            "明白了",
+            "更难了",
+            "忘了"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m3_v21_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_21"
+          ],
+          "promptCn": "确认自己已经理解。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "终于／也＋明白了",
+          "answer": "我终于明白了。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m3_v22_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_22"
+          ],
+          "promptCn": "老师对不会的句子做什么？",
+          "promptEn": "",
+          "stimulus": "不会的句子",
+          "answer": "讲／再讲一遍",
+          "options": [
+            "讲／再讲一遍",
+            "还书",
+            "考试"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m3_v22_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_22"
+          ],
+          "promptCn": "向老师提出具体请求。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "请您……",
+          "answer": "请您再讲一遍。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m3_v19_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_19"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "yè",
+          "answer": "页",
+          "options": [
+            "页",
+            "叶"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m3_v20_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_20"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "huà",
+          "answer": "话",
+          "options": [
+            "话",
+            "活"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m3_v21_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_21"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "míng",
+          "answer": "明",
+          "options": [
+            "明",
+            "朋"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m3_v22_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_22"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "jiǎng",
+          "answer": "讲",
+          "options": [
+            "讲",
+            "进"
+          ],
+          "promptMode": "form"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "title": "给朋友介绍学习阶段和最近的变化",
+      "wordIds": [
+        "v10_04",
+        "v10_09",
+        "v10_25",
+        "v10_26",
+        "v10_27",
+        "v10_28"
+      ],
+      "recognitionWordIds": [
+        "v10_04",
+        "v10_09",
+        "v10_25",
+        "v10_26",
+        "v10_27",
+        "v10_28"
+      ],
+      "activities": [
+        {
+          "id": "l10_m4_v25_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_25"
+          ],
+          "promptCn": "指出句中缺少的词。",
+          "promptEn": "",
+          "stimulus": "初中二____",
+          "answer": "年级",
+          "options": [
+            "年级",
+            "页",
+            "句"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m4_v25_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_25"
+          ],
+          "promptCn": "介绍自己现在上几年级。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "我现在上……",
+          "answer": "我现在上初中二年级。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m4_v27_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_27"
+          ],
+          "promptCn": "选择不把情况说成“每个人都一样”的词。",
+          "promptEn": "",
+          "stimulus": "说明常见情况",
+          "answer": "一般",
+          "options": [
+            "一般",
+            "一定",
+            "都"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m4_v27_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_27"
+          ],
+          "promptCn": "介绍一个常见教育阶段。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "一般……",
+          "answer": "中国的小学一般是六年。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m4_v28_input",
+          "type": "input",
+          "targetWordIds": [
+            "v10_28"
+          ],
+          "promptCn": "为了升学目标，刘小雪现在怎么样？",
+          "promptEn": "",
+          "stimulus": "为了升学目标",
+          "answer": "非常努力",
+          "options": [
+            "非常努力",
+            "很清楚",
+            "很一般"
+          ],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l10_m4_v28_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v10_28"
+          ],
+          "promptCn": "说清一个目标和自己的行动。（最多两句话）",
+          "promptEn": "Use the target expression in no more than two sentences.",
+          "stimulus": "目标＋行动",
+          "answer": "为了实现目标，我会努力学习。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l10_m4_v25_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_25"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "jí",
+          "answer": "级",
+          "options": [
+            "级",
+            "极"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m4_v26_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_26"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "hòu",
+          "answer": "后",
+          "options": [
+            "后",
+            "候"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m4_v27_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_27"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "bān",
+          "answer": "般",
+          "options": [
+            "般",
+            "船"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l10_m4_v28_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v10_28"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "nǔ",
+          "answer": "努",
+          "options": [
+            "努",
+            "怒"
+          ],
+          "promptMode": "form"
+        }
+      ]
+    }
+  ],
+  "resourceOverrides": [
+    {
+      "id": "l10_fill_a",
+      "patch": {
+        "data": {
+          "wordBank": [
+            "数学",
+            "认真",
+            "笔记",
+            "黑板",
+            "提高"
+          ],
+          "sentences": [
+            {
+              "sentence": "我的____越来越好。",
+              "answer": "数学"
+            },
+            {
+              "sentence": "上课时，我____听老师讲。",
+              "answer": "认真"
+            },
+            {
+              "sentence": "我每天都记____。",
+              "answer": "笔记"
+            },
+            {
+              "sentence": "老师把重要的题写在____上。",
+              "answer": "黑板"
+            },
+            {
+              "sentence": "我想____成绩。",
+              "answer": "提高"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l10_fill_c",
+      "patch": {
+        "data": {
+          "wordBank": [
+            "页",
+            "对话",
+            "明白",
+            "讲",
+            "句子"
+          ],
+          "sentences": [
+            {
+              "sentence": "第五____有一个对话。",
+              "answer": "页"
+            },
+            {
+              "sentence": "第五页有一个____。",
+              "answer": "对话"
+            },
+            {
+              "sentence": "请老师再____一遍。",
+              "answer": "讲"
+            },
+            {
+              "sentence": "老师讲完以后，我终于____了。",
+              "answer": "明白"
+            },
+            {
+              "sentence": "这些____一点儿也不难。",
+              "answer": "句子"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l10_scene_04",
+      "patch": {
+        "prompt_cn": "这几个外语题两个人都不会，他们最后去哪儿？",
+        "data": {
+          "question_cn": "这几个外语题两个人都不会，他们最后去哪儿？",
+          "options": [
+            "回家不做了",
+            "去拍照",
+            "去办公室问李老师",
+            "把书还给同学"
+          ],
+          "correct_index": 2
+        },
+        "correct_answer": "去办公室问李老师"
+      }
+    },
+    {
+      "id": "l10_para_01",
+      "patch": {
+        "data": {
+          "title": "整理课堂笔记",
+          "passageParts": [
+            "老师把重要的题写在____1____上，我会认真记____2____。写作业以前，我再看一____3____。"
+          ],
+          "options": [
+            "历史",
+            "黑板",
+            "遍",
+            "办公室",
+            "页",
+            "笔记"
+          ],
+          "answers": [
+            1,
+            5,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "l10_para_04",
+      "patch": {
+        "data": {
+          "title": "做练习再还书",
+          "passageParts": [
+            "这本书上还有几个____1____。我今天做一____2____，明天再把书____3____给老师。"
+          ],
+          "options": [
+            "练习",
+            "遍",
+            "还",
+            "数学",
+            "年级",
+            "当然"
+          ],
+          "answers": [
+            0,
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "l10_para_05",
+      "patch": {
+        "data": {
+          "title": "我的学习近况",
+          "passageParts": [
+            "我现在上初中二____1____，____2____要考高中，所以现在很____3____。"
+          ],
+          "options": [
+            "年级",
+            "后年",
+            "努力",
+            "办公室",
+            "对话",
+            "一般"
+          ],
+          "answers": [
+            0,
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "l10_task_01",
+      "patch": {
+        "prompt_cn": "任务卡：把我的学习方法介绍给同学。",
+        "prompt_en": "把我的学习方法介绍给同学",
+        "data": {
+          "title": "把我的学习方法介绍给同学",
+          "titleEn": "把我的学习方法介绍给同学",
+          "role": "同学问你一门课怎样学得更好。先口头说30至40秒，再提交4至5句文字稿。",
+          "steps": [
+            "介绍一门想提高的学科。",
+            "说明一个课堂行动。",
+            "用“把”说清什么记在哪里。",
+            "说明写作业以前怎样使用笔记。",
+            "说明希望得到的结果。"
+          ],
+          "keywords": [
+            "g10_01",
+            "认真",
+            "笔记",
+            "遍",
+            "提高"
+          ],
+          "output": "教师确认结构正确、信息完整、口头表达和文字稿基本一致。"
+        }
+      }
+    },
+    {
+      "id": "l10_task_02",
+      "patch": {
+        "prompt_cn": "任务卡：考试以后怎么做。",
+        "prompt_en": "考试以后怎么做",
+        "data": {
+          "title": "考试以后怎么做",
+          "titleEn": "考试以后怎么做",
+          "role": "口头表达35至45秒，再提交5个要点；不需要提供真实分数。",
+          "steps": [
+            "说明什么考试。",
+            "说明结果或感受。",
+            "说明原因。",
+            "说明下一场考试前怎样复习。",
+            "说明两个人都不会时找谁求助。"
+          ],
+          "keywords": [
+            "在学习上",
+            "要求",
+            "复习",
+            "遇到"
+          ],
+          "output": "教师确认原因和行动相连，并有明确的求助决定。"
+        }
+      }
+    },
+    {
+      "id": "l10_task_03",
+      "patch": {
+        "prompt_cn": "任务卡：把问题说清楚。",
+        "prompt_en": "把问题说清楚",
+        "data": {
+          "title": "把问题说清楚",
+          "titleEn": "把问题说清楚",
+          "role": "三人轮换角色，每人都完成一次求助者；约40秒，并提交4句个人文字。",
+          "steps": [
+            "说清问题位置。",
+            "说清哪里不明白。",
+            "向老师提出具体请求。",
+            "说明什么时候把什么还给谁。"
+          ],
+          "keywords": [
+            "页",
+            "对话",
+            "讲一遍",
+            "明白",
+            "g10_03"
+          ],
+          "output": "教师确认位置准确、请求自然、归还物品和接收者清楚。"
+        }
+      }
+    },
+    {
+      "id": "l10_task_05",
+      "patch": {
+        "prompt_cn": "任务卡：给朋友写学习近况。",
+        "prompt_en": "给朋友写学习近况",
+        "data": {
+          "title": "给朋友写学习近况",
+          "titleEn": "给朋友写学习近况",
+          "role": "写6至8句短邮件，并做45至60秒口头分享。",
+          "steps": [
+            "问候朋友。",
+            "介绍当前年级。",
+            "说明学习目标。",
+            "说明为什么努力。",
+            "介绍一般教育阶段。",
+            "说明在谁的影响下发生了什么变化。",
+            "说明下次想分享什么。"
+          ],
+          "keywords": [
+            "年级",
+            "一般",
+            "努力",
+            "在……影响下",
+            "后年（可选）"
+          ],
+          "output": "教师确认个人信息可以真实或模拟、邮件顺序清楚、教育阶段表达不绝对。"
+        }
+      }
+    }
+  ],
+  "supportOnlyStructures": [],
+  "evidencePolicy": {
+    "coreTypes": [
+      "entry_expression",
+      "actual_learning_path",
+      "exit_expression"
+    ],
+    "pathEvent": "opened",
+    "optionalSignals": [
+      "support_request",
+      "self_reflection",
+      "teacher_observation"
+    ]
+  },
+  "supportOptions": [
+    {
+      "id": "vocabulary",
+      "labelCn": "我缺少合适的词",
+      "labelEn": "I need the right words"
+    },
+    {
+      "id": "organization",
+      "labelCn": "我不知道怎样组织信息",
+      "labelEn": "I need help organizing my ideas"
+    },
+    {
+      "id": "structure",
+      "labelCn": "我需要一个句子结构",
+      "labelEn": "I need a sentence frame"
+    },
+    {
+      "id": "teacher",
+      "labelCn": "我想获得老师的帮助",
+      "labelEn": "I want help from the teacher"
+    }
+  ],
+  "feelingOptions": [
+    {
+      "id": "clearer",
+      "labelCn": "我说得更清楚了",
+      "labelEn": "My expression is clearer"
+    },
+    {
+      "id": "more_complete",
+      "labelCn": "我说得更完整了",
+      "labelEn": "My expression is more complete"
+    },
+    {
+      "id": "more_natural",
+      "labelCn": "我说得更自然了",
+      "labelEn": "My expression is more natural"
+    },
+    {
+      "id": "still_need_help",
+      "labelCn": "我还需要帮助",
+      "labelEn": "I still need help"
+    }
+  ],
+  "coreEvidence": [
+    "entry_expression",
+    "actual_learning_path",
+    "exit_expression"
+  ],
+  "capabilities": [
+    "select_text_mini_loop",
+    "launch_interaction",
+    "independent_answer",
+    "support_request",
+    "anonymous_return",
+    "open_support",
+    "reanswer",
+    "record_teacher_decision",
+    "compare_entry_exit",
+    "teacher_selected_vocabulary_focus",
+    "shared_countdown",
+    "native_course_resource_return",
+    "configured_task_stimulus"
+  ]
+}

@@ -1,0 +1,2258 @@
+{
+  "schemaVersion": "classpro-use-profile/v3",
+  "experiment": {
+    "id": "l09-use-pilot-v1",
+    "title": "第9课·以用为主线升级版",
+    "lessonLabel": "第9课",
+    "sourceLesson": "HSK3-L09",
+    "scope": "四个课文MINI循环；保留L9原有词汇、语法、课文和练习教学样式。"
+  },
+  "sources": {
+    "lesson": {
+      "path": "../lessons/HSK3-L09.json",
+      "sha256": "0FAF1B60A4A18D24C9B1F25BCA8133D680A66265DBA2001D3F15E0AAA98A5E0F"
+    },
+    "teacher": {
+      "path": "../../in-class/teacher.html"
+    },
+    "student": {
+      "path": "../../in-class/student.html"
+    }
+  },
+  "nativeTeaching": {
+    "preserveCourseStyles": true,
+    "grammar": {
+      "presentationMode": "progressive_grammar",
+      "phases": [
+        "观察例句",
+        "结构归纳",
+        "课堂表达",
+        "跟进练习"
+      ],
+      "preserveExamples": true,
+      "preserveHighlights": true,
+      "preserveOralQuestions": true,
+      "preserveFollowUp": true
+    }
+  },
+  "useGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "icon": "🏅",
+      "label": "课文 1",
+      "title": "运动会选择、准备与支持",
+      "goal": "说明自己的运动会选择、目的和准备；不参赛时说明怎样支持同学。",
+      "goalEn": "Explain your sports-meet choice, purpose and preparation, or how you will support a classmate.",
+      "entry": {
+        "id": "l09_t1_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "你想参加什么项目？如果不参加，你准备做什么？",
+        "promptEn": "What event would you join? If you do not join, what will you do?"
+      },
+      "exit": {
+        "id": "l09_t1_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "再说一次你的选择：说清楚项目或支持角色、目的、最近的准备，以及到时候会做什么。",
+        "promptEn": "State your choice again, including your role, purpose, recent preparation and next action."
+      },
+      "exitRequirements": [
+        {
+          "id": "role",
+          "label": "项目或支持角色"
+        },
+        {
+          "id": "purpose",
+          "label": "选择原因或目的"
+        },
+        {
+          "id": "preparation",
+          "label": "最近的准备"
+        },
+        {
+          "id": "action",
+          "label": "比赛时的行动"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t1_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "为了、运动会、练、参加、比赛",
+          "contentEn": "Use only the words that fit your own choice."
+        },
+        {
+          "id": "t1_frame",
+          "labelCn": "表达结构",
+          "labelEn": "Expression frame",
+          "contentCn": "我想参加……，为了……，我最近……。到时候我会……。",
+          "contentEn": "Adapt the frame to your own plan."
+        },
+        {
+          "id": "t1_support",
+          "labelCn": "不参赛也能表达",
+          "labelEn": "Support role",
+          "contentCn": "我不参加比赛，但是我会去看比赛、帮助同学或给他们加油。",
+          "contentEn": "Not joining is also a valid choice."
+        }
+      ],
+      "textId": "t_hsk3_l09_01",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文1词汇",
+          "vocabSession": "1"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“为了”语法",
+          "grammarIndex": 0
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文1",
+          "textIndex": 0
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "g1",
+          "label": "连词成句 1",
+          "routeState": {
+            "g1i": 0,
+            "g1s": [],
+            "g1a": [],
+            "g1sa": false
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "g09_01",
+          "status": "ready",
+          "purpose": "核心语法"
+        },
+        {
+          "id": "l09_order_01",
+          "status": "ready",
+          "purpose": "连词成句"
+        },
+        {
+          "id": "l09_scene_02",
+          "status": "needs_revision",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l09_pic_02",
+          "status": "ready",
+          "purpose": "看图造句"
+        },
+        {
+          "id": "l09_read_01",
+          "status": "optional",
+          "purpose": "教师带读问答"
+        },
+        {
+          "id": "l09_ind_read_01",
+          "status": "needs_revision",
+          "purpose": "独立阅读"
+        },
+        {
+          "id": "l09_task_01",
+          "status": "needs_revision",
+          "purpose": "任务卡"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "icon": "🏸",
+      "label": "课文 2",
+      "title": "邀请并鼓励久未运动的朋友",
+      "goal": "回应朋友的担心，说明活动目的，并提出容易开始的练习办法。",
+      "goalEn": "Respond to a friend’s concern, explain the purpose and suggest an easy way to start.",
+      "contextCn": "朋友说：“我好多年没打羽毛球了，可能打不好。”",
+      "entry": {
+        "id": "l09_t2_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "你会怎样邀请并鼓励这位朋友？",
+        "promptEn": "How would you invite and encourage this friend?"
+      },
+      "exit": {
+        "id": "l09_t2_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "再邀请一次：回应朋友的担心，减轻压力，说明活动目的，并提出一个容易开始的练习办法。",
+        "promptEn": "Invite the friend again with reassurance, purpose and one easy practice step."
+      },
+      "exitRequirements": [
+        {
+          "id": "invite",
+          "label": "自然邀请"
+        },
+        {
+          "id": "concern",
+          "label": "回应担心"
+        },
+        {
+          "id": "purpose",
+          "label": "活动目的"
+        },
+        {
+          "id": "practice",
+          "label": "容易开始的办法"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t2_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "好多、几乎、只、练习",
+          "contentEn": "Choose words that fit the response."
+        },
+        {
+          "id": "t2_possible",
+          "labelCn": "可能补语",
+          "labelEn": "Potential complement",
+          "contentCn": "接得住 / 接不住；打得好 / 打不好",
+          "contentEn": "Talk about what is possible, not only performance."
+        },
+        {
+          "id": "t2_frame",
+          "labelCn": "鼓励结构",
+          "labelEn": "Encouraging frame",
+          "contentCn": "……也没关系。这不是比赛，只是为了……。我们可以先……。",
+          "contentEn": "Reduce pressure and give a practical first step."
+        }
+      ],
+      "textId": "t_hsk3_l09_02",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文2词汇",
+          "vocabSession": "2"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "可能补语",
+          "grammarIndex": 1
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文2",
+          "textIndex": 1
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "g1",
+          "label": "连词成句 2",
+          "routeState": {
+            "g1i": 1,
+            "g1s": [],
+            "g1a": [],
+            "g1sa": false
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "g09_02",
+          "status": "ready",
+          "purpose": "核心语法"
+        },
+        {
+          "id": "l09_order_02",
+          "status": "ready",
+          "purpose": "连词成句"
+        },
+        {
+          "id": "l09_scene_03",
+          "status": "needs_revision",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l09_scene_04",
+          "status": "needs_revision",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l09_pic_03",
+          "status": "ready",
+          "purpose": "看图造句"
+        },
+        {
+          "id": "l09_pic_04",
+          "status": "ready",
+          "purpose": "看图造句"
+        },
+        {
+          "id": "l09_read_02",
+          "status": "optional",
+          "purpose": "教师带读问答"
+        },
+        {
+          "id": "l09_ind_read_02",
+          "status": "ready",
+          "purpose": "独立阅读"
+        },
+        {
+          "id": "l09_task_02",
+          "status": "ready",
+          "purpose": "任务卡"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "icon": "⚽",
+      "label": "课文 3",
+      "title": "说明赛况、原因、变化与决定",
+      "goal": "用四句话说明比赛情况、原因、情绪变化和接下来的决定。",
+      "goalEn": "Explain the match situation, reason, emotional change and next decision in four sentences.",
+      "entry": {
+        "id": "l09_t3_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "比赛进行得不太顺利，你现在最想说什么？",
+        "promptEn": "The match is not going well. What do you most want to say now?"
+      },
+      "exit": {
+        "id": "l09_t3_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "完成四句个人评论：球队现在怎样、为什么踢不进去、你的心情怎样变化、你准备怎样做。",
+        "promptEn": "Give a four-sentence personal comment on the situation, reason, emotion and decision."
+      },
+      "exitRequirements": [
+        {
+          "id": "situation",
+          "label": "当前赛况"
+        },
+        {
+          "id": "reason",
+          "label": "原因"
+        },
+        {
+          "id": "emotion",
+          "label": "情绪变化"
+        },
+        {
+          "id": "decision",
+          "label": "接下来的决定"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t3_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "紧张、主要、受到影响、得分",
+          "contentEn": "Use the match words that support your explanation."
+        },
+        {
+          "id": "t3_change",
+          "labelCn": "变化结构",
+          "labelEn": "Change structure",
+          "contentCn": "越看越……；越来越……",
+          "contentEn": "Show how a feeling changes."
+        },
+        {
+          "id": "t3_frame",
+          "labelCn": "评论顺序",
+          "labelEn": "Comment order",
+          "contentCn": "现在……。主要因为……。我越看越……。我准备……。",
+          "contentEn": "Keep the four ideas in a clear order."
+        }
+      ],
+      "textId": "t_hsk3_l09_03",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文3词汇",
+          "vocabSession": "3"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“越A越B”语法",
+          "grammarIndex": 2
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文3",
+          "textIndex": 2
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "g1",
+          "label": "连词成句 3",
+          "routeState": {
+            "g1i": 2,
+            "g1s": [],
+            "g1a": [],
+            "g1sa": false
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "g09_03",
+          "status": "ready",
+          "purpose": "唯一核心语法"
+        },
+        {
+          "id": "l09_order_03",
+          "status": "ready",
+          "purpose": "连词成句"
+        },
+        {
+          "id": "l09_scene_05",
+          "status": "needs_revision",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l09_pic_05",
+          "status": "ready",
+          "purpose": "看图造句"
+        },
+        {
+          "id": "l09_pic_06",
+          "status": "ready",
+          "purpose": "看图造句"
+        },
+        {
+          "id": "l09_para_03",
+          "status": "needs_revision",
+          "purpose": "段落填空"
+        },
+        {
+          "id": "l09_chain_03",
+          "status": "optional",
+          "purpose": "故事接龙"
+        },
+        {
+          "id": "l09_task_03",
+          "status": "needs_revision",
+          "purpose": "任务卡"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "icon": "🏃",
+      "label": "课文 4",
+      "title": "推荐一位值得认识的体育人物",
+      "goal": "完成30至45秒个人介绍，并提交五句个人句子提纲。",
+      "goalEn": "Give a 30–45 second personal introduction and submit a five-sentence outline.",
+      "entry": {
+        "id": "l09_t4_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "请用一两句话写出人物、身份和项目。默认介绍刘长春。",
+        "promptEn": "Name the person, identity and sport in one or two sentences."
+      },
+      "exit": {
+        "id": "l09_t4_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "完成30至45秒个人口头介绍，并提交五句个人句子提纲。",
+        "promptEn": "Give a 30–45 second introduction and submit a five-sentence personal outline."
+      },
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "identity",
+          "label": "人物、身份和项目"
+        },
+        {
+          "id": "experience",
+          "label": "重要经历"
+        },
+        {
+          "id": "result",
+          "label": "结果"
+        },
+        {
+          "id": "difficulty",
+          "label": "困难或材料未说明"
+        },
+        {
+          "id": "meaning",
+          "label": "超越成绩的意义"
+        },
+        {
+          "id": "recommendation",
+          "label": "推荐理由"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t4_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "运动员、成绩、体育、世界、得到、奥运会、影响",
+          "contentEn": "Use only facts supported by the text or teacher material."
+        },
+        {
+          "id": "t4_order",
+          "labelCn": "介绍顺序",
+          "labelEn": "Presentation order",
+          "contentCn": "人物和项目 → 经历 → 结果 → 意义 → 推荐理由",
+          "contentEn": "Organize the five-sentence outline."
+        },
+        {
+          "id": "t4_accuracy",
+          "labelCn": "事实边界",
+          "labelEn": "Evidence boundary",
+          "contentCn": "教材没有说明刘长春没有好成绩的具体原因，不要猜测。",
+          "contentEn": "Do not invent a difficulty that the source does not state."
+        }
+      ],
+      "textId": "t_hsk3_l09_04",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文4词汇",
+          "vocabSession": "4"
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文4",
+          "textIndex": 3
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "g2p",
+          "label": "体育人物看图表达",
+          "routeState": {
+            "g2pi": 6
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l09_read_04",
+          "status": "optional",
+          "purpose": "教师带读问答"
+        },
+        {
+          "id": "l09_ind_read_04",
+          "status": "needs_revision",
+          "purpose": "独立阅读"
+        },
+        {
+          "id": "l09_pic_07",
+          "status": "ready",
+          "purpose": "看图造句"
+        },
+        {
+          "id": "l09_pic_08",
+          "status": "ready",
+          "purpose": "看图造句"
+        },
+        {
+          "id": "l09_para_04",
+          "status": "needs_revision",
+          "purpose": "段落填空"
+        },
+        {
+          "id": "l09_chain_04",
+          "status": "optional",
+          "purpose": "故事接龙"
+        },
+        {
+          "id": "l09_task_04",
+          "status": "needs_revision",
+          "purpose": "任务卡"
+        }
+      ]
+    }
+  ],
+  "textLearning": [
+    {
+      "textId": "t_hsk3_l09_01",
+      "useGroupId": "T1",
+      "title": "为了准备运动会",
+      "overviewChoices": [
+        {
+          "id": "l09_t1_overall_01",
+          "focus": "main_idea",
+          "questionCn": "这段对话主要谈哪件事？",
+          "options": [
+            "归还校园卡",
+            "在校园里准备运动会",
+            "介绍奥运会运动员"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l09_t1_overall_02",
+          "focus": "development",
+          "questionCn": "白家月也在为运动会做什么？",
+          "options": [
+            "为运动会练习网球",
+            "帮李文找校园卡",
+            "调查谁爱打羽毛球"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l09_t1_overall_03",
+          "focus": "purpose",
+          "questionCn": "对话最后有什么结果？",
+          "options": [
+            "白家月不参加运动会",
+            "李文和白家月一起报名",
+            "白家月准备参加比赛，李文准备去看"
+          ],
+          "correctIndex": 2
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l09_t1_detail_01",
+          "questionCn": "李文为什么这么快就过来了？",
+          "questionPinyin": "Lǐ Wén wèishénme zhème kuài jiù guòlai le?",
+          "answer": "他接了白家月的电话，就从球场跑过来了。",
+          "answerPinyin": "Tā jiēle Bái Jiāyuè de diànhuà, jiù cóng qiúchǎng pǎoguòlai le.",
+          "acceptedAnswers": [
+            "接了电话；从球场跑过来；两个信息都出现。"
+          ]
+        },
+        {
+          "id": "l09_t1_detail_02",
+          "questionCn": "几个男生为什么每天练球？",
+          "questionPinyin": "Jǐ gè nánshēng wèishénme měitiān liàn qiú?",
+          "answer": "为了准备运动会。",
+          "answerPinyin": "Wèile zhǔnbèi yùndònghuì.",
+          "acceptedAnswers": [
+            "为了运动会；为了准备运动会。"
+          ]
+        },
+        {
+          "id": "l09_t1_detail_03",
+          "questionCn": "哪些话说明白家月也在为运动会做准备？",
+          "questionPinyin": "Nǎxiē huà shuōmíng Bái Jiāyuè yě zài wèi yùndònghuì zuò zhǔnbèi?",
+          "answer": "她想参加网球比赛，最近一直在练习。",
+          "answerPinyin": "Tā xiǎng cānjiā wǎngqiú bǐsài, zuìjìn yìzhí zài liànxí.",
+          "acceptedAnswers": [
+            "想参加网球比赛；最近一直练习；需至少包含准备行动。"
+          ]
+        },
+        {
+          "id": "l09_t1_detail_04",
+          "questionCn": "李文道歉以后，白家月怎么回答？她生气了吗？",
+          "questionPinyin": "Lǐ Wén dàoqiàn yǐhòu, Bái Jiāyuè zěnme huídá? Tā shēngqì le ma?",
+          "answer": "她说“没关系”，没有生气。",
+          "answerPinyin": "Tā shuō “méi guānxi”, méiyǒu shēngqì.",
+          "acceptedAnswers": [
+            "没关系；没有生气；接受道歉。"
+          ]
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "为了准备运动会，他们每天都在球场练球。",
+        "focus": "为了 + 目的，主语 + 行动",
+        "actionLabel": "进入“为了”语法",
+        "grammarIndex": 0
+      },
+      "paragraphPractice": {
+        "label": "调用课文1段落练习",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 0
+      },
+      "lifeTransfer": {
+        "promptCn": "再说一次你的选择：说清楚项目或支持角色、目的、最近的准备，以及到时候会做什么。",
+        "promptEn": "State your choice again, including your role, purpose, recent preparation and next action."
+      }
+    },
+    {
+      "textId": "t_hsk3_l09_02",
+      "useGroupId": "T2",
+      "title": "打不好没关系",
+      "overviewChoices": [
+        {
+          "id": "l09_t2_overall_01",
+          "focus": "main_idea",
+          "questionCn": "这段对话主要围绕什么？",
+          "options": [
+            "说明足球比赛得分",
+            "介绍一位运动员",
+            "邀请并鼓励朋友打羽毛球"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "l09_t2_overall_02",
+          "focus": "development",
+          "questionCn": "白家月一开始怎么回应？",
+          "options": [
+            "马上答应一起打",
+            "没有马上答应，还有点担心",
+            "决定不参加任何运动"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l09_t2_overall_03",
+          "focus": "purpose",
+          "questionCn": "对话最后有什么结果？",
+          "options": [
+            "白家月决定先和朋友一起练",
+            "李文决定不再打羽毛球",
+            "他们马上参加正式比赛"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l09_t2_detail_01",
+          "questionCn": "白家月为什么没有马上答应一起打羽毛球？",
+          "questionPinyin": "Bái Jiāyuè wèishénme méiyǒu mǎshàng dāying yìqǐ dǎ yǔmáoqiú?",
+          "answer": "她好多年没打了，几乎忘了怎么打。",
+          "answerPinyin": "Tā hǎoduō nián méi dǎ le, jīhū wàngle zěnme dǎ.",
+          "acceptedAnswers": [
+            "好多年没打；几乎忘了怎么打；至少说明一个原因。"
+          ]
+        },
+        {
+          "id": "l09_t2_detail_02",
+          "questionCn": "白家月为什么觉得接不住球会不好意思？",
+          "questionPinyin": "Bái Jiāyuè wèishénme juéde jiē bu zhù qiú huì bù hǎoyìsi?",
+          "answer": "因为有这么多同学一起打，她担心自己总是接不住球。",
+          "answerPinyin": "Yīnwèi yǒu zhème duō tóngxué yìqǐ dǎ, tā dānxīn zìjǐ zǒngshì jiē bu zhù qiú.",
+          "acceptedAnswers": [
+            "同学多；担心总是接不住；两个信息均可。"
+          ]
+        },
+        {
+          "id": "l09_t2_detail_03",
+          "questionCn": "“接不住球”在这里说明什么困难？",
+          "questionPinyin": "“Jiē bu zhù qiú” zài zhèli shuōmíng shénme kùnnan?",
+          "answer": "不能把羽毛球打回去。",
+          "answerPinyin": "Bù néng bǎ yǔmáoqiú dǎ huíqu.",
+          "acceptedAnswers": [
+            "不能回球；不能把羽毛球打回去。"
+          ]
+        },
+        {
+          "id": "l09_t2_detail_04",
+          "questionCn": "李文为什么说“打不好没关系”？",
+          "questionPinyin": "Lǐ Wén wèishénme shuō “dǎ bu hǎo méi guānxi”?",
+          "answer": "因为这不是比赛，大家打球只是为了锻炼身体。",
+          "answerPinyin": "Yīnwèi zhè bú shì bǐsài, dàjiā dǎ qiú zhǐshì wèile duànliàn shēntǐ.",
+          "acceptedAnswers": [
+            "不是比赛；只是为了锻炼身体；至少说明一个理由。"
+          ]
+        },
+        {
+          "id": "l09_t2_detail_05",
+          "questionCn": "李文又请白家月怎样练？",
+          "questionPinyin": "Lǐ Wén yòu qǐng Bái Jiāyuè zěnyàng liàn?",
+          "answer": "请她跟李文和天中一起练。",
+          "answerPinyin": "Qǐng tā gēn Lǐ Wén hé Tiānzhōng yìqǐ liàn.",
+          "acceptedAnswers": [
+            "跟李文和天中一起练；过来跟他们一起练。"
+          ]
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "这么快的球我现在还接不住。",
+        "focus": "动词 + 得 / 不 + 结果或方向",
+        "actionLabel": "进入可能补语",
+        "grammarIndex": 1
+      },
+      "paragraphPractice": {
+        "label": "调用课文2段落练习",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 1
+      },
+      "lifeTransfer": {
+        "promptCn": "再邀请一次：回应朋友的担心，减轻压力，说明活动目的，并提出一个容易开始的练习办法。",
+        "promptEn": "Invite the friend again with reassurance, purpose and one easy practice step."
+      }
+    },
+    {
+      "textId": "t_hsk3_l09_03",
+      "useGroupId": "T3",
+      "title": "越看越着急",
+      "overviewChoices": [
+        {
+          "id": "l09_t3_overall_01",
+          "focus": "main_idea",
+          "questionCn": "白家月和陈天中在做什么？",
+          "options": [
+            "一起看足球比赛",
+            "一起练习网球",
+            "一起准备运动会"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l09_t3_overall_02",
+          "focus": "development",
+          "questionCn": "比赛中的主要问题是什么？",
+          "options": [
+            "白家月找不到球场",
+            "比赛还没有开始",
+            "球队总是踢不进去"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "l09_t3_overall_03",
+          "focus": "purpose",
+          "questionCn": "对话最后有什么结果？",
+          "options": [
+            "大家都不关心比赛",
+            "白家月不看了，但还想知道得分",
+            "白家月上场参加比赛"
+          ],
+          "correctIndex": 1
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l09_t3_detail_01",
+          "questionCn": "球队为什么总是踢不进去？",
+          "questionPinyin": "Qiúduì wèishénme zǒngshì tī bu jìnqu?",
+          "answer": "老球员生病了，主要球员没参加；新球员第一次参加重要比赛，太紧张了。",
+          "answerPinyin": "Lǎo qiúyuán shēngbìng le, zhǔyào qiúyuán méi cānjiā; xīn qiúyuán dì-yī cì cānjiā zhòngyào bǐsài, tài jǐnzhāng le.",
+          "acceptedAnswers": [
+            "老球员生病或主要球员没参加；新球员第一次参加重要比赛并紧张；至少说明两类原因。"
+          ]
+        },
+        {
+          "id": "l09_t3_detail_02",
+          "questionCn": "新球员为什么紧张？",
+          "questionPinyin": "Xīn qiúyuán wèishénme jǐnzhāng?",
+          "answer": "因为他们第一次参加这么重要的比赛。",
+          "answerPinyin": "Yīnwèi tāmen dì-yī cì cānjiā zhème zhòngyào de bǐsài.",
+          "acceptedAnswers": [
+            "第一次参加重要比赛；第一次参加这么重要的比赛。"
+          ]
+        },
+        {
+          "id": "l09_t3_detail_03",
+          "questionCn": "白家月的心情怎样变化？课文中哪句话说明了这种变化？",
+          "questionPinyin": "Bái Jiāyuè de xīnqíng zěnyàng biànhuà? Kèwén zhōng nǎ jù huà shuōmíngle zhè zhǒng biànhuà?",
+          "answer": "她越来越着急。课文说“越看越着急”。",
+          "answerPinyin": "Tā yuèláiyuè zháojí. Kèwén shuō “yuè kàn yuè zháojí”.",
+          "acceptedAnswers": [
+            "越看越着急；越来越着急；需给出变化或原话。"
+          ]
+        },
+        {
+          "id": "l09_t3_detail_04",
+          "questionCn": "课文中哪句话说明球队没有实现“进球”这个结果？",
+          "questionPinyin": "Kèwén zhōng nǎ jù huà shuōmíng qiúduì méiyǒu shíxiàn “jìn qiú” zhège jiéguǒ?",
+          "answer": "“总是踢不进去。”",
+          "answerPinyin": "“Zǒngshì tī bu jìnqu.”",
+          "acceptedAnswers": [
+            "踢不进去；总是踢不进去。"
+          ]
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "这场足球比赛我越看越着急。",
+        "focus": "越 + A，越 + B",
+        "actionLabel": "进入“越A越B”语法",
+        "grammarIndex": 2
+      },
+      "paragraphPractice": {
+        "label": "调用“比赛中的紧张”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 2
+      },
+      "lifeTransfer": {
+        "promptCn": "完成四句个人评论：球队现在怎样、为什么踢不进去、你的心情怎样变化、你准备怎样做。",
+        "promptEn": "Give a four-sentence personal comment on the situation, reason, emotion and decision."
+      }
+    },
+    {
+      "textId": "t_hsk3_l09_04",
+      "useGroupId": "T4",
+      "title": "第一位参加奥运会的中国运动员",
+      "overviewChoices": [
+        {
+          "id": "l09_t4_overall_01",
+          "focus": "main_idea",
+          "questionCn": "这篇短文主要谈什么？",
+          "options": [
+            "校园里的比赛",
+            "羽毛球练习",
+            "奥运会和刘长春"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "l09_t4_overall_02",
+          "focus": "development",
+          "questionCn": "李文写这篇演讲稿是想做什么？",
+          "options": [
+            "介绍一位中国运动员",
+            "邀请朋友打羽毛球",
+            "说明运动会准备计划"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l09_t4_overall_03",
+          "focus": "purpose",
+          "questionCn": "短文最后强调什么？",
+          "options": [
+            "刘长春得到了最好的成绩",
+            "刘长春没有好成绩，但让世界认识了中国",
+            "刘长春没有参加奥运会"
+          ],
+          "correctIndex": 1
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l09_t4_detail_01",
+          "questionCn": "哪些话说明奥运会对世界的影响很大？",
+          "questionPinyin": "Nǎxiē huà shuōmíng Àoyùnhuì duì shìjiè de yǐngxiǎng hěn dà?",
+          "answer": "课文说奥运会是世界上影响最大的体育比赛，每次都有非常多的运动员参加。",
+          "answerPinyin": "Kèwén shuō Àoyùnhuì shì shìjiè shang yǐngxiǎng zuì dà de tǐyù bǐsài, měi cì dōu yǒu fēicháng duō de yùndòngyuán cānjiā.",
+          "acceptedAnswers": [
+            "世界上影响最大的体育比赛；每次有很多运动员参加；至少给出一条课文证据。"
+          ]
+        },
+        {
+          "id": "l09_t4_detail_02",
+          "questionCn": "刘长春是哪一年参加奥运会的？他参加了哪些比赛？",
+          "questionPinyin": "Liú Chángchūn shì nǎ yì nián cānjiā Àoyùnhuì de? Tā cānjiāle nǎxiē bǐsài?",
+          "answer": "他1932年参加了100米和200米短跑比赛。",
+          "answerPinyin": "Tā yī jiǔ sān èr nián cānjiāle yì bǎi mǐ hé liǎng bǎi mǐ duǎnpǎo bǐsài.",
+          "acceptedAnswers": [
+            "1932年；100米和200米短跑；年份和比赛均应出现。"
+          ]
+        },
+        {
+          "id": "l09_t4_detail_03",
+          "questionCn": "课文用哪两个词把“没有得到好成绩”和“让世界认识了中国”连起来？这两个词说明什么关系？",
+          "questionPinyin": "Kèwén yòng nǎ liǎng gè cí bǎ “méiyǒu dédào hǎo chéngjì” hé “ràng shìjiè rènshi Zhōngguó” lián qǐlai? Zhè liǎng gè cí shuōmíng shénme guānxi?",
+          "answer": "用“虽然”和“但是”。先说没有好成绩，再说更重要的意义。",
+          "answerPinyin": "Yòng “suīrán” hé “dànshì”. Xiān shuō méiyǒu hǎo chéngjì, zài shuō gèng zhòngyào de yìyì.",
+          "acceptedAnswers": [
+            "虽然……但是……；成绩不好但有重要意义。"
+          ]
+        },
+        {
+          "id": "l09_t4_detail_04",
+          "questionCn": "课文为什么先说奥运会，再说刘长春？",
+          "questionPinyin": "Kèwén wèishénme xiān shuō Àoyùnhuì, zài shuō Liú Chángchūn?",
+          "answer": "因为刘长春是第一位参加奥运会的中国运动员，前后两部分说的是同一个主题。",
+          "answerPinyin": "Yīnwèi Liú Chángchūn shì dì-yī wèi cānjiā Àoyùnhuì de Zhōngguó yùndòngyuán, qiánhòu liǎng bùfen shuō de shì tóng yí gè zhǔtí.",
+          "acceptedAnswers": [
+            "刘长春是第一位参加奥运会的中国运动员；奥运会和人物之间有直接关系。"
+          ]
+        }
+      ],
+      "grammarBridge": null,
+      "paragraphPractice": {
+        "label": "调用“体育人物分享”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 3
+      },
+      "lifeTransfer": {
+        "promptCn": "完成30至45秒个人口头介绍，并提交五句个人句子提纲。",
+        "promptEn": "Give a 30–45 second introduction and submit a five-sentence personal outline."
+      }
+    }
+  ],
+  "vocabularyTaskTypes": [
+    {
+      "id": "recognition",
+      "labelCn": "认读",
+      "labelEn": "Recognition"
+    },
+    {
+      "id": "shape",
+      "labelCn": "辨形",
+      "labelEn": "Character form"
+    },
+    {
+      "id": "input",
+      "labelCn": "输入",
+      "labelEn": "Type the word"
+    },
+    {
+      "id": "collocation",
+      "labelCn": "搭配与使用",
+      "labelEn": "Collocation and use"
+    }
+  ],
+  "timerPolicy": {
+    "miniLoop": {
+      "optionsMinutes": [
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 3
+    },
+    "vocabularyFocus": {
+      "optionsMinutes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 2
+    },
+    "autoClose": false
+  },
+  "vocabularyCatalog": [
+    {
+      "id": "v09_01",
+      "hanzi": "校园",
+      "pinyin": "xiàoyuán",
+      "english": "campus",
+      "meaningCn": "学校里的地方",
+      "phrases": [
+        "大学校园",
+        "校园生活"
+      ],
+      "example": "我们的校园里有两个球场。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v09_02",
+      "hanzi": "卡",
+      "pinyin": "kǎ",
+      "english": "card",
+      "meaningCn": "一张小卡片，可以买东西或进门",
+      "phrases": [
+        "校园卡",
+        "一张卡"
+      ],
+      "example": "这是你的校园卡。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v09_03",
+      "hanzi": "球场",
+      "pinyin": "qiúchǎng",
+      "english": "court; sports field",
+      "meaningCn": "打球的地方",
+      "phrases": [
+        "学校球场",
+        "去球场"
+      ],
+      "example": "他们每天在球场练球。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v09_04",
+      "hanzi": "为了",
+      "pinyin": "wèile",
+      "english": "in order to; for",
+      "meaningCn": "表示做一件事的目的",
+      "phrases": [
+        "为了比赛",
+        "为了健康"
+      ],
+      "example": "为了准备运动会，我们每天都练习。",
+      "tier": "expression",
+      "allowedTypes": [
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v09_05",
+      "hanzi": "运动会",
+      "pinyin": "yùndònghuì",
+      "english": "sports meet",
+      "meaningCn": "很多人一起参加的体育活动",
+      "phrases": [
+        "参加运动会",
+        "准备运动会"
+      ],
+      "example": "学校下个月开运动会。",
+      "tier": "expression",
+      "allowedTypes": [
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v09_06",
+      "hanzi": "男生",
+      "pinyin": "nánshēng",
+      "english": "male student; boy",
+      "meaningCn": "男的学生",
+      "phrases": [
+        "男同学",
+        "几个男生"
+      ],
+      "example": "几个男生正在球场上练球。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v09_07",
+      "hanzi": "练",
+      "pinyin": "liàn",
+      "english": "practise",
+      "meaningCn": "一次又一次地做",
+      "phrases": [
+        "练球",
+        "多练几次"
+      ],
+      "example": "我每天练半个小时网球。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v09_08",
+      "hanzi": "参加",
+      "pinyin": "cānjiā",
+      "english": "take part in; join",
+      "meaningCn": "进入一个活动或比赛，和别人一起做",
+      "phrases": [
+        "参加比赛",
+        "参加活动"
+      ],
+      "example": "我想参加学校的网球比赛。",
+      "tier": "expression",
+      "allowedTypes": [
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v09_09",
+      "hanzi": "网球",
+      "pinyin": "wǎngqiú",
+      "english": "tennis",
+      "meaningCn": "拿球拍打的一种球",
+      "phrases": [
+        "打网球",
+        "网球比赛"
+      ],
+      "example": "白家月最近一直在练网球。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v09_10",
+      "hanzi": "比赛",
+      "pinyin": "bǐsài",
+      "english": "match; competition; compete",
+      "meaningCn": "看谁或哪一组做得更好",
+      "phrases": [
+        "参加比赛",
+        "足球比赛"
+      ],
+      "example": "到时候我去看你的比赛。",
+      "tier": "expression",
+      "allowedTypes": [
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v09_11",
+      "hanzi": "练习",
+      "pinyin": "liànxí",
+      "english": "practise; exercise",
+      "meaningCn": "为了学会一件事而做的活动",
+      "phrases": [
+        "认真练习",
+        "练习接球"
+      ],
+      "example": "最近我一直在练习发球。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v09_12",
+      "hanzi": "好多",
+      "pinyin": "hǎoduō",
+      "english": "many; a lot of",
+      "meaningCn": "数量很多",
+      "phrases": [
+        "好多年",
+        "好多人"
+      ],
+      "example": "球场上有好多同学。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v09_13",
+      "hanzi": "几乎",
+      "pinyin": "jīhū",
+      "english": "almost",
+      "meaningCn": "差一点儿就完全到了",
+      "phrases": [
+        "几乎忘了",
+        "几乎每天"
+      ],
+      "example": "我几乎忘了怎么打羽毛球。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v09_14",
+      "hanzi": "只",
+      "pinyin": "zhǐ",
+      "english": "only; merely",
+      "meaningCn": "表示数量少或范围小",
+      "phrases": [
+        "只看一次",
+        "只是练习"
+      ],
+      "example": "大家打球只是为了锻炼身体。",
+      "tier": "expression",
+      "allowedTypes": [
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v09_15",
+      "hanzi": "啤酒",
+      "pinyin": "píjiǔ",
+      "english": "beer",
+      "meaningCn": "一种酒",
+      "phrases": [
+        "一瓶啤酒",
+        "啤酒和饮料"
+      ],
+      "example": "冰箱里有啤酒和饮料。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v09_16",
+      "hanzi": "回",
+      "pinyin": "huí",
+      "english": "time; occurrence",
+      "meaningCn": "表示事情发生的次数",
+      "phrases": [
+        "怎么回事",
+        "一回事"
+      ],
+      "example": "今天怎么回事？",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v09_17",
+      "hanzi": "紧张",
+      "pinyin": "jǐnzhāng",
+      "english": "nervous; tense",
+      "meaningCn": "心里不放松，有一点儿担心",
+      "phrases": [
+        "感到紧张",
+        "别紧张"
+      ],
+      "example": "新球员第一次参加比赛，有点儿紧张。",
+      "tier": "expression",
+      "allowedTypes": [
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v09_18",
+      "hanzi": "主要",
+      "pinyin": "zhǔyào",
+      "english": "main; major",
+      "meaningCn": "最重要的",
+      "phrases": [
+        "主要原因",
+        "主要球员"
+      ],
+      "example": "主要的球员今天没有参加比赛。",
+      "tier": "expression",
+      "allowedTypes": [
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v09_19",
+      "hanzi": "受到",
+      "pinyin": "shòudào",
+      "english": "receive; be affected by",
+      "meaningCn": "得到或遇到，常和“影响、欢迎”一起说",
+      "phrases": [
+        "受到影响",
+        "受到欢迎"
+      ],
+      "example": "大家都受到了他的影响。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v09_20",
+      "hanzi": "影响",
+      "pinyin": "yǐngxiǎng",
+      "english": "influence; affect",
+      "meaningCn": "一件事让另一件事发生变化",
+      "phrases": [
+        "受到影响",
+        "影响很大"
+      ],
+      "example": "紧张会影响比赛成绩。",
+      "tier": "expression",
+      "allowedTypes": [
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v09_21",
+      "hanzi": "得分",
+      "pinyin": "défēn",
+      "english": "score; points",
+      "meaningCn": "比赛中得到的分数",
+      "phrases": [
+        "比赛得分",
+        "得到两分"
+      ],
+      "example": "最后是谁得分了？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v09_22",
+      "hanzi": "体育",
+      "pinyin": "tǐyù",
+      "english": "sports; physical education",
+      "meaningCn": "锻炼身体和比赛的活动",
+      "phrases": [
+        "体育比赛",
+        "体育运动"
+      ],
+      "example": "我喜欢看体育比赛。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v09_23",
+      "hanzi": "世界",
+      "pinyin": "shìjiè",
+      "english": "world",
+      "meaningCn": "地球上的所有国家和地方",
+      "phrases": [
+        "世界各地",
+        "世界比赛"
+      ],
+      "example": "他让世界认识了中国。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v09_24",
+      "hanzi": "运动员",
+      "pinyin": "yùndòngyuán",
+      "english": "athlete",
+      "meaningCn": "参加体育训练和比赛的人",
+      "phrases": [
+        "中国运动员",
+        "优秀运动员"
+      ],
+      "example": "很多运动员参加奥运会。",
+      "tier": "expression",
+      "allowedTypes": [
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v09_25",
+      "hanzi": "得到",
+      "pinyin": "dédào",
+      "english": "get; obtain",
+      "meaningCn": "拿到或有了",
+      "phrases": [
+        "得到机会",
+        "得到好成绩"
+      ],
+      "example": "他没有得到好成绩。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v09_26",
+      "hanzi": "成绩",
+      "pinyin": "chéngjì",
+      "english": "result; achievement; grade",
+      "meaningCn": "学习或比赛得到的结果",
+      "phrases": [
+        "比赛成绩",
+        "好成绩"
+      ],
+      "example": "比赛成绩不是最重要的。",
+      "tier": "expression",
+      "allowedTypes": [
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v09_27",
+      "hanzi": "奥运会",
+      "pinyin": "Àoyùnhuì",
+      "english": "Olympic Games",
+      "meaningCn": "世界很多国家一起参加的体育活动",
+      "phrases": [
+        "参加奥运会",
+        "观看奥运会"
+      ],
+      "example": "我最爱看的体育比赛是奥运会。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v09_28",
+      "hanzi": "刘长春",
+      "pinyin": "Liú Chángchūn",
+      "english": "Liu Changchun",
+      "meaningCn": "中国很早参加奥运会的一位运动员",
+      "phrases": [
+        "运动员刘长春",
+        "介绍刘长春"
+      ],
+      "example": "刘长春是第一位参加奥运会的中国运动员。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition"
+      ]
+    }
+  ],
+  "vocabularyGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "title": "运动会选择、准备与支持",
+      "wordIds": [
+        "v09_01",
+        "v09_02",
+        "v09_03",
+        "v09_04",
+        "v09_05",
+        "v09_06",
+        "v09_07",
+        "v09_08",
+        "v09_09",
+        "v09_10",
+        "v09_11"
+      ],
+      "recognitionWordIds": [
+        "v09_01",
+        "v09_02",
+        "v09_03",
+        "v09_06",
+        "v09_09",
+        "v09_11"
+      ],
+      "activities": [
+        {
+          "id": "l09_vocab_t1_input_weile",
+          "type": "input",
+          "targetWordIds": [
+            "v09_04"
+          ],
+          "promptCn": "填入合适的词。",
+          "promptEn": "",
+          "stimulus": "____准备运动会，他们每天都练球。",
+          "answer": "为了",
+          "options": [],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l09_vocab_t1_input_yundonghui",
+          "type": "input",
+          "targetWordIds": [
+            "v09_05"
+          ],
+          "promptCn": "填入合适的词。",
+          "promptEn": "",
+          "stimulus": "学校下个月开____。",
+          "answer": "运动会",
+          "options": [],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l09_vocab_t1_input_lian",
+          "type": "input",
+          "targetWordIds": [
+            "v09_07"
+          ],
+          "promptCn": "填入合适的词。",
+          "promptEn": "",
+          "stimulus": "你们几个男生每天都____球。",
+          "answer": "练",
+          "options": [],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l09_vocab_t1_input_canjia",
+          "type": "input",
+          "targetWordIds": [
+            "v09_08"
+          ],
+          "promptCn": "填入合适的词。",
+          "promptEn": "",
+          "stimulus": "我想____网球比赛。",
+          "answer": "参加",
+          "options": [],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l09_vocab_t1_input_bisai",
+          "type": "input",
+          "targetWordIds": [
+            "v09_10"
+          ],
+          "promptCn": "填入合适的词。",
+          "promptEn": "",
+          "stimulus": "我想参加网球____。",
+          "answer": "比赛",
+          "options": [],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l09_vocab_t1_use_plan",
+          "type": "collocation",
+          "targetWordIds": [
+            "v09_04",
+            "v09_05",
+            "v09_07",
+            "v09_08",
+            "v09_10"
+          ],
+          "promptCn": "用指定搭配完成最多两句话。",
+          "promptEn": "Use the given collocations to write no more than two sentences.",
+          "stimulus": "参加运动会、参加比赛、为了、练",
+          "answer": "我想参加运动会的网球比赛。为了打得更好，我每天练球。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l09_vocab_t1_shape_yun",
+          "type": "shape",
+          "targetWordIds": [
+            "v09_05"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "yùn",
+          "answer": "运",
+          "options": [
+            "运",
+            "远"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l09_vocab_t1_shape_lian",
+          "type": "shape",
+          "targetWordIds": [
+            "v09_07"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "liàn",
+          "answer": "练",
+          "options": [
+            "练",
+            "炼"
+          ],
+          "promptMode": "form"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "title": "邀请并鼓励久未运动的朋友",
+      "wordIds": [
+        "v09_07",
+        "v09_11",
+        "v09_12",
+        "v09_13",
+        "v09_14"
+      ],
+      "recognitionWordIds": [
+        "v09_07",
+        "v09_11",
+        "v09_12",
+        "v09_13"
+      ],
+      "activities": [
+        {
+          "id": "l09_vocab_t2_input_zhi",
+          "type": "input",
+          "targetWordIds": [
+            "v09_14"
+          ],
+          "promptCn": "填入目标词，组成课文中的“只是”。",
+          "promptEn": "",
+          "stimulus": "大家打球____是为了锻炼身体。",
+          "answer": "只",
+          "options": [],
+          "acceptedAnswers": [
+            "只",
+            "只是"
+          ],
+          "promptMode": "display_form"
+        },
+        {
+          "id": "l09_vocab_t2_use_zhi",
+          "type": "collocation",
+          "targetWordIds": [
+            "v09_14"
+          ],
+          "promptCn": "用指定搭配完成最多两句话：一句用“只＋动词”，一句用“只是＋说明”。",
+          "promptEn": "Use the given collocations to write up to two sentences: one with “只 + verb” and one with “只是 + explanation”.",
+          "stimulus": "只想先练练；这只是练习，不是比赛。",
+          "answer": "我只想先练练。这只是练习，不是比赛。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "title": "说明赛况、原因、变化与决定",
+      "wordIds": [
+        "v09_15",
+        "v09_16",
+        "v09_17",
+        "v09_18",
+        "v09_19",
+        "v09_20",
+        "v09_21"
+      ],
+      "recognitionWordIds": [
+        "v09_15",
+        "v09_16",
+        "v09_19",
+        "v09_21"
+      ],
+      "activities": [
+        {
+          "id": "l09_vocab_t3_input_jinzhang",
+          "type": "input",
+          "targetWordIds": [
+            "v09_17"
+          ],
+          "promptCn": "填入合适的词。",
+          "promptEn": "",
+          "stimulus": "新球员第一次参加重要比赛，太____了。",
+          "answer": "紧张",
+          "options": [],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l09_vocab_t3_input_zhuyao",
+          "type": "input",
+          "targetWordIds": [
+            "v09_18"
+          ],
+          "promptCn": "填入合适的词。",
+          "promptEn": "",
+          "stimulus": "____的球员没有参加比赛。",
+          "answer": "主要",
+          "options": [],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l09_vocab_t3_input_yingxiang",
+          "type": "input",
+          "targetWordIds": [
+            "v09_20"
+          ],
+          "promptCn": "填入合适的词。",
+          "promptEn": "",
+          "stimulus": "主要球员没参加，所以大家受到____。",
+          "answer": "影响",
+          "options": [],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l09_vocab_t3_input_defen",
+          "type": "input",
+          "targetWordIds": [
+            "v09_21"
+          ],
+          "promptCn": "填入合适的词。",
+          "promptEn": "",
+          "stimulus": "我不看了，你们告诉我____吧。",
+          "answer": "得分",
+          "options": [],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l09_vocab_t3_use_comment",
+          "type": "collocation",
+          "targetWordIds": [
+            "v09_17",
+            "v09_18",
+            "v09_20",
+            "v09_21"
+          ],
+          "promptCn": "用指定搭配完成最多两句话。",
+          "promptEn": "Use the given collocations to write no more than two sentences.",
+          "stimulus": "主要、紧张、受到影响、得分",
+          "answer": "主要球员没参加，新球员很紧张，球队受到影响。请告诉我得分。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l09_vocab_t3_shape_zhu",
+          "type": "shape",
+          "targetWordIds": [
+            "v09_18"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "zhǔ",
+          "answer": "主",
+          "options": [
+            "主",
+            "住"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l09_vocab_t3_shape_ying",
+          "type": "shape",
+          "targetWordIds": [
+            "v09_20"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "yǐng",
+          "answer": "影",
+          "options": [
+            "影",
+            "景"
+          ],
+          "promptMode": "form"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "title": "推荐一位值得认识的体育人物",
+      "wordIds": [
+        "v09_22",
+        "v09_23",
+        "v09_24",
+        "v09_25",
+        "v09_26",
+        "v09_27",
+        "v09_28"
+      ],
+      "recognitionWordIds": [
+        "v09_22",
+        "v09_23",
+        "v09_25",
+        "v09_27",
+        "v09_28"
+      ],
+      "activities": [
+        {
+          "id": "l09_vocab_t4_input_yundongyuan",
+          "type": "input",
+          "targetWordIds": [
+            "v09_24"
+          ],
+          "promptCn": "填入合适的词。",
+          "promptEn": "",
+          "stimulus": "刘长春是中国____。",
+          "answer": "运动员",
+          "options": [],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l09_vocab_t4_input_chengji",
+          "type": "input",
+          "targetWordIds": [
+            "v09_26"
+          ],
+          "promptCn": "填入合适的词。",
+          "promptEn": "",
+          "stimulus": "虽然他没有得到好____，但是他让世界认识了中国。",
+          "answer": "成绩",
+          "options": [],
+          "promptMode": "meaning"
+        },
+        {
+          "id": "l09_vocab_t4_use_person",
+          "type": "collocation",
+          "targetWordIds": [
+            "v09_24",
+            "v09_26"
+          ],
+          "promptCn": "用指定搭配写最多两句话介绍人物。",
+          "promptEn": "Use the given collocations to write no more than two sentences about the person.",
+          "stimulus": "运动员、参加比赛、得到成绩",
+          "answer": "他是一位中国运动员。他参加了比赛，但是没有得到好成绩。",
+          "options": [],
+          "evaluation": "teacher",
+          "promptMode": "open_use"
+        },
+        {
+          "id": "l09_vocab_t4_shape_yuan",
+          "type": "shape",
+          "targetWordIds": [
+            "v09_24"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "yuán",
+          "answer": "员",
+          "options": [
+            "员",
+            "圆"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l09_vocab_t4_shape_cheng",
+          "type": "shape",
+          "targetWordIds": [
+            "v09_26"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "chéng",
+          "answer": "成",
+          "options": [
+            "成",
+            "城"
+          ],
+          "promptMode": "form"
+        },
+        {
+          "id": "l09_vocab_t4_shape_ti",
+          "type": "shape",
+          "targetWordIds": [
+            "v09_22"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "",
+          "stimulus": "tǐ",
+          "answer": "体",
+          "options": [
+            "体",
+            "休"
+          ],
+          "promptMode": "form"
+        }
+      ]
+    }
+  ],
+  "resourceOverrides": [
+    {
+      "id": "l09_scene_02",
+      "patch": {
+        "prompt_cn": "几名学生为学校运动会做准备。选择最合适的句子。",
+        "data": {
+          "options": [
+            "他们准备运动会，可是每天都不练球。",
+            "为了准备运动会，他们每天下午都在球场练球。",
+            "他们每天在球场练球，但是不参加运动会。",
+            "运动会已经结束了，他们才开始准备。"
+          ],
+          "correct_index": 1
+        },
+        "correct_answer": "为了准备运动会，他们每天下午都在球场练球。"
+      }
+    },
+    {
+      "id": "l09_scene_03",
+      "patch": {
+        "prompt_cn": "朋友很久没打羽毛球，担心打不好。选择最合适的回答。",
+        "data": {
+          "options": [
+            "这么多人一起打，你还是别来了。",
+            "你接不住球，所以不能练。",
+            "不是比赛，打不好没关系。",
+            "你好多年没打了，今天一定要得分。"
+          ],
+          "correct_index": 2
+        },
+        "correct_answer": "不是比赛，打不好没关系。"
+      }
+    },
+    {
+      "id": "l09_scene_04",
+      "patch": {
+        "prompt_cn": "她能接慢球，还不能接快球。选择最合适的句子。",
+        "data": {
+          "options": [
+            "慢球她接不住，快球她接得住。",
+            "慢球和快球她都接不住。",
+            "慢球她接得住，快球她还接不住。",
+            "她只看比赛，没有接球。"
+          ],
+          "correct_index": 2
+        },
+        "correct_answer": "慢球她接得住，快球她还接不住。"
+      }
+    },
+    {
+      "id": "l09_scene_05",
+      "patch": {
+        "prompt_cn": "朋友看足球比赛，球队一直没有得分。选择最合适的句子。",
+        "data": {
+          "options": [
+            "比赛一直没有得分，她越看越着急。",
+            "比赛一直没有得分，她越看越高兴。",
+            "主要球员都参加了，她还是不看。",
+            "球队一直得分，她越看越紧张。"
+          ],
+          "correct_index": 0
+        },
+        "correct_answer": "比赛一直没有得分，她越看越着急。"
+      }
+    },
+    {
+      "id": "l09_ind_read_01",
+      "patch": {
+        "data": {
+          "question_cn": "安娜为什么每周练习三次？",
+          "options": [
+            "因为运动会已经结束了。",
+            "为了能打完一场网球比赛。",
+            "因为她不想参加比赛。",
+            "为了每天只看别人练球。"
+          ],
+          "correct_index": 1
+        },
+        "correct_answer": "为了能打完一场网球比赛。"
+      }
+    },
+    {
+      "id": "l09_ind_read_04",
+      "patch": {
+        "data": {
+          "title": "刘长春与奥运会",
+          "passage": "刘长春是第一位参加奥运会的中国运动员。他1932年参加了100米和200米短跑比赛。虽然他没有得到好成绩，但是他让世界认识了中国。",
+          "question_cn": "为什么刘长春没有得到好成绩，也值得介绍？",
+          "options": [
+            "因为他参加了网球比赛。",
+            "因为他得到了最好的成绩。",
+            "因为他让世界认识了中国。",
+            "因为他参加了每一次奥运会。"
+          ],
+          "correct_index": 2
+        },
+        "correct_answer": "因为他让世界认识了中国。"
+      }
+    },
+    {
+      "id": "l09_para_03",
+      "patch": {
+        "data": {
+          "title": "比赛中的紧张",
+          "passageParts": [
+            "重要比赛已经开始了。",
+            "____1____",
+            "几个新球员第一次参加这么重要的比赛。",
+            "____2____",
+            "球队连续几次都没有踢进去。",
+            "____3____"
+          ],
+          "options": [
+            "几个老球员生病了，主要球员没有参加比赛。",
+            "他们太紧张了，大家也都受到影响。",
+            "看比赛的人越看越着急。",
+            "几个主要球员都参加了比赛。",
+            "新球员第一次比赛，一点儿也不紧张。",
+            "球队一直得分，大家越看越高兴。"
+          ],
+          "answers": [
+            0,
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "l09_para_04",
+      "patch": {
+        "data": {
+          "title": "体育人物分享",
+          "passageParts": [
+            "李文准备一篇体育人物介绍。",
+            "____1____",
+            "然后，他介绍刘长春是第一位参加奥运会的中国运动员。",
+            "____2____",
+            "最后，李文说刘长春没有得到好成绩。",
+            "____3____"
+          ],
+          "options": [
+            "他先说自己最爱看奥运会。",
+            "刘长春1932年参加了100米和200米短跑比赛。",
+            "但是他让世界认识了中国。",
+            "刘长春参加了网球比赛。",
+            "刘长春得到了最好的成绩。",
+            "李文说奥运会没有运动员参加。"
+          ],
+          "answers": [
+            0,
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "l09_task_01",
+      "patch": {
+        "prompt_cn": "任务卡：运动会选择和准备采访。",
+        "prompt_en": "运动会选择和准备采访",
+        "data": {
+          "title": "运动会选择和准备采访",
+          "titleEn": "运动会选择和准备采访",
+          "role": "采访同伴参加比赛或支持同学的计划。",
+          "steps": [
+            "你参加什么比赛，或者怎样支持同学？",
+            "你为什么这样选择？",
+            "你最近怎样准备？",
+            "到时候你会做什么？"
+          ],
+          "keywords": [
+            "运动会",
+            "参加",
+            "为了",
+            "练习",
+            "支持"
+          ],
+          "output": "每人3至4句话；不参赛者可以说明看比赛、帮助或给同学加油。"
+        }
+      }
+    },
+    {
+      "id": "l09_task_03",
+      "patch": {
+        "prompt_cn": "任务卡：比赛现场个人评论。",
+        "prompt_en": "比赛现场个人评论",
+        "data": {
+          "title": "比赛现场个人评论",
+          "titleEn": "比赛现场个人评论",
+          "role": "根据课文信息完成个人比赛评论。",
+          "steps": [
+            "球队现在怎样？",
+            "为什么踢不进去？",
+            "你的心情怎样变化？",
+            "你准备继续看还是先不看？"
+          ],
+          "keywords": [
+            "主要",
+            "紧张",
+            "受到影响",
+            "越A越B"
+          ],
+          "output": "每位学生完成4句话；可以先小组讨论，但个人表达和个人提交必须独立完成。"
+        }
+      }
+    },
+    {
+      "id": "l09_task_04",
+      "patch": {
+        "prompt_cn": "任务卡：30至45秒体育人物个人介绍。",
+        "prompt_en": "30至45秒体育人物个人介绍",
+        "data": {
+          "title": "30至45秒体育人物个人介绍",
+          "titleEn": "30至45秒体育人物个人介绍",
+          "role": "根据教材或教师提供的可靠材料独立介绍体育人物。",
+          "steps": [
+            "人物、身份和项目。",
+            "重要经历。",
+            "结果。",
+            "困难或材料未说明。",
+            "超越成绩的意义和推荐理由。"
+          ],
+          "keywords": [
+            "运动员",
+            "项目",
+            "成绩",
+            "影响"
+          ],
+          "output": "每位学生完成30至45秒个人口头表达，并提交5句个人句子提纲，建议70至110个汉字。"
+        }
+      }
+    }
+  ],
+  "supportOnlyStructures": [
+    {
+      "groupId": "T3",
+      "structure": "因为……所以……",
+      "role": "表达原因的支架，不作为L09新增语法"
+    },
+    {
+      "groupId": "T4",
+      "structure": "虽然……但是……",
+      "role": "组织人物结果与意义的支架，不作为L09新增语法"
+    }
+  ],
+  "evidencePolicy": {
+    "coreTypes": [
+      "entry_expression",
+      "actual_learning_path",
+      "exit_expression"
+    ],
+    "pathEvent": "opened",
+    "optionalSignals": [
+      "support_request",
+      "self_reflection",
+      "teacher_observation"
+    ]
+  },
+  "supportOptions": [
+    {
+      "id": "vocabulary",
+      "labelCn": "我缺少合适的词",
+      "labelEn": "I need the right words"
+    },
+    {
+      "id": "organization",
+      "labelCn": "我不知道怎样组织信息",
+      "labelEn": "I need help organizing my ideas"
+    },
+    {
+      "id": "structure",
+      "labelCn": "我需要一个句子结构",
+      "labelEn": "I need a sentence frame"
+    },
+    {
+      "id": "teacher",
+      "labelCn": "我想获得老师的帮助",
+      "labelEn": "I want help from the teacher"
+    }
+  ],
+  "feelingOptions": [
+    {
+      "id": "clearer",
+      "labelCn": "我说得更清楚了",
+      "labelEn": "My expression is clearer"
+    },
+    {
+      "id": "more_complete",
+      "labelCn": "我说得更完整了",
+      "labelEn": "My expression is more complete"
+    },
+    {
+      "id": "more_natural",
+      "labelCn": "我说得更自然了",
+      "labelEn": "My expression is more natural"
+    },
+    {
+      "id": "still_need_help",
+      "labelCn": "我还需要帮助",
+      "labelEn": "I still need help"
+    }
+  ],
+  "coreEvidence": [
+    "entry_expression",
+    "actual_learning_path",
+    "exit_expression"
+  ],
+  "capabilities": [
+    "select_text_mini_loop",
+    "launch_interaction",
+    "independent_answer",
+    "support_request",
+    "anonymous_return",
+    "open_support",
+    "reanswer",
+    "record_teacher_decision",
+    "compare_entry_exit",
+    "teacher_selected_vocabulary_focus",
+    "shared_countdown",
+    "native_course_resource_return"
+  ]
+}

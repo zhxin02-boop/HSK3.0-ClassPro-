@@ -9,7 +9,7 @@
   "sources": {
     "lesson": {
       "path": "../lessons/HSK3-L08.json",
-      "sha256": "B5C5BE30BEFAB5F8DEBD298810D2E5BE544618EC37B6C09C5051E8ED4D4B4694"
+      "sha256": "69BD49407B2C11212026F1FA6FE7F572523022BD929D106554880D357F9A3C94"
     },
     "teacher": {
       "path": "../../in-class/teacher.html"

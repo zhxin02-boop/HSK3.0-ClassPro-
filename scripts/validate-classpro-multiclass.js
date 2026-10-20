@@ -82,8 +82,8 @@ assert(gas.recordMatchesScope_(oldHsk3Row, { classId: 'ai26401-spring' }), 'Hist
 });
 
 const home = source('index.html');
-assert(home.includes('href="source/teacher/login.html"'), 'The main role page should lead teachers to login');
-assert(home.includes('href="source/student/entry.html"'), 'The main role page should lead students to class and name selection');
+assert(home.includes('/source/teacher/login.html"'), 'The main role page should lead teachers to login');
+assert(home.includes('/source/student/entry.html"'), 'The main role page should lead students to class and name selection');
 const studentEntry = source('source/student/entry.html');
 assert(studentEntry.includes('id="classSelect"') && studentEntry.includes('id="studentSelect"'), 'Student entry should ask for class and name');
 

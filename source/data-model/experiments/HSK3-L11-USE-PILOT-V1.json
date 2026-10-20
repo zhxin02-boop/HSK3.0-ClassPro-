@@ -1,0 +1,2732 @@
+{
+  "schemaVersion": "classpro-use-profile/v3",
+  "experiment": {
+    "id": "l11-use-pilot-v1",
+    "title": "第11课·以用为主线升级版",
+    "lessonLabel": "第11课",
+    "sourceLesson": "HSK3-L11",
+    "scope": "四个课文MINI循环；保留L11原有词汇、语法、课文和练习教学样式。"
+  },
+  "sources": {
+    "lesson": {
+      "path": "../lessons/HSK3-L11.json",
+      "sha256": "D31953DEF15BB9AC9170139A6B3DDF71B781856DB40FD19B9A59F46D912863B7"
+    },
+    "teacher": {
+      "path": "../../in-class/teacher.html"
+    },
+    "student": {
+      "path": "../../in-class/student.html"
+    }
+  },
+  "nativeTeaching": {
+    "preserveCourseStyles": true,
+    "grammar": {
+      "source": "formal_lesson",
+      "preserveExamples": true,
+      "preserveHighlights": true,
+      "preserveOralQuestions": true,
+      "preserveFollowUp": true
+    },
+    "text": {
+      "source": "formal_lesson",
+      "preservePresentation": true
+    }
+  },
+  "useGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "icon": "🗓️",
+      "label": "课文 1",
+      "title": "通知会议变化并做好准备",
+      "goal": "向同学或同事说明会议或小组活动的新安排，并确认设备和会前准备。",
+      "goalEn": "Announce a changed meeting or group activity and confirm equipment and preparation.",
+      "entry": {
+        "id": "l11_t1_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图。一次会议或小组活动改了，请先用一两句话告诉大家发生了什么。",
+        "promptEn": "Look at the picture and briefly tell the group what changed.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l11/photo-text-1-meeting-change.png",
+          "labelCn": "会议变化",
+          "altCn": "会议时间发生改变",
+          "instructionCn": "先看图，再用一两句话说明变化。"
+        }
+      },
+      "exit": {
+        "id": "l11_t1_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "请通知一次会议或小组活动的变化：说明变化原因、新时间、新地点、设备选择和会前准备。",
+        "promptEn": "Announce a meeting or group-activity change. Give the reason, new time, new place, equipment choice, and preparation."
+      },
+      "exitRequirements": [
+        {
+          "id": "reason",
+          "label": "变化原因"
+        },
+        {
+          "id": "time",
+          "label": "新时间"
+        },
+        {
+          "id": "place",
+          "label": "新地点"
+        },
+        {
+          "id": "equipment",
+          "label": "设备选择"
+        },
+        {
+          "id": "preparation",
+          "label": "会前准备"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t1_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "会议、开会、后天、地点、发、或者",
+          "contentEn": ""
+        },
+        {
+          "id": "t1_frame",
+          "labelCn": "句式提示",
+          "labelEn": "Support",
+          "contentCn": "我们用A还是B？／A或者B都可以。／因为……，所以……。／我们先把……准备好。",
+          "contentEn": ""
+        },
+        {
+          "id": "t1_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Support",
+          "contentCn": "为什么改 → 新时间 → 新地点 → 设备 → 准备",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l11_01",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文1词汇",
+          "vocabSession": "1"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“还是”和“或者”",
+          "grammarIndex": 0
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文1",
+          "textIndex": 0
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "g1",
+          "label": "连词成句：设备选择",
+          "routeState": {
+            "g1i": 0,
+            "g1s": [],
+            "g1a": [],
+            "g1sa": false
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l11_fill_a",
+          "status": "ready",
+          "purpose": "词汇填空"
+        },
+        {
+          "id": "l11_order_01",
+          "status": "ready",
+          "purpose": "连词成句"
+        },
+        {
+          "id": "l11_scene_01",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l11_scene_02",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l11_scene_03",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l11_match_a",
+          "status": "ready",
+          "purpose": "词语匹配"
+        },
+        {
+          "id": "l11_pic_01",
+          "status": "ready",
+          "purpose": "看图表达"
+        },
+        {
+          "id": "l11_task_01",
+          "status": "ready",
+          "purpose": "表达任务"
+        },
+        {
+          "id": "l11_para_01",
+          "status": "ready",
+          "purpose": "段落填空"
+        },
+        {
+          "id": "l11_pic_02",
+          "status": "needs_revision",
+          "purpose": "看图表达"
+        },
+        {
+          "id": "l11_blind_01",
+          "status": "optional",
+          "purpose": "盲盒"
+        },
+        {
+          "id": "l11_chain_01",
+          "status": "optional",
+          "purpose": "接力表达"
+        },
+        {
+          "id": "l11_read_01",
+          "status": "optional",
+          "purpose": "独立阅读"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "icon": "💻",
+      "label": "课文 2",
+      "title": "判断设备问题并请求帮助",
+      "goal": "根据看见或听见的情况判断设备可能出了什么问题，并向别人求助。",
+      "goalEn": "Infer an equipment problem from what can be seen or heard and ask for help.",
+      "entry": {
+        "id": "l11_t2_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "电脑用不了，请说说你觉得可能是什么问题，请别人帮忙。",
+        "promptEn": "The computer is not working. Say what the problem may be and ask someone for help.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l11/photo-text-2-no-picture.png",
+          "labelCn": "电脑故障",
+          "altCn": "电脑已经连接但屏幕没有画面",
+          "instructionCn": "根据图中的现象判断问题。"
+        }
+      },
+      "exit": {
+        "id": "l11_t2_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "电脑用不了。请根据看到或听到的情况，说说可能是什么问题、你试过什么、为什么还没解决，并请别人帮忙。",
+        "promptEn": "Use what you can see or hear to explain the likely problem, what you tried, why it is not solved, and ask for help."
+      },
+      "exitRequirements": [
+        {
+          "id": "symptom",
+          "label": "至少一个现象"
+        },
+        {
+          "id": "attempt",
+          "label": "已经试过的动作"
+        },
+        {
+          "id": "inference",
+          "label": "用“看来”判断"
+        },
+        {
+          "id": "help",
+          "label": "提出求助"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t2_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "声音、看来、办法、解决、只能、别人",
+          "contentEn": ""
+        },
+        {
+          "id": "t2_frame",
+          "labelCn": "句式提示",
+          "labelEn": "Support",
+          "contentCn": "现在……看不见／听不见。／我检查了……。／看来……。／我只能找……帮忙。",
+          "contentEn": ""
+        },
+        {
+          "id": "t2_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Support",
+          "contentCn": "看到／听到什么 → 试了什么 → 怎么判断 → 请谁帮忙",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l11_02",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文2词汇",
+          "vocabSession": "2"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "固定短语“看来”",
+          "grammarIndex": 1
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文2",
+          "textIndex": 1
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "g1",
+          "label": "连词成句：根据现象说结论",
+          "routeState": {
+            "g1i": 1,
+            "g1s": [],
+            "g1a": [],
+            "g1sa": false
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l11_fill_b",
+          "status": "ready",
+          "purpose": "词汇填空"
+        },
+        {
+          "id": "l11_order_02",
+          "status": "ready",
+          "purpose": "连词成句"
+        },
+        {
+          "id": "l11_scene_04",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l11_scene_05",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l11_scene_06",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l11_match_b",
+          "status": "ready",
+          "purpose": "词语匹配"
+        },
+        {
+          "id": "l11_pic_03",
+          "status": "ready",
+          "purpose": "看图表达"
+        },
+        {
+          "id": "l11_pic_04",
+          "status": "ready",
+          "purpose": "看图表达"
+        },
+        {
+          "id": "l11_task_02",
+          "status": "ready",
+          "purpose": "表达任务"
+        },
+        {
+          "id": "l11_blind_02",
+          "status": "ready",
+          "purpose": "盲盒"
+        },
+        {
+          "id": "l11_para_02",
+          "status": "ready",
+          "purpose": "段落填空"
+        },
+        {
+          "id": "l11_chain_02",
+          "status": "optional",
+          "purpose": "接力表达"
+        },
+        {
+          "id": "l11_read_02",
+          "status": "optional",
+          "purpose": "独立阅读"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "icon": "👥",
+      "label": "课文 3",
+      "title": "说明缺席、重新分工和可能影响",
+      "goal": "有人不能参加时，向小组说明缺席情况、重新安排工作并判断可能的影响。",
+      "goalEn": "Explain an absence, reassign work and describe a possible effect.",
+      "entry": {
+        "id": "l11_t3_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "今天有人不能来。请每个人先写一个简单提纲：谁不能来、大家现在怎么做、可能会怎么样。\n缺席：____\n新分工：____\n可能的影响：____",
+        "promptEn": "Someone cannot come today. Write a short personal outline about the absence, the new work plan, and a possible effect.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l11/photo-text-3-workload.png",
+          "labelCn": "人员与工作量",
+          "altCn": "人员减少但工作仍然很多",
+          "instructionCn": "根据图中情况完成三行个人提纲。"
+        }
+      },
+      "exit": {
+        "id": "l11_t3_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "今天有人不能来，请说说缺席的情况、新的分工，可能会有的影响。\n缺席：____\n新分工：____\n可能的影响：____",
+        "promptEn": "Explain who is absent, the new division of work, and one possible effect."
+      },
+      "exitRequirements": [
+        {
+          "id": "absence",
+          "label": "缺席情况"
+        },
+        {
+          "id": "assignment",
+          "label": "谁接手什么"
+        },
+        {
+          "id": "effect",
+          "label": "一个可能影响"
+        },
+        {
+          "id": "language",
+          "label": "本课词语或“把……做完”"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t3_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "请假、同事、休假、怕、邮箱",
+          "contentEn": ""
+        },
+        {
+          "id": "t3_frame",
+          "labelCn": "句式提示",
+          "labelEn": "Support",
+          "contentCn": "……因为……请假了。／我来……，你来……。／我们一起把……做完。／我怕……。",
+          "contentEn": ""
+        },
+        {
+          "id": "t3_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Support",
+          "contentCn": "谁不来 → 为什么 → 谁做什么 → 可能怎么样",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l11_03",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文3词汇",
+          "vocabSession": "3"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“把”字句（3）：动作产生结果",
+          "grammarIndex": 2
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文3",
+          "textIndex": 2
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "g1",
+          "label": "连词成句：把工作做完",
+          "routeState": {
+            "g1i": 2,
+            "g1s": [],
+            "g1a": [],
+            "g1sa": false
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l11_order_03",
+          "status": "ready",
+          "purpose": "连词成句"
+        },
+        {
+          "id": "l11_scene_07",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l11_scene_08",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l11_pic_05",
+          "status": "ready",
+          "purpose": "看图表达"
+        },
+        {
+          "id": "l11_task_03",
+          "status": "ready",
+          "purpose": "表达任务"
+        },
+        {
+          "id": "l11_para_03",
+          "status": "ready",
+          "purpose": "段落填空"
+        },
+        {
+          "id": "l11_fill_c",
+          "status": "needs_revision",
+          "purpose": "词汇填空"
+        },
+        {
+          "id": "l11_pic_06",
+          "status": "needs_revision",
+          "purpose": "看图表达"
+        },
+        {
+          "id": "l11_order_04",
+          "status": "optional",
+          "purpose": "连词成句"
+        },
+        {
+          "id": "l11_blind_03",
+          "status": "optional",
+          "purpose": "盲盒"
+        },
+        {
+          "id": "l11_chain_03",
+          "status": "optional",
+          "purpose": "接力表达"
+        },
+        {
+          "id": "l11_read_03",
+          "status": "optional",
+          "purpose": "独立阅读"
+        },
+        {
+          "id": "l11_match_c",
+          "status": "optional",
+          "purpose": "词语匹配"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "icon": "🏙️",
+      "label": "课文 4",
+      "title": "说明是否接受外地机会",
+      "goal": "面对去另一个城市工作或学习的机会，说明自己的选择和理由。",
+      "goalEn": "Explain a decision about a work or study opportunity in another city.",
+      "entry": {
+        "id": "l11_t4_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "有人请你去别的城市工作或学习。你愿意吗？请简单说一个理由。",
+        "promptEn": "You have an opportunity to work or study in another city. Say whether you are willing to go and give one reason.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l11/photo-text-4-diary-choice.png",
+          "labelCn": "外地机会",
+          "altCn": "个人在工作机会、生活和家人之间作选择",
+          "instructionCn": "根据图中的选择情境表达自己的决定。"
+        }
+      },
+      "exit": {
+        "id": "l11_t4_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "有人给你一个去别的城市工作或学习的机会。请说明你愿不愿意、这个机会有什么好处、你最在意什么，并说出最后的选择。",
+        "promptEn": "Explain whether you would accept an opportunity in another city, its benefit, what matters most to you, and your final choice."
+      },
+      "exitRequirements": [
+        {
+          "id": "decision",
+          "label": "愿意或不愿意"
+        },
+        {
+          "id": "benefit",
+          "label": "机会的好处"
+        },
+        {
+          "id": "priority",
+          "label": "最在意的事"
+        },
+        {
+          "id": "view",
+          "label": "用“对……来说”表达看法"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t4_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "愿意、城市、离开、机会、生活",
+          "contentEn": ""
+        },
+        {
+          "id": "t4_frame",
+          "labelCn": "句式提示",
+          "labelEn": "Support",
+          "contentCn": "虽然……，但是……。／对我来说，……很重要。／我愿意／不愿意……，因为……。",
+          "contentEn": ""
+        },
+        {
+          "id": "t4_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Support",
+          "contentCn": "机会是什么 → 好处 → 自己在意什么 → 最后选择",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l11_04",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文4词汇",
+          "vocabSession": "4"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "固定格式“对……来说”",
+          "grammarIndex": 3
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文4",
+          "textIndex": 3
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "g2p",
+          "label": "看图表达：重要选择",
+          "routeState": {
+            "g2pi": 7
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l11_order_05",
+          "status": "ready",
+          "purpose": "连词成句"
+        },
+        {
+          "id": "l11_scene_09",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l11_scene_10",
+          "status": "ready",
+          "purpose": "情境选择"
+        },
+        {
+          "id": "l11_guess_10",
+          "status": "ready",
+          "purpose": "猜词"
+        },
+        {
+          "id": "l11_say_07",
+          "status": "ready",
+          "purpose": "看图说词"
+        },
+        {
+          "id": "l11_say_08",
+          "status": "ready",
+          "purpose": "看图说词"
+        },
+        {
+          "id": "l11_blind_04",
+          "status": "ready",
+          "purpose": "盲盒"
+        },
+        {
+          "id": "l11_pic_07",
+          "status": "ready",
+          "purpose": "看图表达"
+        },
+        {
+          "id": "l11_pic_08",
+          "status": "ready",
+          "purpose": "看图表达"
+        },
+        {
+          "id": "l11_task_04",
+          "status": "ready",
+          "purpose": "表达任务"
+        },
+        {
+          "id": "l11_para_04",
+          "status": "ready",
+          "purpose": "段落填空"
+        },
+        {
+          "id": "l11_ind_read_04",
+          "status": "ready",
+          "purpose": "独立阅读"
+        },
+        {
+          "id": "l11_chain_04",
+          "status": "optional",
+          "purpose": "接力表达"
+        },
+        {
+          "id": "l11_task_05",
+          "status": "optional",
+          "purpose": "备用任务"
+        },
+        {
+          "id": "l11_match_c",
+          "status": "optional",
+          "purpose": "词语匹配"
+        }
+      ]
+    }
+  ],
+  "textLearning": [
+    {
+      "textId": "t_hsk3_l11_01",
+      "useGroupId": "T1",
+      "title": "会议改时间和地点",
+      "overviewChoices": [
+        {
+          "id": "l11_t1_overall_01",
+          "focus": "main_idea",
+          "questionCn": "两个人主要在说哪一件事？",
+          "options": [
+            "怎么安排新的会议",
+            "怎么买一台新电脑",
+            "怎么请经理吃饭"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l11_t1_overall_02",
+          "focus": "development",
+          "questionCn": "两个人先说什么，后来又说什么？",
+          "options": [
+            "先问今天的会议，后来说明新的会议和准备",
+            "先修电脑，后来买电脑",
+            "先吃饭，后来回家"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l11_t1_overall_03",
+          "focus": "purpose",
+          "questionCn": "下面哪句话能把整段对话说清楚？",
+          "options": [
+            "会议的事改了，大家开会前还要准备。",
+            "会议已经开完了，大家可以回家。",
+            "两个人决定以后都不开会了。"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l11_t1_detail_01",
+          "questionCn": "今天下午为什么不开会？",
+          "questionPinyin": "Jīntiān xiàwǔ wèishénme bù kāihuì?",
+          "answer": "因为经理不在。",
+          "answerPinyin": "Yīnwèi jīnglǐ bú zài.",
+          "acceptedAnswers": [
+            "因为经理不在",
+            "经理不在"
+          ],
+          "informationPoint": "会议取消的原因"
+        },
+        {
+          "id": "l11_t1_detail_02",
+          "questionCn": "新的会议什么时候、在哪儿开？",
+          "questionPinyin": "Xīn de huìyì shénme shíhou, zài nǎr kāi?",
+          "answer": "后天上午十点，在第一会议室。",
+          "answerPinyin": "Hòutiān shàngwǔ shí diǎn, zài dì-yī huìyìshì.",
+          "acceptedAnswers": [
+            "后天上午十点，在第一会议室",
+            "后天十点，第一会议室"
+          ],
+          "informationPoint": "新时间和新地点"
+        },
+        {
+          "id": "l11_t1_detail_03",
+          "questionCn": "王一雪想在开会前请杨同乐做什么？",
+          "questionPinyin": "Wáng Yīxuě xiǎng zài kāihuì qián qǐng Yáng Tónglè zuò shénme?",
+          "answer": "早点儿过去，帮她把电脑接好。",
+          "answerPinyin": "Zǎodiǎnr guòqu, bāng tā bǎ diànnǎo jiēhǎo.",
+          "acceptedAnswers": [
+            "帮她把电脑接好",
+            "早点儿过去接好电脑"
+          ],
+          "informationPoint": "会前准备及人物关系"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "我们用会议室的电脑还是自己的笔记本电脑？／会议室的电脑或者自己的电脑都可以。",
+        "focus": "选择疑问句用“还是”；陈述可选办法用“或者”",
+        "actionLabel": "进入“还是”和“或者”",
+        "grammarIndex": 0
+      },
+      "paragraphPractice": {
+        "label": "调用“会议通知”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 0
+      },
+      "lifeTransfer": {
+        "promptCn": "请通知一次会议或小组活动的变化：说明变化原因、新时间、新地点、设备选择和会前准备。",
+        "promptEn": "Announce a meeting or group-activity change. Give the reason, new time, new place, equipment choice, and preparation."
+      }
+    },
+    {
+      "textId": "t_hsk3_l11_02",
+      "useGroupId": "T2",
+      "title": "会议室设备问题",
+      "overviewChoices": [
+        {
+          "id": "l11_t2_overall_01",
+          "focus": "main_idea",
+          "questionCn": "两个人主要在做什么？",
+          "options": [
+            "检查电脑并想办法解决问题",
+            "选择会议时间",
+            "写一封工作邮件"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l11_t2_overall_02",
+          "focus": "development",
+          "questionCn": "他们试了电脑以后，电脑怎么样？",
+          "options": [
+            "还有问题。",
+            "什么问题都没有了。",
+            "他们一直没有开机。"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l11_t2_overall_03",
+          "focus": "purpose",
+          "questionCn": "这段对话最后想做什么？",
+          "options": [
+            "把问题说清楚，再请别人帮忙",
+            "告诉大家会议取消了",
+            "请大家马上回家"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l11_t2_detail_01",
+          "questionCn": "王一雪第一次开机以后看见什么？",
+          "questionPinyin": "Wáng Yīxuě dì-yī cì kāijī yǐhòu kànjiàn shénme?",
+          "answer": "她什么都看不见。",
+          "answerPinyin": "Tā shénme dōu kàn bu jiàn.",
+          "acceptedAnswers": [
+            "什么都看不见",
+            "看不见画面"
+          ],
+          "informationPoint": "最初现象"
+        },
+        {
+          "id": "l11_t2_detail_02",
+          "questionCn": "有画面以后，声音还有哪两个问题？",
+          "questionPinyin": "Yǒu huàmiàn yǐhòu, shēngyīn hái yǒu nǎ liǎng ge wèntí?",
+          "answer": "声音有点儿小，而且听不清楚。",
+          "answerPinyin": "Shēngyīn yǒudiǎnr xiǎo, érqiě tīng bu qīngchu.",
+          "acceptedAnswers": [
+            "声音小，听不清楚",
+            "声音有点儿小，听不清楚"
+          ],
+          "informationPoint": "问题的继续和改变"
+        },
+        {
+          "id": "l11_t2_detail_03",
+          "questionCn": "杨同乐为什么决定找别人帮忙？",
+          "questionPinyin": "Yáng Tónglè wèishénme juédìng zhǎo biérén bāngmáng?",
+          "answer": "因为试了以后还有问题，他没办法解决。",
+          "answerPinyin": "Yīnwèi shì le yǐhòu hái yǒu wèntí, tā méi bànfǎ jiějué.",
+          "acceptedAnswers": [
+            "因为他没办法解决",
+            "试了以后还有问题"
+          ],
+          "informationPoint": "求助的理由和课文依据"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "看来我没办法解决这个问题，只能找别人来帮帮忙了。",
+        "focus": "已看到／听到的情况 + 看来 + 结论",
+        "actionLabel": "进入固定短语“看来”",
+        "grammarIndex": 1
+      },
+      "paragraphPractice": {
+        "label": "调用“设备检查”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 1
+      },
+      "lifeTransfer": {
+        "promptCn": "电脑用不了。请根据看到或听到的情况，说说可能是什么问题、你试过什么、为什么还没解决，并请别人帮忙。",
+        "promptEn": "Use what you can see or hear to explain the likely problem, what you tried, why it is not solved, and ask for help."
+      }
+    },
+    {
+      "textId": "t_hsk3_l11_03",
+      "useGroupId": "T3",
+      "title": "一起把工作做完",
+      "overviewChoices": [
+        {
+          "id": "l11_t3_overall_01",
+          "focus": "main_idea",
+          "questionCn": "两个人主要在说什么？",
+          "options": [
+            "有人没来，工作要重新安排",
+            "大家一起去上海工作",
+            "电脑没有声音"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l11_t3_overall_02",
+          "focus": "development",
+          "questionCn": "王一雪开始和最后有什么不一样？",
+          "options": [
+            "开始有点儿着急，最后不着急了。",
+            "开始不想吃饭，最后生气了。",
+            "开始没有工作，最后工作更多了。"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l11_t3_overall_03",
+          "focus": "purpose",
+          "questionCn": "下面哪句话最适合这段对话？",
+          "options": [
+            "先看看新的消息，再决定是不是着急。",
+            "工作多的时候不能吃饭。",
+            "同事请假以后一定要取消工作。"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l11_t3_detail_01",
+          "questionCn": "老张为什么没来？",
+          "questionPinyin": "Lǎo Zhāng wèishénme méi lái?",
+          "answer": "因为家里有点儿事，所以请假了。",
+          "answerPinyin": "Yīnwèi jiā li yǒudiǎnr shì, suǒyǐ qǐngjià le.",
+          "acceptedAnswers": [
+            "家里有事，请假了",
+            "因为家里有事"
+          ],
+          "informationPoint": "缺席原因"
+        },
+        {
+          "id": "l11_t3_detail_02",
+          "questionCn": "王一雪为什么怕工作干不完？",
+          "questionPinyin": "Wáng Yīxuě wèishénme pà gōngzuò gàn bu wán?",
+          "answer": "因为好几个同事休假了，开会前还有很多工作。",
+          "answerPinyin": "Yīnwèi hǎo jǐ ge tóngshì xiūjià le, kāihuì qián hái yǒu hěn duō gōngzuò.",
+          "acceptedAnswers": [
+            "同事休假，工作很多",
+            "好几个同事休假了"
+          ],
+          "informationPoint": "人员与工作量的关系"
+        },
+        {
+          "id": "l11_t3_detail_03",
+          "questionCn": "王一雪后来为什么不着急了？",
+          "questionPinyin": "Wáng Yīxuě hòulái wèishénme bù zháojí le?",
+          "answer": "因为经理还没回来，下周才能开会。",
+          "answerPinyin": "Yīnwèi jīnglǐ hái méi huílái, xià zhōu cái néng kāihuì.",
+          "acceptedAnswers": [
+            "下周才开会",
+            "经理没回来，会议在下周"
+          ],
+          "informationPoint": "新消息带来的改变"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "吃完饭，我跟您一起把这些工作做完。",
+        "focus": "主语 + 把 + 确定宾语 + 动词 + 结果补语",
+        "actionLabel": "进入“把”字句（3）",
+        "grammarIndex": 2
+      },
+      "paragraphPractice": {
+        "label": "调用“团队分工”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 2
+      },
+      "lifeTransfer": {
+        "promptCn": "今天有人不能来，请说说缺席的情况、新的分工，可能会有的影响。\n缺席：____\n新分工：____\n可能的影响：____",
+        "promptEn": "Explain who is absent, the new division of work, and one possible effect."
+      }
+    },
+    {
+      "textId": "t_hsk3_l11_04",
+      "useGroupId": "T4",
+      "title": "工作机会与重要选择",
+      "overviewChoices": [
+        {
+          "id": "l11_t4_overall_01",
+          "focus": "main_idea",
+          "questionCn": "王一雪主要在想什么？",
+          "options": [
+            "要不要去上海工作",
+            "要不要买新电脑",
+            "要不要请一天假"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l11_t4_overall_02",
+          "focus": "development",
+          "questionCn": "这篇日记前面写什么，后面写什么？",
+          "options": [
+            "前面写别人问她去不去上海，后面写她自己的想法。",
+            "前面写孩子上学，后面写丈夫回家。",
+            "前面写北京的天气，后面写上海的天气。"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l11_t4_overall_03",
+          "focus": "purpose",
+          "questionCn": "她写这篇日记，主要想说明什么？",
+          "options": [
+            "她为什么不愿意离开家人去上海",
+            "她为什么喜欢上海的天气",
+            "她怎样安排下一次会议"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l11_t4_detail_01",
+          "questionCn": "上海的同事问王一雪什么？",
+          "questionPinyin": "Shànghǎi de tóngshì wèn Wáng Yīxuě shénme?",
+          "answer": "问她愿不愿意也去上海工作。",
+          "answerPinyin": "Wèn tā yuàn bu yuànyì yě qù Shànghǎi gōngzuò.",
+          "acceptedAnswers": [
+            "愿不愿意去上海工作",
+            "问她要不要去上海工作"
+          ],
+          "informationPoint": "工作机会的来源"
+        },
+        {
+          "id": "l11_t4_detail_02",
+          "questionCn": "如果王一雪去别的城市工作，她的生活会有什么不同？",
+          "questionPinyin": "Rúguǒ Wáng Yīxuě qù biéde chéngshì gōngzuò, tā de shēnghuó huì yǒu shénme bù tóng?",
+          "answer": "她要离开丈夫和孩子。",
+          "answerPinyin": "Tā yào líkāi zhàngfu hé háizi.",
+          "acceptedAnswers": [
+            "要离开家人",
+            "离开丈夫和孩子"
+          ],
+          "informationPoint": "选择带来的结果"
+        },
+        {
+          "id": "l11_t4_detail_03",
+          "questionCn": "上海可能有更好的机会，她为什么还是不愿意去？",
+          "questionPinyin": "Shànghǎi kěnéng yǒu gèng hǎo de jīhuì, tā wèishénme háishi bú yuànyì qù?",
+          "answer": "因为对她来说生活和家人也很重要。",
+          "answerPinyin": "Yīnwèi duì tā lái shuō shēnghuó hé jiārén yě hěn zhòngyào.",
+          "acceptedAnswers": [
+            "生活和家人很重要",
+            "她不愿意离开家人"
+          ],
+          "informationPoint": "最后选择及理由"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "但是对我来说，生活也很重要。",
+        "focus": "对 + 人／对象 + 来说，观点、感受或重要性",
+        "actionLabel": "进入固定格式“对……来说”",
+        "grammarIndex": 3
+      },
+      "paragraphPractice": {
+        "label": "调用“城市机会”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 3
+      },
+      "lifeTransfer": {
+        "promptCn": "有人给你一个去别的城市工作或学习的机会。请说明你愿不愿意、这个机会有什么好处、你最在意什么，并说出最后的选择。",
+        "promptEn": "Explain whether you would accept an opportunity in another city, its benefit, what matters most to you, and your final choice."
+      }
+    }
+  ],
+  "vocabularyTaskTypes": [
+    {
+      "id": "recognition",
+      "labelCn": "认读",
+      "labelEn": "Recognition"
+    },
+    {
+      "id": "shape",
+      "labelCn": "辨形",
+      "labelEn": "Character form"
+    },
+    {
+      "id": "input",
+      "labelCn": "输入",
+      "labelEn": "Type the word"
+    },
+    {
+      "id": "collocation",
+      "labelCn": "搭配与使用",
+      "labelEn": "Collocation and use"
+    }
+  ],
+  "timerPolicy": {
+    "miniLoop": {
+      "optionsMinutes": [
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 3
+    },
+    "vocabularyFocus": {
+      "optionsMinutes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 2
+    },
+    "autoClose": false
+  },
+  "vocabularyCatalog": [
+    {
+      "id": "v11_01",
+      "hanzi": "会议",
+      "pinyin": "huìyì",
+      "english": "meeting; conference",
+      "meaningCn": "大家一起谈工作或重要事情。",
+      "phrases": [
+        "参加会议",
+        "会议时间"
+      ],
+      "example": "后天上午十点有一个会议。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_02",
+      "hanzi": "经理",
+      "pinyin": "jīnglǐ",
+      "english": "manager",
+      "meaningCn": "在公司里负责很多工作的人。",
+      "phrases": [
+        "公司经理",
+        "问经理"
+      ],
+      "example": "经理今天下午不在办公室。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v11_03",
+      "hanzi": "开会",
+      "pinyin": "kāihuì",
+      "english": "have a meeting",
+      "meaningCn": "大家在一起谈工作。",
+      "phrases": [
+        "去开会",
+        "开会时间"
+      ],
+      "example": "我们后天上午十点开会。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_04",
+      "hanzi": "后天",
+      "pinyin": "hòutiān",
+      "english": "the day after tomorrow",
+      "meaningCn": "明天的下一天。",
+      "phrases": [
+        "后天上午",
+        "后天见"
+      ],
+      "example": "后天我们在第一会议室见。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_05",
+      "hanzi": "地点",
+      "pinyin": "dìdiǎn",
+      "english": "place; location",
+      "meaningCn": "一件事在哪里发生。",
+      "phrases": [
+        "会议地点",
+        "活动地点"
+      ],
+      "example": "请告诉大家新的会议地点。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v11_06",
+      "hanzi": "室",
+      "pinyin": "shì",
+      "english": "room",
+      "meaningCn": "房间，如教室、会议室。",
+      "phrases": [
+        "会议室",
+        "办公室"
+      ],
+      "example": "我们在第一会议室开会。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v11_07",
+      "hanzi": "发",
+      "pinyin": "fā",
+      "english": "send",
+      "meaningCn": "把邮件或信息送给别人。",
+      "phrases": [
+        "发邮件",
+        "发信息"
+      ],
+      "example": "我正要给大家发邮件。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v11_08",
+      "hanzi": "笔记本（电脑）",
+      "pinyin": "bǐjìběn (diànnǎo)",
+      "english": "laptop",
+      "meaningCn": "可以带着走的小电脑。",
+      "phrases": [
+        "笔记本电脑",
+        "自己的电脑"
+      ],
+      "example": "请把笔记本电脑接好。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v11_09",
+      "hanzi": "或者",
+      "pinyin": "huòzhě",
+      "english": "or; alternatively",
+      "meaningCn": "说明两个或几个都可以选择。",
+      "phrases": [
+        "或者……",
+        "A或者B"
+      ],
+      "example": "你可以用会议室的电脑或者自己的电脑。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_10",
+      "hanzi": "声音",
+      "pinyin": "shēngyīn",
+      "english": "sound; voice",
+      "meaningCn": "人说话或东西发出的、可以听见的东西。",
+      "phrases": [
+        "声音太小",
+        "听见声音"
+      ],
+      "example": "现在听得见声音了。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v11_11",
+      "hanzi": "看来",
+      "pinyin": "kànlái",
+      "english": "it seems; apparently",
+      "meaningCn": "根据已经看到或听到的情况说自己的想法。",
+      "phrases": [
+        "看来……",
+        "在我看来"
+      ],
+      "example": "灯都关了，看来他们已经走了。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_12",
+      "hanzi": "办法",
+      "pinyin": "bànfǎ",
+      "english": "way; approach",
+      "meaningCn": "解决问题可以怎么做。",
+      "phrases": [
+        "想办法",
+        "没有办法"
+      ],
+      "example": "我们一起想个办法吧。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_13",
+      "hanzi": "解决",
+      "pinyin": "jiějué",
+      "english": "solve; resolve",
+      "meaningCn": "把问题处理好，让问题不再有。",
+      "phrases": [
+        "解决问题",
+        "自己解决"
+      ],
+      "example": "他正在解决电脑的问题。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_14",
+      "hanzi": "只能",
+      "pinyin": "zhǐ néng",
+      "english": "can only; have no choice but to",
+      "meaningCn": "没有别的选择，只可以这样做。",
+      "phrases": [
+        "只能这样",
+        "只能请人"
+      ],
+      "example": "我不会修，只能找别人帮忙。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_15",
+      "hanzi": "别人",
+      "pinyin": "biérén",
+      "english": "someone else; other people",
+      "meaningCn": "自己以外的人。",
+      "phrases": [
+        "帮助别人",
+        "找别人"
+      ],
+      "example": "这个问题可以请别人帮忙。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_16",
+      "hanzi": "请假",
+      "pinyin": "qǐngjià",
+      "english": "ask for leave",
+      "meaningCn": "因为有事，告诉老师或经理自己不能来。",
+      "phrases": [
+        "向经理请假",
+        "请一天假"
+      ],
+      "example": "老张家里有事，所以请假了。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v11_17",
+      "hanzi": "同事",
+      "pinyin": "tóngshì",
+      "english": "colleague",
+      "meaningCn": "和自己在同一个地方工作的人。",
+      "phrases": [
+        "公司同事",
+        "帮助同事"
+      ],
+      "example": "好几个同事今天都不在。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_18",
+      "hanzi": "休假",
+      "pinyin": "xiūjià",
+      "english": "take a vacation; be on leave",
+      "meaningCn": "一段时间不工作，休息或出去玩。",
+      "phrases": [
+        "出去休假",
+        "休假回来"
+      ],
+      "example": "这个星期有两个同事休假。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_19",
+      "hanzi": "怕",
+      "pinyin": "pà",
+      "english": "fear; be afraid that",
+      "meaningCn": "担心不好的事情发生。",
+      "phrases": [
+        "害怕",
+        "怕来不及"
+      ],
+      "example": "工作太多，我怕今天做不完。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v11_20",
+      "hanzi": "邮箱",
+      "pinyin": "yóuxiāng",
+      "english": "email address; mailbox",
+      "meaningCn": "收到和发送电子邮件的地方。",
+      "phrases": [
+        "公司邮箱",
+        "发到邮箱"
+      ],
+      "example": "请把材料发到公司的邮箱里。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_21",
+      "hanzi": "愿意",
+      "pinyin": "yuànyì",
+      "english": "be willing to",
+      "meaningCn": "自己想这样做，也可以这样做。",
+      "phrases": [
+        "愿意帮忙",
+        "愿不愿意"
+      ],
+      "example": "你愿意参加这个小组吗？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_22",
+      "hanzi": "城市",
+      "pinyin": "chéngshì",
+      "english": "city",
+      "meaningCn": "人很多、房子和工作也很多的地方。",
+      "phrases": [
+        "大城市",
+        "别的城市"
+      ],
+      "example": "你最想在哪个城市生活？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v11_23",
+      "hanzi": "离开",
+      "pinyin": "líkāi",
+      "english": "leave",
+      "meaningCn": "从一个人或地方旁边走开。",
+      "phrases": [
+        "离开北京",
+        "离开家人"
+      ],
+      "example": "她不愿意离开家人。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_24",
+      "hanzi": "机会",
+      "pinyin": "jīhuì",
+      "english": "opportunity; chance",
+      "meaningCn": "可以做一件好事的时间或可能。",
+      "phrases": [
+        "工作机会",
+        "好机会"
+      ],
+      "example": "这是一个学习汉语的好机会。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v11_25",
+      "hanzi": "生活",
+      "pinyin": "shēnghuó",
+      "english": "life; live",
+      "meaningCn": "人每天怎么住、工作、学习和休息。",
+      "phrases": [
+        "城市生活",
+        "生活习惯"
+      ],
+      "example": "对我来说，生活也很重要。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v11_26",
+      "hanzi": "为",
+      "pinyin": "wèi",
+      "english": "for; for the sake of",
+      "meaningCn": "表示给谁或因为谁做一件事。",
+      "phrases": [
+        "为了工作",
+        "为家人"
+      ],
+      "example": "她不愿意为工作离开家人。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v11_27",
+      "hanzi": "或",
+      "pinyin": "huò",
+      "english": "or",
+      "meaningCn": "和“或者”意思相近，连接两个选择。",
+      "phrases": [
+        "A或B",
+        "工作或学习"
+      ],
+      "example": "你可以选择工作、学习或休息。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    }
+  ],
+  "vocabularyGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "title": "通知会议变化并做好准备",
+      "wordIds": [
+        "v11_01",
+        "v11_02",
+        "v11_03",
+        "v11_04",
+        "v11_05",
+        "v11_06",
+        "v11_07",
+        "v11_08",
+        "v11_09"
+      ],
+      "recognitionWordIds": [
+        "v11_01",
+        "v11_02",
+        "v11_03",
+        "v11_04",
+        "v11_05",
+        "v11_06",
+        "v11_07",
+        "v11_08",
+        "v11_09"
+      ],
+      "activities": [
+        {
+          "id": "l11_m1_v01_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_01"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "我们下午三点有一个____。",
+          "answer": "会议",
+          "acceptedAnswers": [
+            "会议"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m1_v01_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_01"
+          ],
+          "promptCn": "用“参加会议”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "参加会议",
+          "answer": "我明天上午要参加会议。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m1_v03_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_03"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "经理后天上午十点____。",
+          "answer": "开会",
+          "acceptedAnswers": [
+            "开会"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m1_v03_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_03"
+          ],
+          "promptCn": "用“去开会”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "去开会",
+          "answer": "我们九点去第一会议室开会。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m1_v04_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_04"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "今天是星期一，____是星期三。",
+          "answer": "后天",
+          "acceptedAnswers": [
+            "后天"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m1_v04_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_04"
+          ],
+          "promptCn": "用“后天上午”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "后天上午",
+          "answer": "会议改到后天上午十点。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m1_v05_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_05"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "活动的____改到三号教室。",
+          "answer": "地点",
+          "acceptedAnswers": [
+            "地点"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m1_v05_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_05"
+          ],
+          "promptCn": "用“会议地点”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "会议地点",
+          "answer": "会议地点换到第一会议室。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m1_v07_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_07"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "我现在给大家____邮件。",
+          "answer": "发",
+          "acceptedAnswers": [
+            "发"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m1_v07_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_07"
+          ],
+          "promptCn": "用“发邮件”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "发邮件",
+          "answer": "我会给大家发邮件，告诉他们新时间。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m1_v09_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_09"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "会议室的电脑____自己的电脑都可以。",
+          "answer": "或者",
+          "acceptedAnswers": [
+            "或者"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m1_v09_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_09"
+          ],
+          "promptCn": "用“A或者B”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "A或者B",
+          "answer": "你可以带笔记本电脑，或者用会议室的电脑。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m1_v05_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v11_05"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "Choose the correct character from the pinyin.",
+          "stimulus": "dì",
+          "answer": "地",
+          "acceptedAnswers": [
+            "地"
+          ],
+          "options": [
+            "地",
+            "他"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m1_v07_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v11_07"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "Choose the correct character from the pinyin.",
+          "stimulus": "fā",
+          "answer": "发",
+          "acceptedAnswers": [
+            "发"
+          ],
+          "options": [
+            "发",
+            "友"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "title": "判断设备问题并请求帮助",
+      "wordIds": [
+        "v11_10",
+        "v11_11",
+        "v11_12",
+        "v11_13",
+        "v11_14",
+        "v11_15"
+      ],
+      "recognitionWordIds": [
+        "v11_10",
+        "v11_11",
+        "v11_12",
+        "v11_13",
+        "v11_14",
+        "v11_15"
+      ],
+      "activities": [
+        {
+          "id": "l11_m2_v10_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_10"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "我看见画面了，但是听不见____。",
+          "answer": "声音",
+          "acceptedAnswers": [
+            "声音"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m2_v10_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_10"
+          ],
+          "promptCn": "用“声音太小”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "声音太小",
+          "answer": "声音太小，我听不清楚。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m2_v11_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_11"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "试了几次还不行，____要找别人帮忙了。",
+          "answer": "看来",
+          "acceptedAnswers": [
+            "看来"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m2_v11_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_11"
+          ],
+          "promptCn": "用“看来……”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "看来……",
+          "answer": "看来我没办法自己解决这个问题。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m2_v12_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_12"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "这个问题很难，我现在没有____。",
+          "answer": "办法",
+          "acceptedAnswers": [
+            "办法"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m2_v12_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_12"
+          ],
+          "promptCn": "用“想办法”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "想办法",
+          "answer": "我们一起想办法解决这个问题。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m2_v13_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_13"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "谁能帮我____这个电脑问题？",
+          "answer": "解决",
+          "acceptedAnswers": [
+            "解决"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m2_v13_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_13"
+          ],
+          "promptCn": "用“解决问题”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "解决问题",
+          "answer": "小王来帮我们解决问题。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m2_v14_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_14"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "我不会修电脑，____请别人帮忙。",
+          "answer": "只能",
+          "acceptedAnswers": [
+            "只能"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m2_v14_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_14"
+          ],
+          "promptCn": "用“只能＋动词”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "只能＋动词",
+          "answer": "声音还是太小，我们只能找老师。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m2_v15_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_15"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "我自己做不了，需要请____帮忙。",
+          "answer": "别人",
+          "acceptedAnswers": [
+            "别人"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m2_v15_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_15"
+          ],
+          "promptCn": "用“找别人”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "找别人",
+          "answer": "我没有办法，只能找别人帮忙。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m2_v10_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v11_10"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "Choose the correct character from the pinyin.",
+          "stimulus": "shēng",
+          "answer": "声",
+          "acceptedAnswers": [
+            "声"
+          ],
+          "options": [
+            "声",
+            "生"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "title": "说明缺席、重新分工和可能影响",
+      "wordIds": [
+        "v11_16",
+        "v11_17",
+        "v11_18",
+        "v11_19",
+        "v11_20"
+      ],
+      "recognitionWordIds": [
+        "v11_16",
+        "v11_17",
+        "v11_18",
+        "v11_19",
+        "v11_20"
+      ],
+      "activities": [
+        {
+          "id": "l11_m3_v16_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_16"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "小李家里有事，今天____了。",
+          "answer": "请假",
+          "acceptedAnswers": [
+            "请假"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m3_v16_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_16"
+          ],
+          "promptCn": "用“请一天假”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "请一天假",
+          "answer": "他身体不舒服，想请一天假。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m3_v17_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_17"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "我们在同一家公司工作，他是我的____。",
+          "answer": "同事",
+          "acceptedAnswers": [
+            "同事"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m3_v17_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_17"
+          ],
+          "promptCn": "用“帮助同事”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "帮助同事",
+          "answer": "今天我会帮助同事把材料做完。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m3_v18_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_18"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "王经理这周不工作，他在____。",
+          "answer": "休假",
+          "acceptedAnswers": [
+            "休假"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m3_v18_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_18"
+          ],
+          "promptCn": "用“休假回来”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "休假回来",
+          "answer": "他下周休假回来。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m3_v19_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_19"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "工作太多，我____今天做不完。",
+          "answer": "怕",
+          "acceptedAnswers": [
+            "怕"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m3_v19_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_19"
+          ],
+          "promptCn": "用“怕来不及”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "怕来不及",
+          "answer": "我怕来不及，想请你帮忙。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m3_v20_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_20"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "请把材料发到公司的____里。",
+          "answer": "邮箱",
+          "acceptedAnswers": [
+            "邮箱"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m3_v20_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_20"
+          ],
+          "promptCn": "用“发到邮箱”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "发到邮箱",
+          "answer": "我们把文件发到公司邮箱里。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m3_v16_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v11_16"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "Choose the correct character from the pinyin.",
+          "stimulus": "qǐng",
+          "answer": "请",
+          "acceptedAnswers": [
+            "请"
+          ],
+          "options": [
+            "请",
+            "情"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m3_v19_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v11_19"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "Choose the correct character from the pinyin.",
+          "stimulus": "pà",
+          "answer": "怕",
+          "acceptedAnswers": [
+            "怕"
+          ],
+          "options": [
+            "怕",
+            "拍"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "title": "说明是否接受外地机会",
+      "wordIds": [
+        "v11_21",
+        "v11_22",
+        "v11_23",
+        "v11_24",
+        "v11_25",
+        "v11_26",
+        "v11_27"
+      ],
+      "recognitionWordIds": [
+        "v11_21",
+        "v11_22",
+        "v11_23",
+        "v11_24",
+        "v11_25",
+        "v11_26",
+        "v11_27"
+      ],
+      "activities": [
+        {
+          "id": "l11_m4_v21_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_21"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "你____去上海工作吗？",
+          "answer": "愿意",
+          "acceptedAnswers": [
+            "愿意"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m4_v21_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_21"
+          ],
+          "promptCn": "用“愿意去……”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "愿意去……",
+          "answer": "我愿意去上海工作，但是我也想和家人在一起。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m4_v22_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_22"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "北京和上海都是大____。",
+          "answer": "城市",
+          "acceptedAnswers": [
+            "城市"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m4_v22_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_22"
+          ],
+          "promptCn": "用“别的城市”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "别的城市",
+          "answer": "我不愿意去别的城市工作。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m4_v23_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_23"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "她不想____家人去很远的地方工作。",
+          "answer": "离开",
+          "acceptedAnswers": [
+            "离开"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m4_v23_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_23"
+          ],
+          "promptCn": "用“离开家人”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "离开家人",
+          "answer": "对我来说，工作很重要，但我不想离开家人。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m4_v24_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_24"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "去上海工作可能是一个好____。",
+          "answer": "机会",
+          "acceptedAnswers": [
+            "机会"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m4_v24_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_24"
+          ],
+          "promptCn": "用“工作机会”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "工作机会",
+          "answer": "这是一个很好的工作机会。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m4_v25_input",
+          "type": "input",
+          "targetWordIds": [
+            "v11_25"
+          ],
+          "promptCn": "根据语境完成句子。",
+          "promptEn": "",
+          "stimulus": "对我来说，工作很重要，____也很重要。",
+          "answer": "生活",
+          "acceptedAnswers": [
+            "生活"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m4_v25_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v11_25"
+          ],
+          "promptCn": "用“城市生活”完成表达。（最多两句话）",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "城市生活",
+          "answer": "我喜欢这里的城市生活，也想和家人在一起。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l11_m4_v22_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v11_22"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "Choose the correct character from the pinyin.",
+          "stimulus": "chéng",
+          "answer": "城",
+          "acceptedAnswers": [
+            "城"
+          ],
+          "options": [
+            "城",
+            "诚"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l11_m4_v24_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v11_24"
+          ],
+          "promptCn": "根据拼音选择正确的汉字。",
+          "promptEn": "Choose the correct character from the pinyin.",
+          "stimulus": "jī",
+          "answer": "机",
+          "acceptedAnswers": [
+            "机"
+          ],
+          "options": [
+            "机",
+            "几"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        }
+      ]
+    }
+  ],
+  "resourceOverrides": [
+    {
+      "id": "l11_pic_02",
+      "patch": {
+        "prompt_cn": "看图完成对话。先问用哪台电脑，再回答两种都可以，最后说明会前怎么准备。写2—3句话。",
+        "prompt_en": "Write 2–3 sentences: ask about the computer choice, answer that either is fine, and say how to prepare before the meeting.",
+        "evaluation": "teacher",
+        "data": {
+          "image": "images/hsk3-l11/photo-text-1-computer-choice.png",
+          "keyword": "还是、或者、把……接好",
+          "task": "先问用哪台电脑，再回答两种都可以，最后说明会前怎么准备。",
+          "answerPlaceholder": "写2—3句话。",
+          "sampleAnswer": "我们用会议室的电脑还是自己的电脑？两种电脑都可以。我们早点儿过去，把电脑接好。"
+        }
+      }
+    },
+    {
+      "id": "l11_fill_c",
+      "patch": {
+        "data": {
+          "wordBank": [
+            "请假",
+            "同事",
+            "休假",
+            "怕",
+            "邮箱"
+          ],
+          "sentences": [
+            {
+              "sentence": "老张家里有事，所以____了。",
+              "answer": "请假"
+            },
+            {
+              "sentence": "好几个____都不在，今天的工作要重新安排。",
+              "answer": "同事"
+            },
+            {
+              "sentence": "王经理下周____回来。",
+              "answer": "休假"
+            },
+            {
+              "sentence": "工作太多，我____今天做不完。",
+              "answer": "怕"
+            },
+            {
+              "sentence": "请把材料发到公司的____里。",
+              "answer": "邮箱"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "l11_pic_06",
+      "patch": {
+        "prompt_cn": "看图说2—3句话：说明工作怎么完成、发到哪里、为什么现在不用太着急。",
+        "prompt_en": "Write 2–3 sentences about finishing the work, where to send it, and why it is less urgent now.",
+        "evaluation": "teacher",
+        "data": {
+          "image": "images/hsk3-l11/photo-text-3-meeting-delay.png",
+          "keyword": "把……做完、邮箱、下周",
+          "task": "说明工作怎么完成、发到哪里、为什么现在不用太着急。",
+          "answerPlaceholder": "写2—3句话。",
+          "sampleAnswer": "我们先把这些工作做完，再发到公司的邮箱里。经理还没回来，下周才开会，所以现在不用太着急。"
+        }
+      }
+    }
+  ],
+  "supportOnlyStructures": [],
+  "evidencePolicy": {
+    "coreTypes": [
+      "entry_expression",
+      "actual_learning_path",
+      "exit_expression"
+    ],
+    "pathEvent": "opened",
+    "optionalSignals": [
+      "support_request",
+      "self_reflection",
+      "teacher_observation"
+    ]
+  },
+  "supportOptions": [
+    {
+      "id": "vocabulary",
+      "labelCn": "我缺少合适的词",
+      "labelEn": "I need the right words"
+    },
+    {
+      "id": "organization",
+      "labelCn": "我不知道怎样组织信息",
+      "labelEn": "I need help organizing my ideas"
+    },
+    {
+      "id": "structure",
+      "labelCn": "我需要一个句子结构",
+      "labelEn": "I need a sentence frame"
+    },
+    {
+      "id": "teacher",
+      "labelCn": "我想获得老师的帮助",
+      "labelEn": "I want help from the teacher"
+    }
+  ],
+  "feelingOptions": [
+    {
+      "id": "clearer",
+      "labelCn": "我说得更清楚了",
+      "labelEn": "My expression is clearer"
+    },
+    {
+      "id": "more_complete",
+      "labelCn": "我说得更完整了",
+      "labelEn": "My expression is more complete"
+    },
+    {
+      "id": "more_natural",
+      "labelCn": "我说得更自然了",
+      "labelEn": "My expression is more natural"
+    },
+    {
+      "id": "still_need_help",
+      "labelCn": "我还需要帮助",
+      "labelEn": "I still need help"
+    }
+  ],
+  "coreEvidence": [
+    "entry_expression",
+    "actual_learning_path",
+    "exit_expression"
+  ],
+  "capabilities": [
+    "select_text_mini_loop",
+    "launch_interaction",
+    "independent_answer",
+    "support_request",
+    "anonymous_return",
+    "open_support",
+    "reanswer",
+    "record_teacher_decision",
+    "compare_entry_exit",
+    "teacher_selected_vocabulary_focus",
+    "shared_countdown",
+    "native_course_resource_return",
+    "configured_task_stimulus"
+  ]
+}

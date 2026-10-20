@@ -18,6 +18,7 @@ const ids = new Set();
 let count = 0;
 let listening = 0;
 let reading = 0;
+let writing = 0;
 const partCounts = {};
 const answers26to39 = [];
 const forbiddenTermsByTestId = {
@@ -37,7 +38,9 @@ const expectedParts = {
 const sharedOptionParts = new Set([
   "L3_dialogue_picture_choice",
   "R1_sentence_picture_match",
+  "R1_sentence_match",
   "R2_question_answer_match",
+  "R2_fill_blank",
   "R3_fill_blank"
 ]);
 
@@ -49,6 +52,12 @@ function optionSignature(options) {
   })));
 }
 
+function validateAsset(itemId, asset) {
+  const rel = asset.replace(/^\.\.\//, "source/");
+  const fullPath = path.join(root, rel);
+  if (!fs.existsSync(fullPath)) fail(`${itemId} asset not found: ${asset}`);
+}
+
 for (const section of test.sections) {
   if (!section.id || !Array.isArray(section.items)) fail(`section ${section.id || "(missing)"} has no items`);
   for (const item of section.items) {
@@ -57,11 +66,19 @@ for (const section of test.sections) {
     ids.add(item.id);
     if (!item.skill || !item.part || !item.prompt) fail(`${item.id} missing skill/part/prompt`);
     partCounts[item.part] = (partCounts[item.part] || 0) + 1;
-    if (!Array.isArray(item.options) || item.options.length < 2) fail(`${item.id} needs at least 2 options`);
-    if (!item.answer || !item.options.some((o) => o.id === item.answer)) fail(`${item.id} answer must match an option id`);
+    if (item.responseType === "text") {
+      if (!item.answer || !item.pinyin) fail(`${item.id} text response needs answer and pinyin`);
+    } else if (item.responseType === "textarea") {
+      if (!item.manualReview || !item.image || !item.givenWord || !item.rubric) fail(`${item.id} manual writing item is incomplete`);
+      validateAsset(item.id, item.image);
+    } else {
+      if (!Array.isArray(item.options) || item.options.length < 2) fail(`${item.id} needs at least 2 options`);
+      if (!item.answer || !item.options.some((o) => o.id === item.answer)) fail(`${item.id} answer must match an option id`);
+    }
     if (item.number >= 26 && item.number <= 39) answers26to39.push(item.answer);
     if (item.number !== count) fail(`${item.id} number must be sequential; expected ${count}`);
-    if ((item.points || 1) !== 1) fail(`${item.id} points must be 1`);
+    const expectedPoints = test.testId === "HSK3-mock1" ? (item.skill === "reading" ? 3 : 4) : 1;
+    if ((item.points || 1) !== expectedPoints) fail(`${item.id} points must be ${expectedPoints}`);
     if (item.skill === "listening") {
       listening += 1;
       if (!item.audioText) fail(`${item.id} listening item missing audioText`);
@@ -70,7 +87,8 @@ for (const section of test.sections) {
       reading += 1;
       if (!item.question) fail(`${item.id} reading item missing question`);
     }
-    if (item.part === "R4_reading_comprehension" && !item.passage) fail(`${item.id} reading comprehension missing passage`);
+    if (item.skill === "writing") writing += 1;
+    if (["R3_reading_comprehension", "R4_reading_comprehension"].includes(item.part) && !item.passage) fail(`${item.id} reading comprehension missing passage`);
     if (["L1_picture_choice", "L3_dialogue_picture_choice", "R1_sentence_picture_match"].includes(item.part) && !item.options.every((o) => o.image)) {
       fail(`${item.id} picture-choice item must use image options`);
     }
@@ -78,13 +96,9 @@ for (const section of test.sections) {
     for (const term of forbiddenTerms) {
       if (text.includes(term)) fail(`${item.id} includes out-of-scope L10 shopping term: ${term}`);
     }
-    for (const option of item.options) {
+    for (const option of item.options || []) {
       if (!option.id || !option.text) fail(`${item.id} option missing id/text`);
-      if (option.image) {
-        const rel = option.image.replace(/^\.\.\//, "source/");
-        const img = path.join(root, rel);
-        if (!fs.existsSync(img)) fail(`${item.id} image not found: ${option.image}`);
-      }
+      if (option.image) validateAsset(item.id, option.image);
     }
   }
 }
@@ -97,6 +111,28 @@ if (test.testId !== "HSK1-mock-01") {
     const sig = optionSignature(items[0].options);
     if (!items.every((item) => optionSignature(item.options) === sig)) fail(`${part} items must share the same A-F options`);
   }
+}
+
+if (test.testId === "HSK3-mock1") {
+  const expectedHsk3Parts = {
+    R1_sentence_match: 5,
+    R2_fill_blank: 5,
+    R3_reading_comprehension: 10,
+    W1_pinyin_hanzi: 5,
+    W2_picture_sentence: 5
+  };
+  if (count !== 30) fail(`HSK3-mock1 must include 30 items, got ${count}`);
+  if (reading !== 20 || writing !== 10 || listening !== 0) fail(`HSK3-mock1 expected 20 reading, 10 writing, 0 listening; got ${reading}/${writing}/${listening}`);
+  if (test.durationMinutes !== 40) fail(`HSK3-mock1 duration must be 40 minutes`);
+  const objectivePoints = test.sections.flatMap((section) => section.items).filter((item) => !item.manualReview).reduce((sum, item) => sum + item.points, 0);
+  const manualPoints = test.sections.flatMap((section) => section.items).filter((item) => item.manualReview).reduce((sum, item) => sum + item.points, 0);
+  if (!test.scoringPolicy || test.scoringPolicy.objectiveItems !== 25 || test.scoringPolicy.objectivePoints !== 80 || test.scoringPolicy.manualItems !== 5 || test.scoringPolicy.manualPoints !== 20 || test.scoringPolicy.totalPoints !== 100) fail("HSK3-mock1 scoring policy must be 80 objective + 20 manual = 100 points");
+  if (objectivePoints !== 80 || manualPoints !== 20) fail(`HSK3-mock1 item points must total 80 objective + 20 manual, got ${objectivePoints} + ${manualPoints}`);
+  for (const [part, expected] of Object.entries(expectedHsk3Parts)) {
+    if ((partCounts[part] || 0) !== expected) fail(`${part} expected ${expected}, got ${partCounts[part] || 0}`);
+  }
+  console.log(`Mock test OK: ${test.testId}, ${count} items (${reading} reading, ${writing} writing)`);
+  process.exit(0);
 }
 
 if (count !== 40) fail(`HSK1 mock test must include 40 items, got ${count}`);

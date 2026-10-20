@@ -8,9 +8,10 @@ const outputPath = path.join(root, 'source', 'data-model', 'experiments', 'HSK3-
 
 function read(filePath) {
   const buffer = fs.readFileSync(filePath);
+  const data = filePath.endsWith('.json') ? JSON.parse(buffer.toString('utf8')) : null;
   return {
-    sha256: crypto.createHash('sha256').update(buffer).digest('hex').toUpperCase(),
-    data: filePath.endsWith('.json') ? JSON.parse(buffer.toString('utf8')) : null
+    sha256: crypto.createHash('sha256').update(data ? JSON.stringify(data) : buffer).digest('hex').toUpperCase(),
+    data
   };
 }
 
