@@ -1,0 +1,11 @@
+{
+  "teachers": [
+    {
+      "id": "teacher-id",
+      "username": "TeacherLogin",
+      "displayName": "教师显示姓名",
+      "passwordHash": "scrypt$replace-with-generated-hash",
+      "classIds": ["class-id"]
+    }
+  ]
+}

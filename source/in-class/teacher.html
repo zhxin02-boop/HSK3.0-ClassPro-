@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chinese ClassPro+</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.3.0/mqtt.min.js"></script>
-<script src="../shared/students.js?v=20260916-1"></script>
+<script src="../shared/class-config.js"></script>
 <script src="../shared/context.js"></script>
+<script src="../shared/students.js?v=20261014-1"></script>
+<script src="../shared/classroom-channel.js"></script>
 <script src="../data-model/course-data-adapter.js"></script>
 <script src="./lesson-data-loader.js?v=20260723-l04-images-5"></script>
 <script src="../shared/classpro-pinyin-data.js?v=20260914-1"></script>
@@ -654,7 +656,9 @@ var HR=window.LESSON_DATA.hanziRecognition||{};
 var MT=window.LESSON_DATA.meta||{};
 var URL_LESSON=new URLSearchParams(location.search).get("lesson");
 if(URL_LESSON&&MT.lessonKey!==URL_LESSON){document.getElementById("app").innerHTML='<div style="max-width:720px;margin:80px auto;padding:28px;border:2px solid #f59e0b;border-radius:16px;background:#fff7ed;font:16px sans-serif;line-height:1.8"><h2>课程上下文错误</h2><p>请求课程：'+URL_LESSON+'</p><p>实际加载：'+(MT.lessonKey||"未知")+'</p><p>页面已停止，未进入课堂。请返回教师主页重新选择课程。</p></div>';throw new Error("Lesson context mismatch: "+URL_LESSON+" != "+MT.lessonKey)}
-var RM=(window.ClassProContext&&ClassProContext.read().room)||"8888";
+var CLASSROOM_CTX=(window.ClassProContext&&ClassProContext.read())||{},RM=CLASSROOM_CTX.room||"8888",CLASS_ID=CLASSROOM_CTX.classId||"legacy-default";
+function classroomTopic(channel){return window.ClassProClassroom?ClassProClassroom.topic(channel,{classId:CLASS_ID,room:RM,lesson:(window.MT&&MT.lessonKey)||CLASSROOM_CTX.lesson}):"classpro/room/"+RM+"/"+channel}
+function classroomEnvelope(payload){return window.ClassProClassroom?ClassProClassroom.envelope(payload,{classId:CLASS_ID,room:RM,lesson:(window.MT&&MT.lessonKey)||CLASSROOM_CTX.lesson}):payload}
 function sh(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
 function es(s){return String(s==null?"":s).replace(/</g,"&lt;").replace(/>/g,"&gt;")}
 if(MT.dataLoadError==='file_protocol'){
@@ -664,7 +668,7 @@ if(MT.dataLoadError==='file_protocol'){
 function py(s,p){return window.ClassProPinyin?ClassProPinyin.lookup(s,p):""}
 function pys(s,p){return py(s,p)}
 function rubyLine(s,p,size){return window.ClassProPinyin?ClassProPinyin.ruby(s,p,size):es(s)}
-function rawStudentUrl(){return new URL("student.html?lesson="+encodeURIComponent(MT.lessonKey||URL_LESSON||"HSK1-L01")+"&room="+encodeURIComponent(RM),location.href).href}
+function rawStudentUrl(){var q=window.ClassProContext?ClassProContext.buildQuery({lesson:MT.lessonKey||URL_LESSON||"HSK1-L01",room:RM,student:"",studentId:""}):("lesson="+encodeURIComponent(MT.lessonKey||URL_LESSON||"HSK1-L01")+"&room="+encodeURIComponent(RM));return new URL("../student/entry.html?target=classroom&"+q,location.href).href}
 function studentUrl(){return encodeURIComponent(rawStudentUrl())}
 var ap={
 mt:"home",st:"",tmode:0,pyzStep:0,tvOpen:false,timerOn:false,lw:false,sl:0,sg:0,gr:false,ti:0,tl:0,
@@ -723,9 +727,9 @@ _so(){if(!this._soShow)return"";var t3=this._t3();var h='<div class="star-overla
 _pm(){if(!this.psm)return"";return'<div class="star-overlay" onclick="if(event.target===event.currentTarget){ap.psm=false;ap._r()}"><div style="background:#fff;border-radius:20px;padding:30px;max-width:400px;width:90%;text-align:center"><h2 style="margin-top:0;color:var(--blue)">🎲 点名</h2><div style="font-size:48px;font-weight:900;color:var(--battle);margin:20px 0">'+(this.ps||"点击开始")+'</div><div style="display:flex;gap:10px;justify-content:center"><button class="next-btn" onclick="ap._sp()">🎲 开始</button><button class="next-btn" style="background:#9ca3af" onclick="ap.psm=false;ap._r()">关闭</button></div></div></div>'},
 _qr(){if(!this.qr&&!this.qrp)return"";var u=studentUrl(),raw=rawStudentUrl(),local=/^(file:|http:\/\/(localhost|127\.0\.0\.1))/i.test(raw);return'<div style="position:fixed;left:'+this.qrx+"px;top:"+this.qry+'px;z-index:90"><div style="background:#fff;border-radius:16px;padding:16px;border:0.5px solid var(--line);width:260px;box-shadow:0 6px 24px rgba(0,0,0,.1)"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><span style="font-size:12px;font-weight:700;color:var(--text)">学生扫码入课</span><div><button onclick="ap.qrp=!ap.qrp;ap._r()" style="width:24px;height:24px;border-radius:6px;border:0.5px solid var(--line);background:'+(this.qrp?"var(--primary)":"#fff")+';font-size:11px;cursor:pointer;color:'+(this.qrp?"#fff":"#888")+'">📌</button> <button onclick="ap.qr=false;ap.qrp=false;ap._r()" style="width:24px;height:24px;border-radius:6px;border:0.5px solid var(--line);background:#fff;font-size:11px;cursor:pointer;color:#888">✕</button></div></div><div style="text-align:center"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data='+u+'" style="width:170px;height:170px;border-radius:8px"><div style="font-size:16px;font-weight:800;margin-top:8px">Room '+RM+'</div><div style="font-size:11px;color:#64748b;margin-top:6px;word-break:break-all;line-height:1.35">'+es(raw)+'</div>'+(local?'<div style="font-size:12px;color:#b45309;background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:7px;margin-top:8px;text-align:left">当前是本地地址，学生手机通常扫不开。请部署到公开地址，或用同一局域网的服务器地址打开教师端。</div>':'')+'<div style="font-size:12px;color:var(--green);font-weight:600;margin-top:6px">● '+(this.oc||0)+" online</div></div></div></div>"},
 _sp(){if(this.pint)return;var t=this;var c=0;this.pint=setInterval(function(){if(t.as.length)t.ps=t.as[Math.floor(Math.random()*t.as.length)];c++;if(c>20){clearInterval(t.pint);t.pint=null}t._r()},100)},
-_mq(){var t=this;try{if(!window.mqtt){t.cs="offline";return}var cl=mqtt.connect("wss://05d1d5baec9d4cb3a21f5517b430cff1.s1.eu.hivemq.cloud:8884/mqtt",{username:"classpro",password:"Classpro2026",clientId:"tc_"+Math.random().toString(36).substr(2,8),reconnectPeriod:3000,connectTimeout:8000});cl.on("connect",function(){t.cs="connected";cl.subscribe("classpro/room/"+RM+"/answers");cl.subscribe("classpro/room/"+RM+"/presence");t._r()});cl.on("message",function(tp,p){var m=JSON.parse(p.toString());if(tp.indexOf("/answers")>=0)t._ha(m);else if(tp.indexOf("/presence")>=0)t._hp(m)});cl.on("error",function(e){t.cs="error";console.log("MQTT",e);t._r()});cl.on("close",function(){if(t.cs!=="error")t.cs="disconnected";t._r()});t.mq=cl}catch(e){t.cs="offline";console.log("MQTT",e)}},
+_mq(){var t=this;try{if(!window.mqtt){t.cs="offline";return}var cl=mqtt.connect("wss://05d1d5baec9d4cb3a21f5517b430cff1.s1.eu.hivemq.cloud:8884/mqtt",{username:"classpro",password:"Classpro2026",clientId:"tc_"+Math.random().toString(36).substr(2,8),reconnectPeriod:3000,connectTimeout:8000});cl.on("connect",function(){t.cs="connected";cl.subscribe(classroomTopic("answers"));cl.subscribe(classroomTopic("presence"));t._r()});cl.on("message",function(tp,p){var m=JSON.parse(p.toString());if(window.ClassProClassroom&&!ClassProClassroom.matches(m,{classId:CLASS_ID,room:RM,lesson:MT.lessonKey}))return;if(tp.indexOf("/answers")>=0)t._ha(m);else if(tp.indexOf("/presence")>=0)t._hp(m)});cl.on("error",function(e){t.cs="error";console.log("MQTT",e);t._r()});cl.on("close",function(){if(t.cs!=="error")t.cs="disconnected";t._r()});t.mq=cl}catch(e){t.cs="offline";console.log("MQTT",e)}},
 _ha(m){var n=m.name||m.studentName||"unknown";var tx=m.text||m.answer||"";this.la.unshift({n:n,x:tx,t:new Date().toLocaleTimeString(),ar:m.autoResult||null});if(m.autoResult==="correct"){var r=this._rn(n);this._as(r,1)}if(this.qp==="answering"||this.qp==="locked")this.qsub[n]=true;this._r()},
-_hp(m){if(m&&m.requestCurrent&&this.lastQuestionPayload&&this.mq&&this.cs==="connected"){this.mq.publish("classpro/room/"+RM+"/question",JSON.stringify(this.lastQuestionPayload))}this.oc=m.count||0;this._r()},
+_hp(m){if(m&&m.requestCurrent&&this.lastQuestionPayload&&this.mq&&this.cs==="connected"){this.mq.publish(classroomTopic("question"),JSON.stringify(classroomEnvelope(this.lastQuestionPayload)))}this.oc=m.count||0;this._r()},
 _rn(n){var f=this.as.find(function(s){return s.indexOf(n)>=0||n.indexOf(s)>=0});return f||n},
 _as(n,p){if(!this.sc[n])this.sc[n]={t:0,f:false};this.sc[n].t+=p;this.sc[n].f=true;var t=this;setTimeout(function(){if(t.sc[n])t.sc[n].f=false;t._r()},600);this._r()},
 _sss(){var a=[];for(var k in this.sc){if(this.sc.hasOwnProperty(k))a.push({n:k,t:this.sc[k].t})}return a.sort(function(a,b){return b.t-a.t})},
@@ -741,7 +745,7 @@ _tts(t){if(window.speechSynthesis){var u=new SpeechSynthesisUtterance(t);u.lang=
 _cq(){var s=this.st;if(s==="v1"){var q=(Q.v1_image_guess||[])[this.v1i];if(!q)return null;var opts=this._opts(q.correct_answer||'', ['\u9ad8\u5174','\u8ba4\u8bc6','\u5bf9\u4e0d\u8d77','\u6ca1\u5173\u7cfb','\u4e0d','\u662f','\u4e5f','\u5f88']);var im={'\u9ad8\u5174':'images/v07_gaoxing.jpg','\u8ba4\u8bc6':'images/v08_renshi.jpg','\u5bf9\u4e0d\u8d77':'images/v03_duibuqi.jpg','\u6ca1\u5173\u7cfb':'images/v04_meiguanxi.jpg'};return Object.assign({},q,{data:Object.assign({},q.data||{},{image:(q.media&&q.media.image)||im[q.correct_answer]||'',options:opts,correct_index:opts.indexOf(q.correct_answer)})})}if(s==="v4")return(Q.v4_complete_sentence||[])[this.v4i]||null;if(s==="v5")return(Q.v5_vocab_fill||[])[this.v5i]||null;if(s==="v7"){var q=(Q.v7_word_match||[])[this.v7i];if(!q||!q.data)return null;var ss=q.data.sentences||[],cur=ss[this.v7si]||{},opts=q.data.words||[];return Object.assign({},q,{id:q.id+'_'+this.v7si,data:{sentence:cur.sentence,sentence_pinyin:pys(cur.sentence),options:opts,correct_index:opts.indexOf(cur.answer)}})}if(s==="v8"){var q=(Q.v8_memory_match||[])[this.v8i];if(!q||!q.data)return null;var ps=q.data.pairs||[];if(!ps.length)return null;var idx=this.v8qi||0;if(idx>=ps.length)idx=0;var order=[2,0,3,1,5,4].filter(function(x){return x<ps.length});var opts=order.map(function(k){return ps[k].right});return Object.assign({},q,{id:q.id+'_pair_'+idx,prompt_cn:'\u770b\u6c49\u5b57\uff0c\u9009\u82f1\u6587\u610f\u601d',prompt_en:'Choose the English meaning.',data:{left:ps[idx].left,left_pinyin:py(ps[idx].left),options:opts,correct_index:opts.indexOf(ps[idx].right)}})}if(s==="ttq")return(Q.tt_text_true_false||[])[this.ttqi]||null;if(s==="g1")return(Q.g1_ordering||[])[this.g1i]||null;if(s==="w1"){var qs=[{id:'w1_discriminate_01',prompt_cn:'\u9009\u62e9\u6b63\u786e\u7684\u6c49\u5b57',prompt_en:'Choose the right character',data:{sentence:'\u5f88\u9ad8\u5174___\u8bc6\u4f60\u3002',sentence_pinyin:'H\u011bn g\u0101ox\u00ecng ___ sh\u00ed n\u01d0.',options:['\u8ba9','\u8ba1','\u8ba8','\u8bc6','\u8ba4','\u8bdd','\u8bd5','\u8bd7','\u8bf7','\u8bf4','\u8c01','\u8bfe'],correct_index:4}},{id:'w1_discriminate_02',prompt_cn:'\u9009\u62e9\u6b63\u786e\u7684\u6c49\u5b57',prompt_en:'Choose the right character',data:{sentence:'\u5f88\u9ad8\u5174\u8ba4___\u4f60\u3002',sentence_pinyin:'H\u011bn g\u0101ox\u00ecng r\u00e8n ___ n\u01d0.',options:['\u53ea','\u7ec7','\u804c','\u8bc6','\u8ba4','\u8bdd','\u8bd5','\u8bd7','\u8bf7','\u8bf4','\u8c01','\u8bfe'],correct_index:3}}];return qs[this.w1i]||null}if(s==="pk")return(Q.pk_question||[])[this.pkqi]||null;return null},
 
 _cq2(){if(this.st==="v8"){var q=(Q.v8_memory_match||[])[this.v8i];if(!q||!q.data)return null;var ps=q.data.pairs||[];if(!ps.length)return null;var order=[2,0,3,1,5,4].filter(function(x){return x<ps.length});return Object.assign({},q,{id:q.id+"_board",prompt_cn:"\u8fde\u8fde\u770b\uff1a\u6c49\u5b57\u548c\u82f1\u6587\u610f\u601d",prompt_en:"Matching game: match Chinese words with English meanings.",data:{pairs:ps.map(function(p){return{left:p.left,left_pinyin:py(p.left),right:p.right}}),order:order}})}return this._cq()},
-_pubq(){if(!this.mq||this.cs!=="connected")return;var q=this._cq2();if(!q)return;var payload={room:RM,lesson:MT.lessonKey||"HSK1-L02",mode:this.st,duration:this.qtm,sentAt:new Date().toISOString(),question:q};this.lastQuestionPayload=payload;this.currentQuestionId=q.id;this.mq.publish("classpro/room/"+RM+"/question",JSON.stringify(payload))},
+_pubq(){if(!this.mq||this.cs!=="connected")return;var q=this._cq2();if(!q)return;var payload=classroomEnvelope({room:RM,lesson:MT.lessonKey||"HSK1-L02",mode:this.st,duration:this.qtm,sentAt:new Date().toISOString(),question:q});this.lastQuestionPayload=payload;this.currentQuestionId=q.id;this.mq.publish(classroomTopic("question"),JSON.stringify(payload))},
 qws(){this.qp="answering";this.qt=this.qtm;this.qsub={};this._pubq();var t=this;this.qtint=setInterval(function(){t.qt--;if(t.qt<=0){clearInterval(t.qtint);t.qwe()}t._r()},1000);this._r()},
 qwl(){clearInterval(this.qtint);this.qp="locked";this._r()},
 qwe(){clearInterval(this.qtint);this.qp="published";this._r()},
@@ -952,20 +956,21 @@ var oldInit=ap.init.bind(ap), oldMq=ap._mq.bind(ap), oldR=ap._r.bind(ap);
 ap.roster=CLASS_STUDENTS.slice();
 ap.records=[];
 ap.sessionId=(MT.lessonKey||"HSK1-L02")+"_"+new Date().toISOString().replace(/[:.]/g,"-");
+ap.classDataKey="ClassProData_"+CLASS_ID+"_"+RM+"_"+(MT.lessonKey||"HSK1-L02");
 ap._loadClassData=function(){
-  try{var raw=localStorage.getItem("ClassProData_"+RM);if(!raw)return;var d=JSON.parse(raw);this.records=d.records||[];this.publishedQuestionIds=String(d.lesson||"")===String(MT.lessonKey||"HSK1-L02")?(d.publishedQuestionIds||[]):[];if(d.scores){this.sc={};for(var k in d.scores){if(d.scores.hasOwnProperty(k))this.sc[k]={t:+d.scores[k]||0,f:false}}}}catch(e){console.log("load class data",e)}
+  try{var raw=localStorage.getItem(this.classDataKey);if(!raw)return;var d=JSON.parse(raw);this.records=d.records||[];this.publishedQuestionIds=String(d.lesson||"")===String(MT.lessonKey||"HSK1-L02")?(d.publishedQuestionIds||[]):[];if(d.scores){this.sc={};for(var k in d.scores){if(d.scores.hasOwnProperty(k))this.sc[k]={t:+d.scores[k]||0,f:false}}}}catch(e){console.log("load class data",e)}
 };
 ap._saveClassData=function(){
-  try{var sc={};for(var k in this.sc){if(this.sc.hasOwnProperty(k))sc[k]=this.sc[k].t||0}localStorage.setItem("ClassProData_"+RM,JSON.stringify({room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,updatedAt:new Date().toISOString(),roster:this.roster,scoreboard:this._sss(),scores:sc,records:this.records,publishedQuestionIds:this.publishedQuestionIds||[]}))}catch(e){console.log("save class data",e)}
+  try{var sc={};for(var k in this.sc){if(this.sc.hasOwnProperty(k))sc[k]=this.sc[k].t||0}localStorage.setItem(this.classDataKey,JSON.stringify({teacherId:CLASSROOM_CTX.teacherId||"",classId:CLASS_ID,room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,updatedAt:new Date().toISOString(),roster:this.roster,scoreboard:this._sss(),scores:sc,records:this.records,publishedQuestionIds:this.publishedQuestionIds||[]}))}catch(e){console.log("save class data",e)}
 };
 ap._scorePayload=function(){return{room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,updatedAt:new Date().toISOString(),rows:this._sss().map(function(x,i){return{rank:i+1,name:x.n,points:x.t}})}};
-ap._pubBoard=function(){if(this.mq&&this.cs==="connected"){try{this.mq.publish("classpro/room/"+RM+"/scoreboard",JSON.stringify(this._scorePayload()))}catch(e){console.log("publish scoreboard",e)}}};
+ap._pubBoard=function(){if(this.mq&&this.cs==="connected"){try{this.mq.publish(classroomTopic("scoreboard"),JSON.stringify(classroomEnvelope(this._scorePayload())))}catch(e){console.log("publish scoreboard",e)}}};
 ap.init=function(){this.as=this.roster.slice();this.pkat=this.roster.slice();this._loadClassData();this._mq();this._r()};
 ap._mq=function(){
   var t=this;
   try{if(!window.mqtt){t.cs="offline";return}var cl=mqtt.connect("wss://05d1d5baec9d4cb3a21f5517b430cff1.s1.eu.hivemq.cloud:8884/mqtt",{username:"classpro",password:"Classpro2026",clientId:"tc_"+Math.random().toString(36).substr(2,8),reconnectPeriod:3000,connectTimeout:8000});
-  cl.on("connect",function(){t.cs="connected";cl.subscribe("classpro/room/"+RM+"/answers");cl.subscribe("classpro/room/"+RM+"/presence");t._pubBoard();t._r()});
-  cl.on("message",function(tp,p){try{var m=JSON.parse(p.toString());if(tp.indexOf("/answers")>=0)t._ha(m);else if(tp.indexOf("/presence")>=0)t._hp(m)}catch(e){console.log("MQTT message",e)}});
+  cl.on("connect",function(){t.cs="connected";cl.subscribe(classroomTopic("answers"));cl.subscribe(classroomTopic("presence"));t._pubBoard();t._r()});
+  cl.on("message",function(tp,p){try{var m=JSON.parse(p.toString());if(window.ClassProClassroom&&!ClassProClassroom.matches(m,{classId:CLASS_ID,room:RM,lesson:MT.lessonKey}))return;if(tp.indexOf("/answers")>=0)t._ha(m);else if(tp.indexOf("/presence")>=0)t._hp(m)}catch(e){console.log("MQTT message",e)}});
   cl.on("error",function(e){t.cs="error";console.log("MQTT",e);t._r()});
   cl.on("close",function(){if(t.cs!=="error")t.cs="disconnected";t._r()});
   t.mq=cl}catch(e){t.cs="offline";console.log("MQTT",e)}
@@ -975,14 +980,14 @@ ap._ha=function(m){
   var q=this._cq2?this._cq2():null;
   var questionId=m.questionId||(q&&q.id)||"",submissionId=m.submissionId||"";
   if(submissionId&&this.records.some(function(r){return r.submissionId===submissionId}))return;
-  var rec={room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,studentName:n,mode:m.mode||this.st,questionId:questionId,answer:tx,result:res,submittedAt:m.submittedAt||now.toISOString(),receivedAt:now.toISOString(),submissionId:submissionId};
+  var rec={teacherId:m.teacherId||CLASSROOM_CTX.teacherId||"",classId:m.classId||CLASS_ID,studentId:m.studentId||"",room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,studentName:n,mode:m.mode||this.st,questionId:questionId,answer:tx,result:res,submittedAt:m.submittedAt||now.toISOString(),receivedAt:now.toISOString(),submissionId:submissionId};
   this.records.unshift(rec);
   this.la.unshift({n:n,x:tx,t:now.toLocaleTimeString(),ar:res});
   if(res==="correct")this._as(n,1);else{this._saveClassData();this._pubBoard()}
   if(String(questionId)===String(this.currentQuestionId||(q&&q.id)||""))this.qsub[n]=true;
   this._r();
 };
-ap._hp=function(m){if(m&&m.requestCurrent&&this.lastQuestionPayload&&this.mq&&this.cs==="connected"){this.mq.publish("classpro/room/"+RM+"/question",JSON.stringify(this.lastQuestionPayload))}this.oc=m.count||this.oc||0;this._pubBoard();this._r()};
+ap._hp=function(m){if(m&&m.requestCurrent&&this.lastQuestionPayload&&this.mq&&this.cs==="connected"){this.mq.publish(classroomTopic("question"),JSON.stringify(classroomEnvelope(this.lastQuestionPayload)))}this.oc=m.count||this.oc||0;this._pubBoard();this._r()};
 ap._as=function(n,p){n=this._rn(n);if(!this.sc[n])this.sc[n]={t:0,f:false};this.sc[n].t+=p;this.sc[n].f=true;this._saveClassData();this._pubBoard();var t=this;setTimeout(function(){if(t.sc[n])t.sc[n].f=false;t._r()},600);this._r()};
 ap._sss=function(){return this.roster.map(function(n){return{n:n,t:(ap.sc[n]&&ap.sc[n].t)||0}}).sort(function(a,b){return b.t-a.t||ap.roster.indexOf(a.n)-ap.roster.indexOf(b.n)})};
 ap._pcnt=function(){var c=0;for(var i=0;i<this.roster.length;i++){var n=this.roster[i];if(this.sc[n]&&this.sc[n].t>0)c++}return c};
@@ -993,7 +998,7 @@ ap._ec=function(){
   for(var j=this.records.length-1;j>=0;j--){var r=this.records[j];lines.push(["answer",csv(r.studentName),"",csv(r.mode),csv(r.questionId),csv(r.answer),csv(r.result),csv(r.submittedAt),csv(r.receivedAt)].join(","))}
   var a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+lines.join("\n")],{type:"text/csv;charset=utf-8"}));a.download="ClassPro_"+RM+"_"+this.sessionId+".csv";a.click();
 };
-ap._exportJson=function(){this._saveClassData();var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([localStorage.getItem("ClassProData_"+RM)||"{}"],{type:"application/json;charset=utf-8"}));a.download="ClassPro_"+RM+"_"+this.sessionId+".json";a.click()};
+ap._exportJson=function(){this._saveClassData();var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([localStorage.getItem(this.classDataKey)||"{}"],{type:"application/json;charset=utf-8"}));a.download="ClassPro_"+CLASS_ID+"_"+RM+"_"+this.sessionId+".json";a.click()};
 ap._r=function(){oldR();this._saveClassData()};
 })();
 (function(){
@@ -1034,6 +1039,8 @@ ap._sendSessionSummary=function(reason){
     if(this.currentQuestionId&&this.publishedQuestionIds.indexOf(String(this.currentQuestionId))<0)this.publishedQuestionIds.push(String(this.currentQuestionId));
     var payload={
       action:'session_summary',
+      teacherId:CLASSROOM_CTX.teacherId||'',
+      classId:CLASS_ID,
       lesson:MT.lessonKey||'HSK1-L02',
       stage:'课中',
       module:'session_summary',
@@ -1062,7 +1069,7 @@ ap.qws=function(){this.qcorrect={};baseQws()};
    baseQwr();
  };
 ap.qwl=function(){baseQwl()};
-ap.qwe=function(){if(this.mt==='practice'&&this.st==='v1'){var cq=this._cq2&&this._cq2(),cd=cq&&cq.data||{};this.v1p=typeof cd.correct_index==='number'?cd.correct_index:0;this.v1a=true}baseQwe();if(this.mt==='practice'&&this.st==='v1'&&this.lastQuestionPayload){var q=this.lastQuestionPayload.question||{},d=q.data||{};this.lastQuestionPayload.phase='published';this.lastQuestionPayload.answerKey=q.correct_answer||(typeof d.correct_index==='number'&&d.options?d.options[d.correct_index]:'');this.lastQuestionPayload.publishedAt=new Date().toISOString();if(this.mq&&this.cs==='connected')this.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(this.lastQuestionPayload))}this._saveClassData();this._pubBoard();this._sendSessionSummary('question_end')};
+ap.qwe=function(){if(this.mt==='practice'&&this.st==='v1'){var cq=this._cq2&&this._cq2(),cd=cq&&cq.data||{};this.v1p=typeof cd.correct_index==='number'?cd.correct_index:0;this.v1a=true}baseQwe();if(this.mt==='practice'&&this.st==='v1'&&this.lastQuestionPayload){var q=this.lastQuestionPayload.question||{},d=q.data||{};this.lastQuestionPayload.phase='published';this.lastQuestionPayload.answerKey=q.correct_answer||(typeof d.correct_index==='number'&&d.options?d.options[d.correct_index]:'');this.lastQuestionPayload.publishedAt=new Date().toISOString();if(this.mq&&this.cs==='connected')this.mq.publish(classroomTopic('question'),JSON.stringify(classroomEnvelope(this.lastQuestionPayload)))}this._saveClassData();this._pubBoard();this._sendSessionSummary('question_end')};
 ap._ha=function(m){
   var n=this._rn(m.name||m.studentName||"unknown"),tx=m.text||m.answer||"",res=m.autoResult||null,now=new Date();
   var q=this._cq2?this._cq2():null,rank=0,sb=0,base=0,totalPts=0;
@@ -1081,7 +1088,7 @@ ap._ha=function(m){
     sb=this._speedBonus(rank);
   }
   totalPts=base+sb;
-  var rec={room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,studentName:n,mode:m.mode||this.st,questionId:m.questionId||(q&&q.id)||"",answer:tx,result:res,itemResults:Array.isArray(m.itemResults)?m.itemResults:[],submittedAt:m.submittedAt||now.toISOString(),receivedAt:now.toISOString(),submissionId:m.submissionId||"",speedRank:rank||"",speedBonus:sb,basePoint:base,total:submittedTotal||1,pointsAwarded:totalPts,needsReview:!!m.needsReview||res==="review"};
+  var rec={teacherId:m.teacherId||CLASSROOM_CTX.teacherId||"",classId:m.classId||CLASS_ID,studentId:m.studentId||"",room:RM,lesson:MT.lessonKey||"HSK1-L02",sessionId:this.sessionId,studentName:n,mode:m.mode||this.st,questionId:m.questionId||(q&&q.id)||"",answer:tx,result:res,itemResults:Array.isArray(m.itemResults)?m.itemResults:[],submittedAt:m.submittedAt||now.toISOString(),receivedAt:now.toISOString(),submissionId:m.submissionId||"",speedRank:rank||"",speedBonus:sb,basePoint:base,total:submittedTotal||1,pointsAwarded:totalPts,needsReview:!!m.needsReview||res==="review"};
   this.records.unshift(rec);
   this.la.unshift({n:n,x:tx+(sb?("  +速度奖励"+sb):""),t:now.toLocaleTimeString(),ar:res});
   if(totalPts>0)this._as(n,totalPts);else{this._saveClassData();this._pubBoard()}
@@ -1169,7 +1176,7 @@ window.ap=ap;
     if(!this.mq||this.cs!=="connected"){alert("MQTT 尚未连接，请稍候再试。 / MQTT is not connected yet.");return}
     var x=blend[this.pyzQuestionIndex%blend.length], pool=blend.filter(function(v){return v[0]!==x[0]}).slice(0,4), opts=[x].concat(pool).sort(function(){return Math.random()-.5}), ci=opts.indexOf(x), q={id:"pinyin_blend_"+(this.pyzQuestionIndex%blend.length+1),prompt_cn:"听音，选择正确的拼音",prompt_en:"Listen and choose the correct pinyin.",data:{prompt:x[0],options:opts.map(function(v){return v[0]}),options_pinyin:opts.map(function(v){return v[1]}),correct_index:ci}};
     var payload={room:RM,lesson:MT.lessonKey||"HSK1-L01",mode:"pinyin",duration:this.qtm,sentAt:new Date().toISOString(),question:q};
-    this.lastQuestionPayload=payload;this.currentQuestionId=q.id;this.pyzSentQuestion=q;this.qp="answering";this.qsub={};this.mq.publish("classpro/room/"+RM+"/question",JSON.stringify(payload));this._r();
+    this.lastQuestionPayload=payload;this.currentQuestionId=q.id;this.pyzSentQuestion=q;this.qp="answering";this.qsub={};this.mq.publish(classroomTopic("question"),JSON.stringify(classroomEnvelope(payload)));this._r();
   };
   var oldRender=ap._r;
   ap._r=function(){oldRender.call(this);if(this.mt==="teach"&&this.st==="pyz"&&this.pyzStep===5){var host=document.querySelector('.panel-area');if(host&&!document.getElementById('pinyinSendBox')){var box=document.createElement('div');box.id='pinyinSendBox';box.style.cssText='margin:14px 0;padding:14px;border:1px solid #dfeac8;border-radius:16px;background:#edf6d9;text-align:center';box.innerHTML='<button type="button" onclick="ap._pubPinyinQuestion()" style="background:#3f7f32">📨 发送当前拼音题 / Send Pinyin Question</button><div id="pinyinSubmitState" style="margin-top:8px;color:#4c782c;font-size:13px;font-weight:800"></div>';host.appendChild(box)}var state=document.getElementById('pinyinSubmitState');if(state){var done=this._qsc(),pending=this._qpending();state.textContent=this.qp==="answering"?'已提交 '+done+'/'+this.as.length+'；未提交：'+(pending.slice(0,5).join('、')+(pending.length>5?' 等':'')):'可以发送一道拼音题给学生。 / Ready to send.'}}};
@@ -1418,7 +1425,7 @@ window.ap=ap;
   function status(state){var h='<div class="practice-status-panel"><div class="practice-status-head">答题完成情况</div><div class="practice-status-body">';(state.as||[]).forEach(function(n){var done=Object.keys(state.qsub||{}).some(function(k){return state._rn(k)===n});h+='<div class="practice-student '+(done?'done':'')+'"><span>'+(done?'✓':'·')+'</span><b>'+es(n)+'</b><small>'+(done?'已答':'未答')+'</small></div>'});return h+'</div></div>'}
   var oldStart=ap.qws,oldEnd=ap.qwe,oldNext=ap.qwr,oldRender=ap._r;
   ap.qws=function(){if(this.mt==='practice'&&active(this.st)||this.st==='ttq'){clearInterval(this.qtint);this.qcorrect={};this.qp='answering';this.qt=0;this.qsub={};this._pubq();this._r();return}oldStart.call(this)};
-  ap.qwe=function(){if((this.mt==='practice'&&active(this.st))||this.st==='ttq'){var d=this._cq2&&this._cq2(),data=d&&d.data||{},map={v1:'v1',v4:'v4',v5:'v5',v7:'v7',w1:'w1',ttq:'ttq',scn:'scn',r3r:'r3r'},key=map[this.st];if(key&&typeof data.correct_index==='number'){this[key+'p']=data.correct_index;this[key+'a']=true}if(this.st==='v5'&&Array.isArray(data.sentences))this.v5a=true;oldEnd.call(this);if(this.lastQuestionPayload){this.lastQuestionPayload.phase='published';this.lastQuestionPayload.answerKey=keyFor(this);if(this.mq&&this.cs==='connected')this.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(this.lastQuestionPayload))}this._r();return}oldEnd.call(this)};
+  ap.qwe=function(){if((this.mt==='practice'&&active(this.st))||this.st==='ttq'){var d=this._cq2&&this._cq2(),data=d&&d.data||{},map={v1:'v1',v4:'v4',v5:'v5',v7:'v7',w1:'w1',ttq:'ttq',scn:'scn',r3r:'r3r'},key=map[this.st];if(key&&typeof data.correct_index==='number'){this[key+'p']=data.correct_index;this[key+'a']=true}if(this.st==='v5'&&Array.isArray(data.sentences))this.v5a=true;oldEnd.call(this);if(this.lastQuestionPayload){this.lastQuestionPayload.phase='published';this.lastQuestionPayload.answerKey=keyFor(this);if(this.mq&&this.cs==='connected')this.mq.publish(classroomTopic('question'),JSON.stringify(classroomEnvelope(this.lastQuestionPayload)))}this._r();return}oldEnd.call(this)};
   ap.qwr=function(){if((this.mt==='practice'&&active(this.st))||this.st==='ttq'){if(this.qp==='published'&&indexFor(this)<countFor(this)-1){advance(this);resetAnswer(this);this.qp='idle';this.qsub={};this.lastQuestionPayload=null;this.currentQuestionId=null;this.qws();return}oldNext.call(this);return}oldNext.call(this)};
   ap._r=function(){oldRender.call(this);var on=(this.mt==='practice'&&active(this.st))||this.st==='ttq';document.body.classList.toggle('unified-answer-controls',on);var oldRail=document.querySelector('.practice-rail'),oldStatus=document.querySelector('.practice-status-panel');if(oldRail)oldRail.remove();if(oldStatus)oldStatus.remove();if(!on)return;var side=document.querySelector('.cp-sidebar');if(side){var x=document.createElement('div');x.innerHTML=rail(this);side.insertBefore(x.firstChild,side.querySelector('.sb-spacer')||null)}if(this.statusPanelOpen){var y=document.createElement('div');y.innerHTML=status(this);if(y.firstChild)document.body.appendChild(y.firstChild)}var panel=document.querySelector('.panel-area>.panel'),oldKey=document.querySelector('.practice-key-answer');if(oldKey)oldKey.remove();if(this.qp==='published'&&panel){var b=document.createElement('div');b.className='practice-key-answer';b.textContent='答案：'+keyFor(this);panel.appendChild(b)}};
 })();
@@ -1889,7 +1896,7 @@ window.ap=ap;
       payload.publishedAt=new Date().toISOString();
     }
     state.lastQuestionPayload=payload;state.currentQuestionId=q.id;
-    state.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(payload));
+    state.mq.publish(classroomTopic('question'),JSON.stringify(classroomEnvelope(payload)));
     return true;
   }
   ap.qws=function(){
@@ -2428,7 +2435,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
   function publishPinyin(){
     if(ap.lastQuestionPayload)ap.lastQuestionPayload.pinyinVisible=ap.globalPinyinVisible;
     if(ap.mq&&ap.cs==='connected'){
-      try{ap.mq.publish('classpro/room/'+RM+'/display',JSON.stringify({room:RM,lesson:MT.lessonKey||'',type:'pinyinVisibility',show:ap.globalPinyinVisible,updatedAt:new Date().toISOString()}))}catch(e){}
+      try{ap.mq.publish(classroomTopic('display'),JSON.stringify(classroomEnvelope({room:RM,lesson:MT.lessonKey||'',type:'pinyinVisibility',show:ap.globalPinyinVisible,updatedAt:new Date().toISOString()})))}catch(e){}
     }
   }
   window.toggleGlobalPinyin=function(){ap.globalPinyinVisible=!ap.globalPinyinVisible;applyPinyinClass();publishPinyin();ap._r()};
@@ -2696,8 +2703,8 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
   ap._cq=function(){if(this.st==='opn')return question(this.opni||0);return oldCq.call(this)};
   ap._cq2=function(){if(this.st==='opn')return studentQuestion(this.opni||0);return oldCq2.call(this)};
   ap._qw=function(){if(this.st==='opn'){var s=this.st;this.st='v4';var h=oldQw.call(this);this.st=s;return h}return oldQw.call(this)};
-  ap.qws=function(){if(this.mt==='practice'&&this.st==='opn'){clearInterval(this.qtint);this.qp='answering';this.qt=0;this.qsub={};var q=studentQuestion(this.opni||0);if(q&&this.mq&&this.cs==='connected'){var payload={room:RM,lesson:MT.lessonKey||'',mode:'open_response',duration:this.qtm,sentAt:new Date().toISOString(),phase:'answering',question:q};this.lastQuestionPayload=payload;this.currentQuestionId=q.id;this.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(payload));this.pictureTalkSendStatus='已发送到学生端'}else{this.pictureTalkSendStatus='未发送：MQTT 未连接或题目为空'}this._r();return}oldStart.call(this)};
-  ap.qwe=function(){if(this.mt==='practice'&&this.st==='opn'){clearInterval(this.qtint);this.qp='published';if(this.lastQuestionPayload){this.lastQuestionPayload.phase='published';this.lastQuestionPayload.answerKey='';this.lastQuestionPayload.publishedAt=new Date().toISOString();if(this.mq&&this.cs==='connected')this.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(this.lastQuestionPayload))}this._sendSessionSummary&&this._sendSessionSummary('picture_talk_end');this._r();return}oldEnd.call(this)};
+  ap.qws=function(){if(this.mt==='practice'&&this.st==='opn'){clearInterval(this.qtint);this.qp='answering';this.qt=0;this.qsub={};var q=studentQuestion(this.opni||0);if(q&&this.mq&&this.cs==='connected'){var payload=classroomEnvelope({room:RM,lesson:MT.lessonKey||'',mode:'open_response',duration:this.qtm,sentAt:new Date().toISOString(),phase:'answering',question:q});this.lastQuestionPayload=payload;this.currentQuestionId=q.id;this.mq.publish(classroomTopic('question'),JSON.stringify(payload));this.pictureTalkSendStatus='已发送到学生端'}else{this.pictureTalkSendStatus='未发送：MQTT 未连接或题目为空'}this._r();return}oldStart.call(this)};
+  ap.qwe=function(){if(this.mt==='practice'&&this.st==='opn'){clearInterval(this.qtint);this.qp='published';if(this.lastQuestionPayload){this.lastQuestionPayload.phase='published';this.lastQuestionPayload.answerKey='';this.lastQuestionPayload.publishedAt=new Date().toISOString();if(this.mq&&this.cs==='connected')this.mq.publish(classroomTopic('question'),JSON.stringify(classroomEnvelope(this.lastQuestionPayload)))}this._sendSessionSummary&&this._sendSessionSummary('picture_talk_end');this._r();return}oldEnd.call(this)};
   ap.qwr=function(){if(this.mt==='practice'&&this.st==='opn'){var qs=pictureTalkQuestions();if(this.qp==='published'&&(this.opni||0)<qs.length-1){this.opni=(this.opni||0)+1;this.qp='idle';this.qsub={};this.lastQuestionPayload=null;this.currentQuestionId=null;this.pictureTalkSendStatus='';this._r();return}oldNext.call(this);return}oldNext.call(this)};
   var oldRender=ap._r;
   ap._r=function(){
@@ -2811,6 +2818,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     if(ap.mockLoaded&&ap.mockLoaded.testId===ap.mockTestId){cb&&cb(ap.mockLoaded);return}
     fetch('../data-model/mock-tests/'+ap.mockTestId+'.json').then(function(r){return r.json()}).then(function(d){ap.mockLoaded=d;cb&&cb(d);ap._r()}).catch(function(){ap.mockLoadError='测试数据读取失败';ap._r()});
   }
+  ap.selectMockTest=function(id){ap.mockTestId=id;ap.mockLoaded=null;ap.mockLoadError='';saveMockState();loadMock(function(){})};
   function mockSubmissions(){
     var rows=[],seen={};
     (ap.mockRows||[]).forEach(function(r){
@@ -2835,7 +2843,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     return out;
   }
   function mockPartName(part){
-    return {L1_picture_choice:'听力1 图片',L2_answer_choice:'听力2 问答',L3_dialogue_picture_choice:'听力3 对话图片',L4_sentence_question_answer:'听力4 句问答',R1_sentence_picture_match:'阅读1 图文',R2_question_answer_match:'阅读2 问答',R3_fill_blank:'阅读3 填空',R4_reading_comprehension:'阅读4 理解'}[part]||part;
+    return {L1_picture_choice:'听力1 图片',L2_answer_choice:'听力2 问答',L3_dialogue_picture_choice:'听力3 对话图片',L4_sentence_question_answer:'听力4 句问答',R1_sentence_picture_match:'阅读1 图文',R1_sentence_match:'阅读1 句子匹配',R2_question_answer_match:'阅读2 问答',R2_fill_blank:'阅读2 选词填空',R3_fill_blank:'阅读3 填空',R3_reading_comprehension:'阅读3 理解',R4_reading_comprehension:'阅读4 理解',W1_pinyin_hanzi:'书写1 拼音写汉字',W2_picture_sentence:'书写2 看图写句子'}[part]||part;
   }
   function mockPct(score,total){return total?Math.round(Number(score||0)/Number(total||0)*100):0}
   function mockFmt(sec){sec=Math.max(0,Math.floor(sec||0));var m=Math.floor(sec/60),s=sec%60;return m+':'+String(s).padStart(2,'0')}
@@ -2846,9 +2854,10 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     return{elapsed:elapsed,left:left,finished:left<=0};
   }
   function mockDiagnosis(r){
-    var items=mockItems(),ans=r.answers||{},wrong=[],partWrong={},skillWrong={listening:0,reading:0},skillTotal={listening:0,reading:0};
+    var items=mockItems(),ans=r.answers||{},wrong=[],partWrong={},skillWrong={listening:0,reading:0,writing:0},skillTotal={listening:0,reading:0,writing:0};
     items.forEach(function(x){
-      var ok=ans[x.id]===x.answer,skill=x.skill==='listening'?'listening':'reading';
+      if(x.manualReview)return;
+      var ok=String(ans[x.id]==null?'':ans[x.id]).trim()===String(x.answer==null?'':x.answer).trim(),skill=x.skill==='listening'?'listening':x.skill==='writing'?'writing':'reading';
       skillTotal[skill]++;
       if(!ok){
         wrong.push(x);
@@ -2857,16 +2866,16 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
       }
     });
     var weakParts=Object.keys(partWrong).sort(function(a,b){return partWrong[b]-partWrong[a]}).slice(0,2).map(function(k){return mockPartName(k)+' '+partWrong[k]+'题'});
-    var focus=skillWrong.listening>skillWrong.reading?'听力':skillWrong.reading>skillWrong.listening?'阅读':(wrong.length?'听力和阅读':'保持');
-    return {wrong:wrong,partWrong:partWrong,skillWrong:skillWrong,skillTotal:skillTotal,weakParts:weakParts,focus:focus};
+    var focus=Object.keys(skillWrong).sort(function(a,b){return skillWrong[b]-skillWrong[a]})[0],focusName={listening:'听力',reading:'阅读',writing:'书写'}[focus]||'保持';
+    return {wrong:wrong,partWrong:partWrong,skillWrong:skillWrong,skillTotal:skillTotal,weakParts:weakParts,focus:wrong.length?focusName:'保持'};
   }
   function mockReport(rows){
-    var items=mockItems(),byId={},parts={},wrongByItem={},total=0,correct=0,listenTotal=0,listenCorrect=0,readTotal=0,readCorrect=0;
-    items.forEach(function(x){byId[x.id]=x;wrongByItem[x.id]={item:x,wrong:0,total:rows.length};parts[x.part]=parts[x.part]||{name:mockPartName(x.part),total:0,correct:0};parts[x.part].total+=rows.length});
-    rows.forEach(function(r){var ans=r.answers||{};items.forEach(function(x){var ok=ans[x.id]===x.answer;total++;if(ok)correct++;else if(wrongByItem[x.id])wrongByItem[x.id].wrong++;if(x.skill==='listening'){listenTotal++;if(ok)listenCorrect++}else{readTotal++;if(ok)readCorrect++}if(ok)parts[x.part].correct++})});
+    var items=mockItems(),objective=items.filter(function(x){return !x.manualReview}),manual=items.filter(function(x){return !!x.manualReview}),byId={},parts={},wrongByItem={},total=0,correct=0,listenTotal=0,listenCorrect=0,readTotal=0,readCorrect=0,writeTotal=0,writeCorrect=0;
+    objective.forEach(function(x){byId[x.id]=x;wrongByItem[x.id]={item:x,wrong:0,total:rows.length};parts[x.part]=parts[x.part]||{name:mockPartName(x.part),total:0,correct:0};parts[x.part].total+=rows.length});
+    rows.forEach(function(r){var ans=r.answers||{};objective.forEach(function(x){var ok=String(ans[x.id]==null?'':ans[x.id]).trim()===String(x.answer==null?'':x.answer).trim();total++;if(ok)correct++;else if(wrongByItem[x.id])wrongByItem[x.id].wrong++;if(x.skill==='listening'){listenTotal++;if(ok)listenCorrect++}else if(x.skill==='writing'){writeTotal++;if(ok)writeCorrect++}else{readTotal++;if(ok)readCorrect++}if(ok)parts[x.part].correct++})});
     function pct(a,b){return b?Math.round(a/b*100):0}
     var h='<div style="margin:18px 0;padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff"><h3 style="margin:0 0 12px;color:var(--blue)">测试报告 / Test Report</h3>';
-    h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px"><div class="formula-box">全班正确率<br><b>'+pct(correct,total)+'%</b></div><div class="formula-box">听力<br><b>'+pct(listenCorrect,listenTotal)+'%</b></div><div class="formula-box">阅读<br><b>'+pct(readCorrect,readTotal)+'%</b></div><div class="formula-box">提交人数<br><b>'+rows.length+'</b></div></div>';
+    h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px"><div class="formula-box">客观题正确率<br><b>'+pct(correct,total)+'%</b></div>'+(listenTotal?'<div class="formula-box">听力<br><b>'+pct(listenCorrect,listenTotal)+'%</b></div>':'')+(readTotal?'<div class="formula-box">阅读<br><b>'+pct(readCorrect,readTotal)+'%</b></div>':'')+(writeTotal?'<div class="formula-box">写汉字<br><b>'+pct(writeCorrect,writeTotal)+'%</b></div>':'')+(manual.length?'<div class="formula-box">待人工批改<br><b>'+manual.length+' 题/人</b></div>':'')+'<div class="formula-box">提交人数<br><b>'+rows.length+'</b></div></div>';
     if(rows.length){h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin-top:12px">';Object.keys(parts).forEach(function(k){var p=parts[k];h+='<div style="padding:10px;border:1px solid #dfeac8;border-radius:12px;background:#f8faf3"><b>'+es(p.name)+'</b><div style="font-size:24px;font-weight:900;color:#3f7f32;margin-top:4px">'+pct(p.correct,p.total)+'%</div></div>'});h+='</div>'}
     if(rows.length){
       var hard=Object.keys(wrongByItem).map(function(k){return wrongByItem[k]}).filter(function(x){return x.total&&x.wrong>0}).sort(function(a,b){return b.wrong/b.total-a.wrong/a.total}).slice(0,8);
@@ -2880,10 +2889,10 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
   function publishMock(phase,test){
     if(!ap.mq||ap.cs!=='connected'){ap.mockSendStatus='未发送：MQTT 未连接。请确认右上角 online 后再点开放答题。';saveMockState();return false}
     if(!ap.mockStartedAt)ap.mockStartedAt=new Date().toISOString();
-    var payload={room:RM,lesson:MT.lessonKey||'HSK1-MOCK',mode:'mock_test',phase:phase,testId:ap.mockTestId,durationMinutes:(test&&test.durationMinutes)||35,sentAt:ap.mockStartedAt,question:{id:ap.mockTestId,type:'mock_test',prompt_cn:(test&&test.titleCn)||'HSK1 模拟测试',prompt_en:(test&&test.titleEn)||'HSK1 Mock Test',data:{}}};
+    var payload={room:RM,lesson:(test&&test.recordLesson)||MT.lessonKey||'HSK-MOCK',mode:'mock_test',phase:phase,testId:ap.mockTestId,durationMinutes:(test&&test.durationMinutes)||35,sentAt:ap.mockStartedAt,question:{id:ap.mockTestId,type:'mock_test',prompt_cn:(test&&test.titleCn)||'HSK 模拟测试',prompt_en:(test&&test.titleEn)||'HSK Mock Test',data:{}}};
     ap.lastQuestionPayload=payload;
     ap.currentQuestionId=ap.mockTestId;
-    ap.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(payload));
+    ap.mq.publish(classroomTopic('question'),JSON.stringify(classroomEnvelope(payload)));
     ap.mockSendStatus=(phase==='locked'?'已发送收卷锁定':'已发送开放答题')+'：'+new Date().toLocaleTimeString();
     saveMockState();
     return true;
@@ -2937,31 +2946,30 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
   ap._mockPanel=function(){
     ingestLocalMockSecurity();
     var test=ap.mockLoaded,rows=mockSubmissions(),h='<div class="panel" style="max-width:1080px;width:100%;text-align:left"><h2 style="margin-top:0;color:var(--blue)">测 / HSK Mock Test</h2>';
-    var mockOptionData=[['HSK1-mock-01','HSK1-mock-01（1-10课）'],['HSK1-mock-02','HSK1-mock-02（1-12课）'],['HSK1-mock-03','HSK1-mock-03（1-15课）'],['HSK1-mock-04','HSK1-mock-04（1-13课）']];
+    var mockOptionData=[['HSK1-mock-01','HSK1-mock-01（1-10课）'],['HSK1-mock-02','HSK1-mock-02（1-12课）'],['HSK1-mock-03','HSK1-mock-03（1-15课）'],['HSK1-mock-04','HSK1-mock-04（1-13课）'],['HSK3-mock1','HSK3-mock1（1-7课·阅读与书写）']];
     var mockOptions=mockOptionData.map(function(x){return'<option value="'+x[0]+'" '+(ap.mockTestId===x[0]?'selected':'')+'>'+x[1]+'</option>'}).join('');
-    h+='<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px"><select onchange="ap.mockTestId=this.value;ap.mockLoaded=null;saveMockState();loadMock(function(){})" style="padding:10px 14px;border-radius:999px;border:1px solid var(--line);font-weight:900">'+mockOptions+'</select><button class="next-btn" onclick="ap.startMockTest()" '+(ap.mockPhase==='answering'?'disabled':'')+'>开放答题 / Start</button><button class="next-btn" style="background:#f05a3f" onclick="ap.endMockTest()" '+(ap.mockPhase!=='answering'?'disabled':'')+'>收卷锁定 / Lock</button><button class="next-btn" style="background:#9ca3af" onclick="ap.resetMockTest()">重置 / Reset</button></div>';
+    h+='<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px"><select onchange="ap.selectMockTest(this.value)" style="padding:10px 14px;border-radius:999px;border:1px solid var(--line);font-weight:900">'+mockOptions+'</select><button class="next-btn" onclick="ap.startMockTest()" '+(ap.mockPhase==='answering'?'disabled':'')+'>开放答题 / Start</button><button class="next-btn" style="background:#f05a3f" onclick="ap.endMockTest()" '+(ap.mockPhase!=='answering'?'disabled':'')+'>收卷锁定 / Lock</button><button class="next-btn" style="background:#9ca3af" onclick="ap.resetMockTest()">重置 / Reset</button></div>';
     if(!test){h+='<div style="padding:18px;border:1px dashed var(--line);border-radius:14px;color:#74806d">点击加载或开放测试。'+(ap.mockLoadError?' '+es(ap.mockLoadError):'')+'</div>';setTimeout(function(){loadMock(function(){})},0);return h+'</div>'}
-    var statusBg=ap.mockPhase==='answering'?'#dcfce7':ap.mockPhase==='locked'?'#fee2e2':'#f8faf3',statusColor=ap.mockPhase==='answering'?'#166534':ap.mockPhase==='locked'?'#991b1b':'#64748b';
-    var secMap=mockSecuritySummary(),secCount=Object.keys(secMap).length,clock=mockClock(test);
-    h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:14px 0"><div class="formula-box">题量<br><b>'+((test.sections||[]).reduce(function(n,s){return n+(s.items||[]).length},0))+'</b></div><div class="formula-box">时长<br><b>'+es(test.durationMinutes||35)+' 分钟</b></div><div class="formula-box" style="background:'+statusBg+';color:'+statusColor+';border-color:'+statusColor+'">状态<br><b>'+es(ap.mockPhase==='answering'?'答题中':ap.mockPhase==='locked'?'已锁定':'未开放')+'</b></div><div id="mockClockCard" class="formula-box" style="background:'+(ap.mockPhase==='answering'&&clock.left<300?'#fee2e2':'#edf3ff')+'">计时<br><b id="mockClockText">'+es(ap.mockPhase==='idle'?'未开始':(mockFmt(clock.elapsed)+' / 剩 '+mockFmt(clock.left)))+'</b></div><div class="formula-box">已提交<br><b>'+rows.length+' / '+ap.as.length+'</b></div><div class="formula-box" style="background:#fff7ed;color:#b45309;border-color:#fed7aa">异常记录<br><b>'+secCount+'</b></div></div>';
+    var statusBg=ap.mockPhase==='answering'?'#dcfce7':ap.mockPhase==='locked'?'#fee2e2':'#f8faf3',statusColor=ap.mockPhase==='answering'?'#166534':ap.mockPhase==='locked'?'#991b1b':'#64748b',maxPoints=test.scoringPolicy&&test.scoringPolicy.totalPoints||(test.sections||[]).reduce(function(sum,section){return sum+(section.items||[]).reduce(function(n,item){return n+(item.points||1)},0)},0);
+    var secMap=mockSecuritySummary(),secCount=Object.keys(secMap).length,clock=mockClock(test),hasAudio=Array.isArray(test.audioParts)&&test.audioParts.length>0;
+    h+='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:14px 0"><div class="formula-box">题量<br><b>'+((test.sections||[]).reduce(function(n,s){return n+(s.items||[]).length},0))+'</b></div><div class="formula-box">满分<br><b>'+maxPoints+' 分</b></div><div class="formula-box">时长<br><b>'+es(test.durationMinutes||35)+' 分钟</b></div><div class="formula-box" style="background:'+statusBg+';color:'+statusColor+';border-color:'+statusColor+'">状态<br><b>'+es(ap.mockPhase==='answering'?'答题中':ap.mockPhase==='locked'?'已锁定':'未开放')+'</b></div><div id="mockClockCard" class="formula-box" style="background:'+(ap.mockPhase==='answering'&&clock.left<300?'#fee2e2':'#edf3ff')+'">计时<br><b id="mockClockText">'+es(ap.mockPhase==='idle'?'未开始':(mockFmt(clock.elapsed)+' / 剩 '+mockFmt(clock.left)))+'</b></div><div class="formula-box">已提交<br><b>'+rows.length+' / '+ap.as.length+'</b></div><div class="formula-box" style="background:#fff7ed;color:#b45309;border-color:#fed7aa">异常记录<br><b>'+secCount+'</b></div></div>';
     h+=mockReport(rows);
-    h+='<div style="background:#f8faf3;border:1px solid var(--line);border-radius:14px;padding:14px;line-height:1.7;color:#64748b">听力由教师端统一控制。可按大题加载音频，使用进度条拖动定位错题讲解。'+(ap.mockSendStatus?'<br><b>'+es(ap.mockSendStatus)+'</b>':'')+'</div>';
-    var audioPart=ap.mockAudioPart||'L1_picture_choice',audioFile=mockAudioFile(audioPart);
-    h+='<div style="margin:14px 0;padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff"><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px"><b style="color:var(--blue)">听力播放</b><button class="tab" onclick="ap.loadMockAudioPart(\'L1_picture_choice\')">1-5</button><button class="tab" onclick="ap.loadMockAudioPart(\'L2_answer_choice\')">6-10</button><button class="tab" onclick="ap.loadMockAudioPart(\'L3_dialogue_picture_choice\')">11-15</button><button class="tab" onclick="ap.loadMockAudioPart(\'L4_sentence_question_answer\')">16-20</button><button class="tab" style="border-color:#f05a3f;color:#f05a3f" onclick="ap.stopMockAudio()">停止</button></div>'+(audioFile?'<audio id="mockAudioPlayer" controls preload="metadata" src="'+es(audioFile)+'" style="width:100%"></audio><div style="font-size:12px;color:#64748b;margin-top:6px">'+es(mockPartName(audioPart))+'</div>':'<div style="color:#b45309">当前大题没有音频文件，将使用浏览器语音作为备用。</div>')+'</div>';
+    h+='<div style="background:#f8faf3;border:1px solid var(--line);border-radius:14px;padding:14px;line-height:1.7;color:#64748b">'+(hasAudio?'听力由教师端统一控制。可按大题加载音频，使用进度条拖动定位错题讲解。':'本测试包含阅读和书写。客观题自动评分，看图写句子提交后进入教师批改队列。')+(ap.mockSendStatus?'<br><b>'+es(ap.mockSendStatus)+'</b>':'')+(test.recordLesson?'<br><button class="tab" style="margin-top:8px" onclick="location.href=\'../teacher-dashboard/post-review.html?lesson='+encodeURIComponent(MT.lessonKey||URL_LESSON||'')+'&room='+encodeURIComponent(RM)+'&scope='+encodeURIComponent(test.recordLesson)+'\'">批改看图写句子 / Review Writing</button>':'')+'</div>';
+    if(hasAudio){var audioPart=ap.mockAudioPart||'L1_picture_choice',audioFile=mockAudioFile(audioPart);h+='<div style="margin:14px 0;padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff"><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px"><b style="color:var(--blue)">听力播放</b><button class="tab" onclick="ap.loadMockAudioPart(\'L1_picture_choice\')">1-5</button><button class="tab" onclick="ap.loadMockAudioPart(\'L2_answer_choice\')">6-10</button><button class="tab" onclick="ap.loadMockAudioPart(\'L3_dialogue_picture_choice\')">11-15</button><button class="tab" onclick="ap.loadMockAudioPart(\'L4_sentence_question_answer\')">16-20</button><button class="tab" style="border-color:#f05a3f;color:#f05a3f" onclick="ap.stopMockAudio()">停止</button></div>'+(audioFile?'<audio id="mockAudioPlayer" controls preload="metadata" src="'+es(audioFile)+'" style="width:100%"></audio><div style="font-size:12px;color:#64748b;margin-top:6px">'+es(mockPartName(audioPart))+'</div>':'<div style="color:#b45309">当前大题没有音频文件，将使用浏览器语音作为备用。</div>')+'</div>'}
     h+='<h3 style="color:var(--practice)">提交情况 / Submissions</h3>';
     if(!rows.length)h+='<div style="padding:18px;border:1px dashed var(--line);border-radius:14px;color:#94a3b8;text-align:center">暂无学生提交。</div>';
-    else{h+='<table style="width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden"><tr style="background:#edf6d9"><th style="text-align:left;padding:10px">学生</th><th style="text-align:left;padding:10px">得分</th><th style="text-align:left;padding:10px">异常</th><th style="text-align:left;padding:10px">错题</th><th style="text-align:left;padding:10px">薄弱方向</th><th style="text-align:left;padding:10px">详情</th><th style="text-align:left;padding:10px">提交时间</th></tr>';rows.forEach(function(r){var dx=mockDiagnosis(r),wrong=dx.wrong.length?dx.wrong.map(function(x){return x.number}).join('、'):'无';var answers=r.answers||{},detail=dx.wrong.map(function(x){return '第'+x.number+'题 '+mockPartName(x.part)+'：学生选 '+(answers[x.id]||'未答')+'，正确 '+x.answer}).join('；');var weak=(dx.wrong.length?'需加强：'+dx.focus+(dx.weakParts.length?'；'+dx.weakParts.join('、'):''):'无明显薄弱项'),sec=secMap[String(r.n||'Student')],pct=mockPct(r.score,r.total);h+='<tr><td style="padding:10px;border-top:1px solid var(--line)">'+es(r.n||'')+'</td><td style="padding:10px;border-top:1px solid var(--line);font-weight:900;color:var(--blue)">'+pct+' 分 <span style="font-size:12px;color:#64748b">('+es(r.x||'')+')</span></td><td style="padding:10px;border-top:1px solid var(--line);color:'+(sec?'#b45309':'#64748b')+'">'+(sec?es(sec.violations||0)+'次':'无')+'</td><td style="padding:10px;border-top:1px solid var(--line)">'+es(wrong)+'</td><td style="padding:10px;border-top:1px solid var(--line)">'+es(weak)+'</td><td style="padding:10px;border-top:1px solid var(--line)"><details><summary style="cursor:pointer;color:var(--blue);font-weight:900">查看</summary><div style="margin-top:8px;font-size:12px;line-height:1.7;color:#64748b">'+es(detail||'全部正确')+'</div></details></td><td style="padding:10px;border-top:1px solid var(--line)">'+es(r.t||'')+'</td></tr>'});h+='</table>'}
+    else{h+='<table style="width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden"><tr style="background:#edf6d9"><th style="text-align:left;padding:10px">学生</th><th style="text-align:left;padding:10px">客观题</th><th style="text-align:left;padding:10px">待批改</th><th style="text-align:left;padding:10px">异常</th><th style="text-align:left;padding:10px">错题</th><th style="text-align:left;padding:10px">薄弱方向</th><th style="text-align:left;padding:10px">详情</th><th style="text-align:left;padding:10px">提交时间</th></tr>';rows.forEach(function(r){var dx=mockDiagnosis(r),wrong=dx.wrong.length?dx.wrong.map(function(x){return x.number}).join('、'):'无';var answers=r.answers||{},detail=dx.wrong.map(function(x){return '第'+x.number+'题 '+mockPartName(x.part)+'：学生选 '+(answers[x.id]||'未答')+'，正确 '+x.answer}).join('；');var weak=(dx.wrong.length?'需加强：'+dx.focus+(dx.weakParts.length?'；'+dx.weakParts.join('、'):''):'无明显薄弱项'),sec=secMap[String(r.n||'Student')],pct=mockPct(r.score,r.total);h+='<tr><td style="padding:10px;border-top:1px solid var(--line)">'+es(r.n||'')+'</td><td style="padding:10px;border-top:1px solid var(--line);font-weight:900;color:var(--blue)">'+pct+' 分 <span style="font-size:12px;color:#64748b">('+es(r.x||'')+')</span></td><td style="padding:10px;border-top:1px solid var(--line);color:#b45309">'+es(r.manualPending||0)+' 题</td><td style="padding:10px;border-top:1px solid var(--line);color:'+(sec?'#b45309':'#64748b')+'">'+(sec?es(sec.violations||0)+'次':'无')+'</td><td style="padding:10px;border-top:1px solid var(--line)">'+es(wrong)+'</td><td style="padding:10px;border-top:1px solid var(--line)">'+es(weak)+'</td><td style="padding:10px;border-top:1px solid var(--line)"><details><summary style="cursor:pointer;color:var(--blue);font-weight:900">查看</summary><div style="margin-top:8px;font-size:12px;line-height:1.7;color:#64748b">'+es(detail||'客观题全部正确')+'</div></details></td><td style="padding:10px;border-top:1px solid var(--line)">'+es(r.t||'')+'</td></tr>'});h+='</table>'}
     return h+'</div>';
   };
   var oldSnav=ap._snav,oldCnt=ap._cnt,oldRender=ap._r,oldHa=ap._ha,oldLw=ap._lw;
   ap._snav=function(){if(this.mt==='mock')return'<div class="sub-nav"><button class="sub-btn active" onclick="ap.st=\'mock\';ap._r()">HSK 测试<br><small>Mock Test</small></button></div>';return oldSnav.call(this)};
   ap._cnt=function(){if(this.mt==='mock')return this._mockPanel();return oldCnt.call(this)};
   ap._lw=function(){if(this.mt==='mock')return'';return oldLw.call(this)};
-  ap._ha=function(m){oldHa.call(this,m);if(m&&m.mode==='mock_test_security'){recordMockSecurity(m);saveMockState();this._r();return}if(m&&m.mode==='mock_test'){var n=this._rn?this._rn(m.studentName||m.name||'Student'):(m.studentName||m.name||'Student');if(m.securityViolations&&m.securityViolations.length)this.mockSecurityRows.unshift({n:n,reason:'submitted_with_violations',violations:m.violationCount||m.securityViolations.length,t:new Date().toLocaleTimeString(),submittedAt:m.submittedAt||new Date().toISOString(),testId:m.testId||m.questionId||''});this.mockRows.unshift({n:n,x:(m.score!=null&&m.total!=null)?(m.score+'/'+m.total):(m.text||m.answer||''),score:m.score,total:m.total,t:new Date().toLocaleTimeString(),submittedAt:m.submittedAt||new Date().toISOString(),answers:m.answers||{},wrongNumbers:m.wrongNumbers||[],testId:m.testId||m.questionId||'',violationCount:m.violationCount||0});this.qsub[n]=true;saveMockState();this._r()}};
+  ap._ha=function(m){oldHa.call(this,m);if(m&&m.mode==='mock_test_security'){recordMockSecurity(m);saveMockState();this._r();return}if(m&&m.mode==='mock_test'){var n=this._rn?this._rn(m.studentName||m.name||'Student'):(m.studentName||m.name||'Student');if(m.securityViolations&&m.securityViolations.length)this.mockSecurityRows.unshift({n:n,reason:'submitted_with_violations',violations:m.violationCount||m.securityViolations.length,t:new Date().toLocaleTimeString(),submittedAt:m.submittedAt||new Date().toISOString(),testId:m.testId||m.questionId||''});this.mockRows.unshift({n:n,x:(m.score!=null&&m.total!=null)?(m.score+'/'+m.total):(m.text||m.answer||''),score:m.score,total:m.total,overallTotal:m.overallTotal||m.total,manualPending:m.manualPending||0,t:new Date().toLocaleTimeString(),submittedAt:m.submittedAt||new Date().toISOString(),answers:m.answers||{},wrongNumbers:m.wrongNumbers||[],testId:m.testId||m.questionId||'',violationCount:m.violationCount||0});this.qsub[n]=true;saveMockState();this._r()}};
   ap._r=function(){
     oldRender.call(this);
     var side=document.querySelector('.cp-sidebar');if(!side||side.querySelector('.mock-side-btn'))return;
-    var btn=document.createElement('button');btn.className='sb-btn mock-side-btn'+(ap.mt==='mock'?' active':'');btn.textContent='测';btn.onclick=function(){ap.mt='mock';ap.st='mock';ap._r()};
+    var btn=document.createElement('button');btn.className='sb-btn mock-side-btn'+(ap.mt==='mock'?' active':'');btn.textContent='测';btn.onclick=function(){ap.mt='mock';ap.st='mock';loadMock(function(){});ap._r()};
     var rail=side.querySelector('.practice-rail'),spacer=side.querySelector('.sb-spacer'),firstBottom=side.querySelector('.sb-bottom');
     side.insertBefore(btn,rail||spacer||firstBottom||null);
   };
@@ -3488,7 +3496,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
   ap._cq2=function(){if(this.st==='scn')return qs()[this.scni||0]||null;if(this.st==='v5')return prepFill((Q.v5_vocab_fill||[])[this.v5i||0]||null);if(this.st==='inf')return prepInfo(infoQs()[this.infi||0]||null);if(this.st==='v6d')return prepChoice((Q.v6_description_guess||[])[this.v6di||0]||null);if(this.st==='r3r')return prepChoice((Q.r3_independent_reading||[])[this.r3ri||0]||null);if(this.st==='v2g')return(Q.v2_say_guess||[])[this.v2gi||0]||null;if(this.st==='v3b')return(Q.v3_blind_box||[])[this.v3bi||0]||null;if(this.st==='g2p')return(Q.g2_picture_complete||[])[this.g2pi||0]||null;if(this.st==='r4p')return(Q.r4_paragraph_fill||[])[this.r4pi||0]||null;if(this.st==='t3c')return(Q.t3_chain_sentence||[])[this.t3ci||0]||null;if(this.st==='t2k')return(Q.t2_task_card||[])[this.t2ki||0]||null;return oldCq2.call(this)};
   var oldStart=ap.qws,oldEnd=ap.qwe,oldNext=ap.qwr;
   ap.qws=function(){if(this.mt==='practice'&&this.st==='inf'){clearInterval(this.qtint);this.qp='answering';this.qt=0;this.qsub={};this._pubq();this._r();return}oldStart.call(this)};
-  ap.qwe=function(){if(this.mt==='practice'&&this.st==='inf'){clearInterval(this.qtint);this.qp='published';if(this.lastQuestionPayload){this.lastQuestionPayload.phase='published';this.lastQuestionPayload.answerKey=infoKey(this.lastQuestionPayload.question);this.lastQuestionPayload.publishedAt=new Date().toISOString();if(this.mq&&this.cs==='connected')this.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(this.lastQuestionPayload))}this._r();return}oldEnd.call(this)};
+  ap.qwe=function(){if(this.mt==='practice'&&this.st==='inf'){clearInterval(this.qtint);this.qp='published';if(this.lastQuestionPayload){this.lastQuestionPayload.phase='published';this.lastQuestionPayload.answerKey=infoKey(this.lastQuestionPayload.question);this.lastQuestionPayload.publishedAt=new Date().toISOString();if(this.mq&&this.cs==='connected')this.mq.publish(classroomTopic('question'),JSON.stringify(classroomEnvelope(this.lastQuestionPayload)))}this._r();return}oldEnd.call(this)};
   ap.qwr=function(){
     if(this.mt==='practice'&&this.st==='inf'){var inf=infoQs();if(this.qp==='published'&&(this.infi||0)<inf.length-1){this.infi=(this.infi||0)+1;resetPracticeState();this._r();return}oldNext.call(this);return}
     if(this.mt==='practice'&&['v6d','v2g','v3b','g2p','r3r','r4p','t3c','t2k'].indexOf(this.st)>=0){var list=listFor(this.st),prop=propFor(this.st);if(this.qp==='published'&&(this[prop]||0)<list.length-1){this[prop]=(this[prop]||0)+1;this.v6da=false;this.v6dp=-1;this.r3ra=false;this.r3rp=-1;resetPracticeState();this._r();return}oldNext.call(this);return}
@@ -3907,13 +3915,15 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
     if(note.presentationMode==='listen_first_progressive'){
       var phaseLabels=[['先听音频','Listen'],['回答问题','Q&A'],['展示课文','Read'],['联系生活','Culture'],['复述表达','Retell']],phase=Math.max(0,Math.min(Number(this.hsk3TextPhase)||0,phaseLabels.length-1)),questions=note.classQuestions||[],phaseTabs='<div class="hsk3-text-phase-tabs">'+phaseLabels.map(function(x,k){return'<button class="'+(phase===k?'active':'')+'" onclick="ap.hsk3TextPhase='+k+';ap.hsk3TextAnswer=false;ap._r()"><b>'+(k+1)+'</b><span>'+x[0]+'</span><small>'+x[1]+'</small></button>'}).join('')+'</div>',h='<div class="panel hsk3-text-panel final simple hsk3-progressive-text"><div class="hsk3-text-head"><div><div class="hsk3-kicker">Text Teaching</div><h2>课文讲授：'+esc(cur.title||'')+'</h2><p>'+esc(cur.setting||'')+'</p></div></div>'+textTabs+phaseTabs;
       if(phase===0){
-        h+='<section class="hsk3-text-stage hsk3-listen-stage"><div class="hsk3-stage-heading"><span>STEP 1 · LISTEN FIRST</span><h3>先听音频，不看课文</h3><p>'+esc(note.listenPrompt||'先完整听一遍，说说你听到了什么。')+'</p></div><button class="hsk3-text-audio hsk3-text-audio-main" '+(audio?'onclick="playTextAudio(\''+esc(audio)+'\')"':'disabled')+'>'+(audio?'▶ 播放课文音频':'♪ 原音频待导入')+'</button><small>第一次先听整体意思，详细问题放在下一步。</small></section>';
+        var preQuestions=note.preReadingQuestions||[];
+        h+='<section class="hsk3-text-stage hsk3-listen-stage"><div class="hsk3-stage-heading"><span>STEP 1 · LISTEN FIRST</span><h3>先看问题，再听音频</h3><p>'+esc(note.listenPrompt||'先完整听一遍，说说你听到了什么。')+'</p></div>'+(preQuestions.length?'<div class="hsk3-grammar-oral">'+preQuestions.map(function(q,k){return'<p><b>'+(k+1)+'</b><span class="text-hanzi">'+rubyLine(q.question||q.hanzi||'',q.pinyin||q.question_pinyin||'',18)+'</span></p>'}).join('')+'</div>':'')+'<button class="hsk3-text-audio hsk3-text-audio-main" '+(audio?'onclick="playTextAudio(\''+esc(audio)+'\')"':'disabled')+'>'+(audio?'▶ 播放课文音频':'♪ 原音频待导入')+'</button><small>先让学生回答听读前问题，再第一次听整体意思；详细理解问题放在下一步。</small></section>';
       }else if(phase===1){
         var qi=Math.max(0,Math.min(Number(this.hsk3TextQuestion)||0,Math.max(0,questions.length-1))),q=questions[qi]||{},revealed=!!this.hsk3TextAnswer;
         this.hsk3TextQuestion=qi;
         h+='<section class="hsk3-text-stage hsk3-question-stage"><div class="hsk3-stage-heading"><span>STEP 2 · QUESTION '+(questions.length?(qi+1)+' / '+questions.length:'')+'</span><h3>'+rubyLine(q.question||'请根据课文回答问题。',q.question_pinyin||'',32)+'</h3><p>先让学生说，再点击查看参考答案。</p></div>'+(revealed?'<div class="hsk3-question-answer"><b>参考答案</b><span class="text-hanzi">'+rubyLine(q.answer||'',q.answer_pinyin||'',27)+'</span></div>':'<div class="hsk3-question-wait">先聊聊，不着急给答案。</div>')+'<div class="hsk3-question-actions"><button onclick="ap.hsk3TextQuestion=Math.max(0,'+qi+'-1);ap.hsk3TextAnswer=false;ap._r()" '+(qi===0?'disabled':'')+'>← 上一题</button><button class="reveal" onclick="ap.hsk3TextAnswer=!ap.hsk3TextAnswer;ap._r()">'+(revealed?'隐藏参考答案':'显示参考答案')+'</button><button onclick="ap.hsk3TextQuestion=Math.min('+(Math.max(0,questions.length-1))+','+qi+'+1);ap.hsk3TextAnswer=false;ap._r()" '+(qi>=questions.length-1?'disabled':'')+'>下一题 →</button></div></section>';
       }else if(phase===2){
-        h+='<section class="hsk3-text-stage hsk3-read-stage"><div class="hsk3-stage-heading"><span>STEP 3 · READ AND UNDERSTAND</span><h3>展示并理解课文</h3><p>根据课堂需要切换汉字、拼音或英文。</p></div>'+languageTabs+textBody+'</section>';
+        var keyPoints=note.keyPoints||[];
+        h+='<section class="hsk3-text-stage hsk3-read-stage"><div class="hsk3-stage-heading"><span>STEP 3 · READ AND UNDERSTAND</span><h3>展示、理解与重点讲解</h3><p>根据课堂需要切换汉字、拼音或英文；理解全文后再聚焦关键表达。</p></div>'+languageTabs+textBody+(keyPoints.length?'<div class="hsk3-text-teaching-grid">'+keyPoints.map(function(x,k){return'<div><b>'+(k+1)+'. '+esc(x.hanzi||x.expression||'')+'</b>'+(x.pinyin?'<small data-pinyin="1">'+esc(x.pinyin)+'</small>':'')+'<span>'+esc(x.note||x.meaning||'')+'</span></div>'}).join('')+'</div>':'')+'</section>';
       }else if(phase===3){
         h+=cultureDiscussionHtml(note);
       }else{
@@ -4053,7 +4063,7 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
       if(this.lastQuestionPayload){
         var payload=this.lastQuestionPayload,d=payload.question&&payload.question.data||{};payload.phase='published';payload.publishedAt=new Date().toISOString();
         payload.answerKey=this.st==='r4p'?(d.answers||[]).map(function(index,i){return(i+1)+'-'+((d.options||[])[index]||'')}):'';
-        if(this.mq&&this.cs==='connected')this.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(payload));
+        if(this.mq&&this.cs==='connected')this.mq.publish(classroomTopic('question'),JSON.stringify(classroomEnvelope(payload)));
       }
       this._r();return;
     }
@@ -4201,7 +4211,7 @@ rt{font-size:.42em!important;line-height:1.1;padding-bottom:3px}[data-pinyin="1"
   function save(state){state.updatedAt=new Date().toISOString();try{localStorage.setItem(stateKey(state.questionId),JSON.stringify(state))}catch(e){console.log('save chain',e)}}
   function publicState(state){return{questionId:state.questionId,mode:state.mode,revision:state.revision,single:state.single,lanes:state.lanes,teams:state.teams,updatedAt:state.updatedAt}}
   function broadcast(state,target){
-    save(state);if(ap.mq&&ap.cs==='connected'){var payload={room:RM,lesson:MT.lessonKey||'',type:'chainState',state:publicState(state),updatedAt:new Date().toISOString()};if(target)payload.targetClientId=target;ap.mq.publish('classpro/room/'+RM+'/display',JSON.stringify(payload))}
+    save(state);if(ap.mq&&ap.cs==='connected'){var payload=classroomEnvelope({room:RM,lesson:MT.lessonKey||'',type:'chainState',state:publicState(state),updatedAt:new Date().toISOString()});if(target)payload.targetClientId=target;ap.mq.publish(classroomTopic('display'),JSON.stringify(payload))}
   }
   function touch(state){state.revision=(Number(state.revision)||0)+1;save(state)}
   function words(q){return q&&q.data&&q.data.keywords||[]}
@@ -4247,7 +4257,7 @@ rt{font-size:.42em!important;line-height:1.1;padding-bottom:3px}[data-pinyin="1"
   var previousPresence=ap._hp;
   ap._hp=function(m){
     if(m&&m.requestCurrent&&m.clientId&&this.lastQuestionPayload&&this.mq&&this.cs==='connected'){
-      var payload=Object.assign({},this.lastQuestionPayload,{targetClientId:m.clientId,pinyinVisible:this.globalPinyinVisible===true});this.mq.publish('classpro/room/'+RM+'/question',JSON.stringify(payload));
+      var payload=classroomEnvelope(Object.assign({},this.lastQuestionPayload,{targetClientId:m.clientId,pinyinVisible:this.globalPinyinVisible===true}));this.mq.publish(classroomTopic('question'),JSON.stringify(payload));
       if(this.st==='t3c')broadcast(load(currentChainQuestion()),m.clientId);
       m=Object.assign({},m,{requestCurrent:false});
     }

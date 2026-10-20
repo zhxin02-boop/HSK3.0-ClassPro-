@@ -5,7 +5,7 @@ const vm = require('vm');
 const root = path.resolve(__dirname, '..');
 const storage = {};
 const windowObject = {
-  location: { search: '?lesson=HSK3-L03&room=7788&session=B&student=Student' },
+  location: { search: '?lesson=HSK3-L03&room=7788&session=B&student=Student&classId=ai26401-spring' },
   localStorage: {
     getItem(key) { return Object.prototype.hasOwnProperty.call(storage, key) ? storage[key] : null; },
     setItem(key, value) { storage[key] = String(value); }
@@ -27,7 +27,9 @@ function assert(condition, message) {
 load('source/data-model/hsk1-curriculum.js');
 load('source/data-model/hsk3-curriculum.js');
 load('source/shared/course-catalog.js');
+load('source/shared/class-config.js');
 load('source/shared/context.js');
+load('source/shared/classroom-channel.js');
 load('source/shared/progress-rules.js');
 load('source/shared/progress-data.js');
 
@@ -67,6 +69,8 @@ assert(current.lesson === 'HSK3-L03', 'Context should read lesson from the URL')
 assert(current.room === '7788', 'Context should read room from the URL');
 assert(current.session === 'B', 'Context should preserve the A/B/C session');
 assert(current.student === 'Student', 'Context should preserve the student');
+assert(current.classId === 'ai26401-spring', 'Context should preserve the class');
+assert(current.teacherId === 'zhangxin', 'Class selection should supply its teacher id');
 assert(context.validLesson('HSK3-L18'), 'HSK3 lesson ids should be valid');
 assert(!context.validLesson('HSK3-L99'), 'Unknown catalog lessons should be invalid');
 
@@ -76,7 +80,20 @@ assert(query.get('lesson') === 'HSK3-L03', 'Generated links should preserve the 
 assert(query.get('room') === '7788', 'Generated links should preserve the room');
 assert(query.get('session') === 'C', 'Generated links should include the selected session');
 assert(query.get('student') === 'Student', 'Generated links should preserve the student');
+assert(query.get('classId') === 'ai26401-spring', 'Generated links should preserve the class');
+assert(query.get('teacherId') === 'zhangxin', 'Generated links should preserve the teacher');
 assert(storage.ClassProContext === beforeBuild, 'Building a link must not change saved context');
+
+const classes = windowObject.ClassProClassCatalog;
+assert(classes.roster('ai26401-fall-class-1', 'HSK1-L01')[0].id === 'ai26401-fall-1-student-test', 'Fall class 1 should use its test student id');
+assert(classes.roster('ai26401-fall-class-2', 'HSK1-L01')[0].id === 'ai26401-fall-2-student-test', 'Fall class 2 should use a separate test account');
+assert(classes.roster('ai26401-fall-class-1', 'HSK1-L01').length === 1, 'Fall class 1 should expose only its test account');
+assert(classes.roster('ai26401-fall-class-2', 'HSK1-L01').length === 1, 'Fall class 2 should expose only its test account');
+const channel = windowObject.ClassProClassroom;
+const class1Topic = channel.topic('answers', { classId: 'ai26401-fall-class-1', room: '8888', lesson: 'HSK1-L01' });
+const class2Topic = channel.topic('answers', { classId: 'ai26401-fall-class-2', room: '8888', lesson: 'HSK1-L01' });
+assert(class1Topic !== class2Topic, 'Two classes in the same room must use different MQTT topics');
+assert(class1Topic === 'classpro/v1/ai26401-fall-class-1/8888/hsk1-l01/answers', 'MQTT topic should include class, room, and lesson');
 
 const progressRules = windowObject.ClassProProgressRules;
 assert(progressRules.threshold === 0.7, 'Lesson completion threshold should be 70%');
@@ -112,6 +129,9 @@ assert(studentHome.includes('三项都达到 70%'), 'Student home must explain t
 const teacherClassroom = fs.readFileSync(path.join(root, 'source/in-class/teacher.html'), 'utf8');
 assert(teacherClassroom.includes('../shared/classpro-theme.css'), 'Teacher classroom must load the shared theme');
 assert(teacherClassroom.includes('./teacher-classroom.css'), 'Teacher classroom must load its shell overrides');
+assert(teacherClassroom.includes('../shared/classroom-channel.js'), 'Teacher classroom must load the class-aware MQTT namespace');
+const studentClassroom = fs.readFileSync(path.join(root, 'source/in-class/student.html'), 'utf8');
+assert(studentClassroom.includes('../shared/classroom-channel.js'), 'Student classroom must load the class-aware MQTT namespace');
 
 const entryNavigation = [
   fs.readFileSync(path.join(root, 'source/student/index.html'), 'utf8'),

@@ -6,12 +6,19 @@
   "use strict";
 
   function fetchJson(url, timeoutMs) {
+    url = scopedUrl(url);
     var controller = typeof AbortController !== "undefined" ? new AbortController() : null;
     var timer = controller ? setTimeout(function () { controller.abort(); }, timeoutMs || 18000) : null;
     return fetch(url, controller ? { signal: controller.signal } : {}).then(function (response) {
       if (!response.ok) throw new Error("HTTP " + response.status);
       return response.json();
     }).finally(function () { if (timer) clearTimeout(timer); });
+  }
+
+  function scopedUrl(url) {
+    if (!global.ClassProContext) return url;
+    var ctx = global.ClassProContext.read(), join = url.indexOf("?") >= 0 ? "&" : "?";
+    return url + join + "classId=" + encodeURIComponent(ctx.classId || "legacy-default") + "&teacherId=" + encodeURIComponent(ctx.teacherId || "");
   }
 
   function rowsFromPayload(payload) {

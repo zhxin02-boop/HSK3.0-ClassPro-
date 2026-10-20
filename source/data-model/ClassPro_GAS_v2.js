@@ -6,7 +6,8 @@ var JSONP_CALLBACK = "";
 var HEADERS = [
   "提交时间","姓名","课程","环节","模块","题号","得分","总分","积分",
   "基础分","速度名次","速度奖励","薄弱点","学生作答","结果",
-  "教师批改","批改状态","课堂session","房间","原始提交时间","题目说明"
+  "教师批改","批改状态","课堂session","房间","原始提交时间","题目说明",
+  "教师ID","班级ID","学生ID"
 ];
 
 function doPost(e) {
@@ -28,7 +29,7 @@ function doGet(e) {
     var ss = SpreadsheetApp.openById(SHEET_ID);
     var a = (e.parameter && e.parameter.action) || "get_all";
     if (a === "list_sheets") return json_({ status: "ok", sheets: ss.getSheets().map(function (s) { return s.getName(); }) });
-    if (a === "get_data") return json_({ status: "ok", data: readSheet_(ss, e.parameter.lesson || "") });
+    if (a === "get_data") return json_({ status: "ok", data: readSheet_(ss, e.parameter.lesson || "", e.parameter || {}) });
     if (a === "get_progress") return getProgress_(ss, e.parameter || {});
     if (a === "get_review_queue") return getReviewQueue_(ss, e.parameter || {});
     if (a === "save_score") return saveScore_(ss, e.parameter);
@@ -38,7 +39,7 @@ function doGet(e) {
       for (var i = 0; i < sheets.length; i++) {
         var name = sheets[i].getName();
         if (name === "Sheet1") continue;
-        all[name] = rowsToObjects_(sheets[i].getDataRange().getValues());
+        all[name] = rowsToObjects_(sheets[i].getDataRange().getValues()).filter(function (row) { return recordMatchesScope_(row.__values || [], e.parameter || {}); });
       }
       return json_({ status: "ok", data: all });
     }
@@ -58,7 +59,7 @@ function getReviewQueue_(ss, params) {
     var values = sheet.getDataRange().getValues();
     rowsToObjects_(values).forEach(function (row) {
       var raw = row.__values || [];
-      if (reviewPending_(raw)) records.push(row);
+      if (recordMatchesScope_(raw, params) && reviewPending_(raw)) records.push(row);
     });
   });
   return json_({ status: "ok", data: records, lessons: requested.length, generatedAt: new Date().toISOString() });
@@ -74,7 +75,7 @@ function reviewPending_(row) {
 }
 
 function getProgress_(ss, params) {
-  var student = String(params.student || params.name || "").trim();
+  var student = String(params.student || params.name || "").trim(), studentId = String(params.studentId || "").trim();
   var requested = String(params.lessons || params.lesson || "").split(",").map(function (x) { return x.trim(); }).filter(String);
   if (!student) return json_({ status: "error", message: "student is required" });
   if (!requested.length || requested.length > 24) return json_({ status: "error", message: "1-24 lessons are required" });
@@ -82,14 +83,17 @@ function getProgress_(ss, params) {
   requested.forEach(function (lesson) {
     var sheet = ss.getSheetByName(lesson);
     var rows = sheet && sheet.getLastRow() > 1 ? sheet.getRange(2, 1, sheet.getLastRow() - 1, HEADERS.length).getValues() : [];
-    result[lesson] = lessonProgress_(rows, student, lesson);
+    rows = rows.filter(function (row) { return recordMatchesScope_(row, params); });
+    result[lesson] = lessonProgress_(rows, student, lesson, studentId);
   });
   return json_({ status: "ok", student: student, lessons: result, generatedAt: new Date().toISOString() });
 }
 
-function lessonProgress_(rows, student, lesson) {
+function lessonProgress_(rows, student, lesson, studentId) {
   var expectedSessions = /^HSK3-/i.test(lesson) ? ["A", "B", "C"] : [];
-  var studentRows = rows.filter(function (row) { return String(row[1] || "") === student; });
+  var studentRows = rows.filter(function (row) {
+    return studentId && row[23] ? String(row[23]) === studentId : String(row[1] || "") === student;
+  });
   var pre = studentRows.filter(function (row) { return progressStage_(row[3]) === "pre_class"; });
   var preSummaries = pre.filter(function (row) { return String(row[4] || "") === "pre_progress_summary"; });
   var preRate = 0;
@@ -212,7 +216,10 @@ function appendRecord_(ss, d) {
     d.sessionId || "",
     d.room || "",
     d.submittedAt || "",
-    d.questionText || d.prompt || d.question || ""
+    d.questionText || d.prompt || d.question || "",
+    d.teacherId || "",
+    d.classId || legacyClassForLesson_(lesson),
+    d.studentId || ""
   ]);
   return json_({ status: "ok" });
 }
@@ -232,7 +239,7 @@ function updateReview_(ss, d, score, correction, status, total, result) {
   var directRow = Number(d.rowIndex || d.__rowIndex || 0);
   if (directRow > 1 && directRow <= rows.length) {
     var direct = rows[directRow - 1];
-    if (String(direct[1] || "") === String(d.studentName || "")) {
+    if (recordMatchesScope_(direct, d) && String(direct[1] || "") === String(d.studentName || "")) {
       if (score !== "" && score != null) sheet.getRange(directRow, 7).setValue(score);
       if (total !== "" && total != null) sheet.getRange(directRow, 8).setValue(total);
       if (result) sheet.getRange(directRow, 15).setValue(result);
@@ -252,7 +259,7 @@ function updateReview_(ss, d, score, correction, status, total, result) {
       (!isNaN(targetOriginalTs) && !isNaN(rowOriginalTs) && Math.abs(rowOriginalTs - targetOriginalTs) < 3000);
     var sameQuestion = !targetQuestion || String(rows[i][5] || "") === targetQuestion;
     var sameModule = !targetModule || String(rows[i][4] || "") === targetModule;
-    if (sameTime && sameQuestion && sameModule && rows[i][1] === d.studentName) {
+    if (recordMatchesScope_(rows[i], d) && sameTime && sameQuestion && sameModule && rows[i][1] === d.studentName) {
       if (score !== "" && score != null) sheet.getRange(i + 1, 7).setValue(score);
       if (total !== "" && total != null) sheet.getRange(i + 1, 8).setValue(total);
       if (result) sheet.getRange(i + 1, 15).setValue(result);
@@ -271,14 +278,32 @@ function ensureSheet_(ss, name) {
   if (first[0] !== HEADERS[0]) {
     sheet.clear();
     sheet.appendRow(HEADERS);
-  }
+  } else sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]);
   return sheet;
 }
 
-function readSheet_(ss, name) {
+function readSheet_(ss, name, params) {
   var sheet = ss.getSheetByName(name);
   if (!sheet) return [];
-  return rowsToObjects_(sheet.getDataRange().getValues());
+  return rowsToObjects_(sheet.getDataRange().getValues()).filter(function (row) { return recordMatchesScope_(row.__values || [], params || {}); });
+}
+
+function legacyClassForLesson_(lesson) {
+  var value = String(lesson || "");
+  if (/^HSK3-/i.test(value)) return "ai26401-spring";
+  if (/^HSK1-/i.test(value)) return "rufe-2025-class-4";
+  return "legacy-default";
+}
+
+function rowClass_(row) {
+  var actualClass = String(row[22] || "").trim();
+  if (actualClass && actualClass !== "legacy-default") return actualClass;
+  return legacyClassForLesson_(row[2]);
+}
+
+function recordMatchesScope_(row, params) {
+  var requestedClass = String((params && (params.classId || params.class)) || legacyClassForLesson_(row[2])).trim();
+  return rowClass_(row) === requestedClass;
 }
 
 function rowsToObjects_(values) {

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ClassPro+ 教师登录</title>
+  <link rel="stylesheet" href="../shared/classpro-theme.css">
+  <style>
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:linear-gradient(145deg,#edf7ef,#fff8ee);font-family:Inter,"Microsoft YaHei",sans-serif;color:#20372c}.login-card{width:min(430px,calc(100% - 32px));padding:34px;border:1px solid #d8e5db;border-radius:24px;background:#fff;box-shadow:0 22px 60px rgba(27,72,53,.13)}.login-card h1{margin:10px 0 4px;font-size:30px}.login-card>p{margin:0 0 26px;color:#64756b;line-height:1.6}.login-form{display:grid;gap:16px}.login-form label{display:grid;gap:7px;font-size:13px;font-weight:800}.login-form input{width:100%;height:48px;padding:0 14px;border:1px solid #cfdcd2;border-radius:12px;font:inherit;background:#fbfdfb}.login-form input:focus{outline:3px solid rgba(13,91,67,.13);border-color:#0d5b43}.login-form button{height:50px;border:0;border-radius:12px;background:#0d5b43;color:#fff;font:inherit;font-weight:900;cursor:pointer}.login-form button:disabled{opacity:.6;cursor:wait}.message{min-height:22px;margin-top:14px;color:#b42318;font-size:14px}.note{margin-top:18px;padding-top:16px;border-top:1px solid #edf0ed;color:#718078;font-size:12px;line-height:1.6}
+  </style>
+</head>
+<body>
+  <main class="login-card">
+    <div class="cp-eyebrow">Chinese ClassPro+</div>
+    <h1>教师登录</h1>
+    <p>登录后只显示分配给你的班级和教学数据。</p>
+    <form class="login-form" id="loginForm">
+      <label>教师账号 / Username<input id="username" name="username" autocomplete="username" required autofocus></label>
+      <label>密码 / Password<input id="password" name="password" type="password" autocomplete="current-password" required></label>
+      <button id="submitButton" type="submit">登录教师端</button>
+    </form>
+    <div class="message" id="message" role="alert"></div>
+    <div class="note">教师密码只发送到当前 ClassPro 服务器，不保存在浏览器本地存储中。<br><a href="../../index.html" style="display:inline-block;margin-top:8px;color:#0d5b43;font-weight:800">← 返回角色选择首页</a></div>
+  </main>
+  <script>
+    function safeReturnTo() {
+      var value = new URLSearchParams(location.search).get('returnTo') || '/source/teacher/index.html';
+      return /^\/source\/(teacher|teacher-dashboard|in-class)\//.test(value) ? value : '/source/teacher/index.html';
+    }
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var button = document.getElementById('submitButton'), message = document.getElementById('message');
+      button.disabled = true; message.textContent = '正在验证…';
+      fetch('/api/auth/login', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({username:document.getElementById('username').value, password:document.getElementById('password').value})
+      }).then(function (response) {
+        return response.json().catch(function () { return {}; }).then(function (data) { return {ok:response.ok, data:data}; });
+      }).then(function (result) {
+        if (!result.ok) throw new Error(result.data.message || '登录失败，请重试。');
+        location.replace(safeReturnTo());
+      }).catch(function (error) {
+        message.textContent = error.message; button.disabled = false;
+      });
+    });
+  </script>
+</body>
+</html>

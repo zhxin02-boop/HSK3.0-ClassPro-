@@ -9,6 +9,7 @@
   <script src="../data-model/hsk1-curriculum.js"></script>
   <script src="../data-model/hsk3-curriculum.js"></script>
   <script src="../shared/course-catalog.js"></script>
+  <script src="../shared/class-config.js"></script>
   <script src="../shared/context.js"></script>
   <script src="../shared/progress-rules.js"></script>
   <script src="../shared/progress-data.js"></script>
@@ -20,7 +21,7 @@
         <svg class="cp-brand-mark" viewBox="0 0 96 96" role="img" aria-label="ClassPro 蒲公英"><g fill="none" stroke="#0d5b43" stroke-linecap="round"><path d="M47 45c-2 18-4 31-13 43" stroke-width="3"/><path d="M45 69c10-3 16-8 20-15" stroke-width="2"/><path d="M45 48 24 29M47 46 47 18M50 47 71 27M43 46 18 48M51 50 77 49M45 43 34 21M50 44 62 18" stroke-width="2"/></g><g fill="#0d5b43"><circle cx="47" cy="46" r="5"/><circle cx="19" cy="48" r="3"/><circle cx="24" cy="29" r="3"/><circle cx="34" cy="20" r="3"/><circle cx="47" cy="17" r="3"/><circle cx="62" cy="17" r="3"/><circle cx="72" cy="26" r="3"/><circle cx="78" cy="49" r="3"/></g><g fill="#ef8d45"><circle cx="81" cy="19" r="2.5"/><circle cx="88" cy="27" r="2"/><circle cx="84" cy="38" r="1.8"/></g></svg>
         <div><div class="cp-brand-name">CHINESE CLASSPRO+</div><div class="cp-brand-note">我的中文旅程 / My Journey</div></div>
       </div>
-      <span class="cp-pill" id="studentBadge">Student</span>
+      <div><span class="cp-pill" id="classBadge">Class</span> <span class="cp-pill" id="studentBadge">Student</span></div>
     </header>
 
     <section class="journey-hero">
@@ -75,7 +76,7 @@
     function studentName() { return context.student || readLocal('classpro_student') || readLocal('ClassProStudentName') || 'Student'; }
     function availableLevels() { return window.ClassProCourseCatalog.levels().filter(function (level) { return level.lessons.length; }); }
 
-    function progressCacheKey() { return 'ClassProProgressCache:' + studentName(); }
+    function progressCacheKey() { return 'ClassProProgressCache:' + context.classId + ':' + (context.studentId || studentName()); }
     function readProgressCache() {
       try { syncedProgress = JSON.parse(localStorage.getItem(progressCacheKey()) || '{}') || {}; } catch (error) { syncedProgress = {}; }
     }
@@ -85,7 +86,7 @@
       var synced = syncedProgress[lessonId];
       if (synced) return synced.rates || synced;
       var name = studentName();
-      var keys = ['ClassProLessonProgress:' + name + ':' + lessonId, 'ClassProLessonProgress:' + lessonId];
+      var keys = ['ClassProLessonProgress:' + context.classId + ':' + name + ':' + lessonId, 'ClassProLessonProgress:' + name + ':' + lessonId, 'ClassProLessonProgress:' + lessonId];
       var data = {};
       for (var i = 0; i < keys.length; i++) {
         try { data = JSON.parse(localStorage.getItem(keys[i]) || '{}'); } catch (error) { data = {}; }
@@ -197,6 +198,8 @@
     function render() {
       if (!currentLesson) return;
       document.getElementById('studentBadge').textContent = studentName();
+      var activeClass = window.ClassProClassCatalog.get(context.classId);
+      document.getElementById('classBadge').textContent = activeClass ? activeClass.name : context.classId;
       document.getElementById('currentLessonBadge').textContent = currentLesson.id + ' · ' + currentLesson.title;
       document.getElementById('roomBadge').textContent = '房间 ' + context.room;
       document.getElementById('currentReportLink').href = lessonUrl('../post-class/student-report.html', currentLesson.id, '');
@@ -219,7 +222,7 @@
       function next() {
         var lesson = queue.shift();
         if (!lesson) return Promise.resolve();
-        return fetchJson(GAS_URL + '?action=get_data&lesson=' + encodeURIComponent(lesson.id), 15000).then(function (data) {
+        return fetchJson(GAS_URL + '?action=get_data&lesson=' + encodeURIComponent(lesson.id) + '&classId=' + encodeURIComponent(context.classId), 15000).then(function (data) {
           syncedProgress[lesson.id] = window.ClassProProgressData.fromRows((data && data.data) || [], { student: studentName(), lesson: lesson.id });
         }).catch(function () {}).then(next);
       }
@@ -232,7 +235,7 @@
       if (!lessons.length) return;
       document.getElementById('progressStatus').textContent = '正在同步 Google Sheets 学习记录…';
       var ids = lessons.map(function (lesson) { return lesson.id; });
-      var url = GAS_URL + '?action=get_progress&student=' + encodeURIComponent(studentName()) + '&lessons=' + encodeURIComponent(ids.join(','));
+      var url = GAS_URL + '?action=get_progress&student=' + encodeURIComponent(studentName()) + '&studentId=' + encodeURIComponent(context.studentId || '') + '&classId=' + encodeURIComponent(context.classId) + '&lessons=' + encodeURIComponent(ids.join(','));
       fetchJson(url, 18000).then(function (data) {
         if (!data || data.status !== 'ok' || !data.lessons) throw new Error('compact progress unavailable');
         Object.keys(data.lessons).forEach(function (lessonId) { syncedProgress[lessonId] = data.lessons[lessonId]; });

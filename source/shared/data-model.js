@@ -16,6 +16,9 @@
     var score = Number(input.score);
     var total = Number(input.total);
     return {
+      teacherId: input.teacherId || "",
+      classId: input.classId || "legacy-default",
+      studentId: input.studentId || "",
       lesson: input.lesson || "HSK1-L02",
       stage: input.stage || "in_class",
       module: input.module || input.mode || "",
@@ -40,6 +43,9 @@
   function homeworkSummary(input) {
     input = input || {};
     return learningRecord({
+      teacherId: input.teacherId || "",
+      classId: input.classId || "legacy-default",
+      studentId: input.studentId || "",
       lesson: input.lesson || "HSK1-L02",
       stage: "post_class",
       module: "homework_summary",

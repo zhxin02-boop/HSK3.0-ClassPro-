@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ClassPro+ 学生入口</title>
+  <link rel="stylesheet" href="../shared/classpro-theme.css">
+  <script src="../shared/class-config.js"></script>
+  <script src="../shared/context.js"></script>
+  <style>
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:linear-gradient(145deg,#edf7ef,#fff8ee);font-family:Inter,"Microsoft YaHei",sans-serif;color:#20372c}.entry-card{width:min(500px,calc(100% - 28px));padding:32px;border:1px solid #d8e5db;border-radius:24px;background:#fff;box-shadow:0 22px 60px rgba(27,72,53,.13)}h1{margin:10px 0 4px;font-size:30px}.entry-card>p{margin:0 0 24px;color:#64756b;line-height:1.6}.entry-form{display:grid;gap:16px}.entry-form label{display:grid;gap:7px;font-size:13px;font-weight:800}.entry-form select{width:100%;min-height:50px;padding:0 13px;border:1px solid #cfdcd2;border-radius:12px;background:#fbfdfb;font:inherit}.entry-form select:focus{outline:3px solid rgba(13,91,67,.13);border-color:#0d5b43}.entry-form button{min-height:52px;border:0;border-radius:12px;background:#0d5b43;color:#fff;font:inherit;font-weight:900;cursor:pointer}.entry-form button:disabled{opacity:.55;cursor:not-allowed}.locked{display:none;margin-top:-7px;color:#64756b;font-size:12px}.message{min-height:22px;color:#b42318;font-size:14px}.switch{display:block;margin-top:18px;padding-top:16px;border-top:1px solid #edf0ed;color:#0d5b43;text-align:center;font-size:13px;font-weight:800;text-decoration:none}
+  </style>
+</head>
+<body>
+  <main class="entry-card">
+    <div class="cp-eyebrow">Chinese ClassPro+</div>
+    <h1>学生入口</h1>
+    <p>先确认班级和姓名，再进入课前、课中和课后学习。</p>
+    <form class="entry-form" id="studentForm">
+      <label>班级 / Class<select id="classSelect" required></select></label>
+      <div class="locked" id="lockedHint">班级由教师二维码指定。</div>
+      <label>姓名 / Name<select id="studentSelect" required><option value="">请选择姓名</option></select></label>
+      <div class="message" id="message" role="alert"></div>
+      <button id="continueButton" type="submit" disabled>确认并进入 / Continue</button>
+    </form>
+    <a class="switch" href="../../index.html">← 返回角色选择首页 / Back</a>
+  </main>
+  <script>
+    var query = new URLSearchParams(location.search || '');
+    var requestedClassId = query.get('classId') || query.get('class') || '';
+    var requestedLesson = query.get('lesson') || 'HSK1-L01';
+    var classSelect = document.getElementById('classSelect');
+    var studentSelect = document.getElementById('studentSelect');
+    var continueButton = document.getElementById('continueButton');
+
+    function esc(value) { return String(value == null ? '' : value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+    function activeClass() { return window.ClassProClassCatalog.get(classSelect.value); }
+    function lessonFor(item) {
+      var requestedLevel = (String(requestedLesson).match(/^(HSK\d)/i) || [])[1];
+      if (requestedLevel && item.levels.indexOf(requestedLevel.toUpperCase()) >= 0) return requestedLesson;
+      return item.levels[0] + '-L01';
+    }
+    function renderStudents() {
+      var item = activeClass(), lesson = item ? lessonFor(item) : requestedLesson;
+      var students = item ? window.ClassProClassCatalog.roster(item.id, lesson) : [];
+      studentSelect.innerHTML = '<option value="">请选择姓名 / Select your name</option>' + students.map(function (student) {
+        return '<option value="' + esc(student.id) + '">' + esc(student.name) + (student.testAccount ? ' · Test' : '') + '</option>';
+      }).join('');
+      continueButton.disabled = true;
+    }
+    function renderClasses() {
+      var classes = window.ClassProClassCatalog.all();
+      classSelect.innerHTML = classes.map(function (item) { return '<option value="' + esc(item.id) + '">' + esc(item.name) + '</option>'; }).join('');
+      var requested = window.ClassProClassCatalog.get(requestedClassId);
+      classSelect.value = requested ? requested.id : window.ClassProClassCatalog.defaultClassIdForLesson(requestedLesson);
+      if (requested) {
+        classSelect.disabled = true;
+        document.getElementById('lockedHint').style.display = 'block';
+      }
+      renderStudents();
+    }
+    classSelect.addEventListener('change', renderStudents);
+    studentSelect.addEventListener('change', function () { continueButton.disabled = !studentSelect.value; });
+    document.getElementById('studentForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var item = activeClass(), lesson = item && lessonFor(item);
+      var student = item && window.ClassProClassCatalog.roster(item.id, lesson).filter(function (row) { return row.id === studentSelect.value; })[0];
+      if (!item || !student) { document.getElementById('message').textContent = '请先选择班级和姓名。'; return; }
+      var context = window.ClassProContext.save({
+        classId:item.id, teacherId:item.teacherId, room:query.get('room') || item.room,
+        lesson:lesson, session:query.get('session') || '', student:student.name, studentId:student.id
+      });
+      var destination = query.get('target') === 'classroom' ? '../in-class/student.html' : './index.html';
+      location.href = destination + '?' + window.ClassProContext.buildQuery(context);
+    });
+    renderClasses();
+  </script>
+</body>
+</html>

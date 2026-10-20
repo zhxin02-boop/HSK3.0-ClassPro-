@@ -9,6 +9,7 @@
   <script src="../data-model/hsk1-curriculum.js"></script>
   <script src="../data-model/hsk3-curriculum.js"></script>
   <script src="../shared/course-catalog.js"></script>
+  <script src="../shared/class-config.js"></script>
   <script src="../shared/context.js"></script>
 </head>
 <body>
@@ -18,7 +19,7 @@
         <svg class="cp-brand-mark" viewBox="0 0 96 96" role="img" aria-label="ClassPro 蒲公英"><g fill="none" stroke="#0d5b43" stroke-linecap="round"><path d="M47 45c-2 18-4 31-13 43" stroke-width="3"/><path d="M45 69c10-3 16-8 20-15" stroke-width="2"/><path d="M45 48 24 29M47 46 47 18M50 47 71 27M43 46 18 48M51 50 77 49M45 43 34 21M50 44 62 18" stroke-width="2"/></g><g fill="#0d5b43"><circle cx="47" cy="46" r="5"/><circle cx="19" cy="48" r="3"/><circle cx="24" cy="29" r="3"/><circle cx="34" cy="20" r="3"/><circle cx="47" cy="17" r="3"/><circle cx="62" cy="17" r="3"/><circle cx="72" cy="26" r="3"/><circle cx="78" cy="49" r="3"/></g><g fill="#ef8d45"><circle cx="81" cy="19" r="2.5"/><circle cx="88" cy="27" r="2"/><circle cx="84" cy="38" r="1.8"/></g></svg>
         <div><div class="cp-brand-name">CHINESE CLASSPRO+</div><div class="cp-brand-note">教师课程控制台 / Teacher Workspace</div></div>
       </div>
-      <div class="topbar-status"><span class="cp-pill"><span class="room-dot"></span><span id="roomBadge">房间 8888</span></span></div>
+      <div class="topbar-status"><span class="cp-pill" id="teacherBadge">教师</span><span class="cp-pill"><span class="room-dot"></span><span id="roomBadge">房间 8888</span></span><button class="cp-pill" id="logoutButton" type="button" style="cursor:pointer">退出</button></div>
     </header>
 
     <div class="teacher-layout">
@@ -40,6 +41,7 @@
         <div><div class="cp-eyebrow" id="selectedId">请选择课程</div><h2 id="selectedTitle">尚未选择</h2><div class="lesson-english" id="selectedEnglish"></div></div>
         <div>
           <div class="lesson-status preparing" id="selectedStatus">○ 等待选择</div>
+          <label class="room-field"><span>班级 / Class</span><select class="room-input" id="classInput"></select></label>
           <label class="room-field"><span>课堂房间 / Room</span><input class="room-input" id="roomInput" value="8888" inputmode="numeric" autocomplete="off"></label>
         </div>
         <nav class="workspace-actions" aria-label="教师工作区">
@@ -56,11 +58,17 @@
   <script>
     var selectedLevel = '';
     var selectedLesson = null;
+    var teacherProfile = null;
     var legacyLevelKey = 'ClassProTeacherLevel';
 
     function byId(id) { return document.getElementById(id); }
     function visibleLessons(levelId) { return window.ClassProCourseCatalog.lessons(levelId).filter(function (lesson) { return lesson.teacherVisible !== false; }); }
-    function allLevels() { return window.ClassProCourseCatalog.levels(); }
+    function classesForLevel(levelId) {
+      var classes = window.ClassProClassCatalog.forLevel(levelId);
+      if (!teacherProfile) return [];
+      return classes.filter(function (item) { return teacherProfile.classIds.indexOf(item.id) >= 0; });
+    }
+    function allLevels() { return window.ClassProCourseCatalog.levels().filter(function (level) { return classesForLevel(level.id).length > 0; }); }
     function rememberLevel(levelId) { try { localStorage.setItem(legacyLevelKey, levelId); } catch (error) {} }
     function readLegacy(key) { try { return localStorage.getItem(key) || ''; } catch (error) { return ''; } }
 
@@ -85,6 +93,9 @@
       rememberLevel(levelId);
       var lessons = visibleLessons(levelId);
       selectedLesson = lessons.filter(function (lesson) { return lesson.openForUse; })[0] || lessons[0] || null;
+      var previousClass = byId('classInput').value;
+      renderClasses(previousClass);
+      byId('roomInput').value = currentClass().room;
       renderLevels();
       renderCourses();
       renderInspector();
@@ -135,6 +146,17 @@
     }
 
     function currentRoom() { return String(byId('roomInput').value || '8888').trim() || '8888'; }
+    function currentClass() {
+      var item = window.ClassProClassCatalog.get(byId('classInput').value);
+      return item && teacherProfile.classIds.indexOf(item.id) >= 0 ? item : null;
+    }
+
+    function renderClasses(classId) {
+      var classes = classesForLevel(selectedLevel), select = byId('classInput');
+      select.innerHTML = classes.map(function (item) { return '<option value="' + item.id + '">' + item.name + ' · ' + item.code + '</option>'; }).join('');
+      var available = classes.some(function (item) { return item.id === classId; });
+      select.value = available ? classId : (classes[0] ? classes[0].id : '');
+    }
 
     function updateWorkspaceLinks(ctx) {
       var ready = !!(selectedLesson && selectedLesson.openForUse && ctx);
@@ -143,7 +165,7 @@
         : '../in-class/teacher.html';
       var links = {
         classroomLink: classroomPath,
-        studentLink: '../student/index.html',
+        studentLink: '../student/entry.html',
         dashboardLink: '../teacher-dashboard/unified.html',
         reviewLink: '../teacher-dashboard/post-review.html'
       };
@@ -157,28 +179,53 @@
     function commitContext() {
       byId('roomBadge').textContent = '房间 ' + currentRoom();
       if (!selectedLesson) { updateWorkspaceLinks(null); return; }
-      var ctx = window.ClassProContext.save({ lesson: selectedLesson.id, room: currentRoom(), session: '', student: '' });
+      var activeClass = currentClass();
+      if (!activeClass) { updateWorkspaceLinks(null); return; }
+      var ctx = window.ClassProContext.save({ lesson: selectedLesson.id, room: currentRoom(), session: '', student: '', studentId: '', classId: activeClass.id, teacherId: activeClass.teacherId });
       updateWorkspaceLinks(ctx);
       window.history.replaceState({}, '', '?' + window.ClassProContext.buildQuery(ctx));
     }
 
+    function loadTeacherProfile() {
+      return fetch('/api/auth/me', {cache:'no-store'}).then(function (response) {
+        if (!response.ok) throw new Error('not authenticated');
+        return response.json();
+      }).then(function (data) {
+        teacherProfile = data.teacher;
+        byId('teacherBadge').textContent = teacherProfile.displayName;
+      }).catch(function () {
+        location.replace('./login.html?returnTo=' + encodeURIComponent(location.pathname + location.search));
+        throw new Error('not authenticated');
+      });
+    }
+
+    function logout() {
+      fetch('/api/auth/logout', {method:'POST'}).finally(function () { location.replace('./login.html'); });
+    }
+
     function init() {
+      return loadTeacherProfile().then(function () {
       var ctx = window.ClassProContext.read();
       var url = new URLSearchParams(window.location.search || '');
       var hasSharedContext = !!readLegacy('ClassProContext');
       var lessonId = url.get('lesson') || (hasSharedContext ? ctx.lesson : readLegacy('ClassProTeacherLesson')) || ctx.lesson;
       var lesson = window.ClassProCourseCatalog.get(lessonId);
       selectedLevel = lesson ? window.ClassProCourseCatalog.levelOf(lesson.id) : readLegacy(legacyLevelKey) || 'HSK1';
-      if (!allLevels().some(function (level) { return level.id === selectedLevel; })) selectedLevel = 'HSK1';
+      if (!allLevels().some(function (level) { return level.id === selectedLevel; })) selectedLevel = allLevels()[0] ? allLevels()[0].id : '';
       var lessons = visibleLessons(selectedLevel);
-      selectedLesson = lesson && lesson.teacherVisible !== false ? lesson : lessons.filter(function (item) { return item.openForUse; })[0] || lessons[0] || null;
-      byId('roomInput').value = url.get('room') || (hasSharedContext ? ctx.room : readLegacy('ClassProTeacherRoom')) || ctx.room || '8888';
+      selectedLesson = lesson && window.ClassProCourseCatalog.levelOf(lesson.id) === selectedLevel && lesson.teacherVisible !== false ? lesson : lessons.filter(function (item) { return item.openForUse; })[0] || lessons[0] || null;
+      renderClasses(ctx.classId);
+      var activeClass = currentClass();
+      byId('roomInput').value = url.get('room') || (url.get('classId') && activeClass ? activeClass.room : '') || (hasSharedContext ? ctx.room : readLegacy('ClassProTeacherRoom')) || (activeClass && activeClass.room) || ctx.room || '8888';
+      byId('classInput').addEventListener('change', function () { byId('roomInput').value = currentClass().room; commitContext(); });
       byId('roomInput').addEventListener('change', commitContext);
       byId('roomInput').addEventListener('keydown', function (event) { if (event.key === 'Enter') { event.preventDefault(); commitContext(); } });
+      byId('logoutButton').addEventListener('click', logout);
       renderLevels();
       renderCourses();
       renderInspector();
       commitContext();
+      });
     }
 
     init();

@@ -1,6 +1,7 @@
 backups/
 server-local*.log
 data/learning-records.json
+data/teacher-accounts.json
 data/students/*.json
 *.tmp
 *.bak
