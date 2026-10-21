@@ -166,7 +166,7 @@
       var links = {
         classroomLink: classroomPath,
         legacyClassroomLink: '../in-class/teacher.html',
-        studentLink: '../student/entry.html',
+        studentLink: '/api/teacher/student-join',
         dashboardLink: '../teacher-dashboard/unified.html',
         reviewLink: '../teacher-dashboard/post-review.html'
       };
@@ -174,6 +174,7 @@
         var anchor = byId(id);
         var query = ready ? window.ClassProContext.buildQuery(ctx) : '';
         if (ready && id === 'classroomLink' && useProfile) query += '&profile=' + encodeURIComponent(useProfile);
+        if (ready && id === 'studentLink') query = 'classId=' + encodeURIComponent(ctx.classId) + '&lesson=' + encodeURIComponent(ctx.lesson) + '&room=' + encodeURIComponent(ctx.room) + '&target=home';
         anchor.href = ready ? links[id] + '?' + query : '#';
         anchor.setAttribute('aria-disabled', ready ? 'false' : 'true');
       });

@@ -1,19 +1,80 @@
 var http = require("http");
 var fs = require("fs");
 var path = require("path");
+var crypto = require("crypto");
+var QRCode = require("qrcode");
 var progressData = require("./source/shared/progress-data.js");
 var authLib = require("./server-auth.js");
 var root = __dirname;
 var port = Number(process.env.PORT || 18765);
 var studentsDir = path.join(root, "data", "students");
 var learningRecordsFile = path.join(root, "data", "learning-records.json");
+var classRostersFile = process.env.CLASSPRO_CLASS_ROSTERS_FILE || path.join(root, "data", "class-rosters.json");
+var sessionSecret = process.env.CLASSPRO_SESSION_SECRET || crypto.randomBytes(32).toString("hex");
+var studentAccessKey = crypto.createHash("sha256").update("classpro-student-access|" + sessionSecret).digest();
+var STUDENT_ACCESS_COOKIE = "classpro_student_access";
+var STUDENT_ACCESS_TTL_MS = 8 * 60 * 60 * 1000;
 var teacherAuth = authLib.createAuth({
   accountsFile: process.env.CLASSPRO_TEACHER_ACCOUNTS_FILE || path.join(root, "data", "teacher-accounts.json"),
-  sessionSecret: process.env.CLASSPRO_SESSION_SECRET
+  sessionSecret: sessionSecret
 });
 if (!fs.existsSync(studentsDir)) fs.mkdirSync(studentsDir, {recursive:true});
 function readLearningRecords() { try { return JSON.parse(fs.readFileSync(learningRecordsFile, "utf8")); } catch(e) { return []; } }
 function appendLearningRecord(body) { var rows = readLearningRecords(); rows.push(body); fs.writeFileSync(learningRecordsFile, JSON.stringify(rows, null, 2), "utf8"); }
+function readClassRosters() {
+  try {
+    var parsed = JSON.parse(fs.readFileSync(classRostersFile, "utf8"));
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+  } catch (error) { return {}; }
+}
+function rosterLevel(lesson) {
+  var match = String(lesson || "").toUpperCase().match(/^(HSK\d)/);
+  return match ? match[1] : "default";
+}
+function privateRoster(classId, lesson) {
+  var item = readClassRosters()[String(classId || "")] || {}, levels = item.levels || {};
+  var rows = levels[rosterLevel(lesson)] || levels.default || [];
+  return Array.isArray(rows) ? rows.filter(function(row) { return row && row.id && row.name; }).map(function(row) {
+    return {id:String(row.id), name:String(row.name), testAccount:row.testAccount === true};
+  }) : [];
+}
+function signedStudentValue(payload) {
+  var encoded = Buffer.from(JSON.stringify(payload)).toString("base64url");
+  return encoded + "." + crypto.createHmac("sha256", studentAccessKey).update(encoded).digest("base64url");
+}
+function verifiedStudentValue(value, expectedKind) {
+  var parts = String(value || "").split(".");
+  if (parts.length !== 2) return null;
+  var actual = Buffer.from(parts[1]), expected = Buffer.from(crypto.createHmac("sha256", studentAccessKey).update(parts[0]).digest("base64url"));
+  if (actual.length !== expected.length || !crypto.timingSafeEqual(actual, expected)) return null;
+  try {
+    var payload = JSON.parse(Buffer.from(parts[0], "base64url").toString("utf8"));
+    return payload.kind === expectedKind && Number(payload.exp) > Date.now() ? payload : null;
+  } catch (error) { return null; }
+}
+function requestCookies(req) {
+  return String(req.headers.cookie || "").split(";").reduce(function(out, part) {
+    var at = part.indexOf("=");
+    if (at >= 0) out[part.slice(0, at).trim()] = decodeURIComponent(part.slice(at + 1).trim());
+    return out;
+  }, {});
+}
+function canReadRoster(req, classId) {
+  var teacher = teacherAuth.authenticate(req);
+  if (teacher && teacherAuth.canAccess(teacher, classId)) return true;
+  var access = verifiedStudentValue(requestCookies(req)[STUDENT_ACCESS_COOKIE], "student_access");
+  return !!access && access.classId === String(classId || "");
+}
+function rosterFromReferrer(req) {
+  var referrer = String(req.headers.referer || "");
+  if (!referrer) return {classId:"", lesson:"", students:[]};
+  try {
+    var page = new URL(referrer), classId = page.searchParams.get("classId") || page.searchParams.get("class") || "";
+    var lesson = page.searchParams.get("lesson") || "";
+    if (!/^\/source\//.test(page.pathname) || !classId || !lesson || !canReadRoster(req, classId)) return {classId:"", lesson:"", students:[]};
+    return {classId:classId, lesson:lesson, students:privateRoster(classId, lesson)};
+  } catch (error) { return {classId:"", lesson:"", students:[]}; }
+}
 function defaultClassForLesson(lesson) {
   return /^HSK3-/i.test(String(lesson || "")) ? "ai26401-spring" :
     (/^HSK1-/i.test(String(lesson || "")) ? "rufe-2025-class-4" : "legacy-default");
@@ -51,6 +112,24 @@ function json(res, code, data) {
 
 function clientAddress(req) { return String(req.headers["x-forwarded-for"] || req.socket.remoteAddress || "unknown").split(",")[0].trim(); }
 function secureRequest(req) { return String(req.headers["x-forwarded-proto"] || "").toLowerCase() === "https"; }
+function publicOrigin(req) {
+  var protocol = secureRequest(req) ? "https" : "http";
+  return protocol + "://" + String(req.headers["x-forwarded-host"] || req.headers.host || "localhost:" + port).split(",")[0].trim();
+}
+function studentTicket(req, classId, lesson, room, target) {
+  return signedStudentValue({
+    kind:"student_join", classId:String(classId), lesson:String(lesson), room:String(room || "8888"),
+    target:target === "classroom" ? "classroom" : "home", exp:Date.now() + STUDENT_ACCESS_TTL_MS
+  });
+}
+function studentJoinUrl(req, classId, lesson, room, target) {
+  return publicOrigin(req) + "/api/student/join?ticket=" + encodeURIComponent(studentTicket(req, classId, lesson, room, target));
+}
+function setStudentAccessCookie(req, res, classId, expiresAt) {
+  var token = signedStudentValue({kind:"student_access", classId:String(classId), exp:Number(expiresAt)});
+  var maxAge = Math.max(0, Math.floor((Number(expiresAt) - Date.now()) / 1000));
+  res.setHeader("Set-Cookie", STUDENT_ACCESS_COOKIE + "=" + encodeURIComponent(token) + "; HttpOnly; SameSite=Lax; Path=/; Max-Age=" + maxAge + (secureRequest(req) ? "; Secure" : ""));
+}
 function setLoginCookie(req, res, token) {
   res.setHeader("Set-Cookie", authLib.COOKIE_NAME + "=" + encodeURIComponent(token) + "; HttpOnly; SameSite=Strict; Path=/; Max-Age=" + Math.floor(authLib.SESSION_TTL_MS / 1000) + (secureRequest(req) ? "; Secure" : ""));
 }
@@ -58,6 +137,7 @@ function clearLoginCookie(req, res) {
   res.setHeader("Set-Cookie", authLib.COOKIE_NAME + "=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0" + (secureRequest(req) ? "; Secure" : ""));
 }
 function teacherPage(url) {
+  if (url === "/teacher.html") return true;
   if (url === "/source/teacher" || url === "/source/teacher/" || url === "/source/teacher/index.html") return true;
   if (/^\/source\/teacher-dashboard\/.*\.html$/i.test(url)) return true;
   return /^\/source\/in-class\/.*\.html$/i.test(url) && !/student/i.test(path.basename(url));
@@ -117,6 +197,47 @@ var srv = http.createServer(function(req, res) {
       status: teacherAuth.configured ? "ok" : "error",
       authentication: teacherAuth.configured ? "configured" : "not_configured"
     });
+    return;
+  }
+
+  if (method === "GET" && url === "/api/class-roster") {
+    var rosterQuery = new URL(req.url, "http://localhost").searchParams;
+    var rosterClassId = rosterQuery.get("classId") || rosterQuery.get("class") || "";
+    var rosterLesson = rosterQuery.get("lesson") || "";
+    res.setHeader("Cache-Control", "no-store");
+    if (!rosterClassId || !rosterLesson) { json(res, 400, {status:"error", message:"classId and lesson are required"}); return; }
+    if (!canReadRoster(req, rosterClassId)) { json(res, 403, {status:"error", message:"请扫描教师端生成的班级二维码。"}); return; }
+    json(res, 200, {status:"ok", classId:rosterClassId, lesson:rosterLesson, students:privateRoster(rosterClassId, rosterLesson)});
+    return;
+  }
+
+  if (method === "GET" && (url === "/api/teacher/student-join" || url === "/api/teacher/student-qr")) {
+    var joinTeacher = teacherAuth.authenticate(req), joinQuery = new URL(req.url, "http://localhost").searchParams;
+    var joinClassId = joinQuery.get("classId") || "", joinLesson = joinQuery.get("lesson") || "";
+    var joinRoom = joinQuery.get("room") || "8888", joinTarget = joinQuery.get("target") || "home";
+    if (!joinTeacher) { json(res, 401, {status:"error", message:"请先登录教师账号。"}); return; }
+    if (!teacherAuth.canAccess(joinTeacher, joinClassId)) { json(res, 403, {status:"error", message:"当前教师无权访问该班级。"}); return; }
+    if (!privateRoster(joinClassId, joinLesson).length) { json(res, 404, {status:"error", message:"该班级尚未配置私密名单。"}); return; }
+    var protectedJoinUrl = studentJoinUrl(req, joinClassId, joinLesson, joinRoom, joinTarget);
+    if (url === "/api/teacher/student-join") {
+      res.writeHead(302, {Location:protectedJoinUrl, "Cache-Control":"no-store"}); res.end(); return;
+    }
+    QRCode.toString(protectedJoinUrl, {type:"svg", width:320, margin:2, errorCorrectionLevel:"M"}, function(error, svg) {
+      if (error) { json(res, 500, {status:"error", message:"二维码生成失败。"}); return; }
+      res.writeHead(200, {"Content-Type":"image/svg+xml; charset=UTF-8", "Cache-Control":"no-store", "X-Content-Type-Options":"nosniff"});
+      res.end(svg);
+    });
+    return;
+  }
+
+  if (method === "GET" && url === "/api/student/join") {
+    var joinPayload = verifiedStudentValue(new URL(req.url, "http://localhost").searchParams.get("ticket"), "student_join");
+    if (!joinPayload || !privateRoster(joinPayload.classId, joinPayload.lesson).length) { json(res, 403, {status:"error", message:"二维码已失效，请重新扫描教师端二维码。"}); return; }
+    setStudentAccessCookie(req, res, joinPayload.classId, joinPayload.exp);
+    var cleanQuery = new URLSearchParams({classId:joinPayload.classId, lesson:joinPayload.lesson, room:joinPayload.room});
+    if (joinPayload.target === "classroom") cleanQuery.set("target", "classroom");
+    res.writeHead(302, {Location:"/source/student/entry.html?" + cleanQuery.toString(), "Cache-Control":"no-store", "Referrer-Policy":"no-referrer"});
+    res.end();
     return;
   }
 
@@ -383,8 +504,14 @@ var srv = http.createServer(function(req, res) {
   fs.readFile(fp, function(err, data) {
     if (err) { res.writeHead(404, {"Content-Type":"text/plain"}); res.end("Not found"); return; }
     var ext = path.extname(fp);
-    res.writeHead(200, {"Content-Type": mime[ext] || "text/plain; charset=UTF-8"});
-    res.end(data);
+    var body = data, headers = {"Content-Type": mime[ext] || "text/plain; charset=UTF-8"};
+    if (url === "/source/shared/students.js") {
+      var scopedRoster = rosterFromReferrer(req);
+      body = "window.ClassProServerRoster=" + JSON.stringify(scopedRoster).replace(/</g, "\\u003c") + ";\n" + data.toString("utf8");
+      headers["Cache-Control"] = "no-store";
+    }
+    res.writeHead(200, headers);
+    res.end(body);
   });
 });
 

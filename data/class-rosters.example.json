@@ -1,0 +1,17 @@
+{
+  "class-id": {
+    "levels": {
+      "HSK1": [
+        {
+          "id": "class-id-01",
+          "name": "Student Name"
+        },
+        {
+          "id": "class-id-student-test",
+          "name": "Student",
+          "testAccount": true
+        }
+      ]
+    }
+  }
+}

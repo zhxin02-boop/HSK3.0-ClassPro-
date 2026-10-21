@@ -32,6 +32,7 @@
     var classSelect = document.getElementById('classSelect');
     var studentSelect = document.getElementById('studentSelect');
     var continueButton = document.getElementById('continueButton');
+    var activeRoster = [], rosterRequest = 0;
 
     function esc(value) { return String(value == null ? '' : value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
     function activeClass() { return window.ClassProClassCatalog.get(classSelect.value); }
@@ -42,11 +43,27 @@
     }
     function renderStudents() {
       var item = activeClass(), lesson = item ? lessonFor(item) : requestedLesson;
-      var students = item ? window.ClassProClassCatalog.roster(item.id, lesson) : [];
-      studentSelect.innerHTML = '<option value="">请选择姓名 / Select your name</option>' + students.map(function (student) {
-        return '<option value="' + esc(student.id) + '">' + esc(student.name) + (student.testAccount ? ' · Test' : '') + '</option>';
-      }).join('');
+      var fallback = item ? window.ClassProClassCatalog.roster(item.id, lesson) : [], requestId = ++rosterRequest;
+      activeRoster = fallback;
+      studentSelect.innerHTML = '<option value="">正在读取名单 / Loading roster...</option>';
+      studentSelect.disabled = true;
       continueButton.disabled = true;
+      if (!item) return;
+      fetch('/api/class-roster?classId=' + encodeURIComponent(item.id) + '&lesson=' + encodeURIComponent(lesson), {cache:'no-store'}).then(function (response) {
+        if (!response.ok) throw new Error('Roster API ' + response.status);
+        return response.json();
+      }).then(function (payload) {
+        if (requestId !== rosterRequest) return;
+        activeRoster = payload && Array.isArray(payload.students) && payload.students.length ? payload.students : fallback;
+      }).catch(function () {
+        if (requestId === rosterRequest) activeRoster = fallback;
+      }).then(function () {
+        if (requestId !== rosterRequest) return;
+        studentSelect.innerHTML = '<option value="">请选择姓名 / Select your name</option>' + activeRoster.map(function (student) {
+          return '<option value="' + esc(student.id) + '">' + esc(student.name) + (student.testAccount ? ' · Test' : '') + '</option>';
+        }).join('');
+        studentSelect.disabled = false;
+      });
     }
     function renderClasses() {
       var classes = window.ClassProClassCatalog.all();
@@ -64,7 +81,7 @@
     document.getElementById('studentForm').addEventListener('submit', function (event) {
       event.preventDefault();
       var item = activeClass(), lesson = item && lessonFor(item);
-      var student = item && window.ClassProClassCatalog.roster(item.id, lesson).filter(function (row) { return row.id === studentSelect.value; })[0];
+      var student = item && activeRoster.filter(function (row) { return row.id === studentSelect.value; })[0];
       if (!item || !student) { document.getElementById('message').textContent = '请先选择班级和姓名。'; return; }
       var context = window.ClassProContext.save({
         classId:item.id, teacherId:item.teacherId, room:query.get('room') || item.room,

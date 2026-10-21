@@ -1,7 +1,9 @@
 backups/
+node_modules/
 server-local*.log
 data/learning-records.json
 data/teacher-accounts.json
+data/class-rosters.json
 data/students/*.json
 *.tmp
 *.bak

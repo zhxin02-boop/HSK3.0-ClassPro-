@@ -4,11 +4,13 @@ services:
     runtime: node
     region: singapore
     plan: free
-    buildCommand: echo "No build step required"
-    startCommand: node server.js
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
     healthCheckPath: /api/health
     envVars:
       - key: CLASSPRO_TEACHER_ACCOUNTS_FILE
         value: /etc/secrets/teacher-accounts.json
+      - key: CLASSPRO_CLASS_ROSTERS_FILE
+        value: /etc/secrets/class-rosters.json
       - key: CLASSPRO_SESSION_SECRET
         generateValue: true

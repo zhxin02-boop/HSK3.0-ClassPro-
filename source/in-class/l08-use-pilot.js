@@ -7,6 +7,7 @@
   const LESSON_CODE = (LESSON.split('-').pop() || 'L08').toLowerCase();
   const EXPERIMENT = `${LESSON_CODE}-use-${PROFILE}`;
   const ROOM = PARAMS.get('room') || '8808';
+  const CLASS_ID = PARAMS.get('classId') || 'legacy-default';
   const DATA_VERSION = `${EXPERIMENT}-v1`;
   const CONFIG_URL = `../data-model/experiments/${encodeURIComponent(LESSON)}-USE-${encodeURIComponent(PROFILE.toUpperCase())}.json?v=3`;
   const STORAGE_KEY = `ClassProUsePilot_${EXPERIMENT}_${ROOM}`;
@@ -205,7 +206,7 @@
 
   function setupFrame() {
     const frame = document.getElementById('classproFrame');
-    frame.src = `teacher.html?lesson=${encodeURIComponent(LESSON)}&room=${encodeURIComponent(ROOM)}&dataVersion=${encodeURIComponent(DATA_VERSION)}`;
+    frame.src = `teacher.html?lesson=${encodeURIComponent(LESSON)}&room=${encodeURIComponent(ROOM)}&classId=${encodeURIComponent(CLASS_ID)}&dataVersion=${encodeURIComponent(DATA_VERSION)}`;
     frame.addEventListener('load', () => {
       installNativeDataFetch(frame.contentWindow);
       installUnifiedStudentEntry(frame.contentWindow);
@@ -232,7 +233,7 @@
   }
 
   function unifiedStudentUrl() {
-    return `student.html?lesson=${encodeURIComponent(LESSON)}&room=${encodeURIComponent(ROOM)}&profile=${encodeURIComponent(PROFILE)}&experiment=${encodeURIComponent(EXPERIMENT)}&dataVersion=${encodeURIComponent(DATA_VERSION)}`;
+    return `/api/teacher/student-join?classId=${encodeURIComponent(CLASS_ID)}&lesson=${encodeURIComponent(LESSON)}&room=${encodeURIComponent(ROOM)}&target=classroom`;
   }
 
   function mergeObject(target, patch) {
@@ -265,8 +266,6 @@
   function installUnifiedStudentEntry(frameWindow) {
     if (!frameWindow || frameWindow.__usePilotStudentEntry) return;
     frameWindow.__usePilotStudentEntry = true;
-    frameWindow.rawStudentUrl = function () { return new URL(unifiedStudentUrl(), frameWindow.location.href).href; };
-    frameWindow.studentUrl = function () { return encodeURIComponent(frameWindow.rawStudentUrl()); };
   }
 
   function choiceSummaryData(interaction) {

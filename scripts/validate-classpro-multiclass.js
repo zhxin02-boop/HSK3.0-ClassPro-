@@ -53,9 +53,9 @@ assert(gas.recordMatchesScope_(pilotRow, { classId: 'ai26401-fall-class-1' }), '
 assert(!gas.recordMatchesScope_(pilotRow, { classId: 'ai26401-fall-class-2' }), 'GAS should hide records from other classes');
 const oldHsk1Row = new Array(gas.HEADERS.length).fill('');
 oldHsk1Row[2] = 'HSK1-L01';
-oldHsk1Row[1] = 'DYMSHITS IRINA';
+oldHsk1Row[1] = 'Legacy Student';
 assert(gas.recordMatchesScope_(oldHsk1Row, { classId: 'rufe-2025-class-4' }), 'Historical HSK1 rows should remain with the RUFE class');
-assert(gas.lessonProgress_([oldHsk1Row], 'DYMSHITS IRINA', 'HSK1-L01', 'rufe25-4-01').records === 1, 'Historical rows without student ids should still match by name');
+assert(gas.lessonProgress_([oldHsk1Row], 'Legacy Student', 'HSK1-L01', 'rufe25-4-01').records === 1, 'Historical rows without student ids should still match by name');
 const oldHsk3Row = new Array(gas.HEADERS.length).fill('');
 oldHsk3Row[2] = 'HSK3-L03';
 assert(gas.recordMatchesScope_(oldHsk3Row, { classId: 'ai26401-spring' }), 'Historical HSK3 rows should remain with the spring class');

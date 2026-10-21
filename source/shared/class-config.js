@@ -77,6 +77,12 @@
     var item = get(classId) || get(defaultClassIdForLesson(lesson)), level = levelOf(lesson);
     return copy(item.rosters[level] || item.rosters.default || []);
   }
+  function setRoster(classId, level, rows) {
+    var item = get(classId), key = String(level || "default").toUpperCase();
+    if (!item || !Array.isArray(rows)) return false;
+    item.rosters[key] = copy(rows.filter(function (row) { return row && row.id && row.name; }));
+    return true;
+  }
   function studentIdentity(classId, lesson, name) {
     var students = rosterFor(classId, lesson), target = String(name || "").trim().toLowerCase();
     for (var i = 0; i < students.length; i++) {
@@ -92,6 +98,7 @@
     forLevel: function (level) { return copy(CLASSES.filter(function (item) { return !item.hidden && item.levels.indexOf(level) >= 0; })); },
     get: function (idOrCode) { var item = get(idOrCode); return item ? copy(item) : null; },
     roster: rosterFor,
+    setRoster: setRoster,
     studentIdentity: studentIdentity
   };
 })(window);

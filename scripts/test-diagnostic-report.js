@@ -87,11 +87,7 @@ assert.ok(!Object.prototype.hasOwnProperty.call(anonA.issues[0], 'evidence'), 'd
 assert.strictEqual(anonA.teacherDecisions.keep, '保留导入活动');
 
 const actualRows = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/learning-records.json'), 'utf8'));
-const hsk3Roster = [
-  'MTEWELE THEOFRIDA PHILEMON', 'LILLA LISA APSA', 'MTUI ELISIA LAURENCE', 'MTAMBI ALBERT EVANS',
-  'MAKAA ATHUMAN SHABANI', 'BURIAN JERALD JURGEN', 'MABAMBA PAULINE ILDEPHONCE', 'MACHIRA MACHIRA SULEIMAN',
-  'JAIPONG MISS SIRIWAN', 'CHERYL GRACIA WIJAYA', 'NI PUTU LUNA CAHYA DEWI', 'Ali Altphan'
-];
+const hsk3Roster = Array.from({ length: 12 }, (_, index) => `Test Student ${String(index + 1).padStart(2, '0')}`);
 const actual = diagnostic.createReport(actualRows, { lesson: 'HSK3-L01', roster: hsk3Roster, progressData, generatedAt: '2026-09-20T00:00:00Z' });
 assert.strictEqual(actual.coverage.rosterTotal, 12);
 assert.strictEqual(actual.coverage.complete + actual.coverage.partial + actual.coverage.notStarted, 12);
