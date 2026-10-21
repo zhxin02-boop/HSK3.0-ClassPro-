@@ -9,7 +9,9 @@ var root = __dirname;
 var port = Number(process.env.PORT || 18765);
 var studentsDir = path.join(root, "data", "students");
 var learningRecordsFile = path.join(root, "data", "learning-records.json");
-var classRostersFile = process.env.CLASSPRO_CLASS_ROSTERS_FILE || path.join(root, "data", "class-rosters.json");
+var renderClassRostersFile = "/etc/secrets/class-rosters.json";
+var classRostersFile = process.env.CLASSPRO_CLASS_ROSTERS_FILE ||
+  (fs.existsSync(renderClassRostersFile) ? renderClassRostersFile : path.join(root, "data", "class-rosters.json"));
 var sessionSecret = process.env.CLASSPRO_SESSION_SECRET || crypto.randomBytes(32).toString("hex");
 var studentAccessKey = crypto.createHash("sha256").update("classpro-student-access|" + sessionSecret).digest();
 var STUDENT_ACCESS_COOKIE = "classpro_student_access";
