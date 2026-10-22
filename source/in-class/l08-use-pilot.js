@@ -232,7 +232,7 @@
     };
   }
 
-  function unifiedStudentUrl() {
+  function unifiedStudentQuery() {
     const query = new URLSearchParams({
       classId: CLASS_ID,
       lesson: LESSON,
@@ -241,7 +241,15 @@
       experiment: EXPERIMENT,
       profile: PROFILE
     });
-    return `/api/teacher/student-join?${query.toString()}`;
+    return query.toString();
+  }
+
+  function unifiedStudentUrl() {
+    return `/api/teacher/student-join?${unifiedStudentQuery()}`;
+  }
+
+  function unifiedStudentQrUrl() {
+    return `/api/teacher/student-qr?${unifiedStudentQuery()}`;
   }
 
   function mergeObject(target, patch) {
@@ -274,6 +282,15 @@
   function installUnifiedStudentEntry(frameWindow) {
     if (!frameWindow || frameWindow.__usePilotStudentEntry) return;
     frameWindow.__usePilotStudentEntry = true;
+    frameWindow.rawStudentUrl = function () {
+      return new URL(unifiedStudentUrl(), frameWindow.location.href).href;
+    };
+    frameWindow.studentUrl = function () {
+      return encodeURIComponent(frameWindow.rawStudentUrl());
+    };
+    frameWindow.protectedStudentQrUrl = function () {
+      return unifiedStudentQrUrl();
+    };
   }
 
   function choiceSummaryData(interaction) {
