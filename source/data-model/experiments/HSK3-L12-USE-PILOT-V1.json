@@ -1,0 +1,2871 @@
+{
+  "schemaVersion": "classpro-use-profile/v3",
+  "experiment": {
+    "id": "l12-use-pilot-v1",
+    "title": "第12课·以用为主线升级版",
+    "lessonLabel": "第12课",
+    "sourceLesson": "HSK3-L12",
+    "scope": "四个课文MINI循环；保留L12原有词汇、语法、课文和练习教学样式。"
+  },
+  "sources": {
+    "lesson": {
+      "path": "../lessons/HSK3-L12.json",
+      "sha256": "4CD015BF7370534206A85A77016DFD919E2652952545973103A6DC447B752489"
+    },
+    "teacher": {
+      "path": "../../in-class/teacher.html"
+    },
+    "student": {
+      "path": "../../in-class/student.html"
+    }
+  },
+  "nativeTeaching": {
+    "preserveCourseStyles": true,
+    "grammar": {
+      "source": "formal_lesson",
+      "preserveExamples": true,
+      "preserveHighlights": true,
+      "preserveOralQuestions": true,
+      "preserveFollowUp": true
+    },
+    "text": {
+      "source": "formal_lesson",
+      "preservePresentation": true,
+      "preserveDiary": true
+    },
+    "vocabulary": {
+      "source": "formal_lesson",
+      "preserveScenes": true,
+      "preserveHotspots": true
+    }
+  },
+  "useGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "icon": "🌸",
+      "label": "课文 1",
+      "title": "协商一次春日公园活动",
+      "goal": "邀请同学去公园，并在当天不能成行时协商新的日期和联系办法。",
+      "goalEn": "Invite a classmate to the park and agree on a new date and follow-up plan when today does not work.",
+      "entry": {
+        "id": "l12_t1_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图。请先用一两句话说说你想去哪里、想做什么。",
+        "promptEn": "Look at the picture and say where you want to go and what you want to do in one or two sentences.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l12/photo-text-1-spring-street.png",
+          "labelCn": "春日街景",
+          "altCn": "春天街上的树已经开花",
+          "instructionCn": "先观察春天的街景，再提出一个简单活动想法。",
+          "instructionEn": "Observe the spring street scene, then suggest one simple activity."
+        }
+      },
+      "exit": {
+        "id": "l12_t1_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "请完成一段可以执行的公园邀约：说明春日景象、地点和活动，解释今天不能一起去的原因，用“或者……，或者……”给出两个日期，并说明怎样继续联系。",
+        "promptEn": "Give a practical park invitation. Describe the spring scene, place and activity, explain why today does not work, offer two dates with “或者……，或者……”, and say how you will follow up."
+      },
+      "exitRequirements": [
+        {
+          "id": "scene",
+          "label": "春日景象"
+        },
+        {
+          "id": "activity",
+          "label": "地点和活动"
+        },
+        {
+          "id": "reason",
+          "label": "今天不能成行的原因"
+        },
+        {
+          "id": "dates",
+          "label": "两个备选日期"
+        },
+        {
+          "id": "contact",
+          "label": "下一步联系方式"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t1_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "开花、公园、船、地方、工作日",
+          "contentEn": ""
+        },
+        {
+          "id": "t1_frame",
+          "labelCn": "句式提示",
+          "labelEn": "Support",
+          "contentCn": "我想去……／今天不能……，因为……／或者明天去，或者后天去。",
+          "contentEn": ""
+        },
+        {
+          "id": "t1_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Support",
+          "contentCn": "春日景象 → 活动 → 时间冲突 → 两个日期 → 联系办法",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l12_01",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文1词汇",
+          "vocabSession": "1"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“或者……，或者……”",
+          "grammarIndex": 0
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文1",
+          "textIndex": 0
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：选择户外活动日期",
+          "routeState": {
+            "t2ki": 0
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l12_task_01",
+          "status": "ready",
+          "purpose": "公园活动任务"
+        },
+        {
+          "id": "l12_para_01",
+          "status": "ready",
+          "purpose": "春日计划段落"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "icon": "🌧️",
+      "label": "课文 2",
+      "title": "突然变天时提醒并帮助同学",
+      "goal": "说明天气怎样突然变化，并向没有带雨具的同学提供具体帮助。",
+      "goalEn": "Explain a sudden weather change and offer practical help to a classmate without rain gear.",
+      "entry": {
+        "id": "l12_t2_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图。请先说说天气发生了什么变化，或者给同学一条简单建议。",
+        "promptEn": "Look at the picture and briefly describe the weather change or give one suggestion.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l12/photo-text-2-wind-starts.png",
+          "labelCn": "天气突变",
+          "altCn": "晴天以后突然刮起风来",
+          "instructionCn": "观察天空、树叶和人物，说出天气正在发生什么变化。",
+          "instructionEn": "Observe the sky, leaves and people, and say how the weather is changing."
+        }
+      },
+      "exit": {
+        "id": "l12_t2_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "请完成一段“天气提醒＋雨具帮助”表达：说清刚才的天气，用“起来”说明风雨开始，用“就”说明今天的例外，正确说出借伞或雨衣的方向，并给出立即行动。",
+        "promptEn": "Give a weather warning and offer rain gear. Describe the earlier weather, use “起来” for the change, use “就” for today’s exception, lend an umbrella or raincoat in the correct direction, and suggest an immediate action."
+      },
+      "exitRequirements": [
+        {
+          "id": "change",
+          "label": "刚才和现在的天气"
+        },
+        {
+          "id": "start",
+          "label": "用“起来”说明开始"
+        },
+        {
+          "id": "exception",
+          "label": "用“就”说明例外"
+        },
+        {
+          "id": "help",
+          "label": "正确说明借雨具"
+        },
+        {
+          "id": "action",
+          "label": "立即行动"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t2_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "刚才、刮、风、伞、借、把、雨衣、变化",
+          "contentEn": ""
+        },
+        {
+          "id": "t2_frame",
+          "labelCn": "句式提示",
+          "labelEn": "Support",
+          "contentCn": "刚才还是……，现在……起来了。／我每天都……，就今天……。／我可以把……借给你。",
+          "contentEn": ""
+        },
+        {
+          "id": "t2_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Support",
+          "contentCn": "原来的天气 → 天气变化 → 今天的例外 → 提供雨具 → 快点行动",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l12_02",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文2词汇",
+          "vocabSession": "2"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“起来”的引申用法",
+          "grammarIndex": 1
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文2",
+          "textIndex": 1
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：天气提醒与雨具帮助",
+          "routeState": {
+            "t2ki": 1
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l12_task_02",
+          "status": "needs_revision",
+          "purpose": "天气提醒与雨具帮助"
+        },
+        {
+          "id": "l12_para_02",
+          "status": "ready",
+          "purpose": "天气突变段落"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "icon": "❄️",
+      "label": "课文 3",
+      "title": "向新同学介绍本地冬季体验",
+      "goal": "介绍冬天的天气和下雪情况，说明自己的适应感受，并给新同学出行建议。",
+      "goalEn": "Describe the local winter and snowfall, explain how you have adapted, and give a new classmate practical advice.",
+      "entry": {
+        "id": "l12_t3_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图。请先用一两句话说说这里的冬天怎么样，或者你是否习惯。",
+        "promptEn": "Look at the picture and say what winter is like here or whether you are used to it.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l12/photo-text-3-winter-window.png",
+          "labelCn": "冬季体验",
+          "altCn": "人物从窗边观察冬天的雪景",
+          "instructionCn": "根据冬季窗景说出天气特点和自己的感受。",
+          "instructionEn": "Use the winter window scene to describe the weather and your feeling."
+        }
+      },
+      "exit": {
+        "id": "l12_t3_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "请向新同学介绍本地冬季：说明你住了多久、还不习惯什么，分别说出对寒冷和雪景的看法，用“就”说明今年下雪次数少，并给出关注天气的建议。",
+        "promptEn": "Introduce the local winter to a new classmate. Say how long you have lived here, what you are not used to, how you feel about the cold and snow, use “就” to show that snowfall was limited this year, and give weather advice."
+      },
+      "exitRequirements": [
+        {
+          "id": "duration",
+          "label": "居住时间"
+        },
+        {
+          "id": "adaptation",
+          "label": "还不习惯的方面"
+        },
+        {
+          "id": "attitude",
+          "label": "寒冷和雪景的不同感受"
+        },
+        {
+          "id": "limited",
+          "label": "用“就”突出次数少"
+        },
+        {
+          "id": "advice",
+          "label": "关注天气的建议"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t3_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "冬天、常常、关注、天气、下雪",
+          "contentEn": ""
+        },
+        {
+          "id": "t3_frame",
+          "labelCn": "句式提示",
+          "labelEn": "Support",
+          "contentCn": "我在这里住了……／我还不太习惯……／虽然……，但是……／今年就……／出门前要……",
+          "contentEn": ""
+        },
+        {
+          "id": "t3_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Support",
+          "contentCn": "住了多久 → 是否习惯 → 冬天和雪 → 今年的情况 → 建议",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l12_03",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文3词汇",
+          "vocabSession": "3"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "范围副词“就”",
+          "grammarIndex": 2
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文3",
+          "textIndex": 2
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "g2p",
+          "label": "看图表达：今年就下一次雪",
+          "routeState": {
+            "g2pi": 5
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l12_pic_06",
+          "status": "ready",
+          "purpose": "冬季次数看图表达"
+        },
+        {
+          "id": "l12_para_04",
+          "status": "ready",
+          "purpose": "长期适应段落"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "icon": "🍂",
+      "label": "课文 4",
+      "title": "制作城市四季推荐卡",
+      "goal": "介绍城市的四季特点，并根据长期生活体验推荐适合来访的季节。",
+      "goalEn": "Describe a city’s seasons and recommend a good time to visit based on long-term experience.",
+      "entry": {
+        "id": "l12_t4_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图。请先说出你最喜欢的季节和一个简单理由。",
+        "promptEn": "Look at the picture and name your favorite season with one simple reason.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l12/photo-text-4-autumn-diary.png",
+          "labelCn": "四季日记",
+          "altCn": "秋天的红黄叶子和一篇四季日记",
+          "instructionCn": "观察季节景象，先说出自己的季节偏好。",
+          "instructionEn": "Observe the seasonal scene and state your preference."
+        }
+      },
+      "exit": {
+        "id": "l12_t4_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "请完成一张城市四季推荐卡：至少介绍三个季节，说明最喜欢或最不喜欢的季节和原因，用“下来”概括长期居住后的感受，最后询问对方的偏好。",
+        "promptEn": "Create a city seasons recommendation. Describe at least three seasons, explain your favorite or least favorite season, use “下来” to summarize long-term experience, and ask about the listener’s preference."
+      },
+      "exitRequirements": [
+        {
+          "id": "seasons",
+          "label": "至少三个季节"
+        },
+        {
+          "id": "preference",
+          "label": "喜欢或不喜欢的季节"
+        },
+        {
+          "id": "reason",
+          "label": "真实理由"
+        },
+        {
+          "id": "experience",
+          "label": "用“下来”总结长期体验"
+        },
+        {
+          "id": "question",
+          "label": "询问对方偏好"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t4_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "四季、春天、夏天、凉快、秋天、叶子、变成",
+          "contentEn": ""
+        },
+        {
+          "id": "t4_frame",
+          "labelCn": "句式提示",
+          "labelEn": "Support",
+          "contentCn": "春天……，夏天……，秋天……／这一年住下来……／我最喜欢……，因为……／你最喜欢哪个季节？",
+          "contentEn": ""
+        },
+        {
+          "id": "t4_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Support",
+          "contentCn": "三个季节 → 长期感受 → 个人选择 → 理由 → 询问对方",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l12_04",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文4词汇",
+          "vocabSession": "4"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“下来”的引申用法",
+          "grammarIndex": 3
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文4",
+          "textIndex": 3
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：城市四季推荐",
+          "routeState": {
+            "t2ki": 3
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l12_task_04",
+          "status": "needs_revision",
+          "purpose": "城市四季介绍"
+        },
+        {
+          "id": "l12_para_03",
+          "status": "ready",
+          "purpose": "四季校园段落"
+        }
+      ]
+    }
+  ],
+  "textLearning": [
+    {
+      "textId": "t_hsk3_l12_01",
+      "useGroupId": "T1",
+      "title": "春日公园计划",
+      "overviewChoices": [
+        {
+          "id": "l12_m1_overall_01",
+          "focus": "main_idea",
+          "questionCn": "这段对话主要在谈什么？",
+          "options": [
+            "商量一次公园活动",
+            "准备雨具",
+            "比较北京四季"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l12_m1_overall_02",
+          "focus": "development",
+          "questionCn": "对话是怎样发展的？",
+          "options": [
+            "看到春景、提出活动、遇到时间冲突、继续协商",
+            "先借伞，再去上课",
+            "先下雪，再去坐船"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l12_m1_overall_03",
+          "focus": "purpose",
+          "questionCn": "王一飞今天没时间，两个人最后怎么办？",
+          "options": [
+            "换一天去公园",
+            "今天下午去公园",
+            "不去公园了"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l12_m1_detail_01",
+          "questionCn": "街上的树怎么了？",
+          "questionPinyin": "Jiē shàng de shù zěnme le?",
+          "answer": "街上的树都开花了。",
+          "answerPinyin": "Jiē shàng de shù dōu kāihuā le.",
+          "acceptedAnswers": [
+            "街上的树都开花了",
+            "树都开花了"
+          ],
+          "informationPoint": "春景的具体变化"
+        },
+        {
+          "id": "l12_m1_detail_02",
+          "questionCn": "白家月为什么想去公园？",
+          "questionPinyin": "Bái Jiāyuè wèishénme xiǎng qù gōngyuán?",
+          "answer": "因为天气很好，她想去公园坐船。",
+          "answerPinyin": "Yīnwèi tiānqì hěn hǎo, tā xiǎng qù gōngyuán zuò chuán.",
+          "acceptedAnswers": [
+            "天气好，想去公园坐船",
+            "因为天气很好，她想坐船"
+          ],
+          "informationPoint": "活动原因"
+        },
+        {
+          "id": "l12_m1_detail_03",
+          "questionCn": "王一飞为什么今天不能去太远的地方？",
+          "questionPinyin": "Wáng Yīfēi wèishénme jīntiān bù néng qù tài yuǎn de dìfang?",
+          "answer": "因为她今天下午有课。",
+          "answerPinyin": "Yīnwèi tā jīntiān xiàwǔ yǒu kè.",
+          "acceptedAnswers": [
+            "她下午有课",
+            "因为下午有课"
+          ],
+          "informationPoint": "时间冲突"
+        },
+        {
+          "id": "l12_m1_detail_04",
+          "questionCn": "他们最后提出了哪两个日期？谁再打电话？",
+          "questionPinyin": "Tāmen zuìhòu tíchū le nǎ liǎng ge rìqī? Shéi zài dǎ diànhuà?",
+          "answer": "或者明天去，或者后天去，王一飞再打电话。",
+          "answerPinyin": "Huòzhě míngtiān qù, huòzhě hòutiān qù, Wáng Yīfēi zài dǎ diànhuà.",
+          "acceptedAnswers": [
+            "明天或者后天，王一飞再打电话",
+            "明天、后天，王一飞联系"
+          ],
+          "informationPoint": "两个具体日期与联系人"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "或者明天去，或者后天去，我给你打电话。",
+        "focus": "或者 + 选择一，或者 + 选择二",
+        "actionLabel": "进入“或者……，或者……”",
+        "grammarIndex": 0
+      },
+      "paragraphPractice": {
+        "label": "调用“春日计划”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 0
+      },
+      "lifeTransfer": {
+        "promptCn": "请完成一段可以执行的公园邀约：说明春日景象、地点和活动，解释今天不能一起去的原因，用“或者……，或者……”给出两个日期，并说明怎样继续联系。",
+        "promptEn": "Give a practical park invitation. Describe the spring scene, place and activity, explain why today does not work, offer two dates with “或者……，或者……”, and say how you will follow up."
+      }
+    },
+    {
+      "textId": "t_hsk3_l12_02",
+      "useGroupId": "T2",
+      "title": "突然变化的天气",
+      "overviewChoices": [
+        {
+          "id": "l12_m2_overall_01",
+          "focus": "main_idea",
+          "questionCn": "这段对话主要在谈什么？",
+          "options": [
+            "天气突然变化和雨具帮助",
+            "春游日期",
+            "冬天的雪景"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l12_m2_overall_02",
+          "focus": "development",
+          "questionCn": "情况发生了什么变化？",
+          "options": [
+            "天气由晴转坏，两个人准备快走",
+            "雨停以后去坐船",
+            "天气一直没有变化"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l12_m2_overall_03",
+          "focus": "purpose",
+          "questionCn": "两个人在解决什么问题？",
+          "options": [
+            "一个人没有带雨具，另一个人提供帮助",
+            "两个人都没有课",
+            "两个人要买船票"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l12_m2_detail_01",
+          "questionCn": "天气先后发生了什么变化？",
+          "questionPinyin": "Tiānqì xiānhòu fāshēng le shénme biànhuà?",
+          "answer": "先刮起风来，后来雨也下起来了。",
+          "answerPinyin": "Xiān guā qǐ fēng lái, hòulái yǔ yě xià qǐlái le.",
+          "acceptedAnswers": [
+            "先刮风，后来下雨",
+            "风起来以后又下雨"
+          ],
+          "informationPoint": "变化顺序"
+        },
+        {
+          "id": "l12_m2_detail_02",
+          "questionCn": "白家月平时带伞吗？今天呢？",
+          "questionPinyin": "Bái Jiāyuè píngshí dài sǎn ma? Jīntiān ne?",
+          "answer": "她平时带雨伞，就今天没带。",
+          "answerPinyin": "Tā píngshí dài yǔsǎn, jiù jīntiān méi dài.",
+          "acceptedAnswers": [
+            "每天带伞，就今天没带",
+            "平时带，今天没带"
+          ],
+          "informationPoint": "一般情况与例外"
+        },
+        {
+          "id": "l12_m2_detail_03",
+          "questionCn": "王一飞可以借给白家月什么？",
+          "questionPinyin": "Wáng Yīfēi kěyǐ jiè gěi Bái Jiāyuè shénme?",
+          "answer": "一把伞或者一件雨衣。",
+          "answerPinyin": "Yì bǎ sǎn huòzhě yí jiàn yǔyī.",
+          "acceptedAnswers": [
+            "伞或者雨衣",
+            "一把伞或一件雨衣"
+          ],
+          "informationPoint": "帮助内容"
+        },
+        {
+          "id": "l12_m2_detail_04",
+          "questionCn": "“刮起风来、下起雨来”中的“起来”表示什么？",
+          "questionPinyin": "“Guā qǐ fēng lái, xià qǐ yǔ lái” zhōng de “qǐlái” biǎoshì shénme?",
+          "answer": "表示风和雨开始了。",
+          "answerPinyin": "Biǎoshì fēng hé yǔ kāishǐ le.",
+          "acceptedAnswers": [
+            "表示动作开始",
+            "表示进入新状态"
+          ],
+          "informationPoint": "语言理解"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "我每天书包里都放着雨伞，就今天没带。",
+        "focus": "一般情况 + 就 + 数量少或唯一例外",
+        "actionLabel": "进入范围副词“就”",
+        "grammarIndex": 2
+      },
+      "paragraphPractice": {
+        "label": "调用“天气突变”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 1
+      },
+      "lifeTransfer": {
+        "promptCn": "请完成一段“天气提醒＋雨具帮助”表达：说清刚才的天气，用“起来”说明风雨开始，用“就”说明今天的例外，正确说出借伞或雨衣的方向，并给出立即行动。",
+        "promptEn": "Give a weather warning and offer rain gear. Describe the earlier weather, use “起来” for the change, use “就” for today’s exception, lend an umbrella or raincoat in the correct direction, and suggest an immediate action."
+      }
+    },
+    {
+      "textId": "t_hsk3_l12_03",
+      "useGroupId": "T3",
+      "title": "习惯这里的天气",
+      "overviewChoices": [
+        {
+          "id": "l12_m3_overall_01",
+          "focus": "main_idea",
+          "questionCn": "这段对话主要在谈什么？",
+          "options": [
+            "对本地天气的适应和冬季感受",
+            "去公园的计划",
+            "夏天晚上散步"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l12_m3_overall_02",
+          "focus": "development",
+          "questionCn": "他们怎么说这里的冬天？",
+          "options": [
+            "天气冷，下雪的时候很漂亮",
+            "天气很热，从来不下雪",
+            "每天都下大雨"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l12_m3_overall_03",
+          "focus": "purpose",
+          "questionCn": "他们为什么说到下雪？",
+          "options": [
+            "因为他们在说冬天的天气",
+            "因为他们要买雨衣",
+            "因为他们要去坐船"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l12_m3_detail_01",
+          "questionCn": "王一飞在这里住了多长时间？",
+          "questionPinyin": "Wáng Yīfēi zài zhèlǐ zhù le duō cháng shíjiān?",
+          "answer": "已经一年多了。",
+          "answerPinyin": "Yǐjīng yì nián duō le.",
+          "acceptedAnswers": [
+            "一年多",
+            "已经一年多"
+          ],
+          "informationPoint": "居住时间"
+        },
+        {
+          "id": "l12_m3_detail_02",
+          "questionCn": "她还不太习惯什么？",
+          "questionPinyin": "Tā hái bú tài xíguàn shénme?",
+          "answer": "她还不太习惯这里的天气。",
+          "answerPinyin": "Tā hái bú tài xíguàn zhèlǐ de tiānqì.",
+          "acceptedAnswers": [
+            "这里的天气",
+            "还不太习惯这里的天气"
+          ],
+          "informationPoint": "未适应内容"
+        },
+        {
+          "id": "l12_m3_detail_03",
+          "questionCn": "白家月怎样评价这里的冬天和雪？",
+          "questionPinyin": "Bái Jiāyuè zěnyàng píngjià zhèlǐ de dōngtiān hé xuě?",
+          "answer": "冬天虽然冷，但是下雪的时候特别漂亮。",
+          "answerPinyin": "Dōngtiān suīrán lěng, dànshì xiàxuě de shíhou tèbié piàoliang.",
+          "acceptedAnswers": [
+            "冬天冷，但是雪很漂亮",
+            "虽然冷，但是下雪很美"
+          ],
+          "informationPoint": "态度对比"
+        },
+        {
+          "id": "l12_m3_detail_04",
+          "questionCn": "为什么“今年就下了一次雪”说明雪少？",
+          "questionPinyin": "Wèishénme “jīnnián jiù xià le yí cì xuě” shuōmíng xuě shǎo?",
+          "answer": "因为北京冬天常常下雪，一次比平时少。",
+          "answerPinyin": "Yīnwèi Běijīng dōngtiān chángcháng xiàxuě, yí cì bǐ píngshí shǎo.",
+          "acceptedAnswers": [
+            "因为一次比平时少",
+            "“就”突出次数少"
+          ],
+          "informationPoint": "原因与“就”的含义"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "北京常常下雪，但听说今年就下了一次。",
+        "focus": "就 + 数量，突出比预期少",
+        "actionLabel": "进入范围副词“就”",
+        "grammarIndex": 2
+      },
+      "paragraphPractice": {
+        "label": "调用“一年以后”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 3
+      },
+      "lifeTransfer": {
+        "promptCn": "请向新同学介绍本地冬季：说明你住了多久、还不习惯什么，分别说出对寒冷和雪景的看法，用“就”说明今年下雪次数少，并给出关注天气的建议。",
+        "promptEn": "Introduce the local winter to a new classmate. Say how long you have lived here, what you are not used to, how you feel about the cold and snow, use “就” to show that snowfall was limited this year, and give weather advice."
+      }
+    },
+    {
+      "textId": "t_hsk3_l12_04",
+      "useGroupId": "T4",
+      "title": "北京四季日记",
+      "overviewChoices": [
+        {
+          "id": "l12_m4_overall_01",
+          "focus": "main_idea",
+          "questionCn": "这篇日记主要写什么？",
+          "options": [
+            "北京四季的特点和作者的感受",
+            "一次公园活动",
+            "借雨衣的经过"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l12_m4_overall_02",
+          "focus": "development",
+          "questionCn": "日记按什么顺序介绍内容？",
+          "options": [
+            "春、夏、秋、冬，再说明个人偏好",
+            "冬、春、夏，再介绍新闻",
+            "按照人物对话顺序"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l12_m4_overall_03",
+          "focus": "purpose",
+          "questionCn": "作者介绍自己的四季感受以后，还想做什么？",
+          "options": [
+            "了解读者最喜欢的季节",
+            "请读者马上去北京",
+            "让所有人选择同一个季节"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l12_m4_detail_01",
+          "questionCn": "作者为什么觉得春天最舒服？",
+          "questionPinyin": "Zuòzhě wèishénme juéde chūntiān zuì shūfu?",
+          "answer": "因为春天天气不冷不热。",
+          "answerPinyin": "Yīnwèi chūntiān tiānqì bù lěng bù rè.",
+          "acceptedAnswers": [
+            "春天不冷不热",
+            "天气很舒服"
+          ],
+          "informationPoint": "春季特点与原因"
+        },
+        {
+          "id": "l12_m4_detail_02",
+          "questionCn": "夏天晚上和秋天的叶子分别有什么特点？",
+          "questionPinyin": "Xiàtiān wǎnshang hé qiūtiān de yèzi fēnbié yǒu shénme tèdiǎn?",
+          "answer": "夏天晚上比较凉快，秋天的叶子会变成红色、黄色。",
+          "answerPinyin": "Xiàtiān wǎnshang bǐjiào liángkuai, qiūtiān de yèzi huì biànchéng hóngsè, huángsè.",
+          "acceptedAnswers": [
+            "夏天晚上凉快，秋天叶子变色"
+          ],
+          "informationPoint": "两个具体季节特征"
+        },
+        {
+          "id": "l12_m4_detail_03",
+          "questionCn": "“住下来”在日记中强调什么？",
+          "questionPinyin": "“Zhù xiàlái” zài rìjì zhōng qiángdiào shénme?",
+          "answer": "强调经过一段时间居住后形成的经验和感受。",
+          "answerPinyin": "Qiángdiào jīngguò yí duàn shíjiān jūzhù hòu xíngchéng de jīngyàn hé gǎnshòu.",
+          "acceptedAnswers": [
+            "住了一年多以后形成的感受",
+            "长期生活后的经验"
+          ],
+          "informationPoint": "语言理解"
+        },
+        {
+          "id": "l12_m4_detail_04",
+          "questionCn": "作者最不喜欢哪个季节？为什么？",
+          "questionPinyin": "Zuòzhě zuì bù xǐhuan nǎge jìjié? Wèishénme?",
+          "answer": "冬天，因为不但冷，而且风很大。",
+          "answerPinyin": "Dōngtiān, yīnwèi búdàn lěng, érqiě fēng hěn dà.",
+          "acceptedAnswers": [
+            "冬天，因为冷而且风大",
+            "最不喜欢冬天"
+          ],
+          "informationPoint": "个人态度与原因"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "这一年多住下来，我还是更喜欢北京的四季。",
+        "focus": "动词 + 下来，表示过程延续后形成的结果或经验",
+        "actionLabel": "进入“下来”的引申用法",
+        "grammarIndex": 3
+      },
+      "paragraphPractice": {
+        "label": "调用“四季校园”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 2
+      },
+      "lifeTransfer": {
+        "promptCn": "每个人都需要喜欢同一个季节吗？请说说你的选择和理由。",
+        "promptEn": "Does everyone need to prefer the same season? Explain your own choice."
+      }
+    }
+  ],
+  "vocabularyTaskTypes": [
+    {
+      "id": "recognition",
+      "labelCn": "认读",
+      "labelEn": "Recognition"
+    },
+    {
+      "id": "shape",
+      "labelCn": "辨形",
+      "labelEn": "Character form"
+    },
+    {
+      "id": "input",
+      "labelCn": "输入",
+      "labelEn": "Type the word"
+    },
+    {
+      "id": "collocation",
+      "labelCn": "搭配与使用",
+      "labelEn": "Collocation and use"
+    }
+  ],
+  "timerPolicy": {
+    "miniLoop": {
+      "optionsMinutes": [
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 4
+    },
+    "vocabularyFocus": {
+      "optionsMinutes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 2
+    },
+    "autoClose": false
+  },
+  "vocabularyCatalog": [
+    {
+      "id": "v12_01",
+      "hanzi": "街",
+      "pinyin": "jiē",
+      "english": "street",
+      "meaningCn": "两边有商店或房子的道路。",
+      "phrases": [
+        "一条街",
+        "街上"
+      ],
+      "example": "这条街上的树都开花了。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_02",
+      "hanzi": "开花",
+      "pinyin": "kāihuā",
+      "english": "bloom",
+      "meaningCn": "植物长出花。",
+      "phrases": [
+        "树开花",
+        "花开了"
+      ],
+      "example": "春天到了，公园里的花都开花了。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_03",
+      "hanzi": "公园",
+      "pinyin": "gōngyuán",
+      "english": "park",
+      "meaningCn": "供人散步、休息的公共场所。",
+      "phrases": [
+        "去公园",
+        "公园里"
+      ],
+      "example": "我们明天去公园坐船。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_04",
+      "hanzi": "船",
+      "pinyin": "chuán",
+      "english": "boat",
+      "meaningCn": "在水上行驶的交通工具。",
+      "phrases": [
+        "坐船",
+        "一条船"
+      ],
+      "example": "湖边有几条小船。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v12_05",
+      "hanzi": "工作日",
+      "pinyin": "gōngzuòrì",
+      "english": "weekday",
+      "meaningCn": "正常工作或上课的日子。",
+      "phrases": [
+        "工作日上午",
+        "不是工作日"
+      ],
+      "example": "今天是工作日，公园里的人不多。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_06",
+      "hanzi": "地方",
+      "pinyin": "dìfang",
+      "english": "place",
+      "meaningCn": "某一个地点或空间。",
+      "phrases": [
+        "这个地方",
+        "远的地方"
+      ],
+      "example": "下午有课，不能去太远的地方。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_07",
+      "hanzi": "刚才",
+      "pinyin": "gāngcái",
+      "english": "a moment ago; just now",
+      "meaningCn": "离现在很近的过去时间。",
+      "phrases": [
+        "刚才说",
+        "刚才还"
+      ],
+      "example": "刚才还是大晴天。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_08",
+      "hanzi": "刮",
+      "pinyin": "guā",
+      "english": "blow (of wind)",
+      "meaningCn": "风吹动。",
+      "phrases": [
+        "刮风",
+        "刮起风来"
+      ],
+      "example": "外面突然刮起风来了。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_09",
+      "hanzi": "风",
+      "pinyin": "fēng",
+      "english": "wind",
+      "meaningCn": "流动的空气。",
+      "phrases": [
+        "大风",
+        "风很大"
+      ],
+      "example": "今天下午风很大。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_10",
+      "hanzi": "新闻",
+      "pinyin": "xīnwén",
+      "english": "news",
+      "meaningCn": "最近发生的公开信息。",
+      "phrases": [
+        "看新闻",
+        "新闻里说"
+      ],
+      "example": "新闻里说今天有雨。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_11",
+      "hanzi": "伞",
+      "pinyin": "sǎn",
+      "english": "umbrella",
+      "meaningCn": "挡雨或挡太阳的用品。",
+      "phrases": [
+        "一把伞",
+        "带伞"
+      ],
+      "example": "我书包里常常放着一把伞。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v12_12",
+      "hanzi": "借",
+      "pinyin": "jiè",
+      "english": "lend; borrow",
+      "meaningCn": "暂时给别人用，或暂时使用别人的东西。",
+      "phrases": [
+        "借给你",
+        "借一把伞"
+      ],
+      "example": "我可以把雨伞借给你。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_13",
+      "hanzi": "把",
+      "pinyin": "bǎ",
+      "english": "measure word for handled objects",
+      "meaningCn": "有柄物品的量词。",
+      "phrases": [
+        "一把伞",
+        "一把椅子"
+      ],
+      "example": "车里有一把伞。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_14",
+      "hanzi": "雨衣",
+      "pinyin": "yǔyī",
+      "english": "raincoat",
+      "meaningCn": "下雨时穿的防雨衣服。",
+      "phrases": [
+        "一件雨衣",
+        "穿雨衣"
+      ],
+      "example": "下雨的时候可以穿雨衣。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_15",
+      "hanzi": "变",
+      "pinyin": "biàn",
+      "english": "change",
+      "meaningCn": "跟原来不一样。",
+      "phrases": [
+        "变好",
+        "天气变了"
+      ],
+      "example": "希望下午天气能变好。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v12_16",
+      "hanzi": "季节",
+      "pinyin": "jìjié",
+      "english": "season",
+      "meaningCn": "一年中有共同天气特点的一段时间。",
+      "phrases": [
+        "这个季节",
+        "喜欢的季节"
+      ],
+      "example": "这个季节天气变化很快。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v12_17",
+      "hanzi": "变化",
+      "pinyin": "biànhuà",
+      "english": "change; variation",
+      "meaningCn": "人或事物变得与以前不同。",
+      "phrases": [
+        "天气变化",
+        "变化很快"
+      ],
+      "example": "春天天气变化很快。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_18",
+      "hanzi": "冬天",
+      "pinyin": "dōngtiān",
+      "english": "winter",
+      "meaningCn": "一年中通常最冷的季节。",
+      "phrases": [
+        "今年冬天",
+        "冬天很冷"
+      ],
+      "example": "这里的冬天很冷。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_19",
+      "hanzi": "常常",
+      "pinyin": "chángcháng",
+      "english": "often",
+      "meaningCn": "很多时候都会。",
+      "phrases": [
+        "常常下雪",
+        "常常关注"
+      ],
+      "example": "北京冬天常常下雪。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_20",
+      "hanzi": "关注",
+      "pinyin": "guānzhù",
+      "english": "pay attention to",
+      "meaningCn": "持续注意。",
+      "phrases": [
+        "关注天气",
+        "特别关注"
+      ],
+      "example": "我每天关注天气变化。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_21",
+      "hanzi": "四季",
+      "pinyin": "sìjì",
+      "english": "four seasons",
+      "meaningCn": "春、夏、秋、冬。",
+      "phrases": [
+        "北京四季",
+        "一年四季"
+      ],
+      "example": "这个城市的四季很不一样。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_22",
+      "hanzi": "春天",
+      "pinyin": "chūntiān",
+      "english": "spring",
+      "meaningCn": "冬天以后、夏天以前的季节。",
+      "phrases": [
+        "春天来了",
+        "春天最舒服"
+      ],
+      "example": "北京的春天不冷不热。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_23",
+      "hanzi": "夏天",
+      "pinyin": "xiàtiān",
+      "english": "summer",
+      "meaningCn": "一年中通常最热的季节。",
+      "phrases": [
+        "今年夏天",
+        "夏天晚上"
+      ],
+      "example": "夏天白天很热。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_24",
+      "hanzi": "凉快",
+      "pinyin": "liángkuai",
+      "english": "comfortably cool",
+      "meaningCn": "温度较低，让人感觉舒服。",
+      "phrases": [
+        "很凉快",
+        "比较凉快"
+      ],
+      "example": "夏天晚上比较凉快。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_25",
+      "hanzi": "秋天",
+      "pinyin": "qiūtiān",
+      "english": "autumn",
+      "meaningCn": "夏天以后、冬天以前的季节。",
+      "phrases": [
+        "北京秋天",
+        "秋天到了"
+      ],
+      "example": "秋天的叶子很漂亮。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "input",
+        "collocation",
+        "shape"
+      ]
+    },
+    {
+      "id": "v12_26",
+      "hanzi": "叶子",
+      "pinyin": "yèzi",
+      "english": "leaf",
+      "meaningCn": "植物枝上通常是绿色的部分。",
+      "phrases": [
+        "树叶子",
+        "红色叶子"
+      ],
+      "example": "树上的叶子变成了黄色。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition"
+      ]
+    },
+    {
+      "id": "v12_27",
+      "hanzi": "变成",
+      "pinyin": "biànchéng",
+      "english": "become; turn into",
+      "meaningCn": "从一种状态成为另一种状态。",
+      "phrases": [
+        "变成红色",
+        "变成朋友"
+      ],
+      "example": "秋天，叶子变成红色和黄色。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    }
+  ],
+  "vocabularyGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "title": "协商一次春日公园活动",
+      "wordIds": [
+        "v12_01",
+        "v12_02",
+        "v12_03",
+        "v12_04",
+        "v12_05",
+        "v12_06"
+      ],
+      "recognitionWordIds": [
+        "v12_01",
+        "v12_02",
+        "v12_03",
+        "v12_04",
+        "v12_05",
+        "v12_06"
+      ],
+      "activities": [
+        {
+          "id": "l12_m1_v02_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_02"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "春天到了，校园里的树开始____了。",
+          "answer": "开花",
+          "acceptedAnswers": [
+            "开花"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m1_v02_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_02"
+          ],
+          "promptCn": "用“树开花了”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "树开花了",
+          "answer": "春天到了，街上的树都开花了。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m1_v03_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_03"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "周末我们想去____散步。",
+          "answer": "公园",
+          "acceptedAnswers": [
+            "公园"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m1_v03_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_03"
+          ],
+          "promptCn": "用“去公园”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "去公园",
+          "answer": "天气很好，我想和同学去公园。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m1_v04_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_04"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "湖上有一条小____。",
+          "answer": "船",
+          "acceptedAnswers": [
+            "船"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m1_v04_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_04"
+          ],
+          "promptCn": "用“坐船”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "坐船",
+          "answer": "到了公园以后，我们想坐船。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m1_v05_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_05"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "星期一到星期五一般是____。",
+          "answer": "工作日",
+          "acceptedAnswers": [
+            "工作日"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m1_v05_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_05"
+          ],
+          "promptCn": "用“今天是工作日”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "今天是工作日",
+          "answer": "今天是工作日，公园里的人应该不多。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m1_v06_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_06"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "下午有课，我不能去太远的____。",
+          "answer": "地方",
+          "acceptedAnswers": [
+            "地方"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m1_v06_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_06"
+          ],
+          "promptCn": "用“太远的地方”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "太远的地方",
+          "answer": "我下午有课，不能去太远的地方。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_v01_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_01"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "jiē：两边有房子或商店的道路",
+          "answer": "街",
+          "acceptedAnswers": [
+            "街"
+          ],
+          "options": [
+            "街",
+            "待",
+            "衔",
+            "往"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v02_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_02"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "kāihuā：植物长出花",
+          "answer": "开花",
+          "acceptedAnswers": [
+            "开花"
+          ],
+          "options": [
+            "开花",
+            "开华",
+            "升花",
+            "开化"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v03_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_03"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "gōngyuán：可以散步休息的公共场所",
+          "answer": "公园",
+          "acceptedAnswers": [
+            "公园"
+          ],
+          "options": [
+            "公园",
+            "公圆",
+            "公元",
+            "共园"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v05_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_05"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "gōngzuòrì：正常工作或上课的日子",
+          "answer": "工作日",
+          "acceptedAnswers": [
+            "工作日"
+          ],
+          "options": [
+            "工作日",
+            "工做日",
+            "工作目",
+            "公作日"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v06_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_06"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "dìfang：某一个地点",
+          "answer": "地方",
+          "acceptedAnswers": [
+            "地方"
+          ],
+          "options": [
+            "地方",
+            "地放",
+            "他方",
+            "的方"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "title": "突然变天时提醒并帮助同学",
+      "wordIds": [
+        "v12_07",
+        "v12_08",
+        "v12_09",
+        "v12_10",
+        "v12_11",
+        "v12_12",
+        "v12_13",
+        "v12_14",
+        "v12_15",
+        "v12_16",
+        "v12_17"
+      ],
+      "recognitionWordIds": [
+        "v12_07",
+        "v12_08",
+        "v12_09",
+        "v12_10",
+        "v12_11",
+        "v12_12",
+        "v12_13",
+        "v12_14",
+        "v12_15",
+        "v12_16",
+        "v12_17"
+      ],
+      "activities": [
+        {
+          "id": "l12_m2_v07_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_07"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "____还是晴天，现在已经刮风了。",
+          "answer": "刚才",
+          "acceptedAnswers": [
+            "刚才"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m2_v07_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_07"
+          ],
+          "promptCn": "用“刚才还是……”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "刚才还是……",
+          "answer": "刚才还是晴天，现在已经下雨了。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m2_v08_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_08"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "外面开始____风了。",
+          "answer": "刮",
+          "acceptedAnswers": [
+            "刮"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m2_v08_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_08"
+          ],
+          "promptCn": "用“刮起风来”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "刮起风来",
+          "answer": "外面突然刮起风来了。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m2_v09_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_09"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "今天的____很大。",
+          "answer": "风",
+          "acceptedAnswers": [
+            "风"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m2_v09_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_09"
+          ],
+          "promptCn": "用“风很大”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "风很大",
+          "answer": "今天风很大，出门要小心。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m2_v11_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_11"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "下雨了，别忘了带____。",
+          "answer": "伞",
+          "acceptedAnswers": [
+            "伞"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m2_v11_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_11"
+          ],
+          "promptCn": "用“带一把伞”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "带一把伞",
+          "answer": "天气预报说有雨，我会带一把伞。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m2_v12_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_12"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "我有两把伞，可以____给你一把。",
+          "answer": "借",
+          "acceptedAnswers": [
+            "借"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m2_v12_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_12"
+          ],
+          "promptCn": "用“借给你”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "借给你",
+          "answer": "我可以把车里的雨衣借给你。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m2_v13_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_13"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "车里有一____伞。",
+          "answer": "把",
+          "acceptedAnswers": [
+            "把"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m2_v13_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_13"
+          ],
+          "promptCn": "用“一把伞”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "一把伞",
+          "answer": "我书包里有一把伞。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m2_v14_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_14"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "雨太大了，我想穿____。",
+          "answer": "雨衣",
+          "acceptedAnswers": [
+            "雨衣"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m2_v14_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_14"
+          ],
+          "promptCn": "用“穿雨衣”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "穿雨衣",
+          "answer": "雨下起来了，我要穿雨衣。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m2_v17_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_17"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "春天的天气____很快。",
+          "answer": "变化",
+          "acceptedAnswers": [
+            "变化"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m2_v17_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_17"
+          ],
+          "promptCn": "用“天气变化”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "天气变化",
+          "answer": "这个季节天气变化很快。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_v07_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_07"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "gāngcái：离现在很近的过去时间",
+          "answer": "刚才",
+          "acceptedAnswers": [
+            "刚才"
+          ],
+          "options": [
+            "刚才",
+            "钢才",
+            "刚材",
+            "岗才"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v08_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_08"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "guā：风开始吹动",
+          "answer": "刮",
+          "acceptedAnswers": [
+            "刮"
+          ],
+          "options": [
+            "刮",
+            "乱",
+            "舌",
+            "适"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v09_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_09"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "fēng：流动的空气",
+          "answer": "风",
+          "acceptedAnswers": [
+            "风"
+          ],
+          "options": [
+            "风",
+            "凤",
+            "凡",
+            "冈"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v10_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_10"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "xīnwén：最近发生的公开信息",
+          "answer": "新闻",
+          "acceptedAnswers": [
+            "新闻"
+          ],
+          "options": [
+            "新闻",
+            "新问",
+            "亲闻",
+            "新间"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v12_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_12"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "jiè：暂时给别人使用",
+          "answer": "借",
+          "acceptedAnswers": [
+            "借"
+          ],
+          "options": [
+            "借",
+            "错",
+            "措",
+            "惜"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v13_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_13"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "bǎ：伞等有柄物品的量词",
+          "answer": "把",
+          "acceptedAnswers": [
+            "把"
+          ],
+          "options": [
+            "把",
+            "吧",
+            "爸",
+            "抱"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v14_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_14"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "yǔyī：下雨时穿的衣服",
+          "answer": "雨衣",
+          "acceptedAnswers": [
+            "雨衣"
+          ],
+          "options": [
+            "雨衣",
+            "两衣",
+            "雨依",
+            "雨农"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v17_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_17"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "biànhuà：天气跟以前不同了",
+          "answer": "变化",
+          "acceptedAnswers": [
+            "变化"
+          ],
+          "options": [
+            "变化",
+            "变花",
+            "弯化",
+            "恋化"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "title": "向新同学介绍本地冬季体验",
+      "wordIds": [
+        "v12_18",
+        "v12_19",
+        "v12_20"
+      ],
+      "recognitionWordIds": [
+        "v12_18",
+        "v12_19",
+        "v12_20"
+      ],
+      "activities": [
+        {
+          "id": "l12_m3_v18_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_18"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "一年四季中最冷的是____。",
+          "answer": "冬天",
+          "acceptedAnswers": [
+            "冬天"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m3_v18_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_18"
+          ],
+          "promptCn": "用“冬天太冷”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "冬天太冷",
+          "answer": "我觉得这里的冬天太冷了。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m3_v19_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_19"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "北京冬天____下雪。",
+          "answer": "常常",
+          "acceptedAnswers": [
+            "常常"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m3_v19_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_19"
+          ],
+          "promptCn": "用“常常下雪”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "常常下雪",
+          "answer": "北京冬天常常下雪。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m3_v20_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_20"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "出门以前要____天气变化。",
+          "answer": "关注",
+          "acceptedAnswers": [
+            "关注"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m3_v20_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_20"
+          ],
+          "promptCn": "用“关注天气”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "关注天气",
+          "answer": "我每天出门以前都会关注天气。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_v18_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_18"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "dōngtiān：一年中通常最冷的季节",
+          "answer": "冬天",
+          "acceptedAnswers": [
+            "冬天"
+          ],
+          "options": [
+            "冬天",
+            "东天",
+            "终天",
+            "各天"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v19_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_19"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "chángcháng：很多时候都会",
+          "answer": "常常",
+          "acceptedAnswers": [
+            "常常"
+          ],
+          "options": [
+            "常常",
+            "长长",
+            "尝尝",
+            "裳裳"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v20_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_20"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "guānzhù：持续注意天气情况",
+          "answer": "关注",
+          "acceptedAnswers": [
+            "关注"
+          ],
+          "options": [
+            "关注",
+            "观注",
+            "关住",
+            "观住"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "title": "制作城市四季推荐卡",
+      "wordIds": [
+        "v12_21",
+        "v12_22",
+        "v12_23",
+        "v12_24",
+        "v12_25",
+        "v12_26",
+        "v12_27"
+      ],
+      "recognitionWordIds": [
+        "v12_21",
+        "v12_22",
+        "v12_23",
+        "v12_24",
+        "v12_25",
+        "v12_26",
+        "v12_27"
+      ],
+      "activities": [
+        {
+          "id": "l12_m4_v21_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_21"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "春、夏、秋、冬合起来叫____。",
+          "answer": "四季",
+          "acceptedAnswers": [
+            "四季"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m4_v21_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_21"
+          ],
+          "promptCn": "用“北京的四季”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "北京的四季",
+          "answer": "北京的四季很不一样。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m4_v22_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_22"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "天气不冷不热的季节是____。",
+          "answer": "春天",
+          "acceptedAnswers": [
+            "春天"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m4_v22_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_22"
+          ],
+          "promptCn": "用“春天最舒服”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "春天最舒服",
+          "answer": "我觉得春天最舒服。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m4_v23_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_23"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "白天很热、晚上较凉快的季节是____。",
+          "answer": "夏天",
+          "acceptedAnswers": [
+            "夏天"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m4_v23_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_23"
+          ],
+          "promptCn": "用“夏天白天很热”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "夏天白天很热",
+          "answer": "夏天白天很热，但是晚上比较凉快。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m4_v24_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_24"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "夏天晚上比较____。",
+          "answer": "凉快",
+          "acceptedAnswers": [
+            "凉快"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m4_v24_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_24"
+          ],
+          "promptCn": "用“晚上比较凉快”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "晚上比较凉快",
+          "answer": "我们这里夏天晚上比较凉快。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_m4_v25_input",
+          "type": "input",
+          "targetWordIds": [
+            "v12_25"
+          ],
+          "promptCn": "根据意思或语境输入词语。",
+          "promptEn": "Type the missing Chinese word from the meaning or context.",
+          "stimulus": "叶子开始变红变黄时是____。",
+          "answer": "秋天",
+          "acceptedAnswers": [
+            "秋天"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_m4_v25_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v12_25"
+          ],
+          "promptCn": "用“秋天的叶子”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "秋天的叶子",
+          "answer": "秋天的叶子非常漂亮。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l12_v21_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_21"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "sìjì：春、夏、秋、冬",
+          "answer": "四季",
+          "acceptedAnswers": [
+            "四季"
+          ],
+          "options": [
+            "四季",
+            "四李",
+            "回季",
+            "四际"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v22_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_22"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "chūntiān：冬天以后、夏天以前",
+          "answer": "春天",
+          "acceptedAnswers": [
+            "春天"
+          ],
+          "options": [
+            "春天",
+            "看天",
+            "秦天",
+            "香天"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v23_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_23"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "xiàtiān：一年中通常最热的季节",
+          "answer": "夏天",
+          "acceptedAnswers": [
+            "夏天"
+          ],
+          "options": [
+            "夏天",
+            "复天",
+            "厦天",
+            "下天"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v24_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_24"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "liángkuai：温度较低而且舒服",
+          "answer": "凉快",
+          "acceptedAnswers": [
+            "凉快"
+          ],
+          "options": [
+            "凉快",
+            "谅快",
+            "晾块",
+            "凉块"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v25_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_25"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "qiūtiān：夏天以后、冬天以前",
+          "answer": "秋天",
+          "acceptedAnswers": [
+            "秋天"
+          ],
+          "options": [
+            "秋天",
+            "伙天",
+            "种天",
+            "愁天"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l12_v27_form",
+          "type": "shape",
+          "targetWordIds": [
+            "v12_27"
+          ],
+          "promptCn": "根据拼音和意思选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and meaning.",
+          "stimulus": "biànchéng：从一种状态成为另一种状态",
+          "answer": "变成",
+          "acceptedAnswers": [
+            "变成"
+          ],
+          "options": [
+            "变成",
+            "弯成",
+            "恋成",
+            "变城"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        }
+      ]
+    }
+  ],
+  "resourceOverrides": [
+    {
+      "id": "l12_task_02",
+      "patch": {
+        "prompt_cn": "任务卡：说明天气怎样变化，比较平时和今天的不同，并把伞或雨衣借给同学。",
+        "prompt_en": "Describe the weather change, contrast the usual situation with today, and lend an umbrella or raincoat to a classmate.",
+        "data": {
+          "title": "天气提醒与雨具帮助",
+          "titleEn": "Weather warning and rain-gear help",
+          "role": "有准备的同学",
+          "steps": [
+            "描述刚才和现在的天气",
+            "说明平时怎样、今天有什么例外",
+            "把伞或雨衣借给同学"
+          ],
+          "keywords": [
+            "刮起风来",
+            "就今天没带",
+            "把……借给……"
+          ],
+          "output": "完成3—4句话。",
+          "answerPlaceholder": "请写下天气提醒和帮助。",
+          "sampleAnswer": "刚才还是晴天，现在刮起风来了，雨也下起来了。我每天都带伞，就今天没带。你可以把雨衣借给我吗？"
+        }
+      }
+    },
+    {
+      "id": "l12_task_04",
+      "patch": {
+        "prompt_cn": "任务卡：至少介绍三个季节，用“下来”总结长期生活体验，并说明最喜欢或最不喜欢的季节和理由。",
+        "prompt_en": "Introduce at least three seasons, use “下来” to summarize long-term experience, and explain your favorite or least favorite season.",
+        "data": {
+          "title": "城市四季推荐",
+          "titleEn": "City seasons recommendation",
+          "role": "城市介绍者",
+          "steps": [
+            "至少介绍三个季节",
+            "用“下来”总结长期生活体验",
+            "说明季节偏好和真实理由"
+          ],
+          "keywords": [
+            "四季",
+            "住下来",
+            "最喜欢／最不喜欢"
+          ],
+          "output": "完成5—7句话。",
+          "answerPlaceholder": "请写下四季推荐。",
+          "sampleAnswer": "在北京住下来以后，我越来越喜欢这里的四季。春天不冷不热，夏天晚上比较凉快，秋天的叶子会变成红色和黄色。我最喜欢秋天，因为天气舒服，景色也很漂亮。"
+        }
+      }
+    }
+  ],
+  "supportOnlyStructures": [],
+  "evidencePolicy": {
+    "coreTypes": [
+      "entry_expression",
+      "actual_learning_path",
+      "exit_expression"
+    ],
+    "pathEvent": "opened",
+    "optionalSignals": [
+      "support_request",
+      "self_reflection",
+      "teacher_observation"
+    ]
+  },
+  "supportOptions": [
+    {
+      "id": "vocabulary",
+      "labelCn": "我缺少合适的词",
+      "labelEn": "I need the right words"
+    },
+    {
+      "id": "organization",
+      "labelCn": "我不知道怎样组织信息",
+      "labelEn": "I need help organizing my ideas"
+    },
+    {
+      "id": "structure",
+      "labelCn": "我需要一个句子结构",
+      "labelEn": "I need a sentence frame"
+    },
+    {
+      "id": "teacher",
+      "labelCn": "我想获得老师的帮助",
+      "labelEn": "I want help from the teacher"
+    }
+  ],
+  "feelingOptions": [
+    {
+      "id": "clearer",
+      "labelCn": "我说得更清楚了",
+      "labelEn": "My expression is clearer"
+    },
+    {
+      "id": "more_complete",
+      "labelCn": "我说得更完整了",
+      "labelEn": "My expression is more complete"
+    },
+    {
+      "id": "more_natural",
+      "labelCn": "我说得更自然了",
+      "labelEn": "My expression is more natural"
+    },
+    {
+      "id": "still_need_help",
+      "labelCn": "我还需要帮助",
+      "labelEn": "I still need help"
+    }
+  ],
+  "coreEvidence": [
+    "entry_expression",
+    "actual_learning_path",
+    "exit_expression"
+  ],
+  "capabilities": [
+    "select_text_mini_loop",
+    "launch_interaction",
+    "independent_answer",
+    "support_request",
+    "anonymous_return",
+    "open_support",
+    "reanswer",
+    "record_teacher_decision",
+    "compare_entry_exit",
+    "teacher_selected_vocabulary_focus",
+    "shared_countdown",
+    "native_course_resource_return",
+    "configured_task_stimulus"
+  ]
+}
