@@ -233,7 +233,15 @@
   }
 
   function unifiedStudentUrl() {
-    return `/api/teacher/student-join?classId=${encodeURIComponent(CLASS_ID)}&lesson=${encodeURIComponent(LESSON)}&room=${encodeURIComponent(ROOM)}&target=classroom`;
+    const query = new URLSearchParams({
+      classId: CLASS_ID,
+      lesson: LESSON,
+      room: ROOM,
+      target: 'classroom',
+      experiment: EXPERIMENT,
+      profile: PROFILE
+    });
+    return `/api/teacher/student-join?${query.toString()}`;
   }
 
   function mergeObject(target, patch) {

@@ -118,14 +118,23 @@ function publicOrigin(req) {
   var protocol = secureRequest(req) ? "https" : "http";
   return protocol + "://" + String(req.headers["x-forwarded-host"] || req.headers.host || "localhost:" + port).split(",")[0].trim();
 }
-function studentTicket(req, classId, lesson, room, target) {
-  return signedStudentValue({
+function safeRouteParam(value) {
+  value = String(value || "").trim();
+  return /^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$/.test(value) ? value : "";
+}
+function studentTicket(req, classId, lesson, room, target, route) {
+  var payload = {
     kind:"student_join", classId:String(classId), lesson:String(lesson), room:String(room || "8888"),
     target:target === "classroom" ? "classroom" : "home", exp:Date.now() + STUDENT_ACCESS_TTL_MS
-  });
+  };
+  route = route || {};
+  var experiment = safeRouteParam(route.experiment), profile = safeRouteParam(route.profile);
+  if (experiment) payload.experiment = experiment;
+  if (profile) payload.profile = profile;
+  return signedStudentValue(payload);
 }
-function studentJoinUrl(req, classId, lesson, room, target) {
-  return publicOrigin(req) + "/api/student/join?ticket=" + encodeURIComponent(studentTicket(req, classId, lesson, room, target));
+function studentJoinUrl(req, classId, lesson, room, target, route) {
+  return publicOrigin(req) + "/api/student/join?ticket=" + encodeURIComponent(studentTicket(req, classId, lesson, room, target, route));
 }
 function setStudentAccessCookie(req, res, classId, expiresAt) {
   var token = signedStudentValue({kind:"student_access", classId:String(classId), exp:Number(expiresAt)});
@@ -217,10 +226,11 @@ var srv = http.createServer(function(req, res) {
     var joinTeacher = teacherAuth.authenticate(req), joinQuery = new URL(req.url, "http://localhost").searchParams;
     var joinClassId = joinQuery.get("classId") || "", joinLesson = joinQuery.get("lesson") || "";
     var joinRoom = joinQuery.get("room") || "8888", joinTarget = joinQuery.get("target") || "home";
+    var joinRoute = {experiment:joinQuery.get("experiment"), profile:joinQuery.get("profile")};
     if (!joinTeacher) { json(res, 401, {status:"error", message:"请先登录教师账号。"}); return; }
     if (!teacherAuth.canAccess(joinTeacher, joinClassId)) { json(res, 403, {status:"error", message:"当前教师无权访问该班级。"}); return; }
     if (!privateRoster(joinClassId, joinLesson).length) { json(res, 404, {status:"error", message:"该班级尚未配置私密名单。"}); return; }
-    var protectedJoinUrl = studentJoinUrl(req, joinClassId, joinLesson, joinRoom, joinTarget);
+    var protectedJoinUrl = studentJoinUrl(req, joinClassId, joinLesson, joinRoom, joinTarget, joinRoute);
     if (url === "/api/teacher/student-join") {
       res.writeHead(302, {Location:protectedJoinUrl, "Cache-Control":"no-store"}); res.end(); return;
     }
@@ -238,6 +248,8 @@ var srv = http.createServer(function(req, res) {
     setStudentAccessCookie(req, res, joinPayload.classId, joinPayload.exp);
     var cleanQuery = new URLSearchParams({classId:joinPayload.classId, lesson:joinPayload.lesson, room:joinPayload.room});
     if (joinPayload.target === "classroom") cleanQuery.set("target", "classroom");
+    if (safeRouteParam(joinPayload.experiment)) cleanQuery.set("experiment", joinPayload.experiment);
+    if (safeRouteParam(joinPayload.profile)) cleanQuery.set("profile", joinPayload.profile);
     res.writeHead(302, {Location:"/source/student/entry.html?" + cleanQuery.toString(), "Cache-Control":"no-store", "Referrer-Policy":"no-referrer"});
     res.end();
     return;

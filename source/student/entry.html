@@ -88,7 +88,12 @@
         lesson:lesson, session:query.get('session') || '', student:student.name, studentId:student.id
       });
       var destination = query.get('target') === 'classroom' ? '../in-class/student.html' : './index.html';
-      location.href = destination + '?' + window.ClassProContext.buildQuery(context);
+      var destinationQuery = new URLSearchParams(window.ClassProContext.buildQuery(context));
+      ['experiment', 'profile'].forEach(function (key) {
+        var value = query.get(key);
+        if (value) destinationQuery.set(key, value);
+      });
+      location.href = destination + '?' + destinationQuery.toString();
     });
     renderClasses();
   </script>
