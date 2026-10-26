@@ -10,8 +10,10 @@
   if (EXPERIMENT !== EXPECTED_EXPERIMENT) return;
 
   const ROOM = params.get('room') || '8808';
+  const CLASS_ID = params.get('classId') || 'legacy-default';
+  const RUN = params.get('run') || 'default';
   const CONFIG_URL = `../data-model/experiments/${encodeURIComponent(LESSON)}-USE-${encodeURIComponent(PROFILE.toUpperCase())}.json?v=3`;
-  const TOPIC_ROOT = `classpro/use/${EXPERIMENT}/${ROOM}`;
+  const TOPIC_ROOT = `classpro/use/v2/${CLASS_ID}/${EXPERIMENT}/${ROOM}/${RUN}`;
   const TOPICS = { control: `${TOPIC_ROOT}/control`, answers: `${TOPIC_ROOT}/answers`, presence: `${TOPIC_ROOT}/presence`, ack: `${TOPIC_ROOT}/ack` };
   const FALLBACK_FEELINGS = [
     { id: 'clearer', labelCn: '我说得更清楚了', labelEn: 'My expression is clearer' },

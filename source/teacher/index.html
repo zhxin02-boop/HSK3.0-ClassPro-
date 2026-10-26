@@ -61,6 +61,8 @@
     var selectedLesson = null;
     var teacherProfile = null;
     var legacyLevelKey = 'ClassProTeacherLevel';
+    var pageQuery = new URLSearchParams(window.location.search || '');
+    var directMode = pageQuery.get('direct') === '1' || /(^|\.)github\.io$/i.test(location.hostname);
 
     function byId(id) { return document.getElementById(id); }
     function visibleLessons(levelId) { return window.ClassProCourseCatalog.lessons(levelId).filter(function (lesson) { return lesson.teacherVisible !== false; }); }
@@ -166,7 +168,7 @@
       var links = {
         classroomLink: classroomPath,
         legacyClassroomLink: '../in-class/teacher.html',
-        studentLink: '/api/teacher/student-join',
+        studentLink: directMode ? '../student/entry.html' : '/api/teacher/student-join',
         dashboardLink: '../teacher-dashboard/unified.html',
         reviewLink: '../teacher-dashboard/post-review.html'
       };
@@ -175,6 +177,7 @@
         var query = ready ? window.ClassProContext.buildQuery(ctx) : '';
         if (ready && id === 'classroomLink' && useProfile) query += '&profile=' + encodeURIComponent(useProfile);
         if (ready && id === 'studentLink') query = 'classId=' + encodeURIComponent(ctx.classId) + '&lesson=' + encodeURIComponent(ctx.lesson) + '&room=' + encodeURIComponent(ctx.room) + '&target=home';
+        if (ready && directMode) query += (query ? '&' : '') + 'direct=1';
         anchor.href = ready ? links[id] + '?' + query : '#';
         anchor.setAttribute('aria-disabled', ready ? 'false' : 'true');
       });
@@ -192,6 +195,12 @@
     }
 
     function loadTeacherProfile() {
+      if (directMode) {
+        teacherProfile = {id:'zhangxin', displayName:'ZhangXin（张老师）', classIds:['ai26401-spring','rufe-2025-class-4']};
+        byId('teacherBadge').textContent = teacherProfile.displayName;
+        byId('logoutButton').hidden = true;
+        return Promise.resolve();
+      }
       return fetch('/api/auth/me', {cache:'no-store'}).then(function (response) {
         if (!response.ok) throw new Error('not authenticated');
         return response.json();

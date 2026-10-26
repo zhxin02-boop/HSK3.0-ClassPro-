@@ -88,7 +88,9 @@ assert(teacherJs.includes('localStorage.setItem(STORAGE_KEY'), 'Use state must p
 assert(!teacherJs.includes('resourceCatalog'), 'Interaction must not be attached to every resource item');
 
 assert(teacherJs.includes('installUnifiedStudentEntry') && teacherJs.includes('unifiedStudentUrl'), 'Teacher QR and student button must open the unified student page');
-assert(teacherJs.includes('experiment=${encodeURIComponent(EXPERIMENT)}'), 'Unified student entry must activate the Use bridge');
+assert(teacherJs.includes('experiment: EXPERIMENT') && teacherJs.includes('profile: PROFILE'), 'Unified student entry must preserve the Use MQTT channel through the protected route');
+assert(teacherJs.includes('unifiedStudentQrUrl') && teacherJs.includes('frameWindow.protectedStudentQrUrl'), 'Native classroom QR must use the protected unified student channel');
+assert(teacherJs.includes('frameWindow.rawStudentUrl') && teacherJs.includes('frameWindow.studentUrl'), 'Native student links must use the same unified classroom channel as the QR code');
 assert(read(formalStudentPath).includes('l08-use-student-bridge.js'), 'Formal student page must load the optional Use bridge');
 assert(studentBridge.includes('EXPECTED_EXPERIMENT') && studentBridge.includes('EXPERIMENT !== EXPECTED_EXPERIMENT'), 'Use bridge must stay inactive for ordinary student links');
 assert(studentBridge.includes('classpro/use/${EXPERIMENT}/${ROOM}'), 'Use bridge must use the isolated experiment topic');
