@@ -8,10 +8,13 @@
   const EXPERIMENT = `${LESSON_CODE}-use-${PROFILE}`;
   const ROOM = PARAMS.get('room') || '8808';
   const CLASS_ID = PARAMS.get('classId') || 'legacy-default';
+  const DIRECT_MODE = PARAMS.get('direct') === '1' || /(^|\.)github\.io$/i.test(location.hostname);
+  const RUN = PARAMS.get('run') || `run_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 7)}`;
+  if (!PARAMS.get('run')) { PARAMS.set('run', RUN); if (DIRECT_MODE) PARAMS.set('direct', '1'); history.replaceState({}, '', `${location.pathname}?${PARAMS.toString()}${location.hash}`); }
   const DATA_VERSION = `${EXPERIMENT}-v1`;
   const CONFIG_URL = `../data-model/experiments/${encodeURIComponent(LESSON)}-USE-${encodeURIComponent(PROFILE.toUpperCase())}.json?v=3`;
   const STORAGE_KEY = `ClassProUsePilot_${EXPERIMENT}_${ROOM}`;
-  const TOPIC_ROOT = `classpro/use/${EXPERIMENT}/${ROOM}`;
+  const TOPIC_ROOT = `classpro/use/v2/${CLASS_ID}/${EXPERIMENT}/${ROOM}/${RUN}`;
   const TOPICS = { control: `${TOPIC_ROOT}/control`, answers: `${TOPIC_ROOT}/answers`, presence: `${TOPIC_ROOT}/presence`, ack: `${TOPIC_ROOT}/ack` };
   const ROSTER = window.ClassProStudentsForLesson ? window.ClassProStudentsForLesson(LESSON) : (window.CLASS_STUDENTS || []);
 
@@ -206,7 +209,7 @@
 
   function setupFrame() {
     const frame = document.getElementById('classproFrame');
-    frame.src = `teacher.html?lesson=${encodeURIComponent(LESSON)}&room=${encodeURIComponent(ROOM)}&classId=${encodeURIComponent(CLASS_ID)}&dataVersion=${encodeURIComponent(DATA_VERSION)}`;
+    frame.src = `teacher.html?lesson=${encodeURIComponent(LESSON)}&room=${encodeURIComponent(ROOM)}&classId=${encodeURIComponent(CLASS_ID)}&run=${encodeURIComponent(RUN)}&direct=${DIRECT_MODE ? '1' : '0'}&dataVersion=${encodeURIComponent(DATA_VERSION)}`;
     frame.addEventListener('load', () => {
       installNativeDataFetch(frame.contentWindow);
       installUnifiedStudentEntry(frame.contentWindow);
@@ -239,13 +242,15 @@
       room: ROOM,
       target: 'classroom',
       experiment: EXPERIMENT,
-      profile: PROFILE
+      profile: PROFILE,
+      run: RUN
     });
+    if (DIRECT_MODE) query.set('direct', '1');
     return query.toString();
   }
 
   function unifiedStudentUrl() {
-    return `/api/teacher/student-join?${unifiedStudentQuery()}`;
+    return DIRECT_MODE ? `../student/entry.html?${unifiedStudentQuery()}` : `/api/teacher/student-join?${unifiedStudentQuery()}`;
   }
 
   function unifiedStudentQrUrl() {
@@ -288,9 +293,7 @@
     frameWindow.studentUrl = function () {
       return encodeURIComponent(frameWindow.rawStudentUrl());
     };
-    frameWindow.protectedStudentQrUrl = function () {
-      return unifiedStudentQrUrl();
-    };
+    if (!DIRECT_MODE) frameWindow.protectedStudentQrUrl = function () { return unifiedStudentQrUrl(); };
   }
 
   function choiceSummaryData(interaction) {

@@ -29,6 +29,7 @@
     var query = new URLSearchParams(location.search || '');
     var requestedClassId = query.get('classId') || query.get('class') || '';
     var requestedLesson = query.get('lesson') || 'HSK1-L01';
+    var directMode = query.get('direct') === '1' || /(^|\.)github\.io$/i.test(location.hostname);
     var classSelect = document.getElementById('classSelect');
     var studentSelect = document.getElementById('studentSelect');
     var continueButton = document.getElementById('continueButton');
@@ -49,6 +50,13 @@
       studentSelect.disabled = true;
       continueButton.disabled = true;
       if (!item) return;
+      if (directMode) {
+        studentSelect.innerHTML = '<option value="">请选择姓名 / Select your name</option>' + activeRoster.map(function (student) {
+          return '<option value="' + esc(student.id) + '">' + esc(student.name) + (student.testAccount ? ' · Test' : '') + '</option>';
+        }).join('');
+        studentSelect.disabled = false;
+        return;
+      }
       fetch('/api/class-roster?classId=' + encodeURIComponent(item.id) + '&lesson=' + encodeURIComponent(lesson), {cache:'no-store'}).then(function (response) {
         if (!response.ok) throw new Error('Roster API ' + response.status);
         return response.json();
@@ -89,7 +97,7 @@
       });
       var destination = query.get('target') === 'classroom' ? '../in-class/student.html' : './index.html';
       var destinationQuery = new URLSearchParams(window.ClassProContext.buildQuery(context));
-      ['experiment', 'profile'].forEach(function (key) {
+      ['experiment', 'profile', 'run', 'direct'].forEach(function (key) {
         var value = query.get(key);
         if (value) destinationQuery.set(key, value);
       });

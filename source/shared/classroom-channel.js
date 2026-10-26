@@ -5,11 +5,12 @@
   }
   function current(next) {
     var ctx = global.ClassProContext ? global.ClassProContext.read() : {};
-    return Object.assign({}, ctx, next || {});
+    var query = new URLSearchParams(global.location.search || "");
+    return Object.assign({}, ctx, { run: query.get("run") || "default" }, next || {});
   }
   function base(next) {
     var ctx = current(next);
-    return ["classpro", "v1", segment(ctx.classId, "legacy-default"), segment(ctx.room, "8888"), segment(ctx.lesson, "unknown")].join("/");
+    return ["classpro", "v2", segment(ctx.classId, "legacy-default"), segment(ctx.room, "8888"), segment(ctx.lesson, "unknown"), segment(ctx.run, "default")].join("/");
   }
   function topic(channel, next) { return base(next) + "/" + segment(channel); }
   function envelope(payload, next) {
@@ -18,11 +19,12 @@
     if (!copy.classId) copy.classId = ctx.classId || "legacy-default";
     if (!copy.room) copy.room = ctx.room || "8888";
     if (!copy.lesson) copy.lesson = ctx.lesson || "";
+    if (!copy.run) copy.run = ctx.run || "default";
     return copy;
   }
   function matches(payload, next) {
     var ctx = current(next), data = payload || {};
-    return (!data.classId || data.classId === ctx.classId) && (!data.room || String(data.room) === String(ctx.room)) && (!data.lesson || data.lesson === ctx.lesson);
+    return (!data.classId || data.classId === ctx.classId) && (!data.room || String(data.room) === String(ctx.room)) && (!data.lesson || data.lesson === ctx.lesson) && (!data.run || data.run === ctx.run);
   }
   global.ClassProClassroom = { base: base, topic: topic, envelope: envelope, matches: matches };
 })(window);

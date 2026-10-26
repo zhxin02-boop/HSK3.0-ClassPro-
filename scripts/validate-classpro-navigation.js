@@ -93,7 +93,7 @@ const channel = windowObject.ClassProClassroom;
 const class1Topic = channel.topic('answers', { classId: 'ai26401-fall-class-1', room: '8888', lesson: 'HSK1-L01' });
 const class2Topic = channel.topic('answers', { classId: 'ai26401-fall-class-2', room: '8888', lesson: 'HSK1-L01' });
 assert(class1Topic !== class2Topic, 'Two classes in the same room must use different MQTT topics');
-assert(class1Topic === 'classpro/v1/ai26401-fall-class-1/8888/hsk1-l01/answers', 'MQTT topic should include class, room, and lesson');
+assert(class1Topic === 'classpro/v2/ai26401-fall-class-1/8888/hsk1-l01/default/answers', 'MQTT topic should include class, room, lesson, and classroom run');
 
 const progressRules = windowObject.ClassProProgressRules;
 assert(progressRules.threshold === 0.7, 'Lesson completion threshold should be 70%');

@@ -78,12 +78,12 @@ body.classpro-mock-active #app,body.classpro-mock-active #app *{-webkit-user-sel
   </div>
 </div>
 <script>
-var query=new URLSearchParams(location.search),CTX=window.ClassProContext?ClassProContext.read():{},RM=query.get("room")||CTX.room||"8888",LESSON=query.get("lesson")||CTX.lesson||"HSK1-L01",CLASS_ID=CTX.classId||"legacy-default";
+var query=new URLSearchParams(location.search),CTX=window.ClassProContext?ClassProContext.read():{},RM=query.get("room")||CTX.room||"8888",LESSON=query.get("lesson")||CTX.lesson||"HSK1-L01",CLASS_ID=CTX.classId||"legacy-default",RUN_ID=query.get("run")||"default";
 var current=null, selected=null, chunks=[], answerChunks=[], nameReady=false, matchLeft=null, matchRight=null, matchPairs={}, v5GroupAnswers={}, globalPinyinVisible=false, classproChainState=null;
 var STUDENT_CLIENT_ID="st_"+Math.random().toString(36).slice(2,10);
 var CLASS_STUDENTS=window.CLASS_STUDENTS||[];
 var scoreboard={rows:CLASS_STUDENTS.map(function(n){return{name:n,points:0}}),updatedAt:null};
-var draftKey="ClassProStudentDraft_"+CLASS_ID+"_"+RM+"_"+LESSON, outboxKey="ClassProStudentOutbox_"+CLASS_ID+"_"+RM+"_"+LESSON, submittedAnswer=null;
+var draftKey="ClassProStudentDraft_"+CLASS_ID+"_"+RM+"_"+LESSON+"_"+RUN_ID, outboxKey="ClassProStudentOutbox_"+CLASS_ID+"_"+RM+"_"+LESSON+"_"+RUN_ID, submittedAnswer=null;
 function classroomTopic(channel){return window.ClassProClassroom?ClassProClassroom.topic(channel,{classId:CLASS_ID,room:RM,lesson:LESSON}):"classpro/room/"+RM+"/"+channel}
 function scopePayload(payload){return window.ClassProContext&&ClassProContext.record?ClassProContext.record(payload):payload}
 function es(s){return String(s==null?"":s).replace(/</g,"&lt;").replace(/>/g,"&gt;")}

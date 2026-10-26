@@ -12,7 +12,21 @@
       teacherName: "ZhangXin（张老师）",
       room: "8888",
       levels: ["HSK3"],
-      rosters: { HSK3: testRoster("ai26401-spring") }
+      rosters: { HSK3: [
+        student("ai26401-spring-01", "MTEWELE THEOFRIDA PHILEMON"),
+        student("ai26401-spring-02", "LILLA LISA APSA"),
+        student("ai26401-spring-03", "MTUI ELISIA LAURENCE"),
+        student("ai26401-spring-04", "MTAMBI ALBERT EVANS"),
+        student("ai26401-spring-05", "MAKAA ATHUMAN SHABANI"),
+        student("ai26401-spring-06", "BURIAN JERALD JURGEN"),
+        student("ai26401-spring-07", "MABAMBA PAULINE ILDEPHONCE"),
+        student("ai26401-spring-08", "MACHIRA MACHIRA SULEIMAN"),
+        student("ai26401-spring-09", "JAIPONG MISS SIRIWAN"),
+        student("ai26401-spring-10", "CHERYL GRACIA WIJAYA"),
+        student("ai26401-spring-11", "NI PUTU LUNA CAHYA DEWI"),
+        student("ai26401-spring-12", "Ali Altphan"),
+        student("ai26401-spring-student-test", "Student", { testAccount: true })
+      ] }
     },
     {
       id: "rufe-2025-class-4",
@@ -22,7 +36,27 @@
       teacherName: "ZhangXin（张老师）",
       room: "8888",
       levels: ["HSK1"],
-      rosters: { HSK1: testRoster("rufe25-4") }
+      rosters: { HSK1: [
+        student("rufe25-4-01", "DYMSHITS IRINA"),
+        student("rufe25-4-02", "KADZHIMAGOMAEV SHAMKHAL"),
+        student("rufe25-4-03", "KARAZHANOVA XENIYA"),
+        student("rufe25-4-04", "MANTUROV MATVEY"),
+        student("rufe25-4-05", "MARCHENKO ILIA"),
+        student("rufe25-4-06", "NOVAK MARIIA"),
+        student("rufe25-4-07", "ODERII VLADIMIR"),
+        student("rufe25-4-08", "SKVORTSOVA MARIIA"),
+        student("rufe25-4-09", "ABRAMOVA SOFIA"),
+        student("rufe25-4-10", "ALEKSEEVA ANNA"),
+        student("rufe25-4-11", "GRIBANOVA ALEKSANDRA"),
+        student("rufe25-4-12", "ZERNINA ANNA"),
+        student("rufe25-4-13", "KOZLOVA ANASTASIIA"),
+        student("rufe25-4-14", "KRUGLIASHOVA ANASTASIIA"),
+        student("rufe25-4-15", "PAKHOLENKO IULIIA"),
+        student("rufe25-4-16", "ULITINA SOFIA"),
+        student("rufe25-4-17", "SHLIAKHTIN MAKSIM"),
+        student("rufe25-4-18", "Test", { testAccount: true }),
+        student("rufe25-4-student-test", "Student", { testAccount: true })
+      ] }
     },
     {
       id: "ai26401-fall-class-1",

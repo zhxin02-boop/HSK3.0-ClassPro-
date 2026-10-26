@@ -65,6 +65,6 @@ assert(serverSource.includes('if (experiment) payload.experiment = experiment'),
 assert(serverSource.includes('cleanQuery.set("profile", joinPayload.profile)'), 'Student redirects should preserve the use-classroom profile');
 assert(useClassroom.includes('experiment: EXPERIMENT') && useClassroom.includes('profile: PROFILE'), 'Use-classroom QR links should identify the teacher MQTT channel');
 assert(useClassroom.includes('frameWindow.protectedStudentQrUrl') && useClassroom.includes('unifiedStudentQrUrl'), 'The native QR popup should use the protected use-classroom route');
-assert(studentEntry.includes("['experiment', 'profile']"), 'Student name selection should preserve the protected classroom route');
+assert(studentEntry.includes("['experiment', 'profile', 'run', 'direct']"), 'Student name selection should preserve protected and direct classroom routes');
 
 console.log('ClassPro teacher authentication validation passed.');
