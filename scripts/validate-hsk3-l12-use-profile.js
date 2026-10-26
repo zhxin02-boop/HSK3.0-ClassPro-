@@ -12,7 +12,7 @@ const canonicalFormalHash = '4CD015BF7370534206A85A77016DFD919E2652952545973103A
 
 function assert(condition, message) { if (!condition) throw new Error(message); }
 function read(filePath) { return fs.readFileSync(filePath, 'utf8'); }
-function hash(filePath) { return crypto.createHash('sha256').update(fs.readFileSync(filePath)).digest('hex').toUpperCase(); }
+function hash(filePath) { return crypto.createHash('sha256').update(read(filePath).replace(/\r\n/g, '\n')).digest('hex').toUpperCase(); }
 function collectIds(value, result) {
   if (!value || typeof value !== 'object') return result;
   if (typeof value.id === 'string') result.add(value.id);

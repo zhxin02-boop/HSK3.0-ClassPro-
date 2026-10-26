@@ -8,7 +8,8 @@ const outputPath = path.join(root, 'source', 'data-model', 'experiments', 'HSK3-
 
 function read(filePath) {
   const buffer = fs.readFileSync(filePath);
-  return { sha256: crypto.createHash('sha256').update(buffer).digest('hex').toUpperCase(), data: JSON.parse(buffer.toString('utf8')) };
+  const text = buffer.toString('utf8');
+  return { sha256: crypto.createHash('sha256').update(text.replace(/\r\n/g, '\n')).digest('hex').toUpperCase(), data: JSON.parse(text) };
 }
 
 const taskDesigns = [
