@@ -725,7 +725,9 @@
       const card = doc.createElement('div');
       card.id = 'usePilotHomeCard';
       card.className = 'home-card use';
-      card.innerHTML = '<div class="emoji">🎯</div><div class="label">应用</div><div class="desc">起点 · 学习路径 · 终点</div>';
+      card.innerHTML = typeof frame.contentWindow.classroomModuleIcon === 'function'
+        ? frame.contentWindow.classroomModuleIcon('use') + '<div class="label">应用</div><div class="desc">起点 · 学习路径 · 终点</div>'
+        : '<div class="emoji">🎯</div><div class="label">应用</div><div class="desc">起点 · 学习路径 · 终点</div>';
       card.addEventListener('click', () => window.openUse());
       homeCards.prepend(card);
     }

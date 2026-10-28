@@ -1,0 +1,1931 @@
+{
+  "schemaVersion": "classpro-use-profile/v3",
+  "experiment": {
+    "id": "l13-use-pilot-v1",
+    "title": "第13课·以用为主线升级版",
+    "lessonLabel": "第13课",
+    "sourceLesson": "HSK3-L13",
+    "scope": "四个课文MINI循环；保留L13原有词汇、语法、课文和练习教学样式。"
+  },
+  "sources": {
+    "lesson": {
+      "path": "../lessons/HSK3-L13.json",
+      "sha256": "EE3FE6FA1C58980FC865CF4659A7BD03D0E62C69382A5FB311F48AA9101740A9"
+    },
+    "teacher": {
+      "path": "../../in-class/teacher.html"
+    },
+    "student": {
+      "path": "../../in-class/student.html"
+    }
+  },
+  "nativeTeaching": {
+    "preserveCourseStyles": true,
+    "grammar": {
+      "source": "formal_lesson",
+      "preserveExamples": true,
+      "preserveHighlights": true,
+      "preserveOralQuestions": true,
+      "preserveFollowUp": true
+    },
+    "text": {
+      "source": "formal_lesson",
+      "preservePresentation": true,
+      "preserveDiary": true
+    },
+    "vocabulary": {
+      "source": "formal_lesson",
+      "preserveScenes": true,
+      "preserveHotspots": true
+    }
+  },
+  "useGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "icon": "🍽️",
+      "label": "课文 1",
+      "title": "协商一次饭馆请客与家庭邀请",
+      "goal": "在饭馆协商菜单和数量，再用条件句邀请同事到家里做客。",
+      "goalEn": "Negotiate a menu and quantity, then use a condition to invite colleagues home.",
+      "entry": {
+        "id": "l13_t1_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图。请先说说谁请客、你想点什么。",
+        "promptEn": "Look at the picture and say who is treating and what you want to order.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l13/photo-text-1-menu.png",
+          "labelCn": "饭馆点菜",
+          "altCn": "三位同事在饭馆看菜单点菜",
+          "instructionCn": "观察人物、菜单和桌上的菜，先提出一个简单选择。",
+          "instructionEn": "Look at the picture and say who is treating and what you want to order."
+        }
+      },
+      "exit": {
+        "id": "l13_t1_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "请完成一段可以执行的请客与邀请表达：询问口味，协商菜品和数量，说明谁请客，再用“……的话，就……”邀请大家下周来家里做客。",
+        "promptEn": "Give a practical restaurant-and-home invitation: ask about preferences, agree on dishes and quantity, say who is treating, and invite everyone home with “……的话，就……”."
+      },
+      "exitRequirements": [
+        {
+          "id": "requirement_1",
+          "label": "询问口味"
+        },
+        {
+          "id": "requirement_2",
+          "label": "菜品和数量"
+        },
+        {
+          "id": "requirement_3",
+          "label": "谁请客"
+        },
+        {
+          "id": "requirement_4",
+          "label": "条件邀请"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t1_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "请客、南方、北方、做法、不同、加、做客",
+          "contentEn": ""
+        },
+        {
+          "id": "t1_frame",
+          "labelCn": "句式提示",
+          "labelEn": "Support",
+          "contentCn": "想吃什么就……／别点那么多／有时间的话，就……",
+          "contentEn": ""
+        },
+        {
+          "id": "t1_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Support",
+          "contentCn": "询问口味 → 协商菜单 → 控制数量 → 发出邀请",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l13_01",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文1词汇",
+          "vocabSession": "1"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“……的话，就……”",
+          "grammarIndex": 0
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文1",
+          "textIndex": 0
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：邀请邻居做客",
+          "routeState": {
+            "t2ki": 1
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l13_task_02",
+          "status": "ready",
+          "purpose": "任务卡：邀请邻居做客"
+        },
+        {
+          "id": "l13_para_02",
+          "status": "ready",
+          "purpose": "课文篇章练习"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "icon": "🎵",
+      "label": "课文 2",
+      "title": "检查并调整待客准备",
+      "goal": "发现待客准备中的问题，用把字句说明物品的位置变化和声音的状态调整。",
+      "goalEn": "Find preparation problems and use 把 sentences to move objects and adjust the music.",
+      "entry": {
+        "id": "l13_t2_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图。请先说说客人来以前，房间里还要调整什么。",
+        "promptEn": "Look at the room and say what still needs adjusting before the guests arrive.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l13/photo-text-2-music.png",
+          "labelCn": "待客准备",
+          "altCn": "主人在客厅检查饮料、音乐和待客用品",
+          "instructionCn": "观察饮料、音箱和客厅物品，找出一个需要调整的地方。",
+          "instructionEn": "Look at the room and say what still needs adjusting before the guests arrive."
+        }
+      },
+      "exit": {
+        "id": "l13_t2_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "请完成一段待客准备对话：说明一个担心，检查饮料和酒的位置，指出音乐声音的问题，并用两个不同补语的把字句完成调整。",
+        "promptEn": "Complete a guest-preparation dialogue: state one concern, check the drinks, identify the music problem, and use two 把 sentences with different complements."
+      },
+      "exitRequirements": [
+        {
+          "id": "requirement_1",
+          "label": "一个担心"
+        },
+        {
+          "id": "requirement_2",
+          "label": "饮料或酒的位置"
+        },
+        {
+          "id": "requirement_3",
+          "label": "声音问题"
+        },
+        {
+          "id": "requirement_4",
+          "label": "两个把字句"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t2_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "邻居、放心、酒、放、客人",
+          "contentEn": ""
+        },
+        {
+          "id": "t2_frame",
+          "labelCn": "句式提示",
+          "labelEn": "Support",
+          "contentCn": "把……放进……／把声音开得……／把……关小一点儿",
+          "contentEn": ""
+        },
+        {
+          "id": "t2_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Support",
+          "contentCn": "发现问题 → 说明位置或状态 → 完成调整 → 等客人",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l13_02",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文2词汇",
+          "vocabSession": "2"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "把字句：趋向或状态补语",
+          "grammarIndex": 1
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文2",
+          "textIndex": 1
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：解决准备问题",
+          "routeState": {
+            "t2ki": 2
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l13_task_03",
+          "status": "ready",
+          "purpose": "任务卡：解决准备问题"
+        },
+        {
+          "id": "l13_para_03",
+          "status": "ready",
+          "purpose": "课文篇章练习"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "icon": "🎁",
+      "label": "课文 3",
+      "title": "根据兴趣介绍礼物并安排晚会",
+      "goal": "根据朋友的兴趣解释礼物选择，并用“一边……一边……”安排晚会活动。",
+      "goalEn": "Explain a gift choice from someone’s interests and plan party activities with 一边……一边…….",
+      "entry": {
+        "id": "l13_t3_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图。请先说说这是什么礼物，可能送给谁。",
+        "promptEn": "Look at the gift and say what it is and who it may be for.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l13/photo-text-3-gift.png",
+          "labelCn": "生日礼物",
+          "altCn": "生日晚会上送给喜欢画画的孩子画板和画笔",
+          "instructionCn": "观察礼物和生日场景，先说礼物与兴趣的关系。",
+          "instructionEn": "Look at the gift and say what it is and who it may be for."
+        }
+      },
+      "exit": {
+        "id": "l13_t3_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "请完成一段生日晚会表达：欢迎客人，说明礼物及选择理由，回应这份礼物，再用“一边……一边……”安排两个能同时进行的活动。",
+        "promptEn": "Give a birthday-party expression: welcome guests, explain the gift choice, respond to it, and arrange two simultaneous activities with 一边……一边……."
+      },
+      "exitRequirements": [
+        {
+          "id": "requirement_1",
+          "label": "欢迎或祝福"
+        },
+        {
+          "id": "requirement_2",
+          "label": "礼物名称"
+        },
+        {
+          "id": "requirement_3",
+          "label": "根据兴趣说明理由"
+        },
+        {
+          "id": "requirement_4",
+          "label": "两个同时活动"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t3_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "晚会、礼物、画家、盘子、一边、聊天儿",
+          "contentEn": ""
+        },
+        {
+          "id": "t3_frame",
+          "labelCn": "句式提示",
+          "labelEn": "Support",
+          "contentCn": "因为……，所以……／这正是我需要的／一边……一边……",
+          "contentEn": ""
+        },
+        {
+          "id": "t3_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Support",
+          "contentCn": "欢迎 → 送礼 → 说明理由 → 回应 → 安排活动",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l13_03",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文3词汇",
+          "vocabSession": "3"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“一边……，一边……”",
+          "grammarIndex": 2
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文3",
+          "textIndex": 2
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：介绍合适的礼物",
+          "routeState": {
+            "t2ki": 3
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l13_task_04",
+          "status": "ready",
+          "purpose": "任务卡：介绍合适的礼物"
+        },
+        {
+          "id": "l13_para_04",
+          "status": "ready",
+          "purpose": "课文篇章练习"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "icon": "🗺️",
+      "label": "课文 4",
+      "title": "介绍英国新邻居并设计文化交流",
+      "goal": "介绍新邻居的来源、旅行和中文学习经历，并提出双向文化交流安排。",
+      "goalEn": "Introduce new neighbors’ origin, travel and Chinese learning, then propose two-way cultural exchange.",
+      "entry": {
+        "id": "l13_t4_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图。请先说说这对新邻居来自哪里、可能喜欢做什么。",
+        "promptEn": "Look at the picture and say where the new neighbors come from and what they may enjoy.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l13/photo-text-4-tea-map.png",
+          "labelCn": "红茶与世界地图",
+          "altCn": "来自英国的夫妻用红茶和世界地图介绍旅行经历",
+          "instructionCn": "观察红茶、地图和红点，先介绍人物的来源或兴趣。",
+          "instructionEn": "Look at the picture and say where the new neighbors come from and what they may enjoy."
+        }
+      },
+      "exit": {
+        "id": "l13_t4_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "请完成一段新邻居介绍：说明他们来自哪里、上周做客的经历、地图红点的意思和学习中文的原因，再设计一项中英文化双向交流活动。",
+        "promptEn": "Introduce the new neighbors: their origin, last week’s visit, the map dots, why they learn Chinese, and one two-way cultural exchange activity."
+      },
+      "exitRequirements": [
+        {
+          "id": "requirement_1",
+          "label": "来源"
+        },
+        {
+          "id": "requirement_2",
+          "label": "做客经历"
+        },
+        {
+          "id": "requirement_3",
+          "label": "地图红点"
+        },
+        {
+          "id": "requirement_4",
+          "label": "学习中文的原因"
+        },
+        {
+          "id": "requirement_5",
+          "label": "双向交流活动"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t4_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Support",
+          "contentCn": "来自、夫妻、直到、地图、点、感到、东方、文化、英国",
+          "contentEn": ""
+        },
+        {
+          "id": "t4_frame",
+          "labelCn": "句式提示",
+          "labelEn": "Support",
+          "contentCn": "来自……的夫妻／每一个……都是……／因为……，就……",
+          "contentEn": ""
+        },
+        {
+          "id": "t4_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Support",
+          "contentCn": "人物 → 做客 → 旅行地图 → 学习原因 → 今天的交流",
+          "contentEn": ""
+        }
+      ],
+      "responseMode": "teacherObservedWithTextOutline",
+      "textId": "t_hsk3_l13_04",
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文4词汇",
+          "vocabSession": "4"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“一边……，一边……”",
+          "grammarIndex": 2
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文4",
+          "textIndex": 3
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：欢迎国际新邻居",
+          "routeState": {
+            "t2ki": 4
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l13_task_05",
+          "status": "ready",
+          "purpose": "任务卡：欢迎国际新邻居"
+        },
+        {
+          "id": "l13_para_05",
+          "status": "ready",
+          "purpose": "课文篇章练习"
+        }
+      ]
+    }
+  ],
+  "timerPolicy": {
+    "miniLoop": {
+      "optionsMinutes": [
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 4
+    },
+    "vocabularyFocus": {
+      "optionsMinutes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 2
+    },
+    "autoClose": false
+  },
+  "textLearning": [
+    {
+      "textId": "t_hsk3_l13_01",
+      "useGroupId": "T1",
+      "title": "饭馆请客与做客邀请",
+      "overviewChoices": [
+        {
+          "id": "l13_t1_gist",
+          "focus": "main_idea",
+          "questionCn": "这个对话主要谈什么？",
+          "options": [
+            "三个人在饭馆点菜，并发出做客邀请",
+            "三个人在商店买礼物",
+            "邻居在家里看地图"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l13_m1_overall_02",
+          "focus": "situation",
+          "questionCn": "三个人点菜时遇到什么问题？",
+          "options": [
+            "点的菜可能太多",
+            "饭馆没有鱼",
+            "没有人愿意请客"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l13_m1_overall_03",
+          "focus": "purpose",
+          "questionCn": "王一雪最后想做什么？",
+          "options": [
+            "邀请同事下周来家里做客",
+            "请大家马上回家",
+            "让同事去买地图"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l13_t1_d01",
+          "questionCn": "今天谁请客？他让大家怎样点菜？",
+          "questionPinyin": "Jīntiān shéi qǐngkè? Tā ràng dàjiā zěnyàng diǎn cài?",
+          "answer": "杨同乐请客，想吃什么就点什么。",
+          "answerPinyin": "Yáng Tónglè qǐngkè, xiǎng chī shénme jiù diǎn shénme.",
+          "acceptedAnswers": [
+            "杨同乐请客，想吃什么就点什么",
+            "今天杨同乐请客"
+          ],
+          "informationPoint": "请客人和点菜方式"
+        },
+        {
+          "id": "l13_t1_d02",
+          "questionCn": "南方菜和北方菜有什么不同？",
+          "questionPinyin": "Nánfāng cài hé běifāng cài yǒu shénme bù tóng?",
+          "answer": "做法不同。",
+          "answerPinyin": "Zuòfǎ bù tóng.",
+          "acceptedAnswers": [
+            "做法不同",
+            "南方菜跟北方菜的做法不同"
+          ],
+          "informationPoint": "南北方菜的差异"
+        },
+        {
+          "id": "l13_t1_d03",
+          "questionCn": "同事为什么让杨同乐决定点什么？",
+          "questionPinyin": "Tóngshì wèishénme ràng Yáng Tónglè juédìng diǎn shénme?",
+          "answer": "因为他不常吃南方菜。",
+          "answerPinyin": "Yīnwèi tā bù cháng chī nánfāng cài.",
+          "acceptedAnswers": [
+            "他不常吃南方菜",
+            "因为同事不常吃南方菜"
+          ],
+          "informationPoint": "让杨同乐决定的原因"
+        },
+        {
+          "id": "l13_t1_d04",
+          "questionCn": "王一雪为什么说别点那么多？",
+          "questionPinyin": "Wáng Yīxuě wèishénme shuō bié diǎn nàme duō?",
+          "answer": "因为他们只有三个人。",
+          "answerPinyin": "Yīnwèi tāmen zhǐyǒu sān gè rén.",
+          "acceptedAnswers": [
+            "他们只有三个人",
+            "咱们就三个人"
+          ],
+          "informationPoint": "控制菜量的原因"
+        },
+        {
+          "id": "l13_t1_d05",
+          "questionCn": "王一雪为什么请大家下周去她家？她要做什么菜？",
+          "questionPinyin": "Wáng Yīxuě wèishénme qǐng dàjiā xià zhōu qù tā jiā? Tā yào zuò shénme cài?",
+          "answer": "她儿子过生日，她要给大家做北京菜。",
+          "answerPinyin": "Tā érzi guò shēngrì, tā yào gěi dàjiā zuò Běijīng cài.",
+          "acceptedAnswers": [
+            "她儿子过生日，她要做北京菜",
+            "下周她儿子过生日，她给大家做北京菜"
+          ],
+          "informationPoint": "邀请的原因与活动"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "你们有时间的话，就来我家做客。",
+        "focus": "条件 + 的话，就 + 结果",
+        "actionLabel": "进入“……的话，就……”",
+        "grammarIndex": 0
+      },
+      "paragraphPractice": {
+        "label": "调用“有条件的邀请”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 1
+      },
+      "lifeTransfer": {
+        "promptCn": "邀请同学参加一次真实或合理的周末活动，并说明条件、地点和安排。",
+        "promptEn": "Give a practical restaurant-and-home invitation: ask about preferences, agree on dishes and quantity, say who is treating, and invite everyone home with “……的话，就……”."
+      }
+    },
+    {
+      "textId": "t_hsk3_l13_02",
+      "useGroupId": "T2",
+      "title": "准备接待新邻居",
+      "overviewChoices": [
+        {
+          "id": "l13_t2_gist",
+          "focus": "main_idea",
+          "questionCn": "他们主要在解决什么问题？",
+          "options": [
+            "检查做客前的准备并调整物品",
+            "决定去哪里旅游",
+            "给孩子选择礼物"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l13_m2_overall_02",
+          "focus": "situation",
+          "questionCn": "王一雪一开始为什么担心？",
+          "options": [
+            "第一次请新邻居，怕没准备好",
+            "她不知道饭馆在哪里",
+            "她没有准备生日礼物"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l13_m2_overall_03",
+          "focus": "purpose",
+          "questionCn": "两个人希望客人来以前做到什么？",
+          "options": [
+            "把待客物品和声音调整好",
+            "决定去英国旅游",
+            "再去饭馆点菜"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l13_t2_d01",
+          "questionCn": "王一雪为什么有点儿担心？",
+          "questionPinyin": "Wáng Yīxuě wèishénme yǒudiǎnr dānxīn?",
+          "answer": "因为这是第一次请新邻居来做客，她担心有东西没准备好。",
+          "answerPinyin": "Yīnwèi zhè shì dì-yī cì qǐng xīn línjū lái zuòkè, tā dānxīn yǒu dōngxi méi zhǔnbèi hǎo.",
+          "acceptedAnswers": [
+            "第一次请新邻居来做客",
+            "她担心有东西没准备好"
+          ],
+          "informationPoint": "担心的原因"
+        },
+        {
+          "id": "l13_t2_d02",
+          "questionCn": "王一雪为什么找不到饮料？",
+          "questionPinyin": "Wáng Yīxuě wèishénme zhǎo bú dào yǐnliào?",
+          "answer": "因为刘明把饮料和酒放进冰箱里了。",
+          "answerPinyin": "Yīnwèi Liú Míng bǎ yǐnliào hé jiǔ fàngjìn bīngxiāng li le.",
+          "acceptedAnswers": [
+            "刘明把饮料放进冰箱了",
+            "饮料和酒在冰箱里"
+          ],
+          "informationPoint": "饮料的位置"
+        },
+        {
+          "id": "l13_t2_d03",
+          "questionCn": "刘明准备什么时候把饮料拿出来？",
+          "questionPinyin": "Liú Míng zhǔnbèi shénme shíhou bǎ yǐnliào ná chūlai?",
+          "answer": "客人来了再拿出来。",
+          "answerPinyin": "Kèrén lái le zài ná chūlai.",
+          "acceptedAnswers": [
+            "客人来了再拿出来",
+            "等客人来再拿出来"
+          ],
+          "informationPoint": "取出饮料的时间"
+        },
+        {
+          "id": "l13_t2_d04",
+          "questionCn": "音乐的声音有什么问题？刘明要怎么办？",
+          "questionPinyin": "Yīnyuè de shēngyīn yǒu shénme wèntí? Liú Míng yào zěnme bàn?",
+          "answer": "声音太大，他要关小一点儿。",
+          "answerPinyin": "Shēngyīn tài dà, tā yào guān xiǎo yìdiǎnr.",
+          "acceptedAnswers": [
+            "声音太大，要关小一点儿",
+            "刘明要把声音关小一点儿"
+          ],
+          "informationPoint": "声音状态与调整"
+        },
+        {
+          "id": "l13_t2_d05",
+          "questionCn": "准备好以后，两个人要做什么？",
+          "questionPinyin": "Zhǔnbèi hǎo yǐhòu, liǎng gè rén yào zuò shénme?",
+          "answer": "他们要等客人来。",
+          "answerPinyin": "Tāmen yào děng kèrén lái.",
+          "acceptedAnswers": [
+            "等客人来",
+            "他们就等客人来"
+          ],
+          "informationPoint": "准备后的行动"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "我把饮料和酒都放进冰箱里了。",
+        "focus": "把 + 宾语 + 动词 + 方向或状态结果",
+        "actionLabel": "进入把字句",
+        "grammarIndex": 1
+      },
+      "paragraphPractice": {
+        "label": "调用“待客准备”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 2
+      },
+      "lifeTransfer": {
+        "promptCn": "检查教室、宿舍或家中的一个真实场景，提出两项清楚可执行的调整。",
+        "promptEn": "Complete a guest-preparation dialogue: state one concern, check the drinks, identify the music problem, and use two 把 sentences with different complements."
+      }
+    },
+    {
+      "textId": "t_hsk3_l13_03",
+      "useGroupId": "T3",
+      "title": "生日晚会与礼物",
+      "overviewChoices": [
+        {
+          "id": "l13_t3_gist",
+          "focus": "main_idea",
+          "questionCn": "生日晚会上发生了什么？",
+          "options": [
+            "客人送了合适的礼物，大家准备吃蛋糕聊天儿",
+            "大家讨论明天去饭馆吃饭",
+            "主人找不到冰箱里的饮料"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l13_m3_overall_02",
+          "focus": "situation",
+          "questionCn": "杨同乐怎样选择生日礼物？",
+          "options": [
+            "根据小明喜欢画画来选择",
+            "根据礼物的价格来选择",
+            "根据英国文化来选择"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l13_m3_overall_03",
+          "focus": "purpose",
+          "questionCn": "这个对话主要想说明什么？",
+          "options": [
+            "送合适的礼物并一起参加晚会",
+            "比较南方菜和北方菜",
+            "介绍英国的城市"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l13_t3_d01",
+          "questionCn": "王一雪为什么请大家来？她希望大家怎么样？",
+          "questionPinyin": "Wáng Yīxuě wèishénme qǐng dàjiā lái? Tā xīwàng dàjiā zěnmeyàng?",
+          "answer": "因为是她儿子的生日晚会，她希望大家玩得开心。",
+          "answerPinyin": "Yīnwèi shì tā érzi de shēngrì wǎnhuì, tā xīwàng dàjiā wán de kāixīn.",
+          "acceptedAnswers": [
+            "参加儿子的生日晚会，希望大家玩得开心",
+            "因为是小明的生日晚会"
+          ],
+          "informationPoint": "晚会的原因与主人的希望"
+        },
+        {
+          "id": "l13_t3_d02",
+          "questionCn": "杨同乐送给小明什么礼物？",
+          "questionPinyin": "Yáng Tónglè sòng gěi Xiǎomíng shénme lǐwù?",
+          "answer": "画板和画笔。",
+          "answerPinyin": "Huàbǎn hé huàbǐ.",
+          "acceptedAnswers": [
+            "画板和画笔",
+            "他送了画板和画笔"
+          ],
+          "informationPoint": "礼物的内容"
+        },
+        {
+          "id": "l13_t3_d03",
+          "questionCn": "杨同乐为什么选择这份礼物？",
+          "questionPinyin": "Yáng Tónglè wèishénme xuǎnzé zhè fèn lǐwù?",
+          "answer": "因为小明喜欢画画，想做一名画家。",
+          "answerPinyin": "Yīnwèi Xiǎomíng xǐhuan huàhuà, xiǎng zuò yì míng huàjiā.",
+          "acceptedAnswers": [
+            "小明喜欢画画，想做画家",
+            "因为小明想做一名画家"
+          ],
+          "informationPoint": "选择礼物的原因"
+        },
+        {
+          "id": "l13_t3_d04",
+          "questionCn": "小明看到礼物以后怎么说？",
+          "questionPinyin": "Xiǎomíng kàndào lǐwù yǐhòu zěnme shuō?",
+          "answer": "他说这正是他需要的，他太喜欢了。",
+          "answerPinyin": "Tā shuō zhè zhèng shì tā xūyào de, tā tài xǐhuan le.",
+          "acceptedAnswers": [
+            "这正是我需要的，我太喜欢了",
+            "他说他很需要也很喜欢"
+          ],
+          "informationPoint": "收到礼物后的回应"
+        },
+        {
+          "id": "l13_t3_d05",
+          "questionCn": "王一雪拿盘子以后，大家要做什么？",
+          "questionPinyin": "Wáng Yīxuě ná pánzi yǐhòu, dàjiā yào zuò shénme?",
+          "answer": "一边吃蛋糕，一边聊天儿。",
+          "answerPinyin": "Yìbiān chī dàngāo, yìbiān liáotiānr.",
+          "acceptedAnswers": [
+            "一边吃蛋糕，一边聊天儿",
+            "吃蛋糕和聊天儿"
+          ],
+          "informationPoint": "同时进行的活动"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "咱们一边吃蛋糕，一边聊天儿吧。",
+        "focus": "同一个人或同一组人同时完成两个动作",
+        "actionLabel": "进入“一边……一边……”",
+        "grammarIndex": 2
+      },
+      "paragraphPractice": {
+        "label": "调用“生日礼物”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 3
+      },
+      "lifeTransfer": {
+        "promptCn": "根据一位同学的兴趣推荐一份合适的礼物，并安排两项可以同时进行的活动。",
+        "promptEn": "Give a birthday-party expression: welcome guests, explain the gift choice, respond to it, and arrange two simultaneous activities with 一边……一边……."
+      }
+    },
+    {
+      "textId": "t_hsk3_l13_04",
+      "useGroupId": "T4",
+      "title": "英国新邻居日记",
+      "overviewChoices": [
+        {
+          "id": "l13_t4_gist",
+          "focus": "main_idea",
+          "questionCn": "这篇日记主要介绍谁？",
+          "options": [
+            "来自英国、喜欢旅行和学习中文的新邻居",
+            "饭馆里请客的三个同事",
+            "生日会上画画的孩子"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l13_m4_overall_02",
+          "focus": "situation",
+          "questionCn": "这对夫妻和中国文化有什么关系？",
+          "options": [
+            "他们觉得很特别，开始学习中文",
+            "他们觉得不适合自己",
+            "他们只想学习做英国菜"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l13_m4_overall_03",
+          "focus": "purpose",
+          "questionCn": "作者写这篇日记主要想做什么？",
+          "options": [
+            "介绍新邻居和双方的文化交流",
+            "说明音乐声音太大",
+            "请同事在饭馆买单"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l13_t4_d01",
+          "questionCn": "王一雪的新邻居是谁？他们来自哪里？",
+          "questionPinyin": "Wáng Yīxuě de xīn línjū shì shéi? Tāmen láizì nǎlǐ?",
+          "answer": "是一对来自英国的夫妻。",
+          "answerPinyin": "Shì yí duì láizì Yīngguó de fūqī.",
+          "acceptedAnswers": [
+            "来自英国的夫妻",
+            "一对英国夫妻"
+          ],
+          "informationPoint": "新邻居的身份和来源"
+        },
+        {
+          "id": "l13_t4_d02",
+          "questionCn": "上周王一雪去邻居家做客时，邻居准备了什么？",
+          "questionPinyin": "Shàng zhōu Wáng Yīxuě qù línjū jiā zuòkè shí, línjū zhǔnbèi le shénme?",
+          "answer": "他们做了很多好吃的，还准备了英国的红茶。",
+          "answerPinyin": "Tāmen zuò le hěn duō hǎochī de, hái zhǔnbèi le Yīngguó de hóngchá.",
+          "acceptedAnswers": [
+            "很多好吃的和英国红茶",
+            "他们准备了英国红茶"
+          ],
+          "informationPoint": "上周做客的待客内容"
+        },
+        {
+          "id": "l13_t4_d03",
+          "questionCn": "地图上的红点表示什么？",
+          "questionPinyin": "Dìtú shang de hóng diǎn biǎoshì shénme?",
+          "answer": "他们去过的地方。",
+          "answerPinyin": "Tāmen qùguo de dìfang.",
+          "acceptedAnswers": [
+            "他们去过的地方",
+            "夫妻旅游去过的地方"
+          ],
+          "informationPoint": "地图标记的含义"
+        },
+        {
+          "id": "l13_t4_d04",
+          "questionCn": "他们为什么开始学习中文？",
+          "questionPinyin": "Tāmen wèishénme kāishǐ xuéxí Zhōngwén?",
+          "answer": "因为他们感到东方的文化很特别。",
+          "answerPinyin": "Yīnwèi tāmen gǎndào dōngfāng de wénhuà hěn tèbié.",
+          "acceptedAnswers": [
+            "东方的文化很特别",
+            "因为他们对东方文化感兴趣"
+          ],
+          "informationPoint": "学习中文的原因"
+        },
+        {
+          "id": "l13_t4_d05",
+          "questionCn": "今天王一雪为什么请新邻居到她家？",
+          "questionPinyin": "Jīntiān Wáng Yīxuě wèishénme qǐng xīn línjū dào tā jiā?",
+          "answer": "请他们看看中国人的家，也尝尝中国菜。",
+          "answerPinyin": "Qǐng tāmen kànkan Zhōngguórén de jiā, yě chángchang Zhōngguócài.",
+          "acceptedAnswers": [
+            "看看中国人的家，也尝尝中国菜",
+            "体验中国人的家和中国菜"
+          ],
+          "informationPoint": "今天邀请邻居的目的"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "我跟他们一边喝红茶，一边聊天儿。",
+        "focus": "用同时活动组织自然的文化交流",
+        "actionLabel": "进入“一边……一边……”",
+        "grammarIndex": 2
+      },
+      "paragraphPractice": {
+        "label": "调用“天气与做客”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 4
+      },
+      "lifeTransfer": {
+        "promptCn": "介绍一位真实或虚构的新邻居，并提出双方都能分享内容的文化交流活动。",
+        "promptEn": "Introduce the new neighbors: their origin, last week’s visit, the map dots, why they learn Chinese, and one two-way cultural exchange activity."
+      }
+    }
+  ],
+  "vocabularyTaskTypes": [
+    {
+      "id": "recognition",
+      "labelCn": "认读",
+      "labelEn": "Recognition"
+    },
+    {
+      "id": "shape",
+      "labelCn": "辨形",
+      "labelEn": "Character form"
+    },
+    {
+      "id": "input",
+      "labelCn": "输入",
+      "labelEn": "Type the word"
+    },
+    {
+      "id": "collocation",
+      "labelCn": "搭配与使用",
+      "labelEn": "Collocation and use"
+    }
+  ],
+  "vocabularyCatalog": [
+    {
+      "id": "v13_01",
+      "hanzi": "请客",
+      "pinyin": "qǐngkè",
+      "english": "stand treat",
+      "meaningCn": "请别人吃饭并付钱",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "请客",
+        "南方",
+        "北方",
+        "做法"
+      ],
+      "collocationOptions": [
+        "请客吃饭",
+        "南方菜",
+        "北方菜",
+        "菜的做法"
+      ]
+    },
+    {
+      "id": "v13_02",
+      "hanzi": "南方",
+      "pinyin": "nánfāng",
+      "english": "south",
+      "meaningCn": "一个国家或地区的南部",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "南方",
+        "北方",
+        "做法",
+        "不同"
+      ],
+      "collocationOptions": [
+        "南方菜",
+        "北方菜",
+        "菜的做法",
+        "很不同"
+      ]
+    },
+    {
+      "id": "v13_03",
+      "hanzi": "北方",
+      "pinyin": "běifāng",
+      "english": "north",
+      "meaningCn": "一个国家或地区的北部",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "北方",
+        "做法",
+        "不同",
+        "加"
+      ],
+      "collocationOptions": [
+        "北方菜",
+        "菜的做法",
+        "很不同",
+        "再加一个菜"
+      ]
+    },
+    {
+      "id": "v13_04",
+      "hanzi": "做法",
+      "pinyin": "zuòfǎ",
+      "english": "way of doing or making a thing",
+      "meaningCn": "做事情或做菜的方法",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "做法",
+        "不同",
+        "加",
+        "的话"
+      ],
+      "collocationOptions": [
+        "菜的做法",
+        "很不同",
+        "再加一个菜",
+        "有时间的话"
+      ]
+    },
+    {
+      "id": "v13_05",
+      "hanzi": "不同",
+      "pinyin": "bù tóng",
+      "english": "different",
+      "meaningCn": "不一样",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "不同",
+        "加",
+        "的话",
+        "做客"
+      ],
+      "collocationOptions": [
+        "很不同",
+        "再加一个菜",
+        "有时间的话",
+        "来我家做客"
+      ]
+    },
+    {
+      "id": "v13_06",
+      "hanzi": "加",
+      "pinyin": "jiā",
+      "english": "add",
+      "meaningCn": "在原有数量上增加",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "加",
+        "的话",
+        "做客",
+        "邻居"
+      ],
+      "collocationOptions": [
+        "再加一个菜",
+        "有时间的话",
+        "来我家做客",
+        "新邻居"
+      ]
+    },
+    {
+      "id": "v13_07",
+      "hanzi": "的话",
+      "pinyin": "dehuà",
+      "english": "(used at the end of a conditional clause)",
+      "meaningCn": "放在条件后面",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "的话",
+        "做客",
+        "邻居",
+        "放心"
+      ],
+      "collocationOptions": [
+        "有时间的话",
+        "来我家做客",
+        "新邻居",
+        "请放心"
+      ]
+    },
+    {
+      "id": "v13_08",
+      "hanzi": "做客",
+      "pinyin": "zuòkè",
+      "english": "be a guest",
+      "meaningCn": "到别人家里当客人",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "做客",
+        "邻居",
+        "放心",
+        "酒"
+      ],
+      "collocationOptions": [
+        "来我家做客",
+        "新邻居",
+        "请放心",
+        "一瓶酒"
+      ]
+    },
+    {
+      "id": "v13_09",
+      "hanzi": "邻居",
+      "pinyin": "línjū",
+      "english": "neighbor",
+      "meaningCn": "住在附近的人",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "邻居",
+        "放心",
+        "酒",
+        "放"
+      ],
+      "collocationOptions": [
+        "新邻居",
+        "请放心",
+        "一瓶酒",
+        "放进冰箱"
+      ]
+    },
+    {
+      "id": "v13_10",
+      "hanzi": "放心",
+      "pinyin": "fàngxīn",
+      "english": "feel at ease",
+      "meaningCn": "不再担心",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "放心",
+        "酒",
+        "放",
+        "客人"
+      ],
+      "collocationOptions": [
+        "请放心",
+        "一瓶酒",
+        "放进冰箱",
+        "等客人"
+      ]
+    },
+    {
+      "id": "v13_11",
+      "hanzi": "酒",
+      "pinyin": "jiǔ",
+      "english": "alcoholic drink; wine",
+      "meaningCn": "含酒精的饮料",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "酒",
+        "放",
+        "客人",
+        "晚会"
+      ],
+      "collocationOptions": [
+        "一瓶酒",
+        "放进冰箱",
+        "等客人",
+        "生日晚会"
+      ]
+    },
+    {
+      "id": "v13_12",
+      "hanzi": "放",
+      "pinyin": "fàng",
+      "english": "put",
+      "meaningCn": "使东西在某个地方",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "放",
+        "客人",
+        "晚会",
+        "礼物"
+      ],
+      "collocationOptions": [
+        "放进冰箱",
+        "等客人",
+        "生日晚会",
+        "生日礼物"
+      ]
+    },
+    {
+      "id": "v13_13",
+      "hanzi": "客人",
+      "pinyin": "kèrén",
+      "english": "guest",
+      "meaningCn": "被邀请来的人",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "客人",
+        "晚会",
+        "礼物",
+        "画家"
+      ],
+      "collocationOptions": [
+        "等客人",
+        "生日晚会",
+        "生日礼物",
+        "一名画家"
+      ]
+    },
+    {
+      "id": "v13_14",
+      "hanzi": "晚会",
+      "pinyin": "wǎnhuì",
+      "english": "evening party",
+      "meaningCn": "晚上举行的活动",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "晚会",
+        "礼物",
+        "画家",
+        "盘子"
+      ],
+      "collocationOptions": [
+        "生日晚会",
+        "生日礼物",
+        "一名画家",
+        "拿盘子"
+      ]
+    },
+    {
+      "id": "v13_15",
+      "hanzi": "礼物",
+      "pinyin": "lǐwù",
+      "english": "gift; present",
+      "meaningCn": "送给别人的东西",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "礼物",
+        "画家",
+        "盘子",
+        "一边"
+      ],
+      "collocationOptions": [
+        "生日礼物",
+        "一名画家",
+        "拿盘子",
+        "一边吃一边聊"
+      ]
+    },
+    {
+      "id": "v13_16",
+      "hanzi": "画家",
+      "pinyin": "huàjiā",
+      "english": "painter",
+      "meaningCn": "以画画为工作的人",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "画家",
+        "盘子",
+        "一边",
+        "聊天儿"
+      ],
+      "collocationOptions": [
+        "一名画家",
+        "拿盘子",
+        "一边吃一边聊",
+        "一起聊天儿"
+      ]
+    },
+    {
+      "id": "v13_17",
+      "hanzi": "盘子",
+      "pinyin": "pánzi",
+      "english": "plate",
+      "meaningCn": "装菜或食物的器具",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "盘子",
+        "一边",
+        "聊天儿",
+        "来自"
+      ],
+      "collocationOptions": [
+        "拿盘子",
+        "一边吃一边聊",
+        "一起聊天儿",
+        "来自英国"
+      ]
+    },
+    {
+      "id": "v13_18",
+      "hanzi": "一边",
+      "pinyin": "yìbiān",
+      "english": "at the same time",
+      "meaningCn": "表示两个动作同时进行",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "一边",
+        "聊天儿",
+        "来自",
+        "夫妻"
+      ],
+      "collocationOptions": [
+        "一边吃一边聊",
+        "一起聊天儿",
+        "来自英国",
+        "一对夫妻"
+      ]
+    },
+    {
+      "id": "v13_19",
+      "hanzi": "聊天儿",
+      "pinyin": "liáotiānr",
+      "english": "chat",
+      "meaningCn": "轻松地说话交流",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "聊天儿",
+        "来自",
+        "夫妻",
+        "直到"
+      ],
+      "collocationOptions": [
+        "一起聊天儿",
+        "来自英国",
+        "一对夫妻",
+        "直到十二点"
+      ]
+    },
+    {
+      "id": "v13_20",
+      "hanzi": "来自",
+      "pinyin": "láizì",
+      "english": "come from",
+      "meaningCn": "说明人或东西的来源",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "来自",
+        "夫妻",
+        "直到",
+        "地图"
+      ],
+      "collocationOptions": [
+        "来自英国",
+        "一对夫妻",
+        "直到十二点",
+        "世界地图"
+      ]
+    },
+    {
+      "id": "v13_21",
+      "hanzi": "夫妻",
+      "pinyin": "fūqī",
+      "english": "husband and wife",
+      "meaningCn": "丈夫和妻子",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "夫妻",
+        "直到",
+        "地图",
+        "点"
+      ],
+      "collocationOptions": [
+        "一对夫妻",
+        "直到十二点",
+        "世界地图",
+        "一个红点"
+      ]
+    },
+    {
+      "id": "v13_22",
+      "hanzi": "直到",
+      "pinyin": "zhídào",
+      "english": "until",
+      "meaningCn": "一直到某个时间",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "直到",
+        "地图",
+        "点",
+        "感到"
+      ],
+      "collocationOptions": [
+        "直到十二点",
+        "世界地图",
+        "一个红点",
+        "感到开心"
+      ]
+    },
+    {
+      "id": "v13_23",
+      "hanzi": "地图",
+      "pinyin": "dìtú",
+      "english": "map",
+      "meaningCn": "表示国家、城市和路线的图",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "地图",
+        "点",
+        "感到",
+        "东方"
+      ],
+      "collocationOptions": [
+        "世界地图",
+        "一个红点",
+        "感到开心",
+        "东方文化"
+      ]
+    },
+    {
+      "id": "v13_24",
+      "hanzi": "点",
+      "pinyin": "diǎn",
+      "english": "dot; spot",
+      "meaningCn": "很小的圆形记号",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "点",
+        "感到",
+        "东方",
+        "文化"
+      ],
+      "collocationOptions": [
+        "一个红点",
+        "感到开心",
+        "东方文化",
+        "中国文化"
+      ]
+    },
+    {
+      "id": "v13_25",
+      "hanzi": "感到",
+      "pinyin": "gǎndào",
+      "english": "feel",
+      "meaningCn": "产生某种感觉",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "感到",
+        "东方",
+        "文化",
+        "英国"
+      ],
+      "collocationOptions": [
+        "感到开心",
+        "东方文化",
+        "中国文化",
+        "来自英国"
+      ]
+    },
+    {
+      "id": "v13_26",
+      "hanzi": "东方",
+      "pinyin": "dōngfāng",
+      "english": "East",
+      "meaningCn": "太阳升起的方向或东部地区",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "东方",
+        "文化",
+        "英国",
+        "请客"
+      ],
+      "collocationOptions": [
+        "东方文化",
+        "中国文化",
+        "来自英国",
+        "请客吃饭"
+      ]
+    },
+    {
+      "id": "v13_27",
+      "hanzi": "文化",
+      "pinyin": "wénhuà",
+      "english": "culture",
+      "meaningCn": "一个国家或地区的语言、习惯和艺术等",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "文化",
+        "英国",
+        "请客",
+        "南方"
+      ],
+      "collocationOptions": [
+        "中国文化",
+        "来自英国",
+        "请客吃饭",
+        "南方菜"
+      ]
+    },
+    {
+      "id": "v13_28",
+      "hanzi": "英国",
+      "pinyin": "Yīngguó",
+      "english": "the United Kingdom (the UK)",
+      "meaningCn": "位于欧洲的国家",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ],
+      "shapeOptions": [
+        "英国",
+        "请客",
+        "南方",
+        "北方"
+      ],
+      "collocationOptions": [
+        "来自英国",
+        "请客吃饭",
+        "南方菜",
+        "北方菜"
+      ]
+    }
+  ],
+  "vocabularyGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "title": "协商一次饭馆请客与家庭邀请",
+      "wordIds": [
+        "v13_01",
+        "v13_02",
+        "v13_03",
+        "v13_04",
+        "v13_05",
+        "v13_06",
+        "v13_07",
+        "v13_08"
+      ],
+      "recognitionWordIds": [
+        "v13_01",
+        "v13_02",
+        "v13_03",
+        "v13_04",
+        "v13_05",
+        "v13_06",
+        "v13_07",
+        "v13_08"
+      ],
+      "activities": []
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "title": "检查并调整待客准备",
+      "wordIds": [
+        "v13_09",
+        "v13_10",
+        "v13_11",
+        "v13_12",
+        "v13_13"
+      ],
+      "recognitionWordIds": [
+        "v13_09",
+        "v13_10",
+        "v13_11",
+        "v13_12",
+        "v13_13"
+      ],
+      "activities": []
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "title": "根据兴趣介绍礼物并安排晚会",
+      "wordIds": [
+        "v13_14",
+        "v13_15",
+        "v13_16",
+        "v13_17",
+        "v13_18",
+        "v13_19"
+      ],
+      "recognitionWordIds": [
+        "v13_14",
+        "v13_15",
+        "v13_16",
+        "v13_17",
+        "v13_18",
+        "v13_19"
+      ],
+      "activities": []
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "title": "介绍英国新邻居并设计文化交流",
+      "wordIds": [
+        "v13_20",
+        "v13_21",
+        "v13_22",
+        "v13_23",
+        "v13_24",
+        "v13_25",
+        "v13_26",
+        "v13_27",
+        "v13_28"
+      ],
+      "recognitionWordIds": [
+        "v13_20",
+        "v13_21",
+        "v13_22",
+        "v13_23",
+        "v13_24",
+        "v13_25",
+        "v13_26",
+        "v13_27",
+        "v13_28"
+      ],
+      "activities": []
+    }
+  ],
+  "resourceOverrides": [],
+  "supportOnlyStructures": [],
+  "evidencePolicy": {
+    "coreTypes": [
+      "entry_expression",
+      "actual_learning_path",
+      "exit_expression"
+    ],
+    "pathEvent": "opened",
+    "optionalSignals": [
+      "support_request",
+      "self_reflection",
+      "teacher_observation"
+    ]
+  },
+  "supportOptions": [
+    {
+      "id": "vocabulary",
+      "labelCn": "我缺少合适的词",
+      "labelEn": "I need the right words"
+    },
+    {
+      "id": "organization",
+      "labelCn": "我不知道怎样组织信息",
+      "labelEn": "I need help organizing my ideas"
+    },
+    {
+      "id": "structure",
+      "labelCn": "我需要一个句子结构",
+      "labelEn": "I need a sentence frame"
+    },
+    {
+      "id": "teacher",
+      "labelCn": "我想获得老师的帮助",
+      "labelEn": "I want help from the teacher"
+    }
+  ],
+  "feelingOptions": [
+    {
+      "id": "clearer",
+      "labelCn": "我说得更清楚了",
+      "labelEn": "My expression is clearer"
+    },
+    {
+      "id": "more_complete",
+      "labelCn": "我说得更完整了",
+      "labelEn": "My expression is more complete"
+    },
+    {
+      "id": "more_natural",
+      "labelCn": "我说得更自然了",
+      "labelEn": "My expression is more natural"
+    },
+    {
+      "id": "still_need_help",
+      "labelCn": "我还需要帮助",
+      "labelEn": "I still need help"
+    }
+  ],
+  "coreEvidence": [
+    "entry_expression",
+    "actual_learning_path",
+    "exit_expression"
+  ],
+  "capabilities": [
+    "select_text_mini_loop",
+    "launch_interaction",
+    "independent_answer",
+    "support_request",
+    "anonymous_return",
+    "open_support",
+    "reanswer",
+    "record_teacher_decision",
+    "compare_entry_exit",
+    "teacher_selected_vocabulary_focus",
+    "shared_countdown",
+    "native_course_resource_return",
+    "configured_task_stimulus"
+  ]
+}

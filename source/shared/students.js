@@ -28,7 +28,10 @@
   window.CLASS_ROSTERS = ROSTERS;
   window.ClassProStudentsForLesson = function (lesson, classId) {
     if (serverRoster && serverRoster.classId === (classId || currentClass()) && Array.isArray(serverRoster.students) && serverRoster.students.length) return serverRoster.students.map(function (student) { return student.name; });
-    if (window.ClassProClassCatalog) return window.ClassProClassCatalog.roster(classId || currentClass(), lesson).map(function (student) { return student.name; });
+    if (window.ClassProClassCatalog) {
+      var names = window.ClassProClassCatalog.roster(classId || currentClass(), lesson).map(function (student) { return student.name; });
+      if (names.length) return names;
+    }
     if (/^HSK3-L\d+$/i.test(String(lesson || ""))) return HSK3_DEFAULT.slice();
     return (ROSTERS[lesson] || HSK1_DEFAULT).slice();
   };

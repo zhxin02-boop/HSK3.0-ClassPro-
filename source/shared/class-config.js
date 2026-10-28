@@ -108,8 +108,12 @@
   }
   function defaultClassIdForLesson(lesson) { return levelOf(lesson) === "HSK1" ? "rufe-2025-class-4" : "ai26401-spring"; }
   function rosterFor(classId, lesson) {
-    var item = get(classId) || get(defaultClassIdForLesson(lesson)), level = levelOf(lesson);
-    return copy(item.rosters[level] || item.rosters.default || []);
+    var level = levelOf(lesson), item = get(classId), students = item && (item.rosters[level] || item.rosters.default);
+    if (!students || !students.length) {
+      item = get(defaultClassIdForLesson(lesson));
+      students = item && (item.rosters[level] || item.rosters.default);
+    }
+    return copy(students || []);
   }
   function setRoster(classId, level, rows) {
     var item = get(classId), key = String(level || "default").toUpperCase();
