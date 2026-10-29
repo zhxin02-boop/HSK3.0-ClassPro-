@@ -1,0 +1,2798 @@
+{
+  "schemaVersion": "classpro-use-profile/v3",
+  "experiment": {
+    "id": "l14-use-pilot-v1",
+    "title": "第14课·以用为主线升级版",
+    "lessonLabel": "第14课",
+    "sourceLesson": "HSK3-L14",
+    "scope": "四个课文MINI循环；保留L14原生词汇场景、渐进式语法、课文体裁和正式练习。"
+  },
+  "sources": {
+    "lesson": {
+      "path": "../lessons/HSK3-L14.json",
+      "sha256": "773941FC32671D77513A5856DF6887C37033B5E7A03A9A22EC8486DCF700B99D"
+    },
+    "teacher": {
+      "path": "../../in-class/teacher.html"
+    },
+    "student": {
+      "path": "../../in-class/student.html"
+    }
+  },
+  "nativeTeaching": {
+    "preserveCourseStyles": true,
+    "grammar": {
+      "source": "formal_lesson",
+      "preserveExamples": true,
+      "preserveHighlights": true,
+      "preserveOralQuestions": true,
+      "preserveFollowUp": true
+    },
+    "text": {
+      "source": "formal_lesson",
+      "preservePresentation": true,
+      "preserveDiary": true
+    },
+    "vocabulary": {
+      "source": "formal_lesson",
+      "preserveScenes": true,
+      "preserveHotspots": true
+    }
+  },
+  "useGroups": [
+    {
+      "id": "T1",
+      "icon": "📚",
+      "label": "课文 1",
+      "title": "图书馆帮忙",
+      "goal": "请求同学帮助还书、借书，并说明书已经被别人借走。",
+      "goalEn": "Ask a classmate for help returning and borrowing books, and explain that a book has been checked out.",
+      "image": "images/hsk3-l14/photo-text-1-library-help.png",
+      "imageLabel": "图书馆帮忙",
+      "entryPromptCn": "你今天没课，想请同学帮你借本书，书的名字是《汉语世界》。",
+      "entryPromptEn": "Look at the picture and briefly say who needs help and what needs to be done.",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说明什么书要还"
+        },
+        {
+          "id": "step_2",
+          "label": "请求同学帮忙"
+        },
+        {
+          "id": "step_3",
+          "label": "说明书被借走"
+        },
+        {
+          "id": "step_4",
+          "label": "接受一个解决办法"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t1_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "词典、最好、图书馆、被",
+          "contentEn": ""
+        },
+        {
+          "id": "t1_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Organization support",
+          "contentCn": "说明什么书要还 → 请求同学帮忙 → 说明书被借走 → 接受一个解决办法",
+          "contentEn": ""
+        }
+      ],
+      "textId": "t_hsk3_l14_01",
+      "entry": {
+        "id": "l14_t1_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "你今天没课，想请同学帮你借本书，书的名字是《汉语世界》。",
+        "promptEn": "Look at the picture and briefly say who needs help and what needs to be done.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l14/photo-text-1-library-help.png",
+          "labelCn": "图书馆帮忙",
+          "altCn": "图书馆帮忙",
+          "instructionCn": "你今天没课，想请同学帮你借本书，书的名字是《汉语世界》。",
+          "instructionEn": "Look at the picture and briefly say who needs help and what needs to be done."
+        }
+      },
+      "exit": {
+        "id": "l14_t1_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "完成30—45秒图书馆帮忙对话。 说明什么书要还；请求同学帮忙；说明书被借走；接受一个解决办法。",
+        "promptEn": "Complete the 图书馆帮忙 task using the listed steps."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文1词汇",
+          "vocabSession": "1"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "被动句（1）",
+          "grammarIndex": 0
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文1",
+          "textIndex": 0
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：图书馆帮忙",
+          "routeState": {
+            "t2ki": 0
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l14_task_01",
+          "status": "ready",
+          "purpose": "图书馆帮忙"
+        },
+        {
+          "id": "l14_para_01",
+          "status": "ready",
+          "purpose": "图书馆帮忙"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "icon": "🪪",
+      "label": "课文 2",
+      "title": "校园行动顺序",
+      "goal": "安排两个校园行动，说明校园卡问题并提出替代办法。",
+      "goalEn": "Put two campus actions in order, explain the campus-card problem, and offer an alternative.",
+      "image": "images/hsk3-l14/photo-text-2-campus-plan.png",
+      "imageLabel": "校园行动计划",
+      "entryPromptCn": "说说图上或者你自己今天的安排是什么。",
+      "entryPromptEn": "Look at the picture and name the two things to do this afternoon.",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说出两个校园任务"
+        },
+        {
+          "id": "step_2",
+          "label": "使用先……然后……"
+        },
+        {
+          "id": "step_3",
+          "label": "说明校园卡问题"
+        },
+        {
+          "id": "step_4",
+          "label": "提出替代办法"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t2_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "然后、报纸、忘记、电子书",
+          "contentEn": ""
+        },
+        {
+          "id": "t2_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Organization support",
+          "contentCn": "说出两个校园任务 → 使用先……然后…… → 说明校园卡问题 → 提出替代办法",
+          "contentEn": ""
+        }
+      ],
+      "textId": "t_hsk3_l14_02",
+      "entry": {
+        "id": "l14_t2_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "说说图上或者你自己今天的安排是什么。",
+        "promptEn": "Look at the picture and name the two things to do this afternoon.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l14/photo-text-2-campus-plan.png",
+          "labelCn": "校园行动计划",
+          "altCn": "校园行动计划",
+          "instructionCn": "说说图上或者你自己今天的安排是什么。",
+          "instructionEn": "Look at the picture and name the two things to do this afternoon."
+        }
+      },
+      "exit": {
+        "id": "l14_t2_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "完成30—45秒下午行动计划。 说出两个校园任务；使用先……然后……；说明校园卡问题；提出替代办法。",
+        "promptEn": "Complete the 校园行动顺序 task using the listed steps."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文2词汇",
+          "vocabSession": "2"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "先……再/然后……",
+          "grammarIndex": 1
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文2",
+          "textIndex": 1
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：校园行动顺序",
+          "routeState": {
+            "t2ki": 1
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l14_task_02",
+          "status": "ready",
+          "purpose": "校园行动顺序"
+        },
+        {
+          "id": "l14_para_02",
+          "status": "ready",
+          "purpose": "校园行动计划"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "icon": "🎤",
+      "label": "课文 3",
+      "title": "晚会鼓励对话",
+      "goal": "说明表演担忧，并用合适的“×什么啊”表达安慰、理由和下一步。",
+      "goalEn": "Describe a performance worry, then use an appropriate ×什么啊 expression with reassurance and a next step.",
+      "image": "images/hsk3-l14/photo-text-3-stage-encouragement.png",
+      "imageLabel": "上台前的鼓励",
+      "entryPromptCn": "看图，先说表演者有什么担心，朋友可以怎样简单鼓励。",
+      "entryPromptEn": "Look at the picture and briefly state the performer’s worry and one encouraging response.",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说明准备的节目"
+        },
+        {
+          "id": "step_2",
+          "label": "表达一个担忧"
+        },
+        {
+          "id": "step_3",
+          "label": "使用“×什么啊”安慰"
+        },
+        {
+          "id": "step_4",
+          "label": "补充理由和下一步"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t3_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "表演、节目、怎么办、相信",
+          "contentEn": ""
+        },
+        {
+          "id": "t3_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Organization support",
+          "contentCn": "说明准备的节目 → 表达一个担忧 → 使用“×什么啊”安慰 → 补充理由和下一步",
+          "contentEn": ""
+        }
+      ],
+      "textId": "t_hsk3_l14_03",
+      "entry": {
+        "id": "l14_t3_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图，先说表演者有什么担心，朋友可以怎样简单鼓励。",
+        "promptEn": "Look at the picture and briefly state the performer’s worry and one encouraging response.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l14/photo-text-3-stage-encouragement.png",
+          "labelCn": "上台前的鼓励",
+          "altCn": "上台前的鼓励",
+          "instructionCn": "看图，先说表演者有什么担心，朋友可以怎样简单鼓励。",
+          "instructionEn": "Look at the picture and briefly state the performer’s worry and one encouraging response."
+        }
+      },
+      "exit": {
+        "id": "l14_t3_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "完成一轮担忧—安慰对话。 说明准备的节目；表达一个担忧；使用“×什么啊”安慰；补充理由和下一步。",
+        "promptEn": "Complete the 晚会鼓励对话 task using the listed steps."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文3词汇",
+          "vocabSession": "3"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "×什么（啊）",
+          "grammarIndex": 2
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文3",
+          "textIndex": 2
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：晚会鼓励对话",
+          "routeState": {
+            "t2ki": 2
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l14_task_03",
+          "status": "ready",
+          "purpose": "晚会鼓励对话"
+        },
+        {
+          "id": "l14_para_03",
+          "status": "ready",
+          "purpose": "晚会鼓励"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "icon": "🎉",
+      "label": "课文 4",
+      "title": "新年晚会回顾",
+      "goal": "按日记顺序回顾新年晚会，说明活动、感受、最喜欢的节目和视频计划。",
+      "goalEn": "Give a diary-style review of the New Year party, including activities, feelings, a favorite program, and a video plan.",
+      "image": "images/hsk3-l14/photo-text-4-new-year-party.png",
+      "imageLabel": "新年晚会回顾",
+      "entryPromptCn": "看图，先用一两句话说晚会上有什么活动、你的感受怎样。",
+      "entryPromptEn": "Look at the picture and briefly describe one party activity and your feeling.",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说明晚会时间"
+        },
+        {
+          "id": "step_2",
+          "label": "说活动和感受"
+        },
+        {
+          "id": "step_3",
+          "label": "介绍最喜欢的节目"
+        },
+        {
+          "id": "step_4",
+          "label": "使用被动句"
+        },
+        {
+          "id": "step_5",
+          "label": "说明视频计划"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t4_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "新年、最后、一块儿、网站、视频",
+          "contentEn": ""
+        },
+        {
+          "id": "t4_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Organization support",
+          "contentCn": "说明晚会时间 → 说活动和感受 → 介绍最喜欢的节目 → 使用被动句 → 说明视频计划",
+          "contentEn": ""
+        }
+      ],
+      "textId": "t_hsk3_l14_04",
+      "entry": {
+        "id": "l14_t4_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图，先用一两句话说晚会上有什么活动、你的感受怎样。",
+        "promptEn": "Look at the picture and briefly describe one party activity and your feeling.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l14/photo-text-4-new-year-party.png",
+          "labelCn": "新年晚会回顾",
+          "altCn": "新年晚会回顾",
+          "instructionCn": "看图，先用一两句话说晚会上有什么活动、你的感受怎样。",
+          "instructionEn": "Look at the picture and briefly describe one party activity and your feeling."
+        }
+      },
+      "exit": {
+        "id": "l14_t4_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "完成45—60秒日记式回顾。 说明晚会时间；说活动和感受；介绍最喜欢的节目；使用被动句；说明视频计划。",
+        "promptEn": "Complete the 新年晚会回顾 task using the listed steps."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文4词汇",
+          "vocabSession": "4"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "被动句（1）",
+          "grammarIndex": 0
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文4",
+          "textIndex": 3
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：新年晚会回顾",
+          "routeState": {
+            "t2ki": 3
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l14_task_04",
+          "status": "ready",
+          "purpose": "新年晚会回顾"
+        },
+        {
+          "id": "l14_para_04",
+          "status": "ready",
+          "purpose": "新年晚会"
+        }
+      ]
+    }
+  ],
+  "textLearning": [
+    {
+      "textId": "t_hsk3_l14_01",
+      "useGroupId": "T1",
+      "title": "图书馆还书与借书",
+      "overviewChoices": [
+        {
+          "id": "l14_t1_overall_01",
+          "focus": "main_idea",
+          "questionCn": "对话主要谈什么？",
+          "questionPinyin": "Duìhuà zhǔyào tán shénme?",
+          "options": [
+            "互相帮忙还书和借书",
+            "准备学校晚会",
+            "寻找校园卡"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l14_t1_overall_02",
+          "focus": "development",
+          "questionCn": "这件事最后怎样发展？",
+          "questionPinyin": "Zhè jiàn shì zuìhòu zěnyàng fāzhǎn?",
+          "options": [
+            "还书和借书的问题都有了办法",
+            "两个人决定不再借书",
+            "李文去参加晚会"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l14_t1_overall_03",
+          "focus": "relationship",
+          "questionCn": "这段对话表现两位同学怎样的关系？",
+          "questionPinyin": "Zhè duàn duìhuà biǎoxiàn liǎng wèi tóngxué zěnyàng de guānxi?",
+          "options": [
+            "愿意互相帮助",
+            "互相不相信",
+            "只讨论上课"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l14_t1_detail_01",
+          "questionCn": "李文借的词典最好什么时候还？",
+          "questionPinyin": "Lǐ Wén jiè de cídiǎn zuìhǎo shénme shíhou huán?",
+          "answer": "今天。",
+          "answerPinyin": "Jīntiān.",
+          "acceptedAnswers": [
+            "今天",
+            "最好今天还"
+          ],
+          "informationPoint": "还书时间"
+        },
+        {
+          "id": "l14_t1_detail_02",
+          "questionCn": "李文为什么不能自己去还词典？",
+          "questionPinyin": "Lǐ Wén wèishénme bù néng zìjǐ qù huán cídiǎn?",
+          "answer": "因为他没时间去。",
+          "answerPinyin": "Yīnwèi tā méi shíjiān qù.",
+          "acceptedAnswers": [
+            "他没时间",
+            "没时间去"
+          ],
+          "informationPoint": "不能亲自还书的原因"
+        },
+        {
+          "id": "l14_t1_detail_03",
+          "questionCn": "白家月下午有几节课？",
+          "questionPinyin": "Bái Jiāyuè xiàwǔ yǒu jǐ jié kè?",
+          "answer": "她下午有两节课。",
+          "answerPinyin": "Tā xiàwǔ yǒu liǎng jié kè.",
+          "acceptedAnswers": [
+            "两节",
+            "两节课"
+          ],
+          "informationPoint": "下午课程数量"
+        },
+        {
+          "id": "l14_t1_detail_04",
+          "questionCn": "李文还请白家月帮他做什么？",
+          "questionPinyin": "Lǐ Wén hái qǐng Bái Jiāyuè bāng tā zuò shénme?",
+          "answer": "帮他再借一本书。",
+          "answerPinyin": "Bāng tā zài jiè yì běn shū.",
+          "acceptedAnswers": [
+            "再借一本书",
+            "帮他借书"
+          ],
+          "informationPoint": "第二个请求"
+        },
+        {
+          "id": "l14_t1_detail_05",
+          "questionCn": "白家月为什么说明天可以把《名人的故事》借给李文？",
+          "questionPinyin": "Bái Jiāyuè wèishénme shuō míngtiān kěyǐ bǎ “Míngrén de Gùshi” jiè gěi Lǐ Wén?",
+          "answer": "因为她有这本书。",
+          "answerPinyin": "Yīnwèi tā yǒu zhè běn shū.",
+          "acceptedAnswers": [
+            "她有这本书",
+            "白家月有这本书"
+          ],
+          "informationPoint": "最后的解决办法"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "这本书被别人借走了。",
+        "focus": "主语 + 被 + 宾语 + 动词 + 其他成分",
+        "actionLabel": "进入“被动句（1）”",
+        "grammarIndex": 0
+      },
+      "paragraphPractice": {
+        "label": "调用“图书馆帮忙”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 0
+      },
+      "lifeTransfer": {
+        "promptCn": "说一次借书、还书或请同学帮忙的经历。",
+        "promptEn": "Ask a classmate for help returning and borrowing books, and explain that a book has been checked out."
+      }
+    },
+    {
+      "textId": "t_hsk3_l14_02",
+      "useGroupId": "T2",
+      "title": "校园计划与校园卡",
+      "overviewChoices": [
+        {
+          "id": "l14_t2_overall_01",
+          "focus": "main_idea",
+          "questionCn": "对话主要围绕什么安排？",
+          "questionPinyin": "Duìhuà zhǔyào wéirào shénme ānpái?",
+          "options": [
+            "完成图书馆任务，再进行其他活动",
+            "准备晚会节目",
+            "选择一本名人故事"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l14_t2_overall_02",
+          "focus": "development",
+          "questionCn": "计划进行时出现了什么变化？",
+          "questionPinyin": "Jìhuà jìnxíng shí chūxiàn le shénme biànhuà?",
+          "options": [
+            "进图书馆遇到问题，两人开始想别的办法",
+            "游泳已经结束",
+            "安妮决定回家"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l14_t2_overall_03",
+          "focus": "purpose",
+          "questionCn": "两人主要在想办法做什么？",
+          "questionPinyin": "Liǎng rén zhǔyào zài xiǎng bànfǎ zuò shénme?",
+          "options": [
+            "继续完成今天必须做的事情",
+            "准备校长的节目",
+            "制作学校网站"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l14_t2_detail_01",
+          "questionCn": "安妮想去图书馆看什么？",
+          "questionPinyin": "Ānnī xiǎng qù túshūguǎn kàn shénme?",
+          "answer": "她想看中文报纸。",
+          "answerPinyin": "Tā xiǎng kàn Zhōngwén bàozhǐ.",
+          "acceptedAnswers": [
+            "中文报纸",
+            "看中文报纸"
+          ],
+          "informationPoint": "安妮去图书馆的目的"
+        },
+        {
+          "id": "l14_t2_detail_02",
+          "questionCn": "白家月为什么进不去图书馆？",
+          "questionPinyin": "Bái Jiāyuè wèishénme jìn bu qù túshūguǎn?",
+          "answer": "因为她的校园卡不见了。",
+          "answerPinyin": "Yīnwèi tā de xiàoyuánkǎ bú jiàn le.",
+          "acceptedAnswers": [
+            "校园卡不见了",
+            "没有校园卡"
+          ],
+          "informationPoint": "无法进入图书馆的条件"
+        },
+        {
+          "id": "l14_t2_detail_03",
+          "questionCn": "她觉得校园卡可能在哪里？",
+          "questionPinyin": "Tā juéde xiàoyuánkǎ kěnéng zài nǎli?",
+          "answer": "可能被她放在家里了。",
+          "answerPinyin": "Kěnéng bèi tā fàng zài jiā li le.",
+          "acceptedAnswers": [
+            "在家里",
+            "可能放在家里"
+          ],
+          "informationPoint": "校园卡可能的位置"
+        },
+        {
+          "id": "l14_t2_detail_04",
+          "questionCn": "安妮建议她怎么找书？",
+          "questionPinyin": "Ānnī jiànyì tā zěnme zhǎo shū?",
+          "answer": "上网看看有没有电子书。",
+          "answerPinyin": "Shàngwǎng kànkan yǒu méiyǒu diànzǐshū.",
+          "acceptedAnswers": [
+            "上网找电子书",
+            "看看有没有电子书"
+          ],
+          "informationPoint": "替代解决办法"
+        },
+        {
+          "id": "l14_t2_detail_05",
+          "questionCn": "白家月为什么说她必须去图书馆？",
+          "questionPinyin": "Bái Jiāyuè wèishénme shuō tā bìxū qù túshūguǎn?",
+          "answer": "因为她还得帮李文还书。",
+          "answerPinyin": "Yīnwèi tā hái děi bāng Lǐ Wén huán shū.",
+          "acceptedAnswers": [
+            "帮李文还书",
+            "她还要还书"
+          ],
+          "informationPoint": "必须继续原计划的原因"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "我要先去图书馆借书，然后去游泳。",
+        "focus": "先 + 动作一，再/然后 + 动作二",
+        "actionLabel": "进入“承接复句“先……，再/然后……””",
+        "grammarIndex": 1
+      },
+      "paragraphPractice": {
+        "label": "调用“校园行动计划”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 1
+      },
+      "lifeTransfer": {
+        "promptCn": "说一个两步课后计划，并说明遇到问题时的备用办法。",
+        "promptEn": "Put two campus actions in order, explain the campus-card problem, and offer an alternative."
+      }
+    },
+    {
+      "textId": "t_hsk3_l14_03",
+      "useGroupId": "T3",
+      "title": "学校晚会与同伴鼓励",
+      "overviewChoices": [
+        {
+          "id": "l14_t3_overall_01",
+          "focus": "main_idea",
+          "questionCn": "两个人主要在谈什么？",
+          "questionPinyin": "Liǎng gè rén zhǔyào zài tán shénme?",
+          "options": [
+            "学校晚会和表演",
+            "图书馆借书",
+            "校园卡丢失"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l14_t3_overall_02",
+          "focus": "development",
+          "questionCn": "李文的情况怎样变化？",
+          "questionPinyin": "Lǐ Wén de qíngkuàng zěnyàng biànhuà?",
+          "options": [
+            "从想参加表演变成有些担心",
+            "从紧张变成不参加",
+            "从借书变成看报纸"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l14_t3_overall_03",
+          "focus": "purpose",
+          "questionCn": "白家月最后说话的主要目的是什么？",
+          "questionPinyin": "Bái Jiāyuè zuìhòu shuōhuà de zhǔyào mùdì shì shénme?",
+          "options": [
+            "鼓励李文相信自己",
+            "请李文去还书",
+            "让李文制作网站"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l14_t3_detail_01",
+          "questionCn": "白家月要和谁一起表演节目？",
+          "questionPinyin": "Bái Jiāyuè yào hé shéi yìqǐ biǎoyǎn jiémù?",
+          "answer": "她要和几个女生一起表演。",
+          "answerPinyin": "Tā yào hé jǐ gè nǚshēng yìqǐ biǎoyǎn.",
+          "acceptedAnswers": [
+            "几个女生",
+            "和几个女生"
+          ],
+          "informationPoint": "白家月的表演伙伴"
+        },
+        {
+          "id": "l14_t3_detail_02",
+          "questionCn": "李文想表演什么？",
+          "questionPinyin": "Lǐ Wén xiǎng biǎoyǎn shénme?",
+          "answer": "他想唱中文歌。",
+          "answerPinyin": "Tā xiǎng chàng Zhōngwén gē.",
+          "acceptedAnswers": [
+            "唱中文歌",
+            "中文歌"
+          ],
+          "informationPoint": "李文计划的节目"
+        },
+        {
+          "id": "l14_t3_detail_03",
+          "questionCn": "李文为什么不知道怎么办？",
+          "questionPinyin": "Lǐ Wén wèishénme bù zhīdào zěnme bàn?",
+          "answer": "因为他还没找到人一起表演。",
+          "answerPinyin": "Yīnwèi tā hái méi zhǎodào rén yìqǐ biǎoyǎn.",
+          "acceptedAnswers": [
+            "没找到表演伙伴",
+            "没人和他一起表演"
+          ],
+          "informationPoint": "缺少表演伙伴"
+        },
+        {
+          "id": "l14_t3_detail_04",
+          "questionCn": "李文为什么有些紧张？",
+          "questionPinyin": "Lǐ Wén wèishénme yǒuxiē jǐnzhāng?",
+          "answer": "因为要在校长、老师和很多同学面前表演。",
+          "answerPinyin": "Yīnwèi yào zài xiàozhǎng, lǎoshī hé hěn duō tóngxué miànqián biǎoyǎn.",
+          "acceptedAnswers": [
+            "要在很多人面前表演",
+            "观众很多"
+          ],
+          "informationPoint": "紧张的原因"
+        },
+        {
+          "id": "l14_t3_detail_05",
+          "questionCn": "白家月怎样鼓励李文？",
+          "questionPinyin": "Bái Jiāyuè zěnyàng gǔlì Lǐ Wén?",
+          "answer": "她说大家都喜欢听他唱歌，让他相信自己。",
+          "answerPinyin": "Tā shuō dàjiā dōu xǐhuan tīng tā chàng gē, ràng tā xiāngxìn zìjǐ.",
+          "acceptedAnswers": [
+            "大家喜欢听他唱歌",
+            "相信自己"
+          ],
+          "informationPoint": "鼓励的理由和内容"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "紧张什么啊，我们都喜欢听你唱歌，你要相信自己。",
+        "focus": "担忧或状态 + 什么（啊） + 安慰/理由",
+        "actionLabel": "进入“固定格式“×什么（啊）””",
+        "grammarIndex": 2
+      },
+      "paragraphPractice": {
+        "label": "调用“晚会鼓励”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 2
+      },
+      "lifeTransfer": {
+        "promptCn": "表达一个安全、真实的担忧，再给同伴一句鼓励和一个建议。",
+        "promptEn": "Describe a performance worry, then use an appropriate ×什么啊 expression with reassurance and a next step."
+      }
+    },
+    {
+      "textId": "t_hsk3_l14_04",
+      "useGroupId": "T4",
+      "title": "学校新年晚会日记",
+      "overviewChoices": [
+        {
+          "id": "l14_t4_overall_01",
+          "focus": "main_idea",
+          "questionCn": "这篇日记主要记录什么？",
+          "questionPinyin": "Zhè piān rìjì zhǔyào jìlù shénme?",
+          "options": [
+            "学校新年晚会",
+            "图书馆借书",
+            "游泳计划"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l14_t4_overall_02",
+          "focus": "attitude",
+          "questionCn": "作者对晚会的总体感受是什么？",
+          "questionPinyin": "Zuòzhě duì wǎnhuì de zǒngtǐ gǎnshòu shì shénme?",
+          "options": [
+            "很开心，也很累",
+            "很生气，也很急",
+            "很安静，也很无聊"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l14_t4_overall_03",
+          "focus": "purpose",
+          "questionCn": "作者写这段日记主要想做什么？",
+          "questionPinyin": "Zuòzhě xiě zhè duàn rìjì zhǔyào xiǎng zuò shénme?",
+          "options": [
+            "回顾一次有意思的校园晚会",
+            "说明怎样借电子书",
+            "介绍怎样办校园卡"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l14_t4_detail_01",
+          "questionCn": "晚会几点开始，差不多几点结束？",
+          "questionPinyin": "Wǎnhuì jǐ diǎn kāishǐ, chàbuduō jǐ diǎn jiéshù?",
+          "answer": "八点开始，差不多十二点结束。",
+          "answerPinyin": "Bā diǎn kāishǐ, chàbuduō shí’èr diǎn jiéshù.",
+          "acceptedAnswers": [
+            "八点到十二点",
+            "八点开始，十二点左右结束"
+          ],
+          "informationPoint": "晚会时间"
+        },
+        {
+          "id": "l14_t4_detail_02",
+          "questionCn": "白家月在晚会上做了什么，感觉怎么样？",
+          "questionPinyin": "Bái Jiāyuè zài wǎnhuì shang zuòle shénme, gǎnjué zěnmeyàng?",
+          "answer": "她跟大家又唱又跳，很开心，也累坏了。",
+          "answerPinyin": "Tā gēn dàjiā yòu chàng yòu tiào, hěn kāixīn, yě lèi huài le.",
+          "acceptedAnswers": [
+            "又唱又跳",
+            "开心也很累"
+          ],
+          "informationPoint": "作者参与和感受"
+        },
+        {
+          "id": "l14_t4_detail_03",
+          "questionCn": "她最喜欢什么节目？",
+          "questionPinyin": "Tā zuì xǐhuan shénme jiémù?",
+          "answer": "她最喜欢留学生们跳舞。",
+          "answerPinyin": "Tā zuì xǐhuan liúxuéshēngmen tiàowǔ.",
+          "acceptedAnswers": [
+            "留学生跳舞",
+            "留学生们跳舞"
+          ],
+          "informationPoint": "最喜欢的节目"
+        },
+        {
+          "id": "l14_t4_detail_04",
+          "questionCn": "老师和校长最后怎么样了？",
+          "questionPinyin": "Lǎoshī hé xiàozhǎng zuìhòu zěnmeyàng le?",
+          "answer": "他们被叫起来一块儿跳。",
+          "answerPinyin": "Tāmen bèi jiào qǐlai yíkuàir tiào.",
+          "acceptedAnswers": [
+            "被叫起来跳舞",
+            "和大家一块儿跳"
+          ],
+          "informationPoint": "被动参与活动"
+        },
+        {
+          "id": "l14_t4_detail_05",
+          "questionCn": "白家月过几天打算怎样再看一次晚会？",
+          "questionPinyin": "Bái Jiāyuè guò jǐ tiān dǎsuàn zěnyàng zài kàn yí cì wǎnhuì?",
+          "answer": "她打算在学校网站上看晚会视频。",
+          "answerPinyin": "Tā dǎsuàn zài xuéxiào wǎngzhàn shang kàn wǎnhuì shìpín.",
+          "acceptedAnswers": [
+            "看学校网站的视频",
+            "在网站上看晚会视频"
+          ],
+          "informationPoint": "视频来源和后续计划"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "这本书被别人借走了。",
+        "focus": "主语 + 被 + 宾语 + 动词 + 其他成分",
+        "actionLabel": "进入“被动句（1）”",
+        "grammarIndex": 0
+      },
+      "paragraphPractice": {
+        "label": "调用“新年晚会”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 3
+      },
+      "lifeTransfer": {
+        "promptCn": "按“事件—过程—感受—最喜欢的内容—后续计划”回顾一次校园活动。",
+        "promptEn": "Give a diary-style review of the New Year party, including activities, feelings, a favorite program, and a video plan."
+      }
+    }
+  ],
+  "vocabularyTaskTypes": [
+    {
+      "id": "recognition",
+      "labelCn": "认读",
+      "labelEn": "Recognition"
+    },
+    {
+      "id": "shape",
+      "labelCn": "辨形",
+      "labelEn": "Character form"
+    },
+    {
+      "id": "input",
+      "labelCn": "输入",
+      "labelEn": "Type the word"
+    },
+    {
+      "id": "collocation",
+      "labelCn": "搭配与使用",
+      "labelEn": "Collocation and use"
+    }
+  ],
+  "timerPolicy": {
+    "miniLoop": {
+      "optionsMinutes": [
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 4
+    },
+    "vocabularyFocus": {
+      "optionsMinutes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 2
+    },
+    "autoClose": false
+  },
+  "vocabularyCatalog": [
+    {
+      "id": "v14_01",
+      "hanzi": "词典",
+      "pinyin": "cídiǎn",
+      "english": "dictionary",
+      "meaningCn": "解释词语意思和用法的书或电子工具",
+      "phrases": [
+        "一本词典",
+        "查词典"
+      ],
+      "example": "这本词典最好今天还。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_02",
+      "hanzi": "最好",
+      "pinyin": "zuìhǎo",
+      "english": "had better",
+      "meaningCn": "最合适的选择是",
+      "phrases": [
+        "最好今天还",
+        "最好先问一下"
+      ],
+      "example": "这本词典最好今天还。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_03",
+      "hanzi": "节",
+      "pinyin": "jié",
+      "english": "(used to count class periods or sections of lessons)",
+      "meaningCn": "用来数课的量词",
+      "phrases": [
+        "两节课",
+        "第一节课"
+      ],
+      "example": "下午我只有两节课。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v14_04",
+      "hanzi": "图书馆",
+      "pinyin": "túshūguǎn",
+      "english": "library",
+      "meaningCn": "借书、还书和看书的地方",
+      "phrases": [
+        "去图书馆",
+        "图书馆借书"
+      ],
+      "example": "我去了好几次图书馆。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_05",
+      "hanzi": "被",
+      "pinyin": "bèi",
+      "english": "(used to indicate the passive voice) by",
+      "meaningCn": "说明主语受到了某个动作的影响",
+      "phrases": [
+        "被别人借走",
+        "被叫错名字"
+      ],
+      "example": "这本书被别人借走了。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_06",
+      "hanzi": "名人",
+      "pinyin": "míngrén",
+      "english": "celebrity",
+      "meaningCn": "很多人知道的人",
+      "phrases": [
+        "名人的故事",
+        "一位名人"
+      ],
+      "example": "我想借《名人的故事》。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v14_07",
+      "hanzi": "故事",
+      "pinyin": "gùshi",
+      "english": "story",
+      "meaningCn": "讲人或事情的一段内容",
+      "phrases": [
+        "一个故事",
+        "讲故事"
+      ],
+      "example": "这本书里有很多名人的故事。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v14_08",
+      "hanzi": "然后",
+      "pinyin": "ránhòu",
+      "english": "then",
+      "meaningCn": "做完前一件事以后",
+      "phrases": [
+        "然后去游泳",
+        "然后再回来"
+      ],
+      "example": "我要先去图书馆借书，然后去游泳。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_09",
+      "hanzi": "报纸",
+      "pinyin": "bàozhǐ",
+      "english": "newspaper",
+      "meaningCn": "报道新闻的纸质读物",
+      "phrases": [
+        "中文报纸",
+        "看报纸"
+      ],
+      "example": "我想去图书馆看看中文报纸。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v14_10",
+      "hanzi": "忘记",
+      "pinyin": "wàngjì",
+      "english": "forget",
+      "meaningCn": "没有记住或想不起来",
+      "phrases": [
+        "忘记带卡",
+        "忘记时间"
+      ],
+      "example": "我忘记校园卡放在哪儿了。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_11",
+      "hanzi": "电子书",
+      "pinyin": "diànzǐshū",
+      "english": "e-book",
+      "meaningCn": "在手机、电脑等设备上看的书",
+      "phrases": [
+        "一本电子书",
+        "看电子书"
+      ],
+      "example": "上网看看有没有电子书。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_12",
+      "hanzi": "女生",
+      "pinyin": "nǚshēng",
+      "english": "girl student",
+      "meaningCn": "女学生",
+      "phrases": [
+        "几个女生",
+        "一位女生"
+      ],
+      "example": "我和几个女生要表演一个节目。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v14_13",
+      "hanzi": "表演",
+      "pinyin": "biǎoyǎn",
+      "english": "perform",
+      "meaningCn": "在别人面前唱、跳或演",
+      "phrases": [
+        "表演节目",
+        "一起表演"
+      ],
+      "example": "下周我们要在学校表演。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_14",
+      "hanzi": "节目",
+      "pinyin": "jiémù",
+      "english": "program",
+      "meaningCn": "晚会或演出中的一项内容",
+      "phrases": [
+        "表演节目",
+        "最喜欢的节目"
+      ],
+      "example": "每个班级的同学都表演节目了。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_15",
+      "hanzi": "怎么办",
+      "pinyin": "zěnme bàn",
+      "english": "what to do",
+      "meaningCn": "询问怎样解决问题",
+      "phrases": [
+        "不知道怎么办",
+        "现在怎么办"
+      ],
+      "example": "我还没找到人一起表演，不知道怎么办。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_16",
+      "hanzi": "校长",
+      "pinyin": "xiàozhǎng",
+      "english": "principal",
+      "meaningCn": "管理学校的负责人",
+      "phrases": [
+        "学校校长",
+        "校长面前"
+      ],
+      "example": "校长和老师也来看表演。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v14_17",
+      "hanzi": "面前",
+      "pinyin": "miànqián",
+      "english": "presence",
+      "meaningCn": "人或东西前面的地方",
+      "phrases": [
+        "大家面前",
+        "校长面前"
+      ],
+      "example": "他要在很多同学面前表演。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v14_18",
+      "hanzi": "有些",
+      "pinyin": "yǒuxiē",
+      "english": "somewhat; rather",
+      "meaningCn": "有一点儿",
+      "phrases": [
+        "有些紧张",
+        "有些担心"
+      ],
+      "example": "一想到表演，他就有些紧张。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v14_19",
+      "hanzi": "相信",
+      "pinyin": "xiāngxìn",
+      "english": "believe",
+      "meaningCn": "觉得某人或某事可靠、真实",
+      "phrases": [
+        "相信自己",
+        "相信朋友"
+      ],
+      "example": "你要相信自己。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_20",
+      "hanzi": "新年",
+      "pinyin": "xīnnián",
+      "english": "New Year",
+      "meaningCn": "新的一年开始的时候",
+      "phrases": [
+        "新年晚会",
+        "新年快乐"
+      ],
+      "example": "昨天是学校的新年晚会。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_21",
+      "hanzi": "班级",
+      "pinyin": "bānjí",
+      "english": "classes and grades (in school)",
+      "meaningCn": "学校里一起上课的一组学生",
+      "phrases": [
+        "每个班级",
+        "班级节目"
+      ],
+      "example": "每个班级都准备了节目。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v14_22",
+      "hanzi": "跳",
+      "pinyin": "tiào",
+      "english": "jump",
+      "meaningCn": "身体离开地面；本课也用于“跳舞”",
+      "phrases": [
+        "跳舞",
+        "又唱又跳"
+      ],
+      "example": "大家一块儿又唱又跳。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v14_23",
+      "hanzi": "留学生",
+      "pinyin": "liúxuéshēng",
+      "english": "international student; overseas student",
+      "meaningCn": "在外国学习的学生",
+      "phrases": [
+        "几位留学生",
+        "留学生节目"
+      ],
+      "example": "我最喜欢留学生们跳舞。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v14_24",
+      "hanzi": "最后",
+      "pinyin": "zuìhòu",
+      "english": "the last; in the end",
+      "meaningCn": "所有事情的末尾或结束时",
+      "phrases": [
+        "最后一个节目",
+        "最后大家跳舞"
+      ],
+      "example": "最后老师和校长也被叫起来跳舞。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_25",
+      "hanzi": "一块儿",
+      "pinyin": "yíkuàir",
+      "english": "together; the same place",
+      "meaningCn": "一起",
+      "phrases": [
+        "一块儿跳",
+        "一块儿表演"
+      ],
+      "example": "老师和校长一块儿跳舞。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_26",
+      "hanzi": "网站",
+      "pinyin": "wǎngzhàn",
+      "english": "website",
+      "meaningCn": "互联网上可以访问的一组页面",
+      "phrases": [
+        "学校网站",
+        "打开网站"
+      ],
+      "example": "学校的网站上会有晚会的视频。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v14_27",
+      "hanzi": "视频",
+      "pinyin": "shìpín",
+      "english": "video",
+      "meaningCn": "可以看到画面、通常也能听到声音的内容",
+      "phrases": [
+        "晚会视频",
+        "看视频"
+      ],
+      "example": "我打算再看一遍晚会视频。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    }
+  ],
+  "vocabularyGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "title": "图书馆帮忙",
+      "wordIds": [
+        "v14_01",
+        "v14_02",
+        "v14_03",
+        "v14_04",
+        "v14_05",
+        "v14_06",
+        "v14_07"
+      ],
+      "recognitionWordIds": [
+        "v14_01",
+        "v14_02",
+        "v14_03",
+        "v14_04",
+        "v14_05",
+        "v14_06",
+        "v14_07"
+      ],
+      "activities": [
+        {
+          "id": "l14_m1_v14_01_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_01"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "cídiǎn：解释词语意思和用法的书或电子工具",
+          "answer": "词典",
+          "acceptedAnswers": [
+            "词典"
+          ],
+          "options": [
+            "词典",
+            "词点",
+            "识典",
+            "词店"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m1_v14_01_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_01"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "解释词语意思和用法的书或电子工具",
+          "answer": "词典",
+          "acceptedAnswers": [
+            "词典"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m1_v14_01_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_01"
+          ],
+          "promptCn": "用“一本词典”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "一本词典",
+          "answer": "这本词典最好今天还。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l14_m1_v14_02_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_02"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zuìhǎo：最合适的选择是",
+          "answer": "最好",
+          "acceptedAnswers": [
+            "最好"
+          ],
+          "options": [
+            "最好",
+            "取好",
+            "最号",
+            "最后"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m1_v14_02_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_02"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "最合适的选择是",
+          "answer": "最好",
+          "acceptedAnswers": [
+            "最好"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m1_v14_02_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_02"
+          ],
+          "promptCn": "用“最好今天还”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "最好今天还",
+          "answer": "这本词典最好今天还。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l14_m1_v14_03_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_03"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "jié：用来数课的量词",
+          "answer": "节",
+          "acceptedAnswers": [
+            "节"
+          ],
+          "options": [
+            "节",
+            "爷",
+            "印",
+            "却"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m1_v14_04_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_04"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "túshūguǎn：借书、还书和看书的地方",
+          "answer": "图书馆",
+          "acceptedAnswers": [
+            "图书馆"
+          ],
+          "options": [
+            "图书馆",
+            "图术馆",
+            "图书管",
+            "园书馆"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m1_v14_04_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_04"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "借书、还书和看书的地方",
+          "answer": "图书馆",
+          "acceptedAnswers": [
+            "图书馆"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m1_v14_04_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_04"
+          ],
+          "promptCn": "用“去图书馆”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "去图书馆",
+          "answer": "我去了好几次图书馆。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l14_m1_v14_05_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_05"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "bèi：说明主语受到了某个动作的影响",
+          "answer": "被",
+          "acceptedAnswers": [
+            "被"
+          ],
+          "options": [
+            "被",
+            "破",
+            "坡",
+            "皮"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m1_v14_05_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_05"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "说明主语受到了某个动作的影响",
+          "answer": "被",
+          "acceptedAnswers": [
+            "被"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m1_v14_05_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_05"
+          ],
+          "promptCn": "用“被别人借走”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "被别人借走",
+          "answer": "这本书被别人借走了。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l14_m1_v14_06_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_06"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "míngrén：很多人知道的人",
+          "answer": "名人",
+          "acceptedAnswers": [
+            "名人"
+          ],
+          "options": [
+            "名人",
+            "明人",
+            "民人",
+            "各人"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m1_v14_07_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_07"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "gùshi：讲人或事情的一段内容",
+          "answer": "故事",
+          "acceptedAnswers": [
+            "故事"
+          ],
+          "options": [
+            "故事",
+            "古事",
+            "故是",
+            "做事"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "title": "校园行动顺序",
+      "wordIds": [
+        "v14_08",
+        "v14_09",
+        "v14_10",
+        "v14_11"
+      ],
+      "recognitionWordIds": [
+        "v14_08",
+        "v14_09",
+        "v14_10",
+        "v14_11"
+      ],
+      "activities": [
+        {
+          "id": "l14_m2_v14_08_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_08"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "ránhòu：做完前一件事以后",
+          "answer": "然后",
+          "acceptedAnswers": [
+            "然后"
+          ],
+          "options": [
+            "然后",
+            "燃后",
+            "然候",
+            "虽后"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m2_v14_08_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_08"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "做完前一件事以后",
+          "answer": "然后",
+          "acceptedAnswers": [
+            "然后"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m2_v14_08_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_08"
+          ],
+          "promptCn": "用“然后去游泳”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "然后去游泳",
+          "answer": "我要先去图书馆借书，然后去游泳。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l14_m2_v14_09_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_09"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "bàozhǐ：报道新闻的纸质读物",
+          "answer": "报纸",
+          "acceptedAnswers": [
+            "报纸"
+          ],
+          "options": [
+            "报纸",
+            "抱纸",
+            "报低",
+            "服纸"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m2_v14_10_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_10"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "wàngjì：没有记住或想不起来",
+          "answer": "忘记",
+          "acceptedAnswers": [
+            "忘记"
+          ],
+          "options": [
+            "忘记",
+            "忙记",
+            "忘纪",
+            "望记"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m2_v14_10_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_10"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "没有记住或想不起来",
+          "answer": "忘记",
+          "acceptedAnswers": [
+            "忘记"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m2_v14_10_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_10"
+          ],
+          "promptCn": "用“忘记带卡”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "忘记带卡",
+          "answer": "我忘记校园卡放在哪儿了。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l14_m2_v14_11_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_11"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "diànzǐshū：在手机、电脑等设备上看的书",
+          "answer": "电子书",
+          "acceptedAnswers": [
+            "电子书"
+          ],
+          "options": [
+            "电子书",
+            "电字书",
+            "电子术",
+            "由子书"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m2_v14_11_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_11"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "在手机、电脑等设备上看的书",
+          "answer": "电子书",
+          "acceptedAnswers": [
+            "电子书"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m2_v14_11_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_11"
+          ],
+          "promptCn": "用“一本电子书”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "一本电子书",
+          "answer": "上网看看有没有电子书。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "title": "晚会鼓励对话",
+      "wordIds": [
+        "v14_12",
+        "v14_13",
+        "v14_14",
+        "v14_15",
+        "v14_16",
+        "v14_17",
+        "v14_18",
+        "v14_19"
+      ],
+      "recognitionWordIds": [
+        "v14_12",
+        "v14_13",
+        "v14_14",
+        "v14_15",
+        "v14_16",
+        "v14_17",
+        "v14_18",
+        "v14_19"
+      ],
+      "activities": [
+        {
+          "id": "l14_m3_v14_12_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_12"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "nǚshēng：女学生",
+          "answer": "女生",
+          "acceptedAnswers": [
+            "女生"
+          ],
+          "options": [
+            "女生",
+            "女人",
+            "好生",
+            "安生"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m3_v14_13_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_13"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "biǎoyǎn：在别人面前唱、跳或演",
+          "answer": "表演",
+          "acceptedAnswers": [
+            "表演"
+          ],
+          "options": [
+            "表演",
+            "麦演",
+            "表现",
+            "表滨"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m3_v14_13_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_13"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "在别人面前唱、跳或演",
+          "answer": "表演",
+          "acceptedAnswers": [
+            "表演"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m3_v14_13_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_13"
+          ],
+          "promptCn": "用“表演节目”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "表演节目",
+          "answer": "下周我们要在学校表演。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l14_m3_v14_14_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_14"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "jiémù：晚会或演出中的一项内容",
+          "answer": "节目",
+          "acceptedAnswers": [
+            "节目"
+          ],
+          "options": [
+            "节目",
+            "结目",
+            "节木",
+            "即目"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m3_v14_14_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_14"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "晚会或演出中的一项内容",
+          "answer": "节目",
+          "acceptedAnswers": [
+            "节目"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m3_v14_14_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_14"
+          ],
+          "promptCn": "用“表演节目”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "表演节目",
+          "answer": "每个班级的同学都表演节目了。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l14_m3_v14_15_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_15"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zěnme bàn：询问怎样解决问题",
+          "answer": "怎么办",
+          "acceptedAnswers": [
+            "怎么办"
+          ],
+          "options": [
+            "怎么办",
+            "怎样办",
+            "怎么为",
+            "什么办"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m3_v14_15_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_15"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "询问怎样解决问题",
+          "answer": "怎么办",
+          "acceptedAnswers": [
+            "怎么办"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m3_v14_15_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_15"
+          ],
+          "promptCn": "用“不知道怎么办”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "不知道怎么办",
+          "answer": "我还没找到人一起表演，不知道怎么办。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l14_m3_v14_16_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_16"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "xiàozhǎng：管理学校的负责人",
+          "answer": "校长",
+          "acceptedAnswers": [
+            "校长"
+          ],
+          "options": [
+            "校长",
+            "较长",
+            "学校",
+            "校常"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m3_v14_17_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_17"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "miànqián：人或东西前面的地方",
+          "answer": "面前",
+          "acceptedAnswers": [
+            "面前"
+          ],
+          "options": [
+            "面前",
+            "西前",
+            "面钱",
+            "前面"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m3_v14_18_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_18"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "yǒuxiē：有一点儿",
+          "answer": "有些",
+          "acceptedAnswers": [
+            "有些"
+          ],
+          "options": [
+            "有些",
+            "有此",
+            "友些",
+            "有点"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m3_v14_19_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_19"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "xiāngxìn：觉得某人或某事可靠、真实",
+          "answer": "相信",
+          "acceptedAnswers": [
+            "相信"
+          ],
+          "options": [
+            "相信",
+            "想信",
+            "相心",
+            "香信"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m3_v14_19_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_19"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "觉得某人或某事可靠、真实",
+          "answer": "相信",
+          "acceptedAnswers": [
+            "相信"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m3_v14_19_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_19"
+          ],
+          "promptCn": "用“相信自己”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "相信自己",
+          "answer": "你要相信自己。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "title": "新年晚会回顾",
+      "wordIds": [
+        "v14_20",
+        "v14_21",
+        "v14_22",
+        "v14_23",
+        "v14_24",
+        "v14_25",
+        "v14_26",
+        "v14_27"
+      ],
+      "recognitionWordIds": [
+        "v14_20",
+        "v14_21",
+        "v14_22",
+        "v14_23",
+        "v14_24",
+        "v14_25",
+        "v14_26",
+        "v14_27"
+      ],
+      "activities": [
+        {
+          "id": "l14_m4_v14_20_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_20"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "xīnnián：新的一年开始的时候",
+          "answer": "新年",
+          "acceptedAnswers": [
+            "新年"
+          ],
+          "options": [
+            "新年",
+            "亲年",
+            "新生",
+            "今年"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m4_v14_20_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_20"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "新的一年开始的时候",
+          "answer": "新年",
+          "acceptedAnswers": [
+            "新年"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m4_v14_20_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_20"
+          ],
+          "promptCn": "用“新年晚会”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "新年晚会",
+          "answer": "昨天是学校的新年晚会。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l14_m4_v14_21_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_21"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "bānjí：学校里一起上课的一组学生",
+          "answer": "班级",
+          "acceptedAnswers": [
+            "班级"
+          ],
+          "options": [
+            "班级",
+            "斑级",
+            "班极",
+            "年级"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m4_v14_22_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_22"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "tiào：身体离开地面的动作；本课也用于舞蹈",
+          "answer": "跳",
+          "acceptedAnswers": [
+            "跳"
+          ],
+          "options": [
+            "跳",
+            "桃",
+            "逃",
+            "挑"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m4_v14_23_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_23"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "liúxuéshēng：在外国学习的学生",
+          "answer": "留学生",
+          "acceptedAnswers": [
+            "留学生"
+          ],
+          "options": [
+            "留学生",
+            "流学生",
+            "留学主",
+            "游学生"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m4_v14_24_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_24"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zuìhòu：所有事情的末尾或结束时",
+          "answer": "最后",
+          "acceptedAnswers": [
+            "最后"
+          ],
+          "options": [
+            "最后",
+            "最候",
+            "醉后",
+            "后来"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m4_v14_24_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_24"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "所有事情的末尾或结束时",
+          "answer": "最后",
+          "acceptedAnswers": [
+            "最后"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m4_v14_24_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_24"
+          ],
+          "promptCn": "用“最后一个节目”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "最后一个节目",
+          "answer": "最后老师和校长也被叫起来跳舞。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l14_m4_v14_25_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_25"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "yíkuàir：一起",
+          "answer": "一块儿",
+          "acceptedAnswers": [
+            "一块儿"
+          ],
+          "options": [
+            "一块儿",
+            "一快儿",
+            "一决儿",
+            "一会儿"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m4_v14_25_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_25"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "一起",
+          "answer": "一块儿",
+          "acceptedAnswers": [
+            "一块儿"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m4_v14_25_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_25"
+          ],
+          "promptCn": "用“一块儿跳”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "一块儿跳",
+          "answer": "老师和校长一块儿跳舞。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l14_m4_v14_26_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_26"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "wǎngzhàn：互联网上可以访问的一组页面",
+          "answer": "网站",
+          "acceptedAnswers": [
+            "网站"
+          ],
+          "options": [
+            "网站",
+            "网战",
+            "刚站",
+            "网点"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m4_v14_26_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_26"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "互联网上可以访问的一组页面",
+          "answer": "网站",
+          "acceptedAnswers": [
+            "网站"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m4_v14_26_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_26"
+          ],
+          "promptCn": "用“学校网站”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "学校网站",
+          "answer": "学校的网站上会有晚会的视频。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "id": "l14_m4_v14_27_shape",
+          "type": "shape",
+          "targetWordIds": [
+            "v14_27"
+          ],
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "shìpín：可以看到画面、通常也能听到声音的内容",
+          "answer": "视频",
+          "acceptedAnswers": [
+            "视频"
+          ],
+          "options": [
+            "视频",
+            "视品",
+            "观频",
+            "视顺"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m4_v14_27_input",
+          "type": "input",
+          "targetWordIds": [
+            "v14_27"
+          ],
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "可以看到画面、通常也能听到声音的内容",
+          "answer": "视频",
+          "acceptedAnswers": [
+            "视频"
+          ],
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l14_m4_v14_27_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v14_27"
+          ],
+          "promptCn": "用“晚会视频”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "晚会视频",
+          "answer": "我打算再看一遍晚会视频。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    }
+  ],
+  "resourceOverrides": [],
+  "supportOnlyStructures": [],
+  "evidencePolicy": {
+    "coreTypes": [
+      "entry_expression",
+      "actual_learning_path",
+      "exit_expression"
+    ],
+    "pathEvent": "opened",
+    "optionalSignals": [
+      "support_request",
+      "self_reflection",
+      "teacher_observation"
+    ]
+  },
+  "supportOptions": [
+    {
+      "id": "vocabulary",
+      "labelCn": "我缺少合适的词",
+      "labelEn": "I need the right words"
+    },
+    {
+      "id": "organization",
+      "labelCn": "我不知道怎样组织信息",
+      "labelEn": "I need help organizing my ideas"
+    },
+    {
+      "id": "structure",
+      "labelCn": "我需要一个句子结构",
+      "labelEn": "I need a sentence frame"
+    },
+    {
+      "id": "teacher",
+      "labelCn": "我想获得老师的帮助",
+      "labelEn": "I want help from the teacher"
+    }
+  ],
+  "feelingOptions": [
+    {
+      "id": "clearer",
+      "labelCn": "我说得更清楚了",
+      "labelEn": "My expression is clearer"
+    },
+    {
+      "id": "more_complete",
+      "labelCn": "我说得更完整了",
+      "labelEn": "My expression is more complete"
+    },
+    {
+      "id": "more_natural",
+      "labelCn": "我说得更自然了",
+      "labelEn": "My expression is more natural"
+    },
+    {
+      "id": "still_need_help",
+      "labelCn": "我还需要帮助",
+      "labelEn": "I still need help"
+    }
+  ],
+  "coreEvidence": [
+    "entry_expression",
+    "actual_learning_path",
+    "exit_expression"
+  ],
+  "capabilities": [
+    "select_text_mini_loop",
+    "launch_interaction",
+    "independent_answer",
+    "support_request",
+    "anonymous_return",
+    "open_support",
+    "reanswer",
+    "record_teacher_decision",
+    "compare_entry_exit",
+    "teacher_selected_vocabulary_focus",
+    "shared_countdown",
+    "native_course_resource_return",
+    "configured_task_stimulus"
+  ]
+}

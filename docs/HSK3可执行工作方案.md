@@ -1,5 +1,7 @@
 # HSK3 ClassPro/ClassReady 可执行工作方案
 
+> **历史文档提示（2026-10-28）：** 本文是 HSK3-L01 启动阶段的执行方案，保留用于追溯，不再定义 L14 及后续课程的数据契约和建设流程。新课请执行 [ClassPro-HSK3-L14及后续课程建设工作规范.md](./ClassPro-HSK3-L14及后续课程建设工作规范.md)。
+
 依据文件：`HSK3_ClassPro_ClassReady_课程规划与启动方案.docx`
 
 更新时间：2026-08-18

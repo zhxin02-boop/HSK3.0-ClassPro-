@@ -11,8 +11,10 @@
   const DIRECT_MODE = PARAMS.get('direct') === '1' || /(^|\.)github\.io$/i.test(location.hostname);
   const RUN = PARAMS.get('run') || `run_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 7)}`;
   if (!PARAMS.get('run')) { PARAMS.set('run', RUN); if (DIRECT_MODE) PARAMS.set('direct', '1'); history.replaceState({}, '', `${location.pathname}?${PARAMS.toString()}${location.hash}`); }
-  const DATA_VERSION = `${EXPERIMENT}-v1`;
-  const CONFIG_URL = `../data-model/experiments/${encodeURIComponent(LESSON)}-USE-${encodeURIComponent(PROFILE.toUpperCase())}.json?v=3`;
+  const REQUESTED_DATA_VERSION = PARAMS.get('dataVersion');
+  const DATA_VERSION = REQUESTED_DATA_VERSION || `${EXPERIMENT}-v2`;
+  const CONFIG_VERSION = REQUESTED_DATA_VERSION || '4';
+  const CONFIG_URL = `../data-model/experiments/${encodeURIComponent(LESSON)}-USE-${encodeURIComponent(PROFILE.toUpperCase())}.json?v=${encodeURIComponent(CONFIG_VERSION)}`;
   const STORAGE_KEY = `ClassProUsePilot_${EXPERIMENT}_${ROOM}`;
   const TOPIC_ROOT = `classpro/use/v2/${CLASS_ID}/${EXPERIMENT}/${ROOM}/${RUN}`;
   const TOPICS = { control: `${TOPIC_ROOT}/control`, answers: `${TOPIC_ROOT}/answers`, presence: `${TOPIC_ROOT}/presence`, ack: `${TOPIC_ROOT}/ack` };
