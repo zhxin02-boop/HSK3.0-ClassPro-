@@ -1,0 +1,2776 @@
+{
+  "schemaVersion": "classpro-use-profile/v3",
+  "experiment": {
+    "id": "l15-use-pilot-v1",
+    "title": "第15课·以用为主线升级版",
+    "lessonLabel": "第15课",
+    "sourceLesson": "HSK3-L15",
+    "scope": "四个课文MINI循环；保留L15原生词汇场景、渐进式语法、课文体裁和正式练习。"
+  },
+  "sources": {
+    "lesson": {
+      "path": "../lessons/HSK3-L15.json",
+      "sha256": "50D753AEDAB0F927B3EADFC0F32D581363C099811093DB371E9ADEC36990FA18"
+    },
+    "teacher": {
+      "path": "../../in-class/teacher.html"
+    },
+    "student": {
+      "path": "../../in-class/student.html"
+    }
+  },
+  "nativeTeaching": {
+    "preserveCourseStyles": true,
+    "grammar": {
+      "source": "formal_lesson",
+      "preserveExamples": true,
+      "preserveHighlights": true,
+      "preserveOralQuestions": true,
+      "preserveFollowUp": true
+    },
+    "text": {
+      "source": "formal_lesson",
+      "preservePresentation": true,
+      "preserveDiary": true
+    },
+    "vocabulary": {
+      "source": "formal_lesson",
+      "preserveScenes": true,
+      "preserveHotspots": true
+    }
+  },
+  "useGroups": [
+    {
+      "id": "T1",
+      "icon": "🏘️",
+      "label": "课文 1",
+      "title": "适合谁住的小区",
+      "goal": "介绍附近的生活设施、交通特点，并说明这里适合什么人居住。",
+      "goalEn": "Introduce nearby living facilities, transportation features, and who the place is suitable for.",
+      "image": "images/hsk3-l15/photo-text-1-community-talk.png",
+      "imageLabel": "小区环境与居民需要",
+      "entryPromptCn": "看图先说20—30秒：小区附近有什么？这里可能适合谁住？",
+      "entryPromptEn": "Look at the picture and briefly describe the community and who may live there.",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "介绍附近的生活设施"
+        },
+        {
+          "id": "step_2",
+          "label": "说明交通特点"
+        },
+        {
+          "id": "step_3",
+          "label": "说明适合什么人居住"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t1_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "附近、马路、平时、根据、老人",
+          "contentEn": ""
+        },
+        {
+          "id": "t1_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Organization support",
+          "contentCn": "介绍附近的生活设施 → 说明交通特点 → 说明适合什么人居住",
+          "contentEn": ""
+        }
+      ],
+      "textId": "t_hsk3_l15_01",
+      "entry": {
+        "id": "l15_t1_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图先说20—30秒：小区附近有什么？这里可能适合谁住？",
+        "promptEn": "Look at the picture and briefly describe the community and who may live there.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l15/photo-text-1-community-talk.png",
+          "labelCn": "小区环境与居民需要",
+          "altCn": "小区环境与居民需要",
+          "instructionCn": "看图先说20—30秒：小区附近有什么？这里可能适合谁住？",
+          "instructionEn": "Look at the picture and briefly describe the community and who may live there."
+        }
+      },
+      "exit": {
+        "id": "l15_t1_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "介绍附近的生活设施、交通特点，并说明这里适合什么人居住。",
+        "promptEn": "Introduce nearby living facilities, transportation features, and who the place is suitable for."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文1词汇",
+          "vocabSession": "1"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "介词“根据”",
+          "grammarIndex": 0
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文1",
+          "textIndex": 0
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：适合谁住的小区",
+          "routeState": {
+            "t2ki": 0
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l15_task_01",
+          "status": "ready",
+          "purpose": "适合谁住的小区"
+        },
+        {
+          "id": "l15_para_01",
+          "status": "ready",
+          "purpose": "我的小区"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "icon": "🏯",
+      "label": "课文 2",
+      "title": "半个本地人推荐",
+      "goal": "先问游客的兴趣，推荐两个地方，并分别说明推荐理由。",
+      "goalEn": "Ask about the visitor’s interests, recommend two places, and explain each recommendation.",
+      "image": "images/hsk3-l15/photo-text-2-nanjing-advice.png",
+      "imageLabel": "南京旅行建议",
+      "entryPromptCn": "看图先说20—30秒：游客想了解什么？你会先问什么？",
+      "entryPromptEn": "Look at the picture and briefly state what the visitor wants to know.",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "问问游客的兴趣"
+        },
+        {
+          "id": "step_2",
+          "label": "推荐两个地方"
+        },
+        {
+          "id": "step_3",
+          "label": "分别说明为什么推荐"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t2_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "了解、南京、有名、景点、外地",
+          "contentEn": ""
+        },
+        {
+          "id": "t2_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Organization support",
+          "contentCn": "问问游客的兴趣 → 推荐两个地方 → 分别说明为什么推荐",
+          "contentEn": ""
+        }
+      ],
+      "textId": "t_hsk3_l15_02",
+      "entry": {
+        "id": "l15_t2_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图先说20—30秒：游客想了解什么？你会先问什么？",
+        "promptEn": "Look at the picture and briefly state what the visitor wants to know.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l15/photo-text-2-nanjing-advice.png",
+          "labelCn": "南京旅行建议",
+          "altCn": "南京旅行建议",
+          "instructionCn": "看图先说20—30秒：游客想了解什么？你会先问什么？",
+          "instructionEn": "Look at the picture and briefly state what the visitor wants to know."
+        }
+      },
+      "exit": {
+        "id": "l15_t2_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "先问问游客的兴趣，再推荐两个地方，并分别说明为什么推荐。",
+        "promptEn": "Ask about the visitor’s interests, recommend two places, and explain each recommendation."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文2词汇",
+          "vocabSession": "2"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "数量重叠“数词+量词+数词+量词”",
+          "grammarIndex": 1
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文2",
+          "textIndex": 1
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：问兴趣再推荐",
+          "routeState": {
+            "t2ki": 1
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l15_task_02",
+          "status": "ready",
+          "purpose": "问兴趣再推荐"
+        },
+        {
+          "id": "l15_para_02",
+          "status": "ready",
+          "purpose": "南京建议"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "icon": "🌊",
+      "label": "课文 3",
+      "title": "我了解的黄河",
+      "goal": "请介绍一下你了解的“黄河”。",
+      "goalEn": "Introduce what you know about the Yellow River.",
+      "image": "images/hsk3-l15/photo-text-3-yellow-river-talk.png",
+      "imageLabel": "黄河与生活",
+      "entryPromptCn": "看图先说20—30秒：这是什么河？它为什么重要？",
+      "entryPromptEn": "Look at the picture and briefly say which river it is and why it matters.",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说出黄河的名称和位置"
+        },
+        {
+          "id": "step_2",
+          "label": "介绍一个历史或生活事实"
+        },
+        {
+          "id": "step_3",
+          "label": "说明黄河的重要性"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t3_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "河、关系、养、黄河",
+          "contentEn": ""
+        },
+        {
+          "id": "t3_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Organization support",
+          "contentCn": "说出黄河的名称和位置 → 介绍一个历史或生活事实 → 说明黄河的重要性",
+          "contentEn": ""
+        }
+      ],
+      "textId": "t_hsk3_l15_03",
+      "entry": {
+        "id": "l15_t3_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图先说20—30秒：这是什么河？它为什么重要？",
+        "promptEn": "Look at the picture and briefly say which river it is and why it matters.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l15/photo-text-3-yellow-river-talk.png",
+          "labelCn": "黄河与生活",
+          "altCn": "黄河与生活",
+          "instructionCn": "看图先说20—30秒：这是什么河？它为什么重要？",
+          "instructionEn": "Look at the picture and briefly say which river it is and why it matters."
+        }
+      },
+      "exit": {
+        "id": "l15_t3_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "请介绍一下你了解的“黄河”。",
+        "promptEn": "Introduce what you know about the Yellow River."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文3词汇",
+          "vocabSession": "3"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "固定短语“在……看来”",
+          "grammarIndex": 2
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文3",
+          "textIndex": 2
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：我了解的黄河",
+          "routeState": {
+            "t2ki": 2
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l15_task_03",
+          "status": "ready",
+          "purpose": "我了解的黄河"
+        },
+        {
+          "id": "l15_para_03",
+          "status": "ready",
+          "purpose": "黄河故事"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "icon": "🌿",
+      "label": "课文 4",
+      "title": "我最喜欢的地方",
+      "goal": "讲一个最喜欢的地方，说明原因，并讲一个和这个地方有关的故事。",
+      "goalEn": "Talk about your favorite place, explain why, and tell your story with that place.",
+      "image": "images/hsk3-l15/photo-text-4-riverside-memory.png",
+      "imageLabel": "河边旧记忆",
+      "entryPromptCn": "看图先说20—30秒：这里有什么？人在这里可能会想起什么？",
+      "entryPromptEn": "Look at the picture and briefly describe the place and a possible memory.",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说出最喜欢的地方"
+        },
+        {
+          "id": "step_2",
+          "label": "说明为什么喜欢"
+        },
+        {
+          "id": "step_3",
+          "label": "讲一个和这个地方有关的故事"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t4_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "西北、经过、草地、遇见",
+          "contentEn": ""
+        },
+        {
+          "id": "t4_order",
+          "labelCn": "表达顺序",
+          "labelEn": "Organization support",
+          "contentCn": "说出最喜欢的地方 → 说明为什么喜欢 → 讲一个和这个地方有关的故事",
+          "contentEn": ""
+        }
+      ],
+      "textId": "t_hsk3_l15_04",
+      "entry": {
+        "id": "l15_t4_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图先说20—30秒：这里有什么？人在这里可能会想起什么？",
+        "promptEn": "Look at the picture and briefly describe the place and a possible memory.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l15/photo-text-4-riverside-memory.png",
+          "labelCn": "河边旧记忆",
+          "altCn": "河边旧记忆",
+          "instructionCn": "看图先说20—30秒：这里有什么？人在这里可能会想起什么？",
+          "instructionEn": "Look at the picture and briefly describe the place and a possible memory."
+        }
+      },
+      "exit": {
+        "id": "l15_t4_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "讲一个你最喜欢的地方，说明为什么喜欢，并讲一个你和这个地方的故事。",
+        "promptEn": "Talk about your favorite place, explain why, and tell your story with that place."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文4词汇",
+          "vocabSession": "4"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "固定短语“不一会儿”",
+          "grammarIndex": 3
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文4",
+          "textIndex": 3
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：我最喜欢的地方",
+          "routeState": {
+            "t2ki": 3
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l15_task_04",
+          "status": "ready",
+          "purpose": "我最喜欢的地方"
+        },
+        {
+          "id": "l15_para_04",
+          "status": "ready",
+          "purpose": "河边散步"
+        }
+      ]
+    }
+  ],
+  "textLearning": [
+    {
+      "textId": "t_hsk3_l15_01",
+      "useGroupId": "T1",
+      "title": "适合全家住的小区",
+      "overviewChoices": [
+        {
+          "id": "l15_t1_overall_01",
+          "focus": "main_idea",
+          "questionCn": "课文主要谈什么？",
+          "questionPinyin": "",
+          "options": [
+            "小区环境和家庭需要",
+            "南京旅行",
+            "黄河历史"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l15_t1_overall_02",
+          "focus": "main_idea",
+          "questionCn": "事情最后怎样发展？",
+          "questionPinyin": "",
+          "options": [
+            "人物得到需要的信息或产生变化",
+            "没有任何变化",
+            "换了完全不同的话题"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l15_t1_overall_03",
+          "focus": "main_idea",
+          "questionCn": "这篇课文的交际目的是什么？",
+          "questionPinyin": "",
+          "options": [
+            "介绍、解释或表达观点",
+            "只读生词",
+            "只问时间"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l15_t1_detail_01",
+          "questionCn": "附近买东西方便吗？",
+          "questionPinyin": "",
+          "answer": "方便，过马路就是超市。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "方便，过马路就是超市。"
+          ],
+          "informationPoint": "附近购物"
+        },
+        {
+          "id": "l15_t1_detail_02",
+          "questionCn": "孩子们在哪儿玩？",
+          "questionPinyin": "",
+          "answer": "在树下做游戏。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "在树下做游戏。"
+          ],
+          "informationPoint": "儿童活动"
+        },
+        {
+          "id": "l15_t1_detail_03",
+          "questionCn": "为什么买大房子？",
+          "questionPinyin": "",
+          "answer": "让爸妈一起住。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "让爸妈一起住。"
+          ],
+          "informationPoint": "购房原因"
+        },
+        {
+          "id": "l15_t1_detail_04",
+          "questionCn": "哪类居民多？",
+          "questionPinyin": "",
+          "answer": "老人多。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "老人多。"
+          ],
+          "informationPoint": "居民构成"
+        },
+        {
+          "id": "l15_t1_detail_05",
+          "questionCn": "变化根据什么？",
+          "questionPinyin": "",
+          "answer": "根据老人的需要。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "根据老人的需要。"
+          ],
+          "informationPoint": "变化依据"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "这几年小区根据他们的需要，有了很多变化。",
+        "focus": "根据 + 依据/情况 + 行动或结果",
+        "actionLabel": "进入“介词“根据””",
+        "grammarIndex": 0
+      },
+      "paragraphPractice": {
+        "label": "调用“我的小区”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 0
+      },
+      "lifeTransfer": {
+        "promptCn": "介绍附近的生活设施、交通特点，并说明这里适合什么人居住。",
+        "promptEn": "Introduce nearby living facilities, transportation features, and who the place is suitable for."
+      }
+    },
+    {
+      "textId": "t_hsk3_l15_02",
+      "useGroupId": "T2",
+      "title": "半个南京人的旅行建议",
+      "overviewChoices": [
+        {
+          "id": "l15_t2_overall_01",
+          "focus": "main_idea",
+          "questionCn": "课文主要谈什么？",
+          "questionPinyin": "",
+          "options": [
+            "南京旅行建议",
+            "社区买房",
+            "河边记忆"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l15_t2_overall_02",
+          "focus": "main_idea",
+          "questionCn": "事情最后怎样发展？",
+          "questionPinyin": "",
+          "options": [
+            "人物得到需要的信息或产生变化",
+            "没有任何变化",
+            "换了完全不同的话题"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l15_t2_overall_03",
+          "focus": "main_idea",
+          "questionCn": "这篇课文的交际目的是什么？",
+          "questionPinyin": "",
+          "options": [
+            "介绍、解释或表达观点",
+            "只读生词",
+            "只问时间"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l15_t2_detail_01",
+          "questionCn": "谁更了解南京？",
+          "questionPinyin": "",
+          "answer": "杨同乐。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "杨同乐。"
+          ],
+          "informationPoint": "人物经验"
+        },
+        {
+          "id": "l15_t2_detail_02",
+          "questionCn": "南京有多久历史？",
+          "questionPinyin": "",
+          "answer": "两千年以上。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "两千年以上。"
+          ],
+          "informationPoint": "历史"
+        },
+        {
+          "id": "l15_t2_detail_03",
+          "questionCn": "有什么景点？",
+          "questionPinyin": "",
+          "answer": "老城、老街和有名景点。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "老城、老街和有名景点。"
+          ],
+          "informationPoint": "旅游资源"
+        },
+        {
+          "id": "l15_t2_detail_04",
+          "questionCn": "还想知道什么？",
+          "questionPinyin": "",
+          "answer": "外地人不知道的地方。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "外地人不知道的地方。"
+          ],
+          "informationPoint": "信息需求"
+        },
+        {
+          "id": "l15_t2_detail_05",
+          "questionCn": "下班后做什么？",
+          "questionPinyin": "",
+          "answer": "边吃边聊。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "边吃边聊。"
+          ],
+          "informationPoint": "后续安排"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "我得一点儿一点儿地给您讲。",
+        "focus": "数词 + 量词 + 数词 + 量词 +（地）+ 动词",
+        "actionLabel": "进入“数量重叠“数词+量词+数词+量词””",
+        "grammarIndex": 1
+      },
+      "paragraphPractice": {
+        "label": "调用“南京建议”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 1
+      },
+      "lifeTransfer": {
+        "promptCn": "先问问游客的兴趣，再推荐两个地方，并分别说明为什么推荐。",
+        "promptEn": "Ask about the visitor’s interests, recommend two places, and explain each recommendation."
+      }
+    },
+    {
+      "textId": "t_hsk3_l15_03",
+      "useGroupId": "T3",
+      "title": "黄河为什么重要",
+      "overviewChoices": [
+        {
+          "id": "l15_t3_overall_01",
+          "focus": "main_idea",
+          "questionCn": "课文主要谈什么？",
+          "questionPinyin": "",
+          "options": [
+            "黄河的名字和意义",
+            "南京老街",
+            "小区环境"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l15_t3_overall_02",
+          "focus": "main_idea",
+          "questionCn": "事情最后怎样发展？",
+          "questionPinyin": "",
+          "options": [
+            "人物得到需要的信息或产生变化",
+            "没有任何变化",
+            "换了完全不同的话题"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l15_t3_overall_03",
+          "focus": "main_idea",
+          "questionCn": "这篇课文的交际目的是什么？",
+          "questionPinyin": "",
+          "options": [
+            "介绍、解释或表达观点",
+            "只读生词",
+            "只问时间"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l15_t3_detail_01",
+          "questionCn": "名字跟什么有关？",
+          "questionPinyin": "",
+          "answer": "跟颜色有关。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "跟颜色有关。"
+          ],
+          "informationPoint": "名称"
+        },
+        {
+          "id": "l15_t3_detail_02",
+          "questionCn": "河水什么颜色？",
+          "questionPinyin": "",
+          "answer": "黄色。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "黄色。"
+          ],
+          "informationPoint": "颜色"
+        },
+        {
+          "id": "l15_t3_detail_03",
+          "questionCn": "是最长的河吗？",
+          "questionPinyin": "",
+          "answer": "不是。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "不是。"
+          ],
+          "informationPoint": "判断"
+        },
+        {
+          "id": "l15_t3_detail_04",
+          "questionCn": "以前人们住哪里？",
+          "questionPinyin": "",
+          "answer": "黄河边。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "黄河边。"
+          ],
+          "informationPoint": "历史"
+        },
+        {
+          "id": "l15_t3_detail_05",
+          "questionCn": "像妈妈说明什么？",
+          "questionPinyin": "",
+          "answer": "养了人们几千年。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "养了人们几千年。"
+          ],
+          "informationPoint": "文化比喻"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "在我们中国看人看来，黄河像妈妈一样，养了我们几千年。",
+        "focus": "在 + 人/群体 + 看来，+ 观点",
+        "actionLabel": "进入“固定短语“在……看来””",
+        "grammarIndex": 2
+      },
+      "paragraphPractice": {
+        "label": "调用“黄河故事”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 2
+      },
+      "lifeTransfer": {
+        "promptCn": "请介绍一下你了解的“黄河”。",
+        "promptEn": "Introduce what you know about the Yellow River."
+      }
+    },
+    {
+      "textId": "t_hsk3_l15_04",
+      "useGroupId": "T4",
+      "title": "我最喜欢的河边",
+      "overviewChoices": [
+        {
+          "id": "l15_t4_overall_01",
+          "focus": "main_idea",
+          "questionCn": "课文主要谈什么？",
+          "questionPinyin": "",
+          "options": [
+            "最喜欢的河边",
+            "南京旅行",
+            "小区买房"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l15_t4_overall_02",
+          "focus": "main_idea",
+          "questionCn": "事情最后怎样发展？",
+          "questionPinyin": "",
+          "options": [
+            "人物得到需要的信息或产生变化",
+            "没有任何变化",
+            "换了完全不同的话题"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l15_t4_overall_03",
+          "focus": "main_idea",
+          "questionCn": "这篇课文的交际目的是什么？",
+          "questionPinyin": "",
+          "options": [
+            "介绍、解释或表达观点",
+            "只读生词",
+            "只问时间"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l15_t4_detail_01",
+          "questionCn": "小时候住哪里？",
+          "questionPinyin": "",
+          "answer": "北京西北边。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "北京西北边。"
+          ],
+          "informationPoint": "位置"
+        },
+        {
+          "id": "l15_t4_detail_02",
+          "questionCn": "河边有什么？",
+          "questionPinyin": "",
+          "answer": "大树、草地、花和河水。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "大树、草地、花和河水。"
+          ],
+          "informationPoint": "景物"
+        },
+        {
+          "id": "l15_t4_detail_03",
+          "questionCn": "夏天做什么？",
+          "questionPinyin": "",
+          "answer": "去河里游泳。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "去河里游泳。"
+          ],
+          "informationPoint": "活动"
+        },
+        {
+          "id": "l15_t4_detail_04",
+          "questionCn": "长大后去河边做什么？",
+          "questionPinyin": "",
+          "answer": "听鸟叫、看河水、跟朋友聊天。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "听鸟叫、看河水、跟朋友聊天。"
+          ],
+          "informationPoint": "情绪调节"
+        },
+        {
+          "id": "l15_t4_detail_05",
+          "questionCn": "难过最后怎样？",
+          "questionPinyin": "",
+          "answer": "不一会儿就忘了。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "不一会儿就忘了。"
+          ],
+          "informationPoint": "结果"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "难过的事情不一会儿就忘了。",
+        "focus": "不一会儿（就）+ 新情况",
+        "actionLabel": "进入“固定短语“不一会儿””",
+        "grammarIndex": 3
+      },
+      "paragraphPractice": {
+        "label": "调用“河边散步”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 3
+      },
+      "lifeTransfer": {
+        "promptCn": "讲一个你最喜欢的地方，说明为什么喜欢，并讲一个你和这个地方的故事。",
+        "promptEn": "Talk about your favorite place, explain why, and tell your story with that place."
+      }
+    }
+  ],
+  "vocabularyTaskTypes": [
+    {
+      "id": "recognition",
+      "labelCn": "认读",
+      "labelEn": "Recognition"
+    },
+    {
+      "id": "shape",
+      "labelCn": "辨形",
+      "labelEn": "Character form"
+    },
+    {
+      "id": "input",
+      "labelCn": "输入",
+      "labelEn": "Type the word"
+    },
+    {
+      "id": "collocation",
+      "labelCn": "搭配与使用",
+      "labelEn": "Collocation and use"
+    }
+  ],
+  "timerPolicy": {
+    "miniLoop": {
+      "optionsMinutes": [
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 4
+    },
+    "vocabularyFocus": {
+      "optionsMinutes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 2
+    },
+    "autoClose": false,
+    "autoSubmit": false
+  },
+  "vocabularyCatalog": [
+    {
+      "id": "v15_01",
+      "hanzi": "蓝",
+      "pinyin": "lán",
+      "english": "blue",
+      "meaningCn": "像晴天天空一样的颜色",
+      "phrases": [
+        "蓝天",
+        "蓝色"
+      ],
+      "example": "您搬到蓝天小区一段时间了，觉得怎么样？",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v15_02",
+      "hanzi": "段",
+      "pinyin": "duàn",
+      "english": "(used to indicate a period or section of sth that is continuous, such as time or distance)",
+      "meaningCn": "数连续时间或距离的量词",
+      "phrases": [
+        "一段时间",
+        "一段路"
+      ],
+      "example": "您搬到蓝天小区一段时间了，觉得怎么样？",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v15_03",
+      "hanzi": "附近",
+      "pinyin": "fùjìn",
+      "english": "nearby",
+      "meaningCn": "离这里不远的地方",
+      "phrases": [
+        "学校附近",
+        "住在附近"
+      ],
+      "example": "小区环境挺好的，附近买东西也很方便，过马路就是超市。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_04",
+      "hanzi": "马路",
+      "pinyin": "mǎlù",
+      "english": "road",
+      "meaningCn": "城市里让车和人通过的路",
+      "phrases": [
+        "过马路",
+        "马路对面"
+      ],
+      "example": "小区环境挺好的，附近买东西也很方便，过马路就是超市。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_05",
+      "hanzi": "平时",
+      "pinyin": "píngshí",
+      "english": "usually; normal times",
+      "meaningCn": "一般的时候",
+      "phrases": [
+        "平时喜欢",
+        "平时生活"
+      ],
+      "example": "平时孩子们在哪儿玩？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_06",
+      "hanzi": "放学",
+      "pinyin": "fàngxué",
+      "english": "(of school) let out",
+      "meaningCn": "学校一天的课结束",
+      "phrases": [
+        "放学以后",
+        "放学时间"
+      ],
+      "example": "小区里有很多树，孩子们放学后就在树下做游戏。你想买房子吗？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_07",
+      "hanzi": "游戏",
+      "pinyin": "yóuxì",
+      "english": "game",
+      "meaningCn": "让人一起玩的活动",
+      "phrases": [
+        "做游戏",
+        "电脑游戏"
+      ],
+      "example": "小区里有很多树，孩子们放学后就在树下做游戏。你想买房子吗？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_08",
+      "hanzi": "老人",
+      "pinyin": "lǎorén",
+      "english": "elderly people",
+      "meaningCn": "年纪大的人",
+      "phrases": [
+        "帮助老人",
+        "老人的需要"
+      ],
+      "example": "蓝天小区的老人挺多的，这几年小区根据他们的需要，有了很多变化。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v15_09",
+      "hanzi": "根据",
+      "pinyin": "gēnjù",
+      "english": "according to; depend on",
+      "meaningCn": "把某个情况当作做事的理由",
+      "phrases": [
+        "根据需要",
+        "根据地图"
+      ],
+      "example": "蓝天小区的老人挺多的，这几年小区根据他们的需要，有了很多变化。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_10",
+      "hanzi": "了解",
+      "pinyin": "liǎojiě",
+      "english": "understand; know",
+      "meaningCn": "知道得比较清楚",
+      "phrases": [
+        "了解情况",
+        "了解南京"
+      ],
+      "example": "假期我想去南京旅游，但是我不太了解那里。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_11",
+      "hanzi": "可是",
+      "pinyin": "kěshì",
+      "english": "but; yet",
+      "meaningCn": "表示后面的情况和前面不同",
+      "phrases": [
+        "虽然……可是……",
+        "可是今天"
+      ],
+      "example": "我虽然不是南京人，可是我是在南京上的大学，可以说算半个南京人。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_12",
+      "hanzi": "以上",
+      "pinyin": "yǐshàng",
+      "english": "more than; over",
+      "meaningCn": "达到这个数量或更多",
+      "phrases": [
+        "两年以上",
+        "十二岁以上"
+      ],
+      "example": "南京有两千年以上的历史，有老城、老街，还有很多有名的景点，每年去旅游的游客特别多。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v15_13",
+      "hanzi": "有名",
+      "pinyin": "yǒumíng",
+      "english": "famous; well-known",
+      "meaningCn": "很多人知道",
+      "phrases": [
+        "很有名",
+        "有名的景点"
+      ],
+      "example": "南京有两千年以上的历史，有老城、老街，还有很多有名的景点，每年去旅游的游客特别多。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_14",
+      "hanzi": "景点",
+      "pinyin": "jǐngdiǎn",
+      "english": "scenic spot",
+      "meaningCn": "旅行时可以参观的地方",
+      "phrases": [
+        "旅游景点",
+        "参观景点"
+      ],
+      "example": "南京有两千年以上的历史，有老城、老街，还有很多有名的景点，每年去旅游的游客特别多。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_15",
+      "hanzi": "游客",
+      "pinyin": "yóukè",
+      "english": "tourist",
+      "meaningCn": "去别的地方旅行的人",
+      "phrases": [
+        "外地游客",
+        "游客很多"
+      ],
+      "example": "南京有两千年以上的历史，有老城、老街，还有很多有名的景点，每年去旅游的游客特别多。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v15_16",
+      "hanzi": "外地",
+      "pinyin": "wàidì",
+      "english": "other place",
+      "meaningCn": "不是这里的其他地方",
+      "phrases": [
+        "外地人",
+        "从外地来"
+      ],
+      "example": "除了这些以外，你再告诉我一些外地人不知道的地方。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_17",
+      "hanzi": "聊",
+      "pinyin": "liáo",
+      "english": "chat",
+      "meaningCn": "轻松地说话",
+      "phrases": [
+        "聊一聊",
+        "边吃边聊"
+      ],
+      "example": "行，下班后我请你吃晚饭，咱们边吃边聊。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_18",
+      "hanzi": "河",
+      "pinyin": "hé",
+      "english": "river",
+      "meaningCn": "水长期流过的地方",
+      "phrases": [
+        "一条河",
+        "河边"
+      ],
+      "example": "小明，中国有一条大河，它的名字跟颜色有关系，你知道是什么河吗？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_19",
+      "hanzi": "关系",
+      "pinyin": "guānxì",
+      "english": "relationship",
+      "meaningCn": "两个人或两件事之间的联系",
+      "phrases": [
+        "有关系",
+        "关系很大"
+      ],
+      "example": "小明，中国有一条大河，它的名字跟颜色有关系，你知道是什么河吗？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_20",
+      "hanzi": "养",
+      "pinyin": "yǎng",
+      "english": "raise; keep",
+      "meaningCn": "给人或动物生活需要的东西",
+      "phrases": [
+        "养孩子",
+        "养动物"
+      ],
+      "example": "对。在我们中国人看来，黄河像妈妈一样，养了我们几千年。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v15_21",
+      "hanzi": "西北",
+      "pinyin": "xīběi",
+      "english": "northwest",
+      "meaningCn": "西和北之间的方向",
+      "phrases": [
+        "西北边",
+        "中国西北"
+      ],
+      "example": "我小时候住在北京的西北边，有一条非常有名的河经过那里。我家就住在河边。那里有高高的大树和绿绿的草地。春天，河边的花都开了，看起来特别漂亮。还记得小时候，一到夏天我就去河里游泳。长大以后，遇到什么不开心的事情，我就去河边的树下坐着，听听鸟叫，看看河水，跟遇见的朋友聊聊天儿，难过的事情不一会儿就忘了。那是我最喜欢的地方。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v15_22",
+      "hanzi": "经过",
+      "pinyin": "jīngguò",
+      "english": "pass by; process",
+      "meaningCn": "从一个地方通过",
+      "phrases": [
+        "经过这里",
+        "经过草地"
+      ],
+      "example": "我小时候住在北京的西北边，有一条非常有名的河经过那里。我家就住在河边。那里有高高的大树和绿绿的草地。春天，河边的花都开了，看起来特别漂亮。还记得小时候，一到夏天我就去河里游泳。长大以后，遇到什么不开心的事情，我就去河边的树下坐着，听听鸟叫，看看河水，跟遇见的朋友聊聊天儿，难过的事情不一会儿就忘了。那是我最喜欢的地方。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_23",
+      "hanzi": "草地",
+      "pinyin": "cǎodì",
+      "english": "meadow",
+      "meaningCn": "长着很多草的地方",
+      "phrases": [
+        "绿色草地",
+        "草地上"
+      ],
+      "example": "我小时候住在北京的西北边，有一条非常有名的河经过那里。我家就住在河边。那里有高高的大树和绿绿的草地。春天，河边的花都开了，看起来特别漂亮。还记得小时候，一到夏天我就去河里游泳。长大以后，遇到什么不开心的事情，我就去河边的树下坐着，听听鸟叫，看看河水，跟遇见的朋友聊聊天儿，难过的事情不一会儿就忘了。那是我最喜欢的地方。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_24",
+      "hanzi": "遇见",
+      "pinyin": "yùjiàn",
+      "english": "meet",
+      "meaningCn": "没有先约好而见到",
+      "phrases": [
+        "遇见朋友",
+        "偶然遇见"
+      ],
+      "example": "我小时候住在北京的西北边，有一条非常有名的河经过那里。我家就住在河边。那里有高高的大树和绿绿的草地。春天，河边的花都开了，看起来特别漂亮。还记得小时候，一到夏天我就去河里游泳。长大以后，遇到什么不开心的事情，我就去河边的树下坐着，听听鸟叫，看看河水，跟遇见的朋友聊聊天儿，难过的事情不一会儿就忘了。那是我最喜欢的地方。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_25",
+      "hanzi": "南京",
+      "pinyin": "Nánjīng",
+      "english": "Nanjing",
+      "meaningCn": "中国东部的一座城市",
+      "phrases": [
+        "南京人",
+        "南京老城"
+      ],
+      "example": "假期我想去南京旅游，但是我不太了解那里。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v15_26",
+      "hanzi": "黄河",
+      "pinyin": "Huáng Hé",
+      "english": "the Yellow River",
+      "meaningCn": "中国北方的一条大河",
+      "phrases": [
+        "黄河边",
+        "黄河文化"
+      ],
+      "example": "我知道，是黄河！",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    }
+  ],
+  "vocabularyGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "title": "适合谁住的小区",
+      "wordIds": [
+        "v15_01",
+        "v15_02",
+        "v15_03",
+        "v15_04",
+        "v15_05",
+        "v15_06",
+        "v15_07",
+        "v15_08",
+        "v15_09"
+      ],
+      "recognitionWordIds": [
+        "v15_01",
+        "v15_02",
+        "v15_03",
+        "v15_04"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v15_01"
+          ],
+          "acceptedAnswers": [
+            "蓝"
+          ],
+          "id": "l15_m1_v15_01_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "lán：像晴天天空一样的颜色",
+          "answer": "蓝",
+          "options": [
+            "蓝",
+            "附近",
+            "马路",
+            "平时"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_02"
+          ],
+          "acceptedAnswers": [
+            "段"
+          ],
+          "id": "l15_m1_v15_02_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "duàn：数连续时间或距离的量词",
+          "answer": "段",
+          "options": [
+            "段",
+            "附近",
+            "马路",
+            "平时"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_03"
+          ],
+          "acceptedAnswers": [
+            "附近"
+          ],
+          "id": "l15_m1_v15_03_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "fùjìn：离这里不远的地方",
+          "answer": "附近",
+          "options": [
+            "附近",
+            "段",
+            "马路",
+            "平时"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_03"
+          ],
+          "acceptedAnswers": [
+            "附近"
+          ],
+          "id": "l15_m1_v15_03_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "离这里不远的地方",
+          "answer": "附近",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m1_v15_03_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_03"
+          ],
+          "promptCn": "用“学校附近”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "学校附近",
+          "answer": "小区环境挺好的，附近买东西也很方便，过马路就是超市。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_04"
+          ],
+          "acceptedAnswers": [
+            "马路"
+          ],
+          "id": "l15_m1_v15_04_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "mǎlù：城市里让车和人通过的路",
+          "answer": "马路",
+          "options": [
+            "马路",
+            "段",
+            "附近",
+            "平时"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_04"
+          ],
+          "acceptedAnswers": [
+            "马路"
+          ],
+          "id": "l15_m1_v15_04_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "城市里让车和人通过的路",
+          "answer": "马路",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m1_v15_04_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_04"
+          ],
+          "promptCn": "用“过马路”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "过马路",
+          "answer": "小区环境挺好的，附近买东西也很方便，过马路就是超市。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_05"
+          ],
+          "acceptedAnswers": [
+            "平时"
+          ],
+          "id": "l15_m1_v15_05_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "píngshí：一般的时候",
+          "answer": "平时",
+          "options": [
+            "平时",
+            "段",
+            "附近",
+            "马路"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_05"
+          ],
+          "acceptedAnswers": [
+            "平时"
+          ],
+          "id": "l15_m1_v15_05_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "一般的时候",
+          "answer": "平时",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m1_v15_05_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_05"
+          ],
+          "promptCn": "用“平时喜欢”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "平时喜欢",
+          "answer": "平时孩子们在哪儿玩？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_06"
+          ],
+          "acceptedAnswers": [
+            "放学"
+          ],
+          "id": "l15_m1_v15_06_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "fàngxué：学校一天的课结束",
+          "answer": "放学",
+          "options": [
+            "放学",
+            "段",
+            "附近",
+            "马路"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_06"
+          ],
+          "acceptedAnswers": [
+            "放学"
+          ],
+          "id": "l15_m1_v15_06_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "学校一天的课结束",
+          "answer": "放学",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m1_v15_06_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_06"
+          ],
+          "promptCn": "用“放学以后”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "放学以后",
+          "answer": "小区里有很多树，孩子们放学后就在树下做游戏。你想买房子吗？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_07"
+          ],
+          "acceptedAnswers": [
+            "游戏"
+          ],
+          "id": "l15_m1_v15_07_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "yóuxì：让人一起玩的活动",
+          "answer": "游戏",
+          "options": [
+            "游戏",
+            "段",
+            "附近",
+            "马路"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_07"
+          ],
+          "acceptedAnswers": [
+            "游戏"
+          ],
+          "id": "l15_m1_v15_07_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "让人一起玩的活动",
+          "answer": "游戏",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m1_v15_07_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_07"
+          ],
+          "promptCn": "用“做游戏”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "做游戏",
+          "answer": "小区里有很多树，孩子们放学后就在树下做游戏。你想买房子吗？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_08"
+          ],
+          "acceptedAnswers": [
+            "老人"
+          ],
+          "id": "l15_m1_v15_08_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "lǎorén：年纪大的人",
+          "answer": "老人",
+          "options": [
+            "老人",
+            "段",
+            "附近",
+            "马路"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_09"
+          ],
+          "acceptedAnswers": [
+            "根据"
+          ],
+          "id": "l15_m1_v15_09_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "gēnjù：把某个情况当作做事的理由",
+          "answer": "根据",
+          "options": [
+            "根据",
+            "段",
+            "附近",
+            "马路"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_09"
+          ],
+          "acceptedAnswers": [
+            "根据"
+          ],
+          "id": "l15_m1_v15_09_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "把某个情况当作做事的理由",
+          "answer": "根据",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m1_v15_09_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_09"
+          ],
+          "promptCn": "用“根据需要”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "根据需要",
+          "answer": "蓝天小区的老人挺多的，这几年小区根据他们的需要，有了很多变化。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "title": "半个本地人推荐",
+      "wordIds": [
+        "v15_10",
+        "v15_11",
+        "v15_12",
+        "v15_13",
+        "v15_14",
+        "v15_15",
+        "v15_16",
+        "v15_17",
+        "v15_25"
+      ],
+      "recognitionWordIds": [
+        "v15_10",
+        "v15_11",
+        "v15_12",
+        "v15_13"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v15_10"
+          ],
+          "acceptedAnswers": [
+            "了解"
+          ],
+          "id": "l15_m2_v15_10_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "liǎojiě：知道得比较清楚",
+          "answer": "了解",
+          "options": [
+            "了解",
+            "附近",
+            "马路",
+            "平时"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_10"
+          ],
+          "acceptedAnswers": [
+            "了解"
+          ],
+          "id": "l15_m2_v15_10_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "知道得比较清楚",
+          "answer": "了解",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m2_v15_10_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_10"
+          ],
+          "promptCn": "用“了解情况”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "了解情况",
+          "answer": "假期我想去南京旅游，但是我不太了解那里。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_11"
+          ],
+          "acceptedAnswers": [
+            "可是"
+          ],
+          "id": "l15_m2_v15_11_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "kěshì：表示后面的情况和前面不同",
+          "answer": "可是",
+          "options": [
+            "可是",
+            "附近",
+            "马路",
+            "平时"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_11"
+          ],
+          "acceptedAnswers": [
+            "可是"
+          ],
+          "id": "l15_m2_v15_11_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "表示后面的情况和前面不同",
+          "answer": "可是",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m2_v15_11_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_11"
+          ],
+          "promptCn": "用“虽然……可是……”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "虽然……可是……",
+          "answer": "我虽然不是南京人，可是我是在南京上的大学，可以说算半个南京人。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_12"
+          ],
+          "acceptedAnswers": [
+            "以上"
+          ],
+          "id": "l15_m2_v15_12_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "yǐshàng：达到这个数量或更多",
+          "answer": "以上",
+          "options": [
+            "以上",
+            "附近",
+            "马路",
+            "平时"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_13"
+          ],
+          "acceptedAnswers": [
+            "有名"
+          ],
+          "id": "l15_m2_v15_13_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "yǒumíng：很多人知道",
+          "answer": "有名",
+          "options": [
+            "有名",
+            "附近",
+            "马路",
+            "平时"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_13"
+          ],
+          "acceptedAnswers": [
+            "有名"
+          ],
+          "id": "l15_m2_v15_13_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "很多人知道",
+          "answer": "有名",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m2_v15_13_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_13"
+          ],
+          "promptCn": "用“很有名”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "很有名",
+          "answer": "南京有两千年以上的历史，有老城、老街，还有很多有名的景点，每年去旅游的游客特别多。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_14"
+          ],
+          "acceptedAnswers": [
+            "景点"
+          ],
+          "id": "l15_m2_v15_14_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "jǐngdiǎn：旅行时可以参观的地方",
+          "answer": "景点",
+          "options": [
+            "景点",
+            "附近",
+            "马路",
+            "平时"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_14"
+          ],
+          "acceptedAnswers": [
+            "景点"
+          ],
+          "id": "l15_m2_v15_14_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "旅行时可以参观的地方",
+          "answer": "景点",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m2_v15_14_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_14"
+          ],
+          "promptCn": "用“旅游景点”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "旅游景点",
+          "answer": "南京有两千年以上的历史，有老城、老街，还有很多有名的景点，每年去旅游的游客特别多。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_15"
+          ],
+          "acceptedAnswers": [
+            "游客"
+          ],
+          "id": "l15_m2_v15_15_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "yóukè：去别的地方旅行的人",
+          "answer": "游客",
+          "options": [
+            "游客",
+            "附近",
+            "马路",
+            "平时"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_16"
+          ],
+          "acceptedAnswers": [
+            "外地"
+          ],
+          "id": "l15_m2_v15_16_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "wàidì：不是这里的其他地方",
+          "answer": "外地",
+          "options": [
+            "外地",
+            "附近",
+            "马路",
+            "平时"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_16"
+          ],
+          "acceptedAnswers": [
+            "外地"
+          ],
+          "id": "l15_m2_v15_16_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "不是这里的其他地方",
+          "answer": "外地",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m2_v15_16_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_16"
+          ],
+          "promptCn": "用“外地人”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "外地人",
+          "answer": "除了这些以外，你再告诉我一些外地人不知道的地方。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_17"
+          ],
+          "acceptedAnswers": [
+            "聊"
+          ],
+          "id": "l15_m2_v15_17_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "liáo：轻松地说话",
+          "answer": "聊",
+          "options": [
+            "聊",
+            "附近",
+            "马路",
+            "平时"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_17"
+          ],
+          "acceptedAnswers": [
+            "聊"
+          ],
+          "id": "l15_m2_v15_17_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "轻松地说话",
+          "answer": "聊",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m2_v15_17_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_17"
+          ],
+          "promptCn": "用“聊一聊”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "聊一聊",
+          "answer": "行，下班后我请你吃晚饭，咱们边吃边聊。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_25"
+          ],
+          "acceptedAnswers": [
+            "南京"
+          ],
+          "id": "l15_m2_v15_25_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "Nánjīng：中国东部的一座城市",
+          "answer": "南京",
+          "options": [
+            "南京",
+            "附近",
+            "马路",
+            "平时"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_25"
+          ],
+          "acceptedAnswers": [
+            "南京"
+          ],
+          "id": "l15_m2_v15_25_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "中国东部的一座城市",
+          "answer": "南京",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m2_v15_25_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_25"
+          ],
+          "promptCn": "用“南京人”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "南京人",
+          "answer": "假期我想去南京旅游，但是我不太了解那里。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "title": "我了解的黄河",
+      "wordIds": [
+        "v15_18",
+        "v15_19",
+        "v15_20",
+        "v15_26"
+      ],
+      "recognitionWordIds": [
+        "v15_18",
+        "v15_19",
+        "v15_20",
+        "v15_26"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v15_18"
+          ],
+          "acceptedAnswers": [
+            "河"
+          ],
+          "id": "l15_m3_v15_18_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "hé：水长期流过的地方",
+          "answer": "河",
+          "options": [
+            "河",
+            "马路",
+            "平时",
+            "放学"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_18"
+          ],
+          "acceptedAnswers": [
+            "河"
+          ],
+          "id": "l15_m3_v15_18_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "水长期流过的地方",
+          "answer": "河",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m3_v15_18_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_18"
+          ],
+          "promptCn": "用“一条河”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "一条河",
+          "answer": "小明，中国有一条大河，它的名字跟颜色有关系，你知道是什么河吗？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_19"
+          ],
+          "acceptedAnswers": [
+            "关系"
+          ],
+          "id": "l15_m3_v15_19_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "guānxì：两个人或两件事之间的联系",
+          "answer": "关系",
+          "options": [
+            "关系",
+            "马路",
+            "平时",
+            "放学"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_19"
+          ],
+          "acceptedAnswers": [
+            "关系"
+          ],
+          "id": "l15_m3_v15_19_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "两个人或两件事之间的联系",
+          "answer": "关系",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m3_v15_19_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_19"
+          ],
+          "promptCn": "用“有关系”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "有关系",
+          "answer": "小明，中国有一条大河，它的名字跟颜色有关系，你知道是什么河吗？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_20"
+          ],
+          "acceptedAnswers": [
+            "养"
+          ],
+          "id": "l15_m3_v15_20_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "yǎng：给人或动物生活需要的东西",
+          "answer": "养",
+          "options": [
+            "养",
+            "马路",
+            "平时",
+            "放学"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_26"
+          ],
+          "acceptedAnswers": [
+            "黄河"
+          ],
+          "id": "l15_m3_v15_26_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "Huáng Hé：中国北方的一条大河",
+          "answer": "黄河",
+          "options": [
+            "黄河",
+            "马路",
+            "平时",
+            "放学"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "title": "我最喜欢的地方",
+      "wordIds": [
+        "v15_21",
+        "v15_22",
+        "v15_23",
+        "v15_24"
+      ],
+      "recognitionWordIds": [
+        "v15_21",
+        "v15_22",
+        "v15_23",
+        "v15_24"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v15_21"
+          ],
+          "acceptedAnswers": [
+            "西北"
+          ],
+          "id": "l15_m4_v15_21_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "xīběi：西和北之间的方向",
+          "answer": "西北",
+          "options": [
+            "西北",
+            "平时",
+            "放学",
+            "游戏"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_22"
+          ],
+          "acceptedAnswers": [
+            "经过"
+          ],
+          "id": "l15_m4_v15_22_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "jīngguò：从一个地方通过",
+          "answer": "经过",
+          "options": [
+            "经过",
+            "平时",
+            "放学",
+            "游戏"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_22"
+          ],
+          "acceptedAnswers": [
+            "经过"
+          ],
+          "id": "l15_m4_v15_22_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "从一个地方通过",
+          "answer": "经过",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m4_v15_22_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_22"
+          ],
+          "promptCn": "用“经过这里”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "经过这里",
+          "answer": "我小时候住在北京的西北边，有一条非常有名的河经过那里。我家就住在河边。那里有高高的大树和绿绿的草地。春天，河边的花都开了，看起来特别漂亮。还记得小时候，一到夏天我就去河里游泳。长大以后，遇到什么不开心的事情，我就去河边的树下坐着，听听鸟叫，看看河水，跟遇见的朋友聊聊天儿，难过的事情不一会儿就忘了。那是我最喜欢的地方。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_23"
+          ],
+          "acceptedAnswers": [
+            "草地"
+          ],
+          "id": "l15_m4_v15_23_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "cǎodì：长着很多草的地方",
+          "answer": "草地",
+          "options": [
+            "草地",
+            "平时",
+            "放学",
+            "游戏"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_23"
+          ],
+          "acceptedAnswers": [
+            "草地"
+          ],
+          "id": "l15_m4_v15_23_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "长着很多草的地方",
+          "answer": "草地",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m4_v15_23_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_23"
+          ],
+          "promptCn": "用“绿色草地”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "绿色草地",
+          "answer": "我小时候住在北京的西北边，有一条非常有名的河经过那里。我家就住在河边。那里有高高的大树和绿绿的草地。春天，河边的花都开了，看起来特别漂亮。还记得小时候，一到夏天我就去河里游泳。长大以后，遇到什么不开心的事情，我就去河边的树下坐着，听听鸟叫，看看河水，跟遇见的朋友聊聊天儿，难过的事情不一会儿就忘了。那是我最喜欢的地方。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v15_24"
+          ],
+          "acceptedAnswers": [
+            "遇见"
+          ],
+          "id": "l15_m4_v15_24_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "yùjiàn：没有先约好而见到",
+          "answer": "遇见",
+          "options": [
+            "遇见",
+            "平时",
+            "放学",
+            "游戏"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v15_24"
+          ],
+          "acceptedAnswers": [
+            "遇见"
+          ],
+          "id": "l15_m4_v15_24_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "没有先约好而见到",
+          "answer": "遇见",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l15_m4_v15_24_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v15_24"
+          ],
+          "promptCn": "用“遇见朋友”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "遇见朋友",
+          "answer": "我小时候住在北京的西北边，有一条非常有名的河经过那里。我家就住在河边。那里有高高的大树和绿绿的草地。春天，河边的花都开了，看起来特别漂亮。还记得小时候，一到夏天我就去河里游泳。长大以后，遇到什么不开心的事情，我就去河边的树下坐着，听听鸟叫，看看河水，跟遇见的朋友聊聊天儿，难过的事情不一会儿就忘了。那是我最喜欢的地方。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    }
+  ],
+  "resourceOverrides": [],
+  "supportOnlyStructures": [],
+  "evidencePolicy": {
+    "coreTypes": [
+      "entry_expression",
+      "actual_learning_path",
+      "exit_expression"
+    ],
+    "pathEvent": "opened",
+    "optionalSignals": [
+      "support_request",
+      "self_reflection"
+    ]
+  },
+  "supportOptions": [
+    {
+      "id": "vocabulary",
+      "labelCn": "我缺少合适的词",
+      "labelEn": "I need the right words"
+    },
+    {
+      "id": "organization",
+      "labelCn": "我不知道怎样组织信息",
+      "labelEn": "I need help organizing my ideas"
+    },
+    {
+      "id": "structure",
+      "labelCn": "我需要一个句子结构",
+      "labelEn": "I need a sentence frame"
+    },
+    {
+      "id": "teacher",
+      "labelCn": "我想获得老师的帮助",
+      "labelEn": "I want help from the teacher"
+    }
+  ],
+  "feelingOptions": [
+    {
+      "id": "clearer",
+      "labelCn": "我说得更清楚了",
+      "labelEn": "My expression is clearer"
+    },
+    {
+      "id": "more_complete",
+      "labelCn": "我说得更完整了",
+      "labelEn": "My expression is more complete"
+    },
+    {
+      "id": "more_natural",
+      "labelCn": "我说得更自然了",
+      "labelEn": "My expression is more natural"
+    },
+    {
+      "id": "still_need_help",
+      "labelCn": "我还需要帮助",
+      "labelEn": "I still need help"
+    }
+  ],
+  "coreEvidence": [
+    "entry_expression",
+    "actual_learning_path",
+    "exit_expression"
+  ],
+  "capabilities": [
+    "select_text_mini_loop",
+    "launch_interaction",
+    "independent_answer",
+    "support_request",
+    "anonymous_return",
+    "open_support",
+    "reanswer",
+    "record_teacher_decision",
+    "compare_entry_exit",
+    "teacher_selected_vocabulary_focus",
+    "shared_countdown",
+    "native_course_resource_return",
+    "configured_task_stimulus",
+    "state_restore"
+  ]
+}
