@@ -19,6 +19,14 @@
     return q.get("classId") || q.get("class") || ctx.classId || defaultClass;
   }
 
+  function rosterClass(classId, lesson) {
+    var requested = classId || currentClass();
+    if (requested === "legacy-default" && window.ClassProClassCatalog && window.ClassProClassCatalog.defaultClassIdForLesson) {
+      return window.ClassProClassCatalog.defaultClassIdForLesson(lesson || currentLesson());
+    }
+    return requested;
+  }
+
   var serverRoster = window.ClassProServerRoster;
   if (serverRoster && serverRoster.classId === currentClass() && Array.isArray(serverRoster.students) && window.ClassProClassCatalog) {
     var serverLevel = (/^(HSK\d)/i.exec(serverRoster.lesson || "") || [])[1] || "default";
@@ -29,7 +37,7 @@
   window.ClassProStudentsForLesson = function (lesson, classId) {
     if (serverRoster && serverRoster.classId === (classId || currentClass()) && Array.isArray(serverRoster.students) && serverRoster.students.length) return serverRoster.students.map(function (student) { return student.name; });
     if (window.ClassProClassCatalog) {
-      var names = window.ClassProClassCatalog.roster(classId || currentClass(), lesson).map(function (student) { return student.name; });
+      var names = window.ClassProClassCatalog.roster(rosterClass(classId, lesson), lesson).map(function (student) { return student.name; });
       if (names.length) return names;
     }
     if (/^HSK3-L\d+$/i.test(String(lesson || ""))) return HSK3_DEFAULT.slice();
@@ -40,7 +48,7 @@
       var target = String(name || "").trim().toLowerCase(), found = serverRoster.students.filter(function (student) { return student.name.toLowerCase() === target; })[0];
       if (found) return found;
     }
-    if (window.ClassProClassCatalog) return window.ClassProClassCatalog.studentIdentity(classId || currentClass(), lesson || currentLesson(), name);
+    if (window.ClassProClassCatalog) return window.ClassProClassCatalog.studentIdentity(rosterClass(classId, lesson), lesson || currentLesson(), name);
     return { id: "", name: String(name || "").trim() };
   };
   window.CLASS_STUDENTS = window.ClassProStudentsForLesson(currentLesson(), currentClass());

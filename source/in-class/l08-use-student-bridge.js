@@ -28,6 +28,8 @@
   let activeStudent = '';
   let useViewActive = false;
   let feelingOptions = FALLBACK_FEELINGS;
+  function setBridgeState(value) { document.documentElement.dataset.classproUseBridge = value; }
+  setBridgeState('initialized');
 
   function uid(prefix) { return `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`; }
   function esc(value) { return String(value == null ? '' : value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char])); }
@@ -54,11 +56,17 @@
       if (note) note.textContent = remaining ? '' : "Time's up";
     });
   }
-  function studentName() { return typeof window.name === 'function' ? window.name() : ''; }
+  function studentName() {
+    const select = document.getElementById('studentName');
+    const selected = select ? String(select.value || '').trim() : '';
+    if (selected) return selected;
+    const context = window.ClassProContext ? ClassProContext.read() : {};
+    return String(context.student || '').trim();
+  }
   function freshState() {
     return { schema: 2, participantId: uid('use_student'), controllerId: '', interactionId: '', firstAnswer: '', firstSent: false, choiceAnswers: {}, vocabAnswers: {}, supportIds: [], feelingIds: [], secondAnswer: '', secondSent: false, entryAnswers: {}, outbox: [], control: null };
   }
-  function storageKey() { return `ClassProUseStudent_${LESSON}_${EXPERIMENT}_${ROOM}_${activeStudent}`; }
+  function storageKey() { return `ClassProUseStudent_${LESSON}_${EXPERIMENT}_${ROOM}_${RUN}_${activeStudent}`; }
   function save() { if (activeStudent) localStorage.setItem(storageKey(), JSON.stringify(state)); }
   function restore() {
     try {
@@ -111,13 +119,16 @@
 
   function connect() {
     if (client || !window.mqtt) return;
+    setBridgeState('connecting');
     const clientId = `${LESSON_CODE}use_s_${Math.random().toString(36).slice(2, 10)}`;
     client = mqtt.connect('wss://05d1d5baec9d4cb3a21f5517b430cff1.s1.eu.hivemq.cloud:8884/mqtt', {
       username: 'classpro', password: 'Classpro2026', clientId, reconnectPeriod: 3000, connectTimeout: 8000
     });
     client.on('connect', () => {
+      setBridgeState('connected');
       client.subscribe([TOPICS.control, TOPICS.ack], { qos: 1 }, error => {
         if (error) return;
+        setBridgeState('subscribed');
         sendPresence(true);
         flushOutbox();
       });
@@ -138,6 +149,7 @@
         const nextId = message.interaction ? message.interaction.id : '';
         if (state.controllerId !== message.controllerId || state.interactionId !== nextId) resetForInteraction(message);
         else { control = message; state.control = message; save(); }
+        setBridgeState('received');
         renderUse();
       } catch (error) { console.warn(error); }
     });
@@ -318,7 +330,7 @@
 
   function activate() {
     const nextStudent = studentName();
-    if (!nextStudent || !window.nameReady) return;
+    if (!nextStudent || !window.nameReady) { setBridgeState(nextStudent ? 'waiting-for-confirmation' : 'waiting-for-student'); return; }
     if (nextStudent !== activeStudent) {
       activeStudent = nextStudent;
       restore();

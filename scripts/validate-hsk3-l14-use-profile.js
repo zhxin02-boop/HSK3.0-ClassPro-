@@ -130,23 +130,21 @@ const teacherHome = read(teacherHomePath);
 assert(runtime.includes('selected.size < 4') && runtime.includes('configured.slice(0, 4).map'), 'Shared teacher vocabulary selection must allow and render up to four words');
 assert(bridge.includes('(interaction.items || []).map'), 'Unified student must render all selected vocabulary items');
 assert(runtime.includes("timerPicker('miniLoop'") && runtime.includes("timerPicker('vocabularyFocus'") && bridge.includes('countdownMarkup(interaction)'), 'Shared timer paths are incomplete');
-assert(runtime.includes('localStorage.setItem(STORAGE_KEY') && runtime.includes('state.nativeRoute'), 'Use state/native route persistence is missing');
+assert(runtime.includes('localStorage.setItem(STORAGE_KEY') && runtime.includes('state.nativeRoute') && runtime.includes('${ROOM}_${RUN}'), 'Use state/native route persistence must be isolated by classroom run');
 assert(runtime.includes('app.hsk3GrammarPhase = 0') && !runtime.includes('app._tg ='), 'Use must enter native grammar without replacing the native renderer');
 assert(runtime.includes("addTrail('resource'") && runtime.includes("stage === 'entry'") && runtime.includes("stage === 'exit'"), 'Three evidence paths are not recordable');
 assert(bridge.indexOf('client.subscribe([TOPICS.control, TOPICS.ack]') < bridge.indexOf('sendPresence(true);'), 'Student must subscribe before requesting current state');
 assert(!runtime.includes("LESSON === 'HSK3-L14'") && !runtime.includes('LESSON === "HSK3-L14"') && !bridge.includes("LESSON === 'HSK3-L14'") && !bridge.includes('LESSON === "HSK3-L14"'), 'Shared runtime contains an L14-specific branch');
 assert(runtime.includes("PARAMS.get('dataVersion')") && runtime.includes('CONFIG_VERSION') && runtime.includes('encodeURIComponent(CONFIG_VERSION)'), 'Shared Use runtime must support generic data-version cache busting');
-assert(runtimeHtml.includes('l08-use-pilot.js?v=27'), 'Shared Use HTML must load the current cache-busting runtime version');
+assert(runtimeHtml.includes('l08-use-pilot.js?v=28'), 'Shared Use HTML must load the current cache-busting runtime version');
 assert(/HSK3-L14[^\n]+openForUse:\s*true[^\n]+status:\s*"ready"[^\n]+useProfile:\s*"pilot-v1"/.test(curriculum), 'L14 curriculum must be ready/open with pilot-v1 configured');
 assert(teacherHome.includes('legacyClassroomLink') && teacherHome.includes('selectedLesson.useProfile'), 'Teacher home must preserve upgraded and legacy entries');
 
 const unchangedPaths = [
-  'source/in-class/l08-use-student-bridge.js',
-  'source/in-class/teacher.html','source/in-class/student.html',
   ...['10','11','12','13'].flatMap(number => [`source/data-model/lessons/HSK3-L${number}.json`,`source/data-model/experiments/HSK3-L${number}-USE-PILOT-V1.json`])
 ];
 const diff = spawnSync('git', ['diff','--quiet','HEAD','--',...unchangedPaths], {cwd:root});
-assert(diff.status === 0, 'Shared runtime or L10-L13 formal/profile data changed');
+assert(diff.status === 0, 'L10-L13 formal/profile data changed');
 
 const formalBefore = normalizedHash(formalPath);
 execFileSync(process.execPath, [path.join(__dirname, 'build-hsk3-l14-use-profile.js')], {stdio:'pipe'});

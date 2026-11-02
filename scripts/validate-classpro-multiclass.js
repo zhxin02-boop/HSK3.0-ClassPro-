@@ -37,6 +37,8 @@ assert(classCatalog.roster('rufe-2025-class-4', 'HSK1-L01').some((student) => st
 assert(classCatalog.roster('ai26401-spring', 'HSK3-L01').some((student) => student.testAccount && student.name === 'Student'), 'Spring HSK3 should contain a Student test account');
 assert(classCatalog.defaultClassIdForLesson('HSK1-L01') === 'rufe-2025-class-4', 'Historical HSK1 should remain the default HSK1 class');
 assert(classCatalog.defaultClassIdForLesson('HSK3-L01') === 'ai26401-spring', 'Current HSK3 should remain the default HSK3 class');
+const legacyHsk3Names = windowObject.ClassProStudentsForLesson('HSK3-L14', 'legacy-default');
+assert(legacyHsk3Names.length === 13 && legacyHsk3Names.includes('MTEWELE THEOFRIDA PHILEMON'), 'Legacy HSK3 links should reuse the current HSK3 roster without changing their classroom channel');
 
 const topicA = windowObject.ClassProClassroom.topic('answers', { classId: 'ai26401-fall-class-1', room: '8888', lesson: 'HSK1-L01' });
 const topicB = windowObject.ClassProClassroom.topic('answers', { classId: 'ai26401-fall-class-2', room: '8888', lesson: 'HSK1-L01' });
@@ -83,8 +85,16 @@ assert(gas.recordMatchesScope_(oldHsk3Row, { classId: 'ai26401-spring' }), 'Hist
 
 const home = source('index.html');
 assert(home.includes('/source/teacher/login.html"') || home.includes('source/teacher/index.html?direct=1"'), 'The main role page should lead teachers to an available workspace');
-assert(home.includes('/source/student/entry.html"') || home.includes('source/student/entry.html?direct=1"'), 'The main role page should lead students to class and name selection');
+assert(home.includes('/source/student/entry.html"') || home.includes('source/student/entry.html?direct=1"'), 'The main role page should lead students to the unified name entry');
 const studentEntry = source('source/student/entry.html');
-assert(studentEntry.includes('id="classSelect"') && studentEntry.includes('id="studentSelect"'), 'Student entry should ask for class and name');
+assert(!studentEntry.includes('id="classSelect"') && studentEntry.includes('id="studentSelect"'), 'Student entry should inherit the teacher class and ask for the name only once');
+assert(studentEntry.includes('selectedClassId = requestedClassId ||') && studentEntry.includes("selectedClassId === 'legacy-default'") && studentEntry.includes('classId:selectedClassId'), 'Student entry should preserve the teacher channel while resolving the lesson roster automatically');
+const studentClassroom = source('source/in-class/student.html');
+assert(studentClassroom.includes('CLASS_ID=query.get("classId")||query.get("class")||CTX.classId||"legacy-default"'), 'Student classroom should keep the URL class scope authoritative');
+assert(studentClassroom.includes('function restoreStudentIdentity()') && studentClassroom.includes('renderRosterOptions();restoreStudentIdentity();'), 'Student classroom should restore the identity confirmed at unified entry');
+assert(studentClassroom.includes('l08-use-student-bridge.js?v=11'), 'Student classroom should load the current Use bridge without a stale browser cache');
+const useStudentBridge = source('source/in-class/l08-use-student-bridge.js');
+assert(useStudentBridge.includes("document.getElementById('studentName')") && useStudentBridge.includes('ClassProContext.read()'), 'Use bridge should read the confirmed student identity without relying on the reserved window.name property');
+assert(useStudentBridge.includes('${ROOM}_${RUN}_${activeStudent}'), 'Student Use state should be isolated by classroom run');
 
 console.log('ClassPro multiclass pilot validation passed.');

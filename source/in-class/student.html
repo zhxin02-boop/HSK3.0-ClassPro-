@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>ClassPro+ Student</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.3.0/mqtt.min.js"></script>
-<script src="../shared/class-config.js?v=20261028-2"></script>
+<script src="../shared/class-config.js?v=20261102-1"></script>
 <script src="../shared/context.js"></script>
-<script src="../shared/students.js?v=20261028-2"></script>
+<script src="../shared/students.js?v=20261102-1"></script>
 <script src="../shared/classroom-channel.js"></script>
 <script src="../shared/classpro-pinyin-data.js?v=20260914-1"></script>
 <script src="../shared/classpro-pinyin.js?v=20260914-1"></script>
@@ -78,7 +78,7 @@ body.classpro-mock-active #app,body.classpro-mock-active #app *{-webkit-user-sel
   </div>
 </div>
 <script>
-var query=new URLSearchParams(location.search),CTX=window.ClassProContext?ClassProContext.read():{},RM=query.get("room")||CTX.room||"8888",LESSON=query.get("lesson")||CTX.lesson||"HSK1-L01",CLASS_ID=CTX.classId||"legacy-default",RUN_ID=query.get("run")||"default";
+var query=new URLSearchParams(location.search),CTX=window.ClassProContext?ClassProContext.read():{},RM=query.get("room")||CTX.room||"8888",LESSON=query.get("lesson")||CTX.lesson||"HSK1-L01",CLASS_ID=query.get("classId")||query.get("class")||CTX.classId||"legacy-default",RUN_ID=query.get("run")||"default";
 var current=null, selected=null, chunks=[], answerChunks=[], nameReady=false, matchLeft=null, matchRight=null, matchPairs={}, v5GroupAnswers={}, globalPinyinVisible=false, classproChainState=null;
 var STUDENT_CLIENT_ID="st_"+Math.random().toString(36).slice(2,10);
 var CLASS_STUDENTS=window.CLASS_STUDENTS||[];
@@ -103,6 +103,7 @@ function confirmName(){var el=document.getElementById("studentName");el.value=na
 function setStatus(t){document.getElementById("status").textContent=t}
 function publishPresence(){if(window.client&&client.connected)client.publish(classroomTopic("presence"),JSON.stringify(scopePayload({count:1,studentName:name(),name:name(),clientId:STUDENT_CLIENT_ID,seenAt:new Date().toISOString(),requestCurrent:true})))}
 function renderRosterOptions(){document.getElementById("studentName").innerHTML='<option value="">Select your name / 选择姓名</option>'+CLASS_STUDENTS.map(function(n){return'<option value="'+es(n)+'">'+es(n)+'</option>'}).join("")}
+function restoreStudentIdentity(){var preferred=query.get("student")||CTX.student||"",matched=rosterName(preferred),valid=CLASS_STUDENTS.some(function(n){return normName(n)===normName(matched)});if(!preferred||!valid)return;var el=document.getElementById("studentName");el.value=matched;if(el.value)confirmName()}
 function renderBoard(){var rows=(scoreboard.rows&&scoreboard.rows.length?scoreboard.rows:CLASS_STUDENTS.map(function(n){return{name:n,points:0}})).slice();rows.sort(function(a,b){return (b.points||0)-(a.points||0)||CLASS_STUDENTS.indexOf(a.name)-CLASS_STUDENTS.indexOf(b.name)});var me=normName(name()),myIdx=-1,h="";for(var i=0;i<Math.min(rows.length,10);i++){var r=rows[i],mine=normName(r.name)===me;if(mine)myIdx=i;h+='<div class="leader-row '+(mine?'me':'')+'"><div class="leader-rank">'+(i+1)+'</div><div class="leader-name">'+es(r.name)+'</div><div class="leader-pts">'+(r.points||0)+' pts</div></div>'}if(myIdx<0){for(var j=0;j<rows.length;j++){if(normName(rows[j].name)===me){myIdx=j;break}}}document.getElementById("leaderRows").innerHTML=h||'<div class="leader-empty">等待课堂积分...</div>';document.getElementById("myRank").textContent=myIdx>=0?"#"+(myIdx+1):"--"}
 function qdata(){if(current&&current.question&&window.ClassProPinyin)ClassProPinyin.enrichQuestion(current.question);return current&&current.question?current.question.data||{}:{}}
 function optionGrid(opts,showPy){var d=qdata(),pys=d.options_pinyin||[],h='<div class="options">';(opts||[]).forEach(function(o,i){var rot=[-2,1.5,-1,2,0.5,-1.5][i%6],dy=[0,10,-6,6,-10,4][i%6],opy=pys[i]||py(o);h+='<button class="option '+(selected===i?'sel':'')+'" onclick="pick('+i+')" style="transform:translateY('+dy+'px) rotate('+rot+'deg)">'+(showPy&&opy?'<span class="py">'+es(opy)+'</span>':'')+es(o)+'</button>'});return h+'</div><button style="width:100%;margin-top:16px" onclick="submitChoice()" '+(selected==null?'disabled':'')+'>提交 Submit</button>'}
@@ -121,7 +122,7 @@ function submitChoice(){var d=qdata();publish((d.options||[])[selected]||"",sele
 function submitOrdering(){publish(answerChunks.map(function(c){return c.t}).join(""),-1)}
 function submitMatching(){if(!nameReady)confirmName();var pairs=qdata().pairs||[],correct=0,itemResults=[];for(var i=0;i<pairs.length;i++){var isCorrect=matchPairs[i]===i;if(isCorrect)correct++;itemResults.push({index:i+1,prompt:pairs[i].left||('第 '+(i+1)+' 小题'),answer:(pairs[matchPairs[i]]||{}).right||'',correctAnswer:pairs[i].right||'',result:isCorrect?'correct':'wrong'})}var ok=correct===pairs.length,ans=pairs.map(function(p,i){return(p.left||"")+"="+((pairs[matchPairs[i]]||{}).right||"")}).join("; ");var payload={room:RM,lesson:LESSON,studentName:name(),name:name(),answer:ans,text:ans,questionId:current.question.id,mode:current.mode,autoResult:ok?"correct":"wrong",score:correct,total:pairs.length,itemResults:itemResults,submittedAt:new Date().toISOString()};sendAnswer(payload);document.getElementById("app").innerHTML='<div class="submitted-neutral" data-neutral-feedback="1">已保存并提交，老师会统一公布结果。 / Submitted.</div>'}
 document.getElementById("studentName").addEventListener("keydown",function(e){if(e.key==="Enter")confirmName()});
-renderRosterOptions();restoreDraft();renderBoard();
+renderRosterOptions();restoreStudentIdentity();restoreDraft();renderBoard();
 var client=mqtt.connect("wss://05d1d5baec9d4cb3a21f5517b430cff1.s1.eu.hivemq.cloud:8884/mqtt",{username:"classpro",password:"Classpro2026",clientId:STUDENT_CLIENT_ID,reconnectPeriod:3000,connectTimeout:8000});
 client.on("connect",function(){setStatus("connected room "+RM);client.subscribe(classroomTopic("question"));client.subscribe(classroomTopic("scoreboard"));client.subscribe(classroomTopic("display"));publishPresence();flushPendingAnswers()});
 client.on("message",function(topic,payload){try{var msg=JSON.parse(payload.toString());if(window.ClassProClassroom&&!ClassProClassroom.matches(msg,{classId:CLASS_ID,room:RM,lesson:LESSON}))return;if(msg.targetClientId&&msg.targetClientId!==STUDENT_CLIENT_ID)return;if(topic.indexOf("/scoreboard")>=0){scoreboard=msg;renderBoard();return}if(topic.indexOf("/display")>=0){if(!msg.lesson||msg.lesson===LESSON){if(msg.type==="pinyinVisibility"){globalPinyinVisible=msg.show===true;applyPinyinVisibility()}}return}if(msg.lesson&&msg.lesson!==LESSON&&msg.mode!=='mock_test')return;if(typeof msg.pinyinVisible==="boolean")globalPinyinVisible=msg.pinyinVisible===true;var same=current&&current.question&&msg.question&&current.question.id===msg.question.id;if(!same){current=msg;selected=null;chunks=[];answerChunks=[];matchLeft=null;matchRight=null;matchPairs={};submittedAnswer=null}else current=msg;saveDraft();if(msg.mode==='mock_test')setStatus('received mock test '+(msg.phase||''));else setStatus('received question '+(msg.mode||''));render()}catch(e){console.log(e);setStatus('message parse error')}});
@@ -882,6 +883,6 @@ rt{font-size:.42em;line-height:1.1;padding-bottom:3px}.py,[data-pinyin="1"]{font
 .paragraph-option.used.placed-2,.paragraph-blank.filled.slot-2{border-color:#6c9ed1!important;background:#e7f1fb!important;color:#1d4f7a!important}
 .paragraph-option.used.placed-3,.paragraph-blank.filled.slot-3{border-color:#d99a56!important;background:#fff0df!important;color:#7c4617!important}
 </style>
-<script src="l08-use-student-bridge.js?v=8"></script>
+<script src="l08-use-student-bridge.js?v=11"></script>
 </body>
 </html>

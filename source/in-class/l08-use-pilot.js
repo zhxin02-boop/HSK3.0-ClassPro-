@@ -15,7 +15,7 @@
   const DATA_VERSION = REQUESTED_DATA_VERSION || `${EXPERIMENT}-v2`;
   const CONFIG_VERSION = REQUESTED_DATA_VERSION || '4';
   const CONFIG_URL = `../data-model/experiments/${encodeURIComponent(LESSON)}-USE-${encodeURIComponent(PROFILE.toUpperCase())}.json?v=${encodeURIComponent(CONFIG_VERSION)}`;
-  const STORAGE_KEY = `ClassProUsePilot_${EXPERIMENT}_${ROOM}`;
+  const STORAGE_KEY = `ClassProUsePilot_${EXPERIMENT}_${ROOM}_${RUN}`;
   const TOPIC_ROOT = `classpro/use/v2/${CLASS_ID}/${EXPERIMENT}/${ROOM}/${RUN}`;
   const TOPICS = { control: `${TOPIC_ROOT}/control`, answers: `${TOPIC_ROOT}/answers`, presence: `${TOPIC_ROOT}/presence`, ack: `${TOPIC_ROOT}/ack` };
   const ROSTER = window.ClassProStudentsForLesson ? window.ClassProStudentsForLesson(LESSON) : (window.CLASS_STUDENTS || []);
