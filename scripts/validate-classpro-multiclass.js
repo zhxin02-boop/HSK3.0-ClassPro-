@@ -96,5 +96,9 @@ assert(studentClassroom.includes('l08-use-student-bridge.js?v=11'), 'Student cla
 const useStudentBridge = source('source/in-class/l08-use-student-bridge.js');
 assert(useStudentBridge.includes("document.getElementById('studentName')") && useStudentBridge.includes('ClassProContext.read()'), 'Use bridge should read the confirmed student identity without relying on the reserved window.name property');
 assert(useStudentBridge.includes('${ROOM}_${RUN}_${activeStudent}'), 'Student Use state should be isolated by classroom run');
+const usePilotHtml = source('source/in-class/l08-use-pilot.html');
+const usePilotRuntime = source('source/in-class/l08-use-pilot.js');
+assert(usePilotHtml.includes('l08-use-pilot.js?v=29'), 'Use wrapper should load the direct QR fix without a stale browser cache');
+assert(usePilotRuntime.includes('frameWindow.QRCode.toDataURL(frameWindow.rawStudentUrl()') && usePilotRuntime.includes('frameWindow.CLASSROOM_QR_DATA = data'), 'Direct Use QR codes should be regenerated from the unified student URL');
 
 console.log('ClassPro multiclass pilot validation passed.');

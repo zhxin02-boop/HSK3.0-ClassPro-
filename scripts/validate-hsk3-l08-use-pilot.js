@@ -93,7 +93,7 @@ assert(teacherJs.includes('unifiedStudentQrUrl') && teacherJs.includes('frameWin
 assert(teacherJs.includes('frameWindow.rawStudentUrl') && teacherJs.includes('frameWindow.studentUrl'), 'Native student links must use the same unified classroom channel as the QR code');
 assert(read(formalStudentPath).includes('l08-use-student-bridge.js'), 'Formal student page must load the optional Use bridge');
 assert(studentBridge.includes('EXPECTED_EXPERIMENT') && studentBridge.includes('EXPERIMENT !== EXPECTED_EXPERIMENT'), 'Use bridge must stay inactive for ordinary student links');
-assert(studentBridge.includes('classpro/use/${EXPERIMENT}/${ROOM}'), 'Use bridge must use the isolated experiment topic');
+assert(studentBridge.includes('classpro/use/v2/${CLASS_ID}/${EXPERIMENT}/${ROOM}/${RUN}'), 'Use bridge must use the class- and run-isolated experiment topic');
 assert(studentBridge.includes('groupId: control.interaction.groupId'), 'Student evidence must retain its MINI-loop identity');
 assert(studentBridge.includes('entryAnswers'), 'Student must preserve a separate starting expression for every MINI loop');
 assert(studentBridge.includes('function renderChoiceSet') && studentBridge.includes('choiceAnswers: answers'), 'Student must complete text overview choices independently');
@@ -102,7 +102,7 @@ assert(!studentBridge.includes('item.questionEn'), 'Student overview must not sh
 assert(studentBridge.includes('function renderVocabularyFocus') && studentBridge.includes('vocabAnswers: answers'), 'Student must receive and submit teacher-selected vocabulary focus tasks');
 assert(studentBridge.includes('function renderVocabularyResults'), 'Student must receive the common vocabulary return');
 assert(studentBridge.includes("interaction.currentAction === 'waiting'") && studentBridge.includes('restoreNative()'), 'Use bridge must return to the original student page for native resources');
-assert(teacherJs.includes('classpro/use/${EXPERIMENT}/${ROOM}'), 'Use protocol must use an isolated topic');
+assert(teacherJs.includes('classpro/use/v2/${CLASS_ID}/${EXPERIMENT}/${ROOM}/${RUN}'), 'Use protocol must use a class- and run-isolated topic');
 assert(!teacherJs.includes('classpro/room/'), 'Use protocol must not write to the formal classroom topic');
 assert(lessonLoader.includes("params.get('dataVersion')") && lessonLoader.includes("withDataVersion('../data-model/lessons/' + lesson + '.json')"), 'Shared lesson loader must honor the pilot data version');
 assert(teacherHome.includes('selectedLesson.useProfile') && teacherHome.includes("'../in-class/l08-use-pilot.html'"), 'Teacher home must route configured lessons to the shared Use pilot');

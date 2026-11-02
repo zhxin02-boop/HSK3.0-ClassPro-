@@ -136,7 +136,7 @@ assert(runtime.includes("addTrail('resource'") && runtime.includes("stage === 'e
 assert(bridge.indexOf('client.subscribe([TOPICS.control, TOPICS.ack]') < bridge.indexOf('sendPresence(true);'), 'Student must subscribe before requesting current state');
 assert(!runtime.includes("LESSON === 'HSK3-L14'") && !runtime.includes('LESSON === "HSK3-L14"') && !bridge.includes("LESSON === 'HSK3-L14'") && !bridge.includes('LESSON === "HSK3-L14"'), 'Shared runtime contains an L14-specific branch');
 assert(runtime.includes("PARAMS.get('dataVersion')") && runtime.includes('CONFIG_VERSION') && runtime.includes('encodeURIComponent(CONFIG_VERSION)'), 'Shared Use runtime must support generic data-version cache busting');
-assert(runtimeHtml.includes('l08-use-pilot.js?v=28'), 'Shared Use HTML must load the current cache-busting runtime version');
+assert(runtimeHtml.includes('l08-use-pilot.js?v=29'), 'Shared Use HTML must load the current cache-busting runtime version');
 assert(/HSK3-L14[^\n]+openForUse:\s*true[^\n]+status:\s*"ready"[^\n]+useProfile:\s*"pilot-v1"/.test(curriculum), 'L14 curriculum must be ready/open with pilot-v1 configured');
 assert(teacherHome.includes('legacyClassroomLink') && teacherHome.includes('selectedLesson.useProfile'), 'Teacher home must preserve upgraded and legacy entries');
 

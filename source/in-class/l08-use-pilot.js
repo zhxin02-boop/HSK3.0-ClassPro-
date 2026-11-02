@@ -295,7 +295,16 @@
     frameWindow.studentUrl = function () {
       return encodeURIComponent(frameWindow.rawStudentUrl());
     };
-    if (!DIRECT_MODE) frameWindow.protectedStudentQrUrl = function () { return unifiedStudentQrUrl(); };
+    if (!DIRECT_MODE) {
+      frameWindow.protectedStudentQrUrl = function () { return unifiedStudentQrUrl(); };
+      return;
+    }
+    if (frameWindow.QRCode && typeof frameWindow.QRCode.toDataURL === 'function') {
+      frameWindow.QRCode.toDataURL(frameWindow.rawStudentUrl(), { width: 320, margin: 2, errorCorrectionLevel: 'M' }).then(data => {
+        frameWindow.CLASSROOM_QR_DATA = data;
+        if (frameWindow.ap && frameWindow.ap.qr) frameWindow.ap._r();
+      }).catch(error => console.warn('Use student QR', error));
+    }
   }
 
   function choiceSummaryData(interaction) {
