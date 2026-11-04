@@ -100,5 +100,8 @@ const usePilotHtml = source('source/in-class/l08-use-pilot.html');
 const usePilotRuntime = source('source/in-class/l08-use-pilot.js');
 assert(usePilotHtml.includes('l08-use-pilot.js?v=29'), 'Use wrapper should load the direct QR fix without a stale browser cache');
 assert(usePilotRuntime.includes('frameWindow.QRCode.toDataURL(frameWindow.rawStudentUrl()') && usePilotRuntime.includes('frameWindow.CLASSROOM_QR_DATA = data'), 'Direct Use QR codes should be regenerated from the unified student URL');
+const teacherClassroomCss = source('source/in-class/teacher-classroom.css');
+assert(teacherClassroomCss.includes('.hsk3-guess-word{display:flex') && teacherClassroomCss.includes('flex-wrap:wrap') && teacherClassroomCss.includes('white-space:normal'), 'Say-and-guess cards should wrap long Chinese targets instead of clipping them');
+assert(teacherClassroomCss.includes('font-size:clamp(19px,1.55vw,25px)') && source('source/in-class/teacher.html').includes('teacher-classroom.css?v=20261104-1'), 'Say-and-guess cards should use the current responsive Hanzi size without stale CSS');
 
 console.log('ClassPro multiclass pilot validation passed.');

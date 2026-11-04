@@ -5661,7 +5661,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "校园餐厅里的词典和还书请求",
+            "target": "还词典",
             "boardIndex": 1,
             "clues": [],
             "scaffold": {
@@ -5691,7 +5691,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "图书馆借阅状态",
+            "target": "书被借走了",
             "boardIndex": 2,
             "clues": [],
             "scaffold": {
@@ -5720,7 +5720,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "校园下午路线",
+            "target": "下午路线",
             "boardIndex": 3,
             "clues": [],
             "scaffold": {
@@ -5747,7 +5747,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "找不到校园卡",
+            "target": "校园卡丢了",
             "boardIndex": 4,
             "clues": [],
             "scaffold": {
@@ -5775,7 +5775,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "晚会节目讨论",
+            "target": "晚会节目",
             "boardIndex": 5,
             "clues": [],
             "scaffold": {
@@ -5804,7 +5804,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "上台前的紧张和鼓励",
+            "target": "上台加油",
             "boardIndex": 6,
             "clues": [],
             "scaffold": {
@@ -5833,7 +5833,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "新年晚会节目",
+            "target": "新年晚会",
             "boardIndex": 7,
             "clues": [],
             "scaffold": {
@@ -5862,7 +5862,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "学校网站上的晚会视频",
+            "target": "晚会视频",
             "boardIndex": 8,
             "clues": [],
             "scaffold": {

@@ -6189,7 +6189,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "饭馆菜单和三位同事",
+            "target": "饭馆请客",
             "boardIndex": 1,
             "clues": [],
             "scaffold": {
@@ -6219,7 +6219,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "生日邀请卡",
+            "target": "生日邀请",
             "boardIndex": 2,
             "clues": [],
             "scaffold": {
@@ -6248,7 +6248,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "冰箱里的饮料和酒",
+            "target": "冰箱饮料",
             "boardIndex": 3,
             "clues": [],
             "scaffold": {
@@ -6277,7 +6277,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "音箱的音量太大",
+            "target": "音量太大",
             "boardIndex": 4,
             "clues": [],
             "scaffold": {
@@ -6307,7 +6307,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "画板、画笔和生日蛋糕",
+            "target": "生日礼物",
             "boardIndex": 5,
             "clues": [],
             "scaffold": {
@@ -6336,7 +6336,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "盘子、蛋糕和聊天的人",
+            "target": "边吃边聊",
             "boardIndex": 6,
             "clues": [],
             "scaffold": {
@@ -6364,7 +6364,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "有红点的世界地图",
+            "target": "地图红点",
             "boardIndex": 7,
             "clues": [],
             "scaffold": {
@@ -6394,7 +6394,7 @@
           "openEnded": true,
           "needsTeacherReview": true,
           "data": {
-            "target": "两个城市的四季照片",
+            "target": "城市四季",
             "boardIndex": 8,
             "clues": [],
             "scaffold": {

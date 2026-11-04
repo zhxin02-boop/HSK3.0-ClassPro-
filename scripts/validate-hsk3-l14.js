@@ -138,6 +138,7 @@ const groups = lesson.inClass?.questionGroups || {};
 ok(JSON.stringify(Object.keys(groups).sort()) === JSON.stringify(Object.keys(reference.inClass.questionGroups).sort()), 'L14 practice group keys must match the current L13 shared architecture.');
 const counts = {v5_vocab_fill:3,v7_word_match:3,g1_ordering:5,scene_sentence_choice:10,v6_description_guess:10,v2_say_guess:8,v3_blind_box:4,g2_picture_complete:8,r2_passage_choice:5,r3_independent_reading:5,r4_paragraph_fill:5,t3_chain_sentence:5,t2_task_card:5,pk_question:3,info_match:2,textQa:0,pictureTalk:0};
 for (const [key,count] of Object.entries(counts)) ok(groups[key]?.length === count, `${key} expected ${count}, got ${groups[key]?.length}.`);
+ok(groups.v2_say_guess?.every(item=>[...item.data.target].length<=5), 'Every say-and-guess target must contain no more than five Chinese characters.');
 for (const [key,value] of Object.entries(groups)) if (Array.isArray(value)) ok(value.every(item=>item.sourceType === 'teaching_extension'), `${key} contains an unmarked exercise.`);
 ok(groups.v5_vocab_fill?.every(item=>item.data?.wordBank?.length===5 && item.data?.sentences?.length===5), 'Vocabulary fill must be 3×5.');
 ok(groups.v7_word_match?.every(item=>item.data?.pairs?.length===5 && item.data?.submitAll===true), 'Question-answer match must be 3×5 with submit-all behavior.');

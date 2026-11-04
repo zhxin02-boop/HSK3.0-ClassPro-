@@ -171,6 +171,7 @@ ok(groups.v5_vocab_fill?.every(group=>group.data?.wordBank?.length === 5 && grou
 ok(groups.v7_word_match?.every(group=>group.type === 'question_answer_match' && group.data?.neutralBeforeSubmit === true && group.data?.allowUndo === true && group.data?.submitAll === true), 'Word matching must use the shared submit-all interaction.');
 ok(groups.v3_blind_box?.every(item=>item.data?.words?.length === 2 && item.data?.revealDecoration === 'none' && item.data?.uniformWordSize === true), 'Blind-box items must use two uniform undecorated expressions.');
 ok(groups.v2_say_guess?.every(item=>!item.data?.competition && item.prompt_cn === '说一说、猜一猜。'), 'L13 say-and-guess must keep the established shared interaction without a new team-scoring branch.');
+ok(groups.v2_say_guess?.every(item=>[...item.data.target].length<=5), 'Every L13 say-and-guess target must contain no more than five Chinese characters.');
 ok(groups.r2_passage_choice?.every(item=>item.data?.questions?.length === 3), 'Each passage must contain three questions.');
 ok(groups.r2_passage_choice?.every(item=>item.data?.passage_pinyin && item.data.questions.every(question=>question.answer === question.options[question.correct_index])), 'Each reading passage needs pinyin and answer-index consistency.');
 ok(groups.r3_independent_reading?.every(item=>item.correct_answer === item.data?.options?.[item.data?.correct_index]), 'Independent-reading answers are inconsistent.');

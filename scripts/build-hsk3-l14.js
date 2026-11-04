@@ -351,14 +351,14 @@ const questionGroups = {
     guessItem('l14_guess_10','互联网上可以访问的一组页面。','网站',['网站','视频','报纸','电子书'])
   ],
   v2_say_guess:[
-    openItem('l14_say_01','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'校园餐厅里的词典和还书请求',boardIndex:1,clues:[],scaffold:{words:['词典','最好','节'],frames:['这是……。','它最好……。','同学可以……。']},task:'说明什么东西需要什么时候还。',answerPlaceholder:'写下你的中文提示。'}),
-    openItem('l14_say_02','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'图书馆借阅状态',boardIndex:2,clues:[],scaffold:{words:['图书馆','被','故事'],frames:['这本书……。','它已经被……。']},task:'说明一本书为什么借不到。',answerPlaceholder:'写下你的中文提示。'}),
-    openItem('l14_say_03','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'校园下午路线',boardIndex:3,clues:[],scaffold:{words:['然后','报纸'],frames:['先……，然后……。']},task:'说明两个校园动作的顺序。',answerPlaceholder:'写下你的中文提示。'}),
-    openItem('l14_say_04','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'找不到校园卡',boardIndex:4,clues:[],scaffold:{words:['忘记','电子书'],frames:['我忘记……。','可以先……。']},task:'说明问题和一个替代办法。',answerPlaceholder:'写下你的中文提示。'}),
-    openItem('l14_say_05','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'晚会节目讨论',boardIndex:5,clues:[],scaffold:{words:['女生','表演','节目'],frames:['几个人正在……。','她们准备……。']},task:'说明人物和节目。',answerPlaceholder:'写下你的中文提示。'}),
-    openItem('l14_say_06','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'上台前的紧张和鼓励',boardIndex:6,clues:[],scaffold:{words:['面前','有些','相信'],frames:['他要在……。','……什么啊……。']},task:'说明担忧并给一句鼓励。',answerPlaceholder:'写下你的中文提示。'}),
-    openItem('l14_say_07','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'新年晚会节目',boardIndex:7,clues:[],scaffold:{words:['新年','班级','留学生'],frames:['这是……。','最喜欢……。']},task:'说明活动和喜欢的节目。',answerPlaceholder:'写下你的中文提示。'}),
-    openItem('l14_say_08','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'学校网站上的晚会视频',boardIndex:8,clues:[],scaffold:{words:['最后','网站','视频'],frames:['最后……。','过几天……。']},task:'说明晚会结果和后续计划。',answerPlaceholder:'写下你的中文提示。'})
+    openItem('l14_say_01','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'还词典',boardIndex:1,clues:[],scaffold:{words:['词典','最好','节'],frames:['这是……。','它最好……。','同学可以……。']},task:'说明什么东西需要什么时候还。',answerPlaceholder:'写下你的中文提示。'}),
+    openItem('l14_say_02','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'书被借走了',boardIndex:2,clues:[],scaffold:{words:['图书馆','被','故事'],frames:['这本书……。','它已经被……。']},task:'说明一本书为什么借不到。',answerPlaceholder:'写下你的中文提示。'}),
+    openItem('l14_say_03','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'下午路线',boardIndex:3,clues:[],scaffold:{words:['然后','报纸'],frames:['先……，然后……。']},task:'说明两个校园动作的顺序。',answerPlaceholder:'写下你的中文提示。'}),
+    openItem('l14_say_04','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'校园卡丢了',boardIndex:4,clues:[],scaffold:{words:['忘记','电子书'],frames:['我忘记……。','可以先……。']},task:'说明问题和一个替代办法。',answerPlaceholder:'写下你的中文提示。'}),
+    openItem('l14_say_05','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'晚会节目',boardIndex:5,clues:[],scaffold:{words:['女生','表演','节目'],frames:['几个人正在……。','她们准备……。']},task:'说明人物和节目。',answerPlaceholder:'写下你的中文提示。'}),
+    openItem('l14_say_06','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'上台加油',boardIndex:6,clues:[],scaffold:{words:['面前','有些','相信'],frames:['他要在……。','……什么啊……。']},task:'说明担忧并给一句鼓励。',answerPlaceholder:'写下你的中文提示。'}),
+    openItem('l14_say_07','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'新年晚会',boardIndex:7,clues:[],scaffold:{words:['新年','班级','留学生'],frames:['这是……。','最喜欢……。']},task:'说明活动和喜欢的节目。',answerPlaceholder:'写下你的中文提示。'}),
+    openItem('l14_say_08','open_response','说一说、猜一猜。','Describe the covered scene without naming it.',{target:'晚会视频',boardIndex:8,clues:[],scaffold:{words:['最后','网站','视频'],frames:['最后……。','过几天……。']},task:'说明晚会结果和后续计划。',answerPlaceholder:'写下你的中文提示。'})
   ],
   v3_blind_box:[
     openItem('l14_blind_01','open_response','盲盒造句。','Make one natural sentence with both expressions.',{words:['词典','被借走'],instructions:'Use both expressions in one complete, natural sentence.',answerPlaceholder:'写一个完整的中文句子。',sample:'我想借的词典被别人借走了。',revealDecoration:'none',uniformWordSize:true}),

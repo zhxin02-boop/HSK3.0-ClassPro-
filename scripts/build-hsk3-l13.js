@@ -253,14 +253,14 @@ const guessRows = [
 const guesses = guessRows.map((row,index,all)=>{ const options=[row[0],...guessRows.filter((_,i)=>i!==index).slice(index%6,index%6+3).map(item=>item[0])].slice(0,4); return {id:`l13_guess_${String(index+1).padStart(2,'0')}`,type:'description_guess',stage:'in_class',contentRole:roleFor(index,all.length),prompt_cn:row[1],prompt_en:'Guess the lesson word.',correct_answer:row[0],data:{description:row[1],options}}; });
 
 const sayRows = [
-  ['饭馆菜单和三位同事',['请客','南方菜','北方菜'],'说明谁请客、点什么、为什么不要太多。'],
-  ['生日邀请卡',['有时间的话','做客'],'用条件句邀请一位同学。'],
-  ['冰箱里的饮料和酒',['把','放进'],'说明主人怎样准备饮品。'],
-  ['音箱的音量太大',['把','开得太大','关小'],'提出并解决一个问题。'],
-  ['画板、画笔和生日蛋糕',['礼物','画家'],'说明礼物为什么合适。'],
-  ['盘子、蛋糕和聊天的人',['一边……一边……'],'说出两个同时发生的动作。'],
-  ['有红点的世界地图',['地图','点','去过'],'解释红点的意思。'],
-  ['两个城市的四季照片',['不同','文化','感到'],'复习比较并表达个人感受。']
+  ['饭馆请客',['请客','南方菜','北方菜'],'说明谁请客、点什么、为什么不要太多。'],
+  ['生日邀请',['有时间的话','做客'],'用条件句邀请一位同学。'],
+  ['冰箱饮料',['把','放进'],'说明主人怎样准备饮品。'],
+  ['音量太大',['把','开得太大','关小'],'提出并解决一个问题。'],
+  ['生日礼物',['礼物','画家'],'说明礼物为什么合适。'],
+  ['边吃边聊',['一边……一边……'],'说出两个同时发生的动作。'],
+  ['地图红点',['地图','点','去过'],'解释红点的意思。'],
+  ['城市四季',['不同','文化','感到'],'复习比较并表达个人感受。']
 ];
 const sayGuess = sayRows.map((row,index,all)=>({id:`l13_say_${String(index+1).padStart(2,'0')}`,type:'open_response',stage:'in_class',contentRole:roleFor(index,all.length),prompt_cn:'说一说、猜一猜。',prompt_en:'Describe the covered scene without naming it.',openEnded:true,needsTeacherReview:true,data:{target:row[0],boardIndex:index+1,clues:[],scaffold:{words:row[1],frames:['这是一个……的场景。','人物正在……。','它跟……有关系。']},task:row[2],answerPlaceholder:'写下你的中文提示。'}}));
 
