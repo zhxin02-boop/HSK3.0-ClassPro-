@@ -1,0 +1,3018 @@
+{
+  "schemaVersion": "classpro-use-profile/v3",
+  "experiment": {
+    "id": "l16-use-pilot-v1",
+    "title": "第16课·以用为主线升级版",
+    "lessonLabel": "第16课",
+    "sourceLesson": "HSK3-L16",
+    "scope": "四个课文MINI循环；保留L16原生词汇场景、渐进式语法、对话与日记体裁、正式音频和完整练习。"
+  },
+  "sources": {
+    "lesson": {
+      "path": "../lessons/HSK3-L16.json",
+      "sha256": "9155E3B56A334D78BE24DAA01A531C2E027BC29DE9F69218F97CB488E97E0789"
+    },
+    "teacher": {
+      "path": "../../in-class/teacher.html"
+    },
+    "student": {
+      "path": "../../in-class/student.html"
+    }
+  },
+  "nativeTeaching": {
+    "preserveCourseStyles": true,
+    "grammar": {
+      "source": "formal_lesson",
+      "preserveExamples": true,
+      "preserveHighlights": true,
+      "preserveOralQuestions": true,
+      "preserveFollowUp": true
+    },
+    "text": {
+      "source": "formal_lesson",
+      "preservePresentation": true,
+      "preserveDialogue": true,
+      "preserveDiary": true,
+      "preserveAudio": true
+    },
+    "vocabulary": {
+      "source": "formal_lesson",
+      "preserveScenes": true,
+      "preserveHotspots": true
+    }
+  },
+  "useGroups": [
+    {
+      "id": "T1",
+      "icon": "🐾",
+      "label": "课文 1",
+      "title": "我想领养的动物",
+      "goal": "如果你想领养一只动物，你想领养什么？为什么？",
+      "goalEn": "Say which animal you would adopt and give one simple reason.",
+      "image": "images/hsk3-l16/photo-text-1-adoption-shop.png",
+      "imageLabel": "宠物领养店里的小猫",
+      "entryPromptCn": "看图先说一句：你喜欢什么动物？",
+      "entryPromptEn": "Look at the picture and name one animal you like.",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说出想领养的动物"
+        },
+        {
+          "id": "step_2",
+          "label": "说出一个简单理由"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t1_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "动物、可爱、照顾、周末",
+          "contentEn": "Use only the words you need."
+        },
+        {
+          "id": "t1_order",
+          "labelCn": "表达步骤",
+          "labelEn": "Speaking steps",
+          "contentCn": "说出想领养的动物 → 说出一个简单理由",
+          "contentEn": "Complete the simple steps in order."
+        }
+      ],
+      "textId": "t_hsk3_l16_01",
+      "entry": {
+        "id": "l16_t1_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图先说一句：你喜欢什么动物？",
+        "promptEn": "Look at the picture and name one animal you like.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l16/photo-text-1-adoption-shop.png",
+          "labelCn": "宠物领养店里的小猫",
+          "altCn": "宠物领养店里的小猫",
+          "instructionCn": "看图先说一句：你喜欢什么动物？",
+          "instructionEn": "Look at the picture and name one animal you like."
+        }
+      },
+      "exit": {
+        "id": "l16_t1_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "如果你想领养一只动物，你想领养什么？为什么？",
+        "promptEn": "Which animal would you adopt, and why?"
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文1词汇",
+          "vocabSession": "1"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "一会儿……，一会儿……",
+          "grammarIndex": 0
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文1",
+          "textIndex": 0
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：我想领养的动物",
+          "routeState": {
+            "t2ki": 0
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l16_task_01",
+          "status": "ready",
+          "purpose": "我想领养的动物"
+        },
+        {
+          "id": "l16_para_01",
+          "status": "ready",
+          "purpose": "我的动物选择"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "icon": "🐼",
+      "label": "课文 2",
+      "title": "我眼中的大熊猫",
+      "goal": "介绍一下你眼中的大熊猫。",
+      "goalEn": "Introduce the giant panda in your eyes in two or three sentences.",
+      "image": "images/hsk3-l16/photo-text-2-panda-questions.png",
+      "imageLabel": "孩子在熊猫馆提问题",
+      "entryPromptCn": "关于大熊猫，你想知道什么？（问3个问题）",
+      "entryPromptEn": "What would you like to know about giant pandas? Ask three questions.",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说出你觉得大熊猫怎么样"
+        },
+        {
+          "id": "step_2",
+          "label": "说一个大熊猫事实"
+        },
+        {
+          "id": "step_3",
+          "label": "连成2—3句话"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t2_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "大熊猫、竹子、国宝、关于、其实",
+          "contentEn": "Use only the words you need."
+        },
+        {
+          "id": "t2_order",
+          "labelCn": "表达步骤",
+          "labelEn": "Speaking steps",
+          "contentCn": "说出你觉得大熊猫怎么样 → 说一个大熊猫事实 → 连成2—3句话",
+          "contentEn": "Complete the simple steps in order."
+        }
+      ],
+      "textId": "t_hsk3_l16_02",
+      "entry": {
+        "id": "l16_t2_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "关于大熊猫，你想知道什么？（问3个问题）",
+        "promptEn": "What would you like to know about giant pandas? Ask three questions.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l16/photo-text-2-panda-questions.png",
+          "labelCn": "孩子在熊猫馆提问题",
+          "altCn": "孩子在熊猫馆提问题",
+          "instructionCn": "关于大熊猫，你想知道什么？（问3个问题）",
+          "instructionEn": "What would you like to know about giant pandas? Ask three questions."
+        }
+      },
+      "exit": {
+        "id": "l16_t2_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "介绍一下你眼中的大熊猫。",
+        "promptEn": "Introduce the giant panda in your eyes."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文2词汇",
+          "vocabSession": "2"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "介词“关于”",
+          "grammarIndex": 1
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文2",
+          "textIndex": 1
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：我眼中的大熊猫",
+          "routeState": {
+            "t2ki": 1
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l16_task_02",
+          "status": "ready",
+          "purpose": "我眼中的大熊猫"
+        },
+        {
+          "id": "l16_para_02",
+          "status": "ready",
+          "purpose": "我眼中的大熊猫"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "icon": "🔎",
+      "label": "课文 3",
+      "title": "熊猫的习惯",
+      "goal": "介绍一下熊猫的习惯。",
+      "goalEn": "Introduce two panda habits.",
+      "image": "images/hsk3-l16/photo-text-3-panda-observation.png",
+      "imageLabel": "两只大熊猫的不同动作",
+      "entryPromptCn": "看图先说一个你看到的熊猫动作。",
+      "entryPromptEn": "Look at the picture and name one visible panda action.",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说出一个吃的习惯"
+        },
+        {
+          "id": "step_2",
+          "label": "说出一个睡觉或活动习惯"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t3_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "饱、嘴、身边、半天、脸",
+          "contentEn": "Use only the words you need."
+        },
+        {
+          "id": "t3_order",
+          "labelCn": "表达步骤",
+          "labelEn": "Speaking steps",
+          "contentCn": "说出一个吃的习惯 → 说出一个睡觉或活动习惯",
+          "contentEn": "Complete the simple steps in order."
+        }
+      ],
+      "textId": "t_hsk3_l16_03",
+      "entry": {
+        "id": "l16_t3_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图先说一个你看到的熊猫动作。",
+        "promptEn": "Look at the picture and name one visible panda action.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l16/photo-text-3-panda-observation.png",
+          "labelCn": "两只大熊猫的不同动作",
+          "altCn": "两只大熊猫的不同动作",
+          "instructionCn": "看图先说一个你看到的熊猫动作。",
+          "instructionEn": "Look at the picture and name one visible panda action."
+        }
+      },
+      "exit": {
+        "id": "l16_t3_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "介绍一下熊猫的习惯。",
+        "promptEn": "Introduce two panda habits."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文3词汇",
+          "vocabSession": "3"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "一般来说",
+          "grammarIndex": 2
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文3",
+          "textIndex": 2
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：熊猫的习惯",
+          "routeState": {
+            "t2ki": 2
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l16_task_03",
+          "status": "ready",
+          "purpose": "熊猫的习惯"
+        },
+        {
+          "id": "l16_para_03",
+          "status": "ready",
+          "purpose": "熊猫的习惯"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "icon": "🧭",
+      "label": "课文 4",
+      "title": "第一次来北京的参观建议",
+      "goal": "给第一次来北京旅游的家人朋友一些建议。",
+      "goalEn": "Give two practical tips to family or friends visiting Beijing for the first time.",
+      "image": "images/hsk3-l16/photo-text-4-winter-summer-zoo.png",
+      "imageLabel": "冬天和夏天参观动物园",
+      "entryPromptCn": "看图先说一句：你想什么时候去动物园？",
+      "entryPromptEn": "Look at the picture and say when you would like to visit the zoo.",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "给出第一条实用建议"
+        },
+        {
+          "id": "step_2",
+          "label": "给出第二条实用建议"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t4_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "大人、喜爱、动物园、大熊猫、比、早点儿",
+          "contentEn": "Use only the words you need."
+        },
+        {
+          "id": "t4_order",
+          "labelCn": "表达步骤",
+          "labelEn": "Speaking steps",
+          "contentCn": "给出第一条实用建议 → 给出第二条实用建议",
+          "contentEn": "Complete the simple steps in order."
+        }
+      ],
+      "textId": "t_hsk3_l16_04",
+      "entry": {
+        "id": "l16_t4_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "看图先说一句：你想什么时候去动物园？",
+        "promptEn": "Look at the picture and say when you would like to visit the zoo.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l16/photo-text-4-winter-summer-zoo.png",
+          "labelCn": "冬天和夏天参观动物园",
+          "altCn": "冬天和夏天参观动物园",
+          "instructionCn": "看图先说一句：你想什么时候去动物园？",
+          "instructionEn": "Look at the picture and say when you would like to visit the zoo."
+        }
+      },
+      "exit": {
+        "id": "l16_t4_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "给第一次来北京旅游的家人朋友一些建议。",
+        "promptEn": "Give two practical tips to family or friends visiting Beijing for the first time."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文4词汇",
+          "vocabSession": "4"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "比较句（11）",
+          "grammarIndex": 3
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文4",
+          "textIndex": 3
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：北京参观建议",
+          "routeState": {
+            "t2ki": 3
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l16_task_04",
+          "status": "ready",
+          "purpose": "北京参观建议"
+        },
+        {
+          "id": "l16_para_04",
+          "status": "ready",
+          "purpose": "北京动物园建议"
+        }
+      ]
+    }
+  ],
+  "textLearning": [
+    {
+      "textId": "t_hsk3_l16_01",
+      "useGroupId": "T1",
+      "title": "宠物领养店里的决定",
+      "stageContract": [
+        "listen_or_read",
+        "overall_choice",
+        "detail_qa",
+        "show_text",
+        "language_and_application"
+      ],
+      "overviewChoices": [
+        {
+          "id": "l16_t1_overall_01",
+          "focus": "overall_understanding",
+          "questionCn": "大家在看什么？",
+          "questionPinyin": "",
+          "options": [
+            "一只小狗",
+            "一只小猫",
+            "一只大熊猫"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l16_t1_overall_02",
+          "focus": "overall_understanding",
+          "questionCn": "小猫现在怎么样？",
+          "questionPinyin": "",
+          "options": [
+            "又干净又漂亮",
+            "又脏又小",
+            "不认得服务员"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l16_t1_overall_03",
+          "focus": "overall_understanding",
+          "questionCn": "妈妈最后怎么说？",
+          "questionPinyin": "",
+          "options": [
+            "明天去买一只猫",
+            "现在把猫带回家",
+            "周末带孩子们去动物园"
+          ],
+          "correctIndex": 2
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l16_t1_detail_01",
+          "questionCn": "领养店养这只小猫多久了？",
+          "questionPinyin": "",
+          "answer": "已经一年多了。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "已经一年多了。"
+          ],
+          "informationPoint": "饲养时间"
+        },
+        {
+          "id": "l16_t1_detail_02",
+          "questionCn": "第一天看见它时，它怎么样？",
+          "questionPinyin": "",
+          "answer": "它又脏又小。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "它又脏又小。"
+          ],
+          "informationPoint": "过去状态"
+        },
+        {
+          "id": "l16_t1_detail_03",
+          "questionCn": "这只小猫会做哪两种事？",
+          "questionPinyin": "",
+          "answer": "它一会儿在脚边睡觉，一会儿在人身上爬。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "它一会儿在脚边睡觉，一会儿在人身上爬。"
+          ],
+          "informationPoint": "交替行为"
+        },
+        {
+          "id": "l16_t1_detail_04",
+          "questionCn": "小猫为什么认得服务员了？",
+          "questionPinyin": "",
+          "answer": "因为服务员们一直照顾它。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "因为服务员们一直照顾它。"
+          ],
+          "informationPoint": "照顾关系"
+        },
+        {
+          "id": "l16_t1_detail_05",
+          "questionCn": "王一雪准备什么时候带孩子们去哪里？",
+          "questionPinyin": "",
+          "answer": "周末带他们去北京动物园。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "周末带他们去北京动物园。"
+          ],
+          "informationPoint": "最终安排"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "它一会儿在你脚边睡觉，一会儿在你身上爬。",
+        "focus": "主语 + 一会儿 + 动作/状态1，+ 一会儿 + 动作/状态2",
+        "actionLabel": "进入“一会儿……，一会儿……”",
+        "grammarIndex": 0
+      },
+      "paragraphPractice": {
+        "label": "调用“我的动物选择”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 0
+      },
+      "lifeTransfer": {
+        "promptCn": "如果你想领养一只动物，你想领养什么？为什么？",
+        "promptEn": "Say which animal you would adopt and give one simple reason."
+      }
+    },
+    {
+      "textId": "t_hsk3_l16_02",
+      "useGroupId": "T2",
+      "title": "熊猫问题台",
+      "stageContract": [
+        "listen_or_read",
+        "overall_choice",
+        "detail_qa",
+        "show_text",
+        "language_and_application"
+      ],
+      "overviewChoices": [
+        {
+          "id": "l16_t2_overall_01",
+          "focus": "overall_understanding",
+          "questionCn": "刘小明一直在问谁的问题？",
+          "questionPinyin": "",
+          "options": [
+            "小猫",
+            "大熊猫",
+            "服务员"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l16_t2_overall_02",
+          "focus": "overall_understanding",
+          "questionCn": "他问了名字、食物、国宝，还问了什么？",
+          "questionPinyin": "",
+          "options": [
+            "大熊猫睡多久",
+            "动物园几点关门",
+            "有的熊猫去了哪里"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "l16_t2_overall_03",
+          "focus": "overall_understanding",
+          "questionCn": "王一雪在做什么？",
+          "questionPinyin": "",
+          "options": [
+            "回答刘小明的问题",
+            "给大熊猫拍照",
+            "让孩子们回家"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l16_t2_detail_01",
+          "questionCn": "大熊猫跟猫有什么关系？",
+          "questionPinyin": "",
+          "answer": "它们跟猫没什么关系。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "它们跟猫没什么关系。"
+          ],
+          "informationPoint": "名称与分类"
+        },
+        {
+          "id": "l16_t2_detail_02",
+          "questionCn": "大熊猫可以吃肉，为什么主要吃竹子？",
+          "questionPinyin": "",
+          "answer": "因为它们对肉不感兴趣。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "因为它们对肉不感兴趣。"
+          ],
+          "informationPoint": "食物偏好"
+        },
+        {
+          "id": "l16_t2_detail_03",
+          "questionCn": "大熊猫为什么是中国的国宝？",
+          "questionPinyin": "",
+          "answer": "因为全世界只有中国有野生大熊猫。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "因为全世界只有中国有野生大熊猫。"
+          ],
+          "informationPoint": "国宝原因"
+        },
+        {
+          "id": "l16_t2_detail_04",
+          "questionCn": "刘小明问熊猫去了哪里后，王一雪怎么回答？",
+          "questionPinyin": "",
+          "answer": "她说关于这个问题，得慢慢给他讲。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "她说关于这个问题，得慢慢给他讲。"
+          ],
+          "informationPoint": "关于句与回应"
+        },
+        {
+          "id": "l16_t2_detail_05",
+          "questionCn": "刘小雪说弟弟是“十万个为什么”是什么意思？",
+          "questionPinyin": "",
+          "answer": "意思是他很好奇、问题很多。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "意思是他很好奇、问题很多。"
+          ],
+          "informationPoint": "教材文化注释"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "关于这个问题，我得慢慢给你讲。",
+        "focus": "关于 + 名词/话题，+ 完整句子",
+        "actionLabel": "进入“介词“关于””",
+        "grammarIndex": 1
+      },
+      "paragraphPractice": {
+        "label": "调用“我眼中的大熊猫”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 1
+      },
+      "lifeTransfer": {
+        "promptCn": "介绍一下你眼中的大熊猫。",
+        "promptEn": "Introduce the giant panda in your eyes in two or three sentences."
+      }
+    },
+    {
+      "textId": "t_hsk3_l16_03",
+      "useGroupId": "T3",
+      "title": "熊猫馆观察报告",
+      "stageContract": [
+        "listen_or_read",
+        "overall_choice",
+        "detail_qa",
+        "show_text",
+        "language_and_application"
+      ],
+      "overviewChoices": [
+        {
+          "id": "l16_t3_overall_01",
+          "focus": "overall_understanding",
+          "questionCn": "他们在看什么？",
+          "questionPinyin": "",
+          "options": [
+            "两只大熊猫",
+            "一只小猫",
+            "很多游客"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l16_t3_overall_02",
+          "focus": "overall_understanding",
+          "questionCn": "第一只和第二只熊猫一样吗？",
+          "questionPinyin": "",
+          "options": [
+            "一样，都在睡觉",
+            "一样，都在吃东西",
+            "不一样，一只在动，一只很久没动"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "l16_t3_overall_03",
+          "focus": "overall_understanding",
+          "questionCn": "刘小雪最后想做什么？",
+          "questionPinyin": "",
+          "options": [
+            "给熊猫吃东西",
+            "和两只熊猫照相",
+            "带一只熊猫回家"
+          ],
+          "correctIndex": 1
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l16_t3_detail_01",
+          "questionCn": "第一只大熊猫一会儿做什么，一会儿做什么？",
+          "questionPinyin": "",
+          "answer": "一会儿爬上去，一会儿跳下来。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "一会儿爬上去，一会儿跳下来。"
+          ],
+          "informationPoint": "交替动作"
+        },
+        {
+          "id": "l16_t3_detail_02",
+          "questionCn": "为什么王一雪觉得它还没吃饱？",
+          "questionPinyin": "",
+          "answer": "因为它站起来张着嘴找吃的。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "因为它站起来张着嘴找吃的。"
+          ],
+          "informationPoint": "饥饿判断"
+        },
+        {
+          "id": "l16_t3_detail_03",
+          "questionCn": "为什么她们不能确定身边那只熊猫是不是在睡觉？",
+          "questionPinyin": "",
+          "answer": "它半天没动，而且她们看不见它的脸。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "它半天没动，而且她们看不见它的脸。"
+          ],
+          "informationPoint": "观察与推测"
+        },
+        {
+          "id": "l16_t3_detail_04",
+          "questionCn": "一般来说，大熊猫每天怎样生活？",
+          "questionPinyin": "",
+          "answer": "它们每天睡很多次觉，也花很多时间吃东西。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "它们每天睡很多次觉，也花很多时间吃东西。"
+          ],
+          "informationPoint": "一般习惯"
+        },
+        {
+          "id": "l16_t3_detail_05",
+          "questionCn": "刘小雪最后请妈妈做什么？",
+          "questionPinyin": "",
+          "answer": "给她和两只大熊猫照一张照片。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "给她和两只大熊猫照一张照片。"
+          ],
+          "informationPoint": "最后请求"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "一般来说，熊猫每天要睡很多次觉。",
+        "focus": "一般来说，+ 大多数情况下成立的完整句子",
+        "actionLabel": "进入“一般来说”",
+        "grammarIndex": 2
+      },
+      "paragraphPractice": {
+        "label": "调用“熊猫的习惯”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 2
+      },
+      "lifeTransfer": {
+        "promptCn": "介绍一下熊猫的习惯。",
+        "promptEn": "Introduce two panda habits."
+      }
+    },
+    {
+      "textId": "t_hsk3_l16_04",
+      "useGroupId": "T4",
+      "title": "北京动物园参观日记",
+      "stageContract": [
+        "listen_or_read",
+        "overall_choice",
+        "detail_qa",
+        "show_text",
+        "language_and_application"
+      ],
+      "overviewChoices": [
+        {
+          "id": "l16_t4_overall_01",
+          "focus": "overall_understanding",
+          "questionCn": "王一雪今天带孩子们去了哪里？",
+          "questionPinyin": "",
+          "options": [
+            "南京",
+            "宠物领养店",
+            "北京动物园"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "l16_t4_overall_02",
+          "focus": "overall_understanding",
+          "questionCn": "大人和孩子最喜欢看什么？",
+          "questionPinyin": "",
+          "options": [
+            "小猫",
+            "大熊猫",
+            "竹子"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l16_t4_overall_03",
+          "focus": "overall_understanding",
+          "questionCn": "第一次来北京，王一雪觉得怎么做不错？",
+          "questionPinyin": "",
+          "options": [
+            "跟家人一起去北京动物园",
+            "晚上七点以后去动物园",
+            "冬天晚一点去动物园"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l16_t4_detail_01",
+          "questionCn": "王一雪带谁去动物园了？",
+          "questionPinyin": "",
+          "answer": "她带小雪和小明去了。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "她带小雪和小明去了。"
+          ],
+          "informationPoint": "同行人物"
+        },
+        {
+          "id": "l16_t4_detail_02",
+          "questionCn": "大人和孩子最喜爱什么动物？",
+          "questionPinyin": "",
+          "answer": "他们最喜爱大熊猫。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "他们最喜爱大熊猫。"
+          ],
+          "informationPoint": "最受欢迎动物"
+        },
+        {
+          "id": "l16_t4_detail_03",
+          "questionCn": "游客为什么带着相机去熊猫馆？",
+          "questionPinyin": "",
+          "answer": "为了给可爱的大熊猫拍照。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "为了给可爱的大熊猫拍照。"
+          ],
+          "informationPoint": "游客行为"
+        },
+        {
+          "id": "l16_t4_detail_04",
+          "questionCn": "动物园几点开门、几点关门？",
+          "questionPinyin": "",
+          "answer": "早上七点半开门，晚上七点关门。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "早上七点半开门，晚上七点关门。"
+          ],
+          "informationPoint": "开放时间"
+        },
+        {
+          "id": "l16_t4_detail_05",
+          "questionCn": "冬天和夏天有什么不同，作者给了什么建议？",
+          "questionPinyin": "",
+          "answer": "冬天游客少，也早关门一个小时；第一次来北京可以和家人去北京动物园。",
+          "answerPinyin": "",
+          "acceptedAnswers": [
+            "冬天游客少，也早关门一个小时；第一次来北京可以和家人去北京动物园。"
+          ],
+          "informationPoint": "季节比较与建议"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "冬天比夏天早关门一个小时。",
+        "focus": "A 比 B + 多/少/早/晚 + 动词 + 数量短语",
+        "actionLabel": "进入“比较句（11）”",
+        "grammarIndex": 3
+      },
+      "paragraphPractice": {
+        "label": "调用“北京动物园建议”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 3
+      },
+      "lifeTransfer": {
+        "promptCn": "给第一次来北京旅游的家人朋友一些建议。",
+        "promptEn": "Give two practical tips to family or friends visiting Beijing for the first time."
+      }
+    }
+  ],
+  "vocabularyTaskTypes": [
+    {
+      "id": "recognition",
+      "labelCn": "认读",
+      "labelEn": "Recognition"
+    },
+    {
+      "id": "shape",
+      "labelCn": "辨形",
+      "labelEn": "Character form"
+    },
+    {
+      "id": "input",
+      "labelCn": "输入",
+      "labelEn": "Type the word"
+    },
+    {
+      "id": "collocation",
+      "labelCn": "搭配与使用",
+      "labelEn": "Collocation and use"
+    }
+  ],
+  "timerPolicy": {
+    "miniLoop": {
+      "optionsMinutes": [
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 4
+    },
+    "vocabularyFocus": {
+      "optionsMinutes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 2
+    },
+    "autoClose": false,
+    "autoSubmit": false
+  },
+  "vocabularyCatalog": [
+    {
+      "id": "v16_01",
+      "hanzi": "脏",
+      "pinyin": "zāng",
+      "english": "dirty",
+      "meaningCn": "不干净",
+      "phrases": [
+        "又脏又小",
+        "衣服脏了"
+      ],
+      "example": "第一天看见它的时候，它又脏又小。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v16_02",
+      "hanzi": "可爱",
+      "pinyin": "kě'ài",
+      "english": "cute; lovely",
+      "meaningCn": "让人喜欢",
+      "phrases": [
+        "特别可爱",
+        "可爱的小猫"
+      ],
+      "example": "它还特别可爱，一会儿在你脚边睡觉，一会儿在你身上爬。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_03",
+      "hanzi": "一会儿",
+      "pinyin": "yíhuìr",
+      "english": "now...now/then...",
+      "meaningCn": "很短的时间；表示动作交替",
+      "phrases": [
+        "一会儿睡觉",
+        "等一会儿"
+      ],
+      "example": "它一会儿在你脚边睡觉，一会儿在你身上爬。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_04",
+      "hanzi": "脚",
+      "pinyin": "jiǎo",
+      "english": "foot",
+      "meaningCn": "人或动物身体最下面走路的部分",
+      "phrases": [
+        "脚边",
+        "洗脚"
+      ],
+      "example": "它一会儿在你脚边睡觉，一会儿在你身上爬。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v16_05",
+      "hanzi": "照顾",
+      "pinyin": "zhàogù",
+      "english": "take care of; look after",
+      "meaningCn": "关心并帮助人或动物生活",
+      "phrases": [
+        "照顾小猫",
+        "好好照顾"
+      ],
+      "example": "你们把它照顾得真好。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_06",
+      "hanzi": "好像",
+      "pinyin": "hǎoxiàng",
+      "english": "seem; be like",
+      "meaningCn": "看起来像；表示不完全确定的判断",
+      "phrases": [
+        "好像孩子",
+        "好像没吃饱"
+      ],
+      "example": "它就好像我们的孩子，我们照顾它，它也认得我们了。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_07",
+      "hanzi": "认得",
+      "pinyin": "rènde",
+      "english": "know; recognize",
+      "meaningCn": "见过以后能够认出来",
+      "phrases": [
+        "认得我们",
+        "你认得吗"
+      ],
+      "example": "我们照顾它，它也认得我们了。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_08",
+      "hanzi": "周末",
+      "pinyin": "zhōumò",
+      "english": "weekend",
+      "meaningCn": "一周最后的休息日",
+      "phrases": [
+        "这个周末",
+        "周末去玩"
+      ],
+      "example": "我周末带你们去北京动物园看动物吧。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_09",
+      "hanzi": "动物园",
+      "pinyin": "dòngwùyuán",
+      "english": "zoo",
+      "meaningCn": "让人参观和了解动物的地方",
+      "phrases": [
+        "北京动物园",
+        "去动物园"
+      ],
+      "example": "我周末带你们去北京动物园看动物吧。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_10",
+      "hanzi": "动物",
+      "pinyin": "dòngwù",
+      "english": "animal",
+      "meaningCn": "能自己活动和吃东西的生物",
+      "phrases": [
+        "野生动物",
+        "看动物"
+      ],
+      "example": "我周末带你们去北京动物园看动物吧。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v16_11",
+      "hanzi": "大熊猫",
+      "pinyin": "dàxióngmāo",
+      "english": "giant panda",
+      "meaningCn": "身体黑白相间、喜欢吃竹子的动物",
+      "phrases": [
+        "野生大熊猫",
+        "看大熊猫"
+      ],
+      "example": "大熊猫为什么是中国的国宝？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_12",
+      "hanzi": "奇怪",
+      "pinyin": "qíguài",
+      "english": "strange",
+      "meaningCn": "不平常，让人想问为什么",
+      "phrases": [
+        "很奇怪",
+        "奇怪的问题"
+      ],
+      "example": "大熊猫这个名字很奇怪，它们跟猫有什么关系？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_13",
+      "hanzi": "其实",
+      "pinyin": "qíshí",
+      "english": "actually",
+      "meaningCn": "说明真实情况和原来想的不完全一样",
+      "phrases": [
+        "其实应该",
+        "其实可以"
+      ],
+      "example": "它们跟猫没什么关系，其实应该叫大猫熊。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_14",
+      "hanzi": "竹子",
+      "pinyin": "zhúzi",
+      "english": "bamboo",
+      "meaningCn": "大熊猫常吃的一种植物",
+      "phrases": [
+        "吃竹子",
+        "一片竹子"
+      ],
+      "example": "大熊猫为什么只吃竹子不吃肉？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_15",
+      "hanzi": "国宝",
+      "pinyin": "guóbǎo",
+      "english": "national treasure",
+      "meaningCn": "一个国家非常珍贵、很有代表性的事物",
+      "phrases": [
+        "中国国宝",
+        "国宝大熊猫"
+      ],
+      "example": "大熊猫为什么是中国的国宝？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_16",
+      "hanzi": "全",
+      "pinyin": "quán",
+      "english": "whole; entire",
+      "meaningCn": "整个；没有少一部分",
+      "phrases": [
+        "全世界",
+        "全家"
+      ],
+      "example": "全世界只有中国有野生大熊猫。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v16_17",
+      "hanzi": "野生",
+      "pinyin": "yěshēng",
+      "english": "wild",
+      "meaningCn": "在自然环境中生活，不是人养的",
+      "phrases": [
+        "野生动物",
+        "野生大熊猫"
+      ],
+      "example": "全世界只有中国有野生大熊猫。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v16_18",
+      "hanzi": "关于",
+      "pinyin": "guānyú",
+      "english": "about",
+      "meaningCn": "引出要说、要问的话题",
+      "phrases": [
+        "关于熊猫",
+        "关于这个问题"
+      ],
+      "example": "关于这个问题，我得慢慢给你讲。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_19",
+      "hanzi": "饱",
+      "pinyin": "bǎo",
+      "english": "full",
+      "meaningCn": "吃够了，不饿",
+      "phrases": [
+        "吃饱",
+        "还没饱"
+      ],
+      "example": "它好像还没吃饱，站起来张着嘴找吃的呢。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_20",
+      "hanzi": "张",
+      "pinyin": "zhāng",
+      "english": "open",
+      "meaningCn": "把合着的东西打开",
+      "phrases": [
+        "张嘴",
+        "张着嘴"
+      ],
+      "example": "它好像还没吃饱，站起来张着嘴找吃的呢。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v16_21",
+      "hanzi": "嘴",
+      "pinyin": "zuǐ",
+      "english": "mouth",
+      "meaningCn": "人或动物吃东西、说话的器官",
+      "phrases": [
+        "张嘴",
+        "嘴里"
+      ],
+      "example": "它好像还没吃饱，站起来张着嘴找吃的呢。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_22",
+      "hanzi": "身边",
+      "pinyin": "shēnbiān",
+      "english": "one's side",
+      "meaningCn": "离一个人或动物很近的地方",
+      "phrases": [
+        "在身边",
+        "它身边"
+      ],
+      "example": "它身边那只熊猫半天没动，是不是在睡觉呢？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_23",
+      "hanzi": "半天",
+      "pinyin": "bàntiān",
+      "english": "quite a while",
+      "meaningCn": "比较长的一段时间",
+      "phrases": [
+        "等了半天",
+        "半天没动"
+      ],
+      "example": "它身边那只熊猫半天没动，是不是在睡觉呢？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_24",
+      "hanzi": "脸",
+      "pinyin": "liǎn",
+      "english": "face",
+      "meaningCn": "人或动物头的前面部分",
+      "phrases": [
+        "看不见脸",
+        "洗脸"
+      ],
+      "example": "我看不见它的脸，可能是吧。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v16_25",
+      "hanzi": "大人",
+      "pinyin": "dàrén",
+      "english": "adult",
+      "meaningCn": "已经长大的人",
+      "phrases": [
+        "大人和孩子",
+        "一个大人"
+      ],
+      "example": "大人和孩子最喜爱的还是大熊猫。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v16_26",
+      "hanzi": "喜爱",
+      "pinyin": "xǐ'ài",
+      "english": "love; be fond of",
+      "meaningCn": "非常喜欢",
+      "phrases": [
+        "喜爱动物",
+        "最喜爱的"
+      ],
+      "example": "大人和孩子最喜爱的还是大熊猫。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    }
+  ],
+  "vocabularyGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "title": "我想领养的动物",
+      "wordIds": [
+        "v16_01",
+        "v16_02",
+        "v16_03",
+        "v16_04",
+        "v16_05",
+        "v16_06",
+        "v16_07",
+        "v16_08",
+        "v16_09",
+        "v16_10"
+      ],
+      "recognitionWordIds": [
+        "v16_01",
+        "v16_02",
+        "v16_03",
+        "v16_04"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v16_01"
+          ],
+          "acceptedAnswers": [
+            "脏"
+          ],
+          "id": "l16_m1_v16_01_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zāng：不干净",
+          "answer": "脏",
+          "options": [
+            "一会儿",
+            "脏",
+            "脚",
+            "照顾"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_02"
+          ],
+          "acceptedAnswers": [
+            "可爱"
+          ],
+          "id": "l16_m1_v16_02_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "kě'ài：让人喜欢",
+          "answer": "可爱",
+          "options": [
+            "脚",
+            "照顾",
+            "可爱",
+            "好像"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_02"
+          ],
+          "acceptedAnswers": [
+            "可爱"
+          ],
+          "id": "l16_m1_v16_02_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "让人喜欢",
+          "answer": "可爱",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m1_v16_02_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_02"
+          ],
+          "promptCn": "用“特别可爱”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "特别可爱",
+          "answer": "它还特别可爱，一会儿在你脚边睡觉，一会儿在你身上爬。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_03"
+          ],
+          "acceptedAnswers": [
+            "一会儿"
+          ],
+          "id": "l16_m1_v16_03_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "yíhuìr：很短的时间；表示动作交替",
+          "answer": "一会儿",
+          "options": [
+            "照顾",
+            "好像",
+            "认得",
+            "一会儿"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_03"
+          ],
+          "acceptedAnswers": [
+            "一会儿"
+          ],
+          "id": "l16_m1_v16_03_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "很短的时间；表示动作交替",
+          "answer": "一会儿",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m1_v16_03_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_03"
+          ],
+          "promptCn": "用“一会儿睡觉”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "一会儿睡觉",
+          "answer": "它一会儿在你脚边睡觉，一会儿在你身上爬。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_04"
+          ],
+          "acceptedAnswers": [
+            "脚"
+          ],
+          "id": "l16_m1_v16_04_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "jiǎo：人或动物身体最下面走路的部分",
+          "answer": "脚",
+          "options": [
+            "脚",
+            "好像",
+            "认得",
+            "周末"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_05"
+          ],
+          "acceptedAnswers": [
+            "照顾"
+          ],
+          "id": "l16_m1_v16_05_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zhàogù：关心并帮助人或动物生活",
+          "answer": "照顾",
+          "options": [
+            "认得",
+            "照顾",
+            "周末",
+            "动物园"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_05"
+          ],
+          "acceptedAnswers": [
+            "照顾"
+          ],
+          "id": "l16_m1_v16_05_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "关心并帮助人或动物生活",
+          "answer": "照顾",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m1_v16_05_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_05"
+          ],
+          "promptCn": "用“照顾小猫”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "照顾小猫",
+          "answer": "你们把它照顾得真好。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_06"
+          ],
+          "acceptedAnswers": [
+            "好像"
+          ],
+          "id": "l16_m1_v16_06_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "hǎoxiàng：看起来像；表示不完全确定的判断",
+          "answer": "好像",
+          "options": [
+            "周末",
+            "动物园",
+            "好像",
+            "动物"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_06"
+          ],
+          "acceptedAnswers": [
+            "好像"
+          ],
+          "id": "l16_m1_v16_06_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "看起来像；表示不完全确定的判断",
+          "answer": "好像",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m1_v16_06_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_06"
+          ],
+          "promptCn": "用“好像孩子”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "好像孩子",
+          "answer": "它就好像我们的孩子，我们照顾它，它也认得我们了。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_07"
+          ],
+          "acceptedAnswers": [
+            "认得"
+          ],
+          "id": "l16_m1_v16_07_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "rènde：见过以后能够认出来",
+          "answer": "认得",
+          "options": [
+            "动物园",
+            "动物",
+            "大熊猫",
+            "认得"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_07"
+          ],
+          "acceptedAnswers": [
+            "认得"
+          ],
+          "id": "l16_m1_v16_07_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "见过以后能够认出来",
+          "answer": "认得",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m1_v16_07_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_07"
+          ],
+          "promptCn": "用“认得我们”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "认得我们",
+          "answer": "我们照顾它，它也认得我们了。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_08"
+          ],
+          "acceptedAnswers": [
+            "周末"
+          ],
+          "id": "l16_m1_v16_08_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zhōumò：一周最后的休息日",
+          "answer": "周末",
+          "options": [
+            "周末",
+            "动物",
+            "大熊猫",
+            "奇怪"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_08"
+          ],
+          "acceptedAnswers": [
+            "周末"
+          ],
+          "id": "l16_m1_v16_08_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "一周最后的休息日",
+          "answer": "周末",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m1_v16_08_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_08"
+          ],
+          "promptCn": "用“这个周末”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "这个周末",
+          "answer": "我周末带你们去北京动物园看动物吧。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_09"
+          ],
+          "acceptedAnswers": [
+            "动物园"
+          ],
+          "id": "l16_m1_v16_09_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "dòngwùyuán：让人参观和了解动物的地方",
+          "answer": "动物园",
+          "options": [
+            "大熊猫",
+            "动物园",
+            "奇怪",
+            "其实"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_09"
+          ],
+          "acceptedAnswers": [
+            "动物园"
+          ],
+          "id": "l16_m1_v16_09_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "让人参观和了解动物的地方",
+          "answer": "动物园",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m1_v16_09_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_09"
+          ],
+          "promptCn": "用“北京动物园”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "北京动物园",
+          "answer": "我周末带你们去北京动物园看动物吧。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_10"
+          ],
+          "acceptedAnswers": [
+            "动物"
+          ],
+          "id": "l16_m1_v16_10_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "dòngwù：能自己活动和吃东西的生物",
+          "answer": "动物",
+          "options": [
+            "奇怪",
+            "其实",
+            "动物",
+            "竹子"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "title": "我眼中的大熊猫",
+      "wordIds": [
+        "v16_11",
+        "v16_12",
+        "v16_13",
+        "v16_14",
+        "v16_15",
+        "v16_16",
+        "v16_17",
+        "v16_18"
+      ],
+      "recognitionWordIds": [
+        "v16_11",
+        "v16_12",
+        "v16_13",
+        "v16_14"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v16_11"
+          ],
+          "acceptedAnswers": [
+            "大熊猫"
+          ],
+          "id": "l16_m2_v16_11_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "dàxióngmāo：身体黑白相间、喜欢吃竹子的动物",
+          "answer": "大熊猫",
+          "options": [
+            "大熊猫",
+            "脏",
+            "可爱",
+            "一会儿"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_11"
+          ],
+          "acceptedAnswers": [
+            "大熊猫"
+          ],
+          "id": "l16_m2_v16_11_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "身体黑白相间、喜欢吃竹子的动物",
+          "answer": "大熊猫",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m2_v16_11_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_11"
+          ],
+          "promptCn": "用“野生大熊猫”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "野生大熊猫",
+          "answer": "大熊猫为什么是中国的国宝？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_12"
+          ],
+          "acceptedAnswers": [
+            "奇怪"
+          ],
+          "id": "l16_m2_v16_12_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "qíguài：不平常，让人想问为什么",
+          "answer": "奇怪",
+          "options": [
+            "可爱",
+            "奇怪",
+            "一会儿",
+            "脚"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_12"
+          ],
+          "acceptedAnswers": [
+            "奇怪"
+          ],
+          "id": "l16_m2_v16_12_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "不平常，让人想问为什么",
+          "answer": "奇怪",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m2_v16_12_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_12"
+          ],
+          "promptCn": "用“很奇怪”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "很奇怪",
+          "answer": "大熊猫这个名字很奇怪，它们跟猫有什么关系？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_13"
+          ],
+          "acceptedAnswers": [
+            "其实"
+          ],
+          "id": "l16_m2_v16_13_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "qíshí：说明真实情况和原来想的不完全一样",
+          "answer": "其实",
+          "options": [
+            "一会儿",
+            "脚",
+            "其实",
+            "照顾"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_13"
+          ],
+          "acceptedAnswers": [
+            "其实"
+          ],
+          "id": "l16_m2_v16_13_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "说明真实情况和原来想的不完全一样",
+          "answer": "其实",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m2_v16_13_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_13"
+          ],
+          "promptCn": "用“其实应该”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "其实应该",
+          "answer": "它们跟猫没什么关系，其实应该叫大猫熊。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_14"
+          ],
+          "acceptedAnswers": [
+            "竹子"
+          ],
+          "id": "l16_m2_v16_14_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zhúzi：大熊猫常吃的一种植物",
+          "answer": "竹子",
+          "options": [
+            "脚",
+            "照顾",
+            "好像",
+            "竹子"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_14"
+          ],
+          "acceptedAnswers": [
+            "竹子"
+          ],
+          "id": "l16_m2_v16_14_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "大熊猫常吃的一种植物",
+          "answer": "竹子",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m2_v16_14_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_14"
+          ],
+          "promptCn": "用“吃竹子”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "吃竹子",
+          "answer": "大熊猫为什么只吃竹子不吃肉？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_15"
+          ],
+          "acceptedAnswers": [
+            "国宝"
+          ],
+          "id": "l16_m2_v16_15_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "guóbǎo：一个国家非常珍贵、很有代表性的事物",
+          "answer": "国宝",
+          "options": [
+            "国宝",
+            "照顾",
+            "好像",
+            "认得"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_15"
+          ],
+          "acceptedAnswers": [
+            "国宝"
+          ],
+          "id": "l16_m2_v16_15_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "一个国家非常珍贵、很有代表性的事物",
+          "answer": "国宝",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m2_v16_15_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_15"
+          ],
+          "promptCn": "用“中国国宝”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "中国国宝",
+          "answer": "大熊猫为什么是中国的国宝？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_16"
+          ],
+          "acceptedAnswers": [
+            "全"
+          ],
+          "id": "l16_m2_v16_16_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "quán：整个；没有少一部分",
+          "answer": "全",
+          "options": [
+            "好像",
+            "全",
+            "认得",
+            "周末"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_17"
+          ],
+          "acceptedAnswers": [
+            "野生"
+          ],
+          "id": "l16_m2_v16_17_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "yěshēng：在自然环境中生活，不是人养的",
+          "answer": "野生",
+          "options": [
+            "认得",
+            "周末",
+            "野生",
+            "动物园"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_18"
+          ],
+          "acceptedAnswers": [
+            "关于"
+          ],
+          "id": "l16_m2_v16_18_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "guānyú：引出要说、要问的话题",
+          "answer": "关于",
+          "options": [
+            "周末",
+            "动物园",
+            "动物",
+            "关于"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_18"
+          ],
+          "acceptedAnswers": [
+            "关于"
+          ],
+          "id": "l16_m2_v16_18_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "引出要说、要问的话题",
+          "answer": "关于",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m2_v16_18_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_18"
+          ],
+          "promptCn": "用“关于熊猫”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "关于熊猫",
+          "answer": "关于这个问题，我得慢慢给你讲。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "title": "熊猫的习惯",
+      "wordIds": [
+        "v16_19",
+        "v16_20",
+        "v16_21",
+        "v16_22",
+        "v16_23",
+        "v16_24"
+      ],
+      "recognitionWordIds": [
+        "v16_19",
+        "v16_20",
+        "v16_21",
+        "v16_22"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v16_19"
+          ],
+          "acceptedAnswers": [
+            "饱"
+          ],
+          "id": "l16_m3_v16_19_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "bǎo：吃够了，不饿",
+          "answer": "饱",
+          "options": [
+            "动物",
+            "饱",
+            "大熊猫",
+            "奇怪"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_19"
+          ],
+          "acceptedAnswers": [
+            "饱"
+          ],
+          "id": "l16_m3_v16_19_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "吃够了，不饿",
+          "answer": "饱",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m3_v16_19_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_19"
+          ],
+          "promptCn": "用“吃饱”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "吃饱",
+          "answer": "它好像还没吃饱，站起来张着嘴找吃的呢。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_20"
+          ],
+          "acceptedAnswers": [
+            "张"
+          ],
+          "id": "l16_m3_v16_20_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zhāng：把合着的东西打开",
+          "answer": "张",
+          "options": [
+            "大熊猫",
+            "奇怪",
+            "张",
+            "其实"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_21"
+          ],
+          "acceptedAnswers": [
+            "嘴"
+          ],
+          "id": "l16_m3_v16_21_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zuǐ：人或动物吃东西、说话的器官",
+          "answer": "嘴",
+          "options": [
+            "奇怪",
+            "其实",
+            "竹子",
+            "嘴"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_21"
+          ],
+          "acceptedAnswers": [
+            "嘴"
+          ],
+          "id": "l16_m3_v16_21_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "人或动物吃东西、说话的器官",
+          "answer": "嘴",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m3_v16_21_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_21"
+          ],
+          "promptCn": "用“张嘴”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "张嘴",
+          "answer": "它好像还没吃饱，站起来张着嘴找吃的呢。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_22"
+          ],
+          "acceptedAnswers": [
+            "身边"
+          ],
+          "id": "l16_m3_v16_22_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "shēnbiān：离一个人或动物很近的地方",
+          "answer": "身边",
+          "options": [
+            "身边",
+            "脏",
+            "可爱",
+            "一会儿"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_22"
+          ],
+          "acceptedAnswers": [
+            "身边"
+          ],
+          "id": "l16_m3_v16_22_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "离一个人或动物很近的地方",
+          "answer": "身边",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m3_v16_22_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_22"
+          ],
+          "promptCn": "用“在身边”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "在身边",
+          "answer": "它身边那只熊猫半天没动，是不是在睡觉呢？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_23"
+          ],
+          "acceptedAnswers": [
+            "半天"
+          ],
+          "id": "l16_m3_v16_23_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "bàntiān：比较长的一段时间",
+          "answer": "半天",
+          "options": [
+            "可爱",
+            "半天",
+            "一会儿",
+            "脚"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_23"
+          ],
+          "acceptedAnswers": [
+            "半天"
+          ],
+          "id": "l16_m3_v16_23_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "比较长的一段时间",
+          "answer": "半天",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m3_v16_23_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_23"
+          ],
+          "promptCn": "用“等了半天”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "等了半天",
+          "answer": "它身边那只熊猫半天没动，是不是在睡觉呢？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_24"
+          ],
+          "acceptedAnswers": [
+            "脸"
+          ],
+          "id": "l16_m3_v16_24_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "liǎn：人或动物头的前面部分",
+          "answer": "脸",
+          "options": [
+            "一会儿",
+            "脚",
+            "脸",
+            "照顾"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_24"
+          ],
+          "acceptedAnswers": [
+            "脸"
+          ],
+          "id": "l16_m3_v16_24_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "人或动物头的前面部分",
+          "answer": "脸",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m3_v16_24_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_24"
+          ],
+          "promptCn": "用“看不见脸”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "看不见脸",
+          "answer": "我看不见它的脸，可能是吧。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "title": "第一次来北京的参观建议",
+      "wordIds": [
+        "v16_25",
+        "v16_26",
+        "v16_09",
+        "v16_11",
+        "v16_16",
+        "v16_08"
+      ],
+      "recognitionWordIds": [
+        "v16_25",
+        "v16_26",
+        "v16_09",
+        "v16_11"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v16_25"
+          ],
+          "acceptedAnswers": [
+            "大人"
+          ],
+          "id": "l16_m4_v16_25_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "dàrén：已经长大的人",
+          "answer": "大人",
+          "options": [
+            "大人",
+            "照顾",
+            "好像",
+            "认得"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_26"
+          ],
+          "acceptedAnswers": [
+            "喜爱"
+          ],
+          "id": "l16_m4_v16_26_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "xǐ'ài：非常喜欢",
+          "answer": "喜爱",
+          "options": [
+            "好像",
+            "喜爱",
+            "认得",
+            "周末"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_26"
+          ],
+          "acceptedAnswers": [
+            "喜爱"
+          ],
+          "id": "l16_m4_v16_26_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "非常喜欢",
+          "answer": "喜爱",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m4_v16_26_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_26"
+          ],
+          "promptCn": "用“喜爱动物”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "喜爱动物",
+          "answer": "大人和孩子最喜爱的还是大熊猫。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_09"
+          ],
+          "acceptedAnswers": [
+            "动物园"
+          ],
+          "id": "l16_m4_v16_09_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "dòngwùyuán：让人参观和了解动物的地方",
+          "answer": "动物园",
+          "options": [
+            "动物园",
+            "脏",
+            "可爱",
+            "一会儿"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_09"
+          ],
+          "acceptedAnswers": [
+            "动物园"
+          ],
+          "id": "l16_m4_v16_09_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "让人参观和了解动物的地方",
+          "answer": "动物园",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m4_v16_09_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_09"
+          ],
+          "promptCn": "用“北京动物园”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "北京动物园",
+          "answer": "我周末带你们去北京动物园看动物吧。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_11"
+          ],
+          "acceptedAnswers": [
+            "大熊猫"
+          ],
+          "id": "l16_m4_v16_11_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "dàxióngmāo：身体黑白相间、喜欢吃竹子的动物",
+          "answer": "大熊猫",
+          "options": [
+            "一会儿",
+            "脚",
+            "大熊猫",
+            "照顾"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_11"
+          ],
+          "acceptedAnswers": [
+            "大熊猫"
+          ],
+          "id": "l16_m4_v16_11_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "身体黑白相间、喜欢吃竹子的动物",
+          "answer": "大熊猫",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m4_v16_11_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_11"
+          ],
+          "promptCn": "用“野生大熊猫”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "野生大熊猫",
+          "answer": "大熊猫为什么是中国的国宝？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v16_16"
+          ],
+          "acceptedAnswers": [
+            "全"
+          ],
+          "id": "l16_m4_v16_16_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "quán：整个；没有少一部分",
+          "answer": "全",
+          "options": [
+            "周末",
+            "动物园",
+            "动物",
+            "全"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_08"
+          ],
+          "acceptedAnswers": [
+            "周末"
+          ],
+          "id": "l16_m4_v16_08_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zhōumò：一周最后的休息日",
+          "answer": "周末",
+          "options": [
+            "其实",
+            "竹子",
+            "国宝",
+            "周末"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v16_08"
+          ],
+          "acceptedAnswers": [
+            "周末"
+          ],
+          "id": "l16_m4_v16_08_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "一周最后的休息日",
+          "answer": "周末",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l16_m4_v16_08_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v16_08"
+          ],
+          "promptCn": "用“这个周末”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "这个周末",
+          "answer": "我周末带你们去北京动物园看动物吧。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    }
+  ],
+  "resourceOverrides": [],
+  "supportOnlyStructures": [
+    "目标语法用于支架和挑战层，不要求所有学生在第一次终点表达中全部使用。"
+  ],
+  "evidencePolicy": {
+    "coreTypes": [
+      "entry_expression",
+      "actual_learning_path",
+      "exit_expression"
+    ],
+    "pathEvent": "opened",
+    "optionalSignals": [
+      "support_request",
+      "self_reflection"
+    ]
+  },
+  "supportOptions": [
+    {
+      "id": "vocabulary",
+      "labelCn": "我缺少合适的词",
+      "labelEn": "I need the right words"
+    },
+    {
+      "id": "organization",
+      "labelCn": "我不知道怎样组织信息",
+      "labelEn": "I need help organizing my ideas"
+    },
+    {
+      "id": "structure",
+      "labelCn": "我需要一个句子结构",
+      "labelEn": "I need a sentence frame"
+    },
+    {
+      "id": "teacher",
+      "labelCn": "我想获得老师的帮助",
+      "labelEn": "I want help from the teacher"
+    }
+  ],
+  "feelingOptions": [
+    {
+      "id": "clearer",
+      "labelCn": "我说得更清楚了",
+      "labelEn": "My expression is clearer"
+    },
+    {
+      "id": "more_complete",
+      "labelCn": "我说得更完整了",
+      "labelEn": "My expression is more complete"
+    },
+    {
+      "id": "more_natural",
+      "labelCn": "我说得更自然了",
+      "labelEn": "My expression is more natural"
+    },
+    {
+      "id": "still_need_help",
+      "labelCn": "我还需要帮助",
+      "labelEn": "I still need help"
+    }
+  ],
+  "coreEvidence": [
+    "entry_expression",
+    "actual_learning_path",
+    "exit_expression"
+  ],
+  "capabilities": [
+    "select_text_mini_loop",
+    "launch_interaction",
+    "independent_answer",
+    "support_request",
+    "anonymous_return",
+    "open_support",
+    "reanswer",
+    "record_teacher_decision",
+    "compare_entry_exit",
+    "teacher_selected_vocabulary_focus",
+    "shared_countdown",
+    "native_course_resource_return",
+    "configured_task_stimulus",
+    "state_restore"
+  ]
+}

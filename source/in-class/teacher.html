@@ -3483,7 +3483,8 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
       h+='</div><div class="old-q-tip">请用翻开的词语造一个自然的中文句子。</div><div class="old-blind-actions"><button onclick="hsk3RevealAllBlind(\''+es(c.id)+'\','+words.length+')">全部打开</button><button onclick="hsk3ResetBlind(\''+es(c.id)+'\')">重新盖上</button></div></div>';
     }else if(state==='g2p'){
       var img=d.image?'<div class="hsk3-old-picture"><img src="'+es(d.image)+'" alt=""></div>':'';
-      h+='<div class="old-picture-card">'+img+'<div class="old-picture-task"><div class="hsk3-kicker">看图造句 / Picture Sentence</div><div class="old-sentence-frame"><b>'+rubyLine(d.keyword||'',d.pinyin||'',30)+'</b></div></div></div>';
+      var keywords=d.keywords||(d.keyword?[d.keyword]:[]),structure=d.structure||d.targetStructure||'',prompt=d.task||c.prompt_cn||'',sample=d.sample||'';
+      h+='<div class="old-picture-card">'+img+'<div class="old-picture-task"><div class="hsk3-kicker">看图造句 / Picture Sentence</div>'+(prompt?'<div class="old-picture-prompt">'+es(prompt)+'</div>':'')+(keywords.length?'<div class="old-q-tag">提示词 / Keywords</div><div class="old-keywords">'+keywords.map(function(w,k){return'<span>'+rubyLine(w,(d.keywords_pinyin||[])[k]||'',16)+'</span>'}).join('')+'</div>':'')+(structure?'<div class="old-picture-structure"><b>目标结构 / Target structure</b><span>'+rubyLine(structure,d.structure_pinyin||'',22)+'</span></div>':'')+(sample?'<details class="old-picture-sample"><summary>教师参考表达</summary><p>'+rubyLine(sample,d.sample_pinyin||'',20)+'</p></details>':'')+'</div></div>';
     }else{
       h+='<div class="hsk3-task-card'+(state==='r4p'?' hsk3-para-card':'')+'"><div class="hsk3-task-title">'+es(d.title||c.prompt_cn||'课堂任务')+'</div>';
       if(d.titleEn)h+='<div class="hsk3-task-title-en">'+es(d.titleEn)+'</div>';
@@ -3692,6 +3693,10 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
 .old-picture-task .old-q-tag{color:#6366f1}
 .old-sentence-frame{font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:34px;font-weight:900;line-height:1.45;color:#14312b}
 .old-sentence-frame .hsk3-old-blank{border-bottom-color:#6366f1}
+.old-picture-prompt{margin:8px 0 14px;color:#263b31;font-size:23px;font-weight:900;line-height:1.5}
+.old-picture-structure{margin-top:14px;padding:12px 14px;border:1px solid #c7d2fe;border-radius:11px;background:#fff;color:#3730a3}
+.old-picture-structure b,.old-picture-structure span{display:block}.old-picture-structure b{margin-bottom:5px;font-size:13px}.old-picture-structure span{font-family:KaiTi,STKaiti,"Kaiti SC",serif;font-size:23px;font-weight:900;line-height:1.5}
+.old-picture-sample{margin-top:14px}.old-picture-sample summary{color:#315b49;font-weight:900;cursor:pointer}.old-picture-sample p{margin:9px 0 0;padding:11px 13px;border-radius:10px;background:#fff;color:#263b31;font-size:20px;line-height:1.55}
 .old-keywords{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
 .old-keywords span{background:#dcfce7;color:#166534;padding:7px 12px;border-radius:8px;font-size:18px;font-weight:900}
 @media(max-width:850px){.hsk3-scene-body{grid-template-columns:1fr}.hsk3-scene-img{min-height:160px}}

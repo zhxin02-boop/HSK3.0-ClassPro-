@@ -47,12 +47,17 @@ assert(restartedAuth.authenticate(request), 'Signed teacher sessions should surv
 
 const root = path.resolve(__dirname, '..');
 const serverSource = fs.readFileSync(path.join(root, 'server.js'), 'utf8');
+const mainHome = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const teacherLogin = fs.readFileSync(path.join(root, 'source/teacher/login.html'), 'utf8');
 assert(serverSource.includes('/api/auth/login'), 'The server should expose teacher login');
 assert(serverSource.includes('/api/teacher/reviews'), 'Teacher-wide data should use an authenticated endpoint');
 assert(serverSource.includes('teacherAuth.canAccess'), 'The server should enforce class assignments');
 assert(serverSource.includes('/api/class-roster'), 'The server should expose a protected class roster endpoint');
 assert(serverSource.includes('/api/teacher/student-qr'), 'The teacher should generate a protected student QR code');
 assert(serverSource.includes('HttpOnly; SameSite=Lax'), 'Student roster access should use an HttpOnly class cookie');
+assert(serverSource.includes('var directPage = teacherPageQuery.get("direct") === "1"') && serverSource.includes('if (!directPage) {'), 'Explicit direct teacher pages should bypass the historical login redirect');
+assert(mainHome.includes('source/teacher/index.html?direct=1') && mainHome.includes('source/student/entry.html?direct=1'), 'The main role page should use the direct teacher and student entries');
+assert(teacherLogin.includes("target.searchParams.set('direct', '1')") && teacherLogin.includes('location.replace(target.pathname + target.search + target.hash)'), 'Historical teacher login bookmarks should redirect to direct access');
 
 const publicStudents = fs.readFileSync(path.join(root, 'source/shared/students.js'), 'utf8');
 const teacherClassroom = fs.readFileSync(path.join(root, 'source/in-class/teacher.html'), 'utf8');
@@ -67,4 +72,4 @@ assert(useClassroom.includes('experiment: EXPERIMENT') && useClassroom.includes(
 assert(useClassroom.includes('frameWindow.protectedStudentQrUrl') && useClassroom.includes('unifiedStudentQrUrl'), 'The native QR popup should use the protected use-classroom route');
 assert(studentEntry.includes("['experiment', 'profile', 'run', 'direct']"), 'Student name selection should preserve protected and direct classroom routes');
 
-console.log('ClassPro teacher authentication validation passed.');
+console.log('ClassPro protected and direct-entry validation passed.');

@@ -282,13 +282,17 @@ var srv = http.createServer(function(req, res) {
   }
 
   if (method === "GET" && teacherPage(url)) {
-    var pageTeacher = teacherAuth.authenticate(req);
-    if (!pageTeacher) {
-      var loginTarget = "/source/teacher/login.html?returnTo=" + encodeURIComponent(req.url);
-      res.writeHead(302, {Location:loginTarget, "Cache-Control":"no-store"}); res.end(); return;
+    var teacherPageQuery = new URL(req.url, "http://localhost").searchParams;
+    var directPage = teacherPageQuery.get("direct") === "1";
+    if (!directPage) {
+      var pageTeacher = teacherAuth.authenticate(req);
+      if (!pageTeacher) {
+        var loginTarget = "/source/teacher/login.html?returnTo=" + encodeURIComponent(req.url);
+        res.writeHead(302, {Location:loginTarget, "Cache-Control":"no-store"}); res.end(); return;
+      }
+      var pageClass = teacherPageQuery.get("classId");
+      if (pageClass && !teacherAuth.canAccess(pageTeacher, pageClass)) { json(res, 403, {status:"error", message:"当前教师无权访问该班级。"}); return; }
     }
-    var pageClass = new URL(req.url, "http://localhost").searchParams.get("classId");
-    if (pageClass && !teacherAuth.canAccess(pageTeacher, pageClass)) { json(res, 403, {status:"error", message:"当前教师无权访问该班级。"}); return; }
   }
 
   // Save quiz result
