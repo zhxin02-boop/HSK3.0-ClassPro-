@@ -1,0 +1,2934 @@
+{
+  "schemaVersion": "classpro-use-profile/v3",
+  "experiment": {
+    "id": "l17-use-pilot-v1",
+    "title": "第17课·以用为主线升级版",
+    "lessonLabel": "第17课",
+    "sourceLesson": "HSK3-L17",
+    "scope": "四个课文MINI循环；保留L17原生词汇场景、渐进式语法、对话与日记体裁、正式音频和完整练习。"
+  },
+  "sources": {
+    "lesson": {
+      "path": "../lessons/HSK3-L17.json",
+      "sha256": "A608DC1B702A95E6DE01673075818DDC5BDB97503F2978FC0B9E9A08D94784A6"
+    },
+    "teacher": {
+      "path": "../../in-class/teacher.html"
+    },
+    "student": {
+      "path": "../../in-class/student.html"
+    }
+  },
+  "nativeTeaching": {
+    "preserveCourseStyles": true,
+    "grammar": {
+      "source": "formal_lesson",
+      "preserveExamples": true,
+      "preserveHighlights": true,
+      "preserveOralQuestions": true,
+      "preserveFollowUp": true
+    },
+    "text": {
+      "source": "formal_lesson",
+      "preservePresentation": true,
+      "preserveDialogue": true,
+      "preserveDiary": true,
+      "preserveAudio": true
+    },
+    "vocabulary": {
+      "source": "formal_lesson",
+      "preserveScenes": true,
+      "preserveHotspots": true
+    }
+  },
+  "useGroups": [
+    {
+      "id": "T1",
+      "icon": "🧭",
+      "label": "课文 1",
+      "title": "我想向谁学习",
+      "goal": "你想向谁学习？为什么？",
+      "goalEn": "Name one person you want to learn from and give one reason.",
+      "image": "images/hsk3-l17/photo-text-1-careful-work.png",
+      "imageLabel": "两名学生完成任务后的不同检查习惯",
+      "entryPromptCn": "说一个你觉得“很认真”的人。",
+      "entryPromptEn": "Name one person you think is careful and serious about their work.",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说出一个人"
+        },
+        {
+          "id": "step_2",
+          "label": "说出一个理由"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t1_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "向、害怕、生气、常见、聪明、错、认为",
+          "contentEn": "Use only the words you need."
+        },
+        {
+          "id": "t1_order",
+          "labelCn": "表达步骤",
+          "labelEn": "Speaking steps",
+          "contentCn": "说出一个人 → 说出一个理由",
+          "contentEn": "Complete the simple steps in order."
+        }
+      ],
+      "textId": "t_hsk3_l17_01",
+      "entry": {
+        "id": "l17_t1_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "说一个你觉得“很认真”的人。",
+        "promptEn": "Name one person you think is careful and serious about their work.",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l17/photo-text-1-careful-work.png",
+          "labelCn": "两名学生完成任务后的不同检查习惯",
+          "altCn": "两名学生完成任务后的不同检查习惯",
+          "instructionCn": "说一个你觉得“很认真”的人。",
+          "instructionEn": "Name one person you think is careful and serious about their work."
+        }
+      },
+      "exit": {
+        "id": "l17_t1_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "你想向谁学习？为什么？",
+        "promptEn": "Name one person you want to learn from and give one reason."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文1词汇",
+          "vocabSession": "1"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "介词“向”",
+          "grammarIndex": 0
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文1",
+          "textIndex": 0
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：我想向谁学习",
+          "routeState": {
+            "t2ki": 0
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l17_task_01",
+          "status": "ready",
+          "purpose": "你想向谁学习？为什么？"
+        },
+        {
+          "id": "l17_para_01",
+          "status": "ready",
+          "purpose": "我想向谁学习"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "icon": "📚",
+      "label": "课文 2",
+      "title": "我的学习方向",
+      "goal": "说说你想继续学习什么，并请同学给你一个建议。",
+      "goalEn": "Say what you want to continue studying and ask a classmate for one suggestion.",
+      "image": "images/hsk3-l17/photo-text-2-library-choice.png",
+      "imageLabel": "学生在图书馆比较学习和工作资料",
+      "entryPromptCn": "你以后想继续学习还是工作？",
+      "entryPromptEn": "Would you like to continue studying or start working?",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说出一个学习内容"
+        },
+        {
+          "id": "step_2",
+          "label": "请同学给一个建议"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t2_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "到处、继续、同意、屋子、有关",
+          "contentEn": "Use only the words you need."
+        },
+        {
+          "id": "t2_order",
+          "labelCn": "表达步骤",
+          "labelEn": "Speaking steps",
+          "contentCn": "说出一个学习内容 → 请同学给一个建议",
+          "contentEn": "Complete the simple steps in order."
+        }
+      ],
+      "textId": "t_hsk3_l17_02",
+      "entry": {
+        "id": "l17_t2_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "你以后想继续学习还是工作？",
+        "promptEn": "Would you like to continue studying or start working?",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l17/photo-text-2-library-choice.png",
+          "labelCn": "学生在图书馆比较学习和工作资料",
+          "altCn": "学生在图书馆比较学习和工作资料",
+          "instructionCn": "你以后想继续学习还是工作？",
+          "instructionEn": "Would you like to continue studying or start working?"
+        }
+      },
+      "exit": {
+        "id": "l17_t2_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "说说你想继续学习什么，并请同学给你一个建议。",
+        "promptEn": "Say what you want to continue studying and ask a classmate for one suggestion."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文2词汇",
+          "vocabSession": "2"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "反问句“不是……吗？”",
+          "grammarIndex": 1
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文2",
+          "textIndex": 1
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：我的学习方向",
+          "routeState": {
+            "t2ki": 1
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l17_task_02",
+          "status": "ready",
+          "purpose": "说说你想继续学习什么，并请同学给你一个建议。"
+        },
+        {
+          "id": "l17_para_02",
+          "status": "ready",
+          "purpose": "我的学习方向"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "icon": "🌍",
+      "label": "课文 3",
+      "title": "我要怎么准备",
+      "goal": "介绍一个你想去学习的国家或城市，说说你要怎么准备？",
+      "goalEn": "Introduce one country or city where you want to study and explain how you will prepare.",
+      "image": "images/hsk3-l17/photo-text-3-study-abroad-search.png",
+      "imageLabel": "学生在电脑前查学校和留学资料",
+      "entryPromptCn": "你想去哪个国家或城市学习？",
+      "entryPromptEn": "Which country or city would you like to study in?",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说出一个国家或城市"
+        },
+        {
+          "id": "step_2",
+          "label": "说出一种准备办法"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t3_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "关机、前天、留学、国家、比如、查、有用",
+          "contentEn": "Use only the words you need."
+        },
+        {
+          "id": "t3_order",
+          "labelCn": "表达步骤",
+          "labelEn": "Speaking steps",
+          "contentCn": "说出一个国家或城市 → 说出一种准备办法",
+          "contentEn": "Complete the simple steps in order."
+        }
+      ],
+      "textId": "t_hsk3_l17_03",
+      "entry": {
+        "id": "l17_t3_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "你想去哪个国家或城市学习？",
+        "promptEn": "Which country or city would you like to study in?",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l17/photo-text-3-study-abroad-search.png",
+          "labelCn": "学生在电脑前查学校和留学资料",
+          "altCn": "学生在电脑前查学校和留学资料",
+          "instructionCn": "你想去哪个国家或城市学习？",
+          "instructionEn": "Which country or city would you like to study in?"
+        }
+      },
+      "exit": {
+        "id": "l17_t3_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "介绍一个你想去学习的国家或城市，说说你要怎么准备？",
+        "promptEn": "Introduce one country or city where you want to study and explain how you will prepare."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文3词汇",
+          "vocabSession": "3"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "递进复句“……，更……”",
+          "grammarIndex": 2
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文3",
+          "textIndex": 2
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：我要怎么准备",
+          "routeState": {
+            "t2ki": 2
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l17_task_03",
+          "status": "ready",
+          "purpose": "介绍一个你想去学习的国家或城市，说说你要怎么准备？"
+        },
+        {
+          "id": "l17_para_03",
+          "status": "ready",
+          "purpose": "我要怎么准备"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "icon": "🎓",
+      "label": "课文 4",
+      "title": "毕业后的打算",
+      "goal": "介绍你毕业以后的打算：工作还是继续学习？为什么？",
+      "goalEn": "Explain whether you will work or continue studying after graduation and give one reason.",
+      "image": "images/hsk3-l17/photo-text-4-graduation-paths.png",
+      "imageLabel": "毕业生面对工作、继续学习和留学三条路",
+      "entryPromptCn": "以后你想做什么？",
+      "entryPromptEn": "What would you like to do in the future?",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "选择工作或继续学习"
+        },
+        {
+          "id": "step_2",
+          "label": "说出一个理由"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t4_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "容易、回答、方向、只有、真正、难题",
+          "contentEn": "Use only the words you need."
+        },
+        {
+          "id": "t4_order",
+          "labelCn": "表达步骤",
+          "labelEn": "Speaking steps",
+          "contentCn": "选择工作或继续学习 → 说出一个理由",
+          "contentEn": "Complete the simple steps in order."
+        }
+      ],
+      "textId": "t_hsk3_l17_04",
+      "entry": {
+        "id": "l17_t4_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "以后你想做什么？",
+        "promptEn": "What would you like to do in the future?",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l17/photo-text-4-graduation-paths.png",
+          "labelCn": "毕业生面对工作、继续学习和留学三条路",
+          "altCn": "毕业生面对工作、继续学习和留学三条路",
+          "instructionCn": "以后你想做什么？",
+          "instructionEn": "What would you like to do in the future?"
+        }
+      },
+      "exit": {
+        "id": "l17_t4_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "介绍你毕业以后的打算：工作还是继续学习？为什么？",
+        "promptEn": "Explain whether you will work or continue studying after graduation and give one reason."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文4词汇",
+          "vocabSession": "4"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "条件复句“只有……，才……”",
+          "grammarIndex": 3
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文4",
+          "textIndex": 3
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：毕业后的打算",
+          "routeState": {
+            "t2ki": 3
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l17_task_04",
+          "status": "ready",
+          "purpose": "介绍你毕业以后的打算：工作还是继续学习？为什么？"
+        },
+        {
+          "id": "l17_para_04",
+          "status": "ready",
+          "purpose": "毕业后的打算"
+        }
+      ]
+    }
+  ],
+  "textLearning": [
+    {
+      "textId": "t_hsk3_l17_01",
+      "useGroupId": "T1",
+      "title": "做错以后怎么办",
+      "stageContract": [
+        "listen_or_read",
+        "overall_choice",
+        "detail_qa",
+        "show_text",
+        "language_and_application"
+      ],
+      "overviewChoices": [
+        {
+          "id": "l17_t1_overall_01",
+          "focus": "overall_understanding",
+          "questionCn": "刘小雪和同学走到哪里了？",
+          "questionPinyin": "",
+          "options": [
+            "图书馆门口",
+            "李老师办公室门口",
+            "学生宿舍"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l17_t1_overall_02",
+          "focus": "overall_understanding",
+          "questionCn": "同学见李老师前觉得怎么样？",
+          "questionPinyin": "",
+          "options": [
+            "很高兴",
+            "很生气",
+            "很害怕"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "l17_t1_overall_03",
+          "focus": "overall_understanding",
+          "questionCn": "同学以后想怎么做？",
+          "questionPinyin": "",
+          "options": [
+            "多向认真的人学习",
+            "马上去找工作",
+            "不再见李老师"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l17_t1_detail_01",
+          "questionCn": "同学准备在哪里等刘小雪？",
+          "questionPinyin": "Tóngxué zhǔnbèi zài nǎli děng Liú Xiǎoxuě?",
+          "answer": "在楼梯那儿等她。",
+          "answerPinyin": "Zài lóutī nàr děng tā.",
+          "acceptedAnswers": [
+            "在楼梯那儿等她。"
+          ],
+          "informationPoint": "等候地点"
+        },
+        {
+          "id": "l17_t1_detail_02",
+          "questionCn": "同学为什么害怕见李老师？",
+          "questionPinyin": "Tóngxué wèishénme hàipà jiàn Lǐ lǎoshī?",
+          "answer": "因为最近做错了好几件事，怕李老师生气。",
+          "answerPinyin": "Yīnwèi zuìjìn zuòcuò le hǎo jǐ jiàn shì, pà Lǐ lǎoshī shēngqì.",
+          "acceptedAnswers": [
+            "因为最近做错了好几件事，怕李老师生气。"
+          ],
+          "informationPoint": "害怕原因"
+        },
+        {
+          "id": "l17_t1_detail_03",
+          "questionCn": "刘小雪觉得做错事情怎么样？",
+          "questionPinyin": "Liú Xiǎoxuě juéde zuòcuò shìqing zěnmeyàng?",
+          "answer": "她觉得做错事情很常见。",
+          "answerPinyin": "Tā juéde zuòcuò shìqing hěn chángjiàn.",
+          "acceptedAnswers": [
+            "她觉得做错事情很常见。"
+          ],
+          "informationPoint": "安慰观点"
+        },
+        {
+          "id": "l17_t1_detail_04",
+          "questionCn": "有些聪明的人为什么会做错简单的事情？",
+          "questionPinyin": "Yǒuxiē cōngming de rén wèishénme huì zuòcuò jiǎndān de shìqing?",
+          "answer": "因为他们认为事情简单，就不会认真去做。",
+          "answerPinyin": "Yīnwèi tāmen rènwéi shìqing jiǎndān, jiù bú huì rènzhēn qù zuò.",
+          "acceptedAnswers": [
+            "因为他们认为事情简单，就不会认真去做。"
+          ],
+          "informationPoint": "出错原因"
+        },
+        {
+          "id": "l17_t1_detail_05",
+          "questionCn": "同学听完以后有什么打算？",
+          "questionPinyin": "Tóngxué tīngwán yǐhòu yǒu shénme dǎsuàn?",
+          "answer": "以后要多向认真的人学习。",
+          "answerPinyin": "Yǐhòu yào duō xiàng rènzhēn de rén xuéxí.",
+          "acceptedAnswers": [
+            "以后要多向认真的人学习。"
+          ],
+          "informationPoint": "最后打算"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "别再向前走了。",
+        "focus": "向 + 地方/人 + 动作",
+        "actionLabel": "进入“介词“向””",
+        "grammarIndex": 0
+      },
+      "paragraphPractice": {
+        "label": "调用“我想向谁学习”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 0
+      },
+      "lifeTransfer": {
+        "promptCn": "你想向谁学习？为什么？",
+        "promptEn": "Name one person you want to learn from and give one reason."
+      }
+    },
+    {
+      "textId": "t_hsk3_l17_02",
+      "useGroupId": "T2",
+      "title": "去图书馆找方向",
+      "stageContract": [
+        "listen_or_read",
+        "overall_choice",
+        "detail_qa",
+        "show_text",
+        "language_and_application"
+      ],
+      "overviewChoices": [
+        {
+          "id": "l17_t2_overall_01",
+          "focus": "overall_understanding",
+          "questionCn": "白家月在哪里碰到陈天中？",
+          "questionPinyin": "",
+          "options": [
+            "阅览室门口",
+            "教师办公室",
+            "学生宿舍"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l17_t2_overall_02",
+          "focus": "overall_understanding",
+          "questionCn": "陈天中现在还想做什么？",
+          "questionPinyin": "",
+          "options": [
+            "马上找工作",
+            "继续学习",
+            "回家休息"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l17_t2_overall_03",
+          "focus": "overall_understanding",
+          "questionCn": "白家月建议他看什么？",
+          "questionPinyin": "",
+          "options": [
+            "找工作的报纸",
+            "留学国家的地图",
+            "跟电脑有关的书"
+          ],
+          "correctIndex": 2
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l17_t2_detail_01",
+          "questionCn": "白家月为什么觉得在图书馆看见陈天中很奇怪？",
+          "questionPinyin": "Bái Jiāyuè wèishénme juéde zài túshūguǎn kànjiàn Chén Tiānzhōng hěn qíguài?",
+          "answer": "因为她平时不常在图书馆看见他。",
+          "answerPinyin": "Yīnwèi tā píngshí bù cháng zài túshūguǎn kànjiàn tā.",
+          "acceptedAnswers": [
+            "因为她平时不常在图书馆看见他。"
+          ],
+          "informationPoint": "意外原因"
+        },
+        {
+          "id": "l17_t2_detail_02",
+          "questionCn": "同学们这几天都在做什么？",
+          "questionPinyin": "Tóngxuémen zhè jǐ tiān dōu zài zuò shénme?",
+          "answer": "都在到处找工作。",
+          "answerPinyin": "Dōu zài dàochù zhǎo gōngzuò.",
+          "acceptedAnswers": [
+            "都在到处找工作。"
+          ],
+          "informationPoint": "同学行动"
+        },
+        {
+          "id": "l17_t2_detail_03",
+          "questionCn": "陈天中的父母同意什么？",
+          "questionPinyin": "Chén Tiānzhōng de fùmǔ tóngyì shénme?",
+          "answer": "同意他不马上工作、继续学习。",
+          "answerPinyin": "Tóngyì tā bù mǎshàng gōngzuò, jìxù xuéxí.",
+          "acceptedAnswers": [
+            "同意他不马上工作、继续学习。"
+          ],
+          "informationPoint": "家人态度"
+        },
+        {
+          "id": "l17_t2_detail_04",
+          "questionCn": "陈天中为什么来图书馆看看？",
+          "questionPinyin": "Chén Tiānzhōng wèishénme lái túshūguǎn kànkan?",
+          "answer": "因为还没想好学什么。",
+          "answerPinyin": "Yīnwèi hái méi xiǎnghǎo xué shénme.",
+          "acceptedAnswers": [
+            "因为还没想好学什么。"
+          ],
+          "informationPoint": "来馆原因"
+        },
+        {
+          "id": "l17_t2_detail_05",
+          "questionCn": "他最后准备去哪里找书？",
+          "questionPinyin": "Tā zuìhòu zhǔnbèi qù nǎli zhǎo shū?",
+          "answer": "去那个屋子里找跟电脑有关的书。",
+          "answerPinyin": "Qù nàge wūzi li zhǎo gēn diànnǎo yǒuguān de shū.",
+          "acceptedAnswers": [
+            "去那个屋子里找跟电脑有关的书。"
+          ],
+          "informationPoint": "最后行动"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "你不是喜欢玩电脑吗？你可以去看看跟电脑有关系的书。",
+        "focus": "主语 + 不是 + 已知情况 + 吗？",
+        "actionLabel": "进入“反问句“不是……吗？””",
+        "grammarIndex": 1
+      },
+      "paragraphPractice": {
+        "label": "调用“我的学习方向”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 1
+      },
+      "lifeTransfer": {
+        "promptCn": "说说你想继续学习什么，并请同学给你一个建议。",
+        "promptEn": "Say what you want to continue studying and ask a classmate for one suggestion."
+      }
+    },
+    {
+      "textId": "t_hsk3_l17_03",
+      "useGroupId": "T3",
+      "title": "查一查留学信息",
+      "stageContract": [
+        "listen_or_read",
+        "overall_choice",
+        "detail_qa",
+        "show_text",
+        "language_and_application"
+      ],
+      "overviewChoices": [
+        {
+          "id": "l17_t3_overall_01",
+          "focus": "overall_understanding",
+          "questionCn": "陈天中的手机为什么关机了？",
+          "questionPinyin": "",
+          "options": [
+            "手机坏了",
+            "手机没电了",
+            "他不想接电话"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l17_t3_overall_02",
+          "focus": "overall_understanding",
+          "questionCn": "他们在说陈天中的什么事？",
+          "questionPinyin": "",
+          "options": [
+            "继续留学",
+            "做错事情",
+            "找电脑书"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l17_t3_overall_03",
+          "focus": "overall_understanding",
+          "questionCn": "李文最后准备做什么？",
+          "questionPinyin": "",
+          "options": [
+            "帮他给手机充电",
+            "陪他去找老师",
+            "介绍几个有用的网站"
+          ],
+          "correctIndex": 2
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l17_t3_detail_01",
+          "questionCn": "李文什么时候看见白家月了？",
+          "questionPinyin": "Lǐ Wén shénme shíhou kànjiàn Bái Jiāyuè le?",
+          "answer": "前天。",
+          "answerPinyin": "Qiántiān.",
+          "acceptedAnswers": [
+            "前天。"
+          ],
+          "informationPoint": "时间"
+        },
+        {
+          "id": "l17_t3_detail_02",
+          "questionCn": "白家月告诉李文什么消息？",
+          "questionPinyin": "Bái Jiāyuè gàosu Lǐ Wén shénme xiāoxi?",
+          "answer": "陈天中打算继续留学。",
+          "answerPinyin": "Chén Tiānzhōng dǎsuàn jìxù liúxué.",
+          "acceptedAnswers": [
+            "陈天中打算继续留学。"
+          ],
+          "informationPoint": "消息内容"
+        },
+        {
+          "id": "l17_t3_detail_03",
+          "questionCn": "陈天中还没想好哪两件事？",
+          "questionPinyin": "Chén Tiānzhōng hái méi xiǎnghǎo nǎ liǎng jiàn shì?",
+          "answer": "还没想好学什么，更没想好去哪个国家。",
+          "answerPinyin": "Hái méi xiǎnghǎo xué shénme, gèng méi xiǎnghǎo qù nǎge guójiā.",
+          "acceptedAnswers": [
+            "还没想好学什么，更没想好去哪个国家。"
+          ],
+          "informationPoint": "两个未定项"
+        },
+        {
+          "id": "l17_t3_detail_04",
+          "questionCn": "李文建议他去哪里学什么？",
+          "questionPinyin": "Lǐ Wén jiànyì tā qù nǎli xué shénme?",
+          "answer": "去中国学中文。",
+          "answerPinyin": "Qù Zhōngguó xué Zhōngwén.",
+          "acceptedAnswers": [
+            "去中国学中文。"
+          ],
+          "informationPoint": "朋友建议"
+        },
+        {
+          "id": "l17_t3_detail_05",
+          "questionCn": "陈天中和李文准备怎样找资料？",
+          "questionPinyin": "Chén Tiānzhōng hé Lǐ Wén zhǔnbèi zěnyàng zhǎo zīliào?",
+          "answer": "陈天中上网查，李文介绍几个有用的网站。",
+          "answerPinyin": "Chén Tiānzhōng shàngwǎng chá, Lǐ Wén jièshào jǐ ge yǒuyòng de wǎngzhàn.",
+          "acceptedAnswers": [
+            "陈天中上网查，李文介绍几个有用的网站。"
+          ],
+          "informationPoint": "查找方法"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "我还没想好学什么，更没想好去哪个国家。",
+        "focus": "分句1，+ 更 + 分句2",
+        "actionLabel": "进入“递进复句“……，更……””",
+        "grammarIndex": 2
+      },
+      "paragraphPractice": {
+        "label": "调用“我要怎么准备”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 2
+      },
+      "lifeTransfer": {
+        "promptCn": "介绍一个你想去学习的国家或城市，说说你要怎么准备？",
+        "promptEn": "Introduce one country or city where you want to study and explain how you will prepare."
+      }
+    },
+    {
+      "textId": "t_hsk3_l17_04",
+      "useGroupId": "T4",
+      "title": "毕业后的选择",
+      "stageContract": [
+        "listen_or_read",
+        "overall_choice",
+        "detail_qa",
+        "show_text",
+        "language_and_application"
+      ],
+      "overviewChoices": [
+        {
+          "id": "l17_t4_overall_01",
+          "focus": "overall_understanding",
+          "questionCn": "陈天中的大学生活怎么了？",
+          "questionPinyin": "",
+          "options": [
+            "马上要结束了",
+            "刚刚开始",
+            "暂时停止了"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l17_t4_overall_02",
+          "focus": "overall_understanding",
+          "questionCn": "同学们毕业后的选择一样吗？",
+          "questionPinyin": "",
+          "options": [
+            "一样，都找工作",
+            "不一样，有不同选择",
+            "一样，都去留学"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l17_t4_overall_03",
+          "focus": "overall_understanding",
+          "questionCn": "陈天中觉得做选择前要先做什么？",
+          "questionPinyin": "",
+          "options": [
+            "先问所有同学",
+            "先去一个大城市",
+            "先想清楚真正喜欢什么"
+          ],
+          "correctIndex": 2
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l17_t4_detail_01",
+          "questionCn": "陈天中最近经常被问什么问题？",
+          "questionPinyin": "Chén Tiānzhōng zuìjìn jīngcháng bèi wèn shénme wèntí?",
+          "answer": "“你以后想做什么？”",
+          "answerPinyin": "“Nǐ yǐhòu xiǎng zuò shénme?”",
+          "acceptedAnswers": [
+            "“你以后想做什么？”"
+          ],
+          "informationPoint": "常见问题"
+        },
+        {
+          "id": "l17_t4_detail_02",
+          "questionCn": "他觉得这个问题怎么样？",
+          "questionPinyin": "Tā juéde zhège wèntí zěnmeyàng?",
+          "answer": "真不容易回答。",
+          "answerPinyin": "Zhēn bù róngyì huídá.",
+          "acceptedAnswers": [
+            "真不容易回答。"
+          ],
+          "informationPoint": "作者感受"
+        },
+        {
+          "id": "l17_t4_detail_03",
+          "questionCn": "同学们有哪三种选择？",
+          "questionPinyin": "Tóngxuémen yǒu nǎ sān zhǒng xuǎnzé?",
+          "answer": "继续学习、出国留学、先找工作。",
+          "answerPinyin": "Jìxù xuéxí, chūguó liúxué, xiān zhǎo gōngzuò.",
+          "acceptedAnswers": [
+            "继续学习、出国留学、先找工作。"
+          ],
+          "informationPoint": "三种方向"
+        },
+        {
+          "id": "l17_t4_detail_04",
+          "questionCn": "怎样才能做出最合适的选择？",
+          "questionPinyin": "Zěnyàng cái néng zuòchū zuì héshì de xuǎnzé?",
+          "answer": "只有想清楚自己真正喜欢什么，才能做出最合适的选择。",
+          "answerPinyin": "Zhǐyǒu xiǎng qīngchu zìjǐ zhēnzhèng xǐhuan shénme, cái néng zuòchū zuì héshì de xuǎnzé.",
+          "acceptedAnswers": [
+            "只有想清楚自己真正喜欢什么，才能做出最合适的选择。"
+          ],
+          "informationPoint": "必要条件"
+        },
+        {
+          "id": "l17_t4_detail_05",
+          "questionCn": "对陈天中来说，什么是个难题？",
+          "questionPinyin": "Duì Chén Tiānzhōng lái shuō, shénme shì ge nántí?",
+          "answer": "想清楚“真正喜欢什么”是个难题。",
+          "answerPinyin": "Xiǎng qīngchu “zhēnzhèng xǐhuan shénme” shì ge nántí.",
+          "acceptedAnswers": [
+            "想清楚“真正喜欢什么”是个难题。"
+          ],
+          "informationPoint": "个人难题"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "只有想清楚自己真正喜欢什么，才能做出最合适的选择。",
+        "focus": "只有 + 必要条件，+ 才 + 结果",
+        "actionLabel": "进入“条件复句“只有……，才……””",
+        "grammarIndex": 3
+      },
+      "paragraphPractice": {
+        "label": "调用“毕业后的打算”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 3
+      },
+      "lifeTransfer": {
+        "promptCn": "介绍你毕业以后的打算：工作还是继续学习？为什么？",
+        "promptEn": "Explain whether you will work or continue studying after graduation and give one reason."
+      }
+    }
+  ],
+  "vocabularyTaskTypes": [
+    {
+      "id": "recognition",
+      "labelCn": "认读",
+      "labelEn": "Recognition"
+    },
+    {
+      "id": "shape",
+      "labelCn": "辨形",
+      "labelEn": "Character form"
+    },
+    {
+      "id": "input",
+      "labelCn": "输入",
+      "labelEn": "Type the word"
+    },
+    {
+      "id": "collocation",
+      "labelCn": "搭配与使用",
+      "labelEn": "Collocation and use"
+    }
+  ],
+  "timerPolicy": {
+    "miniLoop": {
+      "optionsMinutes": [
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 4
+    },
+    "vocabularyFocus": {
+      "optionsMinutes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 2
+    },
+    "autoClose": false,
+    "autoSubmit": false
+  },
+  "vocabularyCatalog": [
+    {
+      "id": "v17_01",
+      "hanzi": "向",
+      "pinyin": "xiàng",
+      "english": "to; toward",
+      "meaningCn": "朝着某个方向或对着某个人",
+      "phrases": [
+        "向前走",
+        "向老师学习"
+      ],
+      "example": "以后我要多向认真的人学习。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_02",
+      "hanzi": "楼梯",
+      "pinyin": "lóutī",
+      "english": "stairs",
+      "meaningCn": "楼与楼之间供人上下走的台阶",
+      "phrases": [
+        "走楼梯",
+        "楼梯那儿"
+      ],
+      "example": "我在楼梯那儿等你。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v17_03",
+      "hanzi": "害怕",
+      "pinyin": "hàipà",
+      "english": "fear; be afraid",
+      "meaningCn": "心里不安，不敢面对",
+      "phrases": [
+        "很害怕",
+        "害怕见老师"
+      ],
+      "example": "我害怕见李老师。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_04",
+      "hanzi": "生气",
+      "pinyin": "shēngqì",
+      "english": "get angry",
+      "meaningCn": "因为不高兴而发火",
+      "phrases": [
+        "别生气",
+        "怕老师生气"
+      ],
+      "example": "我怕李老师生气。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_05",
+      "hanzi": "常见",
+      "pinyin": "chángjiàn",
+      "english": "common",
+      "meaningCn": "经常可以看到或遇到",
+      "phrases": [
+        "很常见",
+        "常见的问题"
+      ],
+      "example": "做错事情是很常见的。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v17_06",
+      "hanzi": "聪明",
+      "pinyin": "cōngming",
+      "english": "smart; clever",
+      "meaningCn": "学得快，想得明白",
+      "phrases": [
+        "很聪明",
+        "聪明的学生"
+      ],
+      "example": "有的人虽然很聪明，但是会在简单的事情中出错。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_07",
+      "hanzi": "错",
+      "pinyin": "cuò",
+      "english": "mistake",
+      "meaningCn": "不正确的地方或结果",
+      "phrases": [
+        "做错事情",
+        "一个错"
+      ],
+      "example": "最近我做错了好几件事。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_08",
+      "hanzi": "认为",
+      "pinyin": "rènwéi",
+      "english": "think; consider",
+      "meaningCn": "心里有一种看法",
+      "phrases": [
+        "我认为",
+        "认为很简单"
+      ],
+      "example": "因为他们认为事情简单，就不会认真去做。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_09",
+      "hanzi": "到处",
+      "pinyin": "dàochù",
+      "english": "everywhere",
+      "meaningCn": "各个地方",
+      "phrases": [
+        "到处找",
+        "到处看看"
+      ],
+      "example": "同学们都在到处找工作呢。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v17_10",
+      "hanzi": "继续",
+      "pinyin": "jìxù",
+      "english": "go on; continue",
+      "meaningCn": "一件事没有停，接着做",
+      "phrases": [
+        "继续学习",
+        "继续工作"
+      ],
+      "example": "我不想现在就工作，还想继续学习。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_11",
+      "hanzi": "同意",
+      "pinyin": "tóngyì",
+      "english": "agree (with/to)",
+      "meaningCn": "觉得别人的想法可以接受",
+      "phrases": [
+        "同意这个想法",
+        "父母同意"
+      ],
+      "example": "我爸妈也同意。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_12",
+      "hanzi": "可",
+      "pinyin": "kě",
+      "english": "but",
+      "meaningCn": "表示后面的意思和前面不同",
+      "phrases": [
+        "可我还没想好",
+        "可是不知道"
+      ],
+      "example": "可我还没想好学什么。",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v17_13",
+      "hanzi": "屋子",
+      "pinyin": "wūzi",
+      "english": "room",
+      "meaningCn": "房间",
+      "phrases": [
+        "那个屋子",
+        "走进屋子"
+      ],
+      "example": "我记得那个屋子里有些跟电脑有关的书。",
+      "tier": "context",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v17_14",
+      "hanzi": "有关",
+      "pinyin": "yǒuguān",
+      "english": "have something to do with; about",
+      "meaningCn": "有关系；关于",
+      "phrases": [
+        "跟电脑有关",
+        "有关的书"
+      ],
+      "example": "我记得那个屋子里有些跟电脑有关的书。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_15",
+      "hanzi": "关机",
+      "pinyin": "guānjī",
+      "english": "turn off a mobile phone",
+      "meaningCn": "手机或电脑停止工作",
+      "phrases": [
+        "手机关机",
+        "已经关机"
+      ],
+      "example": "你的手机怎么关机了？",
+      "tier": "understanding",
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v17_16",
+      "hanzi": "前天",
+      "pinyin": "qiántiān",
+      "english": "the day before yesterday",
+      "meaningCn": "昨天的前一天",
+      "phrases": [
+        "前天看见",
+        "前天晚上"
+      ],
+      "example": "前天我看见家月了。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_17",
+      "hanzi": "留学",
+      "pinyin": "liúxué",
+      "english": "study abroad",
+      "meaningCn": "到别的国家学习",
+      "phrases": [
+        "出国留学",
+        "继续留学"
+      ],
+      "example": "她告诉我你打算继续留学？",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_18",
+      "hanzi": "国家",
+      "pinyin": "guójiā",
+      "english": "country",
+      "meaningCn": "有共同土地和管理的地方",
+      "phrases": [
+        "哪个国家",
+        "很多国家"
+      ],
+      "example": "我更没想好去哪个国家。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_19",
+      "hanzi": "比如",
+      "pinyin": "bǐrú",
+      "english": "for example; such as",
+      "meaningCn": "举一个例子来说明",
+      "phrases": [
+        "比如北京",
+        "比如说"
+      ],
+      "example": "比如可以去北京、上海这样的大城市。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_20",
+      "hanzi": "查",
+      "pinyin": "chá",
+      "english": "look up; consult",
+      "meaningCn": "找资料，了解信息",
+      "phrases": [
+        "上网查",
+        "查一查"
+      ],
+      "example": "好，那我上网查一查。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_21",
+      "hanzi": "有用",
+      "pinyin": "yǒuyòng",
+      "english": "useful",
+      "meaningCn": "能帮助解决问题",
+      "phrases": [
+        "有用的网站",
+        "很有用"
+      ],
+      "example": "我给你介绍几个有用的网站。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_22",
+      "hanzi": "容易",
+      "pinyin": "róngyì",
+      "english": "easy",
+      "meaningCn": "做起来不难",
+      "phrases": [
+        "不容易",
+        "很容易回答"
+      ],
+      "example": "这个问题真不容易回答。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_23",
+      "hanzi": "回答",
+      "pinyin": "huídá",
+      "english": "answer",
+      "meaningCn": "对问题说出答案或想法",
+      "phrases": [
+        "回答问题",
+        "不容易回答"
+      ],
+      "example": "这个问题真不容易回答。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_24",
+      "hanzi": "方向",
+      "pinyin": "fāngxiàng",
+      "english": "direction",
+      "meaningCn": "前进或选择的目标",
+      "phrases": [
+        "选择方向",
+        "不同方向"
+      ],
+      "example": "大家选择的方向都不同。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_25",
+      "hanzi": "只有",
+      "pinyin": "zhǐyǒu",
+      "english": "only",
+      "meaningCn": "说明不能少的条件",
+      "phrases": [
+        "只有……才……",
+        "只有这样"
+      ],
+      "example": "只有想清楚自己真正喜欢什么，才能做出最合适的选择。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_26",
+      "hanzi": "真正",
+      "pinyin": "zhēnzhèng",
+      "english": "really; indeed",
+      "meaningCn": "确实，不是表面上的",
+      "phrases": [
+        "真正喜欢",
+        "真正了解"
+      ],
+      "example": "只有想清楚自己真正喜欢什么，才能做出最合适的选择。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v17_27",
+      "hanzi": "难题",
+      "pinyin": "nántí",
+      "english": "difficult problem",
+      "meaningCn": "不容易解决的问题",
+      "phrases": [
+        "一个难题",
+        "解决难题"
+      ],
+      "example": "想清楚“真正喜欢什么”是个难题。",
+      "tier": "expression",
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    }
+  ],
+  "vocabularyGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "title": "我想向谁学习",
+      "wordIds": [
+        "v17_01",
+        "v17_02",
+        "v17_03",
+        "v17_04",
+        "v17_05",
+        "v17_06",
+        "v17_07",
+        "v17_08"
+      ],
+      "recognitionWordIds": [
+        "v17_01",
+        "v17_03",
+        "v17_06",
+        "v17_08"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v17_01"
+          ],
+          "acceptedAnswers": [
+            "向"
+          ],
+          "id": "l17_m1_v17_01_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "xiàng：朝着某个方向或对着某个人",
+          "answer": "向",
+          "options": [
+            "害怕",
+            "向",
+            "生气",
+            "常见"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_01"
+          ],
+          "acceptedAnswers": [
+            "向"
+          ],
+          "id": "l17_m1_v17_01_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "朝着某个方向或对着某个人",
+          "answer": "向",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m1_v17_01_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_01"
+          ],
+          "promptCn": "用“向前走”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "向前走",
+          "answer": "以后我要多向认真的人学习。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_02"
+          ],
+          "acceptedAnswers": [
+            "楼梯"
+          ],
+          "id": "l17_m1_v17_02_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "lóutī：楼与楼之间供人上下走的台阶",
+          "answer": "楼梯",
+          "options": [
+            "生气",
+            "常见",
+            "楼梯",
+            "聪明"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_03"
+          ],
+          "acceptedAnswers": [
+            "害怕"
+          ],
+          "id": "l17_m1_v17_03_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "hàipà：心里不安，不敢面对",
+          "answer": "害怕",
+          "options": [
+            "常见",
+            "聪明",
+            "错",
+            "害怕"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_03"
+          ],
+          "acceptedAnswers": [
+            "害怕"
+          ],
+          "id": "l17_m1_v17_03_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "心里不安，不敢面对",
+          "answer": "害怕",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m1_v17_03_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_03"
+          ],
+          "promptCn": "用“很害怕”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "很害怕",
+          "answer": "我害怕见李老师。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_04"
+          ],
+          "acceptedAnswers": [
+            "生气"
+          ],
+          "id": "l17_m1_v17_04_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "shēngqì：因为不高兴而发火",
+          "answer": "生气",
+          "options": [
+            "生气",
+            "聪明",
+            "错",
+            "认为"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_04"
+          ],
+          "acceptedAnswers": [
+            "生气"
+          ],
+          "id": "l17_m1_v17_04_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "因为不高兴而发火",
+          "answer": "生气",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m1_v17_04_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_04"
+          ],
+          "promptCn": "用“别生气”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "别生气",
+          "answer": "我怕李老师生气。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_05"
+          ],
+          "acceptedAnswers": [
+            "常见"
+          ],
+          "id": "l17_m1_v17_05_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "chángjiàn：经常可以看到或遇到",
+          "answer": "常见",
+          "options": [
+            "错",
+            "常见",
+            "认为",
+            "到处"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_06"
+          ],
+          "acceptedAnswers": [
+            "聪明"
+          ],
+          "id": "l17_m1_v17_06_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "cōngming：学得快，想得明白",
+          "answer": "聪明",
+          "options": [
+            "认为",
+            "到处",
+            "聪明",
+            "继续"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_06"
+          ],
+          "acceptedAnswers": [
+            "聪明"
+          ],
+          "id": "l17_m1_v17_06_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "学得快，想得明白",
+          "answer": "聪明",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m1_v17_06_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_06"
+          ],
+          "promptCn": "用“很聪明”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "很聪明",
+          "answer": "有的人虽然很聪明，但是会在简单的事情中出错。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_07"
+          ],
+          "acceptedAnswers": [
+            "错"
+          ],
+          "id": "l17_m1_v17_07_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "cuò：不正确的地方或结果",
+          "answer": "错",
+          "options": [
+            "到处",
+            "继续",
+            "同意",
+            "错"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_07"
+          ],
+          "acceptedAnswers": [
+            "错"
+          ],
+          "id": "l17_m1_v17_07_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "不正确的地方或结果",
+          "answer": "错",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m1_v17_07_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_07"
+          ],
+          "promptCn": "用“做错事情”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "做错事情",
+          "answer": "最近我做错了好几件事。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_08"
+          ],
+          "acceptedAnswers": [
+            "认为"
+          ],
+          "id": "l17_m1_v17_08_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "rènwéi：心里有一种看法",
+          "answer": "认为",
+          "options": [
+            "认为",
+            "继续",
+            "同意",
+            "可"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_08"
+          ],
+          "acceptedAnswers": [
+            "认为"
+          ],
+          "id": "l17_m1_v17_08_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "心里有一种看法",
+          "answer": "认为",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m1_v17_08_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_08"
+          ],
+          "promptCn": "用“我认为”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "我认为",
+          "answer": "因为他们认为事情简单，就不会认真去做。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "title": "我的学习方向",
+      "wordIds": [
+        "v17_09",
+        "v17_10",
+        "v17_11",
+        "v17_12",
+        "v17_13",
+        "v17_14"
+      ],
+      "recognitionWordIds": [
+        "v17_09",
+        "v17_10",
+        "v17_11",
+        "v17_14"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v17_09"
+          ],
+          "acceptedAnswers": [
+            "到处"
+          ],
+          "id": "l17_m2_v17_09_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "dàochù：各个地方",
+          "answer": "到处",
+          "options": [
+            "有关",
+            "关机",
+            "到处",
+            "前天"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_10"
+          ],
+          "acceptedAnswers": [
+            "继续"
+          ],
+          "id": "l17_m2_v17_10_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "jìxù：一件事没有停，接着做",
+          "answer": "继续",
+          "options": [
+            "关机",
+            "前天",
+            "留学",
+            "继续"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_10"
+          ],
+          "acceptedAnswers": [
+            "继续"
+          ],
+          "id": "l17_m2_v17_10_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "一件事没有停，接着做",
+          "answer": "继续",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m2_v17_10_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_10"
+          ],
+          "promptCn": "用“继续学习”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "继续学习",
+          "answer": "我不想现在就工作，还想继续学习。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_11"
+          ],
+          "acceptedAnswers": [
+            "同意"
+          ],
+          "id": "l17_m2_v17_11_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "tóngyì：觉得别人的想法可以接受",
+          "answer": "同意",
+          "options": [
+            "同意",
+            "前天",
+            "留学",
+            "国家"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_11"
+          ],
+          "acceptedAnswers": [
+            "同意"
+          ],
+          "id": "l17_m2_v17_11_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "觉得别人的想法可以接受",
+          "answer": "同意",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m2_v17_11_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_11"
+          ],
+          "promptCn": "用“同意这个想法”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "同意这个想法",
+          "answer": "我爸妈也同意。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_12"
+          ],
+          "acceptedAnswers": [
+            "可"
+          ],
+          "id": "l17_m2_v17_12_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "kě：表示后面的意思和前面不同",
+          "answer": "可",
+          "options": [
+            "留学",
+            "可",
+            "国家",
+            "比如"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_13"
+          ],
+          "acceptedAnswers": [
+            "屋子"
+          ],
+          "id": "l17_m2_v17_13_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "wūzi：房间",
+          "answer": "屋子",
+          "options": [
+            "国家",
+            "比如",
+            "屋子",
+            "查"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_14"
+          ],
+          "acceptedAnswers": [
+            "有关"
+          ],
+          "id": "l17_m2_v17_14_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "yǒuguān：有关系；关于",
+          "answer": "有关",
+          "options": [
+            "比如",
+            "查",
+            "有用",
+            "有关"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_14"
+          ],
+          "acceptedAnswers": [
+            "有关"
+          ],
+          "id": "l17_m2_v17_14_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "有关系；关于",
+          "answer": "有关",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m2_v17_14_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_14"
+          ],
+          "promptCn": "用“跟电脑有关”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "跟电脑有关",
+          "answer": "我记得那个屋子里有些跟电脑有关的书。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "title": "我要怎么准备",
+      "wordIds": [
+        "v17_15",
+        "v17_16",
+        "v17_17",
+        "v17_18",
+        "v17_19",
+        "v17_20",
+        "v17_21"
+      ],
+      "recognitionWordIds": [
+        "v17_15",
+        "v17_17",
+        "v17_20",
+        "v17_21"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v17_15"
+          ],
+          "acceptedAnswers": [
+            "关机"
+          ],
+          "id": "l17_m3_v17_15_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "guānjī：手机或电脑停止工作",
+          "answer": "关机",
+          "options": [
+            "回答",
+            "关机",
+            "方向",
+            "只有"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_16"
+          ],
+          "acceptedAnswers": [
+            "前天"
+          ],
+          "id": "l17_m3_v17_16_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "qiántiān：昨天的前一天",
+          "answer": "前天",
+          "options": [
+            "方向",
+            "只有",
+            "前天",
+            "真正"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_16"
+          ],
+          "acceptedAnswers": [
+            "前天"
+          ],
+          "id": "l17_m3_v17_16_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "昨天的前一天",
+          "answer": "前天",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m3_v17_16_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_16"
+          ],
+          "promptCn": "用“前天看见”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "前天看见",
+          "answer": "前天我看见家月了。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_17"
+          ],
+          "acceptedAnswers": [
+            "留学"
+          ],
+          "id": "l17_m3_v17_17_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "liúxué：到别的国家学习",
+          "answer": "留学",
+          "options": [
+            "只有",
+            "真正",
+            "难题",
+            "留学"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_17"
+          ],
+          "acceptedAnswers": [
+            "留学"
+          ],
+          "id": "l17_m3_v17_17_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "到别的国家学习",
+          "answer": "留学",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m3_v17_17_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_17"
+          ],
+          "promptCn": "用“出国留学”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "出国留学",
+          "answer": "她告诉我你打算继续留学？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_18"
+          ],
+          "acceptedAnswers": [
+            "国家"
+          ],
+          "id": "l17_m3_v17_18_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "guójiā：有共同土地和管理的地方",
+          "answer": "国家",
+          "options": [
+            "国家",
+            "真正",
+            "难题",
+            "向"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_18"
+          ],
+          "acceptedAnswers": [
+            "国家"
+          ],
+          "id": "l17_m3_v17_18_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "有共同土地和管理的地方",
+          "answer": "国家",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m3_v17_18_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_18"
+          ],
+          "promptCn": "用“哪个国家”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "哪个国家",
+          "answer": "我更没想好去哪个国家。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_19"
+          ],
+          "acceptedAnswers": [
+            "比如"
+          ],
+          "id": "l17_m3_v17_19_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "bǐrú：举一个例子来说明",
+          "answer": "比如",
+          "options": [
+            "难题",
+            "比如",
+            "向",
+            "楼梯"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_19"
+          ],
+          "acceptedAnswers": [
+            "比如"
+          ],
+          "id": "l17_m3_v17_19_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "举一个例子来说明",
+          "answer": "比如",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m3_v17_19_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_19"
+          ],
+          "promptCn": "用“比如北京”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "比如北京",
+          "answer": "比如可以去北京、上海这样的大城市。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_20"
+          ],
+          "acceptedAnswers": [
+            "查"
+          ],
+          "id": "l17_m3_v17_20_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "chá：找资料，了解信息",
+          "answer": "查",
+          "options": [
+            "向",
+            "楼梯",
+            "查",
+            "害怕"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_20"
+          ],
+          "acceptedAnswers": [
+            "查"
+          ],
+          "id": "l17_m3_v17_20_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "找资料，了解信息",
+          "answer": "查",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m3_v17_20_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_20"
+          ],
+          "promptCn": "用“上网查”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "上网查",
+          "answer": "好，那我上网查一查。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_21"
+          ],
+          "acceptedAnswers": [
+            "有用"
+          ],
+          "id": "l17_m3_v17_21_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "yǒuyòng：能帮助解决问题",
+          "answer": "有用",
+          "options": [
+            "楼梯",
+            "害怕",
+            "生气",
+            "有用"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_21"
+          ],
+          "acceptedAnswers": [
+            "有用"
+          ],
+          "id": "l17_m3_v17_21_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "能帮助解决问题",
+          "answer": "有用",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m3_v17_21_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_21"
+          ],
+          "promptCn": "用“有用的网站”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "有用的网站",
+          "answer": "我给你介绍几个有用的网站。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "title": "毕业后的打算",
+      "wordIds": [
+        "v17_22",
+        "v17_23",
+        "v17_24",
+        "v17_25",
+        "v17_26",
+        "v17_27"
+      ],
+      "recognitionWordIds": [
+        "v17_22",
+        "v17_24",
+        "v17_26",
+        "v17_27"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v17_22"
+          ],
+          "acceptedAnswers": [
+            "容易"
+          ],
+          "id": "l17_m4_v17_22_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "róngyì：做起来不难",
+          "answer": "容易",
+          "options": [
+            "聪明",
+            "容易",
+            "错",
+            "认为"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_22"
+          ],
+          "acceptedAnswers": [
+            "容易"
+          ],
+          "id": "l17_m4_v17_22_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "做起来不难",
+          "answer": "容易",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m4_v17_22_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_22"
+          ],
+          "promptCn": "用“不容易”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "不容易",
+          "answer": "这个问题真不容易回答。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_23"
+          ],
+          "acceptedAnswers": [
+            "回答"
+          ],
+          "id": "l17_m4_v17_23_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "huídá：对问题说出答案或想法",
+          "answer": "回答",
+          "options": [
+            "错",
+            "认为",
+            "回答",
+            "到处"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_23"
+          ],
+          "acceptedAnswers": [
+            "回答"
+          ],
+          "id": "l17_m4_v17_23_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "对问题说出答案或想法",
+          "answer": "回答",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m4_v17_23_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_23"
+          ],
+          "promptCn": "用“回答问题”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "回答问题",
+          "answer": "这个问题真不容易回答。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_24"
+          ],
+          "acceptedAnswers": [
+            "方向"
+          ],
+          "id": "l17_m4_v17_24_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "fāngxiàng：前进或选择的目标",
+          "answer": "方向",
+          "options": [
+            "认为",
+            "到处",
+            "继续",
+            "方向"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_24"
+          ],
+          "acceptedAnswers": [
+            "方向"
+          ],
+          "id": "l17_m4_v17_24_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "前进或选择的目标",
+          "answer": "方向",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m4_v17_24_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_24"
+          ],
+          "promptCn": "用“选择方向”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "选择方向",
+          "answer": "大家选择的方向都不同。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_25"
+          ],
+          "acceptedAnswers": [
+            "只有"
+          ],
+          "id": "l17_m4_v17_25_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zhǐyǒu：说明不能少的条件",
+          "answer": "只有",
+          "options": [
+            "只有",
+            "到处",
+            "继续",
+            "同意"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_25"
+          ],
+          "acceptedAnswers": [
+            "只有"
+          ],
+          "id": "l17_m4_v17_25_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "说明不能少的条件",
+          "answer": "只有",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m4_v17_25_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_25"
+          ],
+          "promptCn": "用“只有……才……”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "只有……才……",
+          "answer": "只有想清楚自己真正喜欢什么，才能做出最合适的选择。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_26"
+          ],
+          "acceptedAnswers": [
+            "真正"
+          ],
+          "id": "l17_m4_v17_26_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zhēnzhèng：确实，不是表面上的",
+          "answer": "真正",
+          "options": [
+            "继续",
+            "真正",
+            "同意",
+            "可"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_26"
+          ],
+          "acceptedAnswers": [
+            "真正"
+          ],
+          "id": "l17_m4_v17_26_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "确实，不是表面上的",
+          "answer": "真正",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m4_v17_26_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_26"
+          ],
+          "promptCn": "用“真正喜欢”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "真正喜欢",
+          "answer": "只有想清楚自己真正喜欢什么，才能做出最合适的选择。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v17_27"
+          ],
+          "acceptedAnswers": [
+            "难题"
+          ],
+          "id": "l17_m4_v17_27_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "nántí：不容易解决的问题",
+          "answer": "难题",
+          "options": [
+            "同意",
+            "可",
+            "难题",
+            "屋子"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v17_27"
+          ],
+          "acceptedAnswers": [
+            "难题"
+          ],
+          "id": "l17_m4_v17_27_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "不容易解决的问题",
+          "answer": "难题",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l17_m4_v17_27_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v17_27"
+          ],
+          "promptCn": "用“一个难题”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "一个难题",
+          "answer": "想清楚“真正喜欢什么”是个难题。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    }
+  ],
+  "resourceOverrides": [],
+  "supportOnlyStructures": [
+    "目标语法用于支架和挑战层，不要求所有学生在第一次终点表达中全部使用。"
+  ],
+  "evidencePolicy": {
+    "coreTypes": [
+      "entry_expression",
+      "actual_learning_path",
+      "exit_expression"
+    ],
+    "pathEvent": "opened",
+    "optionalSignals": [
+      "support_request",
+      "self_reflection"
+    ]
+  },
+  "supportOptions": [
+    {
+      "id": "vocabulary",
+      "labelCn": "我缺少合适的词",
+      "labelEn": "I need the right words"
+    },
+    {
+      "id": "organization",
+      "labelCn": "我不知道怎样组织信息",
+      "labelEn": "I need help organizing my ideas"
+    },
+    {
+      "id": "structure",
+      "labelCn": "我需要一个句子结构",
+      "labelEn": "I need a sentence frame"
+    },
+    {
+      "id": "teacher",
+      "labelCn": "我想获得老师的帮助",
+      "labelEn": "I want help from the teacher"
+    }
+  ],
+  "feelingOptions": [
+    {
+      "id": "clearer",
+      "labelCn": "我说得更清楚了",
+      "labelEn": "My expression is clearer"
+    },
+    {
+      "id": "more_complete",
+      "labelCn": "我说得更完整了",
+      "labelEn": "My expression is more complete"
+    },
+    {
+      "id": "more_natural",
+      "labelCn": "我说得更自然了",
+      "labelEn": "My expression is more natural"
+    },
+    {
+      "id": "still_need_help",
+      "labelCn": "我还需要帮助",
+      "labelEn": "I still need help"
+    }
+  ],
+  "coreEvidence": [
+    "entry_expression",
+    "actual_learning_path",
+    "exit_expression"
+  ],
+  "capabilities": [
+    "select_text_mini_loop",
+    "launch_interaction",
+    "independent_answer",
+    "support_request",
+    "anonymous_return",
+    "open_support",
+    "reanswer",
+    "record_teacher_decision",
+    "compare_entry_exit",
+    "teacher_selected_vocabulary_focus",
+    "shared_countdown",
+    "native_course_resource_return",
+    "configured_task_stimulus",
+    "state_restore"
+  ]
+}
