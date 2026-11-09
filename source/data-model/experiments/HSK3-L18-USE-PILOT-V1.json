@@ -1,0 +1,3120 @@
+{
+  "schemaVersion": "classpro-use-profile/v3",
+  "experiment": {
+    "id": "l18-use-pilot-v1",
+    "title": "第18课·以用为主线升级版",
+    "lessonLabel": "第18课",
+    "sourceLesson": "HSK3-L18",
+    "scope": "四个课文MINI循环；保留L18原生词汇场景、渐进式语法、对话与日记体裁、教材音频、课文4教学扩展英文和完整练习。"
+  },
+  "sources": {
+    "lesson": {
+      "path": "../lessons/HSK3-L18.json",
+      "sha256": "C134F7216752EA3EA80558F8F65EB36C4FFB682C4CCB50C71BB0A178D1C2AF48"
+    },
+    "teacher": {
+      "path": "../../in-class/teacher.html"
+    },
+    "student": {
+      "path": "../../in-class/student.html"
+    }
+  },
+  "nativeTeaching": {
+    "preserveCourseStyles": true,
+    "grammar": {
+      "source": "formal_lesson",
+      "preserveExamples": true,
+      "preserveHighlights": true,
+      "preserveOralQuestions": true,
+      "preserveFollowUp": true
+    },
+    "text": {
+      "source": "formal_lesson",
+      "preservePresentation": true,
+      "preserveDialogue": true,
+      "preserveDiary": true,
+      "preserveAudio": true,
+      "preserveExtensionEnglish": true
+    },
+    "vocabulary": {
+      "source": "formal_lesson",
+      "preserveScenes": true,
+      "preserveHotspots": true
+    }
+  },
+  "useGroups": [
+    {
+      "id": "T1",
+      "icon": "🧧",
+      "label": "课文 1",
+      "title": "我的节日家庭活动",
+      "goal": "介绍一个你喜欢的节日：什么时候？你和家人会做什么？",
+      "goalEn": "Introduce one festival you like, when it is, and one activity you do with your family.",
+      "image": "images/hsk3-l18/photo-text-1-family-dumplings-gala.png",
+      "imageLabel": "一家人在春节一起包饺子、看晚会",
+      "entryPromptCn": "你喜欢什么节日？",
+      "entryPromptEn": "Which festival do you like?",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说出一个节日"
+        },
+        {
+          "id": "step_2",
+          "label": "说出时间"
+        },
+        {
+          "id": "step_3",
+          "label": "说出一个家庭活动"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t1_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "春节、怎样、过节、节日、联欢、大概",
+          "contentEn": "Use only the words you need."
+        },
+        {
+          "id": "t1_order",
+          "labelCn": "表达步骤",
+          "labelEn": "Speaking steps",
+          "contentCn": "说出一个节日 → 说出时间 → 说出一个家庭活动",
+          "contentEn": "Complete the simple steps in order."
+        }
+      ],
+      "textId": "t_hsk3_l18_01",
+      "entry": {
+        "id": "l18_t1_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "你喜欢什么节日？",
+        "promptEn": "Which festival do you like?",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l18/photo-text-1-family-dumplings-gala.png",
+          "labelCn": "一家人在春节一起包饺子、看晚会",
+          "altCn": "一家人在春节一起包饺子、看晚会",
+          "instructionCn": "你喜欢什么节日？",
+          "instructionEn": "Which festival do you like?"
+        }
+      },
+      "exit": {
+        "id": "l18_t1_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "介绍一个你喜欢的节日：什么时候？你和家人会做什么？",
+        "promptEn": "Introduce one festival you like, when it is, and one activity you do with your family."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文1词汇",
+          "vocabSession": "1"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "概数表达法",
+          "grammarIndex": 0
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文1",
+          "textIndex": 0
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：我的节日家庭活动",
+          "routeState": {
+            "t2ki": 0
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l18_task_01",
+          "status": "ready",
+          "purpose": "介绍一个你喜欢的节日：什么时候？你和家人会做什么？"
+        },
+        {
+          "id": "l18_para_01",
+          "status": "ready",
+          "purpose": "我喜欢的节日"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "icon": "🥟",
+      "label": "课文 2",
+      "title": "我刚刚学会的事",
+      "goal": "介绍一件你刚刚学会做的事：你怎么学会的？",
+      "goalEn": "Introduce one thing you have just learned to do and explain how you learned it.",
+      "image": "images/hsk3-l18/photo-text-2-learning-dumplings-video.png",
+      "imageLabel": "白家月看视频学习包饺子",
+      "entryPromptCn": "你刚刚学会做的一件事是什么？",
+      "entryPromptEn": "What is one thing you have just learned to do?",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说出一件事"
+        },
+        {
+          "id": "step_2",
+          "label": "说出一种学习方法"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t2_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "阿姨、叔叔、收、总、见面、刚刚",
+          "contentEn": "Use only the words you need."
+        },
+        {
+          "id": "t2_order",
+          "labelCn": "表达步骤",
+          "labelEn": "Speaking steps",
+          "contentCn": "说出一件事 → 说出一种学习方法",
+          "contentEn": "Complete the simple steps in order."
+        }
+      ],
+      "textId": "t_hsk3_l18_02",
+      "entry": {
+        "id": "l18_t2_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "你刚刚学会做的一件事是什么？",
+        "promptEn": "What is one thing you have just learned to do?",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l18/photo-text-2-learning-dumplings-video.png",
+          "labelCn": "白家月看视频学习包饺子",
+          "altCn": "白家月看视频学习包饺子",
+          "instructionCn": "你刚刚学会做的一件事是什么？",
+          "instructionEn": "What is one thing you have just learned to do?"
+        }
+      },
+      "exit": {
+        "id": "l18_t2_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "介绍一件你刚刚学会做的事：你怎么学会的？",
+        "promptEn": "Introduce one thing you have just learned to do and explain how you learned it."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文2词汇",
+          "vocabSession": "2"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "“刚才”和“刚刚”",
+          "grammarIndex": 1
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文2",
+          "textIndex": 1
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：我刚刚学会的事",
+          "routeState": {
+            "t2ki": 1
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l18_task_02",
+          "status": "ready",
+          "purpose": "介绍一件你刚刚学会做的事：你怎么学会的？"
+        },
+        {
+          "id": "l18_para_02",
+          "status": "ready",
+          "purpose": "我刚刚学会的事"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "icon": "📷",
+      "label": "课文 3",
+      "title": "一张重要的旧照片",
+      "goal": "介绍一张对你很重要的旧照片：什么时候照的？有什么故事？",
+      "goalEn": "Introduce an old photo that matters to you, when it was taken, and one part of its story.",
+      "image": "images/hsk3-l18/photo-text-3-airport-family-photo.png",
+      "imageLabel": "妈妈向客人介绍三四年前的机场全家照",
+      "entryPromptCn": "你有一张喜欢的照片吗？",
+      "entryPromptEn": "Do you have a photo you like?",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说出照片时间"
+        },
+        {
+          "id": "step_2",
+          "label": "说出一个故事信息"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t3_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "出发、不久、发生、刚、只要、学期、毕业",
+          "contentEn": "Use only the words you need."
+        },
+        {
+          "id": "t3_order",
+          "labelCn": "表达步骤",
+          "labelEn": "Speaking steps",
+          "contentCn": "说出照片时间 → 说出一个故事信息",
+          "contentEn": "Complete the simple steps in order."
+        }
+      ],
+      "textId": "t_hsk3_l18_03",
+      "entry": {
+        "id": "l18_t3_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "你有一张喜欢的照片吗？",
+        "promptEn": "Do you have a photo you like?",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l18/photo-text-3-airport-family-photo.png",
+          "labelCn": "妈妈向客人介绍三四年前的机场全家照",
+          "altCn": "妈妈向客人介绍三四年前的机场全家照",
+          "instructionCn": "你有一张喜欢的照片吗？",
+          "instructionEn": "Do you have a photo you like?"
+        }
+      },
+      "exit": {
+        "id": "l18_t3_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "介绍一张对你很重要的旧照片：什么时候照的？有什么故事？",
+        "promptEn": "Introduce an old photo that matters to you, when it was taken, and one part of its story."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文3词汇",
+          "vocabSession": "3"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "条件复句“只要……，就……”",
+          "grammarIndex": 2
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文3",
+          "textIndex": 2
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：一张重要的旧照片",
+          "routeState": {
+            "t2ki": 2
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l18_task_03",
+          "status": "ready",
+          "purpose": "介绍一张对你很重要的旧照片：什么时候照的？有什么故事？"
+        },
+        {
+          "id": "l18_para_03",
+          "status": "ready",
+          "purpose": "一张重要的旧照片"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "icon": "🎯",
+      "label": "课文 4",
+      "title": "我的成长目标",
+      "goal": "介绍一个你的目标：从什么时候起？你要怎么坚持？",
+      "goalEn": "Introduce one goal, say when you will start, and explain one action you will keep doing.",
+      "image": "images/hsk3-l18/photo-text-4-study-goal-timeline.png",
+      "imageLabel": "学生通过每天学习和检查计划坚持完成目标",
+      "entryPromptCn": "你现在有一个小目标吗？",
+      "entryPromptEn": "Do you have a small goal now?",
+      "responseMode": "teacherObservedWithTextOutline",
+      "exitRequirements": [
+        {
+          "id": "step_1",
+          "label": "说出一个目标"
+        },
+        {
+          "id": "step_2",
+          "label": "说出开始时间"
+        },
+        {
+          "id": "step_3",
+          "label": "说出一个行动"
+        }
+      ],
+      "supportCards": [
+        {
+          "id": "t4_words",
+          "labelCn": "词汇提示",
+          "labelEn": "Word support",
+          "contentCn": "出生、过去、懂得、坚持、完成、目标",
+          "contentEn": "Use only the words you need."
+        },
+        {
+          "id": "t4_order",
+          "labelCn": "表达步骤",
+          "labelEn": "Speaking steps",
+          "contentCn": "说出一个目标 → 说出开始时间 → 说出一个行动",
+          "contentEn": "Complete the simple steps in order."
+        }
+      ],
+      "textId": "t_hsk3_l18_04",
+      "entry": {
+        "id": "l18_t4_use_entry",
+        "label": "起点表达",
+        "labelEn": "Starting expression",
+        "promptCn": "你现在有一个小目标吗？",
+        "promptEn": "Do you have a small goal now?",
+        "stimulus": {
+          "type": "image",
+          "image": "images/hsk3-l18/photo-text-4-study-goal-timeline.png",
+          "labelCn": "学生通过每天学习和检查计划坚持完成目标",
+          "altCn": "学生通过每天学习和检查计划坚持完成目标",
+          "instructionCn": "你现在有一个小目标吗？",
+          "instructionEn": "Do you have a small goal now?"
+        }
+      },
+      "exit": {
+        "id": "l18_t4_use_exit",
+        "label": "终点表达",
+        "labelEn": "Upgraded expression",
+        "promptCn": "介绍一个你的目标：从什么时候起？你要怎么坚持？",
+        "promptEn": "Introduce one goal, say when you will start, and explain one action you will keep doing."
+      },
+      "linkedResources": {
+        "vocabulary": {
+          "module": "teach",
+          "submodule": "tv",
+          "label": "课文4词汇",
+          "vocabSession": "4"
+        },
+        "grammar": {
+          "module": "teach",
+          "submodule": "tg",
+          "label": "固定格式“从……起”",
+          "grammarIndex": 3
+        },
+        "text": {
+          "module": "teach",
+          "submodule": "tt",
+          "label": "课文4",
+          "textIndex": 3
+        },
+        "practice": {
+          "module": "practice",
+          "submodule": "t2k",
+          "label": "任务卡：我的成长目标",
+          "routeState": {
+            "t2ki": 3
+          }
+        }
+      },
+      "resourceLinks": [
+        {
+          "id": "l18_task_04",
+          "status": "ready",
+          "purpose": "介绍一个你的目标：从什么时候起？你要怎么坚持？"
+        },
+        {
+          "id": "l18_para_04",
+          "status": "ready",
+          "purpose": "我的目标"
+        }
+      ]
+    }
+  ],
+  "textLearning": [
+    {
+      "textId": "t_hsk3_l18_01",
+      "useGroupId": "T1",
+      "title": "第一次在中国过春节",
+      "stageContract": [
+        "listen_or_read",
+        "overall_choice",
+        "detail_qa",
+        "show_text",
+        "language_and_application"
+      ],
+      "overviewChoices": [
+        {
+          "id": "l18_t1_overall_01",
+          "focus": "overall_understanding",
+          "questionCn": "白家月为什么很开心？",
+          "questionPinyin": "",
+          "options": [
+            "她马上要毕业",
+            "她要在中国过年",
+            "她要去图书馆"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l18_t1_overall_02",
+          "focus": "overall_understanding",
+          "questionCn": "李文家过春节时会做什么？",
+          "questionPinyin": "",
+          "options": [
+            "去机场拍照",
+            "去学校联欢",
+            "包饺子、看晚会"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "l18_t1_overall_03",
+          "focus": "overall_understanding",
+          "questionCn": "这段话说的是什么？",
+          "questionPinyin": "",
+          "options": [
+            "李文家怎样过春节",
+            "白家月怎样找工作",
+            "李文怎样学医"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l18_t1_detail_01",
+          "questionCn": "白家月和李文在哪里聊天儿？",
+          "questionPinyin": "Bái Jiāyuè hé Lǐ Wén zài nǎli liáotiānr?",
+          "answer": "在飞机上。",
+          "answerPinyin": "Zài fēijī shang.",
+          "acceptedAnswers": [
+            "在飞机上。"
+          ],
+          "informationPoint": "地点"
+        },
+        {
+          "id": "l18_t1_detail_02",
+          "questionCn": "李文第一次做什么？",
+          "questionPinyin": "Lǐ Wén dì-yī cì zuò shénme?",
+          "answer": "第一次请外国朋友来家里过春节。",
+          "answerPinyin": "Dì-yī cì qǐng wàiguó péngyou lái jiā li guò Chūnjié.",
+          "acceptedAnswers": [
+            "第一次请外国朋友来家里过春节。"
+          ],
+          "informationPoint": "第一次经历"
+        },
+        {
+          "id": "l18_t1_detail_03",
+          "questionCn": "中国人一般怎样过春节？",
+          "questionPinyin": "Zhōngguórén yìbān zěnyàng guò Chūnjié?",
+          "answer": "一般会回家，跟家人一起过。",
+          "answerPinyin": "Yìbān huì huí jiā, gēn jiārén yìqǐ guò.",
+          "acceptedAnswers": [
+            "一般会回家，跟家人一起过。"
+          ],
+          "informationPoint": "过节方式"
+        },
+        {
+          "id": "l18_t1_detail_04",
+          "questionCn": "李文家会一边做什么，一边做什么？",
+          "questionPinyin": "Lǐ Wén jiā huì yìbiān zuò shénme, yìbiān zuò shénme?",
+          "answer": "一边包饺子，一边看春节联欢晚会。",
+          "answerPinyin": "Yìbiān bāo jiǎozi, yìbiān kàn Chūnjié Liánhuān Wǎnhuì.",
+          "acceptedAnswers": [
+            "一边包饺子，一边看春节联欢晚会。"
+          ],
+          "informationPoint": "家庭活动"
+        },
+        {
+          "id": "l18_t1_detail_05",
+          "questionCn": "春节大概放几天假？",
+          "questionPinyin": "Chūnjié dàgài fàng jǐ tiān jià?",
+          "answer": "大概七八天。",
+          "answerPinyin": "Dàgài qī bā tiān.",
+          "acceptedAnswers": [
+            "大概七八天。"
+          ],
+          "informationPoint": "假期时间"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "春节大概放七八天假。",
+        "focus": "相邻数字1 + 相邻数字2 + 量词/名词",
+        "actionLabel": "进入“概数表达法”",
+        "grammarIndex": 0
+      },
+      "paragraphPractice": {
+        "label": "调用“我喜欢的节日”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 0
+      },
+      "lifeTransfer": {
+        "promptCn": "介绍一个你喜欢的节日：什么时候？你和家人会做什么？",
+        "promptEn": "Introduce one festival you like, when it is, and one activity you do with your family."
+      }
+    },
+    {
+      "textId": "t_hsk3_l18_02",
+      "useGroupId": "T2",
+      "title": "我刚刚学会包饺子",
+      "stageContract": [
+        "listen_or_read",
+        "overall_choice",
+        "detail_qa",
+        "show_text",
+        "language_and_application"
+      ],
+      "overviewChoices": [
+        {
+          "id": "l18_t2_overall_01",
+          "focus": "overall_understanding",
+          "questionCn": "白家月为什么去李文家？",
+          "questionPinyin": "",
+          "options": [
+            "去借一本书",
+            "去看旧照片",
+            "和李文家人一起过年"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "l18_t2_overall_02",
+          "focus": "overall_understanding",
+          "questionCn": "大家第一次见面时怎么样？",
+          "questionPinyin": "",
+          "options": [
+            "都很客气，也很高兴",
+            "都不知道说什么",
+            "都急着出发"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l18_t2_overall_03",
+          "focus": "overall_understanding",
+          "questionCn": "白家月后来想做什么？",
+          "questionPinyin": "",
+          "options": [
+            "自己看电视",
+            "和大家一起包饺子",
+            "马上回学校"
+          ],
+          "correctIndex": 1
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l18_t2_detail_01",
+          "questionCn": "白家月见面时先说了什么？",
+          "questionPinyin": "Bái Jiāyuè jiànmiàn shí xiān shuōle shénme?",
+          "answer": "她说“过年好”，还请叔叔阿姨收下礼物。",
+          "answerPinyin": "Tā shuō “Guònián hǎo”, hái qǐng shūshu āyí shōuxia lǐwù.",
+          "acceptedAnswers": [
+            "她说“过年好”，还请叔叔阿姨收下礼物。"
+          ],
+          "informationPoint": "拜年与礼物"
+        },
+        {
+          "id": "l18_t2_detail_02",
+          "questionCn": "张阿姨为什么说“终于有机会见面了”？",
+          "questionPinyin": "Zhāng āyí wèishénme shuō “zhōngyú yǒu jīhuì jiànmiàn le”?",
+          "answer": "因为她总听李文说起白家月。",
+          "answerPinyin": "Yīnwèi tā zǒng tīng Lǐ Wén shuōqǐ Bái Jiāyuè.",
+          "acceptedAnswers": [
+            "因为她总听李文说起白家月。"
+          ],
+          "informationPoint": "见面背景"
+        },
+        {
+          "id": "l18_t2_detail_03",
+          "questionCn": "桌子上有什么？",
+          "questionPinyin": "Zhuōzi shang yǒu shénme?",
+          "answer": "有饮料和矿泉水。",
+          "answerPinyin": "Yǒu yǐnliào hé kuàngquánshuǐ.",
+          "acceptedAnswers": [
+            "有饮料和矿泉水。"
+          ],
+          "informationPoint": "桌上物品"
+        },
+        {
+          "id": "l18_t2_detail_04",
+          "questionCn": "张阿姨请白家月先做什么？",
+          "questionPinyin": "Zhāng āyí qǐng Bái Jiāyuè xiān zuò shénme?",
+          "answer": "先坐着看会儿电视。",
+          "answerPinyin": "Xiān zuòzhe kàn huìr diànshì.",
+          "acceptedAnswers": [
+            "先坐着看会儿电视。"
+          ],
+          "informationPoint": "等候活动"
+        },
+        {
+          "id": "l18_t2_detail_05",
+          "questionCn": "白家月怎样学会包饺子的？",
+          "questionPinyin": "Bái Jiāyuè zěnyàng xuéhuì bāo jiǎozi de?",
+          "answer": "她刚刚看视频学会了。",
+          "answerPinyin": "Tā gānggāng kàn shìpín xuéhuì le.",
+          "acceptedAnswers": [
+            "她刚刚看视频学会了。"
+          ],
+          "informationPoint": "学习方法"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "刚才的电话是我妈妈打来的。",
+        "focus": "刚才 + 的 + 名词／主语 + 刚才 + 动词；主语 + 刚刚 + 动词",
+        "actionLabel": "进入““刚才”和“刚刚””",
+        "grammarIndex": 1
+      },
+      "paragraphPractice": {
+        "label": "调用“我刚刚学会的事”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 1
+      },
+      "lifeTransfer": {
+        "promptCn": "介绍一件你刚刚学会做的事：你怎么学会的？",
+        "promptEn": "Introduce one thing you have just learned to do and explain how you learned it."
+      }
+    },
+    {
+      "textId": "t_hsk3_l18_03",
+      "useGroupId": "T3",
+      "title": "一张三四年前的照片",
+      "stageContract": [
+        "listen_or_read",
+        "overall_choice",
+        "detail_qa",
+        "show_text",
+        "language_and_application"
+      ],
+      "overviewChoices": [
+        {
+          "id": "l18_t3_overall_01",
+          "focus": "overall_understanding",
+          "questionCn": "他们为什么看这张照片？",
+          "questionPinyin": "",
+          "options": [
+            "在说李文出国的事",
+            "在选春节礼物",
+            "在学包饺子"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "l18_t3_overall_02",
+          "focus": "overall_understanding",
+          "questionCn": "张阿姨觉得时间过得怎么样？",
+          "questionPinyin": "",
+          "options": [
+            "很慢",
+            "很快",
+            "没有变化"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l18_t3_overall_03",
+          "focus": "overall_understanding",
+          "questionCn": "张阿姨什么时候很想李文？",
+          "questionPinyin": "",
+          "options": [
+            "李文回家时",
+            "每次看电视时",
+            "几天没有和他视频时"
+          ],
+          "correctIndex": 2
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l18_t3_detail_01",
+          "questionCn": "全家照是在什么地方照的？",
+          "questionPinyin": "Quánjiāzhào shì zài shénme dìfang zhào de?",
+          "answer": "在机场照的。",
+          "answerPinyin": "Zài jīchǎng zhào de.",
+          "acceptedAnswers": [
+            "在机场照的。"
+          ],
+          "informationPoint": "照片地点"
+        },
+        {
+          "id": "l18_t3_detail_02",
+          "questionCn": "这张照片大概是什么时候照的？",
+          "questionPinyin": "Zhè zhāng zhàopiàn dàgài shì shénme shíhou zhào de?",
+          "answer": "三四年前。",
+          "answerPinyin": "Sān sì nián qián.",
+          "acceptedAnswers": [
+            "三四年前。"
+          ],
+          "informationPoint": "照片时间"
+        },
+        {
+          "id": "l18_t3_detail_03",
+          "questionCn": "张阿姨觉得那件事像什么时候发生的？",
+          "questionPinyin": "Zhāng āyí juéde nà jiàn shì xiàng shénme shíhou fāshēng de?",
+          "answer": "好像是不久前发生的一样。",
+          "answerPinyin": "Hǎoxiàng shì bùjiǔ qián fāshēng de yíyàng.",
+          "acceptedAnswers": [
+            "好像是不久前发生的一样。"
+          ],
+          "informationPoint": "时间感受"
+        },
+        {
+          "id": "l18_t3_detail_04",
+          "questionCn": "李文刚离开家时，张阿姨习惯吗？",
+          "questionPinyin": "Lǐ Wén gāng líkāi jiā shí, Zhāng āyí xíguàn ma?",
+          "answer": "不习惯。",
+          "answerPinyin": "Bù xíguàn.",
+          "acceptedAnswers": [
+            "不习惯。"
+          ],
+          "informationPoint": "家人感受"
+        },
+        {
+          "id": "l18_t3_detail_05",
+          "questionCn": "李文还有多久毕业？",
+          "questionPinyin": "Lǐ Wén hái yǒu duōjiǔ bìyè?",
+          "answer": "还有最后一个学期。",
+          "answerPinyin": "Hái yǒu zuìhòu yí ge xuéqī.",
+          "acceptedAnswers": [
+            "还有最后一个学期。"
+          ],
+          "informationPoint": "毕业时间"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "他刚离开家时，我很不习惯，只要几天不跟他视频，就很想他。",
+        "focus": "只要 + 足够条件，+ 就 + 结果",
+        "actionLabel": "进入“条件复句“只要……，就……””",
+        "grammarIndex": 2
+      },
+      "paragraphPractice": {
+        "label": "调用“一张重要的旧照片”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 2
+      },
+      "lifeTransfer": {
+        "promptCn": "介绍一张对你很重要的旧照片：什么时候照的？有什么故事？",
+        "promptEn": "Introduce an old photo that matters to you, when it was taken, and one part of its story."
+      }
+    },
+    {
+      "textId": "t_hsk3_l18_04",
+      "useGroupId": "T4",
+      "title": "从那时起一直坚持",
+      "stageContract": [
+        "listen_or_read",
+        "overall_choice",
+        "detail_qa",
+        "show_text",
+        "language_and_application"
+      ],
+      "overviewChoices": [
+        {
+          "id": "l18_t4_overall_01",
+          "focus": "overall_understanding",
+          "questionCn": "白家月最高兴的是什么？",
+          "questionPinyin": "",
+          "options": [
+            "学会了看照片",
+            "认识了李文的父母",
+            "马上要回学校"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "l18_t4_overall_02",
+          "focus": "overall_understanding",
+          "questionCn": "李文为什么有机会出国留学？",
+          "questionPinyin": "",
+          "options": [
+            "他认识很多朋友",
+            "他会包饺子",
+            "他的成绩特别好"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "l18_t4_overall_03",
+          "focus": "overall_understanding",
+          "questionCn": "白家月从李文学到了什么？",
+          "questionPinyin": "",
+          "options": [
+            "坚持就能完成目标",
+            "过节一定要回家",
+            "学医一定要出国"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "detailMode": "config",
+      "detailQuestions": [
+        {
+          "id": "l18_t4_detail_01",
+          "questionCn": "李文的父母给白家月看了什么？",
+          "questionPinyin": "Lǐ Wén de fùmǔ gěi Bái Jiāyuè kànle shénme?",
+          "answer": "李文出生时的照片。",
+          "answerPinyin": "Lǐ Wén chūshēng shí de zhàopiàn.",
+          "acceptedAnswers": [
+            "李文出生时的照片。"
+          ],
+          "informationPoint": "照片内容"
+        },
+        {
+          "id": "l18_t4_detail_02",
+          "questionCn": "他们还给白家月讲了什么？",
+          "questionPinyin": "Tāmen hái gěi Bái Jiāyuè jiǎngle shénme?",
+          "answer": "很多过去的故事。",
+          "answerPinyin": "Hěn duō guòqù de gùshi.",
+          "acceptedAnswers": [
+            "很多过去的故事。"
+          ],
+          "informationPoint": "故事内容"
+        },
+        {
+          "id": "l18_t4_detail_03",
+          "questionCn": "李文从什么时候起努力学习？",
+          "questionPinyin": "Lǐ Wén cóng shénme shíhou qǐ nǔlì xuéxí?",
+          "answer": "从高中想学医时起。",
+          "answerPinyin": "Cóng gāozhōng xiǎng xué yī shí qǐ.",
+          "acceptedAnswers": [
+            "从高中想学医时起。"
+          ],
+          "informationPoint": "努力起点"
+        },
+        {
+          "id": "l18_t4_detail_04",
+          "questionCn": "李文什么时候得到了留学机会？",
+          "questionPinyin": "Lǐ Wén shénme shíhou dédào le liúxué jīhuì?",
+          "answer": "高三的时候。",
+          "answerPinyin": "Gāosān de shíhou.",
+          "acceptedAnswers": [
+            "高三的时候。"
+          ],
+          "informationPoint": "获得机会时间"
+        },
+        {
+          "id": "l18_t4_detail_05",
+          "questionCn": "白家月懂得了什么？",
+          "questionPinyin": "Bái Jiāyuè dǒngde le shénme?",
+          "answer": "只要一直坚持，就能完成自己的目标。",
+          "answerPinyin": "Zhǐyào yìzhí jiānchí, jiù néng wánchéng zìjǐ de mùbiāo.",
+          "acceptedAnswers": [
+            "只要一直坚持，就能完成自己的目标。"
+          ],
+          "informationPoint": "学到的道理"
+        }
+      ],
+      "grammarBridge": {
+        "evidence": "他从那时起就努力学习。",
+        "focus": "从 + 时间/事情 + 起，+ 主语 + 就/开始 + 变化或行动",
+        "actionLabel": "进入“固定格式“从……起””",
+        "grammarIndex": 3
+      },
+      "paragraphPractice": {
+        "label": "调用“我的目标”段落填空",
+        "module": "practice",
+        "submodule": "r4p",
+        "index": 3
+      },
+      "lifeTransfer": {
+        "promptCn": "介绍一个你的目标：从什么时候起？你要怎么坚持？",
+        "promptEn": "Introduce one goal, say when you will start, and explain one action you will keep doing."
+      }
+    }
+  ],
+  "vocabularyTaskTypes": [
+    {
+      "id": "recognition",
+      "labelCn": "认读",
+      "labelEn": "Recognition"
+    },
+    {
+      "id": "shape",
+      "labelCn": "辨形",
+      "labelEn": "Character form"
+    },
+    {
+      "id": "input",
+      "labelCn": "输入",
+      "labelEn": "Type the word"
+    },
+    {
+      "id": "collocation",
+      "labelCn": "搭配与使用",
+      "labelEn": "Collocation and use"
+    }
+  ],
+  "timerPolicy": {
+    "miniLoop": {
+      "optionsMinutes": [
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 4
+    },
+    "vocabularyFocus": {
+      "optionsMinutes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "defaultMinutes": 2
+    },
+    "autoClose": false,
+    "autoSubmit": false
+  },
+  "vocabularyCatalog": [
+    {
+      "id": "v18_01",
+      "hanzi": "怎样",
+      "pinyin": "zěnyàng",
+      "english": "how",
+      "meaningCn": "用来问方法或情况",
+      "phrases": [
+        "怎样过节",
+        "怎样学习"
+      ],
+      "example": "你们怎样过节？",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_02",
+      "hanzi": "过节",
+      "pinyin": "guòjié",
+      "english": "celebrate a festival",
+      "meaningCn": "庆祝一个节日",
+      "phrases": [
+        "一起过节",
+        "回家过节"
+      ],
+      "example": "你们怎样过节？",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_03",
+      "hanzi": "节",
+      "pinyin": "jié",
+      "english": "festival; holiday",
+      "meaningCn": "节日的简称",
+      "phrases": [
+        "过节",
+        "节前"
+      ],
+      "example": "节前，很多人准备回家。",
+      "tier": "understanding",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v18_04",
+      "hanzi": "节日",
+      "pinyin": "jiérì",
+      "english": "festival; holiday",
+      "meaningCn": "特别庆祝的日子",
+      "phrases": [
+        "重要的节日",
+        "传统节日"
+      ],
+      "example": "春节是中国最重要的节日。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_05",
+      "hanzi": "联欢",
+      "pinyin": "liánhuān",
+      "english": "have a get-together",
+      "meaningCn": "大家一起表演、庆祝",
+      "phrases": [
+        "联欢晚会",
+        "一起联欢"
+      ],
+      "example": "我们一边包饺子，一边看春节联欢晚会。",
+      "tier": "context",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v18_06",
+      "hanzi": "大概",
+      "pinyin": "dàgài",
+      "english": "about; probably",
+      "meaningCn": "数量或情况不完全确定",
+      "phrases": [
+        "大概七天",
+        "大概知道"
+      ],
+      "example": "春节大概放七八天假。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_07",
+      "hanzi": "阿姨",
+      "pinyin": "āyí",
+      "english": "aunt; polite address for a woman",
+      "meaningCn": "对成年女性的礼貌称呼",
+      "phrases": [
+        "张阿姨",
+        "叔叔阿姨"
+      ],
+      "example": "张阿姨，过年好！",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_08",
+      "hanzi": "叔叔",
+      "pinyin": "shūshu",
+      "english": "uncle; polite address for a man",
+      "meaningCn": "对成年男性的礼貌称呼",
+      "phrases": [
+        "李叔叔",
+        "叔叔阿姨"
+      ],
+      "example": "李叔叔，过年好！",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_09",
+      "hanzi": "收",
+      "pinyin": "shōu",
+      "english": "accept; receive",
+      "meaningCn": "接受别人给的东西",
+      "phrases": [
+        "收礼物",
+        "请收下"
+      ],
+      "example": "这是我准备的礼物，请收下。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_10",
+      "hanzi": "总",
+      "pinyin": "zǒng",
+      "english": "always",
+      "meaningCn": "常常；一直",
+      "phrases": [
+        "总听说",
+        "总想起"
+      ],
+      "example": "总听小文说起你。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_11",
+      "hanzi": "起",
+      "pinyin": "qǐ",
+      "english": "start mentioning",
+      "meaningCn": "放在动词后，开始说到某人或某事",
+      "phrases": [
+        "说起",
+        "想起"
+      ],
+      "example": "总听小文说起你。",
+      "tier": "understanding",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v18_12",
+      "hanzi": "见面",
+      "pinyin": "jiànmiàn",
+      "english": "meet",
+      "meaningCn": "两个人见到彼此",
+      "phrases": [
+        "第一次见面",
+        "有机会见面"
+      ],
+      "example": "今天终于有机会见面了。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_13",
+      "hanzi": "矿泉水",
+      "pinyin": "kuàngquánshuǐ",
+      "english": "mineral water",
+      "meaningCn": "瓶装的饮用水",
+      "phrases": [
+        "一瓶矿泉水",
+        "喝矿泉水"
+      ],
+      "example": "桌子上有饮料，还有矿泉水。",
+      "tier": "context",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v18_14",
+      "hanzi": "刚刚",
+      "pinyin": "gānggāng",
+      "english": "just now",
+      "meaningCn": "不久以前",
+      "phrases": [
+        "刚刚学会",
+        "刚刚完成"
+      ],
+      "example": "我刚刚看视频学会了包饺子。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_15",
+      "hanzi": "出发",
+      "pinyin": "chūfā",
+      "english": "depart; set out",
+      "meaningCn": "离开一个地方开始行程",
+      "phrases": [
+        "从北京出发",
+        "准备出发"
+      ],
+      "example": "这是他从北京出发时照的。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_16",
+      "hanzi": "不久",
+      "pinyin": "bùjiǔ",
+      "english": "not long; soon",
+      "meaningCn": "时间不长",
+      "phrases": [
+        "不久前",
+        "不久以后"
+      ],
+      "example": "好像是不久前发生的一样。",
+      "tier": "understanding",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v18_17",
+      "hanzi": "发生",
+      "pinyin": "fāshēng",
+      "english": "happen",
+      "meaningCn": "出现一件事情",
+      "phrases": [
+        "发生事情",
+        "刚刚发生"
+      ],
+      "example": "好像是不久前发生的一样。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_18",
+      "hanzi": "刚",
+      "pinyin": "gāng",
+      "english": "just",
+      "meaningCn": "不久以前",
+      "phrases": [
+        "刚离开",
+        "刚开始"
+      ],
+      "example": "他刚离开家时，我很不习惯。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_19",
+      "hanzi": "只要",
+      "pinyin": "zhǐyào",
+      "english": "as long as",
+      "meaningCn": "表示一个足够的条件",
+      "phrases": [
+        "只要……就……",
+        "只要坚持"
+      ],
+      "example": "只要几天不跟他视频，就很想他。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_20",
+      "hanzi": "学期",
+      "pinyin": "xuéqī",
+      "english": "semester",
+      "meaningCn": "学校学习的一段时间",
+      "phrases": [
+        "这个学期",
+        "最后一个学期"
+      ],
+      "example": "还有最后一个学期就要毕业了。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_21",
+      "hanzi": "毕业",
+      "pinyin": "bìyè",
+      "english": "graduate",
+      "meaningCn": "完成一个阶段的学习",
+      "phrases": [
+        "大学毕业",
+        "快毕业了"
+      ],
+      "example": "还有最后一个学期就要毕业了。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_22",
+      "hanzi": "出生",
+      "pinyin": "chūshēng",
+      "english": "be born",
+      "meaningCn": "来到这个世界上",
+      "phrases": [
+        "出生时",
+        "出生在北京"
+      ],
+      "example": "他们给我看了李文出生时的照片。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_23",
+      "hanzi": "过去",
+      "pinyin": "guòqù",
+      "english": "the past",
+      "meaningCn": "以前的时间",
+      "phrases": [
+        "过去的故事",
+        "回忆过去"
+      ],
+      "example": "他们给我讲了很多过去的故事。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_24",
+      "hanzi": "懂得",
+      "pinyin": "dǒngde",
+      "english": "understand; realize",
+      "meaningCn": "明白并知道",
+      "phrases": [
+        "懂得道理",
+        "懂得坚持"
+      ],
+      "example": "在他身上，我懂得了坚持的重要。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_25",
+      "hanzi": "坚持",
+      "pinyin": "jiānchí",
+      "english": "persist; keep going",
+      "meaningCn": "一直做，不停止",
+      "phrases": [
+        "一直坚持",
+        "坚持学习"
+      ],
+      "example": "只要一直坚持，就能完成自己的目标。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_26",
+      "hanzi": "完成",
+      "pinyin": "wánchéng",
+      "english": "complete",
+      "meaningCn": "把一件事做完",
+      "phrases": [
+        "完成任务",
+        "完成目标"
+      ],
+      "example": "只要一直坚持，就能完成自己的目标。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_27",
+      "hanzi": "目标",
+      "pinyin": "mùbiāo",
+      "english": "goal",
+      "meaningCn": "想要做到的事情",
+      "phrases": [
+        "学习目标",
+        "完成目标"
+      ],
+      "example": "只要一直坚持，就能完成自己的目标。",
+      "tier": "expression",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    },
+    {
+      "id": "v18_28",
+      "hanzi": "发展",
+      "pinyin": "fāzhǎn",
+      "english": "develop",
+      "meaningCn": "慢慢变化、变得更好",
+      "phrases": [
+        "发展得更好",
+        "未来发展"
+      ],
+      "example": "我相信，他以后一定会发展得更好。",
+      "tier": "context",
+      "properNoun": false,
+      "allowedTypes": [
+        "recognition",
+        "shape"
+      ]
+    },
+    {
+      "id": "v18_29",
+      "hanzi": "春节",
+      "pinyin": "Chūnjié",
+      "english": "Spring Festival; Chinese New Year",
+      "meaningCn": "中国农历新年",
+      "phrases": [
+        "过春节",
+        "春节假期"
+      ],
+      "example": "春节是中国最重要的节日。",
+      "tier": "expression",
+      "properNoun": true,
+      "allowedTypes": [
+        "recognition",
+        "shape",
+        "input",
+        "collocation"
+      ]
+    }
+  ],
+  "vocabularyGroups": [
+    {
+      "id": "T1",
+      "textIndex": 0,
+      "title": "我的节日家庭活动",
+      "wordIds": [
+        "v18_01",
+        "v18_02",
+        "v18_03",
+        "v18_04",
+        "v18_05",
+        "v18_06",
+        "v18_29"
+      ],
+      "recognitionWordIds": [
+        "v18_01",
+        "v18_02",
+        "v18_06",
+        "v18_29"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v18_01"
+          ],
+          "acceptedAnswers": [
+            "怎样"
+          ],
+          "id": "l18_m1_v18_01_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zěnyàng：用来问方法或情况",
+          "answer": "怎样",
+          "options": [
+            "节",
+            "怎样",
+            "节日",
+            "联欢"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_01"
+          ],
+          "acceptedAnswers": [
+            "怎样"
+          ],
+          "id": "l18_m1_v18_01_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "用来问方法或情况",
+          "answer": "怎样",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m1_v18_01_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_01"
+          ],
+          "promptCn": "用“怎样过节”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "怎样过节",
+          "answer": "你们怎样过节？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_02"
+          ],
+          "acceptedAnswers": [
+            "过节"
+          ],
+          "id": "l18_m1_v18_02_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "guòjié：庆祝一个节日",
+          "answer": "过节",
+          "options": [
+            "节日",
+            "联欢",
+            "过节",
+            "大概"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_02"
+          ],
+          "acceptedAnswers": [
+            "过节"
+          ],
+          "id": "l18_m1_v18_02_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "庆祝一个节日",
+          "answer": "过节",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m1_v18_02_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_02"
+          ],
+          "promptCn": "用“一起过节”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "一起过节",
+          "answer": "你们怎样过节？",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_03"
+          ],
+          "acceptedAnswers": [
+            "节"
+          ],
+          "id": "l18_m1_v18_03_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "jié：节日的简称",
+          "answer": "节",
+          "options": [
+            "联欢",
+            "大概",
+            "阿姨",
+            "节"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_04"
+          ],
+          "acceptedAnswers": [
+            "节日"
+          ],
+          "id": "l18_m1_v18_04_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "jiérì：特别庆祝的日子",
+          "answer": "节日",
+          "options": [
+            "节日",
+            "大概",
+            "阿姨",
+            "叔叔"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_04"
+          ],
+          "acceptedAnswers": [
+            "节日"
+          ],
+          "id": "l18_m1_v18_04_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "特别庆祝的日子",
+          "answer": "节日",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m1_v18_04_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_04"
+          ],
+          "promptCn": "用“重要的节日”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "重要的节日",
+          "answer": "春节是中国最重要的节日。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_05"
+          ],
+          "acceptedAnswers": [
+            "联欢"
+          ],
+          "id": "l18_m1_v18_05_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "liánhuān：大家一起表演、庆祝",
+          "answer": "联欢",
+          "options": [
+            "阿姨",
+            "联欢",
+            "叔叔",
+            "收"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_06"
+          ],
+          "acceptedAnswers": [
+            "大概"
+          ],
+          "id": "l18_m1_v18_06_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "dàgài：数量或情况不完全确定",
+          "answer": "大概",
+          "options": [
+            "叔叔",
+            "收",
+            "大概",
+            "总"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_06"
+          ],
+          "acceptedAnswers": [
+            "大概"
+          ],
+          "id": "l18_m1_v18_06_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "数量或情况不完全确定",
+          "answer": "大概",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m1_v18_06_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_06"
+          ],
+          "promptCn": "用“大概七天”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "大概七天",
+          "answer": "春节大概放七八天假。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_29"
+          ],
+          "acceptedAnswers": [
+            "春节"
+          ],
+          "id": "l18_m1_v18_29_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "Chūnjié：中国农历新年",
+          "answer": "春节",
+          "options": [
+            "过节",
+            "春节",
+            "节",
+            "节日"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_29"
+          ],
+          "acceptedAnswers": [
+            "春节"
+          ],
+          "id": "l18_m1_v18_29_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "中国农历新年",
+          "answer": "春节",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m1_v18_29_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_29"
+          ],
+          "promptCn": "用“过春节”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "过春节",
+          "answer": "春节是中国最重要的节日。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "textIndex": 1,
+      "title": "我刚刚学会的事",
+      "wordIds": [
+        "v18_07",
+        "v18_08",
+        "v18_09",
+        "v18_10",
+        "v18_11",
+        "v18_12",
+        "v18_13",
+        "v18_14"
+      ],
+      "recognitionWordIds": [
+        "v18_07",
+        "v18_09",
+        "v18_12",
+        "v18_14"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v18_07"
+          ],
+          "acceptedAnswers": [
+            "阿姨"
+          ],
+          "id": "l18_m2_v18_07_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "āyí：对成年女性的礼貌称呼",
+          "answer": "阿姨",
+          "options": [
+            "阿姨",
+            "刚刚",
+            "出发",
+            "不久"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_07"
+          ],
+          "acceptedAnswers": [
+            "阿姨"
+          ],
+          "id": "l18_m2_v18_07_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "对成年女性的礼貌称呼",
+          "answer": "阿姨",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m2_v18_07_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_07"
+          ],
+          "promptCn": "用“张阿姨”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "张阿姨",
+          "answer": "张阿姨，过年好！",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_08"
+          ],
+          "acceptedAnswers": [
+            "叔叔"
+          ],
+          "id": "l18_m2_v18_08_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "shūshu：对成年男性的礼貌称呼",
+          "answer": "叔叔",
+          "options": [
+            "出发",
+            "叔叔",
+            "不久",
+            "发生"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_08"
+          ],
+          "acceptedAnswers": [
+            "叔叔"
+          ],
+          "id": "l18_m2_v18_08_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "对成年男性的礼貌称呼",
+          "answer": "叔叔",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m2_v18_08_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_08"
+          ],
+          "promptCn": "用“李叔叔”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "李叔叔",
+          "answer": "李叔叔，过年好！",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_09"
+          ],
+          "acceptedAnswers": [
+            "收"
+          ],
+          "id": "l18_m2_v18_09_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "shōu：接受别人给的东西",
+          "answer": "收",
+          "options": [
+            "不久",
+            "发生",
+            "收",
+            "刚"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_09"
+          ],
+          "acceptedAnswers": [
+            "收"
+          ],
+          "id": "l18_m2_v18_09_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "接受别人给的东西",
+          "answer": "收",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m2_v18_09_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_09"
+          ],
+          "promptCn": "用“收礼物”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "收礼物",
+          "answer": "这是我准备的礼物，请收下。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_10"
+          ],
+          "acceptedAnswers": [
+            "总"
+          ],
+          "id": "l18_m2_v18_10_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zǒng：常常；一直",
+          "answer": "总",
+          "options": [
+            "发生",
+            "刚",
+            "只要",
+            "总"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_10"
+          ],
+          "acceptedAnswers": [
+            "总"
+          ],
+          "id": "l18_m2_v18_10_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "常常；一直",
+          "answer": "总",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m2_v18_10_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_10"
+          ],
+          "promptCn": "用“总听说”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "总听说",
+          "answer": "总听小文说起你。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_11"
+          ],
+          "acceptedAnswers": [
+            "起"
+          ],
+          "id": "l18_m2_v18_11_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "qǐ：放在动词后，开始说到某人或某事",
+          "answer": "起",
+          "options": [
+            "起",
+            "刚",
+            "只要",
+            "学期"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_12"
+          ],
+          "acceptedAnswers": [
+            "见面"
+          ],
+          "id": "l18_m2_v18_12_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "jiànmiàn：两个人见到彼此",
+          "answer": "见面",
+          "options": [
+            "只要",
+            "见面",
+            "学期",
+            "毕业"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_12"
+          ],
+          "acceptedAnswers": [
+            "见面"
+          ],
+          "id": "l18_m2_v18_12_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "两个人见到彼此",
+          "answer": "见面",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m2_v18_12_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_12"
+          ],
+          "promptCn": "用“第一次见面”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "第一次见面",
+          "answer": "今天终于有机会见面了。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_13"
+          ],
+          "acceptedAnswers": [
+            "矿泉水"
+          ],
+          "id": "l18_m2_v18_13_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "kuàngquánshuǐ：瓶装的饮用水",
+          "answer": "矿泉水",
+          "options": [
+            "学期",
+            "毕业",
+            "矿泉水",
+            "出生"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_14"
+          ],
+          "acceptedAnswers": [
+            "刚刚"
+          ],
+          "id": "l18_m2_v18_14_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "gānggāng：不久以前",
+          "answer": "刚刚",
+          "options": [
+            "毕业",
+            "出生",
+            "过去",
+            "刚刚"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_14"
+          ],
+          "acceptedAnswers": [
+            "刚刚"
+          ],
+          "id": "l18_m2_v18_14_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "不久以前",
+          "answer": "刚刚",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m2_v18_14_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_14"
+          ],
+          "promptCn": "用“刚刚学会”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "刚刚学会",
+          "answer": "我刚刚看视频学会了包饺子。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "textIndex": 2,
+      "title": "一张重要的旧照片",
+      "wordIds": [
+        "v18_15",
+        "v18_16",
+        "v18_17",
+        "v18_18",
+        "v18_19",
+        "v18_20",
+        "v18_21"
+      ],
+      "recognitionWordIds": [
+        "v18_15",
+        "v18_17",
+        "v18_19",
+        "v18_21"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v18_15"
+          ],
+          "acceptedAnswers": [
+            "出发"
+          ],
+          "id": "l18_m3_v18_15_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "chūfā：离开一个地方开始行程",
+          "answer": "出发",
+          "options": [
+            "目标",
+            "出发",
+            "发展",
+            "春节"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_15"
+          ],
+          "acceptedAnswers": [
+            "出发"
+          ],
+          "id": "l18_m3_v18_15_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "离开一个地方开始行程",
+          "answer": "出发",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m3_v18_15_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_15"
+          ],
+          "promptCn": "用“从北京出发”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "从北京出发",
+          "answer": "这是他从北京出发时照的。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_16"
+          ],
+          "acceptedAnswers": [
+            "不久"
+          ],
+          "id": "l18_m3_v18_16_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "bùjiǔ：时间不长",
+          "answer": "不久",
+          "options": [
+            "发展",
+            "春节",
+            "不久",
+            "怎样"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_17"
+          ],
+          "acceptedAnswers": [
+            "发生"
+          ],
+          "id": "l18_m3_v18_17_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "fāshēng：出现一件事情",
+          "answer": "发生",
+          "options": [
+            "春节",
+            "怎样",
+            "过节",
+            "发生"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_17"
+          ],
+          "acceptedAnswers": [
+            "发生"
+          ],
+          "id": "l18_m3_v18_17_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "出现一件事情",
+          "answer": "发生",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m3_v18_17_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_17"
+          ],
+          "promptCn": "用“发生事情”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "发生事情",
+          "answer": "好像是不久前发生的一样。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_18"
+          ],
+          "acceptedAnswers": [
+            "刚"
+          ],
+          "id": "l18_m3_v18_18_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "gāng：不久以前",
+          "answer": "刚",
+          "options": [
+            "刚",
+            "怎样",
+            "过节",
+            "节"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_18"
+          ],
+          "acceptedAnswers": [
+            "刚"
+          ],
+          "id": "l18_m3_v18_18_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "不久以前",
+          "answer": "刚",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m3_v18_18_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_18"
+          ],
+          "promptCn": "用“刚离开”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "刚离开",
+          "answer": "他刚离开家时，我很不习惯。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_19"
+          ],
+          "acceptedAnswers": [
+            "只要"
+          ],
+          "id": "l18_m3_v18_19_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "zhǐyào：表示一个足够的条件",
+          "answer": "只要",
+          "options": [
+            "过节",
+            "只要",
+            "节",
+            "节日"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_19"
+          ],
+          "acceptedAnswers": [
+            "只要"
+          ],
+          "id": "l18_m3_v18_19_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "表示一个足够的条件",
+          "answer": "只要",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m3_v18_19_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_19"
+          ],
+          "promptCn": "用“只要……就……”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "只要……就……",
+          "answer": "只要几天不跟他视频，就很想他。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_20"
+          ],
+          "acceptedAnswers": [
+            "学期"
+          ],
+          "id": "l18_m3_v18_20_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "xuéqī：学校学习的一段时间",
+          "answer": "学期",
+          "options": [
+            "节",
+            "节日",
+            "学期",
+            "联欢"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_20"
+          ],
+          "acceptedAnswers": [
+            "学期"
+          ],
+          "id": "l18_m3_v18_20_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "学校学习的一段时间",
+          "answer": "学期",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m3_v18_20_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_20"
+          ],
+          "promptCn": "用“这个学期”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "这个学期",
+          "answer": "还有最后一个学期就要毕业了。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_21"
+          ],
+          "acceptedAnswers": [
+            "毕业"
+          ],
+          "id": "l18_m3_v18_21_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "bìyè：完成一个阶段的学习",
+          "answer": "毕业",
+          "options": [
+            "节日",
+            "联欢",
+            "大概",
+            "毕业"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_21"
+          ],
+          "acceptedAnswers": [
+            "毕业"
+          ],
+          "id": "l18_m3_v18_21_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "完成一个阶段的学习",
+          "answer": "毕业",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m3_v18_21_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_21"
+          ],
+          "promptCn": "用“大学毕业”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "大学毕业",
+          "answer": "还有最后一个学期就要毕业了。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "textIndex": 3,
+      "title": "我的成长目标",
+      "wordIds": [
+        "v18_22",
+        "v18_23",
+        "v18_24",
+        "v18_25",
+        "v18_26",
+        "v18_27",
+        "v18_28"
+      ],
+      "recognitionWordIds": [
+        "v18_22",
+        "v18_25",
+        "v18_26",
+        "v18_27"
+      ],
+      "activities": [
+        {
+          "targetWordIds": [
+            "v18_22"
+          ],
+          "acceptedAnswers": [
+            "出生"
+          ],
+          "id": "l18_m4_v18_22_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "chūshēng：来到这个世界上",
+          "answer": "出生",
+          "options": [
+            "总",
+            "出生",
+            "起",
+            "见面"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_22"
+          ],
+          "acceptedAnswers": [
+            "出生"
+          ],
+          "id": "l18_m4_v18_22_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "来到这个世界上",
+          "answer": "出生",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m4_v18_22_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_22"
+          ],
+          "promptCn": "用“出生时”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "出生时",
+          "answer": "他们给我看了李文出生时的照片。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_23"
+          ],
+          "acceptedAnswers": [
+            "过去"
+          ],
+          "id": "l18_m4_v18_23_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "guòqù：以前的时间",
+          "answer": "过去",
+          "options": [
+            "起",
+            "见面",
+            "过去",
+            "矿泉水"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_23"
+          ],
+          "acceptedAnswers": [
+            "过去"
+          ],
+          "id": "l18_m4_v18_23_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "以前的时间",
+          "answer": "过去",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m4_v18_23_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_23"
+          ],
+          "promptCn": "用“过去的故事”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "过去的故事",
+          "answer": "他们给我讲了很多过去的故事。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_24"
+          ],
+          "acceptedAnswers": [
+            "懂得"
+          ],
+          "id": "l18_m4_v18_24_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "dǒngde：明白并知道",
+          "answer": "懂得",
+          "options": [
+            "见面",
+            "矿泉水",
+            "刚刚",
+            "懂得"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_24"
+          ],
+          "acceptedAnswers": [
+            "懂得"
+          ],
+          "id": "l18_m4_v18_24_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "明白并知道",
+          "answer": "懂得",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m4_v18_24_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_24"
+          ],
+          "promptCn": "用“懂得道理”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "懂得道理",
+          "answer": "在他身上，我懂得了坚持的重要。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_25"
+          ],
+          "acceptedAnswers": [
+            "坚持"
+          ],
+          "id": "l18_m4_v18_25_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "jiānchí：一直做，不停止",
+          "answer": "坚持",
+          "options": [
+            "坚持",
+            "矿泉水",
+            "刚刚",
+            "出发"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_25"
+          ],
+          "acceptedAnswers": [
+            "坚持"
+          ],
+          "id": "l18_m4_v18_25_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "一直做，不停止",
+          "answer": "坚持",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m4_v18_25_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_25"
+          ],
+          "promptCn": "用“一直坚持”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "一直坚持",
+          "answer": "只要一直坚持，就能完成自己的目标。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_26"
+          ],
+          "acceptedAnswers": [
+            "完成"
+          ],
+          "id": "l18_m4_v18_26_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "wánchéng：把一件事做完",
+          "answer": "完成",
+          "options": [
+            "刚刚",
+            "完成",
+            "出发",
+            "不久"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_26"
+          ],
+          "acceptedAnswers": [
+            "完成"
+          ],
+          "id": "l18_m4_v18_26_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "把一件事做完",
+          "answer": "完成",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m4_v18_26_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_26"
+          ],
+          "promptCn": "用“完成任务”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "完成任务",
+          "answer": "只要一直坚持，就能完成自己的目标。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_27"
+          ],
+          "acceptedAnswers": [
+            "目标"
+          ],
+          "id": "l18_m4_v18_27_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "mùbiāo：想要做到的事情",
+          "answer": "目标",
+          "options": [
+            "出发",
+            "不久",
+            "目标",
+            "发生"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        },
+        {
+          "targetWordIds": [
+            "v18_27"
+          ],
+          "acceptedAnswers": [
+            "目标"
+          ],
+          "id": "l18_m4_v18_27_input",
+          "type": "input",
+          "promptCn": "根据简单中文意思输入词语。",
+          "promptEn": "Type the Chinese word from the simple Chinese meaning.",
+          "stimulus": "想要做到的事情",
+          "answer": "目标",
+          "options": [],
+          "promptMode": "meaning",
+          "evaluation": "automatic"
+        },
+        {
+          "id": "l18_m4_v18_27_use",
+          "type": "collocation",
+          "targetWordIds": [
+            "v18_27"
+          ],
+          "promptCn": "用“学习目标”完成表达，最多两句话。",
+          "promptEn": "Use the phrase in one or two complete sentences.",
+          "stimulus": "学习目标",
+          "answer": "只要一直坚持，就能完成自己的目标。",
+          "acceptedAnswers": [],
+          "options": [],
+          "promptMode": "open_use",
+          "evaluation": "teacher"
+        },
+        {
+          "targetWordIds": [
+            "v18_28"
+          ],
+          "acceptedAnswers": [
+            "发展"
+          ],
+          "id": "l18_m4_v18_28_shape",
+          "type": "shape",
+          "promptCn": "根据拼音和简单中文解释选择正确的汉字词。",
+          "promptEn": "Choose the correct Chinese form from the pinyin and simple Chinese meaning.",
+          "stimulus": "fāzhǎn：慢慢变化、变得更好",
+          "answer": "发展",
+          "options": [
+            "不久",
+            "发生",
+            "刚",
+            "发展"
+          ],
+          "promptMode": "form",
+          "evaluation": "automatic"
+        }
+      ]
+    }
+  ],
+  "resourceOverrides": [],
+  "supportOnlyStructures": [
+    "目标语法用于支架和挑战层，不要求所有学生在第一次终点表达中全部使用。"
+  ],
+  "evidencePolicy": {
+    "coreTypes": [
+      "entry_expression",
+      "actual_learning_path",
+      "exit_expression"
+    ],
+    "pathEvent": "opened",
+    "optionalSignals": [
+      "support_request",
+      "self_reflection"
+    ]
+  },
+  "supportOptions": [
+    {
+      "id": "vocabulary",
+      "labelCn": "我缺少合适的词",
+      "labelEn": "I need the right words"
+    },
+    {
+      "id": "organization",
+      "labelCn": "我不知道怎样组织信息",
+      "labelEn": "I need help organizing my ideas"
+    },
+    {
+      "id": "structure",
+      "labelCn": "我需要一个句子结构",
+      "labelEn": "I need a sentence frame"
+    },
+    {
+      "id": "teacher",
+      "labelCn": "我想获得老师的帮助",
+      "labelEn": "I want help from the teacher"
+    }
+  ],
+  "feelingOptions": [
+    {
+      "id": "clearer",
+      "labelCn": "我说得更清楚了",
+      "labelEn": "My expression is clearer"
+    },
+    {
+      "id": "more_complete",
+      "labelCn": "我说得更完整了",
+      "labelEn": "My expression is more complete"
+    },
+    {
+      "id": "more_natural",
+      "labelCn": "我说得更自然了",
+      "labelEn": "My expression is more natural"
+    },
+    {
+      "id": "still_need_help",
+      "labelCn": "我还需要帮助",
+      "labelEn": "I still need help"
+    }
+  ],
+  "coreEvidence": [
+    "entry_expression",
+    "actual_learning_path",
+    "exit_expression"
+  ],
+  "capabilities": [
+    "select_text_mini_loop",
+    "launch_interaction",
+    "independent_answer",
+    "support_request",
+    "anonymous_return",
+    "open_support",
+    "reanswer",
+    "record_teacher_decision",
+    "compare_entry_exit",
+    "teacher_selected_vocabulary_focus",
+    "shared_countdown",
+    "native_course_resource_return",
+    "configured_task_stimulus",
+    "state_restore"
+  ]
+}

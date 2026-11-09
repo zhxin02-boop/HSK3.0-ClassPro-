@@ -37,7 +37,7 @@ window.HSK3_CURRICULUM = [
   { id: "HSK3-L15", no: 15, title: "我是半个南京人", en: "I am basically half a Nanjing local", page: "015", block: 3, openForUse: true, teacherVisible: true, status: "ready", useProfile: "pilot-v1" },
   { id: "HSK3-L16", no: 16, title: "我听说有的熊猫出国了", en: "I heard that some pandas have gone abroad", page: "016", block: 3, openForUse: true, teacherVisible: true, status: "ready", useProfile: "pilot-v1" },
   { id: "HSK3-L17", no: 17, title: "我要多向认真的人学习", en: "I will learn from people who are careful", page: "017", block: 3, openForUse: true, teacherVisible: true, status: "ready", useProfile: "pilot-v1" },
-  { id: "HSK3-L18", no: 18, title: "我学会了包饺子", en: "I've learned how to make jiaozi", page: "018", block: 3, openForUse: false, teacherVisible: true, status: "preparing" }
+  { id: "HSK3-L18", no: 18, title: "我学会了包饺子", en: "I've learned how to make jiaozi", page: "018", block: 3, openForUse: true, teacherVisible: true, status: "ready", useProfile: "pilot-v1" }
 ];
 
 window.HSK3_REPORT_BLOCKS = [
