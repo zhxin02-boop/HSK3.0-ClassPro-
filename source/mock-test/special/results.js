@@ -42,51 +42,84 @@
     return elsewhere ? null : {classId, studentId: student.id};
   }
 
+  const sectionLabels = {listening: '听力', reading: '阅读', writing: '书写'};
+  const sectionKeys = Object.keys(sectionLabels);
+
   function collect(rows, questions, roster, classId, runId) {
     const details = new Map();
-    const latest = new Map();
+    const sittings = new Map();
     for (const row of rows) {
       const attempt = value(row, 'attempt');
-      if (value(row, 'module') === 'subjective') {
+      const module = value(row, 'module');
+      if (module === 'subjective') {
         if (!details.has(attempt)) details.set(attempt, new Map());
         details.get(attempt).set(value(row, 'question'), row);
-      } else if (value(row, 'module') === 'mock_test') {
-        let summary;
-        try { summary = JSON.parse(value(row, 'answer')); } catch (_) { continue; }
-        if (!summary?.scores || !summary.answers || !Array.isArray(summary.wrong)) continue;
-        if (runId && summary.runId !== runId) continue;
-        const identity = value(row, 'classId')
-          ? {classId: value(row, 'classId'), studentId: value(row, 'studentId') || summary.identity?.studentId}
-          : summary.identity || legacyIdentity(value(row, 'student'), classId, roster);
-        if (identity?.classId !== classId) continue;
-        const studentId = identity.studentId || '';
-        const key = studentId || value(row, 'student');
-        const previous = latest.get(key);
-        if (!previous || Date.parse(value(row, 'submitted')) > Date.parse(value(previous.row, 'submitted'))) {
-          latest.set(key, {row, summary, studentId});
+        continue;
+      }
+      if (module !== 'mock_test') continue;
+      let summary;
+      try { summary = JSON.parse(value(row, 'answer')); } catch (_) { continue; }
+      if (!summary?.scores || !summary.answers || !Array.isArray(summary.wrong)) continue;
+      if (runId && summary.runId !== runId) continue;
+      const identity = value(row, 'classId')
+        ? {classId: value(row, 'classId'), studentId: value(row, 'studentId') || summary.identity?.studentId}
+        : summary.identity || legacyIdentity(value(row, 'student'), classId, roster);
+      if (identity?.classId !== classId) continue;
+      const name = value(row, 'student');
+      const studentId = identity.studentId || '';
+      const key = studentId || name;
+      const grouped = sectionKeys.includes(summary.section) && Boolean(summary.groupId);
+      if (summary.section && !grouped) continue;
+      const group = grouped ? summary.groupId : attempt;
+      const sittingKey = JSON.stringify([key, group]);
+      const when = value(row, 'submitted') || value(row, 'time');
+      if (!sittings.has(sittingKey)) {
+        sittings.set(sittingKey, {name, studentId, key, group, when, parts: new Map()});
+      }
+      const sitting = sittings.get(sittingKey);
+      if (Date.parse(when) > Date.parse(sitting.when)) sitting.when = when;
+      for (const section of grouped ? [summary.section] : sectionKeys) {
+        const previous = sitting.parts.get(section);
+        if (!previous || Date.parse(when) >= Date.parse(previous.when)) {
+          sitting.parts.set(section, {summary, attempt, when});
         }
       }
     }
-    const results = [];
-    for (const {row, summary, studentId} of latest.values()) {
-      const attempt = value(row, 'attempt');
-      const manual = questions.filter(q => q.type === 'pictureSentence').map(q => {
-        const record = details.get(attempt)?.get(q.id);
+    const latest = new Map();
+    for (const sitting of sittings.values()) {
+      const previous = latest.get(sitting.key);
+      if (!previous || Date.parse(sitting.when) >= Date.parse(previous.when)) latest.set(sitting.key, sitting);
+    }
+    return Array.from(latest.values(), sitting => {
+      const sections = sectionKeys.filter(key => sitting.parts.has(key));
+      const summary = {answers: {}, scores: {}, wrong: [], answered: 0};
+      for (const section of sections) {
+        const part = sitting.parts.get(section).summary;
+        summary.scores[section] = part.scores[section];
+        for (const q of questions.filter(q => report.sectionFor(q.number) === section)) {
+          if (part.answers[q.id]) summary.answers[q.id] = part.answers[q.id];
+          if (part.wrong.includes(q.number)) summary.wrong.push(q.number);
+        }
+      }
+      summary.answered = Object.keys(summary.answers).length;
+      const writing = sitting.parts.get('writing');
+      const manual = writing ? questions.filter(q => q.type === 'pictureSentence').map(q => {
+        const record = details.get(writing.attempt)?.get(q.id);
         const response = summary.answers[q.id] || '';
         const graded = record && isGraded(record);
         return {q, record, value: response, points: graded ? Number(value(record, 'score')) : 0,
           pending: Boolean(response && !graded)};
-      });
-      const who = roster.find(student => student.id === studentId);
-      results.push({name: value(row, 'student'), studentId, when: value(row, 'submitted'), attempt,
-        summary, manual, test: who?.testAccount === true});
-    }
-    return results.sort((a, b) => Date.parse(b.when) - Date.parse(a.when));
+      }) : [];
+      const who = roster.find(student => student.id === sitting.studentId);
+      return {name: sitting.name, studentId: sitting.studentId, when: sitting.when,
+        attempt: sitting.group, summary, sections, manual, test: who?.testAccount === true};
+    }).sort((a, b) => Date.parse(b.when) - Date.parse(a.when));
   }
 
   function sums(result) {
     return {
-      auto: Object.values(result.summary.scores).reduce((sum, n) => sum + Number(n), 0),
+      auto: Object.values(result.summary.scores).reduce((sum, n) => sum + Number(n || 0), 0),
+      autoMax: result.sections.reduce((sum, section) => sum + (section === 'writing' ? 5 : 30), 0),
       manual: result.manual.reduce((sum, q) => sum + q.points, 0),
       pending: result.manual.filter(q => q.pending).length,
     };
@@ -119,7 +152,7 @@
           signal: W.timeout(18000)});
       } catch (_) {}
       const rows = await readRows(set.id, classId);
-      const saved = rows.find(row => value(row, 'attempt') === result.attempt &&
+      const saved = rows.find(row => value(row, 'attempt') === value(record, 'attempt') &&
         value(row, 'question') === item.q.id && isGraded(row) && Number(value(row, 'score')) === score);
       if (!saved) throw new Error('Grade not confirmed');
       await loadResults(rows);
@@ -173,12 +206,17 @@
       if (visible.open) state.opened.add(result.attempt);
       else state.opened.delete(result.attempt);
     });
-    visible.append(node('summary', result.name + (result.test ? ' · Test' : '') + ' · ' +
-      result.summary.answered + '/70题 · ' + (totals.pending ? totals.auto + '/65，待批 ' + totals.pending + '题' :
-        (totals.auto + totals.manual) + '/75')));
-    const {listening, reading, writing} = result.summary.scores;
-    visible.append(node('p', '提交时间 ' + whenText(result.when)),
-      node('p', '听力 ' + listening + '/30　阅读 ' + reading + '/30　补字 ' + writing + '/5　造句已得 ' + totals.manual + '/10'));
+    const writingSubmitted = result.sections.includes('writing');
+    visible.append(node('summary', result.name + (result.test ? ' · Test' : '') + ' · 已提交 ' +
+      result.sections.length + '/3部分 · ' + (totals.pending ? totals.auto + '/' + totals.autoMax + ' 客观分，待批 ' + totals.pending + '题' :
+        (totals.auto + totals.manual) + '/' + (totals.autoMax + (writingSubmitted ? 10 : 0)) + '分')));
+    const descriptions = sectionKeys.map(section => {
+      const label = sectionLabels[section] + ' ';
+      if (!result.sections.includes(section)) return label + '待提交';
+      const score = result.summary.scores[section];
+      return label + (section === 'writing' ? '补字 ' + score + '/5，造句已得 ' + totals.manual + '/10' : score + '/30');
+    });
+    visible.append(node('p', '最近提交 ' + whenText(result.when)), node('p', descriptions.join('　')));
     const breakdown = node('details');
     breakdown.append(node('summary', '各部分正确率'), report.accuracy(report.analyse([result]).breakdown));
     visible.append(breakdown);
@@ -186,6 +224,7 @@
     objective.append(node('summary', '逐题作答与错题'));
     const list = node('ol', null, 'answer-grid');
     for (const q of questions.slice(0, 65)) {
+      if (!result.sections.includes(report.sectionFor(q.number))) continue;
       const wrong = result.summary.wrong.includes(q.number);
       list.append(node('li', q.number + '. ' + (result.summary.answers[q.id] || '未答') +
         (wrong ? '（应为 ' + q.answer + '）' : ''), wrong ? 'incorrect' : ''));
@@ -205,7 +244,7 @@
     wrong.append(node('summary', '错题排名 · 按答错人数从高到低'));
     if (scores.ranking.length) wrong.append(report.ranking(scores.ranking));
     else wrong.append(node('p', '已判题目暂无错题。', 'help'));
-    box.replaceChildren(node('h2', testOnly ? '测试账号统计' : '班级成绩'), node('p', '造句满分计为正确。尚未批改的造句暂不计入正确率。', 'help'),
+    box.replaceChildren(node('h2', testOnly ? '测试账号统计' : '班级成绩'), node('p', '各部分按已提交的答卷统计。造句满分计为正确，待批改的造句暂不计入正确率。', 'help'),
       report.accuracy(scores.breakdown), wrong);
   }
 
@@ -247,7 +286,8 @@
       el('results').replaceChildren(...cards);
       el('results').hidden = false;
       el('export').disabled = !state.results.length;
-      W.notice((attemptRun ? '本场练习 · ' : '') + '已提交 ' + count + ' 人' +
+      const complete = classResults.filter(row => row.sections.length === 3).length;
+      W.notice((attemptRun ? '本场练习 · ' : '') + '已交齐 ' + complete + ' 人 · 部分提交 ' + (count - complete) + ' 人' +
         (test ? '，另有 ' + test + ' 条测试账号记录' : '') + '。');
     } catch (_) {
       if (request === state.request) W.notice('暂时无法读取作答记录。请检查网络后点「刷新记录」。', true);
@@ -264,7 +304,7 @@
 
   function exportCsv() {
     const headers = ['班级', '练习', '姓名', '提交时间', '已答题数', '听力30分', '阅读30分', '补字5分',
-      '造句已得10分', '已得75分', '待批题数', '错题',
+      '造句已得10分', '已得分', '待批题数', '错题', '已提交部分',
       ...report.analyse([]).breakdown.map(part => part.name + '正确率'),
       ...Array.from({length: 70}, (_, i) => '第' + (i + 1) + '题')];
     const rows = state.results.map(result => {
@@ -272,7 +312,7 @@
       const answers = new Map(Object.entries(summary.answers).map(([id, text]) => [Number(id.split('-').at(-1)), text]));
       return [el('class').selectedOptions[0].textContent, current().title, result.name, result.when, summary.answered,
         summary.scores.listening, summary.scores.reading, summary.scores.writing, totals.manual,
-        totals.auto + totals.manual, totals.pending, summary.wrong.join(' '),
+        totals.auto + totals.manual, totals.pending, summary.wrong.join(' '), result.sections.map(key => sectionLabels[key]).join('、'),
         ...report.analyse([result]).breakdown.map(part => report.percentage(part.correct, part.correct + part.wrong)),
         ...Array.from({length: 70}, (_, i) => answers.get(i + 1) || '')];
     });

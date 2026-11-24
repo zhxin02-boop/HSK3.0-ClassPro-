@@ -13,6 +13,25 @@
   let control;
   let progressTimer;
   let practiceRun = '';
+  const closeQueued = new Set();
+  let guided = false;
+
+  function submittedSections() {
+    return Object.keys(skills).filter(key => state.draft.sent || state.draft.submissions[key]?.sent);
+  }
+
+  function sectionAvailable(key) {
+    return !guided || state.draft.opened.includes(key);
+  }
+
+  function canEdit(key) {
+    return isLiveOpen() && (!guided || control.activeSection === key);
+  }
+
+  function sectionLocked(key) {
+    const part = state.draft.submissions[key];
+    return state.draft.sent || Boolean(state.draft.bundle || part?.sent || part?.bundle) || !canEdit(key);
+  }
 
   function draftKey(classId, studentId, set, runId) {
     const keys = ['ClassProSpecialW1v1', classId, studentId, set];
@@ -35,9 +54,11 @@
 
   function updateRoomLabel() {
     if (!classroomMode) return;
+    const current = control?.activeSection;
     el('classroom-state').textContent = !classroomReady ? '课堂连接未就绪，正在尝试连接。' :
-      !control ? '请等待教师开放答题。' : control.phase === 'open' ? '教师已开放答题。听力录音由教师统一播放。' :
-      '教师已收卷。已开始的答卷会提交，未确认时可查询或重试。';
+      !control ? '请等待教师开放答题。' : control.phase === 'closed' ? '本场已收卷。可查询或重试已开始部分的提交。' :
+      current ? '教师已开放' + skills[current] + (current === 'listening' ? '。听力录音由教师统一播放。' : '。') :
+      Array.isArray(control.closedSections) ? '正在讲评，请等待教师开放下一部分。' : '教师已开放答题。';
     el('classroom-state').hidden = false;
   }
 
@@ -50,7 +71,14 @@
   }
 
   function submitIfClosed() {
-    if (classroomMode && !isLiveOpen() && state.test && state.draft && !state.draft.sent) submitAttempt(true);
+    if (!classroomMode || !state.test || !state.draft || state.busy) return;
+    const sameRun = control?.runId === practiceRun;
+    const closed = guided ? (sameRun ? control.closedSections : state.draft.opened) :
+      isLiveOpen() ? [] : Object.keys(skills);
+    const keys = closed.filter(key => sectionAvailable(key) && !submittedSections().includes(key) && !closeQueued.has(key));
+    if (!keys.length) return;
+    keys.forEach(key => closeQueued.add(key));
+    submitAttempts(keys, true);
   }
 
   function publishProgress() {
@@ -58,15 +86,18 @@
     const counts = Object.fromEntries(Object.keys(skills).map(key => [key, state.test[key].items.filter(answered).length]));
     classroom.progress({studentId: state.student.id, set: state.test.id, runId: practiceRun, counts,
       total: Object.values(counts).reduce((total, count) => total + count, 0),
-      submitted: state.draft.sent === true}).catch(() => {});
+      submittedSections: submittedSections(), submitted: submittedSections().length === 3}).catch(() => {});
   }
 
   function loadDraft() {
     try {
       const saved = JSON.parse(localStorage.getItem(cacheKey()) || 'null');
-      if (saved && saved.answers && typeof saved.answers === 'object') return saved;
+      if (saved && saved.answers && typeof saved.answers === 'object') {
+        return {...saved, groupId: saved.groupId || window.SpecialRoom.id(), submissions: saved.submissions || {},
+          opened: Array.isArray(saved.opened) ? saved.opened : []};
+      }
     } catch (_) {}
-    return {answers: {}, skill: 'listening'};
+    return {answers: {}, skill: 'listening', groupId: window.SpecialRoom.id(), submissions: {}, opened: []};
   }
 
   function saveDraft() {
@@ -114,30 +145,60 @@
     if (!(key in skills)) key = 'listening';
     stopAudio();
     state.draft.skill = key;
-    document.querySelectorAll('[data-panel]').forEach(div => { div.hidden = div.dataset.panel !== key; });
+    document.querySelectorAll('[data-panel]').forEach(div => {
+      div.hidden = div.dataset.panel !== key || !sectionAvailable(key);
+    });
+    const waiting = el('waiting-section');
+    waiting.hidden = sectionAvailable(key);
+    waiting.textContent = control?.closedSections?.includes(key) ? skills[key] + '已结束。' : '请等待教师开放' + skills[key] + '。';
     document.querySelectorAll('[data-skill]').forEach(button => {
       button.setAttribute('aria-pressed', String(button.dataset.skill === key));
     });
+    updateProgress();
     if (focus) {
       saveDraft();
-      document.querySelector('[data-panel="' + key + '"] h3').scrollIntoView({block: 'start'});
+      const heading = document.querySelector('[data-panel="' + key + '"] h3');
+      if (sectionAvailable(key)) heading.scrollIntoView({block: 'start'});
     }
-  }
-
-  function questionList() {
-    return Object.keys(skills).flatMap(skill => state.test[skill].items);
   }
 
   function answered(q) { return Boolean(String(state.draft.answers[q.id] || '').trim()); }
 
   function updateProgress() {
-    const count = questionList().filter(answered).length;
-    el('progress').textContent = '已答 ' + count + ' / 70';
+    const done = submittedSections();
     for (const button of el('skills').children) {
       const key = button.dataset.skill;
       const items = state.test[key].items;
-      button.textContent = skills[key] + ' ' + items.filter(answered).length + '/' + items.length;
+      const waiting = control?.closedSections?.includes(key) ? '已结束' : '待开放';
+      button.textContent = skills[key] + (done.includes(key) ? ' · 已提交' :
+        sectionAvailable(key) ? ' ' + items.filter(answered).length + '/' + items.length : ' · ' + waiting);
     }
+    for (const panel of el('sections').children) {
+      const locked = sectionLocked(panel.dataset.panel);
+      panel.querySelectorAll('input, textarea').forEach(input => { input.disabled = locked; });
+    }
+    const key = state.draft.skill;
+    const items = state.test[key].items;
+    const part = state.draft.submissions[key];
+    const submitted = done.includes(key);
+    const pending = Boolean(part?.bundle || state.draft.bundle);
+    const score = part?.summary?.scores[key];
+    const receipt = submitted && score != null ? ' · ' + score + '/' + (key === 'writing' ? 5 : items.length) +
+      (key === 'writing' ? ' 补字分，造句由教师批改' : '分') : '';
+    const available = sectionAvailable(key);
+    el('progress').textContent = available ? skills[key] + ' ' + items.filter(answered).length + '/' + items.length +
+      (submitted ? ' · 已提交' + receipt : pending ? ' · 待确认' : '') : '';
+    el('submit').textContent = submitted ? skills[key] + '已提交' : pending ? '重试提交' + skills[key] : '提交' + skills[key];
+    el('submit').hidden = !available;
+    el('submit').disabled = submitted || state.busy;
+    el('switch').disabled = state.busy;
+  }
+
+  function rememberOpenSection() {
+    if (!guided || !isLiveOpen() || !control.activeSection) return null;
+    const key = control.activeSection;
+    if (!state.draft.opened.includes(key)) state.draft.opened.push(key);
+    return key;
   }
 
   function renderPractice() {
@@ -157,25 +218,11 @@
     el('entry').hidden = true;
     el('receipt').hidden = true;
     el('practice').hidden = false;
-    selectSkill(state.draft.skill);
-    if (state.draft.bundle) {
-      lockAnswers();
-      W.notice('上一次提交尚未确认。请点「重试提交」查询并补交同一份答卷。', true);
-    } else {
-      el('submit').textContent = '提交练习';
-    }
-    updateProgress();
+    const active = rememberOpenSection();
+    selectSkill(active || state.draft.skill);
     el('practice-title').focus();
-    if (classroomMode) {
-      saveDraft();
-      publishProgress();
-    }
-  }
-
-  function lockAnswers() {
-    stopAudio();
-    el('sections').querySelectorAll('input, textarea').forEach(input => { input.disabled = true; });
-    el('submit').textContent = '重试提交';
+    saveDraft();
+    if (classroomMode) publishProgress();
   }
 
   function toEntry() {
@@ -198,7 +245,8 @@
     el('practice').hidden = true;
     el('entry').hidden = true;
     el('receipt').hidden = false;
-    const scores = state.draft.summary.scores;
+    const scores = state.draft.summary?.scores || Object.fromEntries(Object.keys(skills).map(key =>
+      [key, state.draft.submissions[key].summary.scores[key]]));
     el('receipt-body').textContent = state.test.title + ' · ' + state.student.name +
       '。自动计分 ' + (scores.listening + scores.reading + scores.writing) + '/65。听力 ' + scores.listening +
       '/30，阅读 ' + scores.reading + '/30，补字 ' + scores.writing + '/5。看图造句由教师批改。';
@@ -211,36 +259,35 @@
     return /^[=+\-@]/.test(text) ? "'" + text : text;
   }
 
-  function bundleAnswers() {
+  function bundleAnswers(skill) {
     const scores = {listening: 0, reading: 0, writing: 0};
     const answers = {};
     const wrong = [];
     const manual = [];
-    for (const skill of Object.keys(skills)) {
-      for (const q of state.test[skill].items) {
-        const value = String(state.draft.answers[q.id] || '').trim();
-        if (value) answers[q.id] = value;
-        if (q.type === 'pictureSentence') {
-          manual.push({q, value});
-        } else if (value.normalize('NFC') === q.answer) {
-          scores[skill] += 1;
-        } else {
-          wrong.push(q.number);
-        }
+    for (const q of state.test[skill].items) {
+      const value = String(state.draft.answers[q.id] || '').trim();
+      if (value) answers[q.id] = value;
+      if (q.type === 'pictureSentence') {
+        manual.push({q, value});
+      } else if (value.normalize('NFC') === q.answer) {
+        scores[skill] += 1;
+      } else {
+        wrong.push(q.number);
       }
     }
     const submittedAt = new Date().toISOString();
-    const attemptId = state.test.id + '-' + (crypto.randomUUID ? crypto.randomUUID() : Date.now() + '-' + Math.random().toString(36).slice(2));
+    const attemptId = [state.test.id, state.draft.groupId, skill].join('-');
     const common = {action: 'mock_test_submit', recordType: 'mock_test', stage: 'mock_test',
       lesson: state.test.id, testId: state.test.id, ...state.scope, attemptId, sessionId: attemptId};
     const identity = {classId: state.scope.classId, studentId: state.scope.studentId};
-    const summary = {answers, scores, wrong, answered: Object.keys(answers).length, identity};
+    const summary = {answers, scores, wrong, answered: Object.keys(answers).length, identity,
+      groupId: state.draft.groupId, section: skill};
     if (practiceRun) summary.runId = practiceRun;
-    const score = Object.values(scores).reduce((sum, points) => sum + points, 0);
-    const rows = [{...common, module: 'mock_test', questionId: state.test.id, score, total: 65,
+    const score = scores[skill];
+    const rows = [{...common, module: 'mock_test', questionId: state.test.id, score, total: skill === 'writing' ? 5 : 30,
       points: score, result: manual.some(item => item.value) ? 'pending_review' : 'submitted',
       weakPoints: wrong.length ? '错题：' + wrong.join('、') : '', answer: JSON.stringify(summary),
-      submittedAt, questionText: state.test.title}];
+      submittedAt, questionText: state.test.title + ' · ' + skills[skill]}];
     manual.forEach(({q, value}, index) => {
       const at = new Date(Date.parse(submittedAt) + index + 1).toISOString();
       rows.push({...common, module: 'subjective', questionId: q.id, score: 0, total: q.points,
@@ -248,8 +295,7 @@
         submittedAt: at, questionText: '看图造句（' + q.word + '）｜图片：' + W.asset(q.image) +
           '｜参考答案：' + q.reference + '｜评分标准：' + Object.entries(state.test.writingRubric).map(([s, text]) => s + '分 ' + text).join(' ')});
     });
-    state.draft.summary = summary;
-    state.draft.bundle = {...common, action: 'mock_test_submit_bundle', submittedAt, records: rows};
+    state.draft.submissions[skill] = {summary, bundle: {...common, action: 'mock_test_submit_bundle', submittedAt, records: rows}};
     saveDraft();
   }
 
@@ -264,7 +310,9 @@
       } catch (_) {}
       try {
         const receipt = await W.getRecords('get_mock_attempt', query);
-        if (receipt.status === 'ok' && receipt.complete && receipt.attemptId === bundle.attemptId) return;
+        const expected = bundle.records.length;
+        const confirmed = expected === 1 ? receipt.count === 1 && receipt.main === 1 : receipt.complete === true;
+        if (receipt.status === 'ok' && confirmed && receipt.attemptId === bundle.attemptId) return;
       } catch (_) {}
     }
     throw new Error('No cloud receipt');
@@ -277,6 +325,8 @@
     const set = state.catalog.find(item => item.id === el('set').value);
     if (!state.student || !set) return;
     practiceRun = classroomMode ? control.runId : '';
+    closeQueued.clear();
+    guided = classroomMode && Array.isArray(control?.closedSections);
     state.test = null;
     state.draft = null;
     state.busy = true;
@@ -287,12 +337,13 @@
       state.test = await W.json(W.asset(set.file));
       if (state.test.id !== set.id) throw new Error('Unexpected test data');
       state.draft = loadDraft();
-      if (state.draft.sent) showReceipt();
+      if (submittedSections().length === 3) showReceipt();
       else renderPractice();
     } catch (_) {
       W.notice('题目加载失败，请检查网络后重试。', true);
     } finally {
       state.busy = false;
+      if (state.test && state.draft && !el('practice').hidden) updateProgress();
       checkEntry();
       submitIfClosed();
     }
@@ -300,7 +351,8 @@
 
   el('answers').addEventListener('input', event => {
     const {name, value} = event.target;
-    if (!name || state.draft.bundle || !isLiveOpen()) return;
+    const key = event.target.closest('[data-panel]')?.dataset.panel;
+    if (!name || !key || sectionLocked(key)) return;
     if (value) state.draft.answers[name] = value;
     else delete state.draft.answers[name];
     saveDraft();
@@ -311,37 +363,64 @@
     }
   });
 
-  async function submitAttempt(automatically) {
-    if (state.busy || state.draft.sent) return;
-    if (!state.draft.bundle) {
-      const done = questionList().filter(answered).length;
-      if (!automatically && !window.confirm(done < 70 ? '还有 ' + (70 - done) + ' 道题未答。确定提交吗？' : '确定提交这份练习吗？')) return;
-      bundleAnswers();
-      lockAnswers();
+  async function submitAttempts(requested, automatic) {
+    if (state.busy || !state.draft || submittedSections().length === 3) return;
+    const keys = requested.filter(key => !submittedSections().includes(key));
+    if (!keys.length) return;
+    const selected = keys[0];
+    if (!automatic && !state.draft.bundle && !state.draft.submissions[selected]?.bundle) {
+      const missing = state.test[selected].items.filter(q => !answered(q)).length;
+      const message = '提交后将锁定' + skills[selected] + '。';
+      if (!window.confirm((missing ? '这部分还有 ' + missing + ' 道题未答。' : '') + message + '确定提交吗？')) return;
     }
     state.busy = true;
-    el('submit').disabled = true;
-    el('switch').disabled = true;
-    W.notice('正在保存并等待服务器确认，请保持页面打开。');
+    stopAudio();
+    const failures = [];
+    if (!state.draft.bundle) {
+      for (const key of keys) if (!state.draft.submissions[key]?.bundle) bundleAnswers(key);
+    }
+    updateProgress();
+    W.notice('正在保存答卷，请保持页面打开。');
     try {
-      await sendBundle(state.draft.bundle);
-      state.draft.sent = true;
-      delete state.draft.bundle;
-      saveDraft();
-      showReceipt();
-    } catch (_) {
-      W.notice('服务器还未确认。答案已保留在当前页面，请检查网络后点「重试提交」。', true);
+      if (state.draft.bundle) {
+        try {
+          await sendBundle(state.draft.bundle);
+          state.draft.sent = true;
+          delete state.draft.bundle;
+          saveDraft();
+        } catch (_) {
+          failures.push('整套旧答卷');
+        }
+      } else {
+        for (const key of keys) {
+          const part = state.draft.submissions[key];
+          try {
+            await sendBundle(part.bundle);
+            part.sent = true;
+            delete part.bundle;
+            saveDraft();
+            updateProgress();
+            if (classroomMode) publishProgress();
+          } catch (_) {
+            failures.push(skills[key]);
+          }
+        }
+      }
+      if (submittedSections().length === 3) showReceipt();
+      else if (failures.length) W.notice(failures.join('、') + '尚未收到回执，请切到相应部分重试。', true);
+      else if (!persistenceError) W.notice(skills[selected] + '已提交，可以继续完成其他部分。');
     } finally {
       state.busy = false;
-      el('submit').disabled = false;
-      el('switch').disabled = false;
+      updateProgress();
       checkEntry();
+      submitIfClosed();
     }
   }
 
   el('answers').addEventListener('submit', event => {
     event.preventDefault();
-    submitAttempt(false);
+    const skill = state.draft.skill;
+    if (sectionAvailable(skill)) submitAttempts([skill], false);
   });
 
   el('class').addEventListener('change', changeClass);
@@ -365,10 +444,18 @@
       },
       onControl(message) {
         if (control && message.changedAt < control.changedAt) return;
+        const previous = control;
         control = message;
         alignSet();
         updateRoomLabel();
         checkEntry();
+        if (state.test && state.draft && !el('practice').hidden) {
+          const active = rememberOpenSection();
+          if (active && previous?.activeSection !== active) {
+            selectSkill(active);
+            saveDraft();
+          } else updateProgress();
+        }
         submitIfClosed();
       },
     };

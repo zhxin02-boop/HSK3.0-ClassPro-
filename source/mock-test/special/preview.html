@@ -9,10 +9,10 @@
 <script defer src="../../shared/context.js"></script>
 <script defer src="../../shared/classroom-channel.js?v=special-1"></script>
 <script defer src="common.js?v=2"></script>
-<script defer src="room.js?v=2"></script>
+<script defer src="room.js?v=3"></script>
 <script defer src="questions.js?v=2"></script>
 <script defer src="preview.js?v=2"></script>
-<script defer src="teacher-room.js?v=2"></script>
+<script defer src="teacher-room.js?v=4"></script>
 </head>
 <body>
 <header class="site-header"><div class="shell"><a id="home-link" href="../../teacher/index.html">Chinese ClassPro</a><span>教师端</span></div></header>
@@ -36,12 +36,13 @@
   <section class="panel room-controls" aria-label="课堂答题控制">
     <div class="practice-heading"><div><h2>课堂答题控制</h2><p id="room-label"></p></div><b id="room-status" role="status"></b></div>
     <div class="actions">
-      <button id="open-room" type="button" disabled>开放答题</button>
-      <button id="close-room" class="secondary" type="button" disabled>收卷</button>
+      <button id="open-room" type="button" disabled>开放听力</button>
+      <button id="end-section" class="secondary" type="button" disabled>结束当前部分</button>
+      <button id="close-room" class="secondary" type="button" disabled>结束本场</button>
       <button id="copy-room-link" class="secondary" type="button" disabled>复制本场学生链接</button>
       <a id="open-room-student" class="button secondary" target="_blank" rel="noopener" href="index.html" hidden>打开本场学生端</a>
     </div>
-    <p id="room-message" class="help" role="status">课堂模式下，由教师在听力部分播放录音。学生用本场链接同步开放与收卷。</p>
+    <p id="room-message" class="help" role="status">逐段开放听力、阅读和书写，可以在两部分之间讲题。课堂听力由教师播放。</p>
     <details><summary id="room-summary">班级进度</summary><div id="room-progress-list"></div></details>
   </section>
   <p id="notice" class="notice" role="status" hidden></p>

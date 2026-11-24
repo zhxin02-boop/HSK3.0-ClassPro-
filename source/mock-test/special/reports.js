@@ -11,7 +11,12 @@
     {name: '书写 · 看图造句', from: 66, to: 70},
   ];
 
+  function sectionFor(number) {
+    return number <= 30 ? 'listening' : number <= 60 ? 'reading' : 'writing';
+  }
+
   function outcome(result, number) {
+    if (result.sections && !result.sections.includes(sectionFor(number))) return null;
     if (number <= 65) return result.summary.wrong.includes(number) ? 'wrong' : 'correct';
     const item = result.manual.find(entry => entry.q.number === number);
     if (!item || item.pending) return 'pending';
@@ -22,7 +27,10 @@
     const questions = Array.from({length: 70}, (_, i) => ({
       number: i + 1, correct: 0, wrong: 0, pending: 0
     }));
-    results.forEach(result => questions.forEach(q => { q[outcome(result, q.number)]++; }));
+    results.forEach(result => questions.forEach(q => {
+      const status = outcome(result, q.number);
+      if (status) q[status]++;
+    }));
     const breakdown = parts.map(part => questions.slice(part.from - 1, part.to).reduce((total, q) => {
       return {...total, correct: total.correct + q.correct, wrong: total.wrong + q.wrong, pending: total.pending + q.pending};
     }, {...part, correct: 0, wrong: 0, pending: 0}));
@@ -71,5 +79,5 @@
     ]));
   }
 
-  window.SpecialReports = {analyse, accuracy, ranking, percentage};
+  window.SpecialReports = {analyse, accuracy, ranking, percentage, sectionFor};
 })();
