@@ -3,6 +3,8 @@
 
   const W = window.SpecialWeek;
   const {el, node} = W;
+  const report = window.SpecialReports;
+  let attemptRun = W.params.get('attemptRun') || '';
   const state = {sets: [], results: [], request: 0, opened: new Set(), saving: false};
   const time = new Intl.DateTimeFormat('zh-CN', {dateStyle: 'short', timeStyle: 'short'});
   const columns = {
@@ -40,7 +42,7 @@
     return elsewhere ? null : {classId, studentId: student.id};
   }
 
-  function collect(rows, questions, roster, classId) {
+  function collect(rows, questions, roster, classId, runId) {
     const details = new Map();
     const latest = new Map();
     for (const row of rows) {
@@ -52,6 +54,7 @@
         let summary;
         try { summary = JSON.parse(value(row, 'answer')); } catch (_) { continue; }
         if (!summary?.scores || !summary.answers || !Array.isArray(summary.wrong)) continue;
+        if (runId && summary.runId !== runId) continue;
         const identity = value(row, 'classId')
           ? {classId: value(row, 'classId'), studentId: value(row, 'studentId') || summary.identity?.studentId}
           : summary.identity || legacyIdentity(value(row, 'student'), classId, roster);
@@ -176,6 +179,9 @@
     const {listening, reading, writing} = result.summary.scores;
     visible.append(node('p', '提交时间 ' + whenText(result.when)),
       node('p', '听力 ' + listening + '/30　阅读 ' + reading + '/30　补字 ' + writing + '/5　造句已得 ' + totals.manual + '/10'));
+    const breakdown = node('details');
+    breakdown.append(node('summary', '各部分正确率'), report.accuracy(report.analyse([result]).breakdown));
+    visible.append(breakdown);
     const objective = node('details');
     objective.append(node('summary', '逐题作答与错题'));
     const list = node('ol', null, 'answer-grid');
@@ -190,6 +196,19 @@
     return visible;
   }
 
+  function displayClassReport(results, testOnly) {
+    const box = el('class-report');
+    box.hidden = !results.length;
+    if (!results.length) return;
+    const scores = report.analyse(results);
+    const wrong = node('details');
+    wrong.append(node('summary', '错题排名 · 按答错人数从高到低'));
+    if (scores.ranking.length) wrong.append(report.ranking(scores.ranking));
+    else wrong.append(node('p', '已判题目暂无错题。', 'help'));
+    box.replaceChildren(node('h2', testOnly ? '测试账号统计' : '班级成绩'), node('p', '造句满分计为正确。尚未批改的造句暂不计入正确率。', 'help'),
+      report.accuracy(scores.breakdown), wrong);
+  }
+
   async function loadResults(prefetched) {
     const set = current();
     if (!set) return;
@@ -199,27 +218,37 @@
     const url = new URL(location.href);
     url.searchParams.set('classId', classId);
     url.searchParams.set('set', set.id);
+    if (attemptRun) url.searchParams.set('attemptRun', attemptRun);
+    else url.searchParams.delete('attemptRun');
+    el('clear-run').hidden = !attemptRun;
     history.replaceState({}, '', url);
+    const preview = new URL('preview.html', url);
+    preview.search = url.search;
+    el('preview-link').href = preview.href;
     el('home-link').href = '../../teacher/index.html?' + window.ClassProContext.buildQuery({lesson: W.lesson,
       classId, room: scope.room, student: '', studentId: ''}) + (W.params.get('direct') === '1' ? '&direct=1' : '');
     W.notice('正在读取提交记录…');
     el('refresh').disabled = true;
     el('export').disabled = true;
     el('results').hidden = true;
+    el('class-report').hidden = true;
     try {
       const [bank, rows, roster] = await Promise.all([
         W.json(W.asset(set.file)), prefetched || readRows(set.id, classId), W.setRoster(classId)
       ]);
       if (request !== state.request) return;
       const questions = [bank.listening, bank.reading, bank.writing].flatMap(section => section.items);
-      state.results = collect(rows, questions, roster, classId);
-      const count = state.results.filter(row => !row.test).length;
+      state.results = collect(rows, questions, roster, classId, attemptRun);
+      const classResults = state.results.filter(row => !row.test);
+      displayClassReport(classResults.length ? classResults : state.results, !classResults.length);
+      const count = classResults.length;
       const test = state.results.length - count;
       const cards = state.results.map(result => displayResult(result, questions));
       el('results').replaceChildren(...cards);
       el('results').hidden = false;
       el('export').disabled = !state.results.length;
-      W.notice('已提交 ' + count + ' 人' + (test ? '，另有 ' + test + ' 条测试账号记录' : '') + '。');
+      W.notice((attemptRun ? '本场练习 · ' : '') + '已提交 ' + count + ' 人' +
+        (test ? '，另有 ' + test + ' 条测试账号记录' : '') + '。');
     } catch (_) {
       if (request === state.request) W.notice('暂时无法读取作答记录。请检查网络后点「刷新记录」。', true);
     } finally {
@@ -235,13 +264,16 @@
 
   function exportCsv() {
     const headers = ['班级', '练习', '姓名', '提交时间', '已答题数', '听力30分', '阅读30分', '补字5分',
-      '造句已得10分', '已得75分', '待批题数', '错题', ...Array.from({length: 70}, (_, i) => '第' + (i + 1) + '题')];
+      '造句已得10分', '已得75分', '待批题数', '错题',
+      ...report.analyse([]).breakdown.map(part => part.name + '正确率'),
+      ...Array.from({length: 70}, (_, i) => '第' + (i + 1) + '题')];
     const rows = state.results.map(result => {
       const totals = sums(result), summary = result.summary;
       const answers = new Map(Object.entries(summary.answers).map(([id, text]) => [Number(id.split('-').at(-1)), text]));
       return [el('class').selectedOptions[0].textContent, current().title, result.name, result.when, summary.answered,
         summary.scores.listening, summary.scores.reading, summary.scores.writing, totals.manual,
         totals.auto + totals.manual, totals.pending, summary.wrong.join(' '),
+        ...report.analyse([result]).breakdown.map(part => report.percentage(part.correct, part.correct + part.wrong)),
         ...Array.from({length: 70}, (_, i) => answers.get(i + 1) || '')];
     });
     const csv = [headers, ...rows].map(row => row.map(cell).join(',')).join('\r\n');
@@ -260,8 +292,10 @@
     el('share').disabled = false;
     loadResults();
   }).catch(() => W.notice('练习列表加载失败，请刷新重试。', true));
-  el('class').addEventListener('change', () => loadResults());
-  el('set').addEventListener('change', () => loadResults());
+  function allAttempts() { attemptRun = ''; loadResults(); }
+  el('class').addEventListener('change', allAttempts);
+  el('set').addEventListener('change', allAttempts);
+  el('clear-run').addEventListener('click', allAttempts);
   el('refresh').addEventListener('click', () => loadResults());
   el('export').addEventListener('click', exportCsv);
   el('share').addEventListener('click', async () => {

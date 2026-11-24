@@ -26,5 +26,11 @@
     var ctx = current(next), data = payload || {};
     return (!data.classId || data.classId === ctx.classId) && (!data.room || String(data.room) === String(ctx.room)) && (!data.lesson || data.lesson === ctx.lesson) && (!data.run || data.run === ctx.run);
   }
-  global.ClassProClassroom = { base: base, topic: topic, envelope: envelope, matches: matches };
+  function connectBroker(clientId) {
+    return global.mqtt.connect('wss://05d1d5baec9d4cb3a21f5517b430cff1.s1.eu.hivemq.cloud:8884/mqtt', {
+      username: 'classpro', password: 'Classpro2026', clientId: clientId,
+      reconnectPeriod: 2000, connectTimeout: 8000,
+    });
+  }
+  global.ClassProClassroom = { base: base, topic: topic, envelope: envelope, matches: matches, connectBroker: connectBroker };
 })(window);

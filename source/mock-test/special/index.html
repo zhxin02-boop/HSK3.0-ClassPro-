@@ -8,8 +8,11 @@
 <script defer src="../../shared/class-config.js"></script>
 <script defer src="../../shared/context.js"></script>
 <script defer src="../../shared/api.js"></script>
+<script defer src="../../shared/classroom-channel.js?v=special-1"></script>
 <script defer src="common.js?v=2"></script>
-<script defer src="student.js?v=2"></script>
+<script defer src="room.js?v=2"></script>
+<script defer src="questions.js?v=2"></script>
+<script defer src="student.js?v=5"></script>
 </head>
 <body>
 <header class="site-header"><div class="shell"><a id="home-link" href="../../student/index.html">Chinese ClassPro</a><span>专项练习</span></div></header>
@@ -18,6 +21,7 @@
     <h1>HSK三级 · 第一周</h1>
     <p>复习第1–6课。每次课70题，含听力、阅读和书写。</p>
   </section>
+  <p id="classroom-state" class="notice" role="status" hidden></p>
   <form id="entry" class="panel">
     <div class="identity">
       <label>班级<select id="class" required></select></label>
