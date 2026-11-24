@@ -7,9 +7,58 @@
   const state = {catalog: [], roster: [], test: null, student: null, draft: null, busy: false};
   let rosterRequest = 0;
   let persistenceError = false;
+  const classroomMode = W.params.get('mode') === 'classroom';
+  let classroom;
+  let classroomReady = false;
+  let control;
+  let progressTimer;
+  let practiceRun = '';
+
+  function draftKey(classId, studentId, set, runId) {
+    const keys = ['ClassProSpecialW1v1', classId, studentId, set];
+    if (runId) keys.push(runId);
+    return keys.join(':');
+  }
 
   function cacheKey() {
-    return ['ClassProSpecialW1v1', state.scope.classId, state.student.id, state.test.id].join(':');
+    return draftKey(state.scope.classId, state.student.id, state.test.id, practiceRun);
+  }
+
+  function mayEnterRoom() {
+    if (!classroomMode) return true;
+    if (!classroomReady || !control) return false;
+    if (control.phase === 'open') return true;
+    try {
+      return Boolean(localStorage.getItem(draftKey(el('class').value, el('student').value, control.set, control.runId)));
+    } catch (_) { return false; }
+  }
+
+  function updateRoomLabel() {
+    if (!classroomMode) return;
+    el('classroom-state').textContent = !classroomReady ? '课堂连接未就绪，正在尝试连接。' :
+      !control ? '请等待教师开放答题。' : control.phase === 'open' ? '教师已开放答题。听力录音由教师统一播放。' :
+      '教师已收卷。已开始的答卷会提交，未确认时可查询或重试。';
+    el('classroom-state').hidden = false;
+  }
+
+  function alignSet() {
+    if (classroomMode && control && state.catalog.some(set => set.id === control.set)) el('set').value = control.set;
+  }
+
+  function isLiveOpen() {
+    return !classroomMode || (control?.runId === practiceRun && control?.phase === 'open');
+  }
+
+  function submitIfClosed() {
+    if (classroomMode && !isLiveOpen() && state.test && state.draft && !state.draft.sent) submitAttempt(true);
+  }
+
+  function publishProgress() {
+    if (!classroomReady || !state.test || !state.draft) return;
+    const counts = Object.fromEntries(Object.keys(skills).map(key => [key, state.test[key].items.filter(answered).length]));
+    classroom.progress({studentId: state.student.id, set: state.test.id, runId: practiceRun, counts,
+      total: Object.values(counts).reduce((total, count) => total + count, 0),
+      submitted: state.draft.sent === true}).catch(() => {});
   }
 
   function loadDraft() {
@@ -31,8 +80,9 @@
   }
 
   function checkEntry() {
-    el('start').disabled = !state.catalog.length || !el('student').value || state.busy;
-    el('start').textContent = state.busy ? '正在加载…' : '开始答题';
+    el('start').disabled = !state.catalog.length || !el('student').value || state.busy || !mayEnterRoom();
+    el('start').textContent = state.busy ? '正在加载…' :
+      classroomMode && control?.phase === 'closed' ? '查看提交状态' : '开始答题';
   }
 
   async function changeClass() {
@@ -52,173 +102,6 @@
     }))], previous || remembered?.id || '');
     el('student').disabled = false;
     checkEntry();
-  }
-
-  function part(title, help) {
-    const section = node('section', null, 'part');
-    section.append(node('h3', title), node('p', help, 'help'));
-    return section;
-  }
-
-  function photo(path, label, className) {
-    const image = node('img', null, className);
-    image.src = W.asset(path);
-    image.alt = label;
-    image.loading = 'lazy';
-    image.decoding = 'async';
-    return image;
-  }
-
-  function pool(values, kind) {
-    const list = node('ul', null, 'pool ' + kind + '-pool');
-    for (const [letter, value] of Object.entries(values)) {
-      const item = node('li');
-      if (kind === 'image') item.append(photo(value.image, '图片 ' + letter), node('span', letter));
-      else item.append(node('b', letter + '　'), document.createTextNode(value));
-      list.append(item);
-    }
-    return list;
-  }
-
-  function example(text, answer) {
-    const block = node('div', null, 'example');
-    if (text) block.append(node('p', text));
-    block.append(node('p', '例题答案 ' + answer));
-    return block;
-  }
-
-  function choices(question, options, lettersOnly) {
-    const field = node('fieldset', null, 'question');
-    field.append(node('legend', '第' + question.number + '题'));
-    if (question.passage) field.append(node('p', question.passage, 'passage'));
-    const prompt = question.question || question.prompt;
-    if (prompt) for (const row of prompt.split('／')) field.append(node('p', row));
-    const group = node('div', null, lettersOnly ? 'choices letters' : 'choices');
-    for (const [key, text] of Object.entries(options)) {
-      const label = node('label', null, 'choice');
-      const input = node('input');
-      input.type = 'radio';
-      input.name = question.id;
-      input.value = key;
-      input.checked = state.draft.answers[question.id] === key;
-      const value = node('span');
-      value.append(node('b', key));
-      if (!lettersOnly) value.append(document.createTextNode(text));
-      label.append(input, value);
-      group.append(label);
-    }
-    field.append(group);
-    return field;
-  }
-
-  function showListening(parent) {
-    const {listening} = state.test;
-    const names = ['听对话选图片', '听对话和问题', '听短文和问题'];
-    listening.audioParts.forEach((track, index) => {
-      const from = index * 10 + 1;
-      const section = part('第' + from + '–' + (from + 9) + '题 · ' + names[index],
-        '点播放听录音，每题听两遍。');
-      const audio = node('audio');
-      audio.controls = true;
-      audio.preload = 'none';
-      audio.src = W.asset(track.file);
-      audio.setAttribute('aria-label', '第' + from + '–' + (from + 9) + '题录音');
-      audio.addEventListener('play', () => stopAudio(audio));
-      audio.addEventListener('error', () => W.notice('录音加载失败。请检查网络后重新打开本套练习。', true));
-      section.append(audio);
-      const items = listening.items.slice(index * 10, index * 10 + 10);
-      if (index === 0) {
-        ['A', 'B'].forEach((key, groupIndex) => {
-          const options = listening.pictureGroups[key].pictures;
-          section.append(node('h3', groupIndex === 0 ? '第1–5题图片' : '第6–10题图片'), pool(options, 'image'));
-          if (!groupIndex) section.append(example('', listening.examples.picture.answer));
-          items.slice(groupIndex * 5, groupIndex * 5 + 5).forEach(q => section.append(choices(q, options, true)));
-        });
-      } else {
-        const sample = listening.examples[index === 1 ? 'dialogue' : 'monologue'];
-        const text = Object.entries(sample.options).map(([key, value]) => key + ' ' + value).join('　');
-        section.append(example(text, sample.answer));
-        items.forEach(q => section.append(choices(q, q.options, false)));
-      }
-      parent.append(section);
-    });
-  }
-
-  function showReading(parent) {
-    const {reading} = state.test;
-    const sets = [
-      [31, '句子配对', '给每句话选择合适的句子。'],
-      [41, '选词填空', '给空格选择合适的词语。'],
-      [51, '短文理解', '读短文，选择正确答案。'],
-    ];
-    sets.forEach(([from, title, help], index) => {
-      const section = part('第' + from + '–' + (from + 9) + '题 · ' + title, help);
-      let previousMaterial = null;
-      if (index === 2) {
-        const demo = reading.examples.E3;
-        const sample = example(demo.passage, demo.answer);
-        sample.insertBefore(node('p', demo.question), sample.lastChild);
-        sample.insertBefore(node('p', Object.entries(demo.options).map(([k, v]) => k + ' ' + v).join('　')), sample.lastChild);
-        section.append(sample);
-      }
-      for (const q of reading.items.slice(index * 10, index * 10 + 10)) {
-        const material = reading.materials[q.materialId];
-        if (material && q.materialId !== previousMaterial) {
-          previousMaterial = q.materialId;
-          if (material.passage) section.append(node('p', material.passage, 'example'));
-          else {
-            section.append(pool(material.options, index === 0 ? 'sentence' : 'word'));
-            const sample = Object.values(reading.examples).find(row => row.materialId === q.materialId);
-            if (sample) section.append(example(sample.prompt.replaceAll('／', '　'), sample.answer));
-          }
-        }
-        section.append(choices(q, q.options || material.options, index < 2));
-      }
-      parent.append(section);
-    });
-  }
-
-  function writingQuestion(q, isPinyin) {
-    const field = node('fieldset', null, 'question');
-    field.append(node('legend', '第' + q.number + '题'));
-    const input = node(isPinyin ? 'input' : 'textarea');
-    input.name = q.id;
-    input.value = state.draft.answers[q.id] || '';
-    input.setAttribute('aria-label', '第' + q.number + '题' + (isPinyin ? '填写一个汉字' : '用' + q.word + '写句子'));
-    input.autocomplete = 'off';
-    input.spellcheck = false;
-    if (isPinyin) {
-      const [before, after] = q.prompt.split('（　）');
-      const prompt = node('p', before);
-      const slot = node('span', null, 'pinyin-gap');
-      slot.append(node('small', q.pinyin), node('span', '（　）'));
-      prompt.append(slot, document.createTextNode(after));
-      input.type = 'text';
-      input.placeholder = '输入一个汉字';
-      input.maxLength = 2;
-      field.append(prompt);
-    } else {
-      field.append(photo(q.image, '第' + q.number + '题图片', 'question-photo'), node('p', '用这个词写句子：' + q.word));
-      input.placeholder = '写一个完整的句子';
-      input.maxLength = 200;
-    }
-    field.append(input);
-    return field;
-  }
-
-  function showWriting(parent) {
-    const {writing} = state.test;
-    const pinyin = part('第61–65题 · 拼音补字', '根据拼音，填入一个汉字。');
-    const hanzi = writing.examples.pinyinCharacter;
-    pinyin.append(example(hanzi.prompt.replace('（　）', '（' + hanzi.pinyin + '）'), hanzi.answer));
-    writing.items.slice(0, 5).forEach(q => pinyin.append(writingQuestion(q, true)));
-    const sentence = part('第66–70题 · 看图造句', '用指定的词写一个完整的句子，由教师批改。');
-    const demo = writing.examples.pictureSentence;
-    const sample = example(demo.word, demo.answer);
-    sample.prepend(photo(demo.image, '书写例题图片'));
-    sentence.append(sample);
-    writing.items.slice(5).forEach(q => sentence.append(writingQuestion(q, false)));
-    parent.append(pinyin, sentence);
   }
 
   function stopAudio(except) {
@@ -258,14 +141,9 @@
   }
 
   function renderPractice() {
-    const panels = [];
+    const panels = window.SpecialQuestions.render(state.test, state.draft.answers, {teacherAudio: classroomMode, onPlay: stopAudio});
     const buttons = [];
-    const renderers = [showListening, showReading, showWriting];
-    Object.keys(skills).forEach((key, index) => {
-      const section = node('div');
-      section.dataset.panel = key;
-      panels.push(section);
-      renderers[index](section);
+    Object.keys(skills).forEach(key => {
       const button = node('button', skills[key]);
       button.type = 'button';
       button.dataset.skill = key;
@@ -288,6 +166,10 @@
     }
     updateProgress();
     el('practice-title').focus();
+    if (classroomMode) {
+      saveDraft();
+      publishProgress();
+    }
   }
 
   function lockAnswers() {
@@ -301,6 +183,9 @@
     stopAudio();
     el('sections').replaceChildren();
     state.test = null;
+    state.draft = null;
+    alignSet();
+    checkEntry();
     el('entry').hidden = false;
     el('practice').hidden = true;
     el('receipt').hidden = true;
@@ -319,6 +204,7 @@
       '/30，阅读 ' + scores.reading + '/30，补字 ' + scores.writing + '/5。看图造句由教师批改。';
     if (!persistenceError) W.notice();
     el('receipt-title').focus();
+    if (classroomMode) publishProgress();
   }
 
   function sheetText(text) {
@@ -349,6 +235,7 @@
       lesson: state.test.id, testId: state.test.id, ...state.scope, attemptId, sessionId: attemptId};
     const identity = {classId: state.scope.classId, studentId: state.scope.studentId};
     const summary = {answers, scores, wrong, answered: Object.keys(answers).length, identity};
+    if (practiceRun) summary.runId = practiceRun;
     const score = Object.values(scores).reduce((sum, points) => sum + points, 0);
     const rows = [{...common, module: 'mock_test', questionId: state.test.id, score, total: 65,
       points: score, result: manual.some(item => item.value) ? 'pending_review' : 'submitted',
@@ -385,10 +272,13 @@
 
   el('entry').addEventListener('submit', async event => {
     event.preventDefault();
-    if (state.busy) return;
+    if (state.busy || !mayEnterRoom()) return;
     state.student = state.roster.find(item => item.id === el('student').value);
     const set = state.catalog.find(item => item.id === el('set').value);
     if (!state.student || !set) return;
+    practiceRun = classroomMode ? control.runId : '';
+    state.test = null;
+    state.draft = null;
     state.busy = true;
     checkEntry();
     W.notice();
@@ -404,24 +294,28 @@
     } finally {
       state.busy = false;
       checkEntry();
+      submitIfClosed();
     }
   });
 
   el('answers').addEventListener('input', event => {
     const {name, value} = event.target;
-    if (!name || state.draft.bundle) return;
+    if (!name || state.draft.bundle || !isLiveOpen()) return;
     if (value) state.draft.answers[name] = value;
     else delete state.draft.answers[name];
     saveDraft();
     updateProgress();
+    if (classroomMode) {
+      clearTimeout(progressTimer);
+      progressTimer = setTimeout(publishProgress, 500);
+    }
   });
 
-  el('answers').addEventListener('submit', async event => {
-    event.preventDefault();
+  async function submitAttempt(automatically) {
     if (state.busy || state.draft.sent) return;
     if (!state.draft.bundle) {
       const done = questionList().filter(answered).length;
-      if (!window.confirm(done < 70 ? '还有 ' + (70 - done) + ' 道题未答。确定提交吗？' : '确定提交这份练习吗？')) return;
+      if (!automatically && !window.confirm(done < 70 ? '还有 ' + (70 - done) + ' 道题未答。确定提交吗？' : '确定提交这份练习吗？')) return;
       bundleAnswers();
       lockAnswers();
     }
@@ -443,6 +337,11 @@
       el('switch').disabled = false;
       checkEntry();
     }
+  }
+
+  el('answers').addEventListener('submit', event => {
+    event.preventDefault();
+    submitAttempt(false);
   });
 
   el('class').addEventListener('change', changeClass);
@@ -452,9 +351,44 @@
   el('home-link').href = '../../student/index.html?' + window.ClassProContext.buildQuery({lesson: W.lesson});
   W.choose(el('class'), W.classes.map(item => ({id: item.id, label: item.name})), W.initialClass?.id);
   if (W.initialClass) changeClass();
+  if (classroomMode && W.initialClass) {
+    el('class').disabled = true;
+    el('set').disabled = true;
+    el('switch').hidden = true;
+    updateRoomLabel();
+    const roomHandlers = {
+      onStatus(value) {
+        classroomReady = value;
+        updateRoomLabel();
+        checkEntry();
+        if (value) publishProgress();
+      },
+      onControl(message) {
+        if (control && message.changedAt < control.changedAt) return;
+        control = message;
+        alignSet();
+        updateRoomLabel();
+        checkEntry();
+        submitIfClosed();
+      },
+    };
+    window.SpecialRoom.studentAuth(W.params.get('invite')).then(auth => {
+      classroom = window.SpecialRoom.connect(W.scopeFor(W.initialClass.id), {...roomHandlers, auth});
+    }).catch(() => {
+      el('classroom-state').textContent = '此课堂链接无效。请打开教师发出的本场作答链接。';
+    });
+    const heartbeat = setInterval(publishProgress, 12000);
+    window.addEventListener('pagehide', event => {
+      if (event.persisted) return;
+      clearInterval(heartbeat);
+      clearTimeout(progressTimer);
+      classroom?.close();
+    });
+  }
   W.json(W.asset('catalog.json')).then(data => {
     state.catalog = data.sets;
     W.choose(el('set'), data.sets.map(set => ({id: set.id, label: set.title})), W.params.get('set'));
+    alignSet();
     checkEntry();
   }).catch(() => W.notice('练习列表加载失败，请刷新重试。', true));
 })();

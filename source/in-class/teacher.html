@@ -2982,10 +2982,12 @@ body.classpro-hide-pinyin .l03-match-py{display:none!important}
   ap.stopMockAudio=function(){if(ap.mockAudio)ap.mockAudio.pause();var el=document.querySelector('#mockAudioPlayer');if(el)el.pause();if(window.speechSynthesis)window.speechSynthesis.cancel()};
   ap._mockPanel=function(){
     ingestLocalMockSecurity();
-    var test=ap.mockLoaded,rows=mockSubmissions(),h='<div class="panel" style="max-width:1080px;width:100%;text-align:left"><h2 style="margin-top:0;color:var(--blue)">测 / HSK Mock Test</h2>';
+    var test=ap.mockLoaded,rows=mockSubmissions(),h='<div class="panel" style="max-width:1080px;width:100%;text-align:left"><h2 style="margin-top:0;color:var(--blue)">测 / HSK 测试</h2>';
     if (/^HSK3/i.test(MT.lessonKey||URL_LESSON||'')) {
-      var specialUrl='../mock-test/special/results.html?'+ClassProContext.buildQuery({lesson:'HSK3-L01',room:RM,student:'',studentId:''});
-      h+='<p><a class="tab" href="'+es(specialUrl)+'">专项练习 · 第一周 / 查看作答记录</a></p>';
+      var specialQuery=ClassProContext.buildQuery({lesson:MT.lessonKey||URL_LESSON||'HSK3-L01',room:RM,student:'',studentId:''});
+      h+='<nav aria-label="测试类型" style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 16px"><span class="tab active" aria-current="page">HSK 模拟测</span>'+
+        '<a class="next-btn" style="margin:0;text-decoration:none" href="../mock-test/special/preview.html?'+es(specialQuery)+'" target="_blank" rel="noopener">HSK三级专项练习 · 预览试题</a>'+
+        '<a href="../mock-test/special/results.html?'+es(specialQuery)+'" target="_blank" rel="noopener">作答记录</a></nav>';
     }
     var mockOptionData=[['HSK1-mock-01','HSK1-mock-01（1-10课）'],['HSK1-mock-02','HSK1-mock-02（1-12课）'],['HSK1-mock-03','HSK1-mock-03（1-15课）'],['HSK1-mock-04','HSK1-mock-04（1-13课）'],['HSK3-mock1','HSK3-mock1（1-7课·阅读与书写）']];
     var mockOptions=mockOptionData.map(function(x){return'<option value="'+x[0]+'" '+(ap.mockTestId===x[0]?'selected':'')+'>'+x[1]+'</option>'}).join('');
