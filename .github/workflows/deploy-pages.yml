@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -31,6 +32,22 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+
+      - name: Wait for the Pages artifact to be indexed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          artifact_url="repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=github-pages"
+          for attempt in {1..12}; do
+            count=$(gh api "$artifact_url" --jq '.total_count') || count=0
+            if [ "$count" -gt 0 ]; then
+              echo "The github-pages artifact is ready."
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::The uploaded github-pages artifact did not appear in the artifact API."
+          exit 1
 
       - name: Deploy to GitHub Pages
         id: deployment
