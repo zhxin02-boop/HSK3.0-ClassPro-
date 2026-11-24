@@ -6,7 +6,7 @@
   const state = {sets: [], results: [], request: 0, opened: new Set(), saving: false};
   const time = new Intl.DateTimeFormat('zh-CN', {dateStyle: 'short', timeStyle: 'short'});
   const columns = {
-    student: [1, '姓名'], lesson: [2, '课程'], module: [4, '模块'],
+    time: [0, '提交时间'], student: [1, '姓名'], lesson: [2, '课程'], module: [4, '模块'],
     question: [5, '题号'], score: [6, '得分'], total: [7, '总分'],
     answer: [13, '学生作答'], status: [16, '批改状态'], attempt: [17, '课堂session'],
     submitted: [19, '原始提交时间'], classId: [22, '班级ID'], studentId: [23, '学生ID']
@@ -25,11 +25,22 @@
     const {teacherId} = W.scopeFor(classId);
     const payload = await W.getRecords('get_data', {lesson, classId, teacherId});
     if (payload.status !== 'ok' || !Array.isArray(payload.data)) throw new Error('Invalid record response');
-    return payload.data.filter(row => value(row, 'lesson') === lesson &&
-      value(row, 'classId') === classId && value(row, 'attempt'));
+    return payload.data.filter(row => {
+      const recordedClass = value(row, 'classId');
+      return value(row, 'lesson') === lesson && value(row, 'attempt') &&
+        (!recordedClass || recordedClass === classId);
+    });
   }
 
-  function collect(rows, questions, roster) {
+  function legacyIdentity(name, classId, roster) {
+    const student = roster.find(item => item.name === name);
+    if (!student) return null;
+    const elsewhere = W.classes.some(item => item.id !== classId &&
+      window.ClassProClassCatalog.roster(item.id, W.lesson).some(row => row.name === name));
+    return elsewhere ? null : {classId, studentId: student.id};
+  }
+
+  function collect(rows, questions, roster, classId) {
     const details = new Map();
     const latest = new Map();
     for (const row of rows) {
@@ -38,16 +49,23 @@
         if (!details.has(attempt)) details.set(attempt, new Map());
         details.get(attempt).set(value(row, 'question'), row);
       } else if (value(row, 'module') === 'mock_test') {
-        const student = value(row, 'studentId') || value(row, 'student');
-        const previous = latest.get(student);
-        if (!previous || Date.parse(value(row, 'submitted')) > Date.parse(value(previous, 'submitted'))) latest.set(student, row);
+        let summary;
+        try { summary = JSON.parse(value(row, 'answer')); } catch (_) { continue; }
+        if (!summary?.scores || !summary.answers || !Array.isArray(summary.wrong)) continue;
+        const identity = value(row, 'classId')
+          ? {classId: value(row, 'classId'), studentId: value(row, 'studentId') || summary.identity?.studentId}
+          : summary.identity || legacyIdentity(value(row, 'student'), classId, roster);
+        if (identity?.classId !== classId) continue;
+        const studentId = identity.studentId || '';
+        const key = studentId || value(row, 'student');
+        const previous = latest.get(key);
+        if (!previous || Date.parse(value(row, 'submitted')) > Date.parse(value(previous.row, 'submitted'))) {
+          latest.set(key, {row, summary, studentId});
+        }
       }
     }
     const results = [];
-    for (const row of latest.values()) {
-      let summary;
-      try { summary = JSON.parse(value(row, 'answer')); } catch (_) { continue; }
-      if (!summary?.scores || !summary.answers || !Array.isArray(summary.wrong)) continue;
+    for (const {row, summary, studentId} of latest.values()) {
       const attempt = value(row, 'attempt');
       const manual = questions.filter(q => q.type === 'pictureSentence').map(q => {
         const record = details.get(attempt)?.get(q.id);
@@ -56,8 +74,9 @@
         return {q, record, value: response, points: graded ? Number(value(record, 'score')) : 0,
           pending: Boolean(response && !graded)};
       });
-      const who = roster.find(student => student.id === value(row, 'studentId'));
-      results.push({name: value(row, 'student'), when: value(row, 'submitted'), attempt, row, summary, manual, test: who?.testAccount === true});
+      const who = roster.find(student => student.id === studentId);
+      results.push({name: value(row, 'student'), studentId, when: value(row, 'submitted'), attempt,
+        summary, manual, test: who?.testAccount === true});
     }
     return results.sort((a, b) => Date.parse(b.when) - Date.parse(a.when));
   }
@@ -81,8 +100,8 @@
     if (!record || ![0, 1, 2].includes(score) || state.saving) return;
     const {teacherId} = W.scopeFor(classId);
     const payload = {action: 'save_score', lesson: set.id, classId, teacherId,
-      studentName: result.name, studentId: value(record, 'studentId'),
-      originalSubmittedAt: value(record, 'submitted'), questionId: item.q.id,
+      studentName: result.name, studentId: result.studentId,
+      timestamp: value(record, 'time'), originalSubmittedAt: value(record, 'submitted'), questionId: item.q.id,
       module: 'subjective', score, total: 2, result: score === 2 ? 'correct' : 'wrong'};
     state.saving = true;
     button.disabled = true;
@@ -94,7 +113,7 @@
       try {
         await fetch(window.ClassProShared.GAS_URL, {method: 'POST', mode: 'no-cors',
           headers: {'Content-Type': 'text/plain;charset=utf-8'}, body: JSON.stringify(payload),
-          signal: AbortSignal.timeout(18000)});
+          signal: W.timeout(18000)});
       } catch (_) {}
       const rows = await readRows(set.id, classId);
       const saved = rows.find(row => value(row, 'attempt') === result.attempt &&
@@ -193,7 +212,7 @@
       ]);
       if (request !== state.request) return;
       const questions = [bank.listening, bank.reading, bank.writing].flatMap(section => section.items);
-      state.results = collect(rows, questions, roster);
+      state.results = collect(rows, questions, roster, classId);
       const count = state.results.filter(row => !row.test).length;
       const test = state.results.length - count;
       const cards = state.results.map(result => displayResult(result, questions));

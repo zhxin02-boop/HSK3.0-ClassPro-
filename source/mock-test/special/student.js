@@ -347,7 +347,8 @@
     const attemptId = state.test.id + '-' + (crypto.randomUUID ? crypto.randomUUID() : Date.now() + '-' + Math.random().toString(36).slice(2));
     const common = {action: 'mock_test_submit', recordType: 'mock_test', stage: 'mock_test',
       lesson: state.test.id, testId: state.test.id, ...state.scope, attemptId, sessionId: attemptId};
-    const summary = {answers, scores, wrong, answered: Object.keys(answers).length};
+    const identity = {classId: state.scope.classId, studentId: state.scope.studentId};
+    const summary = {answers, scores, wrong, answered: Object.keys(answers).length, identity};
     const score = Object.values(scores).reduce((sum, points) => sum + points, 0);
     const rows = [{...common, module: 'mock_test', questionId: state.test.id, score, total: 65,
       points: score, result: manual.some(item => item.value) ? 'pending_review' : 'submitted',
@@ -372,7 +373,7 @@
       try {
         await fetch(window.ClassProShared.GAS_URL, {method: 'POST', mode: 'no-cors',
           headers: {'Content-Type': 'text/plain;charset=utf-8'}, body: JSON.stringify(bundle),
-          signal: AbortSignal.timeout(18000)});
+          signal: W.timeout(18000)});
       } catch (_) {}
       try {
         const receipt = await W.getRecords('get_mock_attempt', query);

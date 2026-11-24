@@ -35,6 +35,11 @@
   }
 
   function asset(path) { return new URL(path, data).href; }
+  function timeout(ms) {
+    return typeof AbortSignal !== 'undefined' && typeof AbortSignal.timeout === 'function'
+      ? AbortSignal.timeout(ms)
+      : undefined;
+  }
 
   async function json(url, options) {
     const response = await fetch(url, options);
@@ -46,7 +51,7 @@
     try {
       if (!/(^|\.)github\.io$/i.test(location.hostname) && params.get('direct') !== '1') {
         const query = new URLSearchParams({classId, lesson});
-        const payload = await json('/api/class-roster?' + query, {cache: 'no-store', signal: AbortSignal.timeout(4000)});
+        const payload = await json('/api/class-roster?' + query, {cache: 'no-store', signal: timeout(4000)});
         if (Array.isArray(payload.students) && payload.students.length) return payload.students;
       }
     } catch (_) {}
@@ -86,7 +91,7 @@
   async function getRecords(action, query) {
     const url = getRecordUrl(action, query);
     try {
-      return await json(url, {cache: 'no-store', signal: AbortSignal.timeout(12000)});
+      return await json(url, {cache: 'no-store', signal: timeout(12000)});
     } catch (_) {
       return jsonp(url);
     }
@@ -101,5 +106,5 @@
   }
 
   window.SpecialWeek = {lesson, params, context, classes, initialClass, el, node, choose, notice, asset, json,
-    setRoster, scopeFor, getRecords, setStudentLink};
+    setRoster, scopeFor, getRecords, setStudentLink, timeout};
 })();
