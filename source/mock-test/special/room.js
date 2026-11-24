@@ -42,8 +42,19 @@
   function decode(text) {
     return Uint8Array.from(atob(text.replaceAll('-', '+').replaceAll('_', '/')), char => char.charCodeAt(0));
   }
+  const sections = ['listening', 'reading', 'writing'];
   function body(payload) {
-    return encoder.encode(JSON.stringify([payload.classId, String(payload.room), payload.set, payload.runId, payload.phase, payload.changedAt]));
+    const values = [payload.classId, String(payload.room), payload.set, payload.runId, payload.phase, payload.changedAt];
+    if (Array.isArray(payload.closedSections)) values.push(payload.activeSection, payload.closedSections);
+    return encoder.encode(JSON.stringify(values));
+  }
+
+  function validPhase(payload) {
+    if (!Array.isArray(payload.closedSections)) return payload.closedSections === undefined && payload.activeSection === undefined;
+    const closed = payload.closedSections;
+    const active = payload.activeSection;
+    return closed.every((key, index) => key === sections[index]) &&
+      (active === null || (payload.phase === 'open' && active === sections[closed.length]));
   }
 
   async function studentAuth(token) {
@@ -115,7 +126,7 @@
         if (!payload || payload.classId !== context.classId || String(payload.room) !== String(context.room)) return;
         if (topic === control) {
           if (/^HSK3-W1-SP0[1-5]$/.test(payload.set) && payload.runId &&
-              ['open', 'closed'].includes(payload.phase) && Number.isFinite(payload.changedAt)) {
+              ['open', 'closed'].includes(payload.phase) && Number.isFinite(payload.changedAt) && validPhase(payload)) {
             auth.verify(payload).then(valid => { if (valid && !stopped) onControl(payload); }).catch(() => {});
           }
         } else if (topic === progress && onProgress && payload.studentId && payload.runId) {
