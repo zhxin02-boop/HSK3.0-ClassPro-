@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HSK三级专项练习 · ClassPro</title>
+<link rel="stylesheet" href="special.css">
+<script defer src="../../shared/class-config.js"></script>
+<script defer src="../../shared/context.js"></script>
+<script defer src="../../shared/api.js"></script>
+<script defer src="common.js"></script>
+<script defer src="student.js"></script>
+</head>
+<body>
+<header class="site-header"><div class="shell"><a id="home-link" href="../../student/index.html">Chinese ClassPro</a><span>专项练习</span></div></header>
+<main class="shell">
+  <section class="intro">
+    <h1>HSK三级 · 第一周</h1>
+    <p>复习第1–6课。每次课70题，含听力、阅读和书写。</p>
+  </section>
+  <form id="entry" class="panel">
+    <div class="identity">
+      <label>班级<select id="class" required></select></label>
+      <label>姓名<select id="student" required></select></label>
+      <label>练习<select id="set" required></select></label>
+    </div>
+    <button id="start" type="submit" disabled>开始答题</button>
+  </form>
+  <p id="notice" class="notice" role="status" hidden></p>
+  <section id="practice" hidden aria-labelledby="practice-title">
+    <div class="practice-heading">
+      <div><h2 id="practice-title" tabindex="-1"></h2><p id="student-label"></p></div>
+      <button id="switch" class="secondary" type="button">切换练习</button>
+    </div>
+    <nav id="skills" class="skills" aria-label="切换题型"></nav>
+    <form id="answers">
+      <div id="sections"></div>
+      <footer class="submit-bar"><span id="progress" aria-live="polite"></span><button id="submit" type="submit">提交练习</button></footer>
+    </form>
+  </section>
+  <section id="receipt" class="panel receipt" hidden aria-labelledby="receipt-title">
+    <h2 id="receipt-title" tabindex="-1">提交成功</h2>
+    <p id="receipt-body"></p>
+    <button id="done" class="secondary" type="button">返回练习列表</button>
+  </section>
+</main>
+</body>
+</html>

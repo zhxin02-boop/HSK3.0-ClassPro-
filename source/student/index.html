@@ -28,7 +28,7 @@
       <div class="cp-eyebrow">Learning journey</div>
       <h1>HSK学习成长路径</h1>
       <p>完成每一课的学习任务，让学习进度从“点亮”走向“发芽”。</p>
-      <div class="hero-meta"><span id="currentLessonBadge">当前课程</span><span id="roomBadge">房间 8888</span></div>
+      <div class="hero-meta"><span id="currentLessonBadge">当前课程</span><span id="roomBadge">房间 8888</span><a id="specialTestLink" class="cp-action" href="../mock-test/special/index.html" hidden>HSK三级专项练习</a></div>
     </section>
 
     <section class="journey-toolbar cp-panel">
@@ -212,6 +212,9 @@
       document.getElementById('roomBadge').textContent = '房间 ' + context.room;
       document.getElementById('currentReportLink').href = lessonUrl('../post-class/student-report.html', currentLesson.id, '');
       document.getElementById('historyReportLink').href = lessonUrl('history.html', currentLesson.id, '');
+      var special = document.getElementById('specialTestLink');
+      special.hidden = selectedLevel !== 'HSK3';
+      special.href = lessonUrl('../mock-test/special/index.html', 'HSK3-L01', '');
       renderLevels();
       renderMap();
     }

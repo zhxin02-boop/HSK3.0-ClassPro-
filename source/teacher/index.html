@@ -50,6 +50,7 @@
           <a class="cp-action" id="studentLink" data-workspace href="#">◉ 打开学生入口</a>
           <a class="cp-action" id="dashboardLink" data-workspace href="#">▦ 查看数据</a>
           <a class="cp-action" id="reviewLink" data-workspace href="#">✎ 进入批改</a>
+          <a class="cp-action" id="specialResultsLink" data-workspace href="#" hidden>HSK三级专项练习记录</a>
         </nav>
         <p class="inspector-note">课程、房间及课次参数会统一传递到各工作区。内容准备中的课程暂不能进入。</p>
       </aside>
@@ -170,7 +171,8 @@
         legacyClassroomLink: '../in-class/teacher.html',
         studentLink: directMode ? '../student/entry.html' : '/api/teacher/student-join',
         dashboardLink: '../teacher-dashboard/unified.html',
-        reviewLink: '../teacher-dashboard/post-review.html'
+        reviewLink: '../teacher-dashboard/post-review.html',
+        specialResultsLink: '../mock-test/special/results.html'
       };
       Object.keys(links).forEach(function (id) {
         var anchor = byId(id);
@@ -182,6 +184,7 @@
         anchor.setAttribute('aria-disabled', ready ? 'false' : 'true');
       });
       byId('legacyClassroomLink').hidden = !useProfile;
+      byId('specialResultsLink').hidden = selectedLevel !== 'HSK3';
     }
 
     function commitContext() {
