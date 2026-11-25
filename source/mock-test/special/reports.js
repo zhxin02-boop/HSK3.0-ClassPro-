@@ -36,7 +36,7 @@
     }, {...part, correct: 0, wrong: 0, pending: 0}));
     const ranking = questions.filter(q => q.wrong).sort((a,b) =>
       b.wrong - a.wrong || b.wrong/(b.wrong+b.correct) - a.wrong/(a.wrong+a.correct) || a.number - b.number);
-    return {breakdown, ranking};
+    return {breakdown, ranking, questions};
   }
 
   function percentage(count, total) {
@@ -58,7 +58,12 @@
     const body = node('tbody');
     rows.forEach(values => {
       const row = node('tr');
-      values.forEach(value => row.append(node('td', value)));
+      values.forEach(value => {
+        const cell = node('td');
+        if (value instanceof Node) cell.append(value);
+        else cell.textContent = value;
+        row.append(cell);
+      });
       body.append(row);
     });
     element.append(headings, body);
@@ -73,9 +78,9 @@
     }));
   }
 
-  function ranking(rows) {
+  function ranking(rows, questionLink = number => number) {
     return table(['排名', '题号', '答错人数', '错误率'], rows.map((item,i) => [
-      i + 1, item.number, item.wrong, percentage(item.wrong,item.wrong+item.correct)
+      i + 1, questionLink(item.number), item.wrong, percentage(item.wrong,item.wrong+item.correct)
     ]));
   }
 

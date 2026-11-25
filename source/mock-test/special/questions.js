@@ -44,6 +44,7 @@
 
     function choices(question, options, lettersOnly) {
       const field = node('fieldset', null, 'question');
+      field.dataset.question = question.number;
       field.append(node('legend', '第' + question.number + '题'));
       if (question.passage) field.append(node('p', question.passage, 'passage'));
       const prompt = question.question || question.prompt;
@@ -147,6 +148,7 @@
 
     function writingQuestion(q, isPinyin) {
       const field = node('fieldset', null, 'question');
+      field.dataset.question = q.number;
       field.append(node('legend', '第' + q.number + '题'));
       const input = node(isPinyin ? 'input' : 'textarea');
       input.name = q.id;

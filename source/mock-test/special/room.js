@@ -46,14 +46,18 @@
   function body(payload) {
     const values = [payload.classId, String(payload.room), payload.set, payload.runId, payload.phase, payload.changedAt];
     if (Array.isArray(payload.closedSections)) values.push(payload.activeSection, payload.closedSections);
+    if (Array.isArray(payload.reviewSections)) values.push(payload.reviewSections);
     return encoder.encode(JSON.stringify(values));
   }
 
   function validPhase(payload) {
-    if (!Array.isArray(payload.closedSections)) return payload.closedSections === undefined && payload.activeSection === undefined;
+    if (!Array.isArray(payload.closedSections)) return payload.closedSections === undefined && payload.activeSection === undefined && payload.reviewSections === undefined;
     const closed = payload.closedSections;
     const active = payload.activeSection;
-    return closed.every((key, index) => key === sections[index]) &&
+    const review = payload.reviewSections;
+    return closed.length <= sections.length && closed.every((key, index) => key === sections[index]) &&
+      (review === undefined || (Array.isArray(review) && review.length <= closed.length &&
+        review.every((key, index) => key === closed[index]))) &&
       (active === null || (payload.phase === 'open' && active === sections[closed.length]));
   }
 

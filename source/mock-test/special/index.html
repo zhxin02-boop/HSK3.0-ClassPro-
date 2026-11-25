@@ -4,15 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>HSK三级专项练习 · ClassPro</title>
-<link rel="stylesheet" href="special.css">
+<link rel="stylesheet" href="special.css?v=5">
 <script defer src="../../shared/class-config.js"></script>
 <script defer src="../../shared/context.js"></script>
 <script defer src="../../shared/api.js"></script>
 <script defer src="../../shared/classroom-channel.js?v=special-1"></script>
 <script defer src="common.js?v=2"></script>
-<script defer src="room.js?v=3"></script>
+<script defer src="room.js?v=4"></script>
 <script defer src="questions.js?v=2"></script>
-<script defer src="student.js?v=7"></script>
+<script defer src="records.js?v=1"></script>
+<script defer src="learning.js?v=1"></script>
+<script defer src="student-review.js?v=1"></script>
+<script defer src="student.js?v=8"></script>
 </head>
 <body>
 <header class="site-header"><div class="shell"><a id="home-link" href="../../student/index.html">Chinese ClassPro</a><span>专项练习</span></div></header>
@@ -28,15 +31,25 @@
       <label>姓名<select id="student" required></select></label>
       <label>练习<select id="set" required></select></label>
     </div>
-    <button id="start" type="submit" disabled>开始答题</button>
+    <div class="actions">
+      <button id="start" type="submit" disabled>开始答题</button>
+      <button id="entry-report" class="secondary" type="button" disabled>我的学习报告 / My Learning Report</button>
+    </div>
   </form>
   <p id="notice" class="notice" role="status" hidden></p>
   <section id="practice" hidden aria-labelledby="practice-title">
     <div class="practice-heading">
       <div><h2 id="practice-title" tabindex="-1"></h2><p id="student-label"></p></div>
-      <button id="switch" class="secondary" type="button">切换练习</button>
+      <div class="actions">
+        <button id="practice-report" class="secondary" type="button">我的学习报告 / My Learning Report</button>
+        <button id="switch" class="secondary" type="button">切换练习</button>
+      </div>
     </div>
     <nav id="skills" class="skills" aria-label="切换题型"></nav>
+    <div class="section-feedback actions">
+      <button id="section-review" type="button" hidden>得分与错题</button>
+      <p id="section-review-status" class="help" role="status" hidden></p>
+    </div>
     <form id="answers">
       <p id="waiting-section" class="notice" role="status" hidden></p>
       <div id="sections"></div>
@@ -46,7 +59,12 @@
   <section id="receipt" class="panel receipt" hidden aria-labelledby="receipt-title">
     <h2 id="receipt-title" tabindex="-1">三部分均已提交</h2>
     <p id="receipt-body"></p>
-    <button id="done" class="secondary" type="button">返回练习列表</button>
+    <div class="actions">
+      <button id="receipt-review" type="button" hidden>各部分得分与错题</button>
+      <button id="receipt-report" class="secondary" type="button">我的学习报告 / My Learning Report</button>
+      <button id="retry" class="secondary" type="button" hidden>再练一次</button>
+      <button id="done" class="secondary" type="button">返回练习列表</button>
+    </div>
   </section>
 </main>
 </body>

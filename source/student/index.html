@@ -52,6 +52,7 @@
     <nav class="student-shortcuts cp-panel" aria-label="学习记录">
       <a id="currentReportLink" href="../post-class/student-report.html">本课学习报告</a>
       <a id="historyReportLink" href="history.html">历史趋势与阶段报告</a>
+      <a id="specialReportLink" href="../mock-test/special/index.html?report=1" hidden>专项学习报告 / Learning Report</a>
     </nav>
   </main>
 
@@ -215,6 +216,11 @@
       var special = document.getElementById('specialTestLink');
       special.hidden = selectedLevel !== 'HSK3';
       special.href = lessonUrl('../mock-test/special/index.html', 'HSK3-L01', '');
+      var specialReport = document.getElementById('specialReportLink');
+      specialReport.hidden = special.hidden;
+      var reportUrl = new URL(special.href);
+      reportUrl.searchParams.set('report', '1');
+      specialReport.href = reportUrl.href;
       renderLevels();
       renderMap();
     }
