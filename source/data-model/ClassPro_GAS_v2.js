@@ -289,7 +289,24 @@ function getMockAttempt_(ss, params) {
   for (var i = 1; i < rows.length; i++) if (String(rows[i][1] || "") === student && String(rows[i][17] || "") === attemptId) found.push(rows[i]);
   var main = found.filter(function (row) { return String(row[4] || "") === "mock_test"; }).length;
   var manual = found.filter(function (row) { return String(row[4] || "") === "subjective"; }).length;
-  return json_({ status: "ok", attemptId: attemptId, count: found.length, main: main, manual: manual, complete: main === 1 && manual === 5 });
+  var receipt = { status: "ok", attemptId: attemptId, count: found.length, main: main, manual: manual, complete: main === 1 && manual === 5 };
+  // Match the writing receipt and the student identity stored with its submission.
+  if (params.includeGrades === "1" && receipt.complete && /^HSK3-W[1-3]-SP0[1-5]$/.test(lesson) &&
+      new RegExp("^" + lesson + "-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-writing$", "i").test(attemptId)) {
+    var mainRow = found.find(function (row) { return String(row[4]) === "mock_test"; });
+    var submission;
+    try { submission = JSON.parse(mainRow[13]); } catch (_) {}
+    var identity = submission && submission.identity || {};
+    if (submission && submission.section === "writing" && submission.groupId + "-writing" === attemptId.slice(lesson.length + 1) &&
+        identity.classId && identity.classId === params.classId && identity.studentId && identity.studentId === params.studentId) {
+      receipt.grades = found.filter(function (row) {
+        return String(row[4]) === "subjective" && /已批改|已归档|reviewed/i.test(String(row[16] || ""));
+      }).map(function (row) {
+        return {questionId: String(row[5] || ""), score: Number(row[6]), feedback: String(row[15] || "")};
+      });
+    }
+  }
+  return json_(receipt);
 }
 
 function archiveMockResults_(ss, d) {

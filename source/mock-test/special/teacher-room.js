@@ -15,6 +15,12 @@
   const reports = new Map();
   const sectionLabels = {listening: '听力', reading: '阅读', writing: '书写'};
   const sections = Object.keys(sectionLabels);
+  const profiles = new Map();
+
+  function announceReviewScope() {
+    if (control?.set !== selectedSet()) return;
+    window.dispatchEvent(new CustomEvent('special-review-scope', {detail: control}));
+  }
 
   function selectedSet() { return el('set').value; }
 
@@ -30,6 +36,11 @@
     el('end-section').textContent = active ? '结束' + sectionLabels[active] : '结束当前部分';
     el('end-section').disabled = !connected || busy || !active;
     el('close-room').disabled = !connected || busy || !open;
+    const closed = control?.closedSections || (control?.phase === 'closed' ? sections : []);
+    const released = control?.reviewSections || closed;
+    el('release-review').disabled = !connected || busy || control?.set !== set || closed.length === released.length;
+    el('release-review').textContent = closed.length > released.length ?
+      '开放' + sectionLabels[closed[released.length]] + '讲评' : '开放讲评';
     el('copy-room-link').disabled = !set || !auth;
     el('open-room-student').hidden = !set || !auth;
     if (set && auth) el('open-room-student').href = R.controlledLink(set, scope.classId, scope.room, auth.token);
@@ -72,6 +83,10 @@
         row.append(node('small', '听 ' + listening + '/30 · 读 ' + reading + '/30 · 写 ' + writing + '/10'));
       }
       if (progress?.sections.length) row.append(node('small', '已交：' + progress.sections.map(key => sectionLabels[key]).join('、')));
+      if (!profiles.has(student.id)) {
+        profiles.set(student.id, window.SpecialTeacherFeedback.profileButton(student, scope.classId));
+      }
+      row.append(profiles.get(student.id));
       list.append(row);
     });
     el('room-summary').textContent = '班级进度 · 已开始 ' + started + '/' + enrolled.length + ' · 已交齐 ' + submitted + ' · 部分提交 ' + partial;
@@ -128,6 +143,7 @@
     }
     refreshControls();
     refreshProgress();
+    announceReviewScope();
   }
 
   const handlers = {
@@ -167,7 +183,7 @@
     const now = Date.now();
     let next;
     if (action === 'open') {
-      if (!open) next = {set: selectedSet(), runId: R.id(), phase: 'open', activeSection: sections[0], closedSections: [], changedAt: now};
+      if (!open) next = {set: selectedSet(), runId: R.id(), phase: 'open', activeSection: sections[0], closedSections: [], reviewSections: [], changedAt: now};
       else if (guided && !active && sections[control.closedSections.length]) {
         next = {...control, activeSection: sections[control.closedSections.length], changedAt: now};
       }
@@ -175,6 +191,9 @@
       const closedSections = [...control.closedSections, active];
       next = {...control, activeSection: null, closedSections,
         phase: closedSections.length === 3 ? 'closed' : 'open', changedAt: now};
+    } else if (action === 'review' && guided && (control.reviewSections || control.closedSections).length < control.closedSections.length) {
+      const released = control.reviewSections || [];
+      next = {...control, reviewSections: control.closedSections.slice(0, released.length + 1), changedAt: now};
     } else if (action === 'close' && open) {
       if (!confirm('确认结束本场？正在作答的部分会收卷。')) return;
       next = {...control, phase: 'closed', changedAt: now};
@@ -189,10 +208,12 @@
     try {
       await room.control(next);
       accept(next);
-      if (!next.activeSection) document.querySelectorAll('#sections audio').forEach(audio => audio.pause());
-      el('room-message').textContent = next.phase === 'closed' ? '本场已收卷。收到回执后即可查看各部分成绩。' :
-        next.activeSection ? '已开放' + sectionLabels[next.activeSection] + '。' :
-        '当前部分已收卷，可以先讲评，准备好后再开放下一部分。';
+      if (action !== 'review' && !next.activeSection) document.querySelectorAll('#sections audio').forEach(audio => audio.pause());
+      el('room-message').textContent = action === 'review'
+        ? '已开放' + sectionLabels[next.reviewSections.at(-1)] + '讲评，学生可以查看得分和错题。'
+        : next.phase === 'closed' ? '本场已收卷。点击「开放讲评」将得分与错题发给学生。'
+        : next.activeSection ? '已开放' + sectionLabels[next.activeSection] + '。'
+        : '当前部分已收卷，可以查看建议讲解题目，或开放学生讲评。';
     } catch (_) {
       el('room-message').textContent = '课堂服务器尚未确认，请检查连接后重试。';
     } finally {
@@ -204,6 +225,7 @@
   el('open-room').addEventListener('click', () => update('open'));
   el('end-section').addEventListener('click', () => update('end'));
   el('close-room').addEventListener('click', () => update('close'));
+  el('release-review').addEventListener('click', () => update('review'));
   el('copy-room-link').addEventListener('click', async () => {
     const link = el('open-room-student').href;
     try {
@@ -219,6 +241,7 @@
       el('set').dispatchEvent(new Event('change'));
     }
     refreshControls();
+    announceReviewScope();
   });
   W.setRoster(scope.classId).then(value => { roster = value; refreshProgress(); });
   const liveness = setInterval(refreshProgress, 10000);

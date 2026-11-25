@@ -3,6 +3,7 @@
 
   const W = window.SpecialWeek;
   const {el, node} = W;
+  const Review = window.SpecialStudentReview;
   const skills = {listening: '听力', reading: '阅读', writing: '书写'};
   const state = {catalog: [], roster: [], test: null, student: null, draft: null, busy: false};
   let rosterRequest = 0;
@@ -15,6 +16,47 @@
   let practiceRun = '';
   const closeQueued = new Set();
   let guided = false;
+  let openReportOnEntry = W.params.get('report') === '1';
+
+  function released() {
+    return state.draft ? Review.releasedSections(state.draft, classroomMode) : [];
+  }
+
+  function syncReviewAccess() {
+    if (!classroomMode || !state.draft || control?.runId !== practiceRun) return;
+    const closed = control.reviewSections || control.closedSections ||
+      (control.phase === 'closed' ? Object.keys(skills) : []);
+    const available = [...new Set([...(state.draft.released || []), ...closed])];
+    if (available.length !== (state.draft.released?.length || 0)) {
+      state.draft.released = available;
+      saveDraft();
+    }
+  }
+
+  function openReview(skill) {
+    const draft = state.draft;
+    Review.showReview(state.test, draft, state.scope, skill, classroomMode, grades => {
+      if (state.draft !== draft || !draft.submissions.writing) return;
+      draft.submissions.writing.grades = grades;
+      saveDraft();
+    });
+  }
+
+  function selectedScope() {
+    const student = state.roster.find(item => item.id === el('student').value);
+    return student ? W.scopeFor(el('class').value, student) : null;
+  }
+
+  function openReport() {
+    const scope = el('entry').hidden ? state.scope : selectedScope();
+    if (scope) Review.showReport(scope, state.catalog);
+  }
+
+  function maybeOpenReport() {
+    if (!openReportOnEntry || !state.catalog.length || !selectedScope()) return;
+    openReportOnEntry = false;
+    openReport();
+  }
 
   function submittedSections() {
     return Object.keys(skills).filter(key => state.draft.sent || state.draft.submissions[key]?.sent);
@@ -111,6 +153,7 @@
   }
 
   function checkEntry() {
+    el('entry-report').disabled = !state.catalog.length || !el('student').value || state.busy;
     el('start').disabled = !state.catalog.length || !el('student').value || state.busy || !mayEnterRoom();
     el('start').textContent = state.busy ? '正在加载…' :
       classroomMode && control?.phase === 'closed' ? '查看提交状态' : '开始答题';
@@ -133,6 +176,7 @@
     }))], previous || remembered?.id || '');
     el('student').disabled = false;
     checkEntry();
+    maybeOpenReport();
   }
 
   function stopAudio(except) {
@@ -182,12 +226,20 @@
     const part = state.draft.submissions[key];
     const submitted = done.includes(key);
     const pending = Boolean(part?.bundle || state.draft.bundle);
-    const score = part?.summary?.scores[key];
-    const receipt = submitted && score != null ? ' · ' + score + '/' + (key === 'writing' ? 5 : items.length) +
-      (key === 'writing' ? ' 补字分，造句由教师批改' : '分') : '';
+    const score = part?.summary?.scores[key] ?? state.draft.summary?.scores?.[key];
+    const canReview = released().includes(key);
+    const receipt = canReview && score != null ? ' · ' + score + '/' + (key === 'writing' ? 5 : items.length) +
+      (key === 'writing' ? ' 补字分' : '分') : '';
     const available = sectionAvailable(key);
     el('progress').textContent = available ? skills[key] + ' ' + items.filter(answered).length + '/' + items.length +
       (submitted ? ' · 已提交' + receipt : pending ? ' · 待确认' : '') : '';
+    el('practice-report').disabled = state.busy;
+    el('section-review').hidden = !canReview;
+    el('section-review').textContent = skills[key] + '得分与错题';
+    el('receipt-review').hidden = !released().length;
+    const status = el('section-review-status');
+    status.hidden = !submitted || canReview;
+    status.textContent = '已提交，等待教师开放讲评。';
     el('submit').textContent = submitted ? skills[key] + '已提交' : pending ? '重试提交' + skills[key] : '提交' + skills[key];
     el('submit').hidden = !available;
     el('submit').disabled = submitted || state.busy;
@@ -245,11 +297,10 @@
     el('practice').hidden = true;
     el('entry').hidden = true;
     el('receipt').hidden = false;
-    const scores = state.draft.summary?.scores || Object.fromEntries(Object.keys(skills).map(key =>
-      [key, state.draft.submissions[key].summary.scores[key]]));
-    el('receipt-body').textContent = state.test.title + ' · ' + state.student.name +
-      '。自动计分 ' + (scores.listening + scores.reading + scores.writing) + '/65。听力 ' + scores.listening +
-      '/30，阅读 ' + scores.reading + '/30，补字 ' + scores.writing + '/5。看图造句由教师批改。';
+    el('receipt-body').textContent = state.test.title + ' · ' + state.student.name + '。' +
+      (released().length === 3 ? '可查看分段得分与错题。' : '教师开放讲评后即可查看本部分得分与错题。');
+    el('receipt-review').hidden = !released().length;
+    el('retry').hidden = classroomMode;
     if (!persistenceError) W.notice();
     el('receipt-title').focus();
     if (classroomMode) publishProgress();
@@ -295,7 +346,7 @@
         submittedAt: at, questionText: '看图造句（' + q.word + '）｜图片：' + W.asset(q.image) +
           '｜参考答案：' + q.reference + '｜评分标准：' + Object.entries(state.test.writingRubric).map(([s, text]) => s + '分 ' + text).join(' ')});
     });
-    state.draft.submissions[skill] = {summary, bundle: {...common, action: 'mock_test_submit_bundle', submittedAt, records: rows}};
+    state.draft.submissions[skill] = {summary, attemptId, submittedAt, bundle: {...common, action: 'mock_test_submit_bundle', submittedAt, records: rows}};
     saveDraft();
   }
 
@@ -337,6 +388,7 @@
       state.test = await W.json(W.asset(set.file));
       if (state.test.id !== set.id) throw new Error('Unexpected test data');
       state.draft = loadDraft();
+      syncReviewAccess();
       if (submittedSections().length === 3) showReceipt();
       else renderPractice();
     } catch (_) {
@@ -386,6 +438,7 @@
         try {
           await sendBundle(state.draft.bundle);
           state.draft.sent = true;
+          state.draft.submittedAt = state.draft.bundle.submittedAt;
           delete state.draft.bundle;
           saveDraft();
         } catch (_) {
@@ -424,7 +477,22 @@
   });
 
   el('class').addEventListener('change', changeClass);
-  el('student').addEventListener('change', checkEntry);
+  el('student').addEventListener('change', () => { checkEntry(); maybeOpenReport(); });
+  for (const id of ['entry-report', 'practice-report', 'receipt-report']) el(id).addEventListener('click', openReport);
+  el('section-review').addEventListener('click', () => openReview(state.draft.skill));
+  el('receipt-review').addEventListener('click', () => openReview());
+  el('retry').addEventListener('click', () => {
+    if (classroomMode || state.busy || submittedSections().length !== 3) return;
+    try {
+      localStorage.setItem(cacheKey() + ':past:' + state.draft.groupId, JSON.stringify(state.draft));
+      localStorage.removeItem(cacheKey());
+    } catch (_) {
+      W.notice('旧成绩还未保存，暂时无法开始重练。', true);
+      return;
+    }
+    state.draft = loadDraft();
+    renderPractice();
+  });
   el('switch').addEventListener('click', toEntry);
   el('done').addEventListener('click', toEntry);
   el('home-link').href = '../../student/index.html?' + window.ClassProContext.buildQuery({lesson: W.lesson});
@@ -446,6 +514,7 @@
         if (control && message.changedAt < control.changedAt) return;
         const previous = control;
         control = message;
+        syncReviewAccess();
         alignSet();
         updateRoomLabel();
         checkEntry();
@@ -455,6 +524,9 @@
             selectSkill(active);
             saveDraft();
           } else updateProgress();
+        } else if (state.test && state.draft && !el('receipt').hidden) {
+          el('receipt-review').hidden = !released().length;
+          if (released().length === 3) el('receipt-body').textContent = state.test.title + ' · ' + state.student.name + '。可查看分段得分与错题。';
         }
         submitIfClosed();
       },
@@ -477,5 +549,6 @@
     W.choose(el('set'), data.sets.map(set => ({id: set.id, label: set.title})), W.params.get('set'));
     alignSet();
     checkEntry();
+    maybeOpenReport();
   }).catch(() => W.notice('练习列表加载失败，请刷新重试。', true));
 })();
