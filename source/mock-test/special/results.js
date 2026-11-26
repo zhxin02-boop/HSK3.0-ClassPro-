@@ -161,6 +161,7 @@
     const scope = W.scopeFor(classId);
     const url = new URL(location.href);
     url.searchParams.set('classId', classId);
+    url.searchParams.set('week', String(W.week));
     url.searchParams.set('set', set.id);
     if (attemptRun) url.searchParams.set('attemptRun', attemptRun);
     else url.searchParams.delete('attemptRun');
@@ -231,7 +232,7 @@
   }
 
   W.choose(el('class'), W.classes.map(item => ({id: item.id, label: item.name})), W.initialClass?.id);
-  W.json(W.asset('catalog.json')).then(data => {
+  W.loadCatalog().then(data => {
     state.sets = data.sets;
     W.choose(el('set'), state.sets.map(set => ({id: set.id, label: set.title})), W.params.get('set'));
     el('share').disabled = false;

@@ -148,3 +148,6 @@ button.secondary, .button.secondary { background: #fff; color: #235b43; }
   .radar-labels li { padding: .35rem .1rem; }
   .dialog-heading h2 { font-size: 1.12rem; }
 }
+
+.week-navigation { margin-bottom: .8rem; }
+body:has(#practice:not([hidden]), #receipt:not([hidden])) #week-navigation { display: none; }

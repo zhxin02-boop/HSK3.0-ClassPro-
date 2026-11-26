@@ -49,7 +49,7 @@
 
   function openReport() {
     const scope = el('entry').hidden ? state.scope : selectedScope();
-    if (scope) Review.showReport(scope, state.catalog);
+    if (scope) Review.showReport(scope);
   }
 
   function maybeOpenReport() {
@@ -544,7 +544,7 @@
       classroom?.close();
     });
   }
-  W.json(W.asset('catalog.json')).then(data => {
+  W.loadCatalog().then(data => {
     state.catalog = data.sets;
     W.choose(el('set'), data.sets.map(set => ({id: set.id, label: set.title})), W.params.get('set'));
     alignSet();

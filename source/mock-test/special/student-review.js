@@ -100,18 +100,19 @@
     });
   }
 
-  function showReport(scope, catalog) {
+  function showReport(scope) {
     L.dialog(['我的学习报告', 'My Learning Report'], async () => {
       const available = drafts(scope.classId, scope.studentId);
+      const {sets, partial} = await W.loadCatalogs();
       const bySet = new Map();
       for (const record of available) {
-        const metadata = catalog.find(set => set.id === record.set);
+        const metadata = sets.find(set => set.id === record.set);
         if (!metadata) continue;
         if (!bySet.has(record.set)) bySet.set(record.set, {metadata, drafts: []});
         bySet.get(record.set).drafts.push(record);
       }
       const outcome = await Promise.allSettled(Array.from(bySet.values(), async entry => {
-        const bank = await W.json(W.asset(entry.metadata.file));
+        const bank = await W.json(W.asset(entry.metadata.file, entry.metadata.id));
         const media = await L.mediaFor(bank.id);
         const entries = [];
         for (const record of entry.drafts) {
@@ -123,7 +124,7 @@
       const history = outcome.flatMap(entry => entry.status === 'fulfilled' ? entry.value : [])
         .sort((a, b) => (Date.parse(b.result.when) || 0) - (Date.parse(a.result.when) || 0));
       return L.reportContents({name: scope.studentName}, history,
-        {partial: outcome.some(entry => entry.status === 'rejected'),
+        {partial: partial || outcome.some(entry => entry.status === 'rejected'),
         gradesPending: history.some(entry => entry.result.gradeSyncUnavailable)});
     });
   }

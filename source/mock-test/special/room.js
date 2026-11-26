@@ -100,7 +100,7 @@
 
   function connect(scope, {auth, teacher = false, onStatus, onControl, onProgress}) {
     const classroom = window.ClassProClassroom;
-    const context = {...scope, lesson: 'HSK3-SP-W1', run: 'special-' + auth.channel};
+    const context = {...scope, lesson: 'HSK3-SP-W' + W.week, run: 'special-' + auth.channel};
     const control = classroom.topic('control', context);
     const progress = classroom.topic('progress', context);
     let socket;
@@ -129,7 +129,7 @@
         try { payload = JSON.parse(bytes.toString()); } catch (_) { return; }
         if (!payload || payload.classId !== context.classId || String(payload.room) !== String(context.room)) return;
         if (topic === control) {
-          if (/^HSK3-W1-SP0[1-5]$/.test(payload.set) && payload.runId &&
+          if (W.weekForSet(payload.set) === W.week && payload.runId &&
               ['open', 'closed'].includes(payload.phase) && Number.isFinite(payload.changedAt) && validPhase(payload)) {
             auth.verify(payload).then(valid => { if (valid && !stopped) onControl(payload); }).catch(() => {});
           }

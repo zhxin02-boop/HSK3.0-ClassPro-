@@ -17,10 +17,10 @@
 
   function profile(person, classId) {
     L.dialog(['学习发展报告', 'Learning Progress Report'], async () => {
-      const [catalog, roster] = await Promise.all([W.json(W.asset('catalog.json')), W.setRoster(classId)]);
-      const sets = await Promise.allSettled(catalog.sets.map(async set => {
+      const [{sets: catalog, partial}, roster] = await Promise.all([W.loadCatalogs(), W.setRoster(classId)]);
+      const sets = await Promise.allSettled(catalog.map(async set => {
         const [bank, rows, media] = await Promise.all([
-          W.json(W.asset(set.file)), R.readRows(set.id, classId), L.mediaFor(set.id)
+          W.json(W.asset(set.file, set.id)), R.readRows(set.id, classId), L.mediaFor(set.id)
         ]);
         const attempts = R.collect(rows, R.questions(bank), roster, classId, {all: true})
           .filter(result => result.studentId === person.id);
@@ -28,7 +28,7 @@
       }));
       const history = sets.flatMap(entry => entry.status === 'fulfilled' ? entry.value : [])
         .sort((a, b) => (Date.parse(b.result.when) || 0) - (Date.parse(a.result.when) || 0));
-      return L.reportContents(person, history, {partial: sets.some(entry => entry.status === 'rejected')});
+      return L.reportContents(person, history, {partial: partial || sets.some(entry => entry.status === 'rejected')});
     });
   }
 

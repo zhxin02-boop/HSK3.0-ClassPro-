@@ -156,7 +156,7 @@
         if (!pictures[key]) continue;
         const figure = node('figure');
         const image = node('img');
-        image.src = W.asset(pictures[key].image);
+        image.src = W.asset(pictures[key].image, bank.id);
         image.alt = '图片 / Picture ' + key;
         image.loading = 'lazy';
         figure.append(image, node('figcaption', key));
@@ -168,7 +168,7 @@
     if (passage) box.append(node('p', passage, 'passage'));
     if (q.image) {
       const image = node('img', null, 'question-photo');
-      image.src = W.asset(q.image);
+      image.src = W.asset(q.image, bank.id);
       image.alt = '试题图片 / Question image';
       image.loading = 'lazy';
       box.append(image);
@@ -189,7 +189,7 @@
       const audioPlayer = node('audio');
       audioPlayer.controls = true;
       audioPlayer.preload = 'none';
-      audioPlayer.src = W.asset(cue.file) + '#t=' + timing.numberStart + ',' + timing.answerPauseStart;
+      audioPlayer.src = W.asset(cue.file, bank.id) + '#t=' + timing.numberStart + ',' + timing.answerPauseStart;
       audioPlayer.setAttribute('aria-label', '重听第' + q.number + '题 / Replay question ' + q.number);
       box.append(audioPlayer);
     }
@@ -316,13 +316,18 @@
     });
   }
 
-  let assets;
+  const assets = new Map();
   function mediaFor(set) {
-    if (!assets) {
-      assets = Promise.all(['teacher-audio.json', 'audio-cues.json'].map(file =>
-        W.json(W.asset(file)).catch(() => ({}))));
+    const week = W.weekForSet(set) || W.week;
+    if (!assets.has(week)) {
+      const pending = Promise.allSettled(['teacher-audio.json', 'audio-cues.json'].map(file => W.json(W.asset(file, week))))
+        .then(outcomes => {
+          if (outcomes.some(result => result.status === 'rejected')) assets.delete(week);
+          return outcomes.map(result => result.status === 'fulfilled' ? result.value : {});
+        });
+      assets.set(week, pending);
     }
-    return assets.then(([transcript, cues]) => ({transcript: transcript[set], cues: cues[set]}));
+    return assets.get(week).then(([transcript, cues]) => ({transcript: transcript[set], cues: cues[set]}));
   }
 
   window.SpecialLearning = {sections, bilingual, dialog, reportContents, questionEvidence, scoreLabel, mediaFor};
