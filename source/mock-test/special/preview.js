@@ -163,6 +163,7 @@
       current.searchParams.delete('attemptRun');
       current.hash = '';
     }
+    current.searchParams.set('week', String(W.week));
     current.searchParams.set('set', meta.id);
     if (classId) current.searchParams.set('classId', classId);
     history.replaceState({}, '', current);
@@ -231,7 +232,7 @@
   document.addEventListener('visibilitychange', refreshHighlights);
   const updates = setInterval(refreshHighlights, 12000);
   window.addEventListener('pagehide', event => { if (!event.persisted) clearInterval(updates); });
-  W.json(W.asset('catalog.json')).then(data => {
+  W.loadCatalog().then(data => {
     sets = data.sets;
     W.choose(el('set'), sets.map(set => ({id: set.id, label: set.title})), W.params.get('set'));
     el('set').disabled = !sets.length;
